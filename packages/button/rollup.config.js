@@ -1,4 +1,4 @@
-import jsx from "rollup-plugin-jsx";
+import babel from "rollup-plugin-babel";
 
 module.exports = {
 	input: "button.jsx",
@@ -6,5 +6,5 @@ module.exports = {
 		file: "dist/button.js",
 		format: "cjs"
 	},
-	plugins: [jsx({ factory: "React.createElement" })]
+	plugins: [babel()]
 };

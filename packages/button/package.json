@@ -1,14 +1,17 @@
 {
 	"name": "src-button",
 	"version": "0.0.1",
-	"main": "index.js",
+	"main": "dist/button.js",
 	"scripts": {
-		"build": "rollup --config"
+		"build": "rollup --config",
+		"clean": "rm -rf dist"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
 		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
 		"rollup": "^1.17.0",
-		"rollup-plugin-jsx": "^1.0.3"
-	},
-	"dependencies": {}
+		"rollup-plugin-babel": "^4.3.3"
+	}
 }
