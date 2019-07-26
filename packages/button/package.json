@@ -1,0 +1,14 @@
+{
+	"name": "src-button",
+	"version": "0.0.1",
+	"main": "index.js",
+	"scripts": {
+		"build": "rollup --config"
+	},
+	"devDependencies": {
+		"react": "^16.8.6",
+		"rollup": "^1.17.0",
+		"rollup-plugin-jsx": "^1.0.3"
+	},
+	"dependencies": {}
+}
