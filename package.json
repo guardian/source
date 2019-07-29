@@ -1,4 +1,14 @@
 {
   "name": "source-components",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "scripts": {
+    "storybook": "start-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/react": "^5.1.9",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
