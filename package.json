@@ -4,7 +4,7 @@
 	"scripts": {
 		"storybook": "start-storybook",
 		"build": "build-storybook -o dist",
-		"deploy": "build && gh-pages -d dist"
+		"deploy": "yarn build && gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
