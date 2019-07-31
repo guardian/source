@@ -1,0 +1,25 @@
+{
+	"name": "@guardian/src-dropdown",
+	"version": "0.0.1",
+	"main": "dist/dropdown.js",
+	"scripts": {
+		"build": "rollup --config",
+		"clean": "rm -rf dist",
+		"prepublish": "yarn build"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"rollup": "^1.17.0",
+		"rollup-plugin-babel": "^4.3.3"
+	},
+	"files": [
+		"dropdown.jsx"
+	],
+	"dependencies": {
+		"@emotion/core": "^10.0.14",
+		"@guardian/pasteup": "^2.0.0-alpha.2"
+	}
+}
