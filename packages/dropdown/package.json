@@ -10,9 +10,6 @@
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@babel/preset-react": "^7.0.0",
-		"@emotion/core": "^10.0.14",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3"
 	},
@@ -21,5 +18,8 @@
 	],
 	"dependencies": {
 		"@guardian/pasteup": "^2.0.0-alpha.2"
+	},
+	"peerDependencies": {
+		"react": "^16.8.6"
 	}
 }
