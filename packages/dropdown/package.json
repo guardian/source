@@ -10,6 +10,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@babel/preset-react": "^7.0.0",
+		"@emotion/core": "^10.0.14",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"rollup": "^1.17.0",
@@ -19,8 +20,6 @@
 		"dropdown.jsx"
 	],
 	"dependencies": {
-		"@emotion/babel-preset-css-prop": "^10.0.14",
-		"@emotion/core": "^10.0.14",
 		"@guardian/pasteup": "^2.0.0-alpha.2"
 	}
 }
