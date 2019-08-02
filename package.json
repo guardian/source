@@ -8,14 +8,13 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
+		"@emotion/babel-preset-css-prop": "^10.0.14",
+		"@emotion/core": "^10.0.14",
 		"@storybook/react": "^5.1.9",
 		"babel-loader": "^8.0.6",
 		"gh-pages": "^2.0.1",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6"
 	},
-	"dependencies": {
-		"@emotion/babel-preset-css-prop": "^10.0.14",
-		"@emotion/core": "^10.0.14"
-	}
+	"dependencies": {}
 }
