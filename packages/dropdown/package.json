@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-dropdown",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "dist/dropdown.js",
 	"scripts": {
 		"build": "rollup --config",
