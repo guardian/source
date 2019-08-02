@@ -19,6 +19,7 @@
 		"dropdown.jsx"
 	],
 	"dependencies": {
+		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@emotion/core": "^10.0.14",
 		"@guardian/pasteup": "^2.0.0-alpha.2"
 	}

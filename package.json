@@ -13,5 +13,9 @@
 		"gh-pages": "^2.0.1",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6"
+	},
+	"dependencies": {
+		"@emotion/babel-preset-css-prop": "^10.0.14",
+		"@emotion/core": "^10.0.14"
 	}
 }

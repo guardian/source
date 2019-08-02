@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import { css } from "@emotion/core";
+import { css } from "@emotion/core";
 import { palette } from "@guardian/pasteup/palette";
 import { textSans } from "@guardian/pasteup/typography";
 import { screenReaderOnly } from "@guardian/pasteup/mixins";
@@ -125,122 +125,120 @@ const buttonExpanded = css`
 	}
 `;
 
-// export class Dropdown extends Component {
-// 	constructor(props) {
-// 		super(props);
-// 		this.state = { isExpanded: false, noJS: true };
-// 		this.boundToggle = this.toggle.bind(this);
-// 	}
+export class Dropdown extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { isExpanded: false, noJS: true };
+		this.boundToggle = this.toggle.bind(this);
+	}
 
-// 	componentDidMount() {
-// 		// If componentDidMount runs we know client-side JS is enabled
-// 		this.setState({
-// 			noJS: false
-// 		});
-// 	}
+	componentDidMount() {
+		// If componentDidMount runs we know client-side JS is enabled
+		this.setState({
+			noJS: false
+		});
+	}
 
-// 	toggle() {
-// 		this.setState(prevState => ({
-// 			isExpanded: !prevState.isExpanded
-// 		}));
-// 	}
+	toggle() {
+		this.setState(prevState => ({
+			isExpanded: !prevState.isExpanded
+		}));
+	}
 
-// 	render() {
-// 		const { label, links } = this.props;
+	render() {
+		const { label, links } = this.props;
 
-// 		if (this.state.isExpanded) {
-// 			const removeListeners = () => {
-// 				document.removeEventListener("keydown", dismissOnEsc);
-// 				document.removeEventListener("click", dismissOnClick);
-// 			};
-// 			const dismissOnClick = event => {
-// 				event.stopPropagation();
-// 				this.setState(() => ({
-// 					isExpanded: false
-// 				}));
-// 				removeListeners();
-// 			};
-// 			const dismissOnEsc = event => {
-// 				const escKey = "Escape";
+		if (this.state.isExpanded) {
+			const removeListeners = () => {
+				document.removeEventListener("keydown", dismissOnEsc);
+				document.removeEventListener("click", dismissOnClick);
+			};
+			const dismissOnClick = event => {
+				event.stopPropagation();
+				this.setState(() => ({
+					isExpanded: false
+				}));
+				removeListeners();
+			};
+			const dismissOnEsc = event => {
+				const escKey = "Escape";
 
-// 				if (event.code === escKey) {
-// 					this.setState(() => ({
-// 						isExpanded: false
-// 					}));
-// 					removeListeners();
-// 				}
-// 			};
+				if (event.code === escKey) {
+					this.setState(() => ({
+						isExpanded: false
+					}));
+					removeListeners();
+				}
+			};
 
-// 			document.addEventListener("keydown", dismissOnEsc, false);
-// 			document.addEventListener("click", dismissOnClick, false);
-// 		}
+			document.addEventListener("keydown", dismissOnEsc, false);
+			document.addEventListener("click", dismissOnClick, false);
+		}
 
-// 		// needs to be unique to allow multiple dropdowns on same page
-// 		// this should be unique because JS is single-threaded
-// 		const dropdownID = `dropbox-id-${this.props.id}`;
-// 		const checkboxID = `checkbox-id-${this.props.id}`;
+		// needs to be unique to allow multiple dropdowns on same page
+		// this should be unique because JS is single-threaded
+		const dropdownID = `dropbox-id-${this.props.id}`;
+		const checkboxID = `checkbox-id-${this.props.id}`;
 
-// 		return (
-// 			<>
-// 				{this.state.noJS ? (
-// 					<label
-// 						htmlFor={checkboxID}
-// 						css={[
-// 							button,
-// 							this.state.isExpanded ? buttonExpanded : null
-// 						]}
-// 						aria-controls={dropdownID}
-// 						aria-expanded={this.state.isExpanded ? "true" : "false"}
-// 						role="button"
-// 					>
-// 						<input
-// 							className={input}
-// 							type="checkbox"
-// 							id={checkboxID}
-// 							aria-controls={dropdownID}
-// 							aria-checked="false"
-// 							tabIndex={-1}
-// 							key="OpenMainMenuCheckbox"
-// 							role="menuitemcheckbox"
-// 						/>
-// 						{label}
-// 					</label>
-// 				) : (
-// 					<button
-// 						onClick={this.boundToggle}
-// 						css={[
-// 							button,
-// 							this.state.isExpanded ? buttonExpanded : null
-// 						]}
-// 						aria-controls={dropdownID}
-// 						aria-expanded={this.state.isExpanded ? "true" : "false"}
-// 					>
-// 						{label}
-// 					</button>
-// 				)}
+		return (
+			<>
+				{this.state.noJS ? (
+					<label
+						htmlFor={checkboxID}
+						css={[
+							button,
+							this.state.isExpanded ? buttonExpanded : null
+						]}
+						aria-controls={dropdownID}
+						aria-expanded={this.state.isExpanded ? "true" : "false"}
+						role="button"
+					>
+						<input
+							className={input}
+							type="checkbox"
+							id={checkboxID}
+							aria-controls={dropdownID}
+							aria-checked="false"
+							tabIndex={-1}
+							key="OpenMainMenuCheckbox"
+							role="menuitemcheckbox"
+						/>
+						{label}
+					</label>
+				) : (
+					<button
+						onClick={this.boundToggle}
+						css={[
+							button,
+							this.state.isExpanded ? buttonExpanded : null
+						]}
+						aria-controls={dropdownID}
+						aria-expanded={this.state.isExpanded ? "true" : "false"}
+					>
+						{label}
+					</button>
+				)}
 
-// 				<ul
-// 					id={dropdownID}
-// 					css={[ul, this.state.isExpanded ? ulExpanded : null]}
-// 				>
-// 					{links.map((l, index) => (
-// 						<li key={l.title}>
-// 							<a
-// 								href={l.url}
-// 								css={[
-// 									link,
-// 									!!l.isActive ? linkActive : null,
-// 									index === 0 ? linkFirst : null
-// 								]}
-// 							>
-// 								{l.title}
-// 							</a>
-// 						</li>
-// 					))}
-// 				</ul>
-// 			</>
-// 		);
-// 	}
-// }
-
-export const Dropdown = () => <div>Hello!</div>;
+				<ul
+					id={dropdownID}
+					css={[ul, this.state.isExpanded ? ulExpanded : null]}
+				>
+					{links.map((l, index) => (
+						<li key={l.title}>
+							<a
+								href={l.url}
+								css={[
+									link,
+									!!l.isActive ? linkActive : null,
+									index === 0 ? linkFirst : null
+								]}
+							>
+								{l.title}
+							</a>
+						</li>
+					))}
+				</ul>
+			</>
+		);
+	}
+}
