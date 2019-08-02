@@ -6,6 +6,10 @@
 		"build": "build-storybook -o dist",
 		"deploy": "yarn build && gh-pages -d dist"
 	},
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
