@@ -1,0 +1,27 @@
+{
+	"name": "@guardian/src-radio",
+	"version": "0.0.5",
+	"main": "dist/radio.js",
+	"scripts": {
+		"build": "rollup --config",
+		"clean": "rm -rf dist",
+		"prepublish": "yarn build"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"@emotion/babel-preset-css-prop": "^10.0.14",
+		"rollup": "^1.17.0",
+		"rollup-plugin-babel": "^4.3.3"
+	},
+	"files": [
+		"radio.jsx"
+	],
+	"peerDependencies": {
+		"@emotion/core": "^10.0.14",
+		"react": "^16.8.6"
+	},
+	"dependencies": {
+		"@guardian/pasteup": "^2.0.0-alpha.2"
+	}
+}
