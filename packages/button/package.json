@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "dist/button.js",
 	"scripts": {
 		"build": "rollup --config",
@@ -18,5 +18,8 @@
 	],
 	"peerDependencies": {
 		"react": "^16.8.6"
+	},
+	"dependencies": {
+		"@guardian/src-svgs": "^0.0.1"
 	}
 }
