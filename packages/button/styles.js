@@ -56,8 +56,18 @@ export const iconStyles = css`
 		position: relative;
 		width: ${ctaHeight / 2}px;
 		height: auto;
+	}
+`;
 
-		/* RIGHT ALIGNED */
+export const iconLeftStyles = css`
+	flex-direction: row-reverse;
+	svg {
+		margin: 0 ${ctaHeight / 4}px 0 ${-ctaHeight / 8}px;
+	}
+`;
+
+export const iconRightStyles = css`
+	svg {
 		margin: 0 ${-ctaHeight / 8}px 0 ${ctaHeight / 4}px;
 	}
 `;
