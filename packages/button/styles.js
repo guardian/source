@@ -47,3 +47,17 @@ export const secondaryStyles = css`
 		background-color: ${palette.neutral[7]};
 	}
 `;
+
+export const iconStyles = css`
+	svg {
+		flex: 0 0 auto;
+		display: block;
+		fill: currentColor;
+		position: relative;
+		width: ${ctaHeight / 2}px;
+		height: auto;
+
+		/* RIGHT ALIGNED */
+		margin: 0 ${-ctaHeight / 8}px 0 ${ctaHeight / 4}px;
+	}
+`;

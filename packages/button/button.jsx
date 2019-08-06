@@ -1,5 +1,6 @@
 import React from "react";
-import { styles, primaryStyles, secondaryStyles } from "./styles";
+import { SvgArrowRightStraight } from "@guardian/src-svgs/arrow-right-straight";
+import { styles, primaryStyles, secondaryStyles, iconStyles } from "./styles";
 
 const appearanceStyles = {
 	primary: primaryStyles,
@@ -7,8 +8,11 @@ const appearanceStyles = {
 };
 const Button = ({ appearance, icon, iconSide, children, ...props }) => {
 	return (
-		<button css={[styles, appearanceStyles[appearance]]} {...props}>
-			{children}
+		<button
+			css={[styles, appearanceStyles[appearance], iconStyles]}
+			{...props}
+		>
+			{[children, icon]}
 		</button>
 	);
 };
@@ -18,7 +22,7 @@ const defaultProps = {
 	"aria-label": null,
 	type: "button",
 	disabled: false,
-	icon: null,
+	icon: <SvgArrowRightStraight />,
 	appearance: appearances[0],
 	iconSide: sides[0]
 };
