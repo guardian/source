@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"main": "dist/button.js",
 	"scripts": {
 		"build": "rollup --config",
@@ -10,6 +10,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@babel/preset-react": "^7.0.0",
+		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3"
 	},
@@ -17,9 +18,11 @@
 		"button.jsx"
 	],
 	"peerDependencies": {
+		"@emotion/core": "^10.0.14",
 		"react": "^16.8.6"
 	},
 	"dependencies": {
+		"@guardian/pasteup": "^2.0.0-alpha.2",
 		"@guardian/src-svgs": "^0.0.1"
 	}
 }
