@@ -1,31 +1,29 @@
 import React from "react";
-import { styles } from "./styles";
+import { groupStyles, radioStyles, labelStyles } from "./styles";
 
 const RadioGroup = ({ name, children, ...props }) => {
 	return (
-		<div css={[styles]} {...props}>
+		<div css={[groupStyles]} {...props}>
 			{React.Children.map(children, child =>
 				React.cloneElement(child, { name })
 			)}
 		</div>
 	);
 };
-const Radio = ({ label, ...props }) => {
+const Radio = ({ id, label, ...props }) => {
 	return (
 		<>
-			<input type="radio" {...props} />
-			<label>{label}</label>
+			<input css={radioStyles} id={id} type="radio" {...props} />
+			<label css={labelStyles} for={id}>
+				{label}
+			</label>
 		</>
 	);
-};
-const radioGroupDefaultProps = {
-	disabled: false
 };
 const radioDefaultProps = {
 	disabled: false
 };
 
-RadioGroup.defaultProps = { ...radioGroupDefaultProps };
 Radio.defaultProps = { ...radioDefaultProps };
 
 export { RadioGroup, Radio };
