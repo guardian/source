@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-radio",
-	"version": "0.0.5",
+	"version": "0.0.1",
 	"main": "dist/radio.js",
 	"scripts": {
 		"build": "rollup --config",
