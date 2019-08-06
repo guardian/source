@@ -14,7 +14,7 @@ const Radio = ({ id, label, ...props }) => {
 	return (
 		<>
 			<input css={radioStyles} id={id} type="radio" {...props} />
-			<label css={labelStyles} for={id}>
+			<label css={labelStyles} htmlFor={id}>
 				{label}
 			</label>
 		</>
