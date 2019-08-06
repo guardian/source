@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "dist/button.js",
 	"scripts": {
 		"build": "rollup --config",
