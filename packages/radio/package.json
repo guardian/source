@@ -22,6 +22,6 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/pasteup": "^2.0.0-alpha.2"
+		"@guardian/src-foundations": "^0.0.2"
 	}
 }

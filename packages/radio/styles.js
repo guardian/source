@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { textSans } from "@guardian/pasteup/typography";
+import { textSans } from "@guardian/src-foundations/typography";
 
 export const groupStyles = css`
 	display: flex;
@@ -9,7 +9,7 @@ export const groupStyles = css`
 export const labelStyles = css`
 	position: relative;
 
-	${textSans(4)};
+	${textSans({ level: 3 })};
 
 	cursor: pointer;
 `;
