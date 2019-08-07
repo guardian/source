@@ -79,14 +79,16 @@ const fontWeightMapping = {
 };
 
 const fs = ({ category, level, lineHeight, fontWeight }) => {
+	// Gosh there's a lot of flaky logic here! We need to think about
+	// what happens if a value is not found. Maybe a big try / catch?
 	const fontFamilyValue = fontMapping[category];
 	const fontSizeValue = fontSizeMapping[category][level];
 	const lineHeightValue = lineHeightMapping[lineHeight];
-	const fontWeightValue = fontWeightMapping[fontWeight];
+	const fontWeightValue = fontWeightMapping[category][fontWeight].fontWeight;
 
 	return `
 	font-family: ${fontFamilyValue};
-	font-size: ${fontSizeValue};
+	font-size: ${fontSizeValue}px;
 	line-height: ${lineHeightValue};
 	font-weight: ${fontWeightValue};
 	`;
@@ -94,15 +96,15 @@ const fs = ({ category, level, lineHeight, fontWeight }) => {
 
 export const headline = ({
 	level,
-	lineHeight = "regular",
-	fontWeight = "regular"
+	lineHeight = "tight",
+	fontWeight = "medium"
 }) => {
 	return fs({ category: "headline", level, lineHeight, fontWeight });
 };
 
 export const body = ({
 	level,
-	lineHeight = "regular",
+	lineHeight = "loose",
 	fontWeight = "regular"
 }) => {
 	return fs({ category: "body", level, lineHeight, fontWeight });
@@ -110,7 +112,7 @@ export const body = ({
 
 export const textSans = ({
 	level,
-	lineHeight = "regular",
+	lineHeight = "loose",
 	fontWeight = "regular"
 }) => {
 	return fs({ category: "textSans", level, lineHeight, fontWeight });
