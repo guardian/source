@@ -1,18 +1,8 @@
 {
 	"name": "@guardian/src-foundations",
 	"version": "0.0.1",
-	"main": "dist/foundations.js",
-	"scripts": {
-		"build": "rollup --config",
-		"clean": "rm -rf dist",
-		"prepublish": "yarn build"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.5.5",
-		"rollup": "^1.17.0",
-		"rollup-plugin-babel": "^4.3.3"
-	},
 	"files": [
-		"foundations.js"
+		"theme.js",
+		"palette.js"
 	]
 }
