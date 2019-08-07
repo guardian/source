@@ -6,8 +6,8 @@ const stories = storiesOf("Radio", module);
 
 stories.add("radio", () => (
 	<RadioGroup name="colours">
-		<Radio id="orange" label="Red" />
-		<Radio id="violet" label="Green" defaultChecked />
-		<Radio id="yellow" label="Blue" />
+		<Radio value="orange" label="Red" />
+		<Radio value="violet" label="Green" defaultChecked />
+		<Radio value="yellow" label="Blue" />
 	</RadioGroup>
 ));
