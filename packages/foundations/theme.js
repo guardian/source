@@ -31,4 +31,6 @@ const colors = {
 	]
 };
 
-export { fontSizes, fonts, lineHeights, fontWeights, colors };
+const space = [0, 5, 10, 20];
+
+export { fontSizes, fonts, lineHeights, fontWeights, colors, space };
