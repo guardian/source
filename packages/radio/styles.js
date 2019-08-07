@@ -1,5 +1,6 @@
 import { css } from "@emotion/core";
 import { textSans } from "@guardian/src-foundations/typography";
+import { space } from "@guardian/src-foundations/space";
 
 export const groupStyles = css`
 	display: flex;
@@ -15,6 +16,7 @@ export const labelStyles = css`
 `;
 export const radioStyles = css`
 	position: relative;
+	margin-right: ${space.medium};
 
 	cursor: pointer;
 `;
