@@ -1,10 +1,11 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"files": [
 		"theme.js",
 		"palette.js",
 		"typography.js",
-		"space.js"
+		"space.js",
+		"helpers.js"
 	]
 }

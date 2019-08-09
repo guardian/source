@@ -10,12 +10,14 @@ const RadioGroup = ({ name, children, ...props }) => {
 		</div>
 	);
 };
-const Radio = ({ value, label, ...props }) => {
+const Radio = ({ id, value, label, ...props }) => {
 	return (
-		<label css={labelStyles}>
-			<input css={radioStyles} value={value} type="radio" {...props} />
-			{label}
-		</label>
+		<>
+			<input css={radioStyles} id={id} value={value} type="radio" {...props} />
+			<label css={labelStyles} htmlFor={id}>
+				{label}
+			</label>
+		</>
 	);
 };
 const radioDefaultProps = {
