@@ -4,6 +4,7 @@ import { palette } from '@guardian/src-foundations/palette';
 import { space } from '@guardian/src-foundations/space';
 import { fontSizes } from '@guardian/src-foundations/theme';
 import { visuallyHidden } from '@guardian/src-foundations/helpers';
+import { transitions } from '@guardian/src-foundations/animation';
 
 export const groupStyles = css`
 	display: flex;
@@ -30,7 +31,7 @@ export const labelStyles = css`
 		border: 1px solid ${palette.brand.main};
 		border-radius: 50%;
 		box-shadow: 0 0 0 3px ${palette.neutrals[100]};
-		transition: box-shadow .25s ease-in-out;
+		transition: box-shadow ${transitions[0]};
 	}
 
 	&:after {
@@ -50,8 +51,8 @@ export const labelStyles = css`
 		border-radius: 50%;
 		transform: scale(0.1);
 		opacity: 0;
-		transition: transform .25s ease-in-out,
-					opacity .25s ease-in-out;
+		transition: transform  ${transitions[0]},
+					opacity  ${transitions[0]};
 	}
 
 	&:hover {
