@@ -1,5 +1,5 @@
 import React from "react";
-import { groupStyles, radioStyles, labelStyles } from "./styles";
+import { groupStyles, radioStyles, textStyles } from "./styles";
 
 const RadioGroup = ({ name, children, ...props }) => {
 	return (
@@ -10,14 +10,12 @@ const RadioGroup = ({ name, children, ...props }) => {
 		</div>
 	);
 };
-const Radio = ({ id, value, label, ...props }) => {
+const Radio = ({ value, label, ...props }) => {
 	return (
-		<>
-			<input css={radioStyles} id={id} value={value} type="radio" {...props} />
-			<label css={labelStyles} htmlFor={id}>
-				{label}
-			</label>
-		</>
+		<label>
+			<input css={radioStyles} value={value} type="radio" {...props} />
+			<span css={textStyles}>{label}</span>
+		</label>
 	);
 };
 const radioDefaultProps = {

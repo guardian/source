@@ -1,17 +1,26 @@
-import { css } from '@emotion/core';
-import { textSans } from '@guardian/src-foundations/typography';
-import { palette } from '@guardian/src-foundations/palette';
-import { space } from '@guardian/src-foundations/space';
-import { fontSizes } from '@guardian/src-foundations/theme';
-import { visuallyHidden } from '@guardian/src-foundations/helpers';
-import { transitions } from '@guardian/src-foundations/animation';
+import { css } from "@emotion/core";
+import { textSans } from "@guardian/src-foundations/typography";
+import { palette } from "@guardian/src-foundations/palette";
+import { space } from "@guardian/src-foundations/space";
+import { fontSizes } from "@guardian/src-foundations/theme";
+import { visuallyHidden } from "@guardian/src-foundations/helpers";
+import { transitions } from "@guardian/src-foundations/animation";
 
 export const groupStyles = css`
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
 `;
-export const labelStyles = css`
+export const radioStyles = css`
+	${visuallyHidden};
+
+	&:checked + span:after {
+		opacity: 1;
+		transform: scale(0.6);
+	}
+`;
+
+export const textStyles = css`
 	position: relative;
 	${textSans({ level: 3 })};
 	color: ${palette.brand.main};
@@ -25,7 +34,7 @@ export const labelStyles = css`
 		height: ${fontSizes[2]}px;
 		margin: 0 ${space.medium} 0 0;
 		vertical-align: middle;
-		content: '';
+		content: "";
 
 		cursor: pointer;
 		border: 1px solid ${palette.brand.main};
@@ -37,7 +46,7 @@ export const labelStyles = css`
 	&:after {
 		box-sizing: border-box;
 		display: inline-block;
-		content: '';
+		content: "";
 		width: ${fontSizes[2]}px;
 		height: ${fontSizes[2]}px;
 		position: absolute;
@@ -51,21 +60,12 @@ export const labelStyles = css`
 		border-radius: 50%;
 		transform: scale(0.1);
 		opacity: 0;
-		transition: transform  ${transitions[0]},
-					opacity  ${transitions[0]};
+		transition: transform ${transitions[0]}, opacity ${transitions[0]};
 	}
 
 	&:hover {
 		&:before {
 			box-shadow: 0 0 0 3px ${palette.neutrals[86]};
 		}
-	}
-`;
-export const radioStyles = css`
-	${visuallyHidden};
-
-	&:checked + label:after {
-		opacity: 1;
-		transform: scale(0.6);
 	}
 `;
