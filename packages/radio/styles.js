@@ -1,7 +1,7 @@
 import { css } from "@emotion/core";
 import { textSans, textSansSizes } from "@guardian/src-foundations/typography";
 import { palette } from "@guardian/src-foundations/palette";
-import { space } from "@guardian/src-foundations/space";
+import { gutter, rhythm } from "@guardian/src-foundations/space";
 import { visuallyHidden } from "@guardian/src-foundations/helpers";
 import { transitions } from "@guardian/src-foundations/animation";
 
@@ -10,6 +10,11 @@ export const groupStyles = css`
 	justify-content: flex-start;
 	flex-direction: column;
 `;
+
+export const labelStyles = css`
+	margin-bottom: ${rhythm.small};
+`;
+
 export const radioStyles = css`
 	${visuallyHidden};
 
@@ -31,7 +36,7 @@ export const textStyles = css`
 		display: inline-block;
 		width: ${textSansSizes[3]}px;
 		height: ${textSansSizes[3]}px;
-		margin: 0 ${space.medium} 0 0;
+		margin: 0 ${gutter.medium} 0 0;
 		vertical-align: middle;
 		content: "";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { groupStyles, radioStyles, textStyles } from "./styles";
+import { groupStyles, labelStyles, radioStyles, textStyles } from "./styles";
 
 const RadioGroup = ({ name, children, ...props }) => {
 	return (
@@ -12,7 +12,7 @@ const RadioGroup = ({ name, children, ...props }) => {
 };
 const Radio = ({ value, label, ...props }) => {
 	return (
-		<label>
+		<label css={labelStyles}>
 			<input css={radioStyles} value={value} type="radio" {...props} />
 			<span css={textStyles}>{label}</span>
 		</label>
