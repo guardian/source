@@ -33,6 +33,18 @@ const colors = {
 
 const space = [0, 5, 10, 20];
 
-const transitions = ['.25s ease-in-out'];
+const transitions = [
+	".25s ease-in-out",
+	".45s ease-in-out",
+	".65s ease-in-out"
+];
 
-export { fontSizes, fonts, lineHeights, fontWeights, colors, space, transitions };
+export {
+	fontSizes,
+	fonts,
+	lineHeights,
+	fontWeights,
+	colors,
+	space,
+	transitions
+};
