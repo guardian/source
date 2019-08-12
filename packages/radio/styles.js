@@ -1,8 +1,7 @@
 import { css } from "@emotion/core";
-import { textSans } from "@guardian/src-foundations/typography";
+import { textSans, textSansSizes } from "@guardian/src-foundations/typography";
 import { palette } from "@guardian/src-foundations/palette";
 import { space } from "@guardian/src-foundations/space";
-import { fontSizes } from "@guardian/src-foundations/theme";
 import { visuallyHidden } from "@guardian/src-foundations/helpers";
 import { transitions } from "@guardian/src-foundations/animation";
 
@@ -30,8 +29,8 @@ export const textStyles = css`
 	&:before {
 		box-sizing: border-box;
 		display: inline-block;
-		width: ${fontSizes[2]}px;
-		height: ${fontSizes[2]}px;
+		width: ${textSansSizes[3]}px;
+		height: ${textSansSizes[3]}px;
 		margin: 0 ${space.medium} 0 0;
 		vertical-align: middle;
 		content: "";
@@ -47,8 +46,8 @@ export const textStyles = css`
 		box-sizing: border-box;
 		display: inline-block;
 		content: "";
-		width: ${fontSizes[2]}px;
-		height: ${fontSizes[2]}px;
+		width: ${textSansSizes[3]}px;
+		height: ${textSansSizes[3]}px;
 		position: absolute;
 		top: 2px; /* a magic number I can't make sense of right now! */
 		left: 0;
