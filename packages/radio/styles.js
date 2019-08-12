@@ -8,11 +8,11 @@ import { transitions } from "@guardian/src-foundations/animation";
 export const group = css`
 	display: flex;
 	justify-content: flex-start;
-	flex-direction: column;
 `;
 
 export const label = css`
 	margin-bottom: ${rhythm.small};
+	margin-right: ${gutter.large};
 `;
 
 export const radio = css`
@@ -67,7 +67,7 @@ export const text = css`
 	}
 `;
 
-export const appearanceLight = css`
+export const light = css`
 	span {
 		color: ${palette.brand.main};
 
@@ -86,7 +86,7 @@ export const appearanceLight = css`
 		}
 	}
 `;
-export const appearanceDark = css`
+export const dark = css`
 	span {
 		color: ${palette.neutrals[100]};
 
@@ -104,4 +104,11 @@ export const appearanceDark = css`
 			}
 		}
 	}
+`;
+
+export const horizontal = css`
+	flex-direction: row;
+`;
+export const vertical = css`
+	flex-direction: column;
 `;

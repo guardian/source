@@ -4,18 +4,32 @@ import {
 	label,
 	radio,
 	text,
-	appearanceDark,
-	appearanceLight
+	dark,
+	light,
+	horizontal,
+	vertical
 } from "./styles";
 
-const appearancesStyles = {
-	light: appearanceLight,
-	dark: appearanceDark
+const appearanceStyles = {
+	light: light,
+	dark: dark
 };
 
-const RadioGroup = ({ name, appearance, children, ...props }) => {
+const orientationStyles = {
+	horizontal: horizontal,
+	vertical: vertical
+};
+
+const RadioGroup = ({ name, appearance, orientation, children, ...props }) => {
 	return (
-		<div css={[group, appearancesStyles[appearance]]} {...props}>
+		<div
+			css={[
+				group,
+				appearanceStyles[appearance],
+				orientationStyles[orientation]
+			]}
+			{...props}
+		>
 			{React.Children.map(children, child =>
 				React.cloneElement(child, { name })
 			)}
@@ -36,6 +50,7 @@ const radioDefaultProps = {
 
 Radio.defaultProps = { ...radioDefaultProps };
 
-const appearances = Object.keys(appearancesStyles);
+const appearances = Object.keys(appearanceStyles);
+const orientations = Object.keys(orientationStyles);
 
-export { RadioGroup, Radio, appearances };
+export { RadioGroup, Radio, appearances, orientations };
