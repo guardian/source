@@ -40,7 +40,7 @@ export const textStyles = css`
 		border: 1px solid ${palette.brand.main};
 		border-radius: 50%;
 		box-shadow: 0 0 0 3px ${palette.neutrals[100]};
-		transition: box-shadow ${transitions[0]};
+		transition: box-shadow ${transitions.short};
 	}
 
 	&:after {
@@ -60,7 +60,7 @@ export const textStyles = css`
 		border-radius: 50%;
 		transform: scale(0.1);
 		opacity: 0;
-		transition: transform ${transitions[0]}, opacity ${transitions[0]};
+		transition: transform ${transitions.short}, opacity ${transitions.short};
 	}
 
 	&:hover {
