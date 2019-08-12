@@ -31,7 +31,13 @@ const colors = {
 	]
 };
 
-const space = [0, 5, 10, 20];
+// Note: our `space` deviates from system-ui.com,
+// which doesn't distinguish between vertical and
+// horizontal spacing
+const space = {
+	gutter: [0, 5, 10, 20],
+	rhythm: [0, 6, 12, 24]
+};
 
 const transitions = [
 	".25s ease-in-out",
