@@ -5,17 +5,17 @@ import { gutter, rhythm } from "@guardian/src-foundations/space";
 import { visuallyHidden } from "@guardian/src-foundations/helpers";
 import { transitions } from "@guardian/src-foundations/animation";
 
-export const groupStyles = css`
+export const group = css`
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
 `;
 
-export const labelStyles = css`
+export const label = css`
 	margin-bottom: ${rhythm.small};
 `;
 
-export const radioStyles = css`
+export const radio = css`
 	${visuallyHidden};
 
 	&:checked + span:after {
@@ -24,7 +24,7 @@ export const radioStyles = css`
 	}
 `;
 
-export const textStyles = css`
+export const text = css`
 	position: relative;
 	${textSans({ level: 3 })};
 
