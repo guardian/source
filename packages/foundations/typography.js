@@ -1,32 +1,38 @@
 import { fontSizes, fonts, lineHeights, fontWeights } from "./theme";
 
+const headlineSizes = {
+	1: fontSizes[2],
+	2: fontSizes[3],
+	3: fontSizes[4],
+	4: fontSizes[5],
+	5: fontSizes[6],
+	6: fontSizes[7],
+	7: fontSizes[8],
+	8: fontSizes[9]
+};
+
+const bodySizes = {
+	1: fontSizes[1],
+	2: fontSizes[2]
+};
+
+const textSansSizes = {
+	1: fontSizes[0],
+	2: fontSizes[1],
+	3: fontSizes[2],
+	4: fontSizes[3],
+	5: fontSizes[4],
+	6: fontSizes[5],
+	7: fontSizes[6],
+	8: fontSizes[7],
+	9: fontSizes[8],
+	10: fontSizes[9]
+};
+
 const fontSizeMapping = {
-	headline: {
-		1: fontSizes[2],
-		2: fontSizes[3],
-		3: fontSizes[4],
-		4: fontSizes[5],
-		5: fontSizes[6],
-		6: fontSizes[7],
-		7: fontSizes[8],
-		8: fontSizes[9]
-	},
-	body: {
-		1: fontSizes[1],
-		2: fontSizes[2]
-	},
-	textSans: {
-		1: fontSizes[0],
-		2: fontSizes[1],
-		3: fontSizes[2],
-		4: fontSizes[3],
-		5: fontSizes[4],
-		6: fontSizes[5],
-		7: fontSizes[6],
-		8: fontSizes[7],
-		9: fontSizes[8],
-		10: fontSizes[9]
-	}
+	headline: headlineSizes,
+	body: bodySizes,
+	textSans: textSansSizes
 };
 
 const fontMapping = {
@@ -94,26 +100,17 @@ const fs = ({ category, level, lineHeight, fontWeight }) => {
 	`;
 };
 
-export const headline = ({
-	level,
-	lineHeight = "tight",
-	fontWeight = "medium"
-}) => {
-	return fs({ category: "headline", level, lineHeight, fontWeight });
-};
+const headline = ({ level, lineHeight = "tight", fontWeight = "medium" }) =>
+	fs({ category: "headline", level, lineHeight, fontWeight });
 
-export const body = ({
-	level,
-	lineHeight = "loose",
-	fontWeight = "regular"
-}) => {
-	return fs({ category: "body", level, lineHeight, fontWeight });
-};
+const body = ({ level, lineHeight = "loose", fontWeight = "regular" }) =>
+	fs({ category: "body", level, lineHeight, fontWeight });
 
-export const textSans = ({
-	level,
-	lineHeight = "loose",
-	fontWeight = "regular"
-}) => {
-	return fs({ category: "textSans", level, lineHeight, fontWeight });
-};
+const textSans = ({ level, lineHeight = "loose", fontWeight = "regular" }) =>
+	fs({ category: "textSans", level, lineHeight, fontWeight });
+
+Object.freeze(headlineSizes);
+Object.freeze(bodySizes);
+Object.freeze(textSansSizes);
+
+export { headline, body, textSans, headlineSizes, bodySizes, textSansSizes };
