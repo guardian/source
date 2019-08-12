@@ -27,7 +27,6 @@ export const radioStyles = css`
 export const textStyles = css`
 	position: relative;
 	${textSans({ level: 3 })};
-	color: ${palette.brand.main};
 
 	cursor: pointer;
 
@@ -41,9 +40,10 @@ export const textStyles = css`
 		content: "";
 
 		cursor: pointer;
-		border: 1px solid ${palette.brand.main};
+		border-width: 1px;
+		border-style: solid;
 		border-radius: 50%;
-		box-shadow: 0 0 0 3px ${palette.neutrals[100]};
+		box-shadow: 0 0 0 3px transparent;
 		transition: box-shadow ${transitions.short};
 	}
 
@@ -58,18 +58,50 @@ export const textStyles = css`
 		left: 0;
 		bottom: 0;
 		margin: auto;
-		border: 1px solid transparent;
 
-		background: ${palette.brand.main};
+		border: 1px solid transparent;
 		border-radius: 50%;
 		transform: scale(0.1);
 		opacity: 0;
 		transition: transform ${transitions.short}, opacity ${transitions.short};
 	}
+`;
 
-	&:hover {
+export const appearanceLight = css`
+	span {
+		color: ${palette.brand.main};
+
 		&:before {
-			box-shadow: 0 0 0 3px ${palette.neutrals[86]};
+			border-color: ${palette.brand.main};
+		}
+
+		&:after {
+			background: ${palette.brand.main};
+		}
+
+		&:hover {
+			&:before {
+				box-shadow: 0 0 0 3px ${palette.neutrals[86]};
+			}
+		}
+	}
+`;
+export const appearanceDark = css`
+	span {
+		color: ${palette.neutrals[100]};
+
+		&:before {
+			border-color: ${palette.neutrals[100]};
+		}
+
+		&:after {
+			background: ${palette.neutrals[100]};
+		}
+
+		&:hover {
+			&:before {
+				box-shadow: 0 0 0 3px ${palette.neutrals[100]};
+			}
 		}
 	}
 `;

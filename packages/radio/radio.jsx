@@ -1,9 +1,21 @@
 import React from "react";
-import { groupStyles, labelStyles, radioStyles, textStyles } from "./styles";
+import {
+	groupStyles,
+	labelStyles,
+	radioStyles,
+	textStyles,
+	appearanceDark,
+	appearanceLight
+} from "./styles";
 
-const RadioGroup = ({ name, children, ...props }) => {
+const appearancesStyles = {
+	light: appearanceLight,
+	dark: appearanceDark
+};
+
+const RadioGroup = ({ name, appearance, children, ...props }) => {
 	return (
-		<div css={[groupStyles]} {...props}>
+		<div css={[groupStyles, appearancesStyles[appearance]]} {...props}>
 			{React.Children.map(children, child =>
 				React.cloneElement(child, { name })
 			)}
@@ -24,4 +36,6 @@ const radioDefaultProps = {
 
 Radio.defaultProps = { ...radioDefaultProps };
 
-export { RadioGroup, Radio };
+const appearances = Object.keys(appearancesStyles);
+
+export { RadioGroup, Radio, appearances };
