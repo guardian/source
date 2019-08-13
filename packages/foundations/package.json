@@ -7,6 +7,7 @@
 		"typography.js",
 		"space.js",
 		"size.js",
-		"helpers.js"
+		"helpers.js",
+		"animation.js"
 	]
 }
