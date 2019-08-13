@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"main": "dist/button.js",
 	"scripts": {
 		"build": "rollup --config",
@@ -15,7 +15,8 @@
 		"rollup-plugin-babel": "^4.3.3"
 	},
 	"files": [
-		"button.jsx"
+		"button.jsx",
+		"styles.js"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",

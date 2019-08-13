@@ -1,34 +1,40 @@
 import React from "react";
 import { SvgArrowRightStraight } from "@guardian/src-svgs/arrow-right-straight";
 import {
-	styles,
-	primaryStyles,
-	secondaryStyles,
-	iconStyles,
-	iconLeftStyles,
-	iconRightStyles
+	button,
+	primary,
+	secondary,
+	icon,
+	iconLeft,
+	iconRight
 } from "./styles";
 
 const appearanceStyles = {
-	primary: primaryStyles,
-	secondary: secondaryStyles
+	primary: primary,
+	secondary: secondary
 };
 const iconSideStyles = {
-	right: iconRightStyles,
-	left: iconLeftStyles
+	right: iconLeft,
+	left: iconRight
 };
-const Button = ({ appearance, icon, iconSide, children, ...props }) => {
+const Button = ({
+	appearance,
+	icon: iconSvg,
+	iconSide,
+	children,
+	...props
+}) => {
 	return (
 		<button
 			css={[
-				styles,
+				button,
 				appearanceStyles[appearance],
-				iconStyles,
+				icon,
 				iconSideStyles[iconSide]
 			]}
 			{...props}
 		>
-			{[children, icon]}
+			{[children, iconSvg]}
 		</button>
 	);
 };

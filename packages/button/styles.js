@@ -4,7 +4,7 @@ import { palette } from "@guardian/pasteup/palette";
 
 const ctaHeight = 42;
 
-export const styles = css`
+export const button = css`
 	/* LAYOUT */
 	display: inline-flex;
 	align-items: center;
@@ -28,7 +28,7 @@ export const styles = css`
 	transition: 0.3s ease-in-out;
 `;
 
-export const primaryStyles = css`
+export const primary = css`
 	background-color: ${palette.highlight.main};
 	color: ${palette.neutral[7]};
 
@@ -38,7 +38,7 @@ export const primaryStyles = css`
 	}
 `;
 
-export const secondaryStyles = css`
+export const secondary = css`
 	background-color: ${palette.neutral[20]};
 	color: ${palette.neutral[100]};
 
@@ -48,7 +48,7 @@ export const secondaryStyles = css`
 	}
 `;
 
-export const iconStyles = css`
+export const icon = css`
 	svg {
 		flex: 0 0 auto;
 		display: block;
@@ -59,14 +59,14 @@ export const iconStyles = css`
 	}
 `;
 
-export const iconLeftStyles = css`
+export const iconLeft = css`
 	flex-direction: row-reverse;
 	svg {
 		margin: 0 ${ctaHeight / 4}px 0 ${-ctaHeight / 8}px;
 	}
 `;
 
-export const iconRightStyles = css`
+export const iconRight = css`
 	svg {
 		margin: 0 ${-ctaHeight / 8}px 0 ${ctaHeight / 4}px;
 	}
