@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-dropdown",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"main": "dist/dropdown.js",
 	"scripts": {
 		"build": "rollup --config",
@@ -15,7 +15,8 @@
 		"rollup-plugin-babel": "^4.3.3"
 	},
 	"files": [
-		"dropdown.jsx"
+		"dropdown.jsx",
+		"styles.js"
 	],
 	"dependencies": {
 		"@guardian/pasteup": "^2.0.0-alpha.2"
