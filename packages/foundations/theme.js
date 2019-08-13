@@ -39,8 +39,10 @@ const space = {
 	rhythm: [0, 6, 12, 24]
 };
 
+const size = [24, 36, 42];
+
 const transitions = [
-	".25s ease-in-out",
+	".2s cubic-bezier(.64, .57, .67, 1.53)",
 	".45s ease-in-out",
 	".65s ease-in-out"
 ];
@@ -52,5 +54,6 @@ export {
 	fontWeights,
 	colors,
 	space,
+	size,
 	transitions
 };

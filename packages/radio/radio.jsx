@@ -16,8 +16,8 @@ const appearanceStyles = {
 };
 
 const orientationStyles = {
-	horizontal: horizontal,
-	vertical: vertical
+	vertical: vertical,
+	horizontal: horizontal
 };
 
 const RadioGroup = ({ name, appearance, orientation, children, ...props }) => {

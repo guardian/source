@@ -7,4 +7,8 @@ const visuallyHidden = `
 	left: 0;
 `
 
-export { visuallyHidden }
+const focusHalo = `
+	box-shadow: 0 0 0 5px #00B2FF;
+`
+
+export { visuallyHidden, focusHalo }
