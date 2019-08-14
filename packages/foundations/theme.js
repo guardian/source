@@ -41,6 +41,8 @@ const space = {
 
 const size = [24, 36, 42];
 
+const breakpoints = [375, 480, 740, 980, 1140, 1300];
+
 const transitions = [
 	".2s cubic-bezier(.64, .57, .67, 1.53)",
 	".45s ease-in-out",
@@ -55,5 +57,6 @@ export {
 	colors,
 	space,
 	size,
+	breakpoints,
 	transitions
 };

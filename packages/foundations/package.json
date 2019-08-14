@@ -8,6 +8,7 @@
 		"space.js",
 		"size.js",
 		"helpers.js",
-		"animation.js"
+		"animation.js",
+		"media-queries.js"
 	]
 }
