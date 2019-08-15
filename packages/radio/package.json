@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-radio",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "dist/radio.js",
 	"scripts": {
 		"build": "rollup --config",
@@ -15,7 +15,8 @@
 		"rollup-plugin-babel": "^4.3.3"
 	},
 	"files": [
-		"radio.jsx"
+		"radio.jsx",
+		"styles.js"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
