@@ -1,6 +1,7 @@
 import { css } from "@emotion/core";
 import { textSans } from "@guardian/pasteup/typography";
 import { palette } from "@guardian/pasteup/palette";
+import { size } from "@guardian/src-foundations/size";
 
 const ctaHeight = 42;
 
@@ -18,11 +19,11 @@ export const button = css`
 
 	/* STYLES */
 	box-sizing: border-box;
-	height: ${ctaHeight}px;
-	min-height: ${ctaHeight}px;
-	padding: 0 ${ctaHeight / 2}px;
+	height: ${size.large};
+	min-height: ${size.large};
+	padding: 0 ${size.large};
 	border: none;
-	border-radius: ${ctaHeight / 2}px;
+	border-radius: ${size.large / 2};
 	background: transparent;
 	cursor: pointer;
 	transition: 0.3s ease-in-out;

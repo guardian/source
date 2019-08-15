@@ -1,7 +1,7 @@
 import { css } from "@emotion/core";
 import { textSans, textSansSizes } from "@guardian/src-foundations/typography";
 import { palette } from "@guardian/src-foundations/palette";
-import { gutter, rhythm } from "@guardian/src-foundations/space";
+import { space } from "@guardian/src-foundations/space";
 import { size } from "@guardian/src-foundations/size";
 import { focusHalo } from "@guardian/src-foundations/helpers";
 import { transitions } from "@guardian/src-foundations/animation";
@@ -14,7 +14,7 @@ export const group = css`
 export const label = css`
 	cursor: pointer;
 	display: flex;
-	height: ${size.large};
+	height: ${size.large}px;
 	align-items: center;
 `;
 
@@ -25,9 +25,9 @@ export const radio = css`
 	color: inherit;
 	box-sizing: border-box;
 	display: inline-block;
-	width: ${size.small};
-	height: ${size.small};
-	margin: 0 ${gutter.medium} 0 0;
+	width: ${size.small}px;
+	height: ${size.small}px;
+	margin: 0 ${space[1]}px 0 0;
 	content: "";
 
 	border: 2px solid currentColor;
@@ -113,7 +113,7 @@ export const horizontal = css`
 	flex-direction: row;
 
 	label {
-		margin-right: ${gutter.large};
+		margin-right: ${space[1]}px;
 	}
 `;
 export const vertical = css`

@@ -31,13 +31,7 @@ const colors = {
 	]
 };
 
-// Note: our `space` deviates from system-ui.com,
-// which doesn't distinguish between vertical and
-// horizontal spacing
-const space = {
-	gutter: [0, 5, 10, 20],
-	rhythm: [0, 6, 12, 24]
-};
+const space = [3, 6, 12, 18, 24, 30, 36, 42, 60, 96];
 
 const size = [24, 36, 42];
 
