@@ -14,8 +14,13 @@ export const group = css`
 export const label = css`
 	cursor: pointer;
 	display: flex;
-	height: ${size.large}px;
+	/* height: ${size.large}px; */
 	align-items: center;
+	margin-bottom: ${space[2]}px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 `;
 
 export const radio = css`
