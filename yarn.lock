@@ -1118,11 +1118,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.3.tgz#dfa0c92efe44a1d1a7974fb49ffeb40ef2da5a27"
   integrity sha512-zVgvPwGK7c1aVdUVc9Qv7SqepOGRDrqCw7KZPSZziWGxSlbII3gmvGLPzLX4d0n0BMbamBacUrN22zOMyFFEkQ==
 
-"@guardian/pasteup@^2.0.0-alpha.2":
-  version "2.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@guardian/pasteup/-/pasteup-2.0.0-alpha.2.tgz#ee73012b19fdc260a4407dcbb7399b82307c3c5e"
-  integrity sha512-V+PlyX9j6jSVs7jDD71wD/iIDC3K2yPletffFDcYHHmiIMuJaE3oqJC+tb8sWjZGtAkfXY8aYdC/GaYpCs6Xgg==
-
 "@icons/material@^0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
