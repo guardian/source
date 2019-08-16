@@ -3,7 +3,12 @@
 	"version": "0.0.1",
 	"scripts": {
 		"storybook": "start-storybook",
-		"build": "build-storybook -o dist",
+		"build:storybook": "build-storybook -o dist",
+		"build:foundations": "cd packages/foundations && yarn build",
+		"build:svgs": "cd packages/svgs && yarn build",
+		"build:button": "cd packages/button && yarn build",
+		"build:radio": "cd packages/radio && yarn build",
+		"build": "yarn build:storybook && yarn build:foundations && yarn build:svgs && yarn build:button && yarn build:radio",
 		"deploy": "yarn build && gh-pages -d dist"
 	},
 	"private": true,
