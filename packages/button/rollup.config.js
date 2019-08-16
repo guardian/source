@@ -14,6 +14,6 @@ module.exports = {
 		resolve({
 			extensions: [".js", ".jsx"]
 		}),
-		commonjs({})
+		commonjs()
 	]
 };

@@ -9,6 +9,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-react": "^7.0.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"rollup": "^1.17.0",

@@ -1,4 +1,5 @@
 import babel from "rollup-plugin-babel";
+import resolve from "rollup-plugin-node-resolve";
 
 module.exports = {
 	input: "radio.jsx",
@@ -6,5 +7,11 @@ module.exports = {
 		file: "dist/radio.js",
 		format: "cjs"
 	},
-	plugins: [babel()]
+	external: ["react", "@emotion/core", "@emotion/css"],
+	plugins: [
+		babel(),
+		resolve({
+			extensions: [".js", ".jsx"]
+		})
+	]
 };
