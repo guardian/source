@@ -14,7 +14,6 @@ export const group = css`
 export const label = css`
 	cursor: pointer;
 	display: flex;
-	/* height: ${size.large}px; */
 	align-items: center;
 	margin-bottom: ${space[2]}px;
 
@@ -24,44 +23,45 @@ export const label = css`
 `;
 
 export const radio = css`
-	appearance: none;
-	outline: 0;
-	cursor: pointer;
-	color: inherit;
-	box-sizing: border-box;
-	display: inline-block;
-	width: ${size.small}px;
-	height: ${size.small}px;
-	margin: 0 ${space[1]}px 0 0;
-	content: "";
+	@supports(-webkit-appearance: none) {
+		-webkit-appearance: none;
+		outline: 0;
+		cursor: pointer;
+		color: inherit;
+		box-sizing: border-box;
+		display: inline-block;
+		width: ${size.small}px;
+		height: ${size.small}px;
+		margin: 0 ${space[1]}px 0 0;
 
-	border: 2px solid currentColor;
-	border-radius: 50%;
-	position: relative;
-	transition: box-shadow ${transitions.short};
-	transition-delay: .08s;
-
-	&:focus {
-		${focusHalo};
-	}
-
-	&:after {
-		background: currentColor;
-		position: absolute;
-		content: "";
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		border: 2px solid currentColor;
 		border-radius: 50%;
-		transform: scale(0);
-		transform-origin: center;
-		transition: transform ${transitions.short};
-	}
+		position: relative;
+		transition: box-shadow ${transitions.short};
+		transition-delay: .08s;
 
-	&:checked {
+		&:focus {
+			${focusHalo};
+		}
+
 		&:after {
-			transform: scale(.6);
+			background: currentColor;
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border-radius: 50%;
+			transform: scale(0);
+			transform-origin: center;
+			transition: transform ${transitions.short};
+		}
+
+		&:checked {
+			&:after {
+				transform: scale(.6);
+			}
 		}
 	}
 `;
