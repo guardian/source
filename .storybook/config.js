@@ -9,10 +9,10 @@ addParameters({
 });
 
 function loadStories() {
-	require("../packages/foundations/stories.js");
-	require("../packages/button/stories.js");
-	require("../packages/dropdown/stories.js");
-	require("../packages/radio/stories.js");
+	require("../packages/foundations/stories.jsx");
+	require("../packages/button/stories.jsx");
+	require("../packages/dropdown/stories.jsx");
+	require("../packages/radio/stories.jsx");
 }
 
 configure(loadStories, module);
