@@ -17,6 +17,7 @@
 	],
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@emotion/core": "^10.0.14",
 		"@storybook/addon-backgrounds": "^5.1.10",
