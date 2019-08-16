@@ -1,5 +1,6 @@
 import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
 
 module.exports = {
 	input: "radio.jsx",
@@ -12,6 +13,7 @@ module.exports = {
 		babel(),
 		resolve({
 			extensions: [".js", ".jsx"]
-		})
+		}),
+		commonjs()
 	]
 };

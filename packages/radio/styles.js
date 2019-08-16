@@ -1,10 +1,12 @@
 import { css } from "@emotion/core";
-import { textSans } from "@guardian/src-foundations/typography";
-import { palette } from "@guardian/src-foundations/palette";
-import { space } from "@guardian/src-foundations/space";
-import { size } from "@guardian/src-foundations/size";
-import { focusHalo } from "@guardian/src-foundations/helpers";
-import { transitions } from "@guardian/src-foundations/animation";
+import {
+	textSans,
+	palette,
+	space,
+	size,
+	focusHalo,
+	transitions
+} from "@guardian/src-foundations";
 
 export const group = css`
 	display: flex;
@@ -23,7 +25,7 @@ export const label = css`
 `;
 
 export const radio = css`
-	@supports(-webkit-appearance: none) {
+	@supports (-webkit-appearance: none) {
 		-webkit-appearance: none;
 		outline: 0;
 		cursor: pointer;
@@ -38,7 +40,7 @@ export const radio = css`
 		border-radius: 50%;
 		position: relative;
 		transition: box-shadow ${transitions.short};
-		transition-delay: .08s;
+		transition-delay: 0.08s;
 
 		&:focus {
 			${focusHalo};
@@ -60,7 +62,7 @@ export const radio = css`
 
 		&:checked {
 			&:after {
-				transform: scale(.6);
+				transform: scale(0.6);
 			}
 		}
 	}
@@ -76,7 +78,7 @@ export const light = css`
 		input {
 			color: ${palette.neutral[60]};
 
-			&:checked  {
+			&:checked {
 				color: ${palette.brand.main};
 			}
 		}
@@ -97,7 +99,7 @@ export const dark = css`
 		input {
 			color: ${palette.brand.pastel};
 
-			&:checked  {
+			&:checked {
 				color: ${palette.neutral[100]};
 			}
 		}

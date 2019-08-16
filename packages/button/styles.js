@@ -1,7 +1,5 @@
 import { css } from "@emotion/core";
-import { textSans } from "@guardian/src-foundations/typography";
-import { palette } from "@guardian/src-foundations/palette";
-import { size } from "@guardian/src-foundations/size";
+import { textSans, palette, size } from "@guardian/src-foundations";
 
 export const button = css`
 	/* LAYOUT */
