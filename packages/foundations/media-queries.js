@@ -1,10 +1,13 @@
-import { breakpoints } from "./theme";
+import { breakpoints, tweakpoints } from "./theme";
 
 const mediaQueryMinimums = {
-	tablet: breakpoints[1],
-	desktop: breakpoints[2],
-	leftCol: breakpoints[3],
-	wide: breakpoints[4]
+	mobileMedium: tweakpoints[0],
+	mobileLandscape: tweakpoints[1],
+	phablet: tweakpoints[2],
+	tablet: breakpoints[0],
+	desktop: breakpoints[1],
+	leftCol: breakpoints[2],
+	wide: breakpoints[3]
 };
 
 const minWidth = value => `@media (min-width: ${value}px)`;

@@ -36,7 +36,12 @@ const space = [3, 6, 12, 18, 24, 30, 36, 42, 60, 96];
 
 const size = [24, 36, 42];
 
-const breakpoints = [375, 740, 980, 1140, 1300];
+const breakpoints = [740, 980, 1140, 1300];
+
+// Diverges from https://system-ui.com
+// At these widths, there are tweaks to the
+// fluid grid on mobile devices
+const tweakpoints = [375, 480, 660];
 
 const transitions = [
 	".2s cubic-bezier(.64, .57, .67, 1.53)",
@@ -53,5 +58,6 @@ export {
 	space,
 	size,
 	breakpoints,
+	tweakpoints,
 	transitions
 };
