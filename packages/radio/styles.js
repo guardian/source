@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { textSans, textSansSizes } from "@guardian/src-foundations/typography";
+import { textSans } from "@guardian/src-foundations/typography";
 import { palette } from "@guardian/src-foundations/palette";
 import { space } from "@guardian/src-foundations/space";
 import { size } from "@guardian/src-foundations/size";
@@ -15,7 +15,7 @@ export const label = css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	margin-bottom: ${space[2]}px;
+	height: ${size.large}px;
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -74,7 +74,7 @@ export const text = css`
 export const light = css`
 	label {
 		input {
-			color: ${palette.neutrals[60]};
+			color: ${palette.neutral[60]};
 
 			&:checked  {
 				color: ${palette.brand.main};
@@ -82,7 +82,7 @@ export const light = css`
 		}
 
 		span {
-			color: ${palette.neutrals[20]};
+			color: ${palette.neutral[20]};
 		}
 
 		&:hover {
@@ -98,17 +98,17 @@ export const dark = css`
 			color: ${palette.brand.pastel};
 
 			&:checked  {
-				color: ${palette.neutrals[100]};
+				color: ${palette.neutral[100]};
 			}
 		}
 
 		span {
-			color: ${palette.neutrals[100]};
+			color: ${palette.neutral[100]};
 		}
 
 		&:hover {
 			input {
-				border-color: ${palette.neutrals[100]};
+				border-color: ${palette.neutral[100]};
 			}
 		}
 	}

@@ -6,7 +6,11 @@ const palette = {
 		main: colors.blues[1],
 		pastel: colors.blues[2]
 	},
-	neutrals: {
+	yellow: {
+		dark: colors.yellows[0],
+		main: colors.yellows[1],
+	},
+	neutral: {
 		7: colors.grays[0],
 		20: colors.grays[1],
 		46: colors.grays[2],

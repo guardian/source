@@ -15,6 +15,7 @@ const colors = {
 	reds: [],
 	oranges: [],
 	blues: ["#041f4a", "#052962", "#506991"],
+	yellows: ["#ffbb50", "#ffe500"],
 	browns: [],
 	pinks: [],
 	greens: [],
