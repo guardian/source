@@ -12,7 +12,9 @@
 		"@babel/preset-react": "^7.0.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"rollup": "^1.17.0",
-		"rollup-plugin-babel": "^4.3.3"
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-commonjs": "^10.0.2",
+		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
 		"button.jsx",

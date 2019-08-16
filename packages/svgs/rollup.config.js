@@ -4,7 +4,11 @@ module.exports = {
 	input: "arrow-right-straight.jsx",
 	output: {
 		file: "arrow-right-straight.js",
-		format: "cjs"
+		format: "cjs",
+		globals: {
+			react: "React"
+		}
 	},
+	external: ["react"],
 	plugins: [babel()]
 };

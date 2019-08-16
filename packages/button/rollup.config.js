@@ -1,4 +1,6 @@
 import babel from "rollup-plugin-babel";
+import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
 
 module.exports = {
 	input: "button.jsx",
@@ -6,5 +8,12 @@ module.exports = {
 		file: "dist/button.js",
 		format: "cjs"
 	},
-	plugins: [babel()]
+	external: ["react", "@emotion/core", "@emotion/css"],
+	plugins: [
+		babel(),
+		resolve({
+			extensions: [".js", ".jsx"]
+		}),
+		commonjs({})
+	]
 };
