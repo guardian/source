@@ -13,7 +13,5 @@ module.exports = ({ config, mode }) => {
 	});
 	config.resolve.extensions.push(".ts", ".tsx");
 
-	console.log(JSON.stringify(config));
-
 	return config;
 };
