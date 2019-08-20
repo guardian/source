@@ -1,0 +1,9 @@
+{
+	"name": "@guardian/src-helpers",
+	"version": "0.0.1",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"@guardian/src-foundations": "^0.0.5"
+	}
+}
