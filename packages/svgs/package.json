@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-svgs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"scripts": {
 		"build": "rollup --config",
 		"watch": "rollup --config --watch",
@@ -17,7 +17,8 @@
 	},
 	"files": [
 		"arrow-right-straight.js",
-		"arrow-right-straight.jsx"
+		"arrow-right-straight.esm.js",
+		"arrow-right-straight.tsx"
 	],
 	"peerDependencies": {
 		"react": "^16.8.6"
