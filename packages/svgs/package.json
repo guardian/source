@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-svgs",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
 	"scripts": {
@@ -18,8 +18,6 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"arrow-right-straight.js",
-		"arrow-right-straight.esm.js",
 		"arrow-right-straight.tsx"
 	],
 	"peerDependencies": {
