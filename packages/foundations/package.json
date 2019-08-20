@@ -20,13 +20,11 @@
 		"theme.ts",
 		"typography.ts"
 	],
-	"dependencies": {
-		"@babel/preset-env": "^7.5.5",
-		"rollup": "^1.19.4",
-		"rollup-plugin-babel": "^4.3.3"
-	},
 	"devDependencies": {
+		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-typescript": "^7.3.3",
+		"rollup": "^1.19.4",
+		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-node-resolve": "^5.2.0"
 	}
 }

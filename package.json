@@ -20,7 +20,6 @@
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@babel/preset-env": "^7.5.5",
-		"@babel/preset-react": "^7.0.0",
 		"@babel/preset-typescript": "^7.3.3",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@emotion/core": "^10.0.14",
@@ -32,6 +31,5 @@
 		"gh-pages": "^2.0.1",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6"
-	},
-	"dependencies": {}
+	}
 }
