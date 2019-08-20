@@ -1,5 +1,5 @@
 import React, { ReactElement, ReactNode } from "react";
-import { SvgArrowRightStraight } from "@guardian/src-svgs/arrow-right-straight.esm";
+import { SvgArrowRightStraight } from "@guardian/src-svgs";
 import {
 	button,
 	primary,

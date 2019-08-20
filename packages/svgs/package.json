@@ -1,6 +1,8 @@
 {
 	"name": "@guardian/src-svgs",
 	"version": "0.0.2",
+	"main": "dist/index.js",
+	"module": "dist/index.esm.js",
 	"scripts": {
 		"build": "rollup --config",
 		"watch": "rollup --config --watch",

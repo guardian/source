@@ -4,17 +4,17 @@ import resolve from "rollup-plugin-node-resolve";
 const extensions = [".ts", ".tsx"];
 
 module.exports = {
-	input: "arrow-right-straight.tsx",
+	input: "index.ts",
 	output: [
 		{
-			file: "arrow-right-straight.js",
+			file: "dist/index.js",
 			format: "cjs",
 			globals: {
 				react: "React"
 			}
 		},
 		{
-			file: "arrow-right-straight.esm.js",
+			file: "dist/index.esm.js",
 			format: "esm",
 			globals: {
 				react: "React"
