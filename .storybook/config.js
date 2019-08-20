@@ -1,12 +1,4 @@
-import { configure, addParameters } from "@storybook/react";
-import { palette } from "@guardian/src-foundations/palette";
-
-addParameters({
-	backgrounds: [
-		{ name: "light", value: palette.neutral[100], default: true },
-		{ name: "dark", value: palette.brand.main }
-	]
-});
+import { configure } from "@storybook/react";
 
 function loadStories() {
 	require("../packages/foundations/stories.jsx");

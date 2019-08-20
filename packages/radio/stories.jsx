@@ -1,31 +1,34 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withKnobs, radios } from "@storybook/addon-knobs";
-import { RadioGroup, Radio, appearances, orientations } from "./radio";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { RadioGroup, Radio } from "./radio";
 
 const stories = storiesOf("Radio", module);
 
-const appearanceKnobs = appearances.reduce(
-	(acc, curr) => Object.assign({}, acc, { [curr]: curr }),
-	{}
+stories.add("default", () => (
+	<RadioGroup name="colours">
+		<Radio value="red" label="Red" />
+		<Radio value="green" label="Green" defaultChecked />
+		<Radio value="blue" label="Blue" />
+	</RadioGroup>
+));
+stories.add(
+	"dark",
+	() => (
+		<RadioGroup appearance="dark" name="colours">
+			<Radio value="red" label="Red" />
+			<Radio value="green" label="Green" defaultChecked />
+			<Radio value="blue" label="Blue" />
+		</RadioGroup>
+	),
+	{
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.dark)
+		]
+	}
 );
-const orientationKnobs = orientations.reduce(
-	(acc, curr) => Object.assign({}, acc, { [curr]: curr }),
-	{}
-);
-
-const getAppearance = () =>
-	radios("Appearance", appearanceKnobs, appearances[0]);
-const getOrientation = () =>
-	radios("Orientation", orientationKnobs, orientations[0]);
-
-stories.addDecorator(withKnobs);
-stories.add("radio", () => (
-	<RadioGroup
-		appearance={getAppearance()}
-		orientation={getOrientation()}
-		name="colours"
-	>
+stories.add("orientation horizontal", () => (
+	<RadioGroup orientation="horizontal" name="colours">
 		<Radio value="red" label="Red" />
 		<Radio value="green" label="Green" defaultChecked />
 		<Radio value="blue" label="Blue" />

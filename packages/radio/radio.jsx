@@ -44,13 +44,18 @@ const Radio = ({ value, label: labelText, ...props }) => {
 		</label>
 	);
 };
+
+const appearances = Object.keys(appearanceStyles);
+const orientations = Object.keys(orientationStyles);
+const radioGroupDefaultProps = {
+	appearance: appearances[0],
+	orientation: orientations[0]
+};
 const radioDefaultProps = {
 	disabled: false
 };
 
 Radio.defaultProps = { ...radioDefaultProps };
-
-const appearances = Object.keys(appearanceStyles);
-const orientations = Object.keys(orientationStyles);
+RadioGroup.defaultProps = { ...radioGroupDefaultProps };
 
 export { RadioGroup, Radio, appearances, orientations };
