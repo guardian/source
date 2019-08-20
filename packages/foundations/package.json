@@ -1,26 +1,27 @@
 {
-  "name": "@guardian/src-foundations",
-  "version": "0.0.5",
-  "main": "dist/foundations.js",
-  "scripts": {
-    "build": "rollup --config",
-    "clean": "rm -rf dist",
-    "prepublish": "yarn build"
-  },
-  "files": [
-    "animation.js",
-    "helpers.js",
-    "index.js",
-    "media-queries.js",
-    "palette.js",
-    "size.js",
-    "space.js",
-    "theme.js",
-    "typography.js"
-  ],
-  "dependencies": {
-    "@babel/preset-env": "^7.5.5",
-    "rollup": "^1.19.4",
-    "rollup-plugin-babel": "^4.3.3"
-  }
+	"name": "@guardian/src-foundations",
+	"version": "0.0.5",
+	"main": "dist/foundations.js",
+	"scripts": {
+		"build": "rollup --config",
+		"watch": "rollup --config --watch",
+		"clean": "rm -rf dist",
+		"prepublish": "yarn build"
+	},
+	"files": [
+		"animation.js",
+		"helpers.js",
+		"index.js",
+		"media-queries.js",
+		"palette.js",
+		"size.js",
+		"space.js",
+		"theme.js",
+		"typography.js"
+	],
+	"dependencies": {
+		"@babel/preset-env": "^7.5.5",
+		"rollup": "^1.19.4",
+		"rollup-plugin-babel": "^4.3.3"
+	}
 }

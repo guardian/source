@@ -8,7 +8,7 @@ const palette = {
 	},
 	yellow: {
 		dark: colors.yellows[0],
-		main: colors.yellows[1],
+		main: colors.yellows[1]
 	},
 	neutral: {
 		7: colors.grays[0],

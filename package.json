@@ -2,9 +2,10 @@
 	"name": "source-components",
 	"version": "0.0.1",
 	"scripts": {
-		"storybook": "start-storybook",
+		"storybook": "yarn watch:foundations & start-storybook",
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd packages/foundations && yarn build",
+		"watch:foundations": "cd packages/foundations && yarn watch",
 		"build:svgs": "cd packages/svgs && yarn build",
 		"build:button": "cd packages/button && yarn build",
 		"build:radio": "cd packages/radio && yarn build",
