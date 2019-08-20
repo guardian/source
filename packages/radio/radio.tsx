@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import {
 	group,
 	label,
@@ -10,6 +10,9 @@ import {
 	vertical
 } from "./styles";
 
+type Appearance = "light" | "dark";
+type Orientation = "vertical" | "horizontal";
+
 const appearanceStyles = {
 	light: light,
 	dark: dark
@@ -20,7 +23,18 @@ const orientationStyles = {
 	horizontal: horizontal
 };
 
-const RadioGroup = ({ name, appearance, orientation, children, ...props }) => {
+const RadioGroup = ({
+	name,
+	appearance,
+	orientation,
+	children,
+	...props
+}: {
+	name: string;
+	appearance: Appearance;
+	orientation: Orientation;
+	children: ReactNode;
+}) => {
 	return (
 		<div
 			css={[
@@ -30,16 +44,33 @@ const RadioGroup = ({ name, appearance, orientation, children, ...props }) => {
 			]}
 			{...props}
 		>
-			{React.Children.map(children, child =>
-				React.cloneElement(child, { name })
-			)}
+			{React.Children.map(children, child => {
+				if (React.isValidElement(child)) {
+					React.cloneElement(child, { name });
+				}
+			})}
 		</div>
 	);
 };
-const Radio = ({ value, label: labelText, ...props }) => {
+const Radio = ({
+	value,
+	label: labelText,
+	defaultChecked,
+	...props
+}: {
+	value: string;
+	label: string;
+	defaultChecked?: boolean;
+}) => {
 	return (
 		<label css={label}>
-			<input css={radio} value={value} type="radio" {...props} />
+			<input
+				css={radio}
+				value={value}
+				type="radio"
+				defaultChecked
+				{...props}
+			/>
 			<span css={text}>{labelText}</span>
 		</label>
 	);
