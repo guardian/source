@@ -21,7 +21,6 @@
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@emotion/core": "^10.0.14",
 		"@storybook/addon-backgrounds": "^5.1.10",
-		"@storybook/addon-knobs": "^5.1.10",
 		"@storybook/react": "^5.1.9",
 		"babel-loader": "^8.0.6",
 		"gh-pages": "^2.0.1",
