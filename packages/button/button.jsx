@@ -34,7 +34,7 @@ const Button = ({
 			]}
 			{...props}
 		>
-			{[children, iconSvg]}
+			{[children, React.cloneElement(iconSvg, { key: "svg" })]}
 		</button>
 	);
 };

@@ -1,34 +1,50 @@
 import React from "react";
+import { css } from "@emotion/core";
 import { storiesOf } from "@storybook/react";
-import { withKnobs, text, radios } from "@storybook/addon-knobs";
-import { Button, appearances, iconSides } from "./button";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { space } from "@guardian/src-foundations";
+import { Button } from "./button";
 
 const stories = storiesOf("Button", module);
+const buttons = [
+	<Button>Button Label</Button>,
+	<Button iconSide="left">Button Label</Button>
+];
 
-const appearanceKnobs = appearances.reduce(
-	(acc, curr) => Object.assign({}, acc, { [curr]: curr }),
-	{}
-);
-const iconSideKnobs = iconSides.reduce(
-	(acc, curr) => Object.assign({}, acc, { [curr]: curr }),
-	{}
-);
-
-const getAppearance = () =>
-	radios("Appearance", appearanceKnobs, appearances[0]);
-const getIconSide = () => radios("Icon side", iconSideKnobs, iconSides[0]);
-
-stories.addDecorator(withKnobs);
 stories
-	.add("with text", () => (
-		<Button appearance={getAppearance()} iconSide={getIconSide()}>
-			{text("Button Label", "Button Label")}
-		</Button>
+	.add("default", () => (
+		<>
+			{buttons.map((button, index) => (
+				<div
+					key={index}
+					css={css`
+						margin-bottom: ${space[2]}px;
+					`}
+				>
+					{button}
+				</div>
+			))}
+		</>
 	))
-	.add("with emoji", () => (
-		<Button>
-			<span role="img" aria-label="so cool">
-				😀 😎 👍 💯
-			</span>
-		</Button>
-	));
+	.add(
+		"dark",
+		() => (
+			<>
+				{buttons.map((button, index) => (
+					<div
+						key={index}
+						css={css`
+							margin-bottom: ${space[2]}px;
+						`}
+					>
+						{button}
+					</div>
+				))}
+			</>
+		),
+		{
+			backgrounds: [
+				Object.assign({}, { default: true }, storybookBackgrounds.dark)
+			]
+		}
+	);

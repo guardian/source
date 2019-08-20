@@ -12,6 +12,7 @@
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-react": "^7.0.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
+		"@guardian/src-svgs": "^0.0.1",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.2",
@@ -26,6 +27,6 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-svgs": "^0.0.1"
+		"@guardian/src-helpers": "^0.0.1"
 	}
 }
