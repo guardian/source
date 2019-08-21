@@ -45,9 +45,13 @@ const RadioGroup = ({
 			{...props}
 		>
 			{React.Children.map(children, child => {
-				if (React.isValidElement(child)) {
-					React.cloneElement(child, { name });
+				if (!React.isValidElement(child)) {
+					// Consumer is probably passing a text node as a child
+					// TODO: Pass error to terminal
+					return <div />;
 				}
+
+				return React.cloneElement(child, { name });
 			})}
 		</div>
 	);
@@ -68,7 +72,7 @@ const Radio = ({
 				css={radio}
 				value={value}
 				type="radio"
-				defaultChecked
+				defaultChecked={defaultChecked}
 				{...props}
 			/>
 			<span css={text}>{labelText}</span>
