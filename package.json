@@ -4,6 +4,7 @@
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook",
 		"lint": "eslint . --ext .ts,.tsx",
+		"fix": "yarn lint --fix",
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd packages/foundations && yarn build",
 		"watch:foundations": "cd packages/foundations && yarn watch",

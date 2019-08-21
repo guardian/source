@@ -53,8 +53,8 @@ const lineHeightMapping: { [lineHight in LineHeight]: string } = {
 
 const fontWeightMapping: {
 	[cat in Category]: {
-		[fontWeight in FontWeight]?: { fontWeight: number; hasItalic: boolean }
-	}
+		[fontWeight in FontWeight]?: { fontWeight: number; hasItalic: boolean };
+	};
 } = {
 	headline: {
 		light: {

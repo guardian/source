@@ -10,7 +10,7 @@ const space = {
 	7: _space[7],
 	6: _space[6],
 	16: _space[9],
-	10: _space[8],
+	10: _space[8]
 };
 
 export { space };
