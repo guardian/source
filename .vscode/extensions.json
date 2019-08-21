@@ -2,6 +2,7 @@
 	"recommendations": [
 		"editorconfig.editorconfig",
 		"stkb.rewrap",
-		"jpoissonnier.vscode-styled-components"
+		"jpoissonnier.vscode-styled-components",
+		"esbenp.prettier-vscode"
 	]
 }
