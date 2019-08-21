@@ -15,7 +15,7 @@ const maxWidth = (value: number) => `@media (max-width: ${value - 1}px)`;
 const minWidthMaxWidth = (from: number, until: number) =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
-const mq = ({ from, until }) => {
+const mq = ({ from, until }: { from: number; until: number }) => {
 	if (from && until) {
 		return minWidthMaxWidth(
 			mediaQueryMinimums[from],
@@ -25,9 +25,8 @@ const mq = ({ from, until }) => {
 	if (from) {
 		return minWidth(mediaQueryMinimums[from]);
 	}
-	if (until) {
-		return maxWidth(mediaQueryMinimums[until]);
-	}
+
+	return maxWidth(mediaQueryMinimums[until]);
 };
 
 export { mq };
