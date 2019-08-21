@@ -1,0 +1,24 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "react", "prettier"],
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"prettier",
+		"prettier/@typescript-eslint",
+		"prettier/react"
+	],
+	"rules": {
+		"@typescript-eslint/explicit-function-return-type": "off"
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
