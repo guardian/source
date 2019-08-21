@@ -10,9 +10,9 @@ const mediaQueryMinimums = {
 	wide: breakpoints[3]
 };
 
-const minWidth = value => `@media (min-width: ${value}px)`;
-const maxWidth = value => `@media (max-width: ${value - 1}px)`;
-const minWidthMaxWidth = (from, until) =>
+const minWidth = (value: number) => `@media (min-width: ${value}px)`;
+const maxWidth = (value: number) => `@media (max-width: ${value - 1}px)`;
+const minWidthMaxWidth = (from: number, until: number) =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
 const mq = ({ from, until }) => {

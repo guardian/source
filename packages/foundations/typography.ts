@@ -1,5 +1,9 @@
 import { fontSizes, fonts, lineHeights, fontWeights } from "./theme";
 
+type Category = "headline" | "body" | "textSans";
+type LineHeight = "tight" | "regular" | "loose";
+type FontWeight = "light" | "regular" | "medium" | "bold";
+
 const headlineSizes = {
 	1: fontSizes[2],
 	2: fontSizes[3],
@@ -29,25 +33,29 @@ const textSansSizes = {
 	10: fontSizes[9]
 };
 
-const fontSizeMapping = {
+const fontSizeMapping: { [cat in Category]: { [level in number]: number } } = {
 	headline: headlineSizes,
 	body: bodySizes,
 	textSans: textSansSizes
 };
 
-const fontMapping = {
+const fontMapping: { [cat in Category]: string } = {
 	headline: fonts.headlineSerif,
 	body: fonts.bodySerif,
 	textSans: fonts.bodySans
 };
 
-const lineHeightMapping = {
+const lineHeightMapping: { [lineHight in LineHeight]: string } = {
 	tight: lineHeights[0],
 	regular: lineHeights[1],
 	loose: lineHeights[2]
 };
 
-const fontWeightMapping = {
+const fontWeightMapping: {
+	[cat in Category]: {
+		[fontWeight in FontWeight]?: { fontWeight: number; hasItalic: boolean }
+	}
+} = {
 	headline: {
 		light: {
 			fontWeight: fontWeights[0],
@@ -84,7 +92,17 @@ const fontWeightMapping = {
 	}
 };
 
-const fs = ({ category, level, lineHeight, fontWeight }) => {
+const fs = ({
+	category,
+	level,
+	lineHeight,
+	fontWeight
+}: {
+	category: Category;
+	level: number;
+	lineHeight: LineHeight;
+	fontWeight: FontWeight;
+}) => {
 	// Gosh there's a lot of flaky logic here! We need to think about
 	// what happens if a value is not found. Maybe a big try / catch?
 	const fontFamilyValue = fontMapping[category];
@@ -100,13 +118,30 @@ const fs = ({ category, level, lineHeight, fontWeight }) => {
 	`;
 };
 
-const headline = ({ level, lineHeight = "tight", fontWeight = "medium" }) =>
+interface FontScaleArgs {
+	level: number;
+	lineHeight?: LineHeight;
+	fontWeight?: FontWeight;
+}
+
+const headline = ({
+	level,
+	lineHeight = "tight",
+	fontWeight = "medium"
+}: FontScaleArgs) =>
 	fs({ category: "headline", level, lineHeight, fontWeight });
 
-const body = ({ level, lineHeight = "loose", fontWeight = "regular" }) =>
-	fs({ category: "body", level, lineHeight, fontWeight });
+const body = ({
+	level,
+	lineHeight = "loose",
+	fontWeight = "regular"
+}: FontScaleArgs) => fs({ category: "body", level, lineHeight, fontWeight });
 
-const textSans = ({ level, lineHeight = "loose", fontWeight = "regular" }) =>
+const textSans = ({
+	level,
+	lineHeight = "loose",
+	fontWeight = "regular"
+}: FontScaleArgs) =>
 	fs({ category: "textSans", level, lineHeight, fontWeight });
 
 Object.freeze(headlineSizes);

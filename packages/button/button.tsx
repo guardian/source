@@ -1,5 +1,5 @@
-import React from "react";
-import { SvgArrowRightStraight } from "@guardian/src-svgs/arrow-right-straight";
+import React, { ReactElement, ReactNode } from "react";
+import { SvgArrowRightStraight } from "@guardian/src-svgs";
 import {
 	button,
 	primary,
@@ -23,6 +23,11 @@ const Button = ({
 	iconSide,
 	children,
 	...props
+}: {
+	appearance: "primary" | "secondary";
+	icon: ReactElement;
+	iconSide: "left" | "right";
+	children: ReactNode;
 }) => {
 	return (
 		<button

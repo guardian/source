@@ -2,6 +2,7 @@
 	"name": "@guardian/src-radio",
 	"version": "0.0.3",
 	"main": "dist/radio.js",
+	"module": "dist/radio.esm.js",
 	"scripts": {
 		"build": "rollup --config",
 		"clean": "rm -rf dist",
@@ -11,6 +12,7 @@
 		"@babel/core": "^7.5.5",
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-react": "^7.0.0",
+		"@babel/preset-typescript": "^7.3.3",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@guardian/src-helpers": "^0.0.1",
 		"rollup": "^1.17.0",
@@ -19,8 +21,8 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"radio.jsx",
-		"styles.js"
+		"radio.tsx",
+		"styles.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
