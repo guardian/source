@@ -7,8 +7,8 @@ import { Button } from "./button";
 
 const stories = storiesOf("Button", module);
 const buttons = [
-	<Button>Button Label</Button>,
-	<Button iconSide="left">Button Label</Button>
+	<Button>Button Label</Button>, // eslint-disable-line react/jsx-key
+	<Button iconSide="left">Button Label</Button> // eslint-disable-line react/jsx-key
 ];
 
 stories

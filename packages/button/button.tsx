@@ -28,21 +28,20 @@ const Button = ({
 	icon: ReactElement;
 	iconSide: "left" | "right";
 	children: ReactNode;
-}) => {
-	return (
-		<button
-			css={[
-				button,
-				appearanceStyles[appearance],
-				icon,
-				iconSideStyles[iconSide]
-			]}
-			{...props}
-		>
-			{[children, React.cloneElement(iconSvg, { key: "svg" })]}
-		</button>
-	);
-};
+}) => (
+	<button
+		css={[
+			button,
+			appearanceStyles[appearance],
+			icon,
+			iconSideStyles[iconSide]
+		]}
+		{...props}
+	>
+		{[children, React.cloneElement(iconSvg, { key: "svg" })]}
+	</button>
+);
+
 const appearances = Object.keys(appearanceStyles);
 const iconSides = Object.keys(iconSideStyles);
 const defaultProps = {
