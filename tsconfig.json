@@ -7,8 +7,6 @@
 		"sourceMap": true,
 		"jsx": "preserve",
 		"moduleResolution": "node",
-		"rootDirs": ["packages"],
-		"baseUrl": "packages",
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
