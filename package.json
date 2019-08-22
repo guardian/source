@@ -3,8 +3,10 @@
 	"version": "0.0.1",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook",
-		"lint": "eslint . --ext .ts,.tsx",
-		"fix": "yarn lint --fix",
+		"lint:styles": "stylelint packages/**/styles.ts",
+		"lint:js": "eslint . --ext .ts,.tsx",
+		"lint": "yarn lint:js && yarn lint:styles",
+		"fix": "yarn lint:js --fix",
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd packages/foundations && yarn build",
 		"watch:foundations": "cd packages/foundations && yarn watch",
@@ -40,6 +42,10 @@
 		"prettier": "^1.18.2",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
+		"stylelint": "^10.1.0",
+		"stylelint-config-recommended": "^2.2.0",
+		"stylelint-config-styled-components": "^0.1.1",
+		"stylelint-processor-styled-components": "^1.8.0",
 		"typescript": "^3.5.3"
 	}
 }
