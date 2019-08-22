@@ -25,8 +25,8 @@ export const label = css`
 `;
 
 export const radio = css`
-	@supports (-webkit-appearance: none) {
-		-webkit-appearance: none;
+	@supports (appearance: none) {
+		appearance: none;
 		outline: 0;
 		cursor: pointer;
 		color: inherit;
