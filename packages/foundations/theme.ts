@@ -12,13 +12,22 @@ const lineHeights = ["1.15em", "1.35em", "1.45em"];
 const fontWeights = [300, 400, 500, 700];
 
 const colors = {
-	reds: [],
-	oranges: [],
-	blues: ["#041f4a", "#052962", "#506991"],
+	reds: ["#ab0613", "#c70000", "#ff4e36", "#ffbac8", "#fff4f2"],
+	oranges: ["#BD5318", "#E05E00", "#FF7F0F", "#F9B376", "#FEF9F5"],
+	blues: [
+		"#041f4a", //brand-dark
+		"#052962", //brand-main
+		"#506991", //brand-pastel
+		"#005689", //sport-dark
+		"#0084C6", //sport-main
+		"#00B2FF", //sport-bright
+		"#90DCFF", //sport-pastel
+		"#F1F8FC" //sport-faded
+	],
 	yellows: ["#ffbb50", "#ffe500"],
-	browns: [],
-	pinks: [],
-	greens: [],
+	browns: ["#6B5840", "#A1845C", "#EACCA0", "#E7D4B9", "#FBF6EF"],
+	pinks: ["#7D0068", "#BB3B80", "#FFABDB", "#FEC8D3", "#FEEEF7"],
+	greens: ["#3F464A", "#65A897", "#185E36", "#22874D", "#69D1CA"],
 	grays: [
 		"#121212",
 		"#333333",
