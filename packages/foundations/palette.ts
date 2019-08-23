@@ -28,6 +28,13 @@ const palette = {
 		pastel: colors.reds[3],
 		faded: colors.reds[4]
 	},
+	opinion: {
+		dark: colors.oranges[0],
+		main: colors.oranges[1],
+		bright: colors.oranges[2],
+		pastel: colors.oranges[3],
+		faded: colors.oranges[4]
+	},
 	sport: {
 		dark: colors.blues[3],
 		main: colors.blues[4],
@@ -48,6 +55,13 @@ const palette = {
 		bright: colors.pinks[2],
 		pastel: colors.pinks[3],
 		faded: colors.pinks[4]
+	},
+	labs: {
+		dark: colors.grays[0],
+		main: colors.grays[0],
+		bright: colors.greens[4],
+		pastel: "", // TODO
+		faded: colors.greens[1]
 	}
 };
 
