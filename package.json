@@ -7,6 +7,8 @@
 		"lint:js": "eslint . --ext .ts,.tsx",
 		"lint": "yarn lint:js && yarn lint:styles",
 		"fix": "yarn lint:js --fix",
+		"tsc": "tsc",
+		"validate": "yarn tsc && yarn lint",
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd packages/foundations && yarn build",
 		"watch:foundations": "cd packages/foundations && yarn watch",

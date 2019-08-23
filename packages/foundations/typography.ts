@@ -3,6 +3,7 @@ import { fontSizes, fonts, lineHeights, fontWeights } from "./theme";
 type Category = "headline" | "body" | "textSans";
 type LineHeight = "tight" | "regular" | "loose";
 type FontWeight = "light" | "regular" | "medium" | "bold";
+type FontWeightDefinition = { fontWeight: number; hasItalic: boolean };
 
 const headlineSizes = {
 	1: fontSizes[2],
@@ -53,7 +54,7 @@ const lineHeightMapping: { [lineHight in LineHeight]: string } = {
 
 const fontWeightMapping: {
 	[cat in Category]: {
-		[fontWeight in FontWeight]?: { fontWeight: number; hasItalic: boolean };
+		[fontWeight in FontWeight]?: FontWeightDefinition;
 	};
 } = {
 	headline: {
@@ -103,18 +104,20 @@ const fs = ({
 	lineHeight: LineHeight;
 	fontWeight: FontWeight;
 }) => {
-	// Gosh there's a lot of flaky logic here! We need to think about
-	// what happens if a value is not found. Maybe a big try / catch?
 	const fontFamilyValue = fontMapping[category];
 	const fontSizeValue = fontSizeMapping[category][level];
 	const lineHeightValue = lineHeightMapping[lineHeight];
-	const fontWeightValue = fontWeightMapping[category][fontWeight].fontWeight;
+	const fontWeightDefinition = fontWeightMapping[category][fontWeight];
 
 	return `
 	font-family: ${fontFamilyValue};
 	font-size: ${fontSizeValue}px;
 	line-height: ${lineHeightValue};
-	font-weight: ${fontWeightValue};
+	${
+		fontWeightDefinition
+			? `font-weight: ${fontWeightDefinition.fontWeight}`
+			: ""
+	};
 	`;
 };
 

@@ -1,6 +1,15 @@
 import { breakpoints, tweakpoints } from "./theme";
 
-const mediaQueryMinimums = {
+type MediaQuery =
+	| "mobileMedium"
+	| "mobileLandscape"
+	| "phablet"
+	| "tablet"
+	| "desktop"
+	| "leftCol"
+	| "wide";
+
+const mediaQueryMinimums: { [mediaQuery in MediaQuery]: number } = {
 	mobileMedium: tweakpoints[0],
 	mobileLandscape: tweakpoints[1],
 	phablet: tweakpoints[2],
@@ -15,7 +24,7 @@ const maxWidth = (value: number) => `@media (max-width: ${value - 1}px)`;
 const minWidthMaxWidth = (from: number, until: number) =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
-const mq = ({ from, until }: { from: number; until: number }) => {
+const mq = ({ from, until }: { from: MediaQuery; until: MediaQuery }) => {
 	if (from && until) {
 		return minWidthMaxWidth(
 			mediaQueryMinimums[from],
