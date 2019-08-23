@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"main": "dist/foundations.js",
 	"module": "dist/foundations.esm.js",
 	"scripts": {
@@ -10,6 +10,7 @@
 		"prepublish": "yarn build"
 	},
 	"files": [
+		"dist/**/*.js",
 		"animation.ts",
 		"helpers.ts",
 		"index.ts",
