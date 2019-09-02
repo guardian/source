@@ -59,23 +59,4 @@ const mq = ({ from, until }: RequireAtLeastOne<MQArgs, "from" | "until">) => {
 	return "";
 };
 
-const [
-	mobileMedium,
-	mobileLandscape,
-	phablet,
-	tablet,
-	desktop,
-	leftCol,
-	wide
-] = tweakAndBreakpoints.map(minWidth);
-
-export {
-	mq,
-	mobileMedium,
-	mobileLandscape,
-	phablet,
-	tablet,
-	desktop,
-	leftCol,
-	wide
-};
+export { mq };
