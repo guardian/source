@@ -43,7 +43,7 @@ const colors = {
 
 const space = [3, 6, 12, 18, 24, 36, 48, 96];
 
-const size = [24, 36, 42];
+const size = [24, 36, 44];
 
 const breakpoints = [740, 980, 1140, 1300];
 
