@@ -9,14 +9,16 @@ type MediaQuery =
 	| "leftCol"
 	| "wide";
 
+const tweakAndBreakpoints = tweakpoints.concat(breakpoints);
+
 const mediaQueryMinimums: { [mediaQuery in MediaQuery]: number } = {
-	mobileMedium: tweakpoints[0],
-	mobileLandscape: tweakpoints[1],
-	phablet: tweakpoints[2],
-	tablet: breakpoints[0],
-	desktop: breakpoints[1],
-	leftCol: breakpoints[2],
-	wide: breakpoints[3]
+	mobileMedium: tweakAndBreakpoints[0],
+	mobileLandscape: tweakAndBreakpoints[1],
+	phablet: tweakAndBreakpoints[2],
+	tablet: tweakAndBreakpoints[3],
+	desktop: tweakAndBreakpoints[4],
+	leftCol: tweakAndBreakpoints[5],
+	wide: tweakAndBreakpoints[6]
 };
 
 const minWidth = (value: number) => `@media (min-width: ${value}px)`;
@@ -38,4 +40,23 @@ const mq = ({ from, until }: { from: MediaQuery; until: MediaQuery }) => {
 	return maxWidth(mediaQueryMinimums[until]);
 };
 
-export { mq };
+const [
+	mobileMedium,
+	mobileLandscape,
+	phablet,
+	tablet,
+	desktop,
+	leftCol,
+	wide
+] = tweakAndBreakpoints.map(minWidth);
+
+export {
+	mq,
+	mobileMedium,
+	mobileLandscape,
+	phablet,
+	tablet,
+	desktop,
+	leftCol,
+	wide
+};
