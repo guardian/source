@@ -120,7 +120,7 @@ export const horizontal = css`
 	flex-direction: row;
 
 	label {
-		margin-right: ${space[1]}px;
+		margin-right: ${space[3]}px;
 	}
 `;
 export const vertical = css`

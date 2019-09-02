@@ -41,7 +41,7 @@ const colors = {
 	]
 };
 
-const space = [3, 6, 12, 18, 24, 30, 36, 42, 60, 96];
+const space = [3, 6, 12, 18, 24, 36, 48, 96];
 
 const size = [24, 36, 42];
 

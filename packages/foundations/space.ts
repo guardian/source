@@ -5,12 +5,10 @@ const space = {
 	1: _space[1],
 	2: _space[2],
 	3: _space[3],
-	5: _space[5],
 	4: _space[4],
-	7: _space[7],
-	6: _space[6],
-	16: _space[9],
-	10: _space[8]
+	6: _space[5],
+	8: _space[6],
+	16: _space[7],
 };
 
 export { space };
