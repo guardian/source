@@ -1,5 +1,16 @@
 import { breakpoints, tweakpoints } from "./theme";
 
+// a helper type used for defining arguments passed to the `mq()` function
+// https://stackoverflow.com/a/49725198/2118700
+type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<
+	T,
+	Exclude<keyof T, Keys>
+> &
+	{
+		[K in Keys]-?: Required<Pick<T, K>> &
+			Partial<Pick<T, Exclude<Keys, K>>>;
+	}[Keys];
+
 type MediaQuery =
 	| "mobileMedium"
 	| "mobileLandscape"
@@ -26,7 +37,12 @@ const maxWidth = (value: number) => `@media (max-width: ${value - 1}px)`;
 const minWidthMaxWidth = (from: number, until: number) =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
-const mq = ({ from, until }: { from: MediaQuery; until: MediaQuery }) => {
+interface MQArgs {
+	from: MediaQuery;
+	until: MediaQuery;
+}
+
+const mq = ({ from, until }: RequireAtLeastOne<MQArgs, "from" | "until">) => {
 	if (from && until) {
 		return minWidthMaxWidth(
 			mediaQueryMinimums[from],
@@ -36,8 +52,11 @@ const mq = ({ from, until }: { from: MediaQuery; until: MediaQuery }) => {
 	if (from) {
 		return minWidth(mediaQueryMinimums[from]);
 	}
+	if (until) {
+		return maxWidth(mediaQueryMinimums[until]);
+	}
 
-	return maxWidth(mediaQueryMinimums[until]);
+	return "";
 };
 
 const [
