@@ -47,16 +47,22 @@ Output:
 ```css
 .class-name {
 	padding: 0 10px;
+}
 
-	@media (min-width: 375px) {
+@media (min-width: 375px) {
+	.class-name {
 		padding: 0 20px;
 	}
+}
 
-	@media (min-width: 660px) and (max-width: 980px) {
+@media (min-width: 660px) and (max-width: 980px) {
+	.class-name {
 		padding: 0 32px;
 	}
+}
 
-	@media (max-width: 1300px) {
+@media (max-width: 1300px) {
+	.class-name {
 		padding: 0 40px;
 	}
 }
