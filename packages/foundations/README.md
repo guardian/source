@@ -10,7 +10,7 @@ $ yarn add @guardian/src-foundations
 
 ## Use
 
-### Palette
+### [Palette](https://zeroheight.com/2a1e5182b/p/606d47)
 
 ```ts
 import { palette } from "@guardian/src-foundations";
