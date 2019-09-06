@@ -1,62 +1,140 @@
-import { breakpoints, tweakpoints } from "./theme";
+import { tweakpoints, breakpoints } from "./theme";
 
-// a helper type used for defining arguments passed to the `mq()` function
-// https://stackoverflow.com/a/49725198/2118700
-type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<
-	T,
-	Exclude<keyof T, Keys>
-> &
-	{
-		[K in Keys]-?: Required<Pick<T, K>> &
-			Partial<Pick<T, Exclude<Keys, K>>>;
-	}[Keys];
-
-type MediaQuery =
-	| "mobileMedium"
-	| "mobileLandscape"
-	| "phablet"
-	| "tablet"
-	| "desktop"
-	| "leftCol"
-	| "wide";
-
-const tweakAndBreakpoints = tweakpoints.concat(breakpoints);
-
-const mediaQueryMinimums: { [mediaQuery in MediaQuery]: number } = {
-	mobileMedium: tweakAndBreakpoints[0],
-	mobileLandscape: tweakAndBreakpoints[1],
-	phablet: tweakAndBreakpoints[2],
-	tablet: tweakAndBreakpoints[3],
-	desktop: tweakAndBreakpoints[4],
-	leftCol: tweakAndBreakpoints[5],
-	wide: tweakAndBreakpoints[6]
+const breakpointMap = {
+	mobileMedium: tweakpoints[0],
+	mobileLandscape: tweakpoints[1],
+	phablet: tweakpoints[2],
+	tablet: breakpoints[0],
+	desktop: breakpoints[1],
+	leftCol: breakpoints[2],
+	wide: breakpoints[3]
 };
 
-const minWidth = (value: number) => `@media (min-width: ${value}px)`;
-const maxWidth = (value: number) => `@media (max-width: ${value - 1}px)`;
-const minWidthMaxWidth = (from: number, until: number) =>
+const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`;
+
+const maxWidth = (until: number): string =>
+	`@media (max-width: ${`${until - 1}px`})`;
+
+const minWidthMaxWidth = (from: number, until: number): string =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
-interface MQArgs {
-	from: MediaQuery;
-	until: MediaQuery;
-}
-
-const mq = ({ from, until }: RequireAtLeastOne<MQArgs, "from" | "until">) => {
-	if (from && until) {
-		return minWidthMaxWidth(
-			mediaQueryMinimums[from],
-			mediaQueryMinimums[until]
-		);
-	}
-	if (from) {
-		return minWidth(mediaQueryMinimums[from]);
-	}
-	if (until) {
-		return maxWidth(mediaQueryMinimums[until]);
-	}
-
-	return "";
+// e.g. until.*
+const until = {
+	mobileMedium: maxWidth(breakpointMap.mobileMedium),
+	mobileLandscape: maxWidth(breakpointMap.mobileLandscape),
+	phablet: maxWidth(breakpointMap.phablet),
+	tablet: maxWidth(breakpointMap.tablet),
+	desktop: maxWidth(breakpointMap.desktop),
+	leftCol: maxWidth(breakpointMap.leftCol),
+	wide: maxWidth(breakpointMap.wide)
 };
 
-export { mq };
+// e.g. from.*.until.*
+const from = {
+	mobileMedium: {
+		until: {
+			mobileLandscape: minWidthMaxWidth(
+				breakpointMap.mobileMedium,
+				breakpointMap.mobileLandscape
+			),
+			phablet: minWidthMaxWidth(
+				breakpointMap.mobileMedium,
+				breakpointMap.phablet
+			),
+			tablet: minWidthMaxWidth(
+				breakpointMap.mobileMedium,
+				breakpointMap.tablet
+			),
+			desktop: minWidthMaxWidth(
+				breakpointMap.mobileMedium,
+				breakpointMap.desktop
+			),
+			leftCol: minWidthMaxWidth(
+				breakpointMap.mobileMedium,
+				breakpointMap.leftCol
+			),
+			wide: minWidthMaxWidth(
+				breakpointMap.mobileMedium,
+				breakpointMap.wide
+			)
+		}
+	},
+	mobileLandscape: {
+		until: {
+			phablet: minWidthMaxWidth(
+				breakpointMap.mobileLandscape,
+				breakpointMap.phablet
+			),
+			tablet: minWidthMaxWidth(
+				breakpointMap.mobileLandscape,
+				breakpointMap.tablet
+			),
+			desktop: minWidthMaxWidth(
+				breakpointMap.mobileLandscape,
+				breakpointMap.desktop
+			),
+			leftCol: minWidthMaxWidth(
+				breakpointMap.mobileLandscape,
+				breakpointMap.leftCol
+			),
+			wide: minWidthMaxWidth(
+				breakpointMap.mobileLandscape,
+				breakpointMap.wide
+			)
+		}
+	},
+	phablet: {
+		until: {
+			tablet: minWidthMaxWidth(
+				breakpointMap.phablet,
+				breakpointMap.tablet
+			),
+			desktop: minWidthMaxWidth(
+				breakpointMap.phablet,
+				breakpointMap.desktop
+			),
+			leftCol: minWidthMaxWidth(
+				breakpointMap.phablet,
+				breakpointMap.leftCol
+			),
+			wide: minWidthMaxWidth(breakpointMap.phablet, breakpointMap.wide)
+		}
+	},
+	tablet: {
+		until: {
+			desktop: minWidthMaxWidth(
+				breakpointMap.tablet,
+				breakpointMap.desktop
+			),
+			leftCol: minWidthMaxWidth(
+				breakpointMap.tablet,
+				breakpointMap.leftCol
+			),
+			wide: minWidthMaxWidth(breakpointMap.tablet, breakpointMap.wide)
+		}
+	},
+	desktop: {
+		until: {
+			leftCol: minWidthMaxWidth(
+				breakpointMap.desktop,
+				breakpointMap.leftCol
+			),
+			wide: minWidthMaxWidth(breakpointMap.desktop, breakpointMap.wide)
+		}
+	},
+	leftCol: {
+		until: {
+			wide: minWidthMaxWidth(breakpointMap.leftCol, breakpointMap.wide)
+		}
+	}
+};
+
+// e.g. from.*
+from.mobileMedium.toString = () => minWidth(breakpointMap.mobileMedium);
+from.mobileLandscape.toString = () => minWidth(breakpointMap.mobileLandscape);
+from.phablet.toString = () => minWidth(breakpointMap.phablet);
+from.tablet.toString = () => minWidth(breakpointMap.tablet);
+from.desktop.toString = () => minWidth(breakpointMap.desktop);
+from.leftCol.toString = () => minWidth(breakpointMap.leftCol);
+
+export { from, until };
