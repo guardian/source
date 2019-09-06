@@ -13,33 +13,33 @@ $ yarn add @guardian/src-foundations
 ### [Palette](https://zeroheight.com/2a1e5182b/p/606d47)
 
 ```ts
-import { palette } from "@guardian/src-foundations";
+import { palette } from "@guardian/src-foundations"
 
 const backgroundColour = css`
 	background-color: ${palette.neutral[97]};
-`;
+`
 ```
 
-### [Media queries](https://zeroheight.com/2a1e5182b/p/41be19/b/332713)
+### [Media queries](https://zeroheight.com/2a1e5182b/p/14af24)
 
 ```ts
-import { mq } from "@guardian/src-foundations";
+import { from, until } from "@guardian/src-foundations"
 
 const styles = css`
 	padding: 0 10px;
 
-	${mq({ from: 'mobileLandscape' })} {
+	${from.mobileLandscape} {
 		padding: 0 20px;
 	}
 
-	${mq({ from: 'phablet', until: 'desktop' })} {
+	${from.phablet.until.desktop} {
 		padding: 0 32px;
 	}
 
-	${mq({ until: 'wide' })} {
+	${until.wide} {
 		padding: 0 40px;
 	}
-`;
+`
 ```
 
 Output:
