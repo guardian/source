@@ -1,4 +1,4 @@
-import { tweakpoints, breakpoints } from "./theme"
+import { tweakpoints, breakpoints } from "./theme";
 
 const breakpointMap = {
 	mobileMedium: tweakpoints[0],
@@ -8,15 +8,15 @@ const breakpointMap = {
 	desktop: breakpoints[1],
 	leftCol: breakpoints[2],
 	wide: breakpoints[3]
-}
+};
 
-const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`
+const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`;
 
 const maxWidth = (until: number): string =>
-	`@media (max-width: ${`${until - 1}px`})`
+	`@media (max-width: ${`${until - 1}px`})`;
 
 const minWidthMaxWidth = (from: number, until: number): string =>
-	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`
+	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
 // e.g. until.*
 const until = {
@@ -27,7 +27,7 @@ const until = {
 	desktop: maxWidth(breakpointMap.desktop),
 	leftCol: maxWidth(breakpointMap.leftCol),
 	wide: maxWidth(breakpointMap.wide)
-}
+};
 
 // e.g. from.*.until.*
 const from = {
@@ -127,14 +127,14 @@ const from = {
 			wide: minWidthMaxWidth(breakpointMap.leftCol, breakpointMap.wide)
 		}
 	}
-}
+};
 
 // e.g. from.*
-from.mobileMedium.toString = () => minWidth(breakpointMap.mobileMedium)
-from.mobileLandscape.toString = () => minWidth(breakpointMap.mobileLandscape)
-from.phablet.toString = () => minWidth(breakpointMap.phablet)
-from.tablet.toString = () => minWidth(breakpointMap.tablet)
-from.desktop.toString = () => minWidth(breakpointMap.desktop)
-from.leftCol.toString = () => minWidth(breakpointMap.leftCol)
+from.mobileMedium.toString = () => minWidth(breakpointMap.mobileMedium);
+from.mobileLandscape.toString = () => minWidth(breakpointMap.mobileLandscape);
+from.phablet.toString = () => minWidth(breakpointMap.phablet);
+from.tablet.toString = () => minWidth(breakpointMap.tablet);
+from.desktop.toString = () => minWidth(breakpointMap.desktop);
+from.leftCol.toString = () => minWidth(breakpointMap.leftCol);
 
-export { from, until }
+export { from, until };
