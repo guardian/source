@@ -18,17 +18,8 @@ const maxWidth = (until: number): string =>
 const minWidthMaxWidth = (from: number, until: number): string =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`
 
-// min-widths
-export const mobileMedium = minWidth(breakpointMap.mobileMedium) // MobileMedium breakpoint is 360
-export const mobileLandscape = minWidth(breakpointMap.mobileLandscape) // MobileLandscape breakpoint is 480
-export const phablet = minWidth(breakpointMap.phablet) // Phablet breakpoint is 660
-export const tablet = minWidth(breakpointMap.tablet) // Tablet breakpoint is 740
-export const desktop = minWidth(breakpointMap.desktop) // Desktop breakpoint is 980
-export const leftCol = minWidth(breakpointMap.leftCol) // leftCol breakpoint is 1140
-export const wide = minWidth(breakpointMap.wide) // Wide breakpoint is 1300
-
 // e.g. until.*
-export const until = {
+const until = {
 	mobileMedium: maxWidth(breakpointMap.mobileMedium),
 	mobileLandscape: maxWidth(breakpointMap.mobileLandscape),
 	phablet: maxWidth(breakpointMap.phablet),
@@ -39,7 +30,7 @@ export const until = {
 }
 
 // e.g. from.*.until.*
-export const from = {
+const from = {
 	mobileMedium: {
 		until: {
 			mobileLandscape: minWidthMaxWidth(
@@ -137,3 +128,13 @@ export const from = {
 		}
 	}
 }
+
+// e.g. from.*
+from.mobileMedium.toString = () => minWidth(breakpointMap.mobileMedium)
+from.mobileLandscape.toString = () => minWidth(breakpointMap.mobileLandscape)
+from.phablet.toString = () => minWidth(breakpointMap.phablet)
+from.tablet.toString = () => minWidth(breakpointMap.tablet)
+from.desktop.toString = () => minWidth(breakpointMap.desktop)
+from.leftCol.toString = () => minWidth(breakpointMap.leftCol)
+
+export { from, until }
