@@ -129,12 +129,21 @@ const from = {
 	}
 };
 
-// e.g. from.*
-from.mobileMedium.toString = () => minWidth(breakpointMap.mobileMedium);
-from.mobileLandscape.toString = () => minWidth(breakpointMap.mobileLandscape);
-from.phablet.toString = () => minWidth(breakpointMap.phablet);
-from.tablet.toString = () => minWidth(breakpointMap.tablet);
-from.desktop.toString = () => minWidth(breakpointMap.desktop);
-from.leftCol.toString = () => minWidth(breakpointMap.leftCol);
+// min-widths
+const mobileMedium = minWidth(breakpointMap.mobileMedium);
+const mobileLandscape = minWidth(breakpointMap.mobileLandscape);
+const phablet = minWidth(breakpointMap.phablet);
+const tablet = minWidth(breakpointMap.tablet);
+const desktop = minWidth(breakpointMap.desktop);
+const leftCol = minWidth(breakpointMap.leftCol);
 
-export { from, until };
+export {
+	from,
+	until,
+	mobileMedium,
+	mobileLandscape,
+	phablet,
+	tablet,
+	desktop,
+	leftCol
+};
