@@ -1,10 +1,11 @@
-import { palette } from "@guardian/src-foundations";
+import { palette } from "@guardian/src-foundations"
 
 const storybookBackgrounds = {
 	light: { name: "light", value: palette.neutral[100] },
-	dark: { name: "dark", value: palette.brand.main }
-};
+	blue: { name: "blue", value: palette.brand.main },
+	dark: { name: "dark", value: palette.neutral[7] }
+}
 
-Object.freeze(storybookBackgrounds);
+Object.freeze(storybookBackgrounds)
 
-export { storybookBackgrounds };
+export { storybookBackgrounds }
