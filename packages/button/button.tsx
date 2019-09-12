@@ -4,7 +4,7 @@ import {
 	highPriority,
 	defaultPriority,
 	lowPriority,
-	subtlePriority,
+	moderatePriority,
 	defaultSize,
 	smallSize,
 	icon,
@@ -12,7 +12,7 @@ import {
 	iconRight,
 } from "./styles"
 
-type Priority = "high" | "default" | "low" | "subtle"
+type Priority = "high" | "default" | "moderate" | "low"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
 
@@ -21,8 +21,8 @@ const priorities: {
 } = {
 	high: highPriority,
 	default: defaultPriority,
+	moderate: moderatePriority,
 	low: lowPriority,
-	subtle: subtlePriority,
 }
 const iconSides: {
 	[key in IconSide]: any

@@ -9,12 +9,12 @@ const stories = storiesOf("Button", module)
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
 	<Button priority="high">High</Button>,
-	<Button priority="default">Default</Button>,
+	<Button>Default</Button>,
+	<Button priority="moderate">Moderate</Button>,
 	<Button priority="low">Low</Button>,
-	<Button priority="subtle">Subtle</Button>,
 ]
 const sizeButtons = [
-	<Button size="default">Default</Button>,
+	<Button>Default</Button>,
 	<Button size="small">Small</Button>,
 ]
 const textIconButtons = [
