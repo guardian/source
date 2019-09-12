@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { textSans, palette, size } from "@guardian/src-foundations"
+import { textSans, palette, size, focusHalo } from "@guardian/src-foundations"
 
 export const button = css`
 	display: inline-flex;
@@ -16,14 +16,22 @@ export const button = css`
 	background: transparent;
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
+
+	&:focus {
+		${focusHalo};
+	}
+
+	&:disabled {
+		opacity: 0.3;
+		cursor: not-allowed;
+	}
 `
 
 export const highPriority = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
-	&:hover,
-	&:focus {
+	&:hover :not(:disabled) {
 		background-color: ${palette.yellow.dark};
 	}
 `
@@ -31,16 +39,28 @@ export const highPriority = css`
 export const defaultPriority = css`
 	background-color: ${palette.neutral[20]};
 	color: ${palette.neutral[100]};
+
+	&:hover :not(:disabled) {
+		background-color: ${palette.neutral[46]};
+	}
+`
+
+export const moderatePriority = css`
+	background-color: ${palette.neutral[93]};
+	color: ${palette.neutral[7]};
+
+	&:hover :not(:disabled) {
+		background-color: ${palette.neutral[86]};
+	}
 `
 
 export const lowPriority = css`
-	background-color: ${palette.neutral[93]};
-	color: ${palette.neutral[7]};
-`
-
-export const subtlePriority = css`
 	background-color: ${palette.neutral[100]};
 	color: ${palette.neutral[7]};
+
+	&:hover :not(:disabled) {
+		background-color: ${palette.neutral[93]};
+	}
 `
 
 export const defaultSize = css`
