@@ -1,4 +1,4 @@
-import { colors } from "./theme";
+import { colors } from "./theme"
 
 const palette = {
 	brand: {
@@ -63,6 +63,6 @@ const palette = {
 		pastel: "", // TODO
 		faded: colors.greens[1]
 	}
-};
+}
 
-export { palette };
+export { palette }
