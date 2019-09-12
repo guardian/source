@@ -2,8 +2,9 @@ import React from "react"
 import { css } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { Button } from "./button"
 import { SvgArrowRightStraight } from "@guardian/src-svgs"
+import { size } from "@guardian/src-foundations"
+import { Button } from "./button"
 
 const stories = storiesOf("Button", module)
 /* eslint-disable react/jsx-key */
@@ -12,6 +13,18 @@ const priorityButtons = [
 	<Button>Default</Button>,
 	<Button priority="moderate">Moderate</Button>,
 	<Button priority="low">Low</Button>,
+]
+const priorityButtonsDisabled = [
+	<Button priority="high" disabled>
+		High
+	</Button>,
+	<Button disabled>Default</Button>,
+	<Button priority="moderate" disabled>
+		Moderate
+	</Button>,
+	<Button priority="low" disabled>
+		Low
+	</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,
@@ -32,7 +45,9 @@ const spaceEvenly = css`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+	margin-bottom: ${size.medium}px;
 `
+
 stories
 	.add("priority", () => (
 		<div css={spaceEvenly}>
@@ -42,7 +57,7 @@ stories
 		</div>
 	))
 	.add(
-		"dark blue background",
+		"priority on dark blue",
 		() => (
 			<div css={spaceEvenly}>
 				{priorityButtons.map((button, index) => (
@@ -77,3 +92,25 @@ stories
 			))}
 		</div>
 	))
+	.add("disabled", () => (
+		<div css={spaceEvenly}>
+			{priorityButtonsDisabled.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	))
+	.add(
+		"disabled on dark blue",
+		() => (
+			<div css={spaceEvenly}>
+				{priorityButtonsDisabled.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		),
+		{
+			backgrounds: [
+				Object.assign({}, { default: true }, storybookBackgrounds.blue),
+			],
+		},
+	)

@@ -20,13 +20,18 @@ export const button = css`
 	&:focus {
 		${focusHalo};
 	}
+
+	&:disabled {
+		opacity: 0.3;
+		cursor: not-allowed;
+	}
 `
 
 export const highPriority = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
-	&:hover {
+	&:hover :not(:disabled) {
 		background-color: ${palette.yellow.dark};
 	}
 `
@@ -35,7 +40,7 @@ export const defaultPriority = css`
 	background-color: ${palette.neutral[20]};
 	color: ${palette.neutral[100]};
 
-	&:hover {
+	&:hover :not(:disabled) {
 		background-color: ${palette.neutral[46]};
 	}
 `
@@ -44,7 +49,7 @@ export const moderatePriority = css`
 	background-color: ${palette.neutral[93]};
 	color: ${palette.neutral[7]};
 
-	&:hover {
+	&:hover :not(:disabled) {
 		background-color: ${palette.neutral[86]};
 	}
 `
@@ -53,7 +58,7 @@ export const lowPriority = css`
 	background-color: ${palette.neutral[100]};
 	color: ${palette.neutral[7]};
 
-	&:hover {
+	&:hover :not(:disabled) {
 		background-color: ${palette.neutral[93]};
 	}
 `
