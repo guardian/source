@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgArrowRightStraight } from "@guardian/src-svgs"
+import { SvgCheckmark } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
 
@@ -31,14 +31,14 @@ const sizeButtons = [
 	<Button size="small">Small</Button>,
 ]
 const textIconButtons = [
-	<Button iconSide="left" icon={<SvgArrowRightStraight />}>
+	<Button iconSide="left" icon={<SvgCheckmark />}>
 		Button Label
 	</Button>,
-	<Button iconSide="right" icon={<SvgArrowRightStraight />}>
+	<Button iconSide="right" icon={<SvgCheckmark />}>
 		Button Label
 	</Button>,
 ]
-const iconButtons = [<Button icon={<SvgArrowRightStraight />} />]
+const iconButtons = [<Button icon={<SvgCheckmark />} />]
 /* eslint-enable react/jsx-key */
 
 const spaceEvenly = css`
