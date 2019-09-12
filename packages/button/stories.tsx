@@ -42,7 +42,7 @@ stories
 		</div>
 	))
 	.add(
-		"blue",
+		"dark blue background",
 		() => (
 			<div css={spaceEvenly}>
 				{priorityButtons.map((button, index) => (
