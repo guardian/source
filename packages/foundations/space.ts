@@ -1,4 +1,4 @@
-import { space as _space } from "./theme";
+import { space as _space } from "./theme"
 
 const space = {
 	half: _space[0],
@@ -8,7 +8,7 @@ const space = {
 	4: _space[4],
 	6: _space[5],
 	8: _space[6],
-	16: _space[7]
-};
+	16: _space[7],
+}
 
-export { space };
+export { space }

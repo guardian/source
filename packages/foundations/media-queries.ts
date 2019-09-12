@@ -1,4 +1,4 @@
-import { tweakpoints, breakpoints } from "./theme";
+import { tweakpoints, breakpoints } from "./theme"
 
 const breakpointMap = {
 	mobileMedium: tweakpoints[0],
@@ -7,16 +7,16 @@ const breakpointMap = {
 	tablet: breakpoints[0],
 	desktop: breakpoints[1],
 	leftCol: breakpoints[2],
-	wide: breakpoints[3]
-};
+	wide: breakpoints[3],
+}
 
-const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`;
+const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`
 
 const maxWidth = (until: number): string =>
-	`@media (max-width: ${`${until - 1}px`})`;
+	`@media (max-width: ${`${until - 1}px`})`
 
 const minWidthMaxWidth = (from: number, until: number): string =>
-	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
+	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`
 
 // e.g. until.*
 const until = {
@@ -26,8 +26,8 @@ const until = {
 	tablet: maxWidth(breakpointMap.tablet),
 	desktop: maxWidth(breakpointMap.desktop),
 	leftCol: maxWidth(breakpointMap.leftCol),
-	wide: maxWidth(breakpointMap.wide)
-};
+	wide: maxWidth(breakpointMap.wide),
+}
 
 // e.g. from.*.until.*
 const from = {
@@ -35,107 +35,107 @@ const from = {
 		until: {
 			mobileLandscape: minWidthMaxWidth(
 				breakpointMap.mobileMedium,
-				breakpointMap.mobileLandscape
+				breakpointMap.mobileLandscape,
 			),
 			phablet: minWidthMaxWidth(
 				breakpointMap.mobileMedium,
-				breakpointMap.phablet
+				breakpointMap.phablet,
 			),
 			tablet: minWidthMaxWidth(
 				breakpointMap.mobileMedium,
-				breakpointMap.tablet
+				breakpointMap.tablet,
 			),
 			desktop: minWidthMaxWidth(
 				breakpointMap.mobileMedium,
-				breakpointMap.desktop
+				breakpointMap.desktop,
 			),
 			leftCol: minWidthMaxWidth(
 				breakpointMap.mobileMedium,
-				breakpointMap.leftCol
+				breakpointMap.leftCol,
 			),
 			wide: minWidthMaxWidth(
 				breakpointMap.mobileMedium,
-				breakpointMap.wide
-			)
-		}
+				breakpointMap.wide,
+			),
+		},
 	},
 	mobileLandscape: {
 		until: {
 			phablet: minWidthMaxWidth(
 				breakpointMap.mobileLandscape,
-				breakpointMap.phablet
+				breakpointMap.phablet,
 			),
 			tablet: minWidthMaxWidth(
 				breakpointMap.mobileLandscape,
-				breakpointMap.tablet
+				breakpointMap.tablet,
 			),
 			desktop: minWidthMaxWidth(
 				breakpointMap.mobileLandscape,
-				breakpointMap.desktop
+				breakpointMap.desktop,
 			),
 			leftCol: minWidthMaxWidth(
 				breakpointMap.mobileLandscape,
-				breakpointMap.leftCol
+				breakpointMap.leftCol,
 			),
 			wide: minWidthMaxWidth(
 				breakpointMap.mobileLandscape,
-				breakpointMap.wide
-			)
-		}
+				breakpointMap.wide,
+			),
+		},
 	},
 	phablet: {
 		until: {
 			tablet: minWidthMaxWidth(
 				breakpointMap.phablet,
-				breakpointMap.tablet
+				breakpointMap.tablet,
 			),
 			desktop: minWidthMaxWidth(
 				breakpointMap.phablet,
-				breakpointMap.desktop
+				breakpointMap.desktop,
 			),
 			leftCol: minWidthMaxWidth(
 				breakpointMap.phablet,
-				breakpointMap.leftCol
+				breakpointMap.leftCol,
 			),
-			wide: minWidthMaxWidth(breakpointMap.phablet, breakpointMap.wide)
-		}
+			wide: minWidthMaxWidth(breakpointMap.phablet, breakpointMap.wide),
+		},
 	},
 	tablet: {
 		until: {
 			desktop: minWidthMaxWidth(
 				breakpointMap.tablet,
-				breakpointMap.desktop
+				breakpointMap.desktop,
 			),
 			leftCol: minWidthMaxWidth(
 				breakpointMap.tablet,
-				breakpointMap.leftCol
+				breakpointMap.leftCol,
 			),
-			wide: minWidthMaxWidth(breakpointMap.tablet, breakpointMap.wide)
-		}
+			wide: minWidthMaxWidth(breakpointMap.tablet, breakpointMap.wide),
+		},
 	},
 	desktop: {
 		until: {
 			leftCol: minWidthMaxWidth(
 				breakpointMap.desktop,
-				breakpointMap.leftCol
+				breakpointMap.leftCol,
 			),
-			wide: minWidthMaxWidth(breakpointMap.desktop, breakpointMap.wide)
-		}
+			wide: minWidthMaxWidth(breakpointMap.desktop, breakpointMap.wide),
+		},
 	},
 	leftCol: {
 		until: {
-			wide: minWidthMaxWidth(breakpointMap.leftCol, breakpointMap.wide)
-		}
-	}
-};
+			wide: minWidthMaxWidth(breakpointMap.leftCol, breakpointMap.wide),
+		},
+	},
+}
 
 // min-widths
-const mobileMedium = minWidth(breakpointMap.mobileMedium);
-const mobileLandscape = minWidth(breakpointMap.mobileLandscape);
-const phablet = minWidth(breakpointMap.phablet);
-const tablet = minWidth(breakpointMap.tablet);
-const desktop = minWidth(breakpointMap.desktop);
-const leftCol = minWidth(breakpointMap.leftCol);
+const mobileMedium = minWidth(breakpointMap.mobileMedium)
+const mobileLandscape = minWidth(breakpointMap.mobileLandscape)
+const phablet = minWidth(breakpointMap.phablet)
+const tablet = minWidth(breakpointMap.tablet)
+const desktop = minWidth(breakpointMap.desktop)
+const leftCol = minWidth(breakpointMap.leftCol)
 
 export {
 	from,
@@ -145,5 +145,5 @@ export {
 	phablet,
 	tablet,
 	desktop,
-	leftCol
-};
+	leftCol,
+}

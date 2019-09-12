@@ -1,17 +1,17 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/core"
 import {
 	textSans,
 	palette,
 	space,
 	size,
 	focusHalo,
-	transitions
-} from "@guardian/src-foundations";
+	transitions,
+} from "@guardian/src-foundations"
 
 export const group = css`
 	display: flex;
 	justify-content: flex-start;
-`;
+`
 
 export const label = css`
 	cursor: pointer;
@@ -22,7 +22,7 @@ export const label = css`
 	&:last-of-type {
 		margin-bottom: 0;
 	}
-`;
+`
 
 export const radio = css`
 	@supports (appearance: none) {
@@ -66,12 +66,12 @@ export const radio = css`
 			}
 		}
 	}
-`;
+`
 
 export const text = css`
 	position: relative;
 	${textSans({ level: 3 })};
-`;
+`
 
 export const light = css`
 	label {
@@ -93,7 +93,7 @@ export const light = css`
 			}
 		}
 	}
-`;
+`
 export const dark = css`
 	label {
 		input {
@@ -114,7 +114,7 @@ export const dark = css`
 			}
 		}
 	}
-`;
+`
 
 export const horizontal = css`
 	flex-direction: row;
@@ -122,7 +122,7 @@ export const horizontal = css`
 	label {
 		margin-right: ${space[3]}px;
 	}
-`;
+`
 export const vertical = css`
 	flex-direction: column;
-`;
+`

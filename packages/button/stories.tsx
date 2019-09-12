@@ -2,7 +2,6 @@ import React from "react"
 import { css } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { space } from "@guardian/src-foundations"
 import { Button } from "./button"
 import { SvgArrowRightStraight } from "@guardian/src-svgs"
 
@@ -12,11 +11,11 @@ const priorityButtons = [
 	<Button priority="high">High</Button>,
 	<Button priority="default">Default</Button>,
 	<Button priority="low">Low</Button>,
-	<Button priority="subtle">Subtle</Button>
+	<Button priority="subtle">Subtle</Button>,
 ]
 const sizeButtons = [
 	<Button size="default">Default</Button>,
-	<Button size="small">Small</Button>
+	<Button size="small">Small</Button>,
 ]
 const textIconButtons = [
 	<Button iconSide="left" icon={<SvgArrowRightStraight />}>
@@ -24,7 +23,7 @@ const textIconButtons = [
 	</Button>,
 	<Button iconSide="right" icon={<SvgArrowRightStraight />}>
 		Button Label
-	</Button>
+	</Button>,
 ]
 const iconButtons = [<Button icon={<SvgArrowRightStraight />} />]
 /* eslint-enable react/jsx-key */
@@ -53,9 +52,9 @@ stories
 		),
 		{
 			backgrounds: [
-				Object.assign({}, { default: true }, storybookBackgrounds.blue)
-			]
-		}
+				Object.assign({}, { default: true }, storybookBackgrounds.blue),
+			],
+		},
 	)
 	.add("sizes", () => (
 		<div css={spaceEvenly}>
