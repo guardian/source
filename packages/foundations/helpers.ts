@@ -8,6 +8,7 @@ const visuallyHidden = `
 `
 
 const focusHalo = `
+	outline: 0;
 	box-shadow: 0 0 0 5px #00B2FF;
 	z-index: 9;
 `
