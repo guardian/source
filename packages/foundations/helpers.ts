@@ -5,11 +5,11 @@ const visuallyHidden = `
 	width: 0;
 	top: 0;
 	left: 0;
-`;
+`
 
 const focusHalo = `
 	box-shadow: 0 0 0 5px #00B2FF;
 	z-index: 9;
-`;
+`
 
-export { visuallyHidden, focusHalo };
+export { visuallyHidden, focusHalo }

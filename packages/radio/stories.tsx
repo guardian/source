@@ -1,9 +1,9 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { RadioGroup, Radio } from "./radio";
+import React from "react"
+import { storiesOf } from "@storybook/react"
+import { storybookBackgrounds } from "@guardian/src-helpers"
+import { RadioGroup, Radio } from "./radio"
 
-const stories = storiesOf("Radio", module);
+const stories = storiesOf("Radio", module)
 
 stories.add("default", () => (
 	<RadioGroup name="colours">
@@ -11,7 +11,7 @@ stories.add("default", () => (
 		<Radio value="green" label="Green" defaultChecked />
 		<Radio value="blue" label="Blue" />
 	</RadioGroup>
-));
+))
 stories.add(
 	"dark",
 	() => (
@@ -23,14 +23,14 @@ stories.add(
 	),
 	{
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.dark)
-		]
-	}
-);
+			Object.assign({}, { default: true }, storybookBackgrounds.dark),
+		],
+	},
+)
 stories.add("orientation horizontal", () => (
 	<RadioGroup orientation="horizontal" name="colours">
 		<Radio value="red" label="Red" />
 		<Radio value="green" label="Green" defaultChecked />
 		<Radio value="blue" label="Blue" />
 	</RadioGroup>
-));
+))

@@ -9,7 +9,7 @@ import {
 	smallSize,
 	icon,
 	iconLeft,
-	iconRight
+	iconRight,
 } from "./styles"
 
 type Priority = "high" | "default" | "low" | "subtle"
@@ -22,19 +22,19 @@ const priorities: {
 	high: highPriority,
 	default: defaultPriority,
 	low: lowPriority,
-	subtle: subtlePriority
+	subtle: subtlePriority,
 }
 const iconSides: {
 	[key in IconSide]: any
 } = {
 	right: iconLeft,
-	left: iconRight
+	left: iconRight,
 }
 const sizes: {
 	[key in Size]: any
 } = {
 	default: defaultSize,
-	small: smallSize
+	small: smallSize,
 }
 const Button = ({
 	priority,
@@ -63,7 +63,7 @@ const Button = ({
 				priorities[priority],
 				sizes[size],
 				iconSvg ? icon : "",
-				iconSide ? iconSides[iconSide] : ""
+				iconSide ? iconSides[iconSide] : "",
 			]}
 			{...props}
 		>
@@ -78,7 +78,7 @@ const defaultProps = {
 	priority: "default",
 	size: "default",
 	icon: null,
-	iconSide: null
+	iconSide: null,
 }
 
 Button.defaultProps = { ...defaultProps }
