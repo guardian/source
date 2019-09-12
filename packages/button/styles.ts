@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { textSans, palette, size } from "@guardian/src-foundations"
+import { textSans, palette, size, focusHalo } from "@guardian/src-foundations"
 
 export const button = css`
 	display: inline-flex;
@@ -16,14 +16,17 @@ export const button = css`
 	background: transparent;
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
+
+	&:focus {
+		${focusHalo};
+	}
 `
 
 export const highPriority = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
-	&:hover,
-	&:focus {
+	&:hover {
 		background-color: ${palette.yellow.dark};
 	}
 `
