@@ -56,7 +56,6 @@ const Button = ({
 	size: Size
 	icon?: ReactElement
 	iconSide?: IconSide
-	title?: string
 	"aria-label"?: string
 	children?: ReactNode
 }) => {

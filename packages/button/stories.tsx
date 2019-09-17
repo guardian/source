@@ -35,13 +35,11 @@ const textIconButtons = [
 const iconButtons = [
 	<Button
 		icon={<SvgCheckmark />}
-		title="I accept the terms and conditions"
 		aria-label="I accept the terms and conditions"
 	/>,
 	<Button
 		icon={<SvgCheckmark />}
 		size="small"
-		title="I accept the terms and conditions"
 		aria-label="I accept the terms and conditions"
 	/>,
 ]
