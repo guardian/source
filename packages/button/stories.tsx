@@ -14,17 +14,11 @@ const priorityButtons = [
 	<Button priority="moderate">Moderate</Button>,
 	<Button priority="low">Low</Button>,
 ]
-const priorityButtonsDisabled = [
+const disabledButtons = [
 	<Button priority="high" disabled>
 		High
 	</Button>,
 	<Button disabled>Default</Button>,
-	<Button priority="moderate" disabled>
-		Moderate
-	</Button>,
-	<Button priority="low" disabled>
-		Low
-	</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,
@@ -38,7 +32,19 @@ const textIconButtons = [
 		Button Label
 	</Button>,
 ]
-const iconButtons = [<Button icon={<SvgCheckmark />} />]
+const iconButtons = [
+	<Button
+		icon={<SvgCheckmark />}
+		title="I accept the terms and conditions"
+		aria-label="I accept the terms and conditions"
+	/>,
+	<Button
+		icon={<SvgCheckmark />}
+		size="small"
+		title="I accept the terms and conditions"
+		aria-label="I accept the terms and conditions"
+	/>,
+]
 /* eslint-enable react/jsx-key */
 
 const spaceEvenly = css`
@@ -94,7 +100,7 @@ stories
 	))
 	.add("disabled", () => (
 		<div css={spaceEvenly}>
-			{priorityButtonsDisabled.map((button, index) => (
+			{disabledButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
@@ -103,7 +109,7 @@ stories
 		"disabled on dark blue",
 		() => (
 			<div css={spaceEvenly}>
-				{priorityButtonsDisabled.map((button, index) => (
+				{disabledButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
 			</div>
