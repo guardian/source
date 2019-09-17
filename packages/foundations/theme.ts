@@ -54,7 +54,7 @@ const tweakpoints = [375, 480, 660]
 
 const transitions = [
 	".2s cubic-bezier(.64, .57, .67, 1.53)",
-	".45s ease-in-out",
+	".3s ease-in-out",
 	".65s ease-in-out",
 ]
 
