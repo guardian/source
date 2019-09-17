@@ -56,7 +56,7 @@ const Button = ({
 	size: Size
 	icon?: ReactElement
 	iconSide?: IconSide
-	"aria-label"?: string
+	onClick?: () => void
 	children?: ReactNode
 }) => {
 	const buttonContents = [children]
@@ -82,7 +82,7 @@ const Button = ({
 	)
 }
 const defaultProps = {
-	"aria-label": null,
+	"aria-label": "",
 	type: "button",
 	disabled: false,
 	priority: "default",
