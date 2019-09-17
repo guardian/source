@@ -45,16 +45,20 @@ const iconButtons = [
 ]
 /* eslint-enable react/jsx-key */
 
-const spaceEvenly = css`
+const flexStart = css`
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	margin-bottom: ${size.medium}px;
+
+	> div {
+		margin-right: ${size.medium}px;
+	}
 `
 
 stories
 	.add("priority", () => (
-		<div css={spaceEvenly}>
+		<div css={flexStart}>
 			{priorityButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
@@ -63,7 +67,7 @@ stories
 	.add(
 		"priority on dark blue",
 		() => (
-			<div css={spaceEvenly}>
+			<div css={flexStart}>
 				{priorityButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
@@ -76,28 +80,28 @@ stories
 		},
 	)
 	.add("sizes", () => (
-		<div css={spaceEvenly}>
+		<div css={flexStart}>
 			{sizeButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
 	))
 	.add("text and icon", () => (
-		<div css={spaceEvenly}>
+		<div css={flexStart}>
 			{textIconButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
 	))
 	.add("icon only", () => (
-		<div css={spaceEvenly}>
+		<div css={flexStart}>
 			{iconButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
 	))
 	.add("disabled", () => (
-		<div css={spaceEvenly}>
+		<div css={flexStart}>
 			{disabledButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
@@ -106,7 +110,7 @@ stories
 	.add(
 		"disabled on dark blue",
 		() => (
-			<div css={spaceEvenly}>
+			<div css={flexStart}>
 				{disabledButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
