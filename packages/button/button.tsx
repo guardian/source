@@ -10,6 +10,8 @@ import {
 	icon,
 	iconLeft,
 	iconRight,
+	iconOnlyDefault,
+	iconOnlySmall,
 } from "./styles"
 
 type Priority = "high" | "default" | "moderate" | "low"
@@ -35,6 +37,12 @@ const sizes: {
 } = {
 	default: defaultSize,
 	small: smallSize,
+}
+const iconOnlySizes: {
+	[key in Size]: any
+} = {
+	default: iconOnlyDefault,
+	small: iconOnlySmall,
 }
 const Button = ({
 	priority,
@@ -64,6 +72,7 @@ const Button = ({
 				sizes[size],
 				iconSvg ? icon : "",
 				iconSide ? iconSides[iconSide] : "",
+				!children ? iconOnlySizes[size] : "",
 			]}
 			{...props}
 		>

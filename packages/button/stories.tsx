@@ -38,7 +38,10 @@ const textIconButtons = [
 		Button Label
 	</Button>,
 ]
-const iconButtons = [<Button icon={<SvgCheckmark />} />]
+const iconButtons = [
+	<Button icon={<SvgCheckmark />} />,
+	<Button icon={<SvgCheckmark />} size="small" />,
+]
 /* eslint-enable react/jsx-key */
 
 const spaceEvenly = css`
