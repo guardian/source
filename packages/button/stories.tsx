@@ -14,17 +14,11 @@ const priorityButtons = [
 	<Button priority="moderate">Moderate</Button>,
 	<Button priority="low">Low</Button>,
 ]
-const priorityButtonsDisabled = [
+const disabledButtons = [
 	<Button priority="high" disabled>
 		High
 	</Button>,
 	<Button disabled>Default</Button>,
-	<Button priority="moderate" disabled>
-		Moderate
-	</Button>,
-	<Button priority="low" disabled>
-		Low
-	</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,
@@ -97,7 +91,7 @@ stories
 	))
 	.add("disabled", () => (
 		<div css={spaceEvenly}>
-			{priorityButtonsDisabled.map((button, index) => (
+			{disabledButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
@@ -106,7 +100,7 @@ stories
 		"disabled on dark blue",
 		() => (
 			<div css={spaceEvenly}>
-				{priorityButtonsDisabled.map((button, index) => (
+				{disabledButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
 			</div>
