@@ -9,17 +9,11 @@ import { Button } from "./button"
 const stories = storiesOf("Button", module)
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
-	<Button priority="high">High</Button>,
 	<Button>Default</Button>,
 	<Button priority="moderate">Moderate</Button>,
 	<Button priority="low">Low</Button>,
 ]
-const disabledButtons = [
-	<Button priority="high" disabled>
-		High
-	</Button>,
-	<Button disabled>Default</Button>,
-]
+const disabledButtons = [<Button disabled>Default</Button>]
 const sizeButtons = [
 	<Button>Default</Button>,
 	<Button size="small">Small</Button>,

@@ -1,7 +1,6 @@
 import React, { ReactElement, ReactNode } from "react"
 import {
 	button,
-	highPriority,
 	defaultPriority,
 	lowPriority,
 	moderatePriority,
@@ -14,14 +13,13 @@ import {
 	iconOnlySmall,
 } from "./styles"
 
-type Priority = "high" | "default" | "moderate" | "low"
+type Priority = "default" | "moderate" | "low"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
 
 const priorities: {
 	[key in Priority]: any
 } = {
-	high: highPriority,
 	default: defaultPriority,
 	moderate: moderatePriority,
 	low: lowPriority,
@@ -82,13 +80,10 @@ const Button = ({
 	)
 }
 const defaultProps = {
-	"aria-label": "",
 	type: "button",
 	disabled: false,
 	priority: "default",
 	size: "default",
-	icon: null,
-	iconSide: null,
 }
 
 Button.defaultProps = { ...defaultProps }

@@ -31,21 +31,12 @@ export const button = css`
 	}
 `
 
-export const highPriority = css`
+export const defaultPriority = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
 	&:hover :not(:disabled) {
 		background-color: ${palette.yellow.dark};
-	}
-`
-
-export const defaultPriority = css`
-	background-color: ${palette.neutral[20]};
-	color: ${palette.neutral[100]};
-
-	&:hover :not(:disabled) {
-		background-color: ${palette.neutral[46]};
 	}
 `
 
