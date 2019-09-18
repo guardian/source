@@ -16,7 +16,6 @@ const priorityButtons = [
 	<Button priority="moderate">Moderate</Button>,
 	<Button priority="low">Low</Button>,
 ]
-const disabledButtons = [<Button disabled>Default</Button>]
 const sizeButtons = [
 	<Button>Default</Button>,
 	<Button size="small">Small</Button>,
@@ -68,21 +67,6 @@ stories
 		</WithBackgroundToggle>
 	))
 	.add(
-		"priority on dark blue",
-		() => (
-			<div css={flexStart}>
-				{priorityButtons.map((button, index) => (
-					<div key={index}>{button}</div>
-				))}
-			</div>
-		),
-		{
-			backgrounds: [
-				Object.assign({}, { default: true }, storybookBackgrounds.blue),
-			],
-		},
-	)
-	.add(
 		"priority dark",
 		() => (
 			<WithBackgroundToggle
@@ -124,25 +108,3 @@ stories
 			))}
 		</div>
 	))
-	.add("disabled", () => (
-		<div css={flexStart}>
-			{disabledButtons.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
-	))
-	.add(
-		"disabled on dark blue",
-		() => (
-			<div css={flexStart}>
-				{disabledButtons.map((button, index) => (
-					<div key={index}>{button}</div>
-				))}
-			</div>
-		),
-		{
-			backgrounds: [
-				Object.assign({}, { default: true }, storybookBackgrounds.blue),
-			],
-		},
-	)
