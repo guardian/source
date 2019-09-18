@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
+import { storybookBackgrounds, Toggle } from "@guardian/src-helpers"
 import { SvgCheckmark } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
@@ -51,11 +51,16 @@ const flexStart = css`
 `
 
 stories
-	.add("priority", () => (
+	.add("priority light", () => (
 		<div css={flexStart}>
 			{priorityButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
+			<Toggle
+				storyKind="Button"
+				storyName="priority"
+				selectedValue="light"
+			/>
 		</div>
 	))
 	.add(
@@ -74,12 +79,17 @@ stories
 		},
 	)
 	.add(
-		"priority in dark mode",
+		"priority dark",
 		() => (
 			<div css={flexStart}>
 				{priorityButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
+				<Toggle
+					storyKind="Button"
+					selectedValue="dark"
+					storyName="priority"
+				/>
 			</div>
 		),
 		{
