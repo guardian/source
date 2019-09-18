@@ -82,13 +82,10 @@ const Button = ({
 	)
 }
 const defaultProps = {
-	"aria-label": "",
 	type: "button",
 	disabled: false,
 	priority: "default",
 	size: "default",
-	icon: null,
-	iconSide: null,
 }
 
 Button.defaultProps = { ...defaultProps }
