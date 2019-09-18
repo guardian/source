@@ -1,5 +1,5 @@
 import { linkTo } from "@storybook/addon-links"
-import { ReactNode } from "react"
+import React, { ReactNode } from "react"
 import { css } from "@emotion/core"
 
 const spaceBetween = css`
@@ -23,7 +23,15 @@ export const WithBackgroundToggle = ({
 		{children}
 		<select
 			value={`${storyName} ${selectedValue}`}
-			onChange={linkTo(storyKind, e => e.currentTarget.value)}
+			onChange={linkTo(storyKind, (e: Event) => {
+				const target = e.currentTarget as HTMLSelectElement
+
+				if (!target) {
+					return ""
+				}
+
+				return target.value
+			})}
 		>
 			<option value={`${storyName} light`}>Light Mode</option>
 			<option value={`${storyName} dark`}>Dark Mode</option>
