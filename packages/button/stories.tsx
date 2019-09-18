@@ -79,6 +79,21 @@ stories
 			],
 		},
 	)
+	.add(
+		"priority in dark mode",
+		() => (
+			<div css={flexStart}>
+				{priorityButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		),
+		{
+			backgrounds: [
+				Object.assign({}, { default: true }, storybookBackgrounds.dark),
+			],
+		},
+	)
 	.add("sizes", () => (
 		<div css={flexStart}>
 			{sizeButtons.map((button, index) => (
