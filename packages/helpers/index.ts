@@ -1,2 +1,2 @@
 export { storybookBackgrounds } from "./storybook-bg"
-export { BackgroundToggle } from "./storybook-bg-toggle"
+export { WithBackgroundToggle } from "./storybook-bg-toggle"

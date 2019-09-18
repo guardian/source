@@ -1,7 +1,10 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
-import { storybookBackgrounds, BackgroundToggle } from "@guardian/src-helpers"
+import {
+	storybookBackgrounds,
+	WithBackgroundToggle,
+} from "@guardian/src-helpers"
 import { SvgCheckmark } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
@@ -50,26 +53,19 @@ const flexStart = css`
 	}
 `
 
-const spaceBetween = css`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-`
-
 stories
 	.add("priority light", () => (
-		<div css={spaceBetween}>
+		<WithBackgroundToggle
+			storyKind="Button"
+			storyName="priority"
+			selectedValue="light"
+		>
 			<div css={flexStart}>
 				{priorityButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
 			</div>
-			<BackgroundToggle
-				storyKind="Button"
-				storyName="priority"
-				selectedValue="light"
-			/>
-		</div>
+		</WithBackgroundToggle>
 	))
 	.add(
 		"priority on dark blue",
@@ -89,18 +85,17 @@ stories
 	.add(
 		"priority dark",
 		() => (
-			<div css={spaceBetween}>
+			<WithBackgroundToggle
+				storyKind="Button"
+				storyName="priority"
+				selectedValue="dark"
+			>
 				<div css={flexStart}>
 					{priorityButtons.map((button, index) => (
 						<div key={index}>{button}</div>
 					))}
 				</div>
-				<BackgroundToggle
-					storyKind="Button"
-					selectedValue="dark"
-					storyName="priority"
-				/>
-			</div>
+			</WithBackgroundToggle>
 		),
 		{
 			backgrounds: [
