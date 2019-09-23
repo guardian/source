@@ -13,6 +13,7 @@ function loadStories() {
 addParameters({
 	options: {
 		isToolshown: false,
+		isFullscreen: true,
 	},
 })
 
