@@ -2,6 +2,7 @@
 	"name": "@guardian/src-text-input",
 	"version": "0.0.1",
 	"main": "dist/text-input.js",
+	"module": "dist/text-input.esm.js",
 	"scripts": {
 		"build": "rollup --config",
 		"clean": "rm -rf dist",
@@ -19,8 +20,8 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"text-input.jsx",
-		"styles.js"
+		"text-input.tsx",
+		"styles.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
