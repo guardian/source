@@ -9,7 +9,8 @@ import {
 	moderatePriorityDark,
 	defaultSize,
 	smallSize,
-	icon,
+	iconDefault,
+	iconSmall,
 	iconLeft,
 	iconRight,
 	iconOnlyDefault,
@@ -53,6 +54,12 @@ const sizes: {
 	default: defaultSize,
 	small: smallSize,
 }
+const iconSizes: {
+	[key in Size]: any
+} = {
+	default: iconDefault,
+	small: iconSmall,
+}
 const iconOnlySizes: {
 	[key in Size]: any
 } = {
@@ -88,7 +95,7 @@ const Button = ({
 				button,
 				sizes[size],
 				appearances[appearance][priority],
-				iconSvg ? icon : "",
+				iconSvg ? iconSizes[size] : "",
 				iconSide ? iconSides[iconSide] : "",
 				!children ? iconOnlySizes[size] : "",
 			]}
