@@ -26,7 +26,7 @@ export const button = css`
 	}
 `
 
-export const defaultPriority = css`
+export const highPriority = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
