@@ -1,5 +1,7 @@
 import { configure, addParameters } from "@storybook/react"
 
+const storiesOnly = process.env.NODE_ENV === "production"
+
 function loadStories() {
 	require("../packages/button/stories.tsx")
 	require("../packages/radio/stories.tsx")
@@ -13,8 +15,8 @@ function loadStories() {
 
 addParameters({
 	options: {
-		isToolshown: false,
-		isFullscreen: true,
+		isToolshown: !storiesOnly,
+		isFullscreen: storiesOnly,
 	},
 })
 
