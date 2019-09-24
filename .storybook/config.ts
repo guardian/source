@@ -3,6 +3,7 @@ import { configure, addParameters } from "@storybook/react"
 function loadStories() {
 	require("../packages/button/stories.tsx")
 	require("../packages/radio/stories.tsx")
+	require("../packages/text-input/stories.tsx")
 }
 
 // We hide the toolbar by default to make Storybook embeds
