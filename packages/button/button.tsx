@@ -67,8 +67,8 @@ const Button = ({
 		<button
 			css={[
 				button,
-				priorities[priority],
 				sizes[size],
+				priorities[priority],
 				iconSvg ? icon : "",
 				iconSide ? iconSides[iconSide] : "",
 				!children ? iconOnlySizes[size] : "",

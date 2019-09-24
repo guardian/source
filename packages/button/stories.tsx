@@ -12,17 +12,20 @@ import { Button } from "./button"
 const stories = storiesOf("Button", module)
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
-	<Button>High</Button>,
-	<Button priority="moderate">Moderate</Button>,
-	<Button priority="low">Low</Button>,
+	<Button>High priority</Button>,
+	<Button priority="moderate">Moderate priority</Button>,
+	<Button priority="low">Low priority</Button>,
 ]
-const sizeButtons = [<Button>High</Button>, <Button size="small">Small</Button>]
+const sizeButtons = [
+	<Button>Default</Button>,
+	<Button size="small">Small</Button>,
+]
 const textIconButtons = [
 	<Button iconSide="left" icon={<SvgCheckmark />}>
-		Button Label
+		Left aligned
 	</Button>,
 	<Button iconSide="right" icon={<SvgCheckmark />}>
-		Button Label
+		Right aligned
 	</Button>,
 ]
 const iconButtons = [
