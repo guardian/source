@@ -2,6 +2,7 @@
 	"name": "@guardian/src-button",
 	"version": "0.0.6",
 	"main": "dist/button.js",
+	"module": "dist/button.esm.js",
 	"scripts": {
 		"build": "rollup --config",
 		"clean": "rm -rf dist",
@@ -19,8 +20,8 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"button.jsx",
-		"styles.js"
+		"button.tsx",
+		"styles.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
