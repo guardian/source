@@ -1,9 +1,12 @@
 import React, { ReactElement, ReactNode } from "react"
 import {
 	button,
-	highPriority,
-	lowPriority,
-	moderatePriority,
+	highPriorityLight,
+	lowPriorityLight,
+	moderatePriorityLight,
+	highPriorityDark,
+	lowPriorityDark,
+	moderatePriorityDark,
 	defaultSize,
 	smallSize,
 	icon,
@@ -13,16 +16,30 @@ import {
 	iconOnlySmall,
 } from "./styles"
 
+type Appearance = "light" | "dark"
 type Priority = "high" | "moderate" | "low"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
 
-const priorities: {
+const prioritiesLight: {
 	[key in Priority]: any
 } = {
-	high: highPriority,
-	moderate: moderatePriority,
-	low: lowPriority,
+	high: highPriorityLight,
+	moderate: moderatePriorityLight,
+	low: lowPriorityLight,
+}
+const prioritiesDark: {
+	[key in Priority]: any
+} = {
+	high: highPriorityDark,
+	moderate: moderatePriorityDark,
+	low: lowPriorityDark,
+}
+const appearances: {
+	[key in Appearance]: any
+} = {
+	light: prioritiesLight,
+	dark: prioritiesDark,
 }
 const iconSides: {
 	[key in IconSide]: any
@@ -43,6 +60,7 @@ const iconOnlySizes: {
 	small: iconOnlySmall,
 }
 const Button = ({
+	appearance,
 	priority,
 	size,
 	icon: iconSvg,
@@ -50,6 +68,7 @@ const Button = ({
 	children,
 	...props
 }: {
+	appearance: Appearance
 	priority: Priority
 	size: Size
 	icon?: ReactElement
@@ -68,7 +87,7 @@ const Button = ({
 			css={[
 				button,
 				sizes[size],
-				priorities[priority],
+				appearances[appearance][priority],
 				iconSvg ? icon : "",
 				iconSide ? iconSides[iconSide] : "",
 				!children ? iconOnlySizes[size] : "",
@@ -81,7 +100,7 @@ const Button = ({
 }
 const defaultProps = {
 	type: "button",
-	disabled: false,
+	appearance: "light",
 	priority: "high",
 	size: "default",
 }

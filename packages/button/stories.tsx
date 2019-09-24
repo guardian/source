@@ -5,16 +5,25 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import { SvgCheckmark } from "@guardian/src-svgs"
+import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
 
 const stories = storiesOf("Button", module)
 /* eslint-disable react/jsx-key */
-const priorityButtons = [
+const priorityButtonsLight = [
 	<Button>High priority</Button>,
 	<Button priority="moderate">Moderate priority</Button>,
 	<Button priority="low">Low priority</Button>,
+]
+const priorityButtonsDark = [
+	<Button appearance="dark">High priority</Button>,
+	<Button priority="moderate" appearance="dark">
+		Moderate priority
+	</Button>,
+	<Button priority="low" appearance="dark">
+		Low priority
+	</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,
@@ -24,7 +33,7 @@ const textIconButtons = [
 	<Button iconSide="left" icon={<SvgCheckmark />}>
 		Left aligned
 	</Button>,
-	<Button iconSide="right" icon={<SvgCheckmark />}>
+	<Button iconSide="right" icon={<SvgArrowRightStraight />}>
 		Right aligned
 	</Button>,
 ]
@@ -45,7 +54,6 @@ const flexStart = css`
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	margin-bottom: ${size.medium}px;
 
 	> div {
 		margin-right: ${size.medium}px;
@@ -60,7 +68,7 @@ stories
 			selectedValue="light"
 		>
 			<div css={flexStart}>
-				{priorityButtons.map((button, index) => (
+				{priorityButtonsLight.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
 			</div>
@@ -75,7 +83,7 @@ stories
 				selectedValue="dark"
 			>
 				<div css={flexStart}>
-					{priorityButtons.map((button, index) => (
+					{priorityButtonsDark.map((button, index) => (
 						<div key={index}>{button}</div>
 					))}
 				</div>

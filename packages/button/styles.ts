@@ -26,7 +26,15 @@ export const button = css`
 	}
 `
 
-export const highPriority = css`
+const lowPriority = css`
+	padding: 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+`
+
+export const highPriorityLight = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
@@ -35,7 +43,7 @@ export const highPriority = css`
 	}
 `
 
-export const moderatePriority = css`
+export const moderatePriorityLight = css`
 	background-color: ${palette.neutral[93]};
 	color: ${palette.neutral[7]};
 
@@ -44,14 +52,34 @@ export const moderatePriority = css`
 	}
 `
 
-export const lowPriority = css`
+export const lowPriorityLight = css`
+	${lowPriority};
 	background-color: ${palette.neutral[100]};
 	color: ${palette.neutral[7]};
-	padding: 0;
+`
+
+export const highPriorityDark = css`
+	background-color: ${palette.yellow.main};
+	color: ${palette.neutral[7]};
 
 	&:hover {
-		text-decoration: underline;
+		background-color: ${palette.yellow.dark};
 	}
+`
+
+export const moderatePriorityDark = css`
+	background-color: ${palette.neutral[93]};
+	color: ${palette.neutral[7]};
+
+	&:hover {
+		background-color: ${palette.neutral[86]};
+	}
+`
+
+export const lowPriorityDark = css`
+	${lowPriority};
+	background-color: ${palette.neutral[10]};
+	color: ${palette.neutral[100]};
 `
 
 export const defaultSize = css`
