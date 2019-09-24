@@ -54,7 +54,6 @@ const flexStart = css`
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	margin-bottom: ${size.medium}px;
 
 	> div {
 		margin-right: ${size.medium}px;
