@@ -18,7 +18,9 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"arrow-right-straight.tsx"
+		"arrow-right-straight.tsx",
+		"checkmark.tsx",
+		"close.tsx"
 	],
 	"peerDependencies": {
 		"react": "^16.8.6"

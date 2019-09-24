@@ -5,7 +5,11 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-svgs"
+import {
+	SvgCheckmark,
+	SvgArrowRightStraight,
+	SvgClose,
+} from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
 
@@ -38,14 +42,11 @@ const textIconButtons = [
 	</Button>,
 ]
 const iconButtons = [
+	<Button icon={<SvgClose />} aria-label="Dismiss the subscribe banner" />,
 	<Button
-		icon={<SvgCheckmark />}
-		aria-label="I accept the terms and conditions"
-	/>,
-	<Button
-		icon={<SvgCheckmark />}
+		icon={<SvgClose />}
 		size="small"
-		aria-label="I accept the terms and conditions"
+		aria-label="Dismiss the subscribe banner"
 	/>,
 ]
 /* eslint-enable react/jsx-key */
