@@ -96,13 +96,24 @@ export const smallSize = css`
 	border-radius: ${size.medium / 2}px;
 `
 
-export const icon = css`
+export const iconDefault = css`
 	svg {
 		flex: 0 0 auto;
 		display: block;
 		fill: currentColor;
 		position: relative;
 		width: ${size.large / 2}px;
+		height: auto;
+	}
+`
+
+export const iconSmall = css`
+	svg {
+		flex: 0 0 auto;
+		display: block;
+		fill: currentColor;
+		position: relative;
+		width: ${size.medium / 2}px;
 		height: auto;
 	}
 `
