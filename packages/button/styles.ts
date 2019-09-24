@@ -47,9 +47,10 @@ export const moderatePriority = css`
 export const lowPriority = css`
 	background-color: ${palette.neutral[100]};
 	color: ${palette.neutral[7]};
+	padding: 0;
 
 	&:hover {
-		background-color: ${palette.neutral[93]};
+		text-decoration: underline;
 	}
 `
 
