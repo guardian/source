@@ -27,10 +27,4 @@ $ cd packages/my-component
 $ yarn publish
 ```
 
-**2.** From the root level, re-deploy the Storybook docs:
-
-```sh
-$ yarn deploy
-```
-
-**3.** Raise a Pull Request against the [Source website repo](https://github.com/guardian/source-website), updating the version of the component and any making necessary documentation changes.
+**2.** Make necessary changes to the [documentation site](https://zeroheight.com/2a1e5182b)
