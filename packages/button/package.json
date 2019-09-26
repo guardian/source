@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.0.6",
+	"version": "0.0.8",
 	"main": "dist/button.js",
 	"module": "dist/button.esm.js",
 	"scripts": {
@@ -28,7 +28,7 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-foundations": "^0.0.5",
+		"@guardian/src-foundations": "^0.2.1",
 		"@guardian/src-helpers": "^0.0.1",
 		"@guardian/src-svgs": "^0.0.2"
 	}
