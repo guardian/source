@@ -82,6 +82,54 @@ export const lowPriorityDark = css`
 	color: ${palette.neutral[100]};
 `
 
+export const highPriorityBlue = css`
+	background-color: ${palette.yellow.main};
+	color: ${palette.neutral[7]};
+
+	&:hover {
+		background-color: ${palette.yellow.dark};
+	}
+`
+
+export const moderatePriorityBlue = css`
+	background-color: ${palette.neutral[93]};
+	color: ${palette.neutral[7]};
+
+	&:hover {
+		background-color: ${palette.neutral[86]};
+	}
+`
+
+export const lowPriorityBlue = css`
+	${lowPriority};
+	background-color: ${palette.neutral[10]};
+	color: ${palette.neutral[100]};
+`
+
+export const highPriorityYellow = css`
+	background-color: ${palette.yellow.main};
+	color: ${palette.neutral[7]};
+
+	&:hover {
+		background-color: ${palette.yellow.dark};
+	}
+`
+
+export const moderatePriorityYellow = css`
+	background-color: ${palette.neutral[93]};
+	color: ${palette.neutral[7]};
+
+	&:hover {
+		background-color: ${palette.neutral[86]};
+	}
+`
+
+export const lowPriorityYellow = css`
+	${lowPriority};
+	background-color: ${palette.neutral[10]};
+	color: ${palette.neutral[100]};
+`
+
 export const defaultSize = css`
 	height: ${size.large}px;
 	min-height: ${size.large}px;
