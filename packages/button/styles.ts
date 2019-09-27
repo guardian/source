@@ -102,16 +102,16 @@ export const moderatePriorityBlue = css`
 
 export const lowPriorityBlue = css`
 	${lowPriority};
-	background-color: ${palette.neutral[10]};
+	background-color: ${palette.brand.main};
 	color: ${palette.neutral[100]};
 `
 
 export const highPriorityYellow = css`
-	background-color: ${palette.yellow.main};
-	color: ${palette.neutral[7]};
+	background-color: ${palette.neutral[7]};
+	color: ${palette.neutral[100]};
 
 	&:hover {
-		background-color: ${palette.yellow.dark};
+		background-color: ${palette.neutral[46]};
 	}
 `
 
@@ -126,8 +126,8 @@ export const moderatePriorityYellow = css`
 
 export const lowPriorityYellow = css`
 	${lowPriority};
-	background-color: ${palette.neutral[10]};
-	color: ${palette.neutral[100]};
+	background-color: ${palette.yellow.main};
+	color: ${palette.neutral[7]};
 `
 
 export const defaultSize = css`
