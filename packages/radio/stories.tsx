@@ -1,36 +1,45 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { RadioGroup, Radio } from "./radio"
 
-const stories = storiesOf("Radio", module)
+export default {
+	title: "Radio",
+}
 
-stories.add("default", () => (
+export const simple = () => (
 	<RadioGroup name="colours">
 		<Radio value="red" label="Red" />
 		<Radio value="green" label="Green" defaultChecked />
 		<Radio value="blue" label="Blue" />
 	</RadioGroup>
-))
-stories.add(
-	"dark",
-	() => (
-		<RadioGroup appearance="dark" name="colours">
-			<Radio value="red" label="Red" />
-			<Radio value="green" label="Green" defaultChecked />
-			<Radio value="blue" label="Blue" />
-		</RadioGroup>
-	),
-	{
+)
+simple.story = {
+	name: "default",
+}
+
+export const dark = () => (
+	<RadioGroup appearance="dark" name="colours">
+		<Radio value="red" label="Red" />
+		<Radio value="green" label="Green" defaultChecked />
+		<Radio value="blue" label="Blue" />
+	</RadioGroup>
+)
+dark.story = {
+	name: "dark",
+	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.dark),
 		],
 	},
-)
-stories.add("orientation horizontal", () => (
+}
+
+export const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="colours">
 		<Radio value="red" label="Red" />
 		<Radio value="green" label="Green" defaultChecked />
 		<Radio value="blue" label="Blue" />
 	</RadioGroup>
-))
+)
+horizontal.story = {
+	name: "orientation horizontal",
+}
