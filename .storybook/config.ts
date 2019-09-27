@@ -2,12 +2,6 @@ import { configure, addParameters } from "@storybook/react"
 
 const storiesOnly = process.env.NODE_ENV === "production"
 
-function loadStories() {
-	require("../packages/button/stories.tsx")
-	require("../packages/radio/stories.tsx")
-	require("../packages/text-input/stories.tsx")
-}
-
 // We hide the toolbar by default to make Storybook embeds
 // look nicer in Zeroheight. Related discussion:
 // https://github.com/storybookjs/storybook/issues/8129
@@ -20,4 +14,4 @@ addParameters({
 	},
 })
 
-configure(loadStories, module)
+configure(require.context("../packages", true, /stories\.tsx$/), module)
