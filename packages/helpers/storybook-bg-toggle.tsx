@@ -33,8 +33,10 @@ export const WithBackgroundToggle = ({
 				return target.value
 			})}
 		>
-			<option value={`${storyName} light`}>Light Mode</option>
-			<option value={`${storyName} dark`}>Dark Mode</option>
+			<option value={`${storyName} light`}>Light mode</option>
+			<option value={`${storyName} dark`}>Dark mode</option>
+			<option value={`${storyName} blue`}>Blue background</option>
+			<option value={`${storyName} yellow`}>Yellow background</option>
 		</select>
 	</div>
 )

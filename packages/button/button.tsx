@@ -7,6 +7,12 @@ import {
 	highPriorityDark,
 	lowPriorityDark,
 	moderatePriorityDark,
+	highPriorityBlue,
+	lowPriorityBlue,
+	moderatePriorityBlue,
+	highPriorityYellow,
+	lowPriorityYellow,
+	moderatePriorityYellow,
 	defaultSize,
 	smallSize,
 	iconDefault,
@@ -16,8 +22,8 @@ import {
 	iconOnlyDefault,
 	iconOnlySmall,
 } from "./styles"
+import { Appearance } from "@guardian/src-helpers"
 
-type Appearance = "light" | "dark"
 type Priority = "high" | "moderate" | "low"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
@@ -36,11 +42,27 @@ const prioritiesDark: {
 	moderate: moderatePriorityDark,
 	low: lowPriorityDark,
 }
+const prioritiesBlue: {
+	[key in Priority]: any
+} = {
+	high: highPriorityBlue,
+	moderate: moderatePriorityBlue,
+	low: lowPriorityBlue,
+}
+const prioritiesYellow: {
+	[key in Priority]: any
+} = {
+	high: highPriorityYellow,
+	moderate: moderatePriorityYellow,
+	low: lowPriorityYellow,
+}
 const appearances: {
 	[key in Appearance]: any
 } = {
 	light: prioritiesLight,
 	dark: prioritiesDark,
+	blue: prioritiesBlue,
+	yellow: prioritiesYellow,
 }
 const iconSides: {
 	[key in IconSide]: any
