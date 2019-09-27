@@ -1,6 +1,5 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { storiesOf } from "@storybook/react"
 import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
@@ -13,7 +12,6 @@ import {
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
 
-const stories = storiesOf("Button", module)
 /* eslint-disable react/jsx-key */
 const priorityButtonsLight = [
 	<Button>High priority</Button>,
@@ -79,106 +77,121 @@ const flexStart = css`
 	}
 `
 
-stories
-	.add("priority light", () => (
-		<WithBackgroundToggle
-			storyKind="Button"
-			storyName="priority"
-			selectedValue="light"
-		>
-			<div css={flexStart}>
-				{priorityButtonsLight.map((button, index) => (
-					<div key={index}>{button}</div>
-				))}
-			</div>
-		</WithBackgroundToggle>
-	))
-	.add(
-		"priority dark",
-		() => (
-			<WithBackgroundToggle
-				storyKind="Button"
-				storyName="priority"
-				selectedValue="dark"
-			>
-				<div css={flexStart}>
-					{priorityButtonsDark.map((button, index) => (
-						<div key={index}>{button}</div>
-					))}
-				</div>
-			</WithBackgroundToggle>
-		),
-		{
-			backgrounds: [
-				Object.assign({}, { default: true }, storybookBackgrounds.dark),
-			],
-		},
-	)
-	.add(
-		"priority blue",
-		() => (
-			<WithBackgroundToggle
-				storyKind="Button"
-				storyName="priority"
-				selectedValue="blue"
-			>
-				<div css={flexStart}>
-					{priorityButtonsBlue.map((button, index) => (
-						<div key={index}>{button}</div>
-					))}
-				</div>
-			</WithBackgroundToggle>
-		),
-		{
-			backgrounds: [
-				Object.assign({}, { default: true }, storybookBackgrounds.blue),
-			],
-		},
-	)
+export default {
+	title: "Button",
+	component: Button,
+}
 
-	.add(
-		"priority yellow",
-		() => (
-			<WithBackgroundToggle
-				storyKind="Button"
-				storyName="priority"
-				selectedValue="yellow"
-			>
-				<div css={flexStart}>
-					{priorityButtonsYellow.map((button, index) => (
-						<div key={index}>{button}</div>
-					))}
-				</div>
-			</WithBackgroundToggle>
-		),
-		{
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds.yellow,
-				),
-			],
-		},
-	)
-	.add("sizes", () => (
+export const priorityLight = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="light"
+	>
 		<div css={flexStart}>
-			{sizeButtons.map((button, index) => (
+			{priorityButtonsLight.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
-	))
-	.add("text and icon", () => (
+	</WithBackgroundToggle>
+)
+priorityLight.story = { name: "priority light" }
+
+export const priorityDark = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="dark"
+	>
 		<div css={flexStart}>
-			{textIconButtons.map((button, index) => (
+			{priorityButtonsDark.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
-	))
-	.add("icon only", () => (
+	</WithBackgroundToggle>
+)
+priorityDark.story = {
+	name: "priority dark",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.dark),
+		],
+	},
+}
+
+export const priorityBlue = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="blue"
+	>
 		<div css={flexStart}>
-			{iconButtons.map((button, index) => (
+			{priorityButtonsBlue.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
-	))
+	</WithBackgroundToggle>
+)
+priorityBlue.story = {
+	name: "priority blue",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.blue),
+		],
+	},
+}
+
+export const priorityYellow = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="yellow"
+	>
+		<div css={flexStart}>
+			{priorityButtonsYellow.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	</WithBackgroundToggle>
+)
+priorityYellow.story = {
+	name: "priority yellow",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
+		],
+	},
+}
+
+export const sizes = () => (
+	<div css={flexStart}>
+		{sizeButtons.map((button, index) => (
+			<div key={index}>{button}</div>
+		))}
+	</div>
+)
+sizes.story = {
+	name: "sizes",
+}
+
+export const textAndIcon = () => (
+	<div css={flexStart}>
+		{textIconButtons.map((button, index) => (
+			<div key={index}>{button}</div>
+		))}
+	</div>
+)
+textAndIcon.story = {
+	name: "text and icon",
+}
+
+export const iconOnly = () => (
+	<div css={flexStart}>
+		{iconButtons.map((button, index) => (
+			<div key={index}>{button}</div>
+		))}
+	</div>
+)
+iconOnly.story = {
+	name: "icon only",
+}
