@@ -16,8 +16,8 @@ export const group = css`
 export const label = css`
 	cursor: pointer;
 	display: flex;
-	align-items: center;
-	height: ${size.large}px;
+	align-items: flex-start;
+	margin-bottom: ${space[3]}px;
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -29,7 +29,6 @@ export const radio = css`
 		appearance: none;
 		outline: 0;
 		cursor: pointer;
-		color: inherit;
 		box-sizing: border-box;
 		display: inline-block;
 		width: ${size.small}px;
@@ -68,52 +67,60 @@ export const radio = css`
 	}
 `
 
-export const text = css`
-	position: relative;
+export const labelText = css`
 	${textSans({ level: 3 })};
 `
 
-export const light = css`
-	label {
+export const labelTextWithSupportingText = css`
+	${textSans({ level: 3, fontWeight: "bold" })};
+`
+
+export const supportingText = css`
+	${textSans({ level: 3 })};
+`
+
+export const lightLabel = css`
+	&:hover {
 		input {
-			color: ${palette.neutral[60]};
-
-			&:checked {
-				color: ${palette.brand.main};
-			}
-		}
-
-		span {
-			color: ${palette.neutral[20]};
-		}
-
-		&:hover {
-			input {
-				border-color: ${palette.brand.main};
-			}
+			border-color: ${palette.brand.main};
 		}
 	}
 `
-export const dark = css`
-	label {
+export const lightRadio = css`
+	color: ${palette.neutral[60]};
+
+	&:checked {
+		color: ${palette.brand.main};
+	}
+`
+export const lightText = css`
+	color: ${palette.neutral[20]};
+`
+
+export const lightSupportingText = css`
+	color: ${palette.neutral[46]};
+`
+
+export const darkLabel = css`
+	&:hover {
 		input {
-			color: ${palette.brand.pastel};
-
-			&:checked {
-				color: ${palette.neutral[100]};
-			}
-		}
-
-		span {
-			color: ${palette.neutral[100]};
-		}
-
-		&:hover {
-			input {
-				border-color: ${palette.neutral[100]};
-			}
+			border-color: ${palette.neutral[100]};
 		}
 	}
+`
+export const darkRadio = css`
+	color: ${palette.brand.pastel};
+
+	&:checked {
+		color: ${palette.neutral[100]};
+	}
+`
+export const darkText = css`
+	color: ${palette.neutral[100]};
+`
+
+export const darkSupportingText = css`
+	color: ${palette.neutral[60]};
 `
 
 export const horizontal = css`
