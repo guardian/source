@@ -23,10 +23,14 @@ const backgroundColour = css`
 ### [Media queries](https://zeroheight.com/2a1e5182b/p/14af24)
 
 ```ts
-import { from, until } from "@guardian/src-foundations"
+import { mobileLandscape, from, until } from "@guardian/src-foundations"
 
 const styles = css`
 	padding: 0 10px;
+
+    ${mobileLandscape} {		
+ 		padding: 0 20px;		
+ 	}
 
 	${from.phablet.until.desktop} {
 		padding: 0 32px;
