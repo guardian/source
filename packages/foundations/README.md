@@ -28,10 +28,6 @@ import { from, until } from "@guardian/src-foundations"
 const styles = css`
 	padding: 0 10px;
 
-	${from.mobileLandscape} {
-		padding: 0 20px;
-	}
-
 	${from.phablet.until.desktop} {
 		padding: 0 32px;
 	}
