@@ -118,7 +118,7 @@ verticalYellow.story = {
 }
 
 export const horizontal = () => (
-	<RadioGroup orientation="horizontal" name="binary">
+	<RadioGroup orientation="horizontal" name="yes-or-no">
 		<Radio value="yes" label="Yes" />
 		<Radio value="no" label="No" defaultChecked />
 	</RadioGroup>
@@ -150,7 +150,7 @@ export const supportingTextDark = () => (
 		storyName="supporting text"
 		selectedValue="dark"
 	>
-		<RadioGroup appearance="dark" name="options">
+		<RadioGroup appearance="dark" name="payment-options">
 			{radiosWithSupportingText.map((radio, index) =>
 				React.cloneElement(radio, { key: index }),
 			)}
@@ -172,7 +172,7 @@ export const supportingTextBlue = () => (
 		storyName="supporting text"
 		selectedValue="blue"
 	>
-		<RadioGroup appearance="blue" name="options">
+		<RadioGroup appearance="blue" name="payment-options">
 			{radiosWithSupportingText.map((radio, index) =>
 				React.cloneElement(radio, { key: index }),
 			)}
@@ -194,7 +194,7 @@ export const supportingTextYellow = () => (
 		storyName="supporting text"
 		selectedValue="yellow"
 	>
-		<RadioGroup appearance="yellow" name="options">
+		<RadioGroup appearance="yellow" name="payment-options">
 			{radiosWithSupportingText.map((radio, index) =>
 				React.cloneElement(radio, { key: index }),
 			)}
