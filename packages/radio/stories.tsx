@@ -78,7 +78,7 @@ export const verticalYellow = () => (
 		<RadioGroup appearance="yellow" name="colours">
 			<Radio value="red" label="Red" />
 			<Radio value="green" label="Green" defaultChecked />
-			<Radio value="yellow" label="yellow" />
+			<Radio value="blue" label="Blue" />
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -99,4 +99,87 @@ export const horizontal = () => (
 )
 horizontal.story = {
 	name: "orientation horizontal",
+}
+
+export const supportingTextLight = () => (
+	<WithBackgroundToggle
+		storyKind="Radio"
+		storyName="supporting text"
+		selectedValue="light"
+	>
+		<RadioGroup name="options">
+			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
+			<Radio value="option-2" label="Option 2" defaultChecked />
+			<Radio value="option-3" label="Option 3" />
+		</RadioGroup>
+	</WithBackgroundToggle>
+)
+supportingTextLight.story = {
+	name: "supporting text light",
+}
+
+export const supportingTextDark = () => (
+	<WithBackgroundToggle
+		storyKind="Radio"
+		storyName="supporting text"
+		selectedValue="dark"
+	>
+		<RadioGroup appearance="dark" name="options">
+			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
+			<Radio value="option-2" label="Option 2" defaultChecked />
+			<Radio value="option-3" label="Option 3" />
+		</RadioGroup>
+	</WithBackgroundToggle>
+)
+supportingTextDark.story = {
+	name: "supporting text dark",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.dark),
+		],
+	},
+}
+
+export const supportingTextBlue = () => (
+	<WithBackgroundToggle
+		storyKind="Radio"
+		storyName="supporting text"
+		selectedValue="blue"
+	>
+		<RadioGroup appearance="blue" name="options">
+			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
+			<Radio value="option-2" label="Option 2" defaultChecked />
+			<Radio value="option-3" label="Option 3" />
+		</RadioGroup>
+	</WithBackgroundToggle>
+)
+supportingTextBlue.story = {
+	name: "supporting text blue",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.blue),
+		],
+	},
+}
+
+export const supportingTextYellow = () => (
+	<WithBackgroundToggle
+		storyKind="Radio"
+		storyName="supporting text"
+		selectedValue="yellow"
+	>
+		<RadioGroup appearance="yellow" name="options">
+			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
+			<Radio value="option-2" label="Option 2" defaultChecked />
+			<Radio value="option-3" label="Option 3" />
+		</RadioGroup>
+	</WithBackgroundToggle>
+)
+supportingTextYellow.story = {
+	name: "supporting text yellow",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
+		],
+	},
 }

@@ -16,8 +16,8 @@ export const group = css`
 export const label = css`
 	cursor: pointer;
 	display: flex;
-	align-items: center;
-	height: ${size.large}px;
+	align-items: flex-start;
+	margin-bottom: ${space[3]}px;
 
 	&:last-of-type {
 		margin-bottom: 0;
@@ -67,8 +67,15 @@ export const radio = css`
 	}
 `
 
-export const text = css`
-	position: relative;
+export const labelText = css`
+	${textSans({ level: 3 })};
+`
+
+export const labelTextWithSupportingText = css`
+	${textSans({ level: 3, fontWeight: "bold" })};
+`
+
+export const supportingText = css`
 	${textSans({ level: 3 })};
 `
 
@@ -90,6 +97,10 @@ export const lightText = css`
 	color: ${palette.neutral[20]};
 `
 
+export const lightSupportingText = css`
+	color: ${palette.neutral[46]};
+`
+
 export const darkLabel = css`
 	&:hover {
 		input {
@@ -106,6 +117,10 @@ export const darkRadio = css`
 `
 export const darkText = css`
 	color: ${palette.neutral[100]};
+`
+
+export const darkSupportingText = css`
+	color: ${palette.neutral[60]};
 `
 
 export const horizontal = css`
