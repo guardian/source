@@ -28,9 +28,9 @@ import { mobileLandscape, from, until } from "@guardian/src-foundations"
 const styles = css`
 	padding: 0 10px;
 
-    ${mobileLandscape} {		
- 		padding: 0 20px;		
- 	}
+	${mobileLandscape} {
+		padding: 0 20px;
+	}
 
 	${from.phablet.until.desktop} {
 		padding: 0 32px;
@@ -49,7 +49,7 @@ Output:
 	padding: 0 10px;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 480px) {
 	.class-name {
 		padding: 0 20px;
 	}
