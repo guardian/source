@@ -4,18 +4,40 @@ import {
 	label,
 	radio,
 	text,
-	dark,
-	light,
+	lightLabel,
+	lightRadio,
+	lightText,
+	darkLabel,
+	darkRadio,
+	darkText,
 	horizontal,
 	vertical,
 } from "./styles"
+import { Appearance } from "@guardian/src-helpers"
 
-type Appearance = "light" | "dark"
 type Orientation = "vertical" | "horizontal"
 
 const appearanceStyles = {
-	light: light,
-	dark: dark,
+	light: {
+		label: lightLabel,
+		radio: lightRadio,
+		text: lightText,
+	},
+	dark: {
+		label: darkLabel,
+		radio: darkRadio,
+		text: darkText,
+	},
+	blue: {
+		label: darkLabel,
+		radio: darkRadio,
+		text: darkText,
+	},
+	yellow: {
+		label: lightLabel,
+		radio: lightRadio,
+		text: lightText,
+	},
 }
 
 const orientationStyles = {
@@ -36,14 +58,7 @@ const RadioGroup = ({
 	children: ReactNode
 }) => {
 	return (
-		<div
-			css={[
-				group,
-				appearanceStyles[appearance],
-				orientationStyles[orientation],
-			]}
-			{...props}
-		>
+		<div css={[group, orientationStyles[orientation]]} {...props}>
 			{React.Children.map(children, child => {
 				if (!React.isValidElement(child)) {
 					// Consumer is probably passing a text node as a child
@@ -51,7 +66,7 @@ const RadioGroup = ({
 					return <div />
 				}
 
-				return React.cloneElement(child, { name })
+				return React.cloneElement(child, { name, appearance })
 			})}
 		</div>
 	)
@@ -60,22 +75,26 @@ const Radio = ({
 	value,
 	label: labelText,
 	defaultChecked,
+	appearance,
 	...props
 }: {
 	value: string
 	label: string
+	appearance: Appearance
 	defaultChecked?: boolean
 }) => {
 	return (
-		<label css={label}>
+		<label css={[label, appearanceStyles[appearance].label]}>
 			<input
-				css={radio}
+				css={[radio, appearanceStyles[appearance].radio]}
 				value={value}
 				type="radio"
 				defaultChecked={defaultChecked}
 				{...props}
 			/>
-			<span css={text}>{labelText}</span>
+			<span css={[text, appearanceStyles[appearance].text]}>
+				{labelText}
+			</span>
 		</label>
 	)
 }
@@ -88,6 +107,7 @@ const radioGroupDefaultProps = {
 }
 const radioDefaultProps = {
 	disabled: false,
+	appearance: appearances[0],
 }
 
 Radio.defaultProps = { ...radioDefaultProps }

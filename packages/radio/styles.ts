@@ -29,7 +29,6 @@ export const radio = css`
 		appearance: none;
 		outline: 0;
 		cursor: pointer;
-		color: inherit;
 		box-sizing: border-box;
 		display: inline-block;
 		width: ${size.small}px;
@@ -73,47 +72,40 @@ export const text = css`
 	${textSans({ level: 3 })};
 `
 
-export const light = css`
-	label {
+export const lightLabel = css`
+	&:hover {
 		input {
-			color: ${palette.neutral[60]};
-
-			&:checked {
-				color: ${palette.brand.main};
-			}
-		}
-
-		span {
-			color: ${palette.neutral[20]};
-		}
-
-		&:hover {
-			input {
-				border-color: ${palette.brand.main};
-			}
+			border-color: ${palette.brand.main};
 		}
 	}
 `
-export const dark = css`
-	label {
+export const lightRadio = css`
+	color: ${palette.neutral[60]};
+
+	&:checked {
+		color: ${palette.brand.main};
+	}
+`
+export const lightText = css`
+	color: ${palette.neutral[20]};
+`
+
+export const darkLabel = css`
+	&:hover {
 		input {
-			color: ${palette.brand.pastel};
-
-			&:checked {
-				color: ${palette.neutral[100]};
-			}
-		}
-
-		span {
-			color: ${palette.neutral[100]};
-		}
-
-		&:hover {
-			input {
-				border-color: ${palette.neutral[100]};
-			}
+			border-color: ${palette.neutral[100]};
 		}
 	}
+`
+export const darkRadio = css`
+	color: ${palette.brand.pastel};
+
+	&:checked {
+		color: ${palette.neutral[100]};
+	}
+`
+export const darkText = css`
+	color: ${palette.neutral[100]};
 `
 
 export const horizontal = css`
