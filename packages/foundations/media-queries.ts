@@ -136,6 +136,7 @@ const phablet = minWidth(breakpointMap.phablet)
 const tablet = minWidth(breakpointMap.tablet)
 const desktop = minWidth(breakpointMap.desktop)
 const leftCol = minWidth(breakpointMap.leftCol)
+const wide = minWidth(breakpointMap.wide)
 
 export {
 	from,
@@ -146,4 +147,5 @@ export {
 	tablet,
 	desktop,
 	leftCol,
+	wide,
 }
