@@ -5,6 +5,32 @@ import {
 } from "@guardian/src-helpers"
 import { RadioGroup, Radio } from "./radio"
 
+/* eslint-disable react/jsx-key */
+const radios = [
+	<Radio value="red" label="Red" />,
+	<Radio value="green" label="Green" defaultChecked />,
+	<Radio value="blue" label="Blue" />,
+]
+const radiosWithSupportingText = [
+	<Radio
+		value="6-for-6"
+		label="6 for 6"
+		supporting="£6 for the first 6 issues (then £37.50 every quarter)"
+	/>,
+	<Radio
+		value="quarterly"
+		label="Quarterly"
+		supporting="£37.50 every quarter"
+		defaultChecked
+	/>,
+	<Radio
+		value="annual"
+		label="Annual"
+		supporting="Subscribe for 12 months and save 10% £135 for 1 year then standard rate (£150 every year)"
+	/>,
+]
+/* eslint-enable react/jsx-key */
+
 export default {
 	title: "Radio",
 }
@@ -16,9 +42,9 @@ export const verticalLight = () => (
 		selectedValue="light"
 	>
 		<RadioGroup name="colours">
-			<Radio value="red" label="Red" />
-			<Radio value="green" label="Green" defaultChecked />
-			<Radio value="blue" label="Blue" />
+			{radios.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -33,9 +59,9 @@ export const verticalDark = () => (
 		selectedValue="dark"
 	>
 		<RadioGroup appearance="dark" name="colours">
-			<Radio value="red" label="Red" />
-			<Radio value="green" label="Green" defaultChecked />
-			<Radio value="blue" label="Blue" />
+			{radios.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -54,9 +80,9 @@ export const verticalBlue = () => (
 		selectedValue="blue"
 	>
 		<RadioGroup appearance="blue" name="colours">
-			<Radio value="red" label="Red" />
-			<Radio value="green" label="Green" defaultChecked />
-			<Radio value="blue" label="Blue" />
+			{radios.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -76,9 +102,9 @@ export const verticalYellow = () => (
 		selectedValue="yellow"
 	>
 		<RadioGroup appearance="yellow" name="colours">
-			<Radio value="red" label="Red" />
-			<Radio value="green" label="Green" defaultChecked />
-			<Radio value="blue" label="Blue" />
+			{radios.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -107,10 +133,10 @@ export const supportingTextLight = () => (
 		storyName="supporting text"
 		selectedValue="light"
 	>
-		<RadioGroup name="options">
-			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
-			<Radio value="option-2" label="Option 2" defaultChecked />
-			<Radio value="option-3" label="Option 3" />
+		<RadioGroup name="payment-options">
+			{radiosWithSupportingText.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -125,9 +151,9 @@ export const supportingTextDark = () => (
 		selectedValue="dark"
 	>
 		<RadioGroup appearance="dark" name="options">
-			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
-			<Radio value="option-2" label="Option 2" defaultChecked />
-			<Radio value="option-3" label="Option 3" />
+			{radiosWithSupportingText.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -147,9 +173,9 @@ export const supportingTextBlue = () => (
 		selectedValue="blue"
 	>
 		<RadioGroup appearance="blue" name="options">
-			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
-			<Radio value="option-2" label="Option 2" defaultChecked />
-			<Radio value="option-3" label="Option 3" />
+			{radiosWithSupportingText.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
@@ -169,9 +195,9 @@ export const supportingTextYellow = () => (
 		selectedValue="yellow"
 	>
 		<RadioGroup appearance="yellow" name="options">
-			<Radio value="option-1" label="Option 1" supporting="Lorem ipsum" />
-			<Radio value="option-2" label="Option 2" defaultChecked />
-			<Radio value="option-3" label="Option 3" />
+			{radiosWithSupportingText.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
 		</RadioGroup>
 	</WithBackgroundToggle>
 )
