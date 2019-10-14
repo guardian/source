@@ -4,6 +4,7 @@ import {
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
 import { RadioGroup, Radio } from "./radio"
+import { Appearance } from "@guardian/src-helpers"
 
 /* eslint-disable react/jsx-key */
 const radios = [
@@ -29,183 +30,131 @@ const radiosWithSupportingText = [
 		supporting="Subscribe for 12 months and save 10% £135 for 1 year then standard rate (£150 every year)"
 	/>,
 ]
+const unselectedRadios = [
+	<Radio value="red" label="Red" />,
+	<Radio value="green" label="Green" />,
+	<Radio value="blue" label="Blue" />,
+]
 /* eslint-enable react/jsx-key */
 
 export default {
 	title: "Radio",
 }
 
-export const verticalLight = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="vertical"
-		selectedValue="light"
-	>
-		<RadioGroup name="colours">
-			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
-)
-verticalLight.story = {
-	name: "vertical light",
-}
+const appearances: Appearance[] = ["light", "dark", "blue", "yellow"]
 
-export const verticalDark = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="vertical"
-		selectedValue="dark"
-	>
-		<RadioGroup appearance="dark" name="colours">
-			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
-)
-verticalDark.story = {
-	name: "vertical dark",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.dark),
-		],
-	},
-}
-export const verticalBlue = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="vertical"
-		selectedValue="blue"
-	>
-		<RadioGroup appearance="blue" name="colours">
-			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
-)
-verticalBlue.story = {
-	name: "vertical blue",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.blue),
-		],
-	},
-}
+const [
+	verticalLight,
+	verticalDark,
+	verticalBlue,
+	verticalYellow,
+] = appearances.map((appearance: Appearance) => {
+	const story = () => (
+		<WithBackgroundToggle
+			storyKind="Radio"
+			storyName="vertical"
+			selectedValue={appearance}
+		>
+			<RadioGroup appearance={appearance} name="colours">
+				{radios.map((radio, index) =>
+					React.cloneElement(radio, { key: index }),
+				)}
+			</RadioGroup>
+		</WithBackgroundToggle>
+	)
+	story.story = {
+		name: `vertical ${appearance}`,
+		parameters: {
+			backgrounds: [
+				Object.assign(
+					{},
+					{ default: true },
+					storybookBackgrounds[appearance],
+				),
+			],
+		},
+	}
 
-export const verticalYellow = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="vertical"
-		selectedValue="yellow"
-	>
-		<RadioGroup appearance="yellow" name="colours">
-			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
-)
-verticalYellow.story = {
-	name: "vertical yellow",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
-		],
-	},
-}
+	return story
+})
 
-export const horizontal = () => (
+const [
+	supportingTextLight,
+	supportingTextDark,
+	supportingTextBlue,
+	supportingTextYellow,
+] = appearances.map((appearance: Appearance) => {
+	const story = () => (
+		<WithBackgroundToggle
+			storyKind="Radio"
+			storyName="supporting text"
+			selectedValue={appearance}
+		>
+			<RadioGroup appearance={appearance} name="payment-options">
+				{radiosWithSupportingText.map((radio, index) =>
+					React.cloneElement(radio, { key: index }),
+				)}
+			</RadioGroup>
+		</WithBackgroundToggle>
+	)
+	story.story = {
+		name: `supporting text ${appearance}`,
+		parameters: {
+			backgrounds: [
+				Object.assign(
+					{},
+					{ default: true },
+					storybookBackgrounds[appearance],
+				),
+			],
+		},
+	}
+
+	return story
+})
+
+const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
 		<Radio value="yes" label="Yes" />
-		<Radio value="no" label="No" defaultChecked />
+		<Radio value="no" label="No" />
 	</RadioGroup>
 )
 horizontal.story = {
 	name: "orientation horizontal",
 }
 
-export const supportingTextLight = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="supporting text"
-		selectedValue="light"
-	>
-		<RadioGroup name="payment-options">
-			{radiosWithSupportingText.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
+const errorWithMessage = () => (
+	<RadioGroup name="colours" error="Please select a colour">
+		{unselectedRadios.map((radio, index) =>
+			React.cloneElement(radio, { key: index }),
+		)}
+	</RadioGroup>
 )
-supportingTextLight.story = {
-	name: "supporting text light",
+errorWithMessage.story = {
+	name: "error with message",
 }
 
-export const supportingTextDark = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="supporting text"
-		selectedValue="dark"
-	>
-		<RadioGroup appearance="dark" name="payment-options">
-			{radiosWithSupportingText.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
+const errorWithoutMessage = () => (
+	<RadioGroup name="colours">
+		{unselectedRadios.map((radio, index) =>
+			React.cloneElement(radio, { key: index, error: true }),
+		)}
+	</RadioGroup>
 )
-supportingTextDark.story = {
-	name: "supporting text dark",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.dark),
-		],
-	},
+errorWithoutMessage.story = {
+	name: "error without message",
 }
 
-export const supportingTextBlue = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="supporting text"
-		selectedValue="blue"
-	>
-		<RadioGroup appearance="blue" name="payment-options">
-			{radiosWithSupportingText.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
-)
-supportingTextBlue.story = {
-	name: "supporting text blue",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.blue),
-		],
-	},
-}
-
-export const supportingTextYellow = () => (
-	<WithBackgroundToggle
-		storyKind="Radio"
-		storyName="supporting text"
-		selectedValue="yellow"
-	>
-		<RadioGroup appearance="yellow" name="payment-options">
-			{radiosWithSupportingText.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
-		</RadioGroup>
-	</WithBackgroundToggle>
-)
-supportingTextYellow.story = {
-	name: "supporting text yellow",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
-		],
-	},
+export {
+	verticalLight,
+	verticalDark,
+	verticalBlue,
+	verticalYellow,
+	horizontal,
+	supportingTextLight,
+	supportingTextDark,
+	supportingTextBlue,
+	supportingTextYellow,
+	errorWithMessage,
+	errorWithoutMessage,
 }

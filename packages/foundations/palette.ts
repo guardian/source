@@ -22,6 +22,9 @@ const palette = {
 		97: colors.grays[8],
 		100: colors.grays[9],
 	},
+	error: {
+		main: colors.reds[1],
+	},
 	news: {
 		dark: colors.reds[0],
 		main: colors.reds[1],

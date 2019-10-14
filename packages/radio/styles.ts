@@ -16,34 +16,41 @@ export const group = css`
 export const label = css`
 	cursor: pointer;
 	display: flex;
+	align-items: center;
+	height: ${size.large}px;
+`
+
+export const labelWithSupportingText = css`
 	align-items: flex-start;
 	margin-bottom: ${space[3]}px;
-
-	&:last-of-type {
-		margin-bottom: 0;
-	}
 `
 
 export const radio = css`
+	cursor: pointer;
+	box-sizing: border-box;
+	display: inline-block;
+	width: ${size.small}px;
+	height: ${size.small}px;
+	margin: 0 ${space[1]}px 0 0;
+
+	border: 2px solid currentColor;
+	border-radius: 50%;
+	position: relative;
+	transition: box-shadow ${transitions.short};
+	transition-delay: 0.08s;
+
+	&:focus {
+		${focusHalo};
+	}
+
+	/*
+	Take care: Emotion extracts @supports blocks and moves them below
+	all other <style> elements, making these values hard to override.
+	I have chosen to keep these styles in the @supports block as
+	moving them out makes radio buttons look horrible on older browsers
+	*/
 	@supports (appearance: none) {
 		appearance: none;
-		outline: 0;
-		cursor: pointer;
-		box-sizing: border-box;
-		display: inline-block;
-		width: ${size.small}px;
-		height: ${size.small}px;
-		margin: 0 ${space[1]}px 0 0;
-
-		border: 2px solid currentColor;
-		border-radius: 50%;
-		position: relative;
-		transition: box-shadow ${transitions.short};
-		transition-delay: 0.08s;
-
-		&:focus {
-			${focusHalo};
-		}
 
 		&:after {
 			background: currentColor;
@@ -132,4 +139,21 @@ export const horizontal = css`
 `
 export const vertical = css`
 	flex-direction: column;
+`
+
+export const inlineError = css`
+	display: flex;
+	align-items: center;
+	${textSans({ level: 3 })};
+	color: ${palette.error.main};
+	margin-bottom: ${space[1]}px;
+
+	svg {
+		fill: currentColor;
+		width: 30px;
+	}
+`
+
+export const errorRadio = css`
+	border: 4px solid ${palette.error.main};
 `
