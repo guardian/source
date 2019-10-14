@@ -16,6 +16,11 @@ export const group = css`
 export const label = css`
 	cursor: pointer;
 	display: flex;
+	align-items: center;
+	height: ${size.large}px;
+`
+
+export const labelWithSupportingText = css`
 	align-items: flex-start;
 	margin-bottom: ${space[3]}px;
 

@@ -2,6 +2,7 @@ import React, { ReactNode } from "react"
 import {
 	group,
 	label,
+	labelWithSupportingText,
 	radio,
 	labelText,
 	labelTextWithSupportingText,
@@ -130,7 +131,13 @@ const Radio = ({
 	defaultChecked?: boolean
 }) => {
 	return (
-		<label css={[label, appearances[appearance].label]}>
+		<label
+			css={[
+				label,
+				supporting ? labelWithSupportingText : "",
+				appearances[appearance].label,
+			]}
+		>
 			<input
 				css={[radio, appearances[appearance].radio]}
 				value={value}
