@@ -88,11 +88,13 @@ const RadioGroup = ({
 					return <div />
 				}
 
-				return React.cloneElement(child, {
-					name,
-					appearance,
-					error: !!error,
-				})
+				return React.cloneElement(
+					child,
+					Object.assign(error ? { error: true } : {}, {
+						name,
+						appearance,
+					}),
+				)
 			})}
 		</div>
 	)

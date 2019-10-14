@@ -116,22 +116,33 @@ const [
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
 		<Radio value="yes" label="Yes" />
-		<Radio value="no" label="No" defaultChecked />
+		<Radio value="no" label="No" />
 	</RadioGroup>
 )
 horizontal.story = {
 	name: "orientation horizontal",
 }
 
-const unselectedRadiosStory = () => (
+const errorWithMessage = () => (
 	<RadioGroup name="colours" error="Please select a colour">
 		{unselectedRadios.map((radio, index) =>
 			React.cloneElement(radio, { key: index }),
 		)}
 	</RadioGroup>
 )
-unselectedRadiosStory.story = {
-	name: "unselected",
+errorWithMessage.story = {
+	name: "error with message",
+}
+
+const errorWithoutMessage = () => (
+	<RadioGroup name="colours">
+		{unselectedRadios.map((radio, index) =>
+			React.cloneElement(radio, { key: index, error: true }),
+		)}
+	</RadioGroup>
+)
+errorWithoutMessage.story = {
+	name: "error without message",
 }
 
 export {
@@ -144,5 +155,6 @@ export {
 	supportingTextDark,
 	supportingTextBlue,
 	supportingTextYellow,
-	unselectedRadiosStory,
+	errorWithMessage,
+	errorWithoutMessage,
 }
