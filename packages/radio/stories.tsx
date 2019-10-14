@@ -30,6 +30,11 @@ const radiosWithSupportingText = [
 		supporting="Subscribe for 12 months and save 10% £135 for 1 year then standard rate (£150 every year)"
 	/>,
 ]
+const unselectedRadios = [
+	<Radio value="red" label="Red" />,
+	<Radio value="green" label="Green" />,
+	<Radio value="blue" label="Blue" />,
+]
 /* eslint-enable react/jsx-key */
 
 export default {
@@ -118,6 +123,17 @@ horizontal.story = {
 	name: "orientation horizontal",
 }
 
+const unselectedRadiosStory = () => (
+	<RadioGroup name="colours" error="Please select a colour">
+		{unselectedRadios.map((radio, index) =>
+			React.cloneElement(radio, { key: index }),
+		)}
+	</RadioGroup>
+)
+unselectedRadiosStory.story = {
+	name: "unselected",
+}
+
 export {
 	verticalLight,
 	verticalDark,
@@ -128,4 +144,5 @@ export {
 	supportingTextDark,
 	supportingTextBlue,
 	supportingTextYellow,
+	unselectedRadiosStory,
 }

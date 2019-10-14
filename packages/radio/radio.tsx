@@ -17,8 +17,11 @@ import {
 	darkSupportingText,
 	horizontal,
 	vertical,
+	inlineError,
+	errorRadio,
 } from "./styles"
 import { Appearance } from "@guardian/src-helpers"
+import { SvgAlert } from "@guardian/src-svgs"
 
 type Orientation = "vertical" | "horizontal"
 
@@ -54,20 +57,30 @@ const orientationStyles = {
 	horizontal: horizontal,
 }
 
+const InlineError = ({ children }: { children: ReactNode }) => (
+	<span css={inlineError}>
+		<SvgAlert />
+		{children}
+	</span>
+)
+
 const RadioGroup = ({
 	name,
 	appearance,
 	orientation,
+	error,
 	children,
 	...props
 }: {
 	name: string
 	appearance: Appearance
 	orientation: Orientation
+	error?: string
 	children: ReactNode
 }) => {
 	return (
 		<div css={[group, orientationStyles[orientation]]} {...props}>
+			{error && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				if (!React.isValidElement(child)) {
 					// Consumer is probably passing a text node as a child
@@ -75,7 +88,11 @@ const RadioGroup = ({
 					return <div />
 				}
 
-				return React.cloneElement(child, { name, appearance })
+				return React.cloneElement(child, {
+					name,
+					appearance,
+					error: !!error,
+				})
 			})}
 		</div>
 	)
@@ -122,13 +139,15 @@ const Radio = ({
 	supporting,
 	defaultChecked,
 	appearance,
+	error,
 	...props
 }: {
 	value: string
 	label: string
 	supporting?: string
-	appearance: Appearance
 	defaultChecked?: boolean
+	appearance: Appearance
+	error?: boolean
 }) => {
 	return (
 		<label
@@ -139,10 +158,15 @@ const Radio = ({
 			]}
 		>
 			<input
-				css={[radio, appearances[appearance].radio]}
+				css={[
+					radio,
+					appearances[appearance].radio,
+					error ? errorRadio : "",
+				]}
 				value={value}
 				type="radio"
 				defaultChecked={defaultChecked}
+				aria-invalid={error}
 				{...props}
 			/>
 			{supporting ? (
