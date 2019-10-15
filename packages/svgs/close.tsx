@@ -1,15 +1,11 @@
 import React from "react"
 
 export const SvgClose = () => (
-	<svg
-		className="svg-close"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="-2 -2 38 38"
-		preserveAspectRatio="xMinYMid"
-	>
+	<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
 		<path
-			d="M16.525 19.87L30.865 33 33 30.87 19.9 16.5 33 2.13 30.866 0l-14.34 13.13L2.133.05 0 2.18 13.15 16.5 0 30.82l2.134 2.13"
 			fillRule="evenodd"
+			clipRule="evenodd"
+			d="M15.325 17.025l7.225 6.625 1.075-1.075-6.6-7.25 6.6-7.25L22.55 7l-7.225 6.625-7.25-6.6L7 8.1l6.625 7.225L7 22.55l1.075 1.075 7.25-6.6z"
 		/>
 	</svg>
 )
