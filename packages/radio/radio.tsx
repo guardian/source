@@ -75,12 +75,12 @@ const RadioGroup = ({
 	name: string
 	appearance: Appearance
 	orientation: Orientation
-	error?: string
+	error?: boolean | string
 	children: ReactNode
 }) => {
 	return (
 		<div css={[group, orientationStyles[orientation]]} {...props}>
-			{error && <InlineError>{error}</InlineError>}
+			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				if (!React.isValidElement(child)) {
 					// Consumer is probably passing a text node as a child

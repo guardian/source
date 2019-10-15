@@ -135,9 +135,9 @@ errorWithMessage.story = {
 }
 
 const errorWithoutMessage = () => (
-	<RadioGroup name="colours">
+	<RadioGroup name="colours" error={true}>
 		{unselectedRadios.map((radio, index) =>
-			React.cloneElement(radio, { key: index, error: true }),
+			React.cloneElement(radio, { key: index }),
 		)}
 	</RadioGroup>
 )
