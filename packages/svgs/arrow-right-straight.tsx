@@ -1,15 +1,11 @@
 import React from "react"
 
-// The right-pointing arrow commonly used on CTAs.
 export const SvgArrowRightStraight = () => (
-	<svg
-		className="svg-arrow-right-straight"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 20 17.89"
-		preserveAspectRatio="xMinYMid"
-		aria-hidden="true"
-		focusable="false"
-	>
-		<path d="M20 9.35l-9.08 8.54-.86-.81 6.54-7.31H0V8.12h16.6L10.06.81l.86-.81L20 8.51v.84z" />
+	<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+		<path
+			fillRule="evenodd"
+			clipRule="evenodd"
+			d="M4 15.95h19.125l-7.5 8.975.975.975 10.425-10.45v-1L16.6 4l-.975.975 7.5 8.975H4v2z"
+		/>
 	</svg>
 )

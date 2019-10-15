@@ -1,11 +1,11 @@
 import React from "react"
 
-export const SvgCheckmark = () => (
+export const SvgArrowLeftStraight = () => (
 	<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
 		<path
 			fillRule="evenodd"
 			clipRule="evenodd"
-			d="M6 14.775l-1 1 5 7h.475l14.3-14.8-1-.975-13.3 12.05L6 14.775z"
+			d="M6.9 13.95l7.5-8.975L13.425 4 3 14.45v1L13.425 25.9l.975-.975-7.5-8.975h19.125v-2H6.9z"
 		/>
 	</svg>
 )
