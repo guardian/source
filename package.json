@@ -48,5 +48,8 @@
 		"stylelint-config-styled-components": "^0.1.1",
 		"stylelint-processor-styled-components": "^1.8.0",
 		"typescript": "^3.5.3"
+	},
+	"dependencies": {
+		"emotion-theming": "^10.0.19"
 	}
 }
