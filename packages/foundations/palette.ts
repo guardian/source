@@ -5,6 +5,7 @@ const palette = {
 		dark: colors.blues[0],
 		main: colors.blues[1],
 		pastel: colors.blues[2],
+		faded: colors.blues[3],
 	},
 	yellow: {
 		dark: colors.yellows[0],
@@ -40,11 +41,11 @@ const palette = {
 		faded: colors.oranges[4],
 	},
 	sport: {
-		dark: colors.blues[3],
-		main: colors.blues[4],
-		bright: colors.blues[5],
-		pastel: colors.blues[6],
-		faded: colors.blues[7],
+		dark: colors.blues[4],
+		main: colors.blues[5],
+		bright: colors.blues[6],
+		pastel: colors.blues[7],
+		faded: colors.blues[8],
 	},
 	culture: {
 		dark: colors.browns[0],

@@ -17,7 +17,8 @@ const colors = {
 	blues: [
 		"#041f4a", //brand-dark
 		"#052962", //brand-main
-		"#506991", //brand-pastel
+		"#E7EFFC", //brand-pastel
+		"#D0D7E3", //brand-faded
 		"#005689", //sport-dark
 		"#0084C6", //sport-main
 		"#00B2FF", //sport-bright

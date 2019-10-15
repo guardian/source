@@ -35,27 +35,27 @@ const tertiary = css`
 `
 
 export const primaryLight = css`
-	background-color: ${palette.yellow.main};
-	color: ${palette.neutral[7]};
+	background-color: ${palette.brand.main};
+	color: ${palette.neutral[100]};
 
 	&:hover {
-		background-color: ${palette.yellow.dark};
+		background-color: ${palette.brand.dark};
 	}
 `
 
 export const secondaryLight = css`
-	background-color: ${palette.neutral[93]};
-	color: ${palette.neutral[7]};
+	background-color: ${palette.brand.pastel};
+	color: ${palette.brand.main};
 
 	&:hover {
-		background-color: ${palette.neutral[86]};
+		background-color: ${palette.brand.faded};
 	}
 `
 
 export const tertiaryLight = css`
 	${tertiary};
 	background-color: ${palette.neutral[100]};
-	color: ${palette.neutral[7]};
+	color: ${palette.brand.main};
 `
 
 export const primaryDark = css`
