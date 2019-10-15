@@ -14,35 +14,35 @@ import { Button } from "./button"
 
 /* eslint-disable react/jsx-key */
 const priorityButtonsLight = [
-	<Button>High priority</Button>,
-	<Button priority="moderate">Moderate priority</Button>,
-	<Button priority="low">Low priority</Button>,
+	<Button>Primary</Button>,
+	<Button priority="secondary">Secondary</Button>,
+	<Button priority="tertiary">Tertiary</Button>,
 ]
 const priorityButtonsDark = [
-	<Button appearance="dark">High priority</Button>,
-	<Button priority="moderate" appearance="dark">
-		Moderate priority
+	<Button appearance="dark">Primary</Button>,
+	<Button priority="secondary" appearance="dark">
+		Secondary
 	</Button>,
-	<Button priority="low" appearance="dark">
-		Low priority
+	<Button priority="tertiary" appearance="dark">
+		Tertiary
 	</Button>,
 ]
 const priorityButtonsBlue = [
-	<Button appearance="blue">High priority</Button>,
-	<Button priority="moderate" appearance="blue">
-		Moderate priority
+	<Button appearance="blue">Primary</Button>,
+	<Button priority="secondary" appearance="blue">
+		Secondary
 	</Button>,
-	<Button priority="low" appearance="blue">
-		Low priority
+	<Button priority="tertiary" appearance="blue">
+		Tertiary
 	</Button>,
 ]
 const priorityButtonsYellow = [
-	<Button appearance="yellow">High priority</Button>,
-	<Button priority="moderate" appearance="yellow">
-		Moderate priority
+	<Button appearance="yellow">Primary</Button>,
+	<Button priority="secondary" appearance="yellow">
+		Secondary
 	</Button>,
-	<Button priority="low" appearance="yellow">
-		Low priority
+	<Button priority="tertiary" appearance="yellow">
+		Tertiary
 	</Button>,
 ]
 const sizeButtons = [

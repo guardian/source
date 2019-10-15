@@ -1,18 +1,18 @@
 import React, { ReactElement, ReactNode } from "react"
 import {
 	button,
-	highPriorityLight,
-	lowPriorityLight,
-	moderatePriorityLight,
-	highPriorityDark,
-	lowPriorityDark,
-	moderatePriorityDark,
-	highPriorityBlue,
-	lowPriorityBlue,
-	moderatePriorityBlue,
-	highPriorityYellow,
-	lowPriorityYellow,
-	moderatePriorityYellow,
+	primaryLight,
+	tertiaryLight,
+	secondaryLight,
+	primaryDark,
+	tertiaryDark,
+	secondaryDark,
+	primaryBlue,
+	tertiaryBlue,
+	secondaryBlue,
+	primaryYellow,
+	tertiaryYellow,
+	secondaryYellow,
 	defaultSize,
 	smallSize,
 	iconDefault,
@@ -24,37 +24,37 @@ import {
 } from "./styles"
 import { Appearance } from "@guardian/src-helpers"
 
-type Priority = "high" | "moderate" | "low"
+type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
 
 const prioritiesLight: {
 	[key in Priority]: any
 } = {
-	high: highPriorityLight,
-	moderate: moderatePriorityLight,
-	low: lowPriorityLight,
+	primary: primaryLight,
+	secondary: secondaryLight,
+	tertiary: tertiaryLight,
 }
 const prioritiesDark: {
 	[key in Priority]: any
 } = {
-	high: highPriorityDark,
-	moderate: moderatePriorityDark,
-	low: lowPriorityDark,
+	primary: primaryDark,
+	secondary: secondaryDark,
+	tertiary: tertiaryDark,
 }
 const prioritiesBlue: {
 	[key in Priority]: any
 } = {
-	high: highPriorityBlue,
-	moderate: moderatePriorityBlue,
-	low: lowPriorityBlue,
+	primary: primaryBlue,
+	secondary: secondaryBlue,
+	tertiary: tertiaryBlue,
 }
 const prioritiesYellow: {
 	[key in Priority]: any
 } = {
-	high: highPriorityYellow,
-	moderate: moderatePriorityYellow,
-	low: lowPriorityYellow,
+	primary: primaryYellow,
+	secondary: secondaryYellow,
+	tertiary: tertiaryYellow,
 }
 const appearances: {
 	[key in Appearance]: any
@@ -130,7 +130,7 @@ const Button = ({
 const defaultProps = {
 	type: "button",
 	appearance: "light",
-	priority: "high",
+	priority: "primary",
 	size: "default",
 }
 

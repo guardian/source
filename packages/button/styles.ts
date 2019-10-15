@@ -26,7 +26,7 @@ export const button = css`
 	}
 `
 
-const lowPriority = css`
+const tertiary = css`
 	padding: 0;
 
 	&:hover {
@@ -34,7 +34,7 @@ const lowPriority = css`
 	}
 `
 
-export const highPriorityLight = css`
+export const primaryLight = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
@@ -43,7 +43,7 @@ export const highPriorityLight = css`
 	}
 `
 
-export const moderatePriorityLight = css`
+export const secondaryLight = css`
 	background-color: ${palette.neutral[93]};
 	color: ${palette.neutral[7]};
 
@@ -52,13 +52,13 @@ export const moderatePriorityLight = css`
 	}
 `
 
-export const lowPriorityLight = css`
-	${lowPriority};
+export const tertiaryLight = css`
+	${tertiary};
 	background-color: ${palette.neutral[100]};
 	color: ${palette.neutral[7]};
 `
 
-export const highPriorityDark = css`
+export const primaryDark = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
@@ -67,7 +67,7 @@ export const highPriorityDark = css`
 	}
 `
 
-export const moderatePriorityDark = css`
+export const secondaryDark = css`
 	background-color: ${palette.neutral[93]};
 	color: ${palette.neutral[7]};
 
@@ -76,13 +76,13 @@ export const moderatePriorityDark = css`
 	}
 `
 
-export const lowPriorityDark = css`
-	${lowPriority};
+export const tertiaryDark = css`
+	${tertiary};
 	background-color: ${palette.neutral[10]};
 	color: ${palette.neutral[100]};
 `
 
-export const highPriorityBlue = css`
+export const primaryBlue = css`
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 
@@ -91,7 +91,7 @@ export const highPriorityBlue = css`
 	}
 `
 
-export const moderatePriorityBlue = css`
+export const secondaryBlue = css`
 	background-color: ${palette.neutral[93]};
 	color: ${palette.neutral[7]};
 
@@ -100,13 +100,13 @@ export const moderatePriorityBlue = css`
 	}
 `
 
-export const lowPriorityBlue = css`
-	${lowPriority};
+export const tertiaryBlue = css`
+	${tertiary};
 	background-color: ${palette.brand.main};
 	color: ${palette.neutral[100]};
 `
 
-export const highPriorityYellow = css`
+export const primaryYellow = css`
 	background-color: ${palette.neutral[7]};
 	color: ${palette.neutral[100]};
 
@@ -115,7 +115,7 @@ export const highPriorityYellow = css`
 	}
 `
 
-export const moderatePriorityYellow = css`
+export const secondaryYellow = css`
 	background-color: ${palette.neutral[93]};
 	color: ${palette.neutral[7]};
 
@@ -124,8 +124,8 @@ export const moderatePriorityYellow = css`
 	}
 `
 
-export const lowPriorityYellow = css`
-	${lowPriority};
+export const tertiaryYellow = css`
+	${tertiary};
 	background-color: ${palette.yellow.main};
 	color: ${palette.neutral[7]};
 `
