@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.0.8",
+	"version": "0.1.0",
 	"main": "dist/button.js",
 	"module": "dist/button.esm.js",
 	"scripts": {
@@ -21,7 +21,8 @@
 	},
 	"files": [
 		"button.tsx",
-		"styles.ts"
+		"styles.ts",
+		"themes.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",

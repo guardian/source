@@ -1,18 +1,9 @@
 import React, { ReactElement, ReactNode } from "react"
 import {
 	button,
-	primaryLight,
-	tertiaryLight,
-	secondaryLight,
-	primaryDark,
-	tertiaryDark,
-	secondaryDark,
-	primaryBlue,
-	tertiaryBlue,
-	secondaryBlue,
-	primaryYellow,
-	tertiaryYellow,
-	secondaryYellow,
+	primary,
+	secondary,
+	tertiary,
 	defaultSize,
 	smallSize,
 	iconDefault,
@@ -22,48 +13,20 @@ import {
 	iconOnlyDefault,
 	iconOnlySmall,
 } from "./styles"
-import { Appearance } from "@guardian/src-helpers"
+export * from "./themes"
 
-type Priority = "primary" | "secondary" | "tertiary"
+export type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
 
-const prioritiesLight: {
+const priorities: {
 	[key in Priority]: any
 } = {
-	primary: primaryLight,
-	secondary: secondaryLight,
-	tertiary: tertiaryLight,
+	primary,
+	secondary,
+	tertiary,
 }
-const prioritiesDark: {
-	[key in Priority]: any
-} = {
-	primary: primaryDark,
-	secondary: secondaryDark,
-	tertiary: tertiaryDark,
-}
-const prioritiesBlue: {
-	[key in Priority]: any
-} = {
-	primary: primaryBlue,
-	secondary: secondaryBlue,
-	tertiary: tertiaryBlue,
-}
-const prioritiesYellow: {
-	[key in Priority]: any
-} = {
-	primary: primaryYellow,
-	secondary: secondaryYellow,
-	tertiary: tertiaryYellow,
-}
-const appearances: {
-	[key in Appearance]: any
-} = {
-	light: prioritiesLight,
-	dark: prioritiesDark,
-	blue: prioritiesBlue,
-	yellow: prioritiesYellow,
-}
+
 const iconSides: {
 	[key in IconSide]: any
 } = {
@@ -89,7 +52,6 @@ const iconOnlySizes: {
 	small: iconOnlySmall,
 }
 const Button = ({
-	appearance,
 	priority,
 	size,
 	icon: iconSvg,
@@ -97,7 +59,6 @@ const Button = ({
 	children,
 	...props
 }: {
-	appearance: Appearance
 	priority: Priority
 	size: Size
 	icon?: ReactElement
@@ -113,10 +74,10 @@ const Button = ({
 
 	return (
 		<button
-			css={[
+			css={theme => [
 				button,
 				sizes[size],
-				appearances[appearance][priority],
+				priorities[priority](theme.button && theme),
 				iconSvg ? iconSizes[size] : "",
 				iconSide ? iconSides[iconSide] : "",
 				!children ? iconOnlySizes[size] : "",
@@ -129,7 +90,6 @@ const Button = ({
 }
 const defaultProps = {
 	type: "button",
-	appearance: "light",
 	priority: "primary",
 	size: "default",
 }

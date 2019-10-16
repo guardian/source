@@ -1,11 +1,11 @@
 import { css } from "@emotion/core"
 import {
 	textSans,
-	palette,
 	size,
 	focusHalo,
 	transitions,
 } from "@guardian/src-foundations"
+import { lightTheme, ButtonTheme } from "./themes"
 
 export const button = css`
 	display: inline-flex;
@@ -26,108 +26,41 @@ export const button = css`
 	}
 `
 
-const tertiary = css`
+export const primary = ({
+	button,
+}: { button: ButtonTheme } = lightTheme) => css`
+	background-color: ${button.primary.backgroundColor};
+	color: ${button.primary.color};
+
+	&:hover {
+		background-color: ${button.primary.hoverBackgroundColor};
+	}
+`
+
+export const secondary = ({
+	button,
+}: { button: ButtonTheme } = lightTheme) => css`
+	background-color: ${button.secondary.backgroundColor};
+	color: ${button.secondary.color};
+	${button.secondary.borderColor
+		? `border: 1px solid ${button.secondary.borderColor};`
+		: ""}
+
+	&:hover {
+		background-color: ${button.secondary.hoverBackgroundColor};
+	}
+`
+
+export const tertiary = ({
+	button,
+}: { button: ButtonTheme } = lightTheme) => css`
 	padding: 0;
+	background-color: ${button.tertiary.backgroundColor};
+	color: ${button.tertiary.color};
 
 	&:hover {
 		text-decoration: underline;
 	}
-`
-
-export const primaryLight = css`
-	background-color: ${palette.brand.main};
-	color: ${palette.neutral[100]};
-
-	&:hover {
-		background-color: ${palette.brand.dark};
-	}
-`
-
-export const secondaryLight = css`
-	background-color: ${palette.brand.pastel};
-	color: ${palette.brand.main};
-
-	&:hover {
-		background-color: ${palette.brand.faded};
-	}
-`
-
-export const tertiaryLight = css`
-	${tertiary};
-	background-color: ${palette.neutral[100]};
-	color: ${palette.brand.main};
-`
-
-export const primaryDark = css`
-	background-color: ${palette.yellow.main};
-	color: ${palette.neutral[7]};
-
-	&:hover {
-		background-color: ${palette.yellow.dark};
-	}
-`
-
-export const secondaryDark = css`
-	background-color: ${palette.neutral[93]};
-	color: ${palette.neutral[7]};
-
-	&:hover {
-		background-color: ${palette.neutral[86]};
-	}
-`
-
-export const tertiaryDark = css`
-	${tertiary};
-	background-color: ${palette.neutral[10]};
-	color: ${palette.neutral[100]};
-`
-
-export const primaryBlue = css`
-	background-color: ${palette.yellow.main};
-	color: ${palette.neutral[7]};
-
-	&:hover {
-		background-color: ${palette.yellow.dark};
-	}
-`
-
-export const secondaryBlue = css`
-	background-color: ${palette.neutral[93]};
-	color: ${palette.neutral[7]};
-
-	&:hover {
-		background-color: ${palette.neutral[86]};
-	}
-`
-
-export const tertiaryBlue = css`
-	${tertiary};
-	background-color: ${palette.brand.main};
-	color: ${palette.neutral[100]};
-`
-
-export const primaryYellow = css`
-	background-color: ${palette.neutral[7]};
-	color: ${palette.neutral[100]};
-
-	&:hover {
-		background-color: ${palette.neutral[46]};
-	}
-`
-
-export const secondaryYellow = css`
-	background-color: ${palette.neutral[93]};
-	color: ${palette.neutral[7]};
-
-	&:hover {
-		background-color: ${palette.neutral[86]};
-	}
-`
-
-export const tertiaryYellow = css`
-	${tertiary};
-	background-color: ${palette.yellow.main};
-	color: ${palette.neutral[7]};
 `
 
 export const defaultSize = css`

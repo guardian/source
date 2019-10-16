@@ -11,39 +11,20 @@ import {
 } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
+import {
+	lightTheme,
+	darkTheme,
+	yellowTheme,
+	blueTheme,
+	rrTheme,
+} from "./themes"
+import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
-const priorityButtonsLight = [
+const priorityButtons = [
 	<Button>Primary</Button>,
 	<Button priority="secondary">Secondary</Button>,
 	<Button priority="tertiary">Tertiary</Button>,
-]
-const priorityButtonsDark = [
-	<Button appearance="dark">Primary</Button>,
-	<Button priority="secondary" appearance="dark">
-		Secondary
-	</Button>,
-	<Button priority="tertiary" appearance="dark">
-		Tertiary
-	</Button>,
-]
-const priorityButtonsBlue = [
-	<Button appearance="blue">Primary</Button>,
-	<Button priority="secondary" appearance="blue">
-		Secondary
-	</Button>,
-	<Button priority="tertiary" appearance="blue">
-		Tertiary
-	</Button>,
-]
-const priorityButtonsYellow = [
-	<Button appearance="yellow">Primary</Button>,
-	<Button priority="secondary" appearance="yellow">
-		Secondary
-	</Button>,
-	<Button priority="tertiary" appearance="yellow">
-		Tertiary
-	</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,
@@ -88,11 +69,13 @@ export const priorityLight = () => (
 		storyName="priority"
 		selectedValue="light"
 	>
-		<div css={flexStart}>
-			{priorityButtonsLight.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<ThemeProvider theme={lightTheme}>
+			<div css={flexStart}>
+				{priorityButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
 	</WithBackgroundToggle>
 )
 priorityLight.story = { name: "priority light" }
@@ -103,11 +86,13 @@ export const priorityDark = () => (
 		storyName="priority"
 		selectedValue="dark"
 	>
-		<div css={flexStart}>
-			{priorityButtonsDark.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<ThemeProvider theme={darkTheme}>
+			<div css={flexStart}>
+				{priorityButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
 	</WithBackgroundToggle>
 )
 priorityDark.story = {
@@ -125,11 +110,13 @@ export const priorityBlue = () => (
 		storyName="priority"
 		selectedValue="blue"
 	>
-		<div css={flexStart}>
-			{priorityButtonsBlue.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<ThemeProvider theme={blueTheme}>
+			<div css={flexStart}>
+				{priorityButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
 	</WithBackgroundToggle>
 )
 priorityBlue.story = {
@@ -147,11 +134,13 @@ export const priorityYellow = () => (
 		storyName="priority"
 		selectedValue="yellow"
 	>
-		<div css={flexStart}>
-			{priorityButtonsYellow.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<ThemeProvider theme={yellowTheme}>
+			<div css={flexStart}>
+				{priorityButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
 	</WithBackgroundToggle>
 )
 priorityYellow.story = {
@@ -159,6 +148,30 @@ priorityYellow.story = {
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
+		],
+	},
+}
+
+export const priorityReaderRevenue = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="reader revenue"
+	>
+		<ThemeProvider theme={rrTheme}>
+			<div css={flexStart}>
+				{priorityButtons.slice(0, 2).map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
+	</WithBackgroundToggle>
+)
+priorityReaderRevenue.story = {
+	name: "priority reader revenue",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.rr),
 		],
 	},
 }

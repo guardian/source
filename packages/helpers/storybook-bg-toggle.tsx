@@ -37,6 +37,9 @@ export const WithBackgroundToggle = ({
 			<option value={`${storyName} dark`}>Dark mode</option>
 			<option value={`${storyName} blue`}>Blue background</option>
 			<option value={`${storyName} yellow`}>Yellow background</option>
+			<option value={`${storyName} reader revenue`}>
+				Reader revenue background
+			</option>
 		</select>
 	</div>
 )
