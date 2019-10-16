@@ -56,7 +56,7 @@ export const blueTheme: { button: ButtonTheme } = {
 			hoverBackgroundColor: palette.brand.faded,
 		},
 		secondary: {
-			backgroundColor: palette.brand.pastel,
+			backgroundColor: "#506991",
 			color: palette.neutral[100],
 			hoverBackgroundColor: palette.brand.faded,
 		},
