@@ -42,6 +42,9 @@ export const secondary = ({
 }: { button: ButtonTheme } = lightTheme) => css`
 	background-color: ${button.secondary.backgroundColor};
 	color: ${button.secondary.color};
+	${button.secondary.borderColor
+		? `border: 1px solid ${button.secondary.borderColor};`
+		: ""}
 
 	&:hover {
 		background-color: ${button.secondary.hoverBackgroundColor};

@@ -6,6 +6,7 @@ export type ButtonTheme = {
 		backgroundColor?: string
 		color?: string
 		hoverBackgroundColor?: string
+		borderColor?: string
 	}
 }
 
@@ -85,7 +86,7 @@ export const yellowTheme: { button: ButtonTheme } = {
 	},
 }
 
-export const scTheme: { button: ButtonTheme } = {
+export const rrTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
 			backgroundColor: palette.yellow.main,
@@ -96,6 +97,7 @@ export const scTheme: { button: ButtonTheme } = {
 			backgroundColor: palette.brand.main,
 			color: palette.yellow.main,
 			hoverBackgroundColor: palette.brand.dark,
+			borderColor: palette.yellow.main,
 		},
 		tertiary: {},
 	},

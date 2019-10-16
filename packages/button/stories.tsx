@@ -11,7 +11,13 @@ import {
 } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
-import { lightTheme, darkTheme, yellowTheme, blueTheme } from "./themes"
+import {
+	lightTheme,
+	darkTheme,
+	yellowTheme,
+	blueTheme,
+	rrTheme,
+} from "./themes"
 import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
@@ -142,6 +148,30 @@ priorityYellow.story = {
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
+		],
+	},
+}
+
+export const priorityReaderRevenue = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="reader revenue"
+	>
+		<ThemeProvider theme={rrTheme}>
+			<div css={flexStart}>
+				{priorityButtons.slice(0, 2).map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
+	</WithBackgroundToggle>
+)
+priorityReaderRevenue.story = {
+	name: "priority reader revenue",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.rr),
 		],
 	},
 }
