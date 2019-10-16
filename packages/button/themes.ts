@@ -1,6 +1,15 @@
 import { palette } from "@guardian/src-foundations"
+import { Priority } from "./button"
 
-export const lightTheme = {
+export type ButtonTheme = {
+	[key in Priority]: {
+		backgroundColor?: string
+		color?: string
+		hoverBackgroundColor?: string
+	}
+}
+
+export const lightTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
 			backgroundColor: palette.brand.main,
@@ -19,7 +28,7 @@ export const lightTheme = {
 	},
 }
 
-export const darkTheme = {
+export const darkTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
 			backgroundColor: palette.neutral[100],
@@ -38,7 +47,7 @@ export const darkTheme = {
 	},
 }
 
-export const blueTheme = {
+export const blueTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
 			backgroundColor: palette.neutral[100],
@@ -57,7 +66,7 @@ export const blueTheme = {
 	},
 }
 
-export const yellowTheme = {
+export const yellowTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
 			backgroundColor: palette.neutral[7],
@@ -76,7 +85,7 @@ export const yellowTheme = {
 	},
 }
 
-export const scTheme = {
+export const scTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
 			backgroundColor: palette.yellow.main,
@@ -88,5 +97,6 @@ export const scTheme = {
 			color: palette.yellow.main,
 			hoverBackgroundColor: palette.brand.dark,
 		},
+		tertiary: {},
 	},
 }

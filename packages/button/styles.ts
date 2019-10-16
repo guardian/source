@@ -5,6 +5,7 @@ import {
 	focusHalo,
 	transitions,
 } from "@guardian/src-foundations"
+import { lightTheme, ButtonTheme } from "./themes"
 
 export const button = css`
 	display: inline-flex;
@@ -25,28 +26,34 @@ export const button = css`
 	}
 `
 
-export const primary = (theme: any) => css`
-	background-color: ${theme.button.primary.backgroundColor};
-	color: ${theme.button.primary.color};
+export const primary = ({
+	button,
+}: { button: ButtonTheme } = lightTheme) => css`
+	background-color: ${button.primary.backgroundColor};
+	color: ${button.primary.color};
 
 	&:hover {
-		background-color: ${theme.button.primary.hoverBackgroundColor};
+		background-color: ${button.primary.hoverBackgroundColor};
 	}
 `
 
-export const secondary = (theme: any) => css`
-	background-color: ${theme.button.secondary.backgroundColor};
-	color: ${theme.button.secondary.color};
+export const secondary = ({
+	button,
+}: { button: ButtonTheme } = lightTheme) => css`
+	background-color: ${button.secondary.backgroundColor};
+	color: ${button.secondary.color};
 
 	&:hover {
-		background-color: ${theme.button.secondary.hoverBackgroundColor};
+		background-color: ${button.secondary.hoverBackgroundColor};
 	}
 `
 
-export const tertiary = (theme: any) => css`
+export const tertiary = ({
+	button,
+}: { button: ButtonTheme } = lightTheme) => css`
 	padding: 0;
-	background-color: ${theme.button.tertiary.backgroundColor};
-	color: ${theme.button.tertiary.color};
+	background-color: ${button.tertiary.backgroundColor};
+	color: ${button.tertiary.color};
 
 	&:hover {
 		text-decoration: underline;

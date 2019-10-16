@@ -15,7 +15,7 @@ import {
 } from "./styles"
 export * from "./themes"
 
-type Priority = "primary" | "secondary" | "tertiary"
+export type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
 
@@ -77,7 +77,7 @@ const Button = ({
 			css={theme => [
 				button,
 				sizes[size],
-				priorities[priority](theme),
+				priorities[priority](theme.button && theme),
 				iconSvg ? iconSizes[size] : "",
 				iconSide ? iconSides[iconSide] : "",
 				!children ? iconOnlySizes[size] : "",
