@@ -21,7 +21,8 @@
 	},
 	"files": [
 		"button.tsx",
-		"styles.ts"
+		"styles.ts",
+		"themes.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",

@@ -13,6 +13,7 @@ import {
 	iconOnlyDefault,
 	iconOnlySmall,
 } from "./styles"
+export * from "./themes"
 
 type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"

@@ -11,12 +11,7 @@ import {
 } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Button } from "./button"
-import {
-	lightTheme,
-	darkTheme,
-	yellowTheme,
-	blueTheme,
-} from "@guardian/src-foundations"
+import { lightTheme, darkTheme, yellowTheme, blueTheme } from "./themes"
 import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */

@@ -1,4 +1,4 @@
-import { palette } from "./palette"
+import { palette } from "@guardian/src-foundations"
 
 export const lightTheme = {
 	button: {
