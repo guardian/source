@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-inline-error",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "dist/inline-error.js",
 	"module": "dist/inline-error.esm.js",
 	"scripts": {
@@ -29,6 +29,7 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-foundations": "^0.0.5"
+		"@guardian/src-foundations": "^0.2.2",
+		"@guardian/src-svgs": "^0.0.5"
 	}
 }
