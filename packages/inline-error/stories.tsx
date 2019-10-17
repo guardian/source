@@ -1,5 +1,5 @@
 import React from "react"
-import { InlineError } from "./inline-error"
+import { InlineError } from "./index"
 
 export default {
 	title: "InlineError",

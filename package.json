@@ -16,7 +16,8 @@
 		"build:svgs": "cd packages/svgs && yarn build",
 		"build:button": "cd packages/button && yarn build",
 		"build:radio": "cd packages/radio && yarn build",
-		"build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:svgs && yarn build:button && yarn build:radio"
+		"build:inline-error": "cd packages/inline-error && yarn build",
+		"build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:svgs && yarn build:button && yarn build:radio && yarn build:inline-error"
 	},
 	"private": true,
 	"workspaces": [

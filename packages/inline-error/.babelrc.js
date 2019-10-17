@@ -3,6 +3,6 @@ module.exports = {
 		"@babel/preset-env",
 		"@babel/preset-react",
 		"@babel/preset-typescript",
-		["@emotion/babel-preset-css-prop", { sourceMap: false }]
-	]
-};
+		"@emotion/babel-preset-css-prop",
+	],
+}

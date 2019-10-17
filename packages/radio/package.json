@@ -30,7 +30,7 @@
 	},
 	"dependencies": {
 		"@guardian/src-foundations": "^0.0.5",
-		"@guardian/src-inline-error": "^0.0.2",
+		"@guardian/src-inline-error": "^0.0.3",
 		"@guardian/src-svgs": "^0.0.2"
 	}
 }
