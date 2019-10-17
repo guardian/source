@@ -141,19 +141,6 @@ export const vertical = css`
 	flex-direction: column;
 `
 
-export const inlineError = css`
-	display: flex;
-	align-items: center;
-	${textSans({ level: 3 })};
-	color: ${palette.error.main};
-	margin-bottom: ${space[1]}px;
-
-	svg {
-		fill: currentColor;
-		width: 30px;
-	}
-`
-
 export const errorRadio = css`
 	border: 4px solid ${palette.error.main};
 `

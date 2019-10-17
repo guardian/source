@@ -17,11 +17,10 @@ import {
 	darkSupportingText,
 	horizontal,
 	vertical,
-	inlineError,
 	errorRadio,
 } from "./styles"
+import { InlineError } from "@guardian/src-inline-error"
 import { Appearance } from "@guardian/src-helpers"
-import { SvgAlert } from "@guardian/src-svgs"
 
 type Orientation = "vertical" | "horizontal"
 
@@ -56,13 +55,6 @@ const orientationStyles = {
 	vertical: vertical,
 	horizontal: horizontal,
 }
-
-const InlineError = ({ children }: { children: ReactNode }) => (
-	<span css={inlineError}>
-		<SvgAlert />
-		{children}
-	</span>
-)
 
 const RadioGroup = ({
 	name,
