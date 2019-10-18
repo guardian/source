@@ -1,4 +1,5 @@
 import { palette } from "@guardian/src-foundations"
+import { darken, lighten } from "@guardian/src-utilities"
 import { Priority } from "./button"
 
 export type ButtonTheme = {
@@ -15,12 +16,12 @@ export const lightTheme: { button: ButtonTheme } = {
 		primary: {
 			backgroundColor: palette.brand.main,
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.brand.dark,
+			hoverBackgroundColor: lighten(palette.brand.main, 13),
 		},
 		secondary: {
 			backgroundColor: palette.brand.pastel,
 			color: palette.brand.main,
-			hoverBackgroundColor: palette.brand.faded,
+			hoverBackgroundColor: darken(palette.brand.pastel, 10),
 		},
 		tertiary: {
 			backgroundColor: palette.neutral[100],
