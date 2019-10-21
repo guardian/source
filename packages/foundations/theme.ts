@@ -56,7 +56,7 @@ const colors = {
 		"#FEEEF7", //lifestyle-faded
 	],
 	yellows: [
-		"#FFBB50", //highlight-dark
+		"#F3C100", //highlight-dark
 		"#FFE500", //highlight-main
 	],
 	greens: [
