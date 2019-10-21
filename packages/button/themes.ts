@@ -20,7 +20,7 @@ export const lightTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.brand.faded,
 			color: palette.brand.main,
-			hoverBackgroundColor: palette.brand.pastel,
+			hoverBackgroundColor: palette.brand.faded,
 		},
 		tertiary: {
 			backgroundColor: palette.neutral[100],
@@ -58,7 +58,7 @@ export const blueTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.brand.pastel,
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.brand.faded,
+			hoverBackgroundColor: palette.brand.pastel,
 		},
 		tertiary: {
 			backgroundColor: palette.brand.main,
