@@ -2,10 +2,11 @@ import { colors } from "./theme"
 
 const palette = {
 	brand: {
-		dark: colors.blues[0],
-		main: colors.blues[1],
-		pastel: colors.blues[2],
-		faded: colors.blues[3],
+		dark: colors.blues[5],
+		main: colors.blues[6],
+		bright: colors.blues[7],
+		pastel: colors.blues[8],
+		faded: colors.blues[9],
 	},
 	yellow: {
 		dark: colors.yellows[0],
@@ -22,6 +23,7 @@ const palette = {
 		93: colors.grays[7],
 		97: colors.grays[8],
 		100: colors.grays[9],
+		specialReport: colors.grays[10],
 	},
 	error: {
 		main: colors.reds[1],
@@ -41,11 +43,11 @@ const palette = {
 		faded: colors.oranges[4],
 	},
 	sport: {
-		dark: colors.blues[4],
-		main: colors.blues[5],
-		bright: colors.blues[6],
-		pastel: colors.blues[7],
-		faded: colors.blues[8],
+		dark: colors.blues[0],
+		main: colors.blues[1],
+		bright: colors.blues[2],
+		pastel: colors.blues[3],
+		faded: colors.blues[4],
 	},
 	culture: {
 		dark: colors.browns[0],
@@ -62,11 +64,8 @@ const palette = {
 		faded: colors.pinks[4],
 	},
 	labs: {
-		dark: colors.grays[0],
-		main: colors.grays[0],
-		bright: colors.greens[4],
-		pastel: "", // TODO
-		faded: colors.greens[1],
+		dark: colors.greens[2],
+		main: colors.greens[3],
 	},
 }
 
