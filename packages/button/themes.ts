@@ -15,10 +15,10 @@ export const lightTheme: { button: ButtonTheme } = {
 		primary: {
 			backgroundColor: palette.brand.main,
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.brand.dark,
+			hoverBackgroundColor: palette.brand.pastel,
 		},
 		secondary: {
-			backgroundColor: palette.brand.pastel,
+			backgroundColor: palette.brand.faded,
 			color: palette.brand.main,
 			hoverBackgroundColor: palette.brand.faded,
 		},
@@ -34,12 +34,12 @@ export const darkTheme: { button: ButtonTheme } = {
 		primary: {
 			backgroundColor: palette.neutral[100],
 			color: palette.neutral[7],
-			hoverBackgroundColor: palette.neutral[85],
+			hoverBackgroundColor: palette.neutral[93],
 		},
 		secondary: {
 			backgroundColor: palette.neutral[46],
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.neutral[20],
+			hoverBackgroundColor: palette.neutral[46],
 		},
 		tertiary: {
 			backgroundColor: palette.neutral[10],
@@ -53,12 +53,12 @@ export const blueTheme: { button: ButtonTheme } = {
 		primary: {
 			backgroundColor: palette.neutral[100],
 			color: palette.brand.main,
-			hoverBackgroundColor: palette.brand.faded,
+			hoverBackgroundColor: palette.neutral[93],
 		},
 		secondary: {
-			backgroundColor: "#506991",
+			backgroundColor: palette.brand.pastel,
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.brand.faded,
+			hoverBackgroundColor: palette.brand.pastel,
 		},
 		tertiary: {
 			backgroundColor: palette.brand.main,
@@ -75,7 +75,7 @@ export const yellowTheme: { button: ButtonTheme } = {
 			hoverBackgroundColor: palette.neutral[20],
 		},
 		secondary: {
-			backgroundColor: "#E9D100",
+			backgroundColor: palette.yellow.dark,
 			color: palette.neutral[7],
 			hoverBackgroundColor: palette.yellow.dark,
 		},
@@ -96,7 +96,7 @@ export const rrTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.brand.main,
 			color: palette.yellow.main,
-			hoverBackgroundColor: palette.brand.dark,
+			hoverBackgroundColor: palette.brand.pastel,
 			borderColor: palette.yellow.main,
 		},
 		tertiary: {},
