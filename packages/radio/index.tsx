@@ -7,61 +7,14 @@ import {
 	labelText,
 	labelTextWithSupportingText,
 	supportingText,
-	lightLabel,
-	lightRadio,
-	lightText,
-	lightSupportingText,
-	darkLabel,
-	darkRadio,
-	darkText,
-	darkSupportingText,
 	horizontal,
 	vertical,
 	errorRadio,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
-import { Appearance } from "@guardian/src-helpers"
+export * from "./themes"
 
 type Orientation = "vertical" | "horizontal"
-
-const appearances = {
-	light: {
-		label: lightLabel,
-		radio: lightRadio,
-		text: lightText,
-		supportingText: lightSupportingText,
-	},
-	dark: {
-		label: darkLabel,
-		radio: darkRadio,
-		text: darkText,
-		supportingText: darkSupportingText,
-	},
-	blue: {
-		label: darkLabel,
-		radio: darkRadio,
-		text: darkText,
-		supportingText: darkSupportingText,
-	},
-	yellow: {
-		label: lightLabel,
-		radio: lightRadio,
-		text: lightText,
-		supportingText: lightSupportingText,
-	},
-	"reader revenue blue": {
-		label: darkLabel,
-		radio: darkRadio,
-		text: darkText,
-		supportingText: darkSupportingText,
-	},
-	"reader revenue yellow": {
-		label: lightLabel,
-		radio: lightRadio,
-		text: lightText,
-		supportingText: lightSupportingText,
-	},
-}
 
 const orientationStyles = {
 	vertical: vertical,
@@ -70,14 +23,12 @@ const orientationStyles = {
 
 const RadioGroup = ({
 	name,
-	appearance,
 	orientation,
 	error,
 	children,
 	...props
 }: {
 	name: string
-	appearance: Appearance
 	orientation: Orientation
 	error?: boolean | string
 	children: ReactNode
@@ -96,7 +47,6 @@ const RadioGroup = ({
 					child,
 					Object.assign(error ? { error: true } : {}, {
 						name,
-						appearance,
 					}),
 				)
 			})}
@@ -105,19 +55,17 @@ const RadioGroup = ({
 }
 
 const LabelText = ({
-	appearance,
 	hasSupportingText,
 	children,
 }: {
-	appearance: Appearance
 	hasSupportingText?: boolean
 	children: ReactNode
 }) => {
 	return (
 		<div
-			css={[
-				hasSupportingText ? labelTextWithSupportingText : labelText,
-				appearances[appearance].text,
+			css={theme => [
+				hasSupportingText ? labelTextWithSupportingText : "",
+				labelText(theme.radio && theme),
 			]}
 		>
 			{children}
@@ -125,15 +73,9 @@ const LabelText = ({
 	)
 }
 
-const SupportingText = ({
-	children,
-	appearance,
-}: {
-	children: ReactNode
-	appearance: Appearance
-}) => {
+const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={[supportingText, appearances[appearance].supportingText]}>
+		<div css={theme => supportingText(theme.radio && theme)}>
 			{children}
 		</div>
 	)
@@ -144,7 +86,6 @@ const Radio = ({
 	label: labelContent,
 	supporting,
 	defaultChecked,
-	appearance,
 	error,
 	...props
 }: {
@@ -152,21 +93,18 @@ const Radio = ({
 	label: string
 	supporting?: string
 	defaultChecked?: boolean
-	appearance: Appearance
 	error?: boolean
 }) => {
 	return (
 		<label
-			css={[
-				label,
+			css={theme => [
+				label(theme.radio && theme),
 				supporting ? labelWithSupportingText : "",
-				appearances[appearance].label,
 			]}
 		>
 			<input
-				css={[
-					radio,
-					appearances[appearance].radio,
+				css={theme => [
+					radio(theme.radio && theme),
 					error ? errorRadio : "",
 				]}
 				value={value}
@@ -177,27 +115,23 @@ const Radio = ({
 			/>
 			{supporting ? (
 				<div>
-					<LabelText appearance={appearance} hasSupportingText={true}>
+					<LabelText hasSupportingText={true}>
 						{labelContent}
 					</LabelText>
-					<SupportingText appearance={appearance}>
-						{supporting}
-					</SupportingText>
+					<SupportingText>{supporting}</SupportingText>
 				</div>
 			) : (
-				<LabelText appearance={appearance}>{labelContent}</LabelText>
+				<LabelText>{labelContent}</LabelText>
 			)}
 		</label>
 	)
 }
 
 const radioGroupDefaultProps = {
-	appearance: "light",
 	orientation: "vertical",
 }
 const radioDefaultProps = {
 	disabled: false,
-	appearance: "light",
 }
 
 Radio.defaultProps = { ...radioDefaultProps }

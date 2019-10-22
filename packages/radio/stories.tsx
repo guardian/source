@@ -3,8 +3,16 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import { RadioGroup, Radio } from "./radio"
+import {
+	RadioGroup,
+	Radio,
+	RadioTheme,
+	lightTheme,
+	darkTheme,
+	blueTheme,
+} from "./index"
 import { Appearance } from "@guardian/src-helpers"
+import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
 const radios = [
@@ -41,32 +49,44 @@ export default {
 	title: "Radio",
 }
 
-const appearances: Appearance[] = ["light", "dark", "blue"]
+const appearances: {
+	name: Appearance
+	theme: { radio: RadioTheme }
+}[] = [
+	{
+		name: "light",
+		theme: lightTheme,
+	},
+	{ name: "dark", theme: darkTheme },
+	{ name: "blue", theme: blueTheme },
+]
 
 const [verticalLight, verticalDark, verticalBlue] = appearances.map(
-	(appearance: Appearance) => {
+	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
 		const story = () => (
 			<WithBackgroundToggle
 				storyKind="Radio"
 				storyName="vertical"
-				options={appearances}
-				selectedValue={appearance}
+				options={appearances.map(a => a.name)}
+				selectedValue={appearance.name}
 			>
-				<RadioGroup appearance={appearance} name="colours">
-					{radios.map((radio, index) =>
-						React.cloneElement(radio, { key: index }),
-					)}
-				</RadioGroup>
+				<ThemeProvider theme={appearance.theme}>
+					<RadioGroup name="colours">
+						{radios.map((radio, index) =>
+							React.cloneElement(radio, { key: index }),
+						)}
+					</RadioGroup>
+				</ThemeProvider>
 			</WithBackgroundToggle>
 		)
 		story.story = {
-			name: `vertical ${appearance}`,
+			name: `vertical ${appearance.name}`,
 			parameters: {
 				backgrounds: [
 					Object.assign(
 						{},
 						{ default: true },
-						storybookBackgrounds[appearance],
+						storybookBackgrounds[appearance.name],
 					),
 				],
 			},
@@ -80,36 +100,40 @@ const [
 	supportingTextLight,
 	supportingTextDark,
 	supportingTextBlue,
-] = appearances.map((appearance: Appearance) => {
-	const story = () => (
-		<WithBackgroundToggle
-			storyKind="Radio"
-			storyName="supporting text"
-			options={appearances}
-			selectedValue={appearance}
-		>
-			<RadioGroup appearance={appearance} name="payment-options">
-				{radiosWithSupportingText.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
-				)}
-			</RadioGroup>
-		</WithBackgroundToggle>
-	)
-	story.story = {
-		name: `supporting text ${appearance}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[appearance],
-				),
-			],
-		},
-	}
+] = appearances.map(
+	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
+		const story = () => (
+			<WithBackgroundToggle
+				storyKind="Radio"
+				storyName="supporting text"
+				options={appearances.map(a => a.name)}
+				selectedValue={appearance.name}
+			>
+				<ThemeProvider theme={appearance.theme}>
+					<RadioGroup name="payment-options">
+						{radiosWithSupportingText.map((radio, index) =>
+							React.cloneElement(radio, { key: index }),
+						)}
+					</RadioGroup>
+				</ThemeProvider>
+			</WithBackgroundToggle>
+		)
+		story.story = {
+			name: `supporting text ${appearance.name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[appearance.name],
+					),
+				],
+			},
+		}
 
-	return story
-})
+		return story
+	},
+)
 
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
@@ -121,16 +145,45 @@ horizontal.story = {
 	name: "orientation horizontal",
 }
 
-const errorWithMessage = () => (
-	<RadioGroup name="colours" error="Please select a colour">
-		{unselectedRadios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
-		)}
-	</RadioGroup>
+const [
+	errorWithMessageLight,
+	errorWithMessageDark,
+	errorWithMessageBlue,
+] = appearances.map(
+	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
+		const story = () => (
+			<WithBackgroundToggle
+				storyKind="Radio"
+				storyName="error with message"
+				options={appearances.map(a => a.name)}
+				selectedValue={appearance.name}
+			>
+				<ThemeProvider theme={appearance.theme}>
+					<RadioGroup name="colours" error="Please select a colour">
+						{unselectedRadios.map((radio, index) =>
+							React.cloneElement(radio, { key: index }),
+						)}
+					</RadioGroup>
+				</ThemeProvider>
+			</WithBackgroundToggle>
+		)
+
+		story.story = {
+			name: `error with message ${appearance.name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[appearance.name],
+					),
+				],
+			},
+		}
+
+		return story
+	},
 )
-errorWithMessage.story = {
-	name: "error with message",
-}
 
 const errorWithoutMessage = () => (
 	<RadioGroup name="colours" error={true}>
@@ -151,6 +204,8 @@ export {
 	supportingTextLight,
 	supportingTextDark,
 	supportingTextBlue,
-	errorWithMessage,
+	errorWithMessageLight,
+	errorWithMessageDark,
+	errorWithMessageBlue,
 	errorWithoutMessage,
 }

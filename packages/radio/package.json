@@ -21,8 +21,9 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"radio.tsx",
-		"styles.ts"
+		"index.tsx",
+		"styles.ts",
+		"themes.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",

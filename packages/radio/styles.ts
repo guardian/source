@@ -7,17 +7,24 @@ import {
 	focusHalo,
 	transitions,
 } from "@guardian/src-foundations"
+import { RadioTheme, lightTheme } from "./themes"
 
 export const group = css`
 	display: flex;
 	justify-content: flex-start;
 `
 
-export const label = css`
+export const label = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	height: ${size.large}px;
+
+	&:hover {
+		input {
+			border-color: ${radio.hoverBorderColor};
+		}
+	}
 `
 
 export const labelWithSupportingText = css`
@@ -25,7 +32,7 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `
 
-export const radio = css`
+export const radio = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 	cursor: pointer;
 	box-sizing: border-box;
 	display: inline-block;
@@ -38,6 +45,12 @@ export const radio = css`
 	position: relative;
 	transition: box-shadow ${transitions.short};
 	transition-delay: 0.08s;
+
+	color: ${radio.color};
+
+	&:checked {
+		color: ${radio.checkedColor};
+	}
 
 	&:focus {
 		${focusHalo};
@@ -74,60 +87,20 @@ export const radio = css`
 	}
 `
 
-export const labelText = css`
+export const labelText = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 	${textSans({ level: 3 })};
+	color: ${radio.textColor};
 `
 
 export const labelTextWithSupportingText = css`
 	${textSans({ level: 3, fontWeight: "bold" })};
 `
 
-export const supportingText = css`
+export const supportingText = ({
+	radio,
+}: { radio: RadioTheme } = lightTheme) => css`
 	${textSans({ level: 3 })};
-`
-
-export const lightLabel = css`
-	&:hover {
-		input {
-			border-color: ${palette.brand.main};
-		}
-	}
-`
-export const lightRadio = css`
-	color: ${palette.neutral[60]};
-
-	&:checked {
-		color: ${palette.brand.main};
-	}
-`
-export const lightText = css`
-	color: ${palette.neutral[20]};
-`
-
-export const lightSupportingText = css`
-	color: ${palette.neutral[46]};
-`
-
-export const darkLabel = css`
-	&:hover {
-		input {
-			border-color: ${palette.neutral[100]};
-		}
-	}
-`
-export const darkRadio = css`
-	color: ${palette.brand.pastel};
-
-	&:checked {
-		color: ${palette.neutral[100]};
-	}
-`
-export const darkText = css`
-	color: ${palette.neutral[100]};
-`
-
-export const darkSupportingText = css`
-	color: ${palette.neutral[60]};
+	color: ${radio.supportingTextColor};
 `
 
 export const horizontal = css`
