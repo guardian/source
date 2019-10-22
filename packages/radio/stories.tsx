@@ -145,16 +145,45 @@ horizontal.story = {
 	name: "orientation horizontal",
 }
 
-const errorWithMessage = () => (
-	<RadioGroup name="colours" error="Please select a colour">
-		{unselectedRadios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
-		)}
-	</RadioGroup>
+const [
+	errorWithMessageLight,
+	errorWithMessageDark,
+	errorWithMessageBlue,
+] = appearances.map(
+	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
+		const story = () => (
+			<WithBackgroundToggle
+				storyKind="Radio"
+				storyName="error with message"
+				options={appearances.map(a => a.name)}
+				selectedValue={appearance.name}
+			>
+				<ThemeProvider theme={appearance.theme}>
+					<RadioGroup name="colours" error="Please select a colour">
+						{unselectedRadios.map((radio, index) =>
+							React.cloneElement(radio, { key: index }),
+						)}
+					</RadioGroup>
+				</ThemeProvider>
+			</WithBackgroundToggle>
+		)
+
+		story.story = {
+			name: `error with message ${appearance.name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[appearance.name],
+					),
+				],
+			},
+		}
+
+		return story
+	},
 )
-errorWithMessage.story = {
-	name: "error with message",
-}
 
 const errorWithoutMessage = () => (
 	<RadioGroup name="colours" error={true}>
@@ -175,6 +204,8 @@ export {
 	supportingTextLight,
 	supportingTextDark,
 	supportingTextBlue,
-	errorWithMessage,
+	errorWithMessageLight,
+	errorWithMessageDark,
+	errorWithMessageBlue,
 	errorWithoutMessage,
 }
