@@ -24,7 +24,7 @@ export const darkTheme: { radio: RadioTheme } = {
 		color: palette.brand.pastel,
 		checkedColor: palette.neutral[100],
 		textColor: palette.neutral[100],
-		supportingTextColor: palette.neutral[60],
+		supportingTextColor: palette.brand.faded,
 	},
 }
 
@@ -34,6 +34,6 @@ export const blueTheme: { radio: RadioTheme } = {
 		color: palette.brand.pastel,
 		checkedColor: palette.neutral[100],
 		textColor: palette.neutral[100],
-		supportingTextColor: palette.neutral[60],
+		supportingTextColor: palette.brand.faded,
 	},
 }
