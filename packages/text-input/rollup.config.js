@@ -5,7 +5,7 @@ import commonjs from "rollup-plugin-commonjs"
 const extensions = [".ts", ".tsx"]
 
 module.exports = {
-	input: "text-input.tsx",
+	input: "index.tsx",
 	output: [
 		{
 			file: "dist/text-input.js",

@@ -20,7 +20,7 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"button.tsx",
+		"index.tsx",
 		"styles.ts",
 		"themes.ts"
 	],

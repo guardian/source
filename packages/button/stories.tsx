@@ -10,15 +10,15 @@ import {
 	SvgClose,
 } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
-import { Button } from "./button"
 import {
+	Button,
 	lightTheme,
 	darkTheme,
 	yellowTheme,
 	blueTheme,
 	rrBlueTheme,
 	rrYellowTheme,
-} from "./themes"
+} from "./index"
 import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */

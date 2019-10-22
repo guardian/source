@@ -1,5 +1,5 @@
 import { palette } from "@guardian/src-foundations"
-import { Priority } from "./button"
+import { Priority } from "./index"
 
 export type ButtonTheme = {
 	[key in Priority]: {

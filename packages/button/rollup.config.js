@@ -1,21 +1,21 @@
-import babel from "rollup-plugin-babel";
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
+import babel from "rollup-plugin-babel"
+import resolve from "rollup-plugin-node-resolve"
+import commonjs from "rollup-plugin-commonjs"
 
-const extensions = [".ts", ".tsx"];
+const extensions = [".ts", ".tsx"]
 
 module.exports = {
-	input: "button.tsx",
+	input: "index.tsx",
 	output: [
 		{
 			file: "dist/button.js",
-			format: "cjs"
+			format: "cjs",
 		},
 		{
 			file: "dist/button.esm.js",
-			format: "esm"
-		}
+			format: "esm",
+		},
 	],
 	external: ["react", "@emotion/core", "@emotion/css"],
-	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()]
-};
+	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
+}

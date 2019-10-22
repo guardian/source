@@ -3,7 +3,7 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import { TextInput } from "./text-input"
+import { TextInput } from "./index"
 
 export default {
 	title: "TextInput",

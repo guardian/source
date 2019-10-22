@@ -20,7 +20,7 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"text-input.tsx",
+		"index.tsx",
 		"styles.ts"
 	],
 	"peerDependencies": {
