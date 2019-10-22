@@ -12,6 +12,7 @@ import {
 	errorRadio,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
+export * from "./themes"
 
 type Orientation = "vertical" | "horizontal"
 

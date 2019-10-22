@@ -3,10 +3,16 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import { RadioGroup, Radio } from "./radio"
+import {
+	RadioGroup,
+	Radio,
+	RadioTheme,
+	lightTheme,
+	darkTheme,
+	blueTheme,
+} from "./index"
 import { Appearance } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
-import { RadioTheme, lightTheme, darkTheme, blueTheme } from "./themes"
 
 /* eslint-disable react/jsx-key */
 const radios = [
