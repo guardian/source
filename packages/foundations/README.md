@@ -15,7 +15,7 @@ $ yarn add @guardian/src-foundations
 ```ts
 import { palette } from "@guardian/src-foundations"
 
-const backgroundColour = css`
+const backgroundColor = css`
 	background-color: ${palette.neutral[97]};
 `
 ```
