@@ -51,7 +51,7 @@ export default {
 
 const appearances: {
 	name: Appearance
-	theme: any
+	theme: { radio: RadioTheme }
 }[] = [
 	{
 		name: "light",
@@ -62,7 +62,7 @@ const appearances: {
 ]
 
 const [verticalLight, verticalDark, verticalBlue] = appearances.map(
-	(appearance: { name: Appearance; theme: RadioTheme }) => {
+	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
 		const story = () => (
 			<WithBackgroundToggle
 				storyKind="Radio"
@@ -100,38 +100,40 @@ const [
 	supportingTextLight,
 	supportingTextDark,
 	supportingTextBlue,
-] = appearances.map((appearance: { name: Appearance; theme: RadioTheme }) => {
-	const story = () => (
-		<WithBackgroundToggle
-			storyKind="Radio"
-			storyName="supporting text"
-			options={appearances.map(a => a.name)}
-			selectedValue={appearance.name}
-		>
-			<ThemeProvider theme={appearance.theme}>
-				<RadioGroup name="payment-options">
-					{radiosWithSupportingText.map((radio, index) =>
-						React.cloneElement(radio, { key: index }),
-					)}
-				</RadioGroup>
-			</ThemeProvider>
-		</WithBackgroundToggle>
-	)
-	story.story = {
-		name: `supporting text ${appearance.name}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[appearance.name],
-				),
-			],
-		},
-	}
+] = appearances.map(
+	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
+		const story = () => (
+			<WithBackgroundToggle
+				storyKind="Radio"
+				storyName="supporting text"
+				options={appearances.map(a => a.name)}
+				selectedValue={appearance.name}
+			>
+				<ThemeProvider theme={appearance.theme}>
+					<RadioGroup name="payment-options">
+						{radiosWithSupportingText.map((radio, index) =>
+							React.cloneElement(radio, { key: index }),
+						)}
+					</RadioGroup>
+				</ThemeProvider>
+			</WithBackgroundToggle>
+		)
+		story.story = {
+			name: `supporting text ${appearance.name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[appearance.name],
+					),
+				],
+			},
+		}
 
-	return story
-})
+		return story
+	},
+)
 
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
