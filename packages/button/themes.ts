@@ -106,15 +106,15 @@ export const rrBlueTheme: { button: ButtonTheme } = {
 export const rrYellowTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.brand.main,
+			backgroundColor: palette.neutral[7],
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.brand.pastel,
+			hoverBackgroundColor: palette.neutral[20],
 		},
 		secondary: {
 			backgroundColor: palette.yellow.main,
-			color: palette.brand.main,
+			color: palette.neutral[7],
 			hoverBackgroundColor: palette.yellow.dark,
-			borderColor: palette.brand.main,
+			borderColor: palette.neutral[7],
 		},
 		tertiary: {
 			backgroundColor: palette.neutral[100],
