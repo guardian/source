@@ -148,5 +148,5 @@ export {
 	desktop,
 	leftCol,
 	wide,
-	breakpointMap,
+	breakpointMap as breakpoints,
 }
