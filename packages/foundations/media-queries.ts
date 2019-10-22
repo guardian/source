@@ -18,8 +18,17 @@ const maxWidth = (until: number): string =>
 const minWidthMaxWidth = (from: number, until: number): string =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`
 
-// e.g. until.*
-const until = {
+const minWidths = {
+	mobileMedium: minWidth(breakpointMap.mobileMedium),
+	mobileLandscape: minWidth(breakpointMap.mobileLandscape),
+	phablet: minWidth(breakpointMap.phablet),
+	tablet: minWidth(breakpointMap.tablet),
+	desktop: minWidth(breakpointMap.desktop),
+	leftCol: minWidth(breakpointMap.leftCol),
+	wide: minWidth(breakpointMap.wide),
+}
+
+const maxWidths = {
 	mobileMedium: maxWidth(breakpointMap.mobileMedium),
 	mobileLandscape: maxWidth(breakpointMap.mobileLandscape),
 	phablet: maxWidth(breakpointMap.phablet),
@@ -28,6 +37,15 @@ const until = {
 	leftCol: maxWidth(breakpointMap.leftCol),
 	wide: maxWidth(breakpointMap.wide),
 }
+
+// e.g. until.*
+const until = maxWidths
+
+// e.g. below.*
+const below = maxWidths
+
+// e.g. above.*
+const above = minWidths
 
 // e.g. from.*.until.*
 const from = {
@@ -141,6 +159,8 @@ const wide = minWidth(breakpointMap.wide)
 export {
 	from,
 	until,
+	below,
+	above,
 	mobileMedium,
 	mobileLandscape,
 	phablet,
