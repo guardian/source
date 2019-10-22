@@ -16,7 +16,8 @@ import {
 	darkTheme,
 	yellowTheme,
 	blueTheme,
-	rrTheme,
+	rrBlueTheme,
+	rrYellowTheme,
 } from "./themes"
 import { ThemeProvider } from "emotion-theming"
 
@@ -152,13 +153,13 @@ priorityYellow.story = {
 	},
 }
 
-export const priorityReaderRevenue = () => (
+export const priorityReaderRevenueBlue = () => (
 	<WithBackgroundToggle
 		storyKind="Button"
 		storyName="priority"
-		selectedValue="reader revenue"
+		selectedValue="reader revenue blue"
 	>
-		<ThemeProvider theme={rrTheme}>
+		<ThemeProvider theme={rrBlueTheme}>
 			<div css={flexStart}>
 				{priorityButtons.slice(0, 2).map((button, index) => (
 					<div key={index}>{button}</div>
@@ -167,14 +168,42 @@ export const priorityReaderRevenue = () => (
 		</ThemeProvider>
 	</WithBackgroundToggle>
 )
-priorityReaderRevenue.story = {
-	name: "priority reader revenue",
+priorityReaderRevenueBlue.story = {
+	name: "priority reader revenue blue",
 	parameters: {
 		backgrounds: [
 			Object.assign(
 				{},
 				{ default: true },
-				storybookBackgrounds["reader revenue"],
+				storybookBackgrounds["reader revenue blue"],
+			),
+		],
+	},
+}
+
+export const priorityReaderRevenueYellow = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="reader revenue yellow"
+	>
+		<ThemeProvider theme={rrYellowTheme}>
+			<div css={flexStart}>
+				{priorityButtons.slice(0, 2).map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
+	</WithBackgroundToggle>
+)
+priorityReaderRevenueYellow.story = {
+	name: "priority reader revenue yellow",
+	parameters: {
+		backgrounds: [
+			Object.assign(
+				{},
+				{ default: true },
+				storybookBackgrounds["reader revenue yellow"],
 			),
 		],
 	},
