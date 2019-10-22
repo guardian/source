@@ -16,20 +16,20 @@ const appearanceDescriptions: {
 	dark: "Brand dark mode",
 	blue: "Blue blue background",
 	yellow: "Brand yellow background",
-	"reader revenue": "Reader revenue blue background (default)",
+	"reader revenue blue": "Reader revenue blue background (default)",
 }
 
 export const WithBackgroundToggle = ({
 	storyKind,
 	storyName,
-	options = ["light", "dark", "blue", "yellow", "reader revenue"],
+	options = ["light", "dark", "blue", "yellow", "reader revenue blue"],
 	selectedValue,
 	children,
 }: {
 	storyKind: string
 	storyName: string
 	options?: Appearance[]
-	selectedValue: string
+	selectedValue: Appearance
 	children: ReactNode
 }) => (
 	<div css={spaceBetween}>

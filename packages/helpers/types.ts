@@ -1,1 +1,6 @@
-export type Appearance = "light" | "dark" | "blue" | "yellow" | "reader revenue"
+export type Appearance =
+	| "light"
+	| "dark"
+	| "blue"
+	| "yellow"
+	| "reader revenue blue"

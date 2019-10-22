@@ -11,7 +11,10 @@ const storybookBackgrounds: {
 	dark: { name: "dark", value: palette.neutral[10] },
 	blue: { name: "blue", value: palette.brand.main },
 	yellow: { name: "yellow", value: palette.yellow.main },
-	"reader revenue": { name: "reader revenue", value: palette.brand.main },
+	"reader revenue blue": {
+		name: "reader revenue blue",
+		value: palette.brand.main,
+	},
 }
 
 Object.freeze(storybookBackgrounds)

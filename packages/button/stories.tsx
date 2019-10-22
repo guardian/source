@@ -152,11 +152,11 @@ priorityYellow.story = {
 	},
 }
 
-export const priorityReaderRevenue = () => (
+export const priorityReaderRevenueBlue = () => (
 	<WithBackgroundToggle
 		storyKind="Button"
 		storyName="priority"
-		selectedValue="reader revenue"
+		selectedValue="reader revenue blue"
 	>
 		<ThemeProvider theme={rrTheme}>
 			<div css={flexStart}>
@@ -167,14 +167,14 @@ export const priorityReaderRevenue = () => (
 		</ThemeProvider>
 	</WithBackgroundToggle>
 )
-priorityReaderRevenue.story = {
-	name: "priority reader revenue",
+priorityReaderRevenueBlue.story = {
+	name: "priority reader revenue blue",
 	parameters: {
 		backgrounds: [
 			Object.assign(
 				{},
 				{ default: true },
-				storybookBackgrounds["reader revenue"],
+				storybookBackgrounds["reader revenue blue"],
 			),
 		],
 	},
