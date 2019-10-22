@@ -1,6 +1,7 @@
 import { linkTo } from "@storybook/addon-links"
 import React, { ReactNode } from "react"
 import { css } from "@emotion/core"
+import { Appearance } from "@guardian/src-helpers"
 
 const spaceBetween = css`
 	display: flex;
@@ -8,14 +9,26 @@ const spaceBetween = css`
 	justify-content: space-between;
 `
 
+const appearanceDescriptions: {
+	[key in Appearance]: string
+} = {
+	light: "Brand light mode (default)",
+	dark: "Brand dark mode",
+	blue: "Blue blue background",
+	yellow: "Brand yellow background",
+	"reader revenue": "Reader revenue blue background (default)",
+}
+
 export const WithBackgroundToggle = ({
 	storyKind,
 	storyName,
+	options = ["light", "dark", "blue", "yellow", "reader revenue"],
 	selectedValue,
 	children,
 }: {
 	storyKind: string
 	storyName: string
+	options?: Appearance[]
 	selectedValue: string
 	children: ReactNode
 }) => (
@@ -33,13 +46,14 @@ export const WithBackgroundToggle = ({
 				return target.value
 			})}
 		>
-			<option value={`${storyName} light`}>Light mode</option>
-			<option value={`${storyName} dark`}>Dark mode</option>
-			<option value={`${storyName} blue`}>Blue background</option>
-			<option value={`${storyName} yellow`}>Yellow background</option>
-			<option value={`${storyName} reader revenue`}>
-				Reader revenue background
-			</option>
+			{options.map((option: Appearance, index) => (
+				<option
+					value={`${storyName} ${option}`}
+					key={`background-toggle-${index}`}
+				>
+					{appearanceDescriptions[option]}
+				</option>
+			))}
 		</select>
 	</div>
 )
