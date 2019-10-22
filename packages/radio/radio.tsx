@@ -55,6 +55,12 @@ const appearances = {
 		text: darkText,
 		supportingText: darkSupportingText,
 	},
+	"reader revenue yellow": {
+		label: lightLabel,
+		radio: lightRadio,
+		text: lightText,
+		supportingText: lightSupportingText,
+	},
 }
 
 const orientationStyles = {

@@ -86,7 +86,7 @@ export const yellowTheme: { button: ButtonTheme } = {
 	},
 }
 
-export const rrTheme: { button: ButtonTheme } = {
+export const rrBlueTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
 			backgroundColor: palette.yellow.main,
@@ -100,5 +100,25 @@ export const rrTheme: { button: ButtonTheme } = {
 			borderColor: palette.yellow.main,
 		},
 		tertiary: {},
+	},
+}
+
+export const rrYellowTheme: { button: ButtonTheme } = {
+	button: {
+		primary: {
+			backgroundColor: palette.brand.main,
+			color: palette.neutral[100],
+			hoverBackgroundColor: palette.brand.pastel,
+		},
+		secondary: {
+			backgroundColor: palette.yellow.main,
+			color: palette.brand.main,
+			hoverBackgroundColor: palette.yellow.dark,
+			borderColor: palette.brand.main,
+		},
+		tertiary: {
+			backgroundColor: palette.neutral[100],
+			color: palette.brand.main,
+		},
 	},
 }

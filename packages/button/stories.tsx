@@ -16,7 +16,8 @@ import {
 	darkTheme,
 	yellowTheme,
 	blueTheme,
-	rrTheme,
+	rrBlueTheme,
+	rrYellowTheme,
 } from "./themes"
 import { ThemeProvider } from "emotion-theming"
 
@@ -158,7 +159,7 @@ export const priorityReaderRevenueBlue = () => (
 		storyName="priority"
 		selectedValue="reader revenue blue"
 	>
-		<ThemeProvider theme={rrTheme}>
+		<ThemeProvider theme={rrBlueTheme}>
 			<div css={flexStart}>
 				{priorityButtons.slice(0, 2).map((button, index) => (
 					<div key={index}>{button}</div>
@@ -175,6 +176,34 @@ priorityReaderRevenueBlue.story = {
 				{},
 				{ default: true },
 				storybookBackgrounds["reader revenue blue"],
+			),
+		],
+	},
+}
+
+export const priorityReaderRevenueYellow = () => (
+	<WithBackgroundToggle
+		storyKind="Button"
+		storyName="priority"
+		selectedValue="reader revenue yellow"
+	>
+		<ThemeProvider theme={rrYellowTheme}>
+			<div css={flexStart}>
+				{priorityButtons.slice(0, 2).map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</ThemeProvider>
+	</WithBackgroundToggle>
+)
+priorityReaderRevenueYellow.story = {
+	name: "priority reader revenue yellow",
+	parameters: {
+		backgrounds: [
+			Object.assign(
+				{},
+				{ default: true },
+				storybookBackgrounds["reader revenue yellow"],
 			),
 		],
 	},

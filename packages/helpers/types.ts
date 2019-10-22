@@ -4,3 +4,4 @@ export type Appearance =
 	| "blue"
 	| "yellow"
 	| "reader revenue blue"
+	| "reader revenue yellow"

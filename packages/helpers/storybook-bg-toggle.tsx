@@ -17,12 +17,20 @@ const appearanceDescriptions: {
 	blue: "Blue blue background",
 	yellow: "Brand yellow background",
 	"reader revenue blue": "Reader revenue blue background (default)",
+	"reader revenue yellow": "Reader revenue yellow background",
 }
 
 export const WithBackgroundToggle = ({
 	storyKind,
 	storyName,
-	options = ["light", "dark", "blue", "yellow", "reader revenue blue"],
+	options = [
+		"light",
+		"dark",
+		"blue",
+		"yellow",
+		"reader revenue blue",
+		"reader revenue yellow",
+	],
 	selectedValue,
 	children,
 }: {
