@@ -5,6 +5,8 @@ import {
 } from "@guardian/src-helpers"
 import { RadioGroup, Radio } from "./radio"
 import { Appearance } from "@guardian/src-helpers"
+import { ThemeProvider } from "emotion-theming"
+import { RadioTheme, lightTheme, darkTheme, blueTheme } from "./themes"
 
 /* eslint-disable react/jsx-key */
 const radios = [
@@ -41,32 +43,44 @@ export default {
 	title: "Radio",
 }
 
-const appearances: Appearance[] = ["light", "dark", "blue"]
+const appearances: {
+	name: Appearance
+	theme: any
+}[] = [
+	{
+		name: "light",
+		theme: lightTheme,
+	},
+	{ name: "dark", theme: darkTheme },
+	{ name: "blue", theme: blueTheme },
+]
 
 const [verticalLight, verticalDark, verticalBlue] = appearances.map(
-	(appearance: Appearance) => {
+	(appearance: { name: Appearance; theme: RadioTheme }) => {
 		const story = () => (
 			<WithBackgroundToggle
 				storyKind="Radio"
 				storyName="vertical"
-				options={appearances}
-				selectedValue={appearance}
+				options={appearances.map(a => a.name)}
+				selectedValue={appearance.name}
 			>
-				<RadioGroup appearance={appearance} name="colours">
-					{radios.map((radio, index) =>
-						React.cloneElement(radio, { key: index }),
-					)}
-				</RadioGroup>
+				<ThemeProvider theme={appearance.theme}>
+					<RadioGroup name="colours">
+						{radios.map((radio, index) =>
+							React.cloneElement(radio, { key: index }),
+						)}
+					</RadioGroup>
+				</ThemeProvider>
 			</WithBackgroundToggle>
 		)
 		story.story = {
-			name: `vertical ${appearance}`,
+			name: `vertical ${appearance.name}`,
 			parameters: {
 				backgrounds: [
 					Object.assign(
 						{},
 						{ default: true },
-						storybookBackgrounds[appearance],
+						storybookBackgrounds[appearance.name],
 					),
 				],
 			},
@@ -80,29 +94,31 @@ const [
 	supportingTextLight,
 	supportingTextDark,
 	supportingTextBlue,
-] = appearances.map((appearance: Appearance) => {
+] = appearances.map((appearance: { name: Appearance; theme: RadioTheme }) => {
 	const story = () => (
 		<WithBackgroundToggle
 			storyKind="Radio"
 			storyName="supporting text"
-			options={appearances}
-			selectedValue={appearance}
+			options={appearances.map(a => a.name)}
+			selectedValue={appearance.name}
 		>
-			<RadioGroup appearance={appearance} name="payment-options">
-				{radiosWithSupportingText.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
-				)}
-			</RadioGroup>
+			<ThemeProvider theme={appearance.theme}>
+				<RadioGroup name="payment-options">
+					{radiosWithSupportingText.map((radio, index) =>
+						React.cloneElement(radio, { key: index }),
+					)}
+				</RadioGroup>
+			</ThemeProvider>
 		</WithBackgroundToggle>
 	)
 	story.story = {
-		name: `supporting text ${appearance}`,
+		name: `supporting text ${appearance.name}`,
 		parameters: {
 			backgrounds: [
 				Object.assign(
 					{},
 					{ default: true },
-					storybookBackgrounds[appearance],
+					storybookBackgrounds[appearance.name],
 				),
 			],
 		},
