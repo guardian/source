@@ -116,7 +116,7 @@ const [
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
 		<Radio value="yes" label="Yes" />
-		<Radio value="no" label="No" />
+		<Radio value="no" label="No" defaultChecked />
 	</RadioGroup>
 )
 horizontal.story = {
