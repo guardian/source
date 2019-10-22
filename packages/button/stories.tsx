@@ -171,7 +171,11 @@ priorityReaderRevenue.story = {
 	name: "priority reader revenue",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.rr),
+			Object.assign(
+				{},
+				{ default: true },
+				storybookBackgrounds["reader revenue"],
+			),
 		],
 	},
 }

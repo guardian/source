@@ -41,53 +41,51 @@ export default {
 	title: "Radio",
 }
 
-const appearances: Appearance[] = ["light", "dark", "blue", "yellow"]
+const appearances: Appearance[] = ["light", "dark", "blue"]
 
-const [
-	verticalLight,
-	verticalDark,
-	verticalBlue,
-	verticalYellow,
-] = appearances.map((appearance: Appearance) => {
-	const story = () => (
-		<WithBackgroundToggle
-			storyKind="Radio"
-			storyName="vertical"
-			selectedValue={appearance}
-		>
-			<RadioGroup appearance={appearance} name="colours">
-				{radios.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
-				)}
-			</RadioGroup>
-		</WithBackgroundToggle>
-	)
-	story.story = {
-		name: `vertical ${appearance}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[appearance],
-				),
-			],
-		},
-	}
+const [verticalLight, verticalDark, verticalBlue] = appearances.map(
+	(appearance: Appearance) => {
+		const story = () => (
+			<WithBackgroundToggle
+				storyKind="Radio"
+				storyName="vertical"
+				options={appearances}
+				selectedValue={appearance}
+			>
+				<RadioGroup appearance={appearance} name="colours">
+					{radios.map((radio, index) =>
+						React.cloneElement(radio, { key: index }),
+					)}
+				</RadioGroup>
+			</WithBackgroundToggle>
+		)
+		story.story = {
+			name: `vertical ${appearance}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[appearance],
+					),
+				],
+			},
+		}
 
-	return story
-})
+		return story
+	},
+)
 
 const [
 	supportingTextLight,
 	supportingTextDark,
 	supportingTextBlue,
-	supportingTextYellow,
 ] = appearances.map((appearance: Appearance) => {
 	const story = () => (
 		<WithBackgroundToggle
 			storyKind="Radio"
 			storyName="supporting text"
+			options={appearances}
 			selectedValue={appearance}
 		>
 			<RadioGroup appearance={appearance} name="payment-options">
@@ -116,7 +114,7 @@ const [
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
 		<Radio value="yes" label="Yes" />
-		<Radio value="no" label="No" />
+		<Radio value="no" label="No" defaultChecked />
 	</RadioGroup>
 )
 horizontal.story = {
@@ -149,12 +147,10 @@ export {
 	verticalLight,
 	verticalDark,
 	verticalBlue,
-	verticalYellow,
 	horizontal,
 	supportingTextLight,
 	supportingTextDark,
 	supportingTextBlue,
-	supportingTextYellow,
 	errorWithMessage,
 	errorWithoutMessage,
 }
