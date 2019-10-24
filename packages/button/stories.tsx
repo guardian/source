@@ -32,9 +32,7 @@ const sizeButtons = [
 	<Button size="small">Small</Button>,
 ]
 const textIconButtons = [
-	<Button iconSide="left" icon={<SvgCheckmark />}>
-		Left aligned
-	</Button>,
+	<Button icon={<SvgCheckmark />}>Left aligned</Button>,
 	<Button iconSide="right" icon={<SvgArrowRightStraight />}>
 		Right aligned
 	</Button>,
