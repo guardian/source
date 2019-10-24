@@ -69,3 +69,34 @@ Output:
     }
 }
 ```
+
+### Visually Hidden
+
+**_DEPRECATED!_** Please import `visuallyHidden` from [`@guardian/src-utilities`](https://github.com/guardian/source-components/tree/master/packages/utilities#visually-hidden)
+
+For elements that should not appear to sighted users, but are useful to assistive technology users.
+
+```ts
+import { visuallyHidden } from "@guardian/src-foundations"
+
+const label = css`
+    ${visuallyHidden};
+`
+```
+
+### Focus Halo
+
+**_DEPRECATED!_** Please import `focusHalo` from [`@guardian/src-utilities`](https://github.com/guardian/source-components/tree/master/packages/utilities#focus-halo)
+
+This mixin provides a [clear focus state](https://zeroheight.com/2a1e5182b/p/08dc26/t/314e46) for
+elements that may receive keyboard focus.
+
+```ts
+import { focusHalo } from "@guardian/src-foundations"
+
+const input = css`
+    ${focusHalo};
+    width: 200px;
+    height: 44px;
+`
+```
