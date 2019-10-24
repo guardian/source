@@ -62,7 +62,7 @@ const Button = ({
 	priority: Priority
 	size: Size
 	icon?: ReactElement
-	iconSide?: IconSide
+	iconSide: IconSide
 	onClick?: () => void
 	children?: ReactNode
 }) => {
@@ -79,7 +79,7 @@ const Button = ({
 				sizes[size],
 				priorities[priority](theme.button && theme),
 				iconSvg ? iconSizes[size] : "",
-				iconSide ? iconSides[iconSide] : "",
+				iconSvg && children ? iconSides[iconSide] : "",
 				!children ? iconOnlySizes[size] : "",
 			]}
 			{...props}
@@ -92,6 +92,7 @@ const defaultProps = {
 	type: "button",
 	priority: "primary",
 	size: "default",
+	iconSide: "left",
 }
 
 Button.defaultProps = { ...defaultProps }
