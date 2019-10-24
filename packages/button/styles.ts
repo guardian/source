@@ -9,11 +9,7 @@ import { lightTheme, ButtonTheme } from "./themes"
 
 export const button = css`
 	display: inline-flex;
-	align-items: center;
 	justify-content: space-between;
-	position: relative;
-	font-weight: bold;
-	text-decoration: none;
 	${textSans({ level: 3, fontWeight: "bold" })};
 	box-sizing: border-box;
 	border: none;
