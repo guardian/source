@@ -16,29 +16,31 @@ $ yarn add @guardian/src-foundations
 import { palette } from "@guardian/src-foundations"
 
 const backgroundColor = css`
-	background-color: ${palette.neutral[97]};
+    background-color: ${palette.neutral[97]};
 `
 ```
 
-### [Media queries](https://zeroheight.com/2a1e5182b/p/14af24)
+### Media queries
+
+**_DEPRECATED!_** Please import media queries from [`@guardian/src-utilities`](https://github.com/guardian/source-components/tree/master/packages/utilities#media-queries)
 
 ```ts
 import { mobileLandscape, from, until } from "@guardian/src-foundations"
 
 const styles = css`
-	padding: 0 10px;
+    padding: 0 10px;
 
-	${mobileLandscape} {
-		padding: 0 20px;
-	}
+    ${mobileLandscape} {
+        padding: 0 20px;
+    }
 
-	${from.phablet.until.desktop} {
-		padding: 0 32px;
-	}
+    ${from.phablet.until.desktop} {
+        padding: 0 32px;
+    }
 
-	${until.wide} {
-		padding: 0 40px;
-	}
+    ${until.wide} {
+        padding: 0 40px;
+    }
 `
 ```
 
@@ -46,24 +48,24 @@ Output:
 
 ```css
 .class-name {
-	padding: 0 10px;
+    padding: 0 10px;
 }
 
 @media (min-width: 480px) {
-	.class-name {
-		padding: 0 20px;
-	}
+    .class-name {
+        padding: 0 20px;
+    }
 }
 
 @media (min-width: 660px) and (max-width: 980px) {
-	.class-name {
-		padding: 0 32px;
-	}
+    .class-name {
+        padding: 0 32px;
+    }
 }
 
 @media (max-width: 1300px) {
-	.class-name {
-		padding: 0 40px;
-	}
+    .class-name {
+        padding: 0 40px;
+    }
 }
 ```
