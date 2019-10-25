@@ -1,10 +1,18 @@
 import { css } from "@emotion/core"
-import { textSans, palette, focusHalo } from "@guardian/src-foundations"
+import { textSans, palette, size } from "@guardian/src-foundations"
+import { focusHalo } from "@guardian/src-utilities"
 
 export const textInput = css`
+	height: ${size.large}px;
+	${textSans({ level: 3 })};
+
 	&:focus {
 		${focusHalo};
 	}
+`
+
+export const textInputWide = css`
+	width: 460px;
 `
 
 export const text = css`
@@ -14,17 +22,11 @@ export const text = css`
 
 export const light = css`
 	input {
-		color: ${palette.neutral[60]};
+		color: ${palette.neutral[7]};
 	}
 
 	span {
 		color: ${palette.neutral[20]};
-	}
-
-	&:hover {
-		input {
-			border-color: ${palette.brand.main};
-		}
 	}
 `
 export const dark = css`
@@ -34,11 +36,5 @@ export const dark = css`
 
 	span {
 		color: ${palette.neutral[100]};
-	}
-
-	&:hover {
-		input {
-			border-color: ${palette.neutral[100]};
-		}
 	}
 `
