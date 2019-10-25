@@ -1,5 +1,18 @@
 import { breakpoints } from "@guardian/src-foundations"
 
+export type Breakpoint =
+	| "mobileMedium"
+	| "mobileLandscape"
+	| "phablet"
+	| "tablet"
+	| "desktop"
+	| "leftCol"
+	| "wide"
+
+type BreakpointMap = {
+	[key in Breakpoint]: string
+}
+
 const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`
 
 const maxWidth = (until: number): string =>
@@ -9,7 +22,7 @@ const minWidthMaxWidth = (from: number, until: number): string =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`
 
 // e.g. from.*
-const from = {
+const from: BreakpointMap = {
 	mobileMedium: minWidth(breakpoints.mobileMedium),
 	mobileLandscape: minWidth(breakpoints.mobileLandscape),
 	phablet: minWidth(breakpoints.phablet),
@@ -20,7 +33,7 @@ const from = {
 }
 
 // e.g. until.*
-const until = {
+const until: BreakpointMap = {
 	mobileMedium: maxWidth(breakpoints.mobileMedium),
 	mobileLandscape: maxWidth(breakpoints.mobileLandscape),
 	phablet: maxWidth(breakpoints.phablet),

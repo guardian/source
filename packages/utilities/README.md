@@ -1,6 +1,6 @@
 # Utilities
 
-reusable style snippets for the web, or functions that you may find useful. Style snippets are expressed as template strings,
+Reusable style snippets for the web, or functions that you may find useful. Style snippets are expressed as template strings,
 and should be compatible with any CSS-in-JS library that accepts this notation.
 
 ## Install
@@ -71,6 +71,19 @@ const label = css`
 `
 ```
 
+Output:
+
+```css
+.class-name {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+}
+```
+
 ### Focus Halo
 
 This mixin provides a [clear focus state](https://zeroheight.com/2a1e5182b/p/08dc26/t/314e46) for
@@ -84,4 +97,16 @@ const input = css`
     width: 200px;
     height: 44px;
 `
+```
+
+Output:
+
+```css
+.class-name {
+    outline: 0;
+    box-shadow: 0 0 0 5px #00b2ff;
+    z-index: 9;
+    width: 200px;
+    height: 44px;
+}
 ```
