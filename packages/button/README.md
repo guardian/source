@@ -1,6 +1,6 @@
 # Buttons
 
-Read about button usage on the [Source Design System website](https://zeroheight.com/2a1e5182b/p/435225)
+📣 For more context and visual guides relating to button usage, visit the [Source Design System website](https://zeroheight.com/2a1e5182b/p/435225)
 
 ## Install
 

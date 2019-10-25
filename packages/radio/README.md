@@ -1,6 +1,6 @@
 # Radios
 
-Read about radio usage on the [Source Design System website](https://zeroheight.com/2a1e5182b/p/2891dd)
+📣 For more context and visual guides relating radio usage on the [Source Design System website](https://zeroheight.com/2a1e5182b/p/2891dd)
 
 ## Install
 
