@@ -15,7 +15,7 @@ export const defaultLight = () => (
 		storyName="default"
 		selectedValue="light"
 	>
-		<TextInput label="label" />
+		<TextInput label="First name" />
 	</WithBackgroundToggle>
 )
 defaultLight.story = {
@@ -28,7 +28,7 @@ export const defaultDark = () => (
 		storyName="default"
 		selectedValue="dark"
 	>
-		<TextInput label="label" appearance="dark" />
+		<TextInput label="First name" appearance="dark" />
 	</WithBackgroundToggle>
 )
 defaultDark.story = {

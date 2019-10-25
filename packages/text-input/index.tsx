@@ -1,5 +1,5 @@
 import React from "react"
-import { textInput, text, light, dark } from "./styles"
+import { textInput, textInputWide, text, light, dark } from "./styles"
 
 type Appearance = "light" | "dark"
 
@@ -20,8 +20,8 @@ const TextInput = ({
 }) => {
 	return (
 		<label css={appearanceStyles[appearance]}>
-			<span css={text}>{labelText}</span>
-			<input css={textInput} type="text" {...props} />
+			<div css={text}>{labelText}</div>
+			<input css={[textInput, textInputWide]} type="text" {...props} />
 		</label>
 	)
 }
