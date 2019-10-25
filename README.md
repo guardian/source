@@ -4,6 +4,11 @@ A shared components library for Guardian Digital. Uses the Guardian's [Source De
 
 ## Contributing
 
+We welcome contributions to the Source Design System! Before you begin, please read our
+[Contributing Guidelines](https://github.com/guardian/source-components/tree/master/CONTRIBUTING.md)
+
+We also have a chat room (internal) at [Digital/Design System Team 📐](https://chat.google.com/room/AAAA1vmbCh8).
+
 ### Install
 
 ```sh
@@ -29,5 +34,4 @@ $ cd packages/my-component
 $ yarn publish --access public
 ```
 
-**3.** Make necessary changes to the [documentation site](https://zeroheight.com/2a1e5182b) 
-
+**3.** Make necessary changes to the [documentation site](https://zeroheight.com/2a1e5182b)
