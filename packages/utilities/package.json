@@ -1,28 +1,29 @@
 {
-  "name": "@guardian/src-utilities",
-  "version": "0.1.0",
-  "main": "dist/utilities.js",
-  "module": "dist/utilities.esm.js",
-  "scripts": {
-    "build": "rollup --config",
-    "watch": "rollup --config --watch",
-    "clean": "rm -rf dist",
-    "prepublish": "yarn build"
-  },
-  "files": [
-    "dist/**/*.js",
-    "index.ts",
-    "media-queries.ts"
-  ],
-  "devDependencies": {
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-typescript": "^7.3.3",
-    "@guardian/src-foundations": "^0.2.3",
-    "rollup": "^1.19.4",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0"
-  },
-  "peerDependencies": {
-    "@guardian/src-foundations": "^0.2.3"
-  }
+	"name": "@guardian/src-utilities",
+	"version": "0.1.0",
+	"main": "dist/utilities.js",
+	"module": "dist/utilities.esm.js",
+	"scripts": {
+		"build": "rollup --config",
+		"watch": "rollup --config --watch",
+		"clean": "rm -rf dist",
+		"prepublish": "yarn build"
+	},
+	"files": [
+		"dist/**/*.js",
+		"index.ts",
+		"helpers.ts",
+		"media-queries.ts"
+	],
+	"devDependencies": {
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-typescript": "^7.3.3",
+		"@guardian/src-foundations": "^0.2.3",
+		"rollup": "^1.19.4",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-node-resolve": "^5.2.0"
+	},
+	"peerDependencies": {
+		"@guardian/src-foundations": "^0.2.3"
+	}
 }
