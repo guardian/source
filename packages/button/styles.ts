@@ -1,10 +1,6 @@
 import { css } from "@emotion/core"
-import {
-	textSans,
-	size,
-	focusHalo,
-	transitions,
-} from "@guardian/src-foundations"
+import { textSans, size, transitions } from "@guardian/src-foundations"
+import { focusHalo } from "@guardian/src-utilities"
 import { lightTheme, ButtonTheme } from "./themes"
 
 export const button = css`
