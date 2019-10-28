@@ -1,34 +1,25 @@
 import React from "react"
-import { textInput, textInputWide, text, light, dark } from "./styles"
+import { textInput, textInputWide, text } from "./styles"
+export * from "./themes"
 
-type Appearance = "light" | "dark"
-
-const appearanceStyles: {
-	[key in Appearance]: any
-} = {
-	light: light,
-	dark: dark,
-}
-
-const TextInput = ({
-	label: labelText,
-	appearance,
-	...props
-}: {
-	label: string
-	appearance: Appearance
-}) => {
+const TextInput = ({ label: labelText, ...props }: { label: string }) => {
 	return (
-		<label css={appearanceStyles[appearance]}>
-			<div css={text}>{labelText}</div>
-			<input css={[textInput, textInputWide]} type="text" {...props} />
+		<label>
+			<div css={theme => text(theme.textInput && theme)}>{labelText}</div>
+			<input
+				css={theme => [
+					textInput(theme.textInput && theme),
+					textInputWide,
+				]}
+				{...props}
+			/>
 		</label>
 	)
 }
 
 const defaultProps = {
-	appearance: "light",
 	disabled: false,
+	type: "text",
 }
 
 TextInput.defaultProps = { ...defaultProps }

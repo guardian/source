@@ -1,9 +1,10 @@
 import React from "react"
+import { ThemeProvider } from "emotion-theming"
 import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import { TextInput } from "./index"
+import { TextInput, lightTheme, darkTheme } from "./index"
 
 export default {
 	title: "TextInput",
@@ -15,7 +16,9 @@ export const defaultLight = () => (
 		storyName="default"
 		selectedValue="light"
 	>
-		<TextInput label="First name" />
+		<ThemeProvider theme={lightTheme}>
+			<TextInput label="First name" />
+		</ThemeProvider>
 	</WithBackgroundToggle>
 )
 defaultLight.story = {
@@ -28,7 +31,9 @@ export const defaultDark = () => (
 		storyName="default"
 		selectedValue="dark"
 	>
-		<TextInput label="First name" appearance="dark" />
+		<ThemeProvider theme={darkTheme}>
+			<TextInput label="First name" />
+		</ThemeProvider>
 	</WithBackgroundToggle>
 )
 defaultDark.story = {
