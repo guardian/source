@@ -3,7 +3,7 @@ import { breakpoints } from "@guardian/src-foundations"
 // This is duplicated from src-foundations.
 // We should find a better way of sharing
 // types across packages
-export type Breakpoint =
+type Breakpoint =
 	| "mobileMedium"
 	| "mobileLandscape"
 	| "phablet"

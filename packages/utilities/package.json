@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-utilities",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"main": "dist/utilities.js",
 	"module": "dist/utilities.esm.js",
 	"scripts": {
