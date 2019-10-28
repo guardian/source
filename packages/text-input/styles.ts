@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { textSans, size } from "@guardian/src-foundations"
+import { textSans, size, palette } from "@guardian/src-foundations"
 import { focusHalo } from "@guardian/src-utilities"
 import { lightTheme, TextInputTheme } from "./themes"
 
@@ -25,4 +25,8 @@ export const text = ({
 	position: relative;
 	${textSans({ level: 3 })};
 	color: ${textInput.textColor};
+`
+
+export const errorInput = css`
+	border: 4px solid ${palette.error.main};
 `
