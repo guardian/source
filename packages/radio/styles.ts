@@ -4,9 +4,9 @@ import {
 	palette,
 	space,
 	size,
-	focusHalo,
 	transitions,
 } from "@guardian/src-foundations"
+import { focusHalo } from "@guardian/src-utilities"
 import { RadioTheme, lightTheme } from "./themes"
 
 export const group = css`
