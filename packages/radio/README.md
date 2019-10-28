@@ -11,7 +11,7 @@ $ yarn add @guardian/src-radio
 ## Use
 
 ```js
-import { Button } from "@guardian/src-button"
+import { RadioGroup, Radio } from "@guardian/src-radio"
 import { SvgCheckmark } from "@guardian/src-svgs"
 
 const Form = () => (
