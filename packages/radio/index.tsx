@@ -83,11 +83,13 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 
 const Radio = ({
 	label: labelContent,
+	value,
 	supporting,
 	error,
 	...props
 }: {
 	label: string
+	value: string
 	supporting?: string
 	error?: boolean
 }) => {
@@ -103,6 +105,7 @@ const Radio = ({
 					radio(theme.radio && theme),
 					error ? errorRadio : "",
 				]}
+				value={value}
 				aria-invalid={error}
 				{...props}
 			/>
@@ -126,6 +129,7 @@ const radioGroupDefaultProps = {
 const radioDefaultProps = {
 	disabled: false,
 	type: "radio",
+	defaultChecked: false,
 }
 
 Radio.defaultProps = { ...radioDefaultProps }
