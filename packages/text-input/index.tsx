@@ -11,7 +11,6 @@ const TextInput = ({ label: labelText, ...props }: { label: string }) => {
 					textInput(theme.textInput && theme),
 					textInputWide,
 				]}
-				type="text"
 				{...props}
 			/>
 		</label>
@@ -20,6 +19,7 @@ const TextInput = ({ label: labelText, ...props }: { label: string }) => {
 
 const defaultProps = {
 	disabled: false,
+	type: "text",
 }
 
 TextInput.defaultProps = { ...defaultProps }
