@@ -1,13 +1,4 @@
-import { breakpoints } from "@guardian/src-foundations"
-
-export type Breakpoint =
-	| "mobileMedium"
-	| "mobileLandscape"
-	| "phablet"
-	| "tablet"
-	| "desktop"
-	| "leftCol"
-	| "wide"
+import { breakpoints, Breakpoint } from "@guardian/src-foundations"
 
 type BreakpointMap = {
 	[key in Breakpoint]: string
@@ -122,4 +113,4 @@ const between = {
 	},
 }
 
-export { from, until, between, breakpoints }
+export { from, until, between, breakpoints, Breakpoint }
