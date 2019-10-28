@@ -12,9 +12,7 @@
 	"files": [
 		"dist/**/*.js",
 		"animation.ts",
-		"helpers.ts",
 		"index.ts",
-		"media-queries.ts",
 		"palette.ts",
 		"size.ts",
 		"space.ts",
