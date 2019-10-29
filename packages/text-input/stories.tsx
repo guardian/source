@@ -37,6 +37,7 @@ const [defaultLight, defaultDark] = appearances.map(
 			<WithBackgroundToggle
 				storyKind="TextInput"
 				storyName="default"
+				options={appearances.map(a => a.name)}
 				selectedValue={name}
 			>
 				<ThemeProvider theme={theme}>
@@ -74,6 +75,7 @@ const [errorWithMessageLight, errorWithMessageDark] = appearances.map(
 			<WithBackgroundToggle
 				storyKind="TextInput"
 				storyName="error with message"
+				options={appearances.map(a => a.name)}
 				selectedValue={name}
 			>
 				<ThemeProvider theme={theme}>
@@ -114,6 +116,7 @@ const [errorWithoutMessageLight, errorWithoutMessageDark] = appearances.map(
 			<WithBackgroundToggle
 				storyKind="TextInput"
 				storyName="error without message"
+				options={appearances.map(a => a.name)}
 				selectedValue={name}
 			>
 				<ThemeProvider theme={theme}>
@@ -139,6 +142,44 @@ const [errorWithoutMessageLight, errorWithoutMessageDark] = appearances.map(
 	},
 )
 
+const [optionalLight, optionalDark] = appearances.map(
+	({
+		name,
+		theme,
+	}: {
+		name: Appearance
+		theme: { textInput: TextInputTheme }
+	}) => {
+		const story = () => (
+			<WithBackgroundToggle
+				storyKind="TextInput"
+				storyName="optional"
+				options={appearances.map(a => a.name)}
+				selectedValue={name}
+			>
+				<ThemeProvider theme={theme}>
+					<TextInput label="First name" optional={true} />
+				</ThemeProvider>
+			</WithBackgroundToggle>
+		)
+
+		story.story = {
+			name: `optional ${name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[name],
+					),
+				],
+			},
+		}
+
+		return story
+	},
+)
+
 export {
 	defaultLight,
 	defaultDark,
@@ -146,4 +187,6 @@ export {
 	errorWithMessageDark,
 	errorWithoutMessageLight,
 	errorWithoutMessageDark,
+	optionalLight,
+	optionalDark,
 }
