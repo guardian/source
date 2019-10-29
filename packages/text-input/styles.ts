@@ -38,3 +38,9 @@ export const optionalLabel = css`
 	color: ${palette.neutral[46]};
 	font-style: italic;
 `
+
+export const supportingText = css`
+	${textSans({ level: 2 })};
+	color: ${palette.neutral[46]};
+	margin-bottom: ${space.half}px;
+`

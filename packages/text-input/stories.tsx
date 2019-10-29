@@ -179,6 +179,43 @@ const [optionalLight, optionalDark] = appearances.map(
 		return story
 	},
 )
+const [supportingTextLight, supportingTextDark] = appearances.map(
+	({
+		name,
+		theme,
+	}: {
+		name: Appearance
+		theme: { textInput: TextInputTheme }
+	}) => {
+		const story = () => (
+			<WithBackgroundToggle
+				storyKind="TextInput"
+				storyName="supporting text"
+				options={appearances.map(a => a.name)}
+				selectedValue={name}
+			>
+				<ThemeProvider theme={theme}>
+					<TextInput label="Email" supporting="alex@example.com" />
+				</ThemeProvider>
+			</WithBackgroundToggle>
+		)
+
+		story.story = {
+			name: `supporting text ${name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[name],
+					),
+				],
+			},
+		}
+
+		return story
+	},
+)
 
 export {
 	defaultLight,
@@ -189,4 +226,6 @@ export {
 	errorWithoutMessageDark,
 	optionalLight,
 	optionalDark,
+	supportingTextLight,
+	supportingTextDark,
 }
