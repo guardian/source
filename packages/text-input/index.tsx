@@ -1,19 +1,30 @@
 import React from "react"
 import { InlineError } from "@guardian/src-inline-error"
-import { textInput, textInputWide, text, errorInput } from "./styles"
+import {
+	textInput,
+	textInputWide,
+	text,
+	errorInput,
+	optionalLabel,
+} from "./styles"
 export * from "./themes"
 
 const TextInput = ({
 	label: labelText,
 	error,
+	optional,
 	...props
 }: {
 	label: string
-	error?: boolean | string
+	error: boolean | string
+	optional: boolean
 }) => {
 	return (
 		<label>
-			<div css={theme => text(theme.textInput && theme)}>{labelText}</div>
+			<div css={theme => text(theme.textInput && theme)}>
+				{labelText}{" "}
+				{optional ? <span css={optionalLabel}>Optional</span> : ""}
+			</div>
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			<input
 				css={theme => [
@@ -30,6 +41,8 @@ const TextInput = ({
 const defaultProps = {
 	disabled: false,
 	type: "text",
+	optional: false,
+	error: false,
 }
 
 TextInput.defaultProps = { ...defaultProps }

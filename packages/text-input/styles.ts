@@ -32,3 +32,9 @@ export const text = ({
 export const errorInput = css`
 	border: 4px solid ${palette.error.main};
 `
+
+export const optionalLabel = css`
+	${textSans({ level: 2 })};
+	color: ${palette.neutral[46]};
+	font-style: italic;
+`
