@@ -11,6 +11,7 @@ export const textInput = ({
 	color: ${textInput.inputColor};
 	background-color: ${textInput.backgroundColor};
 	border: 2px solid ${palette.neutral[60]};
+	padding: 0 ${space[2]}px;
 
 	&:focus {
 		${focusHalo};
@@ -31,6 +32,7 @@ export const text = ({
 
 export const errorInput = css`
 	border: 4px solid ${palette.error.main};
+	color: ${palette.error.main};
 `
 
 export const optionalLabel = css`
