@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ yarn add @guardian/src-radiotext-input
+$ yarn add @guardian/src-text-input
 ```
 
 ## Use
