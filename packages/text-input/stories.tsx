@@ -37,6 +37,7 @@ const [defaultLight, defaultDark] = appearances.map(
 			<WithBackgroundToggle
 				storyKind="TextInput"
 				storyName="default"
+				options={appearances.map(a => a.name)}
 				selectedValue={name}
 			>
 				<ThemeProvider theme={theme}>
@@ -74,6 +75,7 @@ const [errorWithMessageLight, errorWithMessageDark] = appearances.map(
 			<WithBackgroundToggle
 				storyKind="TextInput"
 				storyName="error with message"
+				options={appearances.map(a => a.name)}
 				selectedValue={name}
 			>
 				<ThemeProvider theme={theme}>
@@ -114,6 +116,7 @@ const [errorWithoutMessageLight, errorWithoutMessageDark] = appearances.map(
 			<WithBackgroundToggle
 				storyKind="TextInput"
 				storyName="error without message"
+				options={appearances.map(a => a.name)}
 				selectedValue={name}
 			>
 				<ThemeProvider theme={theme}>
