@@ -1,6 +1,9 @@
 import { breakpoints } from "@guardian/src-foundations"
 
-export type Breakpoint =
+// This is duplicated from src-foundations.
+// We should find a better way of sharing
+// types across packages
+type Breakpoint =
 	| "mobileMedium"
 	| "mobileLandscape"
 	| "phablet"
@@ -122,4 +125,4 @@ const between = {
 	},
 }
 
-export { from, until, between, breakpoints }
+export { from, until, between, breakpoints, Breakpoint }

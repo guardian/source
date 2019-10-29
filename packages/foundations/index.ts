@@ -1,4 +1,5 @@
 export * from "./animation"
+export * from "./breakpoints"
 export * from "./palette"
 export * from "./size"
 export * from "./space"

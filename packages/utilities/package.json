@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-utilities",
-	"version": "0.1.2",
+	"version": "0.1.5",
 	"main": "dist/utilities.js",
 	"module": "dist/utilities.esm.js",
 	"scripts": {
@@ -18,12 +18,12 @@
 	"devDependencies": {
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-typescript": "^7.3.3",
-		"@guardian/src-foundations": "^0.2.3",
+		"@guardian/src-foundations": "^0.3.1",
 		"rollup": "^1.19.4",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"peerDependencies": {
-		"@guardian/src-foundations": "^0.2.3"
+		"@guardian/src-foundations": "^0.3.1"
 	}
 }
