@@ -14,7 +14,7 @@ const appearanceDescriptions: {
 } = {
 	light: "Brand light mode (default)",
 	dark: "Brand dark mode",
-	blue: "Blue blue background",
+	blue: "Brand blue background",
 	yellow: "Brand yellow background",
 	"reader revenue blue": "Reader revenue blue background (default)",
 	"reader revenue yellow": "Reader revenue yellow background",
