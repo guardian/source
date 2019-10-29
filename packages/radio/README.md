@@ -12,14 +12,17 @@ $ yarn add @guardian/src-radio
 
 ```js
 import { RadioGroup, Radio } from "@guardian/src-radio"
-import { SvgCheckmark } from "@guardian/src-svgs"
 
 const Form = () => (
     <form>
-        <RadioGroup name="colours">
-            <Radio value="red" label="Red" />,
-            <Radio value="green" label="Green" defaultChecked />,
-            <Radio value="blue" label="Blue" />,
+        <RadioGroup name="consent" orientation="vertical">
+            <Radio
+                value="no"
+                label="No"
+                supporting="I do not accept the terms"
+                defaultChecked
+            />
+            <Radio value="yes" label="Yes" supporting="I accept the terms" />,
         </RadioGroup>
     </form>
 )
@@ -51,7 +54,7 @@ Whether error styling should apply to this group. If a string is passed, this ap
 
 **`string`**
 
-Appears as a `<label>` alongside the radio button
+Appears to the right of the radio button
 
 ### `supporting`
 
