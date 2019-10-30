@@ -13,11 +13,3 @@ export const lightTheme: { textInput: TextInputTheme } = {
 		backgroundColor: palette.neutral[100],
 	},
 }
-
-export const darkTheme: { textInput: TextInputTheme } = {
-	textInput: {
-		inputColor: palette.neutral[100],
-		textColor: palette.neutral[100],
-		backgroundColor: palette.neutral[7],
-	},
-}

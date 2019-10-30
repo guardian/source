@@ -1,11 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
-import {
-	storybookBackgrounds,
-	WithBackgroundToggle,
-	Appearance,
-} from "@guardian/src-helpers"
-import { TextInput, TextInputTheme, lightTheme, darkTheme } from "./index"
+import { storybookBackgrounds, Appearance } from "@guardian/src-helpers"
+import { TextInput, TextInputTheme, lightTheme } from "./index"
 
 export default {
 	title: "TextInput",
@@ -19,13 +15,9 @@ const appearances: {
 		name: "light",
 		theme: lightTheme,
 	},
-	{
-		name: "dark",
-		theme: darkTheme,
-	},
 ]
 
-const [defaultLight, defaultDark] = appearances.map(
+const [defaultLight] = appearances.map(
 	({
 		name,
 		theme,
@@ -34,16 +26,9 @@ const [defaultLight, defaultDark] = appearances.map(
 		theme: { textInput: TextInputTheme }
 	}) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="TextInput"
-				storyName="default"
-				options={appearances.map(a => a.name)}
-				selectedValue={name}
-			>
-				<ThemeProvider theme={theme}>
-					<TextInput label="First name" />
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={theme}>
+				<TextInput label="First name" />
+			</ThemeProvider>
 		)
 
 		story.story = {
@@ -63,7 +48,7 @@ const [defaultLight, defaultDark] = appearances.map(
 	},
 )
 
-const [errorWithMessageLight, errorWithMessageDark] = appearances.map(
+const [errorWithMessageLight] = appearances.map(
 	({
 		name,
 		theme,
@@ -72,19 +57,12 @@ const [errorWithMessageLight, errorWithMessageDark] = appearances.map(
 		theme: { textInput: TextInputTheme }
 	}) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="TextInput"
-				storyName="error with message"
-				options={appearances.map(a => a.name)}
-				selectedValue={name}
-			>
-				<ThemeProvider theme={theme}>
-					<TextInput
-						label="First name"
-						error="Enter your first name below"
-					/>
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={theme}>
+				<TextInput
+					label="First name"
+					error="Enter your first name below"
+				/>
+			</ThemeProvider>
 		)
 
 		story.story = {
@@ -104,7 +82,7 @@ const [errorWithMessageLight, errorWithMessageDark] = appearances.map(
 	},
 )
 
-const [errorWithoutMessageLight, errorWithoutMessageDark] = appearances.map(
+const [errorWithoutMessageLight] = appearances.map(
 	({
 		name,
 		theme,
@@ -113,16 +91,9 @@ const [errorWithoutMessageLight, errorWithoutMessageDark] = appearances.map(
 		theme: { textInput: TextInputTheme }
 	}) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="TextInput"
-				storyName="error without message"
-				options={appearances.map(a => a.name)}
-				selectedValue={name}
-			>
-				<ThemeProvider theme={theme}>
-					<TextInput label="First name" error={true} />
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={theme}>
+				<TextInput label="First name" error={true} />
+			</ThemeProvider>
 		)
 
 		story.story = {
@@ -142,7 +113,7 @@ const [errorWithoutMessageLight, errorWithoutMessageDark] = appearances.map(
 	},
 )
 
-const [optionalLight, optionalDark] = appearances.map(
+const [optionalLight] = appearances.map(
 	({
 		name,
 		theme,
@@ -151,16 +122,9 @@ const [optionalLight, optionalDark] = appearances.map(
 		theme: { textInput: TextInputTheme }
 	}) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="TextInput"
-				storyName="optional"
-				options={appearances.map(a => a.name)}
-				selectedValue={name}
-			>
-				<ThemeProvider theme={theme}>
-					<TextInput label="First name" optional={true} />
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={theme}>
+				<TextInput label="First name" optional={true} />
+			</ThemeProvider>
 		)
 
 		story.story = {
@@ -179,7 +143,7 @@ const [optionalLight, optionalDark] = appearances.map(
 		return story
 	},
 )
-const [supportingTextLight, supportingTextDark] = appearances.map(
+const [supportingTextLight] = appearances.map(
 	({
 		name,
 		theme,
@@ -188,16 +152,9 @@ const [supportingTextLight, supportingTextDark] = appearances.map(
 		theme: { textInput: TextInputTheme }
 	}) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="TextInput"
-				storyName="supporting text"
-				options={appearances.map(a => a.name)}
-				selectedValue={name}
-			>
-				<ThemeProvider theme={theme}>
-					<TextInput label="Email" supporting="alex@example.com" />
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={theme}>
+				<TextInput label="Email" supporting="alex@example.com" />
+			</ThemeProvider>
 		)
 
 		story.story = {
@@ -219,13 +176,8 @@ const [supportingTextLight, supportingTextDark] = appearances.map(
 
 export {
 	defaultLight,
-	defaultDark,
-	errorWithMessageLight,
-	errorWithMessageDark,
-	errorWithoutMessageLight,
-	errorWithoutMessageDark,
 	optionalLight,
-	optionalDark,
 	supportingTextLight,
-	supportingTextDark,
+	errorWithMessageLight,
+	errorWithoutMessageLight,
 }
