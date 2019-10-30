@@ -3,14 +3,7 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import {
-	RadioGroup,
-	Radio,
-	RadioTheme,
-	lightTheme,
-	darkTheme,
-	blueTheme,
-} from "./index"
+import { RadioGroup, Radio, RadioTheme, lightTheme, blueTheme } from "./index"
 import { Appearance } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
 
@@ -57,11 +50,10 @@ const appearances: {
 		name: "light",
 		theme: lightTheme,
 	},
-	{ name: "dark", theme: darkTheme },
 	{ name: "blue", theme: blueTheme },
 ]
 
-const [verticalLight, verticalDark, verticalBlue] = appearances.map(
+const [verticalLight, verticalBlue] = appearances.map(
 	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
 		const story = () => (
 			<WithBackgroundToggle
@@ -96,11 +88,7 @@ const [verticalLight, verticalDark, verticalBlue] = appearances.map(
 	},
 )
 
-const [
-	supportingTextLight,
-	supportingTextDark,
-	supportingTextBlue,
-] = appearances.map(
+const [supportingTextLight, supportingTextBlue] = appearances.map(
 	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
 		const story = () => (
 			<WithBackgroundToggle
@@ -145,11 +133,7 @@ horizontal.story = {
 	name: "orientation horizontal",
 }
 
-const [
-	errorWithMessageLight,
-	errorWithMessageDark,
-	errorWithMessageBlue,
-] = appearances.map(
+const [errorWithMessageLight, errorWithMessageBlue] = appearances.map(
 	(appearance: { name: Appearance; theme: { radio: RadioTheme } }) => {
 		const story = () => (
 			<WithBackgroundToggle
@@ -198,14 +182,11 @@ errorWithoutMessage.story = {
 
 export {
 	verticalLight,
-	verticalDark,
 	verticalBlue,
 	horizontal,
 	supportingTextLight,
-	supportingTextDark,
 	supportingTextBlue,
 	errorWithMessageLight,
-	errorWithMessageDark,
 	errorWithMessageBlue,
 	errorWithoutMessage,
 }
