@@ -1,5 +1,13 @@
 {
 	"compilerOptions": {
+		"baseUrl": "./packages",
+		"paths": {
+			"@guardian/src-foundations": ["foundations"],
+			"@guardian/src-foundations/mq": ["foundations/mq"],
+			"@guardian/inline-error": ["inline-error"],
+			"@guardian/src-helpers": ["helpers"],
+			"@guardian/src-svgs": ["svgs"]
+		},
 		"outDir": "dist",
 		"module": "commonjs",
 		"target": "es5",

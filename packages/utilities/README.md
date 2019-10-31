@@ -1,5 +1,7 @@
 # Utilities
 
+**DEPRECATED!** This library is deprecated and will soon be deleted. Please use `@guardian/src-foundations`
+
 Reusable style snippets for the web, or functions that you may find useful. Style snippets are expressed as template strings,
 and should be compatible with any CSS-in-JS library that accepts this notation.
 
