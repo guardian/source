@@ -1,16 +1,4 @@
-import { breakpoints } from "@guardian/src-foundations"
-
-// This is duplicated from src-foundations.
-// We should find a better way of sharing
-// types across packages
-type Breakpoint =
-	| "mobileMedium"
-	| "mobileLandscape"
-	| "phablet"
-	| "tablet"
-	| "desktop"
-	| "leftCol"
-	| "wide"
+import { breakpoints, Breakpoint } from "@guardian/src-foundations"
 
 type BreakpointMap = {
 	[key in Breakpoint]: string
