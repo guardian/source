@@ -11,6 +11,7 @@
 	},
 	"files": [
 		"dist/**/*.js",
+		"mq/**/*.js",
 		"animation.ts",
 		"breakpoints.ts",
 		"index.ts",
