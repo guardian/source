@@ -28,5 +28,17 @@ module.exports = [
 			},
 		],
 		plugins,
+		external: ["@guardian/src-foundations"],
+	},
+	{
+		input: "accessibility.ts",
+		output: [
+			{
+				file: "accessibility/index.js",
+				format: "cjs",
+			},
+		],
+		plugins,
+		external: ["@guardian/src-foundations"],
 	},
 ]
