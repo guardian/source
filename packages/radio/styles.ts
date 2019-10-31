@@ -114,6 +114,8 @@ export const vertical = css`
 	flex-direction: column;
 `
 
-export const errorRadio = css`
-	border: 4px solid ${palette.error.main};
+export const errorRadio = ({
+	radio,
+}: { radio: RadioTheme } = lightTheme) => css`
+	border: 4px solid ${radio.errorColor};
 `
