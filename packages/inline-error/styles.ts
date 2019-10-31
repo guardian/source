@@ -1,11 +1,14 @@
 import { css } from "@emotion/core"
-import { textSans, palette, space } from "@guardian/src-foundations"
+import { textSans, space } from "@guardian/src-foundations"
+import { lightTheme, InlineErrorTheme } from "./themes"
 
-export const inlineError = css`
+export const inlineError = ({
+	inlineError,
+}: { inlineError: InlineErrorTheme } = lightTheme) => css`
 	display: flex;
 	align-items: center;
 	${textSans({ level: 3 })};
-	color: ${palette.error.main};
+	color: ${inlineError.color};
 	margin-bottom: ${space[1]}px;
 
 	svg {
