@@ -6,6 +6,7 @@ export type RadioTheme = {
 	checkedColor: string
 	textColor: string
 	supportingTextColor: string
+	errorColor: string
 }
 
 export const lightTheme: { radio: RadioTheme } = {
@@ -15,15 +16,17 @@ export const lightTheme: { radio: RadioTheme } = {
 		checkedColor: palette.brand.main,
 		textColor: palette.neutral[20],
 		supportingTextColor: palette.neutral[46],
+		errorColor: palette.error.main,
 	},
 }
 
 export const blueTheme: { radio: RadioTheme } = {
 	radio: {
 		hoverBorderColor: palette.neutral[100],
-		color: palette.brand.pastel,
+		color: palette.brand.faded,
 		checkedColor: palette.neutral[100],
 		textColor: palette.neutral[100],
 		supportingTextColor: palette.brand.faded,
+		errorColor: palette.error.bright,
 	},
 }

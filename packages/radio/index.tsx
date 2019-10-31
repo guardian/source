@@ -103,7 +103,7 @@ const Radio = ({
 			<input
 				css={theme => [
 					radio(theme.radio && theme),
-					error ? errorRadio : "",
+					error ? errorRadio(theme.radio && theme) : "",
 				]}
 				value={value}
 				aria-invalid={error}
