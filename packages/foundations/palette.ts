@@ -26,6 +26,7 @@ const palette = {
 	},
 	error: {
 		main: colors.reds[1],
+		bright: colors.reds[2],
 	},
 	news: {
 		dark: colors.reds[0],
