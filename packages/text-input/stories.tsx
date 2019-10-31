@@ -55,6 +55,110 @@ const [defaultLight] = appearances.map(
 	},
 )
 
+const [optionalLight] = appearances.map(
+	({
+		name,
+		theme,
+	}: {
+		name: Appearance
+		theme: { textInput: TextInputTheme }
+	}) => {
+		const story = () => (
+			<ThemeProvider theme={theme}>
+				<div css={constrainedWith}>
+					<TextInput label="First name" optional={true} />
+				</div>
+			</ThemeProvider>
+		)
+
+		story.story = {
+			name: `optional ${name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[name],
+					),
+				],
+			},
+		}
+
+		return story
+	},
+)
+const [supportingTextLight] = appearances.map(
+	({
+		name,
+		theme,
+	}: {
+		name: Appearance
+		theme: { textInput: TextInputTheme }
+	}) => {
+		const story = () => (
+			<ThemeProvider theme={theme}>
+				<div css={constrainedWith}>
+					<TextInput label="Email" supporting="alex@example.com" />
+				</div>
+			</ThemeProvider>
+		)
+
+		story.story = {
+			name: `supporting text ${name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[name],
+					),
+				],
+			},
+		}
+
+		return story
+	},
+)
+
+const [widthsLight] = appearances.map(
+	({
+		name,
+		theme,
+	}: {
+		name: Appearance
+		theme: { textInput: TextInputTheme }
+	}) => {
+		const story = () => (
+			<ThemeProvider theme={theme}>
+				<div>
+					<TextInput label="First name" width={30} />
+				</div>
+				<div>
+					<TextInput label="Postcode" width={10} />
+				</div>
+				<div>
+					<TextInput label="Year of birth" width={4} />
+				</div>
+			</ThemeProvider>
+		)
+
+		story.story = {
+			name: `widths ${name}`,
+			parameters: {
+				backgrounds: [
+					Object.assign(
+						{},
+						{ default: true },
+						storybookBackgrounds[name],
+					),
+				],
+			},
+		}
+
+		return story
+	},
+)
+
 const [errorWithMessageLight] = appearances.map(
 	({
 		name,
@@ -124,75 +228,11 @@ const [errorWithoutMessageLight] = appearances.map(
 	},
 )
 
-const [optionalLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
-		const story = () => (
-			<ThemeProvider theme={theme}>
-				<div css={constrainedWith}>
-					<TextInput label="First name" optional={true} />
-				</div>
-			</ThemeProvider>
-		)
-
-		story.story = {
-			name: `optional ${name}`,
-			parameters: {
-				backgrounds: [
-					Object.assign(
-						{},
-						{ default: true },
-						storybookBackgrounds[name],
-					),
-				],
-			},
-		}
-
-		return story
-	},
-)
-const [supportingTextLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
-		const story = () => (
-			<ThemeProvider theme={theme}>
-				<div css={constrainedWith}>
-					<TextInput label="Email" supporting="alex@example.com" />
-				</div>
-			</ThemeProvider>
-		)
-
-		story.story = {
-			name: `supporting text ${name}`,
-			parameters: {
-				backgrounds: [
-					Object.assign(
-						{},
-						{ default: true },
-						storybookBackgrounds[name],
-					),
-				],
-			},
-		}
-
-		return story
-	},
-)
-
 export {
 	defaultLight,
 	optionalLight,
 	supportingTextLight,
+	widthsLight,
 	errorWithMessageLight,
 	errorWithoutMessageLight,
 }

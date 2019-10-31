@@ -1,8 +1,11 @@
 import React, { ReactNode } from "react"
 import { InlineError } from "@guardian/src-inline-error"
 import {
+	widthFluid,
+	width30,
+	width10,
+	width4,
 	textInput,
-	textInputWide,
 	text,
 	errorInput,
 	optionalLabel,
@@ -10,21 +13,33 @@ import {
 } from "./styles"
 export * from "./themes"
 
+export type Width = 30 | 10 | 4
+
+const widths: {
+	[key in Width]: any
+} = {
+	30: width30,
+	10: width10,
+	4: width4,
+}
+
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return <div css={supportingText}>{children}</div>
 }
 
 const TextInput = ({
 	label: labelText,
-	error,
 	optional,
 	supporting,
+	width,
+	error,
 	...props
 }: {
 	label: string
-	error: boolean | string
 	optional: boolean
 	supporting?: string
+	width?: Width
+	error: boolean | string
 }) => {
 	return (
 		<label>
@@ -36,8 +51,8 @@ const TextInput = ({
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			<input
 				css={theme => [
+					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
-					textInputWide,
 					error ? errorInput : "",
 				]}
 				{...props}
