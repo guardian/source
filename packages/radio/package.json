@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-radio",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"main": "dist/radio.js",
 	"module": "dist/radio.esm.js",
 	"scripts": {
