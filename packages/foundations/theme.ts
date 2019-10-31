@@ -18,7 +18,7 @@ const colors = {
 	reds: [
 		"#ab0613", //news-dark
 		"#c70000", //news-main
-		"#ff4e36", //news-bright
+		"#FF5943", //news-bright
 		"#ffbac8", //news-pastel
 		"#fff4f2", //news-fade
 	],
@@ -39,7 +39,7 @@ const colors = {
 		"#052962", //brand-main
 		"#0077B3", //brand-bright
 		"#506991", //brand-pastel
-		"#B6C5DB", //brand-faded
+		"#B2C7E7", //brand-faded
 	],
 	browns: [
 		"#6B5840", //culture-dark
