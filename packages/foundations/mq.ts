@@ -1,4 +1,15 @@
-import { breakpoints, Breakpoint } from "@guardian/src-foundations"
+import { breakpoints } from "@guardian/src-foundations"
+
+// Duplicated from breakpoints.ts because of some issue importing directly
+// babel * typescript * rollup = ¯\_(ツ)_/¯
+export type Breakpoint =
+	| "mobileMedium"
+	| "mobileLandscape"
+	| "phablet"
+	| "tablet"
+	| "desktop"
+	| "leftCol"
+	| "wide"
 
 type BreakpointMap = {
 	[key in Breakpoint]: string
