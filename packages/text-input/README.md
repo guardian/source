@@ -19,6 +19,7 @@ const Form = () => (
             label="Email"
             supporting="alex@example.com"
             optional={true}
+            width={30}
         />
     </form>
 )
@@ -43,6 +44,13 @@ Additional text that appears below the label
 **`boolean`** _= "false"_
 
 Adds the word "Optional" after the label
+
+### `width`
+
+**`30 | 10 | 4`**
+
+Determines the width of a fixed-length field, based on the specified character length of the user input. If unspecified,
+the width will default to 100% of the field's container.
 
 ### `error`
 
