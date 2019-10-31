@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "0.5.0-alpha.3",
+	"version": "0.5.0-alpha.4",
 	"main": "dist/foundations.js",
 	"module": "dist/foundations.esm.js",
 	"scripts": {
@@ -12,9 +12,12 @@
 	"files": [
 		"dist/**/*.js",
 		"mq/**/*.js",
+		"accessibility/**/*.js",
+		"accessibility.ts",
 		"animation.ts",
 		"breakpoints.ts",
 		"index.ts",
+		"mq.ts",
 		"palette.ts",
 		"size.ts",
 		"space.ts",
