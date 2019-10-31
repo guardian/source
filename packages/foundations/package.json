@@ -4,7 +4,7 @@
 	"main": "dist/foundations.js",
 	"module": "dist/foundations.esm.js",
 	"scripts": {
-		"build": "rollup --config",
+		"build": "yarn clean && rollup --config",
 		"watch": "rollup --config --watch",
 		"clean": "rm -rf dist",
 		"prepublish": "yarn build"
