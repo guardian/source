@@ -1,4 +1,5 @@
 import React from "react"
+import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds, Appearance } from "@guardian/src-helpers"
 import { TextInput, TextInputTheme, lightTheme } from "./index"
@@ -17,6 +18,10 @@ const appearances: {
 	},
 ]
 
+const constrainedWith = css`
+	width: 30em;
+`
+
 const [defaultLight] = appearances.map(
 	({
 		name,
@@ -27,7 +32,9 @@ const [defaultLight] = appearances.map(
 	}) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
-				<TextInput label="First name" />
+				<div css={constrainedWith}>
+					<TextInput label="First name" />
+				</div>
 			</ThemeProvider>
 		)
 
@@ -58,10 +65,12 @@ const [errorWithMessageLight] = appearances.map(
 	}) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
-				<TextInput
-					label="First name"
-					error="Enter your first name below"
-				/>
+				<div css={constrainedWith}>
+					<TextInput
+						label="First name"
+						error="Enter your first name below"
+					/>
+				</div>
 			</ThemeProvider>
 		)
 
@@ -92,7 +101,9 @@ const [errorWithoutMessageLight] = appearances.map(
 	}) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
-				<TextInput label="First name" error={true} />
+				<div css={constrainedWith}>
+					<TextInput label="First name" error={true} />
+				</div>
 			</ThemeProvider>
 		)
 
@@ -123,7 +134,9 @@ const [optionalLight] = appearances.map(
 	}) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
-				<TextInput label="First name" optional={true} />
+				<div css={constrainedWith}>
+					<TextInput label="First name" optional={true} />
+				</div>
 			</ThemeProvider>
 		)
 
@@ -153,7 +166,9 @@ const [supportingTextLight] = appearances.map(
 	}) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
-				<TextInput label="Email" supporting="alex@example.com" />
+				<div css={constrainedWith}>
+					<TextInput label="Email" supporting="alex@example.com" />
+				</div>
 			</ThemeProvider>
 		)
 

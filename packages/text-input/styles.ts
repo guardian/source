@@ -19,7 +19,7 @@ export const textInput = ({
 `
 
 export const textInputWide = css`
-	width: 460px;
+	width: 100%;
 `
 
 export const text = ({
