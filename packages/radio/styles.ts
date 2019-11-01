@@ -1,11 +1,5 @@
 import { css } from "@emotion/core"
-import {
-	textSans,
-	palette,
-	space,
-	size,
-	transitions,
-} from "@guardian/src-foundations"
+import { textSans, space, size, transitions } from "@guardian/src-foundations"
 import { focusHalo } from "@guardian/src-utilities"
 import { RadioTheme, lightTheme } from "./themes"
 
