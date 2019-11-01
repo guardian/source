@@ -1,4 +1,9 @@
 import { palette } from "@guardian/src-foundations"
+import {
+	lightTheme as inlineErrorLightTheme,
+	blueTheme as inlineErrorBlueTheme,
+	InlineErrorTheme,
+} from "@guardian/src-inline-error"
 
 export type RadioTheme = {
 	hoverBorderColor: string
@@ -9,7 +14,10 @@ export type RadioTheme = {
 	errorColor: string
 }
 
-export const lightTheme: { radio: RadioTheme } = {
+export const lightTheme: {
+	radio: RadioTheme
+	inlineError: InlineErrorTheme
+} = {
 	radio: {
 		hoverBorderColor: palette.brand.main,
 		color: palette.neutral[60],
@@ -18,9 +26,10 @@ export const lightTheme: { radio: RadioTheme } = {
 		supportingTextColor: palette.neutral[46],
 		errorColor: palette.error.main,
 	},
+	...inlineErrorLightTheme,
 }
 
-export const blueTheme: { radio: RadioTheme } = {
+export const blueTheme: { radio: RadioTheme; inlineError: InlineErrorTheme } = {
 	radio: {
 		hoverBorderColor: palette.neutral[100],
 		color: palette.brand.faded,
@@ -29,4 +38,5 @@ export const blueTheme: { radio: RadioTheme } = {
 		supportingTextColor: palette.brand.faded,
 		errorColor: palette.error.bright,
 	},
+	...inlineErrorBlueTheme,
 }
