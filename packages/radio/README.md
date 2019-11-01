@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ yarn add @guardian/src-radio
+$ yarn add @guardian/src-radio @guardian/src-foundations
 ```
 
 ## Use
