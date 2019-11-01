@@ -2,7 +2,7 @@ import { breakpoints } from "@guardian/src-foundations"
 
 // Duplicated from breakpoints.ts because of some issue importing directly
 // babel * typescript * rollup = ¯\_(ツ)_/¯
-export type Breakpoint =
+type Breakpoint =
 	| "mobileMedium"
 	| "mobileLandscape"
 	| "phablet"

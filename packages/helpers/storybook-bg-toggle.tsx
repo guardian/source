@@ -44,6 +44,8 @@ export const WithBackgroundToggle = ({
 		{children}
 		<select
 			value={`${storyName} ${selectedValue}`}
+			/* eslint-disable-next-line @typescript-eslint/ban-ts-ignore */
+			//@ts-ignore
 			onChange={linkTo(storyKind, (e: Event) => {
 				const target = e.currentTarget as HTMLSelectElement
 
