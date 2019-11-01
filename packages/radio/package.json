@@ -32,7 +32,6 @@
 	"dependencies": {
 		"@guardian/src-foundations": "^0.5.0",
 		"@guardian/src-inline-error": "^0.0.4",
-		"@guardian/src-svgs": "^0.0.2",
-		"@guardian/src-utilities": "^0.1.2"
+		"@guardian/src-svgs": "^0.0.2"
 	}
 }

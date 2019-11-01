@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { textSans, space, size, transitions } from "@guardian/src-foundations"
-import { focusHalo } from "@guardian/src-utilities"
+import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { RadioTheme, lightTheme } from "./themes"
 
 export const group = css`

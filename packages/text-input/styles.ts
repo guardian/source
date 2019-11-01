@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { textSans, size, palette, space } from "@guardian/src-foundations"
-import { focusHalo } from "@guardian/src-utilities"
+import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { lightTheme, TextInputTheme } from "./themes"
 
 export const textInput = ({

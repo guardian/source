@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { textSans, size, transitions } from "@guardian/src-foundations"
-import { focusHalo } from "@guardian/src-utilities"
+import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { lightTheme, ButtonTheme } from "./themes"
 
 export const button = css`
