@@ -16,6 +16,12 @@ module.exports = {
 			format: "esm",
 		},
 	],
-	external: ["react", "@emotion/core", "@emotion/css"],
+	external: [
+		"react",
+		"@emotion/core",
+		"@emotion/css",
+		"@guardian/src-foundations",
+		"@guardian/src-foundations/accessibility",
+	],
 	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
 }

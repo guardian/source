@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ yarn add @guardian/src-button
+$ yarn add @guardian/src-button @guardian/src-foundations
 ```
 
 ## Use

@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ yarn add @guardian/src-text-input
+$ yarn add @guardian/src-text-input @guardian/src-foundations
 ```
 
 ## Use

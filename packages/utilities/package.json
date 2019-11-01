@@ -4,7 +4,7 @@
 	"main": "dist/utilities.js",
 	"module": "dist/utilities.esm.js",
 	"scripts": {
-		"build": "rollup --config",
+		"build": "yarn clean && rollup --config",
 		"watch": "rollup --config --watch",
 		"clean": "rm -rf dist",
 		"prepublish": "yarn build"
