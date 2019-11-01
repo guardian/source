@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds, Appearance } from "@guardian/src-helpers"
-import { TextInput, TextInputTheme, lightTheme } from "./index"
+import { TextInput, lightTheme } from "./index"
 
 export default {
 	title: "TextInput",
@@ -10,7 +10,7 @@ export default {
 
 const appearances: {
 	name: Appearance
-	theme: { textInput: TextInputTheme }
+	theme: {}
 }[] = [
 	{
 		name: "light",
@@ -23,13 +23,7 @@ const constrainedWith = css`
 `
 
 const [defaultLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
+	({ name, theme }: { name: Appearance; theme: {} }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
 				<div css={constrainedWith}>
@@ -56,13 +50,7 @@ const [defaultLight] = appearances.map(
 )
 
 const [optionalLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
+	({ name, theme }: { name: Appearance; theme: {} }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
 				<div css={constrainedWith}>
@@ -88,13 +76,7 @@ const [optionalLight] = appearances.map(
 	},
 )
 const [supportingTextLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
+	({ name, theme }: { name: Appearance; theme: {} }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
 				<div css={constrainedWith}>
@@ -121,13 +103,7 @@ const [supportingTextLight] = appearances.map(
 )
 
 const [widthsLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
+	({ name, theme }: { name: Appearance; theme: {} }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
 				<div>
@@ -160,13 +136,7 @@ const [widthsLight] = appearances.map(
 )
 
 const [errorWithMessageLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
+	({ name, theme }: { name: Appearance; theme: {} }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
 				<div css={constrainedWith}>
@@ -196,13 +166,7 @@ const [errorWithMessageLight] = appearances.map(
 )
 
 const [errorWithoutMessageLight] = appearances.map(
-	({
-		name,
-		theme,
-	}: {
-		name: Appearance
-		theme: { textInput: TextInputTheme }
-	}) => {
+	({ name, theme }: { name: Appearance; theme: {} }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
 				<div css={constrainedWith}>
