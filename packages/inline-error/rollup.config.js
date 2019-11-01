@@ -18,6 +18,11 @@ module.exports = {
 			sourceMap: true,
 		},
 	],
-	external: ["react", "@emotion/core", "@emotion/css"],
+	external: [
+		"react",
+		"@emotion/core",
+		"@emotion/css",
+		"@guardian/src-foundations",
+	],
 	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
 }
