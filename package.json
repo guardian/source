@@ -9,6 +9,7 @@
 		"fix": "yarn lint:js --fix",
 		"tsc": "tsc",
 		"validate": "yarn tsc && yarn lint",
+		"clean": "rm -rf dist",
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd packages/foundations && yarn build",
 		"watch:foundations": "cd packages/foundations && yarn watch",
