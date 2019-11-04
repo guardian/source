@@ -1,28 +1,27 @@
 {
 	"name": "@guardian/src-foundations",
 	"version": "0.5.0",
-	"main": "dist/foundations.js",
-	"module": "dist/foundations.esm.js",
+	"main": "foundations.js",
+	"module": "foundations.esm.js",
 	"scripts": {
 		"build": "yarn clean && rollup --config",
 		"watch": "rollup --config --watch",
-		"clean": "rm -rf dist",
+		"clean": "rm accessibility.js mq.js foundations.js foundations.esm.js",
 		"prepublish": "yarn build"
 	},
 	"files": [
-		"dist/**/*.js",
-		"mq/**/*.js",
-		"accessibility/**/*.js",
-		"accessibility.ts",
-		"animation.ts",
-		"breakpoints.ts",
-		"index.ts",
-		"mq.ts",
-		"palette.ts",
-		"size.ts",
-		"space.ts",
-		"theme.ts",
-		"typography.ts"
+		"mq.js",
+		"accessibility.js",
+		"src/animation.ts",
+		"src/breakpoints.ts",
+		"src/index.ts",
+		"src/palette.ts",
+		"src/size.ts",
+		"src/space.ts",
+		"src/theme.ts",
+		"src/typography.ts",
+		"src/accessibility/index.ts",
+		"src/mq/index.ts"
 	],
 	"devDependencies": {
 		"@babel/preset-env": "^7.5.5",
