@@ -10,6 +10,7 @@
 		"prepublish": "yarn build"
 	},
 	"files": [
+		"foundations.esm.js",
 		"mq.js",
 		"accessibility.js",
 		"src/animation.ts",
