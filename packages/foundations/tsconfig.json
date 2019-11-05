@@ -1,23 +1,7 @@
 {
 	"compilerOptions": {
 		"outDir": ".",
-		"module": "commonjs",
-		"target": "es5",
-		"lib": ["es5", "es6", "es7", "es2017", "dom"],
-		"strict": true,
-		"sourceMap": true,
-		"jsx": "preserve",
-		"moduleResolution": "node",
-		"forceConsistentCasingInFileNames": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
-		"noUnusedLocals": true,
 		"declaration": true,
-		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
 		"emitDeclarationOnly": true
 	},
 	"exclude": ["node_modules"]
