@@ -1,5 +1,5 @@
 mq/
 accessibility/
-index.js
-index.esm.js
+foundations.js
+foundations.esm.js
 *.d.ts

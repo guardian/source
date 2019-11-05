@@ -9,11 +9,11 @@ module.exports = [
 		input: "src/index.ts",
 		output: [
 			{
-				file: "index.js",
+				file: "foundations.js",
 				format: "cjs",
 			},
 			{
-				file: "index.esm.js",
+				file: "foundations.esm.js",
 				format: "esm",
 			},
 		],
