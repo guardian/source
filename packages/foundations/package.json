@@ -1,18 +1,18 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "0.5.0",
+	"version": "0.5.2",
 	"main": "foundations.js",
 	"module": "foundations.esm.js",
 	"scripts": {
-		"build": "yarn clean && rollup --config",
+		"build": "yarn clean && tsc && rollup --config",
 		"watch": "rollup --config --watch",
-		"clean": "rm accessibility.js mq.js foundations.js foundations.esm.js",
+		"clean": "rm -rf accessibility mq index.js index.esm.js *.d.ts src/**/*.d.ts",
 		"prepublish": "yarn build"
 	},
 	"files": [
+		"mq/*",
+		"accessibility/*",
 		"foundations.esm.js",
-		"mq.js",
-		"accessibility.js",
 		"src/animation.ts",
 		"src/breakpoints.ts",
 		"src/index.ts",
@@ -29,6 +29,7 @@
 		"@babel/preset-typescript": "^7.3.3",
 		"rollup": "^1.19.4",
 		"rollup-plugin-babel": "^4.3.3",
-		"rollup-plugin-node-resolve": "^5.2.0"
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"typescript": "^3.6.4"
 	}
 }

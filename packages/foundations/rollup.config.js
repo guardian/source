@@ -9,11 +9,11 @@ module.exports = [
 		input: "src/index.ts",
 		output: [
 			{
-				file: "foundations.js",
+				file: "index.js",
 				format: "cjs",
 			},
 			{
-				file: "foundations.esm.js",
+				file: "index.esm.js",
 				format: "esm",
 			},
 		],
@@ -23,7 +23,7 @@ module.exports = [
 		input: "src/mq/index.ts",
 		output: [
 			{
-				file: "mq.js",
+				file: "mq/index.js",
 				format: "cjs",
 			},
 		],
@@ -34,7 +34,7 @@ module.exports = [
 		input: "src/accessibility/index.ts",
 		output: [
 			{
-				file: "accessibility.js",
+				file: "accessibility/index.js",
 				format: "cjs",
 			},
 		],

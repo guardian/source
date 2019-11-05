@@ -1,4 +1,4 @@
-import { palette } from "@guardian/src-foundations"
+import { palette } from "../index"
 
 const visuallyHidden = `
 	position: absolute;
