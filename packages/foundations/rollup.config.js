@@ -6,21 +6,21 @@ const plugins = [babel({ extensions }), resolve({ extensions })]
 
 module.exports = [
 	{
-		input: "index.ts",
+		input: "src/index.ts",
 		output: [
 			{
-				file: "dist/foundations.js",
+				file: "foundations.js",
 				format: "cjs",
 			},
 			{
-				file: "dist/foundations.esm.js",
+				file: "foundations.esm.js",
 				format: "esm",
 			},
 		],
 		plugins,
 	},
 	{
-		input: "mq.ts",
+		input: "src/mq/index.ts",
 		output: [
 			{
 				file: "mq/index.js",
@@ -31,7 +31,7 @@ module.exports = [
 		external: ["@guardian/src-foundations"],
 	},
 	{
-		input: "accessibility.ts",
+		input: "src/accessibility/index.ts",
 		output: [
 			{
 				file: "accessibility/index.js",

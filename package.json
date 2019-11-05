@@ -9,6 +9,7 @@
 		"fix": "yarn lint:js --fix",
 		"tsc": "tsc",
 		"validate": "yarn tsc && yarn lint",
+		"clean": "rm -rf dist",
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd packages/foundations && yarn build",
 		"watch:foundations": "cd packages/foundations && yarn watch",
@@ -52,6 +53,6 @@
 		"stylelint-config-recommended": "^2.2.0",
 		"stylelint-config-styled-components": "^0.1.1",
 		"stylelint-processor-styled-components": "^1.8.0",
-		"typescript": "^3.5.3"
+		"typescript": "^3.6.4"
 	}
 }

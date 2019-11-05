@@ -1,2 +1,5 @@
-mq
-accessibility
+mq/
+accessibility/
+foundations.js
+foundations.esm.js
+*.d.ts

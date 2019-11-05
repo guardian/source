@@ -1,34 +1,37 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "0.5.0",
-	"main": "dist/foundations.js",
-	"module": "dist/foundations.esm.js",
+	"version": "0.5.6",
+	"main": "foundations.js",
+	"module": "foundations.esm.js",
 	"scripts": {
-		"build": "yarn clean && rollup --config",
+		"build": "yarn clean && tsc && rollup --config",
 		"watch": "rollup --config --watch",
-		"clean": "rm -rf dist",
-		"prepublish": "yarn build"
+		"clean": "rm -rf accessibility mq foundations.js foundations.esm.js *.d.ts src/**/*.d.ts",
+		"prepublishOnly": "yarn build",
+		"postpublish": "yarn clean"
 	},
 	"files": [
-		"dist/**/*.js",
-		"mq/**/*.js",
-		"accessibility/**/*.js",
-		"accessibility.ts",
-		"animation.ts",
-		"breakpoints.ts",
-		"index.ts",
-		"mq.ts",
-		"palette.ts",
-		"size.ts",
-		"space.ts",
-		"theme.ts",
-		"typography.ts"
+		"mq/*",
+		"accessibility/*",
+		"*.d.ts",
+		"foundations.esm.js",
+		"src/animation.ts",
+		"src/breakpoints.ts",
+		"src/index.ts",
+		"src/palette.ts",
+		"src/size.ts",
+		"src/space.ts",
+		"src/theme.ts",
+		"src/typography.ts",
+		"src/accessibility/index.ts",
+		"src/mq/index.ts"
 	],
 	"devDependencies": {
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-typescript": "^7.3.3",
 		"rollup": "^1.19.4",
 		"rollup-plugin-babel": "^4.3.3",
-		"rollup-plugin-node-resolve": "^5.2.0"
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"typescript": "^3.6.4"
 	}
 }
