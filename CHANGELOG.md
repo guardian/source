@@ -3,6 +3,13 @@
 > **Tags:**
 >
 > -   :boom: [Breaking Change]
+> -   :bug: [Bugfix]
+
+## 5th November 2019
+
+### `@guardian/src-foundations 0.5.6`
+
+-   :bug: [#76](https://github.com/guardian/source-components/pull/76) Refactor src-foundations to remove resolution ambiguity and expose types
 
 ## 1st November 2019
 
