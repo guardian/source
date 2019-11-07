@@ -14,8 +14,8 @@ jobs:
             - name: build
               run: |
                   yarn
-                  yarn lint
-                  yarn build
+                  yarn validate
+                  yarn ci:build
             - name: deploy
               env:
                   GH_PAT: ${{ secrets.GH_PAT }}
