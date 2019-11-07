@@ -6,14 +6,14 @@
 	"scripts": {
 		"build": "yarn clean && tsc && rollup --config",
 		"watch": "rollup --config --watch",
-		"clean": "rm -rf accessibility mq __typography foundations.js foundations.esm.js *.d.ts src/**/*.d.ts",
+		"clean": "rm -rf accessibility mq __experimental__typography foundations.js foundations.esm.js *.d.ts src/**/*.d.ts",
 		"prepublishOnly": "yarn build",
 		"postpublish": "yarn clean"
 	},
 	"files": [
 		"mq/*",
 		"accessibility/*",
-		"__typography/*",
+		"__experimental__typography/*",
 		"*.d.ts",
 		"foundations.esm.js",
 		"src/animation.ts",
