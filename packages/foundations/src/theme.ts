@@ -16,11 +16,11 @@ const fontWeights = [300, 400, 500, 700]
 // const [dark, main, bright, pastel, faded] = colors.blue
 const colors = {
 	reds: [
-		"#ab0613", //news-dark
-		"#c70000", //news-main
+		"#AB0613", //news-dark
+		"#C70000", //news-main
 		"#FF5943", //news-bright
-		"#ffbac8", //news-pastel
-		"#fff4f2", //news-fade
+		"#FFBAC8", //news-pastel
+		"#FFF4F2", //news-fade
 	],
 	oranges: [
 		"#AB0613", //opinion-dark
@@ -70,10 +70,10 @@ const colors = {
 		"#333333", //neutral-20
 		"#767676", //neutral-46
 		"#999999", //neutral-60
-		"#dcdcdc", //neutral-86
-		"#ededed", //neutral-93
-		"#f6f6f6", //neutral-97
-		"#ffffff", //neutral-100
+		"#DCDCDC", //neutral-86
+		"#EDEDED", //neutral-93
+		"#F6F6F6", //neutral-97
+		"#FFFFFF", //neutral-100
 		"#3F464A", //special-report
 		"#1A1A1A", //dark-mode-background
 	],
