@@ -1,7 +1,7 @@
 # Ignore built files
 mq/
 accessibility/
-__typography/
+__experimental__typography/
 foundations.js
 foundations.esm.js
 *.d.ts
@@ -9,4 +9,4 @@ foundations.esm.js
 # Include src files
 !src/mq/
 !src/accessibility/
-!src/__typography/
+!src/__experimental__typography/
