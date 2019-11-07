@@ -21,7 +21,7 @@
 		"build:inline-error": "cd packages/inline-error && yarn build",
 		"build:radio": "cd packages/radio && yarn build",
 		"build:text-input": "cd packages/text-input && yarn build",
-		"build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:utilities && yarn build:svgs && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input"
+		"ci:build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:utilities && yarn build:svgs && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input"
 	},
 	"private": true,
 	"workspaces": [
