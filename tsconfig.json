@@ -2,8 +2,14 @@
 	"compilerOptions": {
 		"baseUrl": "./packages",
 		"paths": {
-			"@guardian/src-foundations": ["foundations"],
-			"@guardian/src-foundations/mq": ["foundations/mq"],
+			"@guardian/src-foundations": ["foundations/src"],
+			"@guardian/src-foundations/mq": ["foundations/src/mq"],
+			"@guardian/src-foundations/accessibility": [
+				"foundations/src/accessibility"
+			],
+			"@guardian/src-foundations/__typography": [
+				"foundations/src/__typography"
+			],
 			"@guardian/inline-error": ["inline-error"],
 			"@guardian/src-helpers": ["helpers"],
 			"@guardian/src-svgs": ["svgs"]
