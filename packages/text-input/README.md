@@ -54,6 +54,6 @@ the width will default to 100% of the field's container.
 
 ### `error`
 
-**`boolean | string`**
+**`string`**
 
-Whether error styling should apply to this text input. If a string is passed, this appears as an inline error message
+Whether error styling should apply to this text input. The string appears as an inline error message.
