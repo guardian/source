@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds, Appearance } from "@guardian/src-helpers"
+import { space } from "@guardian/src-foundations"
 import { TextInput, lightTheme } from "./index"
 
 export default {
@@ -102,17 +103,20 @@ const [supportingTextLight] = appearances.map(
 	},
 )
 
+const spacer = css`
+	margin-bottom: ${space[4]}px;
+`
 const [widthsLight] = appearances.map(
 	({ name, theme }: { name: Appearance; theme: {} }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
-				<div>
+				<div css={spacer}>
 					<TextInput label="First name" width={30} />
 				</div>
-				<div>
+				<div css={spacer}>
 					<TextInput label="Postcode" width={10} />
 				</div>
-				<div>
+				<div css={spacer}>
 					<TextInput label="Year of birth" width={4} />
 				</div>
 			</ThemeProvider>
