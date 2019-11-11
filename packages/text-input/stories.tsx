@@ -104,7 +104,7 @@ const [supportingTextLight] = appearances.map(
 )
 
 const spacer = css`
-	margin-bottom: ${space[4]}px;
+	margin-bottom: ${space[3]}px;
 `
 const [widthsLight] = appearances.map(
 	({ name, theme }: { name: Appearance; theme: {} }) => {

@@ -40,7 +40,7 @@ export const text = ({
 }: { textInput: TextInputTheme } = lightTheme) => css`
 	${textSans.medium()};
 	color: ${textInput.textColor};
-	margin-bottom: ${space.half}px;
+	margin-bottom: ${space[1]}px;
 `
 
 export const errorInput = css`
@@ -57,5 +57,5 @@ export const optionalLabel = css`
 export const supportingText = css`
 	${textSans.small()};
 	color: ${palette.neutral[46]};
-	margin-bottom: ${space.half}px;
+	margin-bottom: ${space[1]}px;
 `
