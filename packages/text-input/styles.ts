@@ -13,7 +13,6 @@ export const textInput = ({
 	background-color: ${textInput.backgroundColor};
 	border: 2px solid ${palette.neutral[60]};
 	padding: 0 ${space[2]}px;
-	margin-bottom: ${space[4]}px;
 
 	&:focus {
 		${focusHalo};
