@@ -5,6 +5,7 @@ typography/
 foundations.js
 foundations.esm.js
 *.d.ts
+*.tgz
 
 # Include src files
 !src/mq/
