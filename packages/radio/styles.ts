@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
-import { textSans, space, size, transitions } from "@guardian/src-foundations"
+import { space, size, transitions } from "@guardian/src-foundations"
+import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { RadioTheme, lightTheme } from "./themes"
 
@@ -82,18 +83,18 @@ export const radio = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 `
 
 export const labelText = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
-	${textSans({ level: 3 })};
+	${textSans.medium()};
 	color: ${radio.textColor};
 `
 
 export const labelTextWithSupportingText = css`
-	${textSans({ level: 3, fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: "bold" })};
 `
 
 export const supportingText = ({
 	radio,
 }: { radio: RadioTheme } = lightTheme) => css`
-	${textSans({ level: 3 })};
+	${textSans.medium()};
 	color: ${radio.supportingTextColor};
 `
 
