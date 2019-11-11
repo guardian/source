@@ -169,38 +169,10 @@ const [errorWithMessageLight] = appearances.map(
 	},
 )
 
-const [errorWithoutMessageLight] = appearances.map(
-	({ name, theme }: { name: Appearance; theme: {} }) => {
-		const story = () => (
-			<ThemeProvider theme={theme}>
-				<div css={constrainedWith}>
-					<TextInput label="First name" error={true} />
-				</div>
-			</ThemeProvider>
-		)
-
-		story.story = {
-			name: `error without message ${name}`,
-			parameters: {
-				backgrounds: [
-					Object.assign(
-						{},
-						{ default: true },
-						storybookBackgrounds[name],
-					),
-				],
-			},
-		}
-
-		return story
-	},
-)
-
 export {
 	defaultLight,
 	optionalLight,
 	supportingTextLight,
 	widthsLight,
 	errorWithMessageLight,
-	errorWithoutMessageLight,
 }

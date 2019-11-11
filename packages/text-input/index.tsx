@@ -39,7 +39,7 @@ const TextInput = ({
 	optional: boolean
 	supporting?: string
 	width?: Width
-	error: boolean | string
+	error?: string
 }) => {
 	return (
 		<label>
@@ -48,7 +48,7 @@ const TextInput = ({
 				{optional ? <span css={optionalLabel}>Optional</span> : ""}
 			</div>
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
-			{typeof error === "string" && <InlineError>{error}</InlineError>}
+			{error && <InlineError>{error}</InlineError>}
 			<input
 				css={theme => [
 					width ? widths[width] : widthFluid,
@@ -65,7 +65,6 @@ const defaultProps = {
 	disabled: false,
 	type: "text",
 	optional: false,
-	error: false,
 }
 
 TextInput.defaultProps = { ...defaultProps }
