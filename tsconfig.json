@@ -7,8 +7,8 @@
 			"@guardian/src-foundations/accessibility": [
 				"foundations/src/accessibility"
 			],
-			"@guardian/src-foundations/__experimental__typography": [
-				"foundations/src/__experimental__typography"
+			"@guardian/src-foundations/typography": [
+				"foundations/src/typography"
 			],
 			"@guardian/inline-error": ["inline-error"],
 			"@guardian/src-helpers": ["helpers"],
