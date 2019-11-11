@@ -23,7 +23,7 @@ const backgroundColor = css`
 ### [Typography](https://zeroheight.com/2a1e5182b/p/930d69)
 
 ```ts
-import { headline, body textSans } from "@guardian/src-foundations/typography"
+import { headline, body, textSans } from "@guardian/src-foundations/typography"
 
 const h1 = css`
     ${headline.large({ fontWeight: 'bold' })};
