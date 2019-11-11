@@ -24,7 +24,7 @@ export const label = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 
 export const labelWithSupportingText = css`
 	align-items: flex-start;
-	margin-bottom: ${space[3]}px;
+	margin-bottom: ${space[2]}px;
 `
 
 export const radio = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
@@ -102,7 +102,7 @@ export const horizontal = css`
 	flex-direction: row;
 
 	label {
-		margin-right: ${space[3]}px;
+		margin-right: ${space[2]}px;
 	}
 `
 export const vertical = css`

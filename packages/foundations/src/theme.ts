@@ -79,7 +79,7 @@ const colors = {
 	],
 }
 
-const space = [3, 6, 12, 18, 24, 36, 48, 96]
+const space = [0, 4, 8, 12, 20, 24, 36, 48, 96]
 
 const size = [24, 36, 44]
 
