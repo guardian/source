@@ -7,6 +7,22 @@
 
 ## 11th November 2019
 
+### `@guardian/src-button 0.3.0`
+
+-   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
+
+### `@guardian/src-radio 0.2.0`
+
+-   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
+
+### `@guardian/src-text-input 0.2.0`
+
+-   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
+
+### `@guardian/src-inline-error 0.2.0`
+
+-   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
+
 ### `@guardian/src-foundations 0.6.0`
 
 -   [#77](https://github.com/guardian/source-components/pull/77) New typography API
