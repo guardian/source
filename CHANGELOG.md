@@ -5,6 +5,16 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 11th November 2019
+
+### `@guardian/src-foundations 0.6.0`
+
+-   [#77](https://github.com/guardian/source-components/pull/77) New typography API
+-   :boom: [#78](https://github.com/guardian/source-components/pull/78) Standardise hex colour casing
+-   [#80](https://github.com/guardian/source-components/pull/80) Add typography to README
+-   [#81](https://github.com/guardian/source-components/pull/81) Make it clear typography API is experimental
+-   :boom: [#82](https://github.com/guardian/source-components/pull/82) Migrate experimental typography to typography
+
 ## 5th November 2019
 
 ### `@guardian/src-foundations 0.5.6`
