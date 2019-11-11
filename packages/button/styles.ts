@@ -1,12 +1,13 @@
 import { css } from "@emotion/core"
-import { textSans, size, transitions } from "@guardian/src-foundations"
+import { size, transitions } from "@guardian/src-foundations"
+import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { lightTheme, ButtonTheme } from "./themes"
 
 export const button = css`
 	display: inline-flex;
 	justify-content: space-between;
-	${textSans({ level: 3, fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: "bold" })};
 	box-sizing: border-box;
 	border: none;
 	background: transparent;
