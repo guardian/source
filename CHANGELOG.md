@@ -15,27 +15,27 @@
 
 -   [#83](https://github.com/guardian/source-components/pull/83) Remove bottom-margin
 -   :boom: [#84](https://github.com/guardian/source-components/pull/84) TextInput error message can only be a string
--   [#85](https://github.com/guardian/source-components/pull/83) Upgrade to `@guardian/src-foundations 0.7.0`
+-   [#85](https://github.com/guardian/source-components/pull/85) Upgrade to `@guardian/src-foundations 0.7.0`
 
 ### `@guardian/src-button 0.3.1`
 
 -   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
--   [#85](https://github.com/guardian/source-components/pull/83) Upgrade to `@guardian/src-foundations 0.7.0`
+-   [#85](https://github.com/guardian/source-components/pull/85) Upgrade to `@guardian/src-foundations 0.7.0`
 
 ### `@guardian/src-radio 0.2.1`
 
 -   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
--   [#85](https://github.com/guardian/source-components/pull/83) Upgrade to `@guardian/src-foundations 0.7.0`
+-   [#85](https://github.com/guardian/source-components/pull/85) Upgrade to `@guardian/src-foundations 0.7.0`
 
 ### `@guardian/src-text-input 0.2.1`
 
 -   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
--   [#85](https://github.com/guardian/source-components/pull/83) Upgrade to `@guardian/src-foundations 0.7.0`
+-   [#85](https://github.com/guardian/source-components/pull/85) Upgrade to `@guardian/src-foundations 0.7.0`
 
 ### `@guardian/src-inline-error 0.2.1`
 
 -   [#82](https://github.com/guardian/source-components/pull/82) Upgrade to `@guardian/src-foundations 0.6.0`
--   [#85](https://github.com/guardian/source-components/pull/83) Upgrade to `@guardian/src-foundations 0.7.0`
+-   [#85](https://github.com/guardian/source-components/pull/85) Upgrade to `@guardian/src-foundations 0.7.0`
 
 ### `@guardian/src-foundations 0.6.0`
 
