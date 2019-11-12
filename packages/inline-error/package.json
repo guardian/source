@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-inline-error",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"main": "dist/inline-error.js",
 	"module": "dist/inline-error.esm.js",
 	"scripts": {
