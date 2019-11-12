@@ -22,7 +22,7 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
-		"inline-error.tsx",
+		"index.tsx",
 		"styles.ts"
 	],
 	"peerDependencies": {
