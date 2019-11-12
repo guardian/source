@@ -9,7 +9,7 @@
 
 ### `@guardian/src-foundations 0.7.0`
 
--   :boom: [#85](https://github.com/guardian/source-components/pull/83) Use 4px spacing
+-   :boom: [#85](https://github.com/guardian/source-components/pull/85) Use 4px spacing
 
 ### `@guardian/src-text-input 0.3.0`
 
