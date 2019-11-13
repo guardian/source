@@ -1,9 +1,11 @@
 import { fontSizes, fonts, lineHeights, fontWeights } from "../theme"
 
-type Category = "headline" | "body" | "textSans"
+type Category = "titlepiece" | "headline" | "body" | "textSans"
 type LineHeight = "tight" | "regular" | "loose"
 type FontWeight = "light" | "regular" | "medium" | "bold"
-type FontWeightDefinition = { fontWeight: number; hasItalic: boolean }
+type FontWeightDefinition = { hasItalic: boolean }
+
+type TitlepieceSizes = "small" | "medium" | "large"
 
 type HeadlineSizes =
 	| "tiny"
@@ -26,6 +28,12 @@ type TextSansSizes =
 	| "xxlarge"
 
 const fontSizesRem = fontSizes.map(fontSize => fontSize / 16)
+
+const titlepieceSizes: { [key in TitlepieceSizes]: number } = {
+	small: fontSizesRem[7], //42px
+	medium: fontSizesRem[8], //50px
+	large: fontSizesRem[9], //70px
+}
 
 const headlineSizes: { [key in HeadlineSizes]: number } = {
 	tiny: fontSizesRem[2], //17px
@@ -61,12 +69,14 @@ const textSansSizes: { [key in TextSansSizes]: number } = {
 }
 
 const fontSizeMapping: { [cat in Category]: { [level in string]: number } } = {
+	titlepiece: titlepieceSizes,
 	headline: headlineSizes,
 	body: bodySizes,
 	textSans: textSansSizes,
 }
 
 const fontMapping: { [cat in Category]: string } = {
+	titlepiece: fonts.titlepiece,
 	headline: fonts.headlineSerif,
 	body: fonts.bodySerif,
 	textSans: fonts.bodySans,
@@ -78,42 +88,47 @@ const lineHeightMapping: { [lineHight in LineHeight]: string } = {
 	loose: lineHeights[2],
 }
 
-const fontWeightMapping: {
+const fontWeightMapping: { [fontWeight in FontWeight]: number } = {
+	light: fontWeights[0],
+	regular: fontWeights[1],
+	medium: fontWeights[2],
+	bold: fontWeights[3],
+}
+
+const availableFonts: {
 	[cat in Category]: {
 		[fontWeight in FontWeight]?: FontWeightDefinition
 	}
 } = {
+	titlepiece: {
+		bold: {
+			hasItalic: false,
+		},
+	},
 	headline: {
 		light: {
-			fontWeight: fontWeights[0],
 			hasItalic: true,
 		},
 		medium: {
-			fontWeight: fontWeights[2],
 			hasItalic: true,
 		},
 		bold: {
-			fontWeight: fontWeights[3],
 			hasItalic: false,
 		},
 	},
 	body: {
 		regular: {
-			fontWeight: fontWeights[1],
 			hasItalic: true,
 		},
 		bold: {
-			fontWeight: fontWeights[3],
 			hasItalic: true,
 		},
 	},
 	textSans: {
 		regular: {
-			fontWeight: fontWeights[1],
 			hasItalic: true,
 		},
 		bold: {
-			fontWeight: fontWeights[3],
 			hasItalic: false,
 		},
 	},
@@ -133,17 +148,15 @@ const fs = ({
 	const fontFamilyValue = fontMapping[category]
 	const fontSizeValue = fontSizeMapping[category][level]
 	const lineHeightValue = lineHeightMapping[lineHeight]
-	const fontWeightDefinition = fontWeightMapping[category][fontWeight]
+	const fontWeightValue = availableFonts[category][fontWeight]
+		? fontWeightMapping[fontWeight]
+		: ""
 
 	return `
 	font-family: ${fontFamilyValue};
 	font-size: ${fontSizeValue}rem;
 	line-height: ${lineHeightValue};
-	${
-		fontWeightDefinition
-			? `font-weight: ${fontWeightDefinition.fontWeight}`
-			: ""
-	};
+	${fontWeightValue ? `font-weight: ${fontWeightValue}` : ""};
 	`
 }
 
@@ -151,6 +164,35 @@ interface FontScaleArgs {
 	lineHeight?: LineHeight
 	fontWeight?: FontWeight
 }
+
+type TitlepieceFunctions = {
+	[key in TitlepieceSizes]: (options?: FontScaleArgs) => number
+}
+
+const titlepiece: TitlepieceFunctions = Object.keys(titlepieceSizes).reduce(
+	(acc, key) => {
+		return Object.assign({}, acc, {
+			[key]: (options: FontScaleArgs) => {
+				const defaultOptions = {
+					lineHeight: "tight",
+					fontWeight: "bold",
+				}
+				const { lineHeight, fontWeight } = Object.assign(
+					defaultOptions,
+					options,
+				)
+
+				return fs({
+					category: "titlepiece",
+					level: key,
+					lineHeight,
+					fontWeight,
+				})
+			},
+		})
+	},
+	{} as HeadlineFunctions,
+)
 
 type HeadlineFunctions = {
 	[key in HeadlineSizes]: (options?: FontScaleArgs) => number
@@ -239,8 +281,18 @@ const textSans: TextSansFunctions = Object.keys(textSansSizes).reduce(
 	{} as TextSansFunctions,
 )
 
+Object.freeze(titlepieceSizes)
 Object.freeze(headlineSizes)
 Object.freeze(bodySizes)
 Object.freeze(textSansSizes)
 
-export { headline, body, textSans, headlineSizes, bodySizes, textSansSizes }
+export {
+	titlepiece,
+	headline,
+	body,
+	textSans,
+	titlepieceSizes,
+	headlineSizes,
+	bodySizes,
+	textSansSizes,
+}
