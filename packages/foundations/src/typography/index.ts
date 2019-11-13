@@ -8,24 +8,17 @@ type FontWeightDefinition = { hasItalic: boolean }
 type TitlepieceSizes = "small" | "medium" | "large"
 
 type HeadlineSizes =
-	| "tiny"
+	| "xxxsmall"
 	| "xxsmall"
 	| "xsmall"
 	| "small"
 	| "medium"
 	| "large"
 	| "xlarge"
-	| "jumbo"
 
 type BodySizes = "small" | "medium"
 
-type TextSansSizes =
-	| "xsmall"
-	| "small"
-	| "medium"
-	| "large"
-	| "xlarge"
-	| "xxlarge"
+type TextSansSizes = "xsmall" | "small" | "medium" | "large"
 
 const fontSizesRem = fontSizes.map(fontSize => fontSize / 16)
 
@@ -36,16 +29,13 @@ const titlepieceSizes: { [key in TitlepieceSizes]: number } = {
 }
 
 const headlineSizes: { [key in HeadlineSizes]: number } = {
-	tiny: fontSizesRem[2], //17px
-	// BEGIN SUGGESTED RANGE
+	xxxsmall: fontSizesRem[2], //17px
 	xxsmall: fontSizesRem[3], //20px
 	xsmall: fontSizesRem[4], //24px
 	small: fontSizesRem[5], //28px
 	medium: fontSizesRem[6], //34px
 	large: fontSizesRem[7], //42px
 	xlarge: fontSizesRem[8], //50px
-	// END SUGGESTED RANGE
-	jumbo: fontSizesRem[9], //70px
 }
 
 const bodySizes: { [key in BodySizes]: number } = {
@@ -54,18 +44,10 @@ const bodySizes: { [key in BodySizes]: number } = {
 }
 
 const textSansSizes: { [key in TextSansSizes]: number } = {
-	// BEGIN SUGGESTED RANGE
 	xsmall: fontSizesRem[0], //12px
 	small: fontSizesRem[1], //15px
 	medium: fontSizesRem[2], //17px
-	// END SUGGESTED RANGE
 	large: fontSizesRem[3], //20px
-	xlarge: fontSizesRem[4], //24px
-	xxlarge: fontSizesRem[5], //28px
-	// xxxlarge: fontSizesRem[6], //34px
-	// xxxxlarge: fontSizesRem[7], //42px
-	// xxxxxlarge: fontSizesRem[8], //50px
-	// xxxxxxlarge: fontSizesRem[9], //70px
 }
 
 const fontSizeMapping: { [cat in Category]: { [level in string]: number } } = {
