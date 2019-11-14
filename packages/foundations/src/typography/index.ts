@@ -116,35 +116,42 @@ const availableFonts: {
 	},
 }
 
-const fs = ({
-	category,
-	level,
-	lineHeight,
-	fontWeight,
-}: {
-	category: Category
-	level: string
-	lineHeight: LineHeight
-	fontWeight: FontWeight
-}) => {
+const fs = (
+	category: Category,
+	level: string,
+	{
+		lineHeight,
+		fontWeight,
+		italic,
+	}: {
+		lineHeight: LineHeight
+		fontWeight: FontWeight
+		italic: boolean
+	},
+) => {
 	const fontFamilyValue = fontMapping[category]
 	const fontSizeValue = fontSizeMapping[category][level]
 	const lineHeightValue = lineHeightMapping[lineHeight]
-	const fontWeightValue = availableFonts[category][fontWeight]
-		? fontWeightMapping[fontWeight]
-		: ""
+	// TODO: consider logging an error in development if a requested
+	// font is unavailable
+	const requestedFont = availableFonts[category][fontWeight]
+	const fontWeightValue = requestedFont ? fontWeightMapping[fontWeight] : ""
+	const fontStyleValue =
+		italic && requestedFont && requestedFont.hasItalic ? "italic" : ""
 
 	return `
 	font-family: ${fontFamilyValue};
 	font-size: ${fontSizeValue}rem;
 	line-height: ${lineHeightValue};
 	${fontWeightValue ? `font-weight: ${fontWeightValue}` : ""};
+	${fontStyleValue ? `font-style: ${fontStyleValue}` : ""};
 	`
 }
 
 interface FontScaleArgs {
 	lineHeight?: LineHeight
 	fontWeight?: FontWeight
+	italic?: boolean
 }
 
 type TitlepieceFunctions = {
@@ -158,18 +165,11 @@ const titlepiece: TitlepieceFunctions = Object.keys(titlepieceSizes).reduce(
 				const defaultOptions = {
 					lineHeight: "tight",
 					fontWeight: "bold",
+					italic: false,
 				}
-				const { lineHeight, fontWeight } = Object.assign(
-					defaultOptions,
-					options,
-				)
+				const fsOptions = Object.assign(defaultOptions, options)
 
-				return fs({
-					category: "titlepiece",
-					level: key,
-					lineHeight,
-					fontWeight,
-				})
+				return fs("titlepiece", key, fsOptions)
 			},
 		})
 	},
@@ -187,18 +187,11 @@ const headline: HeadlineFunctions = Object.keys(headlineSizes).reduce(
 				const defaultOptions = {
 					lineHeight: "tight",
 					fontWeight: "medium",
+					italic: false,
 				}
-				const { lineHeight, fontWeight } = Object.assign(
-					defaultOptions,
-					options,
-				)
+				const fsOptions = Object.assign(defaultOptions, options)
 
-				return fs({
-					category: "headline",
-					level: key,
-					lineHeight,
-					fontWeight,
-				})
+				return fs("headline", key, fsOptions)
 			},
 		})
 	},
@@ -216,18 +209,11 @@ const body: BodyFunctions = Object.keys(bodySizes).reduce(
 				const defaultOptions = {
 					lineHeight: "loose",
 					fontWeight: "regular",
+					italic: false,
 				}
-				const { lineHeight, fontWeight } = Object.assign(
-					defaultOptions,
-					options,
-				)
+				const fsOptions = Object.assign(defaultOptions, options)
 
-				return fs({
-					category: "body",
-					level: key,
-					lineHeight,
-					fontWeight,
-				})
+				return fs("body", key, fsOptions)
 			},
 		})
 	},
@@ -245,18 +231,11 @@ const textSans: TextSansFunctions = Object.keys(textSansSizes).reduce(
 				const defaultOptions = {
 					lineHeight: "loose",
 					fontWeight: "regular",
+					italic: false,
 				}
-				const { lineHeight, fontWeight } = Object.assign(
-					defaultOptions,
-					options,
-				)
+				const fsOptions = Object.assign(defaultOptions, options)
 
-				return fs({
-					category: "textSans",
-					level: key,
-					lineHeight,
-					fontWeight,
-				})
+				return fs("textSans", key, fsOptions)
 			},
 		})
 	},
