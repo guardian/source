@@ -134,11 +134,10 @@ const fs = (
 	const lineHeightValue = lineHeightMapping[lineHeight]
 	// TODO: consider logging an error in development if a requested
 	// font is unavailable
-	const fontWeightValue = availableFonts[category][fontWeight]
-		? fontWeightMapping[fontWeight]
-		: ""
+	const requestedFont = availableFonts[category][fontWeight]
+	const fontWeightValue = requestedFont ? fontWeightMapping[fontWeight] : ""
 	const fontStyleValue =
-		italic && availableFonts[category][fontWeight].hasItalic ? "italic" : ""
+		italic && requestedFont && requestedFont.hasItalic ? "italic" : ""
 
 	return `
 	font-family: ${fontFamilyValue};
