@@ -2,9 +2,9 @@ import { palette } from "../index"
 import { inlineErrorDefault, InlineErrorTheme } from "./inline-error"
 
 export type TextInputTheme = {
-	textColorInput: string
-	textColorLabel: string
-	backgroundColor: string
+	textInput: string
+	textLabel: string
+	backgroundInput: string
 }
 
 export const textInputDefault: {
@@ -12,9 +12,9 @@ export const textInputDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	textInput: {
-		textColorInput: palette.neutral[7],
-		textColorLabel: palette.neutral[20],
-		backgroundColor: palette.neutral[100],
+		textInput: palette.neutral[7],
+		textLabel: palette.neutral[20],
+		backgroundInput: palette.neutral[100],
 	},
 	...inlineErrorDefault,
 }

@@ -6,13 +6,13 @@ import {
 } from "./inline-error"
 
 export type RadioTheme = {
-	hoverBorderColor: string
+	borderHover: string
 	// this name needs some thought!
 	color: string
-	checkedColor: string
-	textColor: string
-	textColorSupporting: string
-	textColorError: string
+	checked: string
+	text: string
+	textSupporting: string
+	textError: string
 }
 
 export const radioDefault: {
@@ -20,12 +20,12 @@ export const radioDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		hoverBorderColor: palette.brand.main,
+		borderHover: palette.brand.main,
 		color: palette.neutral[60],
-		checkedColor: palette.brand.main,
-		textColor: palette.neutral[20],
-		textColorSupporting: palette.neutral[46],
-		textColorError: palette.error.main,
+		checked: palette.brand.main,
+		text: palette.neutral[20],
+		textSupporting: palette.neutral[46],
+		textError: palette.error.main,
 	},
 	...inlineErrorDefault,
 }
@@ -35,12 +35,12 @@ export const radioBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		hoverBorderColor: palette.neutral[100],
+		borderHover: palette.neutral[100],
 		color: palette.brand.faded,
-		checkedColor: palette.neutral[100],
-		textColor: palette.neutral[100],
-		textColorSupporting: palette.brand.faded,
-		textColorError: palette.error.bright,
+		checked: palette.neutral[100],
+		text: palette.neutral[100],
+		textSupporting: palette.brand.faded,
+		textError: palette.error.bright,
 	},
 	...inlineErrorBrand,
 }

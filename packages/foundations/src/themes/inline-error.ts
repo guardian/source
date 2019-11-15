@@ -1,17 +1,17 @@
 import { palette } from "../index"
 
 export type InlineErrorTheme = {
-	textColor: string
+	text: string
 }
 
 export const inlineErrorDefault: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		textColor: palette.error.main,
+		text: palette.error.main,
 	},
 }
 
 export const inlineErrorBrand: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		textColor: palette.error.bright,
+		text: palette.error.bright,
 	},
 }
