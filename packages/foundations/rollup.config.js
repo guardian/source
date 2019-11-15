@@ -3,7 +3,7 @@ import resolve from "rollup-plugin-node-resolve"
 
 const extensions = [".ts", ".tsx"]
 const plugins = [babel({ extensions }), resolve({ extensions })]
-const folders = ["accessibility", "mq", "typography"].map(folder => ({
+const folders = ["accessibility", "mq", "themes", "typography"].map(folder => ({
 	input: `src/${folder}/index.ts`,
 	output: [
 		{
