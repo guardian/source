@@ -2,7 +2,7 @@
 	"name": "source-components",
 	"version": "0.0.1",
 	"scripts": {
-		"storybook": "yarn watch:foundations & watch:utilities & yarn watch:svgs & start-storybook",
+		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook",
 		"lint:styles": "stylelint packages/**/styles.ts",
 		"lint:js": "eslint . --ext .ts,.tsx",
 		"lint": "yarn lint:js && yarn lint:styles",
@@ -13,15 +13,13 @@
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd packages/foundations && yarn build",
 		"watch:foundations": "cd packages/foundations && yarn watch",
-		"build:utilities": "cd packages/utilities && yarn build",
-		"watch:utilities": "cd packages/utilities && yarn watch",
 		"watch:svgs": "cd packages/svgs && yarn watch",
 		"build:svgs": "cd packages/svgs && yarn build",
 		"build:button": "cd packages/button && yarn build",
 		"build:inline-error": "cd packages/inline-error && yarn build",
 		"build:radio": "cd packages/radio && yarn build",
 		"build:text-input": "cd packages/text-input && yarn build",
-		"ci:build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:utilities && yarn build:svgs && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input"
+		"ci:build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:svgs && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input"
 	},
 	"private": true,
 	"workspaces": [
