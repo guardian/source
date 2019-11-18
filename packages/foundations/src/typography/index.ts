@@ -64,7 +64,7 @@ const fontMapping: { [cat in Category]: string } = {
 	textSans: fonts.bodySans,
 }
 
-const lineHeightMapping: { [lineHight in LineHeight]: string } = {
+const lineHeightMapping: { [lineHight in LineHeight]: number } = {
 	tight: lineHeights[0],
 	regular: lineHeights[1],
 	loose: lineHeights[2],
