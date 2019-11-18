@@ -42,7 +42,7 @@ export const darkTheme: { button: ButtonTheme } = {
 			hoverBackgroundColor: palette.neutral[36],
 		},
 		tertiary: {
-			backgroundColor: palette.neutral.darkMode,
+			backgroundColor: palette.themes.inverse.background,
 			color: palette.neutral[100],
 		},
 	},
@@ -75,12 +75,12 @@ export const yellowTheme: { button: ButtonTheme } = {
 			hoverBackgroundColor: palette.neutral[20],
 		},
 		secondary: {
-			backgroundColor: palette.yellow.dark,
+			backgroundColor: palette.readerRevenue.dark,
 			color: palette.neutral[7],
 			hoverBackgroundColor: "#F2AE00", //non-palette colour
 		},
 		tertiary: {
-			backgroundColor: palette.yellow.main,
+			backgroundColor: palette.readerRevenue.main,
 			color: palette.neutral[7],
 		},
 	},
@@ -89,15 +89,15 @@ export const yellowTheme: { button: ButtonTheme } = {
 export const rrBlueTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.yellow.main,
+			backgroundColor: palette.readerRevenue.main,
 			color: palette.brand.main,
-			hoverBackgroundColor: palette.yellow.dark,
+			hoverBackgroundColor: palette.readerRevenue.dark,
 		},
 		secondary: {
 			backgroundColor: palette.brand.main,
-			color: palette.yellow.main,
+			color: palette.readerRevenue.main,
 			hoverBackgroundColor: palette.brand.dark,
-			borderColor: palette.yellow.main,
+			borderColor: palette.readerRevenue.main,
 		},
 		tertiary: {},
 	},
@@ -111,9 +111,9 @@ export const rrYellowTheme: { button: ButtonTheme } = {
 			hoverBackgroundColor: palette.neutral[20],
 		},
 		secondary: {
-			backgroundColor: palette.yellow.main,
+			backgroundColor: palette.readerRevenue.main,
 			color: palette.neutral[7],
-			hoverBackgroundColor: palette.yellow.dark,
+			hoverBackgroundColor: palette.readerRevenue.dark,
 			borderColor: palette.neutral[7],
 		},
 		tertiary: {
