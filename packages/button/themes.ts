@@ -42,7 +42,7 @@ export const darkTheme: { button: ButtonTheme } = {
 			hoverBackgroundColor: palette.neutral[36],
 		},
 		tertiary: {
-			backgroundColor: palette.themes.inverse.background,
+			backgroundColor: palette.background.inverse,
 			color: palette.neutral[100],
 		},
 	},

@@ -42,10 +42,14 @@ const palette = {
 		main: colors.grays[0],
 		weak: colors.grays[3],
 	},
-	themes: {
-		inverse: {
-			background: colors.grays[10],
-		},
+	background: {
+		inverse: colors.grays[10],
+		brand: colors.blues[6],
+		brandInverse: colors.yellows[1],
+		readerRevenue: colors.blues[6],
+		readerRevenueInverse: colors.yellows[1],
+		header: colors.blues[6],
+		footer: colors.blues[6],
 	},
 	news: {
 		dark: colors.reds[0],
