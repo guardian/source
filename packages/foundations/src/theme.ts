@@ -38,9 +38,9 @@ const colors = {
 		"#F1F8FC", //sport-faded
 		"#041F4A", //brand-dark
 		"#052962", //brand-main
-		"#0077B3", //brand-bright
+		"#007ABC", //brand-bright
 		"#506991", //brand-pastel
-		"#B2C7E7", //brand-faded
+		"#C1D8FC", //brand-faded
 	],
 	browns: [
 		"#6B5840", //culture-dark
@@ -69,6 +69,7 @@ const colors = {
 	grays: [
 		"#121212", //neutral-7
 		"#333333", //neutral-20
+		"#5C5C5C", //neutral-36
 		"#767676", //neutral-46
 		"#999999", //neutral-60
 		"#DCDCDC", //neutral-86
