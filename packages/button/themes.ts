@@ -15,12 +15,12 @@ export const lightTheme: { button: ButtonTheme } = {
 		primary: {
 			backgroundColor: palette.brand.main,
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.brand.pastel,
+			hoverBackgroundColor: "#234B8A", //non-palette colour
 		},
 		secondary: {
 			backgroundColor: palette.brand.faded,
 			color: palette.brand.main,
-			hoverBackgroundColor: palette.brand.faded,
+			hoverBackgroundColor: "#96B0D9", //non-palette colour
 		},
 		tertiary: {
 			backgroundColor: palette.neutral[100],
@@ -39,7 +39,7 @@ export const darkTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.neutral[46],
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.neutral[46],
+			hoverBackgroundColor: palette.neutral[36],
 		},
 		tertiary: {
 			backgroundColor: palette.neutral.darkMode,
@@ -58,7 +58,7 @@ export const blueTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.brand.pastel,
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.brand.pastel,
+			hoverBackgroundColor: "#234B8A", // non-palette colour
 		},
 		tertiary: {
 			backgroundColor: palette.brand.main,
@@ -77,7 +77,7 @@ export const yellowTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.yellow.dark,
 			color: palette.neutral[7],
-			hoverBackgroundColor: palette.yellow.dark,
+			hoverBackgroundColor: "#F2AE00", //non-palette colour
 		},
 		tertiary: {
 			backgroundColor: palette.yellow.main,
@@ -96,7 +96,7 @@ export const rrBlueTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.brand.main,
 			color: palette.yellow.main,
-			hoverBackgroundColor: palette.brand.pastel,
+			hoverBackgroundColor: palette.brand.dark,
 			borderColor: palette.yellow.main,
 		},
 		tertiary: {},
