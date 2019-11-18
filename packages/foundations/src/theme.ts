@@ -62,7 +62,7 @@ const colors = {
 	],
 	greens: [
 		"#185E36",
-		"#22874D",
+		"#22874D", //success-main
 		"#65A897", //labs-dark
 		"#69D1CA", //labs-main
 	],
@@ -77,7 +77,7 @@ const colors = {
 		"#F6F6F6", //neutral-97
 		"#FFFFFF", //neutral-100
 		"#3F464A", //special-report
-		"#1A1A1A", //dark-mode-background
+		"#1A1A1A", //inverse theme background
 	],
 }
 

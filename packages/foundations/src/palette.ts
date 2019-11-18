@@ -8,6 +8,7 @@ const palette = {
 		pastel: colors.blues[8],
 		faded: colors.blues[9],
 	},
+	// TODO: remove in v0.9.0, prefer readerRevenue
 	yellow: {
 		dark: colors.yellows[0],
 		main: colors.yellows[1],
@@ -23,11 +24,28 @@ const palette = {
 		97: colors.grays[7],
 		100: colors.grays[8],
 		specialReport: colors.grays[9],
+		// TODO: remove in v0.9.0, prefer themes.inverse.background
 		darkMode: colors.grays[10],
 	},
 	error: {
 		main: colors.reds[1],
 		bright: colors.reds[2],
+	},
+	success: {
+		main: colors.greens[1],
+	},
+	readerRevenue: {
+		dark: colors.yellows[0],
+		main: colors.yellows[1],
+	},
+	text: {
+		main: colors.grays[0],
+		weak: colors.grays[3],
+	},
+	themes: {
+		inverse: {
+			background: colors.grays[10],
+		},
 	},
 	news: {
 		dark: colors.reds[0],
