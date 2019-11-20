@@ -8,6 +8,7 @@ const palette = {
 		pastel: colors.blues[8],
 		faded: colors.blues[9],
 	},
+	// TODO: remove in v0.9.0, prefer readerRevenue
 	yellow: {
 		dark: colors.yellows[0],
 		main: colors.yellows[1],
@@ -15,18 +16,40 @@ const palette = {
 	neutral: {
 		7: colors.grays[0],
 		20: colors.grays[1],
-		46: colors.grays[2],
-		60: colors.grays[3],
-		86: colors.grays[4],
-		93: colors.grays[5],
-		97: colors.grays[6],
-		100: colors.grays[7],
-		specialReport: colors.grays[8],
-		darkMode: colors.grays[9],
+		36: colors.grays[2],
+		46: colors.grays[3],
+		60: colors.grays[4],
+		86: colors.grays[5],
+		93: colors.grays[6],
+		97: colors.grays[7],
+		100: colors.grays[8],
+		specialReport: colors.grays[9],
+		// TODO: remove in v0.9.0, prefer themes.inverse.background
+		darkMode: colors.grays[10],
 	},
 	error: {
 		main: colors.reds[1],
 		bright: colors.reds[2],
+	},
+	success: {
+		main: colors.greens[1],
+	},
+	readerRevenue: {
+		dark: colors.yellows[0],
+		main: colors.yellows[1],
+	},
+	text: {
+		main: colors.grays[0],
+		weak: colors.grays[3],
+	},
+	background: {
+		inverse: colors.grays[10],
+		brand: colors.blues[6],
+		brandInverse: colors.yellows[1],
+		readerRevenue: colors.blues[6],
+		readerRevenueInverse: colors.yellows[1],
+		header: colors.blues[6],
+		footer: colors.blues[6],
 	},
 	news: {
 		dark: colors.reds[0],
