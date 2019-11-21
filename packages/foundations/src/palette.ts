@@ -80,6 +80,7 @@ const labs = {
 const text = {
 	primary: neutral[7],
 	secondary: neutral[60],
+	error: error.main,
 	ctaPrimary: neutral[100],
 	ctaSecondary: brand.main,
 	mono: {
@@ -91,6 +92,7 @@ const text = {
 	brand: {
 		primary: neutral[100],
 		secondary: neutral[60],
+		error: error.bright,
 		ctaPrimary: brand.main,
 		ctaSecondary: neutral[100],
 	},
