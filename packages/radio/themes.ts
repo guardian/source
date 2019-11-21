@@ -23,7 +23,7 @@ export const lightTheme: {
 		color: palette.neutral[60],
 		checkedColor: palette.brand.main,
 		textColor: palette.neutral[20],
-		supportingTextColor: palette.text.weak,
+		supportingTextColor: palette.text.secondary,
 		errorColor: palette.error.main,
 	},
 	...inlineErrorLightTheme,
