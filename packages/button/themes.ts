@@ -13,18 +13,18 @@ export type ButtonTheme = {
 export const lightTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.brand.main,
-			color: palette.neutral[100],
-			hoverBackgroundColor: "#234B8A", //non-palette colour
+			color: palette.text.ctaPrimary,
+			backgroundColor: palette.background.ctaPrimary,
+			hoverBackgroundColor: palette.background.ctaPrimaryHover,
 		},
 		secondary: {
-			backgroundColor: palette.brand.faded,
-			color: palette.brand.main,
-			hoverBackgroundColor: "#96B0D9", //non-palette colour
+			color: palette.text.ctaSecondary,
+			backgroundColor: palette.background.ctaSecondary,
+			hoverBackgroundColor: palette.background.ctaSecondaryHover,
 		},
 		tertiary: {
-			backgroundColor: palette.neutral[100],
-			color: palette.brand.main,
+			color: palette.text.ctaSecondary,
+			backgroundColor: palette.background.primary,
 		},
 	},
 }
@@ -32,18 +32,18 @@ export const lightTheme: { button: ButtonTheme } = {
 export const darkTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.neutral[100],
-			color: palette.neutral[7],
-			hoverBackgroundColor: palette.neutral[93],
+			color: palette.text.mono.ctaPrimary,
+			backgroundColor: palette.background.mono.ctaPrimary,
+			hoverBackgroundColor: palette.background.mono.ctaPrimaryHover,
 		},
 		secondary: {
-			backgroundColor: palette.neutral[46],
-			color: palette.neutral[100],
-			hoverBackgroundColor: "#5C5C5C", //non-palette colour
+			color: palette.text.mono.ctaSecondary,
+			backgroundColor: palette.background.mono.ctaSecondary,
+			hoverBackgroundColor: palette.background.mono.ctaSecondaryHover,
 		},
 		tertiary: {
-			backgroundColor: palette.background.inverse,
-			color: palette.neutral[100],
+			color: palette.text.mono.ctaSecondary,
+			backgroundColor: palette.background.mono.primary,
 		},
 	},
 }
@@ -51,18 +51,18 @@ export const darkTheme: { button: ButtonTheme } = {
 export const blueTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.neutral[100],
-			color: palette.brand.main,
-			hoverBackgroundColor: palette.neutral[93],
+			color: palette.text.brand.ctaPrimary,
+			backgroundColor: palette.background.brand.ctaPrimary,
+			hoverBackgroundColor: palette.background.brand.ctaPrimaryHover,
 		},
 		secondary: {
-			backgroundColor: palette.brand.pastel,
-			color: palette.neutral[100],
-			hoverBackgroundColor: "#234B8A", // non-palette colour
+			color: palette.text.brand.ctaSecondary,
+			backgroundColor: palette.background.brand.ctaSecondary,
+			hoverBackgroundColor: palette.background.brand.ctaSecondaryHover,
 		},
 		tertiary: {
-			backgroundColor: palette.brand.main,
-			color: palette.neutral[100],
+			color: palette.text.brand.ctaSecondary,
+			backgroundColor: palette.background.brand.primary,
 		},
 	},
 }
@@ -70,18 +70,20 @@ export const blueTheme: { button: ButtonTheme } = {
 export const yellowTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.neutral[7],
-			color: palette.neutral[100],
-			hoverBackgroundColor: palette.neutral[20],
+			color: palette.text.brandYellow.ctaPrimary,
+			backgroundColor: palette.background.brandYellow.ctaPrimary,
+			hoverBackgroundColor:
+				palette.background.brandYellow.ctaPrimaryHover,
 		},
 		secondary: {
-			backgroundColor: palette.readerRevenue.dark,
-			color: palette.neutral[7],
-			hoverBackgroundColor: "#F2AE00", //non-palette colour
+			color: palette.text.brandYellow.ctaSecondary,
+			backgroundColor: palette.background.brandYellow.ctaSecondary,
+			hoverBackgroundColor:
+				palette.background.brandYellow.ctaSecondaryHover,
 		},
 		tertiary: {
-			backgroundColor: palette.readerRevenue.main,
-			color: palette.neutral[7],
+			color: palette.text.brandYellow.ctaSecondary,
+			backgroundColor: palette.background.brandYellow.primary,
 		},
 	},
 }
@@ -89,15 +91,17 @@ export const yellowTheme: { button: ButtonTheme } = {
 export const rrBlueTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.readerRevenue.main,
-			color: palette.brand.main,
-			hoverBackgroundColor: palette.readerRevenue.dark,
+			color: palette.text.readerRevenue.ctaPrimary,
+			backgroundColor: palette.background.readerRevenue.ctaPrimary,
+			hoverBackgroundColor:
+				palette.background.readerRevenue.ctaPrimaryHover,
 		},
 		secondary: {
-			backgroundColor: palette.brand.main,
-			color: palette.readerRevenue.main,
-			hoverBackgroundColor: palette.brand.dark,
-			borderColor: palette.readerRevenue.main,
+			color: palette.text.readerRevenue.ctaSecondary,
+			backgroundColor: palette.background.readerRevenue.ctaSecondary,
+			hoverBackgroundColor:
+				palette.background.readerRevenue.ctaSecondaryHover,
+			borderColor: palette.border.readerRevenue.ctaSecondary,
 		},
 		tertiary: {},
 	},
@@ -106,19 +110,19 @@ export const rrBlueTheme: { button: ButtonTheme } = {
 export const rrYellowTheme: { button: ButtonTheme } = {
 	button: {
 		primary: {
-			backgroundColor: palette.neutral[7],
-			color: palette.neutral[100],
-			hoverBackgroundColor: palette.neutral[20],
+			color: palette.text.readerRevenueYellow.ctaPrimary,
+			backgroundColor: palette.background.readerRevenueYellow.ctaPrimary,
+			hoverBackgroundColor:
+				palette.background.readerRevenueYellow.ctaPrimaryHover,
 		},
 		secondary: {
-			backgroundColor: palette.readerRevenue.main,
-			color: palette.neutral[7],
-			hoverBackgroundColor: palette.readerRevenue.dark,
-			borderColor: palette.neutral[7],
+			color: palette.text.readerRevenueYellow.ctaSecondary,
+			backgroundColor:
+				palette.background.readerRevenueYellow.ctaSecondary,
+			hoverBackgroundColor:
+				palette.background.readerRevenueYellow.ctaSecondaryHover,
+			borderColor: palette.border.readerRevenueYellow.ctaSecondary,
 		},
-		tertiary: {
-			backgroundColor: palette.neutral[100],
-			color: palette.brand.main,
-		},
+		tertiary: {},
 	},
 }

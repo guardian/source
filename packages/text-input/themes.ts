@@ -15,7 +15,7 @@ export const lightTheme: {
 	inlineError: InlineErrorTheme
 } = {
 	textInput: {
-		inputColor: palette.text.main,
+		inputColor: palette.text.primary,
 		textColor: palette.neutral[20],
 		backgroundColor: palette.neutral[100],
 	},
