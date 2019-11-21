@@ -6,12 +6,12 @@ export type InlineErrorTheme = {
 
 export const lightTheme: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		color: palette.error.main,
+		color: palette.text.error,
 	},
 }
 
 export const blueTheme: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		color: palette.error.bright,
+		color: palette.text.brand.error,
 	},
 }
