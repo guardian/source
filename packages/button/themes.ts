@@ -39,7 +39,7 @@ export const darkTheme: { button: ButtonTheme } = {
 		secondary: {
 			backgroundColor: palette.neutral[46],
 			color: palette.neutral[100],
-			hoverBackgroundColor: palette.neutral[36],
+			hoverBackgroundColor: "#5C5C5C", //non-palette colour
 		},
 		tertiary: {
 			backgroundColor: palette.background.inverse,
