@@ -19,24 +19,24 @@ export const lightTheme: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		hoverBorderColor: palette.brand.main,
-		color: palette.neutral[60],
-		checkedColor: palette.brand.main,
-		textColor: palette.neutral[20],
+		color: palette.border.radio, // consider renaming to border
+		hoverBorderColor: palette.border.radioHover,
+		checkedColor: palette.background.radioChecked, // consider renaming to backgroundChecked
+		textColor: palette.text.primary,
 		supportingTextColor: palette.text.secondary,
-		errorColor: palette.error.main,
+		errorColor: palette.border.error,
 	},
 	...inlineErrorLightTheme,
 }
 
 export const blueTheme: { radio: RadioTheme; inlineError: InlineErrorTheme } = {
 	radio: {
-		hoverBorderColor: palette.neutral[100],
-		color: palette.brand.faded,
-		checkedColor: palette.neutral[100],
-		textColor: palette.neutral[100],
-		supportingTextColor: palette.brand.faded,
-		errorColor: palette.error.bright,
+		color: palette.border.radio, // consider renaming to border
+		hoverBorderColor: palette.border.radioHover,
+		checkedColor: palette.background.brand.radioChecked, // consider renaming to backgroundChecked
+		textColor: palette.text.brand.primary,
+		supportingTextColor: palette.text.brand.secondary,
+		errorColor: palette.border.brand.error,
 	},
 	...inlineErrorBlueTheme,
 }

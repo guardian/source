@@ -79,7 +79,7 @@ const labs = {
 // functional colours
 const text = {
 	primary: neutral[7],
-	secondary: neutral[60],
+	secondary: neutral[46],
 	error: error.main,
 	ctaPrimary: neutral[100],
 	ctaSecondary: brand.main,
@@ -121,6 +121,7 @@ const background = {
 	ctaPrimaryHover: "#234B8A",
 	ctaSecondary: brand.faded,
 	ctaSecondaryHover: "#96B0D9",
+	radioChecked: brand.main,
 	mono: {
 		primary: neutral[7],
 		ctaPrimary: neutral[100],
@@ -134,6 +135,7 @@ const background = {
 		ctaPrimaryHover: neutral[93],
 		ctaSecondary: brand.pastel,
 		ctaSecondaryHover: "#234B8A",
+		radioChecked: neutral[100],
 	},
 	brandYellow: {
 		primary: brandYellow.main,
@@ -158,6 +160,14 @@ const background = {
 	},
 }
 const border = {
+	error: error.main,
+	radio: neutral[60],
+	radioHover: brand.main,
+	brand: {
+		error: error.bright,
+		radio: neutral[100],
+		radioHover: brand.faded,
+	},
 	readerRevenue: {
 		ctaSecondary: brandYellow.main,
 	},
