@@ -11,7 +11,7 @@ import {
 	optionalLabel,
 	supportingText,
 } from "./styles"
-export * from "./themes"
+export { textInputLight } from "@guardian/src-foundations/themes"
 
 export type Width = 30 | 10 | 4
 

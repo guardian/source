@@ -7,14 +7,14 @@ export type TextInputTheme = {
 	backgroundInput: string
 }
 
-export const textInputDefault: {
+export const textInputLight: {
 	textInput: TextInputTheme
 	inlineError: InlineErrorTheme
 } = {
 	textInput: {
-		textInput: palette.neutral[7],
-		textLabel: palette.neutral[20],
-		backgroundInput: palette.neutral[100],
+		textInput: palette.text.primary,
+		textLabel: palette.text.primary,
+		backgroundInput: palette.background.primary,
 	},
 	...inlineErrorLight,
 }
