@@ -13,7 +13,6 @@ const appearanceDescriptions: {
 	[key in Appearance]: string
 } = {
 	light: "Brand light mode (default)",
-	dark: "Brand dark mode",
 	blue: "Brand blue background",
 	yellow: "Brand yellow background",
 	"reader revenue blue": "Reader revenue blue background (default)",
@@ -25,7 +24,6 @@ export const WithBackgroundToggle = ({
 	storyName,
 	options = [
 		"light",
-		"dark",
 		"blue",
 		"yellow",
 		"reader revenue blue",
