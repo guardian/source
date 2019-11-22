@@ -1,6 +1,6 @@
 import { palette } from "../index"
 import {
-	inlineErrorDefault,
+	inlineErrorLight,
 	inlineErrorBrand,
 	InlineErrorTheme,
 } from "./inline-error"
@@ -27,7 +27,7 @@ export const radioDefault: {
 		textSupporting: palette.neutral[46],
 		textError: palette.error.main,
 	},
-	...inlineErrorDefault,
+	...inlineErrorLight,
 }
 
 export const radioBrand: {

@@ -4,14 +4,14 @@ export type InlineErrorTheme = {
 	text: string
 }
 
-export const inlineErrorDefault: { inlineError: InlineErrorTheme } = {
+export const inlineErrorLight: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		text: palette.error.main,
+		text: palette.text.error,
 	},
 }
 
 export const inlineErrorBrand: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		text: palette.error.bright,
+		text: palette.text.brand.error,
 	},
 }

@@ -1,12 +1,16 @@
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
 import {
+	InlineErrorTheme,
+	inlineErrorLight,
+	inlineErrorBrand,
+} from "@guardian/src-foundations/themes"
+import {
 	Appearance,
 	WithBackgroundToggle,
 	storybookBackgrounds,
 } from "@guardian/src-helpers"
 import { InlineError } from "./index"
-import { InlineErrorTheme, lightTheme, blueTheme } from "./themes"
 
 export default {
 	title: "InlineError",
@@ -18,9 +22,9 @@ const appearances: {
 }[] = [
 	{
 		name: "light",
-		theme: lightTheme,
+		theme: inlineErrorLight,
 	},
-	{ name: "blue", theme: blueTheme },
+	{ name: "blue", theme: inlineErrorBrand },
 ]
 
 const [defaultLight, defaultBlue] = appearances.map(
