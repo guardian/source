@@ -8,7 +8,6 @@ const storybookBackgrounds: {
 	}
 } = {
 	light: { name: "light", value: palette.neutral[100] },
-	dark: { name: "dark", value: palette.neutral.darkMode },
 	blue: { name: "blue", value: palette.brand.main },
 	yellow: { name: "yellow", value: palette.yellow.main },
 	"reader revenue blue": {
