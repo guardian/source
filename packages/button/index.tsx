@@ -13,7 +13,13 @@ import {
 	iconOnlyDefault,
 	iconOnlySmall,
 } from "./styles"
-export * from "./themes"
+export {
+	buttonLight,
+	buttonBrand,
+	buttonBrandYellow,
+	buttonReaderRevenue,
+	buttonReaderRevenueYellow,
+} from "@guardian/src-foundations/themes"
 
 export type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"
