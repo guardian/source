@@ -1,106 +1,90 @@
 import { palette } from "../index"
 
 export type ButtonTheme = {
-	backgroundPrimary: string
 	textPrimary: string
+	backgroundPrimary: string
 	backgroundPrimaryHover: string
-	backgroundSecondary: string
 	textSecondary: string
+	backgroundSecondary: string
 	backgroundSecondaryHover: string
 	borderSecondary?: string
-	backgroundTertiary?: string
 	textTertiary?: string
+	backgroundTertiary?: string
 }
 
-// light
-export const buttonDefault: { button: ButtonTheme } = {
+export const buttonLight: { button: ButtonTheme } = {
 	button: {
-		backgroundPrimary: palette.brand.main,
-		textPrimary: palette.neutral[100],
-		backgroundPrimaryHover: "#234B8A",
-		backgroundSecondary: palette.brand.faded,
-		textSecondary: palette.brand.main,
-		backgroundSecondaryHover: "#96B0D9",
-		backgroundTertiary: palette.neutral[100],
-		textTertiary: palette.brand.main,
+		textPrimary: palette.text.ctaPrimary,
+		backgroundPrimary: palette.background.ctaPrimary,
+		backgroundPrimaryHover: palette.background.ctaPrimaryHover,
+		textSecondary: palette.text.ctaSecondary,
+		backgroundSecondary: palette.background.ctaSecondary,
+		backgroundSecondaryHover: palette.background.ctaSecondaryHover,
+		textTertiary: palette.text.ctaSecondary,
+		backgroundTertiary: palette.background.primary,
 	},
 }
 
-// dark
-export const buttonInverse: { button: ButtonTheme } = {
-	button: {
-		backgroundPrimary: palette.neutral[100],
-		textPrimary: palette.neutral[7],
-		backgroundPrimaryHover: palette.neutral[93],
-		backgroundSecondary: palette.neutral[46],
-		textSecondary: palette.neutral[100],
-		backgroundSecondaryHover: "#5C5C5C",
-		backgroundTertiary: palette.neutral.darkMode,
-		textTertiary: palette.neutral[100],
-	},
-}
-
-// brand blue
 export const buttonBrand: { button: ButtonTheme } = {
 	button: {
-		backgroundPrimary: palette.neutral[100],
-		textPrimary: palette.brand.main,
-		backgroundPrimaryHover: palette.neutral[93],
-		backgroundSecondary: palette.brand.pastel,
-		textSecondary: palette.neutral[100],
-		backgroundSecondaryHover: "#234B8A",
-		backgroundTertiary: palette.brand.main,
-		textTertiary: palette.neutral[100],
+		textPrimary: palette.text.brand.ctaPrimary,
+		backgroundPrimary: palette.background.brand.ctaPrimary,
+		backgroundPrimaryHover: palette.background.brand.ctaPrimaryHover,
+		textSecondary: palette.text.brand.ctaSecondary,
+		backgroundSecondary: palette.background.brand.ctaSecondary,
+		backgroundSecondaryHover: palette.background.brand.ctaSecondaryHover,
+		textTertiary: palette.text.brand.ctaSecondary,
+		backgroundTertiary: palette.background.brand.primary,
 	},
 }
 
-// yellow
-export const buttonBrandInverse: { button: ButtonTheme } = {
+export const buttonBrandYellow: { button: ButtonTheme } = {
 	button: {
-		backgroundPrimary: palette.neutral[7],
-		textPrimary: palette.neutral[100],
-		backgroundPrimaryHover: palette.neutral[20],
-		backgroundSecondary: palette.yellow.dark,
-		textSecondary: palette.neutral[7],
-		backgroundSecondaryHover: "#F2AE00",
-		backgroundTertiary: palette.yellow.main,
-		textTertiary: palette.neutral[7],
+		textPrimary: palette.text.brandYellow.ctaPrimary,
+		backgroundPrimary: palette.background.brandYellow.ctaPrimary,
+		backgroundPrimaryHover: palette.background.brandYellow.ctaPrimaryHover,
+		textSecondary: palette.text.brandYellow.ctaSecondary,
+		backgroundSecondary: palette.background.brandYellow.ctaSecondary,
+		backgroundSecondaryHover:
+			palette.background.brandYellow.ctaSecondaryHover,
+		textTertiary: palette.text.brandYellow.ctaSecondary,
+		backgroundTertiary: palette.background.brandYellow.primary,
 	},
 }
 
-// reader revenue blue
 export const buttonReaderRevenue: { button: ButtonTheme } = {
 	button: {
-		backgroundPrimary: palette.yellow.main,
-		textPrimary: palette.brand.main,
-		backgroundPrimaryHover: palette.yellow.dark,
-		backgroundSecondary: palette.brand.main,
-		textSecondary: palette.yellow.main,
-		backgroundSecondaryHover: palette.brand.dark,
-		borderSecondary: palette.yellow.main,
+		textPrimary: palette.text.readerRevenue.ctaPrimary,
+		backgroundPrimary: palette.background.readerRevenue.ctaPrimary,
+		backgroundPrimaryHover:
+			palette.background.readerRevenue.ctaPrimaryHover,
+		textSecondary: palette.text.readerRevenue.ctaSecondary,
+		backgroundSecondary: palette.background.readerRevenue.ctaSecondary,
+		backgroundSecondaryHover:
+			palette.background.readerRevenue.ctaSecondaryHover,
+		borderSecondary: palette.border.readerRevenue.ctaSecondary,
 	},
 }
 
-// reader revenue yellow
-export const buttonReaderRevenueInverse: { button: ButtonTheme } = {
+export const buttonReaderRevenueYellow: { button: ButtonTheme } = {
 	button: {
-		backgroundPrimary: palette.neutral[7],
-		textPrimary: palette.neutral[100],
-		backgroundPrimaryHover: palette.neutral[20],
-		backgroundSecondary: palette.yellow.main,
-		textSecondary: palette.neutral[7],
-		backgroundSecondaryHover: palette.yellow.dark,
-		borderSecondary: palette.neutral[7],
-		backgroundTertiary: palette.neutral[100],
-		textTertiary: palette.brand.main,
+		textPrimary: palette.text.readerRevenueYellow.ctaPrimary,
+		backgroundPrimary: palette.background.readerRevenueYellow.ctaPrimary,
+		backgroundPrimaryHover:
+			palette.background.readerRevenueYellow.ctaPrimaryHover,
+		textSecondary: palette.text.readerRevenueYellow.ctaSecondary,
+		backgroundSecondary:
+			palette.background.readerRevenueYellow.ctaSecondary,
+		backgroundSecondaryHover:
+			palette.background.readerRevenueYellow.ctaSecondaryHover,
+		borderSecondary: palette.border.readerRevenueYellow.ctaSecondary,
 	},
 }
 
 export const button = {
-	buttonDefault,
-	buttonInverse,
+	buttonLight,
 	buttonBrand,
-	buttonBrandInverse,
+	buttonBrandYellow,
 	buttonReaderRevenue,
-	buttonReaderRevenueInverse,
+	buttonReaderRevenueYellow,
 }

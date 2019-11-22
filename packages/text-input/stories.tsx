@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds, Appearance } from "@guardian/src-helpers"
 import { space } from "@guardian/src-foundations"
-import { TextInput, lightTheme } from "./index"
+import { TextInput, textInputLight } from "./index"
 
 export default {
 	title: "TextInput",
@@ -15,7 +15,7 @@ const appearances: {
 }[] = [
 	{
 		name: "light",
-		theme: lightTheme,
+		theme: textInputLight,
 	},
 ]
 

@@ -1,8 +1,8 @@
 import { css } from "@emotion/core"
 import { size, transitions } from "@guardian/src-foundations"
+import { buttonLight, ButtonTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { lightTheme, ButtonTheme } from "./themes"
 
 export const button = css`
 	display: inline-flex;
@@ -21,35 +21,35 @@ export const button = css`
 
 export const primary = ({
 	button,
-}: { button: ButtonTheme } = lightTheme) => css`
-	background-color: ${button.primary.backgroundColor};
-	color: ${button.primary.color};
+}: { button: ButtonTheme } = buttonLight) => css`
+	background-color: ${button.backgroundPrimary};
+	color: ${button.textPrimary};
 
 	&:hover {
-		background-color: ${button.primary.hoverBackgroundColor};
+		background-color: ${button.backgroundPrimaryHover};
 	}
 `
 
 export const secondary = ({
 	button,
-}: { button: ButtonTheme } = lightTheme) => css`
-	background-color: ${button.secondary.backgroundColor};
-	color: ${button.secondary.color};
-	${button.secondary.borderColor
-		? `border: 1px solid ${button.secondary.borderColor};`
+}: { button: ButtonTheme } = buttonLight) => css`
+	background-color: ${button.backgroundSecondary};
+	color: ${button.textSecondary};
+	${button.borderSecondary
+		? `border: 1px solid ${button.borderSecondary};`
 		: ""}
 
 	&:hover {
-		background-color: ${button.secondary.hoverBackgroundColor};
+		background-color: ${button.backgroundSecondaryHover};
 	}
 `
 
 export const tertiary = ({
 	button,
-}: { button: ButtonTheme } = lightTheme) => css`
+}: { button: ButtonTheme } = buttonLight) => css`
 	padding: 0;
-	background-color: ${button.tertiary.backgroundColor};
-	color: ${button.tertiary.color};
+	background-color: ${button.backgroundTertiary};
+	color: ${button.textTertiary};
 
 	&:hover {
 		text-decoration: underline;

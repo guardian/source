@@ -12,12 +12,11 @@ import {
 import { size } from "@guardian/src-foundations"
 import {
 	Button,
-	lightTheme,
-	darkTheme,
-	yellowTheme,
-	blueTheme,
-	rrBlueTheme,
-	rrYellowTheme,
+	buttonLight,
+	buttonBrandYellow,
+	buttonBrand,
+	buttonReaderRevenue,
+	buttonReaderRevenueYellow,
 } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
@@ -68,7 +67,7 @@ export const priorityLight = () => (
 		storyName="priority"
 		selectedValue="light"
 	>
-		<ThemeProvider theme={lightTheme}>
+		<ThemeProvider theme={buttonLight}>
 			<div css={flexStart}>
 				{priorityButtons.map((button, index) => (
 					<div key={index}>{button}</div>
@@ -79,37 +78,13 @@ export const priorityLight = () => (
 )
 priorityLight.story = { name: "priority light" }
 
-export const priorityDark = () => (
-	<WithBackgroundToggle
-		storyKind="Button"
-		storyName="priority"
-		selectedValue="dark"
-	>
-		<ThemeProvider theme={darkTheme}>
-			<div css={flexStart}>
-				{priorityButtons.map((button, index) => (
-					<div key={index}>{button}</div>
-				))}
-			</div>
-		</ThemeProvider>
-	</WithBackgroundToggle>
-)
-priorityDark.story = {
-	name: "priority dark",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.dark),
-		],
-	},
-}
-
 export const priorityBlue = () => (
 	<WithBackgroundToggle
 		storyKind="Button"
 		storyName="priority"
 		selectedValue="blue"
 	>
-		<ThemeProvider theme={blueTheme}>
+		<ThemeProvider theme={buttonBrand}>
 			<div css={flexStart}>
 				{priorityButtons.map((button, index) => (
 					<div key={index}>{button}</div>
@@ -133,7 +108,7 @@ export const priorityYellow = () => (
 		storyName="priority"
 		selectedValue="yellow"
 	>
-		<ThemeProvider theme={yellowTheme}>
+		<ThemeProvider theme={buttonBrandYellow}>
 			<div css={flexStart}>
 				{priorityButtons.map((button, index) => (
 					<div key={index}>{button}</div>
@@ -157,7 +132,7 @@ export const priorityReaderRevenueBlue = () => (
 		storyName="priority"
 		selectedValue="reader revenue blue"
 	>
-		<ThemeProvider theme={rrBlueTheme}>
+		<ThemeProvider theme={buttonReaderRevenue}>
 			<div css={flexStart}>
 				{priorityButtons.slice(0, 2).map((button, index) => (
 					<div key={index}>{button}</div>
@@ -185,7 +160,7 @@ export const priorityReaderRevenueYellow = () => (
 		storyName="priority"
 		selectedValue="reader revenue yellow"
 	>
-		<ThemeProvider theme={rrYellowTheme}>
+		<ThemeProvider theme={buttonReaderRevenueYellow}>
 			<div css={flexStart}>
 				{priorityButtons.slice(0, 2).map((button, index) => (
 					<div key={index}>{button}</div>

@@ -1,5 +1,5 @@
 import { palette } from "../index"
-import { inlineErrorDefault, InlineErrorTheme } from "./inline-error"
+import { inlineErrorLight, InlineErrorTheme } from "./inline-error"
 
 export type TextInputTheme = {
 	textInput: string
@@ -7,14 +7,14 @@ export type TextInputTheme = {
 	backgroundInput: string
 }
 
-export const textInputDefault: {
+export const textInputLight: {
 	textInput: TextInputTheme
 	inlineError: InlineErrorTheme
 } = {
 	textInput: {
-		textInput: palette.neutral[7],
-		textLabel: palette.neutral[20],
-		backgroundInput: palette.neutral[100],
+		textInput: palette.text.primary,
+		textLabel: palette.text.primary,
+		backgroundInput: palette.background.primary,
 	},
-	...inlineErrorDefault,
+	...inlineErrorLight,
 }

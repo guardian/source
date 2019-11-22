@@ -3,7 +3,7 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import { RadioGroup, Radio, lightTheme, blueTheme } from "./index"
+import { RadioGroup, Radio, radioLight, radioBrand } from "./index"
 import { Appearance } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
 
@@ -48,9 +48,9 @@ const appearances: {
 }[] = [
 	{
 		name: "light",
-		theme: lightTheme,
+		theme: radioLight,
 	},
-	{ name: "blue", theme: blueTheme },
+	{ name: "blue", theme: radioBrand },
 ]
 
 const [verticalLight, verticalBlue] = appearances.map(

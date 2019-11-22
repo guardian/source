@@ -2,15 +2,18 @@ import { css } from "@emotion/core"
 import { size, palette, space } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { lightTheme, TextInputTheme } from "./themes"
+import {
+	textInputLight,
+	TextInputTheme,
+} from "@guardian/src-foundations/themes"
 
 export const textInput = ({
 	textInput,
-}: { textInput: TextInputTheme } = lightTheme) => css`
+}: { textInput: TextInputTheme } = textInputLight) => css`
 	height: ${size.large}px;
 	${textSans.medium()};
-	color: ${textInput.inputColor};
-	background-color: ${textInput.backgroundColor};
+	color: ${textInput.textInput};
+	background-color: ${textInput.backgroundInput};
 	border: 2px solid ${palette.neutral[60]};
 	padding: 0 ${space[2]}px;
 
@@ -37,9 +40,9 @@ export const width4 = css`
 
 export const text = ({
 	textInput,
-}: { textInput: TextInputTheme } = lightTheme) => css`
+}: { textInput: TextInputTheme } = textInputLight) => css`
 	${textSans.medium()};
-	color: ${textInput.textColor};
+	color: ${textInput.textLabel};
 	margin-bottom: ${space[1]}px;
 `
 
