@@ -2,14 +2,14 @@ import { css } from "@emotion/core"
 import { space, size, transitions } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { RadioTheme, lightTheme } from "./themes"
+import { RadioTheme, radioLight } from "@guardian/src-foundations/themes"
 
 export const group = css`
 	display: flex;
 	justify-content: flex-start;
 `
 
-export const label = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
+export const label = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -17,7 +17,7 @@ export const label = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 
 	&:hover {
 		input {
-			border-color: ${radio.hoverBorderColor};
+			border-color: ${radio.borderHover};
 		}
 	}
 `
@@ -27,7 +27,7 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[2]}px;
 `
 
-export const radio = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
+export const radio = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 	cursor: pointer;
 	box-sizing: border-box;
 	display: inline-block;
@@ -41,10 +41,10 @@ export const radio = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 	transition: box-shadow ${transitions.short};
 	transition-delay: 0.08s;
 
-	color: ${radio.color};
+	color: ${radio.border};
 
 	&:checked {
-		color: ${radio.checkedColor};
+		color: ${radio.backgroundChecked};
 	}
 
 	&:focus {
@@ -82,9 +82,9 @@ export const radio = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
 	}
 `
 
-export const labelText = ({ radio }: { radio: RadioTheme } = lightTheme) => css`
+export const labelText = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 	${textSans.medium()};
-	color: ${radio.textColor};
+	color: ${radio.text};
 `
 
 export const labelTextWithSupportingText = css`
@@ -93,9 +93,9 @@ export const labelTextWithSupportingText = css`
 
 export const supportingText = ({
 	radio,
-}: { radio: RadioTheme } = lightTheme) => css`
+}: { radio: RadioTheme } = radioLight) => css`
 	${textSans.medium()};
-	color: ${radio.supportingTextColor};
+	color: ${radio.textSupporting};
 `
 
 export const horizontal = css`
@@ -111,6 +111,6 @@ export const vertical = css`
 
 export const errorRadio = ({
 	radio,
-}: { radio: RadioTheme } = lightTheme) => css`
-	border: 4px solid ${radio.errorColor};
+}: { radio: RadioTheme } = radioLight) => css`
+	border: 4px solid ${radio.textError};
 `
