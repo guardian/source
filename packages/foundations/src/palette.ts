@@ -160,9 +160,12 @@ const background = {
 	},
 }
 const border = {
+	primary: neutral[60],
+	secondary: neutral[86],
 	error: error.main,
 	radio: neutral[60],
 	radioHover: brand.main,
+	textInput: neutral[60],
 	brand: {
 		error: error.bright,
 		radio: neutral[100],
