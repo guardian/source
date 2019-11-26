@@ -18,7 +18,7 @@ type HeadlineSizes =
 
 type BodySizes = "small" | "medium"
 
-type TextSansSizes = "xsmall" | "small" | "medium" | "large"
+type TextSansSizes = "xsmall" | "small" | "medium" | "large" | "xlarge"
 
 const fontSizesRem = fontSizes.map(fontSize => fontSize / 16)
 
@@ -48,6 +48,7 @@ const textSansSizes: { [key in TextSansSizes]: number } = {
 	small: fontSizesRem[1], //15px
 	medium: fontSizesRem[2], //17px
 	large: fontSizesRem[3], //20px
+	xlarge: fontSizesRem[4], //24px
 }
 
 const fontSizeMapping: { [cat in Category]: { [level in string]: number } } = {
