@@ -14,7 +14,7 @@ export const textInput = ({
 	${textSans.medium()};
 	color: ${textInput.textInput};
 	background-color: ${textInput.backgroundInput};
-	border: 2px solid ${palette.neutral[60]};
+	border: 2px solid ${palette.border.textInput};
 	padding: 0 ${space[2]}px;
 
 	&:focus {
@@ -47,18 +47,18 @@ export const text = ({
 `
 
 export const errorInput = css`
-	border: 4px solid ${palette.error.main};
+	border: 4px solid ${palette.border.error};
 	color: ${palette.error.main};
 `
 
 export const optionalLabel = css`
 	${textSans.small()};
-	color: ${palette.neutral[46]};
+	color: ${palette.text.secondary};
 	font-style: italic;
 `
 
 export const supportingText = css`
 	${textSans.small()};
-	color: ${palette.neutral[46]};
+	color: ${palette.text.secondary};
 	margin-bottom: ${space[1]}px;
 `
