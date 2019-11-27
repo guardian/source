@@ -5,6 +5,7 @@
 	"module": "dist/utilities.esm.js",
 	"scripts": {
 		"build": "yarn clean && rollup --config",
+		"watch": "rollup --config --watch",
 		"clean": "rm -rf dist",
 		"prepublish": "yarn build"
 	},
