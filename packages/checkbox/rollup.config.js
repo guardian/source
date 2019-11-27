@@ -8,11 +8,11 @@ module.exports = {
 	input: "index.tsx",
 	output: [
 		{
-			file: "dist/radio.js",
+			file: "dist/checkbox.js",
 			format: "cjs",
 		},
 		{
-			file: "dist/radio.esm.js",
+			file: "dist/checkbox.esm.js",
 			format: "esm",
 		},
 	],
@@ -22,6 +22,8 @@ module.exports = {
 		"@emotion/css",
 		"@guardian/src-foundations",
 		"@guardian/src-foundations/accessibility",
+		"@guardian/src-foundations/themes",
+		"@guardian/src-foundations/typography",
 	],
 	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
 }

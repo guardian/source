@@ -1,8 +1,8 @@
 {
-	"name": "@guardian/src-radio",
-	"version": "0.3.1",
-	"main": "dist/radio.js",
-	"module": "dist/radio.esm.js",
+	"name": "@guardian/src-checkbox",
+	"version": "0.0.1",
+	"main": "dist/checkbox.js",
+	"module": "dist/checkbox.esm.js",
 	"scripts": {
 		"build": "yarn clean && rollup --config",
 		"clean": "rm -rf dist",
@@ -23,8 +23,7 @@
 	},
 	"files": [
 		"index.tsx",
-		"styles.ts",
-		"themes.ts"
+		"styles.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",

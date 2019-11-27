@@ -11,7 +11,6 @@ import {
 	errorCheckbox,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
-export { radioBrand, radioLight } from "@guardian/src-foundations/themes"
 
 const CheckboxGroup = ({
 	name,
