@@ -1,0 +1,19 @@
+{
+	"name": "@guardian/src-utilities",
+	"version": "0.2.0",
+	"main": "dist/utilities.js",
+	"module": "dist/utilities.esm.js",
+	"scripts": {
+		"build": "yarn clean && rollup --config",
+		"clean": "rm -rf dist",
+		"prepublish": "yarn build"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-typescript": "^7.3.3",
+		"rollup": "^1.19.4",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"typescript": "^3.7.2"
+	}
+}
