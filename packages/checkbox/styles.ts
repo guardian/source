@@ -6,9 +6,11 @@ import { focusHalo } from "@guardian/src-foundations/accessibility"
 export const group = css`
 	display: flex;
 	justify-content: flex-start;
+	flex-direction: column;
 `
 
 export const label = css`
+	position: relative;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -43,7 +45,13 @@ export const checkbox = css`
 
 	&:checked {
 		border-color: ${palette.border.checkboxChecked};
-		color: ${palette.background.checkboxChecked};
+
+		& ~ span:before {
+			right: 0;
+		}
+		& ~ span:after {
+			top: 0;
+		}
 	}
 
 	&:focus {
@@ -60,7 +68,6 @@ export const checkbox = css`
 		appearance: none;
 
 		&:after {
-			background: currentColor;
 			position: absolute;
 			content: "";
 			top: 0;
@@ -73,8 +80,11 @@ export const checkbox = css`
 		}
 
 		&:checked {
-			&:after {
-				transform: scale(0.6);
+			& ~ span:before {
+				right: 0;
+			}
+			& ~ span:after {
+				top: 0;
 			}
 		}
 	}
@@ -94,8 +104,45 @@ export const supportingText = css`
 	color: ${palette.text.secondary};
 `
 
-export const vertical = css`
-	flex-direction: column;
+export const tick = css`
+	@supports (appearance: none) {
+		/* overall positional properties */
+		position: absolute;
+		top: 15px;
+		left: 9px;
+		width: 6px;
+		height: 12px;
+		transform: rotate(45deg);
+		z-index: 5;
+
+		/* the checkmark ✓ */
+		&:after,
+		&:before {
+			position: absolute;
+			display: block;
+			background-color: ${palette.background.checkboxChecked};
+			transition: all ${transitions.short} ease-in-out;
+			content: "";
+		}
+
+		/* the short side */
+		&:before {
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			right: 100%;
+			transition-delay: 0.05s;
+		}
+
+		/* the long side */
+		&:after {
+			bottom: 0;
+			right: 0;
+			top: 100%;
+			width: 2px;
+			transition-delay: 0.1s;
+		}
+	}
 `
 
 export const errorCheckbox = css`

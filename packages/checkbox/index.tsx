@@ -7,7 +7,7 @@ import {
 	labelText,
 	labelTextWithSupportingText,
 	supportingText,
-	vertical,
+	tick,
 	errorCheckbox,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
@@ -23,7 +23,7 @@ const CheckboxGroup = ({
 	children: ReactNode
 }) => {
 	return (
-		<div css={[group, vertical]} {...props}>
+		<div css={group} {...props}>
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				if (!React.isValidElement(child)) {
@@ -86,6 +86,7 @@ const Checkbox = ({
 				aria-invalid={error}
 				{...props}
 			/>
+			<span css={tick} />
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
