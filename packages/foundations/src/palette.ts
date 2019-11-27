@@ -120,7 +120,7 @@ const background = {
 	ctaPrimary: brand.main,
 	ctaPrimaryHover: "#234B8A",
 	ctaSecondary: brand.faded,
-	ctaSecondaryHover: "#96B0D9",
+	ctaSecondaryHover: "#ACC9F7",
 	radioChecked: brand.main,
 	checkboxChecked: brand.bright,
 	mono: {
@@ -133,7 +133,7 @@ const background = {
 	brand: {
 		primary: brand.main,
 		ctaPrimary: neutral[100],
-		ctaPrimaryHover: neutral[93],
+		ctaPrimaryHover: "#E0E0E0",
 		ctaSecondary: brand.pastel,
 		ctaSecondaryHover: "#234B8A",
 		radioChecked: neutral[100],
@@ -141,7 +141,7 @@ const background = {
 	brandYellow: {
 		primary: brandYellow.main,
 		ctaPrimary: neutral[7],
-		ctaPrimaryHover: neutral[20],
+		ctaPrimaryHover: "#454545",
 		ctaSecondary: brandYellow.dark,
 		ctaSecondaryHover: "#F2AE00",
 	},
@@ -150,12 +150,12 @@ const background = {
 		ctaPrimary: brandYellow.main,
 		ctaPrimaryHover: brandYellow.dark,
 		ctaSecondary: brand.main,
-		ctaSecondaryHover: brand.dark,
+		ctaSecondaryHover: "#234B8A",
 	},
 	readerRevenueYellow: {
 		primary: brandYellow.main,
 		ctaPrimary: neutral[7],
-		ctaPrimaryHover: neutral[20],
+		ctaPrimaryHover: "#454545",
 		ctaSecondary: brandYellow.main,
 		ctaSecondaryHover: brandYellow.dark,
 	},
