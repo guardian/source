@@ -11,7 +11,7 @@
 			"@guardian/src-foundations/typography": [
 				"foundations/src/typography"
 			],
-			"@guardian/inline-error": ["inline-error"],
+			"@guardian/src-inline-error": ["inline-error"],
 			"@guardian/src-helpers": ["helpers"],
 			"@guardian/src-svgs": ["svgs"]
 		},

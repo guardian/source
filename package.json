@@ -19,7 +19,8 @@
 		"build:inline-error": "cd packages/inline-error && yarn build",
 		"build:radio": "cd packages/radio && yarn build",
 		"build:text-input": "cd packages/text-input && yarn build",
-		"ci:build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:svgs && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input"
+		"build:checkbox": "cd packages/checkbox && yarn build",
+		"ci:build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:svgs && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input && yarn build:checkbox"
 	},
 	"private": true,
 	"workspaces": [
