@@ -164,6 +164,7 @@ const border = {
 	primary: neutral[60],
 	secondary: neutral[86],
 	error: error.main,
+	focusHalo: sport.bright,
 	radio: neutral[60],
 	radioHover: brand.main,
 	textInput: neutral[60],

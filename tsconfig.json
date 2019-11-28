@@ -13,7 +13,8 @@
 			],
 			"@guardian/src-inline-error": ["inline-error"],
 			"@guardian/src-helpers": ["helpers"],
-			"@guardian/src-svgs": ["svgs"]
+			"@guardian/src-svgs": ["svgs"],
+			"@guardian/src-utilities": ["utilities"]
 		},
 		"outDir": "dist",
 		"module": "commonjs",
