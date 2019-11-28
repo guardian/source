@@ -1,4 +1,7 @@
-import { configure, addParameters } from "@storybook/react"
+import React from "react"
+import { configure, addParameters, addDecorator } from "@storybook/react"
+import { useEffect } from "@storybook/addons"
+import { FocusStyleManager } from "@guardian/src-utilities"
 
 const storiesOnly = process.env.NODE_ENV === "production"
 
@@ -15,3 +18,13 @@ addParameters({
 })
 
 configure(require.context("../packages", true, /stories\.tsx$/), module)
+
+const FocusManagerDecorator = storyFn => {
+	useEffect(() => {
+		FocusStyleManager.onlyShowFocusOnTabs()
+	})
+
+	return <div>{storyFn()}</div>
+}
+
+addDecorator(FocusManagerDecorator)
