@@ -6,62 +6,52 @@ const TAB_KEY_CODE = 9
  * A nifty little class that maintains event handlers to add a class to the container element
  * when entering "mouse mode" (on a `mousedown` event) and remove it when entering "keyboard mode"
  * (on a `tab` key `keydown` event).
+ * Requires @babel/plugin-proposal-class-properties
  */
 export class InteractionModeEngine {
-	isRunning: boolean
-	container: Element
-	className: string
+	private isRunning = false
 
-	constructor(container: Element, className: string) {
-		this.container = container
-		this.className = className
-		this.isRunning = false
-	}
+	// tslint:disable-next-line:no-constructor-vars
+	constructor(private container: Element, private className: string) {}
 
 	/** Returns whether the engine is currently running. */
-	isActive() {
+	public isActive() {
 		return this.isRunning
 	}
 
 	/** Enable behavior which applies the given className when in mouse mode. */
-	start() {
-		this.container.addEventListener("mousedown", () =>
-			this.handleMouseDown(),
-		)
+	public start() {
+		this.container.addEventListener("mousedown", this.handleMouseDown)
 		this.isRunning = true
 	}
 
 	/** Disable interaction mode behavior and remove className from container. */
-	stop() {
+	public stop() {
 		this.reset()
 		this.isRunning = false
 	}
 
-	reset() {
+	private reset() {
 		this.container.classList.remove(this.className)
-		this.container.removeEventListener("keydown", this
-			.handleKeyDown as EventListener)
-		this.container.removeEventListener("mousedown", () =>
-			this.handleMouseDown(),
-		)
+		this.container.removeEventListener("keydown", this.handleKeyDown as (
+			evt: Event,
+		) => void)
+		this.container.removeEventListener("mousedown", this.handleMouseDown)
 	}
 
-	handleKeyDown(e: KeyboardEvent) {
+	private handleKeyDown = (e: KeyboardEvent) => {
 		if (e.which === TAB_KEY_CODE) {
 			this.reset()
-			this.container.addEventListener("mousedown", () =>
-				this.handleMouseDown(),
-			)
+			this.container.addEventListener("mousedown", this.handleMouseDown)
 		}
 	}
 
-	handleMouseDown() {
-		console.log(this)
+	private handleMouseDown = () => {
 		this.reset()
 		this.container.classList.add(this.className)
-		this.container.addEventListener("keydown", e =>
-			this.handleKeyDown(e as KeyboardEvent),
-		)
+		this.container.addEventListener("keydown", this.handleKeyDown as (
+			evt: Event,
+		) => void)
 	}
 }
 

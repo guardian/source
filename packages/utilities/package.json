@@ -10,6 +10,7 @@
 		"prepublish": "yarn build"
 	},
 	"devDependencies": {
+		"@babel/plugin-proposal-class-properties": "^7.7.4",
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-typescript": "^7.3.3",
 		"rollup": "^1.19.4",
