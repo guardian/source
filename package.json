@@ -22,7 +22,7 @@
 		"build:radio": "cd packages/radio && yarn build",
 		"build:text-input": "cd packages/text-input && yarn build",
 		"build:checkbox": "cd packages/checkbox && yarn build",
-		"ci:build": "NODE_ENV=production yarn build:storybook && yarn build:foundations && yarn build:svgs && yarn build:utilities && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input && yarn build:checkbox"
+		"ci:build": "NODE_ENV=production yarn build:foundations && yarn build:svgs && yarn build:utilities && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input && yarn build:checkbox && yarn build:storybook"
 	},
 	"private": true,
 	"workspaces": [
