@@ -15,6 +15,10 @@
 
 -   [#108](https://github.com/guardian/source-components/pull/108) Emit types in build of SVG package
 
+### `@guardian/src-utilities 0.2.0`
+
+-   [#105](https://github.com/guardian/source-components/pull/105) Disable focus halo on mousedown
+
 ## 26th November 2019
 
 ### `@guardian/src-foundations 0.8.0`
