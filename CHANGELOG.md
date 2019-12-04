@@ -11,6 +11,10 @@
 
 -   :bug: [#107](https://github.com/guardian/source-components/pull/107) Centre align button contents
 
+### `@guardian/src-svgs 0.0.6`
+
+-   [#108](https://github.com/guardian/source-components/pull/108) Emit types in build of SVG package
+
 ## 26th November 2019
 
 ### `@guardian/src-foundations 0.8.0`
