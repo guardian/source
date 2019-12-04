@@ -7,6 +7,7 @@ import { focusHalo } from "@guardian/src-foundations/accessibility"
 export const button = css`
 	display: inline-flex;
 	justify-content: space-between;
+	align-items: center;
 	${textSans.medium({ fontWeight: "bold" })};
 	box-sizing: border-box;
 	border: none;
