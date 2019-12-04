@@ -5,6 +5,12 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 4th December 2019
+
+### `@guardian/src-button 0.4.1`
+
+-   :bug: [#107](https://github.com/guardian/source-components/pull/107) Centre align button contents
+
 ## 26th November 2019
 
 ### `@guardian/src-foundations 0.8.0`
