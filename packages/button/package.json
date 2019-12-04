@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"main": "dist/button.js",
 	"module": "dist/button.esm.js",
 	"scripts": {
