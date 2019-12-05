@@ -4,9 +4,9 @@
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
 	"scripts": {
-		"build": "yarn clean && tsc && rollup --config",
+		"build": "rollup --config",
 		"watch": "rollup --config --watch",
-		"clean": "rm -rf dist *.d.ts",
+		"clean": "rm -rf dist",
 		"prepublish": "yarn build"
 	},
 	"devDependencies": {
@@ -15,8 +15,7 @@
 		"@babel/preset-react": "^7.0.0",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
-		"rollup-plugin-node-resolve": "^5.2.0",
-		"typescript": "^3.7.2"
+		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
 		"alert.tsx",
@@ -27,8 +26,7 @@
 		"checkmark.tsx",
 		"close.tsx",
 		"minus.tsx",
-		"plus.tsx",
-		"*.d.ts"
+		"plus.tsx"
 	],
 	"peerDependencies": {
 		"react": "^16.8.6"
