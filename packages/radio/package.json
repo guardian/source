@@ -33,6 +33,6 @@
 	},
 	"dependencies": {
 		"@guardian/src-inline-error": "^0.3.0",
-		"@guardian/src-svgs": "^0.0.2"
+		"@guardian/src-svgs": "^0.0.6"
 	}
 }

@@ -31,6 +31,6 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-svgs": "^0.0.5"
+		"@guardian/src-svgs": "^0.0.6"
 	}
 }
