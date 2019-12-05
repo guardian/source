@@ -94,13 +94,59 @@ const Button = ({
 		</button>
 	)
 }
-const defaultProps = {
+
+const LinkButton = ({
+	priority,
+	size,
+	icon: iconSvg,
+	iconSide,
+	children,
+	...props
+}: {
+	priority: Priority
+	size: Size
+	icon?: ReactElement
+	iconSide: IconSide
+	href: string
+	children?: ReactNode
+}) => {
+	const buttonContents = [children]
+
+	if (iconSvg) {
+		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
+	}
+
+	return (
+		<a
+			css={theme => [
+				button,
+				sizes[size],
+				priorities[priority](theme.button && theme),
+				iconSvg ? iconSizes[size] : "",
+				iconSvg && children ? iconSides[iconSide] : "",
+				!children ? iconOnlySizes[size] : "",
+			]}
+			{...props}
+		>
+			{buttonContents}
+		</a>
+	)
+}
+
+const defaultButtonProps = {
 	type: "button",
 	priority: "primary",
 	size: "default",
 	iconSide: "left",
 }
 
-Button.defaultProps = { ...defaultProps }
+const defaultLinkButtonProps = {
+	priority: "primary",
+	size: "default",
+	iconSide: "right",
+}
 
-export { Button }
+Button.defaultProps = { ...defaultButtonProps }
+LinkButton.defaultProps = { ...defaultLinkButtonProps }
+
+export { Button, LinkButton }
