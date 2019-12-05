@@ -11,8 +11,8 @@ $ yarn add @guardian/src-button @guardian/src-foundations
 ## Use
 
 ```js
-import { Button } from "@guardian/src-button"
-import { SvgCheckmark } from "@guardian/src-svgs"
+import { Button, LinkButton } from "@guardian/src-button"
+import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-svgs"
 
 const Form = () => (
     <form>
@@ -27,6 +27,15 @@ const Form = () => (
         >
             Click me
         </Button>
+        <LinkButton
+            priority="primary"
+            size="default"
+            icon={<SvgArrowRightStraight />}
+            iconSide="right"
+            href="/read-more"
+        >
+            Read more
+        </LinkButton>
     </form>
 )
 ```
