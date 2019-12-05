@@ -12,6 +12,7 @@ import {
 import { size } from "@guardian/src-foundations"
 import {
 	Button,
+	LinkButton,
 	buttonLight,
 	buttonBrandYellow,
 	buttonBrand,
@@ -32,7 +33,7 @@ const sizeButtons = [
 ]
 const textIconButtons = [
 	<Button icon={<SvgCheckmark />}>Left aligned</Button>,
-	<Button iconSide="right" icon={<SvgArrowRightStraight />}>
+	<Button iconSide="right" icon={<SvgCheckmark />}>
 		Right aligned
 	</Button>,
 ]
@@ -43,6 +44,20 @@ const iconButtons = [
 		size="small"
 		aria-label="Dismiss the subscribe banner"
 	/>,
+]
+const linkButtons = [
+	<LinkButton href="#">Primary</LinkButton>,
+	<LinkButton href="#" priority="secondary">
+		Secondary
+	</LinkButton>,
+	<LinkButton href="#" priority="tertiary">
+		Tertiary
+	</LinkButton>,
+]
+const textIconLinkButtons = [
+	<LinkButton href="#" icon={<SvgArrowRightStraight />}>
+		Right aligned
+	</LinkButton>,
 ]
 /* eslint-enable react/jsx-key */
 
@@ -214,3 +229,21 @@ export const iconOnly = () => (
 iconOnly.story = {
 	name: "icon only",
 }
+
+export const priorityLinkButtons = () => (
+	<div css={flexStart}>
+		{linkButtons.map((button, index) => (
+			<div key={index}>{button}</div>
+		))}
+	</div>
+)
+priorityLinkButtons.story = { name: "priority link buttons" }
+
+export const textAndIconLinkButtons = () => (
+	<div css={flexStart}>
+		{textIconLinkButtons.map((button, index) => (
+			<div key={index}>{button}</div>
+		))}
+	</div>
+)
+textAndIconLinkButtons.story = { name: "text and icon link buttons" }

@@ -14,6 +14,7 @@ export const button = css`
 	background: transparent;
 	cursor: pointer;
 	transition: ${transitions.medium};
+	text-decoration: none;
 
 	&:focus {
 		${focusHalo};
