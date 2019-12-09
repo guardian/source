@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-button",
-	"version": "0.4.1",
+	"version": "0.5.0",
 	"main": "dist/button.js",
 	"module": "dist/button.esm.js",
 	"scripts": {
@@ -14,7 +14,7 @@
 		"@babel/preset-react": "^7.0.0",
 		"@babel/preset-typescript": "^7.3.3",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
-		"@guardian/src-foundations": "^0.8.0",
+		"@guardian/src-foundations": "^0.9.0",
 		"@guardian/src-helpers": "^0.0.1",
 		"@guardian/src-svgs": "^0.0.6",
 		"rollup": "^1.17.0",
@@ -29,7 +29,7 @@
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
-		"@guardian/src-foundations": "^0.8.0",
+		"@guardian/src-foundations": "^0.9.0",
 		"react": "^16.8.6"
 	}
 }
