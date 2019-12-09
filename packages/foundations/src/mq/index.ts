@@ -3,6 +3,7 @@ import { breakpoints } from "../index"
 // Duplicated from breakpoints.ts because of some issue importing directly
 // babel * typescript * rollup = ¯\_(ツ)_/¯
 type Breakpoint =
+	| "mobile"
 	| "mobileMedium"
 	| "mobileLandscape"
 	| "phablet"
@@ -25,6 +26,7 @@ const minWidthMaxWidth = (from: number, until: number): string =>
 
 // e.g. from.*
 const from: BreakpointMap = {
+	mobile: minWidth(breakpoints.mobile),
 	mobileMedium: minWidth(breakpoints.mobileMedium),
 	mobileLandscape: minWidth(breakpoints.mobileLandscape),
 	phablet: minWidth(breakpoints.phablet),
@@ -36,6 +38,7 @@ const from: BreakpointMap = {
 
 // e.g. until.*
 const until: BreakpointMap = {
+	mobile: maxWidth(breakpoints.mobile),
 	mobileMedium: maxWidth(breakpoints.mobileMedium),
 	mobileLandscape: maxWidth(breakpoints.mobileLandscape),
 	phablet: maxWidth(breakpoints.phablet),
@@ -47,6 +50,23 @@ const until: BreakpointMap = {
 
 // e.g. between.*.and.*
 const between = {
+	mobile: {
+		and: {
+			mobileMedium: minWidthMaxWidth(
+				breakpoints.mobile,
+				breakpoints.mobileMedium,
+			),
+			mobileLandscape: minWidthMaxWidth(
+				breakpoints.mobile,
+				breakpoints.mobileLandscape,
+			),
+			phablet: minWidthMaxWidth(breakpoints.mobile, breakpoints.phablet),
+			tablet: minWidthMaxWidth(breakpoints.mobile, breakpoints.tablet),
+			desktop: minWidthMaxWidth(breakpoints.mobile, breakpoints.desktop),
+			leftCol: minWidthMaxWidth(breakpoints.mobile, breakpoints.leftCol),
+			wide: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.wide),
+		},
+	},
 	mobileMedium: {
 		and: {
 			mobileLandscape: minWidthMaxWidth(
