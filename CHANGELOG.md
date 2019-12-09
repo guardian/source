@@ -5,6 +5,29 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 9th December 2019
+
+### `@guardian/src-foundations 0.8.0`
+
+-   [#101](https://github.com/guardian/source-components/pull/101) Add border colours to foundations
+-   [#104](https://github.com/guardian/source-components/pull/104) Apply new button hover colours
+-   [#105](https://github.com/guardian/source-components/pull/105) Expose context-specific focus halo colour
+-   [#112](https://github.com/guardian/source-components/pull/112) Add mobile breakpoint to foundations
+-   Bump: `@guardian/src-radio 0.4.1`
+-   Bump: `@guardian/src-inline-error 0.4.0`
+
+### `@guardian/src-button 0.5.0`
+
+-   [#111](https://github.com/guardian/source-components/pull/111) Added link button
+
+### `@guardian/src-checkbox 0.1.0`
+
+-   [#103](https://github.com/guardian/source-components/pull/103)Add a checkbox component
+
+### `@guardian/src-text-input 0.5.0`
+
+-   [#102](https://github.com/guardian/source-components/pull/102) Use component-specific palette instead of globals
+
 ## 4th December 2019
 
 ### `@guardian/src-button 0.4.1`
