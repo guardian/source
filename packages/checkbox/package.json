@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-checkbox",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "dist/checkbox.js",
 	"module": "dist/checkbox.esm.js",
 	"scripts": {
@@ -31,7 +31,7 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-inline-error": "^0.3.0",
+		"@guardian/src-inline-error": "^0.4.0",
 		"@guardian/src-svgs": "^0.0.6"
 	}
 }

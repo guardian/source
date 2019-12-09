@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-text-input",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"main": "dist/text-input.js",
 	"module": "dist/text-input.esm.js",
 	"scripts": {
@@ -23,8 +23,7 @@
 	},
 	"files": [
 		"index.tsx",
-		"styles.ts",
-		"themes.ts"
+		"styles.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
@@ -32,7 +31,7 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-inline-error": "^0.3.0",
+		"@guardian/src-inline-error": "^0.4.0",
 		"@guardian/src-svgs": "^0.0.6"
 	}
 }

@@ -20,11 +20,11 @@
 
 -   [#111](https://github.com/guardian/source-components/pull/111) Added link button
 
-### `@guardian/src-checkbox 0.1.0`
+### `@guardian/src-checkbox 0.1.1`
 
 -   [#103](https://github.com/guardian/source-components/pull/103)Add a checkbox component
 
-### `@guardian/src-text-input 0.5.0`
+### `@guardian/src-text-input 0.5.1`
 
 -   [#102](https://github.com/guardian/source-components/pull/102) Use component-specific palette instead of globals
 

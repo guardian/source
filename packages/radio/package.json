@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-radio",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"main": "dist/radio.js",
 	"module": "dist/radio.esm.js",
 	"scripts": {
@@ -32,7 +32,7 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-inline-error": "^0.3.0",
+		"@guardian/src-inline-error": "^0.4.0",
 		"@guardian/src-svgs": "^0.0.6"
 	}
 }
