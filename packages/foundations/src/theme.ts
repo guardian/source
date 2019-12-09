@@ -89,7 +89,7 @@ const breakpoints = [740, 980, 1140, 1300]
 // Diverges from https://system-ui.com
 // At these widths, there are tweaks to the
 // fluid grid on mobile devices
-const tweakpoints = [375, 480, 660]
+const tweakpoints = [320, 375, 480, 660]
 
 const transitions = [
 	".2s cubic-bezier(.64, .57, .67, 1.53)",
