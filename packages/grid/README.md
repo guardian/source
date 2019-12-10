@@ -48,17 +48,20 @@ const ArticleAlt = () => (
 The number of columns a grid item should span at the specified breakpoints.
 
 Adopt a mobile-first mindset when using this prop. If a span for a narrow breakpoint is specified (e.g. `mobile`),
-wider breakpoints will also use this span value unless they are specifically overridden.
+wider breakpoints will also use this span value unless it is specifically overridden.
 
 The narrowest specified breakpoint will be the first breakpoint at which the grid item is visible. At narrower
 breakpoints, the grid item will have `display: none` applied to it.
 
 ### `startingPos`
 
-**`number`**
+**`{ mobile?: number, tablet?: number, desktop?: number, wide?: number }`**
 
-The column number at which the grid item should begin. If omitted, the grid item will begin at the next available
-column.
+The column number at which the grid item should begin at the specified breakpoints. If this props is omitted, the grid
+item will begin at the next available column.
+
+Adopt a mobile-first mindset when using this prop. If a starting position for a narrow breakpoint is specified (e.g. `mobile`),
+wider breakpoints will also use this starting position value unless it is specifically overridden.
 
 ### `borderRight`
 

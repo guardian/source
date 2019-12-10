@@ -7,7 +7,10 @@ import {
 } from "@guardian/src-foundations"
 import { from } from "@guardian/src-foundations/mq"
 
-type GridBreakpoints = Extract<Breakpoint, "tablet" | "desktop" | "wide">
+type GridBreakpoints = Extract<
+	Breakpoint,
+	"tablet" | "desktop" | "leftCol" | "wide"
+>
 
 type GridColumns = {
 	[key in GridBreakpoints]: number
@@ -20,12 +23,14 @@ type ContainerWidths = {
 const gridColumns: GridColumns = {
 	tablet: 12,
 	desktop: 12,
+	leftCol: 14,
 	wide: 16,
 }
 
 const containerWidths: ContainerWidths = {
 	tablet: breakpoints.tablet,
 	desktop: breakpoints.desktop,
+	leftCol: breakpoints.leftCol,
 	wide: breakpoints.wide,
 }
 
@@ -52,6 +57,11 @@ export const gridContainer = css`
 		grid-template-columns: repeat(${gridColumns.desktop}, 1fr);
 	}
 
+	${from.leftCol} {
+		width: ${containerWidths.leftCol}px;
+		grid-template-columns: repeat(${gridColumns.leftCol}, 1fr);
+	}
+
 	${from.wide} {
 		width: ${containerWidths.wide}px;
 		grid-template-columns: repeat(${gridColumns.wide}, 1fr);
@@ -65,11 +75,15 @@ const borderRightStyle = css`
 
 const gridItemBreakpoints: readonly Extract<
 	Breakpoint,
-	"mobile" | "tablet" | "desktop" | "wide"
->[] = ["mobile", "tablet", "desktop", "wide"] as const
+	"mobile" | "tablet" | "desktop" | "leftCol" | "wide"
+>[] = ["mobile", "tablet", "desktop", "leftCol", "wide"] as const
 type GridItemBreakpoints = typeof gridItemBreakpoints[number]
 
 export type Spans = {
+	[key in GridItemBreakpoints]?: number
+}
+
+export type StartingPos = {
 	[key in GridItemBreakpoints]?: number
 }
 
@@ -105,16 +119,30 @@ const gridItemSpans = (spans: Spans) => {
 	return style
 }
 
+const gridItemStartingPos = (startingPos: StartingPos) => {
+	return gridItemBreakpoints.reduce((acc, breakpoint) => {
+		if (startingPos[breakpoint]) {
+			return `${acc}
+				${from[breakpoint]} {
+					grid-column-start: ${startingPos[breakpoint]};
+				}
+			`
+		}
+
+		return acc
+	}, "")
+}
+
 export const gridItem = ({
 	span,
 	startingPos,
 	borderRight = false,
 }: {
 	span: Spans
-	startingPos?: number
+	startingPos?: StartingPos
 	borderRight?: boolean
 }) => css`
 	${gridItemSpans(span)}
-	${startingPos ? `grid-column-start: ${startingPos};` : ""}
+	${startingPos ? gridItemStartingPos(startingPos) : ""}
 	${borderRight ? borderRightStyle : ""}
 `
