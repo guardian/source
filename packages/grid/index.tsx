@@ -1,5 +1,5 @@
 import React from "react"
-import { gridContainer, gridItem, Spans } from "./styles"
+import { gridContainer, gridItem, Spans, StartingPos } from "./styles"
 
 const Grid = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={gridContainer}>{children}</div>
@@ -12,7 +12,7 @@ const GridItem = ({
 	children,
 }: {
 	span: Spans
-	startingPos?: number
+	startingPos?: StartingPos
 	borderRight?: boolean
 	children: JSX.Element | JSX.Element[]
 }) => {
