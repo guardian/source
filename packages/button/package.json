@@ -23,6 +23,7 @@
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"files": [
+		"dist/*.js",
 		"index.tsx",
 		"styles.ts",
 		"themes.ts"
