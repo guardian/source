@@ -90,7 +90,7 @@ const gridItemSpans = (spans: Spans) => {
 		if (spans[breakpoint]) {
 			style = `${style}
 				${from[breakpoint]} {
-					display: initial;
+					display: block;
 					grid-column-end: span ${spans[breakpoint]};
 				}
 			`
