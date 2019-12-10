@@ -10,6 +10,8 @@ $ yarn add @guardian/src-grid @guardian/src-foundations
 
 ## Use
 
+**Note:** this component does not currently have support for Internet Explorer
+
 ```js
 import { Grid, GridItem, gridItem } from "@guardian/src-grid"
 
