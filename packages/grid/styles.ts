@@ -7,10 +7,11 @@ import {
 } from "@guardian/src-foundations"
 import { from } from "@guardian/src-foundations/mq"
 
-type GridBreakpoints = Extract<
+const gridBreakpoints: readonly Extract<
 	Breakpoint,
 	"tablet" | "desktop" | "leftCol" | "wide"
->
+>[] = ["tablet", "desktop", "leftCol", "wide"] as const
+type GridBreakpoints = typeof gridBreakpoints[number]
 
 type GridColumns = {
 	[key in GridBreakpoints]: number
@@ -48,24 +49,16 @@ export const gridContainer = css`
 
 	${from.tablet} {
 		padding: 0 ${space[5]}px;
-		width: ${containerWidths.tablet}px;
-		grid-template-columns: repeat(${gridColumns.tablet}, 1fr);
 	}
 
-	${from.desktop} {
-		width: ${containerWidths.desktop}px;
-		grid-template-columns: repeat(${gridColumns.desktop}, 1fr);
-	}
-
-	${from.leftCol} {
-		width: ${containerWidths.leftCol}px;
-		grid-template-columns: repeat(${gridColumns.leftCol}, 1fr);
-	}
-
-	${from.wide} {
-		width: ${containerWidths.wide}px;
-		grid-template-columns: repeat(${gridColumns.wide}, 1fr);
-	}
+	${gridBreakpoints.reduce((acc, breakpoint) => {
+		return `${acc}
+			${from[breakpoint]} {
+				width: ${containerWidths[breakpoint]}px;
+				grid-template-columns: repeat(${gridColumns[breakpoint]}, 1fr);
+			}
+		`
+	}, "")}
 `
 const borderRightStyle = css`
 	border-right: 1px solid ${palette.border.secondary};
