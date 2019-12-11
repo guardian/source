@@ -11,11 +11,6 @@ const brandYellow = {
 	dark: colors.yellows[0],
 	main: colors.yellows[1],
 }
-// TOO: remove in v0.9.0, prefer brandYellow
-const yellow = {
-	dark: colors.yellows[0],
-	main: colors.yellows[1],
-}
 const neutral = {
 	7: colors.grays[0],
 	20: colors.grays[1],
@@ -26,8 +21,6 @@ const neutral = {
 	97: colors.grays[6],
 	100: colors.grays[7],
 	specialReport: colors.grays[8],
-	// TODO: remove in v0.9.0, prefer background.dark.primary
-	darkMode: colors.grays[9],
 }
 const error = {
 	main: colors.reds[1],
@@ -187,7 +180,6 @@ const border = {
 const palette = {
 	brand,
 	brandYellow,
-	yellow,
 	neutral,
 	error,
 	success,
