@@ -5,6 +5,12 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 11th December 2019
+
+### `@guardian/src-button 0.5.1`
+
+-   [#114](https://github.com/guardian/source-components/pull/114) Tidy up button publishing
+
 ## 9th December 2019
 
 ### `@guardian/src-foundations 0.8.0`
