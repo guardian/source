@@ -11,12 +11,12 @@ type GridBreakpoint = Extract<
 	Breakpoint,
 	"mobile" | "tablet" | "desktop" | "wide"
 >
-const gridBreakpoints: readonly GridBreakpoint[] = <const>[
+const gridBreakpoints: readonly GridBreakpoint[] = [
 	"mobile",
 	"tablet",
 	"desktop",
 	"wide",
-]
+] as const
 type GridBreakpoints = typeof gridBreakpoints[number]
 
 type GridColumns = {
