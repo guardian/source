@@ -47,6 +47,8 @@ const gridRow = css`
 	@supports (display: grid) {
 		display: grid;
 	}
+	/* stylelint-disable-next-line value-no-vendor-prefix */
+	display: -ms-grid;
 
 	grid-auto-columns: max-content;
 	column-gap: ${GUTTER_WIDTH}px;
@@ -63,14 +65,17 @@ const [
 	gridRowTablet,
 	gridRowDesktop,
 	gridRowWide,
-] = gridBreakpoints.map(
-	breakpoint => css`
+] = gridBreakpoints.map(breakpoint => {
+	const msGridColumns = `-ms-grid-columns: (minmax(0, 1fr))[${gridColumns[breakpoint]}]`
+
+	return css`
 		${from[breakpoint]} {
 			width: ${containerWidths[breakpoint]}px;
 			grid-template-columns: repeat(${gridColumns[breakpoint]}, 1fr);
+			${msGridColumns};
 		}
-	`,
-)
+	`
+})
 
 const gridItemSpans = ({
 	breakpoints,
@@ -92,6 +97,7 @@ const gridItemSpans = ({
 			${from[breakpoint]} {
 				display: block;
 				grid-column-end: span ${spans[index]};
+				-ms-grid-column-span: ${spans[index]};,
 			}
 		`
 	}, "")
@@ -108,6 +114,11 @@ const gridItemStartingPos = ({
 		return `${acc}
 			${from[breakpoint]} {
 				grid-column-start: ${startingPositions[index]};
+				-ms-grid-column: ${
+					startingPositions[index] > 0
+						? startingPositions[index]
+						: gridColumns[breakpoint] + 2 + startingPositions[index]
+				};
 			}
 		`
 	}, "")
@@ -123,7 +134,12 @@ const gridItem = ({
 	startingPositions: number[]
 }) => css`
 	${gridItemSpans({ breakpoints, spans })}
-	${gridItemStartingPos({ breakpoints, startingPositions })}
+	${gridItemStartingPos({
+		breakpoints,
+		startingPositions,
+	})}
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-ms-grid-row: 1;
 `
 
 const borderRightStyle = css`
