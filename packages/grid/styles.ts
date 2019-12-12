@@ -1,5 +1,10 @@
 import { css } from "@emotion/core"
-import { Breakpoint, space, breakpoints } from "@guardian/src-foundations"
+import {
+	Breakpoint,
+	space,
+	breakpoints,
+	palette,
+} from "@guardian/src-foundations"
 import { from } from "@guardian/src-foundations/mq"
 
 type GridBreakpoint = Extract<
@@ -119,6 +124,12 @@ const gridItem = ({
 	${gridItemStartingPos({ breakpoints, startingPositions })}
 `
 
+const borderRightStyle = css`
+	border-right: 1px solid ${palette.border.secondary};
+	padding-right: ${space[5] / 2}px;
+	margin-right: ${-space[5] / 2}px;
+`
+
 export {
 	gridRow,
 	gridRowMobile,
@@ -127,4 +138,5 @@ export {
 	gridRowWide,
 	gridItem,
 	GridBreakpoint,
+	borderRightStyle,
 }

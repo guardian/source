@@ -7,6 +7,7 @@ import {
 	gridRowWide,
 	gridItem,
 	GridBreakpoint,
+	borderRightStyle,
 } from "./styles"
 import { SerializedStyles } from "@emotion/css"
 
@@ -76,18 +77,25 @@ const GridRow = ({
 }
 
 const GridItem = ({
-	breakpoints,
 	spans,
+	borderRight,
+	breakpoints,
 	startingPositions,
 	children,
 }: {
-	breakpoints: GridBreakpoint[]
 	spans: number[]
+	borderRight?: boolean
 	startingPositions: number[]
+	breakpoints: GridBreakpoint[]
 	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
-		<div css={gridItem({ breakpoints, spans, startingPositions })}>
+		<div
+			css={[
+				gridItem({ breakpoints, spans, startingPositions }),
+				borderRight ? borderRightStyle : "",
+			]}
+		>
 			{children}
 		</div>
 	)
