@@ -13,57 +13,41 @@ $ yarn add @guardian/src-grid @guardian/src-foundations
 **Note:** this component does not currently have support for Internet Explorer
 
 ```js
-import { Grid, GridItem, gridItem } from "@guardian/src-grid"
+import { GridRow, GridItem } from "@guardian/src-grid"
 
 const Article = () => (
-    <Grid>
-        <GridItem span={{ tablet: 3, desktop: 4 }}>
+    <GridRow breakpoints={["mobile", "tablet", "desktop", "wide"]}>
+        <GridItem span={[0, 3, 3, 4]} borderRight={true}>
             <Sidebar />
         </GridItem>
-        <GridItem span={{ tablet: 9, desktop: 8 }}>
+        <GridItem span={[4, 9, 9, 12]}>
             <Main />
         </GridItem>
-    </Grid>
-)
-
-const sidebar = css`
-    ${gridItem({ span: { tablet: 3, desktop: 4 } })}
-`
-const main = css`
-    ${gridItem({ span: { tablet: 9, desktop: 8 } })}
-`
-
-const ArticleAlt = () => (
-    <Grid>
-        <div css={sidebar}></div>
-        <div css={main}></div>
-    </Grid>
+    </GridRow>
 )
 ```
+
+## `GridRow` Props
+
+### `breakpoints`
+
+**`GridBreakpoints[]`**
+
+A list of breakpoints at which grid column span may change. GridRow currently
+supports changes at `"mobile"`, `"tablet"`, `"desktop"` and `"wide"` breakpoints.
+Any of these may be omitted.
 
 ## `GridItem` Props
 
 ### `span`
 
-**`{ mobile?: number, tablet?: number, desktop?: number, wide?: number }`**
+**`number[]`**
 
-The number of columns a grid item should span at the specified breakpoints.
+The number of columns a grid item should span. Corresponds to the `breakpoints` list
+in `GridRow` props.
 
-Adopt a mobile-first mindset when using this prop. If a span for a narrow breakpoint is specified (e.g. `mobile`),
-wider breakpoints will also use this span value unless it is specifically overridden.
-
-The narrowest specified breakpoint will be the first breakpoint at which the grid item is visible. At narrower
-breakpoints, the grid item will have `display: none` applied to it.
-
-### `startingPos`
-
-**`{ mobile?: number, tablet?: number, desktop?: number, wide?: number }`**
-
-The column number at which the grid item should begin at the specified breakpoints. If this props is omitted, the grid
-item will begin at the next available column.
-
-Adopt a mobile-first mindset when using this prop. If a starting position for a narrow breakpoint is specified (e.g. `mobile`),
-wider breakpoints will also use this starting position value unless it is specifically overridden.
+When a col span of 0 is specified for a particular breakpoint, the grid item will have
+`display: none` applied to it.
 
 ### `borderRight`
 

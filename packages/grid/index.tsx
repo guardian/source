@@ -1,24 +1,106 @@
 import React from "react"
-import { gridContainer, gridItem, Spans, StartingPos } from "./styles"
+import {
+	gridRow,
+	gridRowMobile,
+	gridRowTablet,
+	gridRowDesktop,
+	gridRowWide,
+	gridItem,
+	GridBreakpoint,
+	borderRightStyle,
+} from "./styles"
+import { SerializedStyles } from "@emotion/css"
 
-const Grid = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
-	<div css={gridContainer}>{children}</div>
-)
+type GridRowBreakpoints = {
+	[key in GridBreakpoint]: SerializedStyles
+}
+const gridRowBreakpoints: GridRowBreakpoints = {
+	mobile: gridRowMobile,
+	tablet: gridRowTablet,
+	desktop: gridRowDesktop,
+	wide: gridRowWide,
+}
 
-const GridItem = ({
-	span,
-	startingPos,
-	borderRight,
+const GridRow = ({
+	breakpoints,
 	children,
 }: {
-	span: Spans
-	startingPos?: StartingPos
-	borderRight?: boolean
+	breakpoints: GridBreakpoint[]
 	children: JSX.Element | JSX.Element[]
 }) => {
+	// Create an array with an entry for each child
+	// Each entry is an array of starting positions,
+	// all initially set to 1
+	const startingPosForChildren: number[][] = []
+
+	for (let i = 0; i < React.Children.count(children); i += 1) {
+		startingPosForChildren.push(breakpoints.map(() => 1))
+	}
+
+	React.Children.forEach(children, (child, index) => {
+		// We always set the starting position of the next
+		// child, so if this is the last child, we're done
+		if (index === React.Children.count(children) - 1) {
+			return
+		}
+
+		const startingPosForThisChild = startingPosForChildren[index]
+		const startingPosForNextChild = startingPosForChildren[index + 1]
+
+		// The starting position of the next child is the starting position
+		// of the current child, plus the current child's span
+		child.props.spans.forEach((span: number, i: number) => {
+			startingPosForNextChild[i] = startingPosForThisChild[i] + span
+		})
+	})
+
 	return (
-		<div css={gridItem({ span, startingPos, borderRight })}>{children}</div>
+		<div
+			css={[
+				gridRow,
+				breakpoints.reduce(
+					(acc, breakpoint) =>
+						acc.concat([gridRowBreakpoints[breakpoint]]),
+					[] as SerializedStyles[],
+				),
+			]}
+		>
+			{React.Children.map(children, (child, index) =>
+				React.cloneElement(child, {
+					breakpoints,
+					spans: child.props.spans,
+					startingPositions: startingPosForChildren[index],
+				}),
+			)}
+		</div>
 	)
 }
 
-export { Grid, GridItem, gridItem }
+const GridItem = ({
+	spans,
+	borderRight,
+	breakpoints,
+	startingPositions,
+	children,
+}: {
+	spans: number[]
+	borderRight?: boolean
+	startingPositions: number[]
+	breakpoints: GridBreakpoint[]
+	children: JSX.Element | JSX.Element[]
+}) => {
+	return (
+		<div
+			css={[
+				gridItem({ breakpoints, spans, startingPositions }),
+				borderRight ? borderRightStyle : "",
+			]}
+		>
+			{children}
+		</div>
+	)
+}
+
+GridItem.defaultProps = { breakpoints: [], startingPositions: [] }
+
+export { GridRow, GridItem }

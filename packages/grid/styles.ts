@@ -7,10 +7,16 @@ import {
 } from "@guardian/src-foundations"
 import { from } from "@guardian/src-foundations/mq"
 
-const gridBreakpoints: readonly Extract<
+type GridBreakpoint = Extract<
 	Breakpoint,
-	"tablet" | "desktop" | "leftCol" | "wide"
->[] = ["tablet", "desktop", "leftCol", "wide"] as const
+	"mobile" | "tablet" | "desktop" | "wide"
+>
+const gridBreakpoints: readonly GridBreakpoint[] = [
+	"mobile",
+	"tablet",
+	"desktop",
+	"wide",
+] as const
 type GridBreakpoints = typeof gridBreakpoints[number]
 
 type GridColumns = {
@@ -18,124 +24,121 @@ type GridColumns = {
 }
 
 type ContainerWidths = {
-	[key in GridBreakpoints]: number
+	[key in GridBreakpoints]: string
 }
 
 const gridColumns: GridColumns = {
+	mobile: 4,
 	tablet: 12,
 	desktop: 12,
-	leftCol: 14,
 	wide: 16,
 }
 
 const containerWidths: ContainerWidths = {
-	tablet: breakpoints.tablet,
-	desktop: breakpoints.desktop,
-	leftCol: breakpoints.leftCol,
-	wide: breakpoints.wide,
+	mobile: "100%",
+	tablet: `${breakpoints.tablet}px`,
+	desktop: `${breakpoints.desktop}px`,
+	wide: `${breakpoints.wide}px`,
 }
 
-export const gridContainer = css`
+const GUTTER_WIDTH = space[5]
+
+const gridRow = css`
 	@supports (display: grid) {
 		display: grid;
 	}
 
-	padding: 0 ${space[3]}px;
 	grid-auto-columns: max-content;
-	column-gap: ${space[5]}px;
+	column-gap: ${GUTTER_WIDTH}px;
 
-	width: 100%;
-	grid-template-columns: repeat(4, 1fr);
-
+	/* horizontal padding is smaller on mobile */
+	padding: 0 ${space[3]}px;
 	${from.tablet} {
-		padding: 0 ${space[5]}px;
+		padding: 0 ${GUTTER_WIDTH}px;
 	}
-
-	${gridBreakpoints.reduce((acc, breakpoint) => {
-		return `${acc}
-			${from[breakpoint]} {
-				width: ${containerWidths[breakpoint]}px;
-				grid-template-columns: repeat(${gridColumns[breakpoint]}, 1fr);
-			}
-		`
-	}, "")}
-`
-const borderRightStyle = css`
-	border-right: 1px solid ${palette.border.secondary};
-	padding-right: ${space[5] / 2}px;
-	margin-right: ${-space[5] / 2}px;
 `
 
-const gridItemBreakpoints: readonly Extract<
-	Breakpoint,
-	"mobile" | "tablet" | "desktop" | "leftCol" | "wide"
->[] = ["mobile", "tablet", "desktop", "leftCol", "wide"] as const
-type GridItemBreakpoints = typeof gridItemBreakpoints[number]
+const [
+	gridRowMobile,
+	gridRowTablet,
+	gridRowDesktop,
+	gridRowWide,
+] = gridBreakpoints.map(
+	breakpoint => css`
+		${from[breakpoint]} {
+			width: ${containerWidths[breakpoint]}px;
+			grid-template-columns: repeat(${gridColumns[breakpoint]}, 1fr);
+		}
+	`,
+)
 
-export type Spans = {
-	[key in GridItemBreakpoints]?: number
-}
-
-export type StartingPos = {
-	[key in GridItemBreakpoints]?: number
-}
-
-const gridItemSpans = (spans: Spans) => {
-	let minimumBreakpointSet = false
-	let style = ""
-
-	for (let i = 0; i < gridItemBreakpoints.length; i += 1) {
-		const breakpoint = gridItemBreakpoints[i]
-
-		if (spans[breakpoint]) {
-			style = `${style}
-				${from[breakpoint]} {
-					display: block;
-					grid-column-end: span ${spans[breakpoint]};
-				}
-			`
-
-			if (!minimumBreakpointSet) {
-				minimumBreakpointSet = true
-			}
-		} else {
-			if (!minimumBreakpointSet) {
-				style = `${style}
+const gridItemSpans = ({
+	breakpoints,
+	spans,
+}: {
+	breakpoints: GridBreakpoint[]
+	spans: number[]
+}) => {
+	return breakpoints.reduce((acc, breakpoint, index) => {
+		if (spans[index] === 0) {
+			return `${acc}
 				${from[breakpoint]} {
 					display: none;
 				}
 			`
+		}
+
+		return `${acc}
+			${from[breakpoint]} {
+				display: block;
+				grid-column-end: span ${spans[index]};
 			}
-		}
-	}
-
-	return style
-}
-
-const gridItemStartingPos = (startingPos: StartingPos) => {
-	return gridItemBreakpoints.reduce((acc, breakpoint) => {
-		if (startingPos[breakpoint]) {
-			return `${acc}
-				${from[breakpoint]} {
-					grid-column-start: ${startingPos[breakpoint]};
-				}
-			`
-		}
-
-		return acc
+		`
 	}, "")
 }
 
-export const gridItem = ({
-	span,
-	startingPos,
-	borderRight = false,
+const gridItemStartingPos = ({
+	breakpoints,
+	startingPositions,
 }: {
-	span: Spans
-	startingPos?: StartingPos
-	borderRight?: boolean
+	breakpoints: GridBreakpoint[]
+	startingPositions: number[]
+}) => {
+	return breakpoints.reduce((acc, breakpoint, index) => {
+		return `${acc}
+			${from[breakpoint]} {
+				grid-column-start: ${startingPositions[index]};
+			}
+		`
+	}, "")
+}
+
+const gridItem = ({
+	breakpoints,
+	spans,
+	startingPositions,
+}: {
+	breakpoints: GridBreakpoint[]
+	spans: number[]
+	startingPositions: number[]
 }) => css`
-	${gridItemSpans(span)}
-	${startingPos ? gridItemStartingPos(startingPos) : ""}
-	${borderRight ? borderRightStyle : ""}
+	${gridItemSpans({ breakpoints, spans })}
+	${gridItemStartingPos({ breakpoints, startingPositions })}
 `
+
+const borderRightStyle = css`
+	border-right: 1px solid ${palette.border.secondary};
+	padding-right: ${GUTTER_WIDTH / 2}px;
+	margin-right: ${-GUTTER_WIDTH / 2}px;
+`
+
+export {
+	gridRow,
+	gridRowMobile,
+	gridRowTablet,
+	gridRowDesktop,
+	gridRowWide,
+	gridItem,
+	GridBreakpoint,
+	borderRightStyle,
+}
