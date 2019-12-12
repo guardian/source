@@ -3,7 +3,7 @@
 		"editorconfig.editorconfig",
 		"esbenp.prettier-vscode",
 		"jpoissonnier.vscode-styled-components",
-		"shinnn.stylelint",
+		"thibaudcolas.stylelint",
 		"stkb.rewrap"
 	]
 }
