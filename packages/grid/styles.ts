@@ -47,6 +47,7 @@ const gridRow = css`
 	@supports (display: grid) {
 		display: grid;
 	}
+	/* stylelint-disable-next-line value-no-vendor-prefix */
 	display: -ms-grid;
 
 	grid-auto-columns: max-content;
@@ -133,7 +134,11 @@ const gridItem = ({
 	startingPositions: number[]
 }) => css`
 	${gridItemSpans({ breakpoints, spans })}
-	${gridItemStartingPos({ breakpoints, startingPositions })}
+	${gridItemStartingPos({
+		breakpoints,
+		startingPositions,
+	})}
+	/* stylelint-disable-next-line property-no-vendor-prefix */
 	-ms-grid-row: 1;
 `
 
