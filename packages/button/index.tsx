@@ -13,6 +13,8 @@ import {
 	iconOnlyDefault,
 	iconOnlySmall,
 } from "./styles"
+import { SerializedStyles } from "@emotion/css"
+import { ButtonTheme } from "@guardian/src-foundations/themes"
 export {
 	buttonLight,
 	buttonBrand,
@@ -26,7 +28,7 @@ type IconSide = "left" | "right"
 type Size = "default" | "small"
 
 const priorities: {
-	[key in Priority]: any
+	[key in Priority]: ({ button }: { button: ButtonTheme }) => SerializedStyles
 } = {
 	primary,
 	secondary,
@@ -34,25 +36,25 @@ const priorities: {
 }
 
 const iconSides: {
-	[key in IconSide]: any
+	[key in IconSide]: SerializedStyles
 } = {
 	right: iconLeft,
 	left: iconRight,
 }
 const sizes: {
-	[key in Size]: any
+	[key in Size]: SerializedStyles
 } = {
 	default: defaultSize,
 	small: smallSize,
 }
 const iconSizes: {
-	[key in Size]: any
+	[key in Size]: SerializedStyles
 } = {
 	default: iconDefault,
 	small: iconSmall,
 }
 const iconOnlySizes: {
-	[key in Size]: any
+	[key in Size]: SerializedStyles
 } = {
 	default: iconOnlyDefault,
 	small: iconOnlySmall,
