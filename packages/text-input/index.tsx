@@ -11,12 +11,13 @@ import {
 	optionalLabel,
 	supportingText,
 } from "./styles"
+import { SerializedStyles } from "@emotion/css"
 export { textInputLight } from "@guardian/src-foundations/themes"
 
 export type Width = 30 | 10 | 4
 
 const widths: {
-	[key in Width]: any
+	[key in Width]: SerializedStyles
 } = {
 	30: width30,
 	10: width10,
