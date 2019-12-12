@@ -8,7 +8,7 @@ const fonts = {
 		"GuardianTextSans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif",
 }
 
-const lineHeights = [1.15, 1.35, 1.45]
+const lineHeights = [1.15, 1.35, 1.5]
 
 const fontWeights = [300, 400, 500, 700]
 
