@@ -30,7 +30,7 @@ const gridColumns: GridColumns = {
 }
 
 const containerWidths: ContainerWidths = {
-	mobile: '100%',
+	mobile: "100%",
 	tablet: `${breakpoints.tablet}px`,
 	desktop: `${breakpoints.desktop}px`,
 	wide: `${breakpoints.wide}px`,
@@ -65,6 +65,49 @@ const [
 	`,
 )
 
-const gridItem = css``
+const gridItemSpans = ({
+	breakpoints,
+	spans,
+}: {
+	breakpoints: GridBreakpoint[]
+	spans: number[]
+}) => {
+	return css`
+		${breakpoints.reduce((acc, breakpoint, index) => {
+			if (spans[index] === 0) {
+				return `${acc}
+					${from[breakpoint]} {
+						display: none;
+					}
+				`
+			}
 
-export { gridRow, gridRowMobile, gridRowTablet, gridRowDesktop, gridRowWide  gridItem, GridBreakpoint }
+			return `${acc}
+				${from[breakpoint]} {
+					display: block;
+					grid-column-end: span ${spans[index]};
+				}
+			`
+		}, "")}
+	`
+}
+
+const gridItem = ({
+	breakpoints,
+	spans,
+}: {
+	breakpoints: GridBreakpoint[]
+	spans: number[]
+}) => css`
+	${gridItemSpans({ breakpoints, spans })}
+`
+
+export {
+	gridRow,
+	gridRowMobile,
+	gridRowTablet,
+	gridRowDesktop,
+	gridRowWide,
+	gridItem,
+	GridBreakpoint,
+}

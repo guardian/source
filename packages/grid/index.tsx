@@ -37,18 +37,27 @@ const GridRow = ({
 			),
 		]}
 	>
-		{children}
+		{React.Children.map(children, child =>
+			React.cloneElement(child, {
+				breakpoints,
+				spans: child.props.spans,
+			}),
+		)}
 	</div>
 )
 
 const GridItem = ({
-	span,
+	breakpoints,
+	spans,
 	children,
 }: {
-	span: number[]
+	breakpoints: GridBreakpoint[]
+	spans: number[]
 	children: JSX.Element | JSX.Element[]
 }) => {
-	return <div css={gridItem}>{children}</div>
+	return <div css={gridItem({ breakpoints, spans })}>{children}</div>
 }
+
+GridItem.defaultProps = { breakpoints: [] }
 
 export { GridRow, GridItem }
