@@ -257,4 +257,11 @@ export {
 	headlineSizes,
 	bodySizes,
 	textSansSizes,
+	Category,
+	LineHeight,
+	FontWeight,
+	TitlepieceSizes,
+	HeadlineSizes,
+	BodySizes,
+	TextSansSizes,
 }
