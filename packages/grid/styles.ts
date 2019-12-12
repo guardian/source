@@ -41,18 +41,20 @@ const containerWidths: ContainerWidths = {
 	wide: `${breakpoints.wide}px`,
 }
 
+const GUTTER_WIDTH = space[5]
+
 const gridRow = css`
 	@supports (display: grid) {
 		display: grid;
 	}
 
 	grid-auto-columns: max-content;
-	column-gap: ${space[5]}px;
+	column-gap: ${GUTTER_WIDTH}px;
 
 	/* horizontal padding is smaller on mobile */
 	padding: 0 ${space[3]}px;
 	${from.tablet} {
-		padding: 0 ${space[5]}px;
+		padding: 0 ${GUTTER_WIDTH}px;
 	}
 `
 
@@ -126,8 +128,8 @@ const gridItem = ({
 
 const borderRightStyle = css`
 	border-right: 1px solid ${palette.border.secondary};
-	padding-right: ${space[5] / 2}px;
-	margin-right: ${-space[5] / 2}px;
+	padding-right: ${GUTTER_WIDTH / 2}px;
+	margin-right: ${-GUTTER_WIDTH / 2}px;
 `
 
 export {
