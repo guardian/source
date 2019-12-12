@@ -72,34 +72,51 @@ const gridItemSpans = ({
 	breakpoints: GridBreakpoint[]
 	spans: number[]
 }) => {
-	return css`
-		${breakpoints.reduce((acc, breakpoint, index) => {
-			if (spans[index] === 0) {
-				return `${acc}
-					${from[breakpoint]} {
-						display: none;
-					}
-				`
-			}
-
+	return breakpoints.reduce((acc, breakpoint, index) => {
+		if (spans[index] === 0) {
 			return `${acc}
 				${from[breakpoint]} {
-					display: block;
-					grid-column-end: span ${spans[index]};
+					display: none;
 				}
 			`
-		}, "")}
-	`
+		}
+
+		return `${acc}
+			${from[breakpoint]} {
+				display: block;
+				grid-column-end: span ${spans[index]};
+			}
+		`
+	}, "")
+}
+
+const gridItemStartingPos = ({
+	breakpoints,
+	startingPositions,
+}: {
+	breakpoints: GridBreakpoint[]
+	startingPositions: number[]
+}) => {
+	return breakpoints.reduce((acc, breakpoint, index) => {
+		return `${acc}
+			${from[breakpoint]} {
+				grid-column-start: ${startingPositions[index]};
+			}
+		`
+	}, "")
 }
 
 const gridItem = ({
 	breakpoints,
 	spans,
+	startingPositions,
 }: {
 	breakpoints: GridBreakpoint[]
 	spans: number[]
+	startingPositions: number[]
 }) => css`
 	${gridItemSpans({ breakpoints, spans })}
+	${gridItemStartingPos({ breakpoints, startingPositions })}
 `
 
 export {
