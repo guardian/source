@@ -33,9 +33,9 @@ const GridRow = ({
 	// all initially set to 1
 	const startingPosForChildren: number[][] = []
 
-	for (let i = 0; i < React.Children.count(children); i += 1) {
+	React.Children.forEach(children, () => {
 		startingPosForChildren.push(breakpoints.map(() => 1))
-	}
+	})
 
 	React.Children.forEach(children, (child, index) => {
 		// We always set the starting position of the next
@@ -101,6 +101,10 @@ const GridItem = ({
 	)
 }
 
-GridItem.defaultProps = { breakpoints: [], startingPositions: [] }
+GridRow.defaultProps = { breakpoints: ["mobile", "tablet", "desktop", "wide"] }
+GridItem.defaultProps = {
+	breakpoints: ["mobile", "tablet", "desktop", "wide"],
+	startingPositions: [],
+}
 
 export { GridRow, GridItem }
