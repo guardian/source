@@ -1,6 +1,6 @@
 # Foundations
 
-The Guardian's design tokens are the atoms from which all our visual design is built. They are intended for use with a CSS-in-JS library such as Emotion.
+The Guardian's foundations are the atoms from which all our visual design is built. They are intended for use with a CSS-in-JS library such as Emotion.
 
 ## Install
 
@@ -26,7 +26,7 @@ const backgroundColor = css`
 import { headline, body, textSans } from "@guardian/src-foundations/typography"
 
 const h1 = css`
-    ${headline.large({ fontWeight: 'bold' })};
+    ${headline.large({ fontWeight: "bold" })};
 `
 
 const p = css`
@@ -60,32 +60,6 @@ const styles = css`
 `
 ```
 
-Output:
-
-```css
-.class-name {
-    padding: 0 10px;
-}
-
-@media (min-width: 480px) {
-    .class-name {
-        padding: 0 20px;
-    }
-}
-
-@media (min-width: 660px) and (max-width: 980px) {
-    .class-name {
-        padding: 0 32px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .class-name {
-        padding: 0 40px;
-    }
-}
-```
-
 ### Visually Hidden
 
 For elements that should not appear to sighted users, but are useful to assistive technology users.
@@ -96,19 +70,6 @@ import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 const label = css`
     ${visuallyHidden};
 `
-```
-
-Output:
-
-```css
-.class-name {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    top: 0;
-    left: 0;
-}
 ```
 
 ### Focus Halo
@@ -124,16 +85,4 @@ const input = css`
     width: 200px;
     height: 44px;
 `
-```
-
-Output:
-
-```css
-.class-name {
-    outline: 0;
-    box-shadow: 0 0 0 5px #00b2ff;
-    z-index: 9;
-    width: 200px;
-    height: 44px;
-}
 ```
