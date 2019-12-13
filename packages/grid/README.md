@@ -29,7 +29,7 @@ const Article = () => (
 
 ### `breakpoints`
 
-**`GridBreakpoints[]`**
+**`GridBreakpoints[]`** _= ["mobile", "tablet", "desktop", "wide"]_
 
 A list of breakpoints at which grid column span may change. GridRow currently
 supports changes at `"mobile"`, `"tablet"`, `"desktop"` and `"wide"` breakpoints.

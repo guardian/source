@@ -101,6 +101,10 @@ const GridItem = ({
 	)
 }
 
-GridItem.defaultProps = { breakpoints: [], startingPositions: [] }
+GridRow.defaultProps = { breakpoints: ["mobile", "tablet", "desktop", "wide"] }
+GridItem.defaultProps = {
+	breakpoints: ["mobile", "tablet", "desktop", "wide"],
+	startingPositions: [],
+}
 
 export { GridRow, GridItem }
