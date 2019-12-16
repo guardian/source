@@ -40,8 +40,8 @@ const priorities: {
 const iconSides: {
 	[key in IconSide]: SerializedStyles
 } = {
-	right: iconLeft,
-	left: iconRight,
+	right: iconRight,
+	left: iconLeft,
 }
 const sizes: {
 	[key in Size]: SerializedStyles

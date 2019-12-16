@@ -94,13 +94,13 @@ export const iconSmall = css`
 	}
 `
 
-export const iconLeft = css`
+export const iconRight = css`
 	svg {
 		margin: 0 ${-size.large / 8}px 0 ${size.large / 4}px;
 	}
 `
 
-export const iconRight = css`
+export const iconLeft = css`
 	flex-direction: row-reverse;
 	svg {
 		margin: 0 ${size.large / 4}px 0 ${-size.large / 8}px;

@@ -28,9 +28,9 @@ const sizeButtons = [
 	<Button size="small">Small</Button>,
 ]
 const textIconButtons = [
-	<Button icon={<SvgCheckmark />}>Left aligned</Button>,
+	<Button icon={<SvgCheckmark />}>Icon to the left</Button>,
 	<Button iconSide="right" icon={<SvgCheckmark />}>
-		Right aligned
+		Icon to the right
 	</Button>,
 ]
 const iconButtons = [
