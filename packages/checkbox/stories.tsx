@@ -7,6 +7,7 @@ export default {
 	title: "Checkbox",
 }
 
+/* eslint-disable react/jsx-key */
 const checkboxes = [
 	<Checkbox label="Guardian Today: UK" value="today_uk" />,
 	<Checkbox label="Guardian Today: US" value="today_us" />,
@@ -30,6 +31,7 @@ const checkboxesWithSupportingText = [
 		supporting="Learn from leading minds at our Guardian live events, including discussions and debates, courses and training"
 	/>,
 ]
+/* eslint-enable react/jsx-key */
 
 const defaultLight = () => (
 	<CheckboxGroup name="emails">
