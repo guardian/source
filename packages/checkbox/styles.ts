@@ -3,10 +3,11 @@ import { palette, space, size, transitions } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
-export const group = css`
+export const fieldset = css`
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
+	border: 0;
 `
 
 export const label = css`

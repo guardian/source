@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import {
-	group,
+	fieldset,
 	label,
 	labelWithSupportingText,
 	checkbox,
@@ -24,7 +24,7 @@ const CheckboxGroup = ({
 	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
-		<div css={group} {...props}>
+		<fieldset css={fieldset} {...props}>
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				return React.cloneElement(
@@ -34,7 +34,7 @@ const CheckboxGroup = ({
 					}),
 				)
 			})}
-		</div>
+		</fieldset>
 	)
 }
 
