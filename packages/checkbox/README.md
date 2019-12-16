@@ -19,9 +19,14 @@ const Form = () => (
             <Checkbox
                 value="today-uk"
                 label="Guardian Today: UK"
+                supporting="The headlines, the analysis, the debate. Get the whole picture from a source you trust."
                 defaultChecked
             />
-            <Checkbox value="today-us" label="Guardian Today: US" />
+            <Checkbox
+                value="today-us"
+                label="Guardian Today: US"
+                supporting="Cut through the noise. Get straight to the heart of the day’s breaking news in double-quick time."
+            />
         </CheckboxGroup>
     </form>
 )
