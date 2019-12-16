@@ -8,6 +8,7 @@ import {
 	labelTextWithSupportingText,
 	supportingText,
 	tick,
+	tickWithSupportingText,
 	errorCheckbox,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
@@ -80,7 +81,7 @@ const Checkbox = ({
 				aria-invalid={error}
 				{...props}
 			/>
-			<span css={tick} />
+			<span css={[tick, supporting ? tickWithSupportingText : ""]} />
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>

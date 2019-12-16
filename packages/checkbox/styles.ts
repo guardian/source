@@ -10,10 +10,11 @@ export const group = css`
 `
 
 export const label = css`
+	flex: 0;
 	position: relative;
-	cursor: pointer;
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 	height: ${size.large}px;
 
 	&:hover {
@@ -25,13 +26,14 @@ export const label = css`
 
 export const labelWithSupportingText = css`
 	align-items: flex-start;
-	margin-bottom: ${space[2]}px;
+	margin-bottom: ${space[3]}px;
 `
 
 export const checkbox = css`
-	cursor: pointer;
+	flex: 1 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
+	cursor: pointer;
 	width: ${size.small}px;
 	height: ${size.small}px;
 	margin: 0 ${space[1]}px 0 0;
@@ -96,11 +98,11 @@ export const labelText = css`
 `
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.medium()};
 `
 
 export const supportingText = css`
-	${textSans.medium()};
+	${textSans.small()};
 	color: ${palette.text.secondary};
 `
 
@@ -142,6 +144,12 @@ export const tick = css`
 			width: 2px;
 			transition-delay: 0.1s;
 		}
+	}
+`
+
+export const tickWithSupportingText = css`
+	@supports (appearance: none) {
+		top: 5px;
 	}
 `
 
