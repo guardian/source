@@ -110,7 +110,9 @@ const LinkButton = ({
 	href: string
 	children?: ReactNode
 }) => {
-	const buttonContents = [children].concat([<SvgArrowRightStraight />])
+	const buttonContents = [children].concat([
+		React.cloneElement(<SvgArrowRightStraight />, { key: "svg" }),
+	])
 
 	return (
 		<a
