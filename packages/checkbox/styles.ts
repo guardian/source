@@ -30,7 +30,7 @@ export const labelWithSupportingText = css`
 `
 
 export const checkbox = css`
-	flex: 1 0 auto;
+	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
 	cursor: pointer;
