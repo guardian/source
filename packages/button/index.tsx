@@ -27,6 +27,7 @@ export {
 export type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
+type LinkButtonPriority = Extract<"primary" | "secondary", Priority>
 
 const priorities: {
 	[key in Priority]: ({ button }: { button: ButtonTheme }) => SerializedStyles
@@ -104,7 +105,7 @@ const LinkButton = ({
 	children,
 	...props
 }: {
-	priority: Priority
+	priority: LinkButtonPriority
 	size: Size
 	href: string
 	children?: ReactNode

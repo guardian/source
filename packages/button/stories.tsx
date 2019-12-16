@@ -46,9 +46,6 @@ const linkButtons = [
 	<LinkButton href="#" priority="secondary">
 		Secondary
 	</LinkButton>,
-	<LinkButton href="#" priority="tertiary">
-		Tertiary
-	</LinkButton>,
 ]
 const textIconLinkButtons = [
 	<LinkButton href="#">Link styled as a button</LinkButton>,
