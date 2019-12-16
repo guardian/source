@@ -16,7 +16,12 @@ import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-svgs"
 
 const Form = () => (
     <form>
-        <LinkButton priority="primary" size="default" href="/read-more">
+        <LinkButton
+            priority="primary"
+            size="default"
+            showIcon={true}
+            href="/read-more"
+        >
             Read more
         </LinkButton>
         <Button
@@ -47,6 +52,12 @@ Informs users of how important an action is
 **`"default" | "small"`** _= "default"_
 
 Reflects the prominance of the action
+
+### `showIcon`
+
+**`boolean`** _= false_
+
+Whether to show the arrow icon in this button
 
 ## `Button` Props
 
