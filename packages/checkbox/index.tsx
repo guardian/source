@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import {
-	group,
+	fieldset,
 	label,
 	labelWithSupportingText,
 	checkbox,
@@ -8,6 +8,7 @@ import {
 	labelTextWithSupportingText,
 	supportingText,
 	tick,
+	tickWithSupportingText,
 	errorCheckbox,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
@@ -20,18 +21,12 @@ const CheckboxGroup = ({
 }: {
 	name: string
 	error?: boolean | string
-	children: ReactNode
+	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
-		<div css={group} {...props}>
+		<fieldset css={fieldset} {...props}>
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
-				if (!React.isValidElement(child)) {
-					// Consumer is probably passing a text node as a child
-					// TODO: Pass error to terminal
-					return <div />
-				}
-
 				return React.cloneElement(
 					child,
 					Object.assign(error ? { error: true } : {}, {
@@ -39,7 +34,7 @@ const CheckboxGroup = ({
 					}),
 				)
 			})}
-		</div>
+		</fieldset>
 	)
 }
 
@@ -86,7 +81,7 @@ const Checkbox = ({
 				aria-invalid={error}
 				{...props}
 			/>
-			<span css={tick} />
+			<span css={[tick, supporting ? tickWithSupportingText : ""]} />
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
