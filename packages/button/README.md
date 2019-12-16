@@ -11,11 +11,14 @@ $ yarn add @guardian/src-button @guardian/src-foundations
 ## Use
 
 ```js
-import { Button, LinkButton } from "@guardian/src-button"
+import { LinkButton, Button } from "@guardian/src-button"
 import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-svgs"
 
 const Form = () => (
     <form>
+        <LinkButton priority="primary" size="default" href="/read-more">
+            Read more
+        </LinkButton>
         <Button
             priority="primary"
             size="default"
@@ -27,20 +30,25 @@ const Form = () => (
         >
             Click me
         </Button>
-        <LinkButton
-            priority="primary"
-            size="default"
-            icon={<SvgArrowRightStraight />}
-            iconSide="right"
-            href="/read-more"
-        >
-            Read more
-        </LinkButton>
     </form>
 )
 ```
 
-## Props
+## `LinkButton` Props
+
+### `priority`
+
+**`"primary" | "secondary"`** _= "primary"_
+
+Informs users of how important an action is
+
+### `size`
+
+**`"default" | "small"`** _= "default"_
+
+Reflects the prominance of the action
+
+## `Button` Props
 
 ### `priority`
 
