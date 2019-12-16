@@ -103,31 +103,48 @@ const Button = ({
 const LinkButton = ({
 	priority,
 	size,
+	showIcon,
 	children,
 	...props
 }: {
 	priority: LinkButtonPriority
 	size: Size
+	showIcon: boolean
 	href: string
 	children?: ReactNode
 }) => {
-	return (
-		<a
-			css={theme => [
-				button,
-				sizes[size],
-				priorities[priority](theme.button && theme),
-				iconSizes[size],
-				children ? iconSides.right : "",
-				!children ? iconOnlySizes[size] : "",
-				iconNudgeAnimation,
-			]}
-			{...props}
-		>
-			{children}
-			<SvgArrowRightStraight />
-		</a>
-	)
+	if (showIcon) {
+		return (
+			<a
+				css={theme => [
+					button,
+					sizes[size],
+					priorities[priority](theme.button && theme),
+					iconSizes[size],
+					children ? iconSides.right : "",
+					!children ? iconOnlySizes[size] : "",
+					iconNudgeAnimation,
+				]}
+				{...props}
+			>
+				{children}
+				<SvgArrowRightStraight />
+			</a>
+		)
+	} else {
+		return (
+			<a
+				css={theme => [
+					button,
+					sizes[size],
+					priorities[priority](theme.button && theme),
+				]}
+				{...props}
+			>
+				{children}
+			</a>
+		)
+	}
 }
 
 const defaultButtonProps = {
@@ -140,6 +157,7 @@ const defaultButtonProps = {
 const defaultLinkButtonProps = {
 	priority: "primary",
 	size: "default",
+	showIcon: false,
 }
 
 Button.defaultProps = { ...defaultButtonProps }
