@@ -10,12 +10,11 @@ export const group = css`
 `
 
 export const label = css`
-	flex: 0;
 	position: relative;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	height: ${size.large}px;
+	min-height: ${size.large}px;
 
 	&:hover {
 		input {
