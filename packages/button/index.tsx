@@ -15,6 +15,7 @@ import {
 } from "./styles"
 import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
+import { SvgArrowRightStraight } from "@guardian/src-svgs"
 export {
 	buttonLight,
 	buttonBrand,
@@ -100,23 +101,15 @@ const Button = ({
 const LinkButton = ({
 	priority,
 	size,
-	icon: iconSvg,
-	iconSide,
 	children,
 	...props
 }: {
 	priority: Priority
 	size: Size
-	icon?: ReactElement
-	iconSide: IconSide
 	href: string
 	children?: ReactNode
 }) => {
-	const buttonContents = [children]
-
-	if (iconSvg) {
-		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
-	}
+	const buttonContents = [children].concat([<SvgArrowRightStraight />])
 
 	return (
 		<a
@@ -124,8 +117,8 @@ const LinkButton = ({
 				button,
 				sizes[size],
 				priorities[priority](theme.button && theme),
-				iconSvg ? iconSizes[size] : "",
-				iconSvg && children ? iconSides[iconSide] : "",
+				iconSizes[size],
+				children ? iconSides.right : "",
 				!children ? iconOnlySizes[size] : "",
 			]}
 			{...props}
@@ -145,7 +138,6 @@ const defaultButtonProps = {
 const defaultLinkButtonProps = {
 	priority: "primary",
 	size: "default",
-	iconSide: "right",
 }
 
 Button.defaultProps = { ...defaultButtonProps }
