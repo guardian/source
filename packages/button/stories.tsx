@@ -47,9 +47,6 @@ const linkButtons = [
 		Secondary
 	</LinkButton>,
 ]
-const textIconLinkButtons = [
-	<LinkButton href="#">Link styled as a button</LinkButton>,
-]
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -229,12 +226,3 @@ export const priorityLinkButtons = () => (
 	</div>
 )
 priorityLinkButtons.story = { name: "priority link buttons" }
-
-export const textAndIconLinkButtons = () => (
-	<div css={flexStart}>
-		{textIconLinkButtons.map((button, index) => (
-			<div key={index}>{button}</div>
-		))}
-	</div>
-)
-textAndIconLinkButtons.story = { name: "text and icon link buttons" }
