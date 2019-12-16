@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { size, transitions } from "@guardian/src-foundations"
+import { size, space, transitions } from "@guardian/src-foundations"
 import { buttonLight, ButtonTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -115,4 +115,17 @@ export const iconOnlyDefault = css`
 export const iconOnlySmall = css`
 	width: ${size.medium}px;
 	justify-content: center;
+`
+
+export const iconNudgeAnimation = css`
+	svg {
+		transform: translate(0, 0);
+		transition: ${transitions.short};
+	}
+	&:hover,
+	&:focus {
+		svg {
+			transform: translate(${space[1] / 2}px, 0);
+		}
+	}
 `

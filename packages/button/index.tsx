@@ -12,6 +12,7 @@ import {
 	iconRight,
 	iconOnlyDefault,
 	iconOnlySmall,
+	iconNudgeAnimation,
 } from "./styles"
 import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
@@ -110,10 +111,6 @@ const LinkButton = ({
 	href: string
 	children?: ReactNode
 }) => {
-	const buttonContents = [children].concat([
-		React.cloneElement(<SvgArrowRightStraight />, { key: "svg" }),
-	])
-
 	return (
 		<a
 			css={theme => [
@@ -123,10 +120,12 @@ const LinkButton = ({
 				iconSizes[size],
 				children ? iconSides.right : "",
 				!children ? iconOnlySizes[size] : "",
+				iconNudgeAnimation,
 			]}
 			{...props}
 		>
-			{buttonContents}
+			{children}
+			<SvgArrowRightStraight />
 		</a>
 	)
 }
