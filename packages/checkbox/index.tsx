@@ -20,18 +20,12 @@ const CheckboxGroup = ({
 }: {
 	name: string
 	error?: boolean | string
-	children: ReactNode
+	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
 		<div css={group} {...props}>
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
-				if (!React.isValidElement(child)) {
-					// Consumer is probably passing a text node as a child
-					// TODO: Pass error to terminal
-					return <div />
-				}
-
 				return React.cloneElement(
 					child,
 					Object.assign(error ? { error: true } : {}, {
