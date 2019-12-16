@@ -5,7 +5,7 @@ import {
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
 import { SvgCheckmark, SvgClose } from "@guardian/src-svgs"
-import { size } from "@guardian/src-foundations"
+import { size, space } from "@guardian/src-foundations"
 import {
 	Button,
 	LinkButton,
@@ -44,6 +44,14 @@ const iconButtons = [
 const linkButtons = [
 	<LinkButton href="#">Primary</LinkButton>,
 	<LinkButton href="#" priority="secondary">
+		Secondary
+	</LinkButton>,
+]
+const iconLinkButtons = [
+	<LinkButton href="#" showIcon={true}>
+		Primary
+	</LinkButton>,
+	<LinkButton href="#" showIcon={true} priority="secondary">
 		Secondary
 	</LinkButton>,
 ]
@@ -218,11 +226,26 @@ iconOnly.story = {
 	name: "icon only",
 }
 
+const spacer = css`
+	margin-bottom: ${space[3]}px;
+`
+
 export const priorityLinkButtons = () => (
-	<div css={flexStart}>
-		{linkButtons.map((button, index) => (
-			<div key={index}>{button}</div>
-		))}
-	</div>
+	<>
+		<div css={spacer}>
+			<div css={flexStart}>
+				{linkButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</div>
+		<div css={spacer}>
+			<div css={flexStart}>
+				{iconLinkButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</div>
+	</>
 )
 priorityLinkButtons.story = { name: "priority link buttons" }
