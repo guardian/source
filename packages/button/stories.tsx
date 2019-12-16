@@ -32,6 +32,9 @@ const textIconButtons = [
 	<Button iconSide="right" icon={<SvgCheckmark />}>
 		Icon to the right
 	</Button>,
+	<LinkButton href="#" showIcon={true}>
+		Link button with an arrow icon
+	</LinkButton>,
 ]
 const iconButtons = [
 	<Button icon={<SvgClose />} aria-label="Dismiss the subscribe banner" />,
