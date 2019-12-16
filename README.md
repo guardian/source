@@ -14,7 +14,7 @@ Check out our [Getting Started guide](https://zeroheight.com/2a1e5182b/p/876251)
 We welcome contributions to the Source Design System! Before you begin, please read our
 [Contributing Guidelines](https://github.com/guardian/source-components/tree/master/CONTRIBUTING.md)
 
-We also have a chat room (internal) at [Digital/Design System Team 📐](https://chat.google.com/room/AAAA1vmbCh8).
+We also have a chat room (internal) at [Digital/Design system 👩‍🎨](https://chat.google.com/room/AAAAGDIhXQs).
 
 ### Install
 
