@@ -4,11 +4,7 @@ import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
 } from "@guardian/src-helpers"
-import {
-	SvgCheckmark,
-	SvgArrowRightStraight,
-	SvgClose,
-} from "@guardian/src-svgs"
+import { SvgCheckmark, SvgClose } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import {
 	Button,
@@ -32,9 +28,9 @@ const sizeButtons = [
 	<Button size="small">Small</Button>,
 ]
 const textIconButtons = [
-	<Button icon={<SvgCheckmark />}>Left aligned</Button>,
+	<Button icon={<SvgCheckmark />}>Icon to the left</Button>,
 	<Button iconSide="right" icon={<SvgCheckmark />}>
-		Right aligned
+		Icon to the right
 	</Button>,
 ]
 const iconButtons = [
@@ -50,14 +46,9 @@ const linkButtons = [
 	<LinkButton href="#" priority="secondary">
 		Secondary
 	</LinkButton>,
-	<LinkButton href="#" priority="tertiary">
-		Tertiary
-	</LinkButton>,
 ]
 const textIconLinkButtons = [
-	<LinkButton href="#" icon={<SvgArrowRightStraight />}>
-		Right aligned
-	</LinkButton>,
+	<LinkButton href="#">Link styled as a button</LinkButton>,
 ]
 /* eslint-enable react/jsx-key */
 
