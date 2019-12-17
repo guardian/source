@@ -68,27 +68,6 @@ export const checkbox = css`
 	*/
 	@supports (appearance: none) {
 		appearance: none;
-
-		&:after {
-			position: absolute;
-			content: "";
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			transform: scale(0);
-			transform-origin: center;
-			transition: transform ${transitions.short};
-		}
-
-		&:checked {
-			& ~ span:before {
-				right: 0;
-			}
-			& ~ span:after {
-				top: 0;
-			}
-		}
 	}
 `
 
