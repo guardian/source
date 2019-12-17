@@ -66,11 +66,13 @@ const Checkbox = ({
 	value,
 	supporting,
 	error,
+	isIndeterminate,
 	...props
 }: {
 	label: string
 	value: string
 	supporting?: string
+	isIndeterminate: boolean
 	error: boolean
 }) => {
 	return (
@@ -79,6 +81,11 @@ const Checkbox = ({
 				css={[checkbox, error ? errorCheckbox : ""]}
 				value={value}
 				aria-invalid={error}
+				ref={el => {
+					if (el) {
+						el.indeterminate = isIndeterminate
+					}
+				}}
 				{...props}
 			/>
 			<span css={[tick, supporting ? tickWithSupportingText : ""]} />
@@ -101,6 +108,7 @@ const checkboxDefaultProps = {
 	type: "checkbox",
 	defaultChecked: false,
 	error: false,
+	isIndeterminate: false,
 }
 
 Checkbox.defaultProps = { ...checkboxDefaultProps }
