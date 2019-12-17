@@ -42,9 +42,9 @@ Gets passed as the name attribute for each checkbox
 
 ### `error`
 
-**`boolean | string`**
+**`string`**
 
-Whether error styling should apply to this group. If a string is passed, this appears as an inline error message
+If passed, error styling should applies to this checkbox group. The string appears as an inline error message.
 
 ## `Checkbox` Props
 
