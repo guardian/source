@@ -46,7 +46,7 @@ export const checkbox = css`
 	color: ${palette.border.checkbox};
 
 	&:checked {
-		border-color: ${palette.border.checkboxChecked};
+		border: 2px solid ${palette.border.checkboxChecked};
 
 		& ~ span:before {
 			right: 0;

@@ -20,7 +20,7 @@ const CheckboxGroup = ({
 	...props
 }: {
 	name: string
-	error?: boolean | string
+	error?: string
 	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
@@ -71,7 +71,7 @@ const Checkbox = ({
 	label: string
 	value: string
 	supporting?: string
-	error?: boolean
+	error: boolean
 }) => {
 	return (
 		<label css={[label, supporting ? labelWithSupportingText : ""]}>
@@ -100,6 +100,7 @@ const checkboxDefaultProps = {
 	disabled: false,
 	type: "checkbox",
 	defaultChecked: false,
+	error: false,
 }
 
 Checkbox.defaultProps = { ...checkboxDefaultProps }
