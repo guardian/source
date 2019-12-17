@@ -45,29 +45,34 @@ export const checkbox = css`
 
 	color: ${palette.border.checkbox};
 
-	&:checked {
-		border: 2px solid ${palette.border.checkboxChecked};
-
-		& ~ span:before {
-			right: 0;
-		}
-		& ~ span:after {
-			top: 0;
-		}
-	}
-
 	&:focus {
 		${focusHalo};
 	}
 
-	/*
-	Take care: Emotion extracts @supports blocks and moves them below
-	all other <style> elements, making these values hard to override.
-	I have chosen to keep these styles in the @supports block as
-	moving them out makes checkboxes look horrible on older browsers
-	*/
 	@supports (appearance: none) {
 		appearance: none;
+		&:checked {
+			border: 2px solid ${palette.border.checkboxChecked};
+
+			& ~ span:before {
+				right: 0;
+			}
+			& ~ span:after {
+				top: 0;
+			}
+		}
+
+		&:indeterminate {
+			&:after {
+				${textSans.xlarge()};
+				color: ${palette.text.secondary};
+				content: "-";
+				position: absolute;
+				top: -10px;
+				left: 5px;
+				z-index: 5;
+			}
+		}
 	}
 `
 
