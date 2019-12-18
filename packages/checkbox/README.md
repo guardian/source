@@ -59,3 +59,9 @@ Appears to the right of the checkbox
 **`string`**
 
 Additional text that appears below the label
+
+### `isIndeterminate`
+
+**`boolean`**
+
+Whether checkbox is in an indeterminate ("mixed") state
