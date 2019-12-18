@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import {
-	group,
+	fieldset,
 	label,
 	labelWithSupportingText,
 	radio,
@@ -34,7 +34,7 @@ const RadioGroup = ({
 	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
-		<div css={[group, orientationStyles[orientation]]} {...props}>
+		<fieldset css={[fieldset, orientationStyles[orientation]]} {...props}>
 			{error && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				return React.cloneElement(
@@ -44,7 +44,7 @@ const RadioGroup = ({
 					}),
 				)
 			})}
-		</div>
+		</fieldset>
 	)
 }
 
