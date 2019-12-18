@@ -95,7 +95,7 @@ export const labelTextWithSupportingText = css`
 export const supportingText = ({
 	radio,
 }: { radio: RadioTheme } = radioLight) => css`
-	${textSans.medium()};
+	${textSans.small()};
 	color: ${radio.textSupporting};
 `
 
