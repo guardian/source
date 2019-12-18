@@ -79,4 +79,18 @@ errorLight.story = {
 	name: "error light",
 }
 
-export { defaultLight, supportingTextLight, errorLight }
+const indeterminateLight = () => (
+	<CheckboxGroup name="emails">
+		<Checkbox
+			isIndeterminate={true}
+			value="emails-select-all"
+			label="Select all"
+		/>
+	</CheckboxGroup>
+)
+
+indeterminateLight.story = {
+	name: "indeterminate light",
+}
+
+export { defaultLight, supportingTextLight, errorLight, indeterminateLight }
