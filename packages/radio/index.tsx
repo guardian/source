@@ -33,8 +33,11 @@ const RadioGroup = ({
 	error?: string
 	children: JSX.Element | JSX.Element[]
 }) => {
+	// TODO: This is currently a div instead of a fieldset due to a Chrome / Safari
+	// bug that prevents flexbox model working on fieldset elements
+	// https://bugs.chromium.org/p/chromium/issues/detail?id=375693
 	return (
-		<fieldset css={[fieldset, orientationStyles[orientation]]} {...props}>
+		<div css={[fieldset, orientationStyles[orientation]]} {...props}>
 			{error && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				return React.cloneElement(
@@ -44,7 +47,7 @@ const RadioGroup = ({
 					}),
 				)
 			})}
-		</fieldset>
+		</div>
 	)
 }
 
