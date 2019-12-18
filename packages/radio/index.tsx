@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import {
-	group,
+	fieldset,
 	label,
 	labelWithSupportingText,
 	radio,
@@ -30,19 +30,13 @@ const RadioGroup = ({
 }: {
 	name: string
 	orientation: Orientation
-	error?: boolean | string
-	children: ReactNode
+	error?: string
+	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
-		<div css={[group, orientationStyles[orientation]]} {...props}>
-			{typeof error === "string" && <InlineError>{error}</InlineError>}
+		<fieldset css={[fieldset, orientationStyles[orientation]]} {...props}>
+			{error && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
-				if (!React.isValidElement(child)) {
-					// Consumer is probably passing a text node as a child
-					// TODO: Pass error to terminal
-					return <div />
-				}
-
 				return React.cloneElement(
 					child,
 					Object.assign(error ? { error: true } : {}, {
@@ -50,7 +44,7 @@ const RadioGroup = ({
 					}),
 				)
 			})}
-		</div>
+		</fieldset>
 	)
 }
 
@@ -91,7 +85,7 @@ const Radio = ({
 	label: string
 	value: string
 	supporting?: string
-	error?: boolean
+	error: boolean
 }) => {
 	return (
 		<label
@@ -130,6 +124,7 @@ const radioDefaultProps = {
 	disabled: false,
 	type: "radio",
 	defaultChecked: false,
+	error: false,
 }
 
 Radio.defaultProps = { ...radioDefaultProps }

@@ -44,9 +44,9 @@ The direction in which radio buttons are stacked
 
 ### `error`
 
-**`boolean | string`**
+**`string`**
 
-Whether error styling should apply to this group. If a string is passed, this appears as an inline error message
+If passed, error styling should applies to this radio group. The string appears as an inline error message.
 
 ## `Radio` Props
 

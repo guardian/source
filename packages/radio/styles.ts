@@ -4,9 +4,10 @@ import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { RadioTheme, radioLight } from "@guardian/src-foundations/themes"
 
-export const group = css`
+export const fieldset = css`
 	display: flex;
 	justify-content: flex-start;
+	border: 0;
 `
 
 export const label = ({ radio }: { radio: RadioTheme } = radioLight) => css`
@@ -94,7 +95,7 @@ export const labelTextWithSupportingText = css`
 export const supportingText = ({
 	radio,
 }: { radio: RadioTheme } = radioLight) => css`
-	${textSans.medium()};
+	${textSans.small()};
 	color: ${radio.textSupporting};
 `
 
