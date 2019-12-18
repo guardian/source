@@ -29,6 +29,7 @@ export const labelWithSupportingText = css`
 `
 
 export const radio = ({ radio }: { radio: RadioTheme } = radioLight) => css`
+	flex: 0 0 auto;
 	cursor: pointer;
 	box-sizing: border-box;
 	display: inline-block;
