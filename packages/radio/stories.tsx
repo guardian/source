@@ -1,4 +1,5 @@
 import React from "react"
+import { css } from "@emotion/core"
 import {
 	storybookBackgrounds,
 	WithBackgroundToggle,
@@ -88,6 +89,10 @@ const [verticalLight, verticalBlue] = appearances.map(
 	},
 )
 
+const narrow = css`
+	width: 30rem;
+`
+
 const [supportingTextLight, supportingTextBlue] = appearances.map(
 	(appearance: { name: Appearance; theme: {} }) => {
 		const story = () => (
@@ -98,11 +103,13 @@ const [supportingTextLight, supportingTextBlue] = appearances.map(
 				selectedValue={appearance.name}
 			>
 				<ThemeProvider theme={appearance.theme}>
-					<RadioGroup name="payment-options">
-						{radiosWithSupportingText.map((radio, index) =>
-							React.cloneElement(radio, { key: index }),
-						)}
-					</RadioGroup>
+					<div css={narrow}>
+						<RadioGroup name="payment-options">
+							{radiosWithSupportingText.map((radio, index) =>
+								React.cloneElement(radio, { key: index }),
+							)}
+						</RadioGroup>
+					</div>
 				</ThemeProvider>
 			</WithBackgroundToggle>
 		)
