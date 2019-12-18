@@ -30,12 +30,12 @@ const RadioGroup = ({
 }: {
 	name: string
 	orientation: Orientation
-	error?: boolean | string
+	error?: string
 	children: JSX.Element | JSX.Element[]
 }) => {
 	return (
 		<div css={[group, orientationStyles[orientation]]} {...props}>
-			{typeof error === "string" && <InlineError>{error}</InlineError>}
+			{error && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				return React.cloneElement(
 					child,
@@ -85,7 +85,7 @@ const Radio = ({
 	label: string
 	value: string
 	supporting?: string
-	error?: boolean
+	error: boolean
 }) => {
 	return (
 		<label
@@ -124,6 +124,7 @@ const radioDefaultProps = {
 	disabled: false,
 	type: "radio",
 	defaultChecked: false,
+	error: false,
 }
 
 Radio.defaultProps = { ...radioDefaultProps }
