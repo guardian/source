@@ -114,7 +114,7 @@ const background = {
 	ctaPrimaryHover: "#234B8A",
 	ctaSecondary: brand.faded,
 	ctaSecondaryHover: "#ACC9F7",
-	radioChecked: brand.main,
+	radioChecked: brand.bright,
 	checkboxChecked: brand.bright,
 	mono: {
 		primary: neutral[7],
@@ -159,15 +159,15 @@ const border = {
 	error: error.main,
 	focusHalo: sport.bright,
 	radio: neutral[60],
-	radioHover: brand.main,
+	radioHover: brand.bright,
 	textInput: neutral[60],
 	checkbox: neutral[60],
 	checkboxHover: brand.bright,
 	checkboxChecked: brand.bright,
 	brand: {
 		error: error.bright,
-		radio: neutral[100],
-		radioHover: brand.faded,
+		radio: brand.faded,
+		radioHover: neutral[100],
 	},
 	readerRevenue: {
 		ctaSecondary: brandYellow.main,
