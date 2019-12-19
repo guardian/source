@@ -34,8 +34,8 @@ export const radioBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		borderHover: palette.border.radioHover,
-		border: palette.border.radio,
+		borderHover: palette.border.brand.radioHover,
+		border: palette.border.brand.radio,
 		backgroundChecked: palette.background.brand.radioChecked,
 		text: palette.text.brand.primary,
 		textSupporting: palette.text.brand.secondary,
