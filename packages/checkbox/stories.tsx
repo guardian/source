@@ -28,7 +28,13 @@ const checkboxesWithSupportingText = [
 	<Checkbox
 		value="events"
 		label="Events & Masterclasses"
-		supporting="Learn from leading minds at our Guardian live events, including discussions and debates, courses and training"
+		supporting={
+			<>
+				Learn from leading minds at our{" "}
+				<strong>Guardian live events</strong>, including discussions and
+				debates, courses and training
+			</>
+		}
 	/>,
 ]
 /* eslint-enable react/jsx-key */

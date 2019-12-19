@@ -72,7 +72,7 @@ const Checkbox = ({
 }: {
 	label: string
 	value: string
-	supporting?: string
+	supporting?: ReactNode
 	isIndeterminate: boolean
 	defaultChecked: boolean
 	error: boolean
