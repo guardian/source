@@ -29,7 +29,12 @@ const radiosWithSupportingText = [
 	<Radio
 		value="annual"
 		label="Annual"
-		supporting="Subscribe for 12 months and save 10% £135 for 1 year then standard rate (£150 every year)"
+		supporting={
+			<>
+				Subscribe for <strong>12 months</strong> and save 10% £135 for 1
+				year then standard rate (£150 every year)
+			</>
+		}
 	/>,
 ]
 const unselectedRadios = [

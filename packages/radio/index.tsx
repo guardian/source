@@ -87,7 +87,7 @@ const Radio = ({
 }: {
 	label: string
 	value: string
-	supporting?: string
+	supporting?: ReactNode
 	error: boolean
 }) => {
 	return (
