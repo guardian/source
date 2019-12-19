@@ -30,7 +30,9 @@ const checkboxesWithSupportingText = [
 		label="Events & Masterclasses"
 		supporting={
 			<>
-			Learn from leading minds at our <a href="https://membership.theguardian.com/events">Guardian live events</a>, including discussions and debates, courses and training
+				Learn from leading minds at our{" "}
+				<strong>Guardian live events</strong>, including discussions and
+				debates, courses and training
 			</>
 		}
 	/>,

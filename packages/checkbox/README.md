@@ -25,7 +25,11 @@ const Form = () => (
             <Checkbox
                 value="today-us"
                 label="Guardian Today: US"
-                supporting="Cut through the noise. Get straight to the heart of the day’s breaking news in double-quick time."
+                supporting={
+                    <>
+                        <strong>Cut through the noise.</strong> Get straight to the heart of the day’s breaking news in double-quick time.
+                    </>
+                }
             />
         </CheckboxGroup>
     </form>
@@ -56,9 +60,9 @@ Appears to the right of the checkbox
 
 ### `supporting`
 
-**`string`**
+**`ReactNode`**
 
-Additional text that appears below the label
+Additional text or a component that appears below the label
 
 ### `isIndeterminate`
 
