@@ -58,6 +58,6 @@ Appears to the right of the radio button
 
 ### `supporting`
 
-**`string`**
+**`ReactNode`**
 
-Additional text that appears below the label
+Additional text or a component that appears below the label
