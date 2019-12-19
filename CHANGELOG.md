@@ -5,6 +5,50 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 19th December 2019
+
+### `@guardian/src-foundations 0.10.0`
+
+-   :boom: [#122](https://github.com/guardian/source-components/pull/122) Make loose line height 1.5x font size
+-   :boom: [#115](https://github.com/guardian/source-components/pull/115) Remove deprecated colours from palette (yellow, darkMode)
+-   [#121](https://github.com/guardian/source-components/pull/121) Expose typography types
+-   [#125](https://github.com/guardian/source-components/pull/125) Remove output CSS from foundations readme
+-   [#116](https://github.com/guardian/source-components/pull/116) Add repo to package info
+-   Bump: `@guardian/src-inline-error 0.5.0`
+
+### `@guardian/src-button 0.6.0`
+
+-   [#120](https://github.com/guardian/source-components/pull/120) Fix type warnings for button
+-   :boom: [#126](https://github.com/guardian/source-components/pull/126) Slim down link button API
+-   [#127](https://github.com/guardian/source-components/pull/127) Add icon nudge animation to link button
+-   [#128](https://github.com/guardian/source-components/pull/128) Hide link button icon by default
+-   [#129](https://github.com/guardian/source-components/pull/129) Add link button with icon to text icon story
+
+### `@guardian/src-grid 0.1.0`
+
+-   [#113](https://github.com/guardian/source-components/pull/113) Add Grid component
+-   [#117](https://github.com/guardian/source-components/pull/117) Grid API refinements
+-   [#118](https://github.com/guardian/source-components/pull/118) Add support for IE10 and IE11 to grid
+-   [#124](https://github.com/guardian/source-components/pull/124) Grid improvements
+
+### `@guardian/src-radio 0.5.0`
+
+-   [#123](https://github.com/guardian/source-components/pull/123) Externalise src-foundations dependencies
+-   [#134](https://github.com/guardian/source-components/pull/134) Radio: better styles, better types, better markup
+-   [#135](https://github.com/guardian/source-components/pull/135) Render radio group as div instead of fieldset
+-   [#136](https://github.com/guardian/source-components/pull/136) Support narrow width radio group
+
+### `@guardian/src-checkbox 0.2.0`
+
+-   [#130](https://github.com/guardian/source-components/pull/130) Checkbox: supporting text
+-   [#131](https://github.com/guardian/source-components/pull/131) Prevent checkboxes from growing in wide containers
+-   [#132](https://github.com/guardian/source-components/pull/132) Checkbox: error state and message
+-   [#133](https://github.com/guardian/source-components/pull/133) Checkbox: indeterminate state
+
+### `@guardian/src-text-input 0.6.0`
+
+-   [#119](https://github.com/guardian/source-components/pull/119) Fix type warnings for text input
+
 ## 11th December 2019
 
 ### `@guardian/src-button 0.5.1`
@@ -13,7 +57,7 @@
 
 ## 9th December 2019
 
-### `@guardian/src-foundations 0.8.0`
+### `@guardian/src-foundations 0.9.0`
 
 -   [#101](https://github.com/guardian/source-components/pull/101) Add border colours to foundations
 -   [#104](https://github.com/guardian/source-components/pull/104) Apply new button hover colours

@@ -1,12 +1,12 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "0.9.0",
+	"version": "0.10.0",
 	"main": "foundations.js",
 	"module": "foundations.esm.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/guardian/source-components.git"
-  },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/guardian/source-components.git"
+	},
 	"scripts": {
 		"build": "yarn clean && tsc && rollup --config",
 		"watch": "rollup --config --watch",
