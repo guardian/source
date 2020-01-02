@@ -8,6 +8,8 @@ export const fieldset = css`
 	justify-content: flex-start;
 	flex-direction: column;
 	border: 0;
+	padding: 0;
+	margin: 0;
 `
 
 export const label = css`
