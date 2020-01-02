@@ -52,7 +52,7 @@ If passed, error styling should applies to this radio group. The string appears 
 
 ### `label`
 
-**`string`**
+**`ReactNode`**
 
 Appears to the right of the radio button
 
