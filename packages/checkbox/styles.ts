@@ -88,7 +88,7 @@ export const labelTextWithSupportingText = css`
 `
 
 export const supportingText = css`
-	${textSans.small()};
+	${textSans.small({ lineHeight: "regular" })};
 	color: ${palette.text.secondary};
 `
 
