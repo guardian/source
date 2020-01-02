@@ -14,7 +14,7 @@ export const label = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	height: ${size.large}px;
+	min-height: ${size.large}px;
 
 	&:hover {
 		input {
@@ -25,7 +25,7 @@ export const label = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 
 export const labelWithSupportingText = css`
 	align-items: flex-start;
-	margin-bottom: ${space[2]}px;
+	margin-bottom: ${space[5]}px;
 `
 
 export const radio = ({ radio }: { radio: RadioTheme } = radioLight) => css`
@@ -96,7 +96,7 @@ export const labelTextWithSupportingText = css`
 export const supportingText = ({
 	radio,
 }: { radio: RadioTheme } = radioLight) => css`
-	${textSans.small()};
+	${textSans.small({ lineHeight: "regular" })};
 	color: ${radio.textSupporting};
 `
 
@@ -104,7 +104,7 @@ export const horizontal = css`
 	flex-direction: row;
 
 	label {
-		margin-right: ${space[2]}px;
+		margin-right: ${space[5]}px;
 	}
 `
 export const vertical = css`
