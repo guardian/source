@@ -70,7 +70,7 @@ const Checkbox = ({
 	defaultChecked,
 	...props
 }: {
-	label: string
+	label: ReactNode
 	value: string
 	supporting?: ReactNode
 	isIndeterminate: boolean
