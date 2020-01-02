@@ -38,7 +38,7 @@ export const checkbox = css`
 	cursor: pointer;
 	width: ${size.small}px;
 	height: ${size.small}px;
-	margin: 0 ${space[1]}px 0 0;
+	margin: 0 ${space[2]}px 0 0;
 
 	border: 2px solid currentColor;
 	position: relative;
