@@ -21,6 +21,12 @@ const radiosWithSupportingText = [
 		supporting="£6 for the first 6 issues (then £37.50 every quarter)"
 	/>,
 	<Radio
+		value="quarterly"
+		label="Quarterly"
+		supporting="£37.50 every quarter"
+		defaultChecked
+	/>,
+	<Radio
 		value="annual"
 		label="Annual"
 		supporting={
@@ -29,12 +35,6 @@ const radiosWithSupportingText = [
 				year then standard rate (£150 every year)
 			</>
 		}
-	/>,
-	<Radio
-		value="quarterly"
-		label="Quarterly"
-		supporting="£37.50 every quarter"
-		defaultChecked
 	/>,
 ]
 const unselectedRadios = [
