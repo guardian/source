@@ -27,7 +27,9 @@ const Form = () => (
                 label="Guardian Today: US"
                 supporting={
                     <>
-                        <strong>Cut through the noise.</strong> Get straight to the heart of the day’s breaking news in double-quick time.
+                        <strong>Cut through the noise.</strong> Get straight to
+                        the heart of the day’s breaking news in double-quick
+                        time.
                     </>
                 }
             />
@@ -54,7 +56,7 @@ If passed, error styling should applies to this checkbox group. The string appea
 
 ### `label`
 
-**`string`**
+**`ReactNode`**
 
 Appears to the right of the checkbox
 
