@@ -113,24 +113,15 @@ const selectAll = () => {
 		event: ChangeEvent<HTMLInputElement>,
 		pos: number,
 	) => {
-		if (event.target.checked) {
-			const newChecked = checked.slice()
-			newChecked[pos] = true
-			setCheckCount(newChecked)
-		} else {
-			const newChecked = checked.slice()
-			newChecked[pos] = false
-			setCheckCount(newChecked)
-		}
+		const newChecked = checked.slice()
+
+		newChecked[pos] = event.target.checked
+		setCheckCount(newChecked)
 	}
 	const handleMasterCheckboxClick = (
 		event: ChangeEvent<HTMLInputElement>,
 	) => {
-		if (event.target.checked) {
-			setCheckCount(checkboxData.map(() => true))
-		} else {
-			setCheckCount(checkboxData.map(() => false))
-		}
+		setCheckCount(checkboxData.map(() => event.target.checked))
 	}
 	/* eslint-disable react/jsx-key */
 	const selectableCheckboxes = checkboxData.map(({ label, value }, index) => (
