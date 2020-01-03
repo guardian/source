@@ -98,7 +98,17 @@ indeterminateLight.story = {
 }
 
 const selectAll = () => {
-	const [checked, setCheckCount] = useState([false, false])
+	const checkboxData = [
+		{
+			label: "Guardian Today: UK",
+			value: "today_uk",
+		},
+		{
+			label: "Guardian Today: US",
+			value: "today_us",
+		},
+	]
+	const [checked, setCheckCount] = useState(checkboxData.map(() => false))
 	const handleCheckboxClick = (
 		event: ChangeEvent<HTMLInputElement>,
 		pos: number,
@@ -117,26 +127,20 @@ const selectAll = () => {
 		event: ChangeEvent<HTMLInputElement>,
 	) => {
 		if (event.target.checked) {
-			setCheckCount([true, true])
+			setCheckCount(checkboxData.map(() => true))
 		} else {
-			setCheckCount([false, false])
+			setCheckCount(checkboxData.map(() => false))
 		}
 	}
 	/* eslint-disable react/jsx-key */
-	const selectableCheckboxes = [
+	const selectableCheckboxes = checkboxData.map(({ label, value }, index) => (
 		<Checkbox
-			label="Guardian Today: UK"
-			value="today_uk"
-			onChange={event => handleCheckboxClick(event, 0)}
-			checked={checked[0] === true}
-		/>,
-		<Checkbox
-			label="Guardian Today: US"
-			value="today_us"
-			onChange={event => handleCheckboxClick(event, 1)}
-			checked={checked[1] === true}
-		/>,
-	]
+			label={label}
+			value={value}
+			onChange={event => handleCheckboxClick(event, index)}
+			checked={checked[index] === true}
+		/>
+	))
 	/* eslint-enable react/jsx-key */
 	const checkedCount = () =>
 		checked.reduce((acc, curr) => (curr ? ++acc : acc), 0)
@@ -144,8 +148,11 @@ const selectAll = () => {
 	return (
 		<>
 			<Checkbox
-				indeterminate={checkedCount() > 0 && checkedCount() < 2}
-				checked={checkedCount() === 2}
+				indeterminate={
+					checkedCount() > 0 &&
+					checkedCount() < selectableCheckboxes.length
+				}
+				checked={checkedCount() === selectableCheckboxes.length}
 				value="select-all"
 				label={<strong>Select all</strong>}
 				onChange={event => handleMasterCheckboxClick(event)}
