@@ -98,21 +98,7 @@ indeterminateLight.story = {
 }
 
 const selectAll = () => {
-	let [checked, setCheckCount] = useState([false, false])
-	const selectableCheckboxes = [
-		<Checkbox
-			label="Guardian Today: UK"
-			value="today_uk"
-			onChange={event => handleCheckboxClick(event, 0)}
-			checked={checked[0] === true}
-		/>,
-		<Checkbox
-			label="Guardian Today: US"
-			value="today_us"
-			onChange={event => handleCheckboxClick(event, 1)}
-			checked={checked[1] === true}
-		/>,
-	]
+	const [checked, setCheckCount] = useState([false, false])
 	const handleCheckboxClick = (
 		event: ChangeEvent<HTMLInputElement>,
 		pos: number,
@@ -136,6 +122,22 @@ const selectAll = () => {
 			setCheckCount([false, false])
 		}
 	}
+	/* eslint-disable react/jsx-key */
+	const selectableCheckboxes = [
+		<Checkbox
+			label="Guardian Today: UK"
+			value="today_uk"
+			onChange={event => handleCheckboxClick(event, 0)}
+			checked={checked[0] === true}
+		/>,
+		<Checkbox
+			label="Guardian Today: US"
+			value="today_us"
+			onChange={event => handleCheckboxClick(event, 1)}
+			checked={checked[1] === true}
+		/>,
+	]
+	/* eslint-enable react/jsx-key */
 	const checkedCount = () =>
 		checked.reduce((acc, curr) => (curr ? ++acc : acc), 0)
 
@@ -150,7 +152,6 @@ const selectAll = () => {
 			/>
 			<CheckboxGroup name="emails">
 				{selectableCheckboxes.map((checkbox, index) => {
-					console.log("Re-rendering")
 					return React.cloneElement(checkbox, { key: index })
 				})}
 			</CheckboxGroup>
