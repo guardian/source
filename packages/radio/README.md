@@ -20,7 +20,7 @@ const Form = () => (
                 value="no"
                 label="No"
                 supporting="I do not accept the terms"
-                defaultChecked
+                checked={true}
             />
             <Radio value="yes" label="Yes" supporting="I accept the terms" />,
         </RadioGroup>
@@ -61,3 +61,9 @@ Appears to the right of the radio button
 **`ReactNode`**
 
 Additional text or a component that appears below the label
+
+### `checked`
+
+**`boolean`**
+
+Whether radio button is checked

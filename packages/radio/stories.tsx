@@ -11,7 +11,7 @@ import { ThemeProvider } from "emotion-theming"
 /* eslint-disable react/jsx-key */
 const radios = [
 	<Radio value="red" label="Red" />,
-	<Radio value="green" label="Green" defaultChecked />,
+	<Radio value="green" label="Green" checked={true} />,
 	<Radio value="blue" label="Blue" />,
 ]
 const radiosWithSupportingText = [
@@ -24,7 +24,7 @@ const radiosWithSupportingText = [
 		value="quarterly"
 		label="Quarterly"
 		supporting="£37.50 every quarter"
-		defaultChecked
+		checked={true}
 	/>,
 	<Radio
 		value="annual"
@@ -138,7 +138,7 @@ const [supportingTextLight, supportingTextBlue] = appearances.map(
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
 		<Radio value="yes" label="Yes" />
-		<Radio value="no" label="No" defaultChecked />
+		<Radio value="no" label="No" checked={true} />
 	</RadioGroup>
 )
 horizontal.story = {
