@@ -20,7 +20,7 @@ const Form = () => (
                 value="today-uk"
                 label="Guardian Today: UK"
                 supporting="The headlines, the analysis, the debate. Get the whole picture from a source you trust."
-                defaultChecked
+                checked={true}
             />
             <Checkbox
                 value="today-us"
@@ -66,7 +66,13 @@ Appears to the right of the checkbox
 
 Additional text or a component that appears below the label
 
-### `isIndeterminate`
+### `checked`
+
+**`boolean`**
+
+Whether checkbox is checked
+
+### `indeterminate`
 
 **`boolean`**
 

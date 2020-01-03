@@ -23,7 +23,7 @@ const checkboxesWithSupportingText = [
 		value="holidays"
 		label="Holidays & Vacations"
 		supporting="Ideas and inspiration for your next trip away, as well as the latest offers from Guardian Holidays"
-		defaultChecked
+		checked={true}
 	/>,
 	<Checkbox
 		value="events"
@@ -86,13 +86,11 @@ errorLight.story = {
 }
 
 const indeterminateLight = () => (
-	<CheckboxGroup name="emails">
-		<Checkbox
-			isIndeterminate={true}
-			value="emails-select-all"
-			label="Select all"
-		/>
-	</CheckboxGroup>
+	<Checkbox
+		indeterminate={true}
+		value="indeterminate"
+		label="Indeterminate"
+	/>
 )
 
 indeterminateLight.story = {

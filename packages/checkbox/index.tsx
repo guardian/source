@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, ChangeEvent } from "react"
 import {
 	fieldset,
 	label,
@@ -64,26 +64,40 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 const Checkbox = ({
 	label: labelContent,
 	value,
+	checked,
 	supporting,
-	error,
-	isIndeterminate,
 	defaultChecked,
+	error,
+	indeterminate,
 	...props
 }: {
 	label: ReactNode
 	value: string
+	checked?: boolean
 	supporting?: ReactNode
-	isIndeterminate: boolean
 	defaultChecked: boolean
+	indeterminate: boolean
 	error: boolean
+	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
 }) => {
 	const isChecked = (): boolean | "mixed" => {
-		if (isIndeterminate) return "mixed"
+		// Note: the indeterminate prop takes precedence over the checked prop
+		if (indeterminate) {
+			return "mixed"
+		}
+
+		if (checked != null) {
+			return checked
+		}
+
 		return defaultChecked
 	}
-	const setIndeterminate = (el: HTMLInputElement | null): void => {
+	const setCheckboxState = (el: HTMLInputElement | null): void => {
 		if (el) {
-			el.indeterminate = isIndeterminate
+			el.indeterminate = indeterminate
+			if (checked != null) {
+				el.checked = checked
+			}
 		}
 	}
 	return (
@@ -93,8 +107,7 @@ const Checkbox = ({
 				value={value}
 				aria-invalid={error}
 				aria-checked={isChecked()}
-				ref={setIndeterminate}
-				defaultChecked={defaultChecked}
+				ref={setCheckboxState}
 				{...props}
 			/>
 			<span css={[tick, supporting ? tickWithSupportingText : ""]} />
@@ -116,8 +129,8 @@ const checkboxDefaultProps = {
 	disabled: false,
 	type: "checkbox",
 	defaultChecked: false,
+	indeterminate: false,
 	error: false,
-	isIndeterminate: false,
 }
 
 Checkbox.defaultProps = { ...checkboxDefaultProps }
