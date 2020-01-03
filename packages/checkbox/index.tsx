@@ -116,9 +116,10 @@ const Checkbox = ({
 const checkboxDefaultProps = {
 	disabled: false,
 	type: "checkbox",
+	defaultChecked: false,
 	checked: false,
-	error: false,
 	indeterminate: false,
+	error: false,
 }
 
 Checkbox.defaultProps = { ...checkboxDefaultProps }
