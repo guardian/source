@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, ChangeEvent } from "react"
 import { css } from "@emotion/core"
 
 import { CheckboxGroup, Checkbox } from "./index"
@@ -97,4 +97,75 @@ indeterminateLight.story = {
 	name: "indeterminate light",
 }
 
-export { defaultLight, supportingTextLight, errorLight, indeterminateLight }
+const selectAll = () => {
+	let [checked, setCheckCount] = useState([false, false])
+	const selectableCheckboxes = [
+		<Checkbox
+			label="Guardian Today: UK"
+			value="today_uk"
+			onChange={event => handleCheckboxClick(event, 0)}
+			checked={checked[0] === true}
+		/>,
+		<Checkbox
+			label="Guardian Today: US"
+			value="today_us"
+			onChange={event => handleCheckboxClick(event, 1)}
+			checked={checked[1] === true}
+		/>,
+	]
+	const handleCheckboxClick = (
+		event: ChangeEvent<HTMLInputElement>,
+		pos: number,
+	) => {
+		if (event.target.checked) {
+			const newChecked = checked.slice()
+			newChecked[pos] = true
+			setCheckCount(newChecked)
+		} else {
+			const newChecked = checked.slice()
+			newChecked[pos] = false
+			setCheckCount(newChecked)
+		}
+	}
+	const handleMasterCheckboxClick = (
+		event: ChangeEvent<HTMLInputElement>,
+	) => {
+		if (event.target.checked) {
+			setCheckCount([true, true])
+		} else {
+			setCheckCount([false, false])
+		}
+	}
+	const checkedCount = () =>
+		checked.reduce((acc, curr) => (curr ? ++acc : acc), 0)
+
+	return (
+		<>
+			<Checkbox
+				indeterminate={checkedCount() > 0 && checkedCount() < 2}
+				checked={checkedCount() === 2}
+				value="select-all"
+				label={<strong>Select all</strong>}
+				onChange={event => handleMasterCheckboxClick(event)}
+			/>
+			<CheckboxGroup name="emails">
+				{selectableCheckboxes.map((checkbox, index) => {
+					console.log("Re-rendering")
+					return React.cloneElement(checkbox, { key: index })
+				})}
+			</CheckboxGroup>
+		</>
+	)
+}
+
+selectAll.story = {
+	name: "select all",
+}
+
+export {
+	defaultLight,
+	supportingTextLight,
+	errorLight,
+	indeterminateLight,
+	selectAll,
+}
