@@ -66,26 +66,38 @@ const Checkbox = ({
 	value,
 	checked,
 	supporting,
+	defaultChecked,
 	error,
 	indeterminate,
 	...props
 }: {
 	label: ReactNode
 	value: string
-	checked: boolean
+	checked?: boolean
 	supporting?: ReactNode
+	defaultChecked: boolean
 	indeterminate: boolean
 	error: boolean
 	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
 }) => {
 	const isChecked = (): boolean | "mixed" => {
-		if (indeterminate) return "mixed"
-		return checked
+		// Note: the indeterminate prop takes precedence over the checked prop
+		if (indeterminate) {
+			return "mixed"
+		}
+
+		if (checked != null) {
+			return checked
+		}
+
+		return defaultChecked
 	}
 	const setCheckboxState = (el: HTMLInputElement | null): void => {
 		if (el) {
 			el.indeterminate = indeterminate
-			el.checked = checked
+			if (checked != null) {
+				el.checked = checked
+			}
 		}
 	}
 	return (
@@ -117,7 +129,6 @@ const checkboxDefaultProps = {
 	disabled: false,
 	type: "checkbox",
 	defaultChecked: false,
-	checked: false,
 	indeterminate: false,
 	error: false,
 }
