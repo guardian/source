@@ -129,7 +129,7 @@ const selectAll = () => {
 			label={label}
 			value={value}
 			onChange={event => handleCheckboxClick(event, index)}
-			checked={checked[index] === true}
+			checked={checked[index]}
 		/>
 	))
 	/* eslint-enable react/jsx-key */
