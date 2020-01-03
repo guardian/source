@@ -82,14 +82,22 @@ const Radio = ({
 	label: labelContent,
 	value,
 	supporting,
+	checked,
 	error,
 	...props
 }: {
 	label: ReactNode
 	value: string
 	supporting?: ReactNode
+	checked?: boolean
 	error: boolean
 }) => {
+	const setRadioState = (el: HTMLInputElement | null) => {
+		if (el && checked != null) {
+			el.checked = checked
+		}
+	}
+
 	return (
 		<label
 			css={theme => [
@@ -104,6 +112,7 @@ const Radio = ({
 				]}
 				value={value}
 				aria-invalid={error}
+				ref={setRadioState}
 				{...props}
 			/>
 			{supporting ? (
