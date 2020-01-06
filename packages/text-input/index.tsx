@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, ChangeEvent } from "react"
 import { InlineError } from "@guardian/src-inline-error"
 import {
 	widthFluid,
@@ -41,6 +41,8 @@ const TextInput = ({
 	supporting?: string
 	width?: Width
 	error?: string
+	value?: string
+	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
 }) => {
 	return (
 		<label>
