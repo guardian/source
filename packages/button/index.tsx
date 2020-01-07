@@ -72,8 +72,9 @@ const Button = ({
 }: {
 	priority: Priority
 	size: Size
-	icon?: ReactElement
 	iconSide: IconSide
+	icon?: ReactElement
+	tabIndex?: number
 	onClick?: () => void
 	children?: ReactNode
 }) => {
