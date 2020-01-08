@@ -1,9 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
-import {
-	storybookBackgrounds,
-	WithBackgroundToggle,
-} from "@guardian/src-helpers"
+import { storybookBackgrounds } from "@guardian/src-helpers"
 import { RadioGroup, Radio, radioLight, radioBrand } from "./index"
 import { Appearance } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
@@ -62,20 +59,13 @@ const appearances: {
 const [verticalLight, verticalBlue] = appearances.map(
 	(appearance: { name: Appearance; theme: {} }) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="Radio"
-				storyName="vertical"
-				options={appearances.map(a => a.name)}
-				selectedValue={appearance.name}
-			>
-				<ThemeProvider theme={appearance.theme}>
-					<RadioGroup name="colours">
-						{radios.map((radio, index) =>
-							React.cloneElement(radio, { key: index }),
-						)}
-					</RadioGroup>
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={appearance.theme}>
+				<RadioGroup name="colours">
+					{radios.map((radio, index) =>
+						React.cloneElement(radio, { key: index }),
+					)}
+				</RadioGroup>
+			</ThemeProvider>
 		)
 		story.story = {
 			name: `vertical ${appearance.name}`,
@@ -101,22 +91,15 @@ const narrow = css`
 const [supportingTextLight, supportingTextBlue] = appearances.map(
 	(appearance: { name: Appearance; theme: {} }) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="Radio"
-				storyName="supporting text"
-				options={appearances.map(a => a.name)}
-				selectedValue={appearance.name}
-			>
-				<ThemeProvider theme={appearance.theme}>
-					<div css={narrow}>
-						<RadioGroup name="payment-options">
-							{radiosWithSupportingText.map((radio, index) =>
-								React.cloneElement(radio, { key: index }),
-							)}
-						</RadioGroup>
-					</div>
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={appearance.theme}>
+				<div css={narrow}>
+					<RadioGroup name="payment-options">
+						{radiosWithSupportingText.map((radio, index) =>
+							React.cloneElement(radio, { key: index }),
+						)}
+					</RadioGroup>
+				</div>
+			</ThemeProvider>
 		)
 		story.story = {
 			name: `supporting text ${appearance.name}`,
@@ -148,20 +131,13 @@ horizontal.story = {
 const [errorLight, errorBlue] = appearances.map(
 	(appearance: { name: Appearance; theme: {} }) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="Radio"
-				storyName="error"
-				options={appearances.map(a => a.name)}
-				selectedValue={appearance.name}
-			>
-				<ThemeProvider theme={appearance.theme}>
-					<RadioGroup name="colours" error="Please select a colour">
-						{unselectedRadios.map((radio, index) =>
-							React.cloneElement(radio, { key: index }),
-						)}
-					</RadioGroup>
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={appearance.theme}>
+				<RadioGroup name="colours" error="Please select a colour">
+					{unselectedRadios.map((radio, index) =>
+						React.cloneElement(radio, { key: index }),
+					)}
+				</RadioGroup>
+			</ThemeProvider>
 		)
 
 		story.story = {
