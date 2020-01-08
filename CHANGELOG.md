@@ -5,6 +5,40 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 8th January 2020
+
+### `@guardian/src-foundations 0.11.0`
+
+-   [#139](https://github.com/guardian/source-components/pull/139) Radio checked and hover colours
+-   [#140](https://github.com/guardian/source-components/pull/140) Expose all components by theme
+-   Bump: `@guardian/src-inline-error 0.6.0`
+-   Bump: `@guardian/src-grid 0.2.0`
+
+### `@guardian/src-button 0.7.0`
+
+-   [#150](https://github.com/guardian/source-components/pull/150) Add type for tab index
+
+### `@guardian/src-radio 0.6.0`
+
+-   [#138](https://github.com/guardian/source-components/pull/138) Rich supporting content
+-   [#139](https://github.com/guardian/source-components/pull/139) Radio checked and hover colours
+-   [#142](https://github.com/guardian/source-components/pull/142) Label to support rich content
+-   [#143](https://github.com/guardian/source-components/pull/143) Loosen up radio button spacing
+-   [#146](https://github.com/guardian/source-components/pull/146) Support programmatically checking radio buttons
+
+### `@guardian/src-checkbox 0.3.0`
+
+-   [#137](https://github.com/guardian/source-components/pull/137) Rich supporting content
+-   [#141](https://github.com/guardian/source-components/pull/141) Presentational improvements
+-   [#144](https://github.com/guardian/source-components/pull/144) Tighten line-height of checkbox supporting text
+-   [#145](https://github.com/guardian/source-components/pull/145) Better state manipulation
+-   [#147](https://github.com/guardian/source-components/pull/147) Add story demoing select all mechanism
+-   [#149](https://github.com/guardian/source-components/pull/149) Extract checkbox stories into individual modules
+
+### `@guardian/src-text-input 0.7.0`
+
+-   [#148](https://github.com/guardian/source-components/pull/148) Add missing prop types to text-input
+
 ## 19th December 2019
 
 ### `@guardian/src-foundations 0.10.0`
