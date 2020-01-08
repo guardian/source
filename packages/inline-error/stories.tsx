@@ -5,11 +5,7 @@ import {
 	inlineErrorLight,
 	inlineErrorBrand,
 } from "@guardian/src-foundations/themes"
-import {
-	Appearance,
-	WithBackgroundToggle,
-	storybookBackgrounds,
-} from "@guardian/src-helpers"
+import { Appearance, storybookBackgrounds } from "@guardian/src-helpers"
 import { InlineError } from "./index"
 
 export default {
@@ -33,16 +29,9 @@ const [defaultLight, defaultBlue] = appearances.map(
 		theme: { inlineError: InlineErrorTheme }
 	}) => {
 		const story = () => (
-			<WithBackgroundToggle
-				storyKind="InlineError"
-				storyName="default"
-				options={appearances.map(a => a.name)}
-				selectedValue={appearance.name}
-			>
-				<ThemeProvider theme={appearance.theme}>
-					<InlineError>Please enter your name</InlineError>
-				</ThemeProvider>
-			</WithBackgroundToggle>
+			<ThemeProvider theme={appearance.theme}>
+				<InlineError>Please enter your name</InlineError>
+			</ThemeProvider>
 		)
 
 		story.story = {
