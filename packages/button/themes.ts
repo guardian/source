@@ -1,5 +1,5 @@
 import { palette } from "@guardian/src-foundations"
-import { ButtonTheme } from "./index"
+import { ButtonTheme } from "@guardian/src-foundations/themes"
 
 export const buttonReaderRevenue: { button: ButtonTheme } = {
 	button: {

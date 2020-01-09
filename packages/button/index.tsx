@@ -18,7 +18,6 @@ import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
 import { SvgArrowRightStraight } from "@guardian/src-svgs"
 export {
-	ButtonTheme,
 	buttonLight,
 	buttonBrand,
 	buttonBrandYellow,
