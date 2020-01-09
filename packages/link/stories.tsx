@@ -1,7 +1,11 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-svgs"
+import {
+	SvgArrowRightStraight,
+	SvgExternal,
+	SvgChevronLeftSingle,
+} from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Link, linkLight, linkBrandYellow, linkBrand } from "./index"
 import { ThemeProvider } from "emotion-theming"
@@ -13,15 +17,6 @@ const priorityLinks = [
 		Secondary
 	</Link>,
 ]
-
-const textIconLinks = [
-	<Link icon={<SvgArrowRightStraight />} href="#">
-		Icon to the left
-	</Link>,
-	<Link iconSide="right" icon={<SvgCheckmark />} href="#">
-		Icon to the right
-	</Link>,
-]
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -29,7 +24,7 @@ const flexStart = css`
 	flex-direction: row;
 	justify-content: flex-start;
 
-	> div {
+	> * {
 		margin-right: ${size.medium}px;
 	}
 `
@@ -86,12 +81,26 @@ priorityYellow.story = {
 	},
 }
 
+const spacer = css`
+	margin-bottom: 1rem;
+`
+
 export const textAndIcon = () => (
-	<div css={flexStart}>
-		{textIconLinks.map((button, index) => (
-			<div key={index}>{button}</div>
-		))}
-	</div>
+	<>
+		<div css={spacer}>
+			<Link icon={<SvgExternal />} href="#">
+				Terms and conditions
+			</Link>
+		</div>
+		<div css={flexStart}>
+			<Link icon={<SvgChevronLeftSingle />} href="#">
+				Previous
+			</Link>
+			<Link iconSide="right" icon={<SvgArrowRightStraight />} href="#">
+				Next
+			</Link>
+		</div>
+	</>
 )
 textAndIcon.story = {
 	name: "text and icon",
