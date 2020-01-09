@@ -26,6 +26,7 @@
 		"arrow-up-straight.tsx",
 		"checkmark.tsx",
 		"close.tsx",
+		"external.tsx",
 		"minus.tsx",
 		"plus.tsx",
 		"*.d.ts"
