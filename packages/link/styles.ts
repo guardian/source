@@ -1,10 +1,10 @@
 import { css } from "@emotion/core"
-import { space } from "@guardian/src-foundations"
 import { linkLight, LinkTheme } from "@guardian/src-foundations/themes"
-import { textSans } from "@guardian/src-foundations/typography"
+import { textSans, textSansSizes } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
 export const link = css`
+	position: relative;
 	${textSans.medium()};
 	cursor: pointer;
 
@@ -30,24 +30,25 @@ export const secondary = ({ link }: { link: LinkTheme } = linkLight) => css`
 `
 
 export const icon = css`
-	border-bottom: 1px solid currentColor;
-	text-decoration: none;
 	svg {
 		fill: currentColor;
-		position: relative;
+		position: absolute;
+		height: ${textSansSizes.medium}rem;
 		width: auto;
-		height: 17px;
+
+		/* magic number to align the SVG to the text baseline*/
+		bottom: 3px;
 	}
 `
 
 export const iconRight = css`
 	svg {
-		margin-left: ${space[1]}px;
+		right: 0;
 	}
 `
 
 export const iconLeft = css`
 	svg {
-		margin-right: ${space[1]}px;
+		left: 0;
 	}
 `

@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgCheckmark } from "@guardian/src-svgs"
+import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Link, linkLight, linkBrandYellow, linkBrand } from "./index"
 import { ThemeProvider } from "emotion-theming"
@@ -15,7 +15,7 @@ const priorityLinks = [
 ]
 
 const textIconLinks = [
-	<Link icon={<SvgCheckmark />} href="#">
+	<Link icon={<SvgArrowRightStraight />} href="#">
 		Icon to the left
 	</Link>,
 	<Link iconSide="right" icon={<SvgCheckmark />} href="#">
