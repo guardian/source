@@ -37,7 +37,7 @@ export const icon = css`
 		width: auto;
 
 		/* magic number to align the SVG to the text baseline*/
-		bottom: 3px;
+		bottom: 4px;
 	}
 `
 
