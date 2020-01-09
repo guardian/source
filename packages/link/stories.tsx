@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-// import { SvgCheckmark } from "@guardian/src-svgs"
+import { SvgCheckmark } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Link, linkLight, linkBrandYellow, linkBrand } from "./index"
 import { ThemeProvider } from "emotion-theming"
@@ -14,15 +14,14 @@ const priorityLinks = [
 	</Link>,
 ]
 
-// TODO: make icon support better!
-// const textIconLinks = [
-// 	<Link icon={<SvgCheckmark />} href="#">
-// 		Icon to the left
-// 	</Link>,
-// 	<Link iconSide="right" icon={<SvgCheckmark />} href="#">
-// 		Icon to the right
-// 	</Link>,
-// ]
+const textIconLinks = [
+	<Link icon={<SvgCheckmark />} href="#">
+		Icon to the left
+	</Link>,
+	<Link iconSide="right" icon={<SvgCheckmark />} href="#">
+		Icon to the right
+	</Link>,
+]
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -87,14 +86,13 @@ priorityYellow.story = {
 	},
 }
 
-// TODO: make icon support better!
-// export const textAndIcon = () => (
-// 	<div css={flexStart}>
-// 		{textIconLinks.map((button, index) => (
-// 			<div key={index}>{button}</div>
-// 		))}
-// 	</div>
-// )
-// textAndIcon.story = {
-// 	name: "text and icon",
-// }
+export const textAndIcon = () => (
+	<div css={flexStart}>
+		{textIconLinks.map((button, index) => (
+			<div key={index}>{button}</div>
+		))}
+	</div>
+)
+textAndIcon.story = {
+	name: "text and icon",
+}

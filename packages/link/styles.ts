@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { size } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
 import { linkLight, LinkTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -30,25 +30,24 @@ export const secondary = ({ link }: { link: LinkTheme } = linkLight) => css`
 `
 
 export const icon = css`
+	border-bottom: 1px solid currentColor;
+	text-decoration: none;
 	svg {
-		flex: 0 0 auto;
-		display: block;
 		fill: currentColor;
 		position: relative;
-		width: ${size.large / 2}px;
-		height: auto;
+		width: auto;
+		height: 17px;
 	}
 `
 
 export const iconRight = css`
 	svg {
-		margin: 0 ${-size.large / 8}px 0 ${size.large / 4}px;
+		margin-left: ${space[1]}px;
 	}
 `
 
 export const iconLeft = css`
-	flex-direction: row-reverse;
 	svg {
-		margin: 0 ${size.large / 4}px 0 ${-size.large / 8}px;
+		margin-right: ${space[1]}px;
 	}
 `

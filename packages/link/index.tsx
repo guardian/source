@@ -40,7 +40,11 @@ const Link = ({
 	const linkContents = [children]
 
 	if (iconSvg) {
-		linkContents.push(React.cloneElement(iconSvg, { key: "svg" }))
+		if (iconSide === "left") {
+			linkContents.unshift(React.cloneElement(iconSvg, { key: "svg" }))
+		} else {
+			linkContents.push(React.cloneElement(iconSvg, { key: "svg" }))
+		}
 	}
 	return (
 		<a
