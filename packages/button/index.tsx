@@ -21,9 +21,8 @@ export {
 	buttonLight,
 	buttonBrand,
 	buttonBrandYellow,
-	buttonReaderRevenue,
-	buttonReaderRevenueYellow,
 } from "@guardian/src-foundations/themes"
+export { buttonReaderRevenue, buttonReaderRevenueYellow } from "./themes"
 
 export type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"
