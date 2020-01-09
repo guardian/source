@@ -29,6 +29,14 @@ export const secondary = ({ link }: { link: LinkTheme } = linkLight) => css`
 	}
 `
 
+export const subdued = css`
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+`
+
 export const icon = css`
 	svg {
 		fill: currentColor;

@@ -17,6 +17,7 @@ import { SvgArrowRightStraight } from "@guardian/src-svgs"
 const Navigation = () => (
     <Link
         priority="primary"
+        subdued={true}
         icon={<SvgArrowRightStraight />}
         iconSide="right"
         href="/read-more"
@@ -33,6 +34,12 @@ const Navigation = () => (
 **`"primary" | "secondary"`** _= "primary"_
 
 Informs users of how important a link is
+
+### `subdued`
+
+**`boolean`** _= false_
+
+Whether link is subdued (no underline)
 
 ### `icon`
 
