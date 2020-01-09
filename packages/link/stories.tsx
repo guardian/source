@@ -17,6 +17,14 @@ const priorityLinks = [
 		Secondary
 	</Link>,
 ]
+const subduedLinks = [
+	<Link subdued={true} href="#">
+		Primary subdued
+	</Link>,
+	<Link subdued={true} priority="secondary" href="#">
+		Secondary subdued
+	</Link>,
+]
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -84,6 +92,17 @@ priorityYellow.story = {
 const spacer = css`
 	margin-bottom: 1rem;
 `
+
+export const subduedLight = () => (
+	<ThemeProvider theme={linkLight}>
+		<div css={flexStart}>
+			{subduedLinks.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	</ThemeProvider>
+)
+subduedLight.story = { name: "subdued light" }
 
 export const textAndIcon = () => (
 	<>

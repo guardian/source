@@ -1,5 +1,13 @@
 import React, { ReactElement, ReactNode } from "react"
-import { link, primary, secondary, icon, iconRight, iconLeft } from "./styles"
+import {
+	link,
+	primary,
+	secondary,
+	subdued,
+	icon,
+	iconRight,
+	iconLeft,
+} from "./styles"
 import { SerializedStyles } from "@emotion/css"
 import { LinkTheme } from "@guardian/src-foundations/themes"
 export {
@@ -26,12 +34,14 @@ const iconSides: {
 }
 const Link = ({
 	priority,
+	subdued: isSubdued,
 	icon: iconSvg,
 	iconSide,
 	children,
 	...props
 }: {
 	priority: Priority
+	subdued: boolean
 	icon?: ReactElement
 	iconSide: IconSide
 	href: string
@@ -59,6 +69,7 @@ const Link = ({
 			css={theme => [
 				link,
 				priorities[priority](theme.link && theme),
+				isSubdued ? subdued : "",
 				iconSvg ? icon : "",
 				iconSvg ? iconSides[iconSide] : "",
 			]}
@@ -71,6 +82,7 @@ const Link = ({
 
 const defaultLinkProps = {
 	priority: "primary",
+	subdued: false,
 	iconSide: "left",
 }
 
