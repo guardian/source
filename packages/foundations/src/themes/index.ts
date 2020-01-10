@@ -4,13 +4,7 @@ export * from "./link"
 export * from "./radio"
 export * from "./text-input"
 
-import {
-	buttonLight,
-	buttonBrand,
-	buttonBrandYellow,
-	buttonReaderRevenue,
-	buttonReaderRevenueYellow,
-} from "./button"
+import { buttonLight, buttonBrand, buttonBrandYellow } from "./button"
 import { inlineErrorLight, inlineErrorBrand } from "./inline-error"
 import { linkLight, linkBrand, linkBrandYellow } from "./link"
 import { radioLight, radioBrand } from "./radio"
@@ -34,12 +28,4 @@ export const brand = {
 export const brandYellow = {
 	...buttonBrandYellow,
 	...linkBrandYellow,
-}
-
-export const readerRevenue = {
-	...buttonReaderRevenue,
-}
-
-export const readerRevenueYellow = {
-	...buttonReaderRevenueYellow,
 }
