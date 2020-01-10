@@ -77,3 +77,10 @@ Whether checkbox is checked
 **`boolean`**
 
 Whether checkbox is in an indeterminate ("mixed") state
+
+## Supported themes
+
+### Standard
+
+-   `light`
+-   `brand`

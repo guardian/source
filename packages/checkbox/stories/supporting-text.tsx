@@ -1,7 +1,9 @@
 import React from "react"
 import { css } from "@emotion/core"
+import { ThemeProvider } from "emotion-theming"
+import { storybookBackgrounds } from "@guardian/src-helpers"
 
-import { CheckboxGroup, Checkbox } from "../index"
+import { CheckboxGroup, Checkbox, checkboxLight, checkboxBrand } from "../index"
 
 /* eslint-disable react/jsx-key */
 const checkboxesWithSupportingText = [
@@ -36,11 +38,13 @@ const narrow = css`
 
 const supportingTextLight = () => (
 	<div css={narrow}>
-		<CheckboxGroup name="emails">
-			{checkboxesWithSupportingText.map((checkbox, index) =>
-				React.cloneElement(checkbox, { key: index }),
-			)}
-		</CheckboxGroup>
+		<ThemeProvider theme={checkboxLight}>
+			<CheckboxGroup name="emails">
+				{checkboxesWithSupportingText.map((checkbox, index) =>
+					React.cloneElement(checkbox, { key: index }),
+				)}
+			</CheckboxGroup>
+		</ThemeProvider>
 	</div>
 )
 
@@ -48,4 +52,25 @@ supportingTextLight.story = {
 	name: "supporting text light",
 }
 
-export { supportingTextLight }
+const supportingTextBlue = () => (
+	<div css={narrow}>
+		<ThemeProvider theme={checkboxBrand}>
+			<CheckboxGroup name="emails">
+				{checkboxesWithSupportingText.map((checkbox, index) =>
+					React.cloneElement(checkbox, { key: index }),
+				)}
+			</CheckboxGroup>
+		</ThemeProvider>
+	</div>
+)
+
+supportingTextBlue.story = {
+	name: "supporting text blue",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
+		],
+	},
+}
+
+export { supportingTextLight, supportingTextBlue }

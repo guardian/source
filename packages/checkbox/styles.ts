@@ -1,7 +1,8 @@
 import { css } from "@emotion/core"
-import { palette, space, size, transitions } from "@guardian/src-foundations"
+import { space, size, transitions } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
+import { checkboxLight, CheckboxTheme } from "@guardian/src-foundations/themes"
 
 export const fieldset = css`
 	display: flex;
@@ -12,7 +13,9 @@ export const fieldset = css`
 	margin: 0;
 `
 
-export const label = css`
+export const label = ({
+	checkbox,
+}: { checkbox: CheckboxTheme } = checkboxLight) => css`
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -21,7 +24,7 @@ export const label = css`
 
 	&:hover {
 		input {
-			border-color: ${palette.border.checkboxHover};
+			border-color: ${checkbox.borderHover};
 		}
 	}
 `
@@ -31,7 +34,9 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `
 
-export const checkbox = css`
+export const checkbox = ({
+	checkbox,
+}: { checkbox: CheckboxTheme } = checkboxLight) => css`
 	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
@@ -45,7 +50,7 @@ export const checkbox = css`
 	transition: box-shadow ${transitions.short};
 	transition-delay: 0.08s;
 
-	color: ${palette.border.checkbox};
+	color: ${checkbox.border};
 
 	&:focus {
 		${focusHalo};
@@ -54,7 +59,7 @@ export const checkbox = css`
 	@supports (appearance: none) {
 		appearance: none;
 		&:checked {
-			border: 2px solid ${palette.border.checkboxChecked};
+			border: 2px solid ${checkbox.borderChecked};
 
 			& ~ span:before {
 				right: 0;
@@ -67,7 +72,7 @@ export const checkbox = css`
 		&:indeterminate {
 			&:after {
 				${textSans.xlarge()};
-				color: ${palette.text.secondary};
+				color: ${checkbox.textIndeterminate};
 				content: "-";
 				position: absolute;
 				top: -10px;
@@ -78,21 +83,27 @@ export const checkbox = css`
 	}
 `
 
-export const labelText = css`
+export const labelText = ({
+	checkbox,
+}: { checkbox: CheckboxTheme } = checkboxLight) => css`
 	${textSans.medium()};
-	color: ${palette.text.primary};
+	color: ${checkbox.text};
 `
 
 export const labelTextWithSupportingText = css`
 	${textSans.medium()};
 `
 
-export const supportingText = css`
+export const supportingText = ({
+	checkbox,
+}: { checkbox: CheckboxTheme } = checkboxLight) => css`
 	${textSans.small({ lineHeight: "regular" })};
-	color: ${palette.text.secondary};
+	color: ${checkbox.textSupporting};
 `
 
-export const tick = css`
+export const tick = ({
+	checkbox,
+}: { checkbox: CheckboxTheme } = checkboxLight) => css`
 	@supports (appearance: none) {
 		/* overall positional properties */
 		position: absolute;
@@ -108,7 +119,7 @@ export const tick = css`
 		&:before {
 			position: absolute;
 			display: block;
-			background-color: ${palette.background.checkboxChecked};
+			background-color: ${checkbox.backgroundChecked};
 			transition: all ${transitions.short} ease-in-out;
 			content: "";
 		}
@@ -139,6 +150,8 @@ export const tickWithSupportingText = css`
 	}
 `
 
-export const errorCheckbox = css`
-	border: 4px solid ${palette.border.error};
+export const errorCheckbox = ({
+	checkbox,
+}: { checkbox: CheckboxTheme } = checkboxLight) => css`
+	border: 4px solid ${checkbox.borderError};
 `
