@@ -7,9 +7,13 @@ const storybookBackgrounds: {
 		value: string
 	}
 } = {
-	light: { name: "light", value: palette.neutral[100] },
-	brand: { name: "brand", value: palette.brand.main },
-	brandYellow: { name: "brandYellow", value: palette.brandYellow.main },
+	light: { name: "light", value: palette.background.primary },
+	brand: { name: "brand", value: palette.background.brand.primary },
+	brandYellow: {
+		name: "brandYellow",
+		value: palette.background.brandYellow.primary,
+	},
+	mono: { name: "mono", value: palette.background.mono.primary },
 }
 
 Object.freeze(storybookBackgrounds)

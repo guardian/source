@@ -1,1 +1,1 @@
-export type ThemeName = "light" | "brand" | "brandYellow"
+export type ThemeName = "light" | "brand" | "brandYellow" | "mono"
