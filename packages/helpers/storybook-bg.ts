@@ -1,23 +1,15 @@
 import { palette } from "@guardian/src-foundations"
-import { Appearance } from "./types"
+import { ThemeName } from "./types"
 
 const storybookBackgrounds: {
-	[key in Appearance]: {
-		name: string
+	[key in ThemeName]: {
+		name: ThemeName
 		value: string
 	}
 } = {
 	light: { name: "light", value: palette.neutral[100] },
-	blue: { name: "blue", value: palette.brand.main },
-	yellow: { name: "yellow", value: palette.brandYellow.main },
-	"reader revenue blue": {
-		name: "reader revenue blue",
-		value: palette.brand.main,
-	},
-	"reader revenue yellow": {
-		name: "reader revenue yellow",
-		value: palette.brandYellow.main,
-	},
+	brand: { name: "brand", value: palette.brand.main },
+	brandYellow: { name: "brandYellow", value: palette.brandYellow.main },
 }
 
 Object.freeze(storybookBackgrounds)
