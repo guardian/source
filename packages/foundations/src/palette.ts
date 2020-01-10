@@ -80,6 +80,9 @@ const text = {
 	linkPrimaryHover: brand.bright,
 	linkSecondary: neutral[7],
 	linkSecondaryHover: neutral[7],
+	checkbox: neutral[7],
+	checkboxSupporting: neutral[46],
+	checkboxIndeterminate: neutral[46],
 	mono: {
 		primary: neutral[100],
 		secondary: neutral[60],
@@ -100,6 +103,9 @@ const text = {
 		linkPrimaryHover: neutral[100],
 		linkSecondary: neutral[100],
 		linkSecondaryHover: neutral[100],
+		checkbox: neutral[100],
+		checkboxSupporting: brand.faded,
+		checkboxIndeterminate: brand.faded,
 	},
 	brandYellow: {
 		primary: neutral[7],
@@ -134,6 +140,7 @@ const background = {
 		ctaSecondary: brand.pastel,
 		ctaSecondaryHover: "#234B8A",
 		radioChecked: neutral[100],
+		checkboxChecked: neutral[100],
 	},
 	brandYellow: {
 		primary: brandYellow.main,
@@ -154,10 +161,15 @@ const border = {
 	checkbox: neutral[60],
 	checkboxHover: brand.bright,
 	checkboxChecked: brand.bright,
+	checkboxError: error.main,
 	brand: {
 		error: error.bright,
 		radio: brand.faded,
 		radioHover: neutral[100],
+		checkbox: brand.faded,
+		checkboxHover: neutral[100],
+		checkboxChecked: neutral[100],
+		checkboxError: error.bright,
 	},
 }
 
