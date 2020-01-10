@@ -33,6 +33,16 @@ export const linkBrandYellow: { link: LinkTheme } = {
 		textSecondaryHover: palette.text.brandYellow.linkSecondaryHover,
 	},
 }
+
+export const linkMono: { link: LinkTheme } = {
+	link: {
+		textPrimary: palette.text.mono.linkPrimary,
+		textPrimaryHover: palette.text.mono.linkPrimaryHover,
+		textSecondary: palette.text.mono.linkSecondary,
+		textSecondaryHover: palette.text.mono.linkSecondaryHover,
+	},
+}
+
 export const link = {
 	linkLight,
 	linkBrand,
