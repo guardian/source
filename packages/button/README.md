@@ -84,3 +84,16 @@ An icon that appears inside the button, alongside text
 **`"left" | "right"`** _= "left"_
 
 The side of the button on which the icon appears
+
+## Supported themes
+
+### Standard
+
+-   `light`
+-   `brand`
+-   `brandYellow`
+
+### Custom
+
+-   `readerRevenue`
+-   `readerRevenueYellow`
