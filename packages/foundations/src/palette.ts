@@ -111,18 +111,6 @@ const text = {
 		linkSecondary: neutral[7],
 		linkSecondaryHover: neutral[7],
 	},
-	readerRevenue: {
-		primary: neutral[100],
-		secondary: neutral[60],
-		ctaPrimary: brand.main,
-		ctaSecondary: brandYellow.main,
-	},
-	readerRevenueYellow: {
-		primary: neutral[7],
-		secondary: neutral[60],
-		ctaPrimary: neutral[100],
-		ctaSecondary: neutral[7],
-	},
 }
 const background = {
 	primary: neutral[100],
@@ -154,20 +142,6 @@ const background = {
 		ctaSecondary: brandYellow.dark,
 		ctaSecondaryHover: "#F2AE00",
 	},
-	readerRevenue: {
-		primary: brand.main,
-		ctaPrimary: brandYellow.main,
-		ctaPrimaryHover: brandYellow.dark,
-		ctaSecondary: brand.main,
-		ctaSecondaryHover: "#234B8A",
-	},
-	readerRevenueYellow: {
-		primary: brandYellow.main,
-		ctaPrimary: neutral[7],
-		ctaPrimaryHover: "#454545",
-		ctaSecondary: brandYellow.main,
-		ctaSecondaryHover: brandYellow.dark,
-	},
 }
 const border = {
 	primary: neutral[60],
@@ -184,12 +158,6 @@ const border = {
 		error: error.bright,
 		radio: brand.faded,
 		radioHover: neutral[100],
-	},
-	readerRevenue: {
-		ctaSecondary: brandYellow.main,
-	},
-	readerRevenueYellow: {
-		ctaSecondary: neutral[7],
 	},
 }
 
