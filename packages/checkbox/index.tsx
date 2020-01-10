@@ -12,6 +12,7 @@ import {
 	errorCheckbox,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
+export { checkboxLight, checkboxBrand } from "@guardian/src-foundations/themes"
 
 const CheckboxGroup = ({
 	name,
@@ -47,8 +48,8 @@ const LabelText = ({
 }) => {
 	return (
 		<div
-			css={[
-				labelText,
+			css={theme => [
+				labelText(theme.checkbox && theme),
 				hasSupportingText ? labelTextWithSupportingText : "",
 			]}
 		>
@@ -58,7 +59,11 @@ const LabelText = ({
 }
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
-	return <div css={supportingText}>{children}</div>
+	return (
+		<div css={theme => supportingText(theme.checkbox && theme)}>
+			{children}
+		</div>
+	)
 }
 
 const Checkbox = ({
@@ -101,16 +106,29 @@ const Checkbox = ({
 		}
 	}
 	return (
-		<label css={[label, supporting ? labelWithSupportingText : ""]}>
+		<label
+			css={theme => [
+				label(theme.checkbox && theme),
+				supporting ? labelWithSupportingText : "",
+			]}
+		>
 			<input
-				css={[checkbox, error ? errorCheckbox : ""]}
+				css={theme => [
+					checkbox(theme.checkbox && theme),
+					error ? errorCheckbox(theme.checkbox && theme) : "",
+				]}
 				value={value}
 				aria-invalid={error}
 				aria-checked={isChecked()}
 				ref={setCheckboxState}
 				{...props}
 			/>
-			<span css={[tick, supporting ? tickWithSupportingText : ""]} />
+			<span
+				css={theme => [
+					tick(theme.checkbox && theme),
+					supporting ? tickWithSupportingText : "",
+				]}
+			/>
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
