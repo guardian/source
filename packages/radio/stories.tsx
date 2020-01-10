@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { RadioGroup, Radio, radioLight, radioBrand } from "./index"
-import { Appearance } from "@guardian/src-helpers"
+import { ThemeName } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
@@ -45,53 +45,51 @@ export default {
 	title: "Radio",
 }
 
-const appearances: {
-	name: Appearance
+const themes: {
+	name: ThemeName
 	theme: {}
 }[] = [
 	{
 		name: "light",
 		theme: radioLight,
 	},
-	{ name: "blue", theme: radioBrand },
+	{ name: "brand", theme: radioBrand },
 ]
 
-const [verticalLight, verticalBlue] = appearances.map(
-	(appearance: { name: Appearance; theme: {} }) => {
-		const story = () => (
-			<ThemeProvider theme={appearance.theme}>
-				<RadioGroup name="colours">
-					{radios.map((radio, index) =>
-						React.cloneElement(radio, { key: index }),
-					)}
-				</RadioGroup>
-			</ThemeProvider>
-		)
-		story.story = {
-			name: `vertical ${appearance.name}`,
-			parameters: {
-				backgrounds: [
-					Object.assign(
-						{},
-						{ default: true },
-						storybookBackgrounds[appearance.name],
-					),
-				],
-			},
-		}
+const [verticalLight, verticalBlue] = themes.map(({ name, theme }) => {
+	const story = () => (
+		<ThemeProvider theme={theme}>
+			<RadioGroup name="colours">
+				{radios.map((radio, index) =>
+					React.cloneElement(radio, { key: index }),
+				)}
+			</RadioGroup>
+		</ThemeProvider>
+	)
+	story.story = {
+		name: `vertical ${name}`,
+		parameters: {
+			backgrounds: [
+				Object.assign(
+					{},
+					{ default: true },
+					storybookBackgrounds[name],
+				),
+			],
+		},
+	}
 
-		return story
-	},
-)
+	return story
+})
 
 const narrow = css`
 	width: 30rem;
 `
 
-const [supportingTextLight, supportingTextBlue] = appearances.map(
-	(appearance: { name: Appearance; theme: {} }) => {
+const [supportingTextLight, supportingTextBlue] = themes.map(
+	({ name, theme }) => {
 		const story = () => (
-			<ThemeProvider theme={appearance.theme}>
+			<ThemeProvider theme={theme}>
 				<div css={narrow}>
 					<RadioGroup name="payment-options">
 						{radiosWithSupportingText.map((radio, index) =>
@@ -102,13 +100,13 @@ const [supportingTextLight, supportingTextBlue] = appearances.map(
 			</ThemeProvider>
 		)
 		story.story = {
-			name: `supporting text ${appearance.name}`,
+			name: `supporting text ${name}`,
 			parameters: {
 				backgrounds: [
 					Object.assign(
 						{},
 						{ default: true },
-						storybookBackgrounds[appearance.name],
+						storybookBackgrounds[name],
 					),
 				],
 			},
@@ -128,34 +126,32 @@ horizontal.story = {
 	name: "orientation horizontal",
 }
 
-const [errorLight, errorBlue] = appearances.map(
-	(appearance: { name: Appearance; theme: {} }) => {
-		const story = () => (
-			<ThemeProvider theme={appearance.theme}>
-				<RadioGroup name="colours" error="Please select a colour">
-					{unselectedRadios.map((radio, index) =>
-						React.cloneElement(radio, { key: index }),
-					)}
-				</RadioGroup>
-			</ThemeProvider>
-		)
+const [errorLight, errorBlue] = themes.map(({ name, theme }) => {
+	const story = () => (
+		<ThemeProvider theme={theme}>
+			<RadioGroup name="colours" error="Please select a colour">
+				{unselectedRadios.map((radio, index) =>
+					React.cloneElement(radio, { key: index }),
+				)}
+			</RadioGroup>
+		</ThemeProvider>
+	)
 
-		story.story = {
-			name: `error ${appearance.name}`,
-			parameters: {
-				backgrounds: [
-					Object.assign(
-						{},
-						{ default: true },
-						storybookBackgrounds[appearance.name],
-					),
-				],
-			},
-		}
+	story.story = {
+		name: `error ${name}`,
+		parameters: {
+			backgrounds: [
+				Object.assign(
+					{},
+					{ default: true },
+					storybookBackgrounds[name],
+				),
+			],
+		},
+	}
 
-		return story
-	},
-)
+	return story
+})
 
 export {
 	verticalLight,
