@@ -1,10 +1,12 @@
 export * from "./button"
+export * from "./checkbox"
 export * from "./inline-error"
 export * from "./link"
 export * from "./radio"
 export * from "./text-input"
 
 import { buttonLight, buttonBrand, buttonBrandYellow } from "./button"
+import { checkboxLight, checkboxBrand } from "./checkbox"
 import { inlineErrorLight, inlineErrorBrand } from "./inline-error"
 import { linkLight, linkBrand, linkBrandYellow, linkMono } from "./link"
 import { radioLight, radioBrand } from "./radio"
@@ -12,6 +14,7 @@ import { textInputLight } from "./text-input"
 
 export const light = {
 	...buttonLight,
+	...checkboxLight,
 	...inlineErrorLight,
 	...linkLight,
 	...radioLight,
@@ -20,6 +23,7 @@ export const light = {
 
 export const brand = {
 	...buttonBrand,
+	...checkboxBrand,
 	...inlineErrorBrand,
 	...linkBrand,
 	...radioBrand,
