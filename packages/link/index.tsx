@@ -14,6 +14,7 @@ export {
 	linkLight,
 	linkBrand,
 	linkBrandYellow,
+	linkMono,
 } from "@guardian/src-foundations/themes"
 
 export type Priority = "primary" | "secondary"

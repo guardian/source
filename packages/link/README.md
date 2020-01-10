@@ -52,3 +52,12 @@ An icon that appears in the link, alongside text
 **`"left" | "right"`** _= "left"_
 
 The side of the link on which the icon appears
+
+## Supported themes
+
+### Standard
+
+-   `light`
+-   `brand`
+-   `brandYellow`
+-   `mono`
