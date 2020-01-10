@@ -7,7 +7,7 @@ import {
 	SvgChevronLeftSingle,
 } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
-import { Link, linkLight, linkBrandYellow, linkBrand } from "./index"
+import { Link, linkLight, linkBrandYellow, linkBrand, linkMono } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
@@ -89,6 +89,24 @@ priorityYellow.story = {
 				{ default: true },
 				storybookBackgrounds.brandYellow,
 			),
+		],
+	},
+}
+
+export const priorityMono = () => (
+	<ThemeProvider theme={linkMono}>
+		<div css={flexStart}>
+			{priorityLinks.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	</ThemeProvider>
+)
+priorityMono.story = {
+	name: "priority mono",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.mono),
 		],
 	},
 }
