@@ -66,7 +66,7 @@ priorityBlue.story = {
 	name: "priority blue",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.blue),
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
 		],
 	},
 }
@@ -84,7 +84,11 @@ priorityYellow.story = {
 	name: "priority yellow",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
+			Object.assign(
+				{},
+				{ default: true },
+				storybookBackgrounds.brandYellow,
+			),
 		],
 	},
 }

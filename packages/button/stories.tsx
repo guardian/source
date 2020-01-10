@@ -96,7 +96,7 @@ priorityBlue.story = {
 	name: "priority blue",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.blue),
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
 		],
 	},
 }
@@ -114,7 +114,11 @@ priorityYellow.story = {
 	name: "priority yellow",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
+			Object.assign(
+				{},
+				{ default: true },
+				storybookBackgrounds.brandYellow,
+			),
 		],
 	},
 }
@@ -132,7 +136,7 @@ priorityReaderRevenueBlue.story = {
 	name: "priority reader revenue blue",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.blue),
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
 		],
 	},
 }
@@ -150,7 +154,11 @@ priorityReaderRevenueYellow.story = {
 	name: "priority reader revenue yellow",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.yellow),
+			Object.assign(
+				{},
+				{ default: true },
+				storybookBackgrounds.brandYellow,
+			),
 		],
 	},
 }
