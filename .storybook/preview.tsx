@@ -1,5 +1,5 @@
 import React from "react"
-import { configure, addParameters, addDecorator } from "@storybook/react"
+import { addParameters, addDecorator } from "@storybook/react"
 import { useEffect } from "@storybook/addons"
 import { FocusStyleManager } from "@guardian/src-utilities"
 
@@ -16,8 +16,6 @@ addParameters({
 		isFullscreen: storiesOnly,
 	},
 })
-
-configure(require.context("../packages", true, /stories\.tsx$/), module)
 
 const FocusManagerDecorator = storyFn => {
 	useEffect(() => {
