@@ -13,7 +13,6 @@ const storybookBackgrounds: {
 		name: "brandYellow",
 		value: palette.background.brandYellow.primary,
 	},
-	mono: { name: "mono", value: palette.background.mono.primary },
 }
 
 Object.freeze(storybookBackgrounds)
