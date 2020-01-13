@@ -34,15 +34,6 @@ export const linkBrandYellow: { link: LinkTheme } = {
 	},
 }
 
-export const linkMono: { link: LinkTheme } = {
-	link: {
-		textPrimary: palette.text.mono.linkPrimary,
-		textPrimaryHover: palette.text.mono.linkPrimaryHover,
-		textSecondary: palette.text.mono.linkSecondary,
-		textSecondaryHover: palette.text.mono.linkSecondaryHover,
-	},
-}
-
 export const link = {
 	linkLight,
 	linkBrand,

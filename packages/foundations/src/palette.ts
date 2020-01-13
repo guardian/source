@@ -85,16 +85,6 @@ const text = {
 	checkbox: neutral[7],
 	checkboxSupporting: neutral[46],
 	checkboxIndeterminate: neutral[46],
-	mono: {
-		primary: neutral[100],
-		secondary: neutral[60],
-		ctaPrimary: neutral[7],
-		ctaSecondary: neutral[100],
-		linkPrimary: neutral[100],
-		linkPrimaryHover: neutral[100],
-		linkSecondary: neutral[100],
-		linkSecondaryHover: neutral[100],
-	},
 	brand: {
 		primary: neutral[100],
 		secondary: neutral[60],
@@ -130,13 +120,6 @@ const background = {
 	ctaSecondaryHover: "#ACC9F7",
 	radioChecked: brand.bright,
 	checkboxChecked: brand.bright,
-	mono: {
-		primary: neutral[7],
-		ctaPrimary: neutral[100],
-		ctaPrimaryHover: neutral[93],
-		ctaSecondary: neutral[46],
-		ctaSecondaryHover: "#5C5C5C",
-	},
 	brand: {
 		primary: brand.main,
 		ctaPrimary: neutral[100],
