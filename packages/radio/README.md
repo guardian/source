@@ -67,3 +67,10 @@ Additional text or a component that appears below the label
 **`boolean`**
 
 Whether radio button is checked
+
+## Supported themes
+
+### Standard
+
+-   `light`
+-   `brand`
