@@ -57,3 +57,9 @@ the width will default to 100% of the field's container.
 **`string`**
 
 Whether error styling should apply to this text input. The string appears as an inline error message.
+
+## Supported themes
+
+### Standard
+
+-   `light`
