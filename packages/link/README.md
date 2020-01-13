@@ -60,4 +60,3 @@ The side of the link on which the icon appears
 -   `light`
 -   `brand`
 -   `brandYellow`
--   `mono`
