@@ -8,7 +8,7 @@ export * from "./text-input"
 import { buttonLight, buttonBrand, buttonBrandYellow } from "./button"
 import { checkboxLight, checkboxBrand } from "./checkbox"
 import { inlineErrorLight, inlineErrorBrand } from "./inline-error"
-import { linkLight, linkBrand, linkBrandYellow, linkMono } from "./link"
+import { linkLight, linkBrand, linkBrandYellow } from "./link"
 import { radioLight, radioBrand } from "./radio"
 import { textInputLight } from "./text-input"
 
@@ -32,8 +32,4 @@ export const brand = {
 export const brandYellow = {
 	...buttonBrandYellow,
 	...linkBrandYellow,
-}
-
-export const mono = {
-	...linkMono,
 }
