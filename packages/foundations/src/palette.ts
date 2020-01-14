@@ -95,8 +95,6 @@ const text = {
 		radioSupporting: brand.faded,
 		linkPrimary: neutral[100],
 		linkPrimaryHover: neutral[100],
-		linkSecondary: neutral[100],
-		linkSecondaryHover: neutral[100],
 		checkbox: neutral[100],
 		checkboxSupporting: brand.faded,
 		checkboxIndeterminate: brand.faded,
@@ -108,8 +106,6 @@ const text = {
 		ctaSecondary: neutral[7],
 		linkPrimary: neutral[7],
 		linkPrimaryHover: neutral[7],
-		linkSecondary: neutral[7],
-		linkSecondaryHover: neutral[7],
 	},
 }
 const background = {

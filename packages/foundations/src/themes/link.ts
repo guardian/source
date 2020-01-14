@@ -3,8 +3,8 @@ import { palette } from "../index"
 export type LinkTheme = {
 	textPrimary: string
 	textPrimaryHover: string
-	textSecondary: string
-	textSecondaryHover: string
+	textSecondary?: string
+	textSecondaryHover?: string
 }
 
 export const linkLight: { link: LinkTheme } = {
@@ -20,8 +20,6 @@ export const linkBrand: { link: LinkTheme } = {
 	link: {
 		textPrimary: palette.text.brand.linkPrimary,
 		textPrimaryHover: palette.text.brand.linkPrimaryHover,
-		textSecondary: palette.text.brand.linkSecondary,
-		textSecondaryHover: palette.text.brand.linkSecondaryHover,
 	},
 }
 
@@ -29,8 +27,6 @@ export const linkBrandYellow: { link: LinkTheme } = {
 	link: {
 		textPrimary: palette.text.brandYellow.linkPrimary,
 		textPrimaryHover: palette.text.brandYellow.linkPrimaryHover,
-		textSecondary: palette.text.brandYellow.linkSecondary,
-		textSecondaryHover: palette.text.brandYellow.linkSecondaryHover,
 	},
 }
 
