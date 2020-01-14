@@ -55,11 +55,7 @@ priorityLight.story = { name: "priority light" }
 
 export const priorityBlue = () => (
 	<ThemeProvider theme={linkBrand}>
-		<div css={flexStart}>
-			{priorityLinks.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<Link href="#">Primary</Link>
 	</ThemeProvider>
 )
 priorityBlue.story = {
@@ -73,11 +69,7 @@ priorityBlue.story = {
 
 export const priorityYellow = () => (
 	<ThemeProvider theme={linkBrandYellow}>
-		<div css={flexStart}>
-			{priorityLinks.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<Link href="#">Primary</Link>
 	</ThemeProvider>
 )
 priorityYellow.story = {
