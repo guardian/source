@@ -161,6 +161,15 @@ const border = {
 		checkboxError: error.bright,
 	},
 }
+const line = {
+	primary: neutral[86],
+	brand: {
+		primary: brand.pastel,
+	},
+	brandYellow: {
+		primary: neutral[7],
+	},
+}
 
 const palette = {
 	brand,
@@ -177,6 +186,7 @@ const palette = {
 	text,
 	background,
 	border,
+	line,
 }
 
 export { palette }
