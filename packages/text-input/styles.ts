@@ -48,7 +48,7 @@ export const text = ({
 
 export const errorInput = css`
 	border: 4px solid ${palette.border.error};
-	color: ${palette.error.main};
+	color: ${palette.text.error};
 `
 
 export const optionalLabel = css`
