@@ -5,8 +5,8 @@ const text = {
 	readerRevenue: {
 		primary: palette.neutral[100],
 		secondary: palette.neutral[60],
-		ctaPrimary: palette.brand.main,
-		ctaSecondary: palette.brandYellow.main,
+		ctaPrimary: palette.brand[400],
+		ctaSecondary: palette.brandYellow[400],
 	},
 	readerRevenueYellow: {
 		primary: palette.neutral[7],
@@ -17,23 +17,23 @@ const text = {
 }
 const background = {
 	readerRevenue: {
-		primary: palette.brand.main,
-		ctaPrimary: palette.brandYellow.main,
-		ctaPrimaryHover: palette.brandYellow.dark,
-		ctaSecondary: palette.brand.main,
+		primary: palette.brand[400],
+		ctaPrimary: palette.brandYellow[400],
+		ctaPrimaryHover: palette.brandYellow[300],
+		ctaSecondary: palette.brand[400],
 		ctaSecondaryHover: "#234B8A",
 	},
 	readerRevenueYellow: {
-		primary: palette.brandYellow.main,
+		primary: palette.brandYellow[400],
 		ctaPrimary: palette.neutral[7],
 		ctaPrimaryHover: "#454545",
-		ctaSecondary: palette.brandYellow.main,
-		ctaSecondaryHover: palette.brandYellow.dark,
+		ctaSecondary: palette.brandYellow[400],
+		ctaSecondaryHover: palette.brandYellow[300],
 	},
 }
 const border = {
 	readerRevenue: {
-		ctaSecondary: palette.brandYellow.main,
+		ctaSecondary: palette.brandYellow[400],
 	},
 	readerRevenueYellow: {
 		ctaSecondary: palette.neutral[7],
