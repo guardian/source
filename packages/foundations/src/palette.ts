@@ -1,6 +1,13 @@
 import { colors } from "./theme"
 
 const brand = {
+	300: colors.blues[5],
+	400: colors.blues[6],
+	500: colors.blues[7],
+	600: colors.blues[8],
+	800: colors.blues[9],
+
+	// legacy names: please do not use
 	dark: colors.blues[5],
 	main: colors.blues[6],
 	bright: colors.blues[7],
@@ -8,6 +15,10 @@ const brand = {
 	faded: colors.blues[9],
 }
 const brandYellow = {
+	300: colors.yellows[0],
+	400: colors.yellows[1],
+
+	// legacy names: please do not use
 	dark: colors.yellows[0],
 	main: colors.yellows[1],
 }
@@ -23,13 +34,27 @@ const neutral = {
 	specialReport: colors.grays[8],
 }
 const error = {
+	400: colors.reds[1],
+	500: colors.reds[2],
+
+	// legacy names: please do not use
 	main: colors.reds[1],
 	bright: colors.reds[2],
 }
 const success = {
+	400: colors.greens[1],
+
+	// legacy names: please do not use
 	main: colors.greens[1],
 }
 const news = {
+	300: colors.reds[0],
+	400: colors.reds[1],
+	500: colors.reds[2],
+	600: colors.reds[3],
+	800: colors.reds[4],
+
+	// legacy names: please do not use
 	dark: colors.reds[0],
 	main: colors.reds[1],
 	bright: colors.reds[2],
@@ -37,6 +62,13 @@ const news = {
 	faded: colors.reds[4],
 }
 const opinion = {
+	300: colors.oranges[0],
+	400: colors.oranges[1],
+	500: colors.oranges[2],
+	600: colors.oranges[3],
+	800: colors.oranges[4],
+
+	// legacy names: please do not use
 	dark: colors.oranges[0],
 	main: colors.oranges[1],
 	bright: colors.oranges[2],
@@ -44,6 +76,13 @@ const opinion = {
 	faded: colors.oranges[4],
 }
 const sport = {
+	300: colors.blues[0],
+	400: colors.blues[1],
+	500: colors.blues[2],
+	600: colors.blues[3],
+	800: colors.blues[4],
+
+	// legacy names: please do not use
 	dark: colors.blues[0],
 	main: colors.blues[1],
 	bright: colors.blues[2],
@@ -51,6 +90,13 @@ const sport = {
 	faded: colors.blues[4],
 }
 const culture = {
+	300: colors.browns[0],
+	400: colors.browns[1],
+	500: colors.browns[2],
+	600: colors.browns[3],
+	800: colors.browns[4],
+
+	// legacy names: please do not use
 	dark: colors.browns[0],
 	main: colors.browns[1],
 	bright: colors.browns[2],
@@ -58,6 +104,13 @@ const culture = {
 	faded: colors.browns[4],
 }
 const lifestyle = {
+	300: colors.pinks[0],
+	400: colors.pinks[1],
+	500: colors.pinks[2],
+	600: colors.pinks[3],
+	800: colors.pinks[4],
+
+	// legacy names: please do not use
 	dark: colors.pinks[0],
 	main: colors.pinks[1],
 	bright: colors.pinks[2],
@@ -65,6 +118,10 @@ const lifestyle = {
 	faded: colors.pinks[4],
 }
 const labs = {
+	300: colors.greens[2],
+	400: colors.greens[3],
+
+	// legacy names: please do not use
 	dark: colors.greens[2],
 	main: colors.greens[3],
 }
@@ -73,13 +130,13 @@ const labs = {
 const text = {
 	primary: neutral[7],
 	secondary: neutral[46],
-	error: error.main,
+	error: error[400],
 	ctaPrimary: neutral[100],
-	ctaSecondary: brand.main,
+	ctaSecondary: brand[400],
 	radio: neutral[7],
 	radioSupporting: neutral[46],
-	linkPrimary: brand.bright,
-	linkPrimaryHover: brand.bright,
+	linkPrimary: brand[500],
+	linkPrimaryHover: brand[500],
 	linkSecondary: neutral[7],
 	linkSecondaryHover: neutral[7],
 	checkbox: neutral[7],
@@ -87,17 +144,17 @@ const text = {
 	checkboxIndeterminate: neutral[46],
 	brand: {
 		primary: neutral[100],
-		secondary: neutral[60],
-		error: error.bright,
-		ctaPrimary: brand.main,
+		secondary: brand[800],
+		error: error[500],
+		ctaPrimary: brand[400],
 		ctaSecondary: neutral[100],
 		radio: neutral[100],
-		radioSupporting: brand.faded,
+		radioSupporting: brand[800],
 		linkPrimary: neutral[100],
 		linkPrimaryHover: neutral[100],
 		checkbox: neutral[100],
-		checkboxSupporting: brand.faded,
-		checkboxIndeterminate: brand.faded,
+		checkboxSupporting: brand[800],
+		checkboxIndeterminate: brand[800],
 	},
 	brandYellow: {
 		primary: neutral[7],
@@ -110,57 +167,57 @@ const text = {
 }
 const background = {
 	primary: neutral[100],
-	ctaPrimary: brand.main,
+	ctaPrimary: brand[400],
 	ctaPrimaryHover: "#234B8A",
-	ctaSecondary: brand.faded,
+	ctaSecondary: brand[800],
 	ctaSecondaryHover: "#ACC9F7",
-	radioChecked: brand.bright,
-	checkboxChecked: brand.bright,
+	radioChecked: brand[500],
+	checkboxChecked: brand[500],
 	brand: {
-		primary: brand.main,
+		primary: brand[400],
 		ctaPrimary: neutral[100],
 		ctaPrimaryHover: "#E0E0E0",
-		ctaSecondary: brand.pastel,
+		ctaSecondary: brand[600],
 		ctaSecondaryHover: "#234B8A",
 		radioChecked: neutral[100],
 		checkboxChecked: neutral[100],
 	},
 	brandYellow: {
-		primary: brandYellow.main,
+		primary: brandYellow[400],
 		ctaPrimary: neutral[7],
 		ctaPrimaryHover: "#454545",
-		ctaSecondary: brandYellow.dark,
+		ctaSecondary: brandYellow[300],
 		ctaSecondaryHover: "#F2AE00",
 	},
 }
 const border = {
 	primary: neutral[60],
 	secondary: neutral[86],
-	error: error.main,
-	focusHalo: sport.bright,
+	error: error[400],
+	focusHalo: sport[500],
 	radio: neutral[60],
-	radioHover: brand.bright,
-	radioError: error.main,
+	radioHover: brand[500],
+	radioError: error[400],
 	textInput: neutral[60],
 	checkbox: neutral[60],
-	checkboxHover: brand.bright,
-	checkboxChecked: brand.bright,
-	checkboxError: error.main,
+	checkboxHover: brand[500],
+	checkboxChecked: brand[500],
+	checkboxError: error[400],
 	brand: {
-		error: error.bright,
-		radio: brand.faded,
+		error: error[500],
+		radio: brand[800],
 		radioHover: neutral[100],
-		radioError: error.bright,
-		checkbox: brand.faded,
+		radioError: error[500],
+		checkbox: brand[800],
 		checkboxHover: neutral[100],
 		checkboxChecked: neutral[100],
-		checkboxError: error.bright,
+		checkboxError: error[500],
 	},
 }
 const line = {
 	primary: neutral[86],
 	brand: {
-		primary: brand.pastel,
+		primary: brand[600],
 	},
 	brandYellow: {
 		primary: neutral[7],
