@@ -46,8 +46,8 @@ const [
 
 const mqForBreakpoint = (breakpoint: GridBreakpoint | CustomBreakpoint) => {
 	return typeof breakpoint === "string"
-	? from[breakpoint]
-	: `@media (min-width: ${`${breakpoint.width}px`})`
+		? from[breakpoint]
+		: `@media (min-width: ${`${breakpoint.width}px`})`
 }
 
 const gridItemSpans = ({
@@ -139,7 +139,7 @@ const createCustomGridRow = ({
 	const msGridColumns = `-ms-grid-columns: (minmax(0, 1fr))[${columns}]`
 
 	return css`
-		${mqForBreakpoint({width, columns})} {
+		${mqForBreakpoint({ width, columns })} {
 			width: ${width}px;
 			grid-template-columns: repeat(${columns}, 1fr);
 			${msGridColumns};
