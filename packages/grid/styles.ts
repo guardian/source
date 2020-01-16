@@ -44,6 +44,12 @@ const [
 	`
 })
 
+const mqForBreakpoint = (breakpoint: GridBreakpoint | CustomBreakpoint) => {
+	return typeof breakpoint === "string"
+	? from[breakpoint]
+	: `@media (min-width: ${`${breakpoint.width}px`})`
+}
+
 const gridItemSpans = ({
 	breakpoints,
 	spans,
@@ -52,10 +58,7 @@ const gridItemSpans = ({
 	spans: number[]
 }) => {
 	return breakpoints.reduce((acc, breakpoint, index) => {
-		const mq =
-			typeof breakpoint === "string"
-				? from[breakpoint]
-				: `@media (min-width: ${`${breakpoint.width}px`})`
+		const mq = mqForBreakpoint(breakpoint)
 
 		if (spans[index] === 0) {
 			return `${acc}
@@ -83,10 +86,7 @@ const gridItemStartingPos = ({
 	startingPositions: number[]
 }) => {
 	return breakpoints.reduce((acc, breakpoint, index) => {
-		const mq =
-			typeof breakpoint === "string"
-				? from[breakpoint]
-				: `@media (min-width: ${`${breakpoint.width}px`})`
+		const mq = mqForBreakpoint(breakpoint)
 		const columns =
 			typeof breakpoint === "string"
 				? gridColumns[breakpoint]
@@ -139,7 +139,7 @@ const createCustomGridRow = ({
 	const msGridColumns = `-ms-grid-columns: (minmax(0, 1fr))[${columns}]`
 
 	return css`
-		@media (min-width: ${`${width}px`}) {
+		${mqForBreakpoint({width, columns})} {
 			width: ${width}px;
 			grid-template-columns: repeat(${columns}, 1fr);
 			${msGridColumns};
