@@ -29,11 +29,19 @@ const Article = () => (
 
 ### `breakpoints`
 
-**`GridBreakpoints[]`** _= ["mobile", "tablet", "desktop", "wide"]_
+**`Array<GridBreakpoint | CustomBreakpoint>`** _= ["mobile", "tablet", "desktop", "wide"]_
 
 A list of breakpoints at which grid column span may change. GridRow currently
 supports changes at `"mobile"`, `"tablet"`, `"desktop"` and `"wide"` breakpoints.
 Any of these may be omitted.
+
+A custom breakpoint may be specified, which must have the following properties:
+
+-   `width`: the minimum viewport width at which the breakpoint becomes active. This will also
+    be the width of the `GridRow` container
+-   `columns`: the number of columns the grid should comprise
+
+For best results, breakpoints should be ordered ascending by minimum viewport width.
 
 ## `GridItem` Props
 
