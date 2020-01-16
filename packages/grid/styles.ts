@@ -1,47 +1,14 @@
 import { css } from "@emotion/core"
-import {
-	Breakpoint,
-	space,
-	breakpoints,
-	palette,
-} from "@guardian/src-foundations"
+import { space, palette } from "@guardian/src-foundations"
 import { from } from "@guardian/src-foundations/mq"
-
-type GridBreakpoint = Extract<
-	Breakpoint,
-	"mobile" | "tablet" | "desktop" | "wide"
->
-const gridBreakpoints: readonly GridBreakpoint[] = [
-	"mobile",
-	"tablet",
-	"desktop",
-	"wide",
-] as const
-type GridBreakpoints = typeof gridBreakpoints[number]
-
-type GridColumns = {
-	[key in GridBreakpoints]: number
-}
-
-type ContainerWidths = {
-	[key in GridBreakpoints]: string
-}
-
-const gridColumns: GridColumns = {
-	mobile: 4,
-	tablet: 12,
-	desktop: 12,
-	wide: 16,
-}
-
-const containerWidths: ContainerWidths = {
-	mobile: "100%",
-	tablet: `${breakpoints.tablet}px`,
-	desktop: `${breakpoints.desktop}px`,
-	wide: `${breakpoints.wide}px`,
-}
-
-const GUTTER_WIDTH = space[5]
+import {
+	GUTTER_WIDTH,
+	gridBreakpoints,
+	gridColumns,
+	containerWidths,
+	CustomBreakpoint,
+	GridBreakpoint,
+} from "./data"
 
 const gridRow = css`
 	@supports (display: grid) {
@@ -155,6 +122,5 @@ export {
 	gridRowDesktop,
 	gridRowWide,
 	gridItem,
-	GridBreakpoint,
 	borderRightStyle,
 }
