@@ -6,9 +6,10 @@ import {
 	gridRowDesktop,
 	gridRowWide,
 	gridItem,
-	GridBreakpoint,
 	borderRightStyle,
+	createCustomGridRow,
 } from "./styles"
+import { CustomBreakpoint, GridBreakpoint } from "./data"
 import { SerializedStyles } from "@emotion/css"
 
 type GridRowBreakpoints = {
@@ -25,7 +26,7 @@ const GridRow = ({
 	breakpoints,
 	children,
 }: {
-	breakpoints: GridBreakpoint[]
+	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	children: JSX.Element | JSX.Element[]
 }) => {
 	// Create an array with an entry for each child
@@ -59,8 +60,14 @@ const GridRow = ({
 			css={[
 				gridRow,
 				breakpoints.reduce(
-					(acc, breakpoint) =>
-						acc.concat([gridRowBreakpoints[breakpoint]]),
+					(acc, breakpoint) => {
+						const gridRowStyles =
+							typeof breakpoint === "string"
+								? gridRowBreakpoints[breakpoint]
+								: createCustomGridRow(breakpoint)
+
+						return acc.concat([gridRowStyles])
+					},
 					[] as SerializedStyles[],
 				),
 			]}
@@ -86,7 +93,7 @@ const GridItem = ({
 	spans: number[]
 	borderRight?: boolean
 	startingPositions: number[]
-	breakpoints: GridBreakpoint[]
+	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	children: JSX.Element | JSX.Element[]
 }) => {
 	return (

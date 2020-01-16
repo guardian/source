@@ -4,8 +4,8 @@
 	"main": "dist/grid.js",
 	"module": "dist/grid.esm.js",
 	"scripts": {
-		"build": "yarn clean && rollup --config",
-		"clean": "rm -rf dist",
+		"build": "yarn clean && tsc && rollup --config",
+		"clean": "rm -rf dist *.d.ts",
 		"prepublish": "yarn build"
 	},
 	"devDependencies": {
@@ -19,11 +19,14 @@
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.2",
-		"rollup-plugin-node-resolve": "^5.2.0"
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"typescript": "^3.7.2"
 	},
 	"files": [
 		"index.tsx",
-		"styles.ts"
+		"data.ts",
+		"styles.ts",
+		"*.d.ts"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
