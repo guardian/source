@@ -12,9 +12,9 @@ export const textInputLight: {
 	inlineError: InlineErrorTheme
 } = {
 	textInput: {
-		textInput: palette.text.primary,
-		textLabel: palette.text.primary,
-		backgroundInput: palette.background.primary,
+		textInput: palette.text.textInput,
+		textLabel: palette.text.textInput,
+		backgroundInput: palette.background.textInput,
 	},
 	...inlineErrorLight,
 }
