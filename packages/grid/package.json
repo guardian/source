@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-grid",
-	"version": "0.2.0",
+	"version": "0.3.0-alpha.1",
 	"main": "dist/grid.js",
 	"module": "dist/grid.esm.js",
 	"scripts": {
