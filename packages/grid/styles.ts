@@ -48,20 +48,25 @@ const gridItemSpans = ({
 	breakpoints,
 	spans,
 }: {
-	breakpoints: GridBreakpoint[]
+	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	spans: number[]
 }) => {
 	return breakpoints.reduce((acc, breakpoint, index) => {
+		const mq =
+			typeof breakpoint === "string"
+				? from[breakpoint]
+				: `@media (min-width: ${`${breakpoint.width}px`})`
+
 		if (spans[index] === 0) {
 			return `${acc}
-				${from[breakpoint]} {
+				${mq} {
 					display: none;
 				}
 			`
 		}
 
 		return `${acc}
-			${from[breakpoint]} {
+			${mq} {
 				display: block;
 				grid-column-end: span ${spans[index]};
 				-ms-grid-column-span: ${spans[index]};,
@@ -74,17 +79,26 @@ const gridItemStartingPos = ({
 	breakpoints,
 	startingPositions,
 }: {
-	breakpoints: GridBreakpoint[]
+	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	startingPositions: number[]
 }) => {
 	return breakpoints.reduce((acc, breakpoint, index) => {
+		const mq =
+			typeof breakpoint === "string"
+				? from[breakpoint]
+				: `@media (min-width: ${`${breakpoint.width}px`})`
+		const columns =
+			typeof breakpoint === "string"
+				? gridColumns[breakpoint]
+				: breakpoint.columns
+
 		return `${acc}
-			${from[breakpoint]} {
+			${mq} {
 				grid-column-start: ${startingPositions[index]};
 				-ms-grid-column: ${
 					startingPositions[index] > 0
 						? startingPositions[index]
-						: gridColumns[breakpoint] + 2 + startingPositions[index]
+						: columns + 2 + startingPositions[index]
 				};
 			}
 		`
@@ -96,7 +110,7 @@ const gridItem = ({
 	spans,
 	startingPositions,
 }: {
-	breakpoints: GridBreakpoint[]
+	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	spans: number[]
 	startingPositions: number[]
 }) => css`
@@ -115,6 +129,24 @@ const borderRightStyle = css`
 	margin-right: ${-GUTTER_WIDTH / 2}px;
 `
 
+const createCustomGridRow = ({
+	width,
+	columns,
+}: {
+	width: number
+	columns: number
+}) => {
+	const msGridColumns = `-ms-grid-columns: (minmax(0, 1fr))[${columns}]`
+
+	return css`
+		@media (min-width: ${`${width}px`}) {
+			width: ${width}px;
+			grid-template-columns: repeat(${columns}, 1fr);
+			${msGridColumns};
+		}
+	`
+}
+
 export {
 	gridRow,
 	gridRowMobile,
@@ -123,4 +155,5 @@ export {
 	gridRowWide,
 	gridItem,
 	borderRightStyle,
+	createCustomGridRow,
 }
