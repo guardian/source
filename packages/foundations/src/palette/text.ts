@@ -16,6 +16,10 @@ export const text = {
 	radio: neutral[7],
 	radioSupporting: neutral[46],
 	textInput: neutral[7],
+	textInputLabel: neutral[7],
+	textInputOptionalLabel: neutral[46],
+	textInputSupporting: neutral[46],
+	textInputError: error[400],
 	brand: {
 		primary: neutral[100],
 		secondary: brand[800],

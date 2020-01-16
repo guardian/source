@@ -13,6 +13,7 @@ export const border = {
 	radioHover: brand[500],
 	radioError: error[400],
 	textInput: neutral[60],
+	textInputError: error[400],
 	brand: {
 		error: error[500],
 		checkbox: brand[800],
