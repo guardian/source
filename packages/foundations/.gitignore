@@ -1,6 +1,7 @@
 # Ignore built files
 mq/
 accessibility/
+palette/
 themes/
 typography/
 foundations.js
@@ -11,5 +12,6 @@ foundations.esm.js
 # Include src files
 !src/mq/
 !src/accessibility/
+!src/palette
 !src/themes/
 !src/typography/
