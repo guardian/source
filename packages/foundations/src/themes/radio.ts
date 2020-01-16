@@ -11,7 +11,9 @@ export type RadioTheme = {
 	backgroundChecked: string
 	text: string
 	textSupporting: string
+	// TODO: remove textError as it is not used
 	textError: string
+	borderError: string
 }
 
 export const radioLight: {
@@ -24,7 +26,9 @@ export const radioLight: {
 		backgroundChecked: palette.background.radioChecked,
 		text: palette.text.radio,
 		textSupporting: palette.text.radioSupporting,
+		// TODO: remove textError as it is not used
 		textError: palette.border.radioError,
+		borderError: palette.border.radioError,
 	},
 	...inlineErrorLight,
 }
@@ -39,7 +43,9 @@ export const radioBrand: {
 		backgroundChecked: palette.background.brand.radioChecked,
 		text: palette.text.brand.radio,
 		textSupporting: palette.text.brand.radioSupporting,
+		// TODO: remove textError as it is not used
 		textError: palette.border.brand.radioError,
+		borderError: palette.border.brand.radioError,
 	},
 	...inlineErrorBrand,
 }
