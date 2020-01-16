@@ -24,7 +24,7 @@
 		"src/animation.ts",
 		"src/breakpoints.ts",
 		"src/index.ts",
-		"src/palette.ts",
+		"src/palette/*",
 		"src/size.ts",
 		"src/space.ts",
 		"src/theme.ts",
