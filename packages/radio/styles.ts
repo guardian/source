@@ -114,5 +114,5 @@ export const vertical = css`
 export const errorRadio = ({
 	radio,
 }: { radio: RadioTheme } = radioLight) => css`
-	border: 4px solid ${radio.textError};
+	border: 4px solid ${radio.borderError};
 `
