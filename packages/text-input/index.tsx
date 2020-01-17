@@ -25,7 +25,11 @@ const widths: {
 }
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
-	return <div css={supportingText}>{children}</div>
+	return (
+		<div css={theme => supportingText(theme.textInput && theme)}>
+			{children}
+		</div>
+	)
 }
 
 const TextInput = ({
@@ -48,7 +52,15 @@ const TextInput = ({
 		<label>
 			<div css={theme => text(theme.textInput && theme)}>
 				{labelText}{" "}
-				{optional ? <span css={optionalLabel}>Optional</span> : ""}
+				{optional ? (
+					<span
+						css={theme => optionalLabel(theme.textInput && theme)}
+					>
+						Optional
+					</span>
+				) : (
+					""
+				)}
 			</div>
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{error && <InlineError>{error}</InlineError>}
@@ -56,7 +68,7 @@ const TextInput = ({
 				css={theme => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
-					error ? errorInput : "",
+					error ? errorInput(theme.textInput && theme) : "",
 				]}
 				{...props}
 			/>
