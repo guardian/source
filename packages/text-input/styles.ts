@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { size, palette, space } from "@guardian/src-foundations"
+import { size, space } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import {
@@ -14,7 +14,7 @@ export const textInput = ({
 	${textSans.medium()};
 	color: ${textInput.textInput};
 	background-color: ${textInput.backgroundInput};
-	border: 2px solid ${palette.border.textInput};
+	border: 2px solid ${textInput.border};
 	padding: 0 ${space[2]}px;
 
 	&:focus {
@@ -46,19 +46,25 @@ export const text = ({
 	margin-bottom: ${space[1]}px;
 `
 
-export const errorInput = css`
-	border: 4px solid ${palette.border.error};
-	color: ${palette.text.error};
+export const errorInput = ({
+	textInput,
+}: { textInput: TextInputTheme } = textInputLight) => css`
+	border: 4px solid ${textInput.borderError};
+	color: ${textInput.textError};
 `
 
-export const optionalLabel = css`
+export const optionalLabel = ({
+	textInput,
+}: { textInput: TextInputTheme } = textInputLight) => css`
 	${textSans.small()};
-	color: ${palette.text.secondary};
+	color: ${textInput.textOptionalLabel};
 	font-style: italic;
 `
 
-export const supportingText = css`
+export const supportingText = ({
+	textInput,
+}: { textInput: TextInputTheme } = textInputLight) => css`
 	${textSans.small()};
-	color: ${palette.text.secondary};
+	color: ${textInput.textSupporting};
 	margin-bottom: ${space[1]}px;
 `
