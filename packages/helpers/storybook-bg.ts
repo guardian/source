@@ -1,4 +1,8 @@
-import { palette } from "@guardian/src-foundations"
+import {
+	background,
+	brandBackground,
+	brandAltBackground,
+} from "@guardian/src-foundations/palette"
 import { ThemeName } from "./types"
 
 const storybookBackgrounds: {
@@ -7,17 +11,17 @@ const storybookBackgrounds: {
 		value: string
 	}
 } = {
-	default: { name: "default", value: palette.background.primary },
-	brand: { name: "brand", value: palette.background.brand.primary },
+	default: { name: "default", value: background.primary },
+	brand: { name: "brand", value: brandBackground.primary },
 	brandAlt: {
 		name: "brandAlt",
-		value: palette.background.brandAlt.primary,
+		value: brandAltBackground.primary,
 	},
 	// continue to expose legacy theme names
-	light: { name: "light", value: palette.background.primary },
+	light: { name: "light", value: background.primary },
 	brandYellow: {
 		name: "brandYellow",
-		value: palette.background.brandYellow.primary,
+		value: brandAltBackground.primary,
 	},
 }
 
