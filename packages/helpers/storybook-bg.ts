@@ -7,8 +7,14 @@ const storybookBackgrounds: {
 		value: string
 	}
 } = {
-	light: { name: "light", value: palette.background.primary },
+	default: { name: "default", value: palette.background.primary },
 	brand: { name: "brand", value: palette.background.brand.primary },
+	brandAlt: {
+		name: "brandAlt",
+		value: palette.background.brandAlt.primary,
+	},
+	// continue to expose legacy theme names
+	light: { name: "light", value: palette.background.primary },
 	brandYellow: {
 		name: "brandYellow",
 		value: palette.background.brandYellow.primary,

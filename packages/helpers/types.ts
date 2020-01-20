@@ -1,1 +1,6 @@
-export type ThemeName = "light" | "brand" | "brandYellow"
+export type ThemeName =
+	| "default"
+	| "light"
+	| "brand"
+	| "brandYellow"
+	| "brandAlt"
