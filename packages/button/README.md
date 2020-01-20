@@ -89,11 +89,11 @@ The side of the button on which the icon appears
 
 ### Standard
 
--   `light`
+-   `default`
 -   `brand`
--   `brandYellow`
+-   `brandAlt`
 
 ### Custom
 
 -   `readerRevenue`
--   `readerRevenueYellow`
+-   `readerRevenueAlt`
