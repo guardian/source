@@ -1,4 +1,4 @@
-import { palette } from "../index"
+import { border, background, text } from "../index"
 import {
 	inlineErrorDefault,
 	inlineErrorBrand,
@@ -21,14 +21,14 @@ export const checkboxDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	checkbox: {
-		border: palette.border.checkbox,
-		borderHover: palette.border.checkboxHover,
-		borderChecked: palette.border.checkboxChecked,
-		borderError: palette.border.checkboxError,
-		backgroundChecked: palette.background.checkboxChecked,
-		text: palette.text.checkbox,
-		textSupporting: palette.text.checkboxSupporting,
-		textIndeterminate: palette.text.checkboxIndeterminate,
+		border: border.checkbox,
+		borderHover: border.checkboxHover,
+		borderChecked: border.checkboxChecked,
+		borderError: border.checkboxError,
+		backgroundChecked: background.checkboxChecked,
+		text: text.checkbox,
+		textSupporting: text.checkboxSupporting,
+		textIndeterminate: text.checkboxIndeterminate,
 	},
 	...inlineErrorDefault,
 }
@@ -38,14 +38,14 @@ export const checkboxBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	checkbox: {
-		border: palette.border.brand.checkbox,
-		borderHover: palette.border.brand.checkboxHover,
-		borderChecked: palette.border.brand.checkboxChecked,
-		borderError: palette.border.brand.checkboxError,
-		backgroundChecked: palette.background.brand.checkboxChecked,
-		text: palette.text.brand.checkbox,
-		textSupporting: palette.text.brand.checkboxSupporting,
-		textIndeterminate: palette.text.brand.checkboxIndeterminate,
+		border: border.brand.checkbox,
+		borderHover: border.brand.checkboxHover,
+		borderChecked: border.brand.checkboxChecked,
+		borderError: border.brand.checkboxError,
+		backgroundChecked: background.brand.checkboxChecked,
+		text: text.brand.checkbox,
+		textSupporting: text.brand.checkboxSupporting,
+		textIndeterminate: text.brand.checkboxIndeterminate,
 	},
 	...inlineErrorBrand,
 }
