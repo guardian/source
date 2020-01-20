@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { size, space, transitions } from "@guardian/src-foundations"
-import { buttonLight, ButtonTheme } from "@guardian/src-foundations/themes"
+import { buttonDefault, ButtonTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
@@ -23,7 +23,7 @@ export const button = css`
 
 export const primary = ({
 	button,
-}: { button: ButtonTheme } = buttonLight) => css`
+}: { button: ButtonTheme } = buttonDefault) => css`
 	background-color: ${button.backgroundPrimary};
 	color: ${button.textPrimary};
 
@@ -34,7 +34,7 @@ export const primary = ({
 
 export const secondary = ({
 	button,
-}: { button: ButtonTheme } = buttonLight) => css`
+}: { button: ButtonTheme } = buttonDefault) => css`
 	background-color: ${button.backgroundSecondary};
 	color: ${button.textSecondary};
 	${button.borderSecondary
@@ -48,7 +48,7 @@ export const secondary = ({
 
 export const tertiary = ({
 	button,
-}: { button: ButtonTheme } = buttonLight) => css`
+}: { button: ButtonTheme } = buttonDefault) => css`
 	padding: 0;
 	background-color: ${button.backgroundTertiary};
 	color: ${button.textTertiary};

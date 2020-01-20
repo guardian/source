@@ -6,11 +6,11 @@ import { size, space } from "@guardian/src-foundations"
 import {
 	Button,
 	LinkButton,
-	buttonLight,
-	buttonBrandYellow,
+	buttonDefault,
+	buttonBrandAlt,
 	buttonBrand,
 	buttonReaderRevenue,
-	buttonReaderRevenueYellow,
+	buttonReaderRevenueAlt,
 } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
@@ -73,7 +73,7 @@ export default {
 }
 
 export const priorityLight = () => (
-	<ThemeProvider theme={buttonLight}>
+	<ThemeProvider theme={buttonDefault}>
 		<div css={flexStart}>
 			{priorityButtons.map((button, index) => (
 				<div key={index}>{button}</div>
@@ -102,7 +102,7 @@ priorityBlue.story = {
 }
 
 export const priorityYellow = () => (
-	<ThemeProvider theme={buttonBrandYellow}>
+	<ThemeProvider theme={buttonBrandAlt}>
 		<div css={flexStart}>
 			{priorityButtons.map((button, index) => (
 				<div key={index}>{button}</div>
@@ -142,7 +142,7 @@ priorityReaderRevenueBlue.story = {
 }
 
 export const priorityReaderRevenueYellow = () => (
-	<ThemeProvider theme={buttonReaderRevenueYellow}>
+	<ThemeProvider theme={buttonReaderRevenueAlt}>
 		<div css={flexStart}>
 			{priorityButtons.slice(0, 2).map((button, index) => (
 				<div key={index}>{button}</div>
