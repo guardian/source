@@ -12,6 +12,6 @@ export {
 	labs,
 } from "./global"
 export { background, brandBackground, brandAltBackground } from "./background"
-export { border } from "./border"
+export { border, brandBorder } from "./border"
 export { line, brandLine, brandAltLine } from "./line"
 export { text, brandText, brandAltText } from "./text"

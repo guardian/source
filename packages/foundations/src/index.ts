@@ -6,14 +6,15 @@ export * from "./space"
 
 import {
 	background,
-	brandBackground,
-	brandAltBackground,
 	border,
 	line,
-	brandLine,
-	brandAltLine,
 	text,
+	brandBackground,
+	brandBorder,
+	brandLine,
 	brandText,
+	brandAltBackground,
+	brandAltLine,
 	brandAltText,
 	brand,
 	brandYellow,
@@ -36,6 +37,7 @@ export const palette = {
 	text,
 	// functional colours (brand)
 	brandBackground,
+	brandBorder,
 	brandLine,
 	brandText,
 	// functional colours (brandAlt)
