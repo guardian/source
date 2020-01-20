@@ -25,18 +25,16 @@ export const buttonDefault: { button: ButtonTheme } = {
 	},
 }
 
-export const buttonBrandDefault: { button: ButtonTheme } = {
+export const buttonBrand: { button: ButtonTheme } = {
 	button: {
-		textPrimary: palette.text.brandDefault.buttonPrimary,
-		backgroundPrimary: palette.background.brandDefault.buttonPrimary,
-		backgroundPrimaryHover:
-			palette.background.brandDefault.buttonPrimaryHover,
-		textSecondary: palette.text.brandDefault.buttonSecondary,
-		backgroundSecondary: palette.background.brandDefault.buttonSecondary,
-		backgroundSecondaryHover:
-			palette.background.brandDefault.buttonSecondaryHover,
-		textTertiary: palette.text.brandDefault.buttonSecondary,
-		backgroundTertiary: palette.background.brandDefault.primary,
+		textPrimary: palette.text.brand.buttonPrimary,
+		backgroundPrimary: palette.background.brand.buttonPrimary,
+		backgroundPrimaryHover: palette.background.brand.buttonPrimaryHover,
+		textSecondary: palette.text.brand.buttonSecondary,
+		backgroundSecondary: palette.background.brand.buttonSecondary,
+		backgroundSecondaryHover: palette.background.brand.buttonSecondaryHover,
+		textTertiary: palette.text.brand.buttonSecondary,
+		backgroundTertiary: palette.background.brand.primary,
 	},
 }
 
@@ -56,15 +54,13 @@ export const buttonBrandAlt: { button: ButtonTheme } = {
 
 // continue to expose legacy theme names
 export const buttonLight = buttonDefault
-export const buttonBrand = buttonBrandDefault
 export const buttonBrandYellow = buttonBrandAlt
 
 export const button = {
 	buttonDefault,
-	buttonBrandDefault,
+	buttonBrand,
 	buttonBrandAlt,
 	// continue to expose legacy theme names
 	buttonLight,
-	buttonBrand,
 	buttonBrandYellow,
 }

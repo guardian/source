@@ -10,35 +10,22 @@ import {
 	buttonBrand,
 	buttonBrandYellow,
 	buttonDefault,
-	buttonBrandDefault,
 	buttonBrandAlt,
 } from "./button"
-import {
-	checkboxLight,
-	checkboxBrand,
-	checkboxDefault,
-	checkboxBrandDefault,
-} from "./checkbox"
+import { checkboxLight, checkboxBrand, checkboxDefault } from "./checkbox"
 import {
 	inlineErrorLight,
 	inlineErrorBrand,
 	inlineErrorDefault,
-	inlineErrorBrandDefault,
 } from "./inline-error"
 import {
 	linkLight,
 	linkBrand,
 	linkBrandYellow,
 	linkDefault,
-	linkBrandDefault,
 	linkBrandAlt,
 } from "./link"
-import {
-	radioLight,
-	radioBrand,
-	radioDefault,
-	radioBrandDefault,
-} from "./radio"
+import { radioLight, radioBrand, radioDefault } from "./radio"
 import { textInputLight, textInputDefault } from "./text-input"
 
 export const defaultTheme = {
@@ -57,13 +44,7 @@ export const defaultTheme = {
 	...textInputLight,
 }
 
-export const brandDefault = {
-	...buttonBrandDefault,
-	...checkboxBrandDefault,
-	...inlineErrorBrandDefault,
-	...linkBrandDefault,
-	...radioBrandDefault,
-	// continue to expose legacy theme names
+export const brand = {
 	...buttonBrand,
 	...checkboxBrand,
 	...inlineErrorBrand,
@@ -81,5 +62,4 @@ export const brandAlt = {
 
 // continue to expose legacy theme names
 export const light = defaultTheme
-export const brand = brandDefault
 export const brandYellow = brandAlt

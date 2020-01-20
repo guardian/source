@@ -10,11 +10,11 @@ export const inlineErrorDefault: { inlineError: InlineErrorTheme } = {
 	},
 }
 
-export const inlineErrorBrandDefault: { inlineError: InlineErrorTheme } = {
+export const inlineErrorBrand: { inlineError: InlineErrorTheme } = {
 	inlineError: {
 		text: palette.text.brand.error,
 	},
 }
 
+// continue to expose legacy theme names
 export const inlineErrorLight = inlineErrorDefault
-export const inlineErrorBrand = inlineErrorBrandDefault

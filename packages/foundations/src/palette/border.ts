@@ -1,16 +1,5 @@
 import { neutral, error, brand, sport } from "./global"
 
-const brandDefault = {
-	error: error[500],
-	checkbox: brand[800],
-	checkboxHover: neutral[100],
-	checkboxChecked: neutral[100],
-	checkboxError: error[500],
-	radio: brand[800],
-	radioHover: neutral[100],
-	radioError: error[500],
-}
-
 export const border = {
 	primary: neutral[60],
 	secondary: neutral[86],
@@ -25,7 +14,14 @@ export const border = {
 	radioError: error[400],
 	textInput: neutral[60],
 	textInputError: error[400],
-	brandDefault,
-	// continue to expose legacy theme names
-	brand: brandDefault,
+	brand: {
+		error: error[500],
+		checkbox: brand[800],
+		checkboxHover: neutral[100],
+		checkboxChecked: neutral[100],
+		checkboxError: error[500],
+		radio: brand[800],
+		radioHover: neutral[100],
+		radioError: error[500],
+	},
 }

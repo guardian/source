@@ -16,10 +16,10 @@ export const linkDefault: { link: LinkTheme } = {
 	},
 }
 
-export const linkBrandDefault: { link: LinkTheme } = {
+export const linkBrand: { link: LinkTheme } = {
 	link: {
-		textPrimary: palette.text.brandDefault.linkPrimary,
-		textPrimaryHover: palette.text.brandDefault.linkPrimaryHover,
+		textPrimary: palette.text.brand.linkPrimary,
+		textPrimaryHover: palette.text.brand.linkPrimaryHover,
 	},
 }
 
@@ -32,15 +32,13 @@ export const linkBrandAlt: { link: LinkTheme } = {
 
 // continue to expose legacy theme names
 export const linkLight = linkDefault
-export const linkBrand = linkBrandDefault
 export const linkBrandYellow = linkBrandAlt
 
 export const link = {
 	linkDefault,
-	linkBrandDefault,
+	linkBrand,
 	linkBrandAlt,
 	// continue to expose legacy theme names
 	linkLight,
-	linkBrand,
 	linkBrandYellow,
 }
