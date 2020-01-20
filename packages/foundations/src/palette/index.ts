@@ -1,4 +1,4 @@
-import {
+export {
 	brand,
 	brandYellow,
 	neutral,
@@ -11,25 +11,7 @@ import {
 	lifestyle,
 	labs,
 } from "./global"
-import { background } from "./background"
-import { border } from "./border"
-import { line } from "./line"
-import { text } from "./text"
-
-export const palette = {
-	background,
-	border,
-	line,
-	text,
-	brand,
-	brandYellow,
-	neutral,
-	error,
-	success,
-	news,
-	opinion,
-	sport,
-	culture,
-	lifestyle,
-	labs,
-}
+export { background } from "./background"
+export { border } from "./border"
+export { line } from "./line"
+export { text } from "./text"
