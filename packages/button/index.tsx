@@ -18,11 +18,11 @@ import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
 import { SvgArrowRightStraight } from "@guardian/src-svgs"
 export {
-	buttonLight,
+	buttonDefault,
 	buttonBrand,
-	buttonBrandYellow,
+	buttonBrandAlt,
 } from "@guardian/src-foundations/themes"
-export { buttonReaderRevenue, buttonReaderRevenueYellow } from "./themes"
+export { buttonReaderRevenue, buttonReaderRevenueAlt } from "./themes"
 
 export type Priority = "primary" | "secondary" | "tertiary"
 type IconSide = "left" | "right"
