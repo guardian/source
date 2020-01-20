@@ -1,5 +1,13 @@
 import { neutral, error, brand } from "./global"
 
+const brandAlt = {
+	primary: neutral[7],
+	secondary: neutral[60],
+	buttonPrimary: neutral[100],
+	buttonSecondary: neutral[7],
+	linkPrimary: neutral[7],
+	linkPrimaryHover: neutral[7],
+}
 export const text = {
 	primary: neutral[7],
 	secondary: neutral[46],
@@ -34,12 +42,7 @@ export const text = {
 		radio: neutral[100],
 		radioSupporting: brand[800],
 	},
-	brandYellow: {
-		primary: neutral[7],
-		secondary: neutral[60],
-		buttonPrimary: neutral[100],
-		buttonSecondary: neutral[7],
-		linkPrimary: neutral[7],
-		linkPrimaryHover: neutral[7],
-	},
+	brandAlt,
+	// continue to expose legacy theme names
+	brandYellow: brandAlt,
 }

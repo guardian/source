@@ -5,14 +5,37 @@ export * from "./link"
 export * from "./radio"
 export * from "./text-input"
 
-import { buttonLight, buttonBrand, buttonBrandYellow } from "./button"
-import { checkboxLight, checkboxBrand } from "./checkbox"
-import { inlineErrorLight, inlineErrorBrand } from "./inline-error"
-import { linkLight, linkBrand, linkBrandYellow } from "./link"
-import { radioLight, radioBrand } from "./radio"
-import { textInputLight } from "./text-input"
+import {
+	buttonLight,
+	buttonBrand,
+	buttonBrandYellow,
+	buttonDefault,
+	buttonBrandAlt,
+} from "./button"
+import { checkboxLight, checkboxBrand, checkboxDefault } from "./checkbox"
+import {
+	inlineErrorLight,
+	inlineErrorBrand,
+	inlineErrorDefault,
+} from "./inline-error"
+import {
+	linkLight,
+	linkBrand,
+	linkBrandYellow,
+	linkDefault,
+	linkBrandAlt,
+} from "./link"
+import { radioLight, radioBrand, radioDefault } from "./radio"
+import { textInputLight, textInputDefault } from "./text-input"
 
-export const light = {
+export const defaultTheme = {
+	...buttonDefault,
+	...checkboxDefault,
+	...inlineErrorDefault,
+	...linkDefault,
+	...radioDefault,
+	...textInputDefault,
+	// continue to expose legacy theme names
 	...buttonLight,
 	...checkboxLight,
 	...inlineErrorLight,
@@ -29,7 +52,14 @@ export const brand = {
 	...radioBrand,
 }
 
-export const brandYellow = {
+export const brandAlt = {
+	...buttonBrandAlt,
+	...linkBrandAlt,
+	// continue to expose legacy theme names
 	...buttonBrandYellow,
 	...linkBrandYellow,
 }
+
+// continue to expose legacy theme names
+export const light = defaultTheme
+export const brandYellow = brandAlt

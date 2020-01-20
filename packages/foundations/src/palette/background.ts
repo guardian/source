@@ -1,5 +1,13 @@
 import { neutral, brand, brandYellow } from "./global"
 
+const brandAlt = {
+	primary: brandYellow[400],
+	buttonPrimary: neutral[7],
+	buttonPrimaryHover: "#454545",
+	buttonSecondary: brandYellow[300],
+	buttonSecondaryHover: "#F2AE00",
+}
+
 export const background = {
 	primary: neutral[100],
 	buttonPrimary: brand[400],
@@ -18,11 +26,7 @@ export const background = {
 		checkboxChecked: neutral[100],
 		radioChecked: neutral[100],
 	},
-	brandYellow: {
-		primary: brandYellow[400],
-		buttonPrimary: neutral[7],
-		buttonPrimaryHover: "#454545",
-		buttonSecondary: brandYellow[300],
-		buttonSecondaryHover: "#F2AE00",
-	},
+	brandAlt,
+	// continue to expose legacy theme names
+	brandYellow: brandAlt,
 }

@@ -14,7 +14,7 @@ export type RadioTheme = {
 	borderError: string
 }
 
-export const radioLight: {
+export const radioDefault: {
 	radio: RadioTheme
 	inlineError: InlineErrorTheme
 } = {
@@ -43,3 +43,6 @@ export const radioBrand: {
 	},
 	...inlineErrorBrand,
 }
+
+// continue to expose legacy theme names
+export const radioLight = radioDefault

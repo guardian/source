@@ -1,6 +1,6 @@
 import { palette } from "../index"
 import {
-	inlineErrorLight,
+	inlineErrorDefault,
 	inlineErrorBrand,
 	InlineErrorTheme,
 } from "./inline-error"
@@ -16,7 +16,7 @@ export type CheckboxTheme = {
 	textIndeterminate: string
 }
 
-export const checkboxLight: {
+export const checkboxDefault: {
 	checkbox: CheckboxTheme
 	inlineError: InlineErrorTheme
 } = {
@@ -30,7 +30,7 @@ export const checkboxLight: {
 		textSupporting: palette.text.checkboxSupporting,
 		textIndeterminate: palette.text.checkboxIndeterminate,
 	},
-	...inlineErrorLight,
+	...inlineErrorDefault,
 }
 
 export const checkboxBrand: {
@@ -49,3 +49,6 @@ export const checkboxBrand: {
 	},
 	...inlineErrorBrand,
 }
+
+// continue to expose legacy theme names
+export const checkboxLight = checkboxDefault

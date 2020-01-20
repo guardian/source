@@ -1,5 +1,5 @@
 import { palette } from "../index"
-import { inlineErrorLight, InlineErrorTheme } from "./inline-error"
+import { inlineErrorDefault, InlineErrorTheme } from "./inline-error"
 
 export type TextInputTheme = {
 	textInput: string
@@ -12,7 +12,7 @@ export type TextInputTheme = {
 	borderError: string
 }
 
-export const textInputLight: {
+export const textInputDefault: {
 	textInput: TextInputTheme
 	inlineError: InlineErrorTheme
 } = {
@@ -26,5 +26,8 @@ export const textInputLight: {
 		border: palette.border.textInput,
 		borderError: palette.border.textInputError,
 	},
-	...inlineErrorLight,
+	...inlineErrorDefault,
 }
+
+// continue to expose legacy theme names
+export const textInputLight = textInputDefault

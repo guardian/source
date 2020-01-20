@@ -4,7 +4,7 @@ export type InlineErrorTheme = {
 	text: string
 }
 
-export const inlineErrorLight: { inlineError: InlineErrorTheme } = {
+export const inlineErrorDefault: { inlineError: InlineErrorTheme } = {
 	inlineError: {
 		text: palette.text.error,
 	},
@@ -15,3 +15,6 @@ export const inlineErrorBrand: { inlineError: InlineErrorTheme } = {
 		text: palette.text.brand.error,
 	},
 }
+
+// continue to expose legacy theme names
+export const inlineErrorLight = inlineErrorDefault

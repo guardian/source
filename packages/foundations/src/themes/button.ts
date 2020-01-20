@@ -12,7 +12,7 @@ export type ButtonTheme = {
 	backgroundTertiary?: string
 }
 
-export const buttonLight: { button: ButtonTheme } = {
+export const buttonDefault: { button: ButtonTheme } = {
 	button: {
 		textPrimary: palette.text.buttonPrimary,
 		backgroundPrimary: palette.background.buttonPrimary,
@@ -38,23 +38,20 @@ export const buttonBrand: { button: ButtonTheme } = {
 	},
 }
 
-export const buttonBrandYellow: { button: ButtonTheme } = {
+export const buttonBrandAlt: { button: ButtonTheme } = {
 	button: {
-		textPrimary: palette.text.brandYellow.buttonPrimary,
-		backgroundPrimary: palette.background.brandYellow.buttonPrimary,
-		backgroundPrimaryHover:
-			palette.background.brandYellow.buttonPrimaryHover,
-		textSecondary: palette.text.brandYellow.buttonSecondary,
-		backgroundSecondary: palette.background.brandYellow.buttonSecondary,
+		textPrimary: palette.text.brandAlt.buttonPrimary,
+		backgroundPrimary: palette.background.brandAlt.buttonPrimary,
+		backgroundPrimaryHover: palette.background.brandAlt.buttonPrimaryHover,
+		textSecondary: palette.text.brandAlt.buttonSecondary,
+		backgroundSecondary: palette.background.brandAlt.buttonSecondary,
 		backgroundSecondaryHover:
-			palette.background.brandYellow.buttonSecondaryHover,
-		textTertiary: palette.text.brandYellow.buttonSecondary,
-		backgroundTertiary: palette.background.brandYellow.primary,
+			palette.background.brandAlt.buttonSecondaryHover,
+		textTertiary: palette.text.brandAlt.buttonSecondary,
+		backgroundTertiary: palette.background.brandAlt.primary,
 	},
 }
 
-export const button = {
-	buttonLight,
-	buttonBrand,
-	buttonBrandYellow,
-}
+// continue to expose legacy theme names
+export const buttonLight = buttonDefault
+export const buttonBrandYellow = buttonBrandAlt
