@@ -13,10 +13,10 @@ $ yarn add @guardian/src-foundations
 ### [Palette](https://zeroheight.com/2a1e5182b/p/938810)
 
 ```ts
-import { palette } from "@guardian/src-foundations"
+import { background } from "@guardian/src-foundations/palette"
 
 const backgroundColor = css`
-    background-color: ${palette.neutral[97]};
+    background-color: ${background.primary};
 `
 ```
 
