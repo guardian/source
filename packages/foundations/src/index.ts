@@ -5,6 +5,12 @@ export * from "./size"
 export * from "./space"
 
 import {
+	background,
+	border,
+	line,
+	brandLine,
+	brandAltLine,
+	text,
 	brand,
 	brandYellow,
 	neutral,
@@ -16,17 +22,18 @@ import {
 	culture,
 	lifestyle,
 	labs,
-	background,
-	border,
-	line,
-	text,
 } from "./palette"
 
 export const palette = {
+	// functional colours
 	background,
 	border,
 	line,
+	brandLine,
+	brandAltLine,
 	text,
+
+	// global colours
 	brand,
 	brandYellow,
 	neutral,

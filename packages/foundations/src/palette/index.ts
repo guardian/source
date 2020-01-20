@@ -13,5 +13,5 @@ export {
 } from "./global"
 export { background } from "./background"
 export { border } from "./border"
-export { line } from "./line"
+export { line, brandLine, brandAltLine } from "./line"
 export { text } from "./text"
