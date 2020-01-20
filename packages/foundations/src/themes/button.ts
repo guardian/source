@@ -12,7 +12,7 @@ export type ButtonTheme = {
 	backgroundTertiary?: string
 }
 
-export const buttonLight: { button: ButtonTheme } = {
+export const buttonDefault: { button: ButtonTheme } = {
 	button: {
 		textPrimary: palette.text.buttonPrimary,
 		backgroundPrimary: palette.background.buttonPrimary,
@@ -25,35 +25,45 @@ export const buttonLight: { button: ButtonTheme } = {
 	},
 }
 
-export const buttonBrand: { button: ButtonTheme } = {
+export const buttonBrandDefault: { button: ButtonTheme } = {
 	button: {
-		textPrimary: palette.text.brand.buttonPrimary,
-		backgroundPrimary: palette.background.brand.buttonPrimary,
-		backgroundPrimaryHover: palette.background.brand.buttonPrimaryHover,
-		textSecondary: palette.text.brand.buttonSecondary,
-		backgroundSecondary: palette.background.brand.buttonSecondary,
-		backgroundSecondaryHover: palette.background.brand.buttonSecondaryHover,
-		textTertiary: palette.text.brand.buttonSecondary,
-		backgroundTertiary: palette.background.brand.primary,
+		textPrimary: palette.text.brandDefault.buttonPrimary,
+		backgroundPrimary: palette.background.brandDefault.buttonPrimary,
+		backgroundPrimaryHover:
+			palette.background.brandDefault.buttonPrimaryHover,
+		textSecondary: palette.text.brandDefault.buttonSecondary,
+		backgroundSecondary: palette.background.brandDefault.buttonSecondary,
+		backgroundSecondaryHover:
+			palette.background.brandDefault.buttonSecondaryHover,
+		textTertiary: palette.text.brandDefault.buttonSecondary,
+		backgroundTertiary: palette.background.brandDefault.primary,
 	},
 }
 
-export const buttonBrandYellow: { button: ButtonTheme } = {
+export const buttonBrandAlt: { button: ButtonTheme } = {
 	button: {
-		textPrimary: palette.text.brandYellow.buttonPrimary,
-		backgroundPrimary: palette.background.brandYellow.buttonPrimary,
-		backgroundPrimaryHover:
-			palette.background.brandYellow.buttonPrimaryHover,
-		textSecondary: palette.text.brandYellow.buttonSecondary,
-		backgroundSecondary: palette.background.brandYellow.buttonSecondary,
+		textPrimary: palette.text.brandAlt.buttonPrimary,
+		backgroundPrimary: palette.background.brandAlt.buttonPrimary,
+		backgroundPrimaryHover: palette.background.brandAlt.buttonPrimaryHover,
+		textSecondary: palette.text.brandAlt.buttonSecondary,
+		backgroundSecondary: palette.background.brandAlt.buttonSecondary,
 		backgroundSecondaryHover:
-			palette.background.brandYellow.buttonSecondaryHover,
-		textTertiary: palette.text.brandYellow.buttonSecondary,
-		backgroundTertiary: palette.background.brandYellow.primary,
+			palette.background.brandAlt.buttonSecondaryHover,
+		textTertiary: palette.text.brandAlt.buttonSecondary,
+		backgroundTertiary: palette.background.brandAlt.primary,
 	},
 }
+
+// continue to expose legacy theme names
+export const buttonLight = buttonDefault
+export const buttonBrand = buttonBrandDefault
+export const buttonBrandYellow = buttonBrandAlt
 
 export const button = {
+	buttonDefault,
+	buttonBrandDefault,
+	buttonBrandAlt,
+	// continue to expose legacy theme names
 	buttonLight,
 	buttonBrand,
 	buttonBrandYellow,

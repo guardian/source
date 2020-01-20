@@ -7,7 +7,7 @@ export type LinkTheme = {
 	textSecondaryHover?: string
 }
 
-export const linkLight: { link: LinkTheme } = {
+export const linkDefault: { link: LinkTheme } = {
 	link: {
 		textPrimary: palette.text.linkPrimary,
 		textPrimaryHover: palette.text.linkPrimaryHover,
@@ -16,21 +16,30 @@ export const linkLight: { link: LinkTheme } = {
 	},
 }
 
-export const linkBrand: { link: LinkTheme } = {
+export const linkBrandDefault: { link: LinkTheme } = {
 	link: {
-		textPrimary: palette.text.brand.linkPrimary,
-		textPrimaryHover: palette.text.brand.linkPrimaryHover,
+		textPrimary: palette.text.brandDefault.linkPrimary,
+		textPrimaryHover: palette.text.brandDefault.linkPrimaryHover,
 	},
 }
 
-export const linkBrandYellow: { link: LinkTheme } = {
+export const linkBrandAlt: { link: LinkTheme } = {
 	link: {
-		textPrimary: palette.text.brandYellow.linkPrimary,
-		textPrimaryHover: palette.text.brandYellow.linkPrimaryHover,
+		textPrimary: palette.text.brandAlt.linkPrimary,
+		textPrimaryHover: palette.text.brandAlt.linkPrimaryHover,
 	},
 }
+
+// continue to expose legacy theme names
+export const linkLight = linkDefault
+export const linkBrand = linkBrandDefault
+export const linkBrandYellow = linkBrandAlt
 
 export const link = {
+	linkDefault,
+	linkBrandDefault,
+	linkBrandAlt,
+	// continue to expose legacy theme names
 	linkLight,
 	linkBrand,
 	linkBrandYellow,

@@ -1,7 +1,7 @@
 import { palette } from "../index"
 import {
-	inlineErrorLight,
-	inlineErrorBrand,
+	inlineErrorDefault,
+	inlineErrorBrandDefault,
 	InlineErrorTheme,
 } from "./inline-error"
 
@@ -16,7 +16,7 @@ export type CheckboxTheme = {
 	textIndeterminate: string
 }
 
-export const checkboxLight: {
+export const checkboxDefault: {
 	checkbox: CheckboxTheme
 	inlineError: InlineErrorTheme
 } = {
@@ -30,22 +30,26 @@ export const checkboxLight: {
 		textSupporting: palette.text.checkboxSupporting,
 		textIndeterminate: palette.text.checkboxIndeterminate,
 	},
-	...inlineErrorLight,
+	...inlineErrorDefault,
 }
 
-export const checkboxBrand: {
+export const checkboxBrandDefault: {
 	checkbox: CheckboxTheme
 	inlineError: InlineErrorTheme
 } = {
 	checkbox: {
-		border: palette.border.brand.checkbox,
-		borderHover: palette.border.brand.checkboxHover,
-		borderChecked: palette.border.brand.checkboxChecked,
-		borderError: palette.border.brand.checkboxError,
-		backgroundChecked: palette.background.brand.checkboxChecked,
-		text: palette.text.brand.checkbox,
-		textSupporting: palette.text.brand.checkboxSupporting,
-		textIndeterminate: palette.text.brand.checkboxIndeterminate,
+		border: palette.border.brandDefault.checkbox,
+		borderHover: palette.border.brandDefault.checkboxHover,
+		borderChecked: palette.border.brandDefault.checkboxChecked,
+		borderError: palette.border.brandDefault.checkboxError,
+		backgroundChecked: palette.background.brandDefault.checkboxChecked,
+		text: palette.text.brandDefault.checkbox,
+		textSupporting: palette.text.brandDefault.checkboxSupporting,
+		textIndeterminate: palette.text.brandDefault.checkboxIndeterminate,
 	},
-	...inlineErrorBrand,
+	...inlineErrorBrandDefault,
 }
+
+// continue to expose legacy theme names
+export const checkboxLight = checkboxDefault
+export const checkboxBrand = checkboxBrandDefault

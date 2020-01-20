@@ -1,5 +1,27 @@
 import { neutral, error, brand } from "./global"
 
+const brandDefault = {
+	primary: neutral[100],
+	secondary: brand[800],
+	error: error[500],
+	buttonPrimary: brand[400],
+	buttonSecondary: neutral[100],
+	checkbox: neutral[100],
+	checkboxSupporting: brand[800],
+	checkboxIndeterminate: brand[800],
+	linkPrimary: neutral[100],
+	linkPrimaryHover: neutral[100],
+	radio: neutral[100],
+	radioSupporting: brand[800],
+}
+const brandAlt = {
+	primary: neutral[7],
+	secondary: neutral[60],
+	buttonPrimary: neutral[100],
+	buttonSecondary: neutral[7],
+	linkPrimary: neutral[7],
+	linkPrimaryHover: neutral[7],
+}
 export const text = {
 	primary: neutral[7],
 	secondary: neutral[46],
@@ -20,26 +42,9 @@ export const text = {
 	textInputOptionalLabel: neutral[46],
 	textInputSupporting: neutral[46],
 	textInputError: error[400],
-	brand: {
-		primary: neutral[100],
-		secondary: brand[800],
-		error: error[500],
-		buttonPrimary: brand[400],
-		buttonSecondary: neutral[100],
-		checkbox: neutral[100],
-		checkboxSupporting: brand[800],
-		checkboxIndeterminate: brand[800],
-		linkPrimary: neutral[100],
-		linkPrimaryHover: neutral[100],
-		radio: neutral[100],
-		radioSupporting: brand[800],
-	},
-	brandYellow: {
-		primary: neutral[7],
-		secondary: neutral[60],
-		buttonPrimary: neutral[100],
-		buttonSecondary: neutral[7],
-		linkPrimary: neutral[7],
-		linkPrimaryHover: neutral[7],
-	},
+	brandDefault,
+	brandAlt,
+	// continue to expose legacy theme names
+	brand: brandDefault,
+	brandYellow: brandAlt,
 }

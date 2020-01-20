@@ -5,14 +5,50 @@ export * from "./link"
 export * from "./radio"
 export * from "./text-input"
 
-import { buttonLight, buttonBrand, buttonBrandYellow } from "./button"
-import { checkboxLight, checkboxBrand } from "./checkbox"
-import { inlineErrorLight, inlineErrorBrand } from "./inline-error"
-import { linkLight, linkBrand, linkBrandYellow } from "./link"
-import { radioLight, radioBrand } from "./radio"
-import { textInputLight } from "./text-input"
+import {
+	buttonLight,
+	buttonBrand,
+	buttonBrandYellow,
+	buttonDefault,
+	buttonBrandDefault,
+	buttonBrandAlt,
+} from "./button"
+import {
+	checkboxLight,
+	checkboxBrand,
+	checkboxDefault,
+	checkboxBrandDefault,
+} from "./checkbox"
+import {
+	inlineErrorLight,
+	inlineErrorBrand,
+	inlineErrorDefault,
+	inlineErrorBrandDefault,
+} from "./inline-error"
+import {
+	linkLight,
+	linkBrand,
+	linkBrandYellow,
+	linkDefault,
+	linkBrandDefault,
+	linkBrandAlt,
+} from "./link"
+import {
+	radioLight,
+	radioBrand,
+	radioDefault,
+	radioBrandDefault,
+} from "./radio"
+import { textInputLight, textInputDefault } from "./text-input"
 
-export const light = {
+export const defaultTheme = {
+	...buttonDefault,
+	...checkboxDefault,
+	...inlineErrorDefault,
+	...linkDefault,
+	...radioDefault,
+	...textInputDefault,
+	// continue to expose legacy theme names
 	...buttonLight,
 	...checkboxLight,
 	...inlineErrorLight,
@@ -21,7 +57,13 @@ export const light = {
 	...textInputLight,
 }
 
-export const brand = {
+export const brandDefault = {
+	...buttonBrandDefault,
+	...checkboxBrandDefault,
+	...inlineErrorBrandDefault,
+	...linkBrandDefault,
+	...radioBrandDefault,
+	// continue to expose legacy theme names
 	...buttonBrand,
 	...checkboxBrand,
 	...inlineErrorBrand,
@@ -29,7 +71,15 @@ export const brand = {
 	...radioBrand,
 }
 
-export const brandYellow = {
+export const brandAlt = {
+	...buttonBrandAlt,
+	...linkBrandAlt,
+	// continue to expose legacy theme names
 	...buttonBrandYellow,
 	...linkBrandYellow,
 }
+
+// continue to expose legacy theme names
+export const light = defaultTheme
+export const brand = brandDefault
+export const brandYellow = brandAlt
