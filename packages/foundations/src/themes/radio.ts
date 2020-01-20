@@ -1,4 +1,4 @@
-import { palette } from "../index"
+import { border, background, text } from "../index"
 import {
 	inlineErrorLight,
 	inlineErrorBrand,
@@ -19,12 +19,12 @@ export const radioDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		borderHover: palette.border.radioHover,
-		border: palette.border.radio,
-		backgroundChecked: palette.background.radioChecked,
-		text: palette.text.radio,
-		textSupporting: palette.text.radioSupporting,
-		borderError: palette.border.radioError,
+		borderHover: border.radioHover,
+		border: border.radio,
+		backgroundChecked: background.radioChecked,
+		text: text.radio,
+		textSupporting: text.radioSupporting,
+		borderError: border.radioError,
 	},
 	...inlineErrorLight,
 }
@@ -34,12 +34,12 @@ export const radioBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		borderHover: palette.border.brand.radioHover,
-		border: palette.border.brand.radio,
-		backgroundChecked: palette.background.brand.radioChecked,
-		text: palette.text.brand.radio,
-		textSupporting: palette.text.brand.radioSupporting,
-		borderError: palette.border.brand.radioError,
+		borderHover: border.brand.radioHover,
+		border: border.brand.radio,
+		backgroundChecked: background.brand.radioChecked,
+		text: text.brand.radio,
+		textSupporting: text.brand.radioSupporting,
+		borderError: border.brand.radioError,
 	},
 	...inlineErrorBrand,
 }

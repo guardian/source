@@ -1,4 +1,4 @@
-import { palette } from "../index"
+import { text } from "../index"
 
 export type InlineErrorTheme = {
 	text: string
@@ -6,13 +6,13 @@ export type InlineErrorTheme = {
 
 export const inlineErrorDefault: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		text: palette.text.error,
+		text: text.error,
 	},
 }
 
 export const inlineErrorBrand: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		text: palette.text.brand.error,
+		text: text.brand.error,
 	},
 }
 

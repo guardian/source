@@ -1,4 +1,4 @@
-import { palette } from "../index"
+import { text } from "../index"
 
 export type LinkTheme = {
 	textPrimary: string
@@ -9,24 +9,24 @@ export type LinkTheme = {
 
 export const linkDefault: { link: LinkTheme } = {
 	link: {
-		textPrimary: palette.text.linkPrimary,
-		textPrimaryHover: palette.text.linkPrimaryHover,
-		textSecondary: palette.text.linkSecondary,
-		textSecondaryHover: palette.text.linkSecondaryHover,
+		textPrimary: text.linkPrimary,
+		textPrimaryHover: text.linkPrimaryHover,
+		textSecondary: text.linkSecondary,
+		textSecondaryHover: text.linkSecondaryHover,
 	},
 }
 
 export const linkBrand: { link: LinkTheme } = {
 	link: {
-		textPrimary: palette.text.brand.linkPrimary,
-		textPrimaryHover: palette.text.brand.linkPrimaryHover,
+		textPrimary: text.brand.linkPrimary,
+		textPrimaryHover: text.brand.linkPrimaryHover,
 	},
 }
 
 export const linkBrandAlt: { link: LinkTheme } = {
 	link: {
-		textPrimary: palette.text.brandAlt.linkPrimary,
-		textPrimaryHover: palette.text.brandAlt.linkPrimaryHover,
+		textPrimary: text.brandAlt.linkPrimary,
+		textPrimaryHover: text.brandAlt.linkPrimaryHover,
 	},
 }
 

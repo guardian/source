@@ -1,4 +1,4 @@
-import { palette } from "../index"
+import { text, background } from "../index"
 
 export type ButtonTheme = {
 	textPrimary: string
@@ -14,41 +14,40 @@ export type ButtonTheme = {
 
 export const buttonDefault: { button: ButtonTheme } = {
 	button: {
-		textPrimary: palette.text.buttonPrimary,
-		backgroundPrimary: palette.background.buttonPrimary,
-		backgroundPrimaryHover: palette.background.buttonPrimaryHover,
-		textSecondary: palette.text.buttonSecondary,
-		backgroundSecondary: palette.background.buttonSecondary,
-		backgroundSecondaryHover: palette.background.buttonSecondaryHover,
-		textTertiary: palette.text.buttonSecondary,
-		backgroundTertiary: palette.background.primary,
+		textPrimary: text.buttonPrimary,
+		backgroundPrimary: background.buttonPrimary,
+		backgroundPrimaryHover: background.buttonPrimaryHover,
+		textSecondary: text.buttonSecondary,
+		backgroundSecondary: background.buttonSecondary,
+		backgroundSecondaryHover: background.buttonSecondaryHover,
+		textTertiary: text.buttonSecondary,
+		backgroundTertiary: background.primary,
 	},
 }
 
 export const buttonBrand: { button: ButtonTheme } = {
 	button: {
-		textPrimary: palette.text.brand.buttonPrimary,
-		backgroundPrimary: palette.background.brand.buttonPrimary,
-		backgroundPrimaryHover: palette.background.brand.buttonPrimaryHover,
-		textSecondary: palette.text.brand.buttonSecondary,
-		backgroundSecondary: palette.background.brand.buttonSecondary,
-		backgroundSecondaryHover: palette.background.brand.buttonSecondaryHover,
-		textTertiary: palette.text.brand.buttonSecondary,
-		backgroundTertiary: palette.background.brand.primary,
+		textPrimary: text.brand.buttonPrimary,
+		backgroundPrimary: background.brand.buttonPrimary,
+		backgroundPrimaryHover: background.brand.buttonPrimaryHover,
+		textSecondary: text.brand.buttonSecondary,
+		backgroundSecondary: background.brand.buttonSecondary,
+		backgroundSecondaryHover: background.brand.buttonSecondaryHover,
+		textTertiary: text.brand.buttonSecondary,
+		backgroundTertiary: background.brand.primary,
 	},
 }
 
 export const buttonBrandAlt: { button: ButtonTheme } = {
 	button: {
-		textPrimary: palette.text.brandAlt.buttonPrimary,
-		backgroundPrimary: palette.background.brandAlt.buttonPrimary,
-		backgroundPrimaryHover: palette.background.brandAlt.buttonPrimaryHover,
-		textSecondary: palette.text.brandAlt.buttonSecondary,
-		backgroundSecondary: palette.background.brandAlt.buttonSecondary,
-		backgroundSecondaryHover:
-			palette.background.brandAlt.buttonSecondaryHover,
-		textTertiary: palette.text.brandAlt.buttonSecondary,
-		backgroundTertiary: palette.background.brandAlt.primary,
+		textPrimary: text.brandAlt.buttonPrimary,
+		backgroundPrimary: background.brandAlt.buttonPrimary,
+		backgroundPrimaryHover: background.brandAlt.buttonPrimaryHover,
+		textSecondary: text.brandAlt.buttonSecondary,
+		backgroundSecondary: background.brandAlt.buttonSecondary,
+		backgroundSecondaryHover: background.brandAlt.buttonSecondaryHover,
+		textTertiary: text.brandAlt.buttonSecondary,
+		backgroundTertiary: background.brandAlt.primary,
 	},
 }
 
