@@ -14,4 +14,4 @@ export {
 export { background } from "./background"
 export { border } from "./border"
 export { line, brandLine, brandAltLine } from "./line"
-export { text } from "./text"
+export { text, brandText, brandAltText } from "./text"

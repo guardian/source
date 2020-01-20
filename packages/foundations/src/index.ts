@@ -11,6 +11,8 @@ import {
 	brandLine,
 	brandAltLine,
 	text,
+	brandText,
+	brandAltText,
 	brand,
 	brandYellow,
 	neutral,
@@ -25,13 +27,17 @@ import {
 } from "./palette"
 
 export const palette = {
-	// functional colours
+	// functional colours (default)
 	background,
 	border,
 	line,
-	brandLine,
-	brandAltLine,
 	text,
+	// functional colours (brand)
+	brandLine,
+	brandText,
+	// functional colours (brandAlt)
+	brandAltLine,
+	brandAltText,
 
 	// global colours
 	brand,
