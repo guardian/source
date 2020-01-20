@@ -55,12 +55,3 @@ export const buttonBrandAlt: { button: ButtonTheme } = {
 // continue to expose legacy theme names
 export const buttonLight = buttonDefault
 export const buttonBrandYellow = buttonBrandAlt
-
-export const button = {
-	buttonDefault,
-	buttonBrand,
-	buttonBrandAlt,
-	// continue to expose legacy theme names
-	buttonLight,
-	buttonBrandYellow,
-}

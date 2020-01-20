@@ -33,12 +33,3 @@ export const linkBrandAlt: { link: LinkTheme } = {
 // continue to expose legacy theme names
 export const linkLight = linkDefault
 export const linkBrandYellow = linkBrandAlt
-
-export const link = {
-	linkDefault,
-	linkBrand,
-	linkBrandAlt,
-	// continue to expose legacy theme names
-	linkLight,
-	linkBrandYellow,
-}
