@@ -1,4 +1,4 @@
-import { text } from "../index"
+import { text, brandText, brandAltText } from "../index"
 
 export type LinkTheme = {
 	textPrimary: string
@@ -18,15 +18,15 @@ export const linkDefault: { link: LinkTheme } = {
 
 export const linkBrand: { link: LinkTheme } = {
 	link: {
-		textPrimary: text.brand.linkPrimary,
-		textPrimaryHover: text.brand.linkPrimaryHover,
+		textPrimary: brandText.linkPrimary,
+		textPrimaryHover: brandText.linkPrimaryHover,
 	},
 }
 
 export const linkBrandAlt: { link: LinkTheme } = {
 	link: {
-		textPrimary: text.brandAlt.linkPrimary,
-		textPrimaryHover: text.brandAlt.linkPrimaryHover,
+		textPrimary: brandAltText.linkPrimary,
+		textPrimaryHover: brandAltText.linkPrimaryHover,
 	},
 }
 

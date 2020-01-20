@@ -1,4 +1,11 @@
-import { border, background, text } from "../index"
+import {
+	border,
+	background,
+	text,
+	brandBorder,
+	brandBackground,
+	brandText,
+} from "../index"
 import {
 	inlineErrorDefault,
 	inlineErrorBrand,
@@ -38,14 +45,14 @@ export const checkboxBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	checkbox: {
-		border: border.brand.checkbox,
-		borderHover: border.brand.checkboxHover,
-		borderChecked: border.brand.checkboxChecked,
-		borderError: border.brand.checkboxError,
-		backgroundChecked: background.brand.checkboxChecked,
-		text: text.brand.checkbox,
-		textSupporting: text.brand.checkboxSupporting,
-		textIndeterminate: text.brand.checkboxIndeterminate,
+		border: brandBorder.checkbox,
+		borderHover: brandBorder.checkboxHover,
+		borderChecked: brandBorder.checkboxChecked,
+		borderError: brandBorder.checkboxError,
+		backgroundChecked: brandBackground.checkboxChecked,
+		text: brandText.checkbox,
+		textSupporting: brandText.checkboxSupporting,
+		textIndeterminate: brandText.checkboxIndeterminate,
 	},
 	...inlineErrorBrand,
 }

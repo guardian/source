@@ -1,4 +1,11 @@
-import { border, background, text } from "../index"
+import {
+	border,
+	background,
+	text,
+	brandBorder,
+	brandBackground,
+	brandText,
+} from "../index"
 import {
 	inlineErrorLight,
 	inlineErrorBrand,
@@ -34,12 +41,12 @@ export const radioBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		borderHover: border.brand.radioHover,
-		border: border.brand.radio,
-		backgroundChecked: background.brand.radioChecked,
-		text: text.brand.radio,
-		textSupporting: text.brand.radioSupporting,
-		borderError: border.brand.radioError,
+		borderHover: brandBorder.radioHover,
+		border: brandBorder.radio,
+		backgroundChecked: brandBackground.radioChecked,
+		text: brandText.radio,
+		textSupporting: brandText.radioSupporting,
+		borderError: brandBorder.radioError,
 	},
 	...inlineErrorBrand,
 }

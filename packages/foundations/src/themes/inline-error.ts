@@ -1,4 +1,4 @@
-import { text } from "../index"
+import { text, brandText } from "../index"
 
 export type InlineErrorTheme = {
 	text: string
@@ -12,7 +12,7 @@ export const inlineErrorDefault: { inlineError: InlineErrorTheme } = {
 
 export const inlineErrorBrand: { inlineError: InlineErrorTheme } = {
 	inlineError: {
-		text: text.brand.error,
+		text: brandText.error,
 	},
 }
 
