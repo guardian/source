@@ -23,6 +23,8 @@ module.exports = {
 		"@emotion/core",
 		"@emotion/css",
 		"@guardian/src-foundations",
+		"@guardian/src-foundations/themes",
+		"@guardian/src-foundations/typography",
 	],
 	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
 }
