@@ -1,5 +1,6 @@
 export {
 	brand,
+	brandAlt,
 	brandYellow,
 	neutral,
 	error,

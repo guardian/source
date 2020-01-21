@@ -1,4 +1,4 @@
-import { neutral, brand, brandYellow } from "./global"
+import { neutral, brand, brandAlt } from "./global"
 
 export const background = {
 	primary: neutral[100],
@@ -22,9 +22,9 @@ export const brandBackground = {
 }
 
 export const brandAltBackground = {
-	primary: brandYellow[400],
+	primary: brandAlt[400],
 	buttonPrimary: neutral[7],
 	buttonPrimaryHover: "#454545",
-	buttonSecondary: brandYellow[300],
+	buttonSecondary: brandAlt[300],
 	buttonSecondaryHover: "#F2AE00",
 }

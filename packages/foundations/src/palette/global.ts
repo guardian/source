@@ -14,7 +14,7 @@ export const brand = {
 	pastel: colors.blues[8],
 	faded: colors.blues[9],
 }
-export const brandYellow = {
+export const brandAlt = {
 	300: colors.yellows[0],
 	400: colors.yellows[1],
 
@@ -22,6 +22,8 @@ export const brandYellow = {
 	dark: colors.yellows[0],
 	main: colors.yellows[1],
 }
+// continue to expose legacy name for compatibility
+export const brandYellow = brandAlt
 export const neutral = {
 	7: colors.grays[0],
 	20: colors.grays[1],
