@@ -1,4 +1,11 @@
-import { text, background } from "../index"
+import {
+	text,
+	background,
+	brandText,
+	brandBackground,
+	brandAltText,
+	brandAltBackground,
+} from "../index"
 
 export type ButtonTheme = {
 	textPrimary: string
@@ -27,27 +34,27 @@ export const buttonDefault: { button: ButtonTheme } = {
 
 export const buttonBrand: { button: ButtonTheme } = {
 	button: {
-		textPrimary: text.brand.buttonPrimary,
-		backgroundPrimary: background.brand.buttonPrimary,
-		backgroundPrimaryHover: background.brand.buttonPrimaryHover,
-		textSecondary: text.brand.buttonSecondary,
-		backgroundSecondary: background.brand.buttonSecondary,
-		backgroundSecondaryHover: background.brand.buttonSecondaryHover,
-		textTertiary: text.brand.buttonSecondary,
-		backgroundTertiary: background.brand.primary,
+		textPrimary: brandText.buttonPrimary,
+		backgroundPrimary: brandBackground.buttonPrimary,
+		backgroundPrimaryHover: brandBackground.buttonPrimaryHover,
+		textSecondary: brandText.buttonSecondary,
+		backgroundSecondary: brandBackground.buttonSecondary,
+		backgroundSecondaryHover: brandBackground.buttonSecondaryHover,
+		textTertiary: brandText.buttonSecondary,
+		backgroundTertiary: brandBackground.primary,
 	},
 }
 
 export const buttonBrandAlt: { button: ButtonTheme } = {
 	button: {
-		textPrimary: text.brandAlt.buttonPrimary,
-		backgroundPrimary: background.brandAlt.buttonPrimary,
-		backgroundPrimaryHover: background.brandAlt.buttonPrimaryHover,
-		textSecondary: text.brandAlt.buttonSecondary,
-		backgroundSecondary: background.brandAlt.buttonSecondary,
-		backgroundSecondaryHover: background.brandAlt.buttonSecondaryHover,
-		textTertiary: text.brandAlt.buttonSecondary,
-		backgroundTertiary: background.brandAlt.primary,
+		textPrimary: brandAltText.buttonPrimary,
+		backgroundPrimary: brandAltBackground.buttonPrimary,
+		backgroundPrimaryHover: brandAltBackground.buttonPrimaryHover,
+		textSecondary: brandAltText.buttonSecondary,
+		backgroundSecondary: brandAltBackground.buttonSecondary,
+		backgroundSecondaryHover: brandAltBackground.buttonSecondaryHover,
+		textTertiary: brandAltText.buttonSecondary,
+		backgroundTertiary: brandAltBackground.primary,
 	},
 }
 
