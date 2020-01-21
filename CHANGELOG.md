@@ -5,6 +5,78 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 21st January 2020
+
+### `@guardian/src-foundations 0.12.0`
+
+-   [#155](https://github.com/guardian/source-components/pull/155) Add link themes and colours
+-   :boom: [#164](https://github.com/guardian/source-components/pull/164) Delete reader revenue themes from foundations
+-   [#167](https://github.com/guardian/source-components/pull/167) Expose mono theme for links
+-   [#169](https://github.com/guardian/source-components/pull/169) Expose checkbox themes
+-   [#171](https://github.com/guardian/source-components/pull/171) Use more functional colours for radio themes
+-   :boom: [#175](https://github.com/guardian/source-components/pull/175) Delete mono theme
+-   [#177](https://github.com/guardian/source-components/pull/177) Add line colours to palette
+-   [#180](https://github.com/guardian/source-components/pull/180) Colour by numbers
+-   :boom: [#184](https://github.com/guardian/source-components/pull/184) Re-prefix cta colours with button
+-   [#186](https://github.com/guardian/source-components/pull/186) Refactor palette
+-   :boom: [#189](https://github.com/guardian/source-components/pull/189) Remove unused colours from radio theme
+-   [#190](https://github.com/guardian/source-components/pull/190) Expose new theme names
+-   [#193](https://github.com/guardian/source-components/pull/193) Treeshakeable palette
+-   :boom: [#195](https://github.com/guardian/source-components/pull/195) Expose functional colours by theme
+-   [#196](https://github.com/guardian/source-components/pull/196) Re-expose brandYellow colour as brandAlt
+
+### `@guardian/src-button 0.8.0`
+
+-   [#151](https://github.com/guardian/source-components/pull/151) Remove background toggle from button stories
+-   [#161](https://github.com/guardian/source-components/pull/161) Inline Reader Revenue themes for button
+-   [#163](https://github.com/guardian/source-components/pull/163) Move Reader Revenue palette to button package
+-   [#165](https://github.com/guardian/source-components/pull/165) Remove reader revenue themes from helpers
+-   [#181](https://github.com/guardian/source-components/pull/181) Use numbered colour names in button custom themes
+-   :boom: [#191](https://github.com/guardian/source-components/pull/191) Update button custom theme names
+-   [#194](https://github.com/guardian/source-components/pull/194) Import individual global colours in button themes
+
+### `@guardian/src-checkbox 0.4.0`
+
+-   [#170](https://github.com/guardian/source-components/pull/170) Hook up checkbox themes
+
+### `@guardian/src-grid 0.3.0`
+
+-   [#185](https://github.com/guardian/source-components/pull/185) Add support for custom breakpoints to grid
+
+### `@guardian/src-inline-error 0.7.0`
+
+-   [#154](https://github.com/guardian/source-components/pull/154) Remove background toggle from inline-error stories
+
+### `@guardian/src-link 0.1.0`
+
+-   [#156](https://github.com/guardian/source-components/pull/156) First pass at link component
+-   [#157](https://github.com/guardian/source-components/pull/157) Add icon styling to links
+-   [#159](https://github.com/guardian/source-components/pull/159) Add icons that better represent icon purpose
+-   [#160](https://github.com/guardian/source-components/pull/160) Add subdued link API
+-   [#165](https://github.com/guardian/source-components/pull/165) Remove reader revenue themes from helpers
+-   [#168](https://github.com/guardian/source-components/pull/168) Document mono theme in link package
+-   [#174](https://github.com/guardian/source-components/pull/174) Delete mono theme from link component
+-   [#178](https://github.com/guardian/source-components/pull/178) Remove branded secondary links
+-   [#179](https://github.com/guardian/source-components/pull/179) Remove branded secondary links colours
+
+### `@guardian/src-radio 0.7.0`
+
+-   [#152](https://github.com/guardian/source-components/pull/152) Remove background toggle from radio stories
+-   [#165](https://github.com/guardian/source-components/pull/165) Remove reader revenue themes from helpers
+-   [#172](https://github.com/guardian/source-components/pull/172) Add supported themes to radio readme
+-   [#187](https://github.com/guardian/source-components/pull/187) Use error border colour for error border
+
+### `@guardian/src-svgs 0.1.0`
+
+-   [#158](https://github.com/guardian/source-components/pull/158) New SVGs: external and chevron-left-single
+
+### `@guardian/src-text-input 0.8.0`
+
+-   [#165](https://github.com/guardian/source-components/pull/165) Remove reader revenue themes from helpers
+-   [#173](https://github.com/guardian/source-components/pull/173) Add supported themes to text-input
+-   [#182](https://github.com/guardian/source-components/pull/182) Use numbered colour names in text-input
+-   [#188](https://github.com/guardian/source-components/pull/188) Use component-specific theme colours
+
 ## 8th January 2020
 
 ### `@guardian/src-foundations 0.11.0`
