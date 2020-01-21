@@ -17,6 +17,7 @@ import {
 	brandAltLine,
 	brandAltText,
 	brand,
+	brandAlt,
 	brandYellow,
 	neutral,
 	error,
@@ -46,6 +47,7 @@ export const palette = {
 	brandAltText,
 	// global colours
 	brand,
+	brandAlt,
 	brandYellow,
 	neutral,
 	error,
