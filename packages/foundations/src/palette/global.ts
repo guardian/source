@@ -33,7 +33,8 @@ export const neutral = {
 	93: colors.grays[5],
 	97: colors.grays[6],
 	100: colors.grays[7],
-	specialReport: colors.grays[8],
+	// TODO: move this into background.ts
+	specialReport: "#3F464A",
 }
 export const error = {
 	400: colors.reds[1],
