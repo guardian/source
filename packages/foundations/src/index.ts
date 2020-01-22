@@ -9,6 +9,7 @@ import {
 	border,
 	line,
 	text,
+	inverseBackground,
 	brandBackground,
 	brandBorder,
 	brandLine,
@@ -36,6 +37,8 @@ export const palette = {
 	border,
 	line,
 	text,
+	// functional colours (inverse)
+	inverseBackground,
 	// functional colours (brand)
 	brandBackground,
 	brandBorder,
