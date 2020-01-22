@@ -75,8 +75,6 @@ const colors = {
 		"#EDEDED", //neutral-93
 		"#F6F6F6", //neutral-97
 		"#FFFFFF", //neutral-100
-		"#3F464A", //special-report
-		"#1A1A1A", //inverse theme background
 	],
 }
 
