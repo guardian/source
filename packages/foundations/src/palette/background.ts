@@ -2,6 +2,7 @@ import { neutral, brand, brandAlt } from "./global"
 
 export const background = {
 	primary: neutral[100],
+	inverse: "#1A1A1A",
 	buttonPrimary: brand[400],
 	buttonPrimaryHover: "#234B8A",
 	buttonSecondary: brand[800],
@@ -27,8 +28,4 @@ export const brandAltBackground = {
 	buttonPrimaryHover: "#454545",
 	buttonSecondary: brandAlt[300],
 	buttonSecondaryHover: "#F2AE00",
-}
-
-export const inverseBackground = {
-	primary: "#1A1A1A",
 }
