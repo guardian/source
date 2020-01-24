@@ -5,6 +5,20 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 24th January 2020
+
+### `@guardian/src-foundations 0.12.3`
+
+-   :bug: [#198](https://github.com/guardian/source-components/pull/198) Explicitly build palette folder
+
+### `@guardian/src-foundations 0.12.2`
+
+-   :boom: [465ed9c](https://github.com/guardian/source/commit/465ed9c032a0cb35df78f8d03923061f97629b1d) Expose inverse background on default theme
+
+### `@guardian/src-foundations 0.12.1`
+
+-   [#197](https://github.com/guardian/source-components/pull/197) Move snowflake greys out of theme
+
 ## 21st January 2020
 
 ### `@guardian/src-foundations 0.12.0`
