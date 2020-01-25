@@ -1,5 +1,5 @@
 {
-	"name": "source-components",
+	"name": "source",
 	"version": "0.0.1",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:svgs & yarn watch:utilities & start-storybook",
@@ -33,15 +33,15 @@
 		"@babel/preset-env": "^7.8.0",
 		"@babel/preset-typescript": "^7.3.3",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
-		"@emotion/core": "^10.0.14",
+		"@emotion/core": "^10.0.27",
 		"@storybook/addon-backgrounds": "^5.3.1",
-		"@storybook/react": "^5.3.1",
+		"@storybook/react": "^5.3.9",
 		"@types/react": "^16.9.2",
 		"@types/storybook__react": "^4.0.2",
 		"@typescript-eslint/eslint-plugin": "^2.0.0",
 		"@typescript-eslint/parser": "^2.0.0",
 		"babel-loader": "^8.0.6",
-		"emotion-theming": "^10.0.19",
+		"emotion-theming": "^10.0.27",
 		"eslint": "^6.2.1",
 		"eslint-config-prettier": "^6.1.0",
 		"eslint-plugin-prettier": "^3.1.0",
@@ -49,10 +49,12 @@
 		"prettier": "^1.18.2",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
+		"regenerator-runtime": "^0.13.3",
 		"stylelint": "^10.1.0",
 		"stylelint-config-recommended": "^2.2.0",
 		"stylelint-config-styled-components": "^0.1.1",
 		"stylelint-processor-styled-components": "^1.8.0",
-		"typescript": "^3.7.2"
+		"typescript": "^3.7.2",
+		"webpack": "^4.41.5"
 	}
 }
