@@ -11,7 +11,7 @@
 
 -   Ensure each variant of the component supports light and dark themes.
     -   Some components may also need to work against mono, brand blue and brand yellow backgrounds.
--   Theme colours should be added to a corresponding module under packages/foundations/themes. These are passed to the `<ThemeProvider>`, and subsequently down to the component via the `css` prop.
+-   Theme colours should be added to a corresponding module under src/core/foundations/themes. These are passed to the `<ThemeProvider>`, and subsequently down to the component via the `css` prop.
 -   Ensure the theme package only contains theme-related colours. Define generic colours locally in the component styles.
 
 ## Documentation
