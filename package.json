@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:svgs & yarn watch:utilities & start-storybook",
-		"lint:styles": "stylelint packages/**/styles.ts",
+		"lint:styles": "stylelint src/core/**/styles.ts",
 		"lint:js": "eslint . --ext .ts,.tsx",
 		"lint": "yarn lint:js && yarn lint:styles",
 		"fix": "yarn lint:js --fix",
@@ -11,22 +11,25 @@
 		"validate": "yarn tsc && yarn lint",
 		"clean": "rm -rf dist",
 		"build:storybook": "build-storybook -o dist",
-		"build:foundations": "cd packages/foundations && yarn build",
-		"watch:foundations": "cd packages/foundations && yarn watch",
-		"watch:svgs": "cd packages/svgs && yarn watch",
-		"build:svgs": "cd packages/svgs && yarn build",
-		"build:utilities": "cd packages/utilities && yarn build",
-		"watch:utilities": "cd packages/utilities && yarn watch",
-		"build:button": "cd packages/button && yarn build",
-		"build:inline-error": "cd packages/inline-error && yarn build",
-		"build:radio": "cd packages/radio && yarn build",
-		"build:text-input": "cd packages/text-input && yarn build",
-		"build:checkbox": "cd packages/checkbox && yarn build",
-		"ci:build": "NODE_ENV=production yarn build:foundations && yarn build:svgs && yarn build:utilities && yarn build:button && yarn build:inline-error && yarn build:radio && yarn build:text-input && yarn build:checkbox && yarn build:storybook"
+		"build:foundations": "cd src/core/foundations && yarn build",
+		"watch:foundations": "cd src/core/foundations && yarn watch",
+		"watch:svgs": "cd src/core/svgs && yarn watch",
+		"build:svgs": "cd src/core/svgs && yarn build",
+		"build:utilities": "cd src/core/utilities && yarn build",
+		"watch:utilities": "cd src/core/utilities && yarn watch",
+		"build:button": "cd src/core/components/button && yarn build",
+		"build:checkbox": "cd src/core/components/checkbox && yarn build",
+		"build:grid": "cd src/core/components/grid && yarn build",
+		"build:inline-error": "cd src/core/components/inline-error && yarn build",
+		"build:link": "cd src/core/components/link && yarn build",
+		"build:radio": "cd src/core/components/radio && yarn build",
+		"build:text-input": "cd src/core/components/text-input && yarn build",
+		"ci:build": "NODE_ENV=production yarn build:foundations && yarn build:svgs && yarn build:utilities && yarn build:inline-error && yarn build:button && yarn build:checkbox && yarn build:grid && yarn build:link && yarn build:radio && yarn build:text-input && yarn build:storybook"
 	},
 	"private": true,
 	"workspaces": [
-		"packages/*"
+		"src/core/*",
+		"src/core/components/*"
 	],
 	"devDependencies": {
 		"@babel/core": "^7.8.0",

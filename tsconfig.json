@@ -1,21 +1,23 @@
 {
 	"compilerOptions": {
-		"baseUrl": "./packages",
+		"baseUrl": "./src",
 		"paths": {
-			"@guardian/src-foundations": ["foundations/src"],
-			"@guardian/src-foundations/mq": ["foundations/src/mq"],
+			"@guardian/src-foundations": ["core/foundations/src"],
+			"@guardian/src-foundations/mq": ["core/foundations/src/mq"],
 			"@guardian/src-foundations/accessibility": [
-				"foundations/src/accessibility"
+				"core/foundations/src/accessibility"
 			],
-			"@guardian/src-foundations/palette": ["foundations/src/palette"],
-			"@guardian/src-foundations/themes": ["foundations/src/themes"],
+			"@guardian/src-foundations/palette": [
+				"core/foundations/src/palette"
+			],
+			"@guardian/src-foundations/themes": ["core/foundations/src/themes"],
 			"@guardian/src-foundations/typography": [
-				"foundations/src/typography"
+				"core/foundations/src/typography"
 			],
-			"@guardian/src-inline-error": ["inline-error"],
-			"@guardian/src-helpers": ["helpers"],
-			"@guardian/src-svgs": ["svgs"],
-			"@guardian/src-utilities": ["utilities"]
+			"@guardian/src-inline-error": ["core/components/inline-error"],
+			"@guardian/src-helpers": ["core/helpers"],
+			"@guardian/src-svgs": ["core/svgs"],
+			"@guardian/src-utilities": ["core/utilities"]
 		},
 		"outDir": "dist",
 		"module": "commonjs",
@@ -36,6 +38,6 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true
 	},
-	"include": ["packages/**/*"],
+	"include": ["src/**/*"],
 	"exclude": ["node_modules"]
 }

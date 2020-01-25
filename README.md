@@ -37,7 +37,7 @@ $ yarn storybook
 **2.** Run the publish script within the component (you will need to be a member of the [`@guardian` npm organisation](https://www.npmjs.com/settings/guardian/members)):
 
 ```sh
-$ cd packages/my-component
+$ cd src/core/components/my-component
 $ yarn publish --access public
 ```
 
