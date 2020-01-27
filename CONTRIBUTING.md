@@ -9,14 +9,14 @@
 
 ## Themes
 
--   Ensure each variant of the component supports light and dark themes.
-    -   Some components may also need to work against mono, brand blue and brand yellow backgrounds.
+-   Ensure each variant of the component works against the [default theme](https://www.theguardian.design/2a1e5182b/p/938810/t/60b4f8).
+    -   Some components may also need to work against [core brand](https://www.theguardian.design/2a1e5182b/p/938810/t/60ae91) and [alternative brand](https://www.theguardian.design/2a1e5182b/p/938810/t/12ad05) backgrounds.
 -   Theme colours should be added to a corresponding module under src/core/foundations/themes. These are passed to the `<ThemeProvider>`, and subsequently down to the component via the `css` prop.
 -   Ensure the theme package only contains theme-related colours. Define generic colours locally in the component styles.
 
 ## Documentation
 
--   To enable better integration with [our documentation site](https://zeroheight.com/2a1e5182b), each component variant should be represented as a separate story at its own URL.
+-   To enable better integration with [our documentation site](https://www.theguardian.design), each component variant should be represented as a separate story at its own URL.
 
 ## Testing
 
