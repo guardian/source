@@ -16,8 +16,15 @@ import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
-	<Button>Primary</Button>,
-	<Button priority="secondary">Secondary</Button>,
+	<Button onClick={e => console.log("Primary clicked:", e.target)}>
+		Primary
+	</Button>,
+	<Button
+		onClick={() => console.log("Secondary clicked")}
+		priority="secondary"
+	>
+		Secondary
+	</Button>,
 	<Button priority="tertiary">Tertiary</Button>,
 ]
 const sizeButtons = [
