@@ -5,6 +5,13 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 31st January 2020
+
+### `@guardian/src-button 0.8.1`
+
+-   :bug: [#203](https://github.com/guardian/source-components/pull/203) Add src-svgs as dependency of button
+-   :bug: [#202](https://github.com/guardian/source-components/pull/202) Improve onClick event handler type
+
 ## 24th January 2020
 
 ### `@guardian/src-foundations 0.12.3`
