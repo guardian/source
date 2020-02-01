@@ -1,11 +1,26 @@
-import { breakpoints, from, until } from "./index"
+import { breakpoints, from, until, between, Breakpoint } from "./index"
 
 it("from should return a min-width media query", () => {
-	expect(from.mobile).toBe(`@media (min-width: ${`${breakpoints.mobile}px`})`)
+	const min: Breakpoint = "mobile"
+
+	expect(from[min]).toBe(`@media (min-width: ${`${breakpoints[min]}px`})`)
 })
 
 it("until should return a max-width media query", () => {
-	expect(until.wide).toBe(
-		`@media (max-width: ${`${breakpoints.wide - 1}px`})`,
+	const max: Breakpoint = "wide"
+
+	expect(until[max]).toBe(
+		`@media (max-width: ${`${breakpoints[max] - 1}px`})`,
+	)
+})
+
+it("between should return a media query with min- and max-width", () => {
+	const min: Breakpoint = "tablet"
+	const max: Breakpoint = "desktop"
+
+	expect(between[min].and[max]).toBe(
+		`@media (min-width: ${`${breakpoints[min]}px`}) and (max-width: ${`${breakpoints[
+			max
+		] - 1}px`})`,
 	)
 })
