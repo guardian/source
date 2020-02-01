@@ -8,6 +8,7 @@
 		"lint": "yarn lint:js && yarn lint:styles",
 		"fix": "yarn lint:js --fix",
 		"tsc": "tsc",
+		"test": "jest",
 		"validate": "yarn tsc && yarn lint",
 		"clean": "rm -rf dist",
 		"build:storybook": "build-storybook -o dist",
