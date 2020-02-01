@@ -9,7 +9,7 @@
 		"fix": "yarn lint:js --fix",
 		"tsc": "tsc",
 		"test": "jest",
-		"validate": "yarn tsc && yarn lint",
+		"validate": "yarn tsc && yarn lint && yarn test",
 		"clean": "rm -rf dist",
 		"build:storybook": "build-storybook -o dist",
 		"build:foundations": "cd src/core/foundations && yarn build",
