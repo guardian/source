@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react"
+import React, { ReactElement, ReactNode, MouseEvent } from "react"
 import {
 	button,
 	primary,
@@ -74,7 +74,7 @@ const Button = ({
 	iconSide: IconSide
 	icon?: ReactElement
 	tabIndex?: number
-	onClick?: () => void
+	onClick?: (e: MouseEvent<HTMLButtonElement>) => void
 	children?: ReactNode
 }) => {
 	const buttonContents = [children]
