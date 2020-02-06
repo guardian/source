@@ -5,6 +5,12 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## 6th February 2020
+
+### `@guardian/src-foundations 0.12.4`
+
+-   [#205](https://github.com/guardian/source-components/pull/205) Add legacy font-families to foundations
+
 ## 31st January 2020
 
 ### `@guardian/src-button 0.8.1`
