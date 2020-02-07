@@ -8,6 +8,7 @@ import {
 	labelTextWithSupportingText,
 	supportingText,
 	tick,
+	tickWithLabelText,
 	tickWithSupportingText,
 	errorCheckbox,
 } from "./styles"
@@ -79,7 +80,7 @@ const Checkbox = ({
 	indeterminate,
 	...props
 }: {
-	label: ReactNode
+	label?: ReactNode
 	value: string
 	checked?: boolean
 	supporting?: ReactNode
@@ -108,13 +109,9 @@ const Checkbox = ({
 			}
 		}
 	}
-	return (
-		<label
-			css={theme => [
-				label(theme.checkbox && theme),
-				supporting ? labelWithSupportingText : "",
-			]}
-		>
+
+	const Box = () => (
+		<>
 			<input
 				css={theme => [
 					checkbox(theme.checkbox && theme),
@@ -129,9 +126,21 @@ const Checkbox = ({
 			<span
 				css={theme => [
 					tick(theme.checkbox && theme),
+					labelContent ? tickWithLabelText : "",
 					supporting ? tickWithSupportingText : "",
 				]}
 			/>
+		</>
+	)
+
+	const LabelledBox = () => (
+		<label
+			css={theme => [
+				label(theme.checkbox && theme),
+				supporting ? labelWithSupportingText : "",
+			]}
+		>
+			<Box />
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
@@ -144,6 +153,7 @@ const Checkbox = ({
 			)}
 		</label>
 	)
+	return <>{labelContent ? <LabelledBox /> : <Box />}</>
 }
 
 const checkboxDefaultProps = {

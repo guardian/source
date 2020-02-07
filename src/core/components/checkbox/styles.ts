@@ -43,6 +43,7 @@ export const checkbox = ({
 	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
+	z-index: 1;
 	cursor: pointer;
 	width: ${size.small}px;
 	height: ${size.small}px;
@@ -110,12 +111,11 @@ export const tick = ({
 	@supports (appearance: none) {
 		/* overall positional properties */
 		position: absolute;
-		top: 15px;
-		left: 9px;
+		top: 13px;
+		left: 17px;
 		width: 6px;
 		height: 12px;
 		transform: rotate(45deg);
-		z-index: 5;
 
 		/* the checkmark ✓ */
 		&:after,
@@ -144,6 +144,13 @@ export const tick = ({
 			width: 2px;
 			transition-delay: 0.1s;
 		}
+	}
+`
+
+export const tickWithLabelText = css`
+	@supports (appearance: none) {
+		top: 15px;
+		left: 9px;
 	}
 `
 
