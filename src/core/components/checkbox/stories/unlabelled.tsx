@@ -4,7 +4,7 @@ import { ThemeProvider } from "emotion-theming"
 import { CheckboxGroup, Checkbox, checkboxDefault } from "../index"
 
 /* eslint-disable react/jsx-key */
-const checkboxes = [<Checkbox value="today_uk" />]
+const checkboxes = [<Checkbox value="today_uk" aria-label="Today UK" />]
 /* eslint-enable react/jsx-key */
 
 const unlabelled = () => (
