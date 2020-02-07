@@ -12,7 +12,10 @@ import {
 	errorCheckbox,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
-export { checkboxLight, checkboxBrand } from "@guardian/src-foundations/themes"
+export {
+	checkboxDefault,
+	checkboxBrand,
+} from "@guardian/src-foundations/themes"
 
 const CheckboxGroup = ({
 	name,

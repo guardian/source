@@ -2,10 +2,15 @@ import React from "react"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 
-import { CheckboxGroup, Checkbox, checkboxLight, checkboxBrand } from "../index"
+import {
+	CheckboxGroup,
+	Checkbox,
+	checkboxDefault,
+	checkboxBrand,
+} from "../index"
 
 const errorLight = () => (
-	<ThemeProvider theme={checkboxLight}>
+	<ThemeProvider theme={checkboxDefault}>
 		<CheckboxGroup
 			name="tandcs"
 			error="Tick the box to accept the terms and conditions"

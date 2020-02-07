@@ -3,7 +3,12 @@ import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 
-import { CheckboxGroup, Checkbox, checkboxLight, checkboxBrand } from "../index"
+import {
+	CheckboxGroup,
+	Checkbox,
+	checkboxDefault,
+	checkboxBrand,
+} from "../index"
 
 /* eslint-disable react/jsx-key */
 const checkboxesWithSupportingText = [
@@ -38,7 +43,7 @@ const narrow = css`
 
 const supportingTextLight = () => (
 	<div css={narrow}>
-		<ThemeProvider theme={checkboxLight}>
+		<ThemeProvider theme={checkboxDefault}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingText.map((checkbox, index) =>
 					React.cloneElement(checkbox, { key: index }),

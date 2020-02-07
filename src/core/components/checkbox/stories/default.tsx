@@ -2,7 +2,12 @@ import React from "react"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 
-import { CheckboxGroup, Checkbox, checkboxLight, checkboxBrand } from "../index"
+import {
+	CheckboxGroup,
+	Checkbox,
+	checkboxDefault,
+	checkboxBrand,
+} from "../index"
 
 /* eslint-disable react/jsx-key */
 const checkboxes = [
@@ -12,7 +17,7 @@ const checkboxes = [
 /* eslint-enable react/jsx-key */
 
 const defaultLight = () => (
-	<ThemeProvider theme={checkboxLight}>
+	<ThemeProvider theme={checkboxDefault}>
 		<CheckboxGroup name="emails">
 			{checkboxes.map((checkbox, index) =>
 				React.cloneElement(checkbox, { key: index }),

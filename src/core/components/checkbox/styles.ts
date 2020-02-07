@@ -2,7 +2,10 @@ import { css } from "@emotion/core"
 import { space, size, transitions } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { checkboxLight, CheckboxTheme } from "@guardian/src-foundations/themes"
+import {
+	checkboxDefault,
+	CheckboxTheme,
+} from "@guardian/src-foundations/themes"
 
 export const fieldset = css`
 	display: flex;
@@ -15,7 +18,7 @@ export const fieldset = css`
 
 export const label = ({
 	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxLight) => css`
+}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -36,7 +39,7 @@ export const labelWithSupportingText = css`
 
 export const checkbox = ({
 	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxLight) => css`
+}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
@@ -85,7 +88,7 @@ export const checkbox = ({
 
 export const labelText = ({
 	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxLight) => css`
+}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	${textSans.medium()};
 	color: ${checkbox.text};
 `
@@ -96,14 +99,14 @@ export const labelTextWithSupportingText = css`
 
 export const supportingText = ({
 	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxLight) => css`
+}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	${textSans.small({ lineHeight: "regular" })};
 	color: ${checkbox.textSupporting};
 `
 
 export const tick = ({
 	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxLight) => css`
+}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	@supports (appearance: none) {
 		/* overall positional properties */
 		position: absolute;
@@ -152,6 +155,6 @@ export const tickWithSupportingText = css`
 
 export const errorCheckbox = ({
 	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxLight) => css`
+}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	border: 4px solid ${checkbox.borderError};
 `

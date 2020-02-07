@@ -82,5 +82,5 @@ Whether checkbox is in an indeterminate ("mixed") state
 
 ### Standard
 
--   `light`
+-   `default`
 -   `brand`
