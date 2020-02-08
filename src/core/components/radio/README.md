@@ -72,5 +72,5 @@ Whether radio button is checked
 
 ### Standard
 
--   `light`
+-   `default`
 -   `brand`

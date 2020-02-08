@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { RadioGroup, Radio, radioLight, radioBrand } from "./index"
+import { RadioGroup, Radio, radioDefault, radioBrand } from "./index"
 import { ThemeName } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
 
@@ -51,7 +51,7 @@ const themes: {
 }[] = [
 	{
 		name: "light",
-		theme: radioLight,
+		theme: radioDefault,
 	},
 	{ name: "brand", theme: radioBrand },
 ]
