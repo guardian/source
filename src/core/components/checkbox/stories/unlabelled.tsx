@@ -1,19 +1,11 @@
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
 
-import { CheckboxGroup, Checkbox, checkboxDefault } from "../index"
-
-/* eslint-disable react/jsx-key */
-const checkboxes = [<Checkbox value="today_uk" aria-label="Today UK" />]
-/* eslint-enable react/jsx-key */
+import { Checkbox, checkboxDefault } from "../index"
 
 const unlabelled = () => (
 	<ThemeProvider theme={checkboxDefault}>
-		<CheckboxGroup name="emails">
-			{checkboxes.map((checkbox, index) =>
-				React.cloneElement(checkbox, { key: index }),
-			)}
-		</CheckboxGroup>
+		<Checkbox value="today_uk" checked={true} aria-label="Today UK" />
 	</ThemeProvider>
 )
 
