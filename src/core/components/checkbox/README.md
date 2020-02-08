@@ -58,7 +58,9 @@ If passed, error styling should applies to this checkbox group. The string appea
 
 **`ReactNode`**
 
-Appears to the right of the checkbox
+Appears to the right of the checkbox. If a visible label is undesirable (e.g. for layout reasons) use `aria-label` instead.
+
+If label is omitted, supporting text will not appear either.
 
 ### `supporting`
 
@@ -82,5 +84,5 @@ Whether checkbox is in an indeterminate ("mixed") state
 
 ### Standard
 
--   `light`
+-   `default`
 -   `brand`
