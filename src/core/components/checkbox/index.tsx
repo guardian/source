@@ -1,4 +1,4 @@
-import React, { ReactNode, ChangeEvent } from "react"
+import React, { ReactNode, ChangeEvent, MouseEvent } from "react"
 import {
 	fieldset,
 	label,
@@ -88,6 +88,7 @@ const Checkbox = ({
 	indeterminate: boolean
 	error: boolean
 	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+	onClick?: (event: MouseEvent<HTMLInputElement>) => void
 }) => {
 	const isChecked = (): boolean | "mixed" => {
 		// Note: the indeterminate prop takes precedence over the checked prop
