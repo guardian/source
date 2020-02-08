@@ -12,7 +12,7 @@ import {
 	errorRadio,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
-export { radioBrand, radioLight } from "@guardian/src-foundations/themes"
+export { radioBrand, radioDefault } from "@guardian/src-foundations/themes"
 
 type Orientation = "vertical" | "horizontal"
 
