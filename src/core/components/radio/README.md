@@ -54,7 +54,9 @@ If passed, error styling should applies to this radio group. The string appears 
 
 **`ReactNode`**
 
-Appears to the right of the radio button
+Appears to the right of the radio button. If a visible label is undesirable (e.g. for layout reasons) use `aria-label` instead.
+
+If label is omitted, supporting text will not appear either.
 
 ### `supporting`
 
