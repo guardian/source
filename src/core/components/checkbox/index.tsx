@@ -82,6 +82,7 @@ const Checkbox = ({
 }: {
 	label?: ReactNode
 	value: string
+	name?: string
 	checked?: boolean
 	supporting?: ReactNode
 	defaultChecked: boolean
