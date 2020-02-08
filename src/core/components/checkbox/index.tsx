@@ -153,6 +153,9 @@ const Checkbox = ({
 			)}
 		</label>
 	)
+
+	// Note: if no label is passed, supporting text will not
+	// be displayed either
 	return <>{labelContent ? <LabelledBox /> : <Box />}</>
 }
 
