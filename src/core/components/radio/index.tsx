@@ -86,7 +86,7 @@ const Radio = ({
 	error,
 	...props
 }: {
-	label: ReactNode
+	label?: ReactNode
 	value: string
 	supporting?: ReactNode
 	checked?: boolean
@@ -98,23 +98,27 @@ const Radio = ({
 		}
 	}
 
-	return (
+	const RadioControl = () => (
+		<input
+			css={theme => [
+				radio(theme.radio && theme),
+				error ? errorRadio(theme.radio && theme) : "",
+			]}
+			value={value}
+			aria-invalid={error}
+			ref={setRadioState}
+			{...props}
+		/>
+	)
+
+	const LabelledRadioControl = () => (
 		<label
 			css={theme => [
 				label(theme.radio && theme),
 				supporting ? labelWithSupportingText : "",
 			]}
 		>
-			<input
-				css={theme => [
-					radio(theme.radio && theme),
-					error ? errorRadio(theme.radio && theme) : "",
-				]}
-				value={value}
-				aria-invalid={error}
-				ref={setRadioState}
-				{...props}
-			/>
+			<RadioControl />
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
@@ -127,6 +131,10 @@ const Radio = ({
 			)}
 		</label>
 	)
+
+	// Note: if no label is passed, supporting text will not
+	// be displayed either
+	return <>{labelContent ? <LabelledRadioControl /> : <RadioControl />}</>
 }
 
 const radioGroupDefaultProps = {
