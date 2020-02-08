@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, ChangeEvent, MouseEvent } from "react"
 import {
 	fieldset,
 	label,
@@ -91,6 +91,8 @@ const Radio = ({
 	supporting?: ReactNode
 	checked?: boolean
 	error: boolean
+	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+	onClick?: (event: MouseEvent<HTMLInputElement>) => void
 }) => {
 	const setRadioState = (el: HTMLInputElement | null) => {
 		if (el && checked != null) {
