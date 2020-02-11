@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react"
+import React, { ReactElement, ReactNode, AnchorHTMLAttributes } from "react"
 import {
 	link,
 	primary,
@@ -32,6 +32,14 @@ const iconSides: {
 	right: iconRight,
 	left: iconLeft,
 }
+interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+	priority: Priority
+	subdued: boolean
+	icon?: ReactElement
+	iconSide: IconSide
+	children?: ReactNode
+}
+
 const Link = ({
 	priority,
 	subdued: isSubdued,
@@ -39,14 +47,7 @@ const Link = ({
 	iconSide,
 	children,
 	...props
-}: {
-	priority: Priority
-	subdued: boolean
-	icon?: ReactElement
-	iconSide: IconSide
-	href: string
-	children?: ReactNode
-}) => {
+}: LinkProps) => {
 	const linkContents = [children]
 	// a bit of underlined space; the icon sits on top
 	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>
