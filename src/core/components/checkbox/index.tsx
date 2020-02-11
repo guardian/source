@@ -1,4 +1,4 @@
-import React, { ReactNode, ChangeEvent, MouseEvent } from "react"
+import React, { ReactNode, InputHTMLAttributes } from "react"
 import {
 	fieldset,
 	label,
@@ -70,6 +70,13 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
+interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+	label?: ReactNode
+	supporting?: ReactNode
+	indeterminate: boolean
+	error: boolean
+}
+
 const Checkbox = ({
 	label: labelContent,
 	value,
@@ -79,18 +86,7 @@ const Checkbox = ({
 	error,
 	indeterminate,
 	...props
-}: {
-	label?: ReactNode
-	value: string
-	name?: string
-	checked?: boolean
-	supporting?: ReactNode
-	defaultChecked: boolean
-	indeterminate: boolean
-	error: boolean
-	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
-	onClick?: (event: MouseEvent<HTMLInputElement>) => void
-}) => {
+}: CheckboxProps) => {
 	const isChecked = (): boolean | "mixed" => {
 		// Note: the indeterminate prop takes precedence over the checked prop
 		if (indeterminate) {
@@ -101,7 +97,7 @@ const Checkbox = ({
 			return checked
 		}
 
-		return defaultChecked
+		return !!defaultChecked
 	}
 	const setCheckboxState = (el: HTMLInputElement | null): void => {
 		if (el) {
