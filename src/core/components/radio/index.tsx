@@ -1,4 +1,4 @@
-import React, { ReactNode, ChangeEvent, MouseEvent } from "react"
+import React, { ReactNode, InputHTMLAttributes } from "react"
 import {
 	fieldset,
 	label,
@@ -78,6 +78,12 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
+interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
+	label?: ReactNode
+	supporting?: ReactNode
+	error: boolean
+}
+
 const Radio = ({
 	label: labelContent,
 	value,
@@ -85,16 +91,7 @@ const Radio = ({
 	checked,
 	error,
 	...props
-}: {
-	label?: ReactNode
-	value: string
-	name?: string
-	supporting?: ReactNode
-	checked?: boolean
-	error: boolean
-	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
-	onClick?: (event: MouseEvent<HTMLInputElement>) => void
-}) => {
+}: RadioProps) => {
 	const setRadioState = (el: HTMLInputElement | null) => {
 		if (el && checked != null) {
 			el.checked = checked
