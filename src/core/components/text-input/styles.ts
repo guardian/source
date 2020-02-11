@@ -7,6 +7,13 @@ import {
 	TextInputTheme,
 } from "@guardian/src-foundations/themes"
 
+export const errorInput = ({
+	textInput,
+}: { textInput: TextInputTheme } = textInputLight) => css`
+	border: 4px solid ${textInput.borderError};
+	color: ${textInput.textError};
+`
+
 export const textInput = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
@@ -19,6 +26,10 @@ export const textInput = ({
 
 	&:focus {
 		${focusHalo};
+	}
+
+	&:invalid {
+		${errorInput({ textInput })};
 	}
 `
 
@@ -44,13 +55,6 @@ export const text = ({
 	${textSans.medium()};
 	color: ${textInput.textLabel};
 	margin-bottom: ${space[1]}px;
-`
-
-export const errorInput = ({
-	textInput,
-}: { textInput: TextInputTheme } = textInputLight) => css`
-	border: 4px solid ${textInput.borderError};
-	color: ${textInput.textError};
 `
 
 export const optionalLabel = ({
