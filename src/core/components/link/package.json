@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-link",
-	"version": "0.2.0",
+	"version": "0.13.0",
 	"main": "dist/link.js",
 	"module": "dist/link.esm.js",
 	"scripts": {
