@@ -31,6 +31,6 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-inline-error": "^0.8.0"
+		"@guardian/src-inline-error": "^0.13.0"
 	}
 }
