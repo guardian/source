@@ -1,4 +1,9 @@
-import React, { ReactElement, ReactNode, MouseEvent } from "react"
+import React, {
+	ReactElement,
+	ReactNode,
+	ButtonHTMLAttributes,
+	AnchorHTMLAttributes,
+} from "react"
 import {
 	button,
 	primary,
@@ -61,6 +66,15 @@ const iconOnlySizes: {
 	default: iconOnlyDefault,
 	small: iconOnlySmall,
 }
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+	priority: Priority
+	size: Size
+	iconSide: IconSide
+	icon?: ReactElement
+	children?: ReactNode
+}
+
 const Button = ({
 	priority,
 	size,
@@ -68,15 +82,7 @@ const Button = ({
 	iconSide,
 	children,
 	...props
-}: {
-	priority: Priority
-	size: Size
-	iconSide: IconSide
-	icon?: ReactElement
-	tabIndex?: number
-	onClick?: (e: MouseEvent<HTMLButtonElement>) => void
-	children?: ReactNode
-}) => {
+}: ButtonProps) => {
 	const buttonContents = [children]
 
 	if (iconSvg) {
@@ -100,19 +106,20 @@ const Button = ({
 	)
 }
 
+interface LinkButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+	priority: LinkButtonPriority
+	size: Size
+	showIcon: boolean
+	children?: ReactNode
+}
+
 const LinkButton = ({
 	priority,
 	size,
 	showIcon,
 	children,
 	...props
-}: {
-	priority: LinkButtonPriority
-	size: Size
-	showIcon: boolean
-	href: string
-	children?: ReactNode
-}) => {
+}: LinkButtonProps) => {
 	if (showIcon) {
 		return (
 			<a
