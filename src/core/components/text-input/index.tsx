@@ -1,4 +1,4 @@
-import React, { ReactNode, ChangeEvent } from "react"
+import React, { ReactNode, InputHTMLAttributes } from "react"
 import { InlineError } from "@guardian/src-inline-error"
 import {
 	widthFluid,
@@ -32,6 +32,14 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
+interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
+	label: string
+	optional: boolean
+	supporting?: string
+	width?: Width
+	error?: string
+}
+
 const TextInput = ({
 	label: labelText,
 	optional,
@@ -39,15 +47,7 @@ const TextInput = ({
 	width,
 	error,
 	...props
-}: {
-	label: string
-	optional: boolean
-	supporting?: string
-	width?: Width
-	error?: string
-	value?: string
-	onChange?: (event: ChangeEvent<HTMLInputElement>) => void
-}) => {
+}: TextInputProps) => {
 	return (
 		<label>
 			<div css={theme => text(theme.textInput && theme)}>
