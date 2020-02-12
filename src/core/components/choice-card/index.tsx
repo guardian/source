@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { fieldset, input, choiceCard, errorChoiceCard } from "./styles"
+import { fieldset, input, choiceCard } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
@@ -64,10 +64,7 @@ const ChoiceCard = ({
 				{...props}
 			/>
 			<label
-				css={theme => [
-					choiceCard(theme.choiceCard && theme),
-					error ? errorChoiceCard(theme.choiceCard && theme) : "",
-				]}
+				css={theme => [choiceCard(theme.choiceCard && theme)]}
 				htmlFor={id}
 			>
 				{labelContent}

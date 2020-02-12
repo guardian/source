@@ -54,9 +54,3 @@ export const choiceCard = ({
 		${focusHalo};
 	}
 `
-
-export const errorChoiceCard = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	/* border: 4px solid #ff0000; */
-`
