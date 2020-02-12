@@ -20,12 +20,13 @@
 		"watch:utilities": "cd src/core/utilities && yarn watch",
 		"build:button": "cd src/core/components/button && yarn build",
 		"build:checkbox": "cd src/core/components/checkbox && yarn build",
+		"build:choice-card": "cd src/core/components/choice-card && yarn build",
 		"build:grid": "cd src/core/components/grid && yarn build",
 		"build:inline-error": "cd src/core/components/inline-error && yarn build",
 		"build:link": "cd src/core/components/link && yarn build",
 		"build:radio": "cd src/core/components/radio && yarn build",
 		"build:text-input": "cd src/core/components/text-input && yarn build",
-		"ci:build": "NODE_ENV=production yarn build:foundations && yarn build:svgs && yarn build:utilities && yarn build:inline-error && yarn build:button && yarn build:checkbox && yarn build:grid && yarn build:link && yarn build:radio && yarn build:text-input && yarn build:storybook"
+		"ci:build": "NODE_ENV=production yarn build:foundations && yarn build:svgs && yarn build:utilities && yarn build:inline-error && yarn build:button && yarn build:checkbox && yarn build:choice-card && yarn build:grid && yarn build:link && yarn build:radio && yarn build:text-input && yarn build:storybook"
 	},
 	"private": true,
 	"workspaces": [
