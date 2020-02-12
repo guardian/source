@@ -159,10 +159,41 @@ const [errorWithMessageLight] = themes.map(({ name, theme }) => {
 	return story
 })
 
+const [constraintLight] = themes.map(({ name, theme }) => {
+	const story = () => (
+		<ThemeProvider theme={theme}>
+			<div css={constrainedWith}>
+				<TextInput
+					label="Phone number"
+					supporting="An invalid entry will show error styling"
+					pattern="[0-9]{1,11}"
+					title="11 digit phone number"
+				/>
+			</div>
+		</ThemeProvider>
+	)
+
+	story.story = {
+		name: `with constraint ${name}`,
+		parameters: {
+			backgrounds: [
+				Object.assign(
+					{},
+					{ default: true },
+					storybookBackgrounds[name],
+				),
+			],
+		},
+	}
+
+	return story
+})
+
 export {
 	defaultLight,
 	optionalLight,
 	supportingTextLight,
 	widthsLight,
 	errorWithMessageLight,
+	constraintLight,
 }
