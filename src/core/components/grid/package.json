@@ -23,6 +23,7 @@
 		"typescript": "^3.7.2"
 	},
 	"files": [
+		"dist/*.js",
 		"index.tsx",
 		"data.ts",
 		"styles.ts",
