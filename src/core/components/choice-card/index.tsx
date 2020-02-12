@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react"
 import { fieldset, input, choiceCard } from "./styles"
-import { InlineError } from "@guardian/src-inline-error"
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
 const ChoiceCardGroup = ({
@@ -18,7 +17,6 @@ const ChoiceCardGroup = ({
 	// https://bugs.chromium.org/p/chromium/issues/detail?id=375693
 	return (
 		<div css={[fieldset]} {...props}>
-			{error && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				return React.cloneElement(
 					child,
@@ -35,7 +33,6 @@ const ChoiceCard = ({
 	id,
 	label: labelContent,
 	value,
-	supporting,
 	checked,
 	error,
 	...props
