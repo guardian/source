@@ -1,5 +1,6 @@
 export * from "./button"
 export * from "./checkbox"
+export * from "./choice-card"
 export * from "./inline-error"
 export * from "./link"
 export * from "./radio"
@@ -13,6 +14,7 @@ import {
 	buttonBrandAlt,
 } from "./button"
 import { checkboxLight, checkboxBrand, checkboxDefault } from "./checkbox"
+import { choiceCardDefault } from "./choice-card"
 import {
 	inlineErrorLight,
 	inlineErrorBrand,
@@ -31,6 +33,7 @@ import { textInputLight, textInputDefault } from "./text-input"
 export const defaultTheme = {
 	...buttonDefault,
 	...checkboxDefault,
+	...choiceCardDefault,
 	...inlineErrorDefault,
 	...linkDefault,
 	...radioDefault,
