@@ -9,6 +9,8 @@ export const text = {
 	checkbox: neutral[7],
 	checkboxSupporting: neutral[46],
 	checkboxIndeterminate: neutral[46],
+	choiceCard: neutral[46],
+	choiceCardChecked: brand[400],
 	linkPrimary: brand[500],
 	linkPrimaryHover: brand[500],
 	linkSecondary: neutral[7],

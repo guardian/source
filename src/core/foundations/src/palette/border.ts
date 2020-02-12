@@ -9,6 +9,8 @@ export const border = {
 	checkboxHover: brand[500],
 	checkboxChecked: brand[500],
 	checkboxError: error[400],
+	choiceCard: neutral[60],
+	choiceCardChecked: brand[500],
 	radio: neutral[60],
 	radioHover: brand[500],
 	radioError: error[400],
