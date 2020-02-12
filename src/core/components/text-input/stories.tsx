@@ -165,8 +165,9 @@ const [constraintLight] = themes.map(({ name, theme }) => {
 			<div css={constrainedWith}>
 				<TextInput
 					label="Phone number"
-					supporting="Enter an 11 digit phone number. An invalid entry will show error styling."
+					supporting="An invalid entry will show error styling"
 					pattern="[0-9]{1,11}"
+					title="11 digit phone number"
 				/>
 			</div>
 		</ThemeProvider>
