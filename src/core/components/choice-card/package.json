@@ -28,7 +28,7 @@
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
-		"@guardian/src-foundations": "^0.13.0-alpha.1",
+		"@guardian/src-foundations": "^0.13.0",
 		"react": "^16.8.6"
 	}
 }
