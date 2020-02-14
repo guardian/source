@@ -5,6 +5,43 @@
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
 
+## Version 0.13.0 - Valentine's Day update :gift_heart:
+
+14th February 2020
+
+**`@guardian/src-foundations`**
+
+-   [#204](https://github.com/guardian/source-components/pull/204) Add tests for mq
+
+**`@guardian/src-button`**
+
+-   [#216](https://github.com/guardian/source-components/pull/216) Extend button props with standard HTML attributes
+
+**`@guardian/src-radio`**
+
+-   :boom: [#209](https://github.com/guardian/source-components/pull/209) Radio stories refactoring and renaming
+-   [#210](https://github.com/guardian/source-components/pull/210) Support unlabelled radio buttons
+-   [#211](https://github.com/guardian/source-components/pull/211) Support event handlers on radio button
+-   [#212](https://github.com/guardian/source-components/pull/212) Support ungrouped radio buttons
+-   [#213](https://github.com/guardian/source-components/pull/213) Include dist files in package
+-   [#215](https://github.com/guardian/source-components/pull/215) Extend radio props with standard HTML attributes
+
+**`@guardian/src-checkbox`**
+
+-   :boom: [#206](https://github.com/guardian/source-components/pull/206) Radio stories refactoring and renaming
+-   [#207](https://github.com/guardian/source-components/pull/207) Update checkbox props to accept onclick
+-   [#208](https://github.com/guardian/source-components/pull/208) Allow checkboxes to exist outside a checkboxgroup
+-   [#214](https://github.com/guardian/source-components/pull/214) Extend checkbox props with standard HTML attributes
+
+**`@guardian/src-link`**
+
+-   [#218](https://github.com/guardian/source-components/pull/218) Extend link props with standard HTML attributes
+
+**`@guardian/src-text-input`**
+
+-   [#217](https://github.com/guardian/source-components/pull/217) Extend text input props with standard HTML attributes
+-   [#219](https://github.com/guardian/source-components/pull/219) Apply error styles when invalid
+
 ## 6th February 2020
 
 ### `@guardian/src-foundations 0.12.4`
