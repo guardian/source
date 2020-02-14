@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-choice-card",
-	"version": "0.13.0-alpha.3",
+	"version": "0.13.0-alpha.4",
 	"main": "dist/choice-card.js",
 	"module": "dist/choice-card.esm.js",
 	"scripts": {
