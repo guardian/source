@@ -1,26 +1,10 @@
 {
-	"parser": "@typescript-eslint/parser",
-	"plugins": ["@typescript-eslint", "react", "prettier"],
-	"extends": [
-		"plugin:@typescript-eslint/recommended",
-		"plugin:react/recommended",
-		"prettier",
-		"prettier/@typescript-eslint",
-		"prettier/react"
-	],
+	"plugins": ["prettier"],
+	"extends": ["prettier"],
 	"rules": {
-		"prettier/prettier": "error",
-		"@typescript-eslint/explicit-function-return-type": "off"
+		"prettier/prettier": "error"
 	},
 	"parserOptions": {
-		"ecmaVersion": 2015,
-		"ecmaFeatures": {
-			"jsx": true
-		}
-	},
-	"settings": {
-		"react": {
-			"version": "detect"
-		}
+		"ecmaVersion": 2015
 	}
 }
