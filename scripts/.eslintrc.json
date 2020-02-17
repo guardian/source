@@ -1,0 +1,5 @@
+{
+	"parser": "espree",
+	"plugins": ["prettier"],
+	"extends": ["prettier"]
+}
