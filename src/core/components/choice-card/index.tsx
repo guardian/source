@@ -53,7 +53,7 @@ const ChoiceCard = ({
 	return (
 		<>
 			<input
-				css={input}
+				css={theme => [input(theme.choiceCard && theme)]}
 				id={id}
 				value={value}
 				aria-invalid={error}
