@@ -20,7 +20,7 @@ export default {
 	title: "ChoiceCard",
 }
 
-const defaultLight = () => (
+const singleStateLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<ChoiceCardGroup name="colours">
 			{choiceCards.map((choiceCard, index) =>
@@ -30,8 +30,27 @@ const defaultLight = () => (
 	</ThemeProvider>
 )
 
-defaultLight.story = {
-	name: `default light`,
+singleStateLight.story = {
+	name: `single state light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
+const multiStateLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<ChoiceCardGroup name="colours" multi={true}>
+			{choiceCards.map((choiceCard, index) =>
+				React.cloneElement(choiceCard, { key: index }),
+			)}
+		</ChoiceCardGroup>
+	</ThemeProvider>
+)
+
+multiStateLight.story = {
+	name: `multi state light`,
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -58,4 +77,4 @@ defaultLight.story = {
 // 	},
 // }
 
-export { defaultLight }
+export { singleStateLight, multiStateLight }

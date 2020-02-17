@@ -4,11 +4,13 @@ export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
 const ChoiceCardGroup = ({
 	name,
+	multi,
 	error,
 	children,
 	...props
 }: {
 	name: string
+	multi?: boolean
 	error?: string
 	children: JSX.Element | JSX.Element[]
 }) => {
@@ -20,9 +22,12 @@ const ChoiceCardGroup = ({
 			{React.Children.map(children, child => {
 				return React.cloneElement(
 					child,
-					Object.assign(error ? { error: true } : {}, {
-						name,
-					}),
+					Object.assign(
+						{ error: !!error, type: multi ? "checkbox" : "radio" },
+						{
+							name,
+						},
+					),
 				)
 			})}
 		</div>

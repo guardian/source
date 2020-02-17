@@ -15,7 +15,7 @@ import { ChoiceCardGroup, ChoiceCard } from "@guardian/src-choice-card"
 
 const Form = () => (
     <form>
-        <ChoiceCardGroup name="consent" orientation="vertical">
+        <ChoiceCardGroup name="consent" multi={false}>
             <ChoiceCard
                 value="no"
                 label="No"
@@ -39,6 +39,13 @@ const Form = () => (
 **`string`**
 
 Gets passed as the name attribute for each choice card
+
+### `multi`
+
+**`boolean`** _= false_
+
+If true, users may select more than one choice card (checkbox behaviour). By default, users
+may only select a single choice card (radio button behaviour).
 
 ### `error`
 
