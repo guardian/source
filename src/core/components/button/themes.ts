@@ -1,4 +1,4 @@
-import { neutral, brand, brandYellow } from "@guardian/src-foundations/palette"
+import { neutral, brand, brandAlt } from "@guardian/src-foundations/palette"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
 
 const text = {
@@ -6,7 +6,7 @@ const text = {
 		primary: neutral[100],
 		secondary: neutral[60],
 		ctaPrimary: brand[400],
-		ctaSecondary: brandYellow[400],
+		ctaSecondary: brandAlt[400],
 	},
 	readerRevenueAlt: {
 		primary: neutral[7],
@@ -18,22 +18,22 @@ const text = {
 const background = {
 	readerRevenue: {
 		primary: brand[400],
-		ctaPrimary: brandYellow[400],
-		ctaPrimaryHover: brandYellow[300],
+		ctaPrimary: brandAlt[400],
+		ctaPrimaryHover: brandAlt[300],
 		ctaSecondary: brand[400],
 		ctaSecondaryHover: "#234B8A",
 	},
 	readerRevenueAlt: {
-		primary: brandYellow[400],
+		primary: brandAlt[400],
 		ctaPrimary: neutral[7],
 		ctaPrimaryHover: "#454545",
-		ctaSecondary: brandYellow[400],
-		ctaSecondaryHover: brandYellow[300],
+		ctaSecondary: brandAlt[400],
+		ctaSecondaryHover: brandAlt[300],
 	},
 }
 const border = {
 	readerRevenue: {
-		ctaSecondary: brandYellow[400],
+		ctaSecondary: brandAlt[400],
 	},
 	readerRevenueAlt: {
 		ctaSecondary: neutral[7],
