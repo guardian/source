@@ -26,7 +26,7 @@ const colors = {
 		"#FFF4F2", //news-800
 	],
 	oranges: [
-		"#AB0613", //opinion-300
+		"#BD5318", //opinion-300
 		"#E05E00", //opinion-400
 		"#FF7F0F", //opinion-500
 		"#F9B376", //opinion-600
