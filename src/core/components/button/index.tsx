@@ -4,6 +4,9 @@ import React, {
 	ButtonHTMLAttributes,
 	AnchorHTMLAttributes,
 } from "react"
+import { SerializedStyles } from "@emotion/css"
+import { ButtonTheme } from "@guardian/src-foundations/themes"
+import { SvgArrowRightStraight } from "@guardian/src-svgs"
 import {
 	button,
 	primary,
@@ -19,9 +22,8 @@ import {
 	iconOnlySmall,
 	iconNudgeAnimation,
 } from "./styles"
-import { SerializedStyles } from "@emotion/css"
-import { ButtonTheme } from "@guardian/src-foundations/themes"
-import { SvgArrowRightStraight } from "@guardian/src-svgs"
+import { Props } from "../../../common/props"
+
 export {
 	buttonDefault,
 	buttonBrand,
@@ -67,7 +69,7 @@ const iconOnlySizes: {
 	small: iconOnlySmall,
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Props, ButtonHTMLAttributes<HTMLButtonElement> {
 	priority: Priority
 	size: Size
 	iconSide: IconSide
@@ -106,7 +108,9 @@ const Button = ({
 	)
 }
 
-interface LinkButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface LinkButtonProps
+	extends Props,
+		AnchorHTMLAttributes<HTMLAnchorElement> {
 	priority: LinkButtonPriority
 	size: Size
 	showIcon: boolean
