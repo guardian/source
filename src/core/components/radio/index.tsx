@@ -1,4 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
+import { InlineError } from "@guardian/src-inline-error"
 import {
 	fieldset,
 	label,
@@ -11,7 +12,8 @@ import {
 	vertical,
 	errorRadio,
 } from "./styles"
-import { InlineError } from "@guardian/src-inline-error"
+import { Props } from "../../../common/props"
+
 export { radioBrand, radioDefault } from "@guardian/src-foundations/themes"
 
 type Orientation = "vertical" | "horizontal"
@@ -21,23 +23,29 @@ const orientationStyles = {
 	horizontal: horizontal,
 }
 
-const RadioGroup = ({
-	name,
-	orientation,
-	error,
-	children,
-	...props
-}: {
+interface RadioGroupProps extends Props {
 	name: string
 	orientation: Orientation
 	error?: string
 	children: JSX.Element | JSX.Element[]
-}) => {
+}
+
+const RadioGroup = ({
+	name,
+	orientation,
+	error,
+	cssOverrides,
+	children,
+	...props
+}: RadioGroupProps) => {
 	// TODO: This is currently a div instead of a fieldset due to a Chrome / Safari
 	// bug that prevents flexbox model working on fieldset elements
 	// https://bugs.chromium.org/p/chromium/issues/detail?id=375693
 	return (
-		<div css={[fieldset, orientationStyles[orientation]]} {...props}>
+		<div
+			css={[fieldset, orientationStyles[orientation], cssOverrides]}
+			{...props}
+		>
 			{error && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				return React.cloneElement(
@@ -78,7 +86,7 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
-interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
+interface RadioProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	label?: ReactNode
 	supporting?: ReactNode
 	error: boolean
@@ -89,6 +97,7 @@ const Radio = ({
 	value,
 	supporting,
 	checked,
+	cssOverrides,
 	error,
 	...props
 }: RadioProps) => {
@@ -103,6 +112,7 @@ const Radio = ({
 			css={theme => [
 				radio(theme.radio && theme),
 				error ? errorRadio(theme.radio && theme) : "",
+				cssOverrides,
 			]}
 			value={value}
 			aria-invalid={error}
