@@ -1,4 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/css"
 import { InlineError } from "@guardian/src-inline-error"
 import {
 	widthFluid,
@@ -11,9 +12,9 @@ import {
 	optionalLabel,
 	supportingText,
 } from "./styles"
-import { SerializedStyles } from "@emotion/css"
-export { textInputLight } from "@guardian/src-foundations/themes"
+import { Props } from "../../../common/props"
 
+export { textInputLight } from "@guardian/src-foundations/themes"
 export type Width = 30 | 10 | 4
 
 const widths: {
@@ -32,7 +33,7 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
-interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	label: string
 	optional: boolean
 	supporting?: string
@@ -46,6 +47,7 @@ const TextInput = ({
 	supporting,
 	width,
 	error,
+	cssOverrides,
 	...props
 }: TextInputProps) => {
 	return (
@@ -69,6 +71,7 @@ const TextInput = ({
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
 					error ? errorInput(theme.textInput && theme) : "",
+					cssOverrides,
 				]}
 				{...props}
 			/>
