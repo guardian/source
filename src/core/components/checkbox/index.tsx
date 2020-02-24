@@ -1,4 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
+import { InlineError } from "@guardian/src-inline-error"
 import {
 	fieldset,
 	label,
@@ -12,24 +13,28 @@ import {
 	tickWithSupportingText,
 	errorCheckbox,
 } from "./styles"
-import { InlineError } from "@guardian/src-inline-error"
+import { Props } from "../../../common/props"
+
 export {
 	checkboxDefault,
 	checkboxBrand,
 } from "@guardian/src-foundations/themes"
 
-const CheckboxGroup = ({
-	name,
-	error,
-	children,
-	...props
-}: {
+interface CheckboxGroupProps extends Props {
 	name: string
 	error?: string
 	children: JSX.Element | JSX.Element[]
-}) => {
+}
+
+const CheckboxGroup = ({
+	name,
+	error,
+	cssOverrides,
+	children,
+	...props
+}: CheckboxGroupProps) => {
 	return (
-		<fieldset css={fieldset} {...props}>
+		<fieldset css={[fieldset, cssOverrides]} {...props}>
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			{React.Children.map(children, child => {
 				return React.cloneElement(
@@ -70,7 +75,7 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
-interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	label?: ReactNode
 	supporting?: ReactNode
 	indeterminate: boolean
@@ -85,6 +90,7 @@ const Checkbox = ({
 	defaultChecked,
 	error,
 	indeterminate,
+	cssOverrides,
 	...props
 }: CheckboxProps) => {
 	const isChecked = (): boolean | "mixed" => {
@@ -114,6 +120,7 @@ const Checkbox = ({
 				css={theme => [
 					checkbox(theme.checkbox && theme),
 					error ? errorCheckbox(theme.checkbox && theme) : "",
+					cssOverrides,
 				]}
 				value={value}
 				aria-invalid={error}
