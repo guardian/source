@@ -82,6 +82,7 @@ const Button = ({
 	size,
 	icon: iconSvg,
 	iconSide,
+	cssOverrides,
 	children,
 	...props
 }: ButtonProps) => {
@@ -100,6 +101,7 @@ const Button = ({
 				iconSvg ? iconSizes[size] : "",
 				iconSvg && children ? iconSides[iconSide] : "",
 				!children ? iconOnlySizes[size] : "",
+				cssOverrides,
 			]}
 			{...props}
 		>
@@ -121,6 +123,7 @@ const LinkButton = ({
 	priority,
 	size,
 	showIcon,
+	cssOverrides,
 	children,
 	...props
 }: LinkButtonProps) => {
@@ -135,6 +138,7 @@ const LinkButton = ({
 					children ? iconSides.right : "",
 					!children ? iconOnlySizes[size] : "",
 					iconNudgeAnimation,
+					cssOverrides,
 				]}
 				{...props}
 			>
