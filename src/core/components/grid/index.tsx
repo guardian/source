@@ -1,4 +1,5 @@
 import React from "react"
+import { SerializedStyles } from "@emotion/css"
 import {
 	gridRow,
 	gridRowMobile,
@@ -10,7 +11,7 @@ import {
 	createCustomGridRow,
 } from "./styles"
 import { CustomBreakpoint, GridBreakpoint } from "./data"
-import { SerializedStyles } from "@emotion/css"
+import { Props } from "../../../common/props"
 
 type GridRowBreakpoints = {
 	[key in GridBreakpoint]: SerializedStyles
@@ -22,13 +23,12 @@ const gridRowBreakpoints: GridRowBreakpoints = {
 	wide: gridRowWide,
 }
 
-const GridRow = ({
-	breakpoints,
-	children,
-}: {
+interface GridRowProps extends Props {
 	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	children: JSX.Element | JSX.Element[]
-}) => {
+}
+
+const GridRow = ({ breakpoints, cssOverrides, children }: GridRowProps) => {
 	// Create an array with an entry for each child
 	// Each entry is an array of starting positions,
 	// all initially set to 1
@@ -70,6 +70,7 @@ const GridRow = ({
 					},
 					[] as SerializedStyles[],
 				),
+				cssOverrides,
 			]}
 		>
 			{React.Children.map(children, (child, index) =>
@@ -83,24 +84,28 @@ const GridRow = ({
 	)
 }
 
-const GridItem = ({
-	spans,
-	borderRight,
-	breakpoints,
-	startingPositions,
-	children,
-}: {
+interface GridItemProps extends Props {
 	spans: number[]
 	borderRight?: boolean
 	startingPositions: number[]
 	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	children: JSX.Element | JSX.Element[]
-}) => {
+}
+
+const GridItem = ({
+	spans,
+	borderRight,
+	breakpoints,
+	startingPositions,
+	cssOverrides,
+	children,
+}: GridItemProps) => {
 	return (
 		<div
 			css={[
 				gridItem({ breakpoints, spans, startingPositions }),
 				borderRight ? borderRightStyle : "",
+				cssOverrides,
 			]}
 		>
 			{children}
