@@ -1,4 +1,6 @@
 import React, { ReactElement, ReactNode, AnchorHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/css"
+import { LinkTheme } from "@guardian/src-foundations/themes"
 import {
 	link,
 	primary,
@@ -8,8 +10,8 @@ import {
 	iconRight,
 	iconLeft,
 } from "./styles"
-import { SerializedStyles } from "@emotion/css"
-import { LinkTheme } from "@guardian/src-foundations/themes"
+import { Props } from "../../../common/props"
+
 export {
 	linkLight,
 	linkBrand,
@@ -17,6 +19,7 @@ export {
 } from "@guardian/src-foundations/themes"
 
 export type Priority = "primary" | "secondary"
+
 type IconSide = "left" | "right"
 
 const priorities: {
@@ -32,7 +35,7 @@ const iconSides: {
 	right: iconRight,
 	left: iconLeft,
 }
-interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement>, Props {
 	priority: Priority
 	subdued: boolean
 	icon?: ReactElement
@@ -45,6 +48,7 @@ const Link = ({
 	subdued: isSubdued,
 	icon: iconSvg,
 	iconSide,
+	cssOverrides,
 	children,
 	...props
 }: LinkProps) => {
@@ -73,6 +77,7 @@ const Link = ({
 				isSubdued ? subdued : "",
 				iconSvg ? icon : "",
 				iconSvg ? iconSides[iconSide] : "",
+				cssOverrides,
 			]}
 			{...props}
 		>
