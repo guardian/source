@@ -15,6 +15,7 @@ const ChoiceCardGroup = ({
 	name,
 	multi,
 	error,
+	cssOverrides,
 	children,
 	...props
 }: ChoiceCardGroupProps) => {
@@ -22,7 +23,7 @@ const ChoiceCardGroup = ({
 	// bug that prevents flexbox model working on fieldset elements
 	// https://bugs.chromium.org/p/chromium/issues/detail?id=375693
 	return (
-		<div css={[fieldset]} {...props}>
+		<div css={[fieldset, cssOverrides]} {...props}>
 			{React.Children.map(children, child => {
 				return React.cloneElement(
 					child,
@@ -52,6 +53,7 @@ const ChoiceCard = ({
 	label: labelContent,
 	value,
 	checked,
+	cssOverrides,
 	error,
 	...props
 }: ChoiceCardProps) => {
@@ -64,7 +66,7 @@ const ChoiceCard = ({
 	return (
 		<>
 			<input
-				css={theme => [input(theme.choiceCard && theme)]}
+				css={theme => [input(theme.choiceCard && theme), cssOverrides]}
 				id={id}
 				value={value}
 				aria-invalid={error}
