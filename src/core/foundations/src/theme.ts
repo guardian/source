@@ -1,3 +1,27 @@
+// The theme file is based on the specification at https://system-ui.com/theme
+//
+// WARNING!
+//
+// This is an internal file to be consumed by the src-foundations package only
+//
+// It contains the lowest level primitives for the entire design system.
+// Be very, *very* careful when changing the values in here, changes are likely
+// to have a wide-ranging impact across all applications
+//
+// DANGEROUS CHANGES
+//
+// The following will almost certainly require further changes to src-foundations.
+// They will likely also impact every application that consumes src-foundations
+//
+// - Updating a value
+// - Removing a value
+// - Inserting a value into an array
+//
+// SAFE CHANGES
+//
+// - Pushing a value onto the end of an array
+// - Exporting a new object or array
+
 const fontSizes = [12, 15, 17, 20, 24, 28, 34, 42, 50, 70]
 
 const fonts = {
