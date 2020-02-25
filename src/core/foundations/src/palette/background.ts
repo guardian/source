@@ -26,6 +26,6 @@ export const brandAltBackground = {
 	primary: brandAlt[400],
 	buttonPrimary: neutral[7],
 	buttonPrimaryHover: "#454545",
-	buttonSecondary: brandAlt[300],
+	buttonSecondary: brandAlt[200],
 	buttonSecondaryHover: "#F2AE00",
 }
