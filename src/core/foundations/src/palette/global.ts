@@ -38,11 +38,11 @@ export const brand = {
 }
 export const brandAlt = {
 	200: colors.yellows[0],
-	300: colors.yellows[1],
+	300: colors.yellows[0], // TODO: update to colors.yellow[1] (#FFD900)
 	400: colors.yellows[2],
 
 	// legacy names: please do not use
-	dark: colors.yellows[1],
+	dark: colors.yellows[0], // TODO: update to colors.yellow[1] (#FFD900)
 	main: colors.yellows[2],
 }
 // continue to expose legacy name for compatibility
