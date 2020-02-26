@@ -19,7 +19,7 @@ const background = {
 	readerRevenue: {
 		primary: brand[400],
 		ctaPrimary: brandAlt[400],
-		ctaPrimaryHover: brandAlt[300],
+		ctaPrimaryHover: brandAlt[200],
 		ctaSecondary: brand[400],
 		ctaSecondaryHover: "#234B8A",
 	},
@@ -28,7 +28,7 @@ const background = {
 		ctaPrimary: neutral[7],
 		ctaPrimaryHover: "#454545",
 		ctaSecondary: brandAlt[400],
-		ctaSecondaryHover: brandAlt[300],
+		ctaSecondaryHover: brandAlt[200],
 	},
 }
 const border = {

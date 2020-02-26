@@ -1,3 +1,27 @@
+// The theme file is based on the specification at https://system-ui.com/theme
+//
+// WARNING!
+//
+// This is an internal file to be consumed by the src-foundations package only
+//
+// It contains the lowest level primitives for the entire design system.
+// Be very, *very* careful when changing the values in here, changes are likely
+// to have a wide-ranging impact across all applications
+//
+// DANGEROUS CHANGES
+//
+// The following will almost certainly require further changes to src-foundations.
+// They will likely also impact every application that consumes src-foundations
+//
+// - Updating a value
+// - Removing a value
+// - Inserting a value into an array
+//
+// SAFE CHANGES
+//
+// - Pushing a value onto the end of an array
+// - Exporting a new object or array
+
 const fontSizes = [12, 15, 17, 20, 24, 28, 34, 42, 50, 70]
 
 const fonts = {
@@ -19,6 +43,8 @@ const fontWeights = [300, 400, 500, 700]
 // const [sport300, sport400, sport500, sport600, sport800] = colors.blue
 const colors = {
 	reds: [
+		"#660505", //news-100
+		"#8B0000", //news-200
 		"#AB0613", //news-300
 		"#C70000", //news-400
 		"#FF5943", //news-500
@@ -26,6 +52,8 @@ const colors = {
 		"#FFF4F2", //news-800
 	],
 	oranges: [
+		"#672005", //opinion-100
+		"#8D2700", //opinion-200
 		"#BD5318", //opinion-300
 		"#E05E00", //opinion-400
 		"#FF7F0F", //opinion-500
@@ -33,11 +61,14 @@ const colors = {
 		"#FEF9F5", //opinion-800
 	],
 	blues: [
+		"#003C60", //sport-100
+		"#004E7C", //sport-200
 		"#005689", //sport-300
 		"#0084C6", //sport-400
 		"#00B2FF", //sport-500
 		"#90DCFF", //sport-600
 		"#F1F8FC", //sport-800
+		"#001536", //brand-100
 		"#041F4A", //brand-300
 		"#052962", //brand-400
 		"#007ABC", //brand-500
@@ -45,6 +76,8 @@ const colors = {
 		"#C1D8FC", //brand-800
 	],
 	browns: [
+		"#3E3323", //culture-100
+		"#574835", //culture-200
 		"#6B5840", //culture-300
 		"#A1845C", //culture-400
 		"#EACCA0", //culture-500
@@ -52,6 +85,8 @@ const colors = {
 		"#FBF6EF", //culture-800
 	],
 	pinks: [
+		"#510043", //lifestyle-100
+		"#650054", //lifestyle-200
 		"#7D0068", //lifestyle-300
 		"#BB3B80", //lifestyle-400
 		"#FFABDB", //lifestyle-500
@@ -59,16 +94,19 @@ const colors = {
 		"#FEEEF7", //lifestyle-800
 	],
 	yellows: [
-		"#F3C100", //highlight-300
-		"#FFE500", //highlight-400
+		"#F3C100", //brandAlt-200
+		"#FFD900", //brandAlt-300
+		"#FFE500", //brandAlt-400
 	],
 	greens: [
-		"#185E36",
-		"#22874D", //success-400
+		"#185E36", //green-200
+		"#22874D", //green-400
+		"#4B8878", //labs-200
 		"#65A897", //labs-300
 		"#69D1CA", //labs-400
 	],
 	grays: [
+		"#000000", //neutral-0
 		"#121212", //neutral-7
 		"#333333", //neutral-20
 		"#767676", //neutral-46
@@ -77,6 +115,12 @@ const colors = {
 		"#EDEDED", //neutral-93
 		"#F6F6F6", //neutral-97
 		"#FFFFFF", //neutral-100
+		"#222527", //specialReport-100
+		"#303538", //specialReport-200
+		"#3F464A", //specialReport-300
+		"#63717A", //specialReport-400
+		"#ABC2C9", //specialReport-500
+		"#33393D", //dynamo-400
 	],
 }
 
