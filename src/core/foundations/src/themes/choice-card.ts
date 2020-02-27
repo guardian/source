@@ -7,6 +7,8 @@ export type ChoiceCardTheme = {
 	textChecked: string
 	backgroundChecked: string
 	borderColorChecked: string
+	textHover: string
+	borderColorHover: string
 }
 
 export const choiceCardDefault: {
@@ -19,6 +21,8 @@ export const choiceCardDefault: {
 		textChecked: text.choiceCardChecked,
 		backgroundChecked: "rgba(0, 122, 188, 0.1)",
 		borderColorChecked: border.choiceCardChecked,
+		textHover: text.choiceCardHover,
+		borderColorHover: border.choiceCardHover,
 	},
 	...inlineErrorDefault,
 }

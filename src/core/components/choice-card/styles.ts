@@ -53,4 +53,9 @@ export const choiceCard = ({
 	&:focus {
 		${focusHalo};
 	}
+
+	&:hover {
+		color: ${choiceCard.textChecked};
+		border-color: ${choiceCard.borderColorChecked};
+	}
 `
