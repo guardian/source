@@ -1,16 +1,6 @@
-import { neutral, brand, brandAlt } from "./global"
+import { neutral, brand, brandAlt } from "../global"
 
-export const background = {
-	primary: neutral[100],
-	inverse: "#1A1A1A",
-	buttonPrimary: brand[400],
-	buttonPrimaryHover: "#234B8A",
-	buttonSecondary: brand[800],
-	buttonSecondaryHover: "#ACC9F7",
-	checkboxChecked: brand[500],
-	radioChecked: brand[500],
-	textInput: neutral[100],
-}
+export { background } from "./default"
 
 export const brandBackground = {
 	primary: brand[400],
