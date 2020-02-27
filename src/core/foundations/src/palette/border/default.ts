@@ -2,15 +2,17 @@ import { neutral, error as _error, brand, sport } from "../global"
 
 const primary = neutral[60]
 const secondary = neutral[86]
+const error = _error[400]
 const checkableChecked = brand[500]
 const checkableHover = brand[500]
-const error = _error[400]
 const focusHalo = sport[500]
 
 const root = {
 	primary,
 	secondary,
 	error,
+	checkableChecked,
+	checkableHover,
 	focusHalo,
 }
 
@@ -29,7 +31,7 @@ const choiceCard = {
 
 const radio = {
 	radio: primary,
-	radioHover: checkablehover,
+	radioHover: checkableHover,
 	radioError: error,
 }
 
