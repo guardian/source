@@ -1,7 +1,14 @@
-import { neutral, error as _error, brand, sport } from "../global"
+import {
+	neutral,
+	error as _error,
+	success as _success,
+	brand,
+	sport,
+} from "../global"
 
 const primary = neutral[60]
 const secondary = neutral[86]
+const success = _success[400]
 const error = _error[400]
 const checkableChecked = brand[500]
 const checkableHover = brand[500]
@@ -10,6 +17,7 @@ const focusHalo = sport[500]
 const root = {
 	primary,
 	secondary,
+	success,
 	error,
 	checkableChecked,
 	checkableHover,

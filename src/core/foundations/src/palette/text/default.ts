@@ -1,8 +1,9 @@
-import { neutral, error as _error, brand } from "../global"
+import { neutral, error as _error, success as _success, brand } from "../global"
 
 const primary = neutral[7]
 const secondary = neutral[46] //TODO: deprecate?
 const supporting = neutral[46]
+const success = _success[400]
 const error = _error[400]
 const ctaPrimary = neutral[100]
 const ctaSecondary = brand[400]
@@ -13,6 +14,7 @@ const root = {
 	primary,
 	secondary,
 	supporting,
+	success,
 	error,
 	ctaPrimary,
 	ctaSecondary,
