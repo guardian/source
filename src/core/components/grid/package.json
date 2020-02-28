@@ -4,7 +4,7 @@
 	"main": "dist/grid.js",
 	"module": "dist/grid.esm.js",
 	"scripts": {
-		"build": "yarn clean && tsc && rollup --config",
+		"build": "yarn clean && rollup --config",
 		"clean": "rm -rf dist *.d.ts",
 		"prepublish": "yarn build"
 	},
