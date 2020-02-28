@@ -108,6 +108,7 @@ const colors = {
 	grays: [
 		"#000000", //neutral-0
 		"#121212", //neutral-7
+		"#1A1A1A", //neutral-10
 		"#333333", //neutral-20
 		"#767676", //neutral-46
 		"#999999", //neutral-60
