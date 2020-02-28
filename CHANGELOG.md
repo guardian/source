@@ -25,6 +25,7 @@
 **`@guardian/src-grid 0.14.0`**
 
 -   [#230](https://github.com/guardian/source/pull/230) Pass common props to grid
+-   :boom: [#245](https://github.com/guardian/source/pull/245) Temporarily stop generating types for grid
 
 **`@guardian/src-button 0.14.0`**
 
