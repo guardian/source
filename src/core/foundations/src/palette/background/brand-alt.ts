@@ -8,6 +8,10 @@ const ctaSecondaryHover = "#F2AE00"
 
 const root = {
 	primary,
+	ctaPrimary,
+	ctaPrimaryHover,
+	ctaSecondary,
+	ctaSecondaryHover,
 }
 
 const button = {

@@ -9,6 +9,9 @@ const linkPrimary = neutral[7]
 const root = {
 	primary,
 	secondary,
+	ctaPrimary,
+	ctaSecondary,
+	linkPrimary,
 }
 
 const button = {

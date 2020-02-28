@@ -1,7 +1,7 @@
 import { neutral, brand } from "../global"
 
 const primary = brand[400]
-const checked = neutral[100]
+const checkableChecked = neutral[100]
 const ctaPrimary = neutral[100]
 const ctaPrimaryHover = "#E0E0E0"
 const ctaSecondary = brand[600]
@@ -9,7 +9,11 @@ const ctaSecondaryHover = "#234B8A"
 
 const root = {
 	primary,
-	checked,
+	checkableChecked,
+	ctaPrimary,
+	ctaPrimaryHover,
+	ctaSecondary,
+	ctaSecondaryHover,
 }
 
 const button = {
@@ -20,11 +24,11 @@ const button = {
 }
 
 const checkbox = {
-	checkboxChecked: checked,
+	checkboxChecked: checkableChecked,
 }
 
 const radio = {
-	radioChecked: checked,
+	radioChecked: checkableChecked,
 }
 
 export const brandBackground = {
