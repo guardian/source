@@ -1,7 +1,7 @@
 import { neutral, success as _success, error as _error, brand } from "../global"
 
 const primary = neutral[100]
-const secondary = brand[800]
+const secondary = brand[800] //TODO: deprecate?
 const supporting = brand[800]
 const success = _success[400]
 const error = _error[500]
