@@ -1,7 +1,7 @@
 import { neutral, brand } from "../global"
 
 const primary = neutral[100]
-const inverse = "#1A1A1A"
+const inverse = neutral[10]
 const checkableChecked = brand[500]
 const ctaPrimary = brand[400]
 const ctaPrimaryHover = "#234B8A"

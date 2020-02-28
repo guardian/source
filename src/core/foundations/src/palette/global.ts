@@ -50,13 +50,14 @@ export const brandYellow = brandAlt
 export const neutral = {
 	0: colors.grays[0],
 	7: colors.grays[1],
-	20: colors.grays[2],
-	46: colors.grays[3],
-	60: colors.grays[4],
-	86: colors.grays[5],
-	93: colors.grays[6],
-	97: colors.grays[7],
-	100: colors.grays[8],
+	10: colors.grays[2],
+	20: colors.grays[3],
+	46: colors.grays[4],
+	60: colors.grays[5],
+	86: colors.grays[6],
+	93: colors.grays[7],
+	97: colors.grays[8],
+	100: colors.grays[9],
 }
 export const error = {
 	400: colors.reds[3],
@@ -163,13 +164,13 @@ export const labs = {
 }
 
 export const specialReport = {
-	100: colors.grays[9],
-	200: colors.grays[10],
-	300: colors.grays[11],
-	400: colors.grays[12],
-	500: colors.grays[13],
+	100: colors.grays[10],
+	200: colors.grays[11],
+	300: colors.grays[12],
+	400: colors.grays[13],
+	500: colors.grays[14],
 }
 
 export const dynamo = {
-	400: colors.grays[14],
+	400: colors.grays[15],
 }
