@@ -1,8 +1,9 @@
-import { neutral, error as _error, brand } from "../global"
+import { neutral, success as _success, error as _error, brand } from "../global"
 
 const primary = neutral[100]
 const secondary = brand[800]
 const supporting = brand[800]
+const success = _success[400]
 const error = _error[500]
 const ctaPrimary = brand[400]
 const ctaSecondary = neutral[100]
@@ -12,6 +13,7 @@ const root = {
 	primary,
 	secondary,
 	supporting,
+	success,
 	error,
 	ctaPrimary,
 	ctaSecondary,
