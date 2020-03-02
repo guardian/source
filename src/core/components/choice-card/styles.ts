@@ -21,6 +21,7 @@ export const input = ({
 
 	&:checked + label {
 		color: ${choiceCard.textChecked};
+		border-width: 4px;
 		border-color: ${choiceCard.borderColorChecked};
 		background-color: ${choiceCard.backgroundChecked};
 	}
@@ -56,6 +57,7 @@ export const choiceCard = ({
 
 	&:hover {
 		color: ${choiceCard.textChecked};
+		border-width: 4px;
 		border-color: ${choiceCard.borderColorChecked};
 	}
 `
