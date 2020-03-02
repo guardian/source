@@ -4,6 +4,7 @@ accessibility/
 palette/
 themes/
 typography/
+utils/
 foundations.js
 foundations.esm.js
 *.d.ts
@@ -15,3 +16,4 @@ foundations.esm.js
 !src/palette
 !src/themes/
 !src/typography/
+!src/utils/
