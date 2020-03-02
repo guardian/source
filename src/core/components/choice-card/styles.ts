@@ -51,6 +51,10 @@ export const choiceCard = ({
 	${textSans.medium({ fontWeight: "bold" })};
 	cursor: pointer;
 
+	&:last-child {
+		margin: 0;
+	}
+
 	&:hover {
 		color: ${choiceCard.textChecked};
 		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorChecked};
