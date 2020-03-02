@@ -25,8 +25,7 @@ export const input = ({
 
 	&:checked + label {
 		color: ${choiceCard.textChecked};
-		border-width: 4px;
-		border-color: ${choiceCard.borderColorChecked};
+		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorChecked};
 		background-color: ${choiceCard.backgroundChecked};
 	}
 `
@@ -43,11 +42,8 @@ export const choiceCard = ({
 	margin: 0 ${space[2]}px 0 0;
 	align-items: center;
 	justify-content: center;
-
-	border-width: 2px;
-	border-style: solid;
 	/* TODO: prefer curentColor unless it has to be different to text colour */
-	border-color: ${choiceCard.borderColor};
+	box-shadow: inset 0 0 0 2px ${choiceCard.borderColor};
 	border-radius: 4px;
 	position: relative;
 
@@ -57,7 +53,6 @@ export const choiceCard = ({
 
 	&:hover {
 		color: ${choiceCard.textChecked};
-		border-width: 4px;
-		border-color: ${choiceCard.borderColorChecked};
+		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorChecked};
 	}
 `
