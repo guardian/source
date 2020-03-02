@@ -19,7 +19,7 @@ export const choiceCardDefault: {
 		text: text.choiceCard,
 		borderColor: border.choiceCard,
 		textChecked: text.choiceCardChecked,
-		backgroundChecked: "rgba(0, 122, 188, 0.1)",
+		backgroundChecked: "rgba(0, 178, 255, 0.26)",
 		borderColorChecked: border.choiceCardChecked,
 		textHover: text.choiceCardHover,
 		borderColorHover: border.choiceCardHover,
