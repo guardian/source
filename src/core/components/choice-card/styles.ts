@@ -19,6 +19,10 @@ export const input = ({
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
 	${visuallyHidden};
 
+	&:focus + label {
+		${focusHalo};
+	}
+
 	&:checked + label {
 		color: ${choiceCard.textChecked};
 		border-width: 4px;
@@ -50,10 +54,6 @@ export const choiceCard = ({
 	color: ${choiceCard.text};
 	${textSans.medium({ fontWeight: "bold" })};
 	cursor: pointer;
-
-	&:focus {
-		${focusHalo};
-	}
 
 	&:hover {
 		color: ${choiceCard.textChecked};
