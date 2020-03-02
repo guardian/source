@@ -7,6 +7,7 @@
 > -   :sparkles: [New feature]
 > -   :nail_care: [Polish]
 > -   :robot: [Maintenance]
+> -   :globe_with_meridians: [Accessibility improvement]
 
 ## 28th February 2020
 
