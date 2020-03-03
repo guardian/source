@@ -1,4 +1,4 @@
-import { palette } from "../index"
+import { border } from "../index"
 
 const visuallyHidden = `
 	position: absolute;
@@ -12,7 +12,7 @@ const visuallyHidden = `
 const focusHalo = `
 	outline: 0;
 	html:not(.src-focus-disabled) & {
-		box-shadow: 0 0 0 5px ${palette.border.focusHalo};
+		box-shadow: 0 0 0 5px ${border.focusHalo};
 		z-index: 9;
 	}
 `
