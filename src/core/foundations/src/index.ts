@@ -4,6 +4,18 @@ export * from "./palette"
 export * from "./size"
 export * from "./space"
 
+// Avoid importing the entire palette directly in your application. Prefer using the named exports
+// defined within the /palette folder
+//
+// Why?
+// 1) The entire palette consists of global + functional colours. This entails importing a lot of
+// largely usused or repeated values
+// 2) The palette is guaranteed to grow over time, as more components and functional colours are
+// added.
+//
+// Why is it even here?
+// Legacy reasons. Also for developer experience when prototyping.
+
 import {
 	background,
 	border,
