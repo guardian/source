@@ -12,7 +12,7 @@ import {
 	vertical,
 	errorRadio,
 } from "./styles"
-import { Props } from "../../../common/props"
+import { Props } from "@guardian/src-helpers"
 
 export { radioBrand, radioDefault } from "@guardian/src-foundations/themes"
 
