@@ -13,7 +13,7 @@ import {
 	tickWithSupportingText,
 	errorCheckbox,
 } from "./styles"
-import { Props } from "../../../common/props"
+import { Props } from "@guardian/src-helpers"
 
 export {
 	checkboxDefault,
