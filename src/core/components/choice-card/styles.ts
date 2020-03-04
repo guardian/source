@@ -9,9 +9,21 @@ import {
 } from "@guardian/src-foundations/themes"
 
 export const fieldset = css`
+	border: 0;
+`
+
+// TODO: This is currently applied to a div instead of the fieldset
+// due to a Chrome / Safari bug that prevents flexbox model working
+// on fieldset elements
+// https://bugs.chromium.org/p/chromium/issues/detail?id=375693
+export const flexContainer = css`
 	display: flex;
 	justify-content: flex-start;
-	border: 0;
+`
+
+export const groupLabel = css`
+	${textSans.medium({ fontWeight: "bold" })};
+	margin-bottom: ${space[1]}px;
 `
 
 export const input = ({
