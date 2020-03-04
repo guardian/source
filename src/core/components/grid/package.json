@@ -4,7 +4,7 @@
 	"main": "dist/grid.js",
 	"module": "dist/grid.esm.js",
 	"scripts": {
-		"build": "yarn clean && rollup --config",
+		"build": "yarn clean && tsc && rollup --config",
 		"clean": "rm -rf dist *.d.ts",
 		"prepublish": "yarn build"
 	},
@@ -15,7 +15,6 @@
 		"@babel/preset-typescript": "^7.8.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@guardian/src-foundations": "^0.15.0",
-		"@guardian/src-helpers": "^0.0.1",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.2",
@@ -33,5 +32,8 @@
 		"@emotion/core": "^10.0.14",
 		"@guardian/src-foundations": "^0.15.0",
 		"react": "^16.8.6"
+	},
+	"dependencies": {
+		"@guardian/src-helpers": "^0.15.0"
 	}
 }
