@@ -1,11 +1,18 @@
 import React, { ReactNode } from "react"
-import { fieldset, input, choiceCard } from "./styles"
+import {
+	fieldset,
+	flexContainer,
+	groupLabel,
+	input,
+	choiceCard,
+} from "./styles"
 import { Props } from "@guardian/src-helpers"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
 interface ChoiceCardGroupProps extends Props {
 	name: string
+	label?: string
 	multi?: boolean
 	error?: string
 	children: JSX.Element | JSX.Element[]
@@ -13,29 +20,33 @@ interface ChoiceCardGroupProps extends Props {
 
 const ChoiceCardGroup = ({
 	name,
+	label,
 	multi,
 	error,
 	cssOverrides,
 	children,
 	...props
 }: ChoiceCardGroupProps) => {
-	// TODO: This is currently a div instead of a fieldset due to a Chrome / Safari
-	// bug that prevents flexbox model working on fieldset elements
-	// https://bugs.chromium.org/p/chromium/issues/detail?id=375693
 	return (
-		<div css={[fieldset, cssOverrides]} {...props}>
-			{React.Children.map(children, child => {
-				return React.cloneElement(
-					child,
-					Object.assign(
-						{ error: !!error, type: multi ? "checkbox" : "radio" },
-						{
-							name,
-						},
-					),
-				)
-			})}
-		</div>
+		<fieldset css={[fieldset, cssOverrides]} {...props}>
+			{label ? <legend css={groupLabel}>{label}</legend> : ""}
+			<div css={flexContainer}>
+				{React.Children.map(children, child => {
+					return React.cloneElement(
+						child,
+						Object.assign(
+							{
+								error: !!error,
+								type: multi ? "checkbox" : "radio",
+							},
+							{
+								name,
+							},
+						),
+					)
+				})}
+			</div>
+		</fieldset>
 	)
 }
 

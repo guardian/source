@@ -67,6 +67,30 @@ multiStateLight.story = {
 	},
 }
 
+const singleStateWithLabelLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={narrow}>
+			<ChoiceCardGroup
+				name="colours"
+				label="What is your favourite colour?"
+			>
+				{choiceCards.map((choiceCard, index) =>
+					React.cloneElement(choiceCard, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
+
+singleStateWithLabelLight.story = {
+	name: `single state with label light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
 // const errorLight = () => (
 // 	<ThemeProvider theme={choiceCardDefault}>
 // 		<ChoiceCardGroup name="colours" error="Please select a colour">
@@ -86,4 +110,4 @@ multiStateLight.story = {
 // 	},
 // }
 
-export { singleStateLight, multiStateLight }
+export { singleStateLight, multiStateLight, singleStateWithLabelLight }

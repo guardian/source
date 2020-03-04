@@ -15,7 +15,11 @@ import { ChoiceCardGroup, ChoiceCard } from "@guardian/src-choice-card"
 
 const Form = () => (
     <form>
-        <ChoiceCardGroup name="consent" multi={false}>
+        <ChoiceCardGroup
+            name="consent"
+            label="Do you accept the terms?"
+            multi={false}
+        >
             <ChoiceCard
                 value="no"
                 label="No"
@@ -39,6 +43,12 @@ const Form = () => (
 **`string`**
 
 Gets passed as the name attribute for each choice card
+
+### `label`
+
+**`string`**
+
+Set as the legend for the fieldset
 
 ### `multi`
 
