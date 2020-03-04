@@ -12,7 +12,7 @@ import {
 	optionalLabel,
 	supportingText,
 } from "./styles"
-import { Props } from "../../../common/props"
+import { Props } from "@guardian/src-helpers"
 
 export { textInputLight } from "@guardian/src-foundations/themes"
 export type Width = 30 | 10 | 4
