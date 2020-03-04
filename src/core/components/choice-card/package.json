@@ -30,5 +30,8 @@
 		"@emotion/core": "^10.0.14",
 		"@guardian/src-foundations": "^0.15.0",
 		"react": "^16.8.6"
+	},
+	"dependencies": {
+		"@guardian/src-helpers": "^0.15.0"
 	}
 }

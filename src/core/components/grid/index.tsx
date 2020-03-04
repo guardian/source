@@ -11,7 +11,7 @@ import {
 	createCustomGridRow,
 } from "./styles"
 import { CustomBreakpoint, GridBreakpoint } from "./data"
-import { Props } from "../../../common/props"
+import { Props } from "@guardian/src-helpers"
 
 type GridRowBreakpoints = {
 	[key in GridBreakpoint]: SerializedStyles

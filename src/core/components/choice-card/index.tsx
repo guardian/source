@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { fieldset, input, choiceCard } from "./styles"
-import { Props } from "../../../common/props"
+import { Props } from "@guardian/src-helpers"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
 

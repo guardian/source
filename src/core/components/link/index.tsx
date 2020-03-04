@@ -10,7 +10,7 @@ import {
 	iconRight,
 	iconLeft,
 } from "./styles"
-import { Props } from "../../../common/props"
+import { Props } from "@guardian/src-helpers"
 
 export {
 	linkLight,
