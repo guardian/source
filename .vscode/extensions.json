@@ -4,6 +4,7 @@
 		"esbenp.prettier-vscode",
 		"jpoissonnier.vscode-styled-components",
 		"stylelint.vscode-stylelint",
-		"stkb.rewrap"
+		"stkb.rewrap",
+		"naumovs.color-highlight"
 	]
 }
