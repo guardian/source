@@ -17,14 +17,14 @@ export const textInputDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	textInput: {
-		textInput: text.textInput,
-		textLabel: text.textInputLabel,
-		textOptionalLabel: text.textInputOptionalLabel,
-		textSupporting: text.textInputSupporting,
-		textError: text.textInputError,
-		backgroundInput: background.textInput,
-		border: border.textInput,
-		borderError: border.textInputError,
+		textInput: text.input,
+		textLabel: text.input,
+		textOptionalLabel: text.supporting,
+		textSupporting: text.supporting,
+		textError: text.error,
+		backgroundInput: background.input,
+		border: border.input,
+		borderError: border.error,
 	},
 	...inlineErrorDefault,
 }

@@ -26,12 +26,12 @@ export const radioDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		borderHover: border.radioHover,
-		border: border.radio,
-		backgroundChecked: background.radioChecked,
-		text: text.radio,
-		textSupporting: text.radioSupporting,
-		borderError: border.radioError,
+		borderHover: border.inputHover,
+		border: border.input,
+		backgroundChecked: background.inputChecked,
+		text: text.input,
+		textSupporting: text.inputSupporting,
+		borderError: border.error,
 	},
 	...inlineErrorLight,
 }
@@ -41,12 +41,12 @@ export const radioBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	radio: {
-		borderHover: brandBorder.radioHover,
-		border: brandBorder.radio,
-		backgroundChecked: brandBackground.radioChecked,
-		text: brandText.radio,
-		textSupporting: brandText.radioSupporting,
-		borderError: brandBorder.radioError,
+		borderHover: brandBorder.inputHover,
+		border: brandBorder.input,
+		backgroundChecked: brandBackground.inputChecked,
+		text: brandText.input,
+		textSupporting: brandText.supporting,
+		borderError: brandBorder.error,
 	},
 	...inlineErrorBrand,
 }

@@ -9,24 +9,24 @@ export type LinkTheme = {
 
 export const linkDefault: { link: LinkTheme } = {
 	link: {
-		textPrimary: text.linkPrimary,
-		textPrimaryHover: text.linkPrimaryHover,
-		textSecondary: text.linkSecondary,
-		textSecondaryHover: text.linkSecondaryHover,
+		textPrimary: text.anchorPrimary,
+		textPrimaryHover: text.anchorPrimary,
+		textSecondary: text.anchorSecondary,
+		textSecondaryHover: text.anchorSecondary,
 	},
 }
 
 export const linkBrand: { link: LinkTheme } = {
 	link: {
-		textPrimary: brandText.linkPrimary,
-		textPrimaryHover: brandText.linkPrimaryHover,
+		textPrimary: brandText.anchorPrimary,
+		textPrimaryHover: brandText.anchorPrimary,
 	},
 }
 
 export const linkBrandAlt: { link: LinkTheme } = {
 	link: {
-		textPrimary: brandAltText.linkPrimary,
-		textPrimaryHover: brandAltText.linkPrimaryHover,
+		textPrimary: brandAltText.anchorPrimary,
+		textPrimaryHover: brandAltText.anchorPrimary,
 	},
 }
 

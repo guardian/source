@@ -16,13 +16,13 @@ export const choiceCardDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	choiceCard: {
-		text: text.choiceCard,
-		borderColor: border.choiceCard,
-		textChecked: text.choiceCardChecked,
+		text: text.supporting,
+		borderColor: border.input,
+		textChecked: text.inputChecked,
 		backgroundChecked: "#E3F6FF",
-		borderColorChecked: border.choiceCardChecked,
-		textHover: text.choiceCardHover,
-		borderColorHover: border.choiceCardHover,
+		borderColorChecked: border.inputChecked,
+		textHover: text.inputHover,
+		borderColorHover: border.inputHover,
 	},
 	...inlineErrorDefault,
 }
