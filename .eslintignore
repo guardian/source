@@ -8,5 +8,6 @@ src/core/foundations/accessibility
 src/core/foundations/palette
 src/core/foundations/themes
 src/core/foundations/typography
+src/core/foundations/utils
 src/core/foundations/foundations.js
 src/core/foundations/foundations.esm.js
