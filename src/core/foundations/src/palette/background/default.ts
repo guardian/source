@@ -2,20 +2,22 @@ import { neutral, brand } from "../global"
 
 const primary = neutral[100]
 const inverse = neutral[10]
-const checkableChecked = brand[500]
 const ctaPrimary = brand[400]
 const ctaPrimaryHover = "#234B8A"
 const ctaSecondary = brand[800]
 const ctaSecondaryHover = "#ACC9F7"
+const input = neutral[100]
+const inputChecked = brand[500]
 
 const root = {
 	primary,
 	inverse,
-	checkableChecked,
 	ctaPrimary,
 	ctaPrimaryHover,
 	ctaSecondary,
 	ctaSecondaryHover,
+	input,
+	inputChecked,
 }
 
 const button = {
@@ -26,15 +28,15 @@ const button = {
 }
 
 const checkbox = {
-	checkboxChecked: checkableChecked,
+	checkboxChecked: inputChecked,
 }
 
 const radio = {
-	radioChecked: checkableChecked,
+	radioChecked: inputChecked,
 }
 
 const textInput = {
-	textInput: primary,
+	textInput: input,
 }
 
 export const background = {
