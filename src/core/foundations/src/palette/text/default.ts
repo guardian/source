@@ -9,6 +9,10 @@ const ctaPrimary = neutral[100]
 const ctaSecondary = brand[400]
 const anchorPrimary = brand[500]
 const anchorSecondary = neutral[7]
+const input = neutral[7]
+const inputSupporting = neutral[46]
+const inputChecked = brand[400]
+const inputHover = brand[400]
 
 const root = {
 	primary,
@@ -20,6 +24,10 @@ const root = {
 	ctaSecondary,
 	anchorPrimary,
 	anchorSecondary,
+	input,
+	inputSupporting,
+	inputChecked,
+	inputHover,
 }
 
 const button = {
@@ -28,15 +36,15 @@ const button = {
 }
 
 const checkbox = {
-	checkbox: primary,
-	checkboxSupporting: supporting,
-	checkboxIndeterminate: supporting,
+	checkbox: input,
+	checkboxSupporting: inputSupporting,
+	checkboxIndeterminate: inputSupporting,
 }
 
 const choiceCard = {
-	choiceCard: supporting,
-	choiceCardChecked: ctaSecondary,
-	choiceCardHover: ctaSecondary,
+	choiceCard: inputSupporting,
+	choiceCardChecked: inputChecked,
+	choiceCardHover: inputChecked,
 }
 
 const link = {
@@ -47,15 +55,15 @@ const link = {
 }
 
 const radio = {
-	radio: primary,
-	radioSupporting: supporting,
+	radio: input,
+	radioSupporting: inputSupporting,
 }
 
 const textInput = {
-	textInput: primary,
-	textInputLabel: primary,
-	textInputOptionalLabel: supporting,
-	textInputSupporting: supporting,
+	textInput: input,
+	textInputLabel: input,
+	textInputOptionalLabel: inputSupporting,
+	textInputSupporting: inputSupporting,
 	textInputError: error,
 }
 

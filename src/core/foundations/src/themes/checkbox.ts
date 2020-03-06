@@ -28,14 +28,14 @@ export const checkboxDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	checkbox: {
-		border: border.checkbox,
-		borderHover: border.checkboxHover,
-		borderChecked: border.checkboxChecked,
-		borderError: border.checkboxError,
-		backgroundChecked: background.checkboxChecked,
-		text: text.checkbox,
-		textSupporting: text.checkboxSupporting,
-		textIndeterminate: text.checkboxIndeterminate,
+		border: border.input,
+		borderHover: border.inputHover,
+		borderChecked: border.inputChecked,
+		borderError: border.error,
+		backgroundChecked: background.inputChecked,
+		text: text.primary,
+		textSupporting: text.supporting,
+		textIndeterminate: text.supporting,
 	},
 	...inlineErrorDefault,
 }
@@ -45,14 +45,14 @@ export const checkboxBrand: {
 	inlineError: InlineErrorTheme
 } = {
 	checkbox: {
-		border: brandBorder.checkbox,
-		borderHover: brandBorder.checkboxHover,
-		borderChecked: brandBorder.checkboxChecked,
-		borderError: brandBorder.checkboxError,
-		backgroundChecked: brandBackground.checkboxChecked,
-		text: brandText.checkbox,
-		textSupporting: brandText.checkboxSupporting,
-		textIndeterminate: brandText.checkboxIndeterminate,
+		border: brandBorder.input,
+		borderHover: brandBorder.inputHover,
+		borderChecked: brandBorder.inputChecked,
+		borderError: brandBorder.error,
+		backgroundChecked: brandBackground.inputChecked,
+		text: brandText.primary,
+		textSupporting: brandText.supporting,
+		textIndeterminate: brandText.supporting,
 	},
 	...inlineErrorBrand,
 }

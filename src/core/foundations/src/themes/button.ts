@@ -21,39 +21,39 @@ export type ButtonTheme = {
 
 export const buttonDefault: { button: ButtonTheme } = {
 	button: {
-		textPrimary: text.buttonPrimary,
-		backgroundPrimary: background.buttonPrimary,
-		backgroundPrimaryHover: background.buttonPrimaryHover,
-		textSecondary: text.buttonSecondary,
-		backgroundSecondary: background.buttonSecondary,
-		backgroundSecondaryHover: background.buttonSecondaryHover,
-		textTertiary: text.buttonSecondary,
+		textPrimary: text.ctaPrimary,
+		backgroundPrimary: background.ctaPrimary,
+		backgroundPrimaryHover: background.ctaPrimaryHover,
+		textSecondary: text.ctaSecondary,
+		backgroundSecondary: background.ctaSecondary,
+		backgroundSecondaryHover: background.ctaSecondaryHover,
+		textTertiary: text.ctaSecondary,
 		backgroundTertiary: background.primary,
 	},
 }
 
 export const buttonBrand: { button: ButtonTheme } = {
 	button: {
-		textPrimary: brandText.buttonPrimary,
-		backgroundPrimary: brandBackground.buttonPrimary,
-		backgroundPrimaryHover: brandBackground.buttonPrimaryHover,
-		textSecondary: brandText.buttonSecondary,
-		backgroundSecondary: brandBackground.buttonSecondary,
-		backgroundSecondaryHover: brandBackground.buttonSecondaryHover,
-		textTertiary: brandText.buttonSecondary,
+		textPrimary: brandText.ctaPrimary,
+		backgroundPrimary: brandBackground.ctaPrimary,
+		backgroundPrimaryHover: brandBackground.ctaPrimaryHover,
+		textSecondary: brandText.ctaSecondary,
+		backgroundSecondary: brandBackground.ctaSecondary,
+		backgroundSecondaryHover: brandBackground.ctaSecondaryHover,
+		textTertiary: brandText.ctaSecondary,
 		backgroundTertiary: brandBackground.primary,
 	},
 }
 
 export const buttonBrandAlt: { button: ButtonTheme } = {
 	button: {
-		textPrimary: brandAltText.buttonPrimary,
-		backgroundPrimary: brandAltBackground.buttonPrimary,
-		backgroundPrimaryHover: brandAltBackground.buttonPrimaryHover,
-		textSecondary: brandAltText.buttonSecondary,
-		backgroundSecondary: brandAltBackground.buttonSecondary,
-		backgroundSecondaryHover: brandAltBackground.buttonSecondaryHover,
-		textTertiary: brandAltText.buttonSecondary,
+		textPrimary: brandAltText.ctaPrimary,
+		backgroundPrimary: brandAltBackground.ctaPrimary,
+		backgroundPrimaryHover: brandAltBackground.ctaPrimaryHover,
+		textSecondary: brandAltText.ctaSecondary,
+		backgroundSecondary: brandAltBackground.ctaSecondary,
+		backgroundSecondaryHover: brandAltBackground.ctaSecondaryHover,
+		textTertiary: brandAltText.ctaSecondary,
 		backgroundTertiary: brandAltBackground.primary,
 	},
 }

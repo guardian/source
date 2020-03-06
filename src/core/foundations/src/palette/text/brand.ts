@@ -8,6 +8,8 @@ const error = _error[500]
 const ctaPrimary = brand[400]
 const ctaSecondary = neutral[100]
 const anchorPrimary = neutral[100]
+const input = neutral[100]
+const inputSupporting = brand[800]
 
 const root = {
 	primary,
@@ -18,6 +20,8 @@ const root = {
 	ctaPrimary,
 	ctaSecondary,
 	anchorPrimary,
+	input,
+	inputSupporting,
 }
 
 const button = {
@@ -26,9 +30,9 @@ const button = {
 }
 
 const checkbox = {
-	checkbox: primary,
-	checkboxSupporting: supporting,
-	checkboxIndeterminate: supporting,
+	checkbox: input,
+	checkboxSupporting: inputSupporting,
+	checkboxIndeterminate: inputSupporting,
 }
 
 const link = {
@@ -37,8 +41,8 @@ const link = {
 }
 
 const radio = {
-	radio: primary,
-	radioSupporting: supporting,
+	radio: input,
+	radioSupporting: inputSupporting,
 }
 
 export const brandText = {

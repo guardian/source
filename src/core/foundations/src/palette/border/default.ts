@@ -10,8 +10,9 @@ const primary = neutral[60]
 const secondary = neutral[86]
 const success = _success[400]
 const error = _error[400]
-const checkableChecked = brand[500]
-const checkableHover = brand[500]
+const input = neutral[60]
+const inputChecked = brand[500]
+const inputHover = brand[500]
 const focusHalo = sport[500]
 
 const root = {
@@ -19,32 +20,33 @@ const root = {
 	secondary,
 	success,
 	error,
-	checkableChecked,
-	checkableHover,
+	input,
+	inputChecked,
+	inputHover,
 	focusHalo,
 }
 
 const checkbox = {
-	checkbox: primary,
-	checkboxHover: checkableHover,
-	checkboxChecked: checkableChecked,
+	checkbox: input,
+	checkboxHover: inputHover,
+	checkboxChecked: inputChecked,
 	checkboxError: error,
 }
 
 const choiceCard = {
-	choiceCard: primary,
-	choiceCardHover: checkableHover,
-	choiceCardChecked: checkableChecked,
+	choiceCard: input,
+	choiceCardHover: inputHover,
+	choiceCardChecked: inputChecked,
 }
 
 const radio = {
-	radio: primary,
-	radioHover: checkableHover,
+	radio: input,
+	radioHover: inputHover,
 	radioError: error,
 }
 
 const textInput = {
-	textInput: primary,
+	textInput: input,
 	textInputError: error,
 }
 
