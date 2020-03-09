@@ -2,7 +2,10 @@ import { border, text } from "../index"
 import { InlineErrorTheme, inlineErrorDefault } from "./inline-error"
 
 export type ChoiceCardTheme = {
-	text: string
+	textLabel: string
+	textLabelSupporting: string
+	textGroupLabel: string
+	textGroupLabelSupporting: string
 	borderColor: string
 	textChecked: string
 	backgroundChecked: string
@@ -16,7 +19,10 @@ export const choiceCardDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	choiceCard: {
-		text: text.supporting,
+		textLabel: text.supporting,
+		textLabelSupporting: text.supporting,
+		textGroupLabel: text.groupLabel,
+		textGroupLabelSupporting: text.groupLabelSupporting,
 		borderColor: border.input,
 		textChecked: text.inputChecked,
 		backgroundChecked: "#E3F6FF",

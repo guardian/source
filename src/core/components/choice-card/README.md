@@ -18,6 +18,7 @@ const Form = () => (
         <ChoiceCardGroup
             name="consent"
             label="Do you accept the terms?"
+            supporting="Answer as honestly as possible"
             multi={false}
         >
             <ChoiceCard
@@ -49,6 +50,12 @@ Gets passed as the name attribute for each choice card
 **`string`**
 
 Set as the legend for the fieldset
+
+### `supporting`
+
+**`string`**
+
+Additional text that appears below the `label`
 
 ### `multi`
 

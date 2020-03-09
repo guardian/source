@@ -91,6 +91,32 @@ singleStateWithLabelLight.story = {
 	},
 }
 
+const multiStateWithSupportingLabelLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={narrow}>
+			<ChoiceCardGroup
+				name="colours"
+				multi={true}
+				label="What are your favourite colours?"
+				supporting="Select all that apply"
+			>
+				{choiceCards.map((choiceCard, index) =>
+					React.cloneElement(choiceCard, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
+
+multiStateWithSupportingLabelLight.story = {
+	name: `multi state with supporting label light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
 // const errorLight = () => (
 // 	<ThemeProvider theme={choiceCardDefault}>
 // 		<ChoiceCardGroup name="colours" error="Please select a colour">
@@ -110,4 +136,9 @@ singleStateWithLabelLight.story = {
 // 	},
 // }
 
-export { singleStateLight, multiStateLight, singleStateWithLabelLight }
+export {
+	singleStateLight,
+	multiStateLight,
+	singleStateWithLabelLight,
+	multiStateWithSupportingLabelLight,
+}

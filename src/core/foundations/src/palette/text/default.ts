@@ -14,4 +14,6 @@ export const text = {
 	inputSupporting: neutral[46],
 	inputChecked: brand[400],
 	inputHover: brand[400],
+	groupLabel: neutral[7],
+	groupLabelSupporting: neutral[46],
 }
