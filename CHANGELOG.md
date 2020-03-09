@@ -4,7 +4,7 @@
 >
 > -   :boom: [Breaking Change]
 > -   :bug: [Bugfix]
-> -   :sparkles: [New feature]
+> -   :sparkles: [New feature or enhancement]
 > -   :nail_care: [Polish]
 > -   :robot: [Maintenance]
 > -   :globe_with_meridians: [Accessibility improvement]
