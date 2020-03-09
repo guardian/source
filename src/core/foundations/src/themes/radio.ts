@@ -16,8 +16,8 @@ export type RadioTheme = {
 	borderHover: string
 	border: string
 	backgroundChecked: string
-	text: string
-	textSupporting: string
+	textLabel: string
+	textLabelSupporting: string
 	borderError: string
 }
 
@@ -29,8 +29,8 @@ export const radioDefault: {
 		borderHover: border.inputHover,
 		border: border.input,
 		backgroundChecked: background.inputChecked,
-		text: text.input,
-		textSupporting: text.inputSupporting,
+		textLabel: text.inputLabel,
+		textLabelSupporting: text.inputLabelSupporting,
 		borderError: border.error,
 	},
 	...inlineErrorLight,
@@ -44,8 +44,8 @@ export const radioBrand: {
 		borderHover: brandBorder.inputHover,
 		border: brandBorder.input,
 		backgroundChecked: brandBackground.inputChecked,
-		text: brandText.input,
-		textSupporting: brandText.supporting,
+		textLabel: brandText.inputLabel,
+		textLabelSupporting: brandText.supporting,
 		borderError: brandBorder.error,
 	},
 	...inlineErrorBrand,

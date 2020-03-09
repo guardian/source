@@ -2,10 +2,10 @@ import { text, background, border } from "../index"
 import { inlineErrorDefault, InlineErrorTheme } from "./inline-error"
 
 export type TextInputTheme = {
-	textInput: string
+	textUserInput: string
 	textLabel: string
-	textOptionalLabel: string
-	textSupporting: string
+	textLabelOptional: string
+	textLabelSupporting: string
 	textError: string
 	backgroundInput: string
 	border: string
@@ -17,10 +17,10 @@ export const textInputDefault: {
 	inlineError: InlineErrorTheme
 } = {
 	textInput: {
-		textInput: text.input,
-		textLabel: text.input,
-		textOptionalLabel: text.supporting,
-		textSupporting: text.supporting,
+		textUserInput: text.userInput,
+		textLabel: text.inputLabel,
+		textLabelOptional: text.supporting,
+		textLabelSupporting: text.supporting,
 		textError: text.error,
 		backgroundInput: background.input,
 		border: border.input,

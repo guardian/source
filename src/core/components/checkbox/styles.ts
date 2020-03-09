@@ -91,7 +91,7 @@ export const labelText = ({
 	checkbox,
 }: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	${textSans.medium()};
-	color: ${checkbox.text};
+	color: ${checkbox.textLabel};
 `
 
 export const labelTextWithSupportingText = css`
@@ -102,7 +102,7 @@ export const supportingText = ({
 	checkbox,
 }: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	${textSans.small({ lineHeight: "regular" })};
-	color: ${checkbox.textSupporting};
+	color: ${checkbox.textLabelSupporting};
 `
 
 export const tick = ({

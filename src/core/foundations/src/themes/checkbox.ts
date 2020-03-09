@@ -18,8 +18,8 @@ export type CheckboxTheme = {
 	borderChecked: string
 	borderError: string
 	backgroundChecked: string
-	text: string
-	textSupporting: string
+	textLabel: string
+	textLabelSupporting: string
 	textIndeterminate: string
 }
 
@@ -33,8 +33,8 @@ export const checkboxDefault: {
 		borderChecked: border.inputChecked,
 		borderError: border.error,
 		backgroundChecked: background.inputChecked,
-		text: text.primary,
-		textSupporting: text.supporting,
+		textLabel: text.inputLabel,
+		textLabelSupporting: text.inputLabelSupporting,
 		textIndeterminate: text.supporting,
 	},
 	...inlineErrorDefault,
@@ -50,8 +50,8 @@ export const checkboxBrand: {
 		borderChecked: brandBorder.inputChecked,
 		borderError: brandBorder.error,
 		backgroundChecked: brandBackground.inputChecked,
-		text: brandText.primary,
-		textSupporting: brandText.supporting,
+		textLabel: brandText.inputLabel,
+		textLabelSupporting: brandText.inputLabelSupporting,
 		textIndeterminate: brandText.supporting,
 	},
 	...inlineErrorBrand,

@@ -19,7 +19,7 @@ export const textInput = ({
 }: { textInput: TextInputTheme } = textInputLight) => css`
 	height: ${size.large}px;
 	${textSans.medium()};
-	color: ${textInput.textInput};
+	color: ${textInput.textUserInput};
 	background-color: ${textInput.backgroundInput};
 	border: 2px solid ${textInput.border};
 	padding: 0 ${space[2]}px;
@@ -61,7 +61,7 @@ export const optionalLabel = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
 	${textSans.small()};
-	color: ${textInput.textOptionalLabel};
+	color: ${textInput.textLabelOptional};
 	font-style: italic;
 `
 
@@ -69,6 +69,6 @@ export const supportingText = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
 	${textSans.small()};
-	color: ${textInput.textSupporting};
+	color: ${textInput.textLabelSupporting};
 	margin-bottom: ${space[1]}px;
 `
