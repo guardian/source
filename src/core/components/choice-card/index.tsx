@@ -5,14 +5,23 @@ import {
 	groupLabel,
 	input,
 	choiceCard,
+	groupLabelSupporting,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
+const SupportingText = ({ children }: { children: ReactNode }) => {
+	return (
+		<div css={theme => groupLabelSupporting(theme.textInput && theme)}>
+			{children}
+		</div>
+	)
+}
 interface ChoiceCardGroupProps extends Props {
 	name: string
 	label?: string
+	supporting?: string
 	multi?: boolean
 	error?: string
 	children: JSX.Element | JSX.Element[]
@@ -21,6 +30,7 @@ interface ChoiceCardGroupProps extends Props {
 const ChoiceCardGroup = ({
 	name,
 	label,
+	supporting,
 	multi,
 	error,
 	cssOverrides,
@@ -29,7 +39,14 @@ const ChoiceCardGroup = ({
 }: ChoiceCardGroupProps) => {
 	return (
 		<fieldset css={[fieldset, cssOverrides]} {...props}>
-			{label ? <legend css={groupLabel}>{label}</legend> : ""}
+			{label ? (
+				<legend css={theme => groupLabel(theme.choiceCard && theme)}>
+					{label}
+				</legend>
+			) : (
+				""
+			)}
+			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			<div css={flexContainer}>
 				{React.Children.map(children, child => {
 					return React.cloneElement(

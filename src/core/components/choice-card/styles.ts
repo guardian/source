@@ -21,9 +21,22 @@ export const flexContainer = css`
 	justify-content: flex-start;
 `
 
-export const groupLabel = css`
+export const groupLabel = ({
+	choiceCard,
+}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
 	${textSans.medium({ fontWeight: "bold" })};
+	color: ${choiceCard.textGroupLabel};
 	margin-bottom: ${space[1]}px;
+`
+
+export const groupLabelSupporting = ({
+	choiceCard,
+}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
+	${textSans.small()};
+	color: ${choiceCard.textGroupLabelSupporting};
+	margin-bottom: ${space[3]}px;
+	/* Negate the user agent spacing between legend and fieldset content */
+	margin-top: ${-space[2]}px;
 `
 
 export const input = ({
@@ -54,12 +67,11 @@ export const choiceCard = ({
 	margin: 0 ${space[2]}px 0 0;
 	align-items: center;
 	justify-content: center;
-	/* TODO: prefer curentColor unless it has to be different to text colour */
 	box-shadow: inset 0 0 0 2px ${choiceCard.borderColor};
 	border-radius: 4px;
 	position: relative;
 
-	color: ${choiceCard.text};
+	color: ${choiceCard.textLabel};
 	${textSans.medium({ fontWeight: "bold" })};
 	cursor: pointer;
 
