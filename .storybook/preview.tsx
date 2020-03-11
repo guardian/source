@@ -4,7 +4,7 @@ import { useEffect } from "@storybook/addons"
 import { FocusStyleManager } from "@guardian/src-foundations/utils"
 import { breakpoints, Breakpoint } from "@guardian/src-foundations"
 
-const storiesOnly = process.env.NODE_ENV === "production"
+const isProd = process.env.NODE_ENV === "production"
 
 type ViewportMeta = {
 	[key in Breakpoint]: {
@@ -67,12 +67,12 @@ addParameters({
 	// https://github.com/storybookjs/storybook/issues/8129
 	// https://spectrum.chat/zeroheight/feature-requests/swap-out-storybook-stories-in-situ~29d7760d-aba6-4bb3-bf4a-37c119dbc622
 	options: {
-		isToolshown: !storiesOnly,
-		isFullscreen: storiesOnly,
+		isToolshown: !isProd,
+		isFullscreen: isProd,
 	},
 	viewport: {
 		viewports,
-		defaultViewport: "desktop",
+		defaultViewport: "responsive",
 	},
 })
 
