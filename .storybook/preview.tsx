@@ -1,7 +1,7 @@
 import React from "react"
 import { addParameters, addDecorator } from "@storybook/react"
 import { useEffect } from "@storybook/addons"
-import { FocusStyleManager } from "@guardian/src-utilities"
+import { FocusStyleManager } from "@guardian/src-foundations/utils"
 
 const storiesOnly = process.env.NODE_ENV === "production"
 
