@@ -1,11 +1,19 @@
-import React, { ReactNode } from "react"
+import React, {
+	ReactNode,
+	useRef,
+	useEffect,
+	useState,
+	InputHTMLAttributes,
+} from "react"
 import {
 	fieldset,
 	flexContainer,
 	groupLabel,
 	input,
+	tickAnimation,
 	choiceCard,
 	groupLabelSupporting,
+	tick,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
@@ -67,7 +75,7 @@ const ChoiceCardGroup = ({
 	)
 }
 
-interface ChoiceCardProps extends Props {
+interface ChoiceCardProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	id: string
 	label: ReactNode
 	value: string
@@ -81,31 +89,57 @@ const ChoiceCard = ({
 	label: labelContent,
 	value,
 	checked,
+	defaultChecked,
 	cssOverrides,
 	error,
+	onChange,
 	...props
 }: ChoiceCardProps) => {
-	const setChoiceCardState = (el: HTMLInputElement | null) => {
-		if (el && checked != null) {
-			el.checked = checked
+	const inputEl = useRef<HTMLInputElement>(null)
+	const isChecked = (): boolean => {
+		if (checked != null) {
+			return checked
 		}
+
+		return !!defaultChecked
 	}
+	// prevent the animation firing if a Choice Card has been checked by default
+	const [userChanged, setUserChanged] = useState(false)
+
+	useEffect(() => {
+		if (!userChanged && checked != null && inputEl && inputEl.current) {
+			inputEl.current.checked = checked
+		}
+	})
 
 	return (
 		<>
 			<input
-				css={theme => [input(theme.choiceCard && theme), cssOverrides]}
+				css={theme => [
+					input(theme.choiceCard && theme),
+					userChanged ? tickAnimation : "",
+					cssOverrides,
+				]}
 				id={id}
 				value={value}
 				aria-invalid={error}
-				ref={setChoiceCardState}
+				aria-checked={isChecked()}
+				ref={inputEl}
+				onChange={event => {
+					if (onChange) {
+						onChange(event)
+					}
+					setUserChanged(true)
+				}}
 				{...props}
 			/>
 			<label
 				css={theme => [choiceCard(theme.choiceCard && theme)]}
 				htmlFor={id}
 			>
-				{labelContent}
+				{/* Hack: span is content and div is tick, for easier targetting in the styles */}
+				<span>{labelContent}</span>
+				<div css={theme => [tick(theme.checkbox && theme)]} />
 			</label>
 		</>
 	)

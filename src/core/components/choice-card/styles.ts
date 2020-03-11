@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { space, size } from "@guardian/src-foundations"
+import { space, size, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -49,9 +49,60 @@ export const input = ({
 	}
 
 	&:checked + label {
-		color: ${choiceCard.textChecked};
 		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorChecked};
 		background-color: ${choiceCard.backgroundChecked};
+
+		& > span {
+			color: ${choiceCard.textChecked};
+		}
+
+		& > div:before {
+			right: 0;
+		}
+		& > div:after {
+			top: 0;
+		}
+	}
+`
+
+// TODO: use aniimation durations defined in foundations
+export const tickAnimation = css`
+	@keyframes labelFadeOutIn {
+		0% {
+			opacity: 1;
+		}
+		1%,
+		80% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes tickFadeInOut {
+		0% {
+			opacity: 0;
+		}
+		10%,
+		40% {
+			opacity: 1;
+		}
+		70% {
+			opacity: 0;
+		}
+	}
+
+	&:checked + label {
+		& > span {
+			animation-duration: 1s;
+			animation-name: labelFadeOutIn;
+		}
+
+		& > div {
+			animation-duration: 1s;
+			animation-name: tickFadeInOut;
+		}
 	}
 `
 
@@ -70,17 +121,64 @@ export const choiceCard = ({
 	box-shadow: inset 0 0 0 2px ${choiceCard.borderColor};
 	border-radius: 4px;
 	position: relative;
-
-	color: ${choiceCard.textLabel};
-	${textSans.medium({ fontWeight: "bold" })};
 	cursor: pointer;
+
+	& > span {
+		color: ${choiceCard.textLabel};
+		${textSans.medium({ fontWeight: "bold" })};
+	}
 
 	&:last-child {
 		margin: 0;
 	}
 
 	&:hover {
-		color: ${choiceCard.textChecked};
-		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorChecked};
+		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorHover};
+
+		& > span {
+			color: ${choiceCard.textHover};
+		}
+	}
+`
+
+// TODO: most of this is duplicated in the checkbox component
+// We should extract it into its own module somewhere
+export const tick = ({
+	choiceCard,
+}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
+	/* overall positional properties */
+	position: absolute;
+	top: 16px;
+	width: 6px;
+	height: 12px;
+	transform: rotate(45deg);
+	opacity: 0;
+
+	/* the checkmark ✓ */
+	&:after,
+	&:before {
+		position: absolute;
+		display: block;
+		background-color: ${choiceCard.backgroundTick};
+		transition: all ${transitions.short} ease-in-out;
+		content: "";
+	}
+
+	/* the short side */
+	&:before {
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		right: 100%;
+		transition-delay: 0.05s;
+	}
+
+	/* the long side */
+	&:after {
+		bottom: 0;
+		right: 0;
+		top: 100%;
+		width: 2px;
+		transition-delay: 0.1s;
 	}
 `
