@@ -54,18 +54,21 @@ export const input = ({
 
 		& > span {
 			color: ${choiceCard.textChecked};
-		}
 
-		& > div:before {
-			right: 0;
-		}
-		& > div:after {
-			top: 0;
+			/* last child is the tick */
+			&:last-child {
+				&:before {
+					right: 0;
+				}
+				&:after {
+					top: 0;
+				}
+			}
 		}
 	}
 `
 
-// TODO: use aniimation durations defined in foundations
+// TODO: use animation durations defined in foundations
 export const tickAnimation = css`
 	@keyframes labelFadeOutIn {
 		0% {
@@ -97,11 +100,11 @@ export const tickAnimation = css`
 		& > span {
 			animation-duration: 1s;
 			animation-name: labelFadeOutIn;
-		}
 
-		& > div {
-			animation-duration: 1s;
-			animation-name: tickFadeInOut;
+			/* last child is the tick */
+			&:last-child {
+				animation-name: tickFadeInOut;
+			}
 		}
 	}
 `

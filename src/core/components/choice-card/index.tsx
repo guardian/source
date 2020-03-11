@@ -137,9 +137,8 @@ const ChoiceCard = ({
 				css={theme => [choiceCard(theme.choiceCard && theme)]}
 				htmlFor={id}
 			>
-				{/* Hack: span is content and div is tick, for easier targetting in the styles */}
 				<span>{labelContent}</span>
-				<div css={theme => [tick(theme.checkbox && theme)]} />
+				<span css={theme => [tick(theme.checkbox && theme)]} />
 			</label>
 		</>
 	)
