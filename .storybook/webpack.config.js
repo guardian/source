@@ -10,6 +10,7 @@ module.exports = ({ config, mode }) => {
 				"@babel/preset-typescript",
 				"@emotion/babel-preset-css-prop",
 			],
+			plugins: ["@babel/plugin-proposal-class-properties"],
 		},
 	})
 	config.resolve.extensions.push(".ts", ".tsx")
