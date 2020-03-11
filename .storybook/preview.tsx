@@ -72,7 +72,7 @@ addParameters({
 	},
 	viewport: {
 		viewports,
-		defaultViewport: "wide",
+		defaultViewport: "desktop",
 	},
 })
 
