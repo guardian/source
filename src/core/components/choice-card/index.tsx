@@ -137,7 +137,10 @@ const ChoiceCard = ({
 				{...props}
 			/>
 			<label
-				css={theme => [choiceCard(theme.choiceCard && theme)]}
+				css={theme => [
+					choiceCard(theme.choiceCard && theme),
+					error ? errorChoiceCard(theme.choiceCard && theme) : "",
+				]}
 				htmlFor={id}
 			>
 				<span>{labelContent}</span>
