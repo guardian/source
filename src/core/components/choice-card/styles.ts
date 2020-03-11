@@ -3,6 +3,7 @@ import { space, size, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
+import { from } from "@guardian/src-foundations/mq"
 import {
 	ChoiceCardTheme,
 	choiceCardDefault,
@@ -17,8 +18,12 @@ export const fieldset = css`
 // on fieldset elements
 // https://bugs.chromium.org/p/chromium/issues/detail?id=375693
 export const flexContainer = css`
-	display: flex;
-	justify-content: flex-start;
+	width: 100%;
+
+	${from.mobileLandscape} {
+		display: flex;
+		justify-content: flex-start;
+	}
 `
 
 export const groupLabel = ({
@@ -113,26 +118,31 @@ export const choiceCard = ({
 	choiceCard,
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
 	flex: 1 0 auto;
-	box-sizing: border-box;
 	display: flex;
+	box-sizing: border-box;
 	/* TODO: let's talk about size! */
 	min-height: ${size.large}px;
-	max-width: 150px;
-	margin: 0 ${space[2]}px 0 0;
+	margin: 0 0 ${space[2]}px 0;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	padding-left: ${space[5]}px;
 	box-shadow: inset 0 0 0 2px ${choiceCard.borderColor};
 	border-radius: 4px;
 	position: relative;
 	cursor: pointer;
 
+	${from.mobileLandscape} {
+		justify-content: center;
+		padding-left: 0;
+		margin: 0 ${space[2]}px 0 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+
 	& > span {
 		color: ${choiceCard.textLabel};
 		${textSans.medium({ fontWeight: "bold" })};
-	}
-
-	&:last-child {
-		margin: 0;
 	}
 
 	&:hover {
