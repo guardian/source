@@ -15,6 +15,11 @@ const choiceCards = [
 	/>,
 	<ChoiceCard value="blue" label="Blue" id="default-blue" />,
 ]
+const unselectedChoiceCards = [
+	<ChoiceCard value="red" label="Red" id="default-red" />,
+	<ChoiceCard value="green" label="Green" id="default-green" />,
+	<ChoiceCard value="blue" label="Blue" id="default-blue" />,
+]
 /* eslint-enable react/jsx-key */
 
 export default {
@@ -136,24 +141,26 @@ singleStateMobileLight.story = {
 	},
 }
 
-// const errorLight = () => (
-// 	<ThemeProvider theme={choiceCardDefault}>
-// 		<ChoiceCardGroup name="colours" error="Please select a colour">
-// 			{unselectedChoiceCards.map((radio, index) =>
-// 				React.cloneElement(radio, { key: index }),
-// 			)}
-// 		</ChoiceCardGroup>
-// 	</ThemeProvider>
-// )
+const errorLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={narrow}>
+			<ChoiceCardGroup name="colours" error="Please select a colour">
+				{unselectedChoiceCards.map((radio, index) =>
+					React.cloneElement(radio, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
 
-// errorLight.story = {
-// 	name: `error light`,
-// 	parameters: {
-// 		backgrounds: [
-// 			Object.assign({}, { default: true }, storybookBackgrounds.default),
-// 		],
-// 	},
-// }
+errorLight.story = {
+	name: `error light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
 
 export {
 	singleStateLight,
@@ -161,4 +168,5 @@ export {
 	singleStateWithLabelLight,
 	singleStateWithSupportingLabelLight,
 	singleStateMobileLight,
+	errorLight,
 }
