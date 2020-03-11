@@ -116,6 +116,26 @@ singleStateWithSupportingLabelLight.story = {
 	},
 }
 
+const singleStateMobileLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<ChoiceCardGroup name="colours" label="What is your favourite colour?">
+			{choiceCards.map((choiceCard, index) =>
+				React.cloneElement(choiceCard, { key: index }),
+			)}
+		</ChoiceCardGroup>
+	</ThemeProvider>
+)
+
+singleStateMobileLight.story = {
+	name: `single state mobile light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
+
 // const errorLight = () => (
 // 	<ThemeProvider theme={choiceCardDefault}>
 // 		<ChoiceCardGroup name="colours" error="Please select a colour">
@@ -140,4 +160,5 @@ export {
 	multiStateLight,
 	singleStateWithLabelLight,
 	singleStateWithSupportingLabelLight,
+	singleStateMobileLight,
 }
