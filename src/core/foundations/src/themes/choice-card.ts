@@ -1,4 +1,4 @@
-import { border, text } from "../index"
+import { border, text, background } from "../index"
 import { InlineErrorTheme, inlineErrorDefault } from "./inline-error"
 
 export type ChoiceCardTheme = {
@@ -9,6 +9,7 @@ export type ChoiceCardTheme = {
 	borderColor: string
 	textChecked: string
 	backgroundChecked: string
+	backgroundTick: string
 	borderColorChecked: string
 	textHover: string
 	borderColorHover: string
@@ -26,6 +27,7 @@ export const choiceCardDefault: {
 		borderColor: border.input,
 		textChecked: text.inputChecked,
 		backgroundChecked: "#E3F6FF",
+		backgroundTick: background.inputChecked,
 		borderColorChecked: border.inputChecked,
 		textHover: text.inputHover,
 		borderColorHover: border.inputHover,
