@@ -6,13 +6,15 @@ export type ChoiceCardTheme = {
 	textLabelSupporting: string
 	textGroupLabel: string
 	textGroupLabelSupporting: string
-	borderColor: string
+	border: string
 	textChecked: string
 	backgroundChecked: string
 	backgroundTick: string
-	borderColorChecked: string
+	borderChecked: string
 	textHover: string
-	borderColorHover: string
+	borderHover: string
+	textError: string
+	borderError: string
 }
 
 export const choiceCardDefault: {
@@ -24,13 +26,15 @@ export const choiceCardDefault: {
 		textLabelSupporting: text.supporting,
 		textGroupLabel: text.groupLabel,
 		textGroupLabelSupporting: text.groupLabelSupporting,
-		borderColor: border.input,
+		border: border.input,
 		textChecked: text.inputChecked,
 		backgroundChecked: "#E3F6FF",
 		backgroundTick: background.inputChecked,
-		borderColorChecked: border.inputChecked,
+		borderChecked: border.inputChecked,
 		textHover: text.inputHover,
-		borderColorHover: border.inputHover,
+		borderHover: border.inputHover,
+		textError: text.error,
+		borderError: border.error,
 	},
 	...inlineErrorDefault,
 }
