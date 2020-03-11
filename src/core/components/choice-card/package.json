@@ -32,6 +32,7 @@
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-helpers": "^0.15.0"
+		"@guardian/src-helpers": "^0.15.0",
+		"@guardian/src-inline-error": "^0.15.0"
 	}
 }

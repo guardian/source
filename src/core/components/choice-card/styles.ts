@@ -54,7 +54,7 @@ export const input = ({
 	}
 
 	&:checked + label {
-		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorChecked};
+		box-shadow: inset 0 0 0 4px ${choiceCard.borderChecked};
 		background-color: ${choiceCard.backgroundChecked};
 
 		& > span {
@@ -126,7 +126,7 @@ export const choiceCard = ({
 	align-items: center;
 	justify-content: flex-start;
 	padding-left: ${space[5]}px;
-	box-shadow: inset 0 0 0 2px ${choiceCard.borderColor};
+	box-shadow: inset 0 0 0 2px ${choiceCard.border};
 	border-radius: 4px;
 	position: relative;
 	cursor: pointer;
@@ -146,7 +146,7 @@ export const choiceCard = ({
 	}
 
 	&:hover {
-		box-shadow: inset 0 0 0 4px ${choiceCard.borderColorHover};
+		box-shadow: inset 0 0 0 4px ${choiceCard.borderHover};
 
 		& > span {
 			color: ${choiceCard.textHover};
@@ -193,5 +193,15 @@ export const tick = ({
 		top: 100%;
 		width: 2px;
 		transition-delay: 0.1s;
+	}
+`
+
+export const errorChoiceCard = ({
+	choiceCard,
+}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
+	box-shadow: inset 0 0 0 4px ${choiceCard.borderError};
+
+	& > span {
+		color: ${choiceCard.textError};
 	}
 `

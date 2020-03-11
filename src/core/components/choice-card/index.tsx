@@ -14,7 +14,9 @@ import {
 	choiceCard,
 	groupLabelSupporting,
 	tick,
+	errorChoiceCard,
 } from "./styles"
+import { InlineError } from "@guardian/src-inline-error"
 import { Props } from "@guardian/src-helpers"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
@@ -55,6 +57,7 @@ const ChoiceCardGroup = ({
 				""
 			)}
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
+			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			<div css={flexContainer}>
 				{React.Children.map(children, child => {
 					return React.cloneElement(
@@ -134,7 +137,10 @@ const ChoiceCard = ({
 				{...props}
 			/>
 			<label
-				css={theme => [choiceCard(theme.choiceCard && theme)]}
+				css={theme => [
+					choiceCard(theme.choiceCard && theme),
+					error ? errorChoiceCard(theme.choiceCard && theme) : "",
+				]}
 				htmlFor={id}
 			>
 				<span>{labelContent}</span>
