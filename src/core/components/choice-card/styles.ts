@@ -117,7 +117,7 @@ export const tickAnimation = css`
 export const choiceCard = ({
 	choiceCard,
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	flex: 1 0 auto;
+	flex: 1;
 	display: flex;
 	box-sizing: border-box;
 	/* TODO: let's talk about size! */
