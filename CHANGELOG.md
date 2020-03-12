@@ -8,6 +8,7 @@
 > -   :nail_care: [Polish]
 > -   :robot: [Maintenance]
 > -   :globe_with_meridians: [Accessibility improvement]
+> -   :page_with_curl: [Documentation]
 
 ## 6th March 2020
 
