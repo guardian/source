@@ -84,6 +84,12 @@ Appears inside the choice card
 
 Additional text or a component that appears below the label
 
+### `icon`
+
+**`ReactElement`**
+
+An icon that appears inside the button, alongside text
+
 ### `checked`
 
 **`boolean`**

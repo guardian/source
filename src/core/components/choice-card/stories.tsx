@@ -17,9 +17,34 @@ const choiceCards = [
 	<ChoiceCard value="blue" label="Blue" id="default-blue" />,
 ]
 const unselectedChoiceCards = [
-	<ChoiceCard value="red" label="Red" id="default-red" />,
-	<ChoiceCard value="green" label="Green" id="default-green" />,
-	<ChoiceCard value="blue" label="Blue" id="default-blue" />,
+	<ChoiceCard value="option-1" label="Option 1" id="unselected-1" />,
+	<ChoiceCard value="option-2" label="Option 2" id="unselected-2" />,
+	<ChoiceCard value="option-3" label="Option 3" id="unselected-3" />,
+]
+const multiChoiceCards = [
+	<ChoiceCard
+		value="option-1"
+		label="Option 1"
+		checked={true}
+		id="multi-1"
+	/>,
+	<ChoiceCard
+		value="option-2"
+		label="Option 2"
+		id="multi-2"
+		checked={true}
+	/>,
+	<ChoiceCard value="option-3" label="Option 3" id="multi-3" />,
+]
+const singleChoiceCards = [
+	<ChoiceCard
+		value="single-1"
+		label="Preselected"
+		id="single-1"
+		checked={true}
+	/>,
+	<ChoiceCard value="single-2" label="Deselected" id="single-2" />,
+	<ChoiceCard value="single-3" label="Deselected" id="single-3" />,
 ]
 const iconChoiceCards = [
 	<ChoiceCard
@@ -48,17 +73,17 @@ export default {
 	title: "ChoiceCard",
 }
 
-const narrow = css`
+const medium = css`
 	width: 20em;
 `
 
-const medium = css`
+const wide = css`
 	width: 30em;
 `
 
 const singleStateLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={narrow}>
+		<div css={medium}>
 			<ChoiceCardGroup name="colours">
 				{choiceCards.map((choiceCard, index) =>
 					React.cloneElement(choiceCard, { key: index }),
@@ -77,35 +102,11 @@ singleStateLight.story = {
 	},
 }
 
-const multiStateLight = () => (
-	<ThemeProvider theme={choiceCardDefault}>
-		<div css={narrow}>
-			<ChoiceCardGroup name="colours" multi={true}>
-				{choiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index }),
-				)}
-			</ChoiceCardGroup>
-		</div>
-	</ThemeProvider>
-)
-
-multiStateLight.story = {
-	name: `multi state light`,
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
-}
-
 const singleStateWithLabelLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={narrow}>
-			<ChoiceCardGroup
-				name="colours"
-				label="What is your favourite colour?"
-			>
-				{choiceCards.map((choiceCard, index) =>
+		<div css={medium}>
+			<ChoiceCardGroup name="single" label="This is the question label">
+				{singleChoiceCards.map((choiceCard, index) =>
 					React.cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
@@ -122,15 +123,16 @@ singleStateWithLabelLight.story = {
 	},
 }
 
-const singleStateWithSupportingLabelLight = () => (
+const multiStateWithSupportingLabelLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={narrow}>
+		<div css={medium}>
 			<ChoiceCardGroup
-				name="colours"
-				label="What is your favourite colour?"
-				supporting="Think about it"
+				name="multi"
+				label="This is the question label"
+				supporting="Select all that apply"
+				multi={true}
 			>
-				{choiceCards.map((choiceCard, index) =>
+				{multiChoiceCards.map((choiceCard, index) =>
 					React.cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
@@ -138,8 +140,8 @@ const singleStateWithSupportingLabelLight = () => (
 	</ThemeProvider>
 )
 
-singleStateWithSupportingLabelLight.story = {
-	name: `single state with supporting label light`,
+multiStateWithSupportingLabelLight.story = {
+	name: `multi state with supporting label light`,
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -149,8 +151,8 @@ singleStateWithSupportingLabelLight.story = {
 
 const singleStateWithIconLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={medium}>
-			<ChoiceCardGroup name="colours">
+		<div css={wide}>
+			<ChoiceCardGroup name="colours" label="Payment method">
 				{iconChoiceCards.map((choiceCard, index) =>
 					React.cloneElement(choiceCard, { key: index }),
 				)}
@@ -190,7 +192,7 @@ singleStateMobileLight.story = {
 
 const singleStateWithIconMobileLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<ChoiceCardGroup name="colours">
+		<ChoiceCardGroup name="colours" label="Payment method">
 			{iconChoiceCards.map((choiceCard, index) =>
 				React.cloneElement(choiceCard, { key: index }),
 			)}
@@ -210,8 +212,11 @@ singleStateWithIconMobileLight.story = {
 
 const errorLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={narrow}>
-			<ChoiceCardGroup name="colours" error="Please select a colour">
+		<div css={wide}>
+			<ChoiceCardGroup
+				name="colours"
+				error="Please select a choice card to continue"
+			>
 				{unselectedChoiceCards.map((radio, index) =>
 					React.cloneElement(radio, { key: index }),
 				)}
@@ -231,9 +236,8 @@ errorLight.story = {
 
 export {
 	singleStateLight,
-	multiStateLight,
 	singleStateWithLabelLight,
-	singleStateWithSupportingLabelLight,
+	multiStateWithSupportingLabelLight,
 	singleStateWithIconLight,
 	singleStateMobileLight,
 	singleStateWithIconMobileLight,
