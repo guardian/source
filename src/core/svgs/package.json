@@ -27,9 +27,12 @@
 		"checkmark.tsx",
 		"chevron-left-single.tsx",
 		"close.tsx",
+		"credit-card.tsx",
+		"direct-debit.tsx",
 		"external.tsx",
 		"minus.tsx",
 		"plus.tsx",
+		"paypal.tsx",
 		"*.d.ts"
 	],
 	"peerDependencies": {
