@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
+import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-svgs"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
@@ -20,6 +21,27 @@ const unselectedChoiceCards = [
 	<ChoiceCard value="green" label="Green" id="default-green" />,
 	<ChoiceCard value="blue" label="Blue" id="default-blue" />,
 ]
+const iconChoiceCards = [
+	<ChoiceCard
+		value="direct-debit"
+		label="Direct Debit"
+		id="direct-debit"
+		icon={<SvgDirectDebit />}
+	/>,
+	<ChoiceCard
+		value="credit-card"
+		label="Credit Card"
+		id="credit-card"
+		icon={<SvgCreditCard />}
+		checked={true}
+	/>,
+	<ChoiceCard
+		value="paypal"
+		label="PayPal"
+		id="paypal"
+		icon={<SvgPayPal />}
+	/>,
+]
 /* eslint-enable react/jsx-key */
 
 export default {
@@ -28,6 +50,10 @@ export default {
 
 const narrow = css`
 	width: 20em;
+`
+
+const medium = css`
+	width: 30em;
 `
 
 const singleStateLight = () => (
@@ -121,6 +147,27 @@ singleStateWithSupportingLabelLight.story = {
 	},
 }
 
+const singleStateWithIconLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={medium}>
+			<ChoiceCardGroup name="colours">
+				{iconChoiceCards.map((choiceCard, index) =>
+					React.cloneElement(choiceCard, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
+
+singleStateWithIconLight.story = {
+	name: `single state with icon light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
 const singleStateMobileLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<ChoiceCardGroup name="colours" label="What is your favourite colour?">
@@ -133,6 +180,26 @@ const singleStateMobileLight = () => (
 
 singleStateMobileLight.story = {
 	name: `single state mobile light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
+
+const singleStateWithIconMobileLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<ChoiceCardGroup name="colours">
+			{iconChoiceCards.map((choiceCard, index) =>
+				React.cloneElement(choiceCard, { key: index }),
+			)}
+		</ChoiceCardGroup>
+	</ThemeProvider>
+)
+
+singleStateWithIconMobileLight.story = {
+	name: `single state with icon mobile light`,
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -167,6 +234,8 @@ export {
 	multiStateLight,
 	singleStateWithLabelLight,
 	singleStateWithSupportingLabelLight,
+	singleStateWithIconLight,
 	singleStateMobileLight,
+	singleStateWithIconMobileLight,
 	errorLight,
 }

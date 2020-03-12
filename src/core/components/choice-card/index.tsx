@@ -1,5 +1,6 @@
 import React, {
 	ReactNode,
+	ReactElement,
 	useRef,
 	useEffect,
 	useState,
@@ -83,6 +84,7 @@ interface ChoiceCardProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	label: ReactNode
 	value: string
 	supporting?: ReactNode
+	icon?: ReactElement
 	checked?: boolean
 	error: boolean
 }
@@ -91,6 +93,7 @@ const ChoiceCard = ({
 	id,
 	label: labelContent,
 	value,
+	icon: iconSvg,
 	checked,
 	defaultChecked,
 	cssOverrides,
@@ -143,7 +146,8 @@ const ChoiceCard = ({
 				]}
 				htmlFor={id}
 			>
-				<span>{labelContent}</span>
+				{iconSvg ? iconSvg : ""}
+				<div>{labelContent}</div>
 				<span css={theme => [tick(theme.checkbox && theme)]} />
 			</label>
 		</>

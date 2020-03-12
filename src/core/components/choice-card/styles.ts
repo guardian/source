@@ -57,7 +57,7 @@ export const input = ({
 		box-shadow: inset 0 0 0 4px ${choiceCard.borderChecked};
 		background-color: ${choiceCard.backgroundChecked};
 
-		& > span {
+		& > * {
 			color: ${choiceCard.textChecked};
 
 			/* last child is the tick */
@@ -102,7 +102,7 @@ export const tickAnimation = css`
 	}
 
 	&:checked + label {
-		& > span {
+		& > * {
 			animation-duration: 1s;
 			animation-name: labelFadeOutIn;
 
@@ -117,38 +117,45 @@ export const tickAnimation = css`
 export const choiceCard = ({
 	choiceCard,
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	flex: 1 0 auto;
+	flex: 1;
 	display: flex;
+	flex-direction: row;
 	box-sizing: border-box;
 	/* TODO: let's talk about size! */
 	min-height: ${size.large}px;
 	margin: 0 0 ${space[2]}px 0;
 	align-items: center;
-	justify-content: flex-start;
-	padding-left: ${space[5]}px;
+	justify-content: center;
+	padding: ${space[2]}px ${space[5]}px;
 	box-shadow: inset 0 0 0 2px ${choiceCard.border};
 	border-radius: 4px;
 	position: relative;
 	cursor: pointer;
 
 	${from.mobileLandscape} {
-		justify-content: center;
-		padding-left: 0;
+		flex-direction: column;
+		padding: ${space[2]}px ${space[3]}px;
 		margin: 0 ${space[2]}px 0 0;
 		&:last-child {
 			margin: 0;
 		}
 	}
 
-	& > span {
+	& > * {
 		color: ${choiceCard.textLabel};
 		${textSans.medium({ fontWeight: "bold" })};
+	}
+
+	& svg {
+		width: ${size.large}px;
+		height: auto;
+		fill: currentColor;
 	}
 
 	&:hover {
 		box-shadow: inset 0 0 0 4px ${choiceCard.borderHover};
 
-		& > span {
+		& > * {
 			color: ${choiceCard.textHover};
 		}
 	}
@@ -161,10 +168,11 @@ export const tick = ({
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
 	/* overall positional properties */
 	position: absolute;
-	top: 16px;
+	top: 50%;
+	left: 50%;
 	width: 6px;
 	height: 12px;
-	transform: rotate(45deg);
+	transform: rotate(45deg) translateX(-100%) translateY(-25%);
 	opacity: 0;
 
 	/* the checkmark ✓ */
@@ -201,7 +209,7 @@ export const errorChoiceCard = ({
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
 	box-shadow: inset 0 0 0 4px ${choiceCard.borderError};
 
-	& > span {
+	& > * {
 		color: ${choiceCard.textError};
 	}
 `
