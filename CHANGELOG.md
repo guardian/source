@@ -10,6 +10,65 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 13 March 2020
+
+**`@guardian/src-foundations 0.15.0`**
+
+-   :robot: [1eeed0b](https://github.com/guardian/source/pull/249/commits/1eeed0b5e27ec8420279879676a13f5006f7d01c) add @babel/plugin-proposal-class-properties to foundations
+-   :robot: [92e7979](https://github.com/guardian/source/pull/249/commits/92e7979fe491cf02d3daf675642bf41f8159ec47) move focus style manager to foundations
+-   :boom: :nail_care: [d3bef2c](https://github.com/guardian/source/pull/252/commits/d3bef2cd7e1f513484fe9ae69c0af851ab8d010c) Point brandAlt[300](dark) at correct hex value
+-   :robot: [d870566](https://github.com/guardian/source/pull/253/commits/d870566cc6b6bed45758050fec40db65598115e6) import focus halo colour from named exports
+-   :robot: [979cf2f](https://github.com/guardian/source/pull/253/commits/979cf2fae20aaf734662bc8dc318d5a19e7fa703) add public service announcement denouncing the palette export
+-   :sparkles: [d50d84c](https://github.com/guardian/source/pull/256/commits/d50d84c162e50466d920a7460b7200f8b7bfec1a) Added space 4 (16px, 1rem) to spaces
+-   :robot: [a557d89](https://github.com/guardian/source/pull/259/commits/a557d89052befe09a5c8bc3b112af887c9a55248) define input-related colours
+-   :robot: [249fc47](https://github.com/guardian/source/pull/259/commits/249fc47e11dd6a3d29abfe8cc9d96ea86871eff9) bypass component colours in themes
+-   :boom: :robot: [cbc6fc2](https://github.com/guardian/source/pull/260/commits/cbc6fc270fba88e204b9ee75ba67c466d37780c3) delete component-specific colours
+-   :sparkles: [2beed4e](https://github.com/guardian/source/pull/261/commits/2beed4eedefa6655efb8c15fef32ea2ffe612c3b) add default functional colours for group labels
+-   :sparkles: [819ffb1](https://github.com/guardian/source/pull/261/commits/819ffb100a5fdd15d7e865a21139f468eb0559c9) add colours for group label and supporting text
+-   :boom: :robot: [1699876](https://github.com/guardian/source/pull/262/commits/1699876549babf61f35467bb9c832db32f6583d3) clarify names of functional text colours
+-   :boom: :robot: [f470a5c](https://github.com/guardian/source/pull/262/commits/f470a5c5cf72ffa5ceecaf64f32fb2d383a72c31) clarify names of component text colours
+-   :robot: [f874797](https://github.com/guardian/source/pull/263/commits/f874797a155225f3a5da93140ab2b684a78643ce) expose tick colour in choice card theme
+-   :robot: [6b03702](https://github.com/guardian/source/pull/265/commits/6b03702b67dcdee715160cf422813ecebd297f44) build typescript definitions as part of watch script
+-   :boom: :sparkles: [6c02f1b](https://github.com/guardian/source/pull/267/commits/6c02f1b39a9c96328cd979b679ff4d5dcd6f17f6) add error colours and refactor border colours in styles
+
+**`@guardian/src-svgs 0.15.0`**
+
+-   :sparkles: [511bfd4](https://github.com/guardian/source/pull/268/commits/511bfd41b3c64e10b2b25098f33e76d05fdbcd98) add payment svgs
+
+**`@guardian/src-radio 0.15.0`**
+
+-   :robot: [a621152](https://github.com/guardian/source/pull/262/commits/a62115239ab89aebcba9237eea2be17e37df5384) use clearer component colour names in radio
+
+**`@guardian/src-checkbox 0.15.0`**
+
+-   :robot: [6144fc5](https://github.com/guardian/source/pull/262/commits/6144fc5aed7660bd63ac5420313c79ee06d91e75) use clearer component colour names in checkbox
+
+**`@guardian/src-choice-card 0.15.0`**
+
+-   :nail_care: [94eb2a4](https://github.com/guardian/source/pull/246/commits/94eb2a4da346cb9bda552a3521cfd735507fea1d) Thicken border on check and hover
+-   :globe_with_meridians: [021ae0a](https://github.com/guardian/source/pull/247/commits/021ae0a55b194d911a1d6abba7ed97e56f35e4cc) Add focus halo to choice card
+-   :robot: [8b09223](https://github.com/guardian/source/pull/250/commits/8b09223e1db92153a71b4563c7e583eafab844e5) Constrain width of Choice Card container
+-   :bug: [d50f400](https://github.com/guardian/source/pull/250/commits/d50f400adbbbdc4bb863cfdf3eee8c84d0af0fcc) Use box-sizing to apply Choice Card border
+-   :bug: [2985c38](https://github.com/guardian/source/pull/251/commits/2985c38b195a7e07bc31e0ed92db04d46af29ff4) remove right margin from last choice card in group
+-   :bug: [37c1af4](https://github.com/guardian/source/pull/254/commits/37c1af4c8b8133dc0d4f07c3249663d5ad2cf0f3) choice-card: import common props from helpers
+-   :robot: [b032a4e](https://github.com/guardian/source/pull/255/commits/b032a4e5ca2985cfe8a614a4053ef77e6d26b15f) update choice card bg color
+-   :sparkles: [635f81b](https://github.com/guardian/source/pull/257/commits/635f81b4a1e367536920feb5dd1ddc709c2aa549) add group label for choice card group
+-   :sparkles: [4b039f0](https://github.com/guardian/source/pull/261/commits/4b039f0a0e4daf99d77aaeda3520a3e2b54b5389) support group supporting text
+-   :nail_care: [7f66e63](https://github.com/guardian/source/pull/263/commits/7f66e638d1b355d6d18dbb63b0ec58b152571ff6) add tick animation to choice card
+-   :robot: [41489f1](https://github.com/guardian/source/pull/264/commits/41489f19d3ed6a0c22cefd7ca935cba4c8eb02b8) improve style targetting in choice card
+-   :robot: [1d1569e](https://github.com/guardian/source/pull/266/commits/1d1569e5a3b9de891015417c1c9ce27efe6b1fb2) make supporting label story a single state story
+-   :sparkles: [88e1a4a](https://github.com/guardian/source/pull/266/commits/88e1a4ad4182e2e0b91f68e1e97517180b37e2e8) add mobile view story for stacked cards
+-   :sparkles: [0c30622](https://github.com/guardian/source/pull/266/commits/0c30622c06b4c92224a59d8afe878eae8c739ca3) add styling for below mobile viewport
+-   :sparkles: [7186a35](https://github.com/guardian/source/pull/267/commits/7186a357c2cf0d0a51b531bb4ed6482debdaac43) add inline error to choice cards
+-   :sparkles: [28c8314](https://github.com/guardian/source/pull/267/commits/28c8314c2f48b978b01a6c49c73112ceb6e549fb) add error colours and refactor border colours
+-   :nail_care: [149f7d0](https://github.com/guardian/source/pull/268/commits/149f7d0da88da9bf1b9027e1de3080f7484ffbab) ensure choice card width is always equal
+-   :sparkles: [961e3df](https://github.com/guardian/source/pull/268/commits/961e3df94fdf1f278bf7342e99b64bbd12b3ec81) support icons on choice cards
+-   :page_with_curl: [52895a6](https://github.com/guardian/source/pull/269/commits/52895a625ca7d173d7c874accb8a202909bfff7a) improve choice card docs and stories
+
+**`@guardian/src-text-input 0.15.0`**
+
+-   :robot: [af64c51](https://github.com/guardian/source/pull/262/commits/af64c516518f68b11d468ac988d417797b82726c) use clearer component colour names in text input
+
 ## 6th March 2020
 
 **`@guardian/src-foundations 0.14.2`**
