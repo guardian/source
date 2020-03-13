@@ -1,6 +1,6 @@
 {
 	"name": "source",
-	"version": "0.15.0",
+	"version": "0.16.0",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:svgs & yarn watch:utilities & start-storybook",
 		"lint:styles": "stylelint src/core/**/styles.ts",
@@ -18,7 +18,8 @@
 		"clean:all": "node ./scripts/clean-all",
 		"build:all": "node ./scripts/build-all",
 		"ci:build": "NODE_ENV=production yarn build:all && yarn build:storybook",
-		"publish:release": "node ./scripts/publish-release"
+		"publish:release": "node ./scripts/publish-release",
+		"verbump:minor": "yarn version --minor --no-git-tag-version"
 	},
 	"private": true,
 	"workspaces": [

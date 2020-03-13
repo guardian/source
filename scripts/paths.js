@@ -5,6 +5,7 @@ const { promisify } = require("util")
 const readdirP = promisify(fs.readdir)
 const statP = promisify(fs.stat)
 
+const root = path.join(__dirname, "..")
 const foundations = path.join(__dirname, "../src/core/foundations")
 const svgs = path.join(__dirname, "../src/core/svgs")
 const utilities = path.join(__dirname, "../src/core/utilities")
@@ -30,6 +31,7 @@ const getComponentPaths = () =>
 		.then(paths => Promise.resolve(paths.filter(path => !!path)))
 
 module.exports.paths = {
+	root,
 	foundations,
 	svgs,
 	utilities,
