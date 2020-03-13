@@ -5,15 +5,7 @@ const { paths, getComponentPaths } = require("./paths")
 const build = dir => {
 	return execa(
 		"yarn",
-		[
-			"--cwd",
-			`${dir}`,
-			"run",
-			"publish:public",
-			"--",
-			"--new-version",
-			version,
-		],
+		["--cwd", `${dir}`, "run", "publish:public", "--new-version", version],
 		{
 			stdio: "inherit",
 		},
@@ -23,7 +15,7 @@ const build = dir => {
 const { foundations, svgs, components } = paths
 
 // heavily depended on, build these first
-const highPriorityPackages = [foundations]
+const highPriorityPackages = [foundations, svgs]
 
 // somewhat depended on
 // TODO: try to refactor!

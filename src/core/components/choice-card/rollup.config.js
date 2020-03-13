@@ -22,6 +22,7 @@ module.exports = {
 		"@emotion/css",
 		"@guardian/src-foundations",
 		"@guardian/src-foundations/accessibility",
+		"@guardian/src-foundations/mq",
 		"@guardian/src-foundations/themes",
 		"@guardian/src-foundations/typography",
 	],

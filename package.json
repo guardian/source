@@ -17,7 +17,8 @@
 		"watch:utilities": "cd src/core/utilities && yarn watch",
 		"clean:all": "node ./scripts/clean-all",
 		"build:all": "node ./scripts/build-all",
-		"ci:build": "NODE_ENV=production yarn build:all && yarn build:storybook"
+		"ci:build": "NODE_ENV=production yarn build:all && yarn build:storybook",
+		"publish:release": "node ./scripts/publish-release"
 	},
 	"private": true,
 	"workspaces": [
