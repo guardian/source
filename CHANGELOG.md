@@ -16,7 +16,7 @@
 
 -   :robot: [1eeed0b](https://github.com/guardian/source/pull/249/commits/1eeed0b5e27ec8420279879676a13f5006f7d01c) add @babel/plugin-proposal-class-properties to foundations
 -   :robot: [92e7979](https://github.com/guardian/source/pull/249/commits/92e7979fe491cf02d3daf675642bf41f8159ec47) move focus style manager to foundations
--   :boom: :nail_care: [d3bef2c](https://github.com/guardian/source/pull/252/commits/d3bef2cd7e1f513484fe9ae69c0af851ab8d010c) Point brandAlt[300](dark) at correct hex value
+-   :boom: :nail_care: [d3bef2c](https://github.com/guardian/source/pull/252/commits/d3bef2cd7e1f513484fe9ae69c0af851ab8d010c) Point `brandAlt[300]` (dark) at correct hex value
 -   :robot: [d870566](https://github.com/guardian/source/pull/253/commits/d870566cc6b6bed45758050fec40db65598115e6) import focus halo colour from named exports
 -   :robot: [979cf2f](https://github.com/guardian/source/pull/253/commits/979cf2fae20aaf734662bc8dc318d5a19e7fa703) add public service announcement denouncing the palette export
 -   :sparkles: [d50d84c](https://github.com/guardian/source/pull/256/commits/d50d84c162e50466d920a7460b7200f8b7bfec1a) Added space 4 (16px, 1rem) to spaces
