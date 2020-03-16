@@ -8,7 +8,8 @@
 		"clean": "rm -rf dist *.d.ts",
 		"prepublish": "yarn build",
 		"publish:public": "yarn publish --access public",
-		"verbump:minor": "yarn version --minor --no-git-tag-version"
+		"verbump:minor": "yarn version --minor --no-git-tag-version",
+		"verbump:patch": "yarn version --patch --no-git-tag-version"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",

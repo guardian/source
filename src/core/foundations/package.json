@@ -14,7 +14,8 @@
 		"publish:public": "yarn publish --access public",
 		"prepublishOnly": "yarn build",
 		"postpublish": "yarn clean",
-		"verbump:minor": "yarn version --minor --no-git-tag-version"
+		"verbump:minor": "yarn version --minor --no-git-tag-version",
+		"verbump:patch": "yarn version --patch --no-git-tag-version"
 	},
 	"files": [
 		"mq/*",
