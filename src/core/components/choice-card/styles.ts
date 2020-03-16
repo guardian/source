@@ -147,9 +147,16 @@ export const choiceCard = ({
 	}
 
 	& svg {
-		width: ${size.large}px;
+		/* TODO: 30px is a standard icon width, should probably exposed
+		as a size property */
+		width: 30px;
 		height: auto;
 		fill: currentColor;
+		margin-right: ${space[1]}px;
+
+		${from.mobileLandscape} {
+			margin-right: 0;
+		}
 	}
 
 	&:hover {
