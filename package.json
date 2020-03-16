@@ -2,7 +2,7 @@
 	"name": "source",
 	"version": "0.16.0",
 	"scripts": {
-		"storybook": "yarn watch:foundations & yarn watch:svgs & yarn watch:utilities & start-storybook",
+		"storybook": "yarn watch:foundations & yarn watch:svgs & yarn & start-storybook",
 		"lint:styles": "stylelint src/core/**/styles.ts",
 		"lint:js": "eslint . --ext .ts,.tsx,.js",
 		"lint": "yarn lint:js && yarn lint:styles",
@@ -14,7 +14,6 @@
 		"build:storybook": "build-storybook -o dist",
 		"watch:foundations": "cd src/core/foundations && yarn watch",
 		"watch:svgs": "cd src/core/svgs && yarn watch",
-		"watch:utilities": "cd src/core/utilities && yarn watch",
 		"clean:all": "node ./scripts/clean-all",
 		"build:all": "node ./scripts/build-all",
 		"ci:build": "NODE_ENV=production yarn build:all && yarn build:storybook",
