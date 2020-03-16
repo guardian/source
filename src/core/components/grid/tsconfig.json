@@ -6,5 +6,9 @@
 		"jsx": "preserve",
 		"esModuleInterop": true
 	},
+	"references": [
+		{ "path": "../../foundations" },
+		{ "path": "../../helpers" }
+	],
 	"exclude": ["node_modules"]
 }
