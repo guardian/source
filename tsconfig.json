@@ -17,8 +17,7 @@
 			"@guardian/src-foundations/utils": ["core/foundations/src/utils"],
 			"@guardian/src-inline-error": ["core/components/inline-error"],
 			"@guardian/src-helpers": ["core/helpers"],
-			"@guardian/src-svgs": ["core/svgs"],
-			"@guardian/src-utilities": ["core/utilities"]
+			"@guardian/src-svgs": ["core/svgs"]
 		},
 		"outDir": "dist",
 		"module": "commonjs",
