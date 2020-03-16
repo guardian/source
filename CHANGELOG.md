@@ -10,6 +10,12 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 16 March 2020
+
+**`@guardian/src-foundations 0.15.1`**
+
+-   :bug: [857130c](https://github.com/guardian/source/commit/857130c2f200480f16687d2a88a5814bd0d66999) ensure we publish utils folder
+
 ## 13 March 2020
 
 **`@guardian/src-foundations 0.15.0`**
