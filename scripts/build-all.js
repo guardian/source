@@ -7,10 +7,10 @@ const build = dir => {
 	})
 }
 
-const { foundations, svgs, utilities, components } = paths
+const { foundations, svgs, helpers, components } = paths
 
 // heaviy depended on, build these first
-const highPriorityPackages = [foundations, svgs, utilities]
+const highPriorityPackages = [foundations, svgs, helpers]
 
 // somewhat depended on
 // TODO: try to refactor!

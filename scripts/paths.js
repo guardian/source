@@ -8,7 +8,7 @@ const statP = promisify(fs.stat)
 const root = path.join(__dirname, "..")
 const foundations = path.join(__dirname, "../src/core/foundations")
 const svgs = path.join(__dirname, "../src/core/svgs")
-const utilities = path.join(__dirname, "../src/core/utilities")
+const helpers = path.join(__dirname, "../src/core/helpers")
 const components = path.join(__dirname, "../src/core/components")
 
 const isDirectory = path => statP(path).then(stats => stats.isDirectory())
@@ -34,7 +34,7 @@ module.exports.paths = {
 	root,
 	foundations,
 	svgs,
-	utilities,
+	helpers,
 	components,
 }
 module.exports.getComponentPaths = getComponentPaths

@@ -1,8 +1,8 @@
 const fs = require("fs")
 const execa = require("execa")
-const paths = require("./paths")
+const { paths } = require("./paths")
 
-const { foundations, svgs, utilities, components } = paths
+const { foundations, svgs, helpers, components } = paths
 
 const clean = dir => {
 	return execa("yarn", ["--cwd", `${dir}`, "run", "clean"], {
@@ -10,7 +10,7 @@ const clean = dir => {
 	})
 }
 
-;[foundations, svgs, utilities].forEach(dir => {
+;[foundations, svgs, helpers].forEach(dir => {
 	clean(dir)
 })
 
