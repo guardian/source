@@ -14,7 +14,7 @@ const themes: {
 	theme: {}
 }[] = [
 	{
-		name: "light",
+		name: "default",
 		theme: textInputLight,
 	},
 ]
