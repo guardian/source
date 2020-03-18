@@ -17,12 +17,6 @@ const storybookBackgrounds: {
 		name: "brandAlt",
 		value: brandAltBackground.primary,
 	},
-	// continue to expose legacy theme names
-	light: { name: "light", value: background.primary },
-	brandYellow: {
-		name: "brandYellow",
-		value: brandAltBackground.primary,
-	},
 }
 
 Object.freeze(storybookBackgrounds)
