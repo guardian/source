@@ -2,7 +2,6 @@ import { neutral, success as _success, error as _error, brand } from "../global"
 
 export const brandText = {
 	primary: neutral[100],
-	secondary: brand[800], //TODO: deprecate in v0.16
 	supporting: brand[800],
 	success: _success[400],
 	error: _error[500],
