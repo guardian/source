@@ -17,7 +17,7 @@ const themes: {
 	theme: { inlineError: InlineErrorTheme }
 }[] = [
 	{
-		name: "light",
+		name: "default",
 		theme: inlineErrorLight,
 	},
 	{ name: "brand", theme: inlineErrorBrand },
