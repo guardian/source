@@ -67,6 +67,15 @@ const iconChoiceCards = [
 		icon={<SvgPayPal />}
 	/>,
 ]
+const wildlyVaryingContentChoiceCards = [
+	<ChoiceCard
+		value="option-1"
+		label="A very, very long piece of text"
+		id="option-1"
+	/>,
+	<ChoiceCard value="option-2" label="Something in between" id="option-2" />,
+	<ChoiceCard value="option-3" label="Short" id="option-3" />,
+]
 /* eslint-enable react/jsx-key */
 
 export default {
@@ -74,11 +83,11 @@ export default {
 }
 
 const medium = css`
-	width: 20em;
+	width: 30em;
 `
 
 const wide = css`
-	width: 30em;
+	width: 40em;
 `
 
 const singleStateLight = () => (
@@ -151,7 +160,7 @@ multiStateWithSupportingLabelLight.story = {
 
 const singleStateWithIconLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={wide}>
+		<div css={medium}>
 			<ChoiceCardGroup name="colours" label="Payment method">
 				{iconChoiceCards.map((choiceCard, index) =>
 					React.cloneElement(choiceCard, { key: index }),
@@ -212,7 +221,7 @@ singleStateWithIconMobileLight.story = {
 
 const errorLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={wide}>
+		<div css={medium}>
 			<ChoiceCardGroup
 				name="colours"
 				error="Please select a choice card to continue"
@@ -234,6 +243,27 @@ errorLight.story = {
 	},
 }
 
+const wildlyVaryingLengthLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={wide}>
+			<ChoiceCardGroup name="options">
+				{wildlyVaryingContentChoiceCards.map((choiceCard, index) =>
+					React.cloneElement(choiceCard, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
+
+wildlyVaryingLengthLight.story = {
+	name: `single state wildly varying length light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
 export {
 	singleStateLight,
 	singleStateWithLabelLight,
@@ -242,4 +272,5 @@ export {
 	singleStateMobileLight,
 	singleStateWithIconMobileLight,
 	errorLight,
+	wildlyVaryingLengthLight,
 }

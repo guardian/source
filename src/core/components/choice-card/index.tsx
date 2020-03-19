@@ -16,6 +16,7 @@ import {
 	groupLabelSupporting,
 	tick,
 	errorChoiceCard,
+	contentWrapper,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
 import { Props } from "@guardian/src-helpers"
@@ -146,8 +147,10 @@ const ChoiceCard = ({
 				]}
 				htmlFor={id}
 			>
-				{iconSvg ? iconSvg : ""}
-				<div>{labelContent}</div>
+				<div css={contentWrapper}>
+					{iconSvg ? iconSvg : ""}
+					<div>{labelContent}</div>
+				</div>
 				<span css={theme => [tick(theme.checkbox && theme)]} />
 			</label>
 		</>
