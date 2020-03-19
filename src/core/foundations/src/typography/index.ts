@@ -247,6 +247,9 @@ Object.freeze(titlepieceSizes)
 Object.freeze(headlineSizes)
 Object.freeze(bodySizes)
 Object.freeze(textSansSizes)
+Object.freeze(fontMapping)
+Object.freeze(fontWeightMapping)
+Object.freeze(lineHeightMapping)
 
 export {
 	titlepiece,
@@ -257,6 +260,9 @@ export {
 	headlineSizes,
 	bodySizes,
 	textSansSizes,
+	fontMapping as fonts,
+	fontWeightMapping as fontWeights,
+	lineHeightMapping as lineHeights,
 	Category,
 	LineHeight,
 	FontWeight,
