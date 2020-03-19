@@ -121,52 +121,60 @@ export const choiceCard = ({
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
 	flex: 1;
 	display: flex;
-	flex-direction: row;
-	box-sizing: border-box;
+	justify-content: center;
 	/* TODO: let's talk about size! */
 	min-height: ${size.large}px;
 	margin: 0 0 ${space[2]}px 0;
-	align-items: center;
-	justify-content: center;
-	padding: ${space[2]}px ${space[5]}px;
 	box-shadow: inset 0 0 0 2px ${choiceCard.border};
 	border-radius: 4px;
 	position: relative;
 	cursor: pointer;
+	color: ${choiceCard.textLabel};
 
 	${from.mobileLandscape} {
-		flex-direction: column;
-		padding: ${space[2]}px ${space[6]}px;
 		margin: 0 ${space[2]}px 0 0;
+
 		&:last-child {
 			margin: 0;
 		}
 	}
 
+	&:hover {
+		box-shadow: inset 0 0 0 4px ${choiceCard.borderHover};
+		color: ${choiceCard.textHover};
+	}
+`
+
+export const contentWrapper = css`
+	flex: 0 1 auto;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	${from.mobileLandscape} {
+		flex-direction: column;
+		padding: ${space[2]}px ${space[6]}px;
+	}
+
 	& > * {
-		color: ${choiceCard.textLabel};
 		${textSans.medium({ fontWeight: "bold" })};
 		text-align: center;
 	}
 
 	& svg {
+		position: absolute;
 		/* TODO: 30px is a standard icon width, should probably exposed
 		as a size property */
 		width: 30px;
 		height: auto;
+		left: -34px; /* width + 4px "margin" */
 		fill: currentColor;
-		margin-right: ${space[1]}px;
 
 		${from.mobileLandscape} {
-			margin-right: 0;
-		}
-	}
-
-	&:hover {
-		box-shadow: inset 0 0 0 4px ${choiceCard.borderHover};
-
-		& > * {
-			color: ${choiceCard.textHover};
+			position: static;
 		}
 	}
 `
