@@ -180,9 +180,9 @@ export const tick = ({
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 6px;
-	height: 12px;
-	transform: rotate(45deg) translateX(-100%) translateY(-25%);
+	width: 7px;
+	height: 20px;
+	transform: rotate(45deg) translateX(-100%) translateY(-35%);
 	opacity: 0;
 
 	/* the checkmark ✓ */
