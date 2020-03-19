@@ -11,6 +11,8 @@ import {
 
 export const fieldset = css`
 	border: 0;
+	padding: 0;
+	margin: 0;
 `
 
 // TODO: This is currently applied to a div instead of the fieldset
@@ -134,7 +136,7 @@ export const choiceCard = ({
 
 	${from.mobileLandscape} {
 		flex-direction: column;
-		padding: ${space[2]}px ${space[3]}px;
+		padding: ${space[2]}px ${space[6]}px;
 		margin: 0 ${space[2]}px 0 0;
 		&:last-child {
 			margin: 0;
@@ -144,6 +146,7 @@ export const choiceCard = ({
 	& > * {
 		color: ${choiceCard.textLabel};
 		${textSans.medium({ fontWeight: "bold" })};
+		text-align: center;
 	}
 
 	& svg {
