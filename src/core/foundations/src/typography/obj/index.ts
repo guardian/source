@@ -1,5 +1,9 @@
 import { titlepiece, headline, body, textSans } from "../api"
 import {
+	titlepieceSizes,
+	headlineSizes,
+	bodySizes,
+	textSansSizes,
 	remTitlepieceSizes,
 	remHeadlineSizes,
 	remBodySizes,
@@ -9,19 +13,15 @@ import {
 	lineHeightMapping,
 } from "../data"
 
-Object.freeze(remTitlepieceSizes)
-Object.freeze(remHeadlineSizes)
-Object.freeze(remBodySizes)
-Object.freeze(remTextSansSizes)
-Object.freeze(fontMapping)
-Object.freeze(fontWeightMapping)
-Object.freeze(lineHeightMapping)
-
 export {
 	titlepiece,
 	headline,
 	body,
 	textSans,
+	titlepieceSizes,
+	headlineSizes,
+	bodySizes,
+	textSansSizes,
 	remTitlepieceSizes,
 	remHeadlineSizes,
 	remBodySizes,

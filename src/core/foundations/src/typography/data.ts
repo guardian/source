@@ -48,15 +48,53 @@ export interface FontScaleArgs {
 	italic?: boolean
 }
 
-export const remFontSizes = fontSizes.map(fontSize => fontSize / 16)
+const titlepieceSizes: { [key in TitlepieceSizes]: number } = {
+	small: fontSizes[7], //42px
+	medium: fontSizes[8], //50px
+	large: fontSizes[9], //70px
+}
 
-export const remTitlepieceSizes: { [key in TitlepieceSizes]: number } = {
+const headlineSizes: { [key in HeadlineSizes]: number } = {
+	xxxsmall: fontSizes[2], //17px
+	xxsmall: fontSizes[3], //20px
+	xsmall: fontSizes[4], //24px
+	small: fontSizes[5], //28px
+	medium: fontSizes[6], //34px
+	large: fontSizes[7], //42px
+	xlarge: fontSizes[8], //50px
+}
+
+const bodySizes: { [key in BodySizes]: number } = {
+	small: fontSizes[1], //15px
+	medium: fontSizes[2], //17px
+}
+
+const textSansSizes: { [key in TextSansSizes]: number } = {
+	xsmall: fontSizes[0], //12px
+	small: fontSizes[1], //15px
+	medium: fontSizes[2], //17px
+	large: fontSizes[3], //20px
+	xlarge: fontSizes[4], //24px
+}
+
+const fontSizeMapping: {
+	[cat in Category]: { [level in string]: number }
+} = {
+	titlepiece: titlepieceSizes,
+	headline: headlineSizes,
+	body: bodySizes,
+	textSans: textSansSizes,
+}
+
+const remFontSizes = fontSizes.map(fontSize => fontSize / 16)
+
+const remTitlepieceSizes: { [key in TitlepieceSizes]: number } = {
 	small: remFontSizes[7], //42px
 	medium: remFontSizes[8], //50px
 	large: remFontSizes[9], //70px
 }
 
-export const remHeadlineSizes: { [key in HeadlineSizes]: number } = {
+const remHeadlineSizes: { [key in HeadlineSizes]: number } = {
 	xxxsmall: remFontSizes[2], //17px
 	xxsmall: remFontSizes[3], //20px
 	xsmall: remFontSizes[4], //24px
@@ -66,12 +104,12 @@ export const remHeadlineSizes: { [key in HeadlineSizes]: number } = {
 	xlarge: remFontSizes[8], //50px
 }
 
-export const remBodySizes: { [key in BodySizes]: number } = {
+const remBodySizes: { [key in BodySizes]: number } = {
 	small: remFontSizes[1], //15px
 	medium: remFontSizes[2], //17px
 }
 
-export const remTextSansSizes: { [key in TextSansSizes]: number } = {
+const remTextSansSizes: { [key in TextSansSizes]: number } = {
 	xsmall: remFontSizes[0], //12px
 	small: remFontSizes[1], //15px
 	medium: remFontSizes[2], //17px
@@ -79,7 +117,7 @@ export const remTextSansSizes: { [key in TextSansSizes]: number } = {
 	xlarge: remFontSizes[4], //24px
 }
 
-export const remFontSizeMapping: {
+const remFontSizeMapping: {
 	[cat in Category]: { [level in string]: number }
 } = {
 	titlepiece: remTitlepieceSizes,
@@ -88,27 +126,27 @@ export const remFontSizeMapping: {
 	textSans: remTextSansSizes,
 }
 
-export const fontMapping: { [cat in Category]: string } = {
+const fontMapping: { [cat in Category]: string } = {
 	titlepiece: fonts.titlepiece,
 	headline: fonts.headlineSerif,
 	body: fonts.bodySerif,
 	textSans: fonts.bodySans,
 }
 
-export const lineHeightMapping: { [lineHight in LineHeight]: number } = {
+const lineHeightMapping: { [lineHight in LineHeight]: number } = {
 	tight: lineHeights[0],
 	regular: lineHeights[1],
 	loose: lineHeights[2],
 }
 
-export const fontWeightMapping: { [fontWeight in FontWeight]: number } = {
+const fontWeightMapping: { [fontWeight in FontWeight]: number } = {
 	light: fontWeights[0],
 	regular: fontWeights[1],
 	medium: fontWeights[2],
 	bold: fontWeights[3],
 }
 
-export const availableFonts: {
+const availableFonts: {
 	[cat in Category]: {
 		[fontWeight in FontWeight]?: FontWeightDefinition
 	}
@@ -145,4 +183,36 @@ export const availableFonts: {
 			hasItalic: false,
 		},
 	},
+}
+
+Object.freeze(titlepieceSizes)
+Object.freeze(headlineSizes)
+Object.freeze(bodySizes)
+Object.freeze(textSansSizes)
+Object.freeze(remTitlepieceSizes)
+Object.freeze(remHeadlineSizes)
+Object.freeze(remBodySizes)
+Object.freeze(remTextSansSizes)
+Object.freeze(fontMapping)
+Object.freeze(fontSizeMapping)
+Object.freeze(fontWeightMapping)
+Object.freeze(lineHeightMapping)
+Object.freeze(availableFonts)
+
+export {
+	titlepieceSizes,
+	headlineSizes,
+	bodySizes,
+	textSansSizes,
+	remFontSizes,
+	remTitlepieceSizes,
+	remHeadlineSizes,
+	remBodySizes,
+	remTextSansSizes,
+	remFontSizeMapping,
+	fontMapping,
+	fontSizeMapping,
+	lineHeightMapping,
+	fontWeightMapping,
+	availableFonts,
 }
