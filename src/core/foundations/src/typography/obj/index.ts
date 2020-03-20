@@ -4,18 +4,14 @@ import {
 	headlineSizes,
 	bodySizes,
 	textSansSizes,
+	remTitlepieceSizes,
+	remHeadlineSizes,
+	remBodySizes,
+	remTextSansSizes,
 	fontMapping,
 	fontWeightMapping,
 	lineHeightMapping,
 } from "../data"
-
-Object.freeze(titlepieceSizes)
-Object.freeze(headlineSizes)
-Object.freeze(bodySizes)
-Object.freeze(textSansSizes)
-Object.freeze(fontMapping)
-Object.freeze(fontWeightMapping)
-Object.freeze(lineHeightMapping)
 
 export {
 	titlepiece,
@@ -26,6 +22,10 @@ export {
 	headlineSizes,
 	bodySizes,
 	textSansSizes,
+	remTitlepieceSizes,
+	remHeadlineSizes,
+	remBodySizes,
+	remTextSansSizes,
 	fontMapping as fonts,
 	fontWeightMapping as fontWeights,
 	lineHeightMapping as lineHeights,

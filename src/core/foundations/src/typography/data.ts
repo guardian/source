@@ -48,38 +48,36 @@ export interface FontScaleArgs {
 	italic?: boolean
 }
 
-export const fontSizesRem = fontSizes.map(fontSize => fontSize / 16)
-
-export const titlepieceSizes: { [key in TitlepieceSizes]: number } = {
-	small: fontSizesRem[7], //42px
-	medium: fontSizesRem[8], //50px
-	large: fontSizesRem[9], //70px
+const titlepieceSizes: { [key in TitlepieceSizes]: number } = {
+	small: fontSizes[7], //42px
+	medium: fontSizes[8], //50px
+	large: fontSizes[9], //70px
 }
 
-export const headlineSizes: { [key in HeadlineSizes]: number } = {
-	xxxsmall: fontSizesRem[2], //17px
-	xxsmall: fontSizesRem[3], //20px
-	xsmall: fontSizesRem[4], //24px
-	small: fontSizesRem[5], //28px
-	medium: fontSizesRem[6], //34px
-	large: fontSizesRem[7], //42px
-	xlarge: fontSizesRem[8], //50px
+const headlineSizes: { [key in HeadlineSizes]: number } = {
+	xxxsmall: fontSizes[2], //17px
+	xxsmall: fontSizes[3], //20px
+	xsmall: fontSizes[4], //24px
+	small: fontSizes[5], //28px
+	medium: fontSizes[6], //34px
+	large: fontSizes[7], //42px
+	xlarge: fontSizes[8], //50px
 }
 
-export const bodySizes: { [key in BodySizes]: number } = {
-	small: fontSizesRem[1], //15px
-	medium: fontSizesRem[2], //17px
+const bodySizes: { [key in BodySizes]: number } = {
+	small: fontSizes[1], //15px
+	medium: fontSizes[2], //17px
 }
 
-export const textSansSizes: { [key in TextSansSizes]: number } = {
-	xsmall: fontSizesRem[0], //12px
-	small: fontSizesRem[1], //15px
-	medium: fontSizesRem[2], //17px
-	large: fontSizesRem[3], //20px
-	xlarge: fontSizesRem[4], //24px
+const textSansSizes: { [key in TextSansSizes]: number } = {
+	xsmall: fontSizes[0], //12px
+	small: fontSizes[1], //15px
+	medium: fontSizes[2], //17px
+	large: fontSizes[3], //20px
+	xlarge: fontSizes[4], //24px
 }
 
-export const fontSizeMapping: {
+const fontSizeMapping: {
 	[cat in Category]: { [level in string]: number }
 } = {
 	titlepiece: titlepieceSizes,
@@ -88,27 +86,67 @@ export const fontSizeMapping: {
 	textSans: textSansSizes,
 }
 
-export const fontMapping: { [cat in Category]: string } = {
+const remFontSizes = fontSizes.map(fontSize => fontSize / 16)
+
+const remTitlepieceSizes: { [key in TitlepieceSizes]: number } = {
+	small: remFontSizes[7], //42px
+	medium: remFontSizes[8], //50px
+	large: remFontSizes[9], //70px
+}
+
+const remHeadlineSizes: { [key in HeadlineSizes]: number } = {
+	xxxsmall: remFontSizes[2], //17px
+	xxsmall: remFontSizes[3], //20px
+	xsmall: remFontSizes[4], //24px
+	small: remFontSizes[5], //28px
+	medium: remFontSizes[6], //34px
+	large: remFontSizes[7], //42px
+	xlarge: remFontSizes[8], //50px
+}
+
+const remBodySizes: { [key in BodySizes]: number } = {
+	small: remFontSizes[1], //15px
+	medium: remFontSizes[2], //17px
+}
+
+const remTextSansSizes: { [key in TextSansSizes]: number } = {
+	xsmall: remFontSizes[0], //12px
+	small: remFontSizes[1], //15px
+	medium: remFontSizes[2], //17px
+	large: remFontSizes[3], //20px
+	xlarge: remFontSizes[4], //24px
+}
+
+const remFontSizeMapping: {
+	[cat in Category]: { [level in string]: number }
+} = {
+	titlepiece: remTitlepieceSizes,
+	headline: remHeadlineSizes,
+	body: remBodySizes,
+	textSans: remTextSansSizes,
+}
+
+const fontMapping: { [cat in Category]: string } = {
 	titlepiece: fonts.titlepiece,
 	headline: fonts.headlineSerif,
 	body: fonts.bodySerif,
 	textSans: fonts.bodySans,
 }
 
-export const lineHeightMapping: { [lineHight in LineHeight]: number } = {
+const lineHeightMapping: { [lineHight in LineHeight]: number } = {
 	tight: lineHeights[0],
 	regular: lineHeights[1],
 	loose: lineHeights[2],
 }
 
-export const fontWeightMapping: { [fontWeight in FontWeight]: number } = {
+const fontWeightMapping: { [fontWeight in FontWeight]: number } = {
 	light: fontWeights[0],
 	regular: fontWeights[1],
 	medium: fontWeights[2],
 	bold: fontWeights[3],
 }
 
-export const availableFonts: {
+const availableFonts: {
 	[cat in Category]: {
 		[fontWeight in FontWeight]?: FontWeightDefinition
 	}
@@ -145,4 +183,36 @@ export const availableFonts: {
 			hasItalic: false,
 		},
 	},
+}
+
+Object.freeze(titlepieceSizes)
+Object.freeze(headlineSizes)
+Object.freeze(bodySizes)
+Object.freeze(textSansSizes)
+Object.freeze(remTitlepieceSizes)
+Object.freeze(remHeadlineSizes)
+Object.freeze(remBodySizes)
+Object.freeze(remTextSansSizes)
+Object.freeze(fontMapping)
+Object.freeze(fontSizeMapping)
+Object.freeze(fontWeightMapping)
+Object.freeze(lineHeightMapping)
+Object.freeze(availableFonts)
+
+export {
+	titlepieceSizes,
+	headlineSizes,
+	bodySizes,
+	textSansSizes,
+	remFontSizes,
+	remTitlepieceSizes,
+	remHeadlineSizes,
+	remBodySizes,
+	remTextSansSizes,
+	remFontSizeMapping,
+	fontMapping,
+	fontSizeMapping,
+	lineHeightMapping,
+	fontWeightMapping,
+	availableFonts,
 }
