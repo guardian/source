@@ -24,7 +24,8 @@ const titlepiece = Object.fromEntries(
 	Object.entries(titlepieceAsObj).map(([key, func]) => {
 		return [
 			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
+			(options: FontScaleArgs = {}) =>
+				objectStylesToString(func(options), options.unit),
 		]
 	}),
 )
@@ -32,7 +33,8 @@ const headline = Object.fromEntries(
 	Object.entries(headlineAsObj).map(([key, func]) => {
 		return [
 			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
+			(options: FontScaleArgs = {}) =>
+				objectStylesToString(func(options), options.unit),
 		]
 	}),
 )
@@ -40,7 +42,8 @@ const body = Object.fromEntries(
 	Object.entries(bodyAsObj).map(([key, func]) => {
 		return [
 			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
+			(options: FontScaleArgs = {}) =>
+				objectStylesToString(func(options), options.unit),
 		]
 	}),
 )
@@ -48,7 +51,8 @@ const textSans = Object.fromEntries(
 	Object.entries(textSansAsObj).map(([key, func]) => {
 		return [
 			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
+			(options: FontScaleArgs = {}) =>
+				objectStylesToString(func(options), options.unit),
 		]
 	}),
 )
