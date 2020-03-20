@@ -1,18 +1,15 @@
-import { TypographyStyles, ScaleUnit } from "./data"
+import { TypographyStyles } from "./data"
 
-export const objectStylesToString = (
-	{
-		fontFamily,
-		fontSize,
-		lineHeight,
-		fontWeight,
-		fontStyle,
-	}: TypographyStyles,
-	unit?: ScaleUnit,
-) => `
+export const objectStylesToString = ({
+	fontFamily,
+	fontSize,
+	lineHeight,
+	fontWeight,
+	fontStyle,
+}: TypographyStyles) => `
 	font-family: ${fontFamily};
-	font-size: ${unit === "px" ? `${fontSize}px` : fontSize};
-	line-height: ${unit === "px" ? `${lineHeight}px` : lineHeight};
+	font-size: ${typeof fontSize === "number" ? `${fontSize}px` : fontSize};
+	line-height: ${lineHeight};
 	${fontWeight ? `font-weight: ${fontWeight}` : ""};
 	${fontStyle ? `font-style: ${fontStyle}` : ""};
 `

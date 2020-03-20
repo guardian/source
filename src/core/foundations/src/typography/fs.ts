@@ -19,7 +19,8 @@ export const fs: Fs = (
 			: `${fontSizeMapping[category][level] / 16}rem`
 	const lineHeightValue =
 		unit === "px"
-			? lineHeightMapping[lineHeight] * fontSizeMapping[category][level]
+			? `${lineHeightMapping[lineHeight] *
+					fontSizeMapping[category][level]}px`
 			: lineHeightMapping[lineHeight]
 	// TODO: consider logging an error in development if a requested
 	// font is unavailable

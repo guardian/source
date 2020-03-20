@@ -44,7 +44,7 @@ it("should return styles containing the specified line height in px if requested
 	})
 
 	expect(mediumHeadlineStyles.lineHeight).toBe(
-		lineHeights.tight * headlineSizes.medium,
+		`${lineHeights.tight * headlineSizes.medium}px`,
 	)
 })
 
