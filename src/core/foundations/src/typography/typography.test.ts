@@ -41,6 +41,17 @@ it("should return styles containing the specified line height", () => {
 	expect(mediumHeadlineStyles).toContain(`line-height: ${lineHeights.tight};`)
 })
 
+it("should return styles containing the specified line height in px if requested", () => {
+	const mediumHeadlineStyles = headline.medium({
+		lineHeight: "tight",
+		unit: "px",
+	})
+
+	expect(mediumHeadlineStyles).toContain(
+		`line-height: ${lineHeights.tight * headlineSizes.medium}px;`,
+	)
+})
+
 it("should return italic styles if specified", () => {
 	const mediumHeadlineStyles = headline.medium({ italic: true })
 
