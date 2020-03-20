@@ -48,44 +48,44 @@ export interface FontScaleArgs {
 	italic?: boolean
 }
 
-export const fontSizesRem = fontSizes.map(fontSize => fontSize / 16)
+export const remFontSizes = fontSizes.map(fontSize => fontSize / 16)
 
-export const titlepieceSizes: { [key in TitlepieceSizes]: number } = {
-	small: fontSizesRem[7], //42px
-	medium: fontSizesRem[8], //50px
-	large: fontSizesRem[9], //70px
+export const remTitlepieceSizes: { [key in TitlepieceSizes]: number } = {
+	small: remFontSizes[7], //42px
+	medium: remFontSizes[8], //50px
+	large: remFontSizes[9], //70px
 }
 
-export const headlineSizes: { [key in HeadlineSizes]: number } = {
-	xxxsmall: fontSizesRem[2], //17px
-	xxsmall: fontSizesRem[3], //20px
-	xsmall: fontSizesRem[4], //24px
-	small: fontSizesRem[5], //28px
-	medium: fontSizesRem[6], //34px
-	large: fontSizesRem[7], //42px
-	xlarge: fontSizesRem[8], //50px
+export const remHeadlineSizes: { [key in HeadlineSizes]: number } = {
+	xxxsmall: remFontSizes[2], //17px
+	xxsmall: remFontSizes[3], //20px
+	xsmall: remFontSizes[4], //24px
+	small: remFontSizes[5], //28px
+	medium: remFontSizes[6], //34px
+	large: remFontSizes[7], //42px
+	xlarge: remFontSizes[8], //50px
 }
 
-export const bodySizes: { [key in BodySizes]: number } = {
-	small: fontSizesRem[1], //15px
-	medium: fontSizesRem[2], //17px
+export const remBodySizes: { [key in BodySizes]: number } = {
+	small: remFontSizes[1], //15px
+	medium: remFontSizes[2], //17px
 }
 
-export const textSansSizes: { [key in TextSansSizes]: number } = {
-	xsmall: fontSizesRem[0], //12px
-	small: fontSizesRem[1], //15px
-	medium: fontSizesRem[2], //17px
-	large: fontSizesRem[3], //20px
-	xlarge: fontSizesRem[4], //24px
+export const remTextSansSizes: { [key in TextSansSizes]: number } = {
+	xsmall: remFontSizes[0], //12px
+	small: remFontSizes[1], //15px
+	medium: remFontSizes[2], //17px
+	large: remFontSizes[3], //20px
+	xlarge: remFontSizes[4], //24px
 }
 
-export const fontSizeMapping: {
+export const remFontSizeMapping: {
 	[cat in Category]: { [level in string]: number }
 } = {
-	titlepiece: titlepieceSizes,
-	headline: headlineSizes,
-	body: bodySizes,
-	textSans: textSansSizes,
+	titlepiece: remTitlepieceSizes,
+	headline: remHeadlineSizes,
+	body: remBodySizes,
+	textSans: remTextSansSizes,
 }
 
 export const fontMapping: { [cat in Category]: string } = {

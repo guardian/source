@@ -1,7 +1,7 @@
 import {
 	headline,
 	fonts,
-	headlineSizes,
+	remHeadlineSizes,
 	fontWeights,
 	lineHeights,
 } from "./index"
@@ -15,7 +15,7 @@ it("should return styles containing the specified font family", () => {
 it("should return styles containing the specified font size", () => {
 	const mediumHeadlineStyles = headline.medium()
 
-	expect(mediumHeadlineStyles.fontSize).toBe(`${headlineSizes.medium}rem`)
+	expect(mediumHeadlineStyles.fontSize).toBe(`${remHeadlineSizes.medium}rem`)
 })
 
 it("should return styles containing the specified font weight", () => {

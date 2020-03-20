@@ -6,10 +6,10 @@ import {
 } from "./api"
 import { objectStylesToString } from "./object-styles-to-string"
 import {
-	titlepieceSizes,
-	headlineSizes,
-	bodySizes,
-	textSansSizes,
+	remTitlepieceSizes,
+	remHeadlineSizes,
+	remBodySizes,
+	remTextSansSizes,
 	fontMapping,
 	fontWeightMapping,
 	lineHeightMapping,
@@ -49,10 +49,10 @@ const textSans = Object.fromEntries(
 	}),
 )
 
-Object.freeze(titlepieceSizes)
-Object.freeze(headlineSizes)
-Object.freeze(bodySizes)
-Object.freeze(textSansSizes)
+Object.freeze(remTitlepieceSizes)
+Object.freeze(remHeadlineSizes)
+Object.freeze(remBodySizes)
+Object.freeze(remTextSansSizes)
 Object.freeze(fontMapping)
 Object.freeze(fontWeightMapping)
 Object.freeze(lineHeightMapping)
@@ -62,10 +62,10 @@ export {
 	headline,
 	body,
 	textSans,
-	titlepieceSizes,
-	headlineSizes,
-	bodySizes,
-	textSansSizes,
+	remTitlepieceSizes,
+	remHeadlineSizes,
+	remBodySizes,
+	remTextSansSizes,
 	fontMapping as fonts,
 	fontWeightMapping as fontWeights,
 	lineHeightMapping as lineHeights,

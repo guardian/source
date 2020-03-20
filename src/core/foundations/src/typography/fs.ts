@@ -1,7 +1,7 @@
 import {
 	Fs,
 	fontMapping,
-	fontSizeMapping,
+	remFontSizeMapping,
 	lineHeightMapping,
 	fontWeightMapping,
 	availableFonts,
@@ -9,7 +9,7 @@ import {
 
 export const fs: Fs = (category, level, { lineHeight, fontWeight, italic }) => {
 	const fontFamilyValue = fontMapping[category]
-	const fontSizeValue = fontSizeMapping[category][level]
+	const fontSizeValue = remFontSizeMapping[category][level]
 	const lineHeightValue = lineHeightMapping[lineHeight]
 	// TODO: consider logging an error in development if a requested
 	// font is unavailable

@@ -1,7 +1,7 @@
 import {
 	headline,
 	fonts,
-	headlineSizes,
+	remHeadlineSizes,
 	fontWeights,
 	lineHeights,
 } from "./index"
@@ -16,7 +16,7 @@ it("should return styles containing the specified font size", () => {
 	const mediumHeadlineStyles = headline.medium()
 
 	expect(mediumHeadlineStyles).toContain(
-		`font-size: ${headlineSizes.medium}rem;`,
+		`font-size: ${remHeadlineSizes.medium}rem;`,
 	)
 })
 
