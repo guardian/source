@@ -24,7 +24,7 @@ export type TextSansSizes = "xsmall" | "small" | "medium" | "large" | "xlarge"
 export type TypographyStyles = {
 	fontFamily: string
 	fontSize: string | number
-	lineHeight: number
+	lineHeight: string | number
 	fontWeight?: number
 	fontStyle?: string
 }
