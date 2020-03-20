@@ -1,6 +1,7 @@
 import {
 	headline,
 	fonts,
+	headlineSizes,
 	remHeadlineSizes,
 	fontWeights,
 	lineHeights,
@@ -17,6 +18,14 @@ it("should return styles containing the specified font size", () => {
 
 	expect(mediumHeadlineStyles).toContain(
 		`font-size: ${remHeadlineSizes.medium}rem;`,
+	)
+})
+
+it("should return styles containing the specified font size in px if requested", () => {
+	const mediumHeadlineStyles = headline.medium({ unit: "px" })
+
+	expect(mediumHeadlineStyles).toContain(
+		`font-size: ${headlineSizes.medium}px;`,
 	)
 })
 

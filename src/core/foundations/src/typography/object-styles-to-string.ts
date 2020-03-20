@@ -8,7 +8,7 @@ export const objectStylesToString = ({
 	fontStyle,
 }: TypographyStyles) => `
 	font-family: ${fontFamily};
-	font-size: ${fontSize};
+	font-size: ${typeof fontSize === "number" ? `${fontSize}px` : fontSize};
 	line-height: ${lineHeight};
 	${fontWeight ? `font-weight: ${fontWeight}` : ""};
 	${fontStyle ? `font-style: ${fontStyle}` : ""};

@@ -1,15 +1,22 @@
 import {
 	Fs,
 	fontMapping,
-	remFontSizeMapping,
+	fontSizeMapping,
 	lineHeightMapping,
 	fontWeightMapping,
 	availableFonts,
 } from "./data"
 
-export const fs: Fs = (category, level, { lineHeight, fontWeight, italic }) => {
+export const fs: Fs = (
+	category,
+	level,
+	{ lineHeight, fontWeight, italic, unit },
+) => {
 	const fontFamilyValue = fontMapping[category]
-	const fontSizeValue = remFontSizeMapping[category][level]
+	const fontSizeValue =
+		unit === "px"
+			? fontSizeMapping[category][level]
+			: `${fontSizeMapping[category][level] / 16}rem`
 	const lineHeightValue = lineHeightMapping[lineHeight]
 	// TODO: consider logging an error in development if a requested
 	// font is unavailable
@@ -21,7 +28,7 @@ export const fs: Fs = (category, level, { lineHeight, fontWeight, italic }) => {
 	return Object.assign(
 		{
 			fontFamily: fontFamilyValue,
-			fontSize: `${fontSizeValue}rem`,
+			fontSize: fontSizeValue,
 			lineHeight: lineHeightValue,
 		},
 		fontWeightValue ? { fontWeight: fontWeightValue } : {},

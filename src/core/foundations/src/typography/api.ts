@@ -16,6 +16,7 @@ const titlepieceDefaults = {
 	lineHeight: "tight",
 	fontWeight: "bold",
 	italic: false,
+	unit: "rem",
 }
 const titlepieceFs = fs.bind(null, "titlepiece")
 
@@ -35,6 +36,7 @@ const headlineDefaults = {
 	lineHeight: "tight",
 	fontWeight: "medium",
 	italic: false,
+	unit: "rem",
 }
 const headlineFs = fs.bind(null, "headline")
 
@@ -63,6 +65,7 @@ const bodyDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
 	italic: false,
+	unit: "rem",
 }
 const bodyFs = fs.bind(null, "body")
 
@@ -81,6 +84,7 @@ const textSansDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
 	italic: false,
+	unit: "rem",
 }
 const textSansFs = fs.bind(null, "textSans")
 
