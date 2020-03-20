@@ -7,14 +7,6 @@ import {
 	fontMapping,
 	fontWeightMapping,
 	lineHeightMapping,
-	TypographyStyles,
-	Category,
-	LineHeight,
-	FontWeight,
-	TitlepieceSizes,
-	HeadlineSizes,
-	BodySizes,
-	TextSansSizes,
 } from "../data"
 
 Object.freeze(titlepieceSizes)
@@ -37,12 +29,4 @@ export {
 	fontMapping as fonts,
 	fontWeightMapping as fontWeights,
 	lineHeightMapping as lineHeights,
-	TypographyStyles,
-	Category,
-	LineHeight,
-	FontWeight,
-	TitlepieceSizes,
-	HeadlineSizes,
-	BodySizes,
-	TextSansSizes,
 }

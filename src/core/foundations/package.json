@@ -18,11 +18,12 @@
 		"verbump:patch": "yarn version --patch --no-git-tag-version"
 	},
 	"files": [
-		"mq/*",
-		"accessibility/*",
-		"palette/*",
-		"themes/*",
-		"typography/*",
+		"mq/**",
+		"accessibility/**",
+		"palette/**",
+		"themes/**",
+		"typography/**",
+		"utils/**",
 		"*.d.ts",
 		"foundations.esm.js",
 		"src/animation.ts",
@@ -35,7 +36,7 @@
 		"src/mq/index.ts",
 		"src/palette/**",
 		"src/themes/**",
-		"src/typography/index.ts",
+		"src/typography/**",
 		"src/utils/**"
 	],
 	"devDependencies": {
