@@ -13,13 +13,6 @@ import {
 	fontMapping,
 	fontWeightMapping,
 	lineHeightMapping,
-	Category,
-	LineHeight,
-	FontWeight,
-	TitlepieceSizes,
-	HeadlineSizes,
-	BodySizes,
-	TextSansSizes,
 	FontScaleArgs,
 } from "./data"
 
@@ -76,11 +69,4 @@ export {
 	fontMapping as fonts,
 	fontWeightMapping as fontWeights,
 	lineHeightMapping as lineHeights,
-	Category,
-	LineHeight,
-	FontWeight,
-	TitlepieceSizes,
-	HeadlineSizes,
-	BodySizes,
-	TextSansSizes,
 }
