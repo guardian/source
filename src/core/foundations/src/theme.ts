@@ -27,7 +27,7 @@ const fontSizes = [12, 15, 17, 20, 24, 28, 34, 42, 50, 70]
 const fonts = {
 	titlepiece: "GT Guardian Titlepiece, Georgia, serif",
 	headlineSerif:
-		"GH Guardian Headline, Guardian Egyptian Web, Georgia, serif",
+		"Guardian Headline, GH Guardian Headline, Guardian Egyptian Web, Georgia, serif",
 	bodySerif:
 		"GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif",
 	bodySans:
