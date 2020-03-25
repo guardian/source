@@ -7,8 +7,7 @@ import {
 	availableFonts,
 } from "./data"
 
-export const fs: Fs = (
-	category,
+export const fs: Fs = category => (
 	level,
 	{ lineHeight, fontWeight, italic, unit },
 ) => {
