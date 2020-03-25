@@ -31,6 +31,7 @@ export type TypographyStyles = {
 
 export type Fs = (
 	category: Category,
+) => (
 	level: string,
 	{
 		lineHeight,

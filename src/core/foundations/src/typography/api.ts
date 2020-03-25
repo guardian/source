@@ -18,7 +18,7 @@ const titlepieceDefaults = {
 	italic: false,
 	unit: "rem",
 }
-const titlepieceFs = fs.bind(null, "titlepiece")
+const titlepieceFs = fs("titlepiece")
 
 export const titlepiece: TitlepieceFunctions = {
 	small: (options?: FontScaleArgs) =>
@@ -38,7 +38,7 @@ const headlineDefaults = {
 	italic: false,
 	unit: "rem",
 }
-const headlineFs = fs.bind(null, "headline")
+const headlineFs = fs("headline")
 
 export const headline: HeadlineFunctions = {
 	xxxsmall: (options?: FontScaleArgs) =>
@@ -67,7 +67,7 @@ const bodyDefaults = {
 	italic: false,
 	unit: "rem",
 }
-const bodyFs = fs.bind(null, "body")
+const bodyFs = fs("body")
 
 export const body: BodyFunctions = {
 	small: (options?: FontScaleArgs) =>
@@ -86,7 +86,7 @@ const textSansDefaults = {
 	italic: false,
 	unit: "rem",
 }
-const textSansFs = fs.bind(null, "textSans")
+const textSansFs = fs("textSans")
 
 export const textSans: TextSansFunctions = {
 	xsmall: (options?: FontScaleArgs) =>
