@@ -52,7 +52,7 @@ export const width4 = css`
 export const text = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
-	${textSans.medium()};
+	${textSans.medium({ fontWeight: "bold" })};
 	color: ${textInput.textLabel};
 	margin-bottom: ${space[1]}px;
 `
