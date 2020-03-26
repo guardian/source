@@ -15,7 +15,7 @@ type TitlepieceFunctions = {
 const titlepieceDefaults = {
 	lineHeight: "tight",
 	fontWeight: "bold",
-	italic: false,
+	italic: undefined,
 	unit: "rem",
 }
 const titlepieceFs = fs("titlepiece")
@@ -35,7 +35,7 @@ type HeadlineFunctions = {
 const headlineDefaults = {
 	lineHeight: "tight",
 	fontWeight: "medium",
-	italic: false,
+	italic: undefined,
 	unit: "rem",
 }
 const headlineFs = fs("headline")
@@ -64,7 +64,7 @@ type BodyFunctions = {
 const bodyDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
-	italic: false,
+	italic: undefined,
 	unit: "rem",
 }
 const bodyFs = fs("body")
@@ -83,7 +83,7 @@ type TextSansFunctions = {
 const textSansDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
-	italic: false,
+	italic: undefined,
 	unit: "rem",
 }
 const textSansFs = fs("textSans")

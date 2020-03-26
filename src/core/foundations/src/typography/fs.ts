@@ -5,7 +5,23 @@ import {
 	lineHeightMapping,
 	fontWeightMapping,
 	availableFonts,
+	FontWeightDefinition,
 } from "./data"
+
+function fontStyle(
+	font: FontWeightDefinition | undefined,
+	italic: boolean | undefined,
+): string {
+	switch (italic) {
+		case true:
+			return font && font.hasItalic ? "italic" : ""
+		case false:
+			return "normal"
+		case undefined:
+		default:
+			return ""
+	}
+}
 
 export const fs: Fs = category => (
 	level,
@@ -25,8 +41,7 @@ export const fs: Fs = category => (
 	// font is unavailable
 	const requestedFont = availableFonts[category][fontWeight]
 	const fontWeightValue = requestedFont ? fontWeightMapping[fontWeight] : ""
-	const fontStyleValue =
-		italic && requestedFont && requestedFont.hasItalic ? "italic" : ""
+	const fontStyleValue = fontStyle(requestedFont, italic)
 
 	return Object.assign(
 		{

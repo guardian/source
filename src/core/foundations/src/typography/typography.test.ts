@@ -58,6 +58,18 @@ it("should return italic styles if specified", () => {
 	expect(mediumHeadlineStyles).toContain("font-style: italic;")
 })
 
+it("should return normal styles if specified", () => {
+	const mediumHeadlineStyles = headline.medium({ italic: false })
+
+	expect(mediumHeadlineStyles).toContain("font-style: normal;")
+})
+
+it("should not return font styles if unspecified", () => {
+	const mediumHeadlineStyles = headline.medium()
+
+	expect(mediumHeadlineStyles).not.toContain("font-style")
+})
+
 it("should not include italic font style if it is not available for requested font", () => {
 	const mediumHeadlineStyles = headline.medium({
 		fontWeight: "bold",

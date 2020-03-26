@@ -41,7 +41,7 @@ export type Fs = (
 	}: {
 		lineHeight: LineHeight
 		fontWeight: FontWeight
-		italic: boolean
+		italic: boolean | undefined
 		unit: ScaleUnit
 	},
 ) => TypographyStyles
