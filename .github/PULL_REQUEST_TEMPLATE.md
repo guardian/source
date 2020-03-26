@@ -11,6 +11,9 @@ Please ensure you have read CONTRIBUTING.md
 Give an overview of the changes you have made
 -->
 
+-   Change 1
+-   Change 2
+
 ## Design
 
 <!--
@@ -18,6 +21,10 @@ If you are not making changes to the design, please delete this section.
 -->
 
 ### Screenshots
+
+**Before**
+
+**After**
 
 ### Accessibility
 
