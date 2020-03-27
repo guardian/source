@@ -131,7 +131,7 @@ const Checkbox = ({
 			<span
 				css={theme => [
 					tick(theme.checkbox && theme),
-					labelContent ? tickWithLabelText : "",
+					labelContent || supporting ? tickWithLabelText : "",
 					supporting ? tickWithSupportingText : "",
 				]}
 			/>
@@ -159,9 +159,7 @@ const Checkbox = ({
 		</label>
 	)
 
-	// Note: if no label is passed, supporting text will not
-	// be displayed either
-	return <>{labelContent ? <LabelledBox /> : <Box />}</>
+	return <>{labelContent || supportingText ? <LabelledBox /> : <Box />}</>
 }
 
 const checkboxDefaultProps = {
