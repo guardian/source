@@ -10,6 +10,69 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 27 March 2020
+
+**`@guardian/src-foundations 0.16.0`**
+
+-   :robot: [5a3b1f9](https://github.com/guardian/source/pull/275/commits/5a3b1f96eef3c90d43ba2f5aadb29ef099f5d1cc) make foundations a composite package
+-   :boom: :robot: [cf2b904](https://github.com/guardian/source/pull/278/commits/cf2b9041003dc46553a451ff8ffd4d6201a54e77) delete secondary text colours
+-   :robot: [81e1cb0](https://github.com/guardian/source/pull/284/commits/81e1cb0d5a1ab919838c8b681057be7805994c8a) add typography tests
+-   :sparkles: [567d032](https://github.com/guardian/source/commit/567d032aaf8bf60da69e48dd2fdfc36e4515f7c0) implement object styles approach for typography
+-   :boom: :robot: [526f6a4](https://github.com/guardian/source/pull/286/commits/526f6a4ad583ba5b960746beca18ed1c9ec15ca7) publish esm (default) and cjs folders for foundations
+-   :bug: [f4c2d0e](https://github.com/guardian/source/pull/286/commits/f4c2d0ebf36bbbe5fc19b12b2c4839961669bf35) emit types to correct directory
+-   :robot: [976b66c](https://github.com/guardian/source/pull/286/commits/976b66c0cd13bd7187be32c9a674e8c4df2ff60d) dont export types from entry file
+-   :boom: :robot: [afa7a3a](https://github.com/guardian/source/pull/287/commits/afa7a3aa681cc15f46b5d582594e5e1f291f4558) use explicit names for rem font size exports
+-   :sparkles: [9f048b2](https://github.com/guardian/source/pull/287/commits/9f048b257d92847459f4eb8fcfac8c14a8607d52) expose px font sizes and mappings
+-   :sparkles: [4657978](https://github.com/guardian/source/pull/288/commits/46579783fb4d270a4ac8c8f566d77ee206ef01c1) support px font sizes in typography api
+-   :sparkles: [82f7cca](https://github.com/guardian/source/pull/289/commits/82f7ccaa7a008a7fd83fdec479e541d19f0bd0c3) support px line heights in typography api
+-   :bug: [7bf216f](https://github.com/guardian/source/pull/290/commits/7bf216f122e659161a6c1ec5b74c3d3e6beff9de) include px unit in object style line-height
+-   :robot: [6adf586](https://github.com/guardian/source/pull/295/commits/6adf5867039938ec9e74ebda0d18be87e912444a) Dealt with an any that had snuck through
+-   :sparkles: [3cecb1d](https://github.com/guardian/source/pull/298/commits/3cecb1d666313aafe88a32bbc5168588e551bbaa) borderActive value for text input
+
+**`@guardian/src-svgs 0.16.0`**
+
+-   :boom: :sparkles: [f8b9196](https://github.com/guardian/source/pull/273/commits/f8b9196d395a4213b023388cf47f44c600b9ce7c) update payment icons to be 30x20 svgs
+-   :nail_care: [3bf2906](https://github.com/guardian/source/pull/277/commits/3bf29068e99fb1b5d9b4b991164e72d2f19a6a5e) update payment svgs
+-   :nail_care: [13591f4](https://github.com/guardian/source/commit/13591f4d483e4570d0c2b13e77761baca4989a2d) fix alignment of direct debit icon
+
+**`@guardian/src-helpers 0.16.0`**
+
+-   :robot: [757e4bb](https://github.com/guardian/source/pull/274/commits/757e4bbfbcf6d61a4c75953863d13f5e0060dcca) implement better build for helpers package
+-   :boom: :robot: [1ec181d](https://github.com/guardian/source/pull/279/commits/1ec181d1115b38e2036eab7fda7fd08ae30272fc) delete old theme names
+
+**`@guardian/src-inline-error 0.16.0`**
+
+-   :robot: [0f00e8d](https://github.com/guardian/source/pull/279/commits/0f00e8d033d23fc793550867fdb9287e4bfa89b7) refactor old theme names in inline-error stories
+
+**`@guardian/src-radio 0.16.0`**
+
+-   :robot: [f5a34e4](https://github.com/guardian/source/pull/279/commits/f5a34e40fda0eb627f0971ccbc1a16b743f4925f) refactor old theme names in radio stories
+-   :sparkles: [f84eca5](https://github.com/guardian/source/pull/299/commits/f84eca5cbbe83219713249817f50c3146f599c6c) apply label styling if radio has only supporting text
+
+**`@guardian/src-checkbox 0.16.0`**
+
+-   :sparkles: [2260cb8](https://github.com/guardian/source/pull/299/commits/2260cb8615063ee273782936dcb4f22e9d887446) apply label styling if box has only supporting text
+
+**`@guardian/src-choice-card 0.16.0`**
+
+-   :nail_care: [2f3d749](https://github.com/guardian/source/pull/273/commits/2f3d749a8bd095492eebc90fd0644cd8a2663082) update choice card styles to support 30x20 svgs
+-   :nail_care: [f848c9b](https://github.com/guardian/source/pull/283/commits/f848c9b3e9a66846b62a2b0c399e1b206a3f4a04) ensure choice cards of varying text length look good
+-   :nail_care: [d439b47](https://github.com/guardian/source/pull/283/commits/d439b4729b6c8e69facbaf112dbae76794467b60) make choice card tick larger
+-   :nail_care: [06c7861](https://github.com/guardian/source/pull/283/commits/06c7861d05bab34678134681e2c027d0d6453906) center text but not icons in mobile view
+
+**`@guardian/src-link 0.16.0`**
+
+-   :robot: [5595d74](https://github.com/guardian/source/pull/279/commits/5595d742e44523fb84037ef19febe46504fa6189) refactor old theme names in link stories
+-   :robot: [2215125](https://github.com/guardian/source/pull/287/commits/221512558903350034e9afe9c60d96fe063c5d2a) update link styles to use new font size naming
+
+**`@guardian/src-text-input 0.16.0`**
+
+-   :robot: [fd98f9b](https://github.com/guardian/source/pull/279/commits/fd98f9be83ed71188658cae6a1722c68def41755) refactor old theme names in text-input stories
+-   :page_with_curl: [fc1382a](https://github.com/guardian/source/commit/fc1382a0fbf85c45ccbe47d562aa7b0826c9009e) add type=tel to constraint story
+-   :page_with_curl: [9e9358d](https://github.com/guardian/source/commit/9e9358d092ac8483dfe74ac6af84d805e78627e2) remove superfluous supporting text from constraint story
+-   :nail_care: [d3fd741](https://github.com/guardian/source/pull/296/commits/d3fd741699c5526eb3510e2b88a4b93ffee1501a) make text input label bold by default
+-   :nail_care: [8b02fb2](https://github.com/guardian/source/pull/298/commits/8b02fb2c3b54e2b4bfbf5453b65ea4bc61ac8733) active border style for text input
+
 ## 16 March 2020
 
 **`@guardian/src-foundations 0.15.1`**
