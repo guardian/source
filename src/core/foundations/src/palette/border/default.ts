@@ -14,5 +14,6 @@ export const border = {
 	input: neutral[60],
 	inputChecked: brand[500],
 	inputHover: brand[500],
+	inputActive: brand[500],
 	focusHalo: sport[500],
 }
