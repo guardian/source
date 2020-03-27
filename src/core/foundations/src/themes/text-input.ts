@@ -9,6 +9,7 @@ export type TextInputTheme = {
 	textError: string
 	backgroundInput: string
 	border: string
+	borderActive: string
 	borderError: string
 }
 
@@ -24,6 +25,7 @@ export const textInputDefault: {
 		textError: text.error,
 		backgroundInput: background.input,
 		border: border.input,
+		borderActive: border.inputActive,
 		borderError: border.error,
 	},
 	...inlineErrorDefault,
