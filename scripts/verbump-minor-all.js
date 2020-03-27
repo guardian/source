@@ -7,10 +7,10 @@ const verbump = dir => {
 	})
 }
 
-const { root, foundations, svgs } = paths
+const { root, foundations, svgs, helpers } = paths
 
 const packages = getComponentPaths().then(paths =>
-	paths.concat([foundations, svgs, root]),
+	paths.concat([foundations, svgs, root, helpers]),
 )
 
 packages.then(ps => {
