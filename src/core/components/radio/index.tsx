@@ -142,9 +142,15 @@ const Radio = ({
 		</label>
 	)
 
-	// Note: if no label is passed, supporting text will not
-	// be displayed either
-	return <>{labelContent ? <LabelledRadioControl /> : <RadioControl />}</>
+	return (
+		<>
+			{labelContent || supporting ? (
+				<LabelledRadioControl />
+			) : (
+				<RadioControl />
+			)}
+		</>
+	)
 }
 
 const radioGroupDefaultProps = {
