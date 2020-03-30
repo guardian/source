@@ -1,25 +1,17 @@
 import { fontSizes, fonts, lineHeights, fontWeights } from "../theme"
+import {
+	TitlepieceSizes,
+	HeadlineSizes,
+	BodySizes,
+	TextSansSizes,
+	TypographySizes,
+} from "./types"
 
 export type ScaleUnit = "rem" | "px"
 export type Category = "titlepiece" | "headline" | "body" | "textSans"
 export type LineHeight = "tight" | "regular" | "loose"
 export type FontWeight = "light" | "regular" | "medium" | "bold"
 export type FontWeightDefinition = { hasItalic: boolean }
-
-export type TitlepieceSizes = "small" | "medium" | "large"
-
-export type HeadlineSizes =
-	| "xxxsmall"
-	| "xxsmall"
-	| "xsmall"
-	| "small"
-	| "medium"
-	| "large"
-	| "xlarge"
-
-export type BodySizes = "small" | "medium"
-
-export type TextSansSizes = "xsmall" | "small" | "medium" | "large" | "xlarge"
 
 export type TypographyStyles = {
 	fontFamily: string
@@ -53,13 +45,13 @@ export interface FontScaleArgs {
 	unit?: ScaleUnit
 }
 
-const titlepieceSizes: { [key in TitlepieceSizes]: number } = {
+const titlepieceSizes: TitlepieceSizes = {
 	small: fontSizes[7], //42px
 	medium: fontSizes[8], //50px
 	large: fontSizes[9], //70px
 }
 
-const headlineSizes: { [key in HeadlineSizes]: number } = {
+const headlineSizes: HeadlineSizes = {
 	xxxsmall: fontSizes[2], //17px
 	xxsmall: fontSizes[3], //20px
 	xsmall: fontSizes[4], //24px
@@ -69,12 +61,12 @@ const headlineSizes: { [key in HeadlineSizes]: number } = {
 	xlarge: fontSizes[8], //50px
 }
 
-const bodySizes: { [key in BodySizes]: number } = {
+const bodySizes: BodySizes = {
 	small: fontSizes[1], //15px
 	medium: fontSizes[2], //17px
 }
 
-const textSansSizes: { [key in TextSansSizes]: number } = {
+const textSansSizes: TextSansSizes = {
 	xsmall: fontSizes[0], //12px
 	small: fontSizes[1], //15px
 	medium: fontSizes[2], //17px
@@ -83,7 +75,7 @@ const textSansSizes: { [key in TextSansSizes]: number } = {
 }
 
 const fontSizeMapping: {
-	[cat in Category]: { [level in string]: number }
+	[cat in Category]: TypographySizes
 } = {
 	titlepiece: titlepieceSizes,
 	headline: headlineSizes,
@@ -93,13 +85,13 @@ const fontSizeMapping: {
 
 const remFontSizes = fontSizes.map(fontSize => fontSize / 16)
 
-const remTitlepieceSizes: { [key in TitlepieceSizes]: number } = {
+const remTitlepieceSizes: TitlepieceSizes = {
 	small: remFontSizes[7], //42px
 	medium: remFontSizes[8], //50px
 	large: remFontSizes[9], //70px
 }
 
-const remHeadlineSizes: { [key in HeadlineSizes]: number } = {
+const remHeadlineSizes: HeadlineSizes = {
 	xxxsmall: remFontSizes[2], //17px
 	xxsmall: remFontSizes[3], //20px
 	xsmall: remFontSizes[4], //24px
@@ -109,12 +101,12 @@ const remHeadlineSizes: { [key in HeadlineSizes]: number } = {
 	xlarge: remFontSizes[8], //50px
 }
 
-const remBodySizes: { [key in BodySizes]: number } = {
+const remBodySizes: BodySizes = {
 	small: remFontSizes[1], //15px
 	medium: remFontSizes[2], //17px
 }
 
-const remTextSansSizes: { [key in TextSansSizes]: number } = {
+const remTextSansSizes: TextSansSizes = {
 	xsmall: remFontSizes[0], //12px
 	small: remFontSizes[1], //15px
 	medium: remFontSizes[2], //17px
@@ -123,7 +115,7 @@ const remTextSansSizes: { [key in TextSansSizes]: number } = {
 }
 
 const remFontSizeMapping: {
-	[cat in Category]: { [level in string]: number }
+	[cat in Category]: TypographySizes
 } = {
 	titlepiece: remTitlepieceSizes,
 	headline: remHeadlineSizes,
