@@ -19,8 +19,35 @@ import {
 	lineHeightMapping,
 	FontScaleArgs,
 } from "./data"
+import {
+	TitlepieceSizes,
+	HeadlineSizes,
+	BodySizes,
+	TextSansSizes,
+} from "./types"
 
-const titlepiece = Object.fromEntries(
+const fromEntries = <Sizes>(
+	entries: [keyof Sizes, (options?: FontScaleArgs) => string][],
+): {
+	[key in keyof Sizes]: (options?: FontScaleArgs) => string
+} =>
+	entries.reduce(
+		(
+			acc: {
+				[key in keyof Sizes]: (options?: FontScaleArgs) => string
+			},
+			[key, value],
+		) => {
+			acc[key] = value
+
+			return acc
+		},
+		{} as {
+			[key in keyof Sizes]: (options?: FontScaleArgs) => string
+		},
+	)
+
+const titlepiece = fromEntries<TitlepieceSizes>(
 	Object.entries(titlepieceAsObj).map(([key, func]) => {
 		return [
 			key,
@@ -28,7 +55,7 @@ const titlepiece = Object.fromEntries(
 		]
 	}),
 )
-const headline = Object.fromEntries(
+const headline = fromEntries<HeadlineSizes>(
 	Object.entries(headlineAsObj).map(([key, func]) => {
 		return [
 			key,
@@ -36,7 +63,7 @@ const headline = Object.fromEntries(
 		]
 	}),
 )
-const body = Object.fromEntries(
+const body = fromEntries<BodySizes>(
 	Object.entries(bodyAsObj).map(([key, func]) => {
 		return [
 			key,
@@ -44,7 +71,7 @@ const body = Object.fromEntries(
 		]
 	}),
 )
-const textSans = Object.fromEntries(
+const textSans = fromEntries<TextSansSizes>(
 	Object.entries(textSansAsObj).map(([key, func]) => {
 		return [
 			key,
