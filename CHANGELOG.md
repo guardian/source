@@ -10,6 +10,15 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 30 March 2020
+
+**`@guardian/src-foundations 0.16.1`**
+
+-   :robot: [ede1733](https://github.com/guardian/source/pull/300/commits/ede17331abb0aa8e8bf8502d0cae027465d94f55) convert typography size types to interfaces
+-   :robot: [28c654f](https://github.com/guardian/source/pull/300/commits/28c654f968e6cbdc3361185b3f729a0b81e26c9e) write shim for object.fromentries
+-   :robot: [1448d73](https://github.com/guardian/source/pull/300/commits/1448d73da46a105a86630de1e59a8e966b94c62d) move type definitions to types package
+-   :robot: [a4fb308](https://github.com/guardian/source/pull/300/commits/a4fb3086449401f8ee64114732083d91de6cf90e) extract font scale function types
+
 ## 27 March 2020
 
 **`@guardian/src-foundations 0.16.0`**
