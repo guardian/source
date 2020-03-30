@@ -1,11 +1,11 @@
 import {
-	Fs,
 	fontMapping,
 	fontSizeMapping,
 	lineHeightMapping,
 	fontWeightMapping,
 	availableFonts,
 } from "./data"
+import { Fs } from "./types"
 
 export const fs: Fs = category => (
 	level,
