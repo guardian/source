@@ -3,15 +3,13 @@ import {
 	HeadlineSizes,
 	BodySizes,
 	TextSansSizes,
-	TypographyStyles,
 	FontScaleArgs,
+	FontScaleFunction,
 } from "./types"
 import { fs } from "./fs"
 
 type TitlepieceFunctions = {
-	[key in keyof TitlepieceSizes]: (
-		options?: FontScaleArgs,
-	) => TypographyStyles
+	[key in keyof TitlepieceSizes]: FontScaleFunction
 }
 
 const titlepieceDefaults = {
@@ -32,7 +30,7 @@ export const titlepiece: TitlepieceFunctions = {
 }
 
 type HeadlineFunctions = {
-	[key in keyof HeadlineSizes]: (options?: FontScaleArgs) => TypographyStyles
+	[key in keyof HeadlineSizes]: FontScaleFunction
 }
 const headlineDefaults = {
 	lineHeight: "tight",
@@ -60,7 +58,7 @@ export const headline: HeadlineFunctions = {
 }
 
 type BodyFunctions = {
-	[key in keyof BodySizes]: (options?: FontScaleArgs) => TypographyStyles
+	[key in keyof BodySizes]: FontScaleFunction
 }
 
 const bodyDefaults = {
@@ -79,7 +77,7 @@ export const body: BodyFunctions = {
 }
 
 type TextSansFunctions = {
-	[key in keyof TextSansSizes]: (options?: FontScaleArgs) => TypographyStyles
+	[key in keyof TextSansSizes]: FontScaleFunction
 }
 
 const textSansDefaults = {

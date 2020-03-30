@@ -24,17 +24,18 @@ import {
 	BodySizes,
 	TextSansSizes,
 	FontScaleArgs,
+	FontScaleFunctionStr,
 } from "./types"
 
 const fromEntries = <Sizes>(
-	entries: [keyof Sizes, (options?: FontScaleArgs) => string][],
+	entries: [keyof Sizes, FontScaleFunctionStr][],
 ): {
-	[key in keyof Sizes]: (options?: FontScaleArgs) => string
+	[key in keyof Sizes]: FontScaleFunctionStr
 } =>
 	entries.reduce(
 		(
 			acc: {
-				[key in keyof Sizes]: (options?: FontScaleArgs) => string
+				[key in keyof Sizes]: FontScaleFunctionStr
 			},
 			[key, value],
 		) => {
@@ -43,7 +44,7 @@ const fromEntries = <Sizes>(
 			return acc
 		},
 		{} as {
-			[key in keyof Sizes]: (options?: FontScaleArgs) => string
+			[key in keyof Sizes]: FontScaleFunctionStr
 		},
 	)
 

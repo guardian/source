@@ -59,6 +59,11 @@ export type Fs = (
 	},
 ) => TypographyStyles
 
+export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles
+
+// returns styles as a template literal
+export type FontScaleFunctionStr = (options?: FontScaleArgs) => string
+
 export interface FontScaleArgs {
 	lineHeight?: LineHeight
 	fontWeight?: FontWeight
