@@ -1,4 +1,4 @@
-import { TypographyStyles } from "./data"
+import { TypographyStyles } from "./types"
 
 export const objectStylesToString = ({
 	fontFamily,

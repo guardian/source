@@ -1,9 +1,10 @@
-import { TypographyStyles, FontScaleArgs } from "./data"
 import {
 	TitlepieceSizes,
 	HeadlineSizes,
 	BodySizes,
 	TextSansSizes,
+	TypographyStyles,
+	FontScaleArgs,
 } from "./types"
 import { fs } from "./fs"
 

@@ -17,13 +17,13 @@ import {
 	fontMapping,
 	fontWeightMapping,
 	lineHeightMapping,
-	FontScaleArgs,
 } from "./data"
 import {
 	TitlepieceSizes,
 	HeadlineSizes,
 	BodySizes,
 	TextSansSizes,
+	FontScaleArgs,
 } from "./types"
 
 const fromEntries = <Sizes>(

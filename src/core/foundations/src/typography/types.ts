@@ -1,3 +1,16 @@
+export type ScaleUnit = "rem" | "px"
+export type Category = "titlepiece" | "headline" | "body" | "textSans"
+export type LineHeight = "tight" | "regular" | "loose"
+export type FontWeight = "light" | "regular" | "medium" | "bold"
+export type FontWeightDefinition = { hasItalic: boolean }
+
+export type TypographyStyles = {
+	fontFamily: string
+	fontSize: string | number
+	lineHeight: string | number
+	fontWeight?: number
+	fontStyle?: string
+}
 export type TypographySizes = {
 	[key in string]: number
 }
@@ -27,4 +40,28 @@ export interface TextSansSizes extends TypographySizes {
 	medium: number
 	large: number
 	xlarge: number
+}
+
+export type Fs = (
+	category: Category,
+) => (
+	level: string,
+	{
+		lineHeight,
+		fontWeight,
+		italic,
+		unit,
+	}: {
+		lineHeight: LineHeight
+		fontWeight: FontWeight
+		italic: boolean
+		unit: ScaleUnit
+	},
+) => TypographyStyles
+
+export interface FontScaleArgs {
+	lineHeight?: LineHeight
+	fontWeight?: FontWeight
+	italic?: boolean
+	unit?: ScaleUnit
 }

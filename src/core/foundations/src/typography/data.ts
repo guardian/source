@@ -1,49 +1,15 @@
 import { fontSizes, fonts, lineHeights, fontWeights } from "../theme"
 import {
+	Category,
+	LineHeight,
+	FontWeight,
+	FontWeightDefinition,
 	TitlepieceSizes,
 	HeadlineSizes,
 	BodySizes,
 	TextSansSizes,
 	TypographySizes,
 } from "./types"
-
-export type ScaleUnit = "rem" | "px"
-export type Category = "titlepiece" | "headline" | "body" | "textSans"
-export type LineHeight = "tight" | "regular" | "loose"
-export type FontWeight = "light" | "regular" | "medium" | "bold"
-export type FontWeightDefinition = { hasItalic: boolean }
-
-export type TypographyStyles = {
-	fontFamily: string
-	fontSize: string | number
-	lineHeight: string | number
-	fontWeight?: number
-	fontStyle?: string
-}
-
-export type Fs = (
-	category: Category,
-) => (
-	level: string,
-	{
-		lineHeight,
-		fontWeight,
-		italic,
-		unit,
-	}: {
-		lineHeight: LineHeight
-		fontWeight: FontWeight
-		italic: boolean
-		unit: ScaleUnit
-	},
-) => TypographyStyles
-
-export interface FontScaleArgs {
-	lineHeight?: LineHeight
-	fontWeight?: FontWeight
-	italic?: boolean
-	unit?: ScaleUnit
-}
 
 const titlepieceSizes: TitlepieceSizes = {
 	small: fontSizes[7], //42px
