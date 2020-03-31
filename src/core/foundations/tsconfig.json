@@ -6,6 +6,7 @@
 		"emitDeclarationOnly": true,
 		"declarationDir": ".",
 		"composite": true,
+		"strict": true,
 		"lib": ["es2019", "dom"],
 		"tsBuildInfoFile": "./tsconfig.tsbuildinfo"
 	},
