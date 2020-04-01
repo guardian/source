@@ -92,5 +92,11 @@ it("should not include italic font style if it is not available for requested fo
 		fontStyle: "italic",
 	})
 
+	const largeHeadlineStyles = headline.large({
+		fontWeight: "bold",
+		italic: true,
+	})
+
 	expect(mediumHeadlineStyles).not.toContain("font-style: italic;")
+	expect(largeHeadlineStyles).not.toContain("font-style: italic;")
 })
