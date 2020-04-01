@@ -5,11 +5,26 @@ import {
 	fontWeightMapping,
 	availableFonts,
 } from "./data"
-import { Fs } from "./types"
+import { Fs, FontWeightDefinition, FontStyle, Option } from "./types"
+
+function getFontStyle(
+	font: FontWeightDefinition | undefined,
+	fontStyle: Option<FontStyle>,
+): Option<FontStyle> {
+	switch (fontStyle) {
+		case "italic":
+			return font && font.hasItalic ? "italic" : null
+		case "normal":
+			return "normal"
+		case null:
+		default:
+			return null
+	}
+}
 
 export const fs: Fs = category => (
 	level,
-	{ lineHeight, fontWeight, italic, unit },
+	{ lineHeight, fontWeight, fontStyle, unit },
 ) => {
 	const fontFamilyValue = fontMapping[category]
 	const fontSizeValue =
@@ -25,8 +40,7 @@ export const fs: Fs = category => (
 	// font is unavailable
 	const requestedFont = availableFonts[category][fontWeight]
 	const fontWeightValue = requestedFont ? fontWeightMapping[fontWeight] : ""
-	const fontStyleValue =
-		italic && requestedFont && requestedFont.hasItalic ? "italic" : ""
+	const fontStyleValue = getFontStyle(requestedFont, fontStyle)
 
 	return Object.assign(
 		{

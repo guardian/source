@@ -2,7 +2,9 @@ export type ScaleUnit = "rem" | "px"
 export type Category = "titlepiece" | "headline" | "body" | "textSans"
 export type LineHeight = "tight" | "regular" | "loose"
 export type FontWeight = "light" | "regular" | "medium" | "bold"
+export type FontStyle = "normal" | "italic"
 export type FontWeightDefinition = { hasItalic: boolean }
+export type Option<A> = A | null
 
 export type TypographyStyles = {
 	fontFamily: string
@@ -49,12 +51,12 @@ export type Fs = (
 	{
 		lineHeight,
 		fontWeight,
-		italic,
+		fontStyle,
 		unit,
 	}: {
 		lineHeight: LineHeight
 		fontWeight: FontWeight
-		italic: boolean
+		fontStyle: Option<FontStyle>
 		unit: ScaleUnit
 	},
 ) => TypographyStyles
@@ -67,6 +69,6 @@ export type FontScaleFunctionStr = (options?: FontScaleArgs) => string
 export interface FontScaleArgs {
 	lineHeight?: LineHeight
 	fontWeight?: FontWeight
-	italic?: boolean
+	fontStyle?: FontStyle
 	unit?: ScaleUnit
 }

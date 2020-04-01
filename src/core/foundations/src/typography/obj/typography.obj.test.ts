@@ -49,7 +49,7 @@ it("should return styles containing the specified line height in px if requested
 })
 
 it("should return italic styles if specified", () => {
-	const mediumHeadlineStyles = headline.medium({ italic: true })
+	const mediumHeadlineStyles = headline.medium({ fontStyle: "italic" })
 
 	expect(mediumHeadlineStyles.fontStyle).toBe("italic")
 })
@@ -57,7 +57,7 @@ it("should return italic styles if specified", () => {
 it("should not include italic font style if it is not available for requested font", () => {
 	const mediumHeadlineStyles = headline.medium({
 		fontWeight: "bold",
-		italic: true,
+		fontStyle: "italic",
 	})
 
 	expect(mediumHeadlineStyles.fontStyle).toBeUndefined()
