@@ -70,6 +70,22 @@ it("should not return font styles if unspecified", () => {
 	expect(mediumHeadlineStyles).not.toContain("font-style")
 })
 
+it("should support the legacy italic API", () => {
+	const mediumHeadlineStyles = headline.medium({ italic: true })
+
+	expect(mediumHeadlineStyles).toContain("font-style: italic;")
+})
+
+it("should prioritise the new font style API over the deprecated one", () => {
+	const mediumHeadlineStyles = headline.medium({
+		fontStyle: "normal",
+		italic: true,
+	})
+
+	expect(mediumHeadlineStyles).toContain("font-style: normal;")
+	expect(mediumHeadlineStyles).not.toContain("font-style: italic;")
+})
+
 it("should not include italic font style if it is not available for requested font", () => {
 	const mediumHeadlineStyles = headline.medium({
 		fontWeight: "bold",

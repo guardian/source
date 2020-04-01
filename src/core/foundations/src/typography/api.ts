@@ -15,6 +15,7 @@ type TitlepieceFunctions = {
 const titlepieceDefaults = {
 	lineHeight: "tight",
 	fontWeight: "bold",
+	italic: false, // Legacy property
 	fontStyle: null,
 	unit: "rem",
 }
@@ -35,6 +36,7 @@ type HeadlineFunctions = {
 const headlineDefaults = {
 	lineHeight: "tight",
 	fontWeight: "medium",
+	italic: false, // Legacy property
 	fontStyle: null,
 	unit: "rem",
 }
@@ -64,6 +66,7 @@ type BodyFunctions = {
 const bodyDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
+	italic: false, // Legacy property
 	fontStyle: null,
 	unit: "rem",
 }
@@ -83,6 +86,7 @@ type TextSansFunctions = {
 const textSansDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
+	italic: false, // Legacy property
 	fontStyle: null,
 	unit: "rem",
 }
