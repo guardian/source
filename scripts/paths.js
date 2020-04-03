@@ -18,21 +18,38 @@ const editorialComponents = path.join(
 const isDirectory = path => statP(path).then(stats => stats.isDirectory())
 
 const getComponentPaths = () =>
-	readdirP(coreComponents)
-		.then(componentDirs =>
-			Promise.all(
-				componentDirs.map(componentDirName =>
-					isDirectory(`${coreComponents}/${componentDirName}`).then(
-						isDirectory => {
+	Promise.all([
+		readdirP(coreComponents)
+			.then(componentDirs =>
+				Promise.all(
+					componentDirs.map(componentDirName =>
+						isDirectory(
+							`${coreComponents}/${componentDirName}`,
+						).then(isDirectory => {
 							if (!isDirectory) return Promise.resolve()
 
 							return `${coreComponents}/${componentDirName}`
-						},
+						}),
 					),
 				),
-			),
-		)
-		.then(paths => Promise.resolve(paths.filter(path => !!path)))
+			)
+			.then(paths => Promise.resolve(paths.filter(path => !!path))),
+		readdirP(editorialComponents)
+			.then(componentDirs =>
+				Promise.all(
+					componentDirs.map(componentDirName =>
+						isDirectory(
+							`${editorialComponents}/${componentDirName}`,
+						).then(isDirectory => {
+							if (!isDirectory) return Promise.resolve()
+
+							return `${editorialComponents}/${componentDirName}`
+						}),
+					),
+				),
+			)
+			.then(paths => Promise.resolve(paths.filter(path => !!path))),
+	]).then(([corePaths, editorialPaths]) => [...corePaths, ...editorialPaths])
 
 module.exports.paths = {
 	root,
