@@ -12,7 +12,7 @@ const publish = dir => {
 	)
 }
 
-const { foundations, svgs, helpers, components } = paths
+const { foundations, svgs, helpers, coreComponents } = paths
 
 // heavily depended on, publish these first
 const priority0Packages = [foundations, svgs]
@@ -22,7 +22,7 @@ const priority1Packages = [helpers]
 
 // somewhat depended on
 // TODO: try to refactor!
-const priority2Packages = [`${components}/inline-error`]
+const priority2Packages = [`${coreComponents}/inline-error`]
 
 // not depended on
 const priority3Packages = getComponentPaths().then(paths =>

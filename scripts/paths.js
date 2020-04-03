@@ -9,20 +9,24 @@ const root = path.join(__dirname, "..")
 const foundations = path.join(__dirname, "../src/core/foundations")
 const svgs = path.join(__dirname, "../src/core/svgs")
 const helpers = path.join(__dirname, "../src/core/helpers")
-const components = path.join(__dirname, "../src/core/components")
+const coreComponents = path.join(__dirname, "../src/core/components")
+const editorialComponents = path.join(
+	__dirname,
+	"../src/editorial/web/components",
+)
 
 const isDirectory = path => statP(path).then(stats => stats.isDirectory())
 
 const getComponentPaths = () =>
-	readdirP(components)
+	readdirP(coreComponents)
 		.then(componentDirs =>
 			Promise.all(
 				componentDirs.map(componentDirName =>
-					isDirectory(`${components}/${componentDirName}`).then(
+					isDirectory(`${coreComponents}/${componentDirName}`).then(
 						isDirectory => {
 							if (!isDirectory) return Promise.resolve()
 
-							return `${components}/${componentDirName}`
+							return `${coreComponents}/${componentDirName}`
 						},
 					),
 				),
@@ -35,6 +39,7 @@ module.exports.paths = {
 	foundations,
 	svgs,
 	helpers,
-	components,
+	coreComponents,
+	editorialComponents,
 }
 module.exports.getComponentPaths = getComponentPaths
