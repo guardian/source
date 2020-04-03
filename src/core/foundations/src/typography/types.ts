@@ -51,6 +51,7 @@ export type Fs = (
 	{
 		lineHeight,
 		fontWeight,
+		italic,
 		fontStyle,
 		unit,
 	}: {
