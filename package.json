@@ -26,7 +26,8 @@
 	"private": true,
 	"workspaces": [
 		"src/core/*",
-		"src/core/components/*"
+		"src/core/components/*",
+		"src/editorial/web/components/*"
 	],
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
