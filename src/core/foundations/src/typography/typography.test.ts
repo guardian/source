@@ -53,16 +53,50 @@ it("should return styles containing the specified line height in px if requested
 })
 
 it("should return italic styles if specified", () => {
+	const mediumHeadlineStyles = headline.medium({ fontStyle: "italic" })
+
+	expect(mediumHeadlineStyles).toContain("font-style: italic;")
+})
+
+it("should return normal styles if specified", () => {
+	const mediumHeadlineStyles = headline.medium({ fontStyle: "normal" })
+
+	expect(mediumHeadlineStyles).toContain("font-style: normal;")
+})
+
+it("should not return font styles if unspecified", () => {
+	const mediumHeadlineStyles = headline.medium()
+
+	expect(mediumHeadlineStyles).not.toContain("font-style")
+})
+
+it("should support the legacy italic API", () => {
 	const mediumHeadlineStyles = headline.medium({ italic: true })
 
 	expect(mediumHeadlineStyles).toContain("font-style: italic;")
 })
 
+it("should prioritise the new font style API over the deprecated one", () => {
+	const mediumHeadlineStyles = headline.medium({
+		fontStyle: "normal",
+		italic: true,
+	})
+
+	expect(mediumHeadlineStyles).toContain("font-style: normal;")
+	expect(mediumHeadlineStyles).not.toContain("font-style: italic;")
+})
+
 it("should not include italic font style if it is not available for requested font", () => {
 	const mediumHeadlineStyles = headline.medium({
+		fontWeight: "bold",
+		fontStyle: "italic",
+	})
+
+	const largeHeadlineStyles = headline.large({
 		fontWeight: "bold",
 		italic: true,
 	})
 
 	expect(mediumHeadlineStyles).not.toContain("font-style: italic;")
+	expect(largeHeadlineStyles).not.toContain("font-style: italic;")
 })
