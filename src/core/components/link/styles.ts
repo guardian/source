@@ -1,9 +1,7 @@
 import { css } from "@emotion/core"
+import { size } from "@guardian/src-foundations"
 import { linkLight, LinkTheme } from "@guardian/src-foundations/themes"
-import {
-	textSans,
-	remTextSansSizes,
-} from "@guardian/src-foundations/typography"
+import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
 export const link = css`
@@ -44,8 +42,14 @@ export const icon = css`
 	svg {
 		fill: currentColor;
 		position: absolute;
-		height: ${remTextSansSizes.medium}rem;
-		width: auto;
+		/*
+			We support two SVG sizes:
+			- Square: 30x30
+			- Wide: 30x20
+			Since width is constant, we'll hard code it here and allow height to scale
+		*/
+		width: ${size.medium / 2}px;
+		height: auto;
 
 		/* magic number to align the SVG to the text baseline*/
 		bottom: 4px;
