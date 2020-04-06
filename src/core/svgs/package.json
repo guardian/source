@@ -33,6 +33,7 @@
 		"credit-card.tsx",
 		"direct-debit.tsx",
 		"external.tsx",
+		"indent.tsx",
 		"minus.tsx",
 		"plus.tsx",
 		"paypal.tsx",
