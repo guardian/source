@@ -73,6 +73,7 @@ const TextInput = ({
 					error ? errorInput(theme.textInput && theme) : "",
 					cssOverrides,
 				]}
+				aria-required={!optional}
 				{...props}
 			/>
 		</label>
