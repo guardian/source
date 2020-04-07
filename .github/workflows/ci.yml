@@ -1,8 +1,9 @@
 name: CI
 on:
     push:
-        branches:
-            - "*"
+        branches-ignore:
+            - 'master'
+            - 'gh-pages'
 jobs:
     build:
         runs-on: ubuntu-latest
