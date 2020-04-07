@@ -108,6 +108,22 @@ priorityBlue.story = {
 	},
 }
 
+export const priorityGrey = () => (
+	<ThemeProvider theme={buttonBrand}>
+		<div css={flexStart}>
+			{priorityButtons.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	</ThemeProvider>
+)
+priorityGrey.story = {
+	name: "priority grey",
+	parameters: {
+		backgrounds: [{ name: "grey", value: "lightgrey", default: true }],
+	},
+}
+
 export const priorityYellow = () => (
 	<ThemeProvider theme={buttonBrandAlt}>
 		<div css={flexStart}>
