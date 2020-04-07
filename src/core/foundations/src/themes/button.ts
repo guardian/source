@@ -16,7 +16,6 @@ export type ButtonTheme = {
 	backgroundSecondaryHover: string
 	borderSecondary?: string
 	textTertiary?: string
-	backgroundTertiary?: string
 }
 
 export const buttonDefault: { button: ButtonTheme } = {
@@ -28,7 +27,6 @@ export const buttonDefault: { button: ButtonTheme } = {
 		backgroundSecondary: background.ctaSecondary,
 		backgroundSecondaryHover: background.ctaSecondaryHover,
 		textTertiary: text.ctaSecondary,
-		backgroundTertiary: background.primary,
 	},
 }
 
@@ -41,7 +39,6 @@ export const buttonBrand: { button: ButtonTheme } = {
 		backgroundSecondary: brandBackground.ctaSecondary,
 		backgroundSecondaryHover: brandBackground.ctaSecondaryHover,
 		textTertiary: brandText.ctaSecondary,
-		backgroundTertiary: brandBackground.primary,
 	},
 }
 
@@ -54,7 +51,6 @@ export const buttonBrandAlt: { button: ButtonTheme } = {
 		backgroundSecondary: brandAltBackground.ctaSecondary,
 		backgroundSecondaryHover: brandAltBackground.ctaSecondaryHover,
 		textTertiary: brandAltText.ctaSecondary,
-		backgroundTertiary: brandAltBackground.primary,
 	},
 }
 
