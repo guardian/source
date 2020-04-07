@@ -50,7 +50,7 @@ export const tertiary = ({
 	button,
 }: { button: ButtonTheme } = buttonDefault) => css`
 	padding: 0;
-	background-color: ${button.backgroundTertiary};
+	background-color: transparent;
 	color: ${button.textTertiary};
 
 	&:hover {
