@@ -56,6 +56,10 @@ export const tertiary = ({
 	&:hover {
 		text-decoration: underline;
 	}
+
+	/* Why is this zero? Because the default is to have rounded corners but here, when
+	   there is only text, it is more natural to show a rectangle for the focus halo */
+	border-radius: 0;
 `
 
 export const defaultSize = css`
