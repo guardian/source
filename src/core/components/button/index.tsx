@@ -12,6 +12,7 @@ import {
 	primary,
 	secondary,
 	tertiary,
+	subdued,
 	defaultSize,
 	smallSize,
 	iconDefault,
@@ -31,7 +32,7 @@ export {
 } from "@guardian/src-foundations/themes"
 export { buttonReaderRevenue, buttonReaderRevenueAlt } from "./themes"
 
-export type Priority = "primary" | "secondary" | "tertiary"
+export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
 type LinkButtonPriority = Extract<"primary" | "secondary", Priority>
@@ -42,6 +43,7 @@ const priorities: {
 	primary,
 	secondary,
 	tertiary,
+	subdued,
 }
 
 const iconSides: {
