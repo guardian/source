@@ -25,7 +25,7 @@ const priorityButtons = [
 	>
 		Secondary
 	</Button>,
-	<Button priority="tertiary">Tertiary</Button>,
+	<Button priority="subdued">Subdued</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,

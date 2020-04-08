@@ -63,7 +63,7 @@ Whether to show the arrow icon in this button
 
 ### `priority`
 
-**`"primary" | "secondary" | "tertiary"`** _= "primary"_
+**`"primary" | "secondary" | "subdued"`** _= "primary"_
 
 Informs users of how important an action is
 
