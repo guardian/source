@@ -4,46 +4,46 @@ import { ButtonTheme } from "@guardian/src-foundations/themes"
 const text = {
 	readerRevenue: {
 		ctaPrimary: brand[400],
+		ctaSecondary: brand[400],
+	},
+	readerRevenueBrand: {
+		ctaPrimary: brand[400],
 		ctaSecondary: brandAlt[400],
 	},
-	readerRevenueAlt: {
+	readerRevenueBrandAlt: {
 		ctaPrimary: neutral[100],
 		ctaSecondary: neutral[7],
-	},
-	readerRevenueLight: {
-		ctaPrimary: brand[400],
-		ctaSecondary: brand[400],
 	},
 }
 const background = {
 	readerRevenue: {
 		ctaPrimary: brandAlt[400],
 		ctaPrimaryHover: "#FFD213",
+		ctaSecondary: neutral[100],
+		ctaSecondaryHover: "#E5E5E5",
+	},
+	readerRevenueBrand: {
+		ctaPrimary: brandAlt[400],
+		ctaPrimaryHover: "#FFD213",
 		ctaSecondary: brand[400],
 		ctaSecondaryHover: "#234B8A",
 	},
-	readerRevenueAlt: {
+	readerRevenueBrandAlt: {
 		ctaPrimary: neutral[7],
 		ctaPrimaryHover: "#454545",
 		ctaSecondary: brandAlt[400],
 		ctaSecondaryHover: brandAlt[200],
 	},
-	readerRevenueLight: {
-		ctaPrimary: brandAlt[400],
-		ctaPrimaryHover: "#FFD213",
-		ctaSecondary: neutral[100],
-		ctaSecondaryHover: "#E5E5E5",
-	},
 }
 const border = {
 	readerRevenue: {
+		ctaSecondary: brand[400],
+	},
+	readerRevenueBrand: {
 		ctaSecondary: brandAlt[400],
 	},
-	readerRevenueAlt: {
+	readerRevenueBrandAlt: {
 		ctaSecondary: neutral[7],
-	},
-	readerRevenueLight: {
-		ctaSecondary: brand[400],
 	},
 }
 
@@ -58,28 +58,29 @@ export const buttonReaderRevenue: { button: ButtonTheme } = {
 		borderSecondary: border.readerRevenue.ctaSecondary,
 	},
 }
-
-export const buttonReaderRevenueAlt: { button: ButtonTheme } = {
+export const buttonReaderRevenueBrand: { button: ButtonTheme } = {
 	button: {
-		textPrimary: text.readerRevenueAlt.ctaPrimary,
-		backgroundPrimary: background.readerRevenueAlt.ctaPrimary,
-		backgroundPrimaryHover: background.readerRevenueAlt.ctaPrimaryHover,
-		textSecondary: text.readerRevenueAlt.ctaSecondary,
-		backgroundSecondary: background.readerRevenueAlt.ctaSecondary,
-		backgroundSecondaryHover: background.readerRevenueAlt.ctaSecondaryHover,
-		borderSecondary: border.readerRevenueAlt.ctaSecondary,
+		textPrimary: text.readerRevenueBrand.ctaPrimary,
+		backgroundPrimary: background.readerRevenueBrand.ctaPrimary,
+		backgroundPrimaryHover: background.readerRevenueBrand.ctaPrimaryHover,
+		textSecondary: text.readerRevenueBrand.ctaSecondary,
+		backgroundSecondary: background.readerRevenueBrand.ctaSecondary,
+		backgroundSecondaryHover:
+			background.readerRevenueBrand.ctaSecondaryHover,
+		borderSecondary: border.readerRevenueBrand.ctaSecondary,
 	},
 }
 
-export const buttonReaderRevenueLight: { button: ButtonTheme } = {
+export const buttonReaderRevenueBrandAlt: { button: ButtonTheme } = {
 	button: {
-		textPrimary: text.readerRevenueLight.ctaPrimary,
-		backgroundPrimary: background.readerRevenueLight.ctaPrimary,
-		backgroundPrimaryHover: background.readerRevenueLight.ctaPrimaryHover,
-		textSecondary: text.readerRevenueLight.ctaSecondary,
-		backgroundSecondary: background.readerRevenueLight.ctaSecondary,
+		textPrimary: text.readerRevenueBrandAlt.ctaPrimary,
+		backgroundPrimary: background.readerRevenueBrandAlt.ctaPrimary,
+		backgroundPrimaryHover:
+			background.readerRevenueBrandAlt.ctaPrimaryHover,
+		textSecondary: text.readerRevenueBrandAlt.ctaSecondary,
+		backgroundSecondary: background.readerRevenueBrandAlt.ctaSecondary,
 		backgroundSecondaryHover:
-			background.readerRevenueLight.ctaSecondaryHover,
-		borderSecondary: border.readerRevenueLight.ctaSecondary,
+			background.readerRevenueBrandAlt.ctaSecondaryHover,
+		borderSecondary: border.readerRevenueBrandAlt.ctaSecondary,
 	},
 }

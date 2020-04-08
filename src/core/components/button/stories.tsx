@@ -10,8 +10,8 @@ import {
 	buttonBrandAlt,
 	buttonBrand,
 	buttonReaderRevenue,
-	buttonReaderRevenueAlt,
-	buttonReaderRevenueLight,
+	buttonReaderRevenueBrand,
+	buttonReaderRevenueBrandAlt,
 } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
@@ -143,8 +143,26 @@ priorityYellow.story = {
 	},
 }
 
-export const priorityReaderRevenueBlue = () => (
+export const priorityReaderRevenueLight = () => (
 	<ThemeProvider theme={buttonReaderRevenue}>
+		<div css={flexStart}>
+			{priorityButtons.slice(0, 2).map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	</ThemeProvider>
+)
+priorityReaderRevenueLight.story = {
+	name: "priority reader revenue light",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
+export const priorityReaderRevenueBlue = () => (
+	<ThemeProvider theme={buttonReaderRevenueBrand}>
 		<div css={flexStart}>
 			{priorityButtons.slice(0, 2).map((button, index) => (
 				<div key={index}>{button}</div>
@@ -162,7 +180,7 @@ priorityReaderRevenueBlue.story = {
 }
 
 export const priorityReaderRevenueYellow = () => (
-	<ThemeProvider theme={buttonReaderRevenueAlt}>
+	<ThemeProvider theme={buttonReaderRevenueBrandAlt}>
 		<div css={flexStart}>
 			{priorityButtons.slice(0, 2).map((button, index) => (
 				<div key={index}>{button}</div>
@@ -175,24 +193,6 @@ priorityReaderRevenueYellow.story = {
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.brandAlt),
-		],
-	},
-}
-
-export const priorityReaderRevenueLight = () => (
-	<ThemeProvider theme={buttonReaderRevenueLight}>
-		<div css={flexStart}>
-			{priorityButtons.slice(0, 2).map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
-	</ThemeProvider>
-)
-priorityReaderRevenueLight.story = {
-	name: "priority reader revenue light",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
 		],
 	},
 }
