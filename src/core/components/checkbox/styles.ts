@@ -111,11 +111,15 @@ export const tick = ({
 	@supports (appearance: none) {
 		/* overall positional properties */
 		position: absolute;
-		top: 13px;
-		left: 17px;
 		width: 6px;
 		height: 12px;
 		transform: rotate(45deg);
+		/*
+			these properties are very sensitive and are overridden
+			if the checkbox has a label or supporting text
+		*/
+		top: 14px;
+		left: 9px;
 
 		/* the checkmark ✓ */
 		&:after,
