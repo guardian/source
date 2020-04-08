@@ -32,8 +32,8 @@ export {
 } from "@guardian/src-foundations/themes"
 export {
 	buttonReaderRevenue,
-	buttonReaderRevenueAlt,
-	buttonReaderRevenueLight,
+	buttonReaderRevenueBrand,
+	buttonReaderRevenueBrandAlt,
 } from "./themes"
 
 export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
