@@ -3,34 +3,26 @@ import { ButtonTheme } from "@guardian/src-foundations/themes"
 
 const text = {
 	readerRevenue: {
-		primary: neutral[100],
-		secondary: neutral[60],
 		ctaPrimary: brand[400],
 		ctaSecondary: brandAlt[400],
 	},
 	readerRevenueAlt: {
-		primary: neutral[7],
-		secondary: neutral[60],
 		ctaPrimary: neutral[100],
 		ctaSecondary: neutral[7],
 	},
 	readerRevenueLight: {
-		primary: brand[400],
-		secondary: brand[400],
 		ctaPrimary: brand[400],
 		ctaSecondary: brand[400],
 	},
 }
 const background = {
 	readerRevenue: {
-		primary: brand[400],
 		ctaPrimary: brandAlt[400],
 		ctaPrimaryHover: "#FFD213",
 		ctaSecondary: brand[400],
 		ctaSecondaryHover: "#234B8A",
 	},
 	readerRevenueAlt: {
-		primary: brandAlt[400],
 		ctaPrimary: neutral[7],
 		ctaPrimaryHover: "#454545",
 		ctaSecondary: brandAlt[400],
