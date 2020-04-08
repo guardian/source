@@ -14,12 +14,18 @@ const text = {
 		ctaPrimary: neutral[100],
 		ctaSecondary: neutral[7],
 	},
+	readerRevenueLight: {
+		primary: brand[400],
+		secondary: brand[400],
+		ctaPrimary: brand[400],
+		ctaSecondary: brand[400],
+	},
 }
 const background = {
 	readerRevenue: {
 		primary: brand[400],
 		ctaPrimary: brandAlt[400],
-		ctaPrimaryHover: brandAlt[200],
+		ctaPrimaryHover: "#FFD213",
 		ctaSecondary: brand[400],
 		ctaSecondaryHover: "#234B8A",
 	},
@@ -30,6 +36,12 @@ const background = {
 		ctaSecondary: brandAlt[400],
 		ctaSecondaryHover: brandAlt[200],
 	},
+	readerRevenueLight: {
+		ctaPrimary: brandAlt[400],
+		ctaPrimaryHover: "#FFD213",
+		ctaSecondary: neutral[100],
+		ctaSecondaryHover: "#E5E5E5",
+	},
 }
 const border = {
 	readerRevenue: {
@@ -37,6 +49,9 @@ const border = {
 	},
 	readerRevenueAlt: {
 		ctaSecondary: neutral[7],
+	},
+	readerRevenueLight: {
+		ctaSecondary: brand[400],
 	},
 }
 
@@ -61,5 +76,18 @@ export const buttonReaderRevenueAlt: { button: ButtonTheme } = {
 		backgroundSecondary: background.readerRevenueAlt.ctaSecondary,
 		backgroundSecondaryHover: background.readerRevenueAlt.ctaSecondaryHover,
 		borderSecondary: border.readerRevenueAlt.ctaSecondary,
+	},
+}
+
+export const buttonReaderRevenueLight: { button: ButtonTheme } = {
+	button: {
+		textPrimary: text.readerRevenueLight.ctaPrimary,
+		backgroundPrimary: background.readerRevenueLight.ctaPrimary,
+		backgroundPrimaryHover: background.readerRevenueLight.ctaPrimaryHover,
+		textSecondary: text.readerRevenueLight.ctaSecondary,
+		backgroundSecondary: background.readerRevenueLight.ctaSecondary,
+		backgroundSecondaryHover:
+			background.readerRevenueLight.ctaSecondaryHover,
+		borderSecondary: border.readerRevenueLight.ctaSecondary,
 	},
 }

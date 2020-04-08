@@ -30,7 +30,11 @@ export {
 	buttonBrand,
 	buttonBrandAlt,
 } from "@guardian/src-foundations/themes"
-export { buttonReaderRevenue, buttonReaderRevenueAlt } from "./themes"
+export {
+	buttonReaderRevenue,
+	buttonReaderRevenueAlt,
+	buttonReaderRevenueLight,
+} from "./themes"
 
 export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
 type IconSide = "left" | "right"
