@@ -11,6 +11,7 @@ import {
 	buttonBrand,
 	buttonReaderRevenue,
 	buttonReaderRevenueAlt,
+	buttonReaderRevenueLight,
 } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
@@ -174,6 +175,24 @@ priorityReaderRevenueYellow.story = {
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.brandAlt),
+		],
+	},
+}
+
+export const priorityReaderRevenueLight = () => (
+	<ThemeProvider theme={buttonReaderRevenueLight}>
+		<div css={flexStart}>
+			{priorityButtons.slice(0, 2).map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	</ThemeProvider>
+)
+priorityReaderRevenueLight.story = {
+	name: "priority reader revenue light",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
 		],
 	},
 }
