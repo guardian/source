@@ -2,11 +2,12 @@ import { css } from "@emotion/core"
 import { border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
 import { space } from "@guardian/src-foundations"
+import { background } from "@guardian/src-foundations/palette"
 
 export const accordion = css`
 	border-top: 1px solid ${border.primary};
 	border-bottom: 1px solid ${border.primary};
-	padding: ${space[2]}px 0 ${space[4]}px;
+	padding: ${space[2]}px 0 ${space[4]}px ${space[2]}px;
 
 	button {
 		background: none;
@@ -72,4 +73,11 @@ export const hideAccordionElement = css`
 		transition: opacity 400ms;
 		margin: 0;
 	}
+`
+export const grey = css`
+	background-color: #f6f6f6;
+`
+
+export const white = css`
+	background-color: ${background.primary};
 `

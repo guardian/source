@@ -8,7 +8,10 @@ export default {
 
 const defaultLight = () => (
 	<>
-		<Accordion label="Collecting from multiple newsagents">
+		<Accordion
+			label="Collecting from multiple newsagents"
+			backgroundColour="grey"
+		>
 			<AccordionRow>
 				Present your card to a newsagent each time you collect the
 				paper. The newsagent will scan your card and will be reimbursed

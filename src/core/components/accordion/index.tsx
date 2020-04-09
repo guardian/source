@@ -7,20 +7,32 @@ import {
 	accordionToggle,
 	showAccordionElement,
 	hideAccordionElement,
+	grey,
+	white,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle, SvgChevronUpSingle } from "@guardian/src-svgs"
+
+type Colours = "grey" | "white"
+
+const backgroundColours = {
+	grey: grey,
+	white: white,
+}
 
 interface AccordionProps extends Props {
 	label: string
 	children: ReactNode
 }
 
-const Accordion = ({ children, label }: AccordionProps) => {
+const Accordion = ({ children, label, backgroundColour }: AccordionProps) => {
 	const [accordionOpen, toggleAccordion] = useState(false)
 
 	return (
-		<div css={accordion} aria-label="tablist">
+		<div
+			css={[accordion, backgroundColours[backgroundColour]]}
+			aria-label="tablist"
+		>
 			<div css={titleRow}>
 				<strong css={labelText}>{label}</strong>
 				<button
