@@ -7,9 +7,10 @@
 		"build": "yarn clean && rollup --config",
 		"clean": "rm -rf dist",
 		"prepublish": "yarn build",
-		"publish:public": "yarn publish --access public",
-		"verbump:minor": "yarn version --minor --no-git-tag-version",
-		"verbump:patch": "yarn version --patch --no-git-tag-version"
+		"publish:public": "echo 'src-accordion is not publishable'",
+		"verbump:minor": "echo 'src-accordion is not upgradeable'",
+		"verbump:patch": "echo 'src-accordion is not upgradeable'",
+		"verbump:prerelease": "echo 'src-accordion is not upgradeable'"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
