@@ -7,6 +7,16 @@ export const accordion = css`
 	border-top: 1px solid ${border.primary};
 	border-bottom: 1px solid ${border.primary};
 	padding: ${space[2]}px 0 ${space[4]}px;
+
+	button {
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+	}
 `
 
 export const labelText = css`

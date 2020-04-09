@@ -20,10 +20,14 @@ const Accordion = ({ children, label }: AccordionProps) => {
 	const [accordionOpen, toggleAccordion] = useState(false)
 
 	return (
-		<div css={accordion}>
+		<div css={accordion} aria-label="tablist">
 			<div css={titleRow}>
 				<strong css={labelText}>{label}</strong>
-				<div css={accordionToggle}>
+				<button
+					aria-controls="accordionBody"
+					aria-expanded={accordionOpen.toString()}
+					css={accordionToggle}
+				>
 					<div
 						css={
 							accordionOpen
@@ -62,9 +66,11 @@ const Accordion = ({ children, label }: AccordionProps) => {
 					>
 						<SvgChevronDownSingle />
 					</div>
-				</div>
+				</button>
 			</div>
 			<div
+				id="accordionBody"
+				aria-expanded={accordionOpen.toString()}
 				css={
 					accordionOpen ? showAccordionElement : hideAccordionElement
 				}
