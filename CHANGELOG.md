@@ -10,6 +10,48 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 9 April 2020
+
+**`@guardian/src-foundations 0.17.0`**
+
+-   :robot: [c0fdec7](https://github.com/guardian/source/pull/301/commits/c0fdec7f11380954888d0a911e8b3d3c9c338d49) Make foundations use "strict" tsc compiler flag
+-   :sparkles: [b36ba75](https://github.com/guardian/source/commit/b36ba75d1c8b7d3ee7010f00411ac11354d905ef) New API for font-style, explicit "normal" and "italic"
+-   :robot: [f51a0f2](https://github.com/guardian/source/pull/313/commits/f51a0f2769fe342418373d2502a65b4fafeef76d) Remove unused backgroundTertiary property
+-   :sparkles: [ebacc5c](https://github.com/guardian/source/pull/315/commits/ebacc5caa6375c46c829a03eccc32cec8a215106) add subdued text colour to button themes
+
+**`@guardian/src-svgs 0.17.0`**
+
+-   :sparkles: [7c8af0a](https://github.com/guardian/source/pull/309/commits/7c8af0a9988c2b1fd77f8dd6fa785d84da34803e) Add indent icon
+-   :sparkles: [508d6e3](https://github.com/guardian/source/pull/319/commits/508d6e3bc38282d11548a802d8eee3372a8d8aa7) add chevron icons
+
+**`@guardian/src-button 0.17.0`**
+
+-   :bug: [e1fa9fb](https://github.com/guardian/source/pull/313/commits/e1fa9fbae70664225b4d5b14a9f421e519094c63) Use transparent backgrounds for tertiary buttons
+-   :bug: [a5ae0b6](https://github.com/guardian/source/pull/313/commits/a5ae0b67fbff085807909c3dda2abda6d2d4161b) Use square corners for tertiary buttons
+-   :sparkles: [eb597a2](https://github.com/guardian/source/pull/315/commits/eb597a23e7e403ecc29687c15d0e0978491497fe) re-export tertiary button as subdued
+-   :nail_care: [60adf00](https://github.com/guardian/source/pull/317/commits/60adf004af0a0d726d24923abfa2eab6a2e04092) update primary brand rr button bg hover colour
+-   :sparkles: [7495063](https://github.com/guardian/source/pull/317/commits/7495063452cb928209c2ef43ac3999cb93af3c68) add reader revenue light theme
+-   :robot: [f3f0e4d](https://github.com/guardian/source/pull/318/commits/f3f0e4d8f079a4d3ac3fcd13d495f1b35d295b5b) delete unused colours
+-   :robot: [224d69d](https://github.com/guardian/source/pull/318/commits/224d69d6313f63c38827396ed4c8a1f139cf038d) rename reader revenue themes
+
+**`@guardian/src-checkbox 0.17.0`**
+
+-   :bug: [157519](https://github.com/guardian/source/pull/314/commits/0157519191dfe1d28f54df24a2e400d5b80ca57b) update positional properties for unlabelled checkbox tick
+
+**`@guardian/src-link 0.17.0`**
+
+-   :robot: [05fc7ff](https://github.com/guardian/source/pull/308/commits/05fc7ff0dd01ff08a78f8518a52eaf0486539846) hardcode icon width, allow height to scale
+
+**`@guardian/src-text-input 0.17.0`**
+
+-   :globe_with_meridians: [ffa782e](https://github.com/guardian/source/pull/310/commits/ffa782ef4039cb51386749685be4fe4a17789e4a) add aria-required attribute based on optional prop
+
+**`@guardian/src-ed-lines 0.17.0`**
+
+-   :sparkles: [43168d0](https://github.com/guardian/source/pull/302/commits/43168d0d6df5ba5516a2152462602ed5aee7c480) add editorial lines component
+-   :robot: [38b9242](https://github.com/guardian/source/commit/38b9242b9c921ac9f5c4ed87d2e7105d2731fe2f) externalise foundations palette
+-   :robot: [8840314](https://github.com/guardian/source/commit/8840314448778c4e2c694efb6bcf6dda8a8d4b69) remove unused dependency
+
 ## 30 March 2020
 
 **`@guardian/src-foundations 0.16.1`**
