@@ -8,6 +8,7 @@
 		"clean": "rm -rf dist",
 		"prepublish": "yarn build",
 		"publish:public": "echo 'src-accordion is not publishable'",
+		"verbump:minor": "echo 'src-accordion is not upgradeable'",
 		"verbump:preminor": "echo 'src-accordion is not upgradeable'",
 		"verbump:patch": "echo 'src-accordion is not upgradeable'",
 		"verbump:prerelease": "echo 'src-accordion is not upgradeable'"
