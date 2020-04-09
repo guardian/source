@@ -38,7 +38,7 @@ const Accordion = ({ children, label, backgroundColour }: AccordionProps) => {
 				<strong css={labelText}>{label}</strong>
 				<button
 					aria-controls="accordionBody"
-					aria-expanded={accordionOpen.toString()}
+					aria-expanded={accordionOpen ? "true" : "false"}
 					css={accordionToggle}
 				>
 					<div
@@ -83,7 +83,7 @@ const Accordion = ({ children, label, backgroundColour }: AccordionProps) => {
 			</div>
 			<div
 				id="accordionBody"
-				aria-expanded={accordionOpen.toString()}
+				aria-expanded={accordionOpen ? "true" : "false"}
 				css={
 					accordionOpen ? showAccordionElement : hideAccordionElement
 				}
