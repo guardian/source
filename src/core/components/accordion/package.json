@@ -18,7 +18,7 @@
 		"@babel/preset-react": "^7.8.0",
 		"@babel/preset-typescript": "^7.8.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
-		"@guardian/src-foundations": "^0.17.0",
+		"@guardian/src-foundations": "^0.17.0-rc.0",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.2",
@@ -31,10 +31,10 @@
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
-		"@guardian/src-foundations": "^0.17.0",
+		"@guardian/src-foundations": "^0.17.0-rc.0",
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-helpers": "^0.17.0"
+		"@guardian/src-helpers": "^0.17.0-rc.0"
 	}
 }
