@@ -1,6 +1,6 @@
 {
 	"name": "source",
-	"version": "0.17.0",
+	"version": "0.17.0-rc.0",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook",
 		"lint:styles": "stylelint src/core/**/styles.ts",
