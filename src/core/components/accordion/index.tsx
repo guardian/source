@@ -23,7 +23,7 @@ const backgroundColours = {
 interface AccordionProps extends Props {
 	label: string
 	children: ReactNode
-	bacgroundColour: Colours
+	backgroundColour: Colours
 }
 
 const Accordion = ({ children, label, backgroundColour }: AccordionProps) => {
