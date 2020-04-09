@@ -2,7 +2,7 @@ const execa = require("execa")
 const { paths, getComponentPaths } = require("./paths")
 
 const verbump = dir => {
-	return execa("yarn", ["--cwd", `${dir}`, "run", "verbump:minor"], {
+	return execa("yarn", ["--cwd", `${dir}`, "run", "verbump:preminor"], {
 		stdio: "inherit",
 	})
 }

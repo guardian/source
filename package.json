@@ -18,10 +18,10 @@
 		"build:all": "node ./scripts/build-all",
 		"ci:build": "NODE_ENV=production yarn build:all && yarn build:storybook",
 		"publish:release": "node ./scripts/publish-release",
-		"verbump:minor": "yarn version --minor --no-git-tag-version",
+		"verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
 		"verbump:patch": "yarn version --patch --no-git-tag-version",
 		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
-		"verbump:minor:all": "node ./scripts/verbump-minor-all",
+		"verbump:preminor:all": "node ./scripts/verbump-preminor-all",
 		"verbump:patch:all": "node ./scripts/verbump-patch-all",
 		"verbump:prerelease:all": "node ./scripts/verbump-prerelease-all"
 	},
