@@ -2,7 +2,7 @@ import { css } from "@emotion/core"
 import { border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
 import { space } from "@guardian/src-foundations"
-import { background } from "@guardian/src-foundations/palette"
+import { background, neutral } from "@guardian/src-foundations/palette"
 
 export const accordion = css`
 	border-top: 1px solid ${border.primary};
@@ -75,7 +75,7 @@ export const hideAccordionElement = css`
 	}
 `
 export const grey = css`
-	background-color: #f6f6f6;
+	background-color: ${neutral["97"]};
 `
 
 export const white = css`
