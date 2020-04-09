@@ -15,7 +15,8 @@
 		"prepublishOnly": "yarn build",
 		"postpublish": "yarn clean",
 		"verbump:minor": "yarn version --minor --no-git-tag-version",
-		"verbump:patch": "yarn version --patch --no-git-tag-version"
+		"verbump:patch": "yarn version --patch --no-git-tag-version",
+		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
 	},
 	"files": [
 		"mq/**",
