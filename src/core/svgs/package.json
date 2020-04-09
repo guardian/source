@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-svgs",
-	"version": "0.17.0-rc.0",
+	"version": "0.17.0",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
 	"scripts": {
