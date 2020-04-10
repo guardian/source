@@ -2,13 +2,16 @@ import { css } from "@emotion/core"
 import { border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
 import { space } from "@guardian/src-foundations"
-import { background, neutral } from "@guardian/src-foundations/palette"
+import { neutral } from "@guardian/src-foundations/palette"
 
 export const accordion = css`
 	border-top: 1px solid ${border.primary};
 	border-bottom: 1px solid ${border.primary};
 	padding: ${space[2]}px 0 ${space[4]}px ${space[2]}px;
+	background-color: ${neutral["97"]};
+`
 
+export const normalise = css`
 	button {
 		background: none;
 		color: inherit;
@@ -18,13 +21,18 @@ export const accordion = css`
 		cursor: pointer;
 		outline: inherit;
 	}
+
+	h3 {
+		margin: 0;
+	}
 `
 
 export const labelText = css`
-	${headline.xxxsmall()};
+	${headline.xxxsmall({ fontWeight: "bold" })};
 `
 
 export const titleRow = css`
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: ${space[3]}px;
@@ -35,17 +43,24 @@ export const accordionRow = css`
 	margin-bottom: ${space[3]}px;
 `
 
-export const accordionToggle = css`
-	display: inline-flex;
-	align-items: middle;
-
+export const showHide = css`
 	div {
-		${textSans.small({ fontWeight: "bold" })};
+		display: flex;
 	}
-	div svg {
-		height: 15px;
-		width: 15px;
-		margin-top: 4px;
+`
+
+export const showHideText = css`
+	${textSans.small({ fontWeight: "bold" })};
+	margin-right: ${space[2]}px;
+`
+
+export const svgContainer = css`
+	height: 15px;
+	width: 15px;
+	margin-top: 4px;
+	svg {
+		height: 100%;
+		width: 100%;
 	}
 `
 
@@ -73,11 +88,4 @@ export const hideAccordionElement = css`
 		transition: opacity 400ms;
 		margin: 0;
 	}
-`
-export const grey = css`
-	background-color: ${neutral["97"]};
-`
-
-export const white = css`
-	background-color: ${background.primary};
 `

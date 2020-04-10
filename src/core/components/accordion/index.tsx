@@ -1,46 +1,40 @@
 import React, { useState, ReactNode } from "react"
 import {
 	accordion,
+	normalise,
 	labelText,
 	titleRow,
 	accordionRow,
-	accordionToggle,
+	showHide,
+	showHideText,
+	svgContainer,
 	showAccordionElement,
 	hideAccordionElement,
-	grey,
-	white,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle, SvgChevronUpSingle } from "@guardian/src-svgs"
 
-type Colours = "grey" | "white"
-
-const backgroundColours = {
-	grey: grey,
-	white: white,
-}
-
 interface AccordionProps extends Props {
 	label: string
 	children: ReactNode
-	backgroundColour: Colours
+	id: string
 }
 
-const Accordion = ({ children, label, backgroundColour }: AccordionProps) => {
+const Accordion = ({ children, label, id }: AccordionProps) => {
 	const [accordionOpen, toggleAccordion] = useState(false)
+	const toggleToClosed = () => toggleAccordion(false)
+	const toggleToOpen = () => toggleAccordion(true)
 
 	return (
-		<div
-			css={[accordion, backgroundColours[backgroundColour]]}
-			aria-label="tablist"
-		>
-			<div css={titleRow}>
-				<strong css={labelText}>{label}</strong>
-				<button
-					aria-controls="accordionBody"
-					aria-expanded={accordionOpen}
-					css={accordionToggle}
-				>
+		<div css={[accordion, normalise]}>
+			<button
+				aria-expanded={accordionOpen}
+				onClick={accordionOpen ? toggleToClosed : toggleToOpen}
+				aria-controls="accordionBody"
+				css={titleRow}
+			>
+				<h3 css={labelText}>{label}</h3>
+				<div css={showHide}>
 					<div
 						css={
 							accordionOpen
@@ -49,26 +43,10 @@ const Accordion = ({ children, label, backgroundColour }: AccordionProps) => {
 						}
 						onClick={() => toggleAccordion(false)}
 					>
-						Hide
-					</div>
-					<div
-						css={
-							accordionOpen
-								? showAccordionElement
-								: hideAccordionElement
-						}
-					>
-						<SvgChevronUpSingle />
-					</div>
-					<div
-						css={
-							accordionOpen
-								? hideAccordionElement
-								: showAccordionElement
-						}
-						onClick={() => toggleAccordion(true)}
-					>
-						Show
+						<div css={showHideText}>Hide</div>
+						<div css={svgContainer}>
+							<SvgChevronUpSingle />
+						</div>
 					</div>
 					<div
 						css={
@@ -77,12 +55,15 @@ const Accordion = ({ children, label, backgroundColour }: AccordionProps) => {
 								: showAccordionElement
 						}
 					>
-						<SvgChevronDownSingle />
+						<div css={showHideText}>Show</div>
+						<div css={svgContainer}>
+							<SvgChevronDownSingle />
+						</div>
 					</div>
-				</button>
-			</div>
+				</div>
+			</button>
 			<div
-				id="accordionBody"
+				id={id}
 				aria-expanded={accordionOpen}
 				css={
 					accordionOpen ? showAccordionElement : hideAccordionElement
