@@ -26,6 +26,7 @@ import {
 	SvgMinus,
 	SvgPayPal,
 	SvgPlus,
+	SvgGuardianRoundel,
 } from "./index"
 
 const whiteColor = css`
@@ -68,6 +69,7 @@ export const SmallIcons = () => (
 			<SvgMinus />
 			<SvgPlus />
 			<SvgIndent />
+			<SvgGuardianRoundel />
 		</Small>
 	</ThemeProvider>
 )
@@ -101,6 +103,7 @@ export const DefaultIcons = () => (
 			<SvgMinus />
 			<SvgPlus />
 			<SvgIndent />
+			<SvgGuardianRoundel />
 		</Default>
 	</ThemeProvider>
 )
