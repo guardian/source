@@ -2,13 +2,12 @@ import { css } from "@emotion/core"
 import { border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
 import { space } from "@guardian/src-foundations"
-import { neutral } from "@guardian/src-foundations/palette"
 
 export const accordion = css`
 	border-top: 1px solid ${border.primary};
 	border-bottom: 1px solid ${border.primary};
 	padding: ${space[2]}px 0 ${space[4]}px ${space[2]}px;
-	background-color: ${neutral["97"]};
+	background-color: transparent;
 `
 
 export const normalise = css`
@@ -23,12 +22,15 @@ export const normalise = css`
 	}
 
 	h3 {
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: left;
 	}
 `
 
 export const labelText = css`
 	${headline.xxxsmall({ fontWeight: "bold" })};
+	margin-right: ${space[4]}px;
 `
 
 export const titleRow = css`
@@ -36,6 +38,7 @@ export const titleRow = css`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: ${space[3]}px;
+	align-items: baseline;
 `
 
 export const accordionRow = css`
@@ -55,11 +58,10 @@ export const showHideText = css`
 `
 
 export const svgContainer = css`
-	height: 15px;
+	height: 22px;
 	width: 15px;
-	margin-top: 4px;
 	svg {
-		height: 100%;
+		height: auto;
 		width: 100%;
 	}
 `
