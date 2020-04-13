@@ -41,7 +41,6 @@ const Accordion = ({ children, label, id }: AccordionProps) => {
 								? showAccordionElement
 								: hideAccordionElement
 						}
-						onClick={() => toggleAccordion(false)}
 					>
 						<div css={showHideText}>Hide</div>
 						<div css={svgContainer}>
