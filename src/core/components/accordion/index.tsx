@@ -64,6 +64,7 @@ const Accordion = ({ children, label, id }: AccordionProps) => {
 			<div
 				id={id}
 				aria-expanded={accordionOpen}
+				aria-hidden={!accordionOpen}
 				css={
 					accordionOpen ? showAccordionElement : hideAccordionElement
 				}
