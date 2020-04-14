@@ -18,10 +18,10 @@ interface AccordionProps extends Props {
 	children: ReactNode
 }
 
-const Accordion = ({ children }: AccordionRowProps) => {
+const Accordion = ({ children }: AccordionProps) => {
 	return (
 		<div css={accordion}>
-			{children.map((childElement, childIndex) => {
+			{children.map((childElement: ReactNode, childIndex: number) => {
 				return React.cloneElement(
 					childElement,
 					Object.assign(
