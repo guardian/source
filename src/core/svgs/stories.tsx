@@ -2,10 +2,9 @@ import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 
+import { size } from "@guardian/src-foundations"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { brand } from "@guardian/src-foundations/themes"
-
-import { iconDefault, iconSmall } from "../components/button/styles"
 
 import {
 	SvgAlert,
@@ -32,6 +31,28 @@ const whiteColor = css`
 	color: white;
 	svg {
 		fill: white;
+	}
+`
+
+const iconDefault = css`
+	svg {
+		flex: 0 0 auto;
+		display: block;
+		fill: currentColor;
+		position: relative;
+		width: ${size.large / 2}px;
+		height: auto;
+	}
+`
+
+const iconSmall = css`
+	svg {
+		flex: 0 0 auto;
+		display: block;
+		fill: currentColor;
+		position: relative;
+		width: ${size.medium / 2}px;
+		height: auto;
 	}
 `
 
