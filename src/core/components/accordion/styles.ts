@@ -10,26 +10,16 @@ export const accordion = css`
 	background-color: transparent;
 `
 
-export const normalise = css`
-	button {
-		background: none;
-		color: inherit;
-		border: none;
-		padding: 0;
-		font: inherit;
-		cursor: pointer;
-		outline: inherit;
-	}
-
-	h3 {
-		margin-top: 0;
-		margin-bottom: 0;
-		text-align: left;
-	}
+export const button = css`
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	text-align: left;
 `
 
 export const labelText = css`
-	${headline.xxxsmall({ fontWeight: "bold" })};
+	${headline.xxxsmall()};
 	margin-right: ${space[4]}px;
 `
 

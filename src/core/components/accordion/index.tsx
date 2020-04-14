@@ -1,7 +1,7 @@
 import React, { useState, ReactNode } from "react"
 import {
 	accordion,
-	normalise,
+	button,
 	labelText,
 	titleRow,
 	accordionRow,
@@ -26,14 +26,14 @@ const Accordion = ({ children, label, id }: AccordionProps) => {
 	const toggleToOpen = () => toggleAccordion(true)
 
 	return (
-		<div css={[accordion, normalise]}>
+		<div css={accordion}>
 			<button
 				aria-expanded={accordionOpen}
 				onClick={accordionOpen ? toggleToClosed : toggleToOpen}
-				aria-controls="accordionBody"
-				css={titleRow}
+				aria-controls={id}
+				css={[titleRow, button]}
 			>
-				<h3 css={labelText}>{label}</h3>
+				<strong css={labelText}>{label}</strong>
 				<div css={showHide}>
 					<div
 						css={
@@ -63,8 +63,7 @@ const Accordion = ({ children, label, id }: AccordionProps) => {
 			</button>
 			<div
 				id={id}
-				aria-expanded={accordionOpen}
-				aria-hidden={!accordionOpen}
+				hidden={!accordionOpen}
 				css={
 					accordionOpen ? showAccordionElement : hideAccordionElement
 				}
