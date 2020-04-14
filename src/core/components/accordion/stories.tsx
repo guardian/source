@@ -30,10 +30,7 @@ const defaultLight = () => (
 	<div css={main}>
 		<div css={container}>
 			<Accordion>
-				<AccordionRow
-					label="Collecting from multiple newsagents"
-					id="accordionbody1"
-				>
+				<AccordionRow label="Collecting from multiple newsagents">
 					<p>
 						Present your card to a newsagent each time you collect
 						the paper. The newsagent will scan your card and will be
@@ -43,10 +40,7 @@ const defaultLight = () => (
 						<a href="">Find your nearest participating retailer</a>
 					</p>
 				</AccordionRow>
-				<AccordionRow
-					label="Delivery from your retailer"
-					id="accordionbody2"
-				>
+				<AccordionRow label="Delivery from your retailer">
 					<p>
 						Simply give your preferred store / retailer the barcode
 						printed on your subscription letter.

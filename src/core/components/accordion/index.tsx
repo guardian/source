@@ -19,7 +19,21 @@ interface AccordionProps extends Props {
 }
 
 const Accordion = ({ children }: AccordionRowProps) => {
-	return <div css={accordion}>{children}</div>
+	return (
+		<div css={accordion}>
+			{children.map((childElement, childIndex) => {
+				return React.cloneElement(
+					childElement,
+					Object.assign(
+						{},
+						childElement.props,
+						{ id: `accordion${childIndex + 1}` },
+						{ key: childIndex },
+					),
+				)
+			})}
+		</div>
+	)
 }
 
 interface AccordionRowProps extends Props {
