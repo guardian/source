@@ -22,7 +22,10 @@ const esmFolders = folders.map(folder => ({
 		},
 	],
 	plugins,
-	external: ["@guardian/src-foundations"],
+	external: [
+		"@guardian/src-foundations",
+		"@guardian/src-foundations/palette",
+	],
 }))
 
 const cjsFolders = folders.map(folder => ({
@@ -34,7 +37,10 @@ const cjsFolders = folders.map(folder => ({
 		},
 	],
 	plugins,
-	external: ["@guardian/src-foundations"],
+	external: [
+		"@guardian/src-foundations",
+		"@guardian/src-foundations/palette",
+	],
 }))
 
 module.exports = [
