@@ -4,10 +4,15 @@ import { headline, textSans } from "@guardian/src-foundations/typography"
 import { space } from "@guardian/src-foundations"
 
 export const accordion = css`
-	border-top: 1px solid ${border.primary};
-	border-bottom: 1px solid ${border.primary};
-	padding: ${space[2]}px 0 ${space[4]}px ${space[2]}px;
 	background-color: transparent;
+`
+
+export const accordionRow = css`
+	border-top: 1px solid ${border.primary};
+	:last-of-type {
+		border-bottom: 1px solid ${border.primary};
+	}
+	padding: ${space[2]}px 0 ${space[4]}px ${space[2]}px;
 `
 
 export const button = css`
@@ -30,11 +35,6 @@ export const titleRow = css`
 	justify-content: space-between;
 	margin-bottom: ${space[3]}px;
 	align-items: baseline;
-`
-
-export const accordionRow = css`
-	${textSans.small()};
-	margin-bottom: ${space[3]}px;
 `
 
 export const showHide = css`

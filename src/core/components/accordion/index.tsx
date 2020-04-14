@@ -15,18 +15,26 @@ import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle, SvgChevronUpSingle } from "@guardian/src-svgs"
 
 interface AccordionProps extends Props {
+	children: ReactNode
+}
+
+const Accordion = ({ children }: AccordionRowProps) => {
+	return <div css={accordion}>{children}</div>
+}
+
+interface AccordionRowProps extends Props {
 	label: string
 	children: ReactNode
 	id: string
 }
 
-const Accordion = ({ children, label, id }: AccordionProps) => {
+const AccordionRow = ({ children, label, id }: AccordionRowProps) => {
 	const [accordionOpen, toggleAccordion] = useState(false)
 	const toggleToClosed = () => toggleAccordion(false)
 	const toggleToOpen = () => toggleAccordion(true)
 
 	return (
-		<div css={accordion}>
+		<div css={accordionRow}>
 			<button
 				aria-expanded={accordionOpen}
 				onClick={accordionOpen ? toggleToClosed : toggleToOpen}
@@ -72,14 +80,6 @@ const Accordion = ({ children, label, id }: AccordionProps) => {
 			</div>
 		</div>
 	)
-}
-
-interface AccordionRowProps extends Props {
-	children: ReactNode
-}
-
-const AccordionRow = ({ children }: AccordionRowProps) => {
-	return <div css={accordionRow}>{children}</div>
 }
 
 export { Accordion, AccordionRow }
