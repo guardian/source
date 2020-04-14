@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from "react"
+import React, { useState, ReactElement, ReactNode } from "react"
 import {
 	accordion,
 	button,
@@ -15,23 +15,26 @@ import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle, SvgChevronUpSingle } from "@guardian/src-svgs"
 
 interface AccordionProps extends Props {
-	children: ReactNode
+	children: ReactElement[]
 }
 
 const Accordion = ({ children }: AccordionProps) => {
 	return (
 		<div css={accordion}>
-			{children.map((childElement: ReactNode, childIndex: number) => {
-				return React.cloneElement(
-					childElement,
-					Object.assign(
-						{},
-						childElement.props,
-						{ id: `accordion${childIndex + 1}` },
-						{ key: childIndex },
-					),
-				)
-			})}
+			{React.Children.map(
+				children,
+				(childElement: ReactElement, childIndex: number) => {
+					return React.cloneElement(
+						childElement,
+						Object.assign(
+							{},
+							childElement.props,
+							{ id: `accordion${childIndex + 1}` },
+							{ key: childIndex },
+						),
+					)
+				},
+			)}
 		</div>
 	)
 }
@@ -39,7 +42,7 @@ const Accordion = ({ children }: AccordionProps) => {
 interface AccordionRowProps extends Props {
 	label: string
 	children: ReactNode
-	id: string
+	id?: string
 }
 
 const AccordionRow = ({ children, label, id }: AccordionRowProps) => {
