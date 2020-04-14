@@ -1,10 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { ThemeProvider } from "emotion-theming"
 
 import { size } from "@guardian/src-foundations"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { brand } from "@guardian/src-foundations/themes"
 
 import {
 	SvgAlert,
@@ -69,28 +67,26 @@ export default {
 }
 
 export const SmallIcons = () => (
-	<ThemeProvider theme={brand}>
-		<Small>
-			<SvgAlert />
-			<SvgArrowDownStraight />
-			<SvgArrowLeftStraight />
-			<SvgArrowRightStraight />
-			<SvgArrowUpStraight />
-			<SvgChevronDownSingle />
-			<SvgChevronLeftSingle />
-			<SvgChevronRightSingle />
-			<SvgChevronUpSingle />
-			<SvgCreditCard />
-			<SvgDirectDebit />
-			<SvgPayPal />
-			<SvgExternal />
-			<SvgCheckmark />
-			<SvgClose />
-			<SvgMinus />
-			<SvgPlus />
-			<SvgIndent />
-		</Small>
-	</ThemeProvider>
+	<Small>
+		<SvgAlert />
+		<SvgArrowDownStraight />
+		<SvgArrowLeftStraight />
+		<SvgArrowRightStraight />
+		<SvgArrowUpStraight />
+		<SvgChevronDownSingle />
+		<SvgChevronLeftSingle />
+		<SvgChevronRightSingle />
+		<SvgChevronUpSingle />
+		<SvgCreditCard />
+		<SvgDirectDebit />
+		<SvgPayPal />
+		<SvgExternal />
+		<SvgCheckmark />
+		<SvgClose />
+		<SvgMinus />
+		<SvgPlus />
+		<SvgIndent />
+	</Small>
 )
 SmallIcons.story = {
 	name: "small size",
@@ -102,28 +98,26 @@ SmallIcons.story = {
 }
 
 export const DefaultIcons = () => (
-	<ThemeProvider theme={brand}>
-		<Default>
-			<SvgAlert />
-			<SvgArrowDownStraight />
-			<SvgArrowLeftStraight />
-			<SvgArrowRightStraight />
-			<SvgArrowUpStraight />
-			<SvgChevronDownSingle />
-			<SvgChevronLeftSingle />
-			<SvgChevronRightSingle />
-			<SvgChevronUpSingle />
-			<SvgCreditCard />
-			<SvgDirectDebit />
-			<SvgPayPal />
-			<SvgExternal />
-			<SvgCheckmark />
-			<SvgClose />
-			<SvgMinus />
-			<SvgPlus />
-			<SvgIndent />
-		</Default>
-	</ThemeProvider>
+	<Default>
+		<SvgAlert />
+		<SvgArrowDownStraight />
+		<SvgArrowLeftStraight />
+		<SvgArrowRightStraight />
+		<SvgArrowUpStraight />
+		<SvgChevronDownSingle />
+		<SvgChevronLeftSingle />
+		<SvgChevronRightSingle />
+		<SvgChevronUpSingle />
+		<SvgCreditCard />
+		<SvgDirectDebit />
+		<SvgPayPal />
+		<SvgExternal />
+		<SvgCheckmark />
+		<SvgClose />
+		<SvgMinus />
+		<SvgPlus />
+		<SvgIndent />
+	</Default>
 )
 DefaultIcons.story = {
 	name: "default size",
