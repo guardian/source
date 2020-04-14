@@ -1,4 +1,4 @@
-import { text, brandText } from "../index"
+import { text, brandText } from "@guardian/src-foundations/palette"
 
 export type InlineErrorTheme = {
 	text: string

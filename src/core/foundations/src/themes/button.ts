@@ -5,7 +5,7 @@ import {
 	brandBackground,
 	brandAltText,
 	brandAltBackground,
-} from "../index"
+} from "@guardian/src-foundations/palette"
 
 export type ButtonTheme = {
 	textPrimary: string

@@ -5,7 +5,7 @@ import {
 	brandBorder,
 	brandBackground,
 	brandText,
-} from "../index"
+} from "@guardian/src-foundations/palette"
 import {
 	inlineErrorDefault,
 	inlineErrorBrand,

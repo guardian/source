@@ -1,4 +1,4 @@
-import { text, background, border } from "../index"
+import { text, background, border } from "@guardian/src-foundations/palette"
 import { inlineErrorDefault, InlineErrorTheme } from "./inline-error"
 
 export type TextInputTheme = {
