@@ -12,6 +12,7 @@ export const accordion = css`
 
 export const button = css`
 	background: none;
+	outline: none;
 	border: none;
 	padding: 0;
 	cursor: pointer;
