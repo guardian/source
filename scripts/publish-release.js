@@ -14,35 +14,41 @@ const publish = dir => {
 
 const { foundations, svgs, helpers, coreComponents } = paths
 
-// heavily depended on, publish these first
-const priority0Packages = [foundations, svgs]
+// Publish these packages in the specified order
+const prioritisedPackages = [
+	foundations,
+	helpers,
+	svgs,
+	`${coreComponents}/inline-error`,
+]
 
-// somewhat depended on
-const priority1Packages = [helpers]
-
-// somewhat depended on
-// TODO: try to refactor!
-const priority2Packages = [`${coreComponents}/inline-error`]
-
-// not depended on
-const priority3Packages = getComponentPaths().then(paths =>
-	paths.filter(path => !priority2Packages.includes(path)),
+// Publish these packages in parallel
+const otherPackages = getComponentPaths().then(paths =>
+	paths.filter(path => !prioritisedPackages.includes(path)),
 )
 
-Promise.all(priority0Packages.map(dir => publish(dir)))
-	.catch(err => console.log("Error publishing priority 0 packages:", err))
-	.then(() => Promise.all(priority1Packages.map(dir => publish(dir))))
-	.catch(err => console.log("Error publishing priority 1 packages:", err))
-	.then(() => Promise.all(priority2Packages.map(dir => publish(dir))))
-	.catch(err => console.log("Error publishing priority 2 packages:", err))
-	.then(() =>
-		priority3Packages.then(packages => {
-			packages.forEach(package => {
-				if (!package) return
-
-				publish(package).catch(err =>
-					console.log("Error publishing priority 3 package:", err),
-				)
-			})
-		}),
+prioritisedPackages
+	.reduce(
+		(prev, curr) =>
+			prev
+				.then(() => publish(curr))
+				.catch(err =>
+					Promise.reject(
+						"Error publishing prioritised package:",
+						err,
+					),
+				),
+		Promise.resolve(),
 	)
+	.then(() =>
+		otherPackages.then(packages =>
+			Promise.all(packages.map(dir => publish(dir))).catch(err =>
+				Promise.reject("Error publishing other packages:", err),
+			),
+		),
+	)
+	.catch(err => {
+		console.log("***PUBLISH FAILED***\n", err)
+
+		process.exit(1)
+	})
