@@ -1,4 +1,4 @@
-import { border, text, background } from "../index"
+import { border, text, background } from "@guardian/src-foundations/palette"
 import { InlineErrorTheme, inlineErrorDefault } from "./inline-error"
 
 export type ChoiceCardTheme = {

@@ -1,4 +1,8 @@
-import { text, brandText, brandAltText } from "../index"
+import {
+	text,
+	brandText,
+	brandAltText,
+} from "@guardian/src-foundations/palette"
 
 export type LinkTheme = {
 	textPrimary: string
