@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import {
 	SvgArrowRightStraight,
+	SvgIndent,
 	SvgExternal,
 	SvgChevronLeftSingle,
 } from "@guardian/src-svgs"
@@ -103,12 +104,17 @@ export const textAndIcon = () => (
 				Terms and conditions
 			</Link>
 		</div>
-		<div css={flexStart}>
+		<div css={[flexStart, spacer]}>
 			<Link icon={<SvgChevronLeftSingle />} href="#">
 				Previous
 			</Link>
 			<Link iconSide="right" icon={<SvgArrowRightStraight />} href="#">
 				Next
+			</Link>
+		</div>
+		<div css={spacer}>
+			<Link iconSide="left" icon={<SvgIndent />} href="#">
+				Indent
 			</Link>
 		</div>
 	</>
