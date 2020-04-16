@@ -16,6 +16,7 @@ const priorityLinks = [
 	<Link priority="secondary" href="#">
 		Secondary
 	</Link>,
+	<Link iconSide="left" icon={<SvgArrowRightStraight />} href="#">With icon</Link>,
 ]
 const subduedLinks = [
 	<Link subdued={true} href="#">

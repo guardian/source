@@ -9,6 +9,9 @@ export const link = css`
 	${textSans.medium()};
 	cursor: pointer;
 
+	display: flex;
+    align-items: center;
+
 	&:focus {
 		${focusHalo};
 	}
@@ -50,9 +53,6 @@ export const icon = css`
 		*/
 		width: ${size.medium / 2}px;
 		height: auto;
-
-		/* magic number to align the SVG to the text baseline*/
-		bottom: 4px;
 	}
 `
 
