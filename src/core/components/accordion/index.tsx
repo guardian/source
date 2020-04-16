@@ -1,99 +1,75 @@
 import React, { useState, ReactElement, ReactNode } from "react"
 import {
-	accordion,
+	accordionRow,
 	button,
 	labelText,
-	titleRow,
-	accordionRow,
-	showHide,
-	showHideText,
-	svgContainer,
-	showAccordionElement,
-	hideAccordionElement,
+	showHideLabel,
+	chevronIcon,
+	chevronIconUp,
+	chevronIconDown,
+	expandedBody,
+	collapsedBody,
 } from "./styles"
+import { css } from "@emotion/core"
+import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
-import { SvgChevronDownSingle, SvgChevronUpSingle } from "@guardian/src-svgs"
+import { SvgChevronUpSingle } from "@guardian/src-svgs"
 
 interface AccordionProps extends Props {
 	children: ReactElement[]
 }
 
 const Accordion = ({ children }: AccordionProps) => {
-	return (
-		<div css={accordion}>
-			{React.Children.map(
-				children,
-				(childElement: ReactElement, childIndex: number) => {
-					return React.cloneElement(
-						childElement,
-						Object.assign(
-							{},
-							childElement.props,
-							{ id: `accordion${childIndex + 1}` },
-							{ key: childIndex },
-						),
-					)
-				},
-			)}
-		</div>
-	)
+	return <div>{children}</div>
 }
 
 interface AccordionRowProps extends Props {
 	label: string
 	children: ReactNode
-	id?: string
 }
 
-const AccordionRow = ({ children, label, id }: AccordionRowProps) => {
-	const [accordionOpen, toggleAccordion] = useState(false)
-	const toggleToClosed = () => toggleAccordion(false)
-	const toggleToOpen = () => toggleAccordion(true)
+const AccordionRow = ({ children, label }: AccordionRowProps) => {
+	const [expanded, setExpanded] = useState(false)
+	const collapse = () => setExpanded(false)
+	const expand = () => setExpanded(true)
 
 	return (
 		<div css={accordionRow}>
 			<button
-				aria-expanded={accordionOpen}
-				onClick={accordionOpen ? toggleToClosed : toggleToOpen}
-				aria-controls={id}
-				css={[titleRow, button]}
+				aria-expanded={expanded}
+				onClick={expanded ? collapse : expand}
+				css={button}
 			>
 				<strong css={labelText}>{label}</strong>
-				<div css={showHide}>
-					<div
-						css={
-							accordionOpen
-								? showAccordionElement
-								: hideAccordionElement
-						}
-					>
-						<div css={showHideText}>Hide</div>
-						<div css={svgContainer}>
-							<SvgChevronUpSingle />
-						</div>
-					</div>
-					<div
-						css={
-							accordionOpen
-								? hideAccordionElement
-								: showAccordionElement
-						}
-					>
-						<div css={showHideText}>Show</div>
-						<div css={svgContainer}>
-							<SvgChevronDownSingle />
-						</div>
-					</div>
+				<div
+					css={[
+						showHideLabel,
+						chevronIcon,
+						expanded ? chevronIconUp : chevronIconDown,
+					]}
+				>
+					<span>
+						{expanded ? (
+							"Hide"
+						) : (
+							<>
+								Show
+								<span
+									css={css`
+										${visuallyHidden}
+									`}
+								>
+									{" "}
+									more
+								</span>
+							</>
+						)}
+					</span>
+					<SvgChevronUpSingle />
 				</div>
 			</button>
-			<div
-				id={id}
-				hidden={!accordionOpen}
-				css={
-					accordionOpen ? showAccordionElement : hideAccordionElement
-				}
-			>
-				{children}
+			<div css={expanded ? expandedBody : collapsedBody}>
+				<div hidden={!expanded}>{children}</div>
 			</div>
 		</div>
 	)
