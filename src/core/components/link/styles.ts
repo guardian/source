@@ -10,7 +10,7 @@ export const link = css`
 	cursor: pointer;
 
 	display: flex;
-    align-items: center;
+	align-items: center;
 
 	&:focus {
 		${focusHalo};
