@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { SvgCheckmark, SvgClose } from "@guardian/src-svgs"
 import { size, space } from "@guardian/src-foundations"
+import { background } from "@guardian/src-foundations/palette"
 import {
 	Button,
 	LinkButton,
@@ -110,7 +111,7 @@ priorityBlue.story = {
 }
 
 export const priorityGrey = () => (
-	<ThemeProvider theme={buttonBrand}>
+	<ThemeProvider theme={buttonDefault}>
 		<div css={flexStart}>
 			{priorityButtons.map((button, index) => (
 				<div key={index}>{button}</div>
@@ -121,7 +122,9 @@ export const priorityGrey = () => (
 priorityGrey.story = {
 	name: "priority grey",
 	parameters: {
-		backgrounds: [{ name: "grey", value: "lightgrey", default: true }],
+		backgrounds: [
+			{ name: "grey", value: background.secondary, default: true },
+		],
 	},
 }
 
