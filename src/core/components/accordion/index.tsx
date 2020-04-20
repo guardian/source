@@ -1,5 +1,6 @@
 import React, { useState, ReactElement, ReactNode } from "react"
 import {
+	accordion,
 	accordionRow,
 	button,
 	labelText,
@@ -20,7 +21,7 @@ interface AccordionProps extends Props {
 }
 
 const Accordion = ({ children }: AccordionProps) => {
-	return <div>{children}</div>
+	return <div css={accordion}>{children}</div>
 }
 
 interface AccordionRowProps extends Props {
