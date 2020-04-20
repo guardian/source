@@ -44,7 +44,8 @@
 		"minus.tsx",
 		"plus.tsx",
 		"paypal.tsx",
-		"*.d.ts"
+		"*.d.ts",
+		"dist/*.js"
 	],
 	"peerDependencies": {
 		"react": "^16.8.6"
