@@ -4,12 +4,13 @@ import { text, border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
+export const accordion = css`
+	border-bottom: 1px solid ${border.primary};
+`
+
 export const accordionRow = css`
 	padding: ${remSpace[2]};
 	border-top: 1px solid ${border.primary};
-	:last-of-type {
-		border-bottom: 1px solid ${border.primary};
-	}
 `
 
 export const button = css`
