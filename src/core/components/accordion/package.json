@@ -1,17 +1,17 @@
 {
 	"name": "@guardian/src-accordion",
-	"version": "0.18.0-alpha.1",
+	"version": "0.18.0-rc.1",
 	"main": "dist/accordion.js",
 	"module": "dist/accordion.esm.js",
 	"scripts": {
 		"build": "yarn clean && rollup --config",
 		"clean": "rm -rf dist",
 		"prepublish": "yarn build",
-		"publish:public": "echo 'src-accordion is not publishable'",
-		"verbump:minor": "echo 'src-accordion is not upgradeable'",
-		"verbump:preminor": "echo 'src-accordion is not upgradeable'",
-		"verbump:patch": "echo 'src-accordion is not upgradeable'",
-		"verbump:prerelease": "echo 'src-accordion is not upgradeable'"
+		"publish:public": "yarn publish --access public",
+		"verbump:minor": "yarn version --minor --no-git-tag-version",
+		"verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
+		"verbump:patch": "yarn version --patch --no-git-tag-version",
+		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
