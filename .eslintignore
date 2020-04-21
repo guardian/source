@@ -2,6 +2,9 @@ node_modules
 dist
 *.d.ts
 
+# for now ignore foundations script files
+src/core/foundations/scripts
+
 # ignore foundations dist files
 src/core/foundations/mq
 src/core/foundations/accessibility
