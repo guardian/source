@@ -1,5 +1,7 @@
-const cpy = require("cpy")
-const { paths } = require("./paths")
+#!/usr/bin/env ts-node-script
+
+import cpy from "cpy"
+import { paths } from "./paths"
 
 // TODO: it would be good if this could be dynamically generated
 const paletteFolders = ["background", "border", "line", "text"]

@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"strict": true,
+		"esModuleInterop": true,
+		"declaration": false,
+		"emitDeclarationOnly": false
+	}
+}
