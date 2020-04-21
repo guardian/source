@@ -10,6 +10,10 @@ module.exports = {
 		{
 			file: "dist/lines.js",
 			format: "cjs",
+			paths: {
+				"@guardian/src-foundations/palette":
+					"@guardian/src-foundations/palette/cjs",
+			},
 		},
 		{
 			file: "dist/lines.esm.js",
