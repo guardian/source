@@ -4,7 +4,10 @@
 	"main": "dist/helpers.js",
 	"module": "dist/helpers.esm.js",
 	"types": "index.d.ts",
-	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/guardian/source.git"
+	},
 	"scripts": {
 		"build": "yarn clean && tsc && rollup --config",
 		"clean": "rm -rf dist *.d.ts tsconfig.tsbuildinfo",
