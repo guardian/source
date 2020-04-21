@@ -10,6 +10,14 @@ module.exports = {
 		{
 			file: "dist/accordion.js",
 			format: "cjs",
+			paths: {
+				"@guardian/src-foundations/palette":
+					"@guardian/src-foundations/palette/cjs",
+				"@guardian/src-foundations/typography":
+					"@guardian/src-foundations/typography/cjs",
+				"@guardian/src-foundations/accessibility":
+					"@guardian/src-foundations/accessibility/cjs",
+			},
 		},
 		{
 			file: "dist/accordion.esm.js",
@@ -21,7 +29,9 @@ module.exports = {
 		"@emotion/core",
 		"@emotion/css",
 		"@guardian/src-foundations",
+		"@guardian/src-foundations/palette",
 		"@guardian/src-foundations/typography",
+		"@guardian/src-foundations/accessibility",
 	],
 	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
 }

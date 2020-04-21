@@ -11,6 +11,10 @@ module.exports = {
 			file: "dist/grid.js",
 			format: "cjs",
 			sourceMap: true,
+			paths: {
+				"@guardian/src-foundations/mq":
+					"@guardian/src-foundations/mq/cjs",
+			},
 		},
 		{
 			file: "dist/grid.esm.js",

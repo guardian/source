@@ -10,6 +10,14 @@ module.exports = {
 		{
 			file: "dist/checkbox.js",
 			format: "cjs",
+			paths: {
+				"@guardian/src-foundations/themes":
+					"@guardian/src-foundations/themes/cjs",
+				"@guardian/src-foundations/typography":
+					"@guardian/src-foundations/typography/cjs",
+				"@guardian/src-foundations/accessibility":
+					"@guardian/src-foundations/accessibility/cjs",
+			},
 		},
 		{
 			file: "dist/checkbox.esm.js",

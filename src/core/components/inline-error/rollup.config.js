@@ -11,6 +11,12 @@ module.exports = {
 			file: "dist/inline-error.js",
 			format: "cjs",
 			sourceMap: true,
+			paths: {
+				"@guardian/src-foundations/themes":
+					"@guardian/src-foundations/themes/cjs",
+				"@guardian/src-foundations/typography":
+					"@guardian/src-foundations/typography/cjs",
+			},
 		},
 		{
 			file: "dist/inline-error.esm.js",

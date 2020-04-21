@@ -3,6 +3,10 @@
 	"version": "0.18.0-rc.1",
 	"main": "dist/lines.js",
 	"module": "dist/lines.esm.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/guardian/source.git"
+	},
 	"scripts": {
 		"build": "yarn clean && rollup --config",
 		"clean": "rm -rf dist",
