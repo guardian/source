@@ -10,6 +10,16 @@ module.exports = {
 		{
 			file: "dist/button.js",
 			format: "cjs",
+			paths: {
+				"@guardian/src-foundations/palette":
+					"@guardian/src-foundations/palette/cjs",
+				"@guardian/src-foundations/themes":
+					"@guardian/src-foundations/themes/cjs",
+				"@guardian/src-foundations/typography":
+					"@guardian/src-foundations/typography/cjs",
+				"@guardian/src-foundations/accessibility":
+					"@guardian/src-foundations/accessibility/cjs",
+			},
 		},
 		{
 			file: "dist/button.esm.js",
