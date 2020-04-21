@@ -11,6 +11,10 @@ module.exports = {
 			file: "dist/helpers.js",
 			format: "cjs",
 			sourceMap: true,
+			paths: {
+				"@guardian/src-foundations/palette":
+					"@guardian/src-foundations/palette/cjs",
+			},
 		},
 		{
 			file: "dist/helpers.esm.js",
