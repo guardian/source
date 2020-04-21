@@ -8,9 +8,10 @@
 		"url": "https://github.com/guardian/source.git"
 	},
 	"scripts": {
-		"build": "yarn clean && tsc && rollup --config",
+		"build": "yarn clean && tsc && rollup --config && yarn copy:types",
 		"watch": "yarn clean && tsc && rollup --config --watch",
 		"clean": "rm -rf accessibility mq palette themes typography utils foundations.js foundations.esm.js *.d.ts tsconfig.tsbuildinfo src/*.d.ts",
+		"copy:types": "node scripts/copy-type-definitions.js",
 		"publish:public": "yarn publish --access public",
 		"prepublishOnly": "yarn build",
 		"verbump:minor": "yarn version --minor --no-git-tag-version",
@@ -44,6 +45,7 @@
 		"@babel/plugin-proposal-class-properties": "^7.8.3",
 		"@babel/preset-env": "^7.8.0",
 		"@babel/preset-typescript": "^7.8.0",
+		"cpy": "^8.1.0",
 		"rollup": "^1.19.4",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-node-resolve": "^5.2.0",
