@@ -14,18 +14,18 @@
 		"build-storybook": "build-storybook -o dist",
 		"watch:foundations": "cd src/core/foundations && yarn watch",
 		"watch:svgs": "cd src/core/svgs && yarn watch",
-		"clean:all": "node ./scripts/clean-all",
-		"build:all": "node ./scripts/build-all",
+		"clean:all": "ts-node ./scripts/clean-all",
+		"build:all": "ts-node ./scripts/build-all",
 		"ci:build": "NODE_ENV=production yarn build:all && yarn build-storybook",
-		"publish:release": "node ./scripts/publish-release",
+		"publish:release": "ts-node ./scripts/publish-release",
 		"verbump:minor": "yarn version --minor --no-git-tag-version",
 		"verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
 		"verbump:patch": "yarn version --patch --no-git-tag-version",
 		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
-		"verbump:preminor:all": "node ./scripts/verbump-preminor-all",
-		"verbump:minor:all": "node ./scripts/verbump-minor-all",
-		"verbump:patch:all": "node ./scripts/verbump-patch-all",
-		"verbump:prerelease:all": "node ./scripts/verbump-prerelease-all"
+		"verbump:preminor:all": "ts-node ./scripts/verbump-preminor-all",
+		"verbump:minor:all": "ts-node ./scripts/verbump-minor-all",
+		"verbump:patch:all": "ts-node ./scripts/verbump-patch-all",
+		"verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all"
 	},
 	"private": true,
 	"workspaces": [
@@ -66,6 +66,7 @@
 		"stylelint-config-recommended": "^3.0.0",
 		"stylelint-config-styled-components": "^0.1.1",
 		"stylelint-processor-styled-components": "^1.10.0",
+		"ts-node": "^8.9.0",
 		"typescript": "^3.7.2",
 		"webpack": "^4.41.5"
 	},
