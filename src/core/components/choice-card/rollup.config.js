@@ -10,6 +10,14 @@ module.exports = {
 		{
 			file: "dist/choice-card.js",
 			format: "cjs",
+			paths: {
+				"@guardian/src-foundations/themes":
+					"@guardian/src-foundations/themes/cjs",
+				"@guardian/src-foundations/typography":
+					"@guardian/src-foundations/typography/cjs",
+				"@guardian/src-foundations/mq":
+					"@guardian/src-foundations/mq/cjs",
+			},
 		},
 		{
 			file: "dist/choice-card.esm.js",
