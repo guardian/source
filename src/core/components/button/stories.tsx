@@ -22,12 +22,23 @@ const priorityButtons = [
 		Primary
 	</Button>,
 	<Button
-		onClick={() => console.log("Secondary clicked")}
+		onClick={e => console.log("Secondary clicked:", e.target)}
 		priority="secondary"
 	>
 		Secondary
 	</Button>,
-	<Button priority="subdued">Subdued</Button>,
+	<Button
+		onClick={e => console.log("Tertiary clicked", e.target)}
+		priority="tertiary"
+	>
+		Tertiary
+	</Button>,
+	<Button
+		priority="subdued"
+		onClick={e => console.log("Subdued clicked", e.target)}
+	>
+		Subdued
+	</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,

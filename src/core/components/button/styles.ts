@@ -37,12 +37,20 @@ export const secondary = ({
 }: { button: ButtonTheme } = buttonDefault) => css`
 	background-color: ${button.backgroundSecondary};
 	color: ${button.textSecondary};
-	${button.borderSecondary
-		? `border: 1px solid ${button.borderSecondary};`
-		: ""}
 
 	&:hover {
 		background-color: ${button.backgroundSecondaryHover};
+	}
+`
+
+export const tertiary = ({
+	button,
+}: { button: ButtonTheme } = buttonDefault) => css`
+	color: ${button.textTertiary};
+	border: 1px solid ${button.borderTertiary};
+
+	&:hover {
+		background-color: ${button.backgroundTertiaryHover};
 	}
 `
 
@@ -61,10 +69,6 @@ export const subdued = ({
 	   there is only text, it is more natural to show a rectangle for the focus halo */
 	border-radius: 0;
 `
-
-// TODO: 0.18
-// update this to apply "ghost button styling"
-export const tertiary = subdued
 
 export const defaultSize = css`
 	height: ${size.large}px;
