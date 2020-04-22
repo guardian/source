@@ -1,21 +1,25 @@
 import {
 	text,
+	border,
 	background,
 	brandText,
 	brandBackground,
+	brandBorder,
 	brandAltText,
 	brandAltBackground,
+	brandAltBorder,
 } from "@guardian/src-foundations/palette"
 
 export type ButtonTheme = {
 	textPrimary: string
 	backgroundPrimary: string
 	backgroundPrimaryHover: string
-	textSecondary: string
-	backgroundSecondary: string
-	backgroundSecondaryHover: string
-	borderSecondary?: string
+	textSecondary?: string
+	backgroundSecondary?: string
+	backgroundSecondaryHover?: string
 	textTertiary?: string
+	backgroundTertiaryHover?: string
+	borderTertiary?: string
 	textSubdued?: string
 }
 
@@ -27,7 +31,9 @@ export const buttonDefault: { button: ButtonTheme } = {
 		textSecondary: text.ctaSecondary,
 		backgroundSecondary: background.ctaSecondary,
 		backgroundSecondaryHover: background.ctaSecondaryHover,
-		textTertiary: text.ctaSecondary,
+		textTertiary: text.ctaTertiary,
+		backgroundTertiaryHover: background.ctaTertiaryHover,
+		borderTertiary: border.ctaTertiary,
 		textSubdued: text.ctaSecondary,
 	},
 }
@@ -40,7 +46,9 @@ export const buttonBrand: { button: ButtonTheme } = {
 		textSecondary: brandText.ctaSecondary,
 		backgroundSecondary: brandBackground.ctaSecondary,
 		backgroundSecondaryHover: brandBackground.ctaSecondaryHover,
-		textTertiary: brandText.ctaSecondary,
+		textTertiary: brandText.ctaTertiary,
+		backgroundTertiaryHover: brandBackground.ctaTertiaryHover,
+		borderTertiary: brandBorder.ctaTertiary,
 		textSubdued: brandText.ctaSecondary,
 	},
 }
@@ -53,7 +61,9 @@ export const buttonBrandAlt: { button: ButtonTheme } = {
 		textSecondary: brandAltText.ctaSecondary,
 		backgroundSecondary: brandAltBackground.ctaSecondary,
 		backgroundSecondaryHover: brandAltBackground.ctaSecondaryHover,
-		textTertiary: brandAltText.ctaSecondary,
+		textTertiary: brandAltText.ctaTertiary,
+		backgroundTertiaryHover: brandAltBackground.ctaTertiaryHover,
+		borderTertiary: brandAltBorder.ctaTertiary,
 		textSubdued: brandAltText.ctaSecondary,
 	},
 }
