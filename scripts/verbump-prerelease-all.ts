@@ -1,8 +1,8 @@
-const execa = require("execa")
-const { paths, getComponentPaths } = require("./paths")
+import execa from "execa"
+import { paths, getComponentPaths } from "./paths"
 
-const verbump = dir => {
-	return execa("yarn", ["--cwd", `${dir}`, "run", "verbump:patch"], {
+const verbump = (dir: string) => {
+	return execa("yarn", ["--cwd", `${dir}`, "run", "verbump:prerelease"], {
 		stdio: "inherit",
 	})
 }

@@ -1,19 +1,19 @@
-const fs = require("fs")
-const execa = require("execa")
-const { paths, getComponentPaths } = require("./paths")
+import execa from "execa"
+import { paths, getComponentPaths } from "./paths"
 
 const { foundations, svgs, helpers } = paths
 
-const clean = dir => {
+const clean = (dir: string) => {
 	return execa("yarn", ["--cwd", `${dir}`, "run", "clean"], {
 		stdio: "inherit",
 	})
 }
-
 ;[foundations, svgs, helpers].forEach(dir => {
 	clean(dir)
 })
 
 getComponentPaths().then(paths => {
-	paths.forEach(path => clean(path))
+	paths.forEach(path => {
+		if (path) clean(path)
+	})
 })

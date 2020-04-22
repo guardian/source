@@ -1,4 +1,4 @@
-const path = require("path")
+import { join } from "path"
 
 // TODO: it would be good if this could be dynamically generated
 const folders = [
@@ -10,6 +10,6 @@ const folders = [
 	"utils",
 ]
 
-module.exports.paths = folders.map(dirName => {
-	return path.join("./", dirName)
+export const paths = folders.map(dirName => {
+	return join("./", dirName)
 })

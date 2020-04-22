@@ -1,8 +1,8 @@
-const execa = require("execa")
-const { version } = require("../package.json")
-const { paths, getComponentPaths } = require("./paths")
+import execa, { ExecaReturnValue } from "execa"
+import { version } from "../package.json"
+import { paths, getComponentPaths } from "./paths"
 
-const publish = dir => {
+const publish = (dir: string) => {
 	return execa(
 		"yarn",
 		["--cwd", `${dir}`, "run", "publish:public", "--new-version", version],
@@ -34,16 +34,15 @@ prioritisedPackages
 				.then(() => publish(curr))
 				.catch(err =>
 					Promise.reject(
-						"Error publishing prioritised package:",
-						err,
+						`Error publishing prioritised package: ${err}`,
 					),
 				),
-		Promise.resolve(),
+		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
 	)
 	.then(() =>
 		otherPackages.then(packages =>
 			Promise.all(packages.map(dir => publish(dir))).catch(err =>
-				Promise.reject("Error publishing other packages:", err),
+				Promise.reject(`Error publishing other packages: ${err}`),
 			),
 		),
 	)
