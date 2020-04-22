@@ -26,6 +26,7 @@ import {
 	brandLine,
 	brandText,
 	brandAltBackground,
+	brandAltBorder,
 	brandAltLine,
 	brandAltText,
 	brand,
@@ -55,6 +56,7 @@ export const palette = {
 	brandText,
 	// functional colours (brandAlt)
 	brandAltBackground,
+	brandAltBorder,
 	brandAltLine,
 	brandAltText,
 	// global colours

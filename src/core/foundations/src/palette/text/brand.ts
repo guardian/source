@@ -7,6 +7,7 @@ export const brandText = {
 	error: _error[500],
 	ctaPrimary: brand[400],
 	ctaSecondary: neutral[100],
+	ctaTertiary: neutral[100],
 	anchorPrimary: neutral[100],
 	userInput: neutral[100],
 	inputLabel: neutral[100],

@@ -7,6 +7,7 @@ export const text = {
 	error: _error[400],
 	ctaPrimary: neutral[100],
 	ctaSecondary: brand[400],
+	ctaTertiary: brand[400],
 	anchorPrimary: brand[500],
 	anchorSecondary: neutral[7],
 	userInput: neutral[7],

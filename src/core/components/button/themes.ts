@@ -4,46 +4,43 @@ import { ButtonTheme } from "@guardian/src-foundations/themes"
 const text = {
 	readerRevenue: {
 		ctaPrimary: brand[400],
-		ctaSecondary: brand[400],
+		ctaTertiary: brand[400],
 	},
 	readerRevenueBrand: {
 		ctaPrimary: brand[400],
-		ctaSecondary: brandAlt[400],
+		ctaTertiary: brandAlt[400],
 	},
 	readerRevenueBrandAlt: {
 		ctaPrimary: neutral[100],
-		ctaSecondary: neutral[7],
+		ctaTertiary: neutral[7],
 	},
 }
 const background = {
 	readerRevenue: {
 		ctaPrimary: brandAlt[400],
 		ctaPrimaryHover: "#FFD213",
-		ctaSecondary: neutral[100],
-		ctaSecondaryHover: "#E5E5E5",
+		ctaTertiaryHover: "#E5E5E5",
 	},
 	readerRevenueBrand: {
 		ctaPrimary: brandAlt[400],
 		ctaPrimaryHover: "#FFD213",
-		ctaSecondary: brand[400],
-		ctaSecondaryHover: "#234B8A",
+		ctaTertiaryHover: brand[300],
 	},
 	readerRevenueBrandAlt: {
 		ctaPrimary: neutral[7],
 		ctaPrimaryHover: "#454545",
-		ctaSecondary: brandAlt[400],
-		ctaSecondaryHover: brandAlt[200],
+		ctaTertiaryHover: "#FFD213",
 	},
 }
 const border = {
 	readerRevenue: {
-		ctaSecondary: brand[400],
+		ctaTertiary: brand[400],
 	},
 	readerRevenueBrand: {
-		ctaSecondary: brandAlt[400],
+		ctaTertiary: brandAlt[400],
 	},
 	readerRevenueBrandAlt: {
-		ctaSecondary: neutral[7],
+		ctaTertiary: neutral[7],
 	},
 }
 
@@ -52,10 +49,9 @@ export const buttonReaderRevenue: { button: ButtonTheme } = {
 		textPrimary: text.readerRevenue.ctaPrimary,
 		backgroundPrimary: background.readerRevenue.ctaPrimary,
 		backgroundPrimaryHover: background.readerRevenue.ctaPrimaryHover,
-		textSecondary: text.readerRevenue.ctaSecondary,
-		backgroundSecondary: background.readerRevenue.ctaSecondary,
-		backgroundSecondaryHover: background.readerRevenue.ctaSecondaryHover,
-		borderSecondary: border.readerRevenue.ctaSecondary,
+		textTertiary: text.readerRevenue.ctaTertiary,
+		backgroundTertiaryHover: background.readerRevenue.ctaTertiaryHover,
+		borderTertiary: border.readerRevenue.ctaTertiary,
 	},
 }
 export const buttonReaderRevenueBrand: { button: ButtonTheme } = {
@@ -63,11 +59,9 @@ export const buttonReaderRevenueBrand: { button: ButtonTheme } = {
 		textPrimary: text.readerRevenueBrand.ctaPrimary,
 		backgroundPrimary: background.readerRevenueBrand.ctaPrimary,
 		backgroundPrimaryHover: background.readerRevenueBrand.ctaPrimaryHover,
-		textSecondary: text.readerRevenueBrand.ctaSecondary,
-		backgroundSecondary: background.readerRevenueBrand.ctaSecondary,
-		backgroundSecondaryHover:
-			background.readerRevenueBrand.ctaSecondaryHover,
-		borderSecondary: border.readerRevenueBrand.ctaSecondary,
+		textTertiary: text.readerRevenueBrand.ctaTertiary,
+		backgroundTertiaryHover: background.readerRevenueBrand.ctaTertiaryHover,
+		borderTertiary: border.readerRevenueBrand.ctaTertiary,
 	},
 }
 
@@ -77,10 +71,9 @@ export const buttonReaderRevenueBrandAlt: { button: ButtonTheme } = {
 		backgroundPrimary: background.readerRevenueBrandAlt.ctaPrimary,
 		backgroundPrimaryHover:
 			background.readerRevenueBrandAlt.ctaPrimaryHover,
-		textSecondary: text.readerRevenueBrandAlt.ctaSecondary,
-		backgroundSecondary: background.readerRevenueBrandAlt.ctaSecondary,
-		backgroundSecondaryHover:
-			background.readerRevenueBrandAlt.ctaSecondaryHover,
-		borderSecondary: border.readerRevenueBrandAlt.ctaSecondary,
+		textTertiary: text.readerRevenueBrandAlt.ctaTertiary,
+		backgroundTertiaryHover:
+			background.readerRevenueBrandAlt.ctaTertiaryHover,
+		borderTertiary: border.readerRevenueBrandAlt.ctaTertiary,
 	},
 }

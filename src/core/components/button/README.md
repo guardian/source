@@ -43,7 +43,7 @@ const Form = () => (
 
 ### `priority`
 
-**`"primary" | "secondary"`** _= "primary"_
+**`"primary" | "secondary" | "tertiary"`** _= "primary"_
 
 Informs users of how important an action is
 
@@ -63,7 +63,7 @@ Whether to show the arrow icon in this button
 
 ### `priority`
 
-**`"primary" | "secondary" | "subdued"`** _= "primary"_
+**`"primary" | "secondary" | "tertiary" | "subdued"`** _= "primary"_
 
 Informs users of how important an action is
 
@@ -96,4 +96,5 @@ The side of the button on which the icon appears
 ### Custom
 
 -   `readerRevenue`
--   `readerRevenueAlt`
+-   `readerRevenueBrand`
+-   `readerRevenueBrandAlt`

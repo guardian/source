@@ -4,6 +4,7 @@ export const brandBorder = {
 	primary: brand[800],
 	success: _success[400],
 	error: _error[500],
+	ctaTertiary: neutral[100],
 	input: brand[800],
 	inputChecked: neutral[100],
 	inputHover: neutral[100],

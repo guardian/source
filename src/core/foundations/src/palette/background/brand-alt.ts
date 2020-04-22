@@ -6,4 +6,5 @@ export const brandAltBackground = {
 	ctaPrimaryHover: "#454545",
 	ctaSecondary: brandAlt[200],
 	ctaSecondaryHover: "#F2AE00",
+	ctaTertiaryHover: "#FFD213",
 }

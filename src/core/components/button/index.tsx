@@ -39,7 +39,10 @@ export {
 export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
 type IconSide = "left" | "right"
 type Size = "default" | "small"
-type LinkButtonPriority = Extract<"primary" | "secondary", Priority>
+type LinkButtonPriority = Extract<
+	"primary" | "secondary" | "tertiary",
+	Priority
+>
 
 const priorities: {
 	[key in Priority]: ({ button }: { button: ButtonTheme }) => SerializedStyles

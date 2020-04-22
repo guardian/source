@@ -11,6 +11,7 @@ export const border = {
 	secondary: neutral[86],
 	success: _success[400],
 	error: _error[400],
+	ctaTertiary: brand[400],
 	input: neutral[60],
 	inputChecked: brand[500],
 	inputHover: brand[500],

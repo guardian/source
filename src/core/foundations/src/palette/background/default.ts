@@ -8,6 +8,7 @@ export const background = {
 	ctaPrimaryHover: "#234B8A",
 	ctaSecondary: brand[800],
 	ctaSecondaryHover: "#ACC9F7",
+	ctaTertiaryHover: "#E5E5E5",
 	input: neutral[100],
 	inputChecked: brand[500],
 }
