@@ -157,10 +157,12 @@ priorityYellow.story = {
 	},
 }
 
+const readerRevenueButtons = [priorityButtons[0], priorityButtons[2]]
+
 export const priorityReaderRevenueLight = () => (
 	<ThemeProvider theme={buttonReaderRevenue}>
 		<div css={flexStart}>
-			{priorityButtons.slice(0, 2).map((button, index) => (
+			{readerRevenueButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
@@ -178,7 +180,7 @@ priorityReaderRevenueLight.story = {
 export const priorityReaderRevenueBlue = () => (
 	<ThemeProvider theme={buttonReaderRevenueBrand}>
 		<div css={flexStart}>
-			{priorityButtons.slice(0, 2).map((button, index) => (
+			{readerRevenueButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
@@ -196,7 +198,7 @@ priorityReaderRevenueBlue.story = {
 export const priorityReaderRevenueYellow = () => (
 	<ThemeProvider theme={buttonReaderRevenueBrandAlt}>
 		<div css={flexStart}>
-			{priorityButtons.slice(0, 2).map((button, index) => (
+			{readerRevenueButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
