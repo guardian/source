@@ -5,5 +5,6 @@ export const brandAltText = {
 	supporting: neutral[60],
 	ctaPrimary: neutral[100],
 	ctaSecondary: neutral[7],
+	ctaTertiary: neutral[7],
 	anchorPrimary: neutral[7],
 }
