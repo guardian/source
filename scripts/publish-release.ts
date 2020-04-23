@@ -24,7 +24,11 @@ const prioritisedPackages = [
 
 // Publish these packages in parallel
 const otherPackages = getComponentPaths().then(paths =>
-	paths.filter(path => !prioritisedPackages.includes(path)),
+	paths.filter(path => {
+		if (!path) return false
+
+		return !prioritisedPackages.includes(path)
+	}),
 )
 
 prioritisedPackages
@@ -41,7 +45,13 @@ prioritisedPackages
 	)
 	.then(() =>
 		otherPackages.then(packages =>
-			Promise.all(packages.map(dir => publish(dir))).catch(err =>
+			Promise.all(
+				packages.map(dir => {
+					if (!dir) return
+
+					return publish(dir)
+				}),
+			).catch(err =>
 				Promise.reject(`Error publishing other packages: ${err}`),
 			),
 		),
