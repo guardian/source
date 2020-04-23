@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "0.18.0-rc.1",
+	"version": "0.18.0",
 	"main": "foundations.js",
 	"module": "foundations.esm.js",
 	"repository": {
