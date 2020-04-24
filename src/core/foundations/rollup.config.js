@@ -34,6 +34,10 @@ const cjsFolders = folders.map(folder => ({
 		{
 			file: `${folder}/cjs/index.js`,
 			format: "cjs",
+			paths: {
+				"@guardian/src-foundations/palette":
+					"@guardian/src-foundations/palette/cjs",
+			},
 		},
 	],
 	plugins,
