@@ -10,6 +10,12 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 24 April 2020
+
+**`@guardian/src-foundations 0.18.1`**
+
+-   :bug: [0d1082c](https://github.com/guardian/source/commit/0d1082c6c092250552f93078dc0311ca6f536ab2) rewrite paths to palette for cjs builds
+
 ## 23 April 2020
 
 **`@guardian/src-foundations 0.18.0`**
