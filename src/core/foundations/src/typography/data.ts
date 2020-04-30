@@ -38,6 +38,7 @@ const textSansSizes: TextSansSizes = {
 	medium: fontSizes[2], //17px
 	large: fontSizes[3], //20px
 	xlarge: fontSizes[4], //24px
+	xxlarge: fontSizes[6], //34px
 }
 
 const fontSizeMapping: {
@@ -78,6 +79,7 @@ const remTextSansSizes: TextSansSizes = {
 	medium: remFontSizes[2], //17px
 	large: remFontSizes[3], //20px
 	xlarge: remFontSizes[4], //24px
+	xxlarge: remFontSizes[6], //34px
 }
 
 const remFontSizeMapping: {
