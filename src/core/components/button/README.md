@@ -49,7 +49,7 @@ Informs users of how important an action is
 
 ### `size`
 
-**`"default" | "small"`** _= "default"_
+**`"default" | "small" | "xsmall"`** _= "default"_
 
 Reflects the prominance of the action
 
@@ -69,7 +69,7 @@ Informs users of how important an action is
 
 ### `size`
 
-**`"default" | "small"`** _= "default"_
+**`"default" | "small" | "xsmall"`** _= "default"_
 
 Reflects the prominance of the action
 

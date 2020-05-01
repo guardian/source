@@ -15,12 +15,15 @@ import {
 	subdued,
 	defaultSize,
 	smallSize,
+	xsmallSize,
 	iconDefault,
 	iconSmall,
+	iconXsmall,
 	iconLeft,
 	iconRight,
 	iconOnlyDefault,
 	iconOnlySmall,
+	iconOnlyXsmall,
 	iconNudgeAnimation,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
@@ -38,7 +41,7 @@ export {
 
 export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
 type IconSide = "left" | "right"
-type Size = "default" | "small"
+type Size = "default" | "small" | "xsmall"
 type LinkButtonPriority = Extract<
 	"primary" | "secondary" | "tertiary",
 	Priority
@@ -64,18 +67,21 @@ const sizes: {
 } = {
 	default: defaultSize,
 	small: smallSize,
+	xsmall: xsmallSize,
 }
 const iconSizes: {
 	[key in Size]: SerializedStyles
 } = {
 	default: iconDefault,
 	small: iconSmall,
+	xsmall: iconXsmall,
 }
 const iconOnlySizes: {
 	[key in Size]: SerializedStyles
 } = {
 	default: iconOnlyDefault,
 	small: iconOnlySmall,
+	xsmall: iconOnlyXsmall,
 }
 
 interface ButtonProps extends Props, ButtonHTMLAttributes<HTMLButtonElement> {
