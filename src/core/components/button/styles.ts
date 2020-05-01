@@ -8,7 +8,6 @@ export const button = css`
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
-	${textSans.medium({ fontWeight: "bold" })};
 	box-sizing: border-box;
 	border: none;
 	background: transparent;
@@ -71,6 +70,7 @@ export const subdued = ({
 `
 
 export const defaultSize = css`
+	${textSans.medium({ fontWeight: "bold" })};
 	height: ${size.medium}px;
 	min-height: ${size.medium}px;
 	padding: 0 ${size.medium / 2}px;
@@ -78,10 +78,19 @@ export const defaultSize = css`
 `
 
 export const smallSize = css`
+	${textSans.medium({ fontWeight: "bold" })};
 	height: ${size.small}px;
 	min-height: ${size.small}px;
 	padding: 0 ${size.small / 2}px;
 	border-radius: ${size.small / 2}px;
+`
+
+export const xsmallSize = css`
+	${textSans.small({ fontWeight: "bold" })};
+	height: ${size.xsmall}px;
+	min-height: ${size.xsmall}px;
+	padding: 0 ${size.xsmall / 2}px;
+	border-radius: ${size.xsmall / 2}px;
 `
 
 export const iconDefault = css`
@@ -106,6 +115,17 @@ export const iconSmall = css`
 	}
 `
 
+export const iconXsmall = css`
+	svg {
+		flex: 0 0 auto;
+		display: block;
+		fill: currentColor;
+		position: relative;
+		width: ${size.xsmall / 2}px;
+		height: auto;
+	}
+`
+
 export const iconRight = css`
 	svg {
 		margin: 0 ${-size.medium / 8}px 0 ${size.medium / 4}px;
@@ -126,6 +146,11 @@ export const iconOnlyDefault = css`
 
 export const iconOnlySmall = css`
 	width: ${size.small}px;
+	justify-content: center;
+`
+
+export const iconOnlyXsmall = css`
+	width: ${size.xsmall}px;
 	justify-content: center;
 `
 

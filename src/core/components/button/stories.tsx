@@ -40,9 +40,21 @@ const priorityButtons = [
 		Subdued
 	</Button>,
 ]
-const sizeButtons = [
-	<Button>Default</Button>,
-	<Button size="small">Small</Button>,
+const defaultSizeButtons = [
+	<Button>Default primary</Button>,
+	<Button priority="subdued">Default subdued</Button>,
+]
+const smallSizeButtons = [
+	<Button size="small">Small primary</Button>,
+	<Button priority="subdued" size="small">
+		Small subdued
+	</Button>,
+]
+const xsmallSizeButtons = [
+	<Button size="xsmall">Extra small primary</Button>,
+	<Button priority="subdued" size="xsmall">
+		Extra small subdued
+	</Button>,
 ]
 const textIconButtons = [
 	<Button icon={<SvgCheckmark />}>Icon to the left</Button>,
@@ -53,11 +65,40 @@ const textIconButtons = [
 		Link button with an arrow icon
 	</LinkButton>,
 ]
+
+const textIconButtonsSmall = [
+	<Button icon={<SvgCheckmark />} size="small">
+		Small: to the left
+	</Button>,
+	<Button iconSide="right" icon={<SvgCheckmark />} size="small">
+		Small: to the right
+	</Button>,
+	<LinkButton href="#" showIcon={true} size="small">
+		Small: Link button
+	</LinkButton>,
+]
+
+const textIconButtonsXsmall = [
+	<Button icon={<SvgCheckmark />} size="xsmall">
+		Extra small: to the left
+	</Button>,
+	<Button iconSide="right" icon={<SvgCheckmark />} size="xsmall">
+		Extra small: to the right
+	</Button>,
+	<LinkButton href="#" showIcon={true} size="xsmall">
+		Extra small: Link button
+	</LinkButton>,
+]
 const iconButtons = [
 	<Button icon={<SvgClose />} aria-label="Dismiss the subscribe banner" />,
 	<Button
 		icon={<SvgClose />}
 		size="small"
+		aria-label="Dismiss the subscribe banner"
+	/>,
+	<Button
+		icon={<SvgClose />}
+		size="xsmall"
 		aria-label="Dismiss the subscribe banner"
 	/>,
 ]
@@ -91,6 +132,10 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
+`
+
+const bottomSpacer = css`
+	margin-bottom: ${space[9]}px;
 `
 
 export default {
@@ -220,10 +265,22 @@ priorityReaderRevenueYellow.story = {
 }
 
 export const sizes = () => (
-	<div css={flexStart}>
-		{sizeButtons.map((button, index) => (
-			<div key={index}>{button}</div>
-		))}
+	<div>
+		<div css={[flexStart, bottomSpacer]}>
+			{defaultSizeButtons.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+		<div css={[flexStart, bottomSpacer]}>
+			{smallSizeButtons.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+		<div css={[flexStart, bottomSpacer]}>
+			{xsmallSizeButtons.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
 	</div>
 )
 sizes.story = {
@@ -231,10 +288,22 @@ sizes.story = {
 }
 
 export const textAndIcon = () => (
-	<div css={flexStart}>
-		{textIconButtons.map((button, index) => (
-			<div key={index}>{button}</div>
-		))}
+	<div>
+		<div css={[flexStart, bottomSpacer]}>
+			{textIconButtons.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+		<div css={[flexStart, bottomSpacer]}>
+			{textIconButtonsSmall.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+		<div css={[flexStart, bottomSpacer]}>
+			{textIconButtonsXsmall.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
 	</div>
 )
 textAndIcon.story = {
