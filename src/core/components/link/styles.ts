@@ -51,7 +51,7 @@ export const icon = css`
 			- Wide: 30x20
 			Since width is constant, we'll hard code it here and allow height to scale
 		*/
-		width: ${size.medium / 2}px;
+		width: ${size.small / 2}px;
 		height: auto;
 	}
 `

@@ -123,7 +123,7 @@ export const choiceCard = ({
 	display: flex;
 	justify-content: center;
 	/* TODO: let's talk about size! */
-	min-height: ${size.large}px;
+	min-height: ${size.medium}px;
 	margin: 0 0 ${space[2]}px 0;
 	box-shadow: inset 0 0 0 2px ${choiceCard.border};
 	border-radius: 4px;

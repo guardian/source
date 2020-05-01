@@ -38,7 +38,7 @@ const iconDefault = css`
 		display: block;
 		fill: currentColor;
 		position: relative;
-		width: ${size.large / 2}px;
+		width: ${size.medium / 2}px;
 		height: auto;
 	}
 `
@@ -49,7 +49,7 @@ const iconSmall = css`
 		display: block;
 		fill: currentColor;
 		position: relative;
-		width: ${size.medium / 2}px;
+		width: ${size.small / 2}px;
 		height: auto;
 	}
 `

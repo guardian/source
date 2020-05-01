@@ -14,7 +14,7 @@ export const label = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	min-height: ${size.large}px;
+	min-height: ${size.medium}px;
 
 	&:hover {
 		input {
@@ -33,8 +33,8 @@ export const radio = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 	cursor: pointer;
 	box-sizing: border-box;
 	display: inline-block;
-	width: ${size.small}px;
-	height: ${size.small}px;
+	width: ${size.xsmall}px;
+	height: ${size.xsmall}px;
 	margin: 0 ${space[2]}px 0 0;
 
 	border: 2px solid currentColor;

@@ -7,7 +7,7 @@ import {
 	SvgExternal,
 	SvgChevronLeftSingle,
 } from "@guardian/src-svgs"
-import { size } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
 import { Link, linkLight, linkBrandYellow, linkBrand } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
@@ -34,7 +34,7 @@ const flexStart = css`
 	justify-content: flex-start;
 
 	> * {
-		margin-right: ${size.medium}px;
+		margin-right: ${space[9]}px;
 	}
 `
 

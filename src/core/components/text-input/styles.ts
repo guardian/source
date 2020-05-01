@@ -17,7 +17,7 @@ export const errorInput = ({
 export const textInput = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
-	height: ${size.large}px;
+	height: ${size.medium}px;
 	${textSans.medium()};
 	color: ${textInput.textUserInput};
 	background-color: ${textInput.backgroundInput};

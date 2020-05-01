@@ -71,31 +71,20 @@ export const subdued = ({
 `
 
 export const defaultSize = css`
-	height: ${size.large}px;
-	min-height: ${size.large}px;
-	padding: 0 ${size.large / 2}px;
-	border-radius: ${size.large / 2}px;
-`
-
-export const smallSize = css`
 	height: ${size.medium}px;
 	min-height: ${size.medium}px;
 	padding: 0 ${size.medium / 2}px;
 	border-radius: ${size.medium / 2}px;
 `
 
-export const iconDefault = css`
-	svg {
-		flex: 0 0 auto;
-		display: block;
-		fill: currentColor;
-		position: relative;
-		width: ${size.large / 2}px;
-		height: auto;
-	}
+export const smallSize = css`
+	height: ${size.small}px;
+	min-height: ${size.small}px;
+	padding: 0 ${size.small / 2}px;
+	border-radius: ${size.small / 2}px;
 `
 
-export const iconSmall = css`
+export const iconDefault = css`
 	svg {
 		flex: 0 0 auto;
 		display: block;
@@ -106,26 +95,37 @@ export const iconSmall = css`
 	}
 `
 
+export const iconSmall = css`
+	svg {
+		flex: 0 0 auto;
+		display: block;
+		fill: currentColor;
+		position: relative;
+		width: ${size.small / 2}px;
+		height: auto;
+	}
+`
+
 export const iconRight = css`
 	svg {
-		margin: 0 ${-size.large / 8}px 0 ${size.large / 4}px;
+		margin: 0 ${-size.medium / 8}px 0 ${size.medium / 4}px;
 	}
 `
 
 export const iconLeft = css`
 	flex-direction: row-reverse;
 	svg {
-		margin: 0 ${size.large / 4}px 0 ${-size.large / 8}px;
+		margin: 0 ${size.medium / 4}px 0 ${-size.medium / 8}px;
 	}
 `
 
 export const iconOnlyDefault = css`
-	width: ${size.large}px;
+	width: ${size.medium}px;
 	justify-content: center;
 `
 
 export const iconOnlySmall = css`
-	width: ${size.medium}px;
+	width: ${size.small}px;
 	justify-content: center;
 `
 

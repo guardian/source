@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { SvgCheckmark, SvgClose } from "@guardian/src-svgs"
-import { size, space } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
 import { background } from "@guardian/src-foundations/palette"
 import {
 	Button,
@@ -89,7 +89,7 @@ const flexStart = css`
 	justify-content: flex-start;
 
 	> div {
-		margin-right: ${size.medium}px;
+		margin-right: ${space[9]}px;
 	}
 `
 
