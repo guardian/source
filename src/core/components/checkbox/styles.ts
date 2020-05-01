@@ -23,7 +23,7 @@ export const label = ({
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	min-height: ${size.large}px;
+	min-height: ${size.medium}px;
 
 	&:hover {
 		input {
@@ -45,8 +45,8 @@ export const checkbox = ({
 	display: inline-block;
 	z-index: 1;
 	cursor: pointer;
-	width: ${size.small}px;
-	height: ${size.small}px;
+	width: ${size.xsmall}px;
+	height: ${size.xsmall}px;
 	margin: 0 ${space[2]}px 0 0;
 
 	border: 2px solid currentColor;
