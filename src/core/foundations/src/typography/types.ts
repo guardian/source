@@ -42,6 +42,8 @@ export interface TextSansSizes extends TypographySizes {
 	medium: number
 	large: number
 	xlarge: number
+	xxlarge: number
+	xxxlarge: number
 }
 
 export type Fs = (
