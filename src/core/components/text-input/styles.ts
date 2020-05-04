@@ -17,6 +17,7 @@ export const errorInput = ({
 export const textInput = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
+	box-sizing: border-box;
 	height: ${size.medium}px;
 	${textSans.medium()};
 	color: ${textInput.textUserInput};
@@ -43,6 +44,7 @@ export const widthFluid = css`
 
 export const width30 = css`
 	width: 30ch;
+	max-width: 100%; /* prevent overflow on narrow viewports */
 `
 
 export const width10 = css`

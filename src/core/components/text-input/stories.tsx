@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 import { space } from "@guardian/src-foundations"
+import { from } from "@guardian/src-foundations/mq"
 import { TextInput, textInputLight } from "./index"
 
 export default {
@@ -20,7 +21,10 @@ const themes: {
 ]
 
 const constrainedWith = css`
-	width: 30em;
+	width: 100%;
+	${from.phablet} {
+		width: 30em;
+	}
 `
 
 const [defaultLight] = themes.map(({ name, theme }) => {
