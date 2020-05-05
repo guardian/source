@@ -47,7 +47,8 @@ may get, please specify them in the documentation section
 -->
 
 -   [ ] Tested at all breakpoints
--   [ ] Tested with with long text, or stretched to fill a wide container
+-   [ ] Tested with with long text
+-   [ ] Stretched to fill a wide container
 
 ### Documentation
 
