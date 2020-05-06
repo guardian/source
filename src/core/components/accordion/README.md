@@ -14,7 +14,7 @@ $ yarn add @guardian/src-accordion @guardian/src-foundations
 import { Accordion, AccordionRow } from "@guardian/src-accordion"
 
 const Page = () => (
-    <Accordion>
+    <Accordion hideToggleLabel={true}>
         <AccordionRow label="Collecting from multiple newsagents">
             Present your card to a newsagent each time you collect the paper.
             The newsagent will scan your card and will be reimbursed for each
@@ -30,7 +30,15 @@ const Page = () => (
 
 ## Accordion Props
 
-TBC
+### `hideToggleLabel`
+
+**`boolean`** _= false_
+
+Determine whether to display the "show" and "hide" labels that toggle the collapsing
+and expanding of the menu. When set to `true`, the label will no longer appear.
+It may be useful to toggle this flag when there is limited space.
+
+_Note: the up or down chevron icon always appears._
 
 ## AccordionRow Props
 

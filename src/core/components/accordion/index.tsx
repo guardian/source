@@ -4,7 +4,8 @@ import {
 	accordionRow,
 	button,
 	labelText,
-	showHideLabel,
+	toggle,
+	toggleLabel,
 	chevronIcon,
 	chevronIconUp,
 	chevronIconDown,
@@ -17,19 +18,31 @@ import { Props } from "@guardian/src-helpers"
 import { SvgChevronUpSingle } from "@guardian/src-svgs"
 
 interface AccordionProps extends Props {
+	hideToggleLabel?: boolean
 	children: ReactElement[]
 }
 
-const Accordion = ({ children }: AccordionProps) => {
-	return <div css={accordion}>{children}</div>
+const Accordion = ({ hideToggleLabel = false, children }: AccordionProps) => {
+	return (
+		<div css={accordion}>
+			{React.Children.map(children, child => {
+				return React.cloneElement(child, { hideToggleLabel })
+			})}
+		</div>
+	)
 }
 
 interface AccordionRowProps extends Props {
 	label: string
+	hideToggleLabel?: boolean
 	children: ReactNode
 }
 
-const AccordionRow = ({ children, label }: AccordionRowProps) => {
+const AccordionRow = ({
+	label,
+	hideToggleLabel = false,
+	children,
+}: AccordionRowProps) => {
 	const [expanded, setExpanded] = useState(false)
 	const collapse = () => setExpanded(false)
 	const expand = () => setExpanded(true)
@@ -44,28 +57,38 @@ const AccordionRow = ({ children, label }: AccordionRowProps) => {
 				<strong css={labelText}>{label}</strong>
 				<div
 					css={[
-						showHideLabel,
+						toggle,
 						chevronIcon,
 						expanded ? chevronIconUp : chevronIconDown,
 					]}
 				>
-					<span>
-						{expanded ? (
-							"Hide"
-						) : (
-							<>
-								Show
-								<span
-									css={css`
-										${visuallyHidden}
-									`}
-								>
-									{" "}
-									more
-								</span>
-							</>
-						)}
-					</span>
+					{hideToggleLabel ? (
+						<span
+							css={css`
+								${visuallyHidden}
+							`}
+						>
+							{expanded ? "Hide" : "Show more"}
+						</span>
+					) : (
+						<span css={toggleLabel}>
+							{expanded ? (
+								"Hide"
+							) : (
+								<>
+									Show
+									<span
+										css={css`
+											${visuallyHidden}
+										`}
+									>
+										{" "}
+										more
+									</span>
+								</>
+							)}
+						</span>
+					)}
 					<SvgChevronUpSingle />
 				</div>
 			</button>

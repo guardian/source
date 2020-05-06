@@ -1,7 +1,9 @@
 import { css } from "@emotion/core"
 import { remSpace, transitions } from "@guardian/src-foundations"
+import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { text, border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
+import { until } from "@guardian/src-foundations/mq"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
 export const accordion = css`
@@ -65,11 +67,18 @@ export const collapsedBody = css`
 	overflow: hidden;
 `
 
-export const showHideLabel = css`
+export const toggle = css`
 	width: auto;
 	display: flex;
 	align-items: center;
+`
+
+export const toggleLabel = css`
 	${textSans.small({ fontWeight: "bold" })};
+
+	${until.tablet} {
+		${visuallyHidden}
+	}
 `
 
 export const chevronIcon = css`
