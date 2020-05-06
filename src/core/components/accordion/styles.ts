@@ -9,7 +9,6 @@ export const accordion = css`
 `
 
 export const accordionRow = css`
-	padding: ${remSpace[2]};
 	border-top: 1px solid ${border.primary};
 `
 
@@ -17,7 +16,7 @@ export const button = css`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: ${remSpace[3]};
+	padding: ${remSpace[2]} 0 ${remSpace[6]} 0;
 	align-items: baseline;
 	color: ${text.primary};
 
@@ -25,7 +24,7 @@ export const button = css`
 	background: none;
 	outline: none;
 	border: none;
-	padding: 0;
+	/* padding: 0; */
 	cursor: pointer;
 	text-align: left;
 
