@@ -92,7 +92,7 @@ const hideToggleLabelLight = () => (
 )
 
 hideToggleLabelLight.story = {
-	name: `hide toggle label`,
+	name: `hide toggle label light`,
 }
 
 const defaultMobileLight = () => <div css={container}>{accordion}</div>
@@ -104,4 +104,19 @@ defaultMobileLight.story = {
 	},
 }
 
-export { defaultLight, defaultGrey, hideToggleLabelLight, defaultMobileLight }
+const hideToggleLabelMobileLight = () => <div css={container}>{accordion}</div>
+
+hideToggleLabelMobileLight.story = {
+	name: `hide toggle label light`,
+	parameters: {
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
+
+export {
+	defaultLight,
+	defaultGrey,
+	hideToggleLabelLight,
+	defaultMobileLight,
+	hideToggleLabelMobileLight,
+}

@@ -8,6 +8,7 @@ import {
 	toggleLabel,
 	chevronIconUp,
 	chevronIconDown,
+	toggleIconWithLabel,
 	expandedBody,
 	collapsedBody,
 } from "./styles"
@@ -51,7 +52,11 @@ const AccordionRow = ({
 			<button
 				aria-expanded={expanded}
 				onClick={expanded ? collapse : expand}
-				css={[button, expanded ? chevronIconUp : chevronIconDown]}
+				css={[
+					button,
+					expanded ? chevronIconUp : chevronIconDown,
+					!hideToggleLabel ? toggleIconWithLabel : "",
+				]}
 			>
 				<strong css={labelText}>{label}</strong>
 				<div css={toggle}>

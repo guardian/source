@@ -3,7 +3,7 @@ import { space, remSpace, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { text, border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
-import { until } from "@guardian/src-foundations/mq"
+import { until, from } from "@guardian/src-foundations/mq"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
 export const accordion = css`
@@ -19,14 +19,13 @@ export const button = css`
 	display: flex;
 	justify-content: space-between;
 	padding: ${remSpace[2]} 0 ${remSpace[6]} 0;
-	align-items: baseline;
+	align-items: center;
 	color: ${text.primary};
 
 	/* user agent overrides */
 	background: none;
 	outline: none;
 	border: none;
-	/* padding: 0; */
 	cursor: pointer;
 	text-align: left;
 
@@ -80,12 +79,16 @@ export const toggleLabel = css`
 		${visuallyHidden}
 	}
 `
-
 const chevronIcon = css`
 	svg {
-		/* TODO: we need to tidy up size */
-		width: 15px;
-		height: 15px;
+		/* TODO: think about icon sizing */
+		width: 18px;
+		height: 18px;
+
+		${from.tablet} {
+			width: 26px;
+			height: 26px;
+		}
 		margin-left: ${remSpace[1]};
 		transition: ${transitions.short};
 	}
@@ -111,5 +114,12 @@ export const chevronIconUp = css`
 	svg {
 		transform: rotate(180deg);
 		transition: transform ${transitions.short};
+	}
+`
+
+export const toggleIconWithLabel = css`
+	svg {
+		width: 18px;
+		height: 18px;
 	}
 `
