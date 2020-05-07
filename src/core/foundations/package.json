@@ -14,6 +14,7 @@
 		"copy:types": "ts-node --script-mode scripts/copy-type-definitions --esModuleInterop",
 		"publish:public": "yarn publish --access public",
 		"prepublishOnly": "yarn build",
+		"verbump:major": "yarn version --major --no-git-tag-version",
 		"verbump:minor": "yarn version --minor --no-git-tag-version",
 		"verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
 		"verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",

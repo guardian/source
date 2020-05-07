@@ -18,6 +18,7 @@
 		"build:all": "ts-node ./scripts/build-all",
 		"ci:build": "NODE_ENV=production yarn build:all && yarn build-storybook",
 		"publish:release": "ts-node ./scripts/publish-release",
+		"verbump:major": "yarn version --major --no-git-tag-version",
 		"verbump:minor": "yarn version --minor --no-git-tag-version",
 		"verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
 		"verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
