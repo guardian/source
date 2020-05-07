@@ -4,9 +4,6 @@ A shared components library for Guardian Digital. Uses the Guardian's [Source De
 
 ## Usage
 
-**This project is still in alpha.** If you'd like to start using our foundations and components, please drop an email to
-`digital.design.system` so we can add your project to our database.
-
 Check out our [Getting Started guide](https://theguardian.design/2a1e5182b/p/876251).
 
 ## Contributing
