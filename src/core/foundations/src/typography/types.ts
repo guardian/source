@@ -53,13 +53,11 @@ export type Fs = (
 	{
 		lineHeight,
 		fontWeight,
-		italic,
 		fontStyle,
 		unit,
 	}: {
 		lineHeight: LineHeight
 		fontWeight: FontWeight
-		italic: boolean
 		fontStyle: Option<FontStyle>
 		unit: ScaleUnit
 	},
@@ -73,7 +71,6 @@ export type FontScaleFunctionStr = (options?: FontScaleArgs) => string
 export interface FontScaleArgs {
 	lineHeight?: LineHeight
 	fontWeight?: FontWeight
-	italic?: boolean
 	fontStyle?: FontStyle
 	unit?: ScaleUnit
 }
