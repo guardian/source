@@ -18,7 +18,7 @@
 -   :sparkles: [1c2d9f2](https://github.com/guardian/source/pull/346/commits/1c2d9f2860571684257517d9146283e7a3f7b993) add xxlarge and xxxlarge textSans (thanks @webb04)
 -   :boom: :robot: [75a20ac](https://github.com/guardian/source/pull/354/commits/75a20ac12f9d453631c092e3b4d7b71f2078adda) remove legacy italic api
 
-    **`@guardian/src-svgs 1.0.0`**
+**`@guardian/src-svgs 1.0.0`**
 
 -   :robot: [c032120](https://github.com/guardian/source/pull/344/commits/c0321203091c27b27ff8db9bec25d1dada7ddb6b) rename sizes in svg
 
@@ -31,7 +31,7 @@
 
 -   :robot: [cc215fb](https://github.com/guardian/source/pull/344/commits/cc215fb0b592b177f9c35e3b698d168640efe0cf) rename sizes in radio
 
-    **`@guardian/src-checkbox 1.0.0`**
+**`@guardian/src-checkbox 1.0.0`**
 
 -   :robot: [c17d827](https://github.com/guardian/source/pull/344/commits/c17d827535d78a82ff6f0b300a01d9a8315de384) rename sizes in checkbox
 
