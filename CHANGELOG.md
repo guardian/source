@@ -10,6 +10,52 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 7 May 2020
+
+**`@guardian/src-foundations 1.0.0`**
+
+-   :boom: :sparkles: [04c8e76](https://github.com/guardian/source/pull/344/commits/04c8e76ac48d8df27dac1feaefb0859d23476167) shift size naming down a gear
+-   :sparkles: [1c2d9f2](https://github.com/guardian/source/pull/346/commits/1c2d9f2860571684257517d9146283e7a3f7b993) add xxlarge and xxxlarge textSans (thanks @webb04)
+-   :boom: :robot: [75a20ac](https://github.com/guardian/source/pull/354/commits/75a20ac12f9d453631c092e3b4d7b71f2078adda) remove legacy italic api
+
+    **`@guardian/src-svgs 1.0.0`**
+
+-   :robot: [c032120](https://github.com/guardian/source/pull/344/commits/c0321203091c27b27ff8db9bec25d1dada7ddb6b) rename sizes in svg
+
+**`@guardian/src-button 1.0.0`**
+
+-   :robot: [647ef00](https://github.com/guardian/source/pull/344/commits/647ef00a2492445f4042f880255cf7967c61dfa5) rename sizes in buttons
+-   :sparkles: [1b42f47](https://github.com/guardian/source/pull/347/commits/1b42f472948ebbe6db3b0189a9aebbc1d0e7d622) add xsmall button
+
+**`@guardian/src-radio 1.0.0`**
+
+-   :robot: [cc215fb](https://github.com/guardian/source/pull/344/commits/cc215fb0b592b177f9c35e3b698d168640efe0cf) rename sizes in radio
+
+    **`@guardian/src-checkbox 1.0.0`**
+
+-   :robot: [c17d827](https://github.com/guardian/source/pull/344/commits/c17d827535d78a82ff6f0b300a01d9a8315de384) rename sizes in checkbox
+
+**`@guardian/src-choice-card 1.0.0`**
+
+-   :robot: [3c3a595](https://github.com/guardian/source/pull/344/commits/c17d827535d78a82ff6f0b300a01d9a8315de384) rename sizes in choice card
+
+**`@guardian/src-link 1.0.0`**
+
+-   :robot: [21872ed](https://github.com/guardian/source/pull/344/commits/21872ed875b4dd5d27843d2c501c96d6748a1879) rename sizes in link
+
+**`@guardian/src-text-input 1.0.0`**
+
+-   :robot: [bd3ab1f](https://github.com/guardian/source/pull/344/commits/bd3ab1f7600e09857f3c2ca83526b39f10647567) rename sizes in text input
+-   :bug: [1c22a3a](https://github.com/guardian/source/pull/348/commits/1c22a3ae93fc1bbd9088f9858dd0232159846a7e) prevent overflow on narrow viewports
+-   :robot: [0b31a2c](https://github.com/guardian/source/pull/348/commits/0b31a2c93820080ab21e2734268d05de8e06a39e) make stories look better on narrow viewports
+
+**`@guardian/src-accordion 1.0.0`**
+
+-   :globe_with_meridians: [bda1309](https://github.com/guardian/source/pull/350/commits/bda1309f078da6d552807f476bea4af1a3ed05a8) increase row header hit area
+-   :nail_care: [61cabbd](https://github.com/guardian/source/pull/351/commits/61cabbdb89e6d3c8125dced4839cff690057949c) add logic to hide or show toggle label text
+-   :nail_care: [a78f335](https://github.com/guardian/source/pull/352/commits/a78f335e8b451c9d1f79bcdc585e1e493962da18) add nudge animation to toggle icon on hover
+-   :nail_care: [b8f8241](https://github.com/guardian/source/pull/353/commits/b8f82417bb4c60aaa95bb94afdeb3883bc477f34) adjust size of icon depending on presence of label text
+
 ## 24 April 2020
 
 **`@guardian/src-foundations 0.18.1`**
