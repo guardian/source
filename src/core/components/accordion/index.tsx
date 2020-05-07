@@ -6,7 +6,6 @@ import {
 	labelText,
 	toggle,
 	toggleLabel,
-	chevronIcon,
 	chevronIconUp,
 	chevronIconDown,
 	expandedBody,
@@ -15,7 +14,7 @@ import {
 import { css } from "@emotion/core"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
-import { SvgChevronUpSingle } from "@guardian/src-svgs"
+import { SvgChevronDownSingle } from "@guardian/src-svgs"
 
 interface AccordionProps extends Props {
 	hideToggleLabel?: boolean
@@ -52,16 +51,10 @@ const AccordionRow = ({
 			<button
 				aria-expanded={expanded}
 				onClick={expanded ? collapse : expand}
-				css={button}
+				css={[button, expanded ? chevronIconUp : chevronIconDown]}
 			>
 				<strong css={labelText}>{label}</strong>
-				<div
-					css={[
-						toggle,
-						chevronIcon,
-						expanded ? chevronIconUp : chevronIconDown,
-					]}
-				>
+				<div css={toggle}>
 					{hideToggleLabel ? (
 						<span
 							css={css`
@@ -89,7 +82,7 @@ const AccordionRow = ({
 							)}
 						</span>
 					)}
-					<SvgChevronUpSingle />
+					<SvgChevronDownSingle />
 				</div>
 			</button>
 			<div css={expanded ? expandedBody : collapsedBody}>

@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { remSpace, transitions } from "@guardian/src-foundations"
+import { space, remSpace, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { text, border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
@@ -81,23 +81,33 @@ export const toggleLabel = css`
 	}
 `
 
-export const chevronIcon = css`
+const chevronIcon = css`
 	svg {
 		/* TODO: we need to tidy up size */
 		width: 15px;
 		height: 15px;
 		margin-left: ${remSpace[1]};
-	}
-`
-
-export const chevronIconUp = css`
-	svg {
-		transform: rotate(0);
-		transition: transform ${transitions.short};
+		transition: ${transitions.short};
 	}
 `
 
 export const chevronIconDown = css`
+	${chevronIcon};
+	svg {
+		transform: translate(0, 0);
+		transition: transform ${transitions.short};
+	}
+
+	&:hover,
+	&:focus {
+		svg {
+			transform: translate(0, ${space[1] / 2}px);
+		}
+	}
+`
+
+export const chevronIconUp = css`
+	${chevronIcon};
 	svg {
 		transform: rotate(180deg);
 		transition: transform ${transitions.short};
