@@ -35,7 +35,7 @@ export const button = css`
 `
 
 export const labelText = css`
-	${headline.xxxsmall()};
+	${headline.xxxsmall({ fontWeight: "bold" })};
 	margin-right: ${remSpace[4]};
 `
 
