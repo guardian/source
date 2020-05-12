@@ -16,6 +16,7 @@ import { css } from "@emotion/core"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle } from "@guardian/src-svgs"
+export { AccordionTheme } from "@guardian/src-foundations/themes"
 
 interface AccordionProps extends Props {
 	hideToggleLabel?: boolean
@@ -24,7 +25,7 @@ interface AccordionProps extends Props {
 
 const Accordion = ({ hideToggleLabel = false, children }: AccordionProps) => {
 	return (
-		<div css={accordion}>
+		<div css={theme => accordion(theme.accordion && theme)}>
 			{React.Children.map(children, child => {
 				return React.cloneElement(child, { hideToggleLabel })
 			})}
@@ -48,12 +49,12 @@ const AccordionRow = ({
 	const expand = () => setExpanded(true)
 
 	return (
-		<div css={accordionRow}>
+		<div css={theme => accordionRow(theme.accordion && theme)}>
 			<button
 				aria-expanded={expanded}
 				onClick={expanded ? collapse : expand}
-				css={[
-					button,
+				css={theme => [
+					button(theme.accordion && theme),
 					expanded ? chevronIconUp : chevronIconDown,
 					!hideToggleLabel ? toggleIconWithLabel : "",
 				]}

@@ -1,26 +1,35 @@
 import { css } from "@emotion/core"
 import { space, remSpace, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
-import { text, border } from "@guardian/src-foundations/palette"
 import { headline, textSans } from "@guardian/src-foundations/typography"
 import { until, from } from "@guardian/src-foundations/mq"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
+import {
+	accordionDefault,
+	AccordionTheme,
+} from "@guardian/src-foundations/themes"
 
-export const accordion = css`
-	border-bottom: 1px solid ${border.primary};
+export const accordion = ({
+	accordion,
+}: { accordion: AccordionTheme } = accordionDefault) => css`
+	border-bottom: 1px solid ${accordion.borderPrimary};
 `
 
-export const accordionRow = css`
-	border-top: 1px solid ${border.primary};
+export const accordionRow = ({
+	accordion,
+}: { accordion: AccordionTheme } = accordionDefault) => css`
+	border-top: 1px solid ${accordion.borderPrimary};
 `
 
-export const button = css`
+export const button = ({
+	accordion,
+}: { accordion: AccordionTheme } = accordionDefault) => css`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	padding: ${remSpace[2]} 0 ${remSpace[6]} 0;
 	align-items: center;
-	color: ${text.primary};
+	color: ${accordion.textPrimary};
 
 	/* user agent overrides */
 	background: none;
