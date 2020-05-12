@@ -2,55 +2,44 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Accordion, AccordionRow } from "./index"
 import { background } from "@guardian/src-foundations/palette"
-import { textSans } from "@guardian/src-foundations/typography"
+import { body } from "@guardian/src-foundations/typography"
 import { from } from "@guardian/src-foundations/mq"
 import { space } from "@guardian/src-foundations"
+import { Link } from "@guardian/src-link"
+
+/* eslint-disable react/jsx-key */
+const accordionRows = [
+	<AccordionRow label="Collecting from multiple newsagents">
+		<p>
+			Present your card to a newsagent each time you collect the paper.
+			The newsagent will scan your card and will be reimbursed for each
+			transaction automatically.
+		</p>
+		<p>
+			<Link href="">Find your nearest participating retailer</Link>
+		</p>
+	</AccordionRow>,
+	<AccordionRow label="Delivery from your retailer">
+		<p>
+			Simply give your preferred store / retailer the barcode printed on
+			your subscription letter.
+		</p>
+		<p>
+			<Link href="">Find your nearest participating retailer</Link>
+		</p>
+	</AccordionRow>,
+]
+/* eslint-enable react/jsx-key */
 
 const accordion = (
 	<Accordion>
-		<AccordionRow label="Collecting from multiple newsagents">
-			<p>
-				Present your card to a newsagent each time you collect the
-				paper. The newsagent will scan your card and will be reimbursed
-				for each transaction automatically.
-			</p>
-			<p>
-				<a href="">Find your nearest participating retailer</a>
-			</p>
-		</AccordionRow>
-		<AccordionRow label="Delivery from your retailer">
-			<p>
-				Simply give your preferred store / retailer the barcode printed
-				on your subscription letter.
-			</p>
-			<p>
-				<a href="">Find your nearest participating retailer</a>
-			</p>
-		</AccordionRow>
+		{accordionRows.map((row, i) => React.cloneElement(row, { key: i }))}
 	</Accordion>
 )
 
 const accordionHideToggleLabel = (
 	<Accordion hideToggleLabel={true}>
-		<AccordionRow label="Collecting from multiple newsagents">
-			<p>
-				Present your card to a newsagent each time you collect the
-				paper. The newsagent will scan your card and will be reimbursed
-				for each transaction automatically.
-			</p>
-			<p>
-				<a href="">Find your nearest participating retailer</a>
-			</p>
-		</AccordionRow>
-		<AccordionRow label="Delivery from your retailer">
-			<p>
-				Simply give your preferred store / retailer the barcode printed
-				on your subscription letter.
-			</p>
-			<p>
-				<a href="">Find your nearest participating retailer</a>
-			</p>
-		</AccordionRow>
+		{accordionRows.map((row, i) => React.cloneElement(row, { key: i }))}
 	</Accordion>
 )
 
@@ -62,7 +51,7 @@ const container = css`
 	}
 
 	p {
-		${textSans.small()};
+		${body.medium({ lineHeight: "regular" })};
 		margin-bottom: ${space[3]}px;
 	}
 `
