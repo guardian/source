@@ -10,6 +10,18 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 13 May 2020
+
+**`@guardian/src-foundations 1.0.1`**
+
+-   :sparkles: [e0098db](https://github.com/guardian/source/commit/e0098dbb8e084a02645a2162c316f2c2260de04b) add default accordion theme
+
+**`@guardian/src-accordion 1.0.1`**
+
+-   :nail_care: [6270396](https://github.com/guardian/source/commit/62703965fdff75bd471a5a957baa1c48507852b7) bring accordion font usage into line with design
+-   :robot: [07bbee9](https://github.com/guardian/source/commit/07bbee9229a8430a7c890fc0f15ab9dde46094dc) delete unused story
+-   :sparkles: [802886a](https://github.com/guardian/source/commit/802886adc434872293a0017fd83ed6bf3a888e30) consume accordion theme
+
 ## 7 May 2020
 
 **`@guardian/src-foundations 1.0.0`**
