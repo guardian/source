@@ -21,21 +21,25 @@ export const accordionRow = ({
 	border-top: 1px solid ${accordion.borderPrimary};
 `
 
-export const button = ({
-	accordion,
-}: { accordion: AccordionTheme } = accordionDefault) => css`
+const buttonStyles = css`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: ${remSpace[2]} 0 ${remSpace[6]} 0;
 	align-items: center;
+	padding: ${remSpace[2]} 0 ${remSpace[6]} 0;
+	cursor: pointer;
+`
+
+export const button = ({
+	accordion,
+}: { accordion: AccordionTheme } = accordionDefault) => css`
+	${buttonStyles};
 	color: ${accordion.textPrimary};
 
 	/* user agent overrides */
 	background: none;
 	outline: none;
 	border: none;
-	cursor: pointer;
 	text-align: left;
 
 	&:focus div {
@@ -43,12 +47,19 @@ export const button = ({
 	}
 `
 
+export const noJsButton = ({
+	accordion,
+}: { accordion: AccordionTheme } = accordionDefault) => css`
+	${buttonStyles};
+	color: ${accordion.textPrimary};
+`
+
 export const labelText = css`
 	${headline.xxxsmall({ fontWeight: "bold" })};
 	margin-right: ${remSpace[4]};
 `
 
-export const expandedBody = css`
+const expandedBodyStyles = css`
 	/*
 	TODO:
 	Hardcoded max-height because auto is invalid.
@@ -63,7 +74,11 @@ export const expandedBody = css`
 	height: auto;
 `
 
-export const collapsedBody = css`
+export const expandedBody = css`
+	${expandedBodyStyles};
+`
+
+export const collapsedBodyStyles = css`
 	max-height: 0;
 	/*
 	TODO:
@@ -73,6 +88,34 @@ export const collapsedBody = css`
 	transition: max-height ${transitions.short};
 	*/
 	overflow: hidden;
+`
+export const collapsedBody = css`
+	${collapsedBodyStyles};
+`
+
+export const noJsInput = css`
+	${visuallyHidden};
+
+	&:focus + [data-target="label"] > [data-target="toggle"] {
+		${focusHalo};
+	}
+
+	&:not(:checked) ~ [data-target="body"] {
+		${collapsedBodyStyles};
+		display: none;
+	}
+
+	&:checked ~ [data-target="body"] {
+		${expandedBodyStyles};
+	}
+
+	&:not(:checked) + [data-target="label"] [data-target="toggle-label-hide"] {
+		display: none;
+	}
+
+	&:checked + [data-target="label"] [data-target="toggle-label-show"] {
+		display: none;
+	}
 `
 
 export const toggle = css`
