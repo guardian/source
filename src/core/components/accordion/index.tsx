@@ -18,7 +18,7 @@ import { css } from "@emotion/core"
 import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle } from "@guardian/src-svgs"
-export { AccordionTheme } from "@guardian/src-foundations/themes"
+export { accordionDefault } from "@guardian/src-foundations/themes"
 
 const visuallyHidden = css`
 	${_visuallyHidden}
