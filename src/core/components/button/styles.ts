@@ -138,20 +138,24 @@ export const iconLeft = css`
 		margin: 0 ${size.medium / 4}px 0 ${-size.medium / 8}px;
 	}
 `
+const iconOnly = css`
+	justify-content: center;
+	padding: 0;
+`
 
 export const iconOnlyDefault = css`
+	${iconOnly};
 	width: ${size.medium}px;
-	justify-content: center;
 `
 
 export const iconOnlySmall = css`
+	${iconOnly};
 	width: ${size.small}px;
-	justify-content: center;
 `
 
 export const iconOnlyXsmall = css`
+	${iconOnly};
 	width: ${size.xsmall}px;
-	justify-content: center;
 `
 
 export const iconNudgeAnimation = css`
