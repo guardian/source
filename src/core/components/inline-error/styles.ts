@@ -18,5 +18,6 @@ export const inlineError = ({
 	svg {
 		fill: currentColor;
 		width: 30px;
+		height: 30px;
 	}
 `
