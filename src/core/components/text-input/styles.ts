@@ -43,16 +43,16 @@ export const widthFluid = css`
 `
 
 export const width30 = css`
-	width: 30ch;
+	width: 40ex;
 	max-width: 100%; /* prevent overflow on narrow viewports */
 `
 
 export const width10 = css`
-	width: 10ch;
+	width: 18ex;
 `
 
 export const width4 = css`
-	width: 4ch;
+	width: 9ex;
 `
 
 export const text = ({
