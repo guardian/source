@@ -169,7 +169,10 @@ export const contentWrapper = css`
 		/* TODO: 30px is a standard icon width, should probably exposed
 		as a size property */
 		width: 30px;
-		height: auto;
+		/* TODO: height is non-standard to support payment icons, which is
+		currently the only use case of the icon variant. We should find a way
+		to accommodate standard 30x30 icons too */
+		height: 20px;
 		left: -34px; /* width + 4px "margin" */
 		fill: currentColor;
 
