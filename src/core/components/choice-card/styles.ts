@@ -149,10 +149,10 @@ export const contentWrapper = css`
 	flex: 0 1 auto;
 	display: flex;
 	flex-direction: row;
-	box-sizing: border-box;
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	box-sizing: border-box;
 
 	${from.mobileLandscape} {
 		flex-direction: column;
@@ -178,6 +178,17 @@ export const contentWrapper = css`
 
 		${from.mobileLandscape} {
 			position: static;
+		}
+	}
+`
+
+/* We need to explicitly set the width of the content to support
+flex-direction: column in IE11 */
+export const contentWrapperLabelOnly = css`
+	width: 100%;
+	${from.mobileLandscape} {
+		& > div {
+			width: 100%;
 		}
 	}
 `

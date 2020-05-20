@@ -17,6 +17,7 @@ import {
 	tick,
 	errorChoiceCard,
 	contentWrapper,
+	contentWrapperLabelOnly,
 } from "./styles"
 import { InlineError } from "@guardian/src-inline-error"
 import { Props } from "@guardian/src-helpers"
@@ -147,7 +148,12 @@ const ChoiceCard = ({
 				]}
 				htmlFor={id}
 			>
-				<div css={contentWrapper}>
+				<div
+					css={[
+						contentWrapper,
+						!iconSvg ? contentWrapperLabelOnly : "",
+					]}
+				>
 					{iconSvg ? iconSvg : ""}
 					<div>{labelContent}</div>
 				</div>
