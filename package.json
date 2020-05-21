@@ -2,7 +2,7 @@
 	"name": "source",
 	"version": "1.1.0-rc.0",
 	"scripts": {
-		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook",
+		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook --port 9009",
 		"lint:styles": "stylelint src/core/**/styles.ts",
 		"lint:js": "eslint . --ext .ts,.tsx,.js",
 		"lint": "yarn lint:js && yarn lint:styles",
