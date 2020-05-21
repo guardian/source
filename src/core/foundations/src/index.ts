@@ -1,7 +1,7 @@
 export * from "./animation"
 export * from "./breakpoints"
 export * from "./palette"
-export * from "./size"
+export * from "./size__legacy"
 export * from "./space"
 
 // Avoid importing the entire palette directly in your application. Prefer using the named exports
