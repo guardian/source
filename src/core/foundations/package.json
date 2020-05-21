@@ -10,7 +10,7 @@
 	"scripts": {
 		"build": "yarn clean && tsc && rollup --config && yarn copy:types",
 		"watch": "yarn clean && tsc && rollup --config --watch",
-		"clean": "rm -rf accessibility mq palette themes typography utils foundations.js foundations.esm.js *.d.ts tsconfig.tsbuildinfo src/*.d.ts",
+		"clean": "rm -rf accessibility mq palette size themes typography utils foundations.js foundations.esm.js *.d.ts tsconfig.tsbuildinfo src/*.d.ts",
 		"copy:types": "ts-node --script-mode scripts/copy-type-definitions --esModuleInterop",
 		"publish:public": "yarn publish --access public",
 		"prepublishOnly": "yarn build",
@@ -39,6 +39,7 @@
 		"src/accessibility/index.ts",
 		"src/mq/index.ts",
 		"src/palette/**",
+		"src/size/**",
 		"src/themes/**",
 		"src/typography/**",
 		"src/utils/**"

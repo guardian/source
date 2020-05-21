@@ -5,6 +5,7 @@ const folders = [
 	"accessibility",
 	"mq",
 	"palette",
+	"size",
 	"themes",
 	"typography",
 	"utils",

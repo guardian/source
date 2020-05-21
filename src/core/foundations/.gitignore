@@ -2,6 +2,7 @@
 mq/
 accessibility/
 palette/
+size/
 themes/
 typography/
 utils/
@@ -15,6 +16,7 @@ tsconfig.tsbuildinfo
 !src/mq/
 !src/accessibility/
 !src/palette
+!src/size
 !src/themes/
 !src/typography/
 !src/utils/

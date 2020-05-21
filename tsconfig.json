@@ -10,6 +10,7 @@
 			"@guardian/src-foundations/palette": [
 				"core/foundations/src/palette"
 			],
+			"@guardian/src-foundations/size": ["core/foundations/src/size"],
 			"@guardian/src-foundations/themes": ["core/foundations/src/themes"],
 			"@guardian/src-foundations/typography": [
 				"core/foundations/src/typography"
