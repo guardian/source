@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"outDir": ".",
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"jsx": "preserve",
+		"esModuleInterop": true
+	},
+	"exclude": ["node_modules"]
+}

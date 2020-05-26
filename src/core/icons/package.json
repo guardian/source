@@ -1,0 +1,59 @@
+{
+	"name": "@guardian/src-icons",
+	"version": "1.1.0-rc.0",
+	"main": "dist/index.js",
+	"module": "dist/index.esm.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/guardian/source.git"
+	},
+	"scripts": {
+		"build": "yarn clean && tsc && rollup --config",
+		"watch": "rollup --config --watch",
+		"clean": "rm -rf dist *.d.ts",
+		"prepublish": "yarn build",
+		"publish:public": "yarn publish --access public",
+		"verbump:major": "yarn version --major --no-git-tag-version",
+		"verbump:minor": "yarn version --minor --no-git-tag-version",
+		"verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
+		"verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
+		"verbump:patch": "yarn version --patch --no-git-tag-version",
+		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.8.0",
+		"@babel/preset-env": "^7.8.0",
+		"@babel/preset-react": "^7.8.0",
+		"@guardian/src-foundations": "^1.1.0-rc.0",
+		"@guardian/src-helpers": "^1.1.0-rc.0",
+		"rollup": "^1.17.0",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"typescript": "^3.7.2"
+	},
+	"files": [
+		"alert.tsx",
+		"arrow-down-straight.tsx",
+		"arrow-left-straight.tsx",
+		"arrow-right-straight.tsx",
+		"arrow-up-straight.tsx",
+		"checkmark.tsx",
+		"chevron-down-single.tsx",
+		"chevron-left-single.tsx",
+		"chevron-right-single.tsx",
+		"chevron-up-single.tsx",
+		"close.tsx",
+		"credit-card.tsx",
+		"direct-debit.tsx",
+		"external.tsx",
+		"indent.tsx",
+		"minus.tsx",
+		"plus.tsx",
+		"paypal.tsx",
+		"*.d.ts",
+		"dist/*.js"
+	],
+	"peerDependencies": {
+		"react": "^16.8.6"
+	}
+}
