@@ -1,6 +1,7 @@
 import {
 	fontMapping,
 	fontSizeMapping,
+	remFontSizeMapping,
 	lineHeightMapping,
 	fontWeightMapping,
 	availableFonts,
@@ -30,10 +31,12 @@ export const fs: Fs = category => (
 	const fontSizeValue =
 		unit === "px"
 			? fontSizeMapping[category][level]
-			: `${fontSizeMapping[category][level] / 16}rem`
+			: `${remFontSizeMapping[category][level]}rem`
 	const lineHeightValue =
 		unit === "px"
-			? `${lineHeightMapping[lineHeight] *
+			? // line-height is defined as a unitless value, so we multiply
+			  // by the element's font-size in px to get the px value
+			  `${lineHeightMapping[lineHeight] *
 					fontSizeMapping[category][level]}px`
 			: lineHeightMapping[lineHeight]
 	// TODO: consider logging an error in development if a requested

@@ -1,4 +1,5 @@
 import { fontSizes, fonts, lineHeights, fontWeights } from "../theme"
+import { pxToRem } from "../utils"
 import {
 	Category,
 	LineHeight,
@@ -51,7 +52,7 @@ const fontSizeMapping: {
 	textSans: textSansSizes,
 }
 
-const remFontSizes = fontSizes.map(fontSize => fontSize / 16)
+const remFontSizes = fontSizes.map(fontSize => pxToRem(fontSize))
 
 const remTitlepieceSizes: TitlepieceSizes = {
 	small: remFontSizes[7], //42px
