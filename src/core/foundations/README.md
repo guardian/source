@@ -10,7 +10,7 @@ $ yarn add @guardian/src-foundations
 
 ## Use
 
-### [Palette](https://zeroheight.com/2a1e5182b/p/938810)
+### [Palette](https://www.theguardian.design/2a1e5182b/p/28d868-overview)
 
 ```ts
 import { background } from "@guardian/src-foundations/palette"
@@ -20,7 +20,7 @@ const backgroundColor = css`
 `
 ```
 
-### [Typography](https://zeroheight.com/2a1e5182b/p/930d69)
+### [Typography](https://www.theguardian.design/2a1e5182b/p/930d69-typography/b/78d0d9)
 
 ```ts
 import { headline, body, textSans } from "@guardian/src-foundations/typography"
@@ -60,7 +60,18 @@ const styles = css`
 `
 ```
 
-### Visually Hidden
+### [Size](https://www.theguardian.design/2a1e5182b/p/38d9a9-overview)
+
+```ts
+import { width, height } from "@guardian/src-foundations/size"
+
+const checkbox = css`
+    width: ${width.inputXsmall}px;
+    height: ${height.inputXsmall}px;
+`
+```
+
+### [Visually Hidden](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/1285a8)
 
 For elements that should not appear to sighted users, but are useful to assistive technology users.
 
@@ -72,7 +83,7 @@ const label = css`
 `
 ```
 
-### Focus Halo
+### [Focus Halo](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/24562a)
 
 This mixin provides a [clear focus state](https://zeroheight.com/2a1e5182b/p/08dc26/t/314e46) for
 elements that may receive keyboard focus.
