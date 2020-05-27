@@ -57,13 +57,20 @@ export class InteractionModeEngine {
 
 const FOCUS_DISABLED = "src-focus-disabled"
 
-const focusEngine = new InteractionModeEngine(
-	document.documentElement,
-	FOCUS_DISABLED,
-)
+let _focusEngine: InteractionModeEngine
+
+const focusEngine = (): InteractionModeEngine => {
+	if (!_focusEngine)
+		_focusEngine = new InteractionModeEngine(
+			document.documentElement,
+			FOCUS_DISABLED,
+		)
+
+	return _focusEngine
+}
 
 export const FocusStyleManager = {
-	alwaysShowFocus: () => focusEngine.stop(),
-	isActive: () => focusEngine.isActive(),
-	onlyShowFocusOnTabs: () => focusEngine.start(),
+	alwaysShowFocus: () => focusEngine().stop(),
+	isActive: () => focusEngine().isActive(),
+	onlyShowFocusOnTabs: () => focusEngine().start(),
 }
