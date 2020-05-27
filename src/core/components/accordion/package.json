@@ -20,10 +20,10 @@
 		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.8.0",
-		"@babel/preset-env": "^7.8.0",
-		"@babel/preset-react": "^7.8.0",
-		"@babel/preset-typescript": "^7.8.0",
+		"@babel/core": "^7.10.0",
+		"@babel/preset-env": "^7.10.0",
+		"@babel/preset-react": "^7.10.0",
+		"@babel/preset-typescript": "^7.9.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@guardian/src-foundations": "^1.1.0-rc.0",
 		"@guardian/src-link": "^1.1.0-rc.0",
