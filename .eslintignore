@@ -9,6 +9,7 @@ src/core/foundations/scripts
 src/core/foundations/mq
 src/core/foundations/accessibility
 src/core/foundations/palette
+src/core/foundations/size
 src/core/foundations/themes
 src/core/foundations/typography
 src/core/foundations/utils
