@@ -10,6 +10,43 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 28 May 2020
+
+**`@guardian/src-foundations 1.1.0`**
+
+-   :robot: [e729e13](https://github.com/guardian/source/commit/e729e132822f52034e9f561096a804606ea1c2b7) extract px to rem logic into module
+-   :sparkles: [40e5efb](https://github.com/guardian/source/commit/40e5efb3a72bf9ca4b10d87f1cdd41d78a313d89) add new size endpoint to foundations
+-   :page_with_curl: [cc24966](https://github.com/guardian/source/commit/cc2496611a59f3918aba400b0488a7e0fed05520) add size example code and more links to readme
+-   :robot: [3c083e8](https://github.com/guardian/source/commit/3c083e8c97c757f559779e47d3790a0d7a3a839c) ignore size dist files
+-   :bug: [dd0208e](https://github.com/guardian/source/commit/dd0208e36fde6c5819ba576d776bdbe5ce017bf2) remove side effect from focus manager
+
+**`@guardian/src-svgs 1.1.0`**
+
+-   :bug: [78177e](https://github.com/guardian/source/commit/78177eb72050ad816cf0eda47e2f7b1c4d319511) organise icons into ui and payment icons with hardcoded sizes
+-   :robot: [16ac77](https://github.com/guardian/source/commit/16ac77704bd77fbaffc3d6e049df36d8363872cf) resize indent svg to be 30x30
+
+**`@guardian/src-inline-error 1.1.0`**
+
+-   :bug: [7cfb0d](https://github.com/guardian/source/commit/7cfb0da896e660de3d0e693ea2e423ac6e104e51) explicitly set error icon height
+
+**`@guardian/src-button 1.1.0`**
+
+-   :bug: [40f2dc](https://github.com/guardian/source/commit/40f2dc34531a78442e37e09ea5bea9dbf99210d2) remove padding from icon only button for ie11
+
+**`@guardian/src-choice-card 1.1.0`**
+
+-   :bug: [bc74b4](https://github.com/guardian/source/commit/bc74b457056b44a15f8d9c40db492a9f942d57e5) explicitly set payment icon height
+-   :bug: [d95d81](https://github.com/guardian/source/commit/d95d815d41e9c5b61b542be9c75e1dd2bb66cf77) explicitly set width of choice card label for ie11
+
+**`@guardian/src-text-input 1.1.0`**
+
+-   :bug: [3b095f](https://github.com/guardian/source/commit/3b095fb9c127e5ad03b20c2ca00552c28c02825e) use ex instead of ch for better browser consistency
+
+**`@guardian/src-accordion 1.1.0`**
+
+-   :bug: [bf9ba31](https://github.com/guardian/source/commit/bf9ba3198c61f499c581abcafe5f73594682099b) export accordion theme but not type
+-   :globe_with_meridians: [d1c4499](https://github.com/guardian/source/commit/d1c44991dc2ec859cf379189b4830ed57ce5b588) add no js support to accordion
+
 ## 13 May 2020
 
 **`@guardian/src-foundations 1.0.1`**
