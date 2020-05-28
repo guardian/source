@@ -1,6 +1,6 @@
 {
 	"name": "source",
-	"version": "1.1.0-rc.6",
+	"version": "1.1.0",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook --port 9009",
 		"lint:styles": "stylelint src/core/**/styles.ts",
@@ -31,6 +31,8 @@
 		"verbump:patch:all": "ts-node ./scripts/verbump-patch-all",
 		"verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all",
 		"verbump:deps:all": "ts-node ./scripts/verbump-src-deps-all",
+		"release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn verbump:deps:all && publish:release",
+		"release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn verbump:deps:all && publish:release",
 		"release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn verbump:deps:all && publish:release"
 	},
 	"private": true,
