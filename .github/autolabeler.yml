@@ -1,5 +1,5 @@
 foundations: ["src/core/foundations"]
-svgs: ["src/core/svgs"]
+icons: ["src/core/icons"]
 accordion: ["src/core/components/accordion"]
 button: ["src/core/components/button"]
 checkbox: ["src/core/components/checkbox"]
