@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgCheckmark, SvgClose } from "@guardian/src-svgs"
+import { SvgCheckmark, SvgClose } from "@guardian/src-icons"
 import { space } from "@guardian/src-foundations"
 import { background } from "@guardian/src-foundations/palette"
 import {
