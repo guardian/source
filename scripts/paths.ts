@@ -9,6 +9,7 @@ const root = join(__dirname, "..")
 const foundations = join(__dirname, "../src/core/foundations")
 const svgs = join(__dirname, "../src/core/svgs")
 const icons = join(__dirname, "../src/core/icons")
+const brand = join(__dirname, "../src/core/brand")
 const helpers = join(__dirname, "../src/core/helpers")
 const coreComponents = join(__dirname, "../src/core/components")
 const editorialComponents = join(__dirname, "../src/editorial/web/components")
@@ -55,6 +56,7 @@ export const paths = {
 	foundations,
 	svgs,
 	icons,
+	brand,
 	helpers,
 	coreComponents,
 	editorialComponents,
