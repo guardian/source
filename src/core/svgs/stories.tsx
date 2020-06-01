@@ -9,6 +9,7 @@ import {
 	SvgArrowLeftStraight,
 	SvgArrowRightStraight,
 	SvgArrowUpStraight,
+	SvgCamera,
 	SvgCheckmark,
 	SvgChevronDownSingle,
 	SvgChevronLeftSingle,
@@ -22,6 +23,9 @@ import {
 	SvgMinus,
 	SvgPayPal,
 	SvgPlus,
+	SvgQuote,
+	SvgSpeechBubble,
+	SvgStar,
 } from "./index"
 
 const whiteColor = css`
@@ -88,7 +92,7 @@ const DefaultPayment = ({
 }) => <div css={[iconDefault, paymentIconDefault]}>{children}</div>
 
 export default {
-	title: "Icons",
+	title: "SVGs",
 }
 
 export const SmallIcons = () => (
@@ -105,10 +109,14 @@ export const SmallIcons = () => (
 			<SvgChevronUpSingle />
 			<SvgExternal />
 			<SvgCheckmark />
+			<SvgCamera />
 			<SvgClose />
 			<SvgMinus />
 			<SvgPlus />
+			<SvgQuote />
 			<SvgIndent />
+			<SvgSpeechBubble />
+			<SvgStar />
 		</Small>
 
 		<SmallPayment>
@@ -141,10 +149,14 @@ export const DefaultIcons = () => (
 			<SvgChevronUpSingle />
 			<SvgExternal />
 			<SvgCheckmark />
+			<SvgCamera />
 			<SvgClose />
 			<SvgMinus />
 			<SvgPlus />
+			<SvgQuote />
 			<SvgIndent />
+			<SvgSpeechBubble />
+			<SvgStar />
 		</Default>
 
 		<DefaultPayment>
