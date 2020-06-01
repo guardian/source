@@ -8,7 +8,7 @@ import { css } from "@emotion/core"
 import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
-import { SvgArrowRightStraight } from "@guardian/src-svgs"
+import { SvgArrowRightStraight } from "@guardian/src-icons"
 import {
 	button,
 	primary,

@@ -43,7 +43,6 @@
 	},
 	"dependencies": {
 		"@guardian/src-helpers": "^1.2.0-rc.0",
-		"@guardian/src-inline-error": "^1.1.0-rc.0",
-		"@guardian/src-svgs": "^1.2.0-rc.0"
+		"@guardian/src-inline-error": "^1.1.0-rc.0"
 	}
 }

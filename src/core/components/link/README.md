@@ -1,18 +1,18 @@
 # Link
 
-📣 For more context and visual guides relating to link usage, visit the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/43c26b)
+📣 For more context and visual guides relating to link usage, visit the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/43c26b-link/)
 
 ## Install
 
 ```sh
-$ yarn add @guardian/src-link @guardian/src-foundations
+$ yarn add @guardian/src-link
 ```
 
 ## Use
 
 ```js
 import { Link } from "@guardian/src-link"
-import { SvgArrowRightStraight } from "@guardian/src-svgs"
+import { SvgArrowRightStraight } from "@guardian/src-icons"
 
 const Navigation = () => (
     <Link

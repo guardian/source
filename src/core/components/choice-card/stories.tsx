@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-svgs"
+import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-icons"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
