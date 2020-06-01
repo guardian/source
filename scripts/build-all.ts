@@ -7,7 +7,7 @@ const build = (dir: string) => {
 	})
 }
 
-const { foundations, svgs, icons, helpers, coreComponents } = paths
+const { foundations, svgs, icons, brand, helpers, coreComponents } = paths
 
 // Build these packages in the specified order
 const prioritisedPackages = [
@@ -15,6 +15,7 @@ const prioritisedPackages = [
 	helpers,
 	svgs,
 	icons,
+	brand,
 	`${coreComponents}/inline-error`,
 ]
 
