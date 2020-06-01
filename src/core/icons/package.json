@@ -38,6 +38,7 @@
 		"arrow-left-straight.tsx",
 		"arrow-right-straight.tsx",
 		"arrow-up-straight.tsx",
+		"camera.tsx",
 		"checkmark.tsx",
 		"chevron-down-single.tsx",
 		"chevron-left-single.tsx",
@@ -51,6 +52,9 @@
 		"minus.tsx",
 		"plus.tsx",
 		"paypal.tsx",
+		"quote.tsx",
+		"speech-bubble.tsx",
+		"star.tsx",
 		"*.d.ts",
 		"dist/*.js"
 	],
