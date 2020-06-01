@@ -90,17 +90,15 @@ const textIconButtonsXsmall = [
 	</LinkButton>,
 ]
 const iconButtons = [
-	<Button icon={<SvgClose />} aria-label="Dismiss the subscribe banner" />,
-	<Button
-		icon={<SvgClose />}
-		size="small"
-		aria-label="Dismiss the subscribe banner"
-	/>,
-	<Button
-		icon={<SvgClose />}
-		size="xsmall"
-		aria-label="Dismiss the subscribe banner"
-	/>,
+	<Button icon={<SvgClose />} hideLabel={true}>
+		Dismiss the subscribe banner
+	</Button>,
+	<Button size="small" icon={<SvgClose />} hideLabel={true}>
+		Dismiss the subscribe banner
+	</Button>,
+	<Button size="xsmall" icon={<SvgClose />} hideLabel={true}>
+		Dismiss the subscribe banner
+	</Button>,
 ]
 const linkButtons = [
 	<LinkButton href="#">Primary</LinkButton>,

@@ -4,8 +4,10 @@ import React, {
 	ButtonHTMLAttributes,
 	AnchorHTMLAttributes,
 } from "react"
+import { css } from "@emotion/core"
 import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
+import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { SvgArrowRightStraight } from "@guardian/src-svgs"
 import {
 	button,
@@ -89,6 +91,7 @@ interface ButtonProps extends Props, ButtonHTMLAttributes<HTMLButtonElement> {
 	size: Size
 	iconSide: IconSide
 	icon?: ReactElement
+	hideLabel: boolean
 	children?: ReactNode
 }
 
@@ -97,6 +100,7 @@ const Button = ({
 	size,
 	icon: iconSvg,
 	iconSide,
+	hideLabel,
 	cssOverrides,
 	children,
 	...props
@@ -114,13 +118,32 @@ const Button = ({
 				sizes[size],
 				priorities[priority](theme.button && theme),
 				iconSvg ? iconSizes[size] : "",
-				iconSvg && children ? iconSides[iconSide] : "",
-				!children ? iconOnlySizes[size] : "",
+				/*
+				TODO: We should be able to assume that children
+				will always be passed to the Button component.
+				A future breaking change might be to remove the
+				logic that checks for the (non-)existence of children.
+				*/
+				iconSvg && (!hideLabel && children) ? iconSides[iconSide] : "",
+				hideLabel || !children ? iconOnlySizes[size] : "",
 				cssOverrides,
 			]}
 			{...props}
 		>
-			{buttonContents}
+			{hideLabel ? (
+				<>
+					<span
+						css={css`
+							${visuallyHidden};
+						`}
+					>
+						{children}
+					</span>
+					{buttonContents[1]}
+				</>
+			) : (
+				buttonContents
+			)}
 		</button>
 	)
 }
@@ -182,6 +205,7 @@ const defaultButtonProps = {
 	priority: "primary",
 	size: "default",
 	iconSide: "left",
+	hideLabel: false,
 }
 
 const defaultLinkButtonProps = {

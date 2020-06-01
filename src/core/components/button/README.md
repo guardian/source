@@ -85,6 +85,13 @@ An icon that appears inside the button, alongside text
 
 The side of the button on which the icon appears
 
+### `hideLabel`
+
+**`boolean`** _= "false"_
+
+Whether to hide the text label visually. It is only appropriate to set this flag
+if an `icon` is passed. The text label will still be read out by screen readers.
+
 ## Supported themes
 
 ### Standard
