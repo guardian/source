@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { SvgAlert } from "@guardian/src-svgs"
+import { SvgAlert } from "@guardian/src-icons"
 import { Props } from "@guardian/src-helpers"
 import { inlineError } from "./styles"
 export {
