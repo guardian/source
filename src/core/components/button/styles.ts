@@ -70,12 +70,23 @@ export const subdued = ({
 	border-radius: 0;
 `
 
+/*
+	Guardian Text Sans appears to be encoded with slightly more space above the lettering
+	than below. We add a small amount of padding to the bottom of the button to ensure
+	the button label is vertically centred visually.
+	TODO: find a more scalable solution to this (see https://css-tricks.com/how-to-tame-line-height-in-css/)
+*/
+const fontSpacingVerticalOffset = css`
+	padding-bottom: 2px;
+`
+
 export const defaultSize = css`
 	${textSans.medium({ fontWeight: "bold" })};
 	height: ${size.medium}px;
 	min-height: ${size.medium}px;
 	padding: 0 ${size.medium / 2}px;
 	border-radius: ${size.medium / 2}px;
+	${fontSpacingVerticalOffset};
 `
 
 export const smallSize = css`
@@ -84,6 +95,7 @@ export const smallSize = css`
 	min-height: ${size.small}px;
 	padding: 0 ${size.small / 2}px;
 	border-radius: ${size.small / 2}px;
+	${fontSpacingVerticalOffset};
 `
 
 export const xsmallSize = css`
@@ -92,6 +104,7 @@ export const xsmallSize = css`
 	min-height: ${size.xsmall}px;
 	padding: 0 ${size.xsmall / 2}px;
 	border-radius: ${size.xsmall / 2}px;
+	${fontSpacingVerticalOffset};
 `
 
 export const iconDefault = css`
