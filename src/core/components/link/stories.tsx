@@ -6,7 +6,7 @@ import {
 	SvgIndent,
 	SvgExternal,
 	SvgChevronLeftSingle,
-} from "@guardian/src-svgs"
+} from "@guardian/src-icons"
 import { space } from "@guardian/src-foundations"
 import { Link, linkLight, linkBrandYellow, linkBrand } from "./index"
 import { ThemeProvider } from "emotion-theming"
