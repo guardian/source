@@ -1,3 +1,4 @@
+brand: ["src/core/brand"]
 foundations: ["src/core/foundations"]
 icons: ["src/core/icons"]
 accordion: ["src/core/components/accordion"]
