@@ -33,6 +33,10 @@ const iconSmall = css`
 	}
 `
 
+const spacer = css`
+	margin-bottom: 1rem;
+`
+
 const Small = ({
 	theme,
 	children,
@@ -50,7 +54,9 @@ const Default = ({
 	theme?: ThemeName
 	children: JSX.Element | JSX.Element[]
 }) => (
-	<div css={[iconMedium, theme === "brand" ? iconWhite : ""]}>{children}</div>
+	<div css={[iconMedium, theme === "brand" ? iconWhite : "", spacer]}>
+		{children}
+	</div>
 )
 
 export default {
