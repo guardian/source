@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 
 import { storybookBackgrounds } from "@guardian/src-helpers"
+import { width, height } from "@guardian/src-foundations/size"
 
 import {
 	SvgAlert,
@@ -28,73 +29,110 @@ import {
 	SvgStar,
 } from "./index"
 
-const whiteColor = css`
+const iconWhite = css`
 	color: white;
-	svg {
-		fill: white;
-	}
 `
 
-const iconDefault = css`
+const icon = css`
 	svg {
 		flex: 0 0 auto;
 		display: block;
 		fill: currentColor;
 		position: relative;
-		width: 30px;
-		height: 30px;
 	}
 `
 
-const paymentIconDefault = css`
+const iconMedium = css`
+	${icon};
 	svg {
-		height: 20px;
-		padding-bottom: 10px;
+		width: ${width.iconMedium}px;
+		height: ${height.iconMedium}px;
 	}
 `
 
 const iconSmall = css`
+	${icon};
 	svg {
-		flex: 0 0 auto;
-		display: block;
-		fill: currentColor;
-		position: relative;
-		width: 15px;
-		height: 15px;
+		width: ${width.iconSmall}px;
+		height: ${width.iconSmall}px;
 	}
 `
 
-const paymentIconSmall = css`
+const iconXsmall = css`
+	${icon};
 	svg {
-		height: 10px;
-		padding-bottom: 5px;
+		width: ${width.iconXsmall}px;
+		height: ${width.iconXsmall}px;
 	}
 `
+
+const paymentIconMedium = css`
+	${icon};
+	svg {
+		height: ${width.iconPayment}px;
+		padding-bottom: 10px;
+	}
+`
+
+const Xsmall = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
+	<div css={iconXsmall}>{children}</div>
+)
 
 const Small = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
-	<div css={[iconSmall, whiteColor]}>{children}</div>
+	<div css={iconSmall}>{children}</div>
 )
 
-const SmallPayment = ({
+const Medium = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
+	<div css={iconMedium}>{children}</div>
+)
+
+const MediumBrand = ({
 	children,
 }: {
 	children: JSX.Element | JSX.Element[]
-}) => <div css={[iconSmall, paymentIconSmall, whiteColor]}>{children}</div>
+}) => <div css={[iconMedium, iconWhite]}>{children}</div>
 
-const Default = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
-	<div css={[iconDefault]}>{children}</div>
+const Payment = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
+	<div css={paymentIconMedium}>{children}</div>
 )
-
-const DefaultPayment = ({
-	children,
-}: {
-	children: JSX.Element | JSX.Element[]
-}) => <div css={[iconDefault, paymentIconDefault]}>{children}</div>
 
 export default {
 	title: "SVGs",
 }
 
+export const XsmallIcons = () => (
+	<>
+		<Xsmall>
+			<SvgAlert />
+			<SvgArrowDownStraight />
+			<SvgArrowLeftStraight />
+			<SvgArrowRightStraight />
+			<SvgArrowUpStraight />
+			<SvgChevronDownSingle />
+			<SvgChevronLeftSingle />
+			<SvgChevronRightSingle />
+			<SvgChevronUpSingle />
+			<SvgExternal />
+			<SvgCheckmark />
+			<SvgCamera />
+			<SvgCross />
+			<SvgMinus />
+			<SvgPlus />
+			<SvgQuote />
+			<SvgIndent />
+			<SvgSpeechBubble />
+			<SvgStar />
+		</Xsmall>
+	</>
+)
+XsmallIcons.story = {
+	name: "xsmall light",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
 export const SmallIcons = () => (
 	<>
 		<Small>
@@ -118,26 +156,20 @@ export const SmallIcons = () => (
 			<SvgSpeechBubble />
 			<SvgStar />
 		</Small>
-
-		<SmallPayment>
-			<SvgCreditCard />
-			<SvgDirectDebit />
-			<SvgPayPal />
-		</SmallPayment>
 	</>
 )
 SmallIcons.story = {
-	name: "small size",
+	name: "small light",
 	parameters: {
 		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
 		],
 	},
 }
 
-export const DefaultIcons = () => (
+export const MediumIcons = () => (
 	<>
-		<Default>
+		<Medium>
 			<SvgAlert />
 			<SvgArrowDownStraight />
 			<SvgArrowLeftStraight />
@@ -157,17 +189,63 @@ export const DefaultIcons = () => (
 			<SvgIndent />
 			<SvgSpeechBubble />
 			<SvgStar />
-		</Default>
-
-		<DefaultPayment>
-			<SvgCreditCard />
-			<SvgDirectDebit />
-			<SvgPayPal />
-		</DefaultPayment>
+		</Medium>
 	</>
 )
-DefaultIcons.story = {
-	name: "default size",
+MediumIcons.story = {
+	name: "medium light",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
+export const MediumBrandIcons = () => (
+	<>
+		<MediumBrand>
+			<SvgAlert />
+			<SvgArrowDownStraight />
+			<SvgArrowLeftStraight />
+			<SvgArrowRightStraight />
+			<SvgArrowUpStraight />
+			<SvgChevronDownSingle />
+			<SvgChevronLeftSingle />
+			<SvgChevronRightSingle />
+			<SvgChevronUpSingle />
+			<SvgExternal />
+			<SvgCheckmark />
+			<SvgCamera />
+			<SvgCross />
+			<SvgMinus />
+			<SvgPlus />
+			<SvgQuote />
+			<SvgIndent />
+			<SvgSpeechBubble />
+			<SvgStar />
+		</MediumBrand>
+	</>
+)
+
+MediumBrandIcons.story = {
+	name: "medium brand",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
+		],
+	},
+}
+
+export const PaymentIcons = () => (
+	<Payment>
+		<SvgCreditCard />
+		<SvgDirectDebit />
+		<SvgPayPal />
+	</Payment>
+)
+
+PaymentIcons.story = {
+	name: "payment icons light",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
