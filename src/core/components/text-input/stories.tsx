@@ -5,6 +5,10 @@ import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 import { space } from "@guardian/src-foundations"
 import { from } from "@guardian/src-foundations/mq"
 import { TextInput, textInputLight } from "./index"
+import {
+	TextInputTheme,
+	InlineErrorTheme,
+} from "@guardian/src-foundations/themes"
 
 export default {
 	title: "TextInput",
@@ -12,7 +16,7 @@ export default {
 
 const themes: {
 	name: ThemeName
-	theme: {}
+	theme: { textInput: TextInputTheme; inlineError: InlineErrorTheme }
 }[] = [
 	{
 		name: "default",

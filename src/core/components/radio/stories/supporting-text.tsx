@@ -4,6 +4,7 @@ import { storybookBackgrounds } from "@guardian/src-helpers"
 import { RadioGroup, Radio, radioDefault, radioBrand } from "../index"
 import { ThemeName } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
+import { RadioTheme, InlineErrorTheme } from "@guardian/src-foundations/themes"
 
 /* eslint-disable react/jsx-key */
 const radiosWithSupportingText = [
@@ -33,7 +34,7 @@ const radiosWithSupportingText = [
 
 const themes: {
 	name: ThemeName
-	theme: {}
+	theme: { radio: RadioTheme; inlineError: InlineErrorTheme }
 }[] = [
 	{
 		name: "default",
