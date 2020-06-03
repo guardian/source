@@ -15,7 +15,7 @@ import {
 	SvgChevronLeftSingle,
 	SvgChevronRightSingle,
 	SvgChevronUpSingle,
-	SvgClose,
+	SvgCross,
 	SvgCreditCard,
 	SvgDirectDebit,
 	SvgExternal,
@@ -110,7 +110,7 @@ export const SmallIcons = () => (
 			<SvgExternal />
 			<SvgCheckmark />
 			<SvgCamera />
-			<SvgClose />
+			<SvgCross />
 			<SvgMinus />
 			<SvgPlus />
 			<SvgQuote />
@@ -150,7 +150,7 @@ export const DefaultIcons = () => (
 			<SvgExternal />
 			<SvgCheckmark />
 			<SvgCamera />
-			<SvgClose />
+			<SvgCross />
 			<SvgMinus />
 			<SvgPlus />
 			<SvgQuote />
