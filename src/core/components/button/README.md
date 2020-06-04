@@ -43,7 +43,7 @@ const Form = () => (
 
 ### `priority`
 
-**`"primary" | "secondary" | "tertiary"`** _= "primary"_
+**`"primary" | "secondary" | "tertiary" | "subdued"`** _= "primary"_
 
 Informs users of how important an action is
 
