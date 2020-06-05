@@ -10,6 +10,59 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 5 June 2020
+
+**`@guardian/src-foundations 1.2.0`**
+
+-   :bug: [b815e90](https://github.com/guardian/source/commit/b815e90f1c222ed58b8d2d51df7148f8c83e1a88) publish size dist folder
+
+**`@guardian/src-icons 1.2.0`**
+
+-   :page_with_curl: [dc54e7](https://github.com/guardian/source/pull/373/commits/dc54e7afb5df490abb72acf6dda8188cecc84fba) add readme for icons package
+-   :sparkles: [933f31](https://github.com/guardian/source/pull/374/commits/933f31a41368cd9cf78a37ef217912d8743b2bb6) add camera, speech bubble, star to icons
+-   :robot: [ddce31](https://github.com/guardian/source/pull/379/commits/ddce31c6a6c3a42c3a489f27f02786060d394f86) rename close icon to cross in src-icons
+-   :page_with_curl: [4fbb08](https://github.com/guardian/source/pull/381/commits/4fbb08cae6484232873e0586a24b6364b3b5a979) refactor icon stories
+-   :sparkles: [ed42a2](https://github.com/guardian/source/pull/383/commits/ed42a26ca94928152121e70aef9d7af2a160a875) add tick-round icon to icons
+
+**`@guardian/src-brand 1.2.0`**
+
+-   :sparkles: [88a512](https://github.com/guardian/source/commit/88a512a0d8679b40ffea1830b8ac34b3b16b902b) add brand package
+-   :sparkles: [53a7d9](https://github.com/guardian/source/pull/377/commits/53a7d9611c0b3d01df4540f90bf47292d58854a0) add favicons
+-   :page_with_curl: [f1fab7](https://github.com/guardian/source/pull/381/commits/f1fab7e1b6018c7d4de3dd3385932c86762ad9a1) add spacer between roundels in stories
+
+**`@guardian/src-inline-error 1.2.0`**
+
+-   :robot: [e82ae0](https://github.com/guardian/source/pull/376/commits/e82ae01d1a701f41a6e9e677833496bb729239af) use src-icons in inline error
+
+**`@guardian/src-button 1.2.0`**
+
+-   :bug: [d39598](https://github.com/guardian/source/pull/375/commits/d39598f42c5063b7bf7a14bfd4a4961295bddd05) dont wrap text inside button
+-   :nail_care: [e17988](https://github.com/guardian/source/pull/375/commits/e179880dfc0809dd2f3a71a0fecec1abc295a842) push button label up 2px
+-   :sparkles: [0156b6](https://github.com/guardian/source/pull/375/commits/0156b64495eb39dc9cb41f27bef82128014ff57c) implement hideLabel prop
+-   :robot: [e0df62](https://github.com/guardian/source/pull/376/commits/e0df62fb3292b9bca69885c8fbb9b0c3064826d9) use src-icons in button
+-   :sparkles: [007b90](https://github.com/guardian/source/pull/382/commits/007b90e6412b9d27f97c6e57228d26feab05d36f) Adding subdued type to LinkButton (thanks @dominickendrick)
+
+**`@guardian/src-radio 1.2.0`**
+
+-   :robot: [11088dccd07702690a2cf148cd35315b7aed9837](https://github.com/guardian/source/pull/376/commits/11088dccd07702690a2cf148cd35315b7aed9837) remove svgs dependency from radio
+-   :robot: [e3eead03fe41527905e6d7c97a6ebd85e17d26e8](https://github.com/guardian/source/pull/380/commits/e3eead03fe41527905e6d7c97a6ebd85e17d26e8) explicitly define theme in radio stories
+
+**`@guardian/src-choice-card 1.2.0`**
+
+-   :robot: [8ec0ad](https://github.com/guardian/source/pull/376/commits/8ec0ada2260ecb280bce70ab2cf78516456a9b38) use src-icons in choice card
+
+**`@guardian/src-link 1.2.0`**
+
+-   :robot: [63b7a2](https://github.com/guardian/source/pull/376/commits/63b7a28c3ab493070ae9e64347b35209b3f091a4) use src-icons in link
+
+**`@guardian/src-text-input 1.2.0`**
+
+-   :robot: [77e45e](https://github.com/guardian/source/pull/380/commits/77e45e1a92838d6aa6ca172cb395f86945a20ced) explicitly define theme in text input stories
+
+**`@guardian/src-accordion 1.2.0`**
+
+-   :robot: [d3277fc](https://github.com/guardian/source/pull/376/commits/d3277fc2d31af58ef1b2b5565f90b36ea3d3ed15) use src-icons in accordion
+
 ## 28 May 2020
 
 **`@guardian/src-foundations 1.1.0`**
