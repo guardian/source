@@ -5,7 +5,7 @@ import { paths, getComponentPaths } from "./paths"
 const verbump = (dir: string) => {
 	return fs.readFile(`${dir}/package.json`, "utf8").then(contents => {
 		// perfectly safe find and replace that definitely, _definitely_ won't go wrong ever
-		const regex = /"@guardian\/src-(\w+)": ".*"/g
+		const regex = /"@guardian\/src-([\w-]+)": ".*"/g
 		const replaceString = `"@guardian\/src-$1": "^${version}"`
 		const bumpedContents = contents.replace(regex, replaceString)
 
