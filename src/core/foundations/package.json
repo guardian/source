@@ -25,6 +25,7 @@
 		"mq/**",
 		"accessibility/**",
 		"palette/**",
+		"size/**",
 		"themes/**",
 		"typography/**",
 		"utils/**",
