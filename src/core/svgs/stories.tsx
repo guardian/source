@@ -27,6 +27,7 @@ import {
 	SvgQuote,
 	SvgSpeechBubble,
 	SvgStar,
+	SvgTickRound,
 } from "./index"
 
 const iconWhite = css`
@@ -96,6 +97,31 @@ const Payment = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={paymentIconMedium}>{children}</div>
 )
 
+/* eslint-disable react/jsx-key */
+const uiIcons = [
+	<SvgAlert />,
+	<SvgArrowDownStraight />,
+	<SvgArrowLeftStraight />,
+	<SvgArrowRightStraight />,
+	<SvgArrowUpStraight />,
+	<SvgChevronDownSingle />,
+	<SvgChevronLeftSingle />,
+	<SvgChevronRightSingle />,
+	<SvgChevronUpSingle />,
+	<SvgExternal />,
+	<SvgCheckmark />,
+	<SvgCamera />,
+	<SvgCross />,
+	<SvgMinus />,
+	<SvgPlus />,
+	<SvgQuote />,
+	<SvgIndent />,
+	<SvgSpeechBubble />,
+	<SvgStar />,
+	<SvgTickRound />,
+]
+/* eslint-enable react/jsx-key */
+
 export default {
 	title: "SVGs",
 }
@@ -103,30 +129,14 @@ export default {
 export const XsmallIcons = () => (
 	<>
 		<Xsmall>
-			<SvgAlert />
-			<SvgArrowDownStraight />
-			<SvgArrowLeftStraight />
-			<SvgArrowRightStraight />
-			<SvgArrowUpStraight />
-			<SvgChevronDownSingle />
-			<SvgChevronLeftSingle />
-			<SvgChevronRightSingle />
-			<SvgChevronUpSingle />
-			<SvgExternal />
-			<SvgCheckmark />
-			<SvgCamera />
-			<SvgCross />
-			<SvgMinus />
-			<SvgPlus />
-			<SvgQuote />
-			<SvgIndent />
-			<SvgSpeechBubble />
-			<SvgStar />
+			{uiIcons.map((icon, index) =>
+				React.cloneElement(icon, { key: index }),
+			)}
 		</Xsmall>
 	</>
 )
 XsmallIcons.story = {
-	name: "xsmall light",
+	name: "ui icons xsmall light",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -136,30 +146,14 @@ XsmallIcons.story = {
 export const SmallIcons = () => (
 	<>
 		<Small>
-			<SvgAlert />
-			<SvgArrowDownStraight />
-			<SvgArrowLeftStraight />
-			<SvgArrowRightStraight />
-			<SvgArrowUpStraight />
-			<SvgChevronDownSingle />
-			<SvgChevronLeftSingle />
-			<SvgChevronRightSingle />
-			<SvgChevronUpSingle />
-			<SvgExternal />
-			<SvgCheckmark />
-			<SvgCamera />
-			<SvgCross />
-			<SvgMinus />
-			<SvgPlus />
-			<SvgQuote />
-			<SvgIndent />
-			<SvgSpeechBubble />
-			<SvgStar />
+			{uiIcons.map((icon, index) =>
+				React.cloneElement(icon, { key: index }),
+			)}
 		</Small>
 	</>
 )
 SmallIcons.story = {
-	name: "small light",
+	name: "ui icons small light",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -170,30 +164,14 @@ SmallIcons.story = {
 export const MediumIcons = () => (
 	<>
 		<Medium>
-			<SvgAlert />
-			<SvgArrowDownStraight />
-			<SvgArrowLeftStraight />
-			<SvgArrowRightStraight />
-			<SvgArrowUpStraight />
-			<SvgChevronDownSingle />
-			<SvgChevronLeftSingle />
-			<SvgChevronRightSingle />
-			<SvgChevronUpSingle />
-			<SvgExternal />
-			<SvgCheckmark />
-			<SvgCamera />
-			<SvgCross />
-			<SvgMinus />
-			<SvgPlus />
-			<SvgQuote />
-			<SvgIndent />
-			<SvgSpeechBubble />
-			<SvgStar />
+			{uiIcons.map((icon, index) =>
+				React.cloneElement(icon, { key: index }),
+			)}
 		</Medium>
 	</>
 )
 MediumIcons.story = {
-	name: "medium light",
+	name: "ui icons medium light",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -204,31 +182,15 @@ MediumIcons.story = {
 export const MediumBrandIcons = () => (
 	<>
 		<MediumBrand>
-			<SvgAlert />
-			<SvgArrowDownStraight />
-			<SvgArrowLeftStraight />
-			<SvgArrowRightStraight />
-			<SvgArrowUpStraight />
-			<SvgChevronDownSingle />
-			<SvgChevronLeftSingle />
-			<SvgChevronRightSingle />
-			<SvgChevronUpSingle />
-			<SvgExternal />
-			<SvgCheckmark />
-			<SvgCamera />
-			<SvgCross />
-			<SvgMinus />
-			<SvgPlus />
-			<SvgQuote />
-			<SvgIndent />
-			<SvgSpeechBubble />
-			<SvgStar />
+			{uiIcons.map((icon, index) =>
+				React.cloneElement(icon, { key: index }),
+			)}
 		</MediumBrand>
 	</>
 )
 
 MediumBrandIcons.story = {
-	name: "medium brand",
+	name: "ui icons medium brand",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.brand),
