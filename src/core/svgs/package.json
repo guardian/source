@@ -55,6 +55,7 @@
 		"quote.tsx",
 		"speech-bubble.tsx",
 		"star.tsx",
+		"tick-round.tsx",
 		"*.d.ts",
 		"dist/*.js"
 	],
