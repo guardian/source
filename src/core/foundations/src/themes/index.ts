@@ -6,6 +6,7 @@ export * from "./inline-error"
 export * from "./link"
 export * from "./radio"
 export * from "./text-input"
+export * from "./user-feedback"
 
 import {
 	buttonLight,
@@ -30,6 +31,7 @@ import {
 } from "./link"
 import { radioLight, radioBrand, radioDefault } from "./radio"
 import { textInputLight, textInputDefault } from "./text-input"
+import { userFeedbackDefault, userFeedbackBrand } from "./user-feedback"
 
 export const defaultTheme = {
 	...buttonDefault,
@@ -39,6 +41,7 @@ export const defaultTheme = {
 	...linkDefault,
 	...radioDefault,
 	...textInputDefault,
+	...userFeedbackDefault,
 	// continue to expose legacy theme names
 	...buttonLight,
 	...checkboxLight,
@@ -54,6 +57,7 @@ export const brand = {
 	...inlineErrorBrand,
 	...linkBrand,
 	...radioBrand,
+	...userFeedbackBrand,
 }
 
 export const brandAlt = {
