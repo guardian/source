@@ -2,7 +2,7 @@
 	"name": "source",
 	"version": "1.3.0-rc.0",
 	"scripts": {
-		"storybook": "yarn watch:foundations & yarn watch:svgs & start-storybook --port 9009",
+		"storybook": "yarn watch:foundations & yarn watch:icons & start-storybook --port 9009",
 		"lint:styles": "stylelint src/core/**/styles.ts",
 		"lint:js": "eslint . --ext .ts,.tsx,.js",
 		"lint": "yarn lint:js && yarn lint:styles",
@@ -13,7 +13,7 @@
 		"clean": "rm -rf dist",
 		"build-storybook": "build-storybook -o dist",
 		"watch:foundations": "cd src/core/foundations && yarn watch",
-		"watch:svgs": "cd src/core/svgs && yarn watch",
+		"watch:icons": "cd src/core/icons && yarn watch",
 		"clean:all": "ts-node ./scripts/clean-all",
 		"build:all": "ts-node ./scripts/build-all",
 		"ci:build": "NODE_ENV=production yarn build:all && yarn build-storybook",

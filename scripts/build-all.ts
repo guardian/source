@@ -16,7 +16,7 @@ const prioritisedPackages = [
 	svgs,
 	icons,
 	brand,
-	`${coreComponents}/inline-error`,
+	`${coreComponents}/user-feedback`,
 ]
 
 // Build these packages in parallel

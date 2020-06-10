@@ -1,6 +1,6 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/css"
-import { InlineError } from "@guardian/src-inline-error"
+import { InlineError } from "@guardian/src-user-feedback"
 import {
 	widthFluid,
 	width30,
