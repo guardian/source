@@ -1,5 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
-import { InlineError } from "@guardian/src-inline-error"
+import { InlineError } from "@guardian/src-user-feedback"
 import {
 	fieldset,
 	label,
