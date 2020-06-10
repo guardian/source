@@ -10,6 +10,36 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 10 June 2020
+
+**`@guardian/src-foundations 1.3.0`**
+
+-   :sparkles: [80d0dc8](https://github.com/guardian/source/pull/385/commits/80d0dc834735a043d911e4d79da89f9329916797) add user feedback theme
+
+**`@guardian/src-brand 1.3.0`**
+
+-   :sparkles: [e5a42d](https://github.com/guardian/source/pull/386/commits/e5a42d530ad117c1dd4b38e8fb513d2a8268f1a4) add guardian logo
+
+**`@guardian/src-user-feedback 1.3.0`**
+
+-   :sparkles: [61ab9c](https://github.com/guardian/source/pull/385/commits/61ab9c7ee787843f1281961c2a01c2f1a44821b5) add user feedback component
+
+**`@guardian/src-radio 1.3.0`**
+
+-   :robot: [0a7159f7e4c5d84d2379269594c6fc39ccecab4e](https://github.com/guardian/source/pull/387/commits/0a7159f7e4c5d84d2379269594c6fc39ccecab4e) migrate radio to user feedback
+
+**`@guardian/src-checkbox`**
+
+-   :robot: [d5be0423e3a905719453bcc47e662f2c9465a3b0](https://github.com/guardian/source/pull/387/commits/d5be0423e3a905719453bcc47e662f2c9465a3b0) migrate checkbox to user feedback
+
+**`@guardian/src-choice-card 1.3.0`**
+
+-   :robot: [ad61f0](https://github.com/guardian/source/pull/387/commits/ad61f05d7b78e49e48970f406328741a17302e55) migrate choice card to user feedback
+
+**`@guardian/src-text-input 1.3.0`**
+
+-   :robot: [bd014c](https://github.com/guardian/source/pull/387/commits/bd014c7ec12221aa8469264c6646a88e5caa6ffc) migrate text input to user feedback
+
 ## 5 June 2020
 
 **`@guardian/src-foundations 1.2.0`**
