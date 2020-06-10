@@ -19,7 +19,7 @@ import {
 	contentWrapper,
 	contentWrapperLabelOnly,
 } from "./styles"
-import { InlineError } from "@guardian/src-inline-error"
+import { InlineError } from "@guardian/src-user-feedback"
 import { Props } from "@guardian/src-helpers"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
