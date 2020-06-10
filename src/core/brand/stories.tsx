@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 
-import { SvgRoundel } from "./index"
+import { SvgRoundel, SvgGuardianLogo } from "./index"
 
 const iconWhite = css`
 	color: white;
@@ -17,7 +17,7 @@ const icon = css`
 	}
 `
 
-const iconMedium = css`
+const roundel = css`
 	${icon};
 	svg {
 		width: 60px;
@@ -25,11 +25,11 @@ const iconMedium = css`
 	}
 `
 
-const iconSmall = css`
+const logo = css`
 	${icon};
 	svg {
-		width: 42px;
-		height: 42px;
+		width: 539px;
+		height: 173px;
 	}
 `
 
@@ -37,24 +37,26 @@ const spacer = css`
 	margin-bottom: 1rem;
 `
 
-const Small = ({
+const Roundel = ({
 	theme,
 	children,
 }: {
 	theme?: ThemeName
 	children: JSX.Element | JSX.Element[]
 }) => (
-	<div css={[iconSmall, theme === "brand" ? iconWhite : ""]}>{children}</div>
+	<div css={[roundel, theme === "brand" ? iconWhite : "", spacer]}>
+		{children}
+	</div>
 )
 
-const Default = ({
+const Logo = ({
 	theme,
 	children,
 }: {
 	theme?: ThemeName
 	children: JSX.Element | JSX.Element[]
 }) => (
-	<div css={[iconMedium, theme === "brand" ? iconWhite : "", spacer]}>
+	<div css={[logo, theme === "brand" ? iconWhite : "", spacer]}>
 		{children}
 	</div>
 )
@@ -65,12 +67,12 @@ export default {
 
 export const iconsDefaultBackground = () => (
 	<>
-		<Default>
+		<Roundel>
 			<SvgRoundel />
-		</Default>
-		<Small>
-			<SvgRoundel />
-		</Small>
+		</Roundel>
+		<Logo>
+			<SvgGuardianLogo />
+		</Logo>
 	</>
 )
 
@@ -85,12 +87,12 @@ iconsDefaultBackground.story = {
 
 export const iconsBrandBackground = () => (
 	<>
-		<Default theme="brand">
+		<Roundel theme="brand">
 			<SvgRoundel />
-		</Default>
-		<Small theme="brand">
-			<SvgRoundel />
-		</Small>
+		</Roundel>
+		<Logo theme="brand">
+			<SvgGuardianLogo />
+		</Logo>
 	</>
 )
 
