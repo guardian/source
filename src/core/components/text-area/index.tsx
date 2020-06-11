@@ -32,6 +32,7 @@ const TextArea = ({
 	supporting,
 	error,
 	cssOverrides,
+	rows = 3,
 	...props
 }: TextAreaProps) => {
 	return (

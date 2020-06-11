@@ -54,7 +54,7 @@ Whether error styling should apply to this text area. The string appears as an i
 
 **`string`**
 
-Specify the number of rows the component should display by default.
+Specify the number of rows the component should display by default. Defaults to 3 rows.
 
 ## Supported themes
 
