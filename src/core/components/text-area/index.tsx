@@ -24,7 +24,6 @@ interface TextAreaProps
 	supporting?: string
 	error?: string
 	rows?: number
-	cols?: number
 }
 
 const TextArea = ({
