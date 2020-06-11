@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { size, space } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { text, border, background } from "@guardian/src-foundations/palette"
@@ -11,7 +11,6 @@ export const errorInput = css`
 
 export const textArea = css`
 	box-sizing: border-box;
-	height: ${size.medium}px;
 	${textSans.medium()};
 	color: ${text.userInput};
 	background-color: ${background.input};

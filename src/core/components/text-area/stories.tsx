@@ -11,6 +11,12 @@ defaultLight.story = {
 	name: `default light`,
 }
 
+const withRows = () => <TextArea label="Comments" rows={10} />
+
+withRows.story = {
+	name: `with rows`,
+}
+
 const optionalLight = () => <TextArea label="Comments" optional={true} />
 
 optionalLight.story = {
@@ -38,6 +44,7 @@ errorWithMessageLight.story = {
 
 export {
 	defaultLight,
+	withRows,
 	optionalLight,
 	supportingTextLight,
 	errorWithMessageLight,

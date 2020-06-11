@@ -23,6 +23,8 @@ interface TextAreaProps
 	optional: boolean
 	supporting?: string
 	error?: string
+	rows?: number
+	cols?: number
 }
 
 const TextArea = ({
