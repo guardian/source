@@ -51,6 +51,7 @@ const TextArea = ({
 					cssOverrides,
 				]}
 				aria-required={!optional}
+				rows={rows}
 				{...props}
 			/>
 		</label>
