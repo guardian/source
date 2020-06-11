@@ -1,7 +1,14 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-icons"
+import {
+	SvgCamera,
+	SvgAudio,
+	SvgVideo,
+	SvgDirectDebit,
+	SvgCreditCard,
+	SvgPayPal,
+} from "@guardian/src-icons"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "./index"
 import { ThemeProvider } from "emotion-theming"
 
@@ -48,6 +55,23 @@ const singleChoiceCards = [
 ]
 const iconChoiceCards = [
 	<ChoiceCard
+		value="picture"
+		label="Picture"
+		id="picture"
+		icon={<SvgCamera />}
+	/>,
+	<ChoiceCard
+		value="audio"
+		label="Audio"
+		id="audio"
+		icon={<SvgAudio />}
+		checked={true}
+	/>,
+	<ChoiceCard value="video" label="Video" id="video" icon={<SvgVideo />} />,
+]
+
+const paymentIconChoiceCards = [
+	<ChoiceCard
 		value="direct-debit"
 		label="Direct Debit"
 		id="direct-debit"
@@ -62,7 +86,7 @@ const iconChoiceCards = [
 	/>,
 	<ChoiceCard
 		value="paypal"
-		label="PayPal"
+		label="Paypal"
 		id="paypal"
 		icon={<SvgPayPal />}
 	/>,
@@ -161,7 +185,7 @@ multiStateWithSupportingLabelLight.story = {
 const singleStateWithIconLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<div css={medium}>
-			<ChoiceCardGroup name="colours" label="Payment method">
+			<ChoiceCardGroup name="colours" label="Media format">
 				{iconChoiceCards.map((choiceCard, index) =>
 					React.cloneElement(choiceCard, { key: index }),
 				)}
@@ -172,6 +196,27 @@ const singleStateWithIconLight = () => (
 
 singleStateWithIconLight.story = {
 	name: `single state with icon light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
+const singleStateWithPaymentIconLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={medium}>
+			<ChoiceCardGroup name="colours" label="Payment method">
+				{paymentIconChoiceCards.map((choiceCard, index) =>
+					React.cloneElement(choiceCard, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
+
+singleStateWithPaymentIconLight.story = {
+	name: `single state with payment icon light`,
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -201,7 +246,7 @@ singleStateMobileLight.story = {
 
 const singleStateWithIconMobileLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<ChoiceCardGroup name="colours" label="Payment method">
+		<ChoiceCardGroup name="colours" label="Media format">
 			{iconChoiceCards.map((choiceCard, index) =>
 				React.cloneElement(choiceCard, { key: index }),
 			)}
@@ -211,6 +256,26 @@ const singleStateWithIconMobileLight = () => (
 
 singleStateWithIconMobileLight.story = {
 	name: `single state with icon mobile light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
+
+const singleStateWithPaymentIconMobileLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<ChoiceCardGroup name="colours" label="Payment method">
+			{paymentIconChoiceCards.map((choiceCard, index) =>
+				React.cloneElement(choiceCard, { key: index }),
+			)}
+		</ChoiceCardGroup>
+	</ThemeProvider>
+)
+
+singleStateWithPaymentIconMobileLight.story = {
+	name: `single state with payment icon mobile light`,
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -269,8 +334,10 @@ export {
 	singleStateWithLabelLight,
 	multiStateWithSupportingLabelLight,
 	singleStateWithIconLight,
+	singleStateWithPaymentIconLight,
 	singleStateMobileLight,
 	singleStateWithIconMobileLight,
+	singleStateWithPaymentIconMobileLight,
 	errorLight,
 	wildlyVaryingLengthLight,
 }

@@ -38,6 +38,7 @@
 		"arrow-left-straight.tsx",
 		"arrow-right-straight.tsx",
 		"arrow-up-straight.tsx",
+		"audio.tsx",
 		"camera.tsx",
 		"checkmark.tsx",
 		"chevron-down-single.tsx",
@@ -56,6 +57,7 @@
 		"speech-bubble.tsx",
 		"star.tsx",
 		"tick-round.tsx",
+		"video.tsx",
 		"*.d.ts",
 		"dist/*.js"
 	],

@@ -8,6 +8,7 @@ import {
 	ChoiceCardTheme,
 	choiceCardDefault,
 } from "@guardian/src-foundations/themes"
+import { width, height } from "@guardian/src-foundations/size"
 
 export const fieldset = css`
 	border: 0;
@@ -166,14 +167,9 @@ export const contentWrapper = css`
 
 	& svg {
 		position: absolute;
-		/* TODO: 30px is a standard icon width, should probably exposed
-		as a size property */
-		width: 30px;
-		/* TODO: height is non-standard to support payment icons, which is
-		currently the only use case of the icon variant. We should find a way
-		to accommodate standard 30x30 icons too */
-		height: 20px;
-		left: -34px; /* width + 4px "margin" */
+		width: ${width.iconMedium}px;
+		max-height: ${height.iconMedium}px;
+		left: ${-width.iconMedium - space[1]}px; /* width + 4px "margin" */
 		fill: currentColor;
 
 		${from.mobileLandscape} {
