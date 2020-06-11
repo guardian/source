@@ -50,6 +50,12 @@ Adds the word "Optional" after the label
 
 Whether error styling should apply to this text area. The string appears as an inline error message.
 
+### `rows`
+
+**`string`**
+
+Specify the number of rows the component should display by default. Defaults to 3 rows.
+
 ## Supported themes
 
 ### Standard

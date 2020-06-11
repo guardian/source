@@ -23,6 +23,7 @@ interface TextAreaProps
 	optional: boolean
 	supporting?: string
 	error?: string
+	rows?: number
 }
 
 const TextArea = ({
@@ -31,6 +32,7 @@ const TextArea = ({
 	supporting,
 	error,
 	cssOverrides,
+	rows = 3,
 	...props
 }: TextAreaProps) => {
 	return (
@@ -49,6 +51,7 @@ const TextArea = ({
 					cssOverrides,
 				]}
 				aria-required={!optional}
+				rows={rows}
 				{...props}
 			/>
 		</label>
