@@ -1,33 +1,50 @@
 import React from "react"
+import { css } from "@emotion/core"
+
 import { TextArea } from "./index"
+
+const wrapperStyles = css`
+	width: 400px;
+`
 
 export default {
 	title: "TextArea",
 }
 
-const defaultLight = () => <TextArea label="Comments" />
+const defaultLight = () =>
+	<div css={wrapperStyles}>
+		<TextArea label="Comments" />
+	</div>
 
 defaultLight.story = {
 	name: `default light`,
 }
 
-const withRows = () => <TextArea label="Comments" rows={10} />
+const withRows = () =>
+	<div css={wrapperStyles}>
+		<TextArea label="Comments" rows={10} />
+	</div>
 
 withRows.story = {
 	name: `with rows`,
 }
 
-const optionalLight = () => <TextArea label="Comments" optional={true} />
+const optionalLight = () =>
+	<div css={wrapperStyles}>
+		<TextArea label="Comments" optional={true} />
+	</div>
 
 optionalLight.story = {
 	name: `optional light`,
 }
 
 const supportingTextLight = () => (
-	<TextArea
-		label="Comments"
-		supporting="Please keep comments respectful and abide by the community guidelines."
-	/>
+	<div css={wrapperStyles}>
+		<TextArea
+			label="Comments"
+			supporting="Please keep comments respectful and abide by the community guidelines."
+		/>
+	</div>
 )
 
 supportingTextLight.story = {
@@ -35,7 +52,9 @@ supportingTextLight.story = {
 }
 
 const errorWithMessageLight = () => (
-	<TextArea label="Comments" error="Please tell us your views" />
+	<div css={wrapperStyles}>
+		<TextArea label="Comments" error="Please tell us your views" />
+	</div>
 )
 
 errorWithMessageLight.story = {
