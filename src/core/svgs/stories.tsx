@@ -19,6 +19,7 @@ import {
 	SvgCross,
 	SvgCreditCard,
 	SvgDirectDebit,
+	SvgDirectDebitWide,
 	SvgExternal,
 	SvgIndent,
 	SvgMinus,
@@ -70,7 +71,15 @@ const iconXsmall = css`
 const paymentIconMedium = css`
 	${icon};
 	svg {
-		height: ${width.iconPayment}px;
+		height: 30px;
+		padding-bottom: 10px;
+	}
+`
+
+const widePaymentIconMedium = css`
+	${icon};
+	svg {
+		height: 20px;
 		padding-bottom: 10px;
 	}
 `
@@ -96,6 +105,12 @@ const MediumBrand = ({
 const Payment = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={paymentIconMedium}>{children}</div>
 )
+
+const WidePayment = ({
+	children,
+}: {
+	children: JSX.Element | JSX.Element[]
+}) => <div css={widePaymentIconMedium}>{children}</div>
 
 /* eslint-disable react/jsx-key */
 const uiIcons = [
@@ -199,11 +214,16 @@ MediumBrandIcons.story = {
 }
 
 export const PaymentIcons = () => (
-	<Payment>
-		<SvgCreditCard />
-		<SvgDirectDebit />
-		<SvgPayPal />
-	</Payment>
+	<>
+		<Payment>
+			<SvgCreditCard />
+			<SvgDirectDebit />
+			<SvgPayPal />
+		</Payment>
+		<WidePayment>
+			<SvgDirectDebitWide />
+		</WidePayment>
+	</>
 )
 
 PaymentIcons.story = {
