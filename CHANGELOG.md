@@ -10,6 +10,35 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 12 June 2020
+
+**`@guardian/src-foundations 1.4.0`**
+
+-   :boom: :robot: [e887532](https://github.com/guardian/source/pull/390/commits/e887532642020e2034b74b00b68dbc83f96d6de9) delete payment icon sizes
+
+**`@guardian/src-icons 1.4.0`**
+
+-   :sparkles: [4e9b48](https://github.com/guardian/source/pull/389/commits/4e9b484930b8831912b0b124b8f327bd8373722a) add audio and video icons to icons
+-   :robot: [b84788](https://github.com/guardian/source/pull/390/commits/b84788aaeb7fdf0bd653c3725c2bf076f3c2b3d6) update payment icon size in icons
+
+**`@guardian/src-choice-card 1.4.0`**
+
+-   :sparkles: [194edc](https://github.com/guardian/source/pull/389/commits/194edc807129419afeb1980d63e1e45803a65024) support ui icons in choice cards
+-   :nail_care: [fce57f](https://github.com/guardian/source/pull/390/commits/fce57f11aa902ae13bbb7dc922c2634d014bb942) bring icons closer to text
+-   :nail_care: [bfe024](https://github.com/guardian/source/pull/391/commits/bfe024ad33388907306a7c64e8bf3257460e1c71) centre align icon + text at mobile
+-   :bug: [bea016](https://github.com/guardian/source/pull/393/commits/bea0165d4654d12d487898aec13055523467fb7c) restore horizontal space between icon and text
+
+**`@guardian/src-text-input 1.4.0`**
+
+-   :nail_care: [f0250d](https://github.com/guardian/source/pull/392/commits/f0250de8056d026e43f7f254166e767bc9b67402) correct line height
+
+**`@guardian/src-text-area 1.4.0`**
+
+-   :sparkles: [e916d2](https://github.com/guardian/source/pull/378/commits/e916d2241a741120721d909ad8704507fc2bc936) add text area boilerplate
+-   :robot: [4f3403](https://github.com/guardian/source/pull/387/commits/4f3403ea6b51fa4951288ff16fa2c7f90f85e7f0) migrate text area to user feedback
+-   :robot: [4f3403](https://github.com/guardian/source/pull/387/commits/4f3403ea6b51fa4951288ff16fa2c7f90f85e7f0) migrate text area to user feedback
+-   :sparkles: [cd8f0d](https://github.com/guardian/source/commit/cd8f0de7f9a56d30d880efc4bc89987cff9d8c03) add Text Area Rows/Height support (thanks @liywjl)
+
 ## 10 June 2020
 
 **`@guardian/src-foundations 1.3.0`**
@@ -28,7 +57,7 @@
 
 -   :robot: [0a7159f7e4c5d84d2379269594c6fc39ccecab4e](https://github.com/guardian/source/pull/387/commits/0a7159f7e4c5d84d2379269594c6fc39ccecab4e) migrate radio to user feedback
 
-**`@guardian/src-checkbox`**
+**`@guardian/src-checkbox 1.3.0`**
 
 -   :robot: [d5be0423e3a905719453bcc47e662f2c9465a3b0](https://github.com/guardian/source/pull/387/commits/d5be0423e3a905719453bcc47e662f2c9465a3b0) migrate checkbox to user feedback
 
