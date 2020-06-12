@@ -9,7 +9,6 @@ const height = {
 	iconMedium: iconSize.medium,
 	iconSmall: iconSize.small,
 	iconXsmall: iconSize.xsmall,
-	iconPayment: iconSize.xsmall,
 }
 
 const remHeight = {
@@ -21,7 +20,6 @@ const remHeight = {
 	iconMedium: remIconSize.medium,
 	iconSmall: remIconSize.small,
 	iconXsmall: remIconSize.xsmall,
-	iconPayment: remIconSize.xsmall,
 }
 
 const width = {
@@ -32,7 +30,6 @@ const width = {
 	iconMedium: iconSize.medium,
 	iconSmall: iconSize.small,
 	iconXsmall: iconSize.xsmall,
-	iconPayment: iconSize.medium,
 }
 
 const remWidth = {
@@ -43,7 +40,6 @@ const remWidth = {
 	iconMedium: remIconSize.medium,
 	iconSmall: remIconSize.small,
 	iconXsmall: remIconSize.xsmall,
-	iconPayment: remIconSize.medium,
 }
 
 export { height, remHeight, width, remWidth, size, iconSize }

@@ -166,14 +166,14 @@ export const contentWrapper = css`
 	}
 
 	& svg {
-		position: absolute;
 		width: ${width.iconMedium}px;
 		max-height: ${height.iconMedium}px;
-		left: ${-width.iconMedium - space[1]}px; /* width + 4px "margin" */
 		fill: currentColor;
+		margin-right: ${space[1]}px;
 
 		${from.mobileLandscape} {
-			position: static;
+			margin-bottom: -${space[1]}px;
+			margin-right: 0;
 		}
 	}
 `
