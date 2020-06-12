@@ -166,14 +166,11 @@ export const contentWrapper = css`
 	}
 
 	& svg {
-		position: absolute;
 		width: ${width.iconMedium}px;
 		max-height: ${height.iconMedium}px;
-		left: ${-width.iconMedium - space[1]}px; /* width + 4px "margin" */
 		fill: currentColor;
 
 		${from.mobileLandscape} {
-			position: static;
 			margin-bottom: -${space[1]}px;
 		}
 	}
