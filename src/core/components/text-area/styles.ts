@@ -11,11 +11,11 @@ export const errorInput = css`
 
 export const textArea = css`
 	box-sizing: border-box;
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: "regular" })};
 	color: ${text.userInput};
 	background-color: ${background.input};
 	border: 2px solid ${border.input};
-	padding: 0 ${space[2]}px;
+	padding: ${space[2]}px ${space[2]}px 0 ${space[2]}px;
 
 	&:active {
 		border: 2px solid ${border.inputActive};

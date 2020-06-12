@@ -19,7 +19,7 @@ export const textInput = ({
 }: { textInput: TextInputTheme } = textInputLight) => css`
 	box-sizing: border-box;
 	height: ${size.medium}px;
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: "regular" })};
 	color: ${textInput.textUserInput};
 	background-color: ${textInput.backgroundInput};
 	border: 2px solid ${textInput.border};
