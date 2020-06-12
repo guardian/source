@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 
-import { SvgRoundel, SvgGuardianLogo } from "./index"
+import { SvgRoundel, SvgGuardianLogo, SvgGuardianLiveLogo } from "./index"
 
 const iconWhite = css`
 	color: white;
@@ -98,6 +98,42 @@ export const iconsBrandBackground = () => (
 
 iconsBrandBackground.story = {
 	name: "brand icons brand",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
+		],
+	},
+}
+
+
+export const guardianLiveDefaultBackground = () => (
+	<>
+		<Logo>
+			<SvgGuardianLiveLogo />
+		</Logo>
+	</>
+)
+
+guardianLiveDefaultBackground.story = {
+	name: "guardian live default",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
+
+export const guardianLiveBrandBackground = () => (
+	<>
+		<Logo theme="brand">
+			<SvgGuardianLiveLogo />
+		</Logo>
+	</>
+)
+
+guardianLiveBrandBackground.story = {
+	name: "guardian live brand",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.brand),
