@@ -169,9 +169,11 @@ export const contentWrapper = css`
 		width: ${width.iconMedium}px;
 		max-height: ${height.iconMedium}px;
 		fill: currentColor;
+		margin-right: ${space[1]}px;
 
 		${from.mobileLandscape} {
 			margin-bottom: -${space[1]}px;
+			margin-right: 0;
 		}
 	}
 `
