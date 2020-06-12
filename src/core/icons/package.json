@@ -48,6 +48,7 @@
 		"credit-card.tsx",
 		"cross.tsx",
 		"direct-debit.tsx",
+		"direct-debit-wide.tsx",
 		"external.tsx",
 		"indent.tsx",
 		"minus.tsx",
