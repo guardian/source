@@ -174,6 +174,7 @@ export const contentWrapper = css`
 
 		${from.mobileLandscape} {
 			position: static;
+			margin-bottom: -${space[1]}px;
 		}
 	}
 `
