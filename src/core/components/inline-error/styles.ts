@@ -10,7 +10,7 @@ export const inlineError = ({
 	inlineError,
 }: { inlineError: InlineErrorTheme } = inlineErrorLight) => css`
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	${textSans.medium()};
 	color: ${inlineError.text};
 	margin-bottom: ${space[1]}px;

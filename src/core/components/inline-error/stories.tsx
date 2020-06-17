@@ -46,4 +46,16 @@ const [defaultLight, defaultBlue] = themes.map(({ name, theme }) => {
 	return story
 })
 
-export { defaultLight, defaultBlue }
+const errorLongLightMobile = () => (
+	<InlineError>
+		Please pick a date in the future, but not a leap year
+	</InlineError>
+)
+
+errorLongLightMobile.story = {
+	name: `long inline error light mobile`,
+	parameters: {
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
+export { defaultLight, defaultBlue, errorLongLightMobile }
