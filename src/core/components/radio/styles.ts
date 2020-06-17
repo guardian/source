@@ -61,6 +61,7 @@ export const radio = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 	*/
 	@supports (appearance: none) {
 		appearance: none;
+		background-color: transparent;
 
 		&:after {
 			background: currentColor;
