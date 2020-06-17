@@ -10,7 +10,7 @@ import { width, height } from "@guardian/src-foundations/size"
 const inlineMessage = css`
 	/* we use flex purely for vertical centering */
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	${textSans.medium()};
 	/* TODO: we shouldn't be opinionated about layout inside the component */
 	margin-bottom: ${space[1]}px;
