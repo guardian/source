@@ -107,11 +107,9 @@ iconsBrandBackground.story = {
 
 
 export const guardianLiveDefaultBackground = () => (
-	<>
-		<Logo>
-			<SvgGuardianLiveLogo />
-		</Logo>
-	</>
+	<Logo>
+		<SvgGuardianLiveLogo />
+	</Logo>
 )
 
 guardianLiveDefaultBackground.story = {
@@ -125,11 +123,9 @@ guardianLiveDefaultBackground.story = {
 
 
 export const guardianLiveBrandBackground = () => (
-	<>
-		<Logo theme="brand">
-			<SvgGuardianLiveLogo />
-		</Logo>
-	</>
+	<Logo theme="brand">
+		<SvgGuardianLiveLogo />
+	</Logo>
 )
 
 guardianLiveBrandBackground.story = {
