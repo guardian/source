@@ -49,7 +49,9 @@
 		"cross.tsx",
 		"direct-debit.tsx",
 		"direct-debit-wide.tsx",
+		"envelope.tsx",
 		"external.tsx",
+		"facebook.tsx",
 		"indent.tsx",
 		"minus.tsx",
 		"plus.tsx",
@@ -58,6 +60,7 @@
 		"speech-bubble.tsx",
 		"star.tsx",
 		"tick-round.tsx",
+		"twitter.tsx",
 		"video.tsx",
 		"*.d.ts",
 		"dist/*.js"
