@@ -20,7 +20,9 @@ import {
 	SvgCreditCard,
 	SvgDirectDebit,
 	SvgDirectDebitWide,
+	SvgEnvelope,
 	SvgExternal,
+	SvgFacebook,
 	SvgIndent,
 	SvgMinus,
 	SvgPayPal,
@@ -29,6 +31,7 @@ import {
 	SvgSpeechBubble,
 	SvgStar,
 	SvgTickRound,
+	SvgTwitter,
 } from "./index"
 
 const iconWhite = css`
@@ -123,7 +126,9 @@ const uiIcons = [
 	<SvgChevronLeftSingle />,
 	<SvgChevronRightSingle />,
 	<SvgChevronUpSingle />,
+	<SvgEnvelope />,
 	<SvgExternal />,
+	<SvgFacebook />,
 	<SvgCheckmark />,
 	<SvgCamera />,
 	<SvgCross />,
@@ -134,6 +139,7 @@ const uiIcons = [
 	<SvgSpeechBubble />,
 	<SvgStar />,
 	<SvgTickRound />,
+	<SvgTwitter />,
 ]
 /* eslint-enable react/jsx-key */
 
