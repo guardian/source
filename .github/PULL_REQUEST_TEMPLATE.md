@@ -12,8 +12,8 @@ https://www.theguardian.design/2a1e5182b/p/77c9d9-contributing
 Give an overview of the changes you have made.
 -->
 
-- Change 1
-- Change 2
+-   Change 1
+-   Change 2
 
 ## Screenshots
 
@@ -32,7 +32,7 @@ If you are not making changes to the design, please delete this section.
 -   [ ] [Tested with screen reader](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/78ac51)
 -   [ ] [Navigable with keyboard](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/009027)
 -   [ ] [Colour contrast passed](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/58dbf2)
--   [ ] The component doesn't use only colour to convey meaning
+-   [ ] [The component doesn't use only colour to convey meaning](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/61524d)
 
 ### Cross browser and device testing
 
