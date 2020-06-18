@@ -17,6 +17,10 @@ module.exports = {
 					"@guardian/src-foundations/typography/cjs",
 				"@guardian/src-foundations/accessibility":
 					"@guardian/src-foundations/accessibility/cjs",
+				"@guardian/src-foundations/palette":
+					"@guardian/src-foundations/palette/cjs",
+				"@guardian/src-foundations/size":
+					"@guardian/src-foundations/size/cjs",
 			},
 		},
 		{
@@ -30,6 +34,8 @@ module.exports = {
 		"@emotion/css",
 		"@guardian/src-foundations",
 		"@guardian/src-foundations/accessibility",
+		"@guardian/src-foundations/size",
+		"@guardian/src-foundations/palette",
 		"@guardian/src-foundations/themes",
 		"@guardian/src-foundations/typography",
 	],
