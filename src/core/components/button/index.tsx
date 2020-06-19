@@ -45,7 +45,6 @@ export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
 type IconSide = "left" | "right"
 type Size = "default" | "small" | "xsmall"
 
-
 const priorities: {
 	[key in Priority]: ({ button }: { button: ButtonTheme }) => SerializedStyles
 } = {
@@ -150,7 +149,10 @@ interface LinkButtonProps
 		AnchorHTMLAttributes<HTMLAnchorElement> {
 	priority: Priority
 	size: Size
-	showIcon: boolean
+	showIcon: boolean // TODO: deprecated, remove in future version
+	iconSide: IconSide
+	icon?: ReactElement
+	hideLabel: boolean
 	children?: ReactNode
 }
 
@@ -158,10 +160,20 @@ const LinkButton = ({
 	priority,
 	size,
 	showIcon,
+	iconSide,
+	icon: iconSvg,
+	hideLabel,
 	cssOverrides,
 	children,
 	...props
 }: LinkButtonProps) => {
+	const buttonContents = [children]
+
+	if (iconSvg) {
+		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
+	}
+
+	// TODO: deprecated API, remove in future version
 	if (showIcon) {
 		return (
 			<a
@@ -188,10 +200,34 @@ const LinkButton = ({
 					button,
 					sizes[size],
 					priorities[priority](theme.button && theme),
+					iconSvg ? iconSizes[size] : "",
+					/*
+					TODO: We should be able to assume that children
+					will always be passed to the Button component.
+					A future breaking change might be to remove the
+					logic that checks for the (non-)existence of children.
+					*/
+					iconSvg && (!hideLabel && children)
+						? iconSides[iconSide]
+						: "",
+					hideLabel || !children ? iconOnlySizes[size] : "",
 				]}
 				{...props}
 			>
-				{children}
+				{hideLabel ? (
+					<>
+						<span
+							css={css`
+								${visuallyHidden};
+							`}
+						>
+							{children}
+						</span>
+						{buttonContents[1]}
+					</>
+				) : (
+					buttonContents
+				)}
 			</a>
 		)
 	}
@@ -208,6 +244,8 @@ const defaultButtonProps = {
 const defaultLinkButtonProps = {
 	priority: "primary",
 	size: "default",
+	iconSide: "left",
+	hideLabel: false,
 	showIcon: false,
 }
 

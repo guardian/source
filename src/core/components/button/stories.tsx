@@ -1,7 +1,11 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgCheckmark, SvgClose } from "@guardian/src-icons"
+import {
+	SvgCheckmark,
+	SvgClose,
+	SvgArrowRightStraight,
+} from "@guardian/src-icons"
 import { space } from "@guardian/src-foundations"
 import { background } from "@guardian/src-foundations/palette"
 import {
@@ -57,36 +61,55 @@ const xsmallSizeButtons = [
 	</Button>,
 ]
 const textIconButtons = [
-	<Button icon={<SvgCheckmark />}>Icon to the left</Button>,
+	<Button icon={<SvgCheckmark />}>Button: icon to the left</Button>,
 	<Button iconSide="right" icon={<SvgCheckmark />}>
-		Icon to the right
+		Button: icon to the right
 	</Button>,
-	<LinkButton href="#" showIcon={true}>
-		Link button with an arrow icon
+	<LinkButton href="#" icon={<SvgArrowRightStraight />}>
+		Link button: icon to the left
+	</LinkButton>,
+	<LinkButton href="#" iconSide="right" icon={<SvgArrowRightStraight />}>
+		Link button: icon to the right
 	</LinkButton>,
 ]
 
 const textIconButtonsSmall = [
 	<Button icon={<SvgCheckmark />} size="small">
-		Small: to the left
+		Small button: to the left
 	</Button>,
 	<Button iconSide="right" icon={<SvgCheckmark />} size="small">
-		Small: to the right
+		Small button: to the right
 	</Button>,
-	<LinkButton href="#" showIcon={true} size="small">
-		Small: Link button
+	<LinkButton href="#" icon={<SvgArrowRightStraight />} size="small">
+		Small link button: to the left
+	</LinkButton>,
+	<LinkButton
+		href="#"
+		icon={<SvgArrowRightStraight />}
+		iconSide="right"
+		size="small"
+	>
+		Small link button: to the right
 	</LinkButton>,
 ]
 
 const textIconButtonsXsmall = [
 	<Button icon={<SvgCheckmark />} size="xsmall">
-		Extra small: to the left
+		Extra small button: to the left
 	</Button>,
 	<Button iconSide="right" icon={<SvgCheckmark />} size="xsmall">
-		Extra small: to the right
+		Extra small button: to the right
 	</Button>,
-	<LinkButton href="#" showIcon={true} size="xsmall">
-		Extra small: Link button
+	<LinkButton href="#" icon={<SvgArrowRightStraight />} size="xsmall">
+		Extra small link button: to the left
+	</LinkButton>,
+	<LinkButton
+		href="#"
+		iconSide="right"
+		icon={<SvgArrowRightStraight />}
+		size="xsmall"
+	>
+		Extra small link button: to the right
 	</LinkButton>,
 ]
 const iconButtons = [
@@ -100,7 +123,19 @@ const iconButtons = [
 		Dismiss the subscribe banner
 	</Button>,
 ]
-const linkButtons = [
+
+const iconLinkButtons = [
+	<LinkButton href="#" icon={<SvgClose />} hideLabel={true}>
+		Dismiss the subscribe banner
+	</LinkButton>,
+	<LinkButton href="#" size="small" icon={<SvgClose />} hideLabel={true}>
+		Dismiss the subscribe banner
+	</LinkButton>,
+	<LinkButton href="#" size="xsmall" icon={<SvgClose />} hideLabel={true}>
+		Dismiss the subscribe banner
+	</LinkButton>,
+]
+const priorityLinkButtons = [
 	<LinkButton href="#">Primary</LinkButton>,
 	<LinkButton href="#" priority="secondary">
 		Secondary
@@ -112,17 +147,32 @@ const linkButtons = [
 		Subdued
 	</LinkButton>,
 ]
-const iconLinkButtons = [
-	<LinkButton href="#" showIcon={true}>
+const priorityIconLinkButtons = [
+	<LinkButton href="#" iconSide="right" icon={<SvgArrowRightStraight />}>
 		Primary
 	</LinkButton>,
-	<LinkButton href="#" showIcon={true} priority="secondary">
+	<LinkButton
+		href="#"
+		iconSide="right"
+		icon={<SvgArrowRightStraight />}
+		priority="secondary"
+	>
 		Secondary
 	</LinkButton>,
-	<LinkButton href="#" showIcon={true} priority="tertiary">
+	<LinkButton
+		href="#"
+		iconSide="right"
+		icon={<SvgArrowRightStraight />}
+		priority="tertiary"
+	>
 		Tertiary
 	</LinkButton>,
-	<LinkButton href="#" showIcon={true} priority="subdued">
+	<LinkButton
+		href="#"
+		iconSide="right"
+		icon={<SvgArrowRightStraight />}
+		priority="subdued"
+	>
 		Subdued
 	</LinkButton>,
 ]
@@ -314,37 +364,48 @@ textAndIcon.story = {
 	name: "text and icon",
 }
 
-export const iconOnly = () => (
+export const iconOnlyButtons = () => (
 	<div css={flexStart}>
 		{iconButtons.map((button, index) => (
 			<div key={index}>{button}</div>
 		))}
 	</div>
 )
-iconOnly.story = {
-	name: "icon only",
+iconOnlyButtons.story = {
+	name: "icon only buttons",
+}
+
+export const iconOnlyLinkButtons = () => (
+	<div css={flexStart}>
+		{iconLinkButtons.map((button, index) => (
+			<div key={index}>{button}</div>
+		))}
+	</div>
+)
+iconOnlyLinkButtons.story = {
+	name: "icon only link buttons",
 }
 
 const spacer = css`
 	margin-bottom: ${space[3]}px;
 `
 
-export const priorityLinkButtons = () => (
+export const priorityLinkButtonsLight = () => (
 	<>
 		<div css={spacer}>
 			<div css={flexStart}>
-				{linkButtons.map((button, index) => (
+				{priorityLinkButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
 			</div>
 		</div>
 		<div css={spacer}>
 			<div css={flexStart}>
-				{iconLinkButtons.map((button, index) => (
+				{priorityIconLinkButtons.map((button, index) => (
 					<div key={index}>{button}</div>
 				))}
 			</div>
 		</div>
 	</>
 )
-priorityLinkButtons.story = { name: "priority link buttons" }
+priorityLinkButtonsLight.story = { name: "priority link buttons" }
