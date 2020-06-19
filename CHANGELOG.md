@@ -10,6 +10,32 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 19 June 2020
+
+**`@guardian/src-brand 1.5.0`**
+
+-   :sparkles: [83e99c1](https://github.com/guardian/source/commit/83e99c1e47935fd4983bf97c77543d7a83e86098) Guardian live logo (thanks @webb04)
+
+**`@guardian/src-foundations 1.5.0`**
+
+-   :bug: [39fdd6f](https://github.com/guardian/source/pull/395/commits/39fdd6fe70a7df3d0d42abda76d722f76129b679) export all global colours from palette index
+
+**`@guardian/src-icons 1.5.0`**
+
+-   :sparkles: [d150a78](https://github.com/guardian/source/commit/d150a78f9be86a4fdacb7a52962ef33c90b4a478) add social icons to icons package
+
+**`@guardian/src-radio 1.5.0`**
+
+-   :bug: [bb68559](https://github.com/guardian/source/pull/397/commits/bb6855913857521d102a16b8c1ccf1e39c89595f) set radio button background color to transparent
+
+**`@guardian/src-text-area 1.5.0`**
+
+-   :bug: [74485d5](https://github.com/guardian/source/commit/74485d55487e5acb65b5c4673f3913ffcbffecec) add more foundations submodules to paths and externals
+
+**`@guardian/src-user-feedback 1.5.0`**
+
+-   :bug: [3aa68e8](https://github.com/guardian/source/pull/396/commits/3aa68e8a89b4c20163a23d8cc63beaf5e54eac40) support long error messages
+
 ## 12 June 2020
 
 **`@guardian/src-foundations 1.4.0`**
