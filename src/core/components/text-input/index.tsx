@@ -1,6 +1,6 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/css"
-import { InlineError } from "@guardian/src-user-feedback"
+import {InlineError, InlineSuccess} from "@guardian/src-user-feedback"
 import {
 	widthFluid,
 	width30,
@@ -11,6 +11,7 @@ import {
 	errorInput,
 	optionalLabel,
 	supportingText,
+	successInput,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
@@ -39,6 +40,7 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	supporting?: string
 	width?: Width
 	error?: string
+	success?: string
 }
 
 const TextInput = ({
@@ -47,6 +49,7 @@ const TextInput = ({
 	supporting,
 	width,
 	error,
+	success,
 	cssOverrides,
 	...props
 }: TextInputProps) => {
@@ -66,11 +69,13 @@ const TextInput = ({
 			</div>
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{error && <InlineError>{error}</InlineError>}
+			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
 			<input
 				css={theme => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
 					error ? errorInput(theme.textInput && theme) : "",
+					!error && success ? successInput(theme.textInput && theme) : "",
 					cssOverrides,
 				]}
 				aria-required={!optional}
