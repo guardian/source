@@ -14,6 +14,13 @@ export const errorInput = ({
 	color: ${textInput.textError};
 `
 
+export const successInput = ({
+   textInput,
+}: { textInput: TextInputTheme } = textInputLight) => css`
+	border: 4px solid ${textInput.borderSuccess};
+	color: ${textInput.textSuccess};
+`
+
 export const textInput = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`

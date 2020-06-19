@@ -167,6 +167,34 @@ const [errorWithMessageLight] = themes.map(({ name, theme }) => {
 	return story
 })
 
+const [successWithMessageLight] = themes.map(({ name, theme }) => {
+	const story = () => (
+		<ThemeProvider theme={theme}>
+			<div css={constrainedWith}>
+				<TextInput
+					label="Input Code"
+					success="This code is valid"
+				/>
+			</div>
+		</ThemeProvider>
+	)
+
+	story.story = {
+		name: `success with message ${name}`,
+		parameters: {
+			backgrounds: [
+				Object.assign(
+					{},
+					{ default: true },
+					storybookBackgrounds[name],
+				),
+			],
+		},
+	}
+
+	return story
+})
+
 const [constraintLight] = themes.map(({ name, theme }) => {
 	const story = () => (
 		<ThemeProvider theme={theme}>
@@ -203,5 +231,6 @@ export {
 	supportingTextLight,
 	widthsLight,
 	errorWithMessageLight,
+	successWithMessageLight,
 	constraintLight,
 }

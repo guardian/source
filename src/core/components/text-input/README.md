@@ -58,6 +58,12 @@ the width will default to 100% of the field's container.
 
 Whether error styling should apply to this text input. The string appears as an inline error message.
 
+### `success`
+
+**`string`**
+
+Whether success styling should apply to this text input. The string appears as an inline success message. This prop should not have a value set at the same time as the error prop. In the event that both are set, errors take precedence.
+
 ## Supported themes
 
 ### Standard
