@@ -19,7 +19,8 @@ const Form = () => (
         <LinkButton
             priority="primary"
             size="default"
-            showIcon={true}
+            icon={<SvgCheckmark />}
+            iconSide="left"
             href="/read-more"
         >
             Read more
@@ -53,11 +54,24 @@ Informs users of how important an action is
 
 Reflects the prominance of the action
 
-### `showIcon`
+### `icon`
 
-**`boolean`** _= false_
+**`JSX.Element`**
 
-Whether to show the arrow icon in this button
+An icon that appears inside the button, alongside text
+
+### `iconSide`
+
+**`"left" | "right"`** _= "left"_
+
+The side of the button on which the icon appears
+
+### `hideLabel`
+
+**`boolean`** _= "false"_
+
+Whether to hide the text label visually. It is only appropriate to set this flag
+if an `icon` is passed. The text label will still be read out by screen readers.
 
 ## `Button` Props
 
