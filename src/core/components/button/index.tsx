@@ -203,7 +203,7 @@ const LinkButton = ({
 					iconSvg ? iconSizes[size] : "",
 					/*
 					TODO: We should be able to assume that children
-					will always be passed to the Button component.
+					will always be passed to the LinkButton component.
 					A future breaking change might be to remove the
 					logic that checks for the (non-)existence of children.
 					*/
