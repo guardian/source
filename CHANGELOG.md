@@ -10,6 +10,25 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 23 June 2020
+
+**`@guardian/src-button 1.6.0`**
+
+-   :sparkles: [86e7968](https://github.com/guardian/source/pull/400/commits/86e7968c5c25ac45f6797a1a9a1d5c000af3565d) replicate icon api from button in linkbutton
+-   :robot: [217fcd9](https://github.com/guardian/source/pull/400/commits/217fcd972e287d28381f4e588eea4d0545acad55) refactor button stories into separate modules
+
+**`@guardian/src-foundations 1.6.0`**
+
+-   :sparkles: [e9aed04](https://github.com/guardian/source/pull/399/commits/e9aed041a6b9a874dd95712891c2652668bd2b06) add success colours to text input theme (thanks @rupertbates)
+
+**`@guardian/src-icons 1.6.0`**
+
+-   :robot: [3267a70](https://github.com/guardian/source/pull/401/commits/3267a70c6333a21c358c8dcc386925f3c6482a49) republish envelope icon in icons package
+
+**`@guardian/src-text-input 1.6.0`**
+
+-   :sparkles: [f27882e](https://github.com/guardian/source/pull/399/commits/f27882ef92e7c812d8e8fb262dac7e98ca5a9ddc) Add a new `success` prop to `TextInput` component (thanks @rupertbates)
+
 ## 19 June 2020
 
 **`@guardian/src-brand 1.5.0`**
