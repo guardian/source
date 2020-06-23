@@ -101,9 +101,10 @@ const Button = ({
 	children,
 	...props
 }: ButtonProps) => {
-	const buttonContents = [children]
+	const buttonContents = [<div className="baseline-kick">{children}</div>]
 
 	if (iconSvg) {
+		buttonContents.push(<div className="spacer"/>)
 		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
 	}
 

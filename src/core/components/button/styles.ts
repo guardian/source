@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
-import { size, space, transitions } from "@guardian/src-foundations"
+import { size, width  } from "@guardian/src-foundations/size"
+import { space, transitions } from "@guardian/src-foundations"
 import { buttonDefault, ButtonTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -77,15 +78,18 @@ export const subdued = ({
 	TODO: find a more scalable solution to this (see https://css-tricks.com/how-to-tame-line-height-in-css/)
 */
 const fontSpacingVerticalOffset = css`
-	padding-bottom: 2px;
+	.baseline-kick {
+		position: relative;
+		top: -1px;
+	}
 `
 
 export const defaultSize = css`
 	${textSans.medium({ fontWeight: "bold" })};
 	height: ${size.medium}px;
 	min-height: ${size.medium}px;
-	padding: 0 ${size.medium / 2}px;
-	border-radius: ${size.medium / 2}px;
+	padding: 0 ${space[5]}px;
+	border-radius: ${size.medium}px;
 	${fontSpacingVerticalOffset};
 `
 
@@ -93,8 +97,8 @@ export const smallSize = css`
 	${textSans.medium({ fontWeight: "bold" })};
 	height: ${size.small}px;
 	min-height: ${size.small}px;
-	padding: 0 ${size.small / 2}px;
-	border-radius: ${size.small / 2}px;
+	padding: 0 ${space[4]}px;
+	border-radius: ${size.small}px;
 	${fontSpacingVerticalOffset};
 `
 
@@ -102,8 +106,8 @@ export const xsmallSize = css`
 	${textSans.small({ fontWeight: "bold" })};
 	height: ${size.xsmall}px;
 	min-height: ${size.xsmall}px;
-	padding: 0 ${size.xsmall / 2}px;
-	border-radius: ${size.xsmall / 2}px;
+	padding: 0 ${space[3]}px;
+	border-radius: ${size.xsmall}px;
 	${fontSpacingVerticalOffset};
 `
 
@@ -113,8 +117,11 @@ export const iconDefault = css`
 		display: block;
 		fill: currentColor;
 		position: relative;
-		width: ${size.medium / 2}px;
+		width: ${width.iconMedium}px;
 		height: auto;
+	}
+	.spacer {
+		width: ${space[3]}px;
 	}
 `
 
@@ -124,8 +131,11 @@ export const iconSmall = css`
 		display: block;
 		fill: currentColor;
 		position: relative;
-		width: ${size.small / 2}px;
+		width: ${width.iconSmall}px;
 		height: auto;
+	}
+	.spacer {
+		width: ${space[2]}px;
 	}
 `
 
@@ -135,22 +145,19 @@ export const iconXsmall = css`
 		display: block;
 		fill: currentColor;
 		position: relative;
-		width: ${size.xsmall / 2}px;
+		width: ${width.iconXsmall}px;
 		height: auto;
 	}
-`
-
-export const iconRight = css`
-	svg {
-		margin: 0 ${-size.medium / 8}px 0 ${size.medium / 4}px;
+	.spacer {
+		width: ${space[1]}px;
 	}
+`
+// TODO: fix viewBox in SVGs
+export const iconRight = css`
 `
 
 export const iconLeft = css`
 	flex-direction: row-reverse;
-	svg {
-		margin: 0 ${size.medium / 4}px 0 ${-size.medium / 8}px;
-	}
 `
 const iconOnly = css`
 	justify-content: center;
