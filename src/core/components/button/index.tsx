@@ -104,6 +104,8 @@ const Button = ({
 	const buttonContents = [<div className="baseline-kick">{children}</div>]
 
 	if (iconSvg) {
+        // adding an empty spacer div is simpler than adding a left margin
+        // to icons on the right and a right margin to icons on the left =)
 		buttonContents.push(<div className="spacer"/>)
 		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
 	}
