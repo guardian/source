@@ -15,7 +15,7 @@ export const errorInput = ({
 `
 
 export const successInput = ({
-   textInput,
+	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
@@ -65,7 +65,7 @@ export const width4 = css`
 export const text = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
 	color: ${textInput.textLabel};
 	margin-bottom: ${space[1]}px;
 `
@@ -73,7 +73,7 @@ export const text = ({
 export const optionalLabel = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
-	${textSans.small()};
+	${textSans.small({ lineHeight: "regular" })};
 	color: ${textInput.textLabelOptional};
 	font-style: italic;
 `
@@ -81,7 +81,7 @@ export const optionalLabel = ({
 export const supportingText = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputLight) => css`
-	${textSans.small()};
+	${textSans.small({ lineHeight: "regular" })};
 	color: ${textInput.textLabelSupporting};
 	margin-bottom: ${space[1]}px;
 `

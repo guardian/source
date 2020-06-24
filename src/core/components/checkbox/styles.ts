@@ -90,12 +90,12 @@ export const checkbox = ({
 export const labelText = ({
 	checkbox,
 }: { checkbox: CheckboxTheme } = checkboxDefault) => css`
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: "regular" })};
 	color: ${checkbox.textLabel};
 `
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: "regular" })};
 `
 
 export const supportingText = ({

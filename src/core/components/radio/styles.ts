@@ -86,12 +86,12 @@ export const radio = ({ radio }: { radio: RadioTheme } = radioLight) => css`
 `
 
 export const labelText = ({ radio }: { radio: RadioTheme } = radioLight) => css`
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: "regular" })};
 	color: ${radio.textLabel};
 `
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
 `
 
 export const supportingText = ({

@@ -35,7 +35,7 @@ export const widthFluid = css`
 `
 
 export const label = css`
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
 	color: ${text.inputLabel};
 	margin-bottom: ${space[1]}px;
 `

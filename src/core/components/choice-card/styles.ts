@@ -32,15 +32,17 @@ export const flexContainer = css`
 export const groupLabel = ({
 	choiceCard,
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
 	color: ${choiceCard.textGroupLabel};
 	margin-bottom: ${space[1]}px;
+	/* override user agent defaults */
+	padding: 0;
 `
 
 export const groupLabelSupporting = ({
 	choiceCard,
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	${textSans.small()};
+	${textSans.small({ lineHeight: "regular" })};
 	color: ${choiceCard.textGroupLabelSupporting};
 	margin-bottom: ${space[3]}px;
 	/* Negate the user agent spacing between legend and fieldset content */
@@ -161,7 +163,7 @@ export const contentWrapper = css`
 	}
 
 	& > * {
-		${textSans.medium({ fontWeight: "bold" })};
+		${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
 		text-align: center;
 	}
 
