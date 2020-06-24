@@ -11,7 +11,7 @@ const inlineMessage = css`
 	/* we use flex purely for vertical centering */
 	display: flex;
 	align-items: flex-start;
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: "regular" })};
 	/* TODO: we shouldn't be opinionated about layout inside the component */
 	margin-bottom: ${space[1]}px;
 
