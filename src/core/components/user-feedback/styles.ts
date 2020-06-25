@@ -5,13 +5,12 @@ import {
 	UserFeedbackTheme,
 } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
-import { width, height } from "@guardian/src-foundations/size"
+import { remWidth, remHeight } from "@guardian/src-foundations/size"
 
 const inlineMessage = css`
-	/* we use flex purely for vertical centering */
 	display: flex;
 	align-items: flex-start;
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: "regular" })};
 	/* TODO: we shouldn't be opinionated about layout inside the component */
 	margin-bottom: ${space[1]}px;
 
@@ -19,8 +18,11 @@ const inlineMessage = css`
 		fill: currentColor;
 		/* we don't want the SVG to change size depending on available space */
 		flex: none;
-		width: ${width.iconMedium}px;
-		height: ${height.iconMedium}px;
+		width: ${remWidth.iconMedium}rem;
+		height: ${remHeight.iconMedium}rem;
+
+		/* a visual kick to vertically align the icon with the top row of text */
+		transform: translateY(-3px);
 	}
 `
 
