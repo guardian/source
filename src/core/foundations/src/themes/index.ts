@@ -5,6 +5,7 @@ export * from "./choice-card"
 export * from "./inline-error"
 export * from "./link"
 export * from "./radio"
+export * from "./select"
 export * from "./text-input"
 export * from "./user-feedback"
 
