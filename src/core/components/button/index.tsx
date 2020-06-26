@@ -89,6 +89,7 @@ interface ButtonProps extends Props, ButtonHTMLAttributes<HTMLButtonElement> {
 	iconSide: IconSide
 	icon?: ReactElement
 	hideLabel: boolean
+	nudgeIcon?: boolean
 	children?: ReactNode
 }
 
@@ -98,6 +99,7 @@ const Button = ({
 	icon: iconSvg,
 	iconSide,
 	hideLabel,
+	nudgeIcon,
 	cssOverrides,
 	children,
 	...props
@@ -125,6 +127,7 @@ const Button = ({
 				logic that checks for the (non-)existence of children.
 				*/
 				iconSvg && !hideLabel && children ? iconSides[iconSide] : "",
+				nudgeIcon ? iconNudgeAnimation : "",
 				hideLabel || !children ? iconOnlySizes[size] : "",
 				cssOverrides,
 			]}
@@ -156,6 +159,7 @@ interface LinkButtonProps
 	showIcon: boolean // TODO: deprecated, remove in future version
 	iconSide: IconSide
 	icon?: ReactElement
+	nudgeIcon?: boolean
 	hideLabel: boolean
 	children?: ReactNode
 }
@@ -166,6 +170,7 @@ const LinkButton = ({
 	showIcon,
 	iconSide,
 	icon: iconSvg,
+	nudgeIcon,
 	hideLabel,
 	cssOverrides,
 	children,
@@ -216,6 +221,7 @@ const LinkButton = ({
 					iconSvg && !hideLabel && children
 						? iconSides[iconSide]
 						: "",
+					nudgeIcon ? iconNudgeAnimation : "",
 					hideLabel || !children ? iconOnlySizes[size] : "",
 				]}
 				{...props}

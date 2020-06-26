@@ -19,8 +19,9 @@ const Form = () => (
         <LinkButton
             priority="primary"
             size="default"
-            icon={<SvgCheckmark />}
+            icon={<SvgArrowRightStraight />}
             iconSide="left"
+            nudgeIcon={true}
             href="/read-more"
         >
             Read more
@@ -66,6 +67,12 @@ An icon that appears inside the button, alongside text
 
 The side of the button on which the icon appears
 
+### `nudgeIcon`
+
+**`boolean`** _= "false"_
+
+When set, the icon (if visible) will move slightly to the right on hover.
+
 ### `hideLabel`
 
 **`boolean`** _= "false"_
@@ -98,6 +105,12 @@ An icon that appears inside the button, alongside text
 **`"left" | "right"`** _= "left"_
 
 The side of the button on which the icon appears
+
+### `nudgeIcon`
+
+**`boolean`** _= "false"_
+
+When set, the icon (if visible) will move slightly to the right on hover.
 
 ### `hideLabel`
 
