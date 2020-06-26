@@ -78,7 +78,11 @@ const Select = ({
 interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement>, Props {}
 
 const Option = ({ cssOverrides, children, ...props }: OptionProps) => {
-	return <option {...props}>{children}</option>
+	return (
+		<option css={cssOverrides} {...props}>
+			{children}
+		</option>
+	)
 }
 
 const selectDefaultProps = {
