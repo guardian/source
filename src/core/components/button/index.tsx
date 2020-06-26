@@ -60,6 +60,7 @@ const iconSides: {
 	right: iconRight,
 	left: iconLeft,
 }
+
 const sizes: {
 	[key in Size]: SerializedStyles
 } = {
@@ -104,6 +105,9 @@ const Button = ({
 	const buttonContents = [children]
 
 	if (iconSvg) {
+		if (!hideLabel) {
+			buttonContents.push(<div className="src-button-space" />)
+		}
 		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
 	}
 
@@ -120,7 +124,7 @@ const Button = ({
 				A future breaking change might be to remove the
 				logic that checks for the (non-)existence of children.
 				*/
-				iconSvg && (!hideLabel && children) ? iconSides[iconSide] : "",
+				iconSvg && !hideLabel && children ? iconSides[iconSide] : "",
 				hideLabel || !children ? iconOnlySizes[size] : "",
 				cssOverrides,
 			]}
@@ -170,6 +174,9 @@ const LinkButton = ({
 	const buttonContents = [children]
 
 	if (iconSvg) {
+		if (!hideLabel) {
+			buttonContents.push(<div className="src-button-space" />)
+		}
 		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
 	}
 
@@ -182,7 +189,6 @@ const LinkButton = ({
 					sizes[size],
 					priorities[priority](theme.button && theme),
 					iconSizes[size],
-					children ? iconSides.right : "",
 					!children ? iconOnlySizes[size] : "",
 					iconNudgeAnimation,
 					cssOverrides,
@@ -207,7 +213,7 @@ const LinkButton = ({
 					A future breaking change might be to remove the
 					logic that checks for the (non-)existence of children.
 					*/
-					iconSvg && (!hideLabel && children)
+					iconSvg && !hideLabel && children
 						? iconSides[iconSide]
 						: "",
 					hideLabel || !children ? iconOnlySizes[size] : "",
