@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { space, transitions } from "@guardian/src-foundations"
-import { size, height, width } from "@guardian/src-foundations/size"
+import { height, width } from "@guardian/src-foundations/size"
 import { buttonDefault, ButtonTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -117,6 +117,9 @@ export const iconDefault = css`
 		width: ${width.iconMedium}px;
 		height: auto;
 	}
+	.src-button-space {
+		width: ${space[3]}px;
+	}
 `
 
 export const iconSmall = css`
@@ -127,6 +130,9 @@ export const iconSmall = css`
 		position: relative;
 		width: ${width.iconSmall}px;
 		height: auto;
+	}
+	.src-button-space {
+		width: ${space[2]}px;
 	}
 `
 
@@ -139,20 +145,29 @@ export const iconXsmall = css`
 		width: ${width.iconXsmall}px;
 		height: auto;
 	}
-`
-
-export const iconRight = css`
-	svg {
-		margin: 0 ${-size.medium / 8}px 0 ${size.medium / 4}px;
+	.src-button-space {
+		width: ${space[1]}px;
 	}
 `
+
+/* TODO: we add some negative margin to icons to account for
+ the extra space encoded into the SVG. We should consider removing
+ or significantly reducing this space
+ */
+const pullIconTowardEdge = -space[1]
 
 export const iconLeft = css`
 	flex-direction: row-reverse;
 	svg {
-		margin: 0 ${size.medium / 4}px 0 ${-size.medium / 8}px;
+		margin-left: ${pullIconTowardEdge}px;
 	}
 `
+export const iconRight = css`
+	svg {
+		margin-right: ${pullIconTowardEdge}px;
+	}
+`
+
 const iconOnly = css`
 	justify-content: center;
 	padding: 0;
