@@ -10,6 +10,48 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 26 June 2020
+
+**`@guardian/src-button 1.7.0`**
+
+-   :nail_care: [0c82de2](https://github.com/guardian/source/commit/0c82de2fa9d7c9de1345fddcda7eef7034fa3a47) apply better use of size tokens (thanks @mxdvl)
+-   :nail_care: [21bf76a](https://github.com/guardian/source/commit/21bf76a4d478ff0a8a68633f1b6483870417cca5) use spacer div instead of margins for btn icons (thanks @mxdvl)
+-   :sparkles: [c9dabeb](https://github.com/guardian/source/commit/c9dabeb4db46b33e1805a29464c7ec8a365b07aa) reinstate nudge animation
+
+**`@guardian/src-checkbox 1.7.0`**
+
+-   :nail_care: [ebff51f](https://github.com/guardian/source/commit/ebff51f6cf1e94610cf474df5c630fc1ce336199) use correct line heights in checkbox
+
+**`@guardian/src-choice-card 1.7.0`**
+
+-   :nail_care: [d3193e8](https://github.com/guardian/source/commit/d3193e889405e1302752abe15ae6db4bf92bdf4e) use correct line heights in choice card
+
+**`@guardian/src-foundations 1.7.0`**
+
+-   :sparkles: [a87eeb7](https://github.com/guardian/source/commit/a87eeb7a1c98a621c2e3310c392a6d2ccae944b1) add select theme
+
+**`@guardian/src-radio 1.7.0`**
+
+-   :nail_care: [99cc215](https://github.com/guardian/source/commit/99cc215be8a4288dac9329a048d20f52be720158) use correct line heights in radio
+
+**`@guardian/src-select 1.7.0`**
+
+-   :sparkles: [1ca7259](https://github.com/guardian/source/commit/1ca7259cfe70558a5f11cedd42f694ae7bda6d27) add select component boilerplate
+-   :robot: [4762c9d](https://github.com/guardian/source/commit/4762c9dede13498afc336751f2f61b4f7b634f0e) pass cssOverrides to option element
+
+**`@guardian/src-text-area 1.7.0`**
+
+-   :nail_care: [5b1114d](https://github.com/guardian/source/commit/5b1114ddfa60262dbcef332c27cbb868b2b037af) use correct line heights in text area
+
+**`@guardian/src-text-input 1.7.0`**
+
+-   :nail_care: [f8b8acf](https://github.com/guardian/source/commit/f8b8acfdb7d8a0c1490210b376e2f68d596fa6f7) use correct line heights in text input
+
+**`@guardian/src-user-feedback 1.7.0`**
+
+-   :nail_care: [987d602](https://github.com/guardian/source/commit/987d602210ea6f1ee4380101a7259aa34c8ca479) use correct line height for message text
+-   :nail_care: [8ba5d97](https://github.com/guardian/source/commit/8ba5d97635b34f9aed7d8416c0747664c35e71b4) vertically align icons with text in user feedback
+
 ## 23 June 2020
 
 **`@guardian/src-button 1.6.0`**
