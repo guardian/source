@@ -46,7 +46,7 @@ const [errorLight, errorBlue] = themes.map(({ name, theme }) => {
 	return story
 })
 
-const [successLight] = themes.map(({ name, theme }) => {
+const [successLight, successBlue] = themes.map(({ name, theme }) => {
 	const story = () => (
 		<ThemeProvider theme={theme}>
 			<InlineSuccess>Your voucher code is valid</InlineSuccess>
@@ -82,4 +82,10 @@ errorLongLightMobile.story = {
 	},
 }
 
-export { errorLight, errorBlue, successLight, errorLongLightMobile }
+export {
+	errorLight,
+	errorBlue,
+	successLight,
+	successBlue,
+	errorLongLightMobile,
+}
