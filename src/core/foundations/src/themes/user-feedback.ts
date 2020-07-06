@@ -1,7 +1,7 @@
 import { text, brandText } from "@guardian/src-foundations/palette"
 
 export type UserFeedbackTheme = {
-	textSuccess?: string
+	textSuccess: string
 	textError: string
 }
 
@@ -14,6 +14,7 @@ export const userFeedbackDefault: { userFeedback: UserFeedbackTheme } = {
 
 export const userFeedbackBrand: { userFeedback: UserFeedbackTheme } = {
 	userFeedback: {
+		textSuccess: brandText.success,
 		textError: brandText.error,
 	},
 }
