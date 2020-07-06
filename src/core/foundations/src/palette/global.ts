@@ -61,14 +61,15 @@ export const neutral = {
 }
 export const error = {
 	400: colors.reds[3],
-	500: colors.reds[4],
+	500: colors.reds[7],
 
 	// legacy names: please do not use
 	main: colors.reds[3],
-	bright: colors.reds[4],
+	bright: colors.reds[7],
 }
 export const success = {
 	400: colors.greens[1],
+	500: colors.greens[2],
 
 	// legacy names: please do not use
 	main: colors.greens[1],
@@ -154,13 +155,13 @@ export const lifestyle = {
 	faded: colors.pinks[6],
 }
 export const labs = {
-	200: colors.greens[2],
-	300: colors.greens[3],
-	400: colors.greens[4],
+	200: colors.greens[3],
+	300: colors.greens[4],
+	400: colors.greens[5],
 
 	// legacy names: please do not use
-	dark: colors.greens[3],
-	main: colors.greens[4],
+	dark: colors.greens[4],
+	main: colors.greens[5],
 }
 
 export const specialReport = {

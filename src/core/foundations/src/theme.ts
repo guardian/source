@@ -46,10 +46,11 @@ const colors = {
 		"#660505", //news-100
 		"#8B0000", //news-200
 		"#AB0613", //news-300
-		"#C70000", //news-400
+		"#C70000", //news-400, error-400
 		"#FF5943", //news-500
 		"#FFBAC8", //news-600
 		"#FFF4F2", //news-800
+		"#FF9081", //error-500
 	],
 	oranges: [
 		"#672005", //opinion-100
@@ -99,8 +100,9 @@ const colors = {
 		"#FFE500", //brandAlt-400
 	],
 	greens: [
-		"#185E36", //green-200
-		"#22874D", //green-400
+		"#185E36", //green-300
+		"#22874D", //green-400, success-400
+		"#58D08B", //green-500, success-500
 		"#4B8878", //labs-200
 		"#65A897", //labs-300
 		"#69D1CA", //labs-400
