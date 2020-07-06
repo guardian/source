@@ -7,10 +7,10 @@ import {
 	brandText,
 } from "@guardian/src-foundations/palette"
 import {
-	inlineErrorLight,
-	inlineErrorBrand,
-	InlineErrorTheme,
-} from "./inline-error"
+	userFeedbackDefault,
+	userFeedbackBrand,
+	UserFeedbackTheme,
+} from "./user-feedback"
 
 export type RadioTheme = {
 	borderHover: string
@@ -23,7 +23,7 @@ export type RadioTheme = {
 
 export const radioDefault: {
 	radio: RadioTheme
-	inlineError: InlineErrorTheme
+	userFeedback: UserFeedbackTheme
 } = {
 	radio: {
 		borderHover: border.inputHover,
@@ -33,12 +33,12 @@ export const radioDefault: {
 		textLabelSupporting: text.inputLabelSupporting,
 		borderError: border.error,
 	},
-	...inlineErrorLight,
+	...userFeedbackDefault,
 }
 
 export const radioBrand: {
 	radio: RadioTheme
-	inlineError: InlineErrorTheme
+	userFeedback: UserFeedbackTheme
 } = {
 	radio: {
 		borderHover: brandBorder.inputHover,
@@ -48,7 +48,7 @@ export const radioBrand: {
 		textLabelSupporting: brandText.supporting,
 		borderError: brandBorder.error,
 	},
-	...inlineErrorBrand,
+	...userFeedbackBrand,
 }
 
 // continue to expose legacy theme names
