@@ -2,7 +2,7 @@ import { neutral, success as _success, error as _error, brand } from "../global"
 
 export const brandBorder = {
 	primary: brand[800],
-	success: _success[400],
+	success: _success[500],
 	error: _error[500],
 	ctaTertiary: neutral[100],
 	input: brand[800],
