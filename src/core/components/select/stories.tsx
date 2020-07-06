@@ -4,7 +4,10 @@ import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 import { from } from "@guardian/src-foundations/mq"
 import { Select, Option, selectDefault } from "./index"
-import { SelectTheme, InlineErrorTheme } from "@guardian/src-foundations/themes"
+import {
+	SelectTheme,
+	UserFeedbackTheme,
+} from "@guardian/src-foundations/themes"
 
 export default {
 	title: "Select",
@@ -12,7 +15,7 @@ export default {
 
 const themes: {
 	name: ThemeName
-	theme: { select: SelectTheme; inlineError: InlineErrorTheme }
+	theme: { select: SelectTheme; userFeedback: UserFeedbackTheme }
 }[] = [
 	{
 		name: "default",

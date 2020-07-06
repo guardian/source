@@ -1,5 +1,5 @@
 import { text, background, border } from "@guardian/src-foundations/palette"
-import { inlineErrorDefault, InlineErrorTheme } from "./inline-error"
+import { userFeedbackDefault, UserFeedbackTheme } from "./user-feedback"
 
 export type TextInputTheme = {
 	textUserInput: string
@@ -17,7 +17,7 @@ export type TextInputTheme = {
 
 export const textInputDefault: {
 	textInput: TextInputTheme
-	inlineError: InlineErrorTheme
+	userFeedback: UserFeedbackTheme
 } = {
 	textInput: {
 		textUserInput: text.userInput,
@@ -32,7 +32,7 @@ export const textInputDefault: {
 		borderError: border.error,
 		borderSuccess: border.success,
 	},
-	...inlineErrorDefault,
+	...userFeedbackDefault,
 }
 
 // continue to expose legacy theme names

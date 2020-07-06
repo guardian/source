@@ -7,10 +7,10 @@ import {
 	brandText,
 } from "@guardian/src-foundations/palette"
 import {
-	inlineErrorDefault,
-	inlineErrorBrand,
-	InlineErrorTheme,
-} from "./inline-error"
+	userFeedbackDefault,
+	userFeedbackBrand,
+	UserFeedbackTheme,
+} from "./user-feedback"
 
 export type CheckboxTheme = {
 	border: string
@@ -25,7 +25,7 @@ export type CheckboxTheme = {
 
 export const checkboxDefault: {
 	checkbox: CheckboxTheme
-	inlineError: InlineErrorTheme
+	userFeedback: UserFeedbackTheme
 } = {
 	checkbox: {
 		border: border.input,
@@ -37,12 +37,12 @@ export const checkboxDefault: {
 		textLabelSupporting: text.inputLabelSupporting,
 		textIndeterminate: text.supporting,
 	},
-	...inlineErrorDefault,
+	...userFeedbackDefault,
 }
 
 export const checkboxBrand: {
 	checkbox: CheckboxTheme
-	inlineError: InlineErrorTheme
+	userFeedback: UserFeedbackTheme
 } = {
 	checkbox: {
 		border: brandBorder.input,
@@ -54,7 +54,7 @@ export const checkboxBrand: {
 		textLabelSupporting: brandText.inputLabelSupporting,
 		textIndeterminate: brandText.supporting,
 	},
-	...inlineErrorBrand,
+	...userFeedbackBrand,
 }
 
 // continue to expose legacy theme names

@@ -7,7 +7,7 @@ import { from } from "@guardian/src-foundations/mq"
 import { TextInput, textInputLight } from "./index"
 import {
 	TextInputTheme,
-	InlineErrorTheme,
+	UserFeedbackTheme,
 } from "@guardian/src-foundations/themes"
 
 export default {
@@ -16,7 +16,7 @@ export default {
 
 const themes: {
 	name: ThemeName
-	theme: { textInput: TextInputTheme; inlineError: InlineErrorTheme }
+	theme: { textInput: TextInputTheme; userFeedback: UserFeedbackTheme }
 }[] = [
 	{
 		name: "default",
@@ -171,10 +171,7 @@ const [successWithMessageLight] = themes.map(({ name, theme }) => {
 	const story = () => (
 		<ThemeProvider theme={theme}>
 			<div css={constrainedWith}>
-				<TextInput
-					label="Input Code"
-					success="This code is valid"
-				/>
+				<TextInput label="Input Code" success="This code is valid" />
 			</div>
 		</ThemeProvider>
 	)

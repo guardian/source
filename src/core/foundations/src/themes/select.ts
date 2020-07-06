@@ -1,5 +1,5 @@
 import { text, background, border } from "@guardian/src-foundations/palette"
-import { inlineErrorDefault, InlineErrorTheme } from "./inline-error"
+import { userFeedbackDefault, UserFeedbackTheme } from "./user-feedback"
 
 export type SelectTheme = {
 	textUserInput: string
@@ -17,7 +17,7 @@ export type SelectTheme = {
 
 export const selectDefault: {
 	select: SelectTheme
-	inlineError: InlineErrorTheme
+	userFeedback: UserFeedbackTheme
 } = {
 	select: {
 		textUserInput: text.userInput,
@@ -32,5 +32,5 @@ export const selectDefault: {
 		borderError: border.error,
 		borderSuccess: border.success,
 	},
-	...inlineErrorDefault,
+	...userFeedbackDefault,
 }

@@ -1,5 +1,5 @@
 import { border, text, background } from "@guardian/src-foundations/palette"
-import { InlineErrorTheme, inlineErrorDefault } from "./inline-error"
+import { UserFeedbackTheme, userFeedbackDefault } from "./user-feedback"
 
 export type ChoiceCardTheme = {
 	textLabel: string
@@ -19,7 +19,7 @@ export type ChoiceCardTheme = {
 
 export const choiceCardDefault: {
 	choiceCard: ChoiceCardTheme
-	inlineError: InlineErrorTheme
+	userFeedback: UserFeedbackTheme
 } = {
 	choiceCard: {
 		textLabel: text.supporting,
@@ -36,5 +36,5 @@ export const choiceCardDefault: {
 		textError: text.error,
 		borderError: border.error,
 	},
-	...inlineErrorDefault,
+	...userFeedbackDefault,
 }
