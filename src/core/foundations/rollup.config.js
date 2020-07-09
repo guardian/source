@@ -1,20 +1,15 @@
 import babel from "rollup-plugin-babel"
 import resolve from "rollup-plugin-node-resolve"
+import {
+	submodules,
+	cjsPaths,
+	submodulePaths,
+} from "../../../scripts/foundations-submodules"
 
 const extensions = [".ts", ".tsx"]
 const plugins = [babel({ extensions }), resolve({ extensions })]
-const folders = [
-	"accessibility",
-	"mq",
-	"palette",
-	"size",
-	"themes",
-	"typography",
-	"typography/obj",
-	"utils",
-]
 
-const esmFolders = folders.map(folder => ({
+const esmFolders = submodules.map((folder) => ({
 	input: `src/${folder}/index.ts`,
 	output: [
 		{
@@ -23,29 +18,20 @@ const esmFolders = folders.map(folder => ({
 		},
 	],
 	plugins,
-	external: [
-		"@guardian/src-foundations",
-		"@guardian/src-foundations/palette",
-	],
+	external: ["@guardian/src-foundations", ...submodulePaths],
 }))
 
-const cjsFolders = folders.map(folder => ({
+const cjsFolders = submodules.map((folder) => ({
 	input: `src/${folder}/index.ts`,
 	output: [
 		{
 			file: `${folder}/cjs/index.js`,
 			format: "cjs",
-			paths: {
-				"@guardian/src-foundations/palette":
-					"@guardian/src-foundations/palette/cjs",
-			},
+			paths: cjsPaths,
 		},
 	],
 	plugins,
-	external: [
-		"@guardian/src-foundations",
-		"@guardian/src-foundations/palette",
-	],
+	external: ["@guardian/src-foundations", ...submodulePaths],
 }))
 
 module.exports = [

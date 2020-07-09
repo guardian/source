@@ -1,6 +1,10 @@
 import babel from "rollup-plugin-babel"
 import resolve from "rollup-plugin-node-resolve"
 import commonjs from "rollup-plugin-commonjs"
+import {
+	cjsPaths,
+	submodulePaths,
+} from "../../../../scripts/foundations-submodules"
 
 const extensions = [".ts", ".tsx"]
 
@@ -11,10 +15,7 @@ module.exports = {
 			file: "dist/grid.js",
 			format: "cjs",
 			sourceMap: true,
-			paths: {
-				"@guardian/src-foundations/mq":
-					"@guardian/src-foundations/mq/cjs",
-			},
+			paths: cjsPaths,
 		},
 		{
 			file: "dist/grid.esm.js",
@@ -27,7 +28,7 @@ module.exports = {
 		"@emotion/core",
 		"@emotion/css",
 		"@guardian/src-foundations",
-		"@guardian/src-foundations/mq",
+		...submodulePaths,
 	],
 	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
 }

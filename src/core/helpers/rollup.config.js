@@ -1,6 +1,10 @@
 import babel from "rollup-plugin-babel"
 import resolve from "rollup-plugin-node-resolve"
 import commonjs from "rollup-plugin-commonjs"
+import {
+	cjsPaths,
+	submodulePaths,
+} from "../../../scripts/foundations-submodules"
 
 const extensions = [".ts", ".tsx"]
 
@@ -11,10 +15,7 @@ module.exports = {
 			file: "dist/helpers.js",
 			format: "cjs",
 			sourceMap: true,
-			paths: {
-				"@guardian/src-foundations/palette":
-					"@guardian/src-foundations/palette/cjs",
-			},
+			paths: cjsPaths,
 		},
 		{
 			file: "dist/helpers.esm.js",
@@ -22,6 +23,6 @@ module.exports = {
 			sourceMap: true,
 		},
 	],
-	external: ["@guardian/src-foundations/palette"],
+	external: [...submodulePaths],
 	plugins: [babel({ extensions }), resolve({ extensions }), commonjs()],
 }
