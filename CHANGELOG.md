@@ -10,6 +10,41 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 10 July 2020
+
+**`@guardian/src-brand 1.8.0`**
+
+-   :robot: [58d2659](https://github.com/guardian/source/commit/58d26599f608653292e4af78ab48f9bd851ef956) add logo re-export with better viewbox size
+-   :robot: [5064b4b](https://github.com/guardian/source/commit/5064b4bb7f8bd68f924a36e65e1c22b0c7eb5ae0) re-export guardian live logo with better viewbox size
+
+**`@guardian/src-foundations 1.8.0`**
+
+-   :sparkles: [3e34d12](https://github.com/guardian/source/commit/3e34d126e89d2544fbbb505f134bad55ed6271df) add new success and error colours
+-   :sparkles: [0a9a645](https://github.com/guardian/source/commit/0a9a645089b71c60851bdfbcfec8b2f7b72dcc36) expose new success and error tokens
+-   :sparkles: [1b10cfe](https://github.com/guardian/source/commit/1b10cfe11a2bbc276f069d619b33d27368ed8844) add brand success colour to user feedback theme
+-   :bug: [9fd088e](https://github.com/guardian/source/commit/9fd088e6f8a937480d22c44c4820e8f2e3ccce67) use user-feedback in themes, not inline-error
+
+**`@guardian/src-icons 1.8.0`**
+
+-   :sparkles: [632e425](https://github.com/guardian/source/commit/632e42581cde63c31ed702315fc8ea5c00ea5591) add house and settings icons to icons package
+-   :sparkles: [44ff59a](https://github.com/guardian/source/commit/44ff59a87c9823a1dc0bd55c2aaa4301825147d7) add person and info icons to icons package
+
+**`@guardian/src-select 1.8.0`**
+
+-   :bug: [b74305a](https://github.com/guardian/source/commit/b74305a7e3a0112f7d826fb1d1c574e0c2aacc09) use user-feedback theme in select stories
+
+**`@guardian/src-radio 1.8.0`**
+
+-   :bug: [a4f433c](https://github.com/guardian/source/commit/a4f433cde3a4b0840bf3b8a73e7f539e5f759524) use user-feedback theme in radio stories
+
+**`@guardian/src-text-input 1.8.0`**
+
+-   :bug: [827a3c1](https://github.com/guardian/source/commit/827a3c1e5b7b34e46f0169a02d76b5ce8fe65936) use user-feedback theme in text input stories
+
+**`@guardian/src-user-feedback 1.8.0`**
+
+-   :sparkles: [6e400af](https://github.com/guardian/source/commit/6e400afcb90bd5534fb0e5a22e4e819b6f0f009b) add brand success theme to user feedback stories
+
 ## 26 June 2020
 
 **`@guardian/src-button 1.7.0`**
