@@ -26,7 +26,7 @@ const themes: {
 const constrainedWith = css`
 	width: 100%;
 	${from.phablet} {
-		width: 20em;
+		width: 25em;
 	}
 `
 
