@@ -36,7 +36,7 @@ const CheckboxGroup = ({
 	return (
 		<fieldset css={[fieldset, cssOverrides]} {...props}>
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
-			{React.Children.map(children, child => {
+			{React.Children.map(children, (child) => {
 				return React.cloneElement(
 					child,
 					Object.assign(error ? { error: true } : {}, {
@@ -57,7 +57,7 @@ const LabelText = ({
 }) => {
 	return (
 		<div
-			css={theme => [
+			css={(theme) => [
 				labelText(theme.checkbox && theme),
 				hasSupportingText ? labelTextWithSupportingText : "",
 			]}
@@ -69,7 +69,7 @@ const LabelText = ({
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={theme => supportingText(theme.checkbox && theme)}>
+		<div css={(theme) => supportingText(theme.checkbox && theme)}>
 			{children}
 		</div>
 	)
@@ -93,7 +93,7 @@ const Checkbox = ({
 	cssOverrides,
 	...props
 }: CheckboxProps) => {
-	const isChecked = (): boolean | "mixed" => {
+	const ariaChecked = (): boolean | "mixed" => {
 		// Note: the indeterminate prop takes precedence over the checked prop
 		if (indeterminate) {
 			return "mixed"
@@ -105,31 +105,39 @@ const Checkbox = ({
 
 		return !!defaultChecked
 	}
-	const setCheckboxState = (el: HTMLInputElement | null): void => {
+	const isChecked = (): boolean => {
+		if (checked != null) {
+			return checked
+		}
+
+		return !!defaultChecked
+	}
+	const setIndeterminate = (el: HTMLInputElement | null): void => {
 		if (el) {
 			el.indeterminate = indeterminate
-			if (checked != null) {
-				el.checked = checked
-			}
 		}
 	}
 
-	const Box = () => (
+	const box = (
 		<>
 			<input
-				css={theme => [
+				css={(theme) => [
 					checkbox(theme.checkbox && theme),
 					error ? errorCheckbox(theme.checkbox && theme) : "",
 					cssOverrides,
 				]}
 				value={value}
 				aria-invalid={error}
-				aria-checked={isChecked()}
-				ref={setCheckboxState}
+				aria-checked={ariaChecked()}
+				ref={setIndeterminate}
+				defaultChecked={
+					defaultChecked != null ? defaultChecked : undefined
+				}
+				checked={checked != null ? isChecked() : undefined}
 				{...props}
 			/>
 			<span
-				css={theme => [
+				css={(theme) => [
 					tick(theme.checkbox && theme),
 					labelContent || supporting ? tickWithLabelText : "",
 					supporting ? tickWithSupportingText : "",
@@ -138,14 +146,14 @@ const Checkbox = ({
 		</>
 	)
 
-	const LabelledBox = () => (
+	const labelledBox = (
 		<label
-			css={theme => [
+			css={(theme) => [
 				label(theme.checkbox && theme),
 				supporting ? labelWithSupportingText : "",
 			]}
 		>
-			<Box />
+			{box}
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
@@ -159,13 +167,12 @@ const Checkbox = ({
 		</label>
 	)
 
-	return <>{labelContent || supportingText ? <LabelledBox /> : <Box />}</>
+	return <>{labelContent || supportingText ? labelledBox : box}</>
 }
 
 const checkboxDefaultProps = {
 	disabled: false,
 	type: "checkbox",
-	defaultChecked: false,
 	indeterminate: false,
 	error: false,
 }
