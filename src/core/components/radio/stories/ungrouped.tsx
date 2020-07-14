@@ -5,7 +5,7 @@ import { ThemeProvider } from "emotion-theming"
 /* eslint-disable react/jsx-key */
 const radios = [
 	<Radio value="red" label="Red" name="colours" />,
-	<Radio value="green" label="Green" name="colours" checked={true} />,
+	<Radio value="green" label="Green" name="colours" defaultChecked={true} />,
 	<Radio value="blue" label="Blue" name="colours" />,
 ]
 /* eslint-enable react/jsx-key */

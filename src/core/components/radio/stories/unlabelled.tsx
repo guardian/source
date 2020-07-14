@@ -4,7 +4,7 @@ import { ThemeProvider } from "emotion-theming"
 
 const unlabelled = () => (
 	<ThemeProvider theme={radioDefault}>
-		<Radio value="red" checked={true} aria-label="Red" />
+		<Radio value="red" defaultChecked={true} aria-label="Red" />
 	</ThemeProvider>
 )
 

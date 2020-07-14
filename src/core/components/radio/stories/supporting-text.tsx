@@ -17,7 +17,7 @@ const radiosWithSupportingText = [
 		value="quarterly"
 		label="Quarterly"
 		supporting="£37.50 every quarter"
-		checked={true}
+		defaultChecked={true}
 	/>,
 	<Radio
 		value="annual"
