@@ -9,14 +9,14 @@ const multiChoiceCards = [
 	<ChoiceCard
 		value="option-1"
 		label="Option 1"
-		checked={true}
+		defaultChecked={true}
 		id="multi-1"
 	/>,
 	<ChoiceCard
 		value="option-2"
 		label="Option 2"
 		id="multi-2"
-		checked={true}
+		defaultChecked={true}
 	/>,
 	<ChoiceCard value="option-3" label="Option 3" id="multi-3" />,
 ]

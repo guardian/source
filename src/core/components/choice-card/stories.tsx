@@ -4,7 +4,9 @@ export default {
 
 export * from "./stories/error"
 export * from "./stories/multi-state-supporting"
+export * from "./stories/multi-state-controlled-example"
 export * from "./stories/single-state"
+export * from "./stories/single-state-controlled-example"
 export * from "./stories/single-state-icon"
 export * from "./stories/single-state-icon-mobile"
 export * from "./stories/single-state-label"

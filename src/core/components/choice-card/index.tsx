@@ -1,8 +1,6 @@
 import React, {
 	ReactNode,
 	ReactElement,
-	useRef,
-	useEffect,
 	useState,
 	InputHTMLAttributes,
 } from "react"
@@ -26,7 +24,7 @@ export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={theme => groupLabelSupporting(theme.textInput && theme)}>
+		<div css={(theme) => groupLabelSupporting(theme.textInput && theme)}>
 			{children}
 		</div>
 	)
@@ -53,7 +51,7 @@ const ChoiceCardGroup = ({
 	return (
 		<fieldset css={[fieldset, cssOverrides]} {...props}>
 			{label ? (
-				<legend css={theme => groupLabel(theme.choiceCard && theme)}>
+				<legend css={(theme) => groupLabel(theme.choiceCard && theme)}>
 					{label}
 				</legend>
 			) : (
@@ -62,7 +60,7 @@ const ChoiceCardGroup = ({
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			<div css={flexContainer}>
-				{React.Children.map(children, child => {
+				{React.Children.map(children, (child) => {
 					return React.cloneElement(
 						child,
 						Object.assign(
@@ -103,7 +101,6 @@ const ChoiceCard = ({
 	onChange,
 	...props
 }: ChoiceCardProps) => {
-	const inputEl = useRef<HTMLInputElement>(null)
 	const isChecked = (): boolean => {
 		if (checked != null) {
 			return checked
@@ -114,16 +111,10 @@ const ChoiceCard = ({
 	// prevent the animation firing if a Choice Card has been checked by default
 	const [userChanged, setUserChanged] = useState(false)
 
-	useEffect(() => {
-		if (!userChanged && checked != null && inputEl && inputEl.current) {
-			inputEl.current.checked = checked
-		}
-	})
-
 	return (
 		<>
 			<input
-				css={theme => [
+				css={(theme) => [
 					input(theme.choiceCard && theme),
 					userChanged ? tickAnimation : "",
 					cssOverrides,
@@ -132,8 +123,11 @@ const ChoiceCard = ({
 				value={value}
 				aria-invalid={error}
 				aria-checked={isChecked()}
-				ref={inputEl}
-				onChange={event => {
+				defaultChecked={
+					defaultChecked != null ? defaultChecked : undefined
+				}
+				checked={checked != null ? isChecked() : undefined}
+				onChange={(event) => {
 					if (onChange) {
 						onChange(event)
 					}
@@ -142,7 +136,7 @@ const ChoiceCard = ({
 				{...props}
 			/>
 			<label
-				css={theme => [
+				css={(theme) => [
 					choiceCard(theme.choiceCard && theme),
 					error ? errorChoiceCard(theme.choiceCard && theme) : "",
 				]}
@@ -157,7 +151,7 @@ const ChoiceCard = ({
 					{iconSvg ? iconSvg : ""}
 					<div>{labelContent}</div>
 				</div>
-				<span css={theme => [tick(theme.checkbox && theme)]} />
+				<span css={(theme) => [tick(theme.checkbox && theme)]} />
 			</label>
 		</>
 	)
@@ -166,7 +160,6 @@ const ChoiceCard = ({
 const choiceCardDefaultProps = {
 	disabled: false,
 	type: "radio",
-	defaultChecked: false,
 	error: false,
 }
 

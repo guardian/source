@@ -15,7 +15,7 @@ const choiceCards = [
 		value="green"
 		label="Green"
 		id="default-green"
-		checked={true}
+		defaultChecked={true}
 	/>,
 	<ChoiceCard value="blue" label="Blue" id="default-blue" />,
 ]
