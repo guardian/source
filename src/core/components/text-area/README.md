@@ -13,15 +13,21 @@ $ yarn add @guardian/src-text-area
 ```js
 import { TextArea } from "@guardian/src-text-area"
 
-const Form = () => (
-    <form>
-        <TextArea
-            label="Add a comment"
-            supporting="Please keep comments respectful and abide by the community guidelines."
-            optional={false}
-        />
-    </form>
-)
+const Form = () => {
+    const [state, setState] = useState("")
+
+    return (
+        <form>
+            <TextArea
+                label="Add a comment"
+                supporting="Please keep comments respectful and abide by the community guidelines."
+                optional={false}
+                value={state}
+                onChange={(event) => setState(event.target.value)}
+            />
+        </form>
+    )
+}
 ```
 
 ## Props
@@ -37,6 +43,14 @@ Appears above the text area
 **`string`**
 
 Additional text that appears below the label
+
+### `value`
+
+**`string`**
+
+The contents of the text area. This is necessary when using the [controlled approach](https://reactjs.org/docs/forms.html#controlled-components) to form state management.
+
+**Note:** if you pass the `value` prop, you **must** also pass an `onChange` handler, or the field will be rendered as read-only.
 
 ### `optional`
 

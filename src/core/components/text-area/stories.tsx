@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { css } from "@emotion/core"
+import { textSans } from "@guardian/src-foundations/typography"
 
 import { TextArea } from "./index"
 
@@ -11,28 +12,31 @@ export default {
 	title: "TextArea",
 }
 
-const defaultLight = () =>
+const defaultLight = () => (
 	<div css={wrapperStyles}>
 		<TextArea label="Comments" />
 	</div>
+)
 
 defaultLight.story = {
 	name: `default light`,
 }
 
-const withRows = () =>
+const withRows = () => (
 	<div css={wrapperStyles}>
 		<TextArea label="Comments" rows={10} />
 	</div>
+)
 
 withRows.story = {
 	name: `with rows`,
 }
 
-const optionalLight = () =>
+const optionalLight = () => (
 	<div css={wrapperStyles}>
 		<TextArea label="Comments" optional={true} />
 	</div>
+)
 
 optionalLight.story = {
 	name: `optional light`,
@@ -61,10 +65,37 @@ errorWithMessageLight.story = {
 	name: `error with message light`,
 }
 
+const wordCount = css`
+	${textSans.medium()}
+`
+
+const controlled = () => {
+	const [state, setState] = useState("")
+	return (
+		<div css={wrapperStyles}>
+			<TextArea
+				label="Comments"
+				supporting="Please keep comments respectful and abide by the community guidelines."
+				value={state}
+				onChange={(event) => setState(event.target.value)}
+			/>
+			<span css={wordCount}>
+				Word count:{" "}
+				{state.length > 0 ? state.trim().split(" ").length : 0}
+			</span>
+		</div>
+	)
+}
+
+controlled.story = {
+	name: "controlled example",
+}
+
 export {
 	defaultLight,
 	withRows,
 	optionalLight,
 	supportingTextLight,
 	errorWithMessageLight,
+	controlled,
 }
