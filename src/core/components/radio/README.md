@@ -14,7 +14,7 @@ $ yarn add @guardian/src-radio
 import { RadioGroup, Radio } from "@guardian/src-radio"
 
 const Form = () => {
-    const [selected, setSelected] = (useState < string) | (null > null)
+    const [selected, setSelected] = useState(null)
 
     return (
         <form>
