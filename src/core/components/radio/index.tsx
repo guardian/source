@@ -47,7 +47,7 @@ const RadioGroup = ({
 			{...props}
 		>
 			{error && <InlineError>{error}</InlineError>}
-			{React.Children.map(children, child => {
+			{React.Children.map(children, (child) => {
 				return React.cloneElement(
 					child,
 					Object.assign(error ? { error: true } : {}, {
@@ -68,7 +68,7 @@ const LabelText = ({
 }) => {
 	return (
 		<div
-			css={theme => [
+			css={(theme) => [
 				hasSupportingText ? labelTextWithSupportingText : "",
 				labelText(theme.radio && theme),
 			]}
@@ -80,7 +80,7 @@ const LabelText = ({
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={theme => supportingText(theme.radio && theme)}>
+		<div css={(theme) => supportingText(theme.radio && theme)}>
 			{children}
 		</div>
 	)
@@ -97,38 +97,42 @@ const Radio = ({
 	value,
 	supporting,
 	checked,
+	defaultChecked,
 	cssOverrides,
 	error,
 	...props
 }: RadioProps) => {
-	const setRadioState = (el: HTMLInputElement | null) => {
-		if (el && checked != null) {
-			el.checked = checked
+	const isChecked = (): boolean => {
+		if (checked != null) {
+			return checked
 		}
-	}
 
-	const RadioControl = () => (
+		return !!defaultChecked
+	}
+	const radioControl = (
 		<input
-			css={theme => [
+			css={(theme) => [
 				radio(theme.radio && theme),
 				error ? errorRadio(theme.radio && theme) : "",
 				cssOverrides,
 			]}
 			value={value}
 			aria-invalid={error}
-			ref={setRadioState}
+			aria-checked={isChecked()}
+			defaultChecked={defaultChecked != null ? defaultChecked : undefined}
+			checked={checked != null ? isChecked() : undefined}
 			{...props}
 		/>
 	)
 
-	const LabelledRadioControl = () => (
+	const labelledRadioControl = (
 		<label
-			css={theme => [
+			css={(theme) => [
 				label(theme.radio && theme),
 				supporting ? labelWithSupportingText : "",
 			]}
 		>
-			<RadioControl />
+			{radioControl}
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
@@ -143,13 +147,7 @@ const Radio = ({
 	)
 
 	return (
-		<>
-			{labelContent || supporting ? (
-				<LabelledRadioControl />
-			) : (
-				<RadioControl />
-			)}
-		</>
+		<>{labelContent || supporting ? labelledRadioControl : radioControl}</>
 	)
 }
 
@@ -159,7 +157,6 @@ const radioGroupDefaultProps = {
 const radioDefaultProps = {
 	disabled: false,
 	type: "radio",
-	defaultChecked: false,
 	error: false,
 }
 

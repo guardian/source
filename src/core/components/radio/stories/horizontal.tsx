@@ -4,7 +4,7 @@ import { RadioGroup, Radio } from "../index"
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
 		<Radio value="yes" label="Yes" />
-		<Radio value="no" label="No" checked={true} />
+		<Radio value="no" label="No" defaultChecked={true} />
 	</RadioGroup>
 )
 horizontal.story = {
