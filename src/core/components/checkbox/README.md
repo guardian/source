@@ -1,11 +1,11 @@
 # Checkbox
 
-📣 For more context and visual guides relating checkbox usage on the [Source Design System website](https://zeroheight.com/2a1e5182b/p/466fad)
+📣 For more context and visual guides relating checkbox usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/466fad-checkbox/b/33fc2f)
 
 ## Install
 
 ```sh
-$ yarn add @guardian/src-checkbox @guardian/src-foundations
+$ yarn add @guardian/src-checkbox
 ```
 
 ## Use
@@ -13,29 +13,37 @@ $ yarn add @guardian/src-checkbox @guardian/src-foundations
 ```js
 import { CheckboxGroup, Checkbox } from "@guardian/src-checkbox"
 
-const Form = () => (
-    <form>
-        <CheckboxGroup name="emails">
-            <Checkbox
-                value="today-uk"
-                label="Guardian Today: UK"
-                supporting="The headlines, the analysis, the debate. Get the whole picture from a source you trust."
-                checked={true}
-            />
-            <Checkbox
-                value="today-us"
-                label="Guardian Today: US"
-                supporting={
-                    <>
-                        <strong>Cut through the noise.</strong> Get straight to
-                        the heart of the day’s breaking news in double-quick
-                        time.
-                    </>
-                }
-            />
-        </CheckboxGroup>
-    </form>
-)
+const Form = () => {
+    const [ukChecked, setUkChecked] = useState(false)
+    const [usChecked, setUsChecked] = useState(false)
+
+    return (
+        <form>
+            <CheckboxGroup name="emails">
+                <Checkbox
+                    value="today-uk"
+                    label="Guardian Today: UK"
+                    supporting="The headlines, the analysis, the debate. Get the whole picture from a source you trust."
+                    checked={ukChecked}
+                    onChange={() => setUkChecked(!ukChecked)}
+                />
+                <Checkbox
+                    value="today-us"
+                    label="Guardian Today: US"
+                    supporting={
+                        <>
+                            <strong>Cut through the noise.</strong> Get straight
+                            to the heart of the day’s breaking news in
+                            double-quick time.
+                        </>
+                    }
+                    checked={usChecked}
+                    onChange={() => setUsChecked(!usChecked)}
+                />
+            </CheckboxGroup>
+        </form>
+    )
+}
 ```
 
 ## `CheckboxGroup` Props
@@ -72,7 +80,9 @@ Additional text or a component that appears below the label
 
 **`boolean`**
 
-Whether checkbox is checked
+Whether checkbox is checked. This is necessary when using the [controlled approach](https://reactjs.org/docs/forms.html#controlled-components) to form state management.
+
+**Note:** if you pass the `checked` prop, you **must** also pass an `onChange` handler, or the field will be rendered as read-only.
 
 ### `indeterminate`
 
