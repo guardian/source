@@ -21,7 +21,7 @@ const checkboxesWithSupportingText = [
 		value="holidays"
 		label="Holidays & Vacations"
 		supporting="Ideas and inspiration for your next trip away, as well as the latest offers from Guardian Holidays"
-		checked={true}
+		defaultChecked={true}
 	/>,
 	<Checkbox
 		value="events"
