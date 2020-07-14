@@ -62,7 +62,7 @@
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.1.0",
 		"eslint-plugin-prettier": "^3.1.4",
-		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react": "^7.20.3",
 		"execa": "^4.0.0",
 		"jest": "^25.2.7",
 		"prettier": "^2.0.5",
