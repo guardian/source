@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ yarn add @guardian/src-choice-card @guardian/src-foundations
+$ yarn add @guardian/src-choice-card
 ```
 
 ## Use
@@ -13,28 +13,34 @@ $ yarn add @guardian/src-choice-card @guardian/src-foundations
 ```js
 import { ChoiceCardGroup, ChoiceCard } from "@guardian/src-choice-card"
 
-const Form = () => (
-    <form>
-        <ChoiceCardGroup
-            name="consent"
-            label="Do you accept the terms?"
-            supporting="Answer as honestly as possible"
-            multi={false}
-        >
-            <ChoiceCard
-                value="no"
-                label="No"
-                supporting="I do not accept the terms"
-                checked={true}
-            />
-            <ChoiceCard
-                value="yes"
-                label="Yes"
-                supporting="I accept the terms"
-            />,
-        </ChoiceCardGroup>
-    </form>
-)
+const Form = () => {
+    const [selected, setSelected] = useState(null)
+    return (
+        <form>
+            <ChoiceCardGroup
+                name="consent"
+                label="Do you accept the terms?"
+                supporting="Answer as honestly as possible"
+                multi={false}
+            >
+                <ChoiceCard
+                    value="no"
+                    label="No"
+                    supporting="I do not accept the terms"
+                    checked={selected === "no"}
+                    onChange={() => setSelected("no")}
+                />
+                <ChoiceCard
+                    value="yes"
+                    label="Yes"
+                    supporting="I accept the terms"
+                    checked={selected === "yes"}
+                    onChange={() => setSelected("yes")}
+                />,
+            </ChoiceCardGroup>
+        </form>
+    )
+}
 ```
 
 ## `ChoiceCardGroup` Props
@@ -94,7 +100,9 @@ An icon that appears inside the button, alongside text
 
 **`boolean`**
 
-Whether choice card is checked
+Whether choice card is checked. This is necessary when using the [controlled approach](https://reactjs.org/docs/forms.html#controlled-components) to form state management.
+
+**Note:** if you pass the `checked` prop, you **must** also pass an `onChange` handler, or the field will be rendered as read-only.
 
 ## Supported themes
 

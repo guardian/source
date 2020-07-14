@@ -22,7 +22,7 @@ const paymentIconChoiceCards = [
 		label="Credit Card"
 		id="credit-card"
 		icon={<SvgCreditCard />}
-		checked={true}
+		defaultChecked={true}
 	/>,
 	<ChoiceCard
 		value="paypal"

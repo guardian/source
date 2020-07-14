@@ -14,7 +14,7 @@ const singleChoiceCards = [
 		value="single-1"
 		label="Preselected"
 		id="single-1"
-		checked={true}
+		defaultChecked={true}
 	/>,
 	<ChoiceCard value="single-2" label="Deselected" id="single-2" />,
 	<ChoiceCard value="single-3" label="Deselected" id="single-3" />,

@@ -18,7 +18,7 @@ const iconChoiceCards = [
 		label="Audio"
 		id="audio"
 		icon={<SvgAudio />}
-		checked={true}
+		defaultChecked={true}
 	/>,
 	<ChoiceCard value="video" label="Video" id="video" icon={<SvgVideo />} />,
 ]
