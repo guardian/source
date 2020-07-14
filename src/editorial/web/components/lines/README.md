@@ -1,4 +1,4 @@
-# Link
+# Lines
 
 📣 For more context and visual guides relating to lines usage, visit the [Source Design System website](https://www.theguardian.design)
 
