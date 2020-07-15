@@ -117,6 +117,29 @@ export const textAndIcon = () => (
 				Indent
 			</Link>
 		</div>
+		<div css={spacer}>
+			<Link icon={<SvgExternal />} subdued={true} href="#">
+				Terms and conditions
+			</Link>
+		</div>
+		<div css={[flexStart, spacer]}>
+			<Link icon={<SvgChevronLeftSingle />} subdued={true} href="#">
+				Previous
+			</Link>
+			<Link
+				iconSide="right"
+				icon={<SvgArrowRightStraight />}
+				subdued={true}
+				href="#"
+			>
+				Next
+			</Link>
+		</div>
+		<div css={spacer}>
+			<Link iconSide="left" icon={<SvgIndent />} subdued={true} href="#">
+				Indent
+			</Link>
+		</div>
 	</>
 )
 textAndIcon.story = {
