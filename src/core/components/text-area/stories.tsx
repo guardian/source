@@ -65,6 +65,20 @@ errorWithMessageLight.story = {
 	name: `error with message light`,
 }
 
+const withMaxLength = () => (
+	<div css={wrapperStyles}>
+		<TextArea label="Comments" maxLength={10} />
+	</div>
+)
+
+withMaxLength.story = {
+	name: "with maxlength",
+}
+
+errorWithMessageLight.story = {
+	name: `error with message light`,
+}
+
 const wordCount = css`
 	${textSans.medium()}
 `
@@ -97,5 +111,6 @@ export {
 	optionalLight,
 	supportingTextLight,
 	errorWithMessageLight,
+	withMaxLength,
 	controlled,
 }

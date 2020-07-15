@@ -33,6 +33,8 @@ const TextArea = ({
 	error,
 	cssOverrides,
 	rows = 3,
+	className,
+	value,
 	...props
 }: TextAreaProps) => {
 	return (
@@ -51,7 +53,9 @@ const TextArea = ({
 					cssOverrides,
 				]}
 				aria-required={!optional}
+				required={!optional}
 				rows={rows}
+				className={`${className}${value ? " src-has-value" : ""}`}
 				{...props}
 			/>
 		</label>

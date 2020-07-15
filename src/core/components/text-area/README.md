@@ -56,7 +56,7 @@ The contents of the text area. This is necessary when using the [controlled appr
 
 **`boolean`** _= "false"_
 
-Adds the word "Optional" after the label
+Adds the word "Optional" after the label. Non-optional fields are rendered with the `required` attribute.
 
 ### `error`
 
