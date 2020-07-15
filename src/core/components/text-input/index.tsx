@@ -81,6 +81,7 @@ const TextInput = ({
 					cssOverrides,
 				]}
 				aria-required={!optional}
+				aria-invalid={!!error}
 				required={!optional}
 				{...props}
 			/>
