@@ -57,7 +57,7 @@ The contents of the text input field. This is necessary when using the [controll
 
 **`boolean`** _= "false"_
 
-Adds the word "Optional" after the label
+Adds the word "Optional" after the label. Non-optional fields are rendered with the `required` attribute.
 
 ### `width`
 

@@ -1,6 +1,6 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/css"
-import {InlineError, InlineSuccess} from "@guardian/src-user-feedback"
+import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import {
 	widthFluid,
 	width30,
@@ -28,7 +28,7 @@ const widths: {
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={theme => supportingText(theme.textInput && theme)}>
+		<div css={(theme) => supportingText(theme.textInput && theme)}>
 			{children}
 		</div>
 	)
@@ -55,11 +55,11 @@ const TextInput = ({
 }: TextInputProps) => {
 	return (
 		<label>
-			<div css={theme => text(theme.textInput && theme)}>
+			<div css={(theme) => text(theme.textInput && theme)}>
 				{labelText}{" "}
 				{optional ? (
 					<span
-						css={theme => optionalLabel(theme.textInput && theme)}
+						css={(theme) => optionalLabel(theme.textInput && theme)}
 					>
 						Optional
 					</span>
@@ -71,14 +71,18 @@ const TextInput = ({
 			{error && <InlineError>{error}</InlineError>}
 			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
 			<input
-				css={theme => [
+				css={(theme) => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
 					error ? errorInput(theme.textInput && theme) : "",
-					!error && success ? successInput(theme.textInput && theme) : "",
+					!error && success
+						? successInput(theme.textInput && theme)
+						: "",
 					cssOverrides,
 				]}
 				aria-required={!optional}
+				aria-invalid={!!error}
+				required={!optional}
 				{...props}
 			/>
 		</label>
