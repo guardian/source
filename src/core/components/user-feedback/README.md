@@ -1,6 +1,6 @@
 # User feedback
 
-📣 For more context and visual guides relating checkbox usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/108ed3--user-feedback/b/3803b4)
+📣 For more context and visual guides relating to user feedback usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/108ed3--user-feedback/b/3803b4)
 
 ## Install
 
