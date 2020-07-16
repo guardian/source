@@ -10,8 +10,6 @@ import {
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
-export { textInputLight } from "@guardian/src-foundations/themes"
-
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return <div css={supportingText}>{children}</div>
 }
