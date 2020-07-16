@@ -37,6 +37,20 @@ const TextArea = ({
 	value,
 	...props
 }: TextAreaProps) => {
+	const getClassName = () => {
+		const HAS_VALUE_CLASS = "src-has-value"
+
+		if (className) {
+			return `${className}${value ? ` ${HAS_VALUE_CLASS}` : ""}`
+		}
+
+		if (value) {
+			return HAS_VALUE_CLASS
+		}
+
+		return undefined
+	}
+
 	return (
 		<label>
 			<div css={label}>
@@ -56,7 +70,7 @@ const TextArea = ({
 				aria-invalid={!!error}
 				required={!optional}
 				rows={rows}
-				className={`${className}${value ? " src-has-value" : ""}`}
+				className={getClassName()}
 				{...props}
 			/>
 		</label>
