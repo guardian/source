@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { size } from "@guardian/src-foundations"
-import { linkLight, LinkTheme } from "@guardian/src-foundations/themes"
+import { linkDefault, LinkTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
@@ -17,7 +17,7 @@ export const link = css`
 	}
 `
 
-export const primary = ({ link }: { link: LinkTheme } = linkLight) => css`
+export const primary = ({ link }: { link: LinkTheme } = linkDefault) => css`
 	color: ${link.textPrimary};
 
 	&:hover {
@@ -25,7 +25,7 @@ export const primary = ({ link }: { link: LinkTheme } = linkLight) => css`
 	}
 `
 
-export const secondary = ({ link }: { link: LinkTheme } = linkLight) => css`
+export const secondary = ({ link }: { link: LinkTheme } = linkDefault) => css`
 	color: ${link.textSecondary};
 
 	&:hover {
