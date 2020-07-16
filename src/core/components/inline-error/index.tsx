@@ -3,7 +3,7 @@ import { SvgAlert } from "@guardian/src-icons"
 import { Props } from "@guardian/src-helpers"
 import { inlineError } from "./styles"
 export {
-	inlineErrorLight,
+	inlineErrorDefault,
 	inlineErrorBrand,
 } from "@guardian/src-foundations/themes"
 
@@ -13,7 +13,7 @@ interface InlineErrorProps extends Props {
 
 const InlineError = ({ children, cssOverrides }: InlineErrorProps) => (
 	<span
-		css={theme => [inlineError(theme.inlineError && theme), cssOverrides]}
+		css={(theme) => [inlineError(theme.inlineError && theme), cssOverrides]}
 	>
 		<SvgAlert />
 		{children}
