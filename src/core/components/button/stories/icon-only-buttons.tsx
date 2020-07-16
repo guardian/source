@@ -1,18 +1,18 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { SvgClose } from "@guardian/src-icons"
+import { SvgCross } from "@guardian/src-icons"
 import { space } from "@guardian/src-foundations"
 import { Button } from "../index"
 
 /* eslint-disable react/jsx-key */
 const iconButtons = [
-	<Button icon={<SvgClose />} hideLabel={true}>
+	<Button icon={<SvgCross />} hideLabel={true}>
 		Dismiss the subscribe banner
 	</Button>,
-	<Button size="small" icon={<SvgClose />} hideLabel={true}>
+	<Button size="small" icon={<SvgCross />} hideLabel={true}>
 		Dismiss the subscribe banner
 	</Button>,
-	<Button size="xsmall" icon={<SvgClose />} hideLabel={true}>
+	<Button size="xsmall" icon={<SvgCross />} hideLabel={true}>
 		Dismiss the subscribe banner
 	</Button>,
 ]
