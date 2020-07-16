@@ -3,27 +3,27 @@ import { size, space } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import {
-	textInputLight,
+	textInputDefault,
 	TextInputTheme,
 } from "@guardian/src-foundations/themes"
 
 export const errorInput = ({
 	textInput,
-}: { textInput: TextInputTheme } = textInputLight) => css`
+}: { textInput: TextInputTheme } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
 `
 
 export const successInput = ({
 	textInput,
-}: { textInput: TextInputTheme } = textInputLight) => css`
+}: { textInput: TextInputTheme } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
 `
 
 export const textInput = ({
 	textInput,
-}: { textInput: TextInputTheme } = textInputLight) => css`
+}: { textInput: TextInputTheme } = textInputDefault) => css`
 	box-sizing: border-box;
 	height: ${size.medium}px;
 	${textSans.medium({ lineHeight: "regular" })};
@@ -76,7 +76,7 @@ export const width4 = css`
 
 export const text = ({
 	textInput,
-}: { textInput: TextInputTheme } = textInputLight) => css`
+}: { textInput: TextInputTheme } = textInputDefault) => css`
 	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
 	color: ${textInput.textLabel};
 	margin-bottom: ${space[1]}px;
@@ -84,7 +84,7 @@ export const text = ({
 
 export const optionalLabel = ({
 	textInput,
-}: { textInput: TextInputTheme } = textInputLight) => css`
+}: { textInput: TextInputTheme } = textInputDefault) => css`
 	${textSans.small({ lineHeight: "regular" })};
 	color: ${textInput.textLabelOptional};
 	font-style: italic;
@@ -92,7 +92,7 @@ export const optionalLabel = ({
 
 export const supportingText = ({
 	textInput,
-}: { textInput: TextInputTheme } = textInputLight) => css`
+}: { textInput: TextInputTheme } = textInputDefault) => css`
 	${textSans.small({ lineHeight: "regular" })};
 	color: ${textInput.textLabelSupporting};
 	margin-bottom: ${space[1]}px;
