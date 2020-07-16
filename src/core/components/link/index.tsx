@@ -13,9 +13,9 @@ import {
 import { Props } from "@guardian/src-helpers"
 
 export {
-	linkLight,
+	linkDefault,
 	linkBrand,
-	linkBrandYellow,
+	linkBrandAlt,
 } from "@guardian/src-foundations/themes"
 
 export type Priority = "primary" | "secondary"
@@ -71,7 +71,7 @@ const Link = ({
 	}
 	return (
 		<a
-			css={theme => [
+			css={(theme) => [
 				link,
 				priorities[priority](theme.link && theme),
 				isSubdued ? subdued : "",
