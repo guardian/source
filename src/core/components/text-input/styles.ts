@@ -51,7 +51,7 @@ export const textInput = ({
 		Note: the following class will only be applied to a controlled
 		component: https://reactjs.org/docs/forms.html#controlled-components
 		*/
-		&:not([value=""]) {
+		&[value]:not([value=""]) {
 			${errorInput({ textInput })};
 		}
 	}
