@@ -56,6 +56,3 @@ export const checkboxBrand: {
 	},
 	...userFeedbackBrand,
 }
-
-// continue to expose legacy theme names
-export const checkboxLight = checkboxDefault
