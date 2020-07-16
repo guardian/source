@@ -1,6 +1,6 @@
 {
 	"name": "source",
-	"version": "1.9.0-rc.0",
+	"version": "1.9.0",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:icons & start-storybook --port 9009",
 		"lint:styles": "stylelint src/core/**/styles.ts",
@@ -24,16 +24,16 @@
 		"verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
 		"verbump:patch": "yarn version --patch --no-git-tag-version",
 		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
-		"verbump:preminor:all": "ts-node ./scripts/verbump-preminor-all",
-		"verbump:premajor:all": "ts-node ./scripts/verbump-premajor-all",
-		"verbump:major:all": "ts-node ./scripts/verbump-major-all",
-		"verbump:minor:all": "ts-node ./scripts/verbump-minor-all",
-		"verbump:patch:all": "ts-node ./scripts/verbump-patch-all",
-		"verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all",
+		"verbump:preminor:all": "ts-node ./scripts/verbump-preminor-all && yarn verbump:deps:all",
+		"verbump:premajor:all": "ts-node ./scripts/verbump-premajor-all && yarn verbump:deps:all",
+		"verbump:major:all": "ts-node ./scripts/verbump-major-all && yarn verbump:deps:all",
+		"verbump:minor:all": "ts-node ./scripts/verbump-minor-all && yarn verbump:deps:all",
+		"verbump:patch:all": "ts-node ./scripts/verbump-patch-all && yarn verbump:deps:all",
+		"verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all && yarn verbump:deps:all",
 		"verbump:deps:all": "ts-node ./scripts/verbump-src-deps-all",
-		"release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn verbump:deps:all && yarn publish:release",
-		"release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn verbump:deps:all && yarn publish:release",
-		"release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn verbump:deps:all && yarn publish:release"
+		"release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn publish:release",
+		"release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
+		"release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn publish:release"
 	},
 	"private": true,
 	"workspaces": [

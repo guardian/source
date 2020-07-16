@@ -10,6 +10,49 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 16 July 2020
+
+**`@guardian/src-checkbox 1.9.0`**
+
+-   :bug: [9bfaf38](https://github.com/guardian/source/commit/9bfaf38c782eeb023f4a298b4cb55128c63a169c) improve support for controlled components
+-   :page_with_curl: [2c767cb](https://github.com/guardian/source/commit/2c767cb5707fb02abb0e43380d3ed278ef9be30b) add controlled approach docs to checkbox readme
+
+**`@guardian/src-choice-card 1.9.0`**
+
+-   :robot: [9d60470](https://github.com/guardian/source/commit/9d604703af0ab8b5d7e6f131258e717c37a920d0) extract choice card stories into separate modules
+-   :bug: [e572daa](https://github.com/guardian/source/commit/e572daa2dc121cc338bf2d5eb6df388678396d52) improve support for controlled approach in choice cards
+
+**`@guardian/src-ed-lines 1.9.0`**
+
+-   :page_with_curl: [f06526d](https://github.com/guardian/source/commit/f06526de4e615985c4a1a96df433a789a56c4257) Correct the README heading
+
+**`@guardian/src-link 1.9.0`**
+
+-   :page_with_curl: [dd5e9af](https://github.com/guardian/source/commit/dd5e9af32c5a0da01d25e5c7559da996d7236e16) add subdued examples to text and icon story
+
+**`@guardian/src-radio 1.9.0`**
+
+-   :bug: [8e79237](https://github.com/guardian/source/commit/8e792371768afe6c163dd887387424afc382fead) improve support for controlled approach in radio buttons
+-   :page_with_curl: [7d1751c](https://github.com/guardian/source/commit/7d1751cbfd7bdf3754001ddb25ad8c3dc674f9c1) correct code example in readme
+
+**`@guardian/src-select 1.9.0`**
+
+-   :nail_care: [01ee68b](https://github.com/guardian/source/commit/01ee68b5fd7e2bde070ede74c4c501888511e478) make select stories wider
+
+**`@guardian/src-text-area 1.9.0`**
+
+-   :page_with_curl: [ca06a82](https://github.com/guardian/source/commit/ca06a82a08f51d813456347a9f11e33a47b0ddd8) improve support for controlled approach in text area
+-   :globe_with_meridians: [d8ff4fe](https://github.com/guardian/source/commit/d8ff4fecb646ec35c80dcef77eec97c157f5cfd9) add required attribute to non-optional textareas
+-   :globe_with_meridians: [ead68f1](https://github.com/guardian/source/commit/ead68f1d996dbb555b0eb2d512ad2ff5936724d1) add aria-invalid attribute to textareas
+-   :bug: [efc9abf](https://github.com/guardian/source/commit/efc9abf1427f4fc3f5e46729e5f4d2f462d46e2b) fix bug where classname is set to "undefined"
+
+**`@guardian/src-text-input 1.9.0`**
+
+-   :page_with_curl: [eccf378](https://github.com/guardian/source/commit/eccf3787a1b2a9b1abae839fb22f0ec7767786f1) improve support for controlled approach in text input
+-   :globe_with_meridians: [b3223a3](https://github.com/guardian/source/commit/b3223a3ea226a16732cc4ebd605191fc2b886a9c) add required attribute to non-optional text input fields
+-   :globe_with_meridians: [0cd3f8d](https://github.com/guardian/source/commit/0cd3f8d4b28a94a1be1e45a95f367fa42a43fb1a) add aria-invalid attribute to text input field
+-   :bug: [b0ed1f8](https://github.com/guardian/source/commit/b0ed1f8d9c4cbedd168915413351b70c5d793f1f) only show error styling if value attribute is set
+
 ## 10 July 2020
 
 **`@guardian/src-brand 1.8.0`**
