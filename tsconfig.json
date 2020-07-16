@@ -16,7 +16,7 @@
 				"core/foundations/src/typography"
 			],
 			"@guardian/src-foundations/utils": ["core/foundations/src/utils"],
-			"@guardian/src-inline-error": ["core/components/inline-error"],
+			"@guardian/src-user-feedback": ["core/components/user-feedback"],
 			"@guardian/src-helpers": ["core/helpers"],
 			"@guardian/src-svgs": ["core/svgs"]
 		},
