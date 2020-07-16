@@ -9,6 +9,3 @@ export const SvgCross = () => (
 		/>
 	</svg>
 )
-
-// TODO: Remove legacy name
-export const SvgClose = SvgCross
