@@ -33,7 +33,3 @@ export const linkBrandAlt: { link: LinkTheme } = {
 		textPrimaryHover: brandAltText.anchorPrimary,
 	},
 }
-
-// continue to expose legacy theme names
-export const linkLight = linkDefault
-export const linkBrandYellow = linkBrandAlt

@@ -67,7 +67,3 @@ export const buttonBrandAlt: { button: ButtonTheme } = {
 		textSubdued: brandAltText.ctaSecondary,
 	},
 }
-
-// continue to expose legacy theme names
-export const buttonLight = buttonDefault
-export const buttonBrandYellow = buttonBrandAlt
