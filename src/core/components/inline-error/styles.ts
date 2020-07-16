@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 import { space } from "@guardian/src-foundations"
 import {
-	inlineErrorLight,
+	inlineErrorDefault,
 	InlineErrorTheme,
 } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
@@ -9,7 +9,7 @@ import { remWidth, remHeight } from "@guardian/src-foundations/size"
 
 export const inlineError = ({
 	inlineError,
-}: { inlineError: InlineErrorTheme } = inlineErrorLight) => css`
+}: { inlineError: InlineErrorTheme } = inlineErrorDefault) => css`
 	display: flex;
 	align-items: flex-start;
 	${textSans.medium({ lineHeight: "regular" })};

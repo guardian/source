@@ -15,6 +15,3 @@ export const inlineErrorBrand: { inlineError: InlineErrorTheme } = {
 		text: brandText.error,
 	},
 }
-
-// continue to expose legacy theme names
-export const inlineErrorLight = inlineErrorDefault

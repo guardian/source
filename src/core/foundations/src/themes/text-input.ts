@@ -34,6 +34,3 @@ export const textInputDefault: {
 	},
 	...userFeedbackDefault,
 }
-
-// continue to expose legacy theme names
-export const textInputLight = textInputDefault
