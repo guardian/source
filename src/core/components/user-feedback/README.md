@@ -29,4 +29,4 @@ const Form = () => (
 ## Supported themes
 
 -   `default`
--   `brand` (`InlineError` only)
+-   `brand`
