@@ -18,7 +18,7 @@
 			"@guardian/src-foundations/utils": ["core/foundations/src/utils"],
 			"@guardian/src-user-feedback": ["core/components/user-feedback"],
 			"@guardian/src-helpers": ["core/helpers"],
-			"@guardian/src-svgs": ["core/svgs"]
+			"@guardian/src-icons": ["core/icons"]
 		},
 		"outDir": "dist",
 		"module": "commonjs",
