@@ -1,5 +1,4 @@
 import { css } from "@emotion/core"
-import { space } from "@guardian/src-foundations"
 import {
 	userFeedbackDefault,
 	UserFeedbackTheme,
@@ -11,8 +10,6 @@ const inlineMessage = css`
 	display: flex;
 	align-items: flex-start;
 	${textSans.medium({ lineHeight: "regular" })};
-	/* TODO: we shouldn't be opinionated about layout inside the component */
-	margin-bottom: ${space[1]}px;
 
 	svg {
 		fill: currentColor;
