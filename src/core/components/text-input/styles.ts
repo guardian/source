@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
-import { size, space } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
+import { height } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import {
@@ -25,7 +26,7 @@ export const textInput = ({
 	textInput,
 }: { textInput: TextInputTheme } = textInputDefault) => css`
 	box-sizing: border-box;
-	height: ${size.medium}px;
+	height: ${height.inputMedium}px;
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${textInput.textUserInput};
 	background-color: ${textInput.backgroundInput};
