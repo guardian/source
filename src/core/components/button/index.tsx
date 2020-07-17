@@ -90,9 +90,8 @@ interface ButtonProps extends Props, ButtonHTMLAttributes<HTMLButtonElement> {
 	icon?: ReactElement
 	hideLabel: boolean
 	nudgeIcon?: boolean
-	children?: ReactNode
+	children: ReactNode
 }
-
 const Button = ({
 	priority,
 	size,
@@ -115,20 +114,14 @@ const Button = ({
 
 	return (
 		<button
-			css={theme => [
+			css={(theme) => [
 				button,
 				sizes[size],
 				priorities[priority](theme.button && theme),
 				iconSvg ? iconSizes[size] : "",
-				/*
-				TODO: We should be able to assume that children
-				will always be passed to the Button component.
-				A future breaking change might be to remove the
-				logic that checks for the (non-)existence of children.
-				*/
-				iconSvg && !hideLabel && children ? iconSides[iconSide] : "",
+				iconSvg && !hideLabel ? iconSides[iconSide] : "",
 				nudgeIcon ? iconNudgeAnimation : "",
-				hideLabel || !children ? iconOnlySizes[size] : "",
+				hideLabel ? iconOnlySizes[size] : "",
 				cssOverrides,
 			]}
 			{...props}
@@ -161,7 +154,7 @@ interface LinkButtonProps
 	icon?: ReactElement
 	nudgeIcon?: boolean
 	hideLabel: boolean
-	children?: ReactNode
+	children: ReactNode
 }
 
 const LinkButton = ({
@@ -189,7 +182,7 @@ const LinkButton = ({
 	if (showIcon) {
 		return (
 			<a
-				css={theme => [
+				css={(theme) => [
 					button,
 					sizes[size],
 					priorities[priority](theme.button && theme),
@@ -207,22 +200,14 @@ const LinkButton = ({
 	} else {
 		return (
 			<a
-				css={theme => [
+				css={(theme) => [
 					button,
 					sizes[size],
 					priorities[priority](theme.button && theme),
 					iconSvg ? iconSizes[size] : "",
-					/*
-					TODO: We should be able to assume that children
-					will always be passed to the LinkButton component.
-					A future breaking change might be to remove the
-					logic that checks for the (non-)existence of children.
-					*/
-					iconSvg && !hideLabel && children
-						? iconSides[iconSide]
-						: "",
+					iconSvg && !hideLabel ? iconSides[iconSide] : "",
 					nudgeIcon ? iconNudgeAnimation : "",
-					hideLabel || !children ? iconOnlySizes[size] : "",
+					hideLabel ? iconOnlySizes[size] : "",
 				]}
 				{...props}
 			>
