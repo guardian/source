@@ -44,6 +44,15 @@ export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
 type IconSide = "left" | "right"
 type Size = "default" | "small" | "xsmall"
 
+interface SharedButtonProps extends Props {
+	priority: Priority
+	size: Size
+	iconSide: IconSide
+	icon?: ReactElement
+	hideLabel: boolean
+	nudgeIcon?: boolean
+}
+
 const priorities: {
 	[key in Priority]: ({ button }: { button: ButtonTheme }) => SerializedStyles
 } = {
@@ -82,13 +91,65 @@ const iconOnlySizes: {
 	xsmall: iconOnlyXsmall,
 }
 
-interface ButtonProps extends Props, ButtonHTMLAttributes<HTMLButtonElement> {
-	priority: Priority
-	size: Size
-	iconSide: IconSide
-	icon?: ReactElement
+const buttonContents = ({
+	hideLabel,
+	iconSvg,
+	children,
+}: {
 	hideLabel: boolean
-	nudgeIcon?: boolean
+	iconSvg?: ReactElement
+	children: ReactNode
+}) => {
+	const contents = [children]
+
+	if (iconSvg) {
+		if (!hideLabel) {
+			contents.push(<div className="src-button-space" />)
+		}
+		contents.push(React.cloneElement(iconSvg, { key: "svg" }))
+	}
+	if (hideLabel) {
+		return (
+			<>
+				<span
+					css={css`
+						${visuallyHidden};
+					`}
+				>
+					{children}
+				</span>
+				{contents[1]}
+			</>
+		)
+	} else {
+		return contents
+	}
+}
+
+const buttonStyles = ({
+	priority,
+	size,
+	icon: iconSvg,
+	hideLabel,
+	iconSide,
+	nudgeIcon,
+	cssOverrides,
+}: SharedButtonProps) =>
+	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+	(theme: any) => [
+		button,
+		sizes[size],
+		priorities[priority](theme.button && theme),
+		iconSvg ? iconSizes[size] : "",
+		iconSvg && !hideLabel ? iconSides[iconSide] : "",
+		nudgeIcon ? iconNudgeAnimation : "",
+		hideLabel ? iconOnlySizes[size] : "",
+		cssOverrides,
+	]
+
+interface ButtonProps
+	extends SharedButtonProps,
+		ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode
 }
 const Button = ({
@@ -101,50 +162,29 @@ const Button = ({
 	cssOverrides,
 	children,
 	...props
-}: ButtonProps) => {
-	const buttonContents = [children]
-
-	if (iconSvg) {
-		if (!hideLabel) {
-			buttonContents.push(<div className="src-button-space" />)
-		}
-		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
-	}
-
-	return (
-		<button
-			css={(theme) => [
-				button,
-				sizes[size],
-				priorities[priority](theme.button && theme),
-				iconSvg ? iconSizes[size] : "",
-				iconSvg && !hideLabel ? iconSides[iconSide] : "",
-				nudgeIcon ? iconNudgeAnimation : "",
-				hideLabel ? iconOnlySizes[size] : "",
-				cssOverrides,
-			]}
-			{...props}
-		>
-			{hideLabel ? (
-				<>
-					<span
-						css={css`
-							${visuallyHidden};
-						`}
-					>
-						{children}
-					</span>
-					{buttonContents[1]}
-				</>
-			) : (
-				buttonContents
-			)}
-		</button>
-	)
-}
+}: ButtonProps) => (
+	<button
+		css={buttonStyles({
+			size,
+			priority,
+			icon: iconSvg,
+			hideLabel,
+			iconSide,
+			nudgeIcon,
+			cssOverrides,
+		})}
+		{...props}
+	>
+		{buttonContents({
+			hideLabel,
+			iconSvg,
+			children,
+		})}
+	</button>
+)
 
 interface LinkButtonProps
-	extends Props,
+	extends SharedButtonProps,
 		AnchorHTMLAttributes<HTMLAnchorElement> {
 	priority: Priority
 	size: Size
@@ -165,47 +205,26 @@ const LinkButton = ({
 	cssOverrides,
 	children,
 	...props
-}: LinkButtonProps) => {
-	const buttonContents = [children]
-
-	if (iconSvg) {
-		if (!hideLabel) {
-			buttonContents.push(<div className="src-button-space" />)
-		}
-		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
-	}
-
-	return (
-		<a
-			css={(theme) => [
-				button,
-				sizes[size],
-				priorities[priority](theme.button && theme),
-				iconSvg ? iconSizes[size] : "",
-				iconSvg && !hideLabel ? iconSides[iconSide] : "",
-				nudgeIcon ? iconNudgeAnimation : "",
-				hideLabel ? iconOnlySizes[size] : "",
-				cssOverrides,
-			]}
-			{...props}
-		>
-			{hideLabel ? (
-				<>
-					<span
-						css={css`
-							${visuallyHidden};
-						`}
-					>
-						{children}
-					</span>
-					{buttonContents[1]}
-				</>
-			) : (
-				buttonContents
-			)}
-		</a>
-	)
-}
+}: LinkButtonProps) => (
+	<a
+		css={buttonStyles({
+			size,
+			priority,
+			icon: iconSvg,
+			hideLabel,
+			iconSide,
+			nudgeIcon,
+			cssOverrides,
+		})}
+		{...props}
+	>
+		{buttonContents({
+			hideLabel,
+			iconSvg,
+			children,
+		})}
+	</a>
+)
 
 const defaultButtonProps = {
 	type: "button",
