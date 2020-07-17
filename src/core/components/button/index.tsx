@@ -8,7 +8,6 @@ import { css } from "@emotion/core"
 import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
-import { SvgArrowRightStraight } from "@guardian/src-icons"
 import {
 	button,
 	primary,
@@ -149,7 +148,6 @@ interface LinkButtonProps
 		AnchorHTMLAttributes<HTMLAnchorElement> {
 	priority: Priority
 	size: Size
-	showIcon: boolean // TODO: deprecated, remove in future version
 	iconSide: IconSide
 	icon?: ReactElement
 	nudgeIcon?: boolean
@@ -160,7 +158,6 @@ interface LinkButtonProps
 const LinkButton = ({
 	priority,
 	size,
-	showIcon,
 	iconSide,
 	icon: iconSvg,
 	nudgeIcon,
@@ -178,56 +175,36 @@ const LinkButton = ({
 		buttonContents.push(React.cloneElement(iconSvg, { key: "svg" }))
 	}
 
-	// TODO: deprecated API, remove in future version
-	if (showIcon) {
-		return (
-			<a
-				css={(theme) => [
-					button,
-					sizes[size],
-					priorities[priority](theme.button && theme),
-					iconSizes[size],
-					!children ? iconOnlySizes[size] : "",
-					iconNudgeAnimation,
-					cssOverrides,
-				]}
-				{...props}
-			>
-				{children}
-				<SvgArrowRightStraight />
-			</a>
-		)
-	} else {
-		return (
-			<a
-				css={(theme) => [
-					button,
-					sizes[size],
-					priorities[priority](theme.button && theme),
-					iconSvg ? iconSizes[size] : "",
-					iconSvg && !hideLabel ? iconSides[iconSide] : "",
-					nudgeIcon ? iconNudgeAnimation : "",
-					hideLabel ? iconOnlySizes[size] : "",
-				]}
-				{...props}
-			>
-				{hideLabel ? (
-					<>
-						<span
-							css={css`
-								${visuallyHidden};
-							`}
-						>
-							{children}
-						</span>
-						{buttonContents[1]}
-					</>
-				) : (
-					buttonContents
-				)}
-			</a>
-		)
-	}
+	return (
+		<a
+			css={(theme) => [
+				button,
+				sizes[size],
+				priorities[priority](theme.button && theme),
+				iconSvg ? iconSizes[size] : "",
+				iconSvg && !hideLabel ? iconSides[iconSide] : "",
+				nudgeIcon ? iconNudgeAnimation : "",
+				hideLabel ? iconOnlySizes[size] : "",
+				cssOverrides,
+			]}
+			{...props}
+		>
+			{hideLabel ? (
+				<>
+					<span
+						css={css`
+							${visuallyHidden};
+						`}
+					>
+						{children}
+					</span>
+					{buttonContents[1]}
+				</>
+			) : (
+				buttonContents
+			)}
+		</a>
+	)
 }
 
 const defaultButtonProps = {
