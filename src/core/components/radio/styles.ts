@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
-import { space, size, transitions } from "@guardian/src-foundations"
+import { space, transitions } from "@guardian/src-foundations"
+import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { RadioTheme, radioDefault } from "@guardian/src-foundations/themes"
@@ -14,7 +15,7 @@ export const label = ({ radio }: { radio: RadioTheme } = radioDefault) => css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	min-height: ${size.medium}px;
+	min-height: ${height.inputMedium}px;
 
 	&:hover {
 		input {
@@ -33,8 +34,8 @@ export const radio = ({ radio }: { radio: RadioTheme } = radioDefault) => css`
 	cursor: pointer;
 	box-sizing: border-box;
 	display: inline-block;
-	width: ${size.xsmall}px;
-	height: ${size.xsmall}px;
+	width: ${width.inputXsmall}px;
+	height: ${height.inputXsmall}px;
 	margin: 0 ${space[2]}px 0 0;
 
 	border: 2px solid currentColor;
