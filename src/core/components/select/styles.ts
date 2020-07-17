@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
-import { size, space } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
+import { height } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { selectDefault, SelectTheme } from "@guardian/src-foundations/themes"
@@ -22,7 +23,7 @@ export const select = ({
 	select,
 }: { select: SelectTheme } = selectDefault) => css`
 	box-sizing: border-box;
-	height: ${size.medium}px;
+	height: ${height.inputMedium}px;
 	width: 100%;
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${select.textUserInput};
