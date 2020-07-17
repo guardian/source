@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { size } from "@guardian/src-foundations"
+import { width } from "@guardian/src-foundations/size"
 import { linkDefault, LinkTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -45,13 +45,7 @@ export const icon = css`
 	svg {
 		fill: currentColor;
 		position: absolute;
-		/*
-			We support two SVG sizes:
-			- Square: 30x30
-			- Wide: 30x20
-			Since width is constant, we'll hard code it here and allow height to scale
-		*/
-		width: ${size.small / 2}px;
+		width: ${width.iconXsmall}px;
 		height: auto;
 	}
 `
