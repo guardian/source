@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { space, size, transitions } from "@guardian/src-foundations"
+import { space, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -125,8 +125,7 @@ export const choiceCard = ({
 	flex: 1;
 	display: flex;
 	justify-content: center;
-	/* TODO: let's talk about size! */
-	min-height: ${size.medium}px;
+	min-height: ${height.inputMedium}px;
 	margin: 0 0 ${space[2]}px 0;
 	box-shadow: inset 0 0 0 2px ${choiceCard.border};
 	border-radius: 4px;
