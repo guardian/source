@@ -61,11 +61,11 @@ export const neutral = {
 }
 export const error = {
 	400: colors.reds[3],
-	500: colors.reds[7],
+	500: colors.reds[5],
 
 	// legacy names: please do not use
 	main: colors.reds[3],
-	bright: colors.reds[7],
+	bright: colors.reds[5],
 }
 export const success = {
 	400: colors.greens[1],
@@ -80,15 +80,16 @@ export const news = {
 	300: colors.reds[2],
 	400: colors.reds[3],
 	500: colors.reds[4],
-	600: colors.reds[5],
-	800: colors.reds[6],
+	550: colors.reds[5],
+	600: colors.reds[6],
+	800: colors.reds[7],
 
 	// legacy names: please do not use
 	dark: colors.reds[2],
 	main: colors.reds[3],
 	bright: colors.reds[4],
-	pastel: colors.reds[5],
-	faded: colors.reds[6],
+	pastel: colors.reds[6],
+	faded: colors.reds[7],
 }
 export const opinion = {
 	100: colors.oranges[0],
