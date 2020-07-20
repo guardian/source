@@ -28,25 +28,12 @@ export const brand = {
 	500: colors.blues[10],
 	600: colors.blues[11],
 	800: colors.blues[12],
-
-	// legacy names: please do not use
-	dark: colors.blues[8],
-	main: colors.blues[9],
-	bright: colors.blues[10],
-	pastel: colors.blues[11],
-	faded: colors.blues[12],
 }
 export const brandAlt = {
 	200: colors.yellows[0],
 	300: colors.yellows[1],
 	400: colors.yellows[2],
-
-	// legacy names: please do not use
-	dark: colors.yellows[1],
-	main: colors.yellows[2],
 }
-// continue to expose legacy name for compatibility
-export const brandYellow = brandAlt
 export const neutral = {
 	0: colors.grays[0],
 	7: colors.grays[1],
@@ -62,17 +49,10 @@ export const neutral = {
 export const error = {
 	400: colors.reds[3],
 	500: colors.reds[5],
-
-	// legacy names: please do not use
-	main: colors.reds[3],
-	bright: colors.reds[5],
 }
 export const success = {
 	400: colors.greens[1],
 	500: colors.greens[2],
-
-	// legacy names: please do not use
-	main: colors.greens[1],
 }
 export const news = {
 	100: colors.reds[0],
@@ -83,13 +63,6 @@ export const news = {
 	550: colors.reds[5],
 	600: colors.reds[6],
 	800: colors.reds[7],
-
-	// legacy names: please do not use
-	dark: colors.reds[2],
-	main: colors.reds[3],
-	bright: colors.reds[4],
-	pastel: colors.reds[6],
-	faded: colors.reds[7],
 }
 export const opinion = {
 	100: colors.oranges[0],
@@ -99,13 +72,6 @@ export const opinion = {
 	500: colors.oranges[4],
 	600: colors.oranges[5],
 	800: colors.oranges[6],
-
-	// legacy names: please do not use
-	dark: colors.oranges[2],
-	main: colors.oranges[3],
-	bright: colors.oranges[4],
-	pastel: colors.oranges[5],
-	faded: colors.oranges[6],
 }
 export const sport = {
 	100: colors.blues[0],
@@ -115,13 +81,6 @@ export const sport = {
 	500: colors.blues[4],
 	600: colors.blues[5],
 	800: colors.blues[6],
-
-	// legacy names: please do not use
-	dark: colors.blues[2],
-	main: colors.blues[3],
-	bright: colors.blues[4],
-	pastel: colors.blues[5],
-	faded: colors.blues[6],
 }
 export const culture = {
 	100: colors.browns[0],
@@ -131,13 +90,6 @@ export const culture = {
 	500: colors.browns[4],
 	600: colors.browns[5],
 	800: colors.browns[6],
-
-	// legacy names: please do not use
-	dark: colors.browns[2],
-	main: colors.browns[3],
-	bright: colors.browns[4],
-	pastel: colors.browns[5],
-	faded: colors.browns[6],
 }
 export const lifestyle = {
 	100: colors.pinks[0],
@@ -147,22 +99,11 @@ export const lifestyle = {
 	500: colors.pinks[4],
 	600: colors.pinks[5],
 	800: colors.pinks[6],
-
-	// legacy names: please do not use
-	dark: colors.pinks[2],
-	main: colors.pinks[3],
-	bright: colors.pinks[4],
-	pastel: colors.pinks[5],
-	faded: colors.pinks[6],
 }
 export const labs = {
 	200: colors.greens[3],
 	300: colors.greens[4],
 	400: colors.greens[5],
-
-	// legacy names: please do not use
-	dark: colors.greens[4],
-	main: colors.greens[5],
 }
 
 export const specialReport = {
