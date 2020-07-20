@@ -1,4 +1,10 @@
-import { neutral, error as _error, success as _success, brand } from "../global"
+import {
+	neutral,
+	error as _error,
+	success as _success,
+	brand,
+	news,
+} from "../global"
 
 export const text = {
 	primary: neutral[7],
@@ -17,4 +23,5 @@ export const text = {
 	inputHover: brand[400], //choice card only
 	groupLabel: neutral[7],
 	groupLabelSupporting: neutral[46],
+	newsInverse: news[550],
 }
