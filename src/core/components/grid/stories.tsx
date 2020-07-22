@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import { GridRow, GridItem } from "@guardian/src-grid"
+import { GridRow, GridItem } from "./index"
 import { sport } from "@guardian/src-foundations/palette"
 
 export default {
