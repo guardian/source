@@ -1,6 +1,6 @@
 {
 	"name": "source",
-	"version": "1.9.0",
+	"version": "1.9.1",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:icons & start-storybook --port 9009",
 		"lint:styles": "stylelint src/core/**/styles.ts",
