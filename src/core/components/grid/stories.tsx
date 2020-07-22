@@ -1,11 +1,17 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import { GridRow, GridItem } from "@guardian/src-grid"
+import { GridRow, GridItem } from "./index"
 import { sport } from "@guardian/src-foundations/palette"
+
+const gridStoryWrapper = (storyFn: () => JSX.Element) => {
+	// override 8px margin applied globally to every preview body
+	return <div style={{ margin: "0 -8px" }}>{storyFn()}</div>
+}
 
 export default {
 	title: "Grid",
+	decorators: [gridStoryWrapper],
 }
 
 const itemStyle = css`

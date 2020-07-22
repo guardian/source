@@ -11,6 +11,8 @@ import {
 } from "./data"
 
 const gridRow = css`
+	box-sizing: border-box;
+
 	@supports (display: grid) {
 		display: grid;
 	}
@@ -32,12 +34,12 @@ const [
 	gridRowTablet,
 	gridRowDesktop,
 	gridRowWide,
-] = gridBreakpoints.map(breakpoint => {
+] = gridBreakpoints.map((breakpoint) => {
 	const msGridColumns = `-ms-grid-columns: (minmax(0, 1fr))[${gridColumns[breakpoint]}]`
 
 	return css`
 		${from[breakpoint]} {
-			width: ${containerWidths[breakpoint]}px;
+			width: ${containerWidths[breakpoint]};
 			grid-template-columns: repeat(${gridColumns[breakpoint]}, 1fr);
 			${msGridColumns};
 		}
