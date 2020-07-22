@@ -21,17 +21,17 @@ const itemStyle = css`
 `
 
 const fourColLayout = (
-	<GridRow>
-		<GridItem spans={[1, 3, 3, 4]}>
+	<GridRow breakpoints={["mobile", "tablet", "desktop", "leftCol", "wide"]}>
+		<GridItem spans={[1, 3, 3, 2, 4]}>
 			<div css={itemStyle}></div>
 		</GridItem>
-		<GridItem spans={[1, 3, 3, 4]}>
+		<GridItem spans={[1, 3, 3, 4, 4]}>
 			<div css={itemStyle}></div>
 		</GridItem>
-		<GridItem spans={[1, 3, 3, 4]}>
+		<GridItem spans={[1, 3, 3, 4, 4]}>
 			<div css={itemStyle}></div>
 		</GridItem>
-		<GridItem spans={[1, 3, 3, 4]}>
+		<GridItem spans={[1, 3, 3, 4, 4]}>
 			<div css={itemStyle}></div>
 		</GridItem>
 	</GridRow>
@@ -61,6 +61,15 @@ desktop.story = {
 		viewport: { defaultViewport: "desktop" },
 	},
 }
+export const leftCol = () => fourColLayout
+
+leftCol.story = {
+	name: "leftCol four column layout",
+	parameters: {
+		viewport: { defaultViewport: "leftCol" },
+	},
+}
+
 export const wide = () => fourColLayout
 
 wide.story = {

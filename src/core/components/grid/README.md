@@ -1,11 +1,11 @@
 # Grid
 
-📣 For more context and visual guides relating grid usage on the [Source Design System website](https://zeroheight.com/2a1e5182b/p/41be19)
+📣 For more context and visual guides relating grid usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/978527--grid-component/b/304251)
 
 ## Install
 
 ```sh
-$ yarn add @guardian/src-grid @guardian/src-foundations
+$ yarn add @guardian/src-grid
 ```
 
 ## Use
@@ -14,11 +14,11 @@ $ yarn add @guardian/src-grid @guardian/src-foundations
 import { GridRow, GridItem } from "@guardian/src-grid"
 
 const Article = () => (
-    <GridRow breakpoints={["mobile", "tablet", "desktop", "wide"]}>
-        <GridItem span={[0, 3, 3, 4]} borderRight={true}>
+    <GridRow breakpoints={["mobile", "tablet", "desktop", "leftCol", "wide"]}>
+        <GridItem span={[0, 3, 3, 4, 4]} borderRight={true}>
             <Sidebar />
         </GridItem>
-        <GridItem span={[4, 9, 9, 12]}>
+        <GridItem span={[4, 9, 9, 10, 12]}>
             <Main />
         </GridItem>
     </GridRow>
@@ -29,15 +29,13 @@ const Article = () => (
 
 ### `breakpoints`
 
-**`Array<GridBreakpoint | CustomBreakpoint>`** _= ["mobile", "tablet", "desktop", "wide"]_
+**`Array<GridBreakpoint | CustomBreakpoint>`** _= ["mobile", "tablet", "desktop", "leftCol", "wide"]_
 
 A list of breakpoints at which grid column span may change. GridRow currently
-supports changes at `"mobile"`, `"tablet"`, `"desktop"` and `"wide"` breakpoints.
+supports changes at `"mobile"`, `"tablet"`, `"desktop"`, `"leftCol"` and `"wide"` breakpoints.
 Any of these may be omitted.
 
 For best results, breakpoints should be ordered ascending by minimum viewport width.
-
-**Custom breakpoints should be considered experimental. Please tell the Design System Team before you use them**
 
 A custom breakpoint may be specified, which must have the following properties:
 

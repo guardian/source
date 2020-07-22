@@ -5,6 +5,7 @@ import {
 	gridRowMobile,
 	gridRowTablet,
 	gridRowDesktop,
+	gridRowLeftCol,
 	gridRowWide,
 	gridItem,
 	borderRightStyle,
@@ -20,6 +21,7 @@ const gridRowBreakpoints: GridRowBreakpoints = {
 	mobile: gridRowMobile,
 	tablet: gridRowTablet,
 	desktop: gridRowDesktop,
+	leftCol: gridRowLeftCol,
 	wide: gridRowWide,
 }
 
@@ -59,17 +61,14 @@ const GridRow = ({ breakpoints, cssOverrides, children }: GridRowProps) => {
 		<div
 			css={[
 				gridRow,
-				breakpoints.reduce(
-					(acc, breakpoint) => {
-						const gridRowStyles =
-							typeof breakpoint === "string"
-								? gridRowBreakpoints[breakpoint]
-								: createCustomGridRow(breakpoint)
+				breakpoints.reduce((acc, breakpoint) => {
+					const gridRowStyles =
+						typeof breakpoint === "string"
+							? gridRowBreakpoints[breakpoint]
+							: createCustomGridRow(breakpoint)
 
-						return acc.concat([gridRowStyles])
-					},
-					[] as SerializedStyles[],
-				),
+					return acc.concat([gridRowStyles])
+				}, [] as SerializedStyles[]),
 				cssOverrides,
 			]}
 		>
@@ -113,9 +112,11 @@ const GridItem = ({
 	)
 }
 
-GridRow.defaultProps = { breakpoints: ["mobile", "tablet", "desktop", "wide"] }
+GridRow.defaultProps = {
+	breakpoints: ["mobile", "tablet", "desktop", "leftCol", "wide"],
+}
 GridItem.defaultProps = {
-	breakpoints: ["mobile", "tablet", "desktop", "wide"],
+	breakpoints: ["mobile", "tablet", "desktop", "leftCol", "wide"],
 	startingPositions: [],
 }
 
