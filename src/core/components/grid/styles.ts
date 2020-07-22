@@ -33,6 +33,7 @@ const [
 	gridRowMobile,
 	gridRowTablet,
 	gridRowDesktop,
+	gridRowLeftCol,
 	gridRowWide,
 ] = gridBreakpoints.map((breakpoint) => {
 	const msGridColumns = `-ms-grid-columns: (minmax(0, 1fr))[${gridColumns[breakpoint]}]`
@@ -154,6 +155,7 @@ export {
 	gridRowMobile,
 	gridRowTablet,
 	gridRowDesktop,
+	gridRowLeftCol,
 	gridRowWide,
 	gridItem,
 	borderRightStyle,
