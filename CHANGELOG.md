@@ -10,6 +10,62 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 23 July 2020
+
+**`@guardian/src-button 2.0.0`**
+
+-   :robot: [f8ce3d8](https://github.com/guardian/source/commit/f8ce3d8b0915ab0093d93710549feea7f46328b7) migrate button stories to new icon name
+-   :boom: :sparkles: [61ab202](https://github.com/guardian/source/commit/61ab202c6aab8421171e65d30a1b5324c0912e94) remove check for existence of children
+-   :boom: :sparkles: [a0b4fcf](https://github.com/guardian/source/commit/a0b4fcf5da813bef1c28916cdec2e98788ca526e) remove showIcon API
+-   :robot: [78b7e92](https://github.com/guardian/source/commit/78b7e92f5e0ac496367252cd7c62c2aad5e3d7c7) extract common button logic and interfaces
+
+**`@guardian/src-checkbox 2.0.0`**
+
+-   :robot: [da84cc4](https://github.com/guardian/source/commit/da84cc42bc68e32d08fd33e27f896c4be35e6b71) migrate to new size api in checkbox package
+
+**`@guardian/src-choice-card 2.0.0`**
+
+-   :robot: [8b4acfb](https://github.com/guardian/source/commit/8b4acfb6566acdbbc807d92e272e2ae3129af78e) migrate to new size api in choice card package
+
+**`@guardian/src-foundations 2.0.0`**
+
+-   :boom: :robot: [9c2a4b5](https://github.com/guardian/source/commit/9c2a4b581605b742334353c2821981701e4a0deb) delete legacy theme names
+-   :boom: :robot: [207e7e1](https://github.com/guardian/source/commit/207e7e10969af2eb69c2c6bbd5b1ed230a41a742) delete deprecated size api
+-   :boom: :sparkles: [a6b2f16](https://github.com/guardian/source/commit/a6b2f1670ad377169ee923f590779c073c46a020) expose error-500 as news-550
+-   :sparkles: [314bc79](https://github.com/guardian/source/commit/314bc79325754ae00f390b283ed63a501cf8495a) expose news-550 as text colour token
+-   :boom: :robot: [2cb5f98](https://github.com/guardian/source/commit/2cb5f9884fc67f3bd2fca1e212e818b5c1a23792) delete legacy global colour names
+
+**`@guardian/src-icons 2.0.0`**
+
+-   :boom: :robot: [1e1e521](https://github.com/guardian/source/commit/1e1e52129dc0447f7e87e369ff3ef0c47b8bc1e3) remove legacy icon name from icons package
+
+**`@guardian/src-link 2.0.0`**
+
+-   :boom: :robot: [523398f](https://github.com/guardian/source/commit/523398fd0e589638f446f80e554a8463117591b5) stop exposing legacy theme names in link
+-   :robot: [3990810](https://github.com/guardian/source/commit/3990810945bd6f7d8a739f1f696ae0cbf43fb73b) migrate to new size api in link package
+
+**`@guardian/src-radio 2.0.0`**
+
+-   :boom: :robot: [55f0dae](https://github.com/guardian/source/commit/55f0dae70975c5d0f8df5716471fa0cadbe06d21) stop exposing legacy theme names in radio
+-   :robot: [91a9095](https://github.com/guardian/source/commit/91a9095f9faca1703f7003a895a7e195fa483534) migrate to new size api in radio package
+
+**`@guardian/src-select 2.0.0`**
+
+-   :robot: [693a735](https://github.com/guardian/source/commit/693a735877d57ec670bb71648fb14be61e46055c) migrate to new size api in select package
+
+**`@guardian/src-text-area 2.0.0`**
+
+-   :boom: :robot: [e35e351](https://github.com/guardian/source/commit/e35e351fbc51d72eef579d58436a5b1764b41774) stop exposing text-input theme in text-area
+
+**`@guardian/src-text-input 2.0.0`**
+
+-   :boom: :robot: [e76d35b](https://github.com/guardian/source/commit/e76d35b673a6c1ad028af763d73e981a79590848) stop exposing legacy theme names in text-input
+-   :robot: [71c6fcb](https://github.com/guardian/source/commit/71c6fcb4cc67e2ca54e96a797d2f5a936b1f9852) migrate to new size api in text input package
+
+**`@guardian/src-user-feedback 2.0.0`**
+
+-   :boom: :nail_care: [41c95f2](https://github.com/guardian/source/commit/41c95f2078d1a44710b4473a54d4e706df796133) remove spacing from inline error and success
+
 ## 22 July 2020
 
 **`@guardian/src-grid 1.9.1`**
