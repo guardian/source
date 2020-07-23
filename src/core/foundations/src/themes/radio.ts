@@ -50,6 +50,3 @@ export const radioBrand: {
 	},
 	...userFeedbackBrand,
 }
-
-// continue to expose legacy theme names
-export const radioLight = radioDefault

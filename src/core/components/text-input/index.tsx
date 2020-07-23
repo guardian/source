@@ -15,7 +15,7 @@ import {
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
-export { textInputLight } from "@guardian/src-foundations/themes"
+export { textInputDefault } from "@guardian/src-foundations/themes"
 export type Width = 30 | 10 | 4
 
 const widths: {

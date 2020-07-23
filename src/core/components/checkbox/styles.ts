@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
-import { space, size, transitions } from "@guardian/src-foundations"
+import { space, transitions } from "@guardian/src-foundations"
+import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import {
@@ -23,7 +24,7 @@ export const label = ({
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	min-height: ${size.medium}px;
+	min-height: ${height.inputMedium}px;
 
 	&:hover {
 		input {
@@ -45,8 +46,8 @@ export const checkbox = ({
 	display: inline-block;
 	z-index: 1;
 	cursor: pointer;
-	width: ${size.xsmall}px;
-	height: ${size.xsmall}px;
+	width: ${width.inputXsmall}px;
+	height: ${height.inputXsmall}px;
 	margin: 0 ${space[2]}px 0 0;
 
 	border: 2px solid currentColor;

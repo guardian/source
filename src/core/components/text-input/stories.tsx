@@ -4,7 +4,7 @@ import { ThemeProvider } from "emotion-theming"
 import { space } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { from } from "@guardian/src-foundations/mq"
-import { TextInput, textInputLight } from "./index"
+import { TextInput, textInputDefault } from "./index"
 
 export default {
 	title: "TextInput",
@@ -20,7 +20,7 @@ const constrainedWith = css`
 const defaultLight = () => {
 	const [state, setState] = useState("")
 	return (
-		<ThemeProvider theme={textInputLight}>
+		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
 					label="First name"
@@ -37,7 +37,7 @@ defaultLight.story = {
 }
 
 const optionalLight = () => (
-	<ThemeProvider theme={textInputLight}>
+	<ThemeProvider theme={textInputDefault}>
 		<div css={constrainedWith}>
 			<TextInput label="First name" optional={true} />
 		</div>
@@ -51,7 +51,7 @@ optionalLight.story = {
 const supportingTextLight = () => {
 	const [state, setState] = useState("")
 	return (
-		<ThemeProvider theme={textInputLight}>
+		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
 					label="Email"
@@ -73,7 +73,7 @@ const spacer = css`
 const widthsLight = () => {
 	const [state, setState] = useState({ wide: "", medium: "", short: "" })
 	return (
-		<ThemeProvider theme={textInputLight}>
+		<ThemeProvider theme={textInputDefault}>
 			<div css={spacer}>
 				<TextInput
 					label="First name"
@@ -127,7 +127,7 @@ widthsLight.story = {
 const errorWithMessageLight = () => {
 	const [state, setState] = useState("")
 	return (
-		<ThemeProvider theme={textInputLight}>
+		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
 					label="First name"
@@ -147,7 +147,7 @@ errorWithMessageLight.story = {
 const successWithMessageLight = () => {
 	const [state, setState] = useState("")
 	return (
-		<ThemeProvider theme={textInputLight}>
+		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
 					label="Input Code"
@@ -168,7 +168,7 @@ const constraintLight = () => {
 	const [state, setState] = useState("")
 
 	return (
-		<ThemeProvider theme={textInputLight}>
+		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
 					label="Phone number"
