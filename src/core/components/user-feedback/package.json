@@ -38,20 +38,11 @@
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
-<<<<<<< HEAD
-		"@guardian/src-foundations": "^1.9.1",
-		"react": "^16.8.6"
-	},
-	"dependencies": {
-		"@guardian/src-helpers": "^1.9.1",
-		"@guardian/src-icons": "^1.9.1"
-=======
 		"@guardian/src-foundations": "^2.0.0-rc.0",
 		"react": "^16.8.6"
 	},
 	"dependencies": {
 		"@guardian/src-helpers": "^2.0.0-rc.0",
 		"@guardian/src-icons": "^2.0.0-rc.0"
->>>>>>> bump all packages to 2.0.0-rc.0
 	}
 }
