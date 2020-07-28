@@ -28,6 +28,7 @@ const gridRowBreakpoints: GridRowBreakpoints = {
 interface GridRowProps extends Props {
 	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	children: JSX.Element | JSX.Element[]
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const GridRow = ({ breakpoints, cssOverrides, children }: GridRowProps) => {
@@ -89,6 +90,7 @@ interface GridItemProps extends Props {
 	startingPositions: number[]
 	breakpoints: Array<GridBreakpoint | CustomBreakpoint>
 	children: JSX.Element | JSX.Element[]
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const GridItem = ({

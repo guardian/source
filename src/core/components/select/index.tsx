@@ -3,6 +3,7 @@ import React, {
 	SelectHTMLAttributes,
 	OptionHTMLAttributes,
 } from "react"
+import { SerializedStyles } from "@emotion/core"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import {
 	select,
@@ -18,7 +19,7 @@ export { selectDefault } from "@guardian/src-foundations/themes"
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={theme => supportingText(theme.select && theme)}>
+		<div css={(theme) => supportingText(theme.select && theme)}>
 			{children}
 		</div>
 	)
@@ -30,6 +31,8 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 	supporting?: string
 	error?: string
 	success?: string
+	cssOverrides?: SerializedStyles | SerializedStyles[]
+	children: JSX.Element | JSX.Element[]
 }
 
 const Select = ({
@@ -44,10 +47,10 @@ const Select = ({
 }: SelectProps) => {
 	return (
 		<label>
-			<div css={theme => label(theme.select && theme)}>
+			<div css={(theme) => label(theme.select && theme)}>
 				{labelText}{" "}
 				{optional ? (
-					<span css={theme => optionalLabel(theme.select && theme)}>
+					<span css={(theme) => optionalLabel(theme.select && theme)}>
 						Optional
 					</span>
 				) : (
@@ -58,7 +61,7 @@ const Select = ({
 			{error && <InlineError>{error}</InlineError>}
 			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
 			<select
-				css={theme => [
+				css={(theme) => [
 					select(theme.select && theme),
 					error ? errorInput(theme.select && theme) : "",
 					!error && success
@@ -75,7 +78,10 @@ const Select = ({
 	)
 }
 
-interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement>, Props {}
+interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement>, Props {
+	cssOverrides?: SerializedStyles | SerializedStyles[]
+	children: string
+}
 
 const Option = ({ cssOverrides, children, ...props }: OptionProps) => {
 	return (

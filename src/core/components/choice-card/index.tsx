@@ -3,7 +3,9 @@ import React, {
 	ReactElement,
 	useState,
 	InputHTMLAttributes,
+	ChangeEventHandler
 } from "react"
+import { SerializedStyles } from "@emotion/core"
 import {
 	fieldset,
 	flexContainer,
@@ -36,6 +38,7 @@ interface ChoiceCardGroupProps extends Props {
 	multi?: boolean
 	error?: string
 	children: JSX.Element | JSX.Element[]
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const ChoiceCardGroup = ({
@@ -86,7 +89,10 @@ interface ChoiceCardProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	supporting?: ReactNode
 	icon?: ReactElement
 	checked?: boolean
+	defaultChecked?: boolean
+	onChange?: ChangeEventHandler<HTMLInputElement>
 	error: boolean
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const ChoiceCard = ({

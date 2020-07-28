@@ -41,6 +41,7 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement>, Props {
 	icon?: ReactElement
 	iconSide: IconSide
 	children?: ReactNode
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const Link = ({
