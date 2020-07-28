@@ -1,4 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import {
 	fieldset,
@@ -28,6 +29,7 @@ interface RadioGroupProps extends Props {
 	orientation: Orientation
 	error?: string
 	children: JSX.Element | JSX.Element[]
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const RadioGroup = ({
@@ -87,9 +89,13 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 }
 
 interface RadioProps extends InputHTMLAttributes<HTMLInputElement>, Props {
+	value: string
+	checked?: boolean
+	defaultChecked?: boolean
 	label?: ReactNode
 	supporting?: ReactNode
 	error: boolean
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const Radio = ({
