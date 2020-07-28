@@ -1,4 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import {
 	fieldset,
@@ -24,6 +25,7 @@ interface CheckboxGroupProps extends Props {
 	name: string
 	error?: string
 	children: JSX.Element | JSX.Element[]
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const CheckboxGroup = ({
@@ -76,10 +78,14 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 }
 
 interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement>, Props {
+	value: string,
+	checked?: boolean,
+	defaultChecked?: boolean,
 	label?: ReactNode
 	supporting?: ReactNode
 	indeterminate: boolean
 	error: boolean
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const Checkbox = ({
