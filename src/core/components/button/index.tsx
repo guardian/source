@@ -150,7 +150,14 @@ const buttonStyles = ({
 interface ButtonProps
 	extends SharedButtonProps,
 		ButtonHTMLAttributes<HTMLButtonElement> {
+	priority: Priority
+	size: Size
+	icon?: ReactElement
+	iconSide: IconSide
+	hideLabel: boolean
+	nudgeIcon?: boolean
 	children: ReactNode
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 const Button = ({
 	priority,
@@ -193,6 +200,7 @@ interface LinkButtonProps
 	nudgeIcon?: boolean
 	hideLabel: boolean
 	children: ReactNode
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const LinkButton = ({
