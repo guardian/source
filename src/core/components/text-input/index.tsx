@@ -41,6 +41,7 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	width?: Width
 	error?: string
 	success?: string
+	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const TextInput = ({
