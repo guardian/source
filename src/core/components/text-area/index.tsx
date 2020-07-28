@@ -1,4 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import {
 	widthFluid,
@@ -17,11 +18,14 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 interface TextAreaProps
 	extends InputHTMLAttributes<HTMLTextAreaElement>,
 		Props {
+	value?: string
 	label: string
 	optional: boolean
 	supporting?: string
 	error?: string
 	rows?: number
+	cssOverrides?: SerializedStyles | SerializedStyles[]
+	className?: string
 }
 
 const TextArea = ({
