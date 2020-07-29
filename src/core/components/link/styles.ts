@@ -8,6 +8,7 @@ export const link = css`
 	position: relative;
 	${textSans.medium()};
 	cursor: pointer;
+	text-decoration: underline;
 
 	display: inline;
 	align-items: center;
@@ -15,6 +16,13 @@ export const link = css`
 	&:focus {
 		${focusHalo};
 	}
+`
+
+export const buttonLink = css`
+	/* override user agent styles */
+	border: none;
+	background: transparent;
+	padding: 0;
 `
 
 export const primary = ({ link }: { link: LinkTheme } = linkDefault) => css`
