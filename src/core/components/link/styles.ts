@@ -8,13 +8,21 @@ export const link = css`
 	position: relative;
 	${textSans.medium()};
 	cursor: pointer;
+	text-decoration: underline;
 
-	display: flex;
+	display: inline;
 	align-items: center;
 
 	&:focus {
 		${focusHalo};
 	}
+`
+
+export const buttonLink = css`
+	/* override user agent styles */
+	border: none;
+	background: transparent;
+	padding: 0;
 `
 
 export const primary = ({ link }: { link: LinkTheme } = linkDefault) => css`
@@ -42,6 +50,11 @@ export const subdued = css`
 `
 
 export const icon = css`
+	/*
+	FIXME: This makes icons sit vertically centred, but breaks links with long
+	text descriptions onto a separate line to surrounding text
+	 */
+	display: inline-flex;
 	svg {
 		fill: currentColor;
 		position: absolute;

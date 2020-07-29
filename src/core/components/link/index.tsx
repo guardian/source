@@ -1,8 +1,14 @@
-import React, { ReactElement, ReactNode, AnchorHTMLAttributes } from "react"
+import React, {
+	ReactElement,
+	ReactNode,
+	AnchorHTMLAttributes,
+	ButtonHTMLAttributes,
+} from "react"
 import { SerializedStyles } from "@emotion/css"
 import { LinkTheme } from "@guardian/src-foundations/themes"
 import {
 	link,
+	buttonLink,
 	primary,
 	secondary,
 	subdued,
@@ -35,7 +41,76 @@ const iconSides: {
 	right: iconRight,
 	left: iconLeft,
 }
-interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement>, Props {
+
+const linkContents = ({
+	children,
+	iconSvg,
+	iconSide,
+}: {
+	children: ReactNode
+	iconSvg?: ReactElement
+	iconSide: IconSide
+}) => {
+	// a bit of underlined space; the icon sits on top
+	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>
+	const linkContents = [children]
+
+	if (iconSvg) {
+		if (iconSide === "left") {
+			linkContents.unshift(
+				React.cloneElement(iconSvg, { key: "svg" }),
+				spacer,
+			)
+		} else {
+			linkContents.push(
+				React.cloneElement(iconSvg, { key: "svg" }),
+				spacer,
+			)
+		}
+	}
+
+	return linkContents
+}
+
+const linkStyles = ({
+	isButton,
+	priority,
+	isSubdued,
+	iconSvg,
+	iconSide,
+	cssOverrides,
+}: {
+	isButton?: boolean
+	priority: Priority
+	isSubdued: boolean
+	iconSvg?: ReactElement
+	iconSide: IconSide
+	cssOverrides?: SerializedStyles | SerializedStyles[]
+}) => {
+	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+	return (theme: any) => [
+		link,
+		isButton ? buttonLink : "",
+		priorities[priority](theme.link && theme),
+		isSubdued ? subdued : "",
+		iconSvg ? icon : "",
+		iconSvg ? iconSides[iconSide] : "",
+		cssOverrides,
+	]
+}
+
+interface SharedLinkProps extends Props {
+	priority: Priority
+	subdued: boolean
+	icon?: ReactElement
+	iconSide: IconSide
+	children?: ReactNode
+	cssOverrides?: SerializedStyles | SerializedStyles[]
+}
+
+interface LinkProps
+	extends AnchorHTMLAttributes<HTMLAnchorElement>,
+		SharedLinkProps {
 	priority: Priority
 	subdued: boolean
 	icon?: ReactElement
@@ -53,37 +128,56 @@ const Link = ({
 	children,
 	...props
 }: LinkProps) => {
-	const linkContents = [children]
-	// a bit of underlined space; the icon sits on top
-	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>
-
-	if (iconSvg) {
-		if (iconSide === "left") {
-			linkContents.unshift(
-				React.cloneElement(iconSvg, { key: "svg" }),
-				spacer,
-			)
-		} else {
-			linkContents.push(
-				React.cloneElement(iconSvg, { key: "svg" }),
-				spacer,
-			)
-		}
-	}
 	return (
 		<a
-			css={(theme) => [
-				link,
-				priorities[priority](theme.link && theme),
-				isSubdued ? subdued : "",
-				iconSvg ? icon : "",
-				iconSvg ? iconSides[iconSide] : "",
+			css={linkStyles({
+				priority,
+				isSubdued,
+				iconSvg,
+				iconSide,
 				cssOverrides,
-			]}
+			})}
 			{...props}
 		>
-			{linkContents}
+			{linkContents({ children, iconSvg, iconSide })}
 		</a>
+	)
+}
+
+interface ButtonLinkProps
+	extends ButtonHTMLAttributes<HTMLButtonElement>,
+		SharedLinkProps {
+	priority: Priority
+	subdued: boolean
+	icon?: ReactElement
+	iconSide: IconSide
+	children?: ReactNode
+	cssOverrides?: SerializedStyles | SerializedStyles[]
+}
+
+const ButtonLink = ({
+	priority,
+	subdued: isSubdued,
+	icon: iconSvg,
+	iconSide,
+	cssOverrides,
+	children,
+	...props
+}: ButtonLinkProps) => {
+	return (
+		<button
+			css={linkStyles({
+				isButton: true,
+				priority,
+				isSubdued,
+				iconSvg,
+				iconSide,
+				cssOverrides,
+			})}
+			{...props}
+		>
+			{linkContents({ children, iconSvg, iconSide })}
+		</button>
 	)
 }
 
@@ -94,5 +188,6 @@ const defaultLinkProps = {
 }
 
 Link.defaultProps = { ...defaultLinkProps }
+ButtonLink.defaultProps = { ...defaultLinkProps }
 
-export { Link }
+export { Link, ButtonLink }

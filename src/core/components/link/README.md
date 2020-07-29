@@ -11,23 +11,34 @@ $ yarn add @guardian/src-link
 ## Use
 
 ```js
-import { Link } from "@guardian/src-link"
+import { Link, ButtonLink } from "@guardian/src-link"
 import { SvgArrowRightStraight } from "@guardian/src-icons"
 
 const Navigation = () => (
-    <Link
-        priority="primary"
-        subdued={true}
-        icon={<SvgArrowRightStraight />}
-        iconSide="right"
-        href="/read-more"
-    >
-        Click me
-    </Link>
+    <>
+        <Link
+            priority="primary"
+            subdued={true}
+            icon={<SvgArrowRightStraight />}
+            iconSide="right"
+            href="/read-more"
+        >
+            Click me
+        </Link>
+        <ButtonLink
+            priority="primary"
+            subdued={true}
+            icon={<SvgArrowRightStraight />}
+            iconSide="right"
+            onClick={() => console.log("Clicked")}
+        >
+            Click me
+        </ButtonLink>
+    </>
 )
 ```
 
-## `Link` Props
+## `Link` and `ButtonLink` Props
 
 ### `priority`
 
