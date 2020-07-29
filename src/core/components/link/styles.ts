@@ -9,7 +9,7 @@ export const link = css`
 	${textSans.medium()};
 	cursor: pointer;
 
-	display: flex;
+	display: inline;
 	align-items: center;
 
 	&:focus {
@@ -42,6 +42,11 @@ export const subdued = css`
 `
 
 export const icon = css`
+	/*
+	FIXME: This makes icons sit vertically centred, but breaks links with long
+	text descriptions onto a separate line to surrounding text
+	 */
+	display: inline-flex;
 	svg {
 		fill: currentColor;
 		position: absolute;
