@@ -1,6 +1,8 @@
 name: "Chromatic"
 on:
     push:
+        paths:
+            - "src"
         branches-ignore:
             - "gh-pages"
             - "[0-9]+.[0-9]+"
