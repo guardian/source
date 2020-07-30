@@ -8,12 +8,16 @@ import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import {
 	select,
 	label,
+	selectWrapper,
+	errorChevron,
+	successChevron,
 	errorInput,
 	optionalLabel,
 	supportingText,
 	successInput,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
+import { SvgChevronDownSingle } from "@guardian/src-icons"
 
 export { selectDefault } from "@guardian/src-foundations/themes"
 
@@ -60,20 +64,32 @@ const Select = ({
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{error && <InlineError>{error}</InlineError>}
 			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
-			<select
+			<div
 				css={(theme) => [
-					select(theme.select && theme),
-					error ? errorInput(theme.select && theme) : "",
+					selectWrapper(theme.select && theme),
+					error ? errorChevron(theme.select && theme) : "",
 					!error && success
-						? successInput(theme.select && theme)
+						? successChevron(theme.select && theme)
 						: "",
-					cssOverrides,
 				]}
-				aria-required={!optional}
-				{...props}
 			>
-				{children}
-			</select>
+				<select
+					css={(theme) => [
+						select(theme.select && theme),
+						error ? errorInput(theme.select && theme) : "",
+						!error && success
+							? successInput(theme.select && theme)
+							: "",
+						cssOverrides,
+					]}
+					aria-required={!optional}
+					aria-invalid={!!error}
+					{...props}
+				>
+					{children}
+				</select>
+				<SvgChevronDownSingle />
+			</div>
 		</label>
 	)
 }
