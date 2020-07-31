@@ -48,9 +48,6 @@ export const textInput = ({
 		/*
 		We automatically apply error styling to fields in an invalid state,
 		but stop short of applying it to empty required fields.
-
-		Note: the following class will only be applied to a controlled
-		component: https://reactjs.org/docs/forms.html#controlled-components
 		*/
 		&[value]:not([value=""]) {
 			${errorInput({ textInput })};
