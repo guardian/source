@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { space } from "@guardian/src-foundations"
-import { height } from "@guardian/src-foundations/size"
+import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { selectDefault, SelectTheme } from "@guardian/src-foundations/themes"
@@ -19,14 +19,54 @@ export const successInput = ({
 	color: ${select.textSuccess};
 `
 
+export const errorChevron = ({
+	select,
+}: { select: SelectTheme } = selectDefault) => css`
+	svg {
+		fill: ${select.textError};
+	}
+`
+
+export const successChevron = ({
+	select,
+}: { select: SelectTheme } = selectDefault) => css`
+	svg {
+		fill: ${select.textSuccess};
+	}
+`
+
+export const selectWrapper = ({
+	select,
+}: { select: SelectTheme } = selectDefault) => css`
+	position: relative;
+
+	svg {
+		display: none;
+		position: absolute;
+		right: 4px;
+		top: 8px;
+		width: ${width.iconMedium}px;
+		height: ${height.iconMedium}px;
+		fill: ${select.textUserInput};
+	}
+`
+
 export const select = ({
 	select,
 }: { select: SelectTheme } = selectDefault) => css`
+	@supports (appearance: none) {
+		appearance: none;
+
+		& ~ svg {
+			display: block;
+		}
+	}
+
+	color: ${select.textUserInput};
 	box-sizing: border-box;
 	height: ${height.inputMedium}px;
 	width: 100%;
 	${textSans.medium({ lineHeight: "regular" })};
-	color: ${select.textUserInput};
 	background-color: ${select.backgroundInput};
 	border: 2px solid ${select.border};
 	padding: 0 ${space[2]}px;
