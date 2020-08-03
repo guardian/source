@@ -48,6 +48,7 @@ export const selectWrapper = ({
 		width: ${width.iconMedium}px;
 		height: ${height.iconMedium}px;
 		fill: ${select.textUserInput};
+		pointer-events: none;
 	}
 `
 
