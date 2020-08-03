@@ -43,8 +43,8 @@ export const selectWrapper = ({
 	svg {
 		display: none;
 		position: absolute;
-		right: 4px;
-		top: 8px;
+		right: ${space[3]}px;
+		top: ${space[2]}px;
 		width: ${width.iconMedium}px;
 		height: ${height.iconMedium}px;
 		fill: ${select.textUserInput};
