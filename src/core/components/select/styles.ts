@@ -43,25 +43,18 @@ export const selectWrapper = ({
 	svg {
 		display: none;
 		position: absolute;
-		right: 4px;
-		top: 8px;
+		right: ${space[3]}px;
+		top: ${space[2]}px;
 		width: ${width.iconMedium}px;
 		height: ${height.iconMedium}px;
 		fill: ${select.textUserInput};
+		pointer-events: none;
 	}
 `
 
 export const select = ({
 	select,
 }: { select: SelectTheme } = selectDefault) => css`
-	@supports (appearance: none) {
-		appearance: none;
-
-		& ~ svg {
-			display: block;
-		}
-	}
-
 	color: ${select.textUserInput};
 	box-sizing: border-box;
 	height: ${height.inputMedium}px;
@@ -69,7 +62,16 @@ export const select = ({
 	${textSans.medium({ lineHeight: "regular" })};
 	background-color: ${select.backgroundInput};
 	border: 2px solid ${select.border};
-	padding: 0 ${space[2]}px;
+	padding-left: ${space[2]}px;
+
+	@supports (appearance: none) {
+		appearance: none;
+		padding-right: ${space[2]}px;
+
+		& ~ svg {
+			display: block;
+		}
+	}
 
 	&:active {
 		border: 2px solid ${select.borderActive};
