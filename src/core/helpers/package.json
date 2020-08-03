@@ -1,6 +1,7 @@
 {
 	"name": "@guardian/src-helpers",
 	"version": "2.1.0-rc.0",
+	"license": "Apache-2.0",
 	"main": "dist/helpers.js",
 	"module": "dist/helpers.esm.js",
 	"types": "index.d.ts",

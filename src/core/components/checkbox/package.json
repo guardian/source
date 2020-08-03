@@ -1,6 +1,7 @@
 {
 	"name": "@guardian/src-checkbox",
 	"version": "2.1.0-rc.0",
+	"license": "Apache-2.0",
 	"main": "dist/checkbox.js",
 	"module": "dist/checkbox.esm.js",
 	"repository": {

@@ -1,6 +1,7 @@
 {
 	"name": "@guardian/src-radio",
 	"version": "2.1.0-rc.0",
+	"license": "Apache-2.0",
 	"main": "dist/radio.js",
 	"module": "dist/radio.esm.js",
 	"repository": {

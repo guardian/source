@@ -1,6 +1,7 @@
 {
 	"name": "@guardian/src-ed-lines",
 	"version": "2.1.0-rc.0",
+	"license": "Apache-2.0",
 	"main": "dist/lines.js",
 	"module": "dist/lines.esm.js",
 	"repository": {

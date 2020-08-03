@@ -1,6 +1,7 @@
 {
 	"name": "@guardian/src-link",
 	"version": "2.1.0-rc.0",
+	"license": "Apache-2.0",
 	"main": "dist/link.js",
 	"module": "dist/link.esm.js",
 	"repository": {

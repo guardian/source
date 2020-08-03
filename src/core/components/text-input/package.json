@@ -1,6 +1,7 @@
 {
 	"name": "@guardian/src-text-input",
 	"version": "2.1.0-rc.0",
+	"license": "Apache-2.0",
 	"main": "dist/text-input.js",
 	"module": "dist/text-input.esm.js",
 	"repository": {
