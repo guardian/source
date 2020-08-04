@@ -10,6 +10,58 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 4 August 2020
+
+**`@guardian/src-button 2.1.0`**
+
+-   :robot: [ccf1b63](https://github.com/guardian/source/commit/ccf1b63b1b8c66ea4e263a323b8931af0f2e98f8) make button props more explicit
+
+**`@guardian/src-checkbox 2.1.0`**
+
+-   :robot: [81c1323](https://github.com/guardian/source/commit/81c13230fd54702f7e431937dcf0be0cdc26a103) make checkbox props more explicit
+
+**`@guardian/src-choice-card 2.1.0`**
+
+-   :robot: [91c5a09](https://github.com/guardian/source/commit/91c5a09ea38df8b8ca219a483038f4a5e3791af1) make choice card props more explicit
+
+**`@guardian/src-grid 2.1.0`**
+
+-   :robot: [dab776a](https://github.com/guardian/source/commit/dab776af1e0bbce442f85ecb944d5dbcc62b5fc3) make grid props more explicit
+
+**`@guardian/src-link 2.1.0`**
+
+-   :robot: [73c5d5e](https://github.com/guardian/source/commit/73c5d5e1edc70b6cdbd8068b9742fe1e13ad11a8) make link props more explicit
+-   :bug: [4f68de9](https://github.com/guardian/source/commit/4f68de99d7bf6326d20a95a6281b55b869560f17) ensure links sit inline with surrounding text
+-   :sparkles: [75904c7](https://github.com/guardian/source/commit/75904c7a93abbb72277df54719275c6bf9ea22f7) add ButtonLink component
+-   :robot: [6fa31df](https://github.com/guardian/source/commit/6fa31df5f05e8542568ddacbb4bab6ce6151c821) refactor stories into separate modules
+
+**`@guardian/src-radio 2.1.0`**
+
+-   :robot: [6b05286](https://github.com/guardian/source/commit/6b0528613e31358ae4b6d65e4fc064b378fd6487) make radio props more explicit
+
+**`@guardian/src-select 2.1.0`**
+
+-   :robot: [3ba6d6e](https://github.com/guardian/source/commit/3ba6d6e57d6ea1257c0bbbfa724204b9b594739f) make select props more explicit
+-   :nail_care: [de9cfa8](https://github.com/guardian/source/commit/de9cfa8bbab32542e08dec8f525ce6cba754c6b9) apply custom arrow styling
+-   :robot: [951b836](https://github.com/guardian/source/commit/951b8364a9775a6d7feb2a60b263f46b8621974f) refactor stories into separate modules
+-   :page_with_curl: [0291d30](https://github.com/guardian/source/commit/0291d305a71bc4244f9b53a4970c635dc6741442) add controlled example story
+-   :nail_care: [81dc050](https://github.com/guardian/source/commit/81dc0505d6e35a3bed0ca1253a252c863c6a946f) add more space to the right of the chevron
+-   :bug: [d5bd2e7](https://github.com/guardian/source/commit/d5bd2e78704ed955aeff5b4227002e8e872db87f) ensure user can click through chevron to open select
+-   :bug: [097fe00](https://github.com/guardian/source/commit/097fe006978c736755d4d1eb9647cc54397fa49b) only add right padding on modern browsers
+
+**`@guardian/src-text-area 2.1.0`**
+
+-   :robot: [1be8871](https://github.com/guardian/source/commit/1be8871256b2678fedfd4b4b5ac954e6eab96cf7) make text area props more explicit
+
+**`@guardian/src-text-input 2.1.0`**
+
+-   :robot: [faf5e53](https://github.com/guardian/source/commit/faf5e53d268ddd63c05da39fda515b95ec158da9) make text input props more explicit
+-   :robot: [6911b00](https://github.com/guardian/source/commit/6911b005ccbe59a0079690150360f86f89f33adf) amend inaccurate comment
+
+**`@guardian/src-user-feedback 2.1.0`**
+
+-   :robot: [52baa3e](https://github.com/guardian/source/commit/52baa3ebe3db876be64661a674e4c739792a4fbe) make user feedback props more explicit
+
 ## 23 July 2020
 
 **`@guardian/src-button 2.0.0`**
