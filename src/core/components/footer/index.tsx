@@ -2,6 +2,7 @@ import React, { HTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { footer, copyright } from "./styles"
 import { Props } from "@guardian/src-helpers"
+export { footerBrand } from "@guardian/src-foundations/themes"
 
 interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
 	cssOverrides?: SerializedStyles | SerializedStyles[]
