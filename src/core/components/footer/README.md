@@ -13,8 +13,16 @@ $ yarn add @guardian/src-footer
 ```js
 import { Footer } from "@guardian/src-footer"
 
-const Wrapper = () => <Footer />
+const Wrapper = () => <Footer showBackToTop={true} />
 ```
+
+## `Footer` Props
+
+### `showBackToTop`
+
+**`boolean`** _= false_
+
+Whether the "Back to top" link is visible in the footer
 
 ## Supported themes
 
