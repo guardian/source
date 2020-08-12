@@ -12,3 +12,27 @@ defaultBlue.story = {
 		],
 	},
 }
+
+export const defaultBlueTablet = () => <Footer />
+
+defaultBlueTablet.story = {
+	name: "default blue tablet",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
+		],
+		viewport: { defaultViewport: "tablet" },
+	},
+}
+
+export const defaultBlueMobile = () => <Footer />
+
+defaultBlueMobile.story = {
+	name: "default blue mobile",
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
+		],
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
