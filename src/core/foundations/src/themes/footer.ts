@@ -8,6 +8,7 @@ export type FooterTheme = {
 	border: string
 	background: string
 	text: string
+	anchor: string
 }
 
 export const footerBrand: {
@@ -17,5 +18,6 @@ export const footerBrand: {
 		border: brandBorder.primary,
 		background: brandBackground.primary,
 		text: brandText.primary,
+		anchor: brandText.anchorPrimary,
 	},
 }
