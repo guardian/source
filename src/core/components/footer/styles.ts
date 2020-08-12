@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import { footerBrand, FooterTheme } from "@guardian/src-foundations/themes"
-import { from } from "@guardian/src-foundations/mq"
+import { from, between } from "@guardian/src-foundations/mq"
 import { space } from "@guardian/src-foundations"
 import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
@@ -41,6 +41,13 @@ export const copyright = css`
 	}
 `
 
+// ensure copyright text doesn't get too close to back to top link
+export const copyrightExtraPadding = css`
+	${between.mobile.and.tablet} {
+		padding-right: ${height.ctaMedium}px;
+	}
+`
+
 export const backToTop = ({
 	footer,
 }: { footer: FooterTheme } = footerBrand) => css`
@@ -50,7 +57,7 @@ export const backToTop = ({
 	position: absolute;
 	top: -${height.ctaMedium / 2}px;
 	right: 0;
-	padding: 0 ${space[2]}px;
+	padding-left: ${space[2]}px;
 
 	${textSans.medium({ fontWeight: "bold" })};
 	color: ${footer.text};

@@ -15,4 +15,6 @@ export default {
 	title: "Footer",
 	decorators: [footerStoryWrapper],
 }
+
 export * from "./stories/default"
+export * from "./stories/back-to-top"

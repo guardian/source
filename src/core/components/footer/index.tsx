@@ -1,11 +1,19 @@
 import React, { HTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
-import { footer, copyright, links, backToTop, backToTopIcon } from "./styles"
+import {
+	footer,
+	copyright,
+	copyrightExtraPadding,
+	links,
+	backToTop,
+	backToTopIcon,
+} from "./styles"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronUpSingle } from "@guardian/src-icons"
 export { footerBrand } from "@guardian/src-foundations/themes"
 
 interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
+	showBackToTop: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
@@ -18,16 +26,18 @@ const backToTopLink = (
 	</a>
 )
 
-const Footer = ({ cssOverrides, ...props }: FooterProps) => {
+const Footer = ({ showBackToTop, cssOverrides, ...props }: FooterProps) => {
 	return (
 		<footer
 			css={(theme) => [footer(theme.footer && theme), cssOverrides]}
 			{...props}
 		>
 			<div css={(theme) => links(theme.footer && theme)}>
-				{backToTopLink}
+				{showBackToTop ? backToTopLink : ""}
 			</div>
-			<small css={copyright}>
+			<small
+				css={[copyright, showBackToTop ? copyrightExtraPadding : ""]}
+			>
 				&copy; 2020 Guardian News and Media Limited or its affiliated
 				companies. All rights reserved.
 			</small>
@@ -35,7 +45,7 @@ const Footer = ({ cssOverrides, ...props }: FooterProps) => {
 	)
 }
 
-const defaultProps = {}
+const defaultProps = { showBackToTop: false }
 
 Footer.defaultProps = { ...defaultProps }
 
