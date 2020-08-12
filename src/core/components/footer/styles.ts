@@ -1,9 +1,10 @@
 import { css } from "@emotion/core"
+import { space } from "@guardian/src-foundations"
 import { footerBrand, FooterTheme } from "@guardian/src-foundations/themes"
 import { from, between } from "@guardian/src-foundations/mq"
-import { space } from "@guardian/src-foundations"
 import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
+import { focusHalo } from "@guardian/src-foundations/accessibility"
 
 export const footer = ({
 	footer,
@@ -60,9 +61,17 @@ export const backToTop = ({
 	padding-left: ${space[2]}px;
 
 	${textSans.medium({ fontWeight: "bold" })};
-	color: ${footer.text};
+	color: ${footer.anchor};
 	background-color: ${footer.background};
 	text-decoration: none;
+
+	& :hover {
+		color: ${footer.anchorHover};
+	}
+
+	& :focus {
+		${focusHalo};
+	}
 `
 
 export const backToTopIcon = ({
@@ -74,7 +83,7 @@ export const backToTopIcon = ({
 	align-items: center;
 	justify-content: center;
 	border-radius: ${height.ctaMedium}px;
-	background: ${footer.anchor};
+	background: currentColor;
 	margin-left: ${space[2]}px;
 
 	svg {
