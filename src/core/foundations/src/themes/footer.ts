@@ -9,6 +9,7 @@ export type FooterTheme = {
 	background: string
 	text: string
 	anchor: string
+	anchorHover: string
 }
 
 export const footerBrand: {
@@ -19,5 +20,6 @@ export const footerBrand: {
 		background: brandBackground.primary,
 		text: brandText.primary,
 		anchor: brandText.anchorPrimary,
+		anchorHover: brandText.anchorPrimaryHover,
 	},
 }

@@ -1,4 +1,10 @@
-import { neutral, success as _success, error as _error, brand } from "../global"
+import {
+	neutral,
+	success as _success,
+	error as _error,
+	brand,
+	brandAlt,
+} from "../global"
 
 export const brandText = {
 	primary: neutral[100],
@@ -9,6 +15,7 @@ export const brandText = {
 	ctaSecondary: neutral[100],
 	ctaTertiary: neutral[100],
 	anchorPrimary: neutral[100],
+	anchorPrimaryHover: brandAlt[400],
 	userInput: neutral[100],
 	inputLabel: neutral[100],
 	inputLabelSupporting: brand[800],
