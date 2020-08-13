@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react"
+import React, { HTMLAttributes, ReactNode } from "react"
 import { SerializedStyles } from "@emotion/core"
 import {
 	footer,
@@ -14,6 +14,7 @@ export { footerBrand } from "@guardian/src-foundations/themes"
 
 interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
 	showBackToTop: boolean
+	children?: ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
@@ -26,13 +27,19 @@ const backToTopLink = (
 	</a>
 )
 
-const Footer = ({ showBackToTop, cssOverrides, ...props }: FooterProps) => {
+const Footer = ({
+	showBackToTop,
+	children,
+	cssOverrides,
+	...props
+}: FooterProps) => {
 	return (
 		<footer
 			css={(theme) => [footer(theme.footer && theme), cssOverrides]}
 			{...props}
 		>
 			<div css={(theme) => links(theme.footer && theme)}>
+				{children}
 				{showBackToTop ? backToTopLink : ""}
 			</div>
 			<small

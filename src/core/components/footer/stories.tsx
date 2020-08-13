@@ -16,5 +16,6 @@ export default {
 	decorators: [footerStoryWrapper],
 }
 
-export * from "./stories/default"
 export * from "./stories/back-to-top"
+export * from "./stories/default"
+export * from "./stories/with-children"
