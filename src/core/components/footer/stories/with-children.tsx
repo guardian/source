@@ -16,7 +16,7 @@ const container = css`
 `
 
 const para = css`
-	${textSans.medium({ lineHeight: "tight" })};
+	${textSans.small({ lineHeight: "tight" })};
 	max-width: 58.75rem;
 
 	${from.desktop} {
@@ -54,7 +54,7 @@ const li = css`
 `
 
 const anchor = css`
-	${textSans.medium({ lineHeight: "regular" })};
+	${textSans.small({ lineHeight: "regular" })};
 	color: ${brandText.anchorPrimary};
 	text-decoration: none;
 

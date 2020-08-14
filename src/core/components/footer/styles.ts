@@ -35,7 +35,7 @@ export const links = ({ footer }: { footer: FooterTheme } = footerBrand) => css`
 export const copyright = css`
 	${textSans.xsmall()};
 	display: block;
-	margin-top: ${space[5]}px;
+	margin-top: ${space[6]}px;
 
 	${from.desktop} {
 		margin-top: ${space[1]}px;
@@ -60,7 +60,7 @@ export const backToTop = ({
 	right: 0;
 	padding-left: ${space[2]}px;
 
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.small({ fontWeight: "bold" })};
 	color: ${footer.anchor};
 	background-color: ${footer.background};
 	text-decoration: none;
