@@ -10,6 +10,32 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 19 August 2020
+
+**`@guardian/src-checkbox 2.2.0`**
+
+-   :bug: [720a624](https://github.com/guardian/source/commit/720a624ed9fef1d893122611770c2178b8803779) remove z-index from checkbox
+
+**`@guardian/src-footer 2.2.0`**
+
+-   :sparkles: [d140b74](https://github.com/guardian/source/commit/d140b74fc086cbd9ae7a45e1992b7b3fea2b6ea7) add footer component with standard copyright notice
+-   :robot: [77e5dc5](https://github.com/guardian/source/commit/77e5dc50306af073234f47e687499df8befc3975) make stories use brand background
+-   :sparkles: [9e43139](https://github.com/guardian/source/commit/9e4313953ad066a31fe4b091fdc7af966f2ca5ef) add back to top button
+-   :sparkles: [202b697](https://github.com/guardian/source/commit/202b697274a30c63ddbe9d02f70ec990eb1bd5e6) implement back to top prop
+-   :sparkles: [f4efe0d](https://github.com/guardian/source/commit/f4efe0dd4710109514d0477bdee0fb209d77f014) apply hover and focus styling for back to top
+-   :sparkles: [4d2d608](https://github.com/guardian/source/commit/4d2d6089af6423ad60cf19d1849608fd9fda040c) add support for children in footer
+-   :nail_care: [3846394](https://github.com/guardian/source/commit/3846394f8d2b425a9ae0b40f79ec217a1b340e48) implement spacing and text size improvements
+
+**`@guardian/src-foundations 2.2.0`**
+
+-   :robot: [ed35dd0](https://github.com/guardian/source/commit/ed35dd04b3e6916b990d94cd1956ad9434e36cd3) deprecate dynamo-400
+-   :sparkles: [22ddcfd](https://github.com/guardian/source/commit/22ddcfd5d33c4270cca93d988b1129307444ed04) add basic footer theme
+-   :sparkles: [8aae99a](https://github.com/guardian/source/commit/8aae99afd4242810a747e98b1598c5b4fccaba86) add brand text primary colour to footer theme
+-   :sparkles: [013f2b6](https://github.com/guardian/source/commit/013f2b697814781f2dd5100afe401e16900c8d2c) add anchor hover colour for footer links
+-   :nail_care: [63a8856](https://github.com/guardian/source/commit/63a88561c49f8803a23ef395c35a1b052013a967) update brand border primary to brand-600
+-   :globe_with_meridians: [87c6322](https://github.com/guardian/source/commit/87c63227f8e12d48c37afb5b541cd25b8bb25ae3) make opinion.300 more accessible
+-   :bug: [fce58cb](https://github.com/guardian/source/commit/fce58cbeb5cd7d41acb9e352d78281b7015e2f00) remove z-index when focus halo is applied
+
 ## 4 August 2020
 
 **`@guardian/src-button 2.1.0`**
