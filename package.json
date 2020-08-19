@@ -54,7 +54,7 @@
 		"@storybook/addon-backgrounds": "^5.3.19",
 		"@storybook/addon-viewport": "^5.3.19",
 		"@storybook/react": "^5.3.18",
-		"@types/jest": "^26.0.9",
+		"@types/jest": "^26.0.10",
 		"@types/react": "^16.9.2",
 		"@types/storybook__react": "^5.2.1",
 		"@typescript-eslint/eslint-plugin": "^3.7.1",
