@@ -44,7 +44,6 @@ export const checkbox = ({
 	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
-	z-index: 1;
 	cursor: pointer;
 	width: ${width.inputXsmall}px;
 	height: ${height.inputXsmall}px;
