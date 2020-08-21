@@ -4,6 +4,7 @@ export * from "./checkbox"
 export * from "./choice-card"
 export * from "./footer"
 export * from "./inline-error"
+export * from "./label"
 export * from "./link"
 export * from "./radio"
 export * from "./select"
@@ -15,6 +16,7 @@ import { checkboxBrand, checkboxDefault } from "./checkbox"
 import { choiceCardDefault } from "./choice-card"
 import { footerBrand } from "./footer"
 import { inlineErrorBrand, inlineErrorDefault } from "./inline-error"
+import { labelDefault } from "./label"
 import { linkBrand, linkDefault, linkBrandAlt } from "./link"
 import { radioBrand, radioDefault } from "./radio"
 import { textInputDefault } from "./text-input"
@@ -25,6 +27,7 @@ export const defaultTheme = {
 	...checkboxDefault,
 	...choiceCardDefault,
 	...inlineErrorDefault,
+	...labelDefault,
 	...linkDefault,
 	...radioDefault,
 	...textInputDefault,
