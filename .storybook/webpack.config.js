@@ -16,6 +16,14 @@ module.exports = ({ config, mode }) => {
 	config.resolve.extensions.push(".ts", ".tsx")
 	config.resolve.alias = {
 		"@guardian/src-foundations": "@guardian/src-foundations/src",
+		"@guardian/src-label": path.resolve(
+			__dirname,
+			"../src/core/components/label",
+		),
+		"@guardian/src-user-feedback": path.resolve(
+			__dirname,
+			"../src/core/components/user-feedback",
+		),
 	}
 
 	return config
