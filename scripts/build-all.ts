@@ -17,11 +17,12 @@ const prioritisedPackages = [
 	icons,
 	brand,
 	`${coreComponents}/user-feedback`,
+	`${coreComponents}/label`,
 ]
 
 // Build these packages in parallel
-const otherPackages = getComponentPaths().then(paths =>
-	paths.filter(path => {
+const otherPackages = getComponentPaths().then((paths) =>
+	paths.filter((path) => {
 		if (!path) return false
 
 		return !prioritisedPackages.includes(path)
@@ -33,7 +34,7 @@ prioritisedPackages
 		(prev, curr) =>
 			prev
 				.then(() => build(curr))
-				.catch(err =>
+				.catch((err) =>
 					Promise.reject(
 						`Error building prioritised package: ${err}`,
 					),
@@ -41,14 +42,14 @@ prioritisedPackages
 		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
 	)
 	.then(() =>
-		otherPackages.then(packages =>
+		otherPackages.then((packages) =>
 			Promise.all(
-				packages.map(dir => {
+				packages.map((dir) => {
 					if (!dir) return
 
 					return build(dir)
 				}),
-			).catch(err =>
+			).catch((err) =>
 				Promise.reject(`Error building other packages: ${err}`),
 			),
 		),

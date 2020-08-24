@@ -22,11 +22,12 @@ const prioritisedPackages = [
 	icons,
 	brand,
 	`${coreComponents}/user-feedback`,
+	`${coreComponents}/label`,
 ]
 
 // Publish these packages in parallel
-const otherPackages = getComponentPaths().then(paths =>
-	paths.filter(path => {
+const otherPackages = getComponentPaths().then((paths) =>
+	paths.filter((path) => {
 		if (!path) return false
 
 		return !prioritisedPackages.includes(path)
@@ -38,7 +39,7 @@ prioritisedPackages
 		(prev, curr) =>
 			prev
 				.then(() => publish(curr))
-				.catch(err =>
+				.catch((err) =>
 					Promise.reject(
 						`Error publishing prioritised package: ${err}`,
 					),
@@ -46,19 +47,19 @@ prioritisedPackages
 		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
 	)
 	.then(() =>
-		otherPackages.then(packages =>
+		otherPackages.then((packages) =>
 			Promise.all(
-				packages.map(dir => {
+				packages.map((dir) => {
 					if (!dir) return
 
 					return publish(dir)
 				}),
-			).catch(err =>
+			).catch((err) =>
 				Promise.reject(`Error publishing other packages: ${err}`),
 			),
 		),
 	)
-	.catch(err => {
+	.catch((err) => {
 		console.log("***PUBLISH FAILED***\n", err)
 
 		process.exit(1)

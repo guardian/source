@@ -16,6 +16,7 @@
 				"core/foundations/src/typography"
 			],
 			"@guardian/src-foundations/utils": ["core/foundations/src/utils"],
+			"@guardian/src-label": ["core/components/label"],
 			"@guardian/src-user-feedback": ["core/components/user-feedback"],
 			"@guardian/src-helpers": ["core/helpers"],
 			"@guardian/src-icons": ["core/icons"]
