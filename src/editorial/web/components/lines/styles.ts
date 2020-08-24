@@ -38,6 +38,6 @@ export const squigglyLines = css`
 
 export const dottedLines = css`
 	background-image: url(${dottedImage});
-	background-size: 10px; /* magic number that scales the svg perfectly */
-	height: calc(${lineGap} * 3 + 1px);
+	background-size: 3px; /* magic number that scales the svg perfectly */
+	height: calc(${lineGap} * 3);
 `
