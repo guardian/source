@@ -31,9 +31,8 @@ export const eightLines = css`
 export const squigglyLines = css`
 	background-image: url(${squigglyImage});
 	background-repeat: repeat-x;
-	background-size: 199px; /* magic number that scales the svg perfectly */
 	background-position: top;
-	height: calc(${lineGap} * 3 + 1px);
+	height: calc(${lineGap} * 3 + 3px);
 `
 
 export const dottedLines = css`
