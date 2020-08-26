@@ -1,6 +1,7 @@
 import React, { ReactNode, LabelHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
+import { descriptionId } from "@guardian/src-foundations/accessibility"
 import { labelText, optionalText, supportingText } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
@@ -30,6 +31,7 @@ const Label = ({
 	success,
 	optional,
 	as,
+	htmlFor,
 	cssOverrides,
 	children,
 }: LabelProps) => {
@@ -48,8 +50,16 @@ const Label = ({
 				)}
 			</span>
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
-			{error && <InlineError>{error}</InlineError>}
-			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
+			{error && (
+				<InlineError id={htmlFor ? descriptionId(htmlFor) : ""}>
+					{error}
+				</InlineError>
+			)}
+			{!error && success && (
+				<InlineSuccess id={htmlFor ? descriptionId(htmlFor) : ""}>
+					{success}
+				</InlineSuccess>
+			)}
 			{children}
 		</>
 	)
@@ -58,7 +68,11 @@ const Label = ({
 		return <legend css={cssOverrides}>{contents}</legend>
 	}
 
-	return <label css={cssOverrides}>{contents}</label>
+	return (
+		<label css={cssOverrides} htmlFor={htmlFor}>
+			{contents}
+		</label>
+	)
 }
 
 const defaultProps = { optional: false, as: "label" }
