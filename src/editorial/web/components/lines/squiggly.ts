@@ -7,7 +7,7 @@ const squigglySvg = encodeURIComponent(`
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 >
 	<g stroke-width="1" stroke="${border.secondary}" fill="none">
-		<path id="squiggle" d=" M 0 1 q 1.5 0 3 1.5 t 3 1.5 t 3 -1.5 t 3 -1.5" />
+		<path id="squiggle" d=" M 0 0.5 q 1.5 0 3 1.5 t 3 1.5 t 3 -1.5 t 3 -1.5" />
 		<use y="3" xlink:href="#squiggle" />
 		<use y="6" xlink:href="#squiggle" />
 		<use y="9" xlink:href="#squiggle" />

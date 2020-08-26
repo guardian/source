@@ -31,7 +31,7 @@ export const eightLines = css`
 export const squigglyLines = css`
 	background-image: url(${squigglyImage});
 	background-repeat: repeat-x;
-	background-position: top;
+	background-position: left;
 	height: calc(${lineGap} * 3 + 3px);
 `
 
