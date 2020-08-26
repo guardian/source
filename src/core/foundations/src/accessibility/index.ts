@@ -16,4 +16,6 @@ const focusHalo = `
 	}
 `
 
-export { visuallyHidden, focusHalo }
+const descriptionId = (id: string) => `${id}_description`
+
+export { visuallyHidden, focusHalo, descriptionId }

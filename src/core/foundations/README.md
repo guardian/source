@@ -85,8 +85,7 @@ const label = css`
 
 ### [Focus Halo](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/24562a)
 
-This mixin provides a [clear focus state](https://zeroheight.com/2a1e5182b/p/08dc26/t/314e46) for
-elements that may receive keyboard focus.
+This mixin provides a [clear focus state](https://theguardian.design/2a1e5182b/p/08dc26-interaction-states/t/314e46) for elements that may receive keyboard focus.
 
 ```ts
 import { focusHalo } from "@guardian/src-foundations/accessibility"
@@ -96,4 +95,24 @@ const input = css`
     width: 200px;
     height: 44px;
 `
+```
+
+### [Description Id](https://theguardian.design/2a1e5182b/p/6691bb-accessibility/t/062b61)
+
+A function that takes the ID of an element and generates a new ID. This should be set as the
+ID of an element that describes the first element. The generated ID should also be passed to
+the [`aria-describedby`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) attribute on the first element.
+
+```tsx
+import { descriptionId } from "@guardian/src-foundations/accessibility"
+
+const Form = () => {
+    const id = "first_name"
+    return (
+        <form>
+            <input id={id} type="text" aria-describedby={descriptionId(id)} />
+            <p class="error" id={descriptionId(id)} />
+        </form>
+    )
+}
 ```
