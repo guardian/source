@@ -16,7 +16,7 @@ import { checkboxBrand, checkboxDefault } from "./checkbox"
 import { choiceCardDefault } from "./choice-card"
 import { footerBrand } from "./footer"
 import { inlineErrorBrand, inlineErrorDefault } from "./inline-error"
-import { labelDefault } from "./label"
+import { labelDefault, labelBrand } from "./label"
 import { linkBrand, linkDefault, linkBrandAlt } from "./link"
 import { radioBrand, radioDefault } from "./radio"
 import { textInputDefault } from "./text-input"
@@ -39,6 +39,7 @@ export const brand = {
 	...checkboxBrand,
 	...footerBrand,
 	...inlineErrorBrand,
+	...labelBrand,
 	...linkBrand,
 	...radioBrand,
 	...userFeedbackBrand,
