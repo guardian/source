@@ -1,5 +1,9 @@
-import { text } from "@guardian/src-foundations/palette"
-import { userFeedbackDefault, UserFeedbackTheme } from "./user-feedback"
+import { text, brandText } from "@guardian/src-foundations/palette"
+import {
+	userFeedbackDefault,
+	userFeedbackBrand,
+	UserFeedbackTheme,
+} from "./user-feedback"
 
 export type LabelTheme = {
 	textLabel: string
@@ -21,4 +25,18 @@ export const labelDefault: {
 		textSuccess: text.success,
 	},
 	...userFeedbackDefault,
+}
+
+export const labelBrand: {
+	label: LabelTheme
+	userFeedback: UserFeedbackTheme
+} = {
+	label: {
+		textLabel: brandText.inputLabel,
+		textOptional: brandText.supporting,
+		textSupporting: brandText.supporting,
+		textError: brandText.error,
+		textSuccess: brandText.success,
+	},
+	...userFeedbackBrand,
 }
