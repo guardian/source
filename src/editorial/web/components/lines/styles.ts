@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { squigglyImage } from "./squiggly"
+import { squigglyImage, height as squigglyImageHeight } from "./squiggly"
 import { dottedImage } from "./dotted"
 import { border } from "@guardian/src-foundations/palette"
 import { remSpace } from "@guardian/src-foundations"
@@ -32,7 +32,7 @@ export const squigglyLines = css`
 	background-image: url(${squigglyImage});
 	background-repeat: repeat-x;
 	background-position: left;
-	height: calc(${lineGap} * 3 + 3px);
+	height: ${squigglyImageHeight}px;
 `
 
 export const dottedLines = css`
