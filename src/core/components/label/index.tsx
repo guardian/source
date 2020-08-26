@@ -1,14 +1,15 @@
-import React, { ReactNode, HTMLAttributes } from "react"
+import React, { ReactNode, LabelHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import { labelText, optionalText, supportingText } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
-interface LabelProps extends HTMLAttributes<HTMLDivElement>, Props {
+interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	text: string
 	supporting?: string
 	error?: string
 	success?: string
+	as: "label" | "legend"
 	optional: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 	children?: string
@@ -28,12 +29,13 @@ const Label = ({
 	error,
 	success,
 	optional,
+	as,
 	cssOverrides,
 	children,
 }: LabelProps) => {
-	return (
-		<label css={cssOverrides}>
-			<div css={(theme) => labelText(theme.textInput && theme)}>
+	const contents = (
+		<>
+			<span css={(theme) => labelText(theme.textInput && theme)}>
 				{text}{" "}
 				{optional ? (
 					<span
@@ -44,16 +46,22 @@ const Label = ({
 				) : (
 					""
 				)}
-			</div>
+			</span>
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{error && <InlineError>{error}</InlineError>}
 			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
 			{children}
-		</label>
+		</>
 	)
+
+	if (as === "legend") {
+		return <legend css={cssOverrides}>{contents}</legend>
+	}
+
+	return <label css={cssOverrides}>{contents}</label>
 }
 
-const defaultProps = { optional: false }
+const defaultProps = { optional: false, as: "label" }
 
 Label.defaultProps = { ...defaultProps }
 
