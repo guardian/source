@@ -7,6 +7,8 @@ export default {
 
 export * from "./stories/default"
 export * from "./stories/error"
+export * from "./stories/legend"
 export * from "./stories/optional"
+export * from "./stories/optional-error"
 export * from "./stories/success"
 export * from "./stories/supporting"
