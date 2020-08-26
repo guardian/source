@@ -4,6 +4,7 @@ import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import { descriptionId } from "@guardian/src-foundations/accessibility"
 import { labelText, optionalText, supportingText } from "./styles"
 import { Props } from "@guardian/src-helpers"
+export { labelDefault, labelBrand } from "@guardian/src-foundations/themes"
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	text: string
@@ -18,7 +19,7 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={(theme) => supportingText(theme.textInput && theme)}>
+		<div css={(theme) => supportingText(theme.label && theme)}>
 			{children}
 		</div>
 	)
@@ -37,12 +38,10 @@ const Label = ({
 }: LabelProps) => {
 	const contents = (
 		<>
-			<span css={(theme) => labelText(theme.textInput && theme)}>
+			<span css={(theme) => labelText(theme.label && theme)}>
 				{text}{" "}
 				{optional ? (
-					<span
-						css={(theme) => optionalText(theme.textInput && theme)}
-					>
+					<span css={(theme) => optionalText(theme.label && theme)}>
 						Optional
 					</span>
 				) : (
