@@ -40,8 +40,6 @@ Additional text that appears below the label
 
 **`boolean`** _= "false"_
 
-## Supported themes
-
 Adds the word "Optional" after the label.
 
 ### `error`
@@ -63,6 +61,8 @@ value set at the same time as the error prop. In the event that both are set, er
 
 The HTML element that the Label component gets rendered as. By default it is `<label>`, but `<legend>`
 is also available for when labelling a fieldset.
+
+## Supported themes
 
 ### Standard
 
