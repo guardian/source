@@ -18,8 +18,11 @@ const inlineMessage = css`
 		width: ${remWidth.iconMedium}rem;
 		height: ${remHeight.iconMedium}rem;
 
-		/* a visual kick to vertically align the icon with the top row of text */
-		transform: translateY(-3px);
+		/*
+		a visual kick to vertically align the icon with the top row of text
+		and horizontally pull it to the beginning of the row
+		 */
+		transform: translate(-4px, -3px);
 	}
 `
 
