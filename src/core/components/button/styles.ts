@@ -25,7 +25,7 @@ export const button = css`
 export const primary = ({
 	button,
 }: { button: ButtonTheme } = buttonDefault) => css`
-	background-color: ${button.backgroundPrimary};
+	background-color: red;
 	color: ${button.textPrimary};
 
 	&:hover {
