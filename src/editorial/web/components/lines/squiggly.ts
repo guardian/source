@@ -1,16 +1,17 @@
 import { border } from "@guardian/src-foundations/palette"
 
-const wavelength = 12
+const wavelength = 16
 const amplitude = 3
 const thickness = 1
 const count = 4
 const gap = 3
+const squiggliness = wavelength / 8
 
 export const height = gap * count + thickness
 
 const d = [
 	`M 0 ${thickness / 2}`,
-	`q 1.5 0 ${wavelength / 4} ${amplitude / 2}`,
+	`q ${squiggliness} 0 ${wavelength / 4} ${amplitude / 2}`,
 	`t ${wavelength / 4} ${amplitude / 2}`,
 	`t ${wavelength / 4} -${amplitude / 2}`,
 	`t ${wavelength / 4} -${amplitude / 2}`,
