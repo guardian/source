@@ -10,26 +10,32 @@ const fieldsetReset = css`
 	margin: 0;
 `
 
-export const defaultLight = () => (
+export const withSupportingTextLight = () => (
 	<fieldset css={fieldsetReset}>
-		<Legend text="Subscribe to our newsletters" />
+		<Legend
+			text="Subscribe to our newsletters"
+			supporting="Select as many as you like"
+		/>
 	</fieldset>
 )
 
-defaultLight.story = {
-	name: "default light",
+withSupportingTextLight.story = {
+	name: `with supporting text light`,
 }
 
-export const defaultBlue = () => (
+export const withSupportingTextBlue = () => (
 	<fieldset css={fieldsetReset}>
 		<ThemeProvider theme={labelBrand}>
-			<Legend text="Subscribe to our newsletters" />
+			<Legend
+				text="Subscribe to our newsletters"
+				supporting="Select as many as you like"
+			/>
 		</ThemeProvider>
 	</fieldset>
 )
 
-defaultBlue.story = {
-	name: "default blue",
+withSupportingTextBlue.story = {
+	name: `with supporting text blue`,
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.brand),
