@@ -10,26 +10,26 @@ const fieldsetReset = css`
 	margin: 0;
 `
 
-export const defaultLight = () => (
+export const optionalLight = () => (
 	<fieldset css={fieldsetReset}>
-		<Legend text="Subscribe to our newsletters" />
+		<Legend text="Subscribe to our newsletters" optional={true} />
 	</fieldset>
 )
 
-defaultLight.story = {
-	name: "default light",
+optionalLight.story = {
+	name: "optional light",
 }
 
-export const defaultBlue = () => (
+export const optionalBlue = () => (
 	<fieldset css={fieldsetReset}>
 		<ThemeProvider theme={labelBrand}>
-			<Legend text="Subscribe to our newsletters" />
+			<Legend text="Subscribe to our newsletters" optional={true} />
 		</ThemeProvider>
 	</fieldset>
 )
 
-defaultBlue.story = {
-	name: "default blue",
+optionalBlue.story = {
+	name: "optional blue",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.brand),
