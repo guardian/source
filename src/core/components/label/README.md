@@ -11,18 +11,32 @@ $ yarn add @guardian/src-label
 ## Use
 
 ```tsx
-import { Label } from "@guardian/src-label"
+import { Label, Legend } from "@guardian/src-label"
 
 const Form = () => (
     <form>
-        <Label text="First name" error="Enter your first name below">
-            <input type="text" />
+        <Label text="Email" supporting="alex@example.com">
+            <input type="email" />
         </Label>
     </form>
 )
+
+const Fieldset = () => (
+    <fieldset>
+        <Legend
+            text="Subscribe to our newsletters"
+            supporting="Select as many as you like"
+            optional={true}
+        />
+        <label>
+            <input type="checkbox" />
+            Guardian Today: UK
+        </label>
+    </fieldset>
+)
 ```
 
-## Props
+## Label and Legend Props
 
 ### `text`
 
@@ -42,28 +56,9 @@ Additional text that appears below the label
 
 Adds the word "Optional" after the label.
 
-### `error`
-
-**`string`**
-
-Appears as an inline error message below the label and supporting text.
-
-### `success`
-
-**`string`**
-
-Appears as an inline error message below the label and supporting text. This prop should not have a
-value set at the same time as the error prop. In the event that both are set, errors take precedence.
-
-### `as`
-
-**`"label" | "legend"`** _="label"_
-
-The HTML element that the Label component gets rendered as. By default it is `<label>`, but `<legend>`
-is also available for when labelling a fieldset.
-
 ## Supported themes
 
 ### Standard
 
 -   `light`
+-   `brand`
