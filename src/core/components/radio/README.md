@@ -18,7 +18,12 @@ const Form = () => {
 
     return (
         <form>
-            <RadioGroup name="consent" orientation="vertical">
+            <RadioGroup
+                name="consent"
+                orientation="vertical"
+                label="Do you accept the terms and conditions?"
+                supporting="The full terms are available on our website"
+            >
                 <Radio
                     value="no"
                     label="No"
@@ -46,6 +51,18 @@ const Form = () => {
 **`string`**
 
 Gets passed as the name attribute for each radio button
+
+### `label`
+
+**`string`**
+
+Appears as a legend at the top of the radio group
+
+### `supporting`
+
+**`string`**
+
+Additional text that appears below the label
 
 ### `orientation`
 

@@ -8,7 +8,11 @@ import { RadioTheme, radioDefault } from "@guardian/src-foundations/themes"
 export const fieldset = css`
 	display: flex;
 	justify-content: flex-start;
+
+	/* Reset user agent styles */
 	border: 0;
+	padding: 0;
+	margin: 0;
 `
 
 export const label = ({ radio }: { radio: RadioTheme } = radioDefault) => css`
