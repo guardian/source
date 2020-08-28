@@ -1,6 +1,8 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
+import { descriptionId } from "@guardian/src-foundations/accessibility"
+import { Legend } from "@guardian/src-label"
 import {
 	fieldset,
 	label,
@@ -22,28 +24,52 @@ export {
 } from "@guardian/src-foundations/themes"
 
 interface CheckboxGroupProps extends Props {
+	// TODO: this is required when an error is passed to correctly set aria-describedby
+	// We should introduce a way of generating element IDs when they are not explicitly passed
+	id?: string
 	name: string
+	label?: string
+	supporting?: string
 	error?: string
 	children: JSX.Element | JSX.Element[]
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 const CheckboxGroup = ({
+	id,
 	name,
+	label,
+	supporting,
 	error,
 	cssOverrides,
 	children,
 	...props
 }: CheckboxGroupProps) => {
+	const legend = label ? <Legend text={label} supporting={supporting} /> : ""
+
+	const message =
+		typeof error === "string" ? (
+			<InlineError id={id ? descriptionId(id) : ""}>{error}</InlineError>
+		) : (
+			""
+		)
+
 	return (
-		<fieldset css={[fieldset, cssOverrides]} {...props}>
-			{typeof error === "string" && <InlineError>{error}</InlineError>}
+		<fieldset css={[fieldset, cssOverrides]} id={id} {...props}>
+			{legend}
+			{message}
 			{React.Children.map(children, (child) => {
 				return React.cloneElement(
 					child,
-					Object.assign(error ? { error: true } : {}, {
-						name,
-					}),
+					Object.assign(
+						error ? { error: true } : {},
+						error && id
+							? { "aria-describedby": descriptionId(id) }
+							: {},
+						{
+							name,
+						},
+					),
 				)
 			})}
 		</fieldset>
@@ -78,9 +104,9 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 }
 
 interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement>, Props {
-	value: string,
-	checked?: boolean,
-	defaultChecked?: boolean,
+	value: string
+	checked?: boolean
+	defaultChecked?: boolean
 	label?: ReactNode
 	supporting?: ReactNode
 	indeterminate: boolean

@@ -7,7 +7,7 @@ import {
 	Checkbox,
 	checkboxDefault,
 	checkboxBrand,
-} from "../index"
+} from "../../index"
 
 /* eslint-disable react/jsx-key */
 const checkboxes = [
@@ -16,9 +16,9 @@ const checkboxes = [
 ]
 /* eslint-enable react/jsx-key */
 
-const defaultLight = () => (
+const legendLight = () => (
 	<ThemeProvider theme={checkboxDefault}>
-		<CheckboxGroup name="emails">
+		<CheckboxGroup name="emails" label="Email newsletters" id="emails">
 			{checkboxes.map((checkbox, index) =>
 				React.cloneElement(checkbox, { key: index }),
 			)}
@@ -26,13 +26,13 @@ const defaultLight = () => (
 	</ThemeProvider>
 )
 
-defaultLight.story = {
-	name: "default light",
+legendLight.story = {
+	name: "legend light",
 }
 
-const defaultBlue = () => (
+const legendBlue = () => (
 	<ThemeProvider theme={checkboxBrand}>
-		<CheckboxGroup name="emails">
+		<CheckboxGroup name="emails" label="Email newsletters" id="emails">
 			{checkboxes.map((checkbox, index) =>
 				React.cloneElement(checkbox, { key: index }),
 			)}
@@ -40,8 +40,8 @@ const defaultBlue = () => (
 	</ThemeProvider>
 )
 
-defaultBlue.story = {
-	name: "default blue",
+legendBlue.story = {
+	name: "legend blue",
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.brand),
@@ -49,4 +49,4 @@ defaultBlue.story = {
 	},
 }
 
-export { defaultLight, defaultBlue }
+export { legendLight, legendBlue }

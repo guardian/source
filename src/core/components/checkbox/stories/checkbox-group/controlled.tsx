@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { CheckboxGroup, Checkbox } from "../index"
+import { CheckboxGroup, Checkbox } from "../../index"
 
 const controlled = () => {
 	const [ukChecked, setUkChecked] = useState(false)

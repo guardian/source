@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
 
-import { Checkbox, checkboxDefault } from "../index"
+import { Checkbox, checkboxDefault } from "../../index"
 
 /* eslint-disable react/jsx-key */
 const checkboxes = [

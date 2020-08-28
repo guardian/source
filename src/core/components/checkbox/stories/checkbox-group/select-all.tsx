@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from "react"
 
-import { CheckboxGroup, Checkbox } from "../index"
+import { CheckboxGroup, Checkbox } from "../../index"
 
 const selectAll = () => {
 	const checkboxData = [
@@ -33,7 +33,7 @@ const selectAll = () => {
 			label={label}
 			value={value}
 			key={`selectable_checkboxes__${value}`}
-			onChange={event => handleCheckboxClick(event, index)}
+			onChange={(event) => handleCheckboxClick(event, index)}
 			checked={checked[index]}
 		/>
 	))
@@ -50,7 +50,7 @@ const selectAll = () => {
 				checked={checkedCount() === selectableCheckboxes.length}
 				value="select-all"
 				label={<strong>Select all</strong>}
-				onChange={event => handleMasterCheckboxClick(event)}
+				onChange={(event) => handleMasterCheckboxClick(event)}
 			/>
 			<CheckboxGroup name="emails">
 				{selectableCheckboxes.map((checkbox, index) => {
