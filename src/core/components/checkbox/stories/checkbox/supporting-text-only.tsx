@@ -8,7 +8,7 @@ import {
 	Checkbox,
 	checkboxDefault,
 	checkboxBrand,
-} from "../index"
+} from "../../index"
 
 /* eslint-disable react/jsx-key */
 const checkboxesWithSupportingTextOnly = [

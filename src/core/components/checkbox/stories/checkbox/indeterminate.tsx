@@ -2,7 +2,7 @@ import React from "react"
 import { ThemeProvider } from "emotion-theming"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 
-import { Checkbox, checkboxDefault, checkboxBrand } from "../index"
+import { Checkbox, checkboxDefault, checkboxBrand } from "../../index"
 
 const indeterminateLight = () => (
 	<ThemeProvider theme={checkboxDefault}>
