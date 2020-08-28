@@ -9,7 +9,7 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	supporting?: string
 	optional: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children?: string
+	children?: ReactNode
 }
 interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	text: string
