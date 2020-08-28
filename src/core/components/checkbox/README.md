@@ -54,11 +54,23 @@ const Form = () => {
 
 Gets passed as the name attribute for each checkbox
 
+### `label`
+
+**`string`**
+
+Appears as a legend at the top of the checkbox group
+
+### `supporting`
+
+**`string`**
+
+Additional text that appears below the label
+
 ### `error`
 
 **`string`**
 
-If passed, error styling should applies to this checkbox group. The string appears as an inline error message.
+If passed, error styling should be applied to this checkbox group. The string appears as an inline error message.
 
 ## `Checkbox` Props
 
