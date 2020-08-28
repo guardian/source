@@ -11,6 +11,7 @@ import {
 	userFeedbackBrand,
 	UserFeedbackTheme,
 } from "./user-feedback"
+import { labelDefault, labelBrand, LabelTheme } from "./label"
 
 export type RadioTheme = {
 	borderHover: string
@@ -24,6 +25,7 @@ export type RadioTheme = {
 export const radioDefault: {
 	radio: RadioTheme
 	userFeedback: UserFeedbackTheme
+	label: LabelTheme
 } = {
 	radio: {
 		borderHover: border.inputHover,
@@ -33,12 +35,14 @@ export const radioDefault: {
 		textLabelSupporting: text.inputLabelSupporting,
 		borderError: border.error,
 	},
+	...labelDefault,
 	...userFeedbackDefault,
 }
 
 export const radioBrand: {
 	radio: RadioTheme
 	userFeedback: UserFeedbackTheme
+	label: LabelTheme
 } = {
 	radio: {
 		borderHover: brandBorder.inputHover,
@@ -48,5 +52,6 @@ export const radioBrand: {
 		textLabelSupporting: brandText.supporting,
 		borderError: brandBorder.error,
 	},
+	...labelBrand,
 	...userFeedbackBrand,
 }

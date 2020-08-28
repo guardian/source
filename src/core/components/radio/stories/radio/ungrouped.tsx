@@ -1,5 +1,5 @@
 import React from "react"
-import { Radio, radioDefault } from "../index"
+import { Radio, radioDefault } from "../../index"
 import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */

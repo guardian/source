@@ -1,6 +1,8 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
+import { Legend } from "@guardian/src-label"
 import { InlineError } from "@guardian/src-user-feedback"
+import { descriptionId } from "@guardian/src-foundations/accessibility"
 import {
 	fieldset,
 	label,
@@ -25,7 +27,10 @@ const orientationStyles = {
 }
 
 interface RadioGroupProps extends Props {
+	id?: string
 	name: string
+	label?: string
+	supporting?: string
 	orientation: Orientation
 	error?: string
 	children: JSX.Element | JSX.Element[]
@@ -33,31 +38,44 @@ interface RadioGroupProps extends Props {
 }
 
 const RadioGroup = ({
+	id,
 	name,
+	label,
+	supporting,
 	orientation,
 	error,
 	cssOverrides,
 	children,
 	...props
 }: RadioGroupProps) => {
-	// TODO: This is currently a div instead of a fieldset due to a Chrome / Safari
-	// bug that prevents flexbox model working on fieldset elements
-	// https://bugs.chromium.org/p/chromium/issues/detail?id=375693
+	const legend = label ? <Legend text={label} supporting={supporting} /> : ""
+	const message = error && (
+		<InlineError id={id ? descriptionId(id) : ""}>{error}</InlineError>
+	)
+
 	return (
-		<div
+		<fieldset
+			id={id}
 			css={[fieldset, orientationStyles[orientation], cssOverrides]}
 			{...props}
 		>
-			{error && <InlineError>{error}</InlineError>}
+			{legend}
+			{message}
 			{React.Children.map(children, (child) => {
 				return React.cloneElement(
 					child,
-					Object.assign(error ? { error: true } : {}, {
-						name,
-					}),
+					Object.assign(
+						error ? { error: true } : {},
+						error && id
+							? { "aria-describedby": descriptionId(id) }
+							: {},
+						{
+							name,
+						},
+					),
 				)
 			})}
-		</div>
+		</fieldset>
 	)
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { RadioGroup, Radio } from "../index"
+import { RadioGroup, Radio } from "../../index"
 
 const controlled = () => {
 	const [selected, setSelected] = useState<string | null>(null)
