@@ -11,6 +11,7 @@ import {
 	userFeedbackBrand,
 	UserFeedbackTheme,
 } from "./user-feedback"
+import { labelDefault, labelBrand, LabelTheme } from "./label"
 
 export type CheckboxTheme = {
 	border: string
@@ -26,6 +27,7 @@ export type CheckboxTheme = {
 export const checkboxDefault: {
 	checkbox: CheckboxTheme
 	userFeedback: UserFeedbackTheme
+	label: LabelTheme
 } = {
 	checkbox: {
 		border: border.input,
@@ -38,6 +40,7 @@ export const checkboxDefault: {
 		textIndeterminate: text.supporting,
 	},
 	...userFeedbackDefault,
+	...labelDefault,
 }
 
 export const checkboxBrand: {
@@ -55,4 +58,5 @@ export const checkboxBrand: {
 		textIndeterminate: brandText.supporting,
 	},
 	...userFeedbackBrand,
+	...labelBrand,
 }
