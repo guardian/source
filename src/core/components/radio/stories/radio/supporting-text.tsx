@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { RadioGroup, Radio, radioDefault, radioBrand } from "../index"
+import { RadioGroup, Radio, radioDefault, radioBrand } from "../../index"
 import { ThemeName } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
 import { RadioTheme, UserFeedbackTheme } from "@guardian/src-foundations/themes"
