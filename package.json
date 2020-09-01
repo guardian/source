@@ -51,7 +51,7 @@
 		"@babel/preset-typescript": "^7.9.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
 		"@emotion/core": "^10.0.27",
-		"@storybook/addon-backgrounds": "^5.3.19",
+		"@storybook/addon-backgrounds": "^6.0.21",
 		"@storybook/addon-viewport": "^5.3.19",
 		"@storybook/react": "^5.3.18",
 		"@types/jest": "^26.0.10",
