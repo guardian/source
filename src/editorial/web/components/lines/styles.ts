@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 import { squigglyImage, height as squigglyImageHeight } from "./squiggly"
 import { dottedImage } from "./dotted"
-import { border } from "@guardian/src-foundations/palette"
+import { line } from "@guardian/src-foundations/palette"
 import { remSpace } from "@guardian/src-foundations"
 
 const lineGap = remSpace[1]
@@ -9,8 +9,8 @@ const lineGap = remSpace[1]
 export const straightLines = css`
 	background-image: repeating-linear-gradient(
 		to bottom,
-		${border.secondary},
-		${border.secondary} 1px,
+		${line.primary},
+		${line.primary} 1px,
 		transparent 1px,
 		transparent ${lineGap}
 	);

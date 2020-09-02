@@ -1,4 +1,4 @@
-import { border } from "@guardian/src-foundations/palette"
+import { line } from "@guardian/src-foundations/palette"
 
 const wavelength = 16
 const amplitude = 3
@@ -24,7 +24,7 @@ const squigglySvg = encodeURIComponent(`
 	viewBox="0 0 ${wavelength} ${height}"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 >
-	<g stroke-width="${thickness}" stroke="${border.secondary}" fill="none">
+	<g stroke-width="${thickness}" stroke="${line.primary}" fill="none">
 		<path id="squiggle" d="${d}" />
 		<use y="${gap * 1}" xlink:href="#squiggle" />
 		<use y="${gap * 2}" xlink:href="#squiggle" />
