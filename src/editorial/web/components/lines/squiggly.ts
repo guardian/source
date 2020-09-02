@@ -1,13 +1,13 @@
 import { line } from "@guardian/src-foundations/palette"
 
 const wavelength = 12
-const amplitude = 2.5
+const amplitude = 3
 const thickness = 1
 const count = 4
 const gap = 3
 const squiggliness = wavelength / 8
 
-export const height = gap * count + thickness
+export const height = thickness + gap * Math.max(count, 1)
 
 const d = [
 	`M 0 ${thickness / 2}`,
@@ -18,6 +18,11 @@ const d = [
 	`t 12 0`,
 ].join(" ")
 
+const repeatedLines = []
+for (let index = 1; index < count; index++) {
+	repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`)
+}
+
 const squigglySvg = encodeURIComponent(`
 <svg
 	xmlns="http://www.w3.org/2000/svg" width="${wavelength}" height="${height}"
@@ -26,9 +31,7 @@ const squigglySvg = encodeURIComponent(`
 >
 	<g stroke-width="${thickness}" stroke="${line.primary}" fill="none">
 		<path id="squiggle" d="${d}" />
-		<use y="${gap * 1}" xlink:href="#squiggle" />
-		<use y="${gap * 2}" xlink:href="#squiggle" />
-		<use y="${gap * 3}" xlink:href="#squiggle" />
+		${repeatedLines.join()}
 	</g>
 </svg>
 `)
