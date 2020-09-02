@@ -1,7 +1,7 @@
 import { line } from "@guardian/src-foundations/palette"
 
-const wavelength = 16
-const amplitude = 3
+const wavelength = 12
+const amplitude = 2.5
 const thickness = 1
 const count = 4
 const gap = 3
