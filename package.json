@@ -36,7 +36,7 @@
 		"release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
 		"release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn publish:release",
 		"release:prerelease:all": "yarn build:all && yarn validate && yarn publish:release",
-		"release:prerelease-bump:all": "yarn build:all && yarn validate && yarn verbump:prerelase:all && yarn publish:release"
+		"release:prerelease-bump:all": "yarn build:all && yarn validate && yarn verbump:prerelease:all && yarn publish:release"
 	},
 	"private": true,
 	"workspaces": [
