@@ -2,7 +2,7 @@ import { line } from "@guardian/src-foundations/palette"
 
 const dotRadius = 1
 const gridSize = 3
-const count = 3
+const count = 4
 
 export const height = gridSize * count
 
