@@ -1,2 +1,24 @@
-export const dottedImage =
-	"data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22%23DFDFDF%22%3E%3Ccircle%20cx%3D%221.5%22%20cy%3D%221.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%221.5%22%20cy%3D%224.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%221.5%22%20cy%3D%227.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%221.5%22%20cy%3D%2210.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%224.5%22%20cy%3D%221.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%224.5%22%20cy%3D%224.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%224.5%22%20cy%3D%227.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%224.5%22%20cy%3D%2210.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%227.5%22%20cy%3D%221.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%227.5%22%20cy%3D%224.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%227.5%22%20cy%3D%227.5%22%20r%3D%221%22/%3E%3Ccircle%20cx%3D%227.5%22%20cy%3D%2210.5%22%20r%3D%221%22/%3E%3C/g%3E%3C/svg%3E"
+import { line } from "@guardian/src-foundations/palette"
+
+const dotRadius = 1
+const gridSize = 3
+const count = 4
+
+export const height = gridSize * count
+
+const svg = [
+	`<svg width="${gridSize}" height="${height}" viewBox="0 0 ${gridSize} ${height}" xmlns="http://www.w3.org/2000/svg">`,
+]
+
+for (let offset = gridSize / 2; offset < height; offset += gridSize) {
+	svg.push(
+		`<circle fill="${line.primary}"
+		cx="${gridSize / 2}" cy="${offset}" r="${dotRadius}" />`,
+	)
+}
+
+svg.push(`</svg>`)
+
+const dottedSvg = encodeURIComponent(svg.join())
+
+export const dottedImage = `data:image/svg+xml,${dottedSvg}`
