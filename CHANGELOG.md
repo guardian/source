@@ -10,6 +10,50 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 2 September
+
+**`@guardian/src-checkbox 2.3.0`**
+
+-   :sparkles: [608fefe](https://github.com/guardian/source/commit/608fefe711f423c4db37501550601741602e7b25) add legend to checkbox
+-   :page_with_curl: [3cf9999](https://github.com/guardian/source/commit/3cf9999fbd18c85c59c00c9d2ff51afa7cee096c) add checkbox group stories
+-   :robot: [8f22583](https://github.com/guardian/source/commit/8f2258380b07e55c29c80a6bb9b109b07ddc9619) pull checkbox stories into separate folder
+
+**`@guardian/src-ed-lines 2.3.0`**
+
+-   :robot: [ceac9ab](https://github.com/guardian/source/commit/ceac9abe911f659b5a45b77fbcedcff5b535892e) Prevent SVG repetition (thanks @mxdvl)
+
+**`@guardian/src-foundations 2.3.0`**
+
+-   :sparkles: [e11834d](https://github.com/guardian/source/commit/e11834d476c2ae1f5ff8435998076ad86270dbce) add label theme to foundations
+-   :sparkles: [7a82854](https://github.com/guardian/source/commit/7a82854cf77a03b53fd6f0ac9e55cc17d0ffbae9) add function to generate id for description element
+-   :sparkles: [5af731e](https://github.com/guardian/source/commit/5af731eb34d093617fc678b75201eec3dc081d41) add label brand theme
+-   :sparkles: [e260a6a](https://github.com/guardian/source/commit/e260a6ad72b43fb8b36e7ae9dfce54df28d833d9) remove user feedback theme from label
+-   :sparkles: [48acae4](https://github.com/guardian/source/commit/48acae4b1afd24e0e3074325b241bde1c55b2c38) add label theme to checkbox theme
+-   :sparkles: [78dbbc9](https://github.com/guardian/source/commit/78dbbc96769ef4d73f14c7fb32102cbddfce2633) add label theme to radio theme
+
+**`@guardian/src-label 2.3.0`**
+
+-   :sparkles: [65217c1](https://github.com/guardian/source/commit/65217c17020f0ef90add6274876e5dcdc20332b6) add label component
+-   :robot: [3a6e99a](https://github.com/guardian/source/commit/3a6e99a48f52a96f60c9d868044981147431d29c) verbump label to be consistent with source
+-   :sparkles: [aaf7e79](https://github.com/guardian/source/commit/aaf7e79a4ec38747978c0513fa3619913afc0ba5) allow label component to render as legend
+-   :page_with_curl: [48d133f](https://github.com/guardian/source/commit/48d133fbacd1fe34506f78916655100ac9a39da6) Move supported themes heading to bottom of readme
+-   :nail_care: [579a161](https://github.com/guardian/source/commit/579a161ccd6e6fb830e3e47140d7cb3198741505) pull icon to start of row
+-   :sparkles: [552f0bb](https://github.com/guardian/source/commit/552f0bb8cc155bcb6f3dfd649d6bcdb63c59ddc1) support brand theme in label component
+-   :sparkles: [10c4777](https://github.com/guardian/source/commit/10c4777e04ac82fdcc7ce4f10bcf03ad8364b66e) extract legend into new component
+-   :robot: [7011569](https://github.com/guardian/source/commit/7011569aaac28bc614a1805fdb97c7b69ed5a6ff) extract legend and label stories into separate modules
+-   :bug: [ef2eee3](https://github.com/guardian/source/commit/ef2eee34817b54ecdb9ead5caf2ef84abc56a154) accept reactnode children
+
+**`@guardian/src-radio 2.3.0`**
+
+-   :sparkles: [000af55](https://github.com/guardian/source/commit/000af55dd5e21edb944692e2b6313f8d3f00e9c4) add legend to radio group
+-   :page_with_curl: [e835c31](https://github.com/guardian/source/commit/e835c311fa7346b92d0f04585a7cb022d8f5cbb3) add radio group stories
+-   :robot: [6bec54c](https://github.com/guardian/source/commit/6bec54c46eac06bd6676495e6fcdb1b92a26582c) moved radio stories into separate folder
+
+**`@guardian/src-user-feedback 2.3.0`**
+
+-   :nail_care: [579a161](https://github.com/guardian/source/commit/579a161ccd6e6fb830e3e47140d7cb3198741505) pull icon to start of row
+-   :robot: [c0e0222](https://github.com/guardian/source/commit/c0e02228dfe04118c9d87504ce5e4e0ecd2f7d8b) pass all props to builtin
+
 ## 19 August 2020
 
 **`@guardian/src-checkbox 2.2.0`**
