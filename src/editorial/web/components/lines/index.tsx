@@ -17,10 +17,10 @@ interface LinesProps extends Props {
 
 export const Lines = ({ effect = "straight", count = 4 }: LinesProps) => {
 	if (effect === "squiggly") {
-		return <div css={squigglyLines} />
+		return <div css={squigglyLines(count)} />
 	}
 	if (effect === "dotted") {
-		return <div css={dottedLines} />
+		return <div css={dottedLines(count)} />
 	}
 	return <div css={[straightLines, count === 4 ? fourLines : eightLines]} />
 }

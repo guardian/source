@@ -28,14 +28,14 @@ export const eightLines = css`
 	height: calc(${lineGap} * 7 + 1px);
 `
 
-export const squigglyLines = css`
-	background-image: url(${squigglyImage});
+export const squigglyLines = (count: 4 | 8) => css`
+	background-image: url(${squigglyImage(count)});
 	background-repeat: repeat-x;
 	background-position: left;
-	height: ${squigglyImageHeight}px;
+	height: ${squigglyImageHeight(count)}px;
 `
 
-export const dottedLines = css`
-	background-image: url(${dottedImage});
-	height: ${dottedImageHeight}px;
+export const dottedLines = (count: 4 | 8) => css`
+	background-image: url(${dottedImage(count)});
+	height: ${dottedImageHeight(count)}px;
 `

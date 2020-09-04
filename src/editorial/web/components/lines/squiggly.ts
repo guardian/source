@@ -3,11 +3,11 @@ import { line } from "@guardian/src-foundations/palette"
 const wavelength = 12
 const amplitude = 3
 const thickness = 1
-const count = 4
 const gap = 3
 const squiggliness = wavelength / 8
 
-export const height = thickness + gap * Math.max(count, 1)
+export const height = (count: 4 | 8): number =>
+	thickness + gap * Math.max(count, 1)
 
 const d = [
 	`M 0 ${thickness / 2}`,
@@ -18,16 +18,17 @@ const d = [
 	`t 12 0`,
 ].join(" ")
 
-const repeatedLines = []
-for (let index = 1; index < count; index++) {
-	repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`)
-}
+const squigglySvg = (count: 4 | 8): string => {
+	const repeatedLines = []
+	for (let index = 1; index < count; index++) {
+		repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`)
+	}
 
-const squigglySvg = encodeURIComponent(`
-<svg
-	xmlns="http://www.w3.org/2000/svg" width="${wavelength}" height="${height}"
-	viewBox="0 0 ${wavelength} ${height}"
+	return encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="${wavelength}" height="${height(count)}"
+	viewBox="0 0 ${wavelength} ${height(count)}"
 >
 	<g stroke-width="${thickness}" stroke="${line.primary}" fill="none">
 		<path id="squiggle" d="${d}" />
@@ -35,5 +36,7 @@ const squigglySvg = encodeURIComponent(`
 	</g>
 </svg>
 `)
+}
 
-export const squigglyImage = `data:image/svg+xml;utf-8,${squigglySvg}`
+export const squigglyImage = (count: 4 | 8 = 4): string =>
+	`data:image/svg+xml;utf-8,${squigglySvg(count)}`
