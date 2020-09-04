@@ -1,4 +1,5 @@
 import { line } from "@guardian/src-foundations/palette"
+import { LineCount } from "."
 
 const wavelength = 12
 const amplitude = 3
@@ -6,7 +7,7 @@ const thickness = 1
 const gap = 3
 const squiggliness = wavelength / 8
 
-export const height = (count: 4 | 8): number =>
+export const height = (count: LineCount): number =>
 	thickness + gap * Math.max(count, 1)
 
 const d = [
@@ -18,7 +19,7 @@ const d = [
 	`t 12 0`,
 ].join(" ")
 
-const squigglySvg = (count: 4 | 8): string => {
+const squigglySvg = (count: LineCount): string => {
 	const repeatedLines = []
 	for (let index = 1; index < count; index++) {
 		repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`)
@@ -38,5 +39,5 @@ const squigglySvg = (count: 4 | 8): string => {
 `)
 }
 
-export const squigglyImage = (count: 4 | 8 = 4): string =>
+export const squigglyImage = (count: LineCount = 4): string =>
 	`data:image/svg+xml;utf-8,${squigglySvg(count)}`

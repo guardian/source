@@ -10,9 +10,11 @@ import {
 
 type LineEffectType = "squiggly" | "dotted" | "straight"
 
+export type LineCount = 4 | 8
+
 interface LinesProps extends Props {
 	effect?: LineEffectType
-	count?: 4 | 8
+	count?: LineCount
 }
 
 export const Lines = ({ effect = "straight", count = 4 }: LinesProps) => {

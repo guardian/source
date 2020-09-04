@@ -1,11 +1,12 @@
 import { line } from "@guardian/src-foundations/palette"
+import { LineCount } from "."
 
 const dotRadius = 1
 const gridSize = 3
 
-export const height = (count: 4 | 8): number => gridSize * count
+export const height = (count: LineCount): number => gridSize * count
 
-const dottedSvg = (count: 4 | 8): string => {
+const dottedSvg = (count: LineCount): string => {
 	const svg = [
 		`<svg xmlns="http://www.w3.org/2000/svg" ` +
 			`width="${gridSize}" height="${height(count)}" ` +
@@ -25,5 +26,5 @@ const dottedSvg = (count: 4 | 8): string => {
 	return encodeURIComponent(svg.join())
 }
 
-export const dottedImage = (count: 4 | 8) =>
+export const dottedImage = (count: LineCount) =>
 	`data:image/svg+xml,${dottedSvg(count)}`
