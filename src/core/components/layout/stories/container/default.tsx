@@ -43,6 +43,34 @@ withColumns.story = {
 	name: "with columns",
 }
 
+export const withColumnsAndWidth = () => (
+	<>
+		<Container border={true} cssOverrides={container}>
+			<Columns>
+				<Column width={1 / 2} cssOverrides={column}>
+					1
+				</Column>
+				<Column cssOverrides={column}>2</Column>
+				<Column cssOverrides={column}>3</Column>
+			</Columns>
+		</Container>
+
+		<Container border={true} cssOverrides={container}>
+			<Columns>
+				<Column width={1 / 4} cssOverrides={column}>
+					1
+				</Column>
+				<Column cssOverrides={column}>2</Column>
+				<Column cssOverrides={column}>3</Column>
+			</Columns>
+		</Container>
+	</>
+)
+
+withColumnsAndWidth.story = {
+	name: "with columns and width",
+}
+
 export const withColumnsCollpaseBelowTablet = () => (
 	<Container border={true} cssOverrides={container}>
 		<Columns collapseBelow="tablet">

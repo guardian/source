@@ -116,7 +116,9 @@ export const collapseBelowWide = css`
 
 export const column = (width: number) => css`
 	box-sizing: border-box;
-	flex: 1 0 auto;
 
-	${width ? `width: ${width * 100}%` : ""};
+	flex: ${width ? 0 : 1} 0 auto;
+	${width
+		? `width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);`
+		: ""}
 `
