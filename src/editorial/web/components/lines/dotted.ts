@@ -13,11 +13,11 @@ const dottedSvg = (count: LineCount): string => {
 			`viewBox="0 0 ${gridSize} ${height(count)}" >`,
 	]
 
-	for (let index = 1; index < count; index++) {
+	for (let index = 1; index <= count; index++) {
 		svg.push(
 			`<circle fill="${line.primary}" ` +
 				`cx="${gridSize / 2}" ` +
-				`cy="${gridSize * (index + 1 / 2)}" ` +
+				`cy="${gridSize * (index - 1 / 2)}" ` +
 				`r="${dotRadius}" />`,
 		)
 	}
