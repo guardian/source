@@ -1,5 +1,5 @@
 import React, { ReactNode, HTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { css, SerializedStyles } from "@emotion/core"
 import {
 	container,
 	containerBorder,
@@ -24,7 +24,7 @@ import {
 	tile,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
-import { Breakpoint } from "@guardian/src-foundations/mq"
+import { until, from, Breakpoint } from "@guardian/src-foundations/mq"
 
 interface Container extends HTMLAttributes<HTMLDivElement>, Props {
 	border?: boolean
@@ -166,4 +166,30 @@ const Tiles = ({ cssOverrides, children, columns, ...props }: TilesProps) => {
 	)
 }
 
-export { Container, Columns, Column, Stack, Tiles }
+interface HideProps extends HTMLAttributes<HTMLDivElement>, Props {
+	children: ReactNode
+	above?: Breakpoint
+	below?: Breakpoint
+}
+
+const Hide = ({ children, above, below }: HideProps) => {
+	let whenToHide
+	if (below) {
+		whenToHide = css`
+			${until[below]} {
+				display: none;
+			}
+		`
+	}
+	if (above) {
+		whenToHide = css`
+			${from[above]} {
+				display: none;
+			}
+		`
+	}
+
+	return <span css={whenToHide}>{children}</span>
+}
+
+export { Container, Columns, Column, Stack, Tiles, Hide }
