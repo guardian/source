@@ -147,3 +147,49 @@ export const column = (width: number) => css`
 		? `width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);`
 		: ""}
 `
+
+export const stack = css`
+	& > * {
+		width: 100%;
+	}
+`
+
+export const stackSpace1 = css`
+	& > * + * {
+		margin-top: ${space[1]}px;
+	}
+`
+export const stackSpace2 = css`
+	& > * + * {
+		margin-top: ${space[2]}px;
+	}
+`
+export const stackSpace3 = css`
+	& > * + * {
+		margin-top: ${space[3]}px;
+	}
+`
+export const stackSpace4 = css`
+	& > * + * {
+		margin-top: ${space[4]}px;
+	}
+`
+export const stackSpace5 = css`
+	& > * + * {
+		margin-top: ${space[5]}px;
+	}
+`
+
+export const tiles = css`
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: ${-space[5]}px;
+	margin-right: ${-space[5]}px;
+`
+
+export const tile = (columns: number) => css`
+	box-sizing: border-box;
+	flex: 0 1 ${100 / columns}%;
+	padding-top: ${space[5]}px;
+	padding-right: ${space[5]}px;
+`
