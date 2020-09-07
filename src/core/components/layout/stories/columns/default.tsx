@@ -3,26 +3,14 @@ import { Container, Columns, Column } from "../../index"
 import { sport } from "@guardian/src-foundations/palette"
 import { css } from "@emotion/core"
 
-export const defaultLight = () => <Container>Hello world</Container>
-
-defaultLight.story = {
-	name: "default light",
-}
-
-export const withBorder = () => <Container border={true}>Hello world</Container>
-
-withBorder.story = {
-	name: "with border",
-}
-
 const contents = css`
 	text-align: center;
 	background-color: ${sport[600]};
 `
 
-export const withColumns = () => (
+export const collapseBelowTablet = () => (
 	<Container border={true}>
-		<Columns>
+		<Columns collapseBelow="tablet">
 			<Column>
 				<div css={contents}>1</div>
 			</Column>
@@ -39,6 +27,6 @@ export const withColumns = () => (
 	</Container>
 )
 
-withColumns.story = {
-	name: "with columns",
+collapseBelowTablet.story = {
+	name: "collapse below tablet",
 }
