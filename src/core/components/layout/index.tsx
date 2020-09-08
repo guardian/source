@@ -5,7 +5,6 @@ import {
 	containerBorder,
 	columns,
 	column,
-	columnsNotCollapsed,
 	collapseBelowTabletColumns,
 	collapseBelowDesktopColumns,
 	collapseBelowLeftColColumns,
@@ -89,9 +88,7 @@ const Columns = ({
 		<div
 			css={[
 				columns,
-				collapseBelow
-					? collapseBelowColumnsMap[collapseBelow]
-					: columnsNotCollapsed,
+				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : "",
 				collapseBelow ? collapseBelowMap[collapseBelow] : "",
 				cssOverrides,
 			]}

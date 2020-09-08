@@ -50,66 +50,67 @@ export const columns = css`
 	}
 `
 
-export const columnsNotCollapsed = css``
+const collapseBelowSpacing = css`
+	display: block;
+	& > * + * {
+		margin-left: 0;
+	}
+
+	& > * {
+		margin-bottom: ${space[5]}px;
+	}
+`
 
 export const collapseBelowTabletColumns = css`
 	${until.tablet} {
-		display: block;
-		& > * + * {
-			margin-left: 0;
-		}
+		${collapseBelowSpacing}
 	}
 `
 export const collapseBelowDesktopColumns = css`
 	${until.desktop} {
-		display: block;
-		& > * + * {
-			margin-left: 0;
-		}
+		${collapseBelowSpacing}
 	}
 `
 export const collapseBelowLeftColColumns = css`
 	${until.leftCol} {
-		display: block;
-		& > * + * {
-			margin-left: 0;
-		}
+		${collapseBelowSpacing}
 	}
 `
 export const collapseBelowWideColumns = css`
 	${until.wide} {
-		display: block;
-		& > * + * {
-			margin-left: 0;
-		}
+		${collapseBelowSpacing}
 	}
+`
+
+const collapseBelowWidth = css`
+	width: 100% !important;
 `
 
 export const collapseBelowTablet = css`
 	& > * {
 		${until.tablet} {
-			width: 100%;
+			${collapseBelowWidth}
 		}
 	}
 `
 export const collapseBelowDesktop = css`
 	& > * {
 		${until.desktop} {
-			width: 100%;
+			${collapseBelowWidth}
 		}
 	}
 `
 export const collapseBelowleftCol = css`
 	& > * {
 		${until.leftCol} {
-			width: 100%;
+			${collapseBelowWidth}
 		}
 	}
 `
 export const collapseBelowWide = css`
 	& > * {
 		${until.wide} {
-			width: 100%;
+			${collapseBelowWidth}
 		}
 	}
 `
