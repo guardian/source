@@ -3,6 +3,7 @@ import { squigglyImage, height as squigglyImageHeight } from "./squiggly"
 import { dottedImage, height as dottedImageHeight } from "./dotted"
 import { line } from "@guardian/src-foundations/palette"
 import { remSpace } from "@guardian/src-foundations"
+import { LineCount } from "."
 
 const lineGap = remSpace[1]
 
@@ -28,14 +29,14 @@ export const eightLines = css`
 	height: calc(${lineGap} * 7 + 1px);
 `
 
-export const squigglyLines = (count: 4 | 8) => css`
+export const squigglyLines = (count: LineCount) => css`
 	background-image: url(${squigglyImage(count)});
 	background-repeat: repeat-x;
 	background-position: left;
 	height: ${squigglyImageHeight(count)}px;
 `
 
-export const dottedLines = (count: 4 | 8) => css`
+export const dottedLines = (count: LineCount) => css`
 	background-image: url(${dottedImage(count)});
 	height: ${dottedImageHeight(count)}px;
 `
