@@ -27,11 +27,10 @@ const Section = () => (
 
 **`"straight" | "dotted" | "squiggly"`** _= "straight"_
 
-The appearance of the lines
+The appearance of the lines.
 
 ### `count`
 
 **`4 | 8`** _= 4_
 
-How many lines appear. Note: this applies to the `straight` effect only.
-Other effects always have 4 lines.
+How many lines appear.
