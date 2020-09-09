@@ -7,6 +7,10 @@
 ```sh
 $ yarn add @guardian/src-ed-lines @guardian/src-foundations
 ```
+or
+```sh
+$ npm i @guardian/src-ed-lines @guardian/src-foundations
+```
 
 ## Use
 
