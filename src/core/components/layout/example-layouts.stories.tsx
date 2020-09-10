@@ -9,3 +9,4 @@ export default {
 }
 
 export * from "./stories/example-layouts/checkout"
+export * from "./stories/example-layouts/thank-you"
