@@ -1,9 +1,9 @@
 import { css } from "@emotion/core"
-import { background, border, neutral } from "@guardian/src-foundations/palette"
+import { background, border } from "@guardian/src-foundations/palette"
 import { space } from "@guardian/src-foundations"
 import { from } from "@guardian/src-foundations/mq"
 import { Lines } from "@guardian/src-ed-lines"
-import { Container, Stack, Columns, Column } from "../../index"
+import { Container, Columns, Column } from "../../index"
 
 const meta = css`
 	display: flex;
