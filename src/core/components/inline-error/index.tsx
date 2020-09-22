@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { SerializedStyles } from "@emotion/core"
-import { SvgAlert } from "@guardian/src-icons"
+import { SvgAlertTriangle } from "@guardian/src-icons"
 import { Props } from "@guardian/src-helpers"
 import { inlineError } from "./styles"
 export {
@@ -17,7 +17,7 @@ const InlineError = ({ children, cssOverrides }: InlineErrorProps) => (
 	<span
 		css={(theme) => [inlineError(theme.inlineError && theme), cssOverrides]}
 	>
-		<SvgAlert />
+		<SvgAlertTriangle />
 		{children}
 	</span>
 )
