@@ -5,7 +5,8 @@ import { storybookBackgrounds } from "@guardian/src-helpers"
 import { width, height } from "@guardian/src-foundations/size"
 
 import {
-	SvgAlert,
+	SvgAlertRound,
+	SvgAlertTriangle,
 	SvgArrowDownStraight,
 	SvgArrowLeftStraight,
 	SvgArrowRightStraight,
@@ -22,6 +23,8 @@ import {
 	SvgDirectDebitWide,
 	SvgEnvelope,
 	SvgExternal,
+	SvgEye,
+	SvgEyeStrike,
 	SvgFacebook,
 	SvgHouse,
 	SvgIndent,
@@ -29,6 +32,7 @@ import {
 	SvgMinus,
 	SvgPayPal,
 	SvgPerson,
+	SvgPlay,
 	SvgPlus,
 	SvgQuote,
 	SvgSettings,
@@ -121,7 +125,8 @@ const WidePayment = ({
 
 /* eslint-disable react/jsx-key */
 const uiIcons = [
-	<SvgAlert />,
+	<SvgAlertRound />,
+	<SvgAlertTriangle />,
 	<SvgArrowDownStraight />,
 	<SvgArrowLeftStraight />,
 	<SvgArrowRightStraight />,
@@ -132,12 +137,15 @@ const uiIcons = [
 	<SvgChevronUpSingle />,
 	<SvgEnvelope />,
 	<SvgExternal />,
+	<SvgEye />,
+	<SvgEyeStrike />,
 	<SvgFacebook />,
 	<SvgHouse />,
 	<SvgCheckmark />,
 	<SvgCamera />,
 	<SvgCross />,
 	<SvgMinus />,
+	<SvgPlay />,
 	<SvgPlus />,
 	<SvgPerson />,
 	<SvgQuote />,
