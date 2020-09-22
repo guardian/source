@@ -1,6 +1,6 @@
 import React, { ReactNode, HTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/css"
-import { SvgAlert, SvgTickRound } from "@guardian/src-icons"
+import { SvgAlertTriangle, SvgTickRound } from "@guardian/src-icons"
 import { Props } from "@guardian/src-helpers"
 import { inlineError, inlineSuccess } from "./styles"
 export {
@@ -25,7 +25,7 @@ const InlineError = ({
 		]}
 		{...props}
 	>
-		<SvgAlert />
+		<SvgAlertTriangle />
 		{children}
 	</span>
 )
