@@ -87,14 +87,15 @@ const LabelText = ({
 	children: ReactNode
 }) => {
 	return (
-		<div
+		<span
 			css={(theme) => [
 				hasSupportingText ? labelTextWithSupportingText : "",
 				labelText(theme.radio && theme),
 			]}
+			className="src-radio-label-text"
 		>
 			{children}
-		</div>
+		</span>
 	)
 }
 

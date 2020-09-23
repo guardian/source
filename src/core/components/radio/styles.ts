@@ -108,11 +108,22 @@ export const supportingText = ({
 	color: ${radio.textLabelSupporting};
 `
 
+/*
+TODO: Chrome <86 doesn't allow us to use display:flex on fieldsets.
+The display:block and vertical-align:middle here are a workaround
+which can be replaced by flex-direction:row when the issue is fixed
+https://bugs.chromium.org/p/chromium/issues/detail?id=375693
+*/
 export const horizontal = css`
-	flex-direction: row;
+	display: block;
 
 	label {
+		display: inline-flex;
 		margin-right: ${space[5]}px;
+	}
+	input,
+	.src-radio-label-text {
+		vertical-align: middle;
 	}
 `
 export const vertical = css`

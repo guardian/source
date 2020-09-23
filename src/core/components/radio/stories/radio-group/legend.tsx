@@ -40,3 +40,18 @@ legendBlue.story = {
 		],
 	},
 }
+
+export const legendHorizontal = () => (
+	<RadioGroup
+		orientation="horizontal"
+		name="yes-or-no"
+		label="Do you live in the United Kingdom?"
+	>
+		<Radio value="yes" label="Yes" />
+		<Radio value="no" label="No" defaultChecked={true} />
+	</RadioGroup>
+)
+
+legendHorizontal.story = {
+	name: `legend horizontal light`,
+}

@@ -8,7 +8,7 @@ const horizontal = () => (
 	</RadioGroup>
 )
 horizontal.story = {
-	name: "orientation horizontal",
+	name: "horizontal light",
 }
 
 export { horizontal }
