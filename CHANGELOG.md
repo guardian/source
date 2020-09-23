@@ -10,6 +10,24 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 23 September
+
+**`@guardian/src-ed-lines 2.4.0`**
+- :sparkles: [b95ce71](https://github.com/guardian/source/commit/b95ce71cc41b469820ed7854de1797bc13fc02c1) Eight lines of anything (thanks @mxdvl)
+- :page_with_curl: [0f80f98](https://github.com/guardian/source/commit/0f80f98503d115d24caf191b7947c475951d8e7e) Add npm example to ed-lines README (thanks @jamieb-gu)
+
+**`@guardian/src-foundations 2.4.0`**
+- :sparkles: [dca2927](https://github.com/guardian/source/commit/dca2927dfe5f8663304fbbd3a4299935de4764d9) add special report 800 (thanks @webb)
+
+**`@guardian/src-icons 2.4.0`**
+- :sparkles: [fbc60b3](https://github.com/guardian/source/commit/fbc60b3b78bbe21e8c965410436882865bfc64b5) add alert, eye and play icons
+
+**`@guardian/src-radio 2.4.0`**
+- :bug: [19687a1](https://github.com/guardian/source/commit/19687a1e58ddb94791c618ddfcaa9fbb863e5f97) use vertical align instead of flex for horiz fieldset
+
+**`@guardian/src-user-feedback 2.4.0`**
+- :robot: [a47e731](https://github.com/guardian/source/commit/a47e7318a970829b08a882a3eae6e3dc97f50ddc) use alert triangle in user feedback
+
 ## 2 September
 
 **`@guardian/src-checkbox 2.3.0`**
