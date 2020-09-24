@@ -78,7 +78,7 @@
 		"stylelint-config-styled-components": "^0.1.1",
 		"stylelint-processor-styled-components": "^1.10.0",
 		"ts-node": "^9.0.0",
-		"typescript": "^4.0.2",
+		"typescript": "^4.0.3",
 		"webpack": "^4.44.1"
 	},
 	"jest": {
