@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
 import { space } from "@guardian/src-foundations"
+import { StackSpace } from "."
 
 export const stack = css`
 	& > * {
@@ -7,8 +8,8 @@ export const stack = css`
 	}
 `
 
-export const stackSpace = (space) => css`
+export const stackSpace = (number: StackSpace) => css`
 	& > * + * {
-		margin-top: ${space[space]}px;
+		margin-top: ${space[number]}px;
 	}
 `
