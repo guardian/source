@@ -14,7 +14,7 @@ interface StackProps extends HTMLAttributes<HTMLDivElement>, Props {
 const Stack = ({ cssOverrides, children, space, ...props }: StackProps) => {
 	return (
 		<div
-			css={[stack, space ? stackSpace(space) : "", cssOverrides]}
+			css={[stack, space ? stackSpace[space] : "", cssOverrides]}
 			{...props}
 		>
 			{children}
