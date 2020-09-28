@@ -26,6 +26,6 @@ const Wrapper = () => (
 
 ### `space`
 
-**`1 | 2 | 3 | 4 | 5`**
+**`1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24`**
 
 Units of space between stack items (one unit is 4px)
