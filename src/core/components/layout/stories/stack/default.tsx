@@ -1,8 +1,8 @@
 import React from "react"
+import { css } from "@emotion/core"
 import { Stack } from "../../index"
 import { textSans } from "@guardian/src-foundations/typography"
 import { sport } from "@guardian/src-foundations/palette"
-import { css } from "@emotion/core"
 
 const contents = css`
 	${textSans.medium()};
