@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from "@emotion/core"
 import { space } from "@guardian/src-foundations"
-import { StackSpace } from "."
+import { StackSpace } from "./stack"
 
 export const stack = css`
 	& > * {
