@@ -8,7 +8,27 @@
 $ yarn add @guardian/src-layout
 ```
 
-## Use
+## Container
+
+```tsx
+import { Container } from "@guardian/src-layout"
+
+const Wrapper = () => (
+    <Container>
+        <div css={contents}>Contents</div>
+    </Container>
+)
+```
+
+### Props
+
+#### `border`
+
+**`boolean`** _= false_
+
+Whether to show a border to the left and right of the Container
+
+## Stack
 
 ```tsx
 import { Stack } from "@guardian/src-layout"
@@ -22,9 +42,9 @@ const Wrapper = () => (
 )
 ```
 
-## Stack Props
+### Props
 
-### `space`
+#### `space`
 
 **`1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24`**
 
