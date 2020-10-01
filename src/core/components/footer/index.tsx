@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from "react"
+import React from "react"
 import { SerializedStyles } from "@emotion/core"
 import {
 	footer,
@@ -12,9 +12,9 @@ import { Props } from "@guardian/src-helpers"
 import { SvgChevronUpSingle } from "@guardian/src-icons"
 export { footerBrand } from "@guardian/src-foundations/themes"
 
-interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
+interface FooterProps extends React.HTMLAttributes<HTMLElement>, Props {
 	showBackToTop: boolean
-	children?: ReactNode
+	children?: React.ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 

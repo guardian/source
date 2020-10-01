@@ -1,4 +1,4 @@
-import React, { ReactNode, InputHTMLAttributes } from "react"
+import React from "react"
 import { SerializedStyles } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import { descriptionId } from "@guardian/src-foundations/accessibility"
@@ -81,7 +81,7 @@ const LabelText = ({
 	children,
 }: {
 	hasSupportingText?: boolean
-	children: ReactNode
+	children: React.ReactNode
 }) => {
 	return (
 		<div
@@ -95,7 +95,7 @@ const LabelText = ({
 	)
 }
 
-const SupportingText = ({ children }: { children: ReactNode }) => {
+const SupportingText = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<div css={(theme) => supportingText(theme.checkbox && theme)}>
 			{children}
@@ -103,12 +103,12 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
-interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement>, Props {
+interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement>, Props {
 	value: string
 	checked?: boolean
 	defaultChecked?: boolean
-	label?: ReactNode
-	supporting?: ReactNode
+	label?: React.ReactNode
+	supporting?: React.ReactNode
 	indeterminate: boolean
 	error: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]

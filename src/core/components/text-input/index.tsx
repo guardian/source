@@ -1,4 +1,4 @@
-import React, { ReactNode, InputHTMLAttributes } from "react"
+import React from "react"
 import { SerializedStyles } from "@emotion/css"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import {
@@ -26,7 +26,7 @@ const widths: {
 	4: width4,
 }
 
-const SupportingText = ({ children }: { children: ReactNode }) => {
+const SupportingText = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<div css={(theme) => supportingText(theme.textInput && theme)}>
 			{children}
@@ -34,7 +34,7 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	)
 }
 
-interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
+interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement>, Props {
 	label: string
 	optional: boolean
 	supporting?: string

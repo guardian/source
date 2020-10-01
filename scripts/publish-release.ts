@@ -1,4 +1,4 @@
-import execa, { ExecaReturnValue } from "execa"
+import execa from "execa"
 import { version } from "../package.json"
 import { paths, getComponentPaths } from "./paths"
 
@@ -44,7 +44,7 @@ prioritisedPackages
 						`Error publishing prioritised package: ${err}`,
 					),
 				),
-		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
+		Promise.resolve() as Promise<void | execa.ExecaReturnValue<string>>,
 	)
 	.then(() =>
 		otherPackages.then((packages) =>

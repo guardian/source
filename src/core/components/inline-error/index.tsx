@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { SerializedStyles } from "@emotion/core"
 import { SvgAlertTriangle } from "@guardian/src-icons"
 import { Props } from "@guardian/src-helpers"
@@ -9,7 +9,7 @@ export {
 } from "@guardian/src-foundations/themes"
 
 interface InlineErrorProps extends Props {
-	children: ReactNode
+	children: React.ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 

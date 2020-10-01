@@ -1,9 +1,4 @@
-import React, {
-	ReactElement,
-	ReactNode,
-	ButtonHTMLAttributes,
-	AnchorHTMLAttributes,
-} from "react"
+import React from "react"
 import { css } from "@emotion/core"
 import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
@@ -48,7 +43,7 @@ interface SharedButtonProps extends Props {
 	priority: Priority
 	size: Size
 	iconSide: IconSide
-	icon?: ReactElement
+	icon?: React.ReactElement
 	hideLabel: boolean
 	nudgeIcon?: boolean
 }
@@ -97,8 +92,8 @@ const buttonContents = ({
 	children,
 }: {
 	hideLabel: boolean
-	iconSvg?: ReactElement
-	children: ReactNode
+	iconSvg?: React.ReactElement
+	children: React.ReactNode
 }) => {
 	const contents = [children]
 
@@ -149,14 +144,14 @@ const buttonStyles = ({
 
 interface ButtonProps
 	extends SharedButtonProps,
-		ButtonHTMLAttributes<HTMLButtonElement> {
+		React.ButtonHTMLAttributes<HTMLButtonElement> {
 	priority: Priority
 	size: Size
-	icon?: ReactElement
+	icon?: React.ReactElement
 	iconSide: IconSide
 	hideLabel: boolean
 	nudgeIcon?: boolean
-	children: ReactNode
+	children: React.ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 const Button = ({
@@ -192,14 +187,14 @@ const Button = ({
 
 interface LinkButtonProps
 	extends SharedButtonProps,
-		AnchorHTMLAttributes<HTMLAnchorElement> {
+		React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	priority: Priority
 	size: Size
 	iconSide: IconSide
-	icon?: ReactElement
+	icon?: React.ReactElement
 	nudgeIcon?: boolean
 	hideLabel: boolean
-	children: ReactNode
+	children: React.ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 

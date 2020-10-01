@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactElement, ReactNode } from "react"
+import React, { useState, useEffect } from "react"
 import {
 	accordion,
 	accordionRow,
@@ -26,7 +26,7 @@ const visuallyHidden = css`
 
 interface AccordionProps extends Props {
 	hideToggleLabel?: boolean
-	children: ReactElement[]
+	children: React.ReactElement[]
 }
 
 const Accordion = ({ hideToggleLabel = false, children }: AccordionProps) => {
@@ -42,7 +42,7 @@ const Accordion = ({ hideToggleLabel = false, children }: AccordionProps) => {
 interface AccordionRowProps extends Props {
 	label: string
 	hideToggleLabel?: boolean
-	children: ReactNode
+	children: React.ReactNode
 }
 
 const NoJsRow = ({

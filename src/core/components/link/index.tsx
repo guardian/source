@@ -1,9 +1,4 @@
-import React, {
-	ReactElement,
-	ReactNode,
-	AnchorHTMLAttributes,
-	ButtonHTMLAttributes,
-} from "react"
+import React from "react"
 import { SerializedStyles } from "@emotion/css"
 import { LinkTheme } from "@guardian/src-foundations/themes"
 import {
@@ -47,8 +42,8 @@ const linkContents = ({
 	iconSvg,
 	iconSide,
 }: {
-	children: ReactNode
-	iconSvg?: ReactElement
+	children: React.ReactNode
+	iconSvg?: React.ReactElement
 	iconSide: IconSide
 }) => {
 	// a bit of underlined space; the icon sits on top
@@ -83,7 +78,7 @@ const linkStyles = ({
 	isButton?: boolean
 	priority: Priority
 	isSubdued: boolean
-	iconSvg?: ReactElement
+	iconSvg?: React.ReactElement
 	iconSide: IconSide
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }) => {
@@ -102,20 +97,20 @@ const linkStyles = ({
 interface SharedLinkProps extends Props {
 	priority: Priority
 	subdued: boolean
-	icon?: ReactElement
+	icon?: React.ReactElement
 	iconSide: IconSide
-	children?: ReactNode
+	children?: React.ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
 interface LinkProps
-	extends AnchorHTMLAttributes<HTMLAnchorElement>,
+	extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
 		SharedLinkProps {
 	priority: Priority
 	subdued: boolean
-	icon?: ReactElement
+	icon?: React.ReactElement
 	iconSide: IconSide
-	children?: ReactNode
+	children?: React.ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
@@ -145,13 +140,13 @@ const Link = ({
 }
 
 interface ButtonLinkProps
-	extends ButtonHTMLAttributes<HTMLButtonElement>,
+	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		SharedLinkProps {
 	priority: Priority
 	subdued: boolean
-	icon?: ReactElement
+	icon?: React.ReactElement
 	iconSide: IconSide
-	children?: ReactNode
+	children?: React.ReactNode
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
