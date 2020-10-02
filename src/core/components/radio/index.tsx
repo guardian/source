@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode, InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { Legend } from "@guardian/src-label"
 import { InlineError } from "@guardian/src-user-feedback"
@@ -84,7 +84,7 @@ const LabelText = ({
 	children,
 }: {
 	hasSupportingText?: boolean
-	children: React.ReactNode
+	children: ReactNode
 }) => {
 	return (
 		<span
@@ -99,7 +99,7 @@ const LabelText = ({
 	)
 }
 
-const SupportingText = ({ children }: { children: React.ReactNode }) => {
+const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
 		<div css={(theme) => supportingText(theme.radio && theme)}>
 			{children}
@@ -107,12 +107,12 @@ const SupportingText = ({ children }: { children: React.ReactNode }) => {
 	)
 }
 
-interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement>, Props {
+interface RadioProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	value: string
 	checked?: boolean
 	defaultChecked?: boolean
-	label?: React.ReactNode
-	supporting?: React.ReactNode
+	label?: ReactNode
+	supporting?: ReactNode
 	error: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }

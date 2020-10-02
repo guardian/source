@@ -1,5 +1,9 @@
 import React, {
+	ReactNode,
+	ReactElement,
 	useState,
+	InputHTMLAttributes,
+	ChangeEventHandler
 } from "react"
 import { SerializedStyles } from "@emotion/core"
 import {
@@ -20,7 +24,7 @@ import { Props } from "@guardian/src-helpers"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
-const SupportingText = ({ children }: { children: React.ReactNode }) => {
+const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
 		<div css={(theme) => groupLabelSupporting(theme.textInput && theme)}>
 			{children}
@@ -78,15 +82,15 @@ const ChoiceCardGroup = ({
 	)
 }
 
-interface ChoiceCardProps extends React.InputHTMLAttributes<HTMLInputElement>, Props {
+interface ChoiceCardProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	id: string
-	label: React.ReactNode
+	label: ReactNode
 	value: string
-	supporting?: React.ReactNode
-	icon?: React.ReactElement
+	supporting?: ReactNode
+	icon?: ReactElement
 	checked?: boolean
 	defaultChecked?: boolean
-	onChange?: React.ChangeEventHandler<HTMLInputElement>
+	onChange?: ChangeEventHandler<HTMLInputElement>
 	error: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }

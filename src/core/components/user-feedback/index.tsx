@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode, HTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/css"
 import { SvgAlertTriangle, SvgTickRound } from "@guardian/src-icons"
 import { Props } from "@guardian/src-helpers"
@@ -8,9 +8,9 @@ export {
 	userFeedbackBrand,
 } from "@guardian/src-foundations/themes"
 
-interface UserFeedbackProps extends Props, React.HTMLAttributes<HTMLSpanElement> {
+interface UserFeedbackProps extends Props, HTMLAttributes<HTMLSpanElement> {
 	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children: React.ReactNode
+	children: ReactNode
 }
 
 const InlineError = ({

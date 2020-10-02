@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode, InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import {
@@ -11,12 +11,12 @@ import {
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
-const SupportingText = ({ children }: { children: React.ReactNode }) => {
+const SupportingText = ({ children }: { children: ReactNode }) => {
 	return <div css={supportingText}>{children}</div>
 }
 
 interface TextAreaProps
-	extends React.InputHTMLAttributes<HTMLTextAreaElement>,
+	extends InputHTMLAttributes<HTMLTextAreaElement>,
 		Props {
 	value?: string
 	label: string

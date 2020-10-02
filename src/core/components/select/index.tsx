@@ -1,4 +1,8 @@
-import React from "react"
+import React, {
+	ReactNode,
+	SelectHTMLAttributes,
+	OptionHTMLAttributes,
+} from "react"
 import { SerializedStyles } from "@emotion/core"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import {
@@ -17,7 +21,7 @@ import { SvgChevronDownSingle } from "@guardian/src-icons"
 
 export { selectDefault } from "@guardian/src-foundations/themes"
 
-const SupportingText = ({ children }: { children: React.ReactNode }) => {
+const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
 		<div css={(theme) => supportingText(theme.select && theme)}>
 			{children}
@@ -25,7 +29,7 @@ const SupportingText = ({ children }: { children: React.ReactNode }) => {
 	)
 }
 
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement>, Props {
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 	label: string
 	optional: boolean
 	supporting?: string
@@ -90,7 +94,7 @@ const Select = ({
 	)
 }
 
-interface OptionProps extends React.OptionHTMLAttributes<HTMLOptionElement>, Props {
+interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement>, Props {
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 	children: string
 }

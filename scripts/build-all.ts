@@ -1,4 +1,4 @@
-import execa from "execa"
+import execa, { ExecaReturnValue } from "execa"
 import { paths, getComponentPaths } from "./paths"
 
 const build = (dir: string) => {
@@ -39,7 +39,7 @@ prioritisedPackages
 						`Error building prioritised package: ${err}`,
 					),
 				),
-		Promise.resolve() as Promise<void | execa.ExecaReturnValue<string>>,
+		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
 	)
 	.then(() =>
 		otherPackages.then((packages) =>

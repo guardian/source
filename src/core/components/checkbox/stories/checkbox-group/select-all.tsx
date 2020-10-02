@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, ChangeEvent } from "react"
 
 import { CheckboxGroup, Checkbox } from "../../index"
 
@@ -15,7 +15,7 @@ const selectAll = () => {
 	]
 	const [checked, setCheckCount] = useState(checkboxData.map(() => false))
 	const handleCheckboxClick = (
-		event: React.ChangeEvent<HTMLInputElement>,
+		event: ChangeEvent<HTMLInputElement>,
 		pos: number,
 	) => {
 		const newChecked = checked.slice()
@@ -24,7 +24,7 @@ const selectAll = () => {
 		setCheckCount(newChecked)
 	}
 	const handleMasterCheckboxClick = (
-		event: React.ChangeEvent<HTMLInputElement>,
+		event: ChangeEvent<HTMLInputElement>,
 	) => {
 		setCheckCount(checkboxData.map(() => event.target.checked))
 	}

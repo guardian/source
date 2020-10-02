@@ -1,24 +1,24 @@
-import React from "react"
+import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { legend, labelText, optionalText, supportingText } from "./styles"
 import { Props } from "@guardian/src-helpers"
 export { labelDefault, labelBrand } from "@guardian/src-foundations/themes"
 
-interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement>, Props {
+interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	text: string
 	supporting?: string
 	optional: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children?: React.ReactNode
+	children?: ReactNode
 }
-interface LegendProps extends React.HTMLAttributes<HTMLLegendElement>, Props {
+interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	text: string
 	supporting?: string
 	optional: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
-const SupportingText = ({ children }: { children: React.ReactNode }) => {
+const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
 		<p css={(theme) => supportingText(theme.label && theme)}>{children}</p>
 	)

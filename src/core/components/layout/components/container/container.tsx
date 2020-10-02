@@ -1,12 +1,12 @@
-import React from "react"
+import React, { HTMLAttributes, ReactNode } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { container, containerBorder } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
-interface Container extends React.HTMLAttributes<HTMLDivElement>, Props {
+interface Container extends HTMLAttributes<HTMLDivElement>, Props {
 	border?: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children: React.ReactNode
+	children: ReactNode
 }
 
 const Container = ({
