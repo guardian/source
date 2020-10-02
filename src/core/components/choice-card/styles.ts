@@ -35,7 +35,7 @@ export const gridContainer = ({columns} : {columns : number}) => css`
 	${from.mobileLandscape} {
 		display: grid;
 		grid-template-columns: repeat(${columns}, 1fr);
-		row-gap: 8px;
+		row-gap: ${space[2]}px;
 	}
 `
 
