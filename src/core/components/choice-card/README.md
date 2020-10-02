@@ -104,6 +104,13 @@ Whether choice card is checked. This is necessary when using the [controlled app
 
 **Note:** if you pass the `checked` prop, you **must** also pass an `onChange` handler, or the field will be rendered as read-only.
 
+### `columns`
+
+**`number`**
+
+The number of columns in which the ChoiceCardGroup should be displayed. If this is prop is not set it is going to be displayed without wrapping to the other line.
+
+
 ## Supported themes
 
 ### Standard
