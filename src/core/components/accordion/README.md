@@ -47,4 +47,4 @@ _Note: the up or down chevron icon always appears._
 **`string`**
 
 A line of text to summarise the information that lies within the expanded state.
-Appears in the collapsed state, as well as prominantly at the top of the expanded state.
+Appears in the collapsed state, as well as prominently at the top of the expanded state.
