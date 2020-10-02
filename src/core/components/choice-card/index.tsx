@@ -9,6 +9,7 @@ import { SerializedStyles } from "@emotion/core"
 import {
 	fieldset,
 	flexContainer,
+	gridContainer,
 	groupLabel,
 	input,
 	tickAnimation,
@@ -37,6 +38,7 @@ interface ChoiceCardGroupProps extends Props {
 	supporting?: string
 	multi?: boolean
 	error?: string
+	columns?: number
 	children: JSX.Element | JSX.Element[]
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
@@ -47,6 +49,7 @@ const ChoiceCardGroup = ({
 	supporting,
 	multi,
 	error,
+	columns,
 	cssOverrides,
 	children,
 	...props
@@ -62,7 +65,7 @@ const ChoiceCardGroup = ({
 			)}
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
-			<div css={flexContainer}>
+			<div css={columns ? gridContainer({columns}) : flexContainer}>
 				{React.Children.map(children, (child) => {
 					return React.cloneElement(
 						child,

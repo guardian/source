@@ -24,7 +24,7 @@ export const singleStateControlled = () => {
 	return (
 		<div css={medium}>
 			<div css={spaced}>
-				<ChoiceCardGroup name="colours">
+				<ChoiceCardGroup name="colours" columns={2}>
 					<ChoiceCard
 						value="red"
 						label="Red"

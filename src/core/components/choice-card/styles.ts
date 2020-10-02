@@ -29,6 +29,16 @@ export const flexContainer = css`
 	}
 `
 
+export const gridContainer = ({columns} : {columns : number}) => css`
+	width: 100%;
+
+	${from.mobileLandscape} {
+		display: grid;
+		grid-template-columns: repeat(${columns}, 1fr);
+		row-gap: 8px;
+	}
+`
+
 export const groupLabel = ({
 	choiceCard,
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
@@ -135,10 +145,6 @@ export const choiceCard = ({
 
 	${from.mobileLandscape} {
 		margin: 0 ${space[2]}px 0 0;
-
-		&:last-child {
-			margin: 0;
-		}
 	}
 
 	&:hover {
