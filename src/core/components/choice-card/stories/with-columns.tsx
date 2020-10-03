@@ -18,13 +18,13 @@ const message = css`
 	color: ${text.primary};
 `
 
-export const singleStateControlled = () => {
+export const singleStateControlledWithColumns = () => {
 	const [selected, setSelected] = useState<string | null>("green")
 
 	return (
 		<div css={medium}>
 			<div css={spaced}>
-				<ChoiceCardGroup name="colours">
+				<ChoiceCardGroup name="colours" columns={2}>
 					<ChoiceCard
 						value="red"
 						label="Red"
@@ -46,6 +46,20 @@ export const singleStateControlled = () => {
 						checked={selected === "blue"}
 						onChange={() => setSelected("blue")}
 					/>
+					<ChoiceCard
+						value="orange"
+						label="Orange"
+						id="default-orange"
+						checked={selected === "orange"}
+						onChange={() => setSelected("orange")}
+					/>
+					<ChoiceCard
+						value="yellow"
+						label="Yellow"
+						id="default-yellow"
+						checked={selected === "yellow"}
+						onChange={() => setSelected("yellow")}
+					/>
 				</ChoiceCardGroup>
 			</div>
 			<span css={message}>{selected} is selected</span>
@@ -53,6 +67,6 @@ export const singleStateControlled = () => {
 	)
 }
 
-singleStateControlled.story = {
-	name: `single state controlled example`,
+singleStateControlledWithColumns.story = {
+	name: `single state controlled with columns example`
 }

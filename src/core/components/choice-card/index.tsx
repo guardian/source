@@ -10,6 +10,7 @@ import {
 	fieldset,
 	flexContainer,
 	gridContainer,
+	gridColumns,
 	groupLabel,
 	input,
 	tickAnimation,
@@ -32,13 +33,16 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 		</div>
 	)
 }
+
+export type Columns = 2 | 3 | 4 | 5
+
 interface ChoiceCardGroupProps extends Props {
 	name: string
 	label?: string
 	supporting?: string
 	multi?: boolean
 	error?: string
-	columns?: number
+	columns?: Columns
 	children: JSX.Element | JSX.Element[]
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
@@ -65,7 +69,7 @@ const ChoiceCardGroup = ({
 			)}
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
-			<div css={columns ? gridContainer({columns}) : flexContainer}>
+			<div css={columns ? [gridContainer, gridColumns[columns] ] : flexContainer}>
 				{React.Children.map(children, (child) => {
 					return React.cloneElement(
 						child,

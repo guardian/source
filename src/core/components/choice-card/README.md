@@ -108,7 +108,7 @@ Whether choice card is checked. This is necessary when using the [controlled app
 
 **`number`**
 
-The number of columns in which the ChoiceCardGroup should be displayed. If this is prop is not set it is going to be displayed without wrapping to the other line.
+To render a grid of choice cards, specify the number of columns. If this prop is not set, cards will appear on a single line.
 
 
 ## Supported themes
