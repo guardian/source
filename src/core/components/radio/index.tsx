@@ -30,6 +30,7 @@ interface RadioGroupProps extends Props {
 	id?: string
 	name: string
 	label?: string
+	hideLabel: boolean
 	supporting?: string
 	orientation: Orientation
 	error?: string
@@ -41,6 +42,7 @@ const RadioGroup = ({
 	id,
 	name,
 	label,
+	hideLabel,
 	supporting,
 	orientation,
 	error,
@@ -48,7 +50,7 @@ const RadioGroup = ({
 	children,
 	...props
 }: RadioGroupProps) => {
-	const legend = label ? <Legend text={label} supporting={supporting} /> : ""
+	const legend = label ? <Legend text={label} supporting={supporting} hideLabel={hideLabel} /> : ""
 	const message = error && (
 		<InlineError id={id ? descriptionId(id) : ""}>{error}</InlineError>
 	)
@@ -178,7 +180,9 @@ const Radio = ({
 
 const radioGroupDefaultProps = {
 	orientation: "vertical",
+	hideLabel: false
 }
+
 const radioDefaultProps = {
 	disabled: false,
 	type: "radio",

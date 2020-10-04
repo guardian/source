@@ -58,6 +58,12 @@ Gets passed as the name attribute for each radio button
 
 Appears as a legend at the top of the radio group
 
+### `hideLabel`
+
+**`boolean`** _= "false"_
+
+Visually hides the label.
+
 ### `supporting`
 
 **`string`**
