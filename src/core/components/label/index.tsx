@@ -1,8 +1,13 @@
 import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles, css } from "@emotion/core"
 import { legend, labelText, optionalText, supportingText } from "./styles"
 import { Props } from "@guardian/src-helpers"
 export { labelDefault, labelBrand } from "@guardian/src-foundations/themes"
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
+
+const visuallyHidden = css`
+	${_visuallyHidden}
+`
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	text: string
@@ -15,6 +20,7 @@ interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	text: string
 	supporting?: string
 	optional: boolean
+	hideLabel?: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
@@ -41,12 +47,13 @@ const Legend = ({
 	text,
 	supporting,
 	optional,
+	hideLabel,
 	cssOverrides,
 	...props
 }: LegendProps) => {
 	return (
 		<>
-			<legend css={[legend, cssOverrides]} {...props}>
+			<legend css={[legend, hideLabel ? visuallyHidden : undefined, cssOverrides]} {...props}>
 				<Text text={text} optional={optional} />
 			</legend>
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
