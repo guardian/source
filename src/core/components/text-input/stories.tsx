@@ -48,6 +48,26 @@ optionalLight.story = {
 	name: `optional light`,
 }
 
+const hideLabel = () => {
+	const [state, setState] = useState("")
+	return (
+		<ThemeProvider theme={textInputDefault}>
+			<div css={constrainedWith}>
+				<TextInput
+					label="First name"
+					hideLabel={true}
+					value={state}
+					onChange={(event) => setState(event.target.value)}
+				/>
+			</div>
+		</ThemeProvider>
+	)
+}
+
+hideLabel.story = {
+	name: `visually hide label light`,
+}
+
 const supportingTextLight = () => {
 	const [state, setState] = useState("")
 	return (
@@ -215,6 +235,7 @@ controlled.story = {
 export {
 	defaultLight,
 	optionalLight,
+	hideLabel,
 	supportingTextLight,
 	widthsLight,
 	errorWithMessageLight,

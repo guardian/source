@@ -59,6 +59,12 @@ The contents of the text input field. This is necessary when using the [controll
 
 Adds the word "Optional" after the label. Non-optional fields are rendered with the `required` attribute.
 
+### `hideLabel`
+
+**`boolean`** _= "false"_
+
+Visually hides the label and the "Optional" text set by the `optional` flag.
+
 ### `width`
 
 **`30 | 10 | 4`**
