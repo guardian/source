@@ -162,10 +162,9 @@ export const choiceCard = ({
 
 	${from.mobileLandscape} {
 		margin: 0 ${space[2]}px 0 0;
-	}
-
-	&:last-child {
-		margin: 0;
+		&:last-child {
+			margin: 0;
+		}
 	}
 
 	&:hover {
