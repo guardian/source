@@ -1,5 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles, css} from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import {
 	widthFluid,
@@ -9,7 +9,12 @@ import {
 	optionalLabel,
 	supportingText,
 } from "./styles"
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
 import { Props } from "@guardian/src-helpers"
+
+const visuallyHidden = css`
+	${_visuallyHidden}
+`
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return <div css={supportingText}>{children}</div>
@@ -21,6 +26,7 @@ interface TextAreaProps
 	value?: string
 	label: string
 	optional: boolean
+	hideLabel: boolean
 	supporting?: string
 	error?: string
 	rows?: number
@@ -31,6 +37,7 @@ interface TextAreaProps
 const TextArea = ({
 	label: labelText,
 	optional,
+	hideLabel,
 	supporting,
 	error,
 	cssOverrides,
@@ -55,7 +62,7 @@ const TextArea = ({
 
 	return (
 		<label>
-			<div css={label}>
+			<div css={[label, hideLabel ? visuallyHidden : ""]}>
 				{labelText}{" "}
 				{optional ? <span css={optionalLabel}>Optional</span> : ""}
 			</div>
@@ -82,6 +89,7 @@ const TextArea = ({
 const defaultProps = {
 	disabled: false,
 	optional: false,
+	hideLabel: false
 }
 
 TextArea.defaultProps = { ...defaultProps }
