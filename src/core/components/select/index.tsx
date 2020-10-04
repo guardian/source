@@ -3,7 +3,7 @@ import React, {
 	SelectHTMLAttributes,
 	OptionHTMLAttributes,
 } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles, css } from "@emotion/core"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import {
 	select,
@@ -19,7 +19,12 @@ import {
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle } from "@guardian/src-icons"
 
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
 export { selectDefault } from "@guardian/src-foundations/themes"
+
+const visuallyHidden = css`
+	${_visuallyHidden}
+`
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
@@ -32,6 +37,7 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 	label: string
 	optional: boolean
+	hideLabel: boolean
 	supporting?: string
 	error?: string
 	success?: string
@@ -42,6 +48,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 const Select = ({
 	label: labelText,
 	optional,
+	hideLabel,
 	supporting,
 	error,
 	success,
@@ -51,7 +58,7 @@ const Select = ({
 }: SelectProps) => {
 	return (
 		<label>
-			<div css={(theme) => label(theme.select && theme)}>
+			<div css={(theme) => [label(theme.select && theme), hideLabel ? visuallyHidden : ""]}>
 				{labelText}{" "}
 				{optional ? (
 					<span css={(theme) => optionalLabel(theme.select && theme)}>
@@ -110,6 +117,7 @@ const Option = ({ cssOverrides, children, ...props }: OptionProps) => {
 const selectDefaultProps = {
 	disabled: false,
 	optional: false,
+	hideLabel: false,
 }
 
 Select.defaultProps = { ...selectDefaultProps }
