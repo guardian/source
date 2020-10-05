@@ -104,6 +104,13 @@ Whether choice card is checked. This is necessary when using the [controlled app
 
 **Note:** if you pass the `checked` prop, you **must** also pass an `onChange` handler, or the field will be rendered as read-only.
 
+### `columns`
+
+**`number`**
+
+To render a grid of choice cards, specify the number of columns. If this prop is not set, cards will appear on a single line.
+
+
 ## Supported themes
 
 ### Standard

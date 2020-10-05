@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css, SerializedStyles } from "@emotion/core"
 import { space, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { textSans } from "@guardian/src-foundations/typography"
@@ -9,6 +9,7 @@ import {
 	choiceCardDefault,
 } from "@guardian/src-foundations/themes"
 import { width, height } from "@guardian/src-foundations/size"
+import { Columns } from './index'
 
 export const fieldset = css`
 	border: 0;
@@ -28,6 +29,32 @@ export const flexContainer = css`
 		justify-content: flex-start;
 	}
 `
+
+export const gridContainer = css`
+	width: 100%;
+	${from.mobileLandscape} {
+		@supports (display: grid) {
+			display: grid;
+			row-gap: ${space[2]}px;
+			column-gap: ${space[2]}px;
+			& > label {
+				margin: 0;
+			}
+		}
+	}	
+`
+
+const gridColumnsStyle = (columns: Columns) => css`
+  	${from.mobileLandscape} {
+		grid-template-columns: repeat(${columns}, 1fr);
+	}
+`
+export const gridColumns: {[key in Columns]: SerializedStyles } = {
+	2: gridColumnsStyle(2),
+	3: gridColumnsStyle(3),
+	4: gridColumnsStyle(4),
+	5: gridColumnsStyle(5),
+}
 
 export const groupLabel = ({
 	choiceCard,
@@ -135,7 +162,6 @@ export const choiceCard = ({
 
 	${from.mobileLandscape} {
 		margin: 0 ${space[2]}px 0 0;
-
 		&:last-child {
 			margin: 0;
 		}
