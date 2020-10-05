@@ -104,7 +104,7 @@ const buttonContents = ({
 
 	if (iconSvg) {
 		if (!hideLabel) {
-			contents.push(<div className="src-button-space" />)
+			contents.push(<div key="space" className="src-button-space" />)
 		}
 		contents.push(React.cloneElement(iconSvg, { key: "svg" }))
 	}
