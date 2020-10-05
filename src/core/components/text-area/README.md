@@ -58,6 +58,12 @@ The contents of the text area. This is necessary when using the [controlled appr
 
 Adds the word "Optional" after the label. Non-optional fields are rendered with the `required` attribute.
 
+### `hideLabel`
+
+**`boolean`** _= "false"_
+
+Visually hides the label and the "Optional" text set by the `optional` flag.
+
 ### `error`
 
 **`string`**

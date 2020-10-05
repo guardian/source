@@ -55,3 +55,14 @@ export const legendHorizontal = () => (
 legendHorizontal.story = {
 	name: `legend horizontal light`,
 }
+
+export const legendHideLabelLight = () => (
+	<RadioGroup name="colours" label="Select your preferred colour" hideLabel={true}>
+		{radios.map((radio, index) =>
+			React.cloneElement(radio, { key: index }),
+		)}
+	</RadioGroup>
+)
+legendHideLabelLight.story = {
+	name: `visually hide legend light`,
+}

@@ -60,6 +60,12 @@ Gets passed as the name attribute for each checkbox
 
 Appears as a legend at the top of the checkbox group
 
+### `hideLabel`
+
+**`boolean`** _= "false"_
+
+Visually hides the label.
+
 ### `supporting`
 
 **`string`**

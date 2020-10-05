@@ -42,6 +42,16 @@ optionalLight.story = {
 	name: `optional light`,
 }
 
+const hideLabelLight = () => (
+	<div css={wrapperStyles}>
+		<TextArea label="Comments" hideLabel={true} />
+	</div>
+)
+
+hideLabelLight.story = {
+	name: `visually hide label light`,
+}
+
 const supportingTextLight = () => (
 	<div css={wrapperStyles}>
 		<TextArea
@@ -109,6 +119,7 @@ export {
 	defaultLight,
 	withRows,
 	optionalLight,
+	hideLabelLight,
 	supportingTextLight,
 	errorWithMessageLight,
 	withMaxLength,

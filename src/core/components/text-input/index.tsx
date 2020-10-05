@@ -1,5 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/css"
+import { SerializedStyles, css } from "@emotion/core"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
 import {
 	widthFluid,
@@ -13,10 +13,15 @@ import {
 	supportingText,
 	successInput,
 } from "./styles"
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
 import { Props } from "@guardian/src-helpers"
 
 export { textInputDefault } from "@guardian/src-foundations/themes"
 export type Width = 30 | 10 | 4
+
+const visuallyHidden = css`
+	${_visuallyHidden}
+`
 
 const widths: {
 	[key in Width]: SerializedStyles
@@ -37,6 +42,7 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	label: string
 	optional: boolean
+	hideLabel: boolean
 	supporting?: string
 	width?: Width
 	error?: string
@@ -47,6 +53,7 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 const TextInput = ({
 	label: labelText,
 	optional,
+	hideLabel,
 	supporting,
 	width,
 	error,
@@ -56,7 +63,10 @@ const TextInput = ({
 }: TextInputProps) => {
 	return (
 		<label>
-			<div css={(theme) => text(theme.textInput && theme)}>
+			<div css={(theme) => [
+				text(theme.textInput && theme),
+				hideLabel ? visuallyHidden : "",
+			]}>
 				{labelText}{" "}
 				{optional ? (
 					<span
@@ -94,6 +104,7 @@ const defaultProps = {
 	disabled: false,
 	type: "text",
 	optional: false,
+	hideLabel: false,
 }
 
 TextInput.defaultProps = { ...defaultProps }

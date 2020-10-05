@@ -47,6 +47,12 @@ Additional text that appears below the label
 
 Adds the word "Optional" after the label
 
+### `hideLabel`
+
+**`boolean`** _= "false"_
+
+Visually hides the label and the "Optional" text set by the `optional` flag.
+
 ### `error`
 
 **`string`**

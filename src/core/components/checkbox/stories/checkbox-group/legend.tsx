@@ -49,4 +49,18 @@ legendBlue.story = {
 	},
 }
 
-export { legendLight, legendBlue }
+const legendHideLabelLight = () => (
+	<ThemeProvider theme={checkboxDefault}>
+		<CheckboxGroup name="emails" label="Email newsletters" id="emails" hideLabel={true}>
+			{checkboxes.map((checkbox, index) =>
+				React.cloneElement(checkbox, { key: index }),
+			)}
+		</CheckboxGroup>
+	</ThemeProvider>
+)
+
+legendHideLabelLight.story = {
+	name: "visually hide legend light",
+}
+
+export { legendLight, legendBlue, legendHideLabelLight }

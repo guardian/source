@@ -29,6 +29,7 @@ interface CheckboxGroupProps extends Props {
 	id?: string
 	name: string
 	label?: string
+	hideLabel: boolean
 	supporting?: string
 	error?: string
 	children: JSX.Element | JSX.Element[]
@@ -39,13 +40,14 @@ const CheckboxGroup = ({
 	id,
 	name,
 	label,
+	hideLabel,
 	supporting,
 	error,
 	cssOverrides,
 	children,
 	...props
 }: CheckboxGroupProps) => {
-	const legend = label ? <Legend text={label} supporting={supporting} /> : ""
+	const legend = label ? <Legend text={label} supporting={supporting} hideLabel={hideLabel} /> : ""
 
 	const message =
 		typeof error === "string" ? (
@@ -194,8 +196,8 @@ const Checkbox = ({
 					<SupportingText>{supporting}</SupportingText>
 				</div>
 			) : (
-				<LabelText>{labelContent}</LabelText>
-			)}
+					<LabelText>{labelContent}</LabelText>
+				)}
 		</label>
 	)
 
@@ -209,6 +211,11 @@ const checkboxDefaultProps = {
 	error: false,
 }
 
+const checkboxGroupDefaultProps = {
+	hideLabel: false
+}
+
 Checkbox.defaultProps = { ...checkboxDefaultProps }
+CheckboxGroup.defaultProps = { ...checkboxGroupDefaultProps }
 
 export { CheckboxGroup, Checkbox }
