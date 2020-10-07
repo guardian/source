@@ -89,3 +89,36 @@ Columns will be stacked one on top of the other at viewport widths lower than th
 **`number`**
 
 Fraction of the parent container's width that the column will occupy. If no value is provided, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns)
+
+## Hide
+
+Hide a component above or below a certain breakpoint
+
+```tsx
+import { Hide } from "@guardian/src-layout"
+
+const Wrapper = () => (
+    <>
+        <Hide above="tablet">
+            <MobileNavigation />
+        </Hide>
+        <Hide below="desktop">
+            <DesktopNavigation />
+        </Hide>
+    </>
+)
+```
+
+### Props
+
+#### `above`
+
+**`Breakpoint`**
+
+Contents will be hidden at viewport widths greater than the specified breakpoint
+
+#### `below`
+
+**`Breakpoint`**
+
+Contents will be hidden at viewport widths less than the specified breakpoint
