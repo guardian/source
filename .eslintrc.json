@@ -1,15 +1,16 @@
 {
 	"parser": "@typescript-eslint/parser",
-	"plugins": ["@typescript-eslint", "react"],
+	"plugins": ["@typescript-eslint", "react", "jsx-a11y"],
 	"extends": [
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended",
 		"prettier/@typescript-eslint",
 		"prettier/react"
 	],
 	"rules": {
 		"@typescript-eslint/explicit-module-boundary-types": "off",
-		"@typescript-eslint/no-unused-vars" : "off"
+		"@typescript-eslint/no-unused-vars": "off"
 	},
 	"parserOptions": {
 		"ecmaFeatures": {
