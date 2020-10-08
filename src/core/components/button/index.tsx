@@ -247,7 +247,6 @@ const defaultLinkButtonProps = {
 	size: "default",
 	iconSide: "left",
 	hideLabel: false,
-	showIcon: false,
 }
 
 Button.defaultProps = { ...defaultButtonProps }
