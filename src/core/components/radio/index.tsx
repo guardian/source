@@ -13,7 +13,6 @@ import {
 	supportingText,
 	horizontal,
 	vertical,
-	errorRadio,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 
@@ -50,15 +49,24 @@ const RadioGroup = ({
 	children,
 	...props
 }: RadioGroupProps) => {
-	const legend = label ? <Legend text={label} supporting={supporting} hideLabel={hideLabel} /> : ""
+	const legend = label ? (
+		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
+	) : (
+		""
+	)
 	const message = error && (
 		<InlineError id={id ? descriptionId(id) : ""}>{error}</InlineError>
 	)
 
 	return (
 		<fieldset
+			aria-invalid={!!error}
 			id={id}
-			css={[fieldset, orientationStyles[orientation], cssOverrides]}
+			css={(theme) => [
+				fieldset(theme.radio && theme),
+				orientationStyles[orientation],
+				cssOverrides,
+			]}
 			{...props}
 		>
 			{legend}
@@ -67,7 +75,6 @@ const RadioGroup = ({
 				return React.cloneElement(
 					child,
 					Object.assign(
-						error ? { error: true } : {},
 						error && id
 							? { "aria-describedby": descriptionId(id) }
 							: {},
@@ -115,7 +122,6 @@ interface RadioProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	defaultChecked?: boolean
 	label?: ReactNode
 	supporting?: ReactNode
-	error: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
@@ -126,7 +132,6 @@ const Radio = ({
 	checked,
 	defaultChecked,
 	cssOverrides,
-	error,
 	...props
 }: RadioProps) => {
 	const isChecked = (): boolean => {
@@ -138,13 +143,9 @@ const Radio = ({
 	}
 	const radioControl = (
 		<input
-			css={(theme) => [
-				radio(theme.radio && theme),
-				error ? errorRadio(theme.radio && theme) : "",
-				cssOverrides,
-			]}
+			type="radio"
+			css={(theme) => [radio(theme.radio && theme), cssOverrides]}
 			value={value}
-			aria-invalid={error}
 			aria-checked={isChecked()}
 			defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 			checked={checked != null ? isChecked() : undefined}
@@ -180,13 +181,11 @@ const Radio = ({
 
 const radioGroupDefaultProps = {
 	orientation: "vertical",
-	hideLabel: false
+	hideLabel: false,
 }
 
 const radioDefaultProps = {
 	disabled: false,
-	type: "radio",
-	error: false,
 }
 
 Radio.defaultProps = { ...radioDefaultProps }
