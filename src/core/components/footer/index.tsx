@@ -7,6 +7,7 @@ import {
 	links,
 	backToTop,
 	backToTopIcon,
+	linksWrapper,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronUpSingle } from "@guardian/src-icons"
@@ -38,8 +39,10 @@ const Footer = ({
 			css={(theme) => [footer(theme.footer && theme), cssOverrides]}
 			{...props}
 		>
-			<div css={(theme) => links(theme.footer && theme)}>
-				{children}
+			<div css={linksWrapper(showBackToTop)}>
+				<div css={(theme) => links(theme.footer && theme)}>
+					{children}
+				</div>
 				{showBackToTop ? backToTopLink : ""}
 			</div>
 			<small
