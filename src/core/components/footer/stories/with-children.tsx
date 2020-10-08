@@ -97,22 +97,22 @@ const footerContents = (
 		</p>
 		<ul css={ul}>
 			<li css={[li, link1]}>
-				<a css={anchor} href="#">
+				<a css={anchor} href="/">
 					Privacy policy
 				</a>
 			</li>
 			<li css={[li, link2]}>
-				<a css={anchor} href="#">
+				<a css={anchor} href="/">
 					Contact us
 				</a>
 			</li>
 			<li css={[li, link3]}>
-				<a css={anchor} href="#">
+				<a css={anchor} href="/">
 					Frequently asked questions
 				</a>
 			</li>
 			<li css={[li, link4]}>
-				<a css={anchor} href="#">
+				<a css={anchor} href="/">
 					Terms &amp; conditions
 				</a>
 			</li>
