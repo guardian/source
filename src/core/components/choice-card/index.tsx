@@ -3,7 +3,7 @@ import React, {
 	ReactElement,
 	useState,
 	InputHTMLAttributes,
-	ChangeEventHandler
+	ChangeEventHandler,
 } from "react"
 import { SerializedStyles } from "@emotion/core"
 import {
@@ -69,7 +69,13 @@ const ChoiceCardGroup = ({
 			)}
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
-			<div css={columns ? [gridContainer, gridColumns[columns] ] : flexContainer}>
+			<div
+				css={
+					columns
+						? [gridContainer, gridColumns[columns]]
+						: flexContainer
+				}
+			>
 				{React.Children.map(children, (child) => {
 					return React.cloneElement(
 						child,
@@ -126,6 +132,7 @@ const ChoiceCard = ({
 
 	return (
 		<>
+			{/* eslint-disable-next-line jsx-a11y/role-supports-aria-props*/}
 			<input
 				css={(theme) => [
 					input(theme.choiceCard && theme),
