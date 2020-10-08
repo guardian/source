@@ -47,7 +47,11 @@ const CheckboxGroup = ({
 	children,
 	...props
 }: CheckboxGroupProps) => {
-	const legend = label ? <Legend text={label} supporting={supporting} hideLabel={hideLabel} /> : ""
+	const legend = label ? (
+		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
+	) : (
+		""
+	)
 
 	const message =
 		typeof error === "string" ? (
@@ -155,6 +159,7 @@ const Checkbox = ({
 	const box = (
 		<>
 			<input
+				type="checkbox"
 				css={(theme) => [
 					checkbox(theme.checkbox && theme),
 					error ? errorCheckbox(theme.checkbox && theme) : "",
@@ -196,8 +201,8 @@ const Checkbox = ({
 					<SupportingText>{supporting}</SupportingText>
 				</div>
 			) : (
-					<LabelText>{labelContent}</LabelText>
-				)}
+				<LabelText>{labelContent}</LabelText>
+			)}
 		</label>
 	)
 
@@ -206,13 +211,12 @@ const Checkbox = ({
 
 const checkboxDefaultProps = {
 	disabled: false,
-	type: "checkbox",
 	indeterminate: false,
 	error: false,
 }
 
 const checkboxGroupDefaultProps = {
-	hideLabel: false
+	hideLabel: false,
 }
 
 Checkbox.defaultProps = { ...checkboxDefaultProps }
