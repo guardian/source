@@ -1,5 +1,6 @@
 export * from "./stories/inline-button-link"
 export * from "./stories/inline-link"
+export * from "./stories/inline-link-icon"
 export * from "./stories/priority-button-links"
 export * from "./stories/priority-links"
 export * from "./stories/subdued-links"
