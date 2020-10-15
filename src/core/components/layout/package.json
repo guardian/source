@@ -35,7 +35,7 @@
 	"files": [
 		"dist/*.js",
 		"index.tsx",
-		"styles.ts"
+		"components/**/*"
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
