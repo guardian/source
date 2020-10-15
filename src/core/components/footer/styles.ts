@@ -18,20 +18,24 @@ export const footer = ({
 	}
 `
 
-const getMarginBottom = (initialSpace: number, withBackToTop: boolean) => {
-	if (!withBackToTop) {
-		return initialSpace;
-	}
-
-	return initialSpace - height.ctaMedium / 2
-}
-export const linksWrapper = (withBackToTop: boolean) => css`
+export const linksWrapper = css`
 	display: flex;
 	align-items: center;
-	margin-bottom: ${getMarginBottom(space[6], withBackToTop)}px;
+`
 
+export const linksWrapperSpace = css`
+    margin-bottom: ${space[6]}px;
 	${from.desktop} {
-		margin-bottom: ${getMarginBottom(space[1], withBackToTop)}px;
+		margin-bottom: ${space[1]}px;
+	}
+`
+
+const backToTopSpace = (initial: number) => initial - height.ctaMedium / 2
+
+export const linksWrapperSpaceWithBackToTop = css`
+    margin-bottom: ${backToTopSpace(space[6])}px;
+	${from.desktop} {
+		margin-bottom: ${backToTopSpace(space[1])}px;
 	}
 `
 
