@@ -1,6 +1,6 @@
 {
 	"name": "source",
-	"version": "2.5.0-rc.1",
+	"version": "2.5.0",
 	"license": "Apache-2.0",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:icons & start-storybook --port 9009",

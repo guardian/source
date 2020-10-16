@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-svgs",
-	"version": "2.5.0-rc.1",
+	"version": "2.5.0",
 	"license": "Apache-2.0",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
@@ -26,8 +26,8 @@
 		"@babel/preset-env": "^7.10.0",
 		"@babel/preset-react": "^7.10.0",
 		"@babel/preset-typescript": "^7.9.0",
-		"@guardian/src-foundations": "^2.5.0-rc.1",
-		"@guardian/src-helpers": "^2.5.0-rc.1",
+		"@guardian/src-foundations": "^2.5.0",
+		"@guardian/src-helpers": "^2.5.0",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-node-resolve": "^5.2.0",
