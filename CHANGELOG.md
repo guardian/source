@@ -41,6 +41,7 @@
 -   :sparkles: [2f32ddc](https://github.com/guardian/source/commit/2f32ddc0d77df68dcfd18d64ec26c46bc485df13) add columns component
 -   :sparkles: [8a4dbe6](https://github.com/guardian/source/commit/8a4dbe6cf7f7616c21ae3766a937791955ee9656) add hide component
 -   :bug: [b92b36e](https://github.com/guardian/source/commit/b92b36e9847ce54ef76ede51cefd74e9f858a870) publish component source files
+-   :sparkles: [f0ff17b](https://github.com/guardian/source/commit/f0ff17bf2631dff3327c1206836e5528ac355771) Add an Inline component (thanks @amyhughes)
 
 **`@guardian/src-radio 2.5.0`**
 
@@ -60,7 +61,7 @@
 
 -   :sparkles: [c485e64](https://github.com/guardian/source/commit/c485e6475e5d389f3ed23ef74e7c45d4e717b51f) add hideLabel-prop to text-input (thanks @agreon)
 
-## 23 September
+## 23 September 2020
 
 **`@guardian/src-ed-lines 2.4.0`**
 
@@ -83,7 +84,7 @@
 
 -   :robot: [a47e731](https://github.com/guardian/source/commit/a47e7318a970829b08a882a3eae6e3dc97f50ddc) use alert triangle in user feedback
 
-## 2 September
+## 2 September 2020
 
 **`@guardian/src-checkbox 2.3.0`**
 
