@@ -70,7 +70,7 @@
 		"execa": "^4.0.3",
 		"jest": "^26.5.3",
 		"prettier": "^2.1.2",
-		"react": "^16.8.6",
+		"react": "^16.14.0",
 		"react-dom": "^16.8.6",
 		"regenerator-runtime": "^0.13.7",
 		"storybook-chromatic": "^4.0.2",
