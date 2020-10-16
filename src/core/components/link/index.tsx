@@ -51,16 +51,20 @@ const linkContents = ({
 	iconSvg?: ReactElement
 	iconSide: IconSide
 }) => {
+	// a bit of underlined space; the icon sits on top
+	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>
 	const linkContents = [children]
 
 	if (iconSvg) {
 		if (iconSide === "left") {
 			linkContents.unshift(
-				React.cloneElement(iconSvg, { key: "svg" }),
+				spacer,
+				React.cloneElement(iconSvg, { key: "svg" })
 			)
 		} else {
 			linkContents.push(
-				React.cloneElement(iconSvg, { key: "svg" }),
+				spacer,
+				React.cloneElement(iconSvg, { key: "svg" })
 			)
 		}
 	}

@@ -61,12 +61,13 @@ export const icon = css`
 
 export const iconRight = css`
 	svg {
-		margin-left: ${space[1]}px;
+		margin-left: -${space[5]}px;
 	}
 `
 
 export const iconLeft = css`
 	svg {
+		margin-left: -${space[6]}px;
 		margin-right: ${space[1]}px;
 	}
 `
