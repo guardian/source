@@ -8,8 +8,10 @@ export const container = css`
 	box-sizing: border-box;
 	padding: 0 ${space[3]}px;
 	width: 100%;
-	${from.tablet} {
+	${from.mobileLandscape} {
 		padding: 0 ${space[5]}px;
+	}
+	${from.tablet} {
 		width: ${breakpoints.tablet}px;
 	}
 	${from.desktop} {
