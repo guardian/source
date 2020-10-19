@@ -53,7 +53,7 @@ export const subdued = css`
 export const icon = css`
 	svg {
 		fill: currentColor;
-		vertical-align: middle;
+		vertical-align: text-top;
 		width: ${width.iconXsmall}px;
 		height: auto;
 	}
