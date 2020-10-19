@@ -53,7 +53,12 @@ export const subdued = css`
 export const icon = css`
 	svg {
 		fill: currentColor;
-		vertical-align: text-top;
+		/*
+		TODO: hardcoded bottom margin to vertically align
+		icons with text. This needs to be revisited when
+		the rules of icon spacing have been formalised
+		 */
+		margin-bottom: -3px;
 		width: ${width.iconXsmall}px;
 		height: auto;
 	}
