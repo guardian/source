@@ -37,6 +37,10 @@
 		"guardian-logo.tsx",
 		"guardian-live-logo.tsx",
 		"roundel.tsx",
+		"roundel-brand.tsx",
+		"roundel-brand-inverse.tsx",
+		"roundel-default.tsx",
+		"roundel-inverse.tsx",
 		"*.d.ts",
 		"dist/*.js"
 	],
