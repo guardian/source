@@ -13,3 +13,4 @@ export default {
 }
 
 export * from "./stories/tiles/default"
+export * from "./stories/tiles/collapse-below"

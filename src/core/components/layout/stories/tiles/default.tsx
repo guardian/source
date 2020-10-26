@@ -10,7 +10,18 @@ const contents = css`
 	background-color: ${sport[600]};
 `
 
-export const noSpace = () => (
+export const columns2 = () => (
+	<Tiles columns={2}>
+		<div css={contents}>Item 1</div>
+		<div css={contents}>Item 2</div>
+	</Tiles>
+)
+
+columns2.story = {
+	name: "2 columns",
+}
+
+export const columns3 = () => (
 	<Tiles columns={3}>
 		<div css={contents}>Item 1</div>
 		<div css={contents}>Item 2</div>
@@ -18,42 +29,33 @@ export const noSpace = () => (
 	</Tiles>
 )
 
-noSpace.story = {
-	name: "no space",
+columns3.story = {
+	name: "3 columns",
 }
 
-export const space1 = () => (
-	<Tiles space={2} columns={3}>
+export const columns4 = () => (
+	<Tiles columns={4}>
 		<div css={contents}>Item 1</div>
 		<div css={contents}>Item 2</div>
 		<div css={contents}>Item 3</div>
+		<div css={contents}>Item 4</div>
 	</Tiles>
 )
 
-space1.story = {
-	name: "space 1",
+columns4.story = {
+	name: "4 columns",
 }
 
-export const space2 = () => (
-	<Tiles space={2} columns={3}>
+export const columns5 = () => (
+	<Tiles columns={3}>
 		<div css={contents}>Item 1</div>
 		<div css={contents}>Item 2</div>
 		<div css={contents}>Item 3</div>
+		<div css={contents}>Item 4</div>
+		<div css={contents}>Item 5</div>
 	</Tiles>
 )
 
-space2.story = {
-	name: "space 2",
-}
-
-export const space3 = () => (
-	<Tiles space={2} columns={3}>
-		<div css={contents}>Item 1</div>
-		<div css={contents}>Item 2</div>
-		<div css={contents}>Item 3</div>
-	</Tiles>
-)
-
-space3.story = {
-	name: "space 3",
+columns5.story = {
+	name: "5 columns",
 }

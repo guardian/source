@@ -2,21 +2,60 @@ import React, { HTMLAttributes, ReactNode } from "react"
 import { SerializedStyles } from "@emotion/core"
 import { Props } from "@guardian/src-helpers"
 import {tileGridColumns, tilesGridContainer} from "./styles";
+import {
+	tilesCollapseBelowDesktop, collapseBelowDesktopTiles,
+	tilesCollapseBelowleftCol, collapseBelowLeftColTiles,
+	tilesCollapseBelowTablet,
+	collapseBelowTabletTiles,
+	tilesCollapseBelowWide, collapseBelowWideTiles
+} from "../tiles/styles";
+import {Breakpoint} from "@guardian/src-foundations/mq";
 
 type Columns = 2 | 3 | 4 | 5
 type StackSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24
+
+type GridBreakpoint = Extract<
+	Breakpoint,
+	"mobile" | "tablet" | "desktop" | "leftCol" | "wide"
+	>
+
+type CollapseBreakpoint = Extract<
+	GridBreakpoint,
+	"tablet" | "desktop" | "leftCol" | "wide"
+	>
 
 interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
 	columns: Columns
 	space?: StackSpace
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 	children: ReactNode
+	collapseBelow?: CollapseBreakpoint
 }
 
-const Tiles = ({ cssOverrides, children, columns, space, ...props }: TilesProps) => {
+const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
+	tablet: tilesCollapseBelowTablet,
+	desktop: tilesCollapseBelowDesktop,
+	leftCol: tilesCollapseBelowleftCol,
+	wide: tilesCollapseBelowWide,
+}
+
+const collapseBelowColumnsMap: {
+	[key in CollapseBreakpoint]: SerializedStyles
+} = {
+	tablet: collapseBelowTabletTiles,
+	desktop: collapseBelowDesktopTiles,
+	leftCol: collapseBelowLeftColTiles,
+	wide: collapseBelowWideTiles,
+}
+
+const Tiles = ({ collapseBelow, cssOverrides, children, columns, space, ...props }: TilesProps) => {
 	return (
 		<div
-			css={[tilesGridContainer, tileGridColumns[columns]]}
+			css={[
+				tilesGridContainer,
+				tileGridColumns[columns],
+				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : "",
+				collapseBelow ? collapseBelowMap[collapseBelow] : "",]}
 			{...props}
 		>
 			{children}
