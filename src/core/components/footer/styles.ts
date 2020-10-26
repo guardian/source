@@ -18,11 +18,32 @@ export const footer = ({
 	}
 `
 
+export const linksWrapper = css`
+	display: flex;
+	align-items: center;
+`
+
+export const linksWrapperSpace = css`
+    margin-bottom: ${space[6]}px;
+	${from.desktop} {
+		margin-bottom: ${space[1]}px;
+	}
+`
+
+const backToTopSpace = (initial: number) => initial - height.ctaMedium / 2
+
+export const linksWrapperSpaceWithBackToTop = css`
+    margin-bottom: ${backToTopSpace(space[6])}px;
+	${from.desktop} {
+		margin-bottom: ${backToTopSpace(space[1])}px;
+	}
+`
+
 export const links = ({ footer }: { footer: FooterTheme } = footerBrand) => css`
-	position: relative;
 	border-style: solid;
 	border-color: ${footer.border};
 	border-width: 0 0 1px 0;
+	flex: 1 1 auto;
 
 	/* TODO: viewport-specific layout for when footer supports content */
 	/* border-width: 1px 0 1px 0;
@@ -35,11 +56,6 @@ export const links = ({ footer }: { footer: FooterTheme } = footerBrand) => css`
 export const copyright = css`
 	${textSans.xsmall()};
 	display: block;
-	margin-top: ${space[6]}px;
-
-	${from.desktop} {
-		margin-top: ${space[1]}px;
-	}
 `
 
 // ensure copyright text doesn't get too close to back to top link
@@ -55,9 +71,6 @@ export const backToTop = ({
 	display: flex;
 	align-items: center;
 	height: ${height.ctaMedium}px;
-	position: absolute;
-	top: -${height.ctaMedium / 2}px;
-	right: 0;
 	padding-left: ${space[2]}px;
 
 	${textSans.small({ fontWeight: "bold" })};

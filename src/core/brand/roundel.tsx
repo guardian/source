@@ -1,5 +1,6 @@
 import React from "react"
 
+// TODO: Deprecated. Please only use filled versions
 export const SvgRoundel = () => {
 	return (
 		<svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">

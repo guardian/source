@@ -3,6 +3,7 @@ import { width } from "@guardian/src-foundations/size"
 import { linkDefault, LinkTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
+import { space } from "@guardian/src-foundations"
 
 export const link = css`
 	position: relative;
@@ -50,14 +51,14 @@ export const subdued = css`
 `
 
 export const icon = css`
-	/*
-	FIXME: This makes icons sit vertically centred, but breaks links with long
-	text descriptions onto a separate line to surrounding text
-	 */
-	display: inline-flex;
 	svg {
 		fill: currentColor;
-		position: absolute;
+		/*
+		TODO: hardcoded bottom margin to vertically align
+		icons with text. This needs to be revisited when
+		the rules of icon spacing have been formalised
+		 */
+		margin-bottom: -3px;
 		width: ${width.iconXsmall}px;
 		height: auto;
 	}
@@ -65,12 +66,13 @@ export const icon = css`
 
 export const iconRight = css`
 	svg {
-		right: 0;
+		margin-left: -${space[5]}px;
 	}
 `
 
 export const iconLeft = css`
 	svg {
-		left: 0;
+		margin-left: -${space[6]}px;
+		margin-right: ${space[1]}px;
 	}
 `

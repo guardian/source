@@ -10,25 +10,81 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
-## 23 September
+## 16 October 2020
+
+**`@guardian/src-button 2.5.0`**
+
+-   :bug: [2da7f3a](https://github.com/guardian/source/commit/2da7f3adc1d2cb09d163878ced1c0712dd770f66) fix: remove React warnings about missing key (thanks @mathieumure)
+-   :robot: [68a4266](https://github.com/guardian/source/commit/68a426616f8de94cb14e97a75ba1e604ad3272e0) remove unused props showIcon (thanks @mathieumure)
+
+**`@guardian/src-checkbox 2.5.0`**
+
+-   :sparkles: [5ee9ccd](https://github.com/guardian/source/commit/5ee9ccdf44dbed68e9ff968ea277e0f9c1d8f11d) add hideLabel-prop to checkbox-group (thanks @agreon)
+-   :globe_with_meridians: [e504db4](https://github.com/guardian/source/commit/e504db4f66ca5dded18b800ba525c6f16666a9ed) add checkbox type to input
+
+**`@guardian/src-choice-card 2.5.0`**
+
+-   :sparkles: [8af55ef](https://github.com/guardian/source/commit/8af55efbe5bb9e6f388c92250f7dbf807290aec4) Add columns Prop to ChoiceCardGroup (thanks @rrrahal)
+-   :robot: [6f15ea4](https://github.com/guardian/source/commit/6f15ea474417cfc98b424eda46b4045117effc84) disable aria role check as too strict
+
+**`@guardian/src-footer 2.5.0`**
+
+-   :robot: [6f15ea4](https://github.com/guardian/source/commit/538d28f3509fbcd6f49eac1f41f06f0801b6b645) disable aria role check as too strict
+-   :bug: [0a800ae](https://github.com/guardian/source/commit/0a800ae16ee5012587254bdeea730a78853f317d) (thanks @mathieumure)
+
+**`@guardian/src-layout 2.5.0`**
+
+-   :sparkles: [e4adea4](https://github.com/guardian/source/commit/e4adea43e53a81e0306d27647694bb2f251ac48f) add layout package with stack component
+-   :robot: [3f44e02](https://github.com/guardian/source/commit/3f44e02bff1f0d40de72aed77b4967059d34c86c) Clean up stacks (thanks @mxdvl)
+-   :robot: [c403d6b](https://github.com/guardian/source/commit/c403d6b40c005af2c6f37cdde388ebc112158132) move stack component into separate folder
+-   :sparkles: [e96c175](https://github.com/guardian/source/commit/e96c1755a15e513b16b10c4a3b7d7489d566864e) add container component
+-   :sparkles: [2f32ddc](https://github.com/guardian/source/commit/2f32ddc0d77df68dcfd18d64ec26c46bc485df13) add columns component
+-   :sparkles: [8a4dbe6](https://github.com/guardian/source/commit/8a4dbe6cf7f7616c21ae3766a937791955ee9656) add hide component
+-   :bug: [b92b36e](https://github.com/guardian/source/commit/b92b36e9847ce54ef76ede51cefd74e9f858a870) publish component source files
+-   :sparkles: [f0ff17b](https://github.com/guardian/source/commit/f0ff17bf2631dff3327c1206836e5528ac355771) Add an Inline component (thanks @amyhughes)
+
+**`@guardian/src-radio 2.5.0`**
+
+-   :sparkles: [715cd6d](https://github.com/guardian/source/commit/715cd6d2b362c78dd0f356d5d779e48039d25b73) add hideLabel-prop to radio-group (thanks @agreon)
+-   :globe_with_meridians: [565c57b](https://github.com/guardian/source/commit/565c57bd0d51513cdccdbb7e1ca336825237474d) move aria-invalid from radio to fieldset
+
+**`@guardian/src-select 2.5.0`**
+
+-   :sparkles: [730d226](https://github.com/guardian/source/commit/730d226ec8201fe14c047e1db15029c9dbf83d97) add hideLabel-prop to select (thanks @agreon)
+-   :robot: [79c0327](https://github.com/guardian/source/commit/79c03275aa100209acabd3e28486802aae1440d8) expose select hide label story
+
+**`@guardian/src-text-area 2.5.0`**
+
+-   :sparkles: [a3a0ade](https://github.com/guardian/source/commit/a3a0adebe59fa94d72f41ff52fac278301b104e2) add hideLabel-prop to text-area (thanks @agreon)
+
+**`@guardian/src-text-input 2.5.0`**
+
+-   :sparkles: [c485e64](https://github.com/guardian/source/commit/c485e6475e5d389f3ed23ef74e7c45d4e717b51f) add hideLabel-prop to text-input (thanks @agreon)
+
+## 23 September 2020
 
 **`@guardian/src-ed-lines 2.4.0`**
-- :sparkles: [b95ce71](https://github.com/guardian/source/commit/b95ce71cc41b469820ed7854de1797bc13fc02c1) Eight lines of anything (thanks @mxdvl)
-- :page_with_curl: [0f80f98](https://github.com/guardian/source/commit/0f80f98503d115d24caf191b7947c475951d8e7e) Add npm example to ed-lines README (thanks @jamieb-gu)
+
+-   :sparkles: [b95ce71](https://github.com/guardian/source/commit/b95ce71cc41b469820ed7854de1797bc13fc02c1) Eight lines of anything (thanks @mxdvl)
+-   :page_with_curl: [0f80f98](https://github.com/guardian/source/commit/0f80f98503d115d24caf191b7947c475951d8e7e) Add npm example to ed-lines README (thanks @jamieb-gu)
 
 **`@guardian/src-foundations 2.4.0`**
-- :sparkles: [dca2927](https://github.com/guardian/source/commit/dca2927dfe5f8663304fbbd3a4299935de4764d9) add special report 800 (thanks @webb)
+
+-   :sparkles: [dca2927](https://github.com/guardian/source/commit/dca2927dfe5f8663304fbbd3a4299935de4764d9) add special report 800 (thanks @webb)
 
 **`@guardian/src-icons 2.4.0`**
-- :sparkles: [fbc60b3](https://github.com/guardian/source/commit/fbc60b3b78bbe21e8c965410436882865bfc64b5) add alert, eye and play icons
+
+-   :sparkles: [fbc60b3](https://github.com/guardian/source/commit/fbc60b3b78bbe21e8c965410436882865bfc64b5) add alert, eye and play icons
 
 **`@guardian/src-radio 2.4.0`**
-- :bug: [19687a1](https://github.com/guardian/source/commit/19687a1e58ddb94791c618ddfcaa9fbb863e5f97) use vertical align instead of flex for horiz fieldset
+
+-   :bug: [19687a1](https://github.com/guardian/source/commit/19687a1e58ddb94791c618ddfcaa9fbb863e5f97) use vertical align instead of flex for horiz fieldset
 
 **`@guardian/src-user-feedback 2.4.0`**
-- :robot: [a47e731](https://github.com/guardian/source/commit/a47e7318a970829b08a882a3eae6e3dc97f50ddc) use alert triangle in user feedback
 
-## 2 September
+-   :robot: [a47e731](https://github.com/guardian/source/commit/a47e7318a970829b08a882a3eae6e3dc97f50ddc) use alert triangle in user feedback
+
+## 2 September 2020
 
 **`@guardian/src-checkbox 2.3.0`**
 

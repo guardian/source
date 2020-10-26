@@ -5,7 +5,9 @@ import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { RadioTheme, radioDefault } from "@guardian/src-foundations/themes"
 
-export const fieldset = css`
+export const fieldset = ({
+	radio,
+}: { radio: RadioTheme } = radioDefault) => css`
 	display: flex;
 	justify-content: flex-start;
 
@@ -13,6 +15,10 @@ export const fieldset = css`
 	border: 0;
 	padding: 0;
 	margin: 0;
+
+	&[aria-invalid="true"] input {
+		border: 4px solid ${radio.borderError};
+	}
 `
 
 export const label = ({ radio }: { radio: RadioTheme } = radioDefault) => css`
@@ -128,10 +134,4 @@ export const horizontal = css`
 `
 export const vertical = css`
 	flex-direction: column;
-`
-
-export const errorRadio = ({
-	radio,
-}: { radio: RadioTheme } = radioDefault) => css`
-	border: 4px solid ${radio.borderError};
 `
