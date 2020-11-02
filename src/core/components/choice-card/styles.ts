@@ -9,7 +9,7 @@ import {
 	choiceCardDefault,
 } from "@guardian/src-foundations/themes"
 import { width, height } from "@guardian/src-foundations/size"
-import { Columns } from './index'
+import { Columns } from "./index"
 
 export const fieldset = css`
 	border: 0;
@@ -41,15 +41,15 @@ export const gridContainer = css`
 				margin: 0;
 			}
 		}
-	}	
+	}
 `
 
 const gridColumnsStyle = (columns: Columns) => css`
-  	${from.mobileLandscape} {
+	${from.mobileLandscape} {
 		grid-template-columns: repeat(${columns}, 1fr);
 	}
 `
-export const gridColumns: {[key in Columns]: SerializedStyles } = {
+export const gridColumns: { [key in Columns]: SerializedStyles } = {
 	2: gridColumnsStyle(2),
 	3: gridColumnsStyle(3),
 	4: gridColumnsStyle(4),

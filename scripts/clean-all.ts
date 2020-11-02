@@ -8,12 +8,12 @@ const clean = (dir: string) => {
 		stdio: "inherit",
 	})
 }
-;[foundations, svgs, icons, brand, helpers].forEach(dir => {
+;[foundations, svgs, icons, brand, helpers].forEach((dir) => {
 	clean(dir)
 })
 
-getComponentPaths().then(paths => {
-	paths.forEach(path => {
+getComponentPaths().then((paths) => {
+	paths.forEach((path) => {
 		if (path) clean(path)
 	})
 })

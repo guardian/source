@@ -52,7 +52,7 @@ const fontSizeMapping: {
 	textSans: textSansSizes,
 }
 
-const remFontSizes = fontSizes.map(fontSize => pxToRem(fontSize))
+const remFontSizes = fontSizes.map((fontSize) => pxToRem(fontSize))
 
 const remTitlepieceSizes: TitlepieceSizes = {
 	small: remFontSizes[7], //42px

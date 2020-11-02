@@ -3,7 +3,7 @@ import { SerializedStyles, css } from "@emotion/core"
 import { legend, labelText, optionalText, supportingText } from "./styles"
 import { Props } from "@guardian/src-helpers"
 export { labelDefault, labelBrand } from "@guardian/src-foundations/themes"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
 
 const visuallyHidden = css`
 	${_visuallyHidden}
@@ -53,7 +53,14 @@ const Legend = ({
 }: LegendProps) => {
 	return (
 		<>
-			<legend css={[legend, hideLabel ? visuallyHidden : undefined, cssOverrides]} {...props}>
+			<legend
+				css={[
+					legend,
+					hideLabel ? visuallyHidden : undefined,
+					cssOverrides,
+				]}
+				{...props}
+			>
 				<Text text={text} optional={optional} />
 			</legend>
 			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}

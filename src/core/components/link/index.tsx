@@ -59,12 +59,12 @@ const linkContents = ({
 		if (iconSide === "left") {
 			linkContents.unshift(
 				spacer,
-				React.cloneElement(iconSvg, { key: "svg" })
+				React.cloneElement(iconSvg, { key: "svg" }),
 			)
 		} else {
 			linkContents.push(
 				spacer,
-				React.cloneElement(iconSvg, { key: "svg" })
+				React.cloneElement(iconSvg, { key: "svg" }),
 			)
 		}
 	}

@@ -15,7 +15,7 @@ const space = {
 
 /* TODO: this should be exposed as a number instead of a string,
    so consumers can perform calculations on it */
-const remSpace: { [K in keyof (typeof space)]: string } = {
+const remSpace: { [K in keyof typeof space]: string } = {
 	1: `${pxToRem(space[1])}rem`,
 	2: `${pxToRem(space[2])}rem`,
 	3: `${pxToRem(space[3])}rem`,

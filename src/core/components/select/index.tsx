@@ -19,7 +19,7 @@ import {
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle } from "@guardian/src-icons"
 
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
 export { selectDefault } from "@guardian/src-foundations/themes"
 
 const visuallyHidden = css`
@@ -58,7 +58,12 @@ const Select = ({
 }: SelectProps) => {
 	return (
 		<label>
-			<div css={(theme) => [label(theme.select && theme), hideLabel ? visuallyHidden : ""]}>
+			<div
+				css={(theme) => [
+					label(theme.select && theme),
+					hideLabel ? visuallyHidden : "",
+				]}
+			>
 				{labelText}{" "}
 				{optional ? (
 					<span css={(theme) => optionalLabel(theme.select && theme)}>

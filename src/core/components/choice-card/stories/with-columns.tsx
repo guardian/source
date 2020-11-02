@@ -68,5 +68,5 @@ export const singleStateControlledWithColumns = () => {
 }
 
 singleStateControlledWithColumns.story = {
-	name: `single state controlled with columns example`
+	name: `single state controlled with columns example`,
 }

@@ -13,7 +13,7 @@ import {
 	supportingText,
 	successInput,
 } from "./styles"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
 
 export { textInputDefault } from "@guardian/src-foundations/themes"
@@ -63,10 +63,12 @@ const TextInput = ({
 }: TextInputProps) => {
 	return (
 		<label>
-			<div css={(theme) => [
-				text(theme.textInput && theme),
-				hideLabel ? visuallyHidden : "",
-			]}>
+			<div
+				css={(theme) => [
+					text(theme.textInput && theme),
+					hideLabel ? visuallyHidden : "",
+				]}
+			>
 				{labelText}{" "}
 				{optional ? (
 					<span

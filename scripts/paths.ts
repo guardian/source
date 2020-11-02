@@ -15,17 +15,17 @@ const coreComponents = join(__dirname, "../src/core/components")
 const editorialComponents = join(__dirname, "../src/editorial/web/components")
 
 const isDirectory = (path: string) =>
-	statP(path).then(stats => stats.isDirectory())
+	statP(path).then((stats) => stats.isDirectory())
 
 export const getComponentPaths = () =>
 	Promise.all([
 		readdirP(coreComponents)
-			.then(componentDirs =>
+			.then((componentDirs) =>
 				Promise.all(
-					componentDirs.map(componentDirName =>
+					componentDirs.map((componentDirName) =>
 						isDirectory(
 							`${coreComponents}/${componentDirName}`,
-						).then(isDir => {
+						).then((isDir) => {
 							if (!isDir) return
 
 							return `${coreComponents}/${componentDirName}`
@@ -33,14 +33,14 @@ export const getComponentPaths = () =>
 					),
 				),
 			)
-			.then(paths => Promise.resolve(paths.filter(path => !!path))),
+			.then((paths) => Promise.resolve(paths.filter((path) => !!path))),
 		readdirP(editorialComponents)
-			.then(componentDirs =>
+			.then((componentDirs) =>
 				Promise.all(
-					componentDirs.map(componentDirName =>
+					componentDirs.map((componentDirName) =>
 						isDirectory(
 							`${editorialComponents}/${componentDirName}`,
-						).then(isDir => {
+						).then((isDir) => {
 							if (!isDir) return
 
 							return `${editorialComponents}/${componentDirName}`
@@ -48,7 +48,7 @@ export const getComponentPaths = () =>
 					),
 				),
 			)
-			.then(paths => Promise.resolve(paths.filter(path => !!path))),
+			.then((paths) => Promise.resolve(paths.filter((path) => !!path))),
 	]).then(([corePaths, editorialPaths]) => [...corePaths, ...editorialPaths])
 
 export const paths = {

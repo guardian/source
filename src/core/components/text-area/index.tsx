@@ -1,5 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles, css} from "@emotion/core"
+import { SerializedStyles, css } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import {
 	widthFluid,
@@ -9,7 +9,7 @@ import {
 	optionalLabel,
 	supportingText,
 } from "./styles"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
 
 const visuallyHidden = css`
@@ -89,7 +89,7 @@ const TextArea = ({
 const defaultProps = {
 	disabled: false,
 	optional: false,
-	hideLabel: false
+	hideLabel: false,
 }
 
 TextArea.defaultProps = { ...defaultProps }
