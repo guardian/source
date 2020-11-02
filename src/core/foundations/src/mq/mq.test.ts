@@ -19,8 +19,8 @@ it("between should return a media query with min- and max-width", () => {
 	const max: Breakpoint = "desktop"
 
 	expect(between[min].and[max]).toBe(
-		`@media (min-width: ${`${breakpoints[min]}px`}) and (max-width: ${`${breakpoints[
-			max
-		] - 1}px`})`,
+		`@media (min-width: ${`${breakpoints[min]}px`}) and (max-width: ${`${
+			breakpoints[max] - 1
+		}px`})`,
 	)
 })

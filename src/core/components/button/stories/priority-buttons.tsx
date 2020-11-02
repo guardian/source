@@ -16,24 +16,24 @@ import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
-	<Button onClick={e => console.log("Primary clicked:", e.target)}>
+	<Button onClick={(e) => console.log("Primary clicked:", e.target)}>
 		Primary
 	</Button>,
 	<Button
-		onClick={e => console.log("Secondary clicked:", e.target)}
+		onClick={(e) => console.log("Secondary clicked:", e.target)}
 		priority="secondary"
 	>
 		Secondary
 	</Button>,
 	<Button
-		onClick={e => console.log("Tertiary clicked", e.target)}
+		onClick={(e) => console.log("Tertiary clicked", e.target)}
 		priority="tertiary"
 	>
 		Tertiary
 	</Button>,
 	<Button
 		priority="subdued"
-		onClick={e => console.log("Subdued clicked", e.target)}
+		onClick={(e) => console.log("Subdued clicked", e.target)}
 	>
 		Subdued
 	</Button>,

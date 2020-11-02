@@ -24,7 +24,7 @@ export const linksWrapper = css`
 `
 
 export const linksWrapperSpace = css`
-    margin-bottom: ${space[6]}px;
+	margin-bottom: ${space[6]}px;
 	${from.desktop} {
 		margin-bottom: ${space[1]}px;
 	}
@@ -33,7 +33,7 @@ export const linksWrapperSpace = css`
 const backToTopSpace = (initial: number) => initial - height.ctaMedium / 2
 
 export const linksWrapperSpaceWithBackToTop = css`
-    margin-bottom: ${backToTopSpace(space[6])}px;
+	margin-bottom: ${backToTopSpace(space[6])}px;
 	${from.desktop} {
 		margin-bottom: ${backToTopSpace(space[1])}px;
 	}

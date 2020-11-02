@@ -23,7 +23,7 @@ function getFontStyle(
 	}
 }
 
-export const fs: Fs = category => (
+export const fs: Fs = (category) => (
 	level,
 	{ lineHeight, fontWeight, fontStyle, unit },
 ) => {
@@ -36,8 +36,10 @@ export const fs: Fs = category => (
 		unit === "px"
 			? // line-height is defined as a unitless value, so we multiply
 			  // by the element's font-size in px to get the px value
-			  `${lineHeightMapping[lineHeight] *
-					fontSizeMapping[category][level]}px`
+			  `${
+					lineHeightMapping[lineHeight] *
+					fontSizeMapping[category][level]
+			  }px`
 			: lineHeightMapping[lineHeight]
 	// TODO: consider logging an error in development if a requested
 	// font is unavailable

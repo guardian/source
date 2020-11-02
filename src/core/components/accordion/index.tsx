@@ -31,8 +31,8 @@ interface AccordionProps extends Props {
 
 const Accordion = ({ hideToggleLabel = false, children }: AccordionProps) => {
 	return (
-		<div css={theme => accordion(theme.accordion && theme)}>
-			{React.Children.map(children, child => {
+		<div css={(theme) => accordion(theme.accordion && theme)}>
+			{React.Children.map(children, (child) => {
 				return React.cloneElement(child, { hideToggleLabel })
 			})}
 		</div>
@@ -51,11 +51,11 @@ const NoJsRow = ({
 	children,
 }: AccordionRowProps) => {
 	return (
-		<div css={theme => accordionRow(theme.accordion && theme)}>
+		<div css={(theme) => accordionRow(theme.accordion && theme)}>
 			<label>
 				<input type="checkbox" css={noJsInput} role="button" />
 				<div
-					css={theme => noJsButton(theme.accordion && theme)}
+					css={(theme) => noJsButton(theme.accordion && theme)}
 					data-target="label"
 				>
 					<strong css={labelText}>{label}</strong>
@@ -122,11 +122,11 @@ const AccordionRow = ({
 
 	if (isBrowser) {
 		return (
-			<div css={theme => accordionRow(theme.accordion && theme)}>
+			<div css={(theme) => accordionRow(theme.accordion && theme)}>
 				<button
 					aria-expanded={expanded}
 					onClick={expanded ? collapse : expand}
-					css={theme => [
+					css={(theme) => [
 						button(theme.accordion && theme),
 						expanded ? chevronIconUp : chevronIconDown,
 						!hideToggleLabel ? toggleIconWithLabel : "",
