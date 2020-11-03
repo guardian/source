@@ -70,6 +70,12 @@ Additional text that appears below the `label`
 If true, users may select more than one choice card (checkbox behaviour). By default, users
 may only select a single choice card (radio button behaviour).
 
+### `columns`
+
+**`number`**
+
+To render a grid of choice cards, specify the number of columns. If this prop is not set, cards will appear on a single line.
+
 ### `error`
 
 **`string`**
@@ -103,13 +109,6 @@ An icon that appears inside the button, alongside text
 Whether choice card is checked. This is necessary when using the [controlled approach](https://reactjs.org/docs/forms.html#controlled-components) to form state management.
 
 **Note:** if you pass the `checked` prop, you **must** also pass an `onChange` handler, or the field will be rendered as read-only.
-
-### `columns`
-
-**`number`**
-
-To render a grid of choice cards, specify the number of columns. If this prop is not set, cards will appear on a single line.
-
 
 ## Supported themes
 
