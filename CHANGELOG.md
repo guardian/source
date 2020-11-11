@@ -10,6 +10,26 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 11 November 2020
+
+**`@guardian/src-brand 2.6.0`**
+
+-   :sparkles: [74639ae](https://github.com/guardian/source/commit/74639aedc0af739e0d789b3c42579732b1a86854) add filled roundels
+-   :page_with_curl: [79da8a6](https://github.com/guardian/source/commit/79da8a6e4efc00bacf6ceb6f2f4a97fb9b749808) add brand readme
+
+**`@guardian/src-choice-card 2.6.0`**
+
+-   :page_with_curl: [4e8ea7e](https://github.com/guardian/source/commit/4e8ea7efa7d78c8b2c8423e713d4062431e54c9f) move columns prop to group docs
+-   :page_with_curl: [203638f](https://github.com/guardian/source/commit/203638f14549870bb879a595a442f08dac932df0) simplify columns story
+
+**`@guardian/src-layout 2.6.0`**
+
+-   :nail_care: [80e2dc7](https://github.com/guardian/source/commit/80e2dc755278e6c5933400c9ff03beb7199c265b) update container side padding to be 20px from mobile landscape (thanks @i-hardy)
+
+**`@guardian/src-link 2.6.0`**
+
+-   :bug: [e46ee53](https://github.com/guardian/source/commit/e46ee533fb10a0fe7c4dd0b3b65d991e18b69e67) Allow links with icons to sit inline (thanks @webb04)
+
 ## 16 October 2020
 
 **`@guardian/src-button 2.5.0`**
