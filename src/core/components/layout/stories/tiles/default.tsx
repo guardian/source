@@ -46,7 +46,7 @@ columns4.story = {
 	name: "4 columns",
 }
 
-export const columns5 = () => (
+export const columns3rows2 = () => (
 	<Tiles columns={3}>
 		<div css={contents}>Item 1</div>
 		<div css={contents}>Item 2</div>
@@ -56,6 +56,6 @@ export const columns5 = () => (
 	</Tiles>
 )
 
-columns5.story = {
-	name: "5 columns",
+columns3rows2.story = {
+	name: "3 columns 2 rows",
 }

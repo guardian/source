@@ -12,7 +12,6 @@ import {
 import {Breakpoint} from "@guardian/src-foundations/mq";
 
 type Columns = 2 | 3 | 4 | 5
-type StackSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24
 
 type GridBreakpoint = Extract<
 	Breakpoint,
@@ -26,7 +25,6 @@ type CollapseBreakpoint = Extract<
 
 interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
 	columns: Columns
-	space?: StackSpace
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 	children: ReactNode
 	collapseBelow?: CollapseBreakpoint
@@ -48,7 +46,7 @@ const collapseBelowColumnsMap: {
 	wide: collapseBelowWideTiles,
 }
 
-const Tiles = ({ collapseBelow, cssOverrides, children, columns, space, ...props }: TilesProps) => {
+const Tiles = ({ collapseBelow, cssOverrides, children, columns, ...props }: TilesProps) => {
 	return (
 		<div
 			css={[

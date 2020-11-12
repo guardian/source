@@ -72,8 +72,8 @@ export const tilesGridContainer = css`
 	${from.mobileLandscape} {
 		@supports (display: grid) {
 			display: grid;
-			row-gap: ${space[2]}px;
-			column-gap: ${space[2]}px;
+			row-gap: ${space[5]}px;
+			column-gap: ${space[5]}px;
 		}
 	}
 `
