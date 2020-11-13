@@ -2,7 +2,7 @@ import React from "react"
 import { Tiles } from "../../index"
 import { sport } from "@guardian/src-foundations/palette"
 import { css } from "@emotion/core"
-import {textSans} from "@guardian/src-foundations/typography";
+import { textSans } from "@guardian/src-foundations/typography"
 
 const contents = css`
 	${textSans.medium()};

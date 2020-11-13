@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from "@emotion/core"
-import {Columns} from "@guardian/src-choice-card";
-import {from, until} from "@guardian/src-foundations/mq";
-import {space} from "@guardian/src-foundations";
+import { Columns } from "@guardian/src-choice-card"
+import { from, until } from "@guardian/src-foundations/mq"
+import { space } from "@guardian/src-foundations"
 
 const collapseBelowTilesSpacing = css`
 	display: block;
@@ -79,12 +79,12 @@ export const tilesGridContainer = css`
 `
 
 const gridColumnsStyle = (columns: Columns) => css`
-  	${from.mobileLandscape} {
+	${from.mobileLandscape} {
 		grid-template-columns: repeat(${columns}, 1fr);
 	}
 `
 
-export const tileGridColumns: {[key in Columns]: SerializedStyles } = {
+export const tileGridColumns: { [key in Columns]: SerializedStyles } = {
 	2: gridColumnsStyle(2),
 	3: gridColumnsStyle(3),
 	4: gridColumnsStyle(4),
