@@ -45,6 +45,7 @@
 		"dist/*.js"
 	],
 	"peerDependencies": {
-		"react": "^16.8.6"
+		"react": "^16.8.6",
+		"@guardian/src-foundations": "^2.7.0-rc.0"
 	}
 }
