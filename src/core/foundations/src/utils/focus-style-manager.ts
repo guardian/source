@@ -33,9 +33,10 @@ export class InteractionModeEngine {
 
 	private reset() {
 		this.container.classList.remove(this.className)
-		this.container.removeEventListener("keydown", this.handleKeyDown as (
-			evt: Event,
-		) => void)
+		this.container.removeEventListener(
+			"keydown",
+			this.handleKeyDown as (evt: Event) => void,
+		)
 		this.container.removeEventListener("mousedown", this.handleMouseDown)
 	}
 
@@ -49,9 +50,10 @@ export class InteractionModeEngine {
 	private handleMouseDown = () => {
 		this.reset()
 		this.container.classList.add(this.className)
-		this.container.addEventListener("keydown", this.handleKeyDown as (
-			evt: Event,
-		) => void)
+		this.container.addEventListener(
+			"keydown",
+			this.handleKeyDown as (evt: Event) => void,
+		)
 	}
 }
 

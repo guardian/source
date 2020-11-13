@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-svgs",
-	"version": "2.6.0-rc.0",
+	"version": "2.7.0-rc.0",
 	"license": "Apache-2.0",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
@@ -22,16 +22,16 @@
 		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.10.0",
+		"@babel/core": "^7.12.3",
 		"@babel/preset-env": "^7.10.0",
 		"@babel/preset-react": "^7.10.0",
 		"@babel/preset-typescript": "^7.9.0",
-		"@guardian/src-foundations": "^2.6.0-rc.0",
-		"@guardian/src-helpers": "^2.6.0-rc.0",
+		"@guardian/src-foundations": "^2.7.0-rc.0",
+		"@guardian/src-helpers": "^2.7.0-rc.0",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-node-resolve": "^5.2.0",
-		"typescript": "^4.0.3"
+		"typescript": "^4.0.5"
 	},
 	"files": [
 		"alert.tsx",

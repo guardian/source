@@ -3,7 +3,7 @@ import { version } from "../package.json"
 import { paths, getComponentPaths } from "./paths"
 
 const verbump = (dir: string) => {
-	return fs.readFile(`${dir}/package.json`, "utf8").then(contents => {
+	return fs.readFile(`${dir}/package.json`, "utf8").then((contents) => {
 		// perfectly safe find and replace that definitely, _definitely_ won't go wrong ever
 		const regex = /"@guardian\/src-([\w-]+)": ".*"/g
 		const replaceString = `"@guardian\/src-$1": "^${version}"`
@@ -15,14 +15,14 @@ const verbump = (dir: string) => {
 
 const { root, foundations, svgs, icons, brand, helpers } = paths
 
-const packages = getComponentPaths().then(paths =>
+const packages = getComponentPaths().then((paths) =>
 	paths.concat([foundations, svgs, icons, brand, root, helpers]),
 )
 
-packages.then(ps => {
-	ps.forEach(dir => {
+packages.then((ps) => {
+	ps.forEach((dir) => {
 		if (!dir) return
 
-		verbump(dir).catch(err => console.log("Error bumping packages:", err))
+		verbump(dir).catch((err) => console.log("Error bumping packages:", err))
 	})
 })

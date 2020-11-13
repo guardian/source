@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-ed-lines",
-	"version": "2.6.0-rc.0",
+	"version": "2.7.0-rc.0",
 	"license": "Apache-2.0",
 	"main": "dist/lines.js",
 	"module": "dist/lines.esm.js",
@@ -21,12 +21,12 @@
 		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.10.0",
+		"@babel/core": "^7.12.3",
 		"@babel/preset-env": "^7.10.0",
 		"@babel/preset-react": "^7.10.0",
 		"@babel/preset-typescript": "^7.9.0",
 		"@emotion/babel-preset-css-prop": "^10.0.14",
-		"@guardian/src-foundations": "^2.6.0-rc.0",
+		"@guardian/src-foundations": "^2.7.0-rc.0",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.2",
@@ -41,10 +41,10 @@
 	],
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
-		"@guardian/src-foundations": "^2.6.0-rc.0",
+		"@guardian/src-foundations": "^2.7.0-rc.0",
 		"react": "^16.8.6"
 	},
 	"dependencies": {
-		"@guardian/src-helpers": "^2.6.0-rc.0"
+		"@guardian/src-helpers": "^2.7.0-rc.0"
 	}
 }

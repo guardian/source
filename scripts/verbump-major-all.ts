@@ -9,14 +9,14 @@ const verbump = (dir: string) => {
 
 const { root, foundations, svgs, icons, brand, helpers } = paths
 
-const packages = getComponentPaths().then(paths =>
+const packages = getComponentPaths().then((paths) =>
 	paths.concat([foundations, svgs, icons, brand, root, helpers]),
 )
 
-packages.then(ps => {
-	ps.forEach(dir => {
+packages.then((ps) => {
+	ps.forEach((dir) => {
 		if (!dir) return
 
-		verbump(dir).catch(err => console.log("Error bumping packages:", err))
+		verbump(dir).catch((err) => console.log("Error bumping packages:", err))
 	})
 })
