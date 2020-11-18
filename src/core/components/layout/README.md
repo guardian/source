@@ -144,3 +144,25 @@ const Wrapper = () => (
 **`1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24`**
 
 Units of space between inline items (one unit is 4px)
+
+## Tiles
+
+```tsx
+import { Tiles } from "@guardian/src-layout"
+
+const Wrapper = () => (
+    <Tiles columns={3}>
+        <div css={contents}>Item 1</div>
+        <div css={contents}>Item 2</div>
+        <div css={contents}>Item 3</div>
+    </Tiles>
+)
+```
+
+### Props
+
+#### `collapseBelow`
+
+**`Breakpoint`**
+
+Tiles will be stacked one on top of the other at viewport widths lower than the specified breakpoint.
