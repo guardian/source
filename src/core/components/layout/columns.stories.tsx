@@ -12,6 +12,7 @@ export default {
 	decorators: [gridStoryWrapper],
 }
 
-export * from "./stories/columns/collapse-below"
 export * from "./stories/columns/default"
+export * from "./stories/columns/collapse-below"
+export * from "./stories/columns/with-container"
 export * from "./stories/columns/with-width"
