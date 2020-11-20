@@ -12,13 +12,12 @@ const publish = (dir: string) => {
 	)
 }
 
-const { foundations, svgs, icons, brand, helpers, coreComponents } = paths
+const { foundations, icons, brand, helpers, coreComponents } = paths
 
 // Publish these packages in the specified order
 const prioritisedPackages = [
 	foundations,
 	helpers,
-	svgs,
 	icons,
 	brand,
 	`${coreComponents}/user-feedback`,
