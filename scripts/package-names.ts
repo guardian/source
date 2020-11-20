@@ -47,7 +47,6 @@ export const getComponentPackageNames = () =>
 
 export const packageNames = {
 	foundations: "@guardian/src-foundations",
-	svgs: "@guardian/src-svgs",
 	icons: "@guardian/src-icons",
 	brand: "@guardian/src-brand",
 	helpers: "@guardian/src-helpers",
