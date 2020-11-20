@@ -7,13 +7,12 @@ const build = (dir: string) => {
 	})
 }
 
-const { foundations, svgs, icons, brand, helpers, coreComponents } = paths
+const { foundations, icons, brand, helpers, coreComponents } = paths
 
 // Build these packages in the specified order
 const prioritisedPackages = [
 	foundations,
 	helpers,
-	svgs,
 	icons,
 	brand,
 	`${coreComponents}/user-feedback`,
