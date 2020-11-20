@@ -1,14 +1,14 @@
 import execa from "execa"
 import { paths, getComponentPaths } from "./paths"
 
-const { foundations, svgs, icons, brand, helpers } = paths
+const { foundations, icons, brand, helpers } = paths
 
 const clean = (dir: string) => {
 	return execa("yarn", ["--cwd", `${dir}`, "run", "clean"], {
 		stdio: "inherit",
 	})
 }
-;[foundations, svgs, icons, brand, helpers].forEach((dir) => {
+;[foundations, icons, brand, helpers].forEach((dir) => {
 	clean(dir)
 })
 

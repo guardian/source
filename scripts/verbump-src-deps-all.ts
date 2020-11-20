@@ -13,10 +13,10 @@ const verbump = (dir: string) => {
 	})
 }
 
-const { root, foundations, svgs, icons, brand, helpers } = paths
+const { root, foundations, icons, brand, helpers } = paths
 
 const packages = getComponentPaths().then((paths) =>
-	paths.concat([foundations, svgs, icons, brand, root, helpers]),
+	paths.concat([foundations, icons, brand, root, helpers]),
 )
 
 packages.then((ps) => {
