@@ -10,6 +10,19 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 20 November 2020
+
+**`@guardian/src-brand 2.7.0`**
+
+-   :robot: [c922bf9](https://github.com/guardian/source/commit/c922bf9fa1b650070dab8e1afce3088c73dadba6) Roundels: optimise SVGs (thanks @mxdvl)
+
+**`@guardian/src-layout 2.7.0`**
+
+-   :sparkles: [ed3bcba](https://github.com/guardian/source/commit/ed3bcba1ec2c285da101eda1df0c2bc44bbdf6df) Add tiles component (thanks @frankie297)
+-   :page_with_curl: [fe283f5](https://github.com/guardian/source/commit/fe283f5eab1b382bfa252ae01467c301fab9908c) add tiles documentation
+-   :page_with_curl: [9bf7984](https://github.com/guardian/source/commit/9bf798424c614cbb9e03540226405babd1599543) add tiles long text story
+-   :page_with_curl: [dd9884e](https://github.com/guardian/source/commit/dd9884eb77d1427957f5c3c624eaec3b0c503046) add non-container columns story
+
 ## 11 November 2020
 
 **`@guardian/src-brand 2.6.0`**
