@@ -3,7 +3,6 @@ export * from "./button"
 export * from "./checkbox"
 export * from "./choice-card"
 export * from "./footer"
-export * from "./inline-error"
 export * from "./label"
 export * from "./link"
 export * from "./radio"
@@ -15,7 +14,6 @@ import { buttonBrand, buttonDefault, buttonBrandAlt } from "./button"
 import { checkboxBrand, checkboxDefault } from "./checkbox"
 import { choiceCardDefault } from "./choice-card"
 import { footerBrand } from "./footer"
-import { inlineErrorBrand, inlineErrorDefault } from "./inline-error"
 import { labelDefault, labelBrand } from "./label"
 import { linkBrand, linkDefault, linkBrandAlt } from "./link"
 import { radioBrand, radioDefault } from "./radio"
@@ -26,7 +24,6 @@ export const defaultTheme = {
 	...buttonDefault,
 	...checkboxDefault,
 	...choiceCardDefault,
-	...inlineErrorDefault,
 	...labelDefault,
 	...linkDefault,
 	...radioDefault,
@@ -38,7 +35,6 @@ export const brand = {
 	...buttonBrand,
 	...checkboxBrand,
 	...footerBrand,
-	...inlineErrorBrand,
 	...labelBrand,
 	...linkBrand,
 	...radioBrand,
