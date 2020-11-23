@@ -10,6 +10,12 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 23 November 2020
+
+**`@guardian/src-layout 2.7.1`**
+
+-   :bug: [70d375b](https://github.com/guardian/source/commit/70d375b41e95235b9b36eabf3f77a096c08fb261) import columns type from tiles component
+
 ## 20 November 2020
 
 **`@guardian/src-brand 2.7.0`**
