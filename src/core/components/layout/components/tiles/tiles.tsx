@@ -14,7 +14,7 @@ import {
 } from "../tiles/styles"
 import { Breakpoint } from "@guardian/src-foundations/mq"
 
-type Columns = 2 | 3 | 4 | 5
+export type Columns = 2 | 3 | 4 | 5
 
 type GridBreakpoint = Extract<
 	Breakpoint,
