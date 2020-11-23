@@ -123,7 +123,6 @@ const colors = {
 		"#3F464A", //specialReport-300
 		"#63717A", //specialReport-400
 		"#ABC2C9", //specialReport-500
-		"#33393D", //dynamo-400
 		"#EFF1F2", //specialReport-800
 	],
 }
