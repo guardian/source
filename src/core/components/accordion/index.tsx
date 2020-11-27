@@ -29,9 +29,13 @@ interface AccordionProps extends Props {
 	children: ReactElement[]
 }
 
-const Accordion = ({ hideToggleLabel = false, children }: AccordionProps) => {
+const Accordion = ({
+	hideToggleLabel = false,
+	children,
+	...props
+}: AccordionProps) => {
 	return (
-		<div css={(theme) => accordion(theme.accordion && theme)}>
+		<div css={(theme) => accordion(theme.accordion && theme)} {...props}>
 			{React.Children.map(children, (child) => {
 				return React.cloneElement(child, { hideToggleLabel })
 			})}
@@ -49,9 +53,10 @@ const NoJsRow = ({
 	label,
 	hideToggleLabel = false,
 	children,
+	...props
 }: AccordionRowProps) => {
 	return (
-		<div css={(theme) => accordionRow(theme.accordion && theme)}>
+		<div css={(theme) => accordionRow(theme.accordion && theme)} {...props}>
 			<label>
 				<input type="checkbox" css={noJsInput} role="button" />
 				<div
