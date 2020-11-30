@@ -46,9 +46,10 @@ const errorBlue = () => (
 errorBlue.story = {
 	name: "error blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 

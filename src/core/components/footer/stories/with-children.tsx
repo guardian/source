@@ -125,9 +125,10 @@ export const withChildrenBlue = () => <Footer>{footerContents}</Footer>
 withChildrenBlue.story = {
 	name: "with children blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 
@@ -136,9 +137,10 @@ export const withChildrenBlueTablet = () => <Footer>{footerContents}</Footer>
 withChildrenBlueTablet.story = {
 	name: "with children blue tablet",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 		viewport: { defaultViewport: "tablet" },
 	},
 }
@@ -148,9 +150,10 @@ export const withChildrenBlueMobile = () => <Footer>{footerContents}</Footer>
 withChildrenBlueMobile.story = {
 	name: "with children blue mobile",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 		viewport: { defaultViewport: "mobileMedium" },
 	},
 }

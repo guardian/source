@@ -7,9 +7,10 @@ export const backToTopBlue = () => <Footer showBackToTop={true} />
 backToTopBlue.story = {
 	name: "back to top blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 
@@ -18,9 +19,10 @@ export const backToTopBlueTablet = () => <Footer showBackToTop={true} />
 backToTopBlueTablet.story = {
 	name: "back to top blue tablet",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 		viewport: { defaultViewport: "tablet" },
 	},
 }
@@ -30,9 +32,10 @@ export const backToTopBlueMobile = () => <Footer showBackToTop={true} />
 backToTopBlueMobile.story = {
 	name: "back to top blue mobile",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 		viewport: { defaultViewport: "mobileMedium" },
 	},
 }

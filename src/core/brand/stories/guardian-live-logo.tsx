@@ -3,6 +3,8 @@ import { css } from "@emotion/core"
 import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 import { SvgGuardianLiveLogo } from "../index"
 
+console.log("Storybook, here are your backgrounds", storybookBackgrounds)
+
 const iconWhite = css`
 	color: white;
 `
@@ -40,11 +42,6 @@ export const guardianLiveDefaultBackground = () => (
 
 guardianLiveDefaultBackground.story = {
 	name: "guardian live default",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }
 
 export const guardianLiveBrandBackground = () => (
@@ -56,8 +53,9 @@ export const guardianLiveBrandBackground = () => (
 guardianLiveBrandBackground.story = {
 	name: "guardian live brand",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }

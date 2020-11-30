@@ -31,8 +31,9 @@ export const defaultBlue = () => (
 defaultBlue.story = {
 	name: "default blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }

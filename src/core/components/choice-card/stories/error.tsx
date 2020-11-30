@@ -1,7 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds } from "@guardian/src-helpers"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
 const medium = css`
@@ -33,9 +32,4 @@ export const errorLight = () => (
 
 errorLight.story = {
 	name: `error light`,
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }

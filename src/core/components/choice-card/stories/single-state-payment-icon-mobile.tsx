@@ -1,6 +1,5 @@
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds } from "@guardian/src-helpers"
 import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-icons"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
@@ -41,9 +40,6 @@ export const singleStateWithPaymentIconMobileLight = () => (
 singleStateWithPaymentIconMobileLight.story = {
 	name: `single state with payment icon mobile light`,
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
 		viewport: { defaultViewport: "mobileMedium" },
 	},
 }

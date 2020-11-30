@@ -1,7 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds } from "@guardian/src-helpers"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
 /* eslint-disable react/jsx-key */
@@ -44,9 +43,4 @@ export const multiStateWithSupportingLabelLight = () => (
 
 multiStateWithSupportingLabelLight.story = {
 	name: `multi state with supporting label light`,
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }

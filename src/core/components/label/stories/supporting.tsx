@@ -20,8 +20,9 @@ export const withSupportingTextBlue = () => (
 withSupportingTextBlue.story = {
 	name: `with supporting text blue`,
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }

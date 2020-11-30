@@ -33,13 +33,10 @@ const [errorLight, errorBlue] = themes.map(({ name, theme }) => {
 	story.story = {
 		name: `inline error ${name}`,
 		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
+			backgrounds: {
+				default: name,
+				values: [storybookBackgrounds[name]],
+			},
 		},
 	}
 
@@ -56,13 +53,10 @@ const [successLight, successBlue] = themes.map(({ name, theme }) => {
 	story.story = {
 		name: `inline success ${name}`,
 		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
+			backgrounds: {
+				default: name,
+				values: [storybookBackgrounds[name]],
+			},
 		},
 	}
 

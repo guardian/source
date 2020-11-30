@@ -43,9 +43,10 @@ const legendBlue = () => (
 legendBlue.story = {
 	name: "legend blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 

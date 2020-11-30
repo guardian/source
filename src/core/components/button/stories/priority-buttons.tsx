@@ -73,9 +73,10 @@ export const priorityBlue = () => (
 priorityBlue.story = {
 	name: "priority blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 
@@ -91,9 +92,10 @@ export const priorityGrey = () => (
 priorityGrey.story = {
 	name: "priority grey",
 	parameters: {
-		backgrounds: [
-			{ name: "grey", value: background.secondary, default: true },
-		],
+		backgrounds: {
+			default: "grey",
+			values: [{ name: "grey", value: background.secondary }],
+		},
 	},
 }
 
@@ -109,9 +111,10 @@ export const priorityYellow = () => (
 priorityYellow.story = {
 	name: "priority yellow",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brandAlt),
-		],
+		backgrounds: {
+			default: "brandAlt",
+			values: [storybookBackgrounds.brandAlt],
+		},
 	},
 }
 
@@ -128,11 +131,6 @@ export const priorityReaderRevenueLight = () => (
 )
 priorityReaderRevenueLight.story = {
 	name: "priority reader revenue light",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }
 
 export const priorityReaderRevenueBlue = () => (
@@ -147,9 +145,10 @@ export const priorityReaderRevenueBlue = () => (
 priorityReaderRevenueBlue.story = {
 	name: "priority reader revenue blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 
@@ -165,8 +164,9 @@ export const priorityReaderRevenueYellow = () => (
 priorityReaderRevenueYellow.story = {
 	name: "priority reader revenue yellow",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brandAlt),
-		],
+		backgrounds: {
+			default: "brandAlt",
+			values: [storybookBackgrounds.brandAlt],
+		},
 	},
 }

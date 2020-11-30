@@ -37,11 +37,6 @@ export const defaultRoundel = () => (
 
 defaultRoundel.story = {
 	name: "default roundel",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }
 
 export const brandRoundel = () => (
@@ -53,9 +48,10 @@ export const brandRoundel = () => (
 brandRoundel.story = {
 	name: "brand roundel",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 
@@ -68,9 +64,10 @@ export const inverseRoundel = () => (
 inverseRoundel.story = {
 	name: "inverse roundel",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.inverse),
-		],
+		backgrounds: {
+			default: "inverse",
+			values: [storybookBackgrounds.inverse],
+		},
 	},
 }
 
@@ -83,8 +80,9 @@ export const inverseBrandRoundel = () => (
 inverseBrandRoundel.story = {
 	name: "inverse brand roundel",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }

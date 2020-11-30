@@ -38,13 +38,10 @@ const [errorLight, errorBlue] = themes.map(({ name, theme }) => {
 	story.story = {
 		name: `error ${name}`,
 		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
+			backgrounds: {
+				default: name,
+				values: [storybookBackgrounds[name]],
+			},
 		},
 	}
 
