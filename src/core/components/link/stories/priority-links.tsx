@@ -43,9 +43,10 @@ export const priorityBlue = () => (
 priorityBlue.story = {
 	name: "priority blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 
@@ -57,8 +58,9 @@ export const priorityYellow = () => (
 priorityYellow.story = {
 	name: "priority yellow",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brandAlt),
-		],
+		backgrounds: {
+			default: "brandAlt",
+			values: [storybookBackgrounds.brandAlt],
+		},
 	},
 }

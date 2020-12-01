@@ -60,13 +60,10 @@ const [supportingTextOnlyLight, supportingTextOnlyBlue] = themes.map(
 		story.story = {
 			name: `supporting text only ${name}`,
 			parameters: {
-				backgrounds: [
-					Object.assign(
-						{},
-						{ default: true },
-						storybookBackgrounds[name],
-					),
-				],
+				backgrounds: {
+					default: name,
+					values: [storybookBackgrounds[name]],
+				},
 			},
 		}
 

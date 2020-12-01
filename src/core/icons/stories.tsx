@@ -174,11 +174,6 @@ export const XsmallIcons = () => (
 )
 XsmallIcons.story = {
 	name: "ui icons xsmall light",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }
 export const SmallIcons = () => (
 	<>
@@ -191,11 +186,6 @@ export const SmallIcons = () => (
 )
 SmallIcons.story = {
 	name: "ui icons small light",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }
 
 export const MediumIcons = () => (
@@ -209,11 +199,6 @@ export const MediumIcons = () => (
 )
 MediumIcons.story = {
 	name: "ui icons medium light",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }
 
 export const MediumBrandIcons = () => (
@@ -229,9 +214,10 @@ export const MediumBrandIcons = () => (
 MediumBrandIcons.story = {
 	name: "ui icons medium brand",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 
@@ -250,9 +236,4 @@ export const PaymentIcons = () => (
 
 PaymentIcons.story = {
 	name: "payment icons light",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }

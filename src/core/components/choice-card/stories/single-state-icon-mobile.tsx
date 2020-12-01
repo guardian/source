@@ -1,6 +1,5 @@
 import React from "react"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds } from "@guardian/src-helpers"
 import { SvgCamera, SvgAudio, SvgVideo } from "@guardian/src-icons"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
@@ -36,9 +35,6 @@ export const singleStateWithIconMobileLight = () => (
 singleStateWithIconMobileLight.story = {
 	name: `single state with icon mobile light`,
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
 		viewport: { defaultViewport: "mobileMedium" },
 	},
 }

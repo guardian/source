@@ -43,8 +43,9 @@ export const singleStateWithIconLight = () => (
 singleStateWithIconLight.story = {
 	name: `single state with icon light`,
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
+		backgrounds: {
+			default: "default",
+			values: [{ name: "default", value: storybookBackgrounds.default }],
+		},
 	},
 }

@@ -15,7 +15,10 @@ module.exports = ({ config, mode }) => {
 	})
 	config.resolve.extensions.push(".ts", ".tsx")
 	config.resolve.alias = {
-		"@guardian/src-foundations": "@guardian/src-foundations/src",
+		"@guardian/src-foundations": path.resolve(
+			__dirname,
+			"../src/core/foundations/src",
+		),
 		"@guardian/src-label": path.resolve(
 			__dirname,
 			"../src/core/components/label",
@@ -23,6 +26,10 @@ module.exports = ({ config, mode }) => {
 		"@guardian/src-user-feedback": path.resolve(
 			__dirname,
 			"../src/core/components/user-feedback",
+		),
+		"@guardian/src-helpers": path.resolve(
+			__dirname,
+			"../src/core/helpers",
 		),
 	}
 

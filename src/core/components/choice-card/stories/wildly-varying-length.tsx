@@ -1,7 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds } from "@guardian/src-helpers"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
 /* eslint-disable react/jsx-key */
@@ -34,9 +33,4 @@ export const wildlyVaryingLengthLight = () => (
 
 wildlyVaryingLengthLight.story = {
 	name: `single state wildly varying length light`,
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }

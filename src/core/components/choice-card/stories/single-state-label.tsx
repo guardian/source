@@ -1,7 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds } from "@guardian/src-helpers"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
 const medium = css`
@@ -35,9 +34,4 @@ export const singleStateWithLabelLight = () => (
 
 singleStateWithLabelLight.story = {
 	name: `single state with label light`,
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }

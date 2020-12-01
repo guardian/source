@@ -40,11 +40,6 @@ export const logoDefaultBackground = () => (
 
 logoDefaultBackground.story = {
 	name: "guardian logo default",
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }
 
 export const logoBrandBackground = () => (
@@ -56,8 +51,9 @@ export const logoBrandBackground = () => (
 logoBrandBackground.story = {
 	name: "guardian logo default brand",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }

@@ -35,8 +35,9 @@ export const verticalBlue = () => (
 verticalBlue.story = {
 	name: `vertical blue`,
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }

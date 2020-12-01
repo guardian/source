@@ -1,7 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds } from "@guardian/src-helpers"
 import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-icons"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
@@ -47,9 +46,4 @@ export const singleStateWithPaymentIconLight = () => (
 
 singleStateWithPaymentIconLight.story = {
 	name: `single state with payment icon light`,
-	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.default),
-		],
-	},
 }

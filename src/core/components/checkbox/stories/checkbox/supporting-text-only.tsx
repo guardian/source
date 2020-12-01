@@ -69,9 +69,10 @@ const supportingTextOnlyBlue = () => (
 supportingTextOnlyBlue.story = {
 	name: "supporting text only blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
 

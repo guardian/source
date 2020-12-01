@@ -31,8 +31,9 @@ export const optionalBlue = () => (
 optionalBlue.story = {
 	name: "optional blue",
 	parameters: {
-		backgrounds: [
-			Object.assign({}, { default: true }, storybookBackgrounds.brand),
-		],
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
 	},
 }
