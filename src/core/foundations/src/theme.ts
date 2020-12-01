@@ -22,7 +22,7 @@
 // - Pushing a value onto the end of an array
 // - Exporting a new object or array
 
-const fontSizes = [12, 15, 17, 20, 24, 28, 34, 42, 50, 70]
+const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70]
 
 const fonts = {
 	titlepiece: "GT Guardian Titlepiece, Georgia, serif",

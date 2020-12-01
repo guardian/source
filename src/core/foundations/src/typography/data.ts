@@ -13,34 +13,35 @@ import {
 } from "./types"
 
 const titlepieceSizes: TitlepieceSizes = {
-	small: fontSizes[7], //42px
-	medium: fontSizes[8], //50px
-	large: fontSizes[9], //70px
+	small: fontSizes[8], //42px
+	medium: fontSizes[9], //50px
+	large: fontSizes[10], //70px
 }
 
 const headlineSizes: HeadlineSizes = {
-	xxxsmall: fontSizes[2], //17px
-	xxsmall: fontSizes[3], //20px
-	xsmall: fontSizes[4], //24px
-	small: fontSizes[5], //28px
-	medium: fontSizes[6], //34px
-	large: fontSizes[7], //42px
-	xlarge: fontSizes[8], //50px
+	xxxsmall: fontSizes[3], //17px
+	xxsmall: fontSizes[4], //20px
+	xsmall: fontSizes[5], //24px
+	small: fontSizes[6], //28px
+	medium: fontSizes[7], //34px
+	large: fontSizes[8], //42px
+	xlarge: fontSizes[9], //50px
 }
 
 const bodySizes: BodySizes = {
-	small: fontSizes[1], //15px
-	medium: fontSizes[2], //17px
+	small: fontSizes[2], //15px
+	medium: fontSizes[3], //17px
 }
 
 const textSansSizes: TextSansSizes = {
-	xsmall: fontSizes[0], //12px
-	small: fontSizes[1], //15px
-	medium: fontSizes[2], //17px
-	large: fontSizes[3], //20px
-	xlarge: fontSizes[4], //24px
-	xxlarge: fontSizes[5], //28px
-	xxxlarge: fontSizes[6], //34px
+	xxsmall: fontSizes[0], //12px
+	xsmall: fontSizes[1], //14px
+	small: fontSizes[2], //15px
+	medium: fontSizes[3], //17px
+	large: fontSizes[4], //20px
+	xlarge: fontSizes[5], //24px
+	xxlarge: fontSizes[6], //28px
+	xxxlarge: fontSizes[7], //34px
 }
 
 const fontSizeMapping: {
