@@ -74,7 +74,7 @@
 		"react-dom": "^16.8.6",
 		"regenerator-runtime": "^0.13.7",
 		"storybook-chromatic": "^4.0.2",
-		"stylelint": "^13.7.2",
+		"stylelint": "^13.8.0",
 		"stylelint-config-recommended": "^3.0.0",
 		"stylelint-config-styled-components": "^0.1.1",
 		"stylelint-processor-styled-components": "^1.10.0",
