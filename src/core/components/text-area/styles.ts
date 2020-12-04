@@ -45,21 +45,3 @@ export const textArea = css`
 export const widthFluid = css`
 	width: 100%;
 `
-
-export const label = css`
-	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
-	color: ${text.inputLabel};
-	margin-bottom: ${space[1]}px;
-`
-
-export const optionalLabel = css`
-	${textSans.small()};
-	color: ${text.inputLabelSupporting};
-	font-style: italic;
-`
-
-export const supportingText = css`
-	${textSans.small()};
-	color: ${text.inputLabelSupporting};
-	margin-bottom: ${space[1]}px;
-`
