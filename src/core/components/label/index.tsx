@@ -13,6 +13,7 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	text: string
 	supporting?: string
 	optional: boolean
+	hideLabel?: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 	children?: ReactNode
 }
@@ -24,14 +25,32 @@ interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
-const SupportingText = ({ children }: { children: ReactNode }) => {
+const SupportingText = ({
+	hideLabel,
+	children,
+}: {
+	hideLabel?: boolean
+	children: ReactNode
+}) => {
 	return (
-		<p css={(theme) => supportingText(theme.label && theme)}>{children}</p>
+		<p
+			css={(theme) => [
+				supportingText(theme.label && theme),
+				hideLabel ? visuallyHidden : "",
+			]}
+		>
+			{children}
+		</p>
 	)
 }
 
-const Text = ({ text, optional }: LabelProps) => (
-	<span css={(theme) => labelText(theme.label && theme)}>
+const Text = ({ text, optional, hideLabel }: LabelProps) => (
+	<span
+		css={(theme) => [
+			labelText(theme.label && theme),
+			hideLabel ? visuallyHidden : "",
+		]}
+	>
 		{text}{" "}
 		{optional ? (
 			<span css={(theme) => optionalText(theme.label && theme)}>
@@ -53,17 +72,16 @@ const Legend = ({
 }: LegendProps) => {
 	return (
 		<>
-			<legend
-				css={[
-					legend,
-					hideLabel ? visuallyHidden : undefined,
-					cssOverrides,
-				]}
-				{...props}
-			>
-				<Text text={text} optional={optional} />
+			<legend css={[legend, cssOverrides]} {...props}>
+				<Text text={text} optional={optional} hideLabel={hideLabel} />
 			</legend>
-			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
+			{supporting ? (
+				<SupportingText hideLabel={hideLabel}>
+					{supporting}
+				</SupportingText>
+			) : (
+				""
+			)}
 		</>
 	)
 }
@@ -72,14 +90,21 @@ const Label = ({
 	text,
 	supporting,
 	optional,
+	hideLabel,
 	cssOverrides,
 	children,
 	...props
 }: LabelProps) => {
 	return (
 		<label css={cssOverrides} {...props}>
-			<Text text={text} optional={optional} />
-			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
+			<Text hideLabel={hideLabel} text={text} optional={optional} />
+			{supporting ? (
+				<SupportingText hideLabel={hideLabel}>
+					{supporting}
+				</SupportingText>
+			) : (
+				""
+			)}
 			{children}
 		</label>
 	)
