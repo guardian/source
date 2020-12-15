@@ -18,4 +18,8 @@ const focusHalo = `
 
 const descriptionId = (id: string) => `${id}_description`
 
-export { visuallyHidden, focusHalo, descriptionId }
+let sourceIdIndex = 0
+
+const generateSourceId = () => `src-component-${sourceIdIndex++}`
+
+export { visuallyHidden, focusHalo, descriptionId, generateSourceId }
