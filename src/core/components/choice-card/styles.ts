@@ -56,26 +56,6 @@ export const gridColumns: { [key in Columns]: SerializedStyles } = {
 	5: gridColumnsStyle(5),
 }
 
-export const groupLabel = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
-	color: ${choiceCard.textGroupLabel};
-	margin-bottom: ${space[1]}px;
-	/* override user agent defaults */
-	padding: 0;
-`
-
-export const groupLabelSupporting = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
-	color: ${choiceCard.textGroupLabelSupporting};
-	margin-bottom: ${space[3]}px;
-	/* Negate the user agent spacing between legend and fieldset content */
-	margin-top: ${-space[2]}px;
-`
-
 export const input = ({
 	choiceCard,
 }: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
