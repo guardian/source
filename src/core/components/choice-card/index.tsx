@@ -6,16 +6,15 @@ import React, {
 	ChangeEventHandler,
 } from "react"
 import { SerializedStyles } from "@emotion/core"
+import { Legend } from "@guardian/src-label"
 import {
 	fieldset,
 	flexContainer,
 	gridContainer,
 	gridColumns,
-	groupLabel,
 	input,
 	tickAnimation,
 	choiceCard,
-	groupLabelSupporting,
 	tick,
 	errorChoiceCard,
 	contentWrapper,
@@ -25,14 +24,6 @@ import { InlineError } from "@guardian/src-user-feedback"
 import { Props } from "@guardian/src-helpers"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
-
-const SupportingText = ({ children }: { children: ReactNode }) => {
-	return (
-		<div css={(theme) => groupLabelSupporting(theme.textInput && theme)}>
-			{children}
-		</div>
-	)
-}
 
 export type Columns = 2 | 3 | 4 | 5
 
@@ -60,14 +51,7 @@ const ChoiceCardGroup = ({
 }: ChoiceCardGroupProps) => {
 	return (
 		<fieldset css={[fieldset, cssOverrides]} {...props}>
-			{label ? (
-				<legend css={(theme) => groupLabel(theme.choiceCard && theme)}>
-					{label}
-				</legend>
-			) : (
-				""
-			)}
-			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
+			{label ? <Legend text={label} supporting={supporting} /> : ""}
 			{typeof error === "string" && <InlineError>{error}</InlineError>}
 			<div
 				css={
