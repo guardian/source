@@ -71,27 +71,3 @@ export const width10 = css`
 export const width4 = css`
 	width: 9ex;
 `
-
-export const text = ({
-	textInput,
-}: { textInput: TextInputTheme } = textInputDefault) => css`
-	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
-	color: ${textInput.textLabel};
-	margin-bottom: ${space[1]}px;
-`
-
-export const optionalLabel = ({
-	textInput,
-}: { textInput: TextInputTheme } = textInputDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
-	color: ${textInput.textLabelOptional};
-	font-style: italic;
-`
-
-export const supportingText = ({
-	textInput,
-}: { textInput: TextInputTheme } = textInputDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
-	color: ${textInput.textLabelSupporting};
-	margin-bottom: ${space[1]}px;
-`

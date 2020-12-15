@@ -44,6 +44,7 @@
 	},
 	"dependencies": {
 		"@guardian/src-helpers": "^2.8.1",
+		"@guardian/src-label": "^2.8.1",
 		"@guardian/src-user-feedback": "^2.8.1"
 	}
 }
