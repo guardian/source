@@ -1,16 +1,14 @@
-import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles, css } from "@emotion/core"
+import React, { InputHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/core"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
+import { Label } from "@guardian/src-label"
 import {
 	widthFluid,
 	width30,
 	width10,
 	width4,
 	textInput,
-	text,
 	errorInput,
-	optionalLabel,
-	supportingText,
 	successInput,
 } from "./styles"
 import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
@@ -19,24 +17,12 @@ import { Props } from "@guardian/src-helpers"
 export { textInputDefault } from "@guardian/src-foundations/themes"
 export type Width = 30 | 10 | 4
 
-const visuallyHidden = css`
-	${_visuallyHidden}
-`
-
 const widths: {
 	[key in Width]: SerializedStyles
 } = {
 	30: width30,
 	10: width10,
 	4: width4,
-}
-
-const SupportingText = ({ children }: { children: ReactNode }) => {
-	return (
-		<div css={(theme) => supportingText(theme.textInput && theme)}>
-			{children}
-		</div>
-	)
 }
 
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
@@ -62,25 +48,12 @@ const TextInput = ({
 	...props
 }: TextInputProps) => {
 	return (
-		<label>
-			<div
-				css={(theme) => [
-					text(theme.textInput && theme),
-					hideLabel ? visuallyHidden : "",
-				]}
-			>
-				{labelText}{" "}
-				{optional ? (
-					<span
-						css={(theme) => optionalLabel(theme.textInput && theme)}
-					>
-						Optional
-					</span>
-				) : (
-					""
-				)}
-			</div>
-			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
+		<Label
+			text={labelText}
+			optional={optional}
+			hideLabel={hideLabel}
+			supporting={supporting}
+		>
 			{error && <InlineError>{error}</InlineError>}
 			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
 			<input
@@ -98,7 +71,7 @@ const TextInput = ({
 				required={!optional}
 				{...props}
 			/>
-		</label>
+		</Label>
 	)
 }
 
