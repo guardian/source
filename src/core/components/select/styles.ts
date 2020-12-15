@@ -85,27 +85,3 @@ export const select = ({
 		${errorInput({ select })};
 	}
 `
-
-export const label = ({
-	select,
-}: { select: SelectTheme } = selectDefault) => css`
-	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
-	color: ${select.textLabel};
-	margin-bottom: ${space[1]}px;
-`
-
-export const optionalLabel = ({
-	select,
-}: { select: SelectTheme } = selectDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
-	color: ${select.textLabelOptional};
-	font-style: italic;
-`
-
-export const supportingText = ({
-	select,
-}: { select: SelectTheme } = selectDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
-	color: ${select.textLabelSupporting};
-	margin-bottom: ${space[1]}px;
-`
