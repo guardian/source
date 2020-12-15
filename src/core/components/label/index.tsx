@@ -45,7 +45,7 @@ const SupportingText = ({
 }
 
 const Text = ({ text, optional, hideLabel }: LabelProps) => (
-	<span
+	<div
 		css={(theme) => [
 			labelText(theme.label && theme),
 			hideLabel ? visuallyHidden : "",
@@ -59,7 +59,7 @@ const Text = ({ text, optional, hideLabel }: LabelProps) => (
 		) : (
 			""
 		)}
-	</span>
+	</div>
 )
 
 const Legend = ({
