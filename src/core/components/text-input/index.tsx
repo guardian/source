@@ -11,7 +11,11 @@ import {
 	errorInput,
 	successInput,
 } from "./styles"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
+import {
+	visuallyHidden as _visuallyHidden,
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
 
 export { textInputDefault } from "@guardian/src-foundations/themes"
@@ -26,6 +30,7 @@ const widths: {
 }
 
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
+	id?: string
 	label: string
 	optional: boolean
 	hideLabel: boolean
@@ -37,6 +42,7 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 }
 
 const TextInput = ({
+	id,
 	label: labelText,
 	optional,
 	hideLabel,
@@ -47,6 +53,7 @@ const TextInput = ({
 	cssOverrides,
 	...props
 }: TextInputProps) => {
+	const textInputId = id || generateSourceId()
 	return (
 		<Label
 			text={labelText}
@@ -54,8 +61,16 @@ const TextInput = ({
 			hideLabel={hideLabel}
 			supporting={supporting}
 		>
-			{error && <InlineError>{error}</InlineError>}
-			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
+			{error && (
+				<InlineError id={descriptionId(textInputId)}>
+					{error}
+				</InlineError>
+			)}
+			{!error && success && (
+				<InlineSuccess id={descriptionId(textInputId)}>
+					{success}
+				</InlineSuccess>
+			)}
 			<input
 				css={(theme) => [
 					width ? widths[width] : widthFluid,
@@ -66,8 +81,12 @@ const TextInput = ({
 						: "",
 					cssOverrides,
 				]}
+				id={textInputId}
 				aria-required={!optional}
 				aria-invalid={!!error}
+				aria-describedby={
+					error || success ? descriptionId(textInputId) : ""
+				}
 				required={!optional}
 				{...props}
 			/>
