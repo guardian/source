@@ -13,10 +13,15 @@ import {
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle } from "@guardian/src-icons"
 
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
+import {
+	visuallyHidden as _visuallyHidden,
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 export { selectDefault } from "@guardian/src-foundations/themes"
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
+	id?: string
 	label: string
 	optional: boolean
 	hideLabel: boolean
@@ -28,6 +33,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 }
 
 const Select = ({
+	id,
 	label: labelText,
 	optional,
 	hideLabel,
@@ -38,6 +44,7 @@ const Select = ({
 	children,
 	...props
 }: SelectProps) => {
+	const selectId = id || generateSourceId()
 	return (
 		<Label
 			text={labelText}
@@ -45,8 +52,14 @@ const Select = ({
 			supporting={supporting}
 			hideLabel={hideLabel}
 		>
-			{error && <InlineError>{error}</InlineError>}
-			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
+			{error && (
+				<InlineError id={descriptionId(selectId)}>{error}</InlineError>
+			)}
+			{!error && success && (
+				<InlineSuccess id={descriptionId(selectId)}>
+					{success}
+				</InlineSuccess>
+			)}
 			<div
 				css={(theme) => [
 					selectWrapper(theme.select && theme),
@@ -67,6 +80,10 @@ const Select = ({
 					]}
 					aria-required={!optional}
 					aria-invalid={!!error}
+					aria-describedby={
+						error || success ? descriptionId(selectId) : ""
+					}
+					id={selectId}
 					{...props}
 				>
 					{children}
