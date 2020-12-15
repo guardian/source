@@ -76,6 +76,6 @@
 		"dist/*.js"
 	],
 	"peerDependencies": {
-		"react": "^16.8.6"
+		"react": "^17.0.1"
 	}
 }

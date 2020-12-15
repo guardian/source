@@ -40,7 +40,7 @@
 	"peerDependencies": {
 		"@emotion/core": "^10.0.14",
 		"@guardian/src-foundations": "^2.8.0-rc.0",
-		"react": "^16.8.6"
+		"react": "^17.0.1"
 	},
 	"dependencies": {
 		"@guardian/src-helpers": "^2.8.0-rc.0"
