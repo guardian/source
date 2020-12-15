@@ -3,12 +3,17 @@ import { SerializedStyles } from "@emotion/core"
 import { InlineError } from "@guardian/src-user-feedback"
 import { Label } from "@guardian/src-label"
 import { widthFluid, textArea, errorInput } from "./styles"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
+import {
+	visuallyHidden as _visuallyHidden,
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
 
 interface TextAreaProps
 	extends InputHTMLAttributes<HTMLTextAreaElement>,
 		Props {
+	id?: string
 	value?: string
 	label: string
 	optional: boolean
@@ -21,6 +26,7 @@ interface TextAreaProps
 }
 
 const TextArea = ({
+	id,
 	label: labelText,
 	optional,
 	hideLabel,
@@ -32,6 +38,7 @@ const TextArea = ({
 	value,
 	...props
 }: TextAreaProps) => {
+	const textAreaId = id || generateSourceId()
 	const getClassName = () => {
 		const HAS_VALUE_CLASS = "src-has-value"
 
@@ -53,7 +60,11 @@ const TextArea = ({
 			optional={optional}
 			hideLabel={hideLabel}
 		>
-			{error && <InlineError>{error}</InlineError>}
+			{error && (
+				<InlineError id={descriptionId(textAreaId)}>
+					{error}
+				</InlineError>
+			)}
 			<textarea
 				css={[
 					widthFluid,
@@ -61,8 +72,10 @@ const TextArea = ({
 					error ? errorInput : "",
 					cssOverrides,
 				]}
+				id={textAreaId}
 				aria-required={!optional}
 				aria-invalid={!!error}
+				aria-describedby={error ? descriptionId(textAreaId) : ""}
 				required={!optional}
 				rows={rows}
 				className={getClassName()}
