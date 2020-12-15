@@ -22,12 +22,17 @@ import {
 } from "./styles"
 import { InlineError } from "@guardian/src-user-feedback"
 import { Props } from "@guardian/src-helpers"
+import {
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 
 export { choiceCardDefault } from "@guardian/src-foundations/themes"
 
 export type Columns = 2 | 3 | 4 | 5
 
 interface ChoiceCardGroupProps extends Props {
+	id?: string
 	name: string
 	label?: string
 	supporting?: string
@@ -39,6 +44,7 @@ interface ChoiceCardGroupProps extends Props {
 }
 
 const ChoiceCardGroup = ({
+	id,
 	name,
 	label,
 	supporting,
@@ -49,10 +55,13 @@ const ChoiceCardGroup = ({
 	children,
 	...props
 }: ChoiceCardGroupProps) => {
+	const groupId = id || generateSourceId()
 	return (
-		<fieldset css={[fieldset, cssOverrides]} {...props}>
+		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
 			{label ? <Legend text={label} supporting={supporting} /> : ""}
-			{typeof error === "string" && <InlineError>{error}</InlineError>}
+			{typeof error === "string" && (
+				<InlineError id={descriptionId(groupId)}>{error}</InlineError>
+			)}
 			<div
 				css={
 					columns
@@ -65,9 +74,16 @@ const ChoiceCardGroup = ({
 						child,
 						Object.assign(
 							{
-								error: !!error,
 								type: multi ? "checkbox" : "radio",
 							},
+							error
+								? {
+										error: true,
+										"aria-describedby": descriptionId(
+											groupId,
+										),
+								  }
+								: {},
 							{
 								name,
 							},
