@@ -46,6 +46,6 @@
 	],
 	"peerDependencies": {
 		"@guardian/src-foundations": "^2.8.1",
-		"react": "^16.8.6"
+		"react": "^17.0.1"
 	}
 }
