@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from "@emotion/core"
+import { css, SerializedStyles } from "@emotion/react"
 import { space } from "@guardian/src-foundations"
 import { InlineSpace } from "./inline"
 

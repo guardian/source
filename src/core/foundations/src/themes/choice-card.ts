@@ -1,26 +1,7 @@
 import { border, text, background } from "@guardian/src-foundations/palette"
-import { UserFeedbackTheme, userFeedbackDefault } from "./user-feedback"
+import { userFeedbackDefault } from "./user-feedback"
 
-export type ChoiceCardTheme = {
-	textLabel: string
-	textLabelSupporting: string
-	textGroupLabel: string
-	textGroupLabelSupporting: string
-	border: string
-	textChecked: string
-	backgroundChecked: string
-	backgroundTick: string
-	borderChecked: string
-	textHover: string
-	borderHover: string
-	textError: string
-	borderError: string
-}
-
-export const choiceCardDefault: {
-	choiceCard: ChoiceCardTheme
-	userFeedback: UserFeedbackTheme
-} = {
+export const choiceCardDefault = {
 	choiceCard: {
 		textLabel: text.supporting,
 		textLabelSupporting: text.supporting,

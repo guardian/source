@@ -1,23 +1,16 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { space, remSpace, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { headline, textSans } from "@guardian/src-foundations/typography"
 import { until, from } from "@guardian/src-foundations/mq"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import {
-	accordionDefault,
-	AccordionTheme,
-} from "@guardian/src-foundations/themes"
+import { accordionDefault } from "@guardian/src-foundations/themes"
 
-export const accordion = ({
-	accordion,
-}: { accordion: AccordionTheme } = accordionDefault) => css`
+export const accordion = ({ accordion } = accordionDefault) => css`
 	border-bottom: 1px solid ${accordion.borderPrimary};
 `
 
-export const accordionRow = ({
-	accordion,
-}: { accordion: AccordionTheme } = accordionDefault) => css`
+export const accordionRow = ({ accordion } = accordionDefault) => css`
 	border-top: 1px solid ${accordion.borderPrimary};
 `
 
@@ -30,9 +23,7 @@ const buttonStyles = css`
 	cursor: pointer;
 `
 
-export const button = ({
-	accordion,
-}: { accordion: AccordionTheme } = accordionDefault) => css`
+export const button = ({ accordion } = accordionDefault) => css`
 	${buttonStyles};
 	color: ${accordion.textPrimary};
 
@@ -47,9 +38,7 @@ export const button = ({
 	}
 `
 
-export const noJsButton = ({
-	accordion,
-}: { accordion: AccordionTheme } = accordionDefault) => css`
+export const noJsButton = ({ accordion } = accordionDefault) => css`
 	${buttonStyles};
 	color: ${accordion.textPrimary};
 `

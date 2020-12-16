@@ -5,7 +5,7 @@ import React, {
 	InputHTMLAttributes,
 	ChangeEventHandler,
 } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles } from "@emotion/react"
 import { Legend } from "@guardian/src-label"
 import {
 	fieldset,

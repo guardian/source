@@ -1,12 +1,9 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { space, transitions } from "@guardian/src-foundations"
 import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import {
-	checkboxDefault,
-	CheckboxTheme,
-} from "@guardian/src-foundations/themes"
+import { checkboxDefault } from "@guardian/src-foundations/themes"
 
 export const fieldset = css`
 	display: flex;
@@ -17,9 +14,7 @@ export const fieldset = css`
 	margin: 0;
 `
 
-export const label = ({
-	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
+export const label = ({ checkbox } = checkboxDefault) => css`
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -38,9 +33,7 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `
 
-export const checkbox = ({
-	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
+export const checkbox = ({ checkbox } = checkboxDefault) => css`
 	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
@@ -87,9 +80,7 @@ export const checkbox = ({
 	}
 `
 
-export const labelText = ({
-	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
+export const labelText = ({ checkbox } = checkboxDefault) => css`
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${checkbox.textLabel};
 	width: 100%;
@@ -99,16 +90,12 @@ export const labelTextWithSupportingText = css`
 	${textSans.medium({ lineHeight: "regular" })};
 `
 
-export const supportingText = ({
-	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
+export const supportingText = ({ checkbox } = checkboxDefault) => css`
 	${textSans.small({ lineHeight: "regular" })};
 	color: ${checkbox.textLabelSupporting};
 `
 
-export const tick = ({
-	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
+export const tick = ({ checkbox } = checkboxDefault) => css`
 	@supports (appearance: none) {
 		/* overall positional properties */
 		position: absolute;
@@ -170,8 +157,6 @@ export const tickWithSupportingText = css`
 	}
 `
 
-export const errorCheckbox = ({
-	checkbox,
-}: { checkbox: CheckboxTheme } = checkboxDefault) => css`
+export const errorCheckbox = ({ checkbox } = checkboxDefault) => css`
 	border: 4px solid ${checkbox.borderError};
 `

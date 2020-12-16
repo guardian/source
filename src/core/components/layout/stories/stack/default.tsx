@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { Stack } from "../../index"
 import { textSans } from "@guardian/src-foundations/typography"
 import { sport } from "@guardian/src-foundations/palette"
