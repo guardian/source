@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 import { SvgGuardianLiveLogo } from "../index"
 

@@ -1,24 +1,7 @@
 import { text, background, border } from "@guardian/src-foundations/palette"
-import { userFeedbackDefault, UserFeedbackTheme } from "./user-feedback"
+import { userFeedbackDefault } from "./user-feedback"
 
-export type SelectTheme = {
-	textUserInput: string
-	textLabel: string
-	textLabelOptional: string
-	textLabelSupporting: string
-	textError: string
-	textSuccess: string
-	backgroundInput: string
-	border: string
-	borderActive: string
-	borderError: string
-	borderSuccess: string
-}
-
-export const selectDefault: {
-	select: SelectTheme
-	userFeedback: UserFeedbackTheme
-} = {
+export const selectDefault = {
 	select: {
 		textUserInput: text.userInput,
 		textLabel: text.inputLabel,

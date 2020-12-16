@@ -1,6 +1,6 @@
 import React from "react"
 import { Footer } from "./index"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 const topMargin = css`
 	margin-top: 3em;

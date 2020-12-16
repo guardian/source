@@ -3,7 +3,7 @@ import { Container, Columns, Column } from "../../index"
 import { textSans } from "@guardian/src-foundations/typography"
 import { sport } from "@guardian/src-foundations/palette"
 import { space } from "@guardian/src-foundations"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 const contents = css`
 	${textSans.medium()};

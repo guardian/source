@@ -1,5 +1,5 @@
 import React from "react"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
 /* eslint-disable react/jsx-key */

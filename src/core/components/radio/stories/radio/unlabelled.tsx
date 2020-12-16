@@ -1,6 +1,6 @@
 import React from "react"
 import { Radio, radioDefault } from "../../index"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 
 const unlabelled = () => (
 	<ThemeProvider theme={radioDefault}>

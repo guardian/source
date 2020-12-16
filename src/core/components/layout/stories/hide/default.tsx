@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Hide } from "../../index"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { sport } from "@guardian/src-foundations/palette"
 import { textSans } from "@guardian/src-foundations/typography"
 
