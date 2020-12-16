@@ -1,6 +1,6 @@
 import React from "react"
-import { css } from "@emotion/core"
-import { ThemeProvider } from "emotion-theming"
+import { css } from "@emotion/react"
+import { ThemeProvider } from "@emotion/react"
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
 
 const medium = css`

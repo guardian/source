@@ -1,67 +1,79 @@
 import React from "react"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 import {
-	UserFeedbackTheme,
 	userFeedbackDefault,
 	userFeedbackBrand,
 } from "@guardian/src-foundations/themes"
-import { ThemeName, storybookBackgrounds } from "@guardian/src-helpers"
+import { storybookBackgrounds } from "@guardian/src-helpers"
 import { InlineError, InlineSuccess } from "./index"
 
 export default {
 	title: "UserFeedback",
 }
 
-const themes: {
-	name: ThemeName
-	theme: { userFeedback: UserFeedbackTheme }
-}[] = [
-	{
-		name: "default",
-		theme: userFeedbackDefault,
+const errorLight = () => (
+	<ThemeProvider theme={userFeedbackDefault}>
+		<InlineError>Please enter your name</InlineError>
+	</ThemeProvider>
+)
+
+errorLight.story = {
+	name: `inline error default`,
+	parameters: {
+		backgrounds: {
+			default: "default",
+			values: [storybookBackgrounds.default],
+		},
 	},
-	{ name: "brand", theme: userFeedbackBrand },
-]
+}
 
-const [errorLight, errorBlue] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
-			<InlineError>Please enter your name</InlineError>
-		</ThemeProvider>
-	)
+const errorBlue = () => (
+	<ThemeProvider theme={userFeedbackBrand}>
+		<InlineError>Please enter your name</InlineError>
+	</ThemeProvider>
+)
 
-	story.story = {
-		name: `inline error ${name}`,
-		parameters: {
-			backgrounds: {
-				default: name,
-				values: [storybookBackgrounds[name]],
-			},
+errorBlue.story = {
+	name: `inline error brand`,
+	parameters: {
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
 		},
-	}
+	},
+}
 
-	return story
-})
+const successLight = () => (
+	<ThemeProvider theme={userFeedbackDefault}>
+		<InlineSuccess>Your voucher code is valid</InlineSuccess>
+	</ThemeProvider>
+)
 
-const [successLight, successBlue] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
-			<InlineSuccess>Your voucher code is valid</InlineSuccess>
-		</ThemeProvider>
-	)
-
-	story.story = {
-		name: `inline success ${name}`,
-		parameters: {
-			backgrounds: {
-				default: name,
-				values: [storybookBackgrounds[name]],
-			},
+successLight.story = {
+	name: `inline success default`,
+	parameters: {
+		backgrounds: {
+			default: "default",
+			values: [storybookBackgrounds.default],
 		},
-	}
+	},
+}
 
-	return story
-})
+const successBlue = () => (
+	<ThemeProvider theme={userFeedbackBrand}>
+		<InlineSuccess>Your voucher code is valid</InlineSuccess>
+	</ThemeProvider>
+)
+
+successBlue.story = {
+	name: `inline success brand`,
+	parameters: {
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
+	},
+}
 
 const errorLongLightMobile = () => (
 	<InlineError>

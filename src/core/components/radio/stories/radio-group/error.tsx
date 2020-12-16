@@ -1,9 +1,7 @@
 import React from "react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { RadioGroup, Radio, radioDefault, radioBrand } from "../../index"
-import { ThemeName } from "@guardian/src-helpers"
-import { ThemeProvider } from "emotion-theming"
-import { RadioTheme, UserFeedbackTheme } from "@guardian/src-foundations/themes"
+import { ThemeProvider } from "@emotion/react"
 
 /* eslint-disable react/jsx-key */
 const unselectedRadios = [
@@ -13,39 +11,44 @@ const unselectedRadios = [
 ]
 /* eslint-enable react/jsx-key */
 
-const themes: {
-	name: ThemeName
-	theme: { radio: RadioTheme; userFeedback: UserFeedbackTheme }
-}[] = [
-	{
-		name: "default",
-		theme: radioDefault,
-	},
-	{ name: "brand", theme: radioBrand },
-]
+const errorLight = () => (
+	<ThemeProvider theme={radioDefault}>
+		<RadioGroup name="colours" error="Please select a colour">
+			{unselectedRadios.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
+		</RadioGroup>
+	</ThemeProvider>
+)
 
-const [errorLight, errorBlue] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
-			<RadioGroup name="colours" error="Please select a colour">
-				{unselectedRadios.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
-				)}
-			</RadioGroup>
-		</ThemeProvider>
-	)
-
-	story.story = {
-		name: `error ${name}`,
-		parameters: {
-			backgrounds: {
-				default: name,
-				values: [storybookBackgrounds[name]],
-			},
+errorLight.story = {
+	name: `error default`,
+	parameters: {
+		backgrounds: {
+			default: "default",
+			values: [storybookBackgrounds.default],
 		},
-	}
+	},
+}
 
-	return story
-})
+const errorBlue = () => (
+	<ThemeProvider theme={radioBrand}>
+		<RadioGroup name="colours" error="Please select a colour">
+			{unselectedRadios.map((radio, index) =>
+				React.cloneElement(radio, { key: index }),
+			)}
+		</RadioGroup>
+	</ThemeProvider>
+)
+
+errorBlue.story = {
+	name: `error brand`,
+	parameters: {
+		backgrounds: {
+			default: "brand",
+			values: [storybookBackgrounds.brand],
+		},
+	},
+}
 
 export { errorLight, errorBlue }

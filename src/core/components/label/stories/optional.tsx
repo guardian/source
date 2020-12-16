@@ -1,6 +1,6 @@
 import React from "react"
 import { Label, labelBrand } from "../index"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 
 export const optionalLight = () => <Label text="Middle name" optional={true} />

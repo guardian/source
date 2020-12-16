@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { from } from "@guardian/src-foundations/mq"
 import { textSans } from "@guardian/src-foundations/typography"
 import { Select, Option } from "../index"

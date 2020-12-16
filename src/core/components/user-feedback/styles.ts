@@ -1,8 +1,5 @@
-import { css } from "@emotion/core"
-import {
-	userFeedbackDefault,
-	UserFeedbackTheme,
-} from "@guardian/src-foundations/themes"
+import { css } from "@emotion/react"
+import { userFeedbackDefault } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"
 import { remWidth, remHeight } from "@guardian/src-foundations/size"
 
@@ -26,16 +23,12 @@ const inlineMessage = css`
 	}
 `
 
-export const inlineError = ({
-	userFeedback,
-}: { userFeedback: UserFeedbackTheme } = userFeedbackDefault) => css`
+export const inlineError = ({ userFeedback } = userFeedbackDefault) => css`
 	${inlineMessage};
 	color: ${userFeedback.textError};
 `
 
-export const inlineSuccess = ({
-	userFeedback,
-}: { userFeedback: UserFeedbackTheme } = userFeedbackDefault) => css`
+export const inlineSuccess = ({ userFeedback } = userFeedbackDefault) => css`
 	${inlineMessage};
 	color: ${userFeedback.textSuccess};
 `
