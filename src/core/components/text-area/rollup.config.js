@@ -23,7 +23,7 @@ module.exports = {
 	],
 	external: [
 		"react",
-		"@emotion/core",
+		"@emotion/react",
 		"@emotion/css",
 		"@guardian/src-foundations",
 		...submodulePaths,
