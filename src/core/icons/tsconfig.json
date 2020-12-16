@@ -4,7 +4,9 @@
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"jsx": "preserve",
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"lib": ["es5", "es6", "es7", "es2017", "es2019", "dom"],
+		"types": ["@emotion/react/types/css-prop"]
 	},
 	"exclude": ["node_modules"]
 }
