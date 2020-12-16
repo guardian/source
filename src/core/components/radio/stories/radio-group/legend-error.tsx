@@ -1,7 +1,7 @@
 import React from "react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { RadioGroup, Radio, radioBrand } from "../../index"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 
 /* eslint-disable react/jsx-key */
 const radios = [

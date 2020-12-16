@@ -1,16 +1,6 @@
 import { text, brandText } from "@guardian/src-foundations/palette"
 
-export type LabelTheme = {
-	textLabel: string
-	textOptional: string
-	textSupporting: string
-	textError: string
-	textSuccess: string
-}
-
-export const labelDefault: {
-	label: LabelTheme
-} = {
+export const labelDefault = {
 	label: {
 		textLabel: text.inputLabel,
 		textOptional: text.supporting,
@@ -20,9 +10,7 @@ export const labelDefault: {
 	},
 }
 
-export const labelBrand: {
-	label: LabelTheme
-} = {
+export const labelBrand = {
 	label: {
 		textLabel: brandText.inputLabel,
 		textOptional: brandText.supporting,

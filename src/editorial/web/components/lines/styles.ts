@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { squigglyImage, height as squigglyImageHeight } from "./squiggly"
 import { dottedImage, height as dottedImageHeight } from "./dotted"
 import { line } from "@guardian/src-foundations/palette"
