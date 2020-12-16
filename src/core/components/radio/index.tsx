@@ -1,5 +1,5 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles } from "@emotion/react"
 import { Legend } from "@guardian/src-label"
 import { InlineError } from "@guardian/src-user-feedback"
 import {

@@ -14,7 +14,7 @@ import {
 	noJsInput,
 	noJsButton,
 } from "./styles"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle } from "@guardian/src-icons"

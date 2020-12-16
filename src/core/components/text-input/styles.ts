@@ -1,59 +1,54 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { space } from "@guardian/src-foundations"
 import { height } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import {
-	textInputDefault,
-	TextInputTheme,
-} from "@guardian/src-foundations/themes"
+import { textInputDefault } from "@guardian/src-foundations/themes"
 
-export const errorInput = ({
-	textInput,
-}: { textInput: TextInputTheme } = textInputDefault) => css`
+export const errorInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
 `
 
-export const successInput = ({
-	textInput,
-}: { textInput: TextInputTheme } = textInputDefault) => css`
+export const successInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
 `
 
-export const textInput = ({
-	textInput,
-}: { textInput: TextInputTheme } = textInputDefault) => css`
-	box-sizing: border-box;
-	height: ${height.inputMedium}px;
-	${textSans.medium({ lineHeight: "regular" })};
-	color: ${textInput.textUserInput};
-	background-color: ${textInput.backgroundInput};
-	border: 2px solid ${textInput.border};
-	padding: 0 ${space[2]}px;
+export const textInput = (theme = textInputDefault) => {
+	const { textInput } = theme
 
-	&:active {
-		border: 2px solid ${textInput.borderActive};
-	}
+	return css`
+		box-sizing: border-box;
+		height: ${height.inputMedium}px;
+		${textSans.medium({ lineHeight: "regular" })};
+		color: ${textInput.textUserInput};
+		background-color: ${textInput.backgroundInput};
+		border: 2px solid ${textInput.border};
+		padding: 0 ${space[2]}px;
 
-	&:focus {
-		${focusHalo};
-	}
+		&:active {
+			border: 2px solid ${textInput.borderActive};
+		}
 
-	&:invalid {
-		/* reset UA styles (Firefox) */
-		box-shadow: none;
+		&:focus {
+			${focusHalo};
+		}
 
-		/*
+		&:invalid {
+			/* reset UA styles (Firefox) */
+			box-shadow: none;
+
+			/*
 		We automatically apply error styling to fields in an invalid state,
 		but stop short of applying it to empty required fields.
 		*/
-		&[value]:not([value=""]) {
-			${errorInput({ textInput })};
+			&[value]:not([value=""]) {
+				${errorInput(theme)};
+			}
 		}
-	}
-`
+	`
+}
 
 export const widthFluid = css`
 	width: 100%;

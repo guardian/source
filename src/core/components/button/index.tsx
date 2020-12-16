@@ -4,7 +4,7 @@ import React, {
 	ButtonHTMLAttributes,
 	AnchorHTMLAttributes,
 } from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { SerializedStyles } from "@emotion/css"
 import { ButtonTheme } from "@guardian/src-foundations/themes"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"

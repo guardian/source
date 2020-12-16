@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { space } from "@guardian/src-foundations"
 import { background } from "@guardian/src-foundations/palette"
@@ -12,7 +12,7 @@ import {
 	buttonReaderRevenueBrand,
 	buttonReaderRevenueBrandAlt,
 } from "../index"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 
 /* eslint-disable react/jsx-key */
 const priorityButtons = [

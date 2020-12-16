@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { SvgArrowRightStraight } from "@guardian/src-icons"
 import { space } from "@guardian/src-foundations"
 import { LinkButton } from "../index"
