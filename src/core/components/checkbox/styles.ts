@@ -120,6 +120,11 @@ export const tick = ({
 		*/
 		top: 14px;
 		left: 9px;
+		/*
+			this prevents simulated click events to the checkbox, eg from Selenium tests
+			from being intercepted by the tick
+		*/
+		pointer-events: none;
 
 		/* the checkmark ✓ */
 		&:after,
