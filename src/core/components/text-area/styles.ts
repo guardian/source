@@ -3,6 +3,7 @@ import { space } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { text, border, background } from "@guardian/src-foundations/palette"
+import { resets } from "@guardian/src-foundations/utils"
 
 export const errorInput = css`
 	border: 4px solid ${border.error};
@@ -10,6 +11,7 @@ export const errorInput = css`
 `
 
 export const textArea = css`
+	${resets.input};
 	box-sizing: border-box;
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${text.userInput};
@@ -26,9 +28,6 @@ export const textArea = css`
 	}
 
 	&:invalid {
-		/* reset UA styles (Firefox) */
-		box-shadow: none;
-
 		/*
 		We automatically apply error styling to fields in an invalid state,
 		but stop short of applying it to empty required fields.
