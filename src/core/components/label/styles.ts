@@ -1,10 +1,10 @@
 import { css } from "@emotion/react"
 import { textSans } from "@guardian/src-foundations/typography"
 import { labelDefault } from "@guardian/src-foundations/themes"
+import { resets } from "@guardian/src-foundations/utils"
 
 export const legend = css`
-	/* Override UA styling */
-	padding: 0;
+	${resets.legend};
 `
 
 export const labelText = ({ label } = labelDefault) => css`
