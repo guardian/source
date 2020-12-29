@@ -4,6 +4,7 @@ import { height } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { textInputDefault } from "@guardian/src-foundations/themes"
+import { resets } from "@guardian/src-foundations/utils"
 
 export const errorInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderError};
@@ -19,6 +20,7 @@ export const textInput = (theme = textInputDefault) => {
 	const { textInput } = theme
 
 	return css`
+		${resets.input};
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
 		${textSans.medium({ lineHeight: "regular" })};
@@ -36,13 +38,10 @@ export const textInput = (theme = textInputDefault) => {
 		}
 
 		&:invalid {
-			/* reset UA styles (Firefox) */
-			box-shadow: none;
-
 			/*
-		We automatically apply error styling to fields in an invalid state,
-		but stop short of applying it to empty required fields.
-		*/
+			We automatically apply error styling to fields in an invalid state,
+			but stop short of applying it to empty required fields.
+			*/
 			&[value]:not([value=""]) {
 				${errorInput(theme)};
 			}
