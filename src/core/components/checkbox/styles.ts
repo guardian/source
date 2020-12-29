@@ -4,14 +4,13 @@ import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { checkboxDefault } from "@guardian/src-foundations/themes"
+import { resets } from "@guardian/src-foundations/utils"
 
 export const fieldset = css`
+	${resets.fieldset};
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-	border: 0;
-	padding: 0;
-	margin: 0;
 `
 
 export const label = ({ checkbox } = checkboxDefault) => css`
