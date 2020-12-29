@@ -4,15 +4,12 @@ import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { radioDefault } from "@guardian/src-foundations/themes"
+import { resets } from "@guardian/src-foundations/utils"
 
 export const fieldset = ({ radio } = radioDefault) => css`
+	${resets.fieldset};
 	display: flex;
 	justify-content: flex-start;
-
-	/* Reset user agent styles */
-	border: 0;
-	padding: 0;
-	margin: 0;
 
 	&[aria-invalid="true"] input {
 		border: 4px solid ${radio.borderError};
