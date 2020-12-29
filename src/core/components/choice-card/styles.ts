@@ -6,12 +6,11 @@ import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { from } from "@guardian/src-foundations/mq"
 import { choiceCardDefault } from "@guardian/src-foundations/themes"
 import { width, height } from "@guardian/src-foundations/size"
+import { resets } from "@guardian/src-foundations/utils"
 import { Columns } from "./index"
 
 export const fieldset = css`
-	border: 0;
-	padding: 0;
-	margin: 0;
+	${resets.fieldset};
 `
 
 // TODO: This is currently applied to a div instead of the fieldset
