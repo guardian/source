@@ -52,7 +52,7 @@ export const links = ({ footer } = footerBrand) => css`
 `
 
 export const copyright = css`
-	${textSans.xsmall()};
+	${textSans.xxsmall()};
 	display: block;
 `
 
