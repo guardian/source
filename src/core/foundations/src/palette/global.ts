@@ -83,13 +83,15 @@ export const sport = {
 	800: colors.blues[6],
 }
 export const culture = {
-	100: colors.browns[0],
-	200: colors.browns[1],
-	300: colors.browns[2],
-	400: colors.browns[3],
-	500: colors.browns[4],
-	600: colors.browns[5],
-	800: colors.browns[6],
+	50: colors.browns[0],
+	100: colors.browns[1],
+	200: colors.browns[2],
+	300: colors.browns[3],
+	400: colors.browns[4],
+	500: colors.browns[5],
+	600: colors.browns[6],
+	700: colors.browns[7],
+	800: colors.browns[8],
 }
 export const lifestyle = {
 	100: colors.pinks[0],
@@ -111,12 +113,8 @@ export const specialReport = {
 	200: colors.grays[11],
 	300: colors.grays[12],
 	400: colors.grays[13],
-	500: colors.grays[14],
-	800: colors.grays[16],
-}
-
-// Deprecated - please do not use
-// TODO: remove in v3.0.0
-export const dynamo = {
-	400: colors.grays[15],
+	450: colors.grays[14],
+	500: colors.grays[15],
+	700: colors.grays[16],
+	800: colors.grays[17],
 }
