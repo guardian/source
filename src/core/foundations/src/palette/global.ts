@@ -83,14 +83,15 @@ export const sport = {
 	800: colors.blues[6],
 }
 export const culture = {
-	100: colors.browns[0],
-	200: colors.browns[1],
-	300: colors.browns[2],
-	400: colors.browns[3],
-	500: colors.browns[4],
-	600: colors.browns[5],
-	700: colors.browns[6],
-	800: colors.browns[7],
+	50: colors.browns[0],
+	100: colors.browns[1],
+	200: colors.browns[2],
+	300: colors.browns[3],
+	400: colors.browns[4],
+	500: colors.browns[5],
+	600: colors.browns[6],
+	700: colors.browns[7],
+	800: colors.browns[8],
 }
 export const lifestyle = {
 	100: colors.pinks[0],
