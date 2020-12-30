@@ -89,7 +89,8 @@ export const culture = {
 	400: colors.browns[3],
 	500: colors.browns[4],
 	600: colors.browns[5],
-	800: colors.browns[6],
+	700: colors.browns[6],
+	800: colors.browns[7],
 }
 export const lifestyle = {
 	100: colors.pinks[0],
