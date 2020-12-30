@@ -37,6 +37,7 @@ export interface BodySizes extends TypographySizes {
 	medium: number
 }
 export interface TextSansSizes extends TypographySizes {
+	xxsmall: number
 	xsmall: number
 	small: number
 	medium: number
