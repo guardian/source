@@ -83,6 +83,7 @@ const colors = {
 		"#A1845C", //culture-400
 		"#EACCA0", //culture-500
 		"#E7D4B9", //culture-600
+		"#EFE8DD", //culture-700
 		"#FBF6EF", //culture-800
 	],
 	pinks: [
