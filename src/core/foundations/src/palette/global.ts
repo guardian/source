@@ -112,11 +112,5 @@ export const specialReport = {
 	300: colors.grays[12],
 	400: colors.grays[13],
 	500: colors.grays[14],
-	800: colors.grays[16],
-}
-
-// Deprecated - please do not use
-// TODO: remove in v3.0.0
-export const dynamo = {
-	400: colors.grays[15],
+	800: colors.grays[15],
 }
