@@ -77,6 +77,7 @@ const colors = {
 		"#C1D8FC", //brand-800
 	],
 	browns: [
+		"#2B2625", //culture-50
 		"#3E3323", //culture-100
 		"#574835", //culture-200
 		"#6B5840", //culture-300
