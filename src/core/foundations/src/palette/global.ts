@@ -112,6 +112,8 @@ export const specialReport = {
 	200: colors.grays[11],
 	300: colors.grays[12],
 	400: colors.grays[13],
-	500: colors.grays[14],
-	800: colors.grays[15],
+	450: colors.grays[14],
+	500: colors.grays[15],
+	700: colors.grays[16],
+	800: colors.grays[17],
 }

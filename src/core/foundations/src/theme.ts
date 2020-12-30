@@ -122,8 +122,10 @@ const colors = {
 		"#222527", //specialReport-100
 		"#303538", //specialReport-200
 		"#3F464A", //specialReport-300
-		"#63717A", //specialReport-400
+		"#595C5F", //specialReport-400
+		"#9DA0A2", //specialReport-450
 		"#ABC2C9", //specialReport-500
+		"#E4E5E8", //specialReport-700
 		"#EFF1F2", //specialReport-800
 	],
 }
