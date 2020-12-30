@@ -13,34 +13,35 @@ import {
 } from "./types"
 
 const titlepieceSizes: TitlepieceSizes = {
-	small: fontSizes[7], //42px
-	medium: fontSizes[8], //50px
-	large: fontSizes[9], //70px
+	small: fontSizes[8], //42px
+	medium: fontSizes[9], //50px
+	large: fontSizes[10], //70px
 }
 
 const headlineSizes: HeadlineSizes = {
-	xxxsmall: fontSizes[2], //17px
-	xxsmall: fontSizes[3], //20px
-	xsmall: fontSizes[4], //24px
-	small: fontSizes[5], //28px
-	medium: fontSizes[6], //34px
-	large: fontSizes[7], //42px
-	xlarge: fontSizes[8], //50px
+	xxxsmall: fontSizes[3], //17px
+	xxsmall: fontSizes[4], //20px
+	xsmall: fontSizes[5], //24px
+	small: fontSizes[6], //28px
+	medium: fontSizes[7], //34px
+	large: fontSizes[8], //42px
+	xlarge: fontSizes[9], //50px
 }
 
 const bodySizes: BodySizes = {
-	small: fontSizes[1], //15px
-	medium: fontSizes[2], //17px
+	small: fontSizes[2], //15px
+	medium: fontSizes[3], //17px
 }
 
 const textSansSizes: TextSansSizes = {
-	xsmall: fontSizes[0], //12px
-	small: fontSizes[1], //15px
-	medium: fontSizes[2], //17px
-	large: fontSizes[3], //20px
-	xlarge: fontSizes[4], //24px
-	xxlarge: fontSizes[5], //28px
-	xxxlarge: fontSizes[6], //34px
+	xxsmall: fontSizes[0], //12px
+	xsmall: fontSizes[1], //14px
+	small: fontSizes[2], //15px
+	medium: fontSizes[3], //17px
+	large: fontSizes[4], //20px
+	xlarge: fontSizes[5], //24px
+	xxlarge: fontSizes[6], //28px
+	xxxlarge: fontSizes[7], //34px
 }
 
 const fontSizeMapping: {
@@ -55,34 +56,35 @@ const fontSizeMapping: {
 const remFontSizes = fontSizes.map((fontSize) => pxToRem(fontSize))
 
 const remTitlepieceSizes: TitlepieceSizes = {
-	small: remFontSizes[7], //42px
-	medium: remFontSizes[8], //50px
-	large: remFontSizes[9], //70px
+	small: remFontSizes[8], //42px
+	medium: remFontSizes[9], //50px
+	large: remFontSizes[10], //70px
 }
 
 const remHeadlineSizes: HeadlineSizes = {
-	xxxsmall: remFontSizes[2], //17px
-	xxsmall: remFontSizes[3], //20px
-	xsmall: remFontSizes[4], //24px
-	small: remFontSizes[5], //28px
-	medium: remFontSizes[6], //34px
-	large: remFontSizes[7], //42px
-	xlarge: remFontSizes[8], //50px
+	xxxsmall: remFontSizes[3], //17px
+	xxsmall: remFontSizes[4], //20px
+	xsmall: remFontSizes[5], //24px
+	small: remFontSizes[6], //28px
+	medium: remFontSizes[7], //34px
+	large: remFontSizes[8], //42px
+	xlarge: remFontSizes[9], //50px
 }
 
 const remBodySizes: BodySizes = {
-	small: remFontSizes[1], //15px
-	medium: remFontSizes[2], //17px
+	small: remFontSizes[2], //15px
+	medium: remFontSizes[3], //17px
 }
 
 const remTextSansSizes: TextSansSizes = {
-	xsmall: remFontSizes[0], //12px
-	small: remFontSizes[1], //15px
-	medium: remFontSizes[2], //17px
-	large: remFontSizes[3], //20px
-	xlarge: remFontSizes[4], //24px
-	xxlarge: remFontSizes[5], //28px
-	xxxlarge: remFontSizes[6], //34px
+	xxsmall: remFontSizes[0], //12px
+	xsmall: remFontSizes[1], //14px
+	small: remFontSizes[2], //15px
+	medium: remFontSizes[3], //17px
+	large: remFontSizes[4], //20px
+	xlarge: remFontSizes[5], //24px
+	xxlarge: remFontSizes[6], //28px
+	xxxlarge: remFontSizes[7], //34px
 }
 
 const remFontSizeMapping: {

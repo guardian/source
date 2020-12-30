@@ -89,6 +89,8 @@ const textSansDefaults = {
 const textSansFs = fs("textSans")
 
 export const textSans: TextSansFunctions = {
+	xxsmall: (options?: FontScaleArgs) =>
+		textSansFs("xxsmall", Object.assign({}, textSansDefaults, options)),
 	xsmall: (options?: FontScaleArgs) =>
 		textSansFs("xsmall", Object.assign({}, textSansDefaults, options)),
 	small: (options?: FontScaleArgs) =>
