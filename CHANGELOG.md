@@ -10,6 +10,20 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 31 December 2020
+
+**`@guardian/src-accordion 2.8.0`**
+
+-   :bug: [f8c6f55](https://github.com/guardian/source/commit/f8c6f558462cccda1e4effc122317ae01fe043de) pass props from accordion comp to root element
+
+**`@guardian/src-checkbox 2.8.0`**
+
+-   :bug: [3b94ddb](https://github.com/guardian/source/commit/3b94ddb051587bd6e8973b8270359f0a1314fa25) disallow pointer events on the checkbox tick (thanks @i-hardy)
+
+**`@guardian/src-label 2.8.0`**
+
+-   :sparkles: [2591cfb](https://github.com/guardian/source/commit/2591cfb2ffde9d750ab094cbc52113566660d4e1) make label and supporting text hideable
+
 ## 23 November 2020
 
 **`@guardian/src-layout 2.7.1`**
