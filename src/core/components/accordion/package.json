@@ -25,15 +25,9 @@
 		"@babel/preset-env": "^7.10.0",
 		"@babel/preset-react": "^7.10.0",
 		"@babel/preset-typescript": "^7.9.0",
-<<<<<<< HEAD
-		"@emotion/babel-preset-css-prop": "^10.0.14",
+		"@emotion/babel-preset-css-prop": "^11.0.0",
 		"@guardian/src-foundations": "^2.8.0",
 		"@guardian/src-link": "^2.8.0",
-=======
-		"@emotion/babel-preset-css-prop": "^11.0.0",
-		"@guardian/src-foundations": "^2.8.0-rc.0",
-		"@guardian/src-link": "^2.8.0-rc.0",
->>>>>>> upgrade emotion, typescript and related deps
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-commonjs": "^10.0.2",
