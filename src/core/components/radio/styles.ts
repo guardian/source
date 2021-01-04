@@ -101,6 +101,7 @@ export const labelText = ({
 }: { radio: RadioTheme } = radioDefault) => css`
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${radio.textLabel};
+	width: 100%;
 `
 
 export const labelTextWithSupportingText = css`
