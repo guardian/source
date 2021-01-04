@@ -10,6 +10,16 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 4 January 2021
+
+**`@guardian/src-checkbox 2.8.1`**
+
+-   :nail_care: [4cddfe3](https://github.com/guardian/source/commit/4cddfe3051def84a31bd777a0bd541a8c9db2055) make checkbox label text full width
+
+**`@guardian/src-radio 2.8.1`**
+
+-   :nail_care: [82c28ed](https://github.com/guardian/source/commit/82c28ed16a98320dc9158b82f5dbe62614f202de) make radio label text block level
+
 ## 31 December 2020
 
 **`@guardian/src-accordion 2.8.0`**
