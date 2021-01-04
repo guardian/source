@@ -92,6 +92,7 @@ export const labelText = ({
 }: { checkbox: CheckboxTheme } = checkboxDefault) => css`
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${checkbox.textLabel};
+	width: 100%;
 `
 
 export const labelTextWithSupportingText = css`
