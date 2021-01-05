@@ -1,6 +1,6 @@
 {
 	"name": "source",
-	"version": "3.0.0-rc.0",
+	"version": "3.0.0-rc.2",
 	"license": "Apache-2.0",
 	"scripts": {
 		"storybook": "yarn watch:foundations & yarn watch:icons & start-storybook --port 9009",
@@ -36,7 +36,7 @@
 		"release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
 		"release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn publish:release",
 		"release:prerelease:all": "yarn build:all && yarn validate && yarn publish:release",
-		"release:prerelease-bump:all": "yarn build:all && yarn validate && yarn verbump:prerelease:all && yarn publish:release && yarn tag:beta:all",
+		"release:prerelease-bump:all": "yarn build:all && yarn validate && yarn verbump:prerelease:all && yarn publish:release",
 		"tag:beta:all": "ts-node ./scripts/tag-beta-all"
 	},
 	"private": true,
