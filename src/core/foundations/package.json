@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-foundations",
-	"version": "2.8.1",
+	"version": "3.0.0-rc.2",
 	"license": "Apache-2.0",
 	"main": "foundations.js",
 	"module": "foundations.esm.js",
@@ -28,6 +28,7 @@
 		"palette/**",
 		"size/**",
 		"themes/**",
+		"types/**",
 		"typography/**",
 		"utils/**",
 		"*.d.ts",

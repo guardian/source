@@ -1,7 +1,10 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles } from "@emotion/react"
 import { InlineError } from "@guardian/src-user-feedback"
-import { descriptionId } from "@guardian/src-foundations/accessibility"
+import {
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 import { Legend } from "@guardian/src-label"
 import {
 	fieldset,
@@ -24,8 +27,6 @@ export {
 } from "@guardian/src-foundations/themes"
 
 interface CheckboxGroupProps extends Props {
-	// TODO: this is required when an error is passed to correctly set aria-describedby
-	// We should introduce a way of generating element IDs when they are not explicitly passed
 	id?: string
 	name: string
 	label?: string
@@ -47,6 +48,7 @@ const CheckboxGroup = ({
 	children,
 	...props
 }: CheckboxGroupProps) => {
+	const groupId = id || generateSourceId()
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 	) : (
@@ -55,22 +57,24 @@ const CheckboxGroup = ({
 
 	const message =
 		typeof error === "string" ? (
-			<InlineError id={id ? descriptionId(id) : ""}>{error}</InlineError>
+			<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 		) : (
 			""
 		)
 
 	return (
-		<fieldset css={[fieldset, cssOverrides]} id={id} {...props}>
+		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
 			{legend}
 			{message}
 			{React.Children.map(children, (child) => {
 				return React.cloneElement(
 					child,
 					Object.assign(
-						error ? { error: true } : {},
-						error && id
-							? { "aria-describedby": descriptionId(id) }
+						error
+							? {
+									error: true,
+									"aria-describedby": descriptionId(groupId),
+							  }
 							: {},
 						{
 							name,

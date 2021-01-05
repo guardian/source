@@ -1,5 +1,5 @@
 import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from "react"
-import { SerializedStyles, css } from "@emotion/core"
+import { SerializedStyles, css } from "@emotion/react"
 import { legend, labelText, optionalText, supportingText } from "./styles"
 import { Props } from "@guardian/src-helpers"
 export { labelDefault, labelBrand } from "@guardian/src-foundations/themes"
@@ -45,7 +45,7 @@ const SupportingText = ({
 }
 
 const Text = ({ text, optional, hideLabel }: LabelProps) => (
-	<span
+	<div
 		css={(theme) => [
 			labelText(theme.label && theme),
 			hideLabel ? visuallyHidden : "",
@@ -59,7 +59,7 @@ const Text = ({ text, optional, hideLabel }: LabelProps) => (
 		) : (
 			""
 		)}
-	</span>
+	</div>
 )
 
 const Legend = ({

@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { SvgCross } from "@guardian/src-icons"
 import { space } from "@guardian/src-foundations"
 import { Button } from "../index"

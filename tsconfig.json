@@ -38,7 +38,8 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"esModuleInterop": true,
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"types": ["@emotion/react/types/css-prop", "jest", "node"]
 	},
 	"include": ["src/**/*"],
 	"exclude": ["node_modules"]

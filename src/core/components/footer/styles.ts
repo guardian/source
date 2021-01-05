@@ -1,14 +1,12 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { space } from "@guardian/src-foundations"
-import { footerBrand, FooterTheme } from "@guardian/src-foundations/themes"
+import { footerBrand } from "@guardian/src-foundations/themes"
 import { from, between } from "@guardian/src-foundations/mq"
 import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 
-export const footer = ({
-	footer,
-}: { footer: FooterTheme } = footerBrand) => css`
+export const footer = ({ footer } = footerBrand) => css`
 	color: ${footer.text};
 	background-color: ${footer.background};
 	padding: 0 ${space[3]}px ${space[3]}px ${space[3]}px;
@@ -39,7 +37,7 @@ export const linksWrapperSpaceWithBackToTop = css`
 	}
 `
 
-export const links = ({ footer }: { footer: FooterTheme } = footerBrand) => css`
+export const links = ({ footer } = footerBrand) => css`
 	border-style: solid;
 	border-color: ${footer.border};
 	border-width: 0 0 1px 0;
@@ -54,7 +52,7 @@ export const links = ({ footer }: { footer: FooterTheme } = footerBrand) => css`
 `
 
 export const copyright = css`
-	${textSans.xsmall()};
+	${textSans.xxsmall()};
 	display: block;
 `
 
@@ -65,9 +63,7 @@ export const copyrightExtraPadding = css`
 	}
 `
 
-export const backToTop = ({
-	footer,
-}: { footer: FooterTheme } = footerBrand) => css`
+export const backToTop = ({ footer } = footerBrand) => css`
 	display: flex;
 	align-items: center;
 	height: ${height.ctaMedium}px;
@@ -87,9 +83,7 @@ export const backToTop = ({
 	}
 `
 
-export const backToTopIcon = ({
-	footer,
-}: { footer: FooterTheme } = footerBrand) => css`
+export const backToTopIcon = ({ footer } = footerBrand) => css`
 	height: ${height.ctaMedium}px;
 	width: ${width.ctaMedium}px;
 	display: flex;

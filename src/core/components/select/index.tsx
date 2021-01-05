@@ -1,40 +1,27 @@
-import React, {
-	ReactNode,
-	SelectHTMLAttributes,
-	OptionHTMLAttributes,
-} from "react"
-import { SerializedStyles, css } from "@emotion/core"
+import React, { SelectHTMLAttributes, OptionHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/react"
 import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
+import { Label } from "@guardian/src-label"
 import {
 	select,
-	label,
 	selectWrapper,
 	errorChevron,
 	successChevron,
 	errorInput,
-	optionalLabel,
-	supportingText,
 	successInput,
 } from "./styles"
 import { Props } from "@guardian/src-helpers"
 import { SvgChevronDownSingle } from "@guardian/src-icons"
 
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
+import {
+	visuallyHidden as _visuallyHidden,
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 export { selectDefault } from "@guardian/src-foundations/themes"
 
-const visuallyHidden = css`
-	${_visuallyHidden}
-`
-
-const SupportingText = ({ children }: { children: ReactNode }) => {
-	return (
-		<div css={(theme) => supportingText(theme.select && theme)}>
-			{children}
-		</div>
-	)
-}
-
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
+	id?: string
 	label: string
 	optional: boolean
 	hideLabel: boolean
@@ -46,6 +33,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 }
 
 const Select = ({
+	id,
 	label: labelText,
 	optional,
 	hideLabel,
@@ -56,26 +44,22 @@ const Select = ({
 	children,
 	...props
 }: SelectProps) => {
+	const selectId = id || generateSourceId()
 	return (
-		<label>
-			<div
-				css={(theme) => [
-					label(theme.select && theme),
-					hideLabel ? visuallyHidden : "",
-				]}
-			>
-				{labelText}{" "}
-				{optional ? (
-					<span css={(theme) => optionalLabel(theme.select && theme)}>
-						Optional
-					</span>
-				) : (
-					""
-				)}
-			</div>
-			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
-			{error && <InlineError>{error}</InlineError>}
-			{!error && success && <InlineSuccess>{success}</InlineSuccess>}
+		<Label
+			text={labelText}
+			optional={optional}
+			supporting={supporting}
+			hideLabel={hideLabel}
+		>
+			{error && (
+				<InlineError id={descriptionId(selectId)}>{error}</InlineError>
+			)}
+			{!error && success && (
+				<InlineSuccess id={descriptionId(selectId)}>
+					{success}
+				</InlineSuccess>
+			)}
 			<div
 				css={(theme) => [
 					selectWrapper(theme.select && theme),
@@ -96,13 +80,17 @@ const Select = ({
 					]}
 					aria-required={!optional}
 					aria-invalid={!!error}
+					aria-describedby={
+						error || success ? descriptionId(selectId) : ""
+					}
+					id={selectId}
 					{...props}
 				>
 					{children}
 				</select>
 				<SvgChevronDownSingle />
 			</div>
-		</label>
+		</Label>
 	)
 }
 

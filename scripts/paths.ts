@@ -7,7 +7,6 @@ const statP = promisify(stat)
 
 const root = join(__dirname, "..")
 const foundations = join(__dirname, "../src/core/foundations")
-const svgs = join(__dirname, "../src/core/svgs")
 const icons = join(__dirname, "../src/core/icons")
 const brand = join(__dirname, "../src/core/brand")
 const helpers = join(__dirname, "../src/core/helpers")
@@ -54,7 +53,6 @@ export const getComponentPaths = () =>
 export const paths = {
 	root,
 	foundations,
-	svgs,
 	icons,
 	brand,
 	helpers,

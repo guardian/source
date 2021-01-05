@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/src-icons",
-	"version": "2.8.1",
+	"version": "3.0.0-rc.2",
 	"license": "Apache-2.0",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
@@ -26,8 +26,9 @@
 		"@babel/preset-env": "^7.10.0",
 		"@babel/preset-react": "^7.10.0",
 		"@babel/preset-typescript": "^7.9.0",
-		"@guardian/src-foundations": "^2.8.1",
-		"@guardian/src-helpers": "^2.8.1",
+		"@emotion/react": "^11.1.2",
+		"@guardian/src-foundations": "^3.0.0-rc.2",
+		"@guardian/src-helpers": "^3.0.0-rc.2",
 		"rollup": "^1.17.0",
 		"rollup-plugin-babel": "^4.3.3",
 		"rollup-plugin-node-resolve": "^5.2.0",
@@ -76,6 +77,6 @@
 		"dist/*.js"
 	],
 	"peerDependencies": {
-		"react": "^16.8.6"
+		"react": "^17.0.1"
 	}
 }

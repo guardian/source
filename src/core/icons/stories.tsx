@@ -1,10 +1,11 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { width, height } from "@guardian/src-foundations/size"
 
 import {
+	SvgAlert,
 	SvgAlertRound,
 	SvgAlertTriangle,
 	SvgArrowDownStraight,
@@ -125,6 +126,7 @@ const WidePayment = ({
 
 /* eslint-disable react/jsx-key */
 const uiIcons = [
+	<SvgAlert />,
 	<SvgAlertRound />,
 	<SvgAlertTriangle />,
 	<SvgArrowDownStraight />,

@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { width } from "@guardian/src-foundations/size"
 import { linkDefault, LinkTheme } from "@guardian/src-foundations/themes"
 import { textSans } from "@guardian/src-foundations/typography"

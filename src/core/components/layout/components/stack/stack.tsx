@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, ReactNode } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles } from "@emotion/react"
 import { stack, stackSpace } from "./styles"
 import { Props } from "@guardian/src-helpers"
 

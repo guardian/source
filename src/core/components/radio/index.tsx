@@ -1,8 +1,11 @@
 import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/core"
+import { SerializedStyles } from "@emotion/react"
 import { Legend } from "@guardian/src-label"
 import { InlineError } from "@guardian/src-user-feedback"
-import { descriptionId } from "@guardian/src-foundations/accessibility"
+import {
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 import {
 	fieldset,
 	label,
@@ -49,19 +52,20 @@ const RadioGroup = ({
 	children,
 	...props
 }: RadioGroupProps) => {
+	const groupId = id || generateSourceId()
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 	) : (
 		""
 	)
 	const message = error && (
-		<InlineError id={id ? descriptionId(id) : ""}>{error}</InlineError>
+		<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 	)
 
 	return (
 		<fieldset
 			aria-invalid={!!error}
-			id={id}
+			id={groupId}
 			css={(theme) => [
 				fieldset(theme.radio && theme),
 				orientationStyles[orientation],
@@ -75,8 +79,10 @@ const RadioGroup = ({
 				return React.cloneElement(
 					child,
 					Object.assign(
-						error && id
-							? { "aria-describedby": descriptionId(id) }
+						error
+							? {
+									"aria-describedby": descriptionId(groupId),
+							  }
 							: {},
 						{
 							name,

@@ -1,13 +1,10 @@
-import { css, SerializedStyles } from "@emotion/core"
+import { css, SerializedStyles } from "@emotion/react"
 import { space, transitions } from "@guardian/src-foundations"
 import { visuallyHidden } from "@guardian/src-foundations/accessibility"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
 import { from } from "@guardian/src-foundations/mq"
-import {
-	ChoiceCardTheme,
-	choiceCardDefault,
-} from "@guardian/src-foundations/themes"
+import { choiceCardDefault } from "@guardian/src-foundations/themes"
 import { width, height } from "@guardian/src-foundations/size"
 import { Columns } from "./index"
 
@@ -56,29 +53,7 @@ export const gridColumns: { [key in Columns]: SerializedStyles } = {
 	5: gridColumnsStyle(5),
 }
 
-export const groupLabel = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
-	color: ${choiceCard.textGroupLabel};
-	margin-bottom: ${space[1]}px;
-	/* override user agent defaults */
-	padding: 0;
-`
-
-export const groupLabelSupporting = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
-	color: ${choiceCard.textGroupLabelSupporting};
-	margin-bottom: ${space[3]}px;
-	/* Negate the user agent spacing between legend and fieldset content */
-	margin-top: ${-space[2]}px;
-`
-
-export const input = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
+export const input = ({ choiceCard } = choiceCardDefault) => css`
 	${visuallyHidden};
 
 	&:focus + label {
@@ -146,9 +121,7 @@ export const tickAnimation = css`
 	}
 `
 
-export const choiceCard = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
+export const choiceCard = ({ choiceCard } = choiceCardDefault) => css`
 	flex: 1;
 	display: flex;
 	justify-content: center;
@@ -218,9 +191,7 @@ export const contentWrapperLabelOnly = css`
 
 // TODO: most of this is duplicated in the checkbox component
 // We should extract it into its own module somewhere
-export const tick = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
+export const tick = ({ choiceCard } = choiceCardDefault) => css`
 	/* overall positional properties */
 	position: absolute;
 	top: 50%;
@@ -259,9 +230,7 @@ export const tick = ({
 	}
 `
 
-export const errorChoiceCard = ({
-	choiceCard,
-}: { choiceCard: ChoiceCardTheme } = choiceCardDefault) => css`
+export const errorChoiceCard = ({ choiceCard } = choiceCardDefault) => css`
 	box-shadow: inset 0 0 0 4px ${choiceCard.borderError};
 
 	& > * {

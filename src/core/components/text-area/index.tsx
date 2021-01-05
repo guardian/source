@@ -1,28 +1,19 @@
-import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles, css } from "@emotion/core"
+import React, { InputHTMLAttributes } from "react"
+import { SerializedStyles } from "@emotion/react"
 import { InlineError } from "@guardian/src-user-feedback"
+import { Label } from "@guardian/src-label"
+import { widthFluid, textArea, errorInput } from "./styles"
 import {
-	widthFluid,
-	textArea,
-	label,
-	errorInput,
-	optionalLabel,
-	supportingText,
-} from "./styles"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
+	visuallyHidden as _visuallyHidden,
+	descriptionId,
+	generateSourceId,
+} from "@guardian/src-foundations/accessibility"
 import { Props } from "@guardian/src-helpers"
-
-const visuallyHidden = css`
-	${_visuallyHidden}
-`
-
-const SupportingText = ({ children }: { children: ReactNode }) => {
-	return <div css={supportingText}>{children}</div>
-}
 
 interface TextAreaProps
 	extends InputHTMLAttributes<HTMLTextAreaElement>,
 		Props {
+	id?: string
 	value?: string
 	label: string
 	optional: boolean
@@ -35,6 +26,7 @@ interface TextAreaProps
 }
 
 const TextArea = ({
+	id,
 	label: labelText,
 	optional,
 	hideLabel,
@@ -46,6 +38,7 @@ const TextArea = ({
 	value,
 	...props
 }: TextAreaProps) => {
+	const textAreaId = id || generateSourceId()
 	const getClassName = () => {
 		const HAS_VALUE_CLASS = "src-has-value"
 
@@ -61,13 +54,17 @@ const TextArea = ({
 	}
 
 	return (
-		<label>
-			<div css={[label, hideLabel ? visuallyHidden : ""]}>
-				{labelText}{" "}
-				{optional ? <span css={optionalLabel}>Optional</span> : ""}
-			</div>
-			{supporting ? <SupportingText>{supporting}</SupportingText> : ""}
-			{error && <InlineError>{error}</InlineError>}
+		<Label
+			text={labelText}
+			supporting={supporting}
+			optional={optional}
+			hideLabel={hideLabel}
+		>
+			{error && (
+				<InlineError id={descriptionId(textAreaId)}>
+					{error}
+				</InlineError>
+			)}
 			<textarea
 				css={[
 					widthFluid,
@@ -75,14 +72,16 @@ const TextArea = ({
 					error ? errorInput : "",
 					cssOverrides,
 				]}
+				id={textAreaId}
 				aria-required={!optional}
 				aria-invalid={!!error}
+				aria-describedby={error ? descriptionId(textAreaId) : ""}
 				required={!optional}
 				rows={rows}
 				className={getClassName()}
 				{...props}
 			/>
-		</label>
+		</Label>
 	)
 }
 
