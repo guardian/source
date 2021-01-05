@@ -20,3 +20,4 @@ tsconfig.tsbuildinfo
 !src/themes/
 !src/typography/
 !src/utils/
+!types/*.d.ts

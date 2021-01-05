@@ -28,6 +28,7 @@
 		"palette/**",
 		"size/**",
 		"themes/**",
+		"types/**",
 		"typography/**",
 		"utils/**",
 		"*.d.ts",
