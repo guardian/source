@@ -1,3 +1,4 @@
+///<reference types="@emotion/react/types/css-prop" />
 import React, { InputHTMLAttributes } from "react"
 import { SerializedStyles } from "@emotion/react"
 import { InlineError } from "@guardian/src-user-feedback"
