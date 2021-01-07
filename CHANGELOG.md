@@ -10,6 +10,78 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 7 January 2021
+
+**`@guardian/src-checkbox 3.0.0`**
+
+-   :sparkles: [df84cbe](https://github.com/guardian/source/commit/df84cbeb8cc20e86e8001a33366b841bf2906efb) use id generator for missing id in checkbox group
+-   :robot: [422c5ea](https://github.com/guardian/source/commit/422c5ea2f915439fc82a57322203735acc764ffc) consume resets in checkbox
+
+**`@guardian/src-choice-card 3.0.0`**
+
+-   :robot: [b0d2bd5](https://github.com/guardian/source/commit/b0d2bd5acfbb25f719a3d8ecae506f6cf0af8503) consume resets in choice card
+-   :robot: [6e01b17](https://github.com/guardian/source/commit/6e01b175c2f86e63fd56f783d2d5632ee0725833) use label package in choice card
+-   :sparkles: [9a44cc2](https://github.com/guardian/source/commit/9a44cc2bcbf004352243966bcc46acf876801609) use id generator for missing id in choice card group
+
+**`@guardian/src-footer 3.0.0`**
+
+-   :robot: [87798f1](https://github.com/guardian/source/commit/87798f1629d47dafa1b15afbc4e900c81a735a28) update footer to use new text sans option
+
+**`@guardian/src-foundations 3.0.0`**
+
+-   :sparkles: [51caec0](https://github.com/guardian/source/commit/51caec0ea284b5557b57cf2f1ade5bba0a4f2e05) add resets module to utils
+-   :boom: :sparkles: [2ed3664](https://github.com/guardian/source/commit/2ed366477fae2c590c40fe774d6b510195d7cbca) delete inline error themes
+-   :boom: :sparkles: [f2a654e](https://github.com/guardian/source/commit/f2a654e2d4a5f7413596abf104820e60c70aa8bd) add 14px text size for text sans
+-   :sparkles: [0775058](https://github.com/guardian/source/commit/077505890e1df96b6338c9328df4e18c80dc6c8d) add id generating function for source components
+-   :boom: :sparkles: [ed2848b](https://github.com/guardian/source/commit/ed2848bd066bbd48ab7d09c6b51b28c49683f52d) delete dynamo 400
+-   :sparkles: [8f7ae00](https://github.com/guardian/source/commit/8f7ae00ff8d83a9ebbb550966a832a65190bc3a2) add culture-700
+-   :sparkles: [a9d7a67](https://github.com/guardian/source/commit/a9d7a67390817d890b05a53a2b489ef3b5f5c003) add new special report colours
+-   :sparkles: [669cd96](https://github.com/guardian/source/commit/669cd96661bced0abbaf050698ac0e3498a85b31) add culture-50
+-   :boom: :sparkles: [2cdcb04](https://github.com/guardian/source/commit/2cdcb04aaa1e02f83b89191af6b79017dffa1337) move emotion types to foundations
+
+**`@guardian/src-grid 3.0.0`**
+
+-   :boom: :sparkles: [709407c](https://github.com/guardian/source/commit/709407cc56b86959ddb5f79d40f74f414ade97e9) delete grid component
+
+**`@guardian/src-icons 3.0.0`**
+
+-   :boom: :sparkles: [68077e5](https://github.com/guardian/source/commit/68077e5b5569859c89fc296364f1792d9f3fc7f6) update alert to be exclamation mark without triangle
+
+**`@guardian/src-inline-error 3.0.0`**
+
+-   :boom: :sparkles: [cec5b85](https://github.com/guardian/source/commit/cec5b857844beb88dfa41c631cf19913d0b0459a) delete inline error package
+
+**`@guardian/src-label 3.0.0`**
+
+-   :robot: [f7aeda7](https://github.com/guardian/source/commit/f7aeda749735abd41dc7d2554a97a208702a1a61) consume resets in label
+    #N/A
+
+**`@guardian/src-radio 3.0.0`**
+
+-   :sparkles: [075eb94](https://github.com/guardian/source/commit/075eb94e3b1ee69879a962378b7ebe3cc02de4bd) use id generator for missing id in radio group
+-   :robot: [f0e7117](https://github.com/guardian/source/commit/f0e711781d6f88f40b9267fdc05e1ba224428ff4) consume resets in radio
+
+**`@guardian/src-select 3.0.0`**
+
+-   :robot: [72f2ce0](https://github.com/guardian/source/commit/72f2ce0e5162aca65ea00f0f5dd75024c0f124ca) use label package in select
+-   :sparkles: [507df18](https://github.com/guardian/source/commit/507df18332e2e7e1bc821a4d29a413804379ed9e) describe invalid or valid select with success or error msg
+
+**`@guardian/src-svgs 3.0.0`**
+
+-   :boom: :sparkles: [a3f977f](https://github.com/guardian/source/commit/a3f977f19df4457c2b650349687c1d1daf05bf26) delete svgs package
+
+**`@guardian/src-text-area 3.0.0`**
+
+-   :robot: [ab9ee04](https://github.com/guardian/source/commit/ab9ee042c3368f87b4afc90d8feba377f4a0cb16) use label package in text area
+-   :sparkles: [edfeed1](https://github.com/guardian/source/commit/edfeed12fb799cdd0e315764646bb01ed0e17289) describe invalid textarea with error msg
+-   :robot: [83d22f8](https://github.com/guardian/source/commit/83d22f8111c4a6247e82e56e8c18ba255686c0e3) consume resets in text area
+
+**`@guardian/src-text-input 3.0.0`**
+
+-   :robot: [0b44f60](https://github.com/guardian/source/commit/0b44f60dcacf2069584b868d8e4395c0852ab995) use label package in text input
+-   :sparkles: [b2feeb9](https://github.com/guardian/source/commit/b2feeb99672c2d4c632fc4fa1d11a2ee8cd095a1) describe invalid or valid text input with error or success msg
+-   :robot: [f62a786](https://github.com/guardian/source/commit/f62a786191cdf477ef1d8b17f1b26bc6d0cd5602) consume resets in text input
+
 ## 4 January 2021
 
 **`@guardian/src-checkbox 2.8.1`**
