@@ -82,6 +82,12 @@ The direction in which radio buttons are stacked
 
 If passed, error styling should applies to this radio group. The string appears as an inline error message.
 
+### `optional`
+
+**`boolean`** _= "false"_
+
+Adds the word "Optional" after the label
+
 ## `Radio` Props
 
 ### `label`
