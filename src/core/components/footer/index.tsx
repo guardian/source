@@ -58,7 +58,7 @@ const Footer = ({
 			<small
 				css={[copyright, showBackToTop ? copyrightExtraPadding : ""]}
 			>
-				&copy; 2020 Guardian News and Media Limited or its affiliated
+				&copy; 2021 Guardian News and Media Limited or its affiliated
 				companies. All rights reserved.
 			</small>
 		</footer>
