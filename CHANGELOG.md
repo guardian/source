@@ -10,6 +10,24 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 14 January 2021
+
+**`@guardian/src-button 3.0.1`**
+
+-   :bug: [67cd4b9](https://github.com/guardian/source/commit/67cd4b982c277beb517df4c94d6081cfd4881654) Fix importing type from wrong module (thanks @paddyo)
+
+**`@guardian/src-footer 3.0.1`**
+
+-   :bug: [90686ba](https://github.com/guardian/source/commit/90686bafbff7827c1216dd29be3dd4f1918e038f) Update Footer copyright to 2021 (thanks @JamieB-gu)
+
+**`@guardian/src-link 3.0.1`**
+
+-   :bug: [67cd4b9](https://github.com/guardian/source/commit/67cd4b982c277beb517df4c94d6081cfd4881654) Fix importing type from wrong module (thanks @paddyo)
+
+**`@guardian/src-user-feedback 3.0.1`**
+
+-   :bug: [67cd4b9](https://github.com/guardian/source/commit/67cd4b982c277beb517df4c94d6081cfd4881654) Fix importing type from wrong module (thanks @paddyo)
+
 ## 7 January 2021
 
 **`@guardian/src-checkbox 3.0.0`**
