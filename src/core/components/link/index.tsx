@@ -5,7 +5,7 @@ import React, {
 	AnchorHTMLAttributes,
 	ButtonHTMLAttributes,
 } from "react"
-import { SerializedStyles } from "@emotion/css"
+import { SerializedStyles } from "@emotion/react"
 import { LinkTheme } from "@guardian/src-foundations/themes"
 import {
 	link,
