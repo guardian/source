@@ -25,7 +25,7 @@ export * from "./house";
 export * from "./indent";
 export * from "./info";
 export * from "./linkedin";
-export * from "./messanger";
+export * from "./messenger";
 export * from "./minus";
 export * from "./person";
 export * from "./paypal";
