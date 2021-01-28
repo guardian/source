@@ -12,7 +12,7 @@ const refs = {
 }
 
 module.exports = {
-	stories: [`../src/${process.env.SB_STORY_PATH || core}/**/*stories.tsx`],
+	stories: [`../src/${process.env.SB_STORY_PATH || 'core'}/**/*stories.tsx`],
 	addons: ["@storybook/addon-backgrounds", "@storybook/addon-viewport"],
 	...process.env.SB_STORY_PATH === 'core' ? { refs } : {}
 }
