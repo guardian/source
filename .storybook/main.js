@@ -1,11 +1,15 @@
+
+const editorialStorybookUrl =
+process.env.NODE_ENV === 'production'
+	? 'https://guardian.github.io/source/editorial'
+	: 'http://localhost:9011'
+
 const refs = {
 	editorial: {
 		title: "Editorial System",
-		url: process.env.NODE_ENV === 'production' ? '/editorial' : 'http://localhost:9011'
+		url: editorialStorybookUrl
 	}
 }
-
-console.log(process.env.SB_STORY_PATH === 'core' ? refs : {})
 
 module.exports = {
 	stories: [`../src/${process.env.SB_STORY_PATH}/**/*stories.tsx`],
