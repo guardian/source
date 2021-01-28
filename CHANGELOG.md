@@ -10,6 +10,12 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 28 January 2021
+
+**`@guardian/editorial 3.1.0`**
+
+-   :sparkles: [9b4b451](https://github.com/guardian/source/commit/9b4b4512d363cd97bca1e4763c2134510887d0cc) make editorial package publishable
+
 ## 14 January 2021
 
 **`@guardian/src-button 3.0.1`**
