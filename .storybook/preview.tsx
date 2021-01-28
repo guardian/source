@@ -59,7 +59,7 @@ const viewportEntries = Object.entries(breakpoints).map(([name, width]) => {
 })
 const viewports = Object.fromEntries(viewportEntries)
 
-export const paramters = {
+export const parameters = {
 	// We hide the toolbar by default to make Storybook embeds
 	// look nicer in Zeroheight. Related discussion:
 	// https://github.com/storybookjs/storybook/issues/8129
