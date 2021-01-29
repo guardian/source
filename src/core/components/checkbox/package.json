@@ -21,7 +21,7 @@
 		"verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.12.3",
+		"@babel/core": "^7.12.10",
 		"@babel/preset-env": "^7.10.0",
 		"@babel/preset-react": "^7.10.0",
 		"@babel/preset-typescript": "^7.9.0",
