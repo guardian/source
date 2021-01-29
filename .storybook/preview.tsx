@@ -2,8 +2,6 @@ import React, { useEffect } from "react"
 import { FocusStyleManager } from "@guardian/src-foundations/utils"
 import { breakpoints, Breakpoint } from "@guardian/src-foundations"
 
-const isProd = process.env.NODE_ENV === "production"
-
 type ViewportMeta = {
 	[key in Breakpoint]: {
 		name: string
@@ -57,7 +55,20 @@ const viewportEntries = Object.entries(breakpoints).map(([name, width]) => {
 		},
 	]
 })
-const viewports = Object.fromEntries(viewportEntries)
+const viewports = {
+	responsive: {
+		name: "Responsive",
+		styles: {
+			width: "100%",
+			height: "100%",
+			border: "none",
+			display: "block",
+			margin: "0",
+			boxShadow: "none",
+		},
+	},
+	...Object.fromEntries(viewportEntries),
+}
 
 export const parameters = {
 	viewport: {
