@@ -12,6 +12,7 @@
 		"test": "jest",
 		"validate": "yarn tsc && yarn lint && yarn test",
 		"clean": "rm -rf dist",
+		"build-storybook": "build-storybook -o dist",
 		"watch:foundations": "cd src/core/foundations && yarn watch",
 		"watch:icons": "cd src/core/icons && yarn watch",
 		"clean:all": "ts-node ./scripts/clean-all",
