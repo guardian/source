@@ -4,11 +4,11 @@ import React, {
 	ReactNode,
 	ButtonHTMLAttributes,
 	AnchorHTMLAttributes,
-} from "react"
-import { css } from "@emotion/react"
-import { SerializedStyles } from "@emotion/react"
-import { ButtonTheme } from "@guardian/src-foundations/themes"
-import { visuallyHidden } from "@guardian/src-foundations/accessibility"
+} from "react";
+import { css } from "@emotion/react";
+import { SerializedStyles } from "@emotion/react";
+import { ButtonTheme } from "@guardian/src-foundations/themes";
+import { visuallyHidden } from "@guardian/src-foundations/accessibility";
 import {
 	button,
 	primary,
@@ -27,87 +27,91 @@ import {
 	iconOnlySmall,
 	iconOnlyXsmall,
 	iconNudgeAnimation,
-} from "./styles"
-import { Props } from "@guardian/src-helpers"
+} from "./styles";
+import { Props } from "@guardian/src-helpers";
 
 export {
 	buttonDefault,
 	buttonBrand,
 	buttonBrandAlt,
-} from "@guardian/src-foundations/themes"
+} from "@guardian/src-foundations/themes";
 export {
 	buttonReaderRevenue,
 	buttonReaderRevenueBrand,
 	buttonReaderRevenueBrandAlt,
-} from "./themes"
+} from "./themes";
 
-export type Priority = "primary" | "secondary" | "tertiary" | "subdued"
-type IconSide = "left" | "right"
-type Size = "default" | "small" | "xsmall"
+export type Priority = "primary" | "secondary" | "tertiary" | "subdued";
+type IconSide = "left" | "right";
+type Size = "default" | "small" | "xsmall";
 
 interface SharedButtonProps extends Props {
-	priority: Priority
-	size: Size
-	iconSide: IconSide
-	icon?: ReactElement
-	hideLabel: boolean
-	nudgeIcon?: boolean
+	priority: Priority;
+	size: Size;
+	iconSide: IconSide;
+	icon?: ReactElement;
+	hideLabel: boolean;
+	nudgeIcon?: boolean;
 }
 
 const priorities: {
-	[key in Priority]: ({ button }: { button: ButtonTheme }) => SerializedStyles
+	[key in Priority]: ({
+		button,
+	}: {
+		button: ButtonTheme;
+	}) => SerializedStyles;
 } = {
 	primary,
 	secondary,
 	tertiary,
 	subdued,
-}
+};
 
 const iconSides: {
-	[key in IconSide]: SerializedStyles
+	[key in IconSide]: SerializedStyles;
 } = {
 	right: iconRight,
 	left: iconLeft,
-}
+};
 
 const sizes: {
-	[key in Size]: SerializedStyles
+	[key in Size]: SerializedStyles;
 } = {
 	default: defaultSize,
 	small: smallSize,
 	xsmall: xsmallSize,
-}
+};
 const iconSizes: {
-	[key in Size]: SerializedStyles
+	[key in Size]: SerializedStyles;
 } = {
 	default: iconDefault,
 	small: iconSmall,
 	xsmall: iconXsmall,
-}
+};
 const iconOnlySizes: {
-	[key in Size]: SerializedStyles
+	[key in Size]: SerializedStyles;
 } = {
 	default: iconOnlyDefault,
 	small: iconOnlySmall,
 	xsmall: iconOnlyXsmall,
-}
+};
 
 const buttonContents = ({
 	hideLabel,
 	iconSvg,
 	children,
 }: {
-	hideLabel: boolean
-	iconSvg?: ReactElement
-	children: ReactNode
+	hideLabel: boolean;
+	iconSvg?: ReactElement;
+	children: ReactNode;
 }) => {
-	const contents = [children]
+	const contents = [children];
 
 	if (iconSvg) {
 		if (!hideLabel) {
-			contents.push(<div key="space" className="src-button-space" />)
+			contents.push(<div key="space" className="src-button-space" />);
 		}
-		contents.push(React.cloneElement(iconSvg, { key: "svg" }))
+		contents.push(React.cloneElement(iconSvg, { key: "svg" }));
 	}
 	if (hideLabel) {
 		return (
@@ -121,11 +125,11 @@ const buttonContents = ({
 				</span>
 				{contents[1]}
 			</>
-		)
+		);
 	} else {
-		return contents
+		return contents;
 	}
-}
+};
 
 const buttonStyles = ({
 	priority,
@@ -146,19 +150,19 @@ const buttonStyles = ({
 		nudgeIcon ? iconNudgeAnimation : "",
 		hideLabel ? iconOnlySizes[size] : "",
 		cssOverrides,
-	]
+	];
 
 interface ButtonProps
 	extends SharedButtonProps,
 		ButtonHTMLAttributes<HTMLButtonElement> {
-	priority: Priority
-	size: Size
-	icon?: ReactElement
-	iconSide: IconSide
-	hideLabel: boolean
-	nudgeIcon?: boolean
-	children: ReactNode
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	priority: Priority;
+	size: Size;
+	icon?: ReactElement;
+	iconSide: IconSide;
+	hideLabel: boolean;
+	nudgeIcon?: boolean;
+	children: ReactNode;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 const Button = ({
 	priority,
@@ -189,19 +193,19 @@ const Button = ({
 			children,
 		})}
 	</button>
-)
+);
 
 interface LinkButtonProps
 	extends SharedButtonProps,
 		AnchorHTMLAttributes<HTMLAnchorElement> {
-	priority: Priority
-	size: Size
-	iconSide: IconSide
-	icon?: ReactElement
-	nudgeIcon?: boolean
-	hideLabel: boolean
-	children: ReactNode
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	priority: Priority;
+	size: Size;
+	iconSide: IconSide;
+	icon?: ReactElement;
+	nudgeIcon?: boolean;
+	hideLabel: boolean;
+	children: ReactNode;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const LinkButton = ({
@@ -233,7 +237,7 @@ const LinkButton = ({
 			children,
 		})}
 	</a>
-)
+);
 
 const defaultButtonProps = {
 	type: "button",
@@ -241,16 +245,16 @@ const defaultButtonProps = {
 	size: "default",
 	iconSide: "left",
 	hideLabel: false,
-}
+};
 
 const defaultLinkButtonProps = {
 	priority: "primary",
 	size: "default",
 	iconSide: "left",
 	hideLabel: false,
-}
+};
 
-Button.defaultProps = { ...defaultButtonProps }
-LinkButton.defaultProps = { ...defaultLinkButtonProps }
+Button.defaultProps = { ...defaultButtonProps };
+LinkButton.defaultProps = { ...defaultLinkButtonProps };
 
-export { Button, LinkButton }
+export { Button, LinkButton };

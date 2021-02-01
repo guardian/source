@@ -1,11 +1,11 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index";
 
 const medium = css`
 	width: 30em;
-`
+`;
 
 /* eslint-disable react/jsx-key */
 const choiceCards = [
@@ -17,7 +17,7 @@ const choiceCards = [
 		defaultChecked={true}
 	/>,
 	<ChoiceCard value="blue" label="Blue" id="default-blue" />,
-]
+];
 /* eslint-enable react/jsx-key */
 
 export const singleStateLight = () => (
@@ -25,13 +25,13 @@ export const singleStateLight = () => (
 		<div css={medium}>
 			<ChoiceCardGroup name="colours">
 				{choiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index }),
+					React.cloneElement(choiceCard, { key: index })
 				)}
 			</ChoiceCardGroup>
 		</div>
 	</ThemeProvider>
-)
+);
 
 singleStateLight.story = {
 	name: `single state light`,
-}
+};

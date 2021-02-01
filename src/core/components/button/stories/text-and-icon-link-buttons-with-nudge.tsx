@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { SvgArrowRightStraight } from "@guardian/src-icons"
-import { space } from "@guardian/src-foundations"
-import { LinkButton } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { SvgArrowRightStraight } from "@guardian/src-icons";
+import { space } from "@guardian/src-foundations";
+import { LinkButton } from "../index";
 
 /* eslint-disable react/jsx-key */
 const textIconButtons = [
@@ -17,7 +17,7 @@ const textIconButtons = [
 	>
 		Hover over me
 	</LinkButton>,
-]
+];
 
 /* eslint-enable react/jsx-key */
 
@@ -29,7 +29,7 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 export const textAndIconLinkButtonsWithNudge = () => (
 	<div>
@@ -39,7 +39,7 @@ export const textAndIconLinkButtonsWithNudge = () => (
 			))}
 		</div>
 	</div>
-)
+);
 textAndIconLinkButtonsWithNudge.story = {
 	name: "text and icon link buttons with nudge animation",
-}
+};

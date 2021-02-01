@@ -1,13 +1,13 @@
-import React from "react"
-import { ThemeProvider } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
+import React from "react";
+import { ThemeProvider } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
 
 import {
 	CheckboxGroup,
 	Checkbox,
 	checkboxDefault,
 	checkboxBrand,
-} from "../../index"
+} from "../../index";
 
 const errorLight = () => (
 	<ThemeProvider theme={checkboxDefault}>
@@ -22,11 +22,11 @@ const errorLight = () => (
 			/>
 		</CheckboxGroup>
 	</ThemeProvider>
-)
+);
 
 errorLight.story = {
 	name: "error light",
-}
+};
 
 const errorBlue = () => (
 	<ThemeProvider theme={checkboxBrand}>
@@ -41,7 +41,7 @@ const errorBlue = () => (
 			/>
 		</CheckboxGroup>
 	</ThemeProvider>
-)
+);
 
 errorBlue.story = {
 	name: "error blue",
@@ -51,6 +51,6 @@ errorBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
-export { errorLight, errorBlue }
+export { errorLight, errorBlue };

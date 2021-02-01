@@ -1,37 +1,37 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from "react"
-import { SerializedStyles, css } from "@emotion/react"
-import { legend, labelText, optionalText, supportingText } from "./styles"
-import { Props } from "@guardian/src-helpers"
-export { labelDefault, labelBrand } from "@guardian/src-foundations/themes"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
+import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from "react";
+import { SerializedStyles, css } from "@emotion/react";
+import { legend, labelText, optionalText, supportingText } from "./styles";
+import { Props } from "@guardian/src-helpers";
+export { labelDefault, labelBrand } from "@guardian/src-foundations/themes";
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
 
 const visuallyHidden = css`
 	${_visuallyHidden}
-`
+`;
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
-	text: string
-	supporting?: string
-	optional: boolean
-	hideLabel?: boolean
-	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children?: ReactNode
+	text: string;
+	supporting?: string;
+	optional: boolean;
+	hideLabel?: boolean;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+	children?: ReactNode;
 }
 interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
-	text: string
-	supporting?: string
-	optional: boolean
-	hideLabel?: boolean
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	text: string;
+	supporting?: string;
+	optional: boolean;
+	hideLabel?: boolean;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const SupportingText = ({
 	hideLabel,
 	children,
 }: {
-	hideLabel?: boolean
-	children: ReactNode
+	hideLabel?: boolean;
+	children: ReactNode;
 }) => {
 	return (
 		<p
@@ -42,8 +42,8 @@ const SupportingText = ({
 		>
 			{children}
 		</p>
-	)
-}
+	);
+};
 
 const Text = ({ text, optional, hideLabel }: LabelProps) => (
 	<div
@@ -61,7 +61,7 @@ const Text = ({ text, optional, hideLabel }: LabelProps) => (
 			""
 		)}
 	</div>
-)
+);
 
 const Legend = ({
 	text,
@@ -84,8 +84,8 @@ const Legend = ({
 				""
 			)}
 		</>
-	)
-}
+	);
+};
 
 const Label = ({
 	text,
@@ -108,12 +108,12 @@ const Label = ({
 			)}
 			{children}
 		</label>
-	)
-}
+	);
+};
 
-const defaultProps = { optional: false }
+const defaultProps = { optional: false };
 
-Label.defaultProps = { ...defaultProps }
-Legend.defaultProps = { ...defaultProps }
+Label.defaultProps = { ...defaultProps };
+Legend.defaultProps = { ...defaultProps };
 
-export { Label, Legend }
+export { Label, Legend };

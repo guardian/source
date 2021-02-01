@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
 export const SvgRoundelFilled = ({
 	background,
 	text,
 }: {
-	background: string
-	text: string
+	background: string;
+	text: string;
 }) => {
 	return (
 		<svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
@@ -16,5 +16,5 @@ export const SvgRoundelFilled = ({
 				fill={text}
 			/>
 		</svg>
-	)
-}
+	);
+};

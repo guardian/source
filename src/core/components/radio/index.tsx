@@ -1,12 +1,12 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { ReactNode, InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/react"
-import { Legend } from "@guardian/src-label"
-import { InlineError } from "@guardian/src-user-feedback"
+import React, { ReactNode, InputHTMLAttributes } from "react";
+import { SerializedStyles } from "@emotion/react";
+import { Legend } from "@guardian/src-label";
+import { InlineError } from "@guardian/src-user-feedback";
 import {
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility"
+} from "@guardian/src-foundations/accessibility";
 import {
 	fieldset,
 	label,
@@ -17,28 +17,28 @@ import {
 	supportingText,
 	horizontal,
 	vertical,
-} from "./styles"
-import { Props } from "@guardian/src-helpers"
+} from "./styles";
+import { Props } from "@guardian/src-helpers";
 
-export { radioBrand, radioDefault } from "@guardian/src-foundations/themes"
+export { radioBrand, radioDefault } from "@guardian/src-foundations/themes";
 
-type Orientation = "vertical" | "horizontal"
+type Orientation = "vertical" | "horizontal";
 
 const orientationStyles = {
 	vertical: vertical,
 	horizontal: horizontal,
-}
+};
 
 interface RadioGroupProps extends Props {
-	id?: string
-	name: string
-	label?: string
-	hideLabel: boolean
-	supporting?: string
-	orientation: Orientation
-	error?: string
-	children: JSX.Element | JSX.Element[]
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	id?: string;
+	name: string;
+	label?: string;
+	hideLabel: boolean;
+	supporting?: string;
+	orientation: Orientation;
+	error?: string;
+	children: JSX.Element | JSX.Element[];
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const RadioGroup = ({
@@ -53,15 +53,15 @@ const RadioGroup = ({
 	children,
 	...props
 }: RadioGroupProps) => {
-	const groupId = id || generateSourceId()
+	const groupId = id || generateSourceId();
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 	) : (
 		""
-	)
+	);
 	const message = error && (
 		<InlineError id={descriptionId(groupId)}>{error}</InlineError>
-	)
+	);
 
 	return (
 		<fieldset
@@ -87,20 +87,20 @@ const RadioGroup = ({
 							: {},
 						{
 							name,
-						},
-					),
-				)
+						}
+					)
+				);
 			})}
 		</fieldset>
-	)
-}
+	);
+};
 
 const LabelText = ({
 	hasSupportingText,
 	children,
 }: {
-	hasSupportingText?: boolean
-	children: ReactNode
+	hasSupportingText?: boolean;
+	children: ReactNode;
 }) => {
 	return (
 		<div
@@ -112,24 +112,24 @@ const LabelText = ({
 		>
 			{children}
 		</div>
-	)
-}
+	);
+};
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
 		<div css={(theme) => supportingText(theme.radio && theme)}>
 			{children}
 		</div>
-	)
-}
+	);
+};
 
 interface RadioProps extends InputHTMLAttributes<HTMLInputElement>, Props {
-	value: string
-	checked?: boolean
-	defaultChecked?: boolean
-	label?: ReactNode
-	supporting?: ReactNode
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	value: string;
+	checked?: boolean;
+	defaultChecked?: boolean;
+	label?: ReactNode;
+	supporting?: ReactNode;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const Radio = ({
@@ -143,11 +143,11 @@ const Radio = ({
 }: RadioProps) => {
 	const isChecked = (): boolean => {
 		if (checked != null) {
-			return checked
+			return checked;
 		}
 
-		return !!defaultChecked
-	}
+		return !!defaultChecked;
+	};
 	const radioControl = (
 		<input
 			type="radio"
@@ -158,7 +158,7 @@ const Radio = ({
 			checked={checked != null ? isChecked() : undefined}
 			{...props}
 		/>
-	)
+	);
 
 	const labelledRadioControl = (
 		<label
@@ -179,23 +179,23 @@ const Radio = ({
 				<LabelText>{labelContent}</LabelText>
 			)}
 		</label>
-	)
+	);
 
 	return (
 		<>{labelContent || supporting ? labelledRadioControl : radioControl}</>
-	)
-}
+	);
+};
 
 const radioGroupDefaultProps = {
 	orientation: "vertical",
 	hideLabel: false,
-}
+};
 
 const radioDefaultProps = {
 	disabled: false,
-}
+};
 
-Radio.defaultProps = { ...radioDefaultProps }
-RadioGroup.defaultProps = { ...radioGroupDefaultProps }
+Radio.defaultProps = { ...radioDefaultProps };
+RadioGroup.defaultProps = { ...radioGroupDefaultProps };
 
-export { RadioGroup, Radio }
+export { RadioGroup, Radio };

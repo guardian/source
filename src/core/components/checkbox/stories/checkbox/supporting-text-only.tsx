@@ -1,14 +1,14 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
 
 import {
 	CheckboxGroup,
 	Checkbox,
 	checkboxDefault,
 	checkboxBrand,
-} from "../../index"
+} from "../../index";
 
 /* eslint-disable react/jsx-key */
 const checkboxesWithSupportingTextOnly = [
@@ -31,40 +31,40 @@ const checkboxesWithSupportingTextOnly = [
 			</>
 		}
 	/>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const narrow = css`
 	width: 30rem;
-`
+`;
 
 const supportingTextOnlyLight = () => (
 	<div css={narrow}>
 		<ThemeProvider theme={checkboxDefault}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingTextOnly.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index }),
+					React.cloneElement(checkbox, { key: index })
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>
 	</div>
-)
+);
 
 supportingTextOnlyLight.story = {
 	name: "supporting text only light",
-}
+};
 
 const supportingTextOnlyBlue = () => (
 	<div css={narrow}>
 		<ThemeProvider theme={checkboxBrand}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingTextOnly.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index }),
+					React.cloneElement(checkbox, { key: index })
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>
 	</div>
-)
+);
 
 supportingTextOnlyBlue.story = {
 	name: "supporting text only blue",
@@ -74,6 +74,6 @@ supportingTextOnlyBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
-export { supportingTextOnlyLight, supportingTextOnlyBlue }
+export { supportingTextOnlyLight, supportingTextOnlyBlue };

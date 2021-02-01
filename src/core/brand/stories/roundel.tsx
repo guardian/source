@@ -1,12 +1,12 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
+import React from "react";
+import { css } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
 import {
 	SvgRoundelDefault,
 	SvgRoundelInverse,
 	SvgRoundelBrand,
 	SvgRoundelBrandInverse,
-} from "../index"
+} from "../index";
 
 const icon = css`
 	svg {
@@ -15,7 +15,7 @@ const icon = css`
 		fill: currentColor;
 		position: relative;
 	}
-`
+`;
 
 const logo = css`
 	${icon};
@@ -23,27 +23,27 @@ const logo = css`
 		width: 60px;
 		height: 60px;
 	}
-`
+`;
 
 const Logo = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={logo}>{children}</div>
-)
+);
 
 export const defaultRoundel = () => (
 	<Logo>
 		<SvgRoundelDefault />
 	</Logo>
-)
+);
 
 defaultRoundel.story = {
 	name: "default roundel",
-}
+};
 
 export const brandRoundel = () => (
 	<Logo>
 		<SvgRoundelBrand />
 	</Logo>
-)
+);
 
 brandRoundel.story = {
 	name: "brand roundel",
@@ -53,13 +53,13 @@ brandRoundel.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
 export const inverseRoundel = () => (
 	<Logo>
 		<SvgRoundelInverse />
 	</Logo>
-)
+);
 
 inverseRoundel.story = {
 	name: "inverse roundel",
@@ -69,13 +69,13 @@ inverseRoundel.story = {
 			values: [storybookBackgrounds.inverse],
 		},
 	},
-}
+};
 
 export const inverseBrandRoundel = () => (
 	<Logo>
 		<SvgRoundelBrandInverse />
 	</Logo>
-)
+);
 
 inverseBrandRoundel.story = {
 	name: "inverse brand roundel",
@@ -85,4 +85,4 @@ inverseBrandRoundel.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};

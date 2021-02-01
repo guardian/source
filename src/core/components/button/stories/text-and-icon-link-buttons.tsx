@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { SvgArrowRightStraight } from "@guardian/src-icons"
-import { space } from "@guardian/src-foundations"
-import { LinkButton } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { SvgArrowRightStraight } from "@guardian/src-icons";
+import { space } from "@guardian/src-foundations";
+import { LinkButton } from "../index";
 
 /* eslint-disable react/jsx-key */
 const textIconButtons = [
@@ -12,7 +12,7 @@ const textIconButtons = [
 	<LinkButton href="#" iconSide="right" icon={<SvgArrowRightStraight />}>
 		Link button: icon to the right
 	</LinkButton>,
-]
+];
 
 const textIconButtonsSmall = [
 	<LinkButton href="#" icon={<SvgArrowRightStraight />} size="small">
@@ -26,7 +26,7 @@ const textIconButtonsSmall = [
 	>
 		Small link button: to the right
 	</LinkButton>,
-]
+];
 
 const textIconButtonsXsmall = [
 	<LinkButton href="#" icon={<SvgArrowRightStraight />} size="xsmall">
@@ -40,7 +40,7 @@ const textIconButtonsXsmall = [
 	>
 		Extra small link button: to the right
 	</LinkButton>,
-]
+];
 
 /* eslint-enable react/jsx-key */
 
@@ -52,11 +52,11 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 const bottomSpacer = css`
 	margin-bottom: ${space[9]}px;
-`
+`;
 
 export const textAndIconLinkButtons = () => (
 	<div>
@@ -76,7 +76,7 @@ export const textAndIconLinkButtons = () => (
 			))}
 		</div>
 	</div>
-)
+);
 textAndIconLinkButtons.story = {
 	name: "text and icon link buttons",
-}
+};

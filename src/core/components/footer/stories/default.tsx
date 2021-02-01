@@ -1,8 +1,8 @@
-import React from "react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
-import { Footer } from "../index"
+import React from "react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { Footer } from "../index";
 
-export const defaultBlue = () => <Footer />
+export const defaultBlue = () => <Footer />;
 
 defaultBlue.story = {
 	name: "default blue",
@@ -12,9 +12,9 @@ defaultBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
-export const defaultBlueTablet = () => <Footer />
+export const defaultBlueTablet = () => <Footer />;
 
 defaultBlueTablet.story = {
 	name: "default blue tablet",
@@ -25,9 +25,9 @@ defaultBlueTablet.story = {
 		},
 		viewport: { defaultViewport: "tablet" },
 	},
-}
+};
 
-export const defaultBlueMobile = () => <Footer />
+export const defaultBlueMobile = () => <Footer />;
 
 defaultBlueMobile.story = {
 	name: "default blue mobile",
@@ -38,4 +38,4 @@ defaultBlueMobile.story = {
 		},
 		viewport: { defaultViewport: "mobileMedium" },
 	},
-}
+};

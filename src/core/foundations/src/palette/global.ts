@@ -19,7 +19,7 @@
 // If a context-specific colour is not available for your use case, consider raising a pull
 // request to add it, rather than consuming the global colour.
 
-import { colors } from "../theme"
+import { colors } from "../theme";
 
 export const brand = {
 	100: colors.blues[7],
@@ -28,12 +28,12 @@ export const brand = {
 	500: colors.blues[10],
 	600: colors.blues[11],
 	800: colors.blues[12],
-}
+};
 export const brandAlt = {
 	200: colors.yellows[0],
 	300: colors.yellows[1],
 	400: colors.yellows[2],
-}
+};
 export const neutral = {
 	0: colors.grays[0],
 	7: colors.grays[1],
@@ -45,15 +45,15 @@ export const neutral = {
 	93: colors.grays[7],
 	97: colors.grays[8],
 	100: colors.grays[9],
-}
+};
 export const error = {
 	400: colors.reds[3],
 	500: colors.reds[5],
-}
+};
 export const success = {
 	400: colors.greens[1],
 	500: colors.greens[2],
-}
+};
 export const news = {
 	100: colors.reds[0],
 	200: colors.reds[1],
@@ -63,7 +63,7 @@ export const news = {
 	550: colors.reds[5],
 	600: colors.reds[6],
 	800: colors.reds[7],
-}
+};
 export const opinion = {
 	100: colors.oranges[0],
 	200: colors.oranges[1],
@@ -72,7 +72,7 @@ export const opinion = {
 	500: colors.oranges[4],
 	600: colors.oranges[5],
 	800: colors.oranges[6],
-}
+};
 export const sport = {
 	100: colors.blues[0],
 	200: colors.blues[1],
@@ -81,7 +81,7 @@ export const sport = {
 	500: colors.blues[4],
 	600: colors.blues[5],
 	800: colors.blues[6],
-}
+};
 export const culture = {
 	50: colors.browns[0],
 	100: colors.browns[1],
@@ -92,7 +92,7 @@ export const culture = {
 	600: colors.browns[6],
 	700: colors.browns[7],
 	800: colors.browns[8],
-}
+};
 export const lifestyle = {
 	100: colors.pinks[0],
 	200: colors.pinks[1],
@@ -101,12 +101,12 @@ export const lifestyle = {
 	500: colors.pinks[4],
 	600: colors.pinks[5],
 	800: colors.pinks[6],
-}
+};
 export const labs = {
 	200: colors.greens[3],
 	300: colors.greens[4],
 	400: colors.greens[5],
-}
+};
 
 export const specialReport = {
 	100: colors.grays[10],
@@ -117,4 +117,4 @@ export const specialReport = {
 	500: colors.grays[15],
 	700: colors.grays[16],
 	800: colors.grays[17],
-}
+};

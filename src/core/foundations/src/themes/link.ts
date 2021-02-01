@@ -2,14 +2,14 @@ import {
 	text,
 	brandText,
 	brandAltText,
-} from "@guardian/src-foundations/palette"
+} from "@guardian/src-foundations/palette";
 
 export type LinkTheme = {
-	textPrimary: string
-	textPrimaryHover: string
-	textSecondary?: string
-	textSecondaryHover?: string
-}
+	textPrimary: string;
+	textPrimaryHover: string;
+	textSecondary?: string;
+	textSecondaryHover?: string;
+};
 
 export const linkDefault: { link: LinkTheme } = {
 	link: {
@@ -18,18 +18,18 @@ export const linkDefault: { link: LinkTheme } = {
 		textSecondary: text.anchorSecondary,
 		textSecondaryHover: text.anchorSecondary,
 	},
-}
+};
 
 export const linkBrand: { link: LinkTheme } = {
 	link: {
 		textPrimary: brandText.anchorPrimary,
 		textPrimaryHover: brandText.anchorPrimary,
 	},
-}
+};
 
 export const linkBrandAlt: { link: LinkTheme } = {
 	link: {
 		textPrimary: brandAltText.anchorPrimary,
 		textPrimaryHover: brandAltText.anchorPrimary,
 	},
-}
+};

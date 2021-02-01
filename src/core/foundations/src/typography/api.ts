@@ -5,20 +5,20 @@ import {
 	TextSansSizes,
 	FontScaleArgs,
 	FontScaleFunction,
-} from "./types"
-import { fs } from "./fs"
+} from "./types";
+import { fs } from "./fs";
 
 type TitlepieceFunctions = {
-	[key in keyof TitlepieceSizes]: FontScaleFunction
-}
+	[key in keyof TitlepieceSizes]: FontScaleFunction;
+};
 
 const titlepieceDefaults = {
 	lineHeight: "tight",
 	fontWeight: "bold",
 	fontStyle: null,
 	unit: "rem",
-}
-const titlepieceFs = fs("titlepiece")
+};
+const titlepieceFs = fs("titlepiece");
 
 export const titlepiece: TitlepieceFunctions = {
 	small: (options?: FontScaleArgs) =>
@@ -27,18 +27,18 @@ export const titlepiece: TitlepieceFunctions = {
 		titlepieceFs("medium", Object.assign({}, titlepieceDefaults, options)),
 	large: (options?: FontScaleArgs) =>
 		titlepieceFs("large", Object.assign({}, titlepieceDefaults, options)),
-}
+};
 
 type HeadlineFunctions = {
-	[key in keyof HeadlineSizes]: FontScaleFunction
-}
+	[key in keyof HeadlineSizes]: FontScaleFunction;
+};
 const headlineDefaults = {
 	lineHeight: "tight",
 	fontWeight: "medium",
 	fontStyle: null,
 	unit: "rem",
-}
-const headlineFs = fs("headline")
+};
+const headlineFs = fs("headline");
 
 export const headline: HeadlineFunctions = {
 	xxxsmall: (options?: FontScaleArgs) =>
@@ -55,38 +55,38 @@ export const headline: HeadlineFunctions = {
 		headlineFs("large", Object.assign({}, headlineDefaults, options)),
 	xlarge: (options?: FontScaleArgs) =>
 		headlineFs("xlarge", Object.assign({}, headlineDefaults, options)),
-}
+};
 
 type BodyFunctions = {
-	[key in keyof BodySizes]: FontScaleFunction
-}
+	[key in keyof BodySizes]: FontScaleFunction;
+};
 
 const bodyDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
 	fontStyle: null,
 	unit: "rem",
-}
-const bodyFs = fs("body")
+};
+const bodyFs = fs("body");
 
 export const body: BodyFunctions = {
 	small: (options?: FontScaleArgs) =>
 		bodyFs("small", Object.assign({}, bodyDefaults, options)),
 	medium: (options?: FontScaleArgs) =>
 		bodyFs("medium", Object.assign({}, bodyDefaults, options)),
-}
+};
 
 type TextSansFunctions = {
-	[key in keyof TextSansSizes]: FontScaleFunction
-}
+	[key in keyof TextSansSizes]: FontScaleFunction;
+};
 
 const textSansDefaults = {
 	lineHeight: "loose",
 	fontWeight: "regular",
 	fontStyle: null,
 	unit: "rem",
-}
-const textSansFs = fs("textSans")
+};
+const textSansFs = fs("textSans");
 
 export const textSans: TextSansFunctions = {
 	xxsmall: (options?: FontScaleArgs) =>
@@ -105,4 +105,4 @@ export const textSans: TextSansFunctions = {
 		textSansFs("xxlarge", Object.assign({}, textSansDefaults, options)),
 	xxxlarge: (options?: FontScaleArgs) =>
 		textSansFs("xxxlarge", Object.assign({}, textSansDefaults, options)),
-}
+};

@@ -1,22 +1,22 @@
-import React, { useState } from "react"
-import { css } from "@emotion/react"
-import { from } from "@guardian/src-foundations/mq"
-import { textSans } from "@guardian/src-foundations/typography"
-import { Select, Option } from "../index"
+import React, { useState } from "react";
+import { css } from "@emotion/react";
+import { from } from "@guardian/src-foundations/mq";
+import { textSans } from "@guardian/src-foundations/typography";
+import { Select, Option } from "../index";
 
 const constrainedWith = css`
 	width: 100%;
 	${from.phablet} {
 		width: 25em;
 	}
-`
+`;
 
 const message = css`
 	${textSans.medium()}
-`
+`;
 
 export const controlled = () => {
-	const [state, setState] = useState("al")
+	const [state, setState] = useState("al");
 
 	return (
 		<div css={constrainedWith}>
@@ -33,9 +33,9 @@ export const controlled = () => {
 				{state ? `You have selected: ${state}` : ""}
 			</span>
 		</div>
-	)
-}
+	);
+};
 
 controlled.story = {
 	name: "controlled example",
-}
+};

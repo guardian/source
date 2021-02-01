@@ -1,13 +1,13 @@
-import React from "react"
-import { css } from "@emotion/react"
+import React from "react";
+import { css } from "@emotion/react";
 import {
 	SvgArrowRightStraight,
 	SvgIndent,
 	SvgExternal,
 	SvgChevronLeftSingle,
-} from "@guardian/src-icons"
-import { space } from "@guardian/src-foundations"
-import { ButtonLink } from "../index"
+} from "@guardian/src-icons";
+import { space } from "@guardian/src-foundations";
+import { ButtonLink } from "../index";
 
 const flexStart = css`
 	display: flex;
@@ -17,10 +17,10 @@ const flexStart = css`
 	> * {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 const spacer = css`
 	margin-bottom: ${space[4]}px;
-`
+`;
 
 export const textAndIconButtonLinks = () => (
 	<>
@@ -93,7 +93,7 @@ export const textAndIconButtonLinks = () => (
 			</ButtonLink>
 		</div>
 	</>
-)
+);
 textAndIconButtonLinks.story = {
 	name: "text and icon button links",
-}
+};

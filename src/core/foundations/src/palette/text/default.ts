@@ -4,7 +4,7 @@ import {
 	success as _success,
 	brand,
 	news,
-} from "../global"
+} from "../global";
 
 export const text = {
 	primary: neutral[7],
@@ -24,4 +24,4 @@ export const text = {
 	groupLabel: neutral[7],
 	groupLabelSupporting: neutral[46],
 	newsInverse: news[550],
-}
+};

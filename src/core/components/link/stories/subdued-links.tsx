@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { Link, linkDefault } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { Link, linkDefault } from "../index";
 
 /* eslint-disable react/jsx-key */
 const subduedLinks = [
@@ -12,7 +12,7 @@ const subduedLinks = [
 	<Link subdued={true} priority="secondary" href="#">
 		Secondary subdued
 	</Link>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -23,7 +23,7 @@ const flexStart = css`
 	> * {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 export const subduedLight = () => (
 	<ThemeProvider theme={linkDefault}>
 		<div css={flexStart}>
@@ -32,5 +32,5 @@ export const subduedLight = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
-subduedLight.story = { name: "subdued light" }
+);
+subduedLight.story = { name: "subdued light" };

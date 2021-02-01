@@ -1,29 +1,29 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/react"
-import { InlineError } from "@guardian/src-user-feedback"
-import { Label } from "@guardian/src-label"
-import { widthFluid, textArea, errorInput } from "./styles"
+import React, { InputHTMLAttributes } from "react";
+import { SerializedStyles } from "@emotion/react";
+import { InlineError } from "@guardian/src-user-feedback";
+import { Label } from "@guardian/src-label";
+import { widthFluid, textArea, errorInput } from "./styles";
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility"
-import { Props } from "@guardian/src-helpers"
+} from "@guardian/src-foundations/accessibility";
+import { Props } from "@guardian/src-helpers";
 
 interface TextAreaProps
 	extends InputHTMLAttributes<HTMLTextAreaElement>,
 		Props {
-	id?: string
-	value?: string
-	label: string
-	optional: boolean
-	hideLabel: boolean
-	supporting?: string
-	error?: string
-	rows?: number
-	cssOverrides?: SerializedStyles | SerializedStyles[]
-	className?: string
+	id?: string;
+	value?: string;
+	label: string;
+	optional: boolean;
+	hideLabel: boolean;
+	supporting?: string;
+	error?: string;
+	rows?: number;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+	className?: string;
 }
 
 const TextArea = ({
@@ -39,20 +39,20 @@ const TextArea = ({
 	value,
 	...props
 }: TextAreaProps) => {
-	const textAreaId = id || generateSourceId()
+	const textAreaId = id || generateSourceId();
 	const getClassName = () => {
-		const HAS_VALUE_CLASS = "src-has-value"
+		const HAS_VALUE_CLASS = "src-has-value";
 
 		if (className) {
-			return `${className}${value ? ` ${HAS_VALUE_CLASS}` : ""}`
+			return `${className}${value ? ` ${HAS_VALUE_CLASS}` : ""}`;
 		}
 
 		if (value) {
-			return HAS_VALUE_CLASS
+			return HAS_VALUE_CLASS;
 		}
 
-		return undefined
-	}
+		return undefined;
+	};
 
 	return (
 		<Label
@@ -83,15 +83,15 @@ const TextArea = ({
 				{...props}
 			/>
 		</Label>
-	)
-}
+	);
+};
 
 const defaultProps = {
 	disabled: false,
 	optional: false,
 	hideLabel: false,
-}
+};
 
-TextArea.defaultProps = { ...defaultProps }
+TextArea.defaultProps = { ...defaultProps };
 
-export { TextArea }
+export { TextArea };

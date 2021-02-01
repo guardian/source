@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
-import { space } from "@guardian/src-foundations"
-import { background } from "@guardian/src-foundations/palette"
+import React from "react";
+import { css } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { space } from "@guardian/src-foundations";
+import { background } from "@guardian/src-foundations/palette";
 import {
 	Button,
 	buttonDefault,
@@ -11,8 +11,8 @@ import {
 	buttonReaderRevenue,
 	buttonReaderRevenueBrand,
 	buttonReaderRevenueBrandAlt,
-} from "../index"
-import { ThemeProvider } from "@emotion/react"
+} from "../index";
+import { ThemeProvider } from "@emotion/react";
 
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
@@ -37,7 +37,7 @@ const priorityButtons = [
 	>
 		Subdued
 	</Button>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -48,7 +48,7 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 export const priorityLight = () => (
 	<ThemeProvider theme={buttonDefault}>
@@ -58,8 +58,8 @@ export const priorityLight = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
-priorityLight.story = { name: "priority light" }
+);
+priorityLight.story = { name: "priority light" };
 
 export const priorityBlue = () => (
 	<ThemeProvider theme={buttonBrand}>
@@ -69,7 +69,7 @@ export const priorityBlue = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
+);
 priorityBlue.story = {
 	name: "priority blue",
 	parameters: {
@@ -78,7 +78,7 @@ priorityBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
 export const priorityGrey = () => (
 	<ThemeProvider theme={buttonDefault}>
@@ -88,7 +88,7 @@ export const priorityGrey = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
+);
 priorityGrey.story = {
 	name: "priority grey",
 	parameters: {
@@ -97,7 +97,7 @@ priorityGrey.story = {
 			values: [{ name: "grey", value: background.secondary }],
 		},
 	},
-}
+};
 
 export const priorityYellow = () => (
 	<ThemeProvider theme={buttonBrandAlt}>
@@ -107,7 +107,7 @@ export const priorityYellow = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
+);
 priorityYellow.story = {
 	name: "priority yellow",
 	parameters: {
@@ -116,9 +116,9 @@ priorityYellow.story = {
 			values: [storybookBackgrounds.brandAlt],
 		},
 	},
-}
+};
 
-const readerRevenueButtons = [priorityButtons[0], priorityButtons[2]]
+const readerRevenueButtons = [priorityButtons[0], priorityButtons[2]];
 
 export const priorityReaderRevenueLight = () => (
 	<ThemeProvider theme={buttonReaderRevenue}>
@@ -128,10 +128,10 @@ export const priorityReaderRevenueLight = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
+);
 priorityReaderRevenueLight.story = {
 	name: "priority reader revenue light",
-}
+};
 
 export const priorityReaderRevenueBlue = () => (
 	<ThemeProvider theme={buttonReaderRevenueBrand}>
@@ -141,7 +141,7 @@ export const priorityReaderRevenueBlue = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
+);
 priorityReaderRevenueBlue.story = {
 	name: "priority reader revenue blue",
 	parameters: {
@@ -150,7 +150,7 @@ priorityReaderRevenueBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
 export const priorityReaderRevenueYellow = () => (
 	<ThemeProvider theme={buttonReaderRevenueBrandAlt}>
@@ -160,7 +160,7 @@ export const priorityReaderRevenueYellow = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
+);
 priorityReaderRevenueYellow.story = {
 	name: "priority reader revenue yellow",
 	parameters: {
@@ -169,4 +169,4 @@ priorityReaderRevenueYellow.story = {
 			values: [storybookBackgrounds.brandAlt],
 		},
 	},
-}
+};

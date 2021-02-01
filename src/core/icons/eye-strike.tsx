@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const SvgEyeStrike = () => {
 	return (
@@ -16,5 +16,5 @@ export const SvgEyeStrike = () => {
 				transform="rotate(45 23.4942 5.10417)"
 			/>
 		</svg>
-	)
-}
+	);
+};

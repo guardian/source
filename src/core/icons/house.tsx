@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const SvgHouse = () => {
 	return (
@@ -9,5 +9,5 @@ export const SvgHouse = () => {
 				d="M22 25l1-1V13.375L15.6 6h-1.2L7 13.375V24l1 1h4.5v-6.5h5V25H22z"
 			/>
 		</svg>
-	)
-}
+	);
+};

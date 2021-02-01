@@ -1,12 +1,12 @@
-import React from "react"
-import { Container, Columns, Column } from "../../index"
-import { sport } from "@guardian/src-foundations/palette"
-import { css } from "@emotion/react"
+import React from "react";
+import { Container, Columns, Column } from "../../index";
+import { sport } from "@guardian/src-foundations/palette";
+import { css } from "@emotion/react";
 
 const contents = css`
 	text-align: center;
 	background-color: ${sport[600]};
-`
+`;
 
 export const collapseBelowTablet = () => (
 	<Container border={true}>
@@ -25,11 +25,11 @@ export const collapseBelowTablet = () => (
 			</Column>
 		</Columns>
 	</Container>
-)
+);
 
 collapseBelowTablet.story = {
 	name: "collapse below tablet",
 	parameters: {
 		viewport: { defaultViewport: "phablet" },
 	},
-}
+};

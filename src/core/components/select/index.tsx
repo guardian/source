@@ -1,8 +1,8 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { SelectHTMLAttributes, OptionHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/react"
-import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
-import { Label } from "@guardian/src-label"
+import React, { SelectHTMLAttributes, OptionHTMLAttributes } from "react";
+import { SerializedStyles } from "@emotion/react";
+import { InlineError, InlineSuccess } from "@guardian/src-user-feedback";
+import { Label } from "@guardian/src-label";
 import {
 	select,
 	selectWrapper,
@@ -10,27 +10,27 @@ import {
 	successChevron,
 	errorInput,
 	successInput,
-} from "./styles"
-import { Props } from "@guardian/src-helpers"
-import { SvgChevronDownSingle } from "@guardian/src-icons"
+} from "./styles";
+import { Props } from "@guardian/src-helpers";
+import { SvgChevronDownSingle } from "@guardian/src-icons";
 
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility"
-export { selectDefault } from "@guardian/src-foundations/themes"
+} from "@guardian/src-foundations/accessibility";
+export { selectDefault } from "@guardian/src-foundations/themes";
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
-	id?: string
-	label: string
-	optional: boolean
-	hideLabel: boolean
-	supporting?: string
-	error?: string
-	success?: string
-	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children: JSX.Element | JSX.Element[]
+	id?: string;
+	label: string;
+	optional: boolean;
+	hideLabel: boolean;
+	supporting?: string;
+	error?: string;
+	success?: string;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+	children: JSX.Element | JSX.Element[];
 }
 
 const Select = ({
@@ -45,7 +45,7 @@ const Select = ({
 	children,
 	...props
 }: SelectProps) => {
-	const selectId = id || generateSourceId()
+	const selectId = id || generateSourceId();
 	return (
 		<Label
 			text={labelText}
@@ -92,12 +92,12 @@ const Select = ({
 				<SvgChevronDownSingle />
 			</div>
 		</Label>
-	)
-}
+	);
+};
 
 interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement>, Props {
-	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children: string
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+	children: string;
 }
 
 const Option = ({ cssOverrides, children, ...props }: OptionProps) => {
@@ -105,15 +105,15 @@ const Option = ({ cssOverrides, children, ...props }: OptionProps) => {
 		<option css={cssOverrides} {...props}>
 			{children}
 		</option>
-	)
-}
+	);
+};
 
 const selectDefaultProps = {
 	disabled: false,
 	optional: false,
 	hideLabel: false,
-}
+};
 
-Select.defaultProps = { ...selectDefaultProps }
+Select.defaultProps = { ...selectDefaultProps };
 
-export { Select, Option }
+export { Select, Option };

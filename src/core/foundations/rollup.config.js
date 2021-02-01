@@ -1,13 +1,13 @@
-import babel from "rollup-plugin-babel"
-import resolve from "rollup-plugin-node-resolve"
+import babel from "rollup-plugin-babel";
+import resolve from "rollup-plugin-node-resolve";
 import {
 	submodules,
 	cjsPaths,
 	submodulePaths,
-} from "../../../scripts/foundations-submodules"
+} from "../../../scripts/foundations-submodules";
 
-const extensions = [".ts", ".tsx"]
-const plugins = [babel({ extensions }), resolve({ extensions })]
+const extensions = [".ts", ".tsx"];
+const plugins = [babel({ extensions }), resolve({ extensions })];
 
 const esmFolders = submodules.map((folder) => ({
 	input: `src/${folder}/index.ts`,
@@ -19,7 +19,7 @@ const esmFolders = submodules.map((folder) => ({
 	],
 	plugins,
 	external: ["@guardian/src-foundations", ...submodulePaths],
-}))
+}));
 
 const cjsFolders = submodules.map((folder) => ({
 	input: `src/${folder}/index.ts`,
@@ -32,7 +32,7 @@ const cjsFolders = submodules.map((folder) => ({
 	],
 	plugins,
 	external: ["@guardian/src-foundations", ...submodulePaths],
-}))
+}));
 
 module.exports = [
 	{
@@ -51,4 +51,4 @@ module.exports = [
 	},
 	...esmFolders,
 	...cjsFolders,
-]
+];

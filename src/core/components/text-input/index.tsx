@@ -1,8 +1,8 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { InputHTMLAttributes } from "react"
-import { SerializedStyles } from "@emotion/react"
-import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
-import { Label } from "@guardian/src-label"
+import React, { InputHTMLAttributes } from "react";
+import { SerializedStyles } from "@emotion/react";
+import { InlineError, InlineSuccess } from "@guardian/src-user-feedback";
+import { Label } from "@guardian/src-label";
 import {
 	widthFluid,
 	width30,
@@ -11,35 +11,35 @@ import {
 	textInput,
 	errorInput,
 	successInput,
-} from "./styles"
+} from "./styles";
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility"
-import { Props } from "@guardian/src-helpers"
+} from "@guardian/src-foundations/accessibility";
+import { Props } from "@guardian/src-helpers";
 
-export { textInputDefault } from "@guardian/src-foundations/themes"
-export type Width = 30 | 10 | 4
+export { textInputDefault } from "@guardian/src-foundations/themes";
+export type Width = 30 | 10 | 4;
 
 const widths: {
-	[key in Width]: SerializedStyles
+	[key in Width]: SerializedStyles;
 } = {
 	30: width30,
 	10: width10,
 	4: width4,
-}
+};
 
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
-	id?: string
-	label: string
-	optional: boolean
-	hideLabel: boolean
-	supporting?: string
-	width?: Width
-	error?: string
-	success?: string
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	id?: string;
+	label: string;
+	optional: boolean;
+	hideLabel: boolean;
+	supporting?: string;
+	width?: Width;
+	error?: string;
+	success?: string;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const TextInput = ({
@@ -54,7 +54,7 @@ const TextInput = ({
 	cssOverrides,
 	...props
 }: TextInputProps) => {
-	const textInputId = id || generateSourceId()
+	const textInputId = id || generateSourceId();
 	return (
 		<Label
 			text={labelText}
@@ -92,16 +92,16 @@ const TextInput = ({
 				{...props}
 			/>
 		</Label>
-	)
-}
+	);
+};
 
 const defaultProps = {
 	disabled: false,
 	type: "text",
 	optional: false,
 	hideLabel: false,
-}
+};
 
-TextInput.defaultProps = { ...defaultProps }
+TextInput.defaultProps = { ...defaultProps };
 
-export { TextInput }
+export { TextInput };

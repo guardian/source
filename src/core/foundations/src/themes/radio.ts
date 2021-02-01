@@ -5,9 +5,9 @@ import {
 	brandBorder,
 	brandBackground,
 	brandText,
-} from "@guardian/src-foundations/palette"
-import { userFeedbackDefault, userFeedbackBrand } from "./user-feedback"
-import { labelDefault, labelBrand } from "./label"
+} from "@guardian/src-foundations/palette";
+import { userFeedbackDefault, userFeedbackBrand } from "./user-feedback";
+import { labelDefault, labelBrand } from "./label";
 
 export const radioDefault = {
 	radio: {
@@ -20,7 +20,7 @@ export const radioDefault = {
 	},
 	...labelDefault,
 	...userFeedbackDefault,
-}
+};
 
 export const radioBrand = {
 	radio: {
@@ -33,4 +33,4 @@ export const radioBrand = {
 	},
 	...labelBrand,
 	...userFeedbackBrand,
-}
+};

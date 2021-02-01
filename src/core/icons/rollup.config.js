@@ -1,7 +1,7 @@
-import babel from "rollup-plugin-babel"
-import resolve from "rollup-plugin-node-resolve"
+import babel from "rollup-plugin-babel";
+import resolve from "rollup-plugin-node-resolve";
 
-const extensions = [".ts", ".tsx"]
+const extensions = [".ts", ".tsx"];
 
 module.exports = {
 	input: "index.ts",
@@ -23,4 +23,4 @@ module.exports = {
 	],
 	external: ["react"],
 	plugins: [babel({ extensions }), resolve({ extensions })],
-}
+};

@@ -5,9 +5,9 @@ import {
 	brandBorder,
 	brandBackground,
 	brandText,
-} from "@guardian/src-foundations/palette"
-import { userFeedbackDefault, userFeedbackBrand } from "./user-feedback"
-import { labelDefault, labelBrand } from "./label"
+} from "@guardian/src-foundations/palette";
+import { userFeedbackDefault, userFeedbackBrand } from "./user-feedback";
+import { labelDefault, labelBrand } from "./label";
 
 export const checkboxDefault = {
 	checkbox: {
@@ -22,7 +22,7 @@ export const checkboxDefault = {
 	},
 	...userFeedbackDefault,
 	...labelDefault,
-}
+};
 
 export const checkboxBrand = {
 	checkbox: {
@@ -37,4 +37,4 @@ export const checkboxBrand = {
 	},
 	...userFeedbackBrand,
 	...labelBrand,
-}
+};

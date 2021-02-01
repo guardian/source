@@ -1,17 +1,17 @@
-import { css, SerializedStyles } from "@emotion/react"
-import { space, transitions } from "@guardian/src-foundations"
-import { visuallyHidden } from "@guardian/src-foundations/accessibility"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { from } from "@guardian/src-foundations/mq"
-import { choiceCardDefault } from "@guardian/src-foundations/themes"
-import { width, height } from "@guardian/src-foundations/size"
-import { resets } from "@guardian/src-foundations/utils"
-import { Columns } from "./index"
+import { css, SerializedStyles } from "@emotion/react";
+import { space, transitions } from "@guardian/src-foundations";
+import { visuallyHidden } from "@guardian/src-foundations/accessibility";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { from } from "@guardian/src-foundations/mq";
+import { choiceCardDefault } from "@guardian/src-foundations/themes";
+import { width, height } from "@guardian/src-foundations/size";
+import { resets } from "@guardian/src-foundations/utils";
+import { Columns } from "./index";
 
 export const fieldset = css`
 	${resets.fieldset};
-`
+`;
 
 // TODO: This is currently applied to a div instead of the fieldset
 // due to a Chrome / Safari bug that prevents flexbox model working
@@ -24,7 +24,7 @@ export const flexContainer = css`
 		display: flex;
 		justify-content: flex-start;
 	}
-`
+`;
 
 export const gridContainer = css`
 	width: 100%;
@@ -38,19 +38,19 @@ export const gridContainer = css`
 			}
 		}
 	}
-`
+`;
 
 const gridColumnsStyle = (columns: Columns) => css`
 	${from.mobileLandscape} {
 		grid-template-columns: repeat(${columns}, 1fr);
 	}
-`
+`;
 export const gridColumns: { [key in Columns]: SerializedStyles } = {
 	2: gridColumnsStyle(2),
 	3: gridColumnsStyle(3),
 	4: gridColumnsStyle(4),
 	5: gridColumnsStyle(5),
-}
+};
 
 export const input = ({ choiceCard } = choiceCardDefault) => css`
 	${visuallyHidden};
@@ -77,7 +77,7 @@ export const input = ({ choiceCard } = choiceCardDefault) => css`
 			}
 		}
 	}
-`
+`;
 
 // TODO: use animation durations defined in foundations
 export const tickAnimation = css`
@@ -118,7 +118,7 @@ export const tickAnimation = css`
 			}
 		}
 	}
-`
+`;
 
 export const choiceCard = ({ choiceCard } = choiceCardDefault) => css`
 	flex: 1;
@@ -143,7 +143,7 @@ export const choiceCard = ({ choiceCard } = choiceCardDefault) => css`
 		box-shadow: inset 0 0 0 4px ${choiceCard.borderHover};
 		color: ${choiceCard.textHover};
 	}
-`
+`;
 
 export const contentWrapper = css`
 	flex: 0 1 auto;
@@ -175,7 +175,7 @@ export const contentWrapper = css`
 			margin-right: 0;
 		}
 	}
-`
+`;
 
 /* We need to explicitly set the width of the content to support
 flex-direction: column in IE11 */
@@ -186,7 +186,7 @@ export const contentWrapperLabelOnly = css`
 			width: 100%;
 		}
 	}
-`
+`;
 
 // TODO: most of this is duplicated in the checkbox component
 // We should extract it into its own module somewhere
@@ -227,7 +227,7 @@ export const tick = ({ choiceCard } = choiceCardDefault) => css`
 		width: 2px;
 		transition-delay: 0.1s;
 	}
-`
+`;
 
 export const errorChoiceCard = ({ choiceCard } = choiceCardDefault) => css`
 	box-shadow: inset 0 0 0 4px ${choiceCard.borderError};
@@ -235,4 +235,4 @@ export const errorChoiceCard = ({ choiceCard } = choiceCardDefault) => css`
 	& > * {
 		color: ${choiceCard.textError};
 	}
-`
+`;

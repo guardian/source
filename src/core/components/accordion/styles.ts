@@ -1,18 +1,18 @@
-import { css } from "@emotion/react"
-import { space, remSpace, transitions } from "@guardian/src-foundations"
-import { visuallyHidden } from "@guardian/src-foundations/accessibility"
-import { headline, textSans } from "@guardian/src-foundations/typography"
-import { until, from } from "@guardian/src-foundations/mq"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { accordionDefault } from "@guardian/src-foundations/themes"
+import { css } from "@emotion/react";
+import { space, remSpace, transitions } from "@guardian/src-foundations";
+import { visuallyHidden } from "@guardian/src-foundations/accessibility";
+import { headline, textSans } from "@guardian/src-foundations/typography";
+import { until, from } from "@guardian/src-foundations/mq";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { accordionDefault } from "@guardian/src-foundations/themes";
 
 export const accordion = ({ accordion } = accordionDefault) => css`
 	border-bottom: 1px solid ${accordion.borderPrimary};
-`
+`;
 
 export const accordionRow = ({ accordion } = accordionDefault) => css`
 	border-top: 1px solid ${accordion.borderPrimary};
-`
+`;
 
 const buttonStyles = css`
 	width: 100%;
@@ -21,7 +21,7 @@ const buttonStyles = css`
 	align-items: center;
 	padding: ${remSpace[2]} 0 ${remSpace[6]} 0;
 	cursor: pointer;
-`
+`;
 
 export const button = ({ accordion } = accordionDefault) => css`
 	${buttonStyles};
@@ -36,17 +36,17 @@ export const button = ({ accordion } = accordionDefault) => css`
 	&:focus div {
 		${focusHalo};
 	}
-`
+`;
 
 export const noJsButton = ({ accordion } = accordionDefault) => css`
 	${buttonStyles};
 	color: ${accordion.textPrimary};
-`
+`;
 
 export const labelText = css`
 	${headline.xxxsmall({ fontWeight: "bold" })};
 	margin-right: ${remSpace[4]};
-`
+`;
 
 const expandedBodyStyles = css`
 	/*
@@ -61,11 +61,11 @@ const expandedBodyStyles = css`
 	transition: max-height ${transitions.medium};
 	overflow: hidden;
 	height: auto;
-`
+`;
 
 export const expandedBody = css`
 	${expandedBodyStyles};
-`
+`;
 
 export const collapsedBodyStyles = css`
 	max-height: 0;
@@ -77,10 +77,10 @@ export const collapsedBodyStyles = css`
 	transition: max-height ${transitions.short};
 	*/
 	overflow: hidden;
-`
+`;
 export const collapsedBody = css`
 	${collapsedBodyStyles};
-`
+`;
 
 export const noJsInput = css`
 	${visuallyHidden};
@@ -105,13 +105,13 @@ export const noJsInput = css`
 	&:checked + [data-target="label"] [data-target="toggle-label-show"] {
 		display: none;
 	}
-`
+`;
 
 export const toggle = css`
 	width: auto;
 	display: flex;
 	align-items: center;
-`
+`;
 
 export const toggleLabel = css`
 	${textSans.small({ fontWeight: "bold" })};
@@ -119,7 +119,7 @@ export const toggleLabel = css`
 	${until.tablet} {
 		${visuallyHidden}
 	}
-`
+`;
 const chevronIcon = css`
 	svg {
 		/* TODO: think about icon sizing */
@@ -133,7 +133,7 @@ const chevronIcon = css`
 		margin-left: ${remSpace[1]};
 		transition: ${transitions.short};
 	}
-`
+`;
 
 export const chevronIconDown = css`
 	${chevronIcon};
@@ -148,7 +148,7 @@ export const chevronIconDown = css`
 			transform: translate(0, ${space[1] / 2}px);
 		}
 	}
-`
+`;
 
 export const chevronIconUp = css`
 	${chevronIcon};
@@ -156,11 +156,11 @@ export const chevronIconUp = css`
 		transform: rotate(180deg);
 		transition: transform ${transitions.short};
 	}
-`
+`;
 
 export const toggleIconWithLabel = css`
 	svg {
 		width: 18px;
 		height: 18px;
 	}
-`
+`;

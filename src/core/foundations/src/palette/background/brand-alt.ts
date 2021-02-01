@@ -1,4 +1,4 @@
-import { neutral, brandAlt } from "../global"
+import { neutral, brandAlt } from "../global";
 
 export const brandAltBackground = {
 	primary: brandAlt[400],
@@ -7,4 +7,4 @@ export const brandAltBackground = {
 	ctaSecondary: brandAlt[200],
 	ctaSecondaryHover: "#F2AE00",
 	ctaTertiaryHover: "#FFD213",
-}
+};

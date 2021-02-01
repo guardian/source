@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { ButtonLink, linkDefault } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { ButtonLink, linkDefault } from "../index";
 
 /* eslint-disable react/jsx-key */
 const buttonLinks = [
@@ -15,7 +15,7 @@ const buttonLinks = [
 	>
 		Secondary
 	</ButtonLink>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -26,7 +26,7 @@ const flexStart = css`
 	> * {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 export const buttonLinkLight = () => (
 	<ThemeProvider theme={linkDefault}>
@@ -36,5 +36,5 @@ export const buttonLinkLight = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
-buttonLinkLight.story = { name: "button links light" }
+);
+buttonLinkLight.story = { name: "button links light" };

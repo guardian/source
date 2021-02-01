@@ -1,4 +1,4 @@
-import { neutral, brand } from "../global"
+import { neutral, brand } from "../global";
 
 export const background = {
 	primary: neutral[100],
@@ -11,4 +11,4 @@ export const background = {
 	ctaTertiaryHover: "#E5E5E5",
 	input: neutral[100],
 	inputChecked: brand[500],
-}
+};

@@ -1,14 +1,14 @@
-import { css } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { text, border, background } from "@guardian/src-foundations/palette"
-import { resets } from "@guardian/src-foundations/utils"
+import { css } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { text, border, background } from "@guardian/src-foundations/palette";
+import { resets } from "@guardian/src-foundations/utils";
 
 export const errorInput = css`
 	border: 4px solid ${border.error};
 	color: ${text.error};
-`
+`;
 
 export const textArea = css`
 	${resets.input};
@@ -39,8 +39,8 @@ export const textArea = css`
 			${errorInput}
 		}
 	}
-`
+`;
 
 export const widthFluid = css`
 	width: 100%;
-`
+`;

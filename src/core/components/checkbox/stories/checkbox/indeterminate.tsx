@@ -1,8 +1,8 @@
-import React from "react"
-import { ThemeProvider } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
+import React from "react";
+import { ThemeProvider } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
 
-import { Checkbox, checkboxDefault, checkboxBrand } from "../../index"
+import { Checkbox, checkboxDefault, checkboxBrand } from "../../index";
 
 const indeterminateLight = () => (
 	<ThemeProvider theme={checkboxDefault}>
@@ -12,11 +12,11 @@ const indeterminateLight = () => (
 			label="Indeterminate"
 		/>
 	</ThemeProvider>
-)
+);
 
 indeterminateLight.story = {
 	name: "indeterminate light",
-}
+};
 
 const indeterminateBlue = () => (
 	<ThemeProvider theme={checkboxBrand}>
@@ -26,7 +26,7 @@ const indeterminateBlue = () => (
 			label="Indeterminate"
 		/>
 	</ThemeProvider>
-)
+);
 
 indeterminateBlue.story = {
 	name: "indeterminate blue",
@@ -36,6 +36,6 @@ indeterminateBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
-export { indeterminateLight, indeterminateBlue }
+export { indeterminateLight, indeterminateBlue };

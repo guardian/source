@@ -1,18 +1,18 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index";
 
 const medium = css`
 	width: 30em;
-`
+`;
 
 /* eslint-disable react/jsx-key */
 const unselectedChoiceCards = [
 	<ChoiceCard value="option-1" label="Option 1" id="unselected-1" />,
 	<ChoiceCard value="option-2" label="Option 2" id="unselected-2" />,
 	<ChoiceCard value="option-3" label="Option 3" id="unselected-3" />,
-]
+];
 /* eslint-enable react/jsx-key */
 
 export const errorLight = () => (
@@ -23,13 +23,13 @@ export const errorLight = () => (
 				error="Please select a choice card to continue"
 			>
 				{unselectedChoiceCards.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
+					React.cloneElement(radio, { key: index })
 				)}
 			</ChoiceCardGroup>
 		</div>
 	</ThemeProvider>
-)
+);
 
 errorLight.story = {
 	name: `error light`,
-}
+};

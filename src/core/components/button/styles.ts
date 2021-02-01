@@ -1,9 +1,9 @@
-import { css } from "@emotion/react"
-import { space, transitions } from "@guardian/src-foundations"
-import { height, width } from "@guardian/src-foundations/size"
-import { buttonDefault, ButtonTheme } from "@guardian/src-foundations/themes"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
+import { css } from "@emotion/react";
+import { space, transitions } from "@guardian/src-foundations";
+import { height, width } from "@guardian/src-foundations/size";
+import { buttonDefault, ButtonTheme } from "@guardian/src-foundations/themes";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
 
 export const button = css`
 	display: inline-flex;
@@ -20,7 +20,7 @@ export const button = css`
 	&:focus {
 		${focusHalo};
 	}
-`
+`;
 
 export const primary = ({
 	button,
@@ -31,7 +31,7 @@ export const primary = ({
 	&:hover {
 		background-color: ${button.backgroundPrimaryHover};
 	}
-`
+`;
 
 export const secondary = ({
 	button,
@@ -42,7 +42,7 @@ export const secondary = ({
 	&:hover {
 		background-color: ${button.backgroundSecondaryHover};
 	}
-`
+`;
 
 export const tertiary = ({
 	button,
@@ -53,7 +53,7 @@ export const tertiary = ({
 	&:hover {
 		background-color: ${button.backgroundTertiaryHover};
 	}
-`
+`;
 
 export const subdued = ({
 	button,
@@ -69,7 +69,7 @@ export const subdued = ({
 	/* Why is this zero? Because the default is to have rounded corners but here, when
 	   there is only text, it is more natural to show a rectangle for the focus halo */
 	border-radius: 0;
-`
+`;
 
 /*
 	Guardian Text Sans appears to be encoded with slightly more space above the lettering
@@ -79,7 +79,7 @@ export const subdued = ({
 */
 const fontSpacingVerticalOffset = css`
 	padding-bottom: 2px;
-`
+`;
 
 export const defaultSize = css`
 	${textSans.medium({ fontWeight: "bold" })};
@@ -88,7 +88,7 @@ export const defaultSize = css`
 	padding: 0 ${space[5]}px;
 	border-radius: ${height.ctaMedium}px;
 	${fontSpacingVerticalOffset};
-`
+`;
 
 export const smallSize = css`
 	${textSans.medium({ fontWeight: "bold" })};
@@ -97,7 +97,7 @@ export const smallSize = css`
 	padding: 0 ${space[4]}px;
 	border-radius: ${height.ctaSmall}px;
 	${fontSpacingVerticalOffset};
-`
+`;
 
 export const xsmallSize = css`
 	${textSans.small({ fontWeight: "bold" })};
@@ -106,7 +106,7 @@ export const xsmallSize = css`
 	padding: 0 ${space[3]}px;
 	border-radius: ${height.ctaXsmall}px;
 	${fontSpacingVerticalOffset};
-`
+`;
 
 export const iconDefault = css`
 	svg {
@@ -120,7 +120,7 @@ export const iconDefault = css`
 	.src-button-space {
 		width: ${space[3]}px;
 	}
-`
+`;
 
 export const iconSmall = css`
 	svg {
@@ -134,7 +134,7 @@ export const iconSmall = css`
 	.src-button-space {
 		width: ${space[2]}px;
 	}
-`
+`;
 
 export const iconXsmall = css`
 	svg {
@@ -148,45 +148,45 @@ export const iconXsmall = css`
 	.src-button-space {
 		width: ${space[1]}px;
 	}
-`
+`;
 
 /* TODO: we add some negative margin to icons to account for
  the extra space encoded into the SVG. We should consider removing
  or significantly reducing this space
  */
-const pullIconTowardEdge = -space[1]
+const pullIconTowardEdge = -space[1];
 
 export const iconLeft = css`
 	flex-direction: row-reverse;
 	svg {
 		margin-left: ${pullIconTowardEdge}px;
 	}
-`
+`;
 export const iconRight = css`
 	svg {
 		margin-right: ${pullIconTowardEdge}px;
 	}
-`
+`;
 
 const iconOnly = css`
 	justify-content: center;
 	padding: 0;
-`
+`;
 
 export const iconOnlyDefault = css`
 	${iconOnly};
 	width: ${width.ctaMedium}px;
-`
+`;
 
 export const iconOnlySmall = css`
 	${iconOnly};
 	width: ${width.ctaSmall}px;
-`
+`;
 
 export const iconOnlyXsmall = css`
 	${iconOnly};
 	width: ${width.ctaXsmall}px;
-`
+`;
 
 export const iconNudgeAnimation = css`
 	svg {
@@ -199,4 +199,4 @@ export const iconNudgeAnimation = css`
 			transform: translate(${space[1] / 2}px, 0);
 		}
 	}
-`
+`;

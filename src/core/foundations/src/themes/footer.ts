@@ -2,7 +2,7 @@ import {
 	brandBorder,
 	brandBackground,
 	brandText,
-} from "@guardian/src-foundations/palette"
+} from "@guardian/src-foundations/palette";
 
 export const footerBrand = {
 	footer: {
@@ -12,4 +12,4 @@ export const footerBrand = {
 		anchor: brandText.anchorPrimary,
 		anchorHover: brandText.anchorPrimaryHover,
 	},
-}
+};

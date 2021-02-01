@@ -1,5 +1,5 @@
-import { neutral, brand, brandAlt } from "@guardian/src-foundations/palette"
-import { ButtonTheme } from "@guardian/src-foundations/themes"
+import { neutral, brand, brandAlt } from "@guardian/src-foundations/palette";
+import { ButtonTheme } from "@guardian/src-foundations/themes";
 
 const text = {
 	readerRevenue: {
@@ -14,7 +14,7 @@ const text = {
 		ctaPrimary: neutral[100],
 		ctaTertiary: neutral[7],
 	},
-}
+};
 const background = {
 	readerRevenue: {
 		ctaPrimary: brandAlt[400],
@@ -31,7 +31,7 @@ const background = {
 		ctaPrimaryHover: "#454545",
 		ctaTertiaryHover: "#FFD213",
 	},
-}
+};
 const border = {
 	readerRevenue: {
 		ctaTertiary: brand[400],
@@ -42,7 +42,7 @@ const border = {
 	readerRevenueBrandAlt: {
 		ctaTertiary: neutral[7],
 	},
-}
+};
 
 export const buttonReaderRevenue: { button: ButtonTheme } = {
 	button: {
@@ -53,7 +53,7 @@ export const buttonReaderRevenue: { button: ButtonTheme } = {
 		backgroundTertiaryHover: background.readerRevenue.ctaTertiaryHover,
 		borderTertiary: border.readerRevenue.ctaTertiary,
 	},
-}
+};
 export const buttonReaderRevenueBrand: { button: ButtonTheme } = {
 	button: {
 		textPrimary: text.readerRevenueBrand.ctaPrimary,
@@ -63,7 +63,7 @@ export const buttonReaderRevenueBrand: { button: ButtonTheme } = {
 		backgroundTertiaryHover: background.readerRevenueBrand.ctaTertiaryHover,
 		borderTertiary: border.readerRevenueBrand.ctaTertiary,
 	},
-}
+};
 
 export const buttonReaderRevenueBrandAlt: { button: ButtonTheme } = {
 	button: {
@@ -76,4 +76,4 @@ export const buttonReaderRevenueBrandAlt: { button: ButtonTheme } = {
 			background.readerRevenueBrandAlt.ctaTertiaryHover,
 		borderTertiary: border.readerRevenueBrandAlt.ctaTertiary,
 	},
-}
+};

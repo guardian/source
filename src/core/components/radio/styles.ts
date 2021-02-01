@@ -1,10 +1,10 @@
-import { css } from "@emotion/react"
-import { space, transitions } from "@guardian/src-foundations"
-import { height, width } from "@guardian/src-foundations/size"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { radioDefault } from "@guardian/src-foundations/themes"
-import { resets } from "@guardian/src-foundations/utils"
+import { css } from "@emotion/react";
+import { space, transitions } from "@guardian/src-foundations";
+import { height, width } from "@guardian/src-foundations/size";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { radioDefault } from "@guardian/src-foundations/themes";
+import { resets } from "@guardian/src-foundations/utils";
 
 export const fieldset = ({ radio } = radioDefault) => css`
 	${resets.fieldset};
@@ -14,7 +14,7 @@ export const fieldset = ({ radio } = radioDefault) => css`
 	&[aria-invalid="true"] input {
 		border: 4px solid ${radio.borderError};
 	}
-`
+`;
 
 export const label = ({ radio } = radioDefault) => css`
 	cursor: pointer;
@@ -27,12 +27,12 @@ export const label = ({ radio } = radioDefault) => css`
 			border-color: ${radio.borderHover};
 		}
 	}
-`
+`;
 
 export const labelWithSupportingText = css`
 	align-items: flex-start;
 	margin-bottom: ${space[3]}px;
-`
+`;
 
 export const radio = ({ radio } = radioDefault) => css`
 	flex: 0 0 auto;
@@ -89,22 +89,22 @@ export const radio = ({ radio } = radioDefault) => css`
 			}
 		}
 	}
-`
+`;
 
 export const labelText = ({ radio } = radioDefault) => css`
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${radio.textLabel};
 	width: 100%;
-`
+`;
 
 export const labelTextWithSupportingText = css`
 	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
-`
+`;
 
 export const supportingText = ({ radio } = radioDefault) => css`
 	${textSans.small({ lineHeight: "regular" })};
 	color: ${radio.textLabelSupporting};
-`
+`;
 
 /*
 TODO: Chrome <86 doesn't allow us to use display:flex on fieldsets.
@@ -123,7 +123,7 @@ export const horizontal = css`
 	.src-radio-label-text {
 		vertical-align: middle;
 	}
-`
+`;
 export const vertical = css`
 	flex-direction: column;
-`
+`;

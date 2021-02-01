@@ -1,31 +1,31 @@
-import { css } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { height, width } from "@guardian/src-foundations/size"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { selectDefault } from "@guardian/src-foundations/themes"
+import { css } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { height, width } from "@guardian/src-foundations/size";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { selectDefault } from "@guardian/src-foundations/themes";
 
 export const errorInput = ({ select } = selectDefault) => css`
 	border: 4px solid ${select.borderError};
 	color: ${select.textError};
-`
+`;
 
 export const successInput = ({ select } = selectDefault) => css`
 	border: 4px solid ${select.borderSuccess};
 	color: ${select.textSuccess};
-`
+`;
 
 export const errorChevron = ({ select } = selectDefault) => css`
 	svg {
 		fill: ${select.textError};
 	}
-`
+`;
 
 export const successChevron = ({ select } = selectDefault) => css`
 	svg {
 		fill: ${select.textSuccess};
 	}
-`
+`;
 
 export const selectWrapper = ({ select } = selectDefault) => css`
 	position: relative;
@@ -40,10 +40,10 @@ export const selectWrapper = ({ select } = selectDefault) => css`
 		fill: ${select.textUserInput};
 		pointer-events: none;
 	}
-`
+`;
 
 export const select = (theme = selectDefault) => {
-	const { select } = theme
+	const { select } = theme;
 
 	return css`
 		color: ${select.textUserInput};
@@ -75,5 +75,5 @@ export const select = (theme = selectDefault) => {
 		&:invalid {
 			${errorInput(theme)};
 		}
-	`
-}
+	`;
+};

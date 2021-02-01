@@ -1,9 +1,9 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
-import { space } from "@guardian/src-foundations"
-import { Link, linkDefault, linkBrandAlt, linkBrand } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { space } from "@guardian/src-foundations";
+import { Link, linkDefault, linkBrandAlt, linkBrand } from "../index";
 
 /* eslint-disable react/jsx-key */
 const priorityLinks = [
@@ -11,7 +11,7 @@ const priorityLinks = [
 	<Link priority="secondary" href="#">
 		Secondary
 	</Link>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -22,7 +22,7 @@ const flexStart = css`
 	> * {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 export const priorityLight = () => (
 	<ThemeProvider theme={linkDefault}>
@@ -32,14 +32,14 @@ export const priorityLight = () => (
 			))}
 		</div>
 	</ThemeProvider>
-)
-priorityLight.story = { name: "priority light" }
+);
+priorityLight.story = { name: "priority light" };
 
 export const priorityBlue = () => (
 	<ThemeProvider theme={linkBrand}>
 		<Link href="#">Primary</Link>
 	</ThemeProvider>
-)
+);
 priorityBlue.story = {
 	name: "priority blue",
 	parameters: {
@@ -48,13 +48,13 @@ priorityBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
 export const priorityYellow = () => (
 	<ThemeProvider theme={linkBrandAlt}>
 		<Link href="#">Primary</Link>
 	</ThemeProvider>
-)
+);
 priorityYellow.story = {
 	name: "priority yellow",
 	parameters: {
@@ -63,4 +63,4 @@ priorityYellow.story = {
 			values: [storybookBackgrounds.brandAlt],
 		},
 	},
-}
+};

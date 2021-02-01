@@ -7,8 +7,8 @@ const submodules = [
 	"typography",
 	"typography/obj",
 	"utils",
-]
-const submodulePaths = submodules.map((s) => `@guardian/src-foundations/${s}`)
+];
+const submodulePaths = submodules.map((s) => `@guardian/src-foundations/${s}`);
 
 /*
 Build an object that maps foundations submodule paths to their cjs equivalents
@@ -20,8 +20,8 @@ e.g.
 }
 */
 const cjsPaths = submodulePaths.reduce((acc, curr) => {
-	acc[curr] = `${curr}/cjs`
-	return acc
-}, {})
+	acc[curr] = `${curr}/cjs`;
+	return acc;
+}, {});
 
-export { submodules, submodulePaths, cjsPaths }
+export { submodules, submodulePaths, cjsPaths };

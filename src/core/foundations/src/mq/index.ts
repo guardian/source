@@ -1,4 +1,4 @@
-import { breakpoints } from "../index"
+import { breakpoints } from "../index";
 
 // Duplicated from breakpoints.ts because of some issue importing directly
 // babel * typescript * rollup = ¯\_(ツ)_/¯
@@ -10,19 +10,19 @@ type Breakpoint =
 	| "tablet"
 	| "desktop"
 	| "leftCol"
-	| "wide"
+	| "wide";
 
 type BreakpointMap = {
-	[key in Breakpoint]: string
-}
+	[key in Breakpoint]: string;
+};
 
-const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`
+const minWidth = (from: number): string => `@media (min-width: ${`${from}px`})`;
 
 const maxWidth = (until: number): string =>
-	`@media (max-width: ${`${until - 1}px`})`
+	`@media (max-width: ${`${until - 1}px`})`;
 
 const minWidthMaxWidth = (from: number, until: number): string =>
-	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`
+	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
 // e.g. from.*
 const from: BreakpointMap = {
@@ -34,7 +34,7 @@ const from: BreakpointMap = {
 	desktop: minWidth(breakpoints.desktop),
 	leftCol: minWidth(breakpoints.leftCol),
 	wide: minWidth(breakpoints.wide),
-}
+};
 
 // e.g. until.*
 const until: BreakpointMap = {
@@ -46,7 +46,7 @@ const until: BreakpointMap = {
 	desktop: maxWidth(breakpoints.desktop),
 	leftCol: maxWidth(breakpoints.leftCol),
 	wide: maxWidth(breakpoints.wide),
-}
+};
 
 // e.g. between.*.and.*
 const between = {
@@ -54,11 +54,11 @@ const between = {
 		and: {
 			mobileMedium: minWidthMaxWidth(
 				breakpoints.mobile,
-				breakpoints.mobileMedium,
+				breakpoints.mobileMedium
 			),
 			mobileLandscape: minWidthMaxWidth(
 				breakpoints.mobile,
-				breakpoints.mobileLandscape,
+				breakpoints.mobileLandscape
 			),
 			phablet: minWidthMaxWidth(breakpoints.mobile, breakpoints.phablet),
 			tablet: minWidthMaxWidth(breakpoints.mobile, breakpoints.tablet),
@@ -71,23 +71,23 @@ const between = {
 		and: {
 			mobileLandscape: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.mobileLandscape,
+				breakpoints.mobileLandscape
 			),
 			phablet: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.phablet,
+				breakpoints.phablet
 			),
 			tablet: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.tablet,
+				breakpoints.tablet
 			),
 			desktop: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.desktop,
+				breakpoints.desktop
 			),
 			leftCol: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.leftCol,
+				breakpoints.leftCol
 			),
 			wide: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.wide),
 		},
@@ -96,23 +96,23 @@ const between = {
 		and: {
 			phablet: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.phablet,
+				breakpoints.phablet
 			),
 			tablet: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.tablet,
+				breakpoints.tablet
 			),
 			desktop: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.desktop,
+				breakpoints.desktop
 			),
 			leftCol: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.leftCol,
+				breakpoints.leftCol
 			),
 			wide: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.wide,
+				breakpoints.wide
 			),
 		},
 	},
@@ -142,6 +142,6 @@ const between = {
 			wide: minWidthMaxWidth(breakpoints.leftCol, breakpoints.wide),
 		},
 	},
-}
+};
 
-export { from, until, between, breakpoints, Breakpoint }
+export { from, until, between, breakpoints, Breakpoint };

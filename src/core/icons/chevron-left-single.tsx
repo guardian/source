@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const SvgChevronLeftSingle = () => {
 	return (
@@ -9,5 +9,5 @@ export const SvgChevronLeftSingle = () => {
 				d="M18.4 4L8 14.4V15.45L18.4 25.8499L19.375 24.8999L11.05 14.925L19.375 4.95L18.4 4Z"
 			/>
 		</svg>
-	)
-}
+	);
+};
