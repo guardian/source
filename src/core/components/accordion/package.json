@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
-		"@babel/preset-env": "^7.10.0",
+		"@babel/preset-env": "^7.12.11",
 		"@babel/preset-react": "^7.10.0",
 		"@babel/preset-typescript": "^7.9.0",
 		"@emotion/babel-preset-css-prop": "^11.0.0",
