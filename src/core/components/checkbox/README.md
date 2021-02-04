@@ -94,6 +94,12 @@ If label is omitted, supporting text will not appear either.
 
 Additional text or a component that appears below the label
 
+### `optional`
+
+**`boolean`** _= "false"_
+
+Determine if the user must select this checkbox in order to proceed with submission.
+
 ### `checked`
 
 **`boolean`**
