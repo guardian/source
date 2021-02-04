@@ -1,9 +1,10 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, {
+import {
 	ReactElement,
 	ReactNode,
 	ButtonHTMLAttributes,
 	AnchorHTMLAttributes,
+	cloneElement,
 } from "react";
 import { css } from "@emotion/react";
 import { SerializedStyles } from "@emotion/react";
@@ -111,7 +112,7 @@ const buttonContents = ({
 		if (!hideLabel) {
 			contents.push(<div key="space" className="src-button-space" />);
 		}
-		contents.push(React.cloneElement(iconSvg, { key: "svg" }));
+		contents.push(cloneElement(iconSvg, { key: "svg" }));
 	}
 	if (hideLabel) {
 		return (

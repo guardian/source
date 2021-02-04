@@ -12,7 +12,9 @@
 		"prettier/prettier": "error",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/no-unused-vars": "off",
-		"jsx-a11y/label-has-for": "off"
+		"jsx-a11y/label-has-for": "off",
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off"
 	},
 	"parserOptions": {
 		"ecmaFeatures": {

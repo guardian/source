@@ -23,6 +23,7 @@ module.exports = {
 	],
 	external: [
 		"react",
+		"react/jsx-runtime",
 		"@emotion/react",
 		"@emotion/css",
 		"@guardian/src-foundations",
