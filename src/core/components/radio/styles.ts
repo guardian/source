@@ -3,8 +3,8 @@ import { space, transitions } from "@guardian/src-foundations"
 import { height, width } from "@guardian/src-foundations/size"
 import { textSans } from "@guardian/src-foundations/typography"
 import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { radioDefault } from "@guardian/src-foundations/themes"
 import { resets } from "@guardian/src-foundations/utils"
+import { radioDefault } from "@guardian/src-foundations/themes"
 
 export const fieldset = ({ radio } = radioDefault) => css`
 	${resets.fieldset};

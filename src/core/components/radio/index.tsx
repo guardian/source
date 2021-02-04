@@ -37,6 +37,7 @@ interface RadioGroupProps extends Props {
 	supporting?: string
 	orientation: Orientation
 	error?: string
+	optional?: boolean
 	children: JSX.Element | JSX.Element[]
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
@@ -51,11 +52,17 @@ const RadioGroup = ({
 	error,
 	cssOverrides,
 	children,
+	optional,
 	...props
 }: RadioGroupProps) => {
 	const groupId = id || generateSourceId()
 	const legend = label ? (
-		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
+		<Legend
+			text={label}
+			supporting={supporting}
+			hideLabel={hideLabel}
+			optional={optional}
+		/>
 	) : (
 		""
 	)
@@ -86,6 +93,7 @@ const RadioGroup = ({
 							  }
 							: {},
 						{
+							optional,
 							name,
 						},
 					),
@@ -129,6 +137,8 @@ interface RadioProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	defaultChecked?: boolean
 	label?: ReactNode
 	supporting?: ReactNode
+	error: boolean
+	optional?: boolean
 	cssOverrides?: SerializedStyles | SerializedStyles[]
 }
 
@@ -139,6 +149,8 @@ const Radio = ({
 	checked,
 	defaultChecked,
 	cssOverrides,
+	error,
+	optional,
 	...props
 }: RadioProps) => {
 	const isChecked = (): boolean => {
@@ -153,6 +165,8 @@ const Radio = ({
 			type="radio"
 			css={(theme) => [radio(theme.radio && theme), cssOverrides]}
 			value={value}
+			aria-invalid={error}
+			required={!optional}
 			aria-checked={isChecked()}
 			defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 			checked={checked != null ? isChecked() : undefined}
@@ -188,11 +202,16 @@ const Radio = ({
 
 const radioGroupDefaultProps = {
 	orientation: "vertical",
+	optional: false,
 	hideLabel: false,
 }
 
 const radioDefaultProps = {
 	disabled: false,
+	type: "radio",
+	optional: false,
+	defaultChecked: false,
+	error: false,
 }
 
 Radio.defaultProps = { ...radioDefaultProps }
