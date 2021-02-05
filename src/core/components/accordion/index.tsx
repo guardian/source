@@ -48,6 +48,7 @@ interface AccordionRowProps extends Props {
 	label: string;
 	hideToggleLabel?: boolean;
 	children: ReactNode;
+	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const NoJsRow = ({
@@ -116,11 +117,17 @@ const AccordionRow = ({
 	label,
 	hideToggleLabel = false,
 	children,
+	onClick = () => {},
 }: AccordionRowProps) => {
 	const [expanded, setExpanded] = useState(false);
 	const collapse = () => setExpanded(false);
 	const expand = () => setExpanded(true);
 	const [isBrowser, setIsBrowser] = useState(false);
+
+	function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+		expanded ? collapse() : expand();
+		onClick(event);
+	}
 
 	useEffect(() => {
 		setIsBrowser(true);
@@ -131,7 +138,7 @@ const AccordionRow = ({
 			<div css={(theme) => accordionRow(theme.accordion && theme)}>
 				<button
 					aria-expanded={expanded}
-					onClick={expanded ? collapse : expand}
+					onClick={handleClick}
 					css={(theme) => [
 						button(theme.accordion && theme),
 						expanded ? chevronIconUp : chevronIconDown,
