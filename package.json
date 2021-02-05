@@ -6,7 +6,7 @@
   "workspaces": [
     "packages/source/*",
     "packages/source/components/*",
-    "src/editorial/web/components/*"
+    "packages/editorial/web/components/*"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",

@@ -6,7 +6,10 @@ const readdirP = promisify(readdir);
 const statP = promisify(stat);
 
 const coreComponents = join(__dirname, '../packages/source/components');
-const editorialComponents = join(__dirname, '../src/editorial/web/components');
+const editorialComponents = join(
+	__dirname,
+	'../packages/editorial/web/components',
+);
 
 const isDirectory = (path: string) =>
 	statP(path).then((stats) => stats.isDirectory());
