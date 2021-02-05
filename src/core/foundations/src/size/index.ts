@@ -1,4 +1,4 @@
-import { size, remSize, iconSize, remIconSize } from "./global"
+import { size, remSize, iconSize, remIconSize } from "./global";
 
 const height = {
 	ctaMedium: size.medium,
@@ -9,7 +9,7 @@ const height = {
 	iconMedium: iconSize.medium,
 	iconSmall: iconSize.small,
 	iconXsmall: iconSize.xsmall,
-}
+};
 
 const remHeight = {
 	ctaMedium: remSize.medium,
@@ -20,7 +20,7 @@ const remHeight = {
 	iconMedium: remIconSize.medium,
 	iconSmall: remIconSize.small,
 	iconXsmall: remIconSize.xsmall,
-}
+};
 
 const width = {
 	ctaMedium: size.medium,
@@ -30,7 +30,7 @@ const width = {
 	iconMedium: iconSize.medium,
 	iconSmall: iconSize.small,
 	iconXsmall: iconSize.xsmall,
-}
+};
 
 const remWidth = {
 	ctaMedium: remSize.medium,
@@ -40,6 +40,6 @@ const remWidth = {
 	iconMedium: remIconSize.medium,
 	iconSmall: remIconSize.small,
 	iconXsmall: remIconSize.xsmall,
-}
+};
 
-export { height, remHeight, width, remWidth, size, iconSize }
+export { height, remHeight, width, remWidth, size, iconSize };

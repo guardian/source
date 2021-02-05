@@ -1,4 +1,4 @@
-import { breakpoints as _breakpoints, tweakpoints } from "./theme"
+import { breakpoints as _breakpoints, tweakpoints } from "./theme";
 
 export type Breakpoint =
 	| "mobile"
@@ -8,7 +8,7 @@ export type Breakpoint =
 	| "tablet"
 	| "desktop"
 	| "leftCol"
-	| "wide"
+	| "wide";
 
 export const breakpoints = {
 	mobile: tweakpoints[0],
@@ -19,4 +19,4 @@ export const breakpoints = {
 	desktop: _breakpoints[1],
 	leftCol: _breakpoints[2],
 	wide: _breakpoints[3],
-}
+};

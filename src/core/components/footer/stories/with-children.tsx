@@ -1,11 +1,11 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
-import { space } from "@guardian/src-foundations"
-import { textSans } from "@guardian/src-foundations/typography"
-import { from } from "@guardian/src-foundations/mq"
-import { brandText, brandBorder } from "@guardian/src-foundations/palette"
-import { Footer } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { space } from "@guardian/src-foundations";
+import { textSans } from "@guardian/src-foundations/typography";
+import { from } from "@guardian/src-foundations/mq";
+import { brandText, brandBorder } from "@guardian/src-foundations/palette";
+import { Footer } from "../index";
 
 const container = css`
 	${from.desktop} {
@@ -13,7 +13,7 @@ const container = css`
 		border-color: ${brandBorder.primary};
 		border-width: 0 1px 0 1px;
 	}
-`
+`;
 
 const para = css`
 	${textSans.small({ lineHeight: "tight" })};
@@ -22,7 +22,7 @@ const para = css`
 	${from.desktop} {
 		padding-left: ${space[4]}px;
 	}
-`
+`;
 
 const ul = css`
 	list-style: none;
@@ -40,7 +40,7 @@ const ul = css`
 		grid-template-areas: "link1 link2 link3 link4";
 		margin-bottom: 0;
 	}
-`
+`;
 
 const li = css`
 	padding: ${space[1]}px 0 ${space[4]}px 0;
@@ -51,7 +51,7 @@ const li = css`
 	${from.desktop} {
 		padding: ${space[2]}px 0 ${space[4]}px ${space[4]}px;
 	}
-`
+`;
 
 const anchor = css`
 	${textSans.small({ lineHeight: "regular" })};
@@ -61,16 +61,16 @@ const anchor = css`
 	& :hover {
 		color: ${brandText.anchorPrimaryHover};
 	}
-`
+`;
 
 const link1 = css`
 	grid-area: link1;
 	border-right-width: 1px;
-`
+`;
 const link2 = css`
 	grid-area: link2;
 	border-right-width: 1px;
-`
+`;
 const link3 = css`
 	grid-area: link3;
 	padding-left: ${space[4]}px;
@@ -78,11 +78,11 @@ const link3 = css`
 	${from.desktop} {
 		border-right-width: 1px;
 	}
-`
+`;
 const link4 = css`
 	grid-area: link4;
 	padding-left: ${space[4]}px;
-`
+`;
 
 const footerContents = (
 	<div css={container}>
@@ -118,9 +118,9 @@ const footerContents = (
 			</li>
 		</ul>
 	</div>
-)
+);
 
-export const withChildrenBlue = () => <Footer>{footerContents}</Footer>
+export const withChildrenBlue = () => <Footer>{footerContents}</Footer>;
 
 withChildrenBlue.story = {
 	name: "with children blue",
@@ -130,9 +130,9 @@ withChildrenBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
-export const withChildrenBlueTablet = () => <Footer>{footerContents}</Footer>
+export const withChildrenBlueTablet = () => <Footer>{footerContents}</Footer>;
 
 withChildrenBlueTablet.story = {
 	name: "with children blue tablet",
@@ -143,9 +143,9 @@ withChildrenBlueTablet.story = {
 		},
 		viewport: { defaultViewport: "tablet" },
 	},
-}
+};
 
-export const withChildrenBlueMobile = () => <Footer>{footerContents}</Footer>
+export const withChildrenBlueMobile = () => <Footer>{footerContents}</Footer>;
 
 withChildrenBlueMobile.story = {
 	name: "with children blue mobile",
@@ -156,4 +156,4 @@ withChildrenBlueMobile.story = {
 		},
 		viewport: { defaultViewport: "mobileMedium" },
 	},
-}
+};

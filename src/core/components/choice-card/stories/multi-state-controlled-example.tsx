@@ -1,32 +1,32 @@
-import React, { useState } from "react"
-import { css } from "@emotion/react"
-import { textSans } from "@guardian/src-foundations/typography"
-import { text } from "@guardian/src-foundations/palette"
-import { space } from "@guardian/src-foundations"
-import { ChoiceCardGroup, ChoiceCard } from "../index"
+import React, { useState } from "react";
+import { css } from "@emotion/react";
+import { textSans } from "@guardian/src-foundations/typography";
+import { text } from "@guardian/src-foundations/palette";
+import { space } from "@guardian/src-foundations";
+import { ChoiceCardGroup, ChoiceCard } from "../index";
 
 const medium = css`
 	width: 30em;
-`
+`;
 
 const spaced = css`
 	margin-bottom: ${space[3]}px;
-`
+`;
 
 const message = css`
 	${textSans.medium()};
 	color: ${text.primary};
-`
+`;
 
 export const multiStateControlled = () => {
-	const [state, setState] = useState({ opt1: true, opt2: true, opt3: false })
+	const [state, setState] = useState({ opt1: true, opt2: true, opt3: false });
 	const selectedCards = Object.entries(state)
 		.filter((entry) => entry[1] === true)
 		.map((entry) => entry[0])
-		.join(", ")
+		.join(", ");
 	const messageText = selectedCards
 		? `${selectedCards} selected`
-		: "Nothing selected"
+		: "Nothing selected";
 
 	return (
 		<div css={medium}>
@@ -80,9 +80,9 @@ export const multiStateControlled = () => {
 			</div>
 			<span css={message}>{messageText}</span>
 		</div>
-	)
-}
+	);
+};
 
 multiStateControlled.story = {
 	name: `multi state controlled example`,
-}
+};

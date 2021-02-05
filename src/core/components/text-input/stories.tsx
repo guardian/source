@@ -1,24 +1,24 @@
-import React, { useState } from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { textSans } from "@guardian/src-foundations/typography"
-import { from } from "@guardian/src-foundations/mq"
-import { TextInput, textInputDefault } from "./index"
+import React, { useState } from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { textSans } from "@guardian/src-foundations/typography";
+import { from } from "@guardian/src-foundations/mq";
+import { TextInput, textInputDefault } from "./index";
 
 export default {
 	title: "TextInput",
-}
+};
 
 const constrainedWith = css`
 	width: 100%;
 	${from.phablet} {
 		width: 30em;
 	}
-`
+`;
 
 const defaultLight = () => {
-	const [state, setState] = useState("")
+	const [state, setState] = useState("");
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -29,12 +29,12 @@ const defaultLight = () => {
 				/>
 			</div>
 		</ThemeProvider>
-	)
-}
+	);
+};
 
 defaultLight.story = {
 	name: `default light`,
-}
+};
 
 const optionalLight = () => (
 	<ThemeProvider theme={textInputDefault}>
@@ -42,14 +42,14 @@ const optionalLight = () => (
 			<TextInput label="First name" optional={true} />
 		</div>
 	</ThemeProvider>
-)
+);
 
 optionalLight.story = {
 	name: `optional light`,
-}
+};
 
 const hideLabel = () => {
-	const [state, setState] = useState("")
+	const [state, setState] = useState("");
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -61,15 +61,15 @@ const hideLabel = () => {
 				/>
 			</div>
 		</ThemeProvider>
-	)
-}
+	);
+};
 
 hideLabel.story = {
 	name: `visually hide label light`,
-}
+};
 
 const supportingTextLight = () => {
-	const [state, setState] = useState("")
+	const [state, setState] = useState("");
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -81,17 +81,17 @@ const supportingTextLight = () => {
 				/>
 			</div>
 		</ThemeProvider>
-	)
-}
+	);
+};
 supportingTextLight.story = {
 	name: `supporting text light`,
-}
+};
 
 const spacer = css`
 	margin-bottom: ${space[3]}px;
-`
+`;
 const widthsLight = () => {
-	const [state, setState] = useState({ wide: "", medium: "", short: "" })
+	const [state, setState] = useState({ wide: "", medium: "", short: "" });
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={spacer}>
@@ -137,15 +137,15 @@ const widthsLight = () => {
 				/>
 			</div>
 		</ThemeProvider>
-	)
-}
+	);
+};
 
 widthsLight.story = {
 	name: `widths light`,
-}
+};
 
 const errorWithMessageLight = () => {
-	const [state, setState] = useState("")
+	const [state, setState] = useState("");
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -157,15 +157,15 @@ const errorWithMessageLight = () => {
 				/>
 			</div>
 		</ThemeProvider>
-	)
-}
+	);
+};
 
 errorWithMessageLight.story = {
 	name: `error with message light`,
-}
+};
 
 const successWithMessageLight = () => {
-	const [state, setState] = useState("")
+	const [state, setState] = useState("");
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -177,15 +177,15 @@ const successWithMessageLight = () => {
 				/>
 			</div>
 		</ThemeProvider>
-	)
-}
+	);
+};
 
 successWithMessageLight.story = {
 	name: `success with message ${name}`,
-}
+};
 
 const constraintLight = () => {
-	const [state, setState] = useState("")
+	const [state, setState] = useState("");
 
 	return (
 		<ThemeProvider theme={textInputDefault}>
@@ -200,19 +200,19 @@ const constraintLight = () => {
 				/>
 			</div>
 		</ThemeProvider>
-	)
-}
+	);
+};
 
 constraintLight.story = {
 	name: `with constraint light`,
-}
+};
 
 const message = css`
 	${textSans.medium()}
-`
+`;
 
 const controlled = () => {
-	const [state, setState] = useState("")
+	const [state, setState] = useState("");
 
 	return (
 		<div css={constrainedWith}>
@@ -225,12 +225,12 @@ const controlled = () => {
 			</div>
 			<span css={message}>{state ? `Hello, ${state}` : ""}</span>
 		</div>
-	)
-}
+	);
+};
 
 controlled.story = {
 	name: "controlled example",
-}
+};
 
 export {
 	defaultLight,
@@ -242,4 +242,4 @@ export {
 	successWithMessageLight,
 	constraintLight,
 	controlled,
-}
+};

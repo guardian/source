@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { SvgCross } from "@guardian/src-icons"
-import { space } from "@guardian/src-foundations"
-import { LinkButton } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { SvgCross } from "@guardian/src-icons";
+import { space } from "@guardian/src-foundations";
+import { LinkButton } from "../index";
 
 /* eslint-disable react/jsx-key */
 const iconLinkButtons = [
@@ -15,7 +15,7 @@ const iconLinkButtons = [
 	<LinkButton href="#" size="xsmall" icon={<SvgCross />} hideLabel={true}>
 		Dismiss the subscribe banner
 	</LinkButton>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -26,7 +26,7 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 export const iconOnlyLinkButtons = () => (
 	<div css={flexStart}>
@@ -34,7 +34,7 @@ export const iconOnlyLinkButtons = () => (
 			<div key={index}>{button}</div>
 		))}
 	</div>
-)
+);
 iconOnlyLinkButtons.story = {
 	name: "icon only link buttons",
-}
+};

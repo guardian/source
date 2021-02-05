@@ -1,4 +1,4 @@
-import { background, text } from "../palette"
+import { background, text } from "../palette";
 
 ////////////////////////////
 // Element specific resets
@@ -8,20 +8,20 @@ import { background, text } from "../palette"
 
 const legend = `
 	padding: 0;
-`
+`;
 
 const fieldset = `
 	border: 0;
 	padding: 0;
 	margin: 0;
-`
+`;
 
 // remove styling of invalid input elements that gets applied in Firefox
 const input = `
 	&:invalid {
 		box-shadow: none;
 	}
-`
+`;
 
 ////////////////////////////
 // Default resets
@@ -49,11 +49,11 @@ const defaults = `
     em {
         font-style: italic;
     }
-`
+`;
 
 export const resets = {
 	legend,
 	fieldset,
 	input,
 	defaults,
-}
+};

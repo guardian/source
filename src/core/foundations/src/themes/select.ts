@@ -1,5 +1,5 @@
-import { text, background, border } from "@guardian/src-foundations/palette"
-import { userFeedbackDefault } from "./user-feedback"
+import { text, background, border } from "@guardian/src-foundations/palette";
+import { userFeedbackDefault } from "./user-feedback";
 
 export const selectDefault = {
 	select: {
@@ -16,4 +16,4 @@ export const selectDefault = {
 		borderSuccess: border.success,
 	},
 	...userFeedbackDefault,
-}
+};

@@ -1,5 +1,5 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { useState, useEffect, ReactElement, ReactNode } from "react"
+import React, { useState, useEffect, ReactElement, ReactNode } from "react";
 import {
 	accordion,
 	accordionRow,
@@ -14,20 +14,20 @@ import {
 	collapsedBody,
 	noJsInput,
 	noJsButton,
-} from "./styles"
-import { css } from "@emotion/react"
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility"
-import { Props } from "@guardian/src-helpers"
-import { SvgChevronDownSingle } from "@guardian/src-icons"
-export { accordionDefault } from "@guardian/src-foundations/themes"
+} from "./styles";
+import { css } from "@emotion/react";
+import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
+import { Props } from "@guardian/src-helpers";
+import { SvgChevronDownSingle } from "@guardian/src-icons";
+export { accordionDefault } from "@guardian/src-foundations/themes";
 
 const visuallyHidden = css`
 	${_visuallyHidden}
-`
+`;
 
 interface AccordionProps extends Props {
-	hideToggleLabel?: boolean
-	children: ReactElement[]
+	hideToggleLabel?: boolean;
+	children: ReactElement[];
 }
 
 const Accordion = ({
@@ -38,16 +38,16 @@ const Accordion = ({
 	return (
 		<div css={(theme) => accordion(theme.accordion && theme)} {...props}>
 			{React.Children.map(children, (child) => {
-				return React.cloneElement(child, { hideToggleLabel })
+				return React.cloneElement(child, { hideToggleLabel });
 			})}
 		</div>
-	)
-}
+	);
+};
 
 interface AccordionRowProps extends Props {
-	label: string
-	hideToggleLabel?: boolean
-	children: ReactNode
+	label: string;
+	hideToggleLabel?: boolean;
+	children: ReactNode;
 }
 
 const NoJsRow = ({
@@ -109,22 +109,22 @@ const NoJsRow = ({
 				</div>
 			</label>
 		</div>
-	)
-}
+	);
+};
 
 const AccordionRow = ({
 	label,
 	hideToggleLabel = false,
 	children,
 }: AccordionRowProps) => {
-	const [expanded, setExpanded] = useState(false)
-	const collapse = () => setExpanded(false)
-	const expand = () => setExpanded(true)
-	const [isBrowser, setIsBrowser] = useState(false)
+	const [expanded, setExpanded] = useState(false);
+	const collapse = () => setExpanded(false);
+	const expand = () => setExpanded(true);
+	const [isBrowser, setIsBrowser] = useState(false);
 
 	useEffect(() => {
-		setIsBrowser(true)
-	})
+		setIsBrowser(true);
+	});
 
 	if (isBrowser) {
 		return (
@@ -163,14 +163,14 @@ const AccordionRow = ({
 					<div hidden={!expanded}>{children}</div>
 				</div>
 			</div>
-		)
+		);
 	}
 
 	return NoJsRow({
 		label,
 		hideToggleLabel,
 		children,
-	})
-}
+	});
+};
 
-export { Accordion, AccordionRow }
+export { Accordion, AccordionRow };

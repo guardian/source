@@ -1,10 +1,10 @@
-import { css } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { footerBrand } from "@guardian/src-foundations/themes"
-import { from, between } from "@guardian/src-foundations/mq"
-import { height, width } from "@guardian/src-foundations/size"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
+import { css } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { footerBrand } from "@guardian/src-foundations/themes";
+import { from, between } from "@guardian/src-foundations/mq";
+import { height, width } from "@guardian/src-foundations/size";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
 
 export const footer = ({ footer } = footerBrand) => css`
 	color: ${footer.text};
@@ -14,28 +14,28 @@ export const footer = ({ footer } = footerBrand) => css`
 	${from.desktop} {
 		padding-bottom: ${space[6]}px;
 	}
-`
+`;
 
 export const linksWrapper = css`
 	display: flex;
 	align-items: center;
-`
+`;
 
 export const linksWrapperSpace = css`
 	margin-bottom: ${space[6]}px;
 	${from.desktop} {
 		margin-bottom: ${space[1]}px;
 	}
-`
+`;
 
-const backToTopSpace = (initial: number) => initial - height.ctaMedium / 2
+const backToTopSpace = (initial: number) => initial - height.ctaMedium / 2;
 
 export const linksWrapperSpaceWithBackToTop = css`
 	margin-bottom: ${backToTopSpace(space[6])}px;
 	${from.desktop} {
 		margin-bottom: ${backToTopSpace(space[1])}px;
 	}
-`
+`;
 
 export const links = ({ footer } = footerBrand) => css`
 	border-style: solid;
@@ -49,19 +49,19 @@ export const links = ({ footer } = footerBrand) => css`
 	${from.desktop} {
 		border-width: 1px;
 	} */
-`
+`;
 
 export const copyright = css`
 	${textSans.xxsmall()};
 	display: block;
-`
+`;
 
 // ensure copyright text doesn't get too close to back to top link
 export const copyrightExtraPadding = css`
 	${between.mobile.and.tablet} {
 		padding-right: ${height.ctaMedium}px;
 	}
-`
+`;
 
 export const backToTop = ({ footer } = footerBrand) => css`
 	display: flex;
@@ -81,7 +81,7 @@ export const backToTop = ({ footer } = footerBrand) => css`
 	& :focus {
 		${focusHalo};
 	}
-`
+`;
 
 export const backToTopIcon = ({ footer } = footerBrand) => css`
 	height: ${height.ctaMedium}px;
@@ -98,4 +98,4 @@ export const backToTopIcon = ({ footer } = footerBrand) => css`
 		width: ${width.iconSmall}px;
 		fill: ${footer.background};
 	}
-`
+`;

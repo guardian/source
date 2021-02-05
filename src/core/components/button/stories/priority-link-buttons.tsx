@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { SvgArrowRightStraight } from "@guardian/src-icons"
-import { space } from "@guardian/src-foundations"
-import { LinkButton } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { SvgArrowRightStraight } from "@guardian/src-icons";
+import { space } from "@guardian/src-foundations";
+import { LinkButton } from "../index";
 
 /* eslint-disable react/jsx-key */
 const priorityLinkButtons = [
@@ -16,7 +16,7 @@ const priorityLinkButtons = [
 	<LinkButton href="#" priority="subdued">
 		Subdued
 	</LinkButton>,
-]
+];
 const priorityIconLinkButtons = [
 	<LinkButton href="#" iconSide="right" icon={<SvgArrowRightStraight />}>
 		Primary
@@ -45,7 +45,7 @@ const priorityIconLinkButtons = [
 	>
 		Subdued
 	</LinkButton>,
-]
+];
 
 const flexStart = css`
 	display: flex;
@@ -55,10 +55,10 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 const spacer = css`
 	margin-bottom: ${space[3]}px;
-`
+`;
 
 export const priorityLinkButtonsLight = () => (
 	<>
@@ -77,5 +77,5 @@ export const priorityLinkButtonsLight = () => (
 			</div>
 		</div>
 	</>
-)
-priorityLinkButtonsLight.story = { name: "priority link buttons" }
+);
+priorityLinkButtonsLight.story = { name: "priority link buttons" };

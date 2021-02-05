@@ -22,7 +22,7 @@
 // - Pushing a value onto the end of an array
 // - Exporting a new object or array
 
-const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70]
+const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70];
 
 const fonts = {
 	titlepiece: "GT Guardian Titlepiece, Georgia, serif",
@@ -32,11 +32,11 @@ const fonts = {
 		"GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif",
 	bodySans:
 		"GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif",
-}
+};
 
-const lineHeights = [1.15, 1.35, 1.5]
+const lineHeights = [1.15, 1.35, 1.5];
 
-const fontWeights = [300, 400, 500, 700]
+const fontWeights = [300, 400, 500, 700];
 
 // Arrays of colours should have pillar colors first
 // e.g. for sport:
@@ -129,24 +129,24 @@ const colors = {
 		"#E4E5E8", //specialReport-700
 		"#EFF1F2", //specialReport-800
 	],
-}
+};
 
-const space = [0, 4, 8, 12, 16, 20, 24, 36, 48, 96]
+const space = [0, 4, 8, 12, 16, 20, 24, 36, 48, 96];
 
-const size = [24, 36, 44]
+const size = [24, 36, 44];
 
-const breakpoints = [740, 980, 1140, 1300]
+const breakpoints = [740, 980, 1140, 1300];
 
 // Diverges from https://system-ui.com
 // At these widths, there are tweaks to the
 // fluid grid on mobile devices
-const tweakpoints = [320, 375, 480, 660]
+const tweakpoints = [320, 375, 480, 660];
 
 const transitions = [
 	".2s cubic-bezier(.64, .57, .67, 1.53)",
 	".3s ease-in-out",
 	".65s ease-in-out",
-]
+];
 
 export {
 	fontSizes,
@@ -159,4 +159,4 @@ export {
 	breakpoints,
 	tweakpoints,
 	transitions,
-}
+};

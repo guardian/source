@@ -1,4 +1,4 @@
-import { text, brandText } from "@guardian/src-foundations/palette"
+import { text, brandText } from "@guardian/src-foundations/palette";
 
 export const labelDefault = {
 	label: {
@@ -8,7 +8,7 @@ export const labelDefault = {
 		textError: text.error,
 		textSuccess: text.success,
 	},
-}
+};
 
 export const labelBrand = {
 	label: {
@@ -18,4 +18,4 @@ export const labelBrand = {
 		textError: brandText.error,
 		textSuccess: brandText.success,
 	},
-}
+};

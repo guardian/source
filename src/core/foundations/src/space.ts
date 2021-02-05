@@ -1,5 +1,5 @@
-import { space as _space } from "./theme"
-import { pxToRem } from "./utils"
+import { space as _space } from "./theme";
+import { pxToRem } from "./utils";
 
 const space = {
 	1: _space[1],
@@ -11,7 +11,7 @@ const space = {
 	9: _space[7],
 	12: _space[8],
 	24: _space[9],
-}
+};
 
 /* TODO: this should be exposed as a number instead of a string,
    so consumers can perform calculations on it */
@@ -25,6 +25,6 @@ const remSpace: { [K in keyof typeof space]: string } = {
 	9: `${pxToRem(space[9])}rem`,
 	12: `${pxToRem(space[12])}rem`,
 	24: `${pxToRem(space[24])}rem`,
-}
+};
 
-export { space, remSpace }
+export { space, remSpace };

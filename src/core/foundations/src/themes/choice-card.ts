@@ -1,5 +1,5 @@
-import { border, text, background } from "@guardian/src-foundations/palette"
-import { userFeedbackDefault } from "./user-feedback"
+import { border, text, background } from "@guardian/src-foundations/palette";
+import { userFeedbackDefault } from "./user-feedback";
 
 export const choiceCardDefault = {
 	choiceCard: {
@@ -18,4 +18,4 @@ export const choiceCardDefault = {
 		borderError: border.error,
 	},
 	...userFeedbackDefault,
-}
+};

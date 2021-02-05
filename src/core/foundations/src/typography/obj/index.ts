@@ -1,4 +1,4 @@
-import { titlepiece, headline, body, textSans } from "../api"
+import { titlepiece, headline, body, textSans } from "../api";
 import {
 	titlepieceSizes,
 	headlineSizes,
@@ -11,7 +11,7 @@ import {
 	fontMapping,
 	fontWeightMapping,
 	lineHeightMapping,
-} from "../data"
+} from "../data";
 
 export {
 	titlepiece,
@@ -29,4 +29,4 @@ export {
 	fontMapping as fonts,
 	fontWeightMapping as fontWeights,
 	lineHeightMapping as lineHeights,
-}
+};

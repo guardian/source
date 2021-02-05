@@ -8,20 +8,20 @@ import {
 	brandAltText,
 	brandAltBackground,
 	brandAltBorder,
-} from "@guardian/src-foundations/palette"
+} from "@guardian/src-foundations/palette";
 
 export type ButtonTheme = {
-	textPrimary: string
-	backgroundPrimary: string
-	backgroundPrimaryHover: string
-	textSecondary?: string
-	backgroundSecondary?: string
-	backgroundSecondaryHover?: string
-	textTertiary?: string
-	backgroundTertiaryHover?: string
-	borderTertiary?: string
-	textSubdued?: string
-}
+	textPrimary: string;
+	backgroundPrimary: string;
+	backgroundPrimaryHover: string;
+	textSecondary?: string;
+	backgroundSecondary?: string;
+	backgroundSecondaryHover?: string;
+	textTertiary?: string;
+	backgroundTertiaryHover?: string;
+	borderTertiary?: string;
+	textSubdued?: string;
+};
 
 export const buttonDefault: { button: ButtonTheme } = {
 	button: {
@@ -36,7 +36,7 @@ export const buttonDefault: { button: ButtonTheme } = {
 		borderTertiary: border.ctaTertiary,
 		textSubdued: text.ctaSecondary,
 	},
-}
+};
 
 export const buttonBrand: { button: ButtonTheme } = {
 	button: {
@@ -51,7 +51,7 @@ export const buttonBrand: { button: ButtonTheme } = {
 		borderTertiary: brandBorder.ctaTertiary,
 		textSubdued: brandText.ctaSecondary,
 	},
-}
+};
 
 export const buttonBrandAlt: { button: ButtonTheme } = {
 	button: {
@@ -66,4 +66,4 @@ export const buttonBrandAlt: { button: ButtonTheme } = {
 		borderTertiary: brandAltBorder.ctaTertiary,
 		textSubdued: brandAltText.ctaSecondary,
 	},
-}
+};

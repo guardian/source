@@ -1,25 +1,25 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { Button } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { Button } from "../index";
 
 /* eslint-disable react/jsx-key */
 const defaultSizeButtons = [
 	<Button>Default primary</Button>,
 	<Button priority="subdued">Default subdued</Button>,
-]
+];
 const smallSizeButtons = [
 	<Button size="small">Small primary</Button>,
 	<Button priority="subdued" size="small">
 		Small subdued
 	</Button>,
-]
+];
 const xsmallSizeButtons = [
 	<Button size="xsmall">Extra small primary</Button>,
 	<Button priority="subdued" size="xsmall">
 		Extra small subdued
 	</Button>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -30,11 +30,11 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 const bottomSpacer = css`
 	margin-bottom: ${space[9]}px;
-`
+`;
 
 export const sizes = () => (
 	<div>
@@ -54,7 +54,7 @@ export const sizes = () => (
 			))}
 		</div>
 	</div>
-)
+);
 sizes.story = {
 	name: "sizes",
-}
+};

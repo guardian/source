@@ -1,7 +1,7 @@
-import React from "react"
-import { ThemeProvider } from "@emotion/react"
+import React from "react";
+import { ThemeProvider } from "@emotion/react";
 
-import { Checkbox, checkboxDefault } from "../../index"
+import { Checkbox, checkboxDefault } from "../../index";
 
 const unlabelled = () => (
 	<ThemeProvider theme={checkboxDefault}>
@@ -11,10 +11,10 @@ const unlabelled = () => (
 			aria-label="Today UK"
 		/>
 	</ThemeProvider>
-)
+);
 
 unlabelled.story = {
 	name: "unlabelled",
-}
+};
 
-export { unlabelled }
+export { unlabelled };

@@ -1,6 +1,6 @@
-import { css } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { until } from "@guardian/src-foundations/mq"
+import { css } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { until } from "@guardian/src-foundations/mq";
 
 export const columns = css`
 	box-sizing: border-box;
@@ -8,7 +8,7 @@ export const columns = css`
 	& > * + * {
 		margin-left: ${space[5]}px;
 	}
-`
+`;
 
 const collapseBelowSpacing = css`
 	display: block;
@@ -18,32 +18,32 @@ const collapseBelowSpacing = css`
 	& > * {
 		margin-bottom: ${space[5]}px;
 	}
-`
+`;
 
 export const collapseBelowTabletColumns = css`
 	${until.tablet} {
 		${collapseBelowSpacing}
 	}
-`
+`;
 export const collapseBelowDesktopColumns = css`
 	${until.desktop} {
 		${collapseBelowSpacing}
 	}
-`
+`;
 export const collapseBelowLeftColColumns = css`
 	${until.leftCol} {
 		${collapseBelowSpacing}
 	}
-`
+`;
 export const collapseBelowWideColumns = css`
 	${until.wide} {
 		${collapseBelowSpacing}
 	}
-`
+`;
 
 const collapseBelowWidth = css`
 	width: 100% !important;
-`
+`;
 
 export const collapseBelowTablet = css`
 	& > * {
@@ -51,28 +51,28 @@ export const collapseBelowTablet = css`
 			${collapseBelowWidth}
 		}
 	}
-`
+`;
 export const collapseBelowDesktop = css`
 	& > * {
 		${until.desktop} {
 			${collapseBelowWidth}
 		}
 	}
-`
+`;
 export const collapseBelowleftCol = css`
 	& > * {
 		${until.leftCol} {
 			${collapseBelowWidth}
 		}
 	}
-`
+`;
 export const collapseBelowWide = css`
 	& > * {
 		${until.wide} {
 			${collapseBelowWidth}
 		}
 	}
-`
+`;
 
 export const column = (width: number) => css`
 	box-sizing: border-box;
@@ -97,4 +97,4 @@ export const column = (width: number) => css`
 	${width
 		? `width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);`
 		: ""}
-`
+`;

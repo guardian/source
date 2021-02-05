@@ -1,25 +1,25 @@
-import React, { useState } from "react"
-import { css } from "@emotion/react"
-import { textSans } from "@guardian/src-foundations/typography"
-import { text } from "@guardian/src-foundations/palette"
-import { space } from "@guardian/src-foundations"
-import { ChoiceCardGroup, ChoiceCard } from "../index"
+import React, { useState } from "react";
+import { css } from "@emotion/react";
+import { textSans } from "@guardian/src-foundations/typography";
+import { text } from "@guardian/src-foundations/palette";
+import { space } from "@guardian/src-foundations";
+import { ChoiceCardGroup, ChoiceCard } from "../index";
 
 const medium = css`
 	width: 30em;
-`
+`;
 
 const spaced = css`
 	margin-bottom: ${space[3]}px;
-`
+`;
 
 const message = css`
 	${textSans.medium()};
 	color: ${text.primary};
-`
+`;
 
 export const singleStateControlled = () => {
-	const [selected, setSelected] = useState<string | null>("green")
+	const [selected, setSelected] = useState<string | null>("green");
 
 	return (
 		<div css={medium}>
@@ -50,9 +50,9 @@ export const singleStateControlled = () => {
 			</div>
 			<span css={message}>{selected} is selected</span>
 		</div>
-	)
-}
+	);
+};
 
 singleStateControlled.story = {
 	name: `single state controlled example`,
-}
+};

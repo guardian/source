@@ -1,14 +1,14 @@
-import React, { HTMLAttributes, ReactNode } from "react"
-import { SerializedStyles } from "@emotion/react"
-import { inline, inlineSpace } from "./styles"
-import { Props } from "@guardian/src-helpers"
+import React, { HTMLAttributes, ReactNode } from "react";
+import { SerializedStyles } from "@emotion/react";
+import { inline, inlineSpace } from "./styles";
+import { Props } from "@guardian/src-helpers";
 
-export type InlineSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24
+export type InlineSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;
 
 interface InlineProps extends HTMLAttributes<HTMLDivElement>, Props {
-	space?: InlineSpace
-	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children: ReactNode
+	space?: InlineSpace;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+	children: ReactNode;
 }
 
 const Inline = ({ cssOverrides, children, space, ...props }: InlineProps) => {
@@ -19,11 +19,11 @@ const Inline = ({ cssOverrides, children, space, ...props }: InlineProps) => {
 		>
 			{children}
 		</div>
-	)
-}
+	);
+};
 
-const defaultProps = {}
+const defaultProps = {};
 
-Inline.defaultProps = { ...defaultProps }
+Inline.defaultProps = { ...defaultProps };
 
-export { Inline }
+export { Inline };

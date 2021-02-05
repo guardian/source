@@ -1,14 +1,14 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { Legend, labelBrand } from "../index"
-import { ThemeProvider } from "@emotion/react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
+import React from "react";
+import { css } from "@emotion/react";
+import { Legend, labelBrand } from "../index";
+import { ThemeProvider } from "@emotion/react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
 
 const fieldsetReset = css`
 	border: 0;
 	padding: 0;
 	margin: 0;
-`
+`;
 
 export const withSupportingTextLight = () => (
 	<fieldset css={fieldsetReset}>
@@ -17,11 +17,11 @@ export const withSupportingTextLight = () => (
 			supporting="Select as many as you like"
 		/>
 	</fieldset>
-)
+);
 
 withSupportingTextLight.story = {
 	name: `with supporting text light`,
-}
+};
 
 export const withSupportingTextBlue = () => (
 	<fieldset css={fieldsetReset}>
@@ -32,7 +32,7 @@ export const withSupportingTextBlue = () => (
 			/>
 		</ThemeProvider>
 	</fieldset>
-)
+);
 
 withSupportingTextBlue.story = {
 	name: `with supporting text blue`,
@@ -42,4 +42,4 @@ withSupportingTextBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};

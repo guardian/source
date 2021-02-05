@@ -1,54 +1,54 @@
-export type ScaleUnit = "rem" | "px"
-export type Category = "titlepiece" | "headline" | "body" | "textSans"
-export type LineHeight = "tight" | "regular" | "loose"
-export type FontWeight = "light" | "regular" | "medium" | "bold"
-export type FontStyle = "normal" | "italic"
-export type FontWeightDefinition = { hasItalic: boolean }
-export type Option<A> = A | null
+export type ScaleUnit = "rem" | "px";
+export type Category = "titlepiece" | "headline" | "body" | "textSans";
+export type LineHeight = "tight" | "regular" | "loose";
+export type FontWeight = "light" | "regular" | "medium" | "bold";
+export type FontStyle = "normal" | "italic";
+export type FontWeightDefinition = { hasItalic: boolean };
+export type Option<A> = A | null;
 
 export type TypographyStyles = {
-	fontFamily: string
-	fontSize: string | number
-	lineHeight: string | number
-	fontWeight?: number
-	fontStyle?: string
-}
+	fontFamily: string;
+	fontSize: string | number;
+	lineHeight: string | number;
+	fontWeight?: number;
+	fontStyle?: string;
+};
 export type TypographySizes = {
-	[key in string]: number
-}
+	[key in string]: number;
+};
 
 export interface TitlepieceSizes extends TypographySizes {
-	small: number
-	medium: number
-	large: number
+	small: number;
+	medium: number;
+	large: number;
 }
 
 export interface HeadlineSizes extends TypographySizes {
-	xxxsmall: number
-	xxsmall: number
-	xsmall: number
-	small: number
-	medium: number
-	large: number
-	xlarge: number
+	xxxsmall: number;
+	xxsmall: number;
+	xsmall: number;
+	small: number;
+	medium: number;
+	large: number;
+	xlarge: number;
 }
 export interface BodySizes extends TypographySizes {
-	small: number
-	medium: number
+	small: number;
+	medium: number;
 }
 export interface TextSansSizes extends TypographySizes {
-	xxsmall: number
-	xsmall: number
-	small: number
-	medium: number
-	large: number
-	xlarge: number
-	xxlarge: number
-	xxxlarge: number
+	xxsmall: number;
+	xsmall: number;
+	small: number;
+	medium: number;
+	large: number;
+	xlarge: number;
+	xxlarge: number;
+	xxxlarge: number;
 }
 
 export type Fs = (
-	category: Category,
+	category: Category
 ) => (
 	level: string,
 	{
@@ -57,21 +57,21 @@ export type Fs = (
 		fontStyle,
 		unit,
 	}: {
-		lineHeight: LineHeight
-		fontWeight: FontWeight
-		fontStyle: Option<FontStyle>
-		unit: ScaleUnit
-	},
-) => TypographyStyles
+		lineHeight: LineHeight;
+		fontWeight: FontWeight;
+		fontStyle: Option<FontStyle>;
+		unit: ScaleUnit;
+	}
+) => TypographyStyles;
 
-export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles
+export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles;
 
 // returns styles as a template literal
-export type FontScaleFunctionStr = (options?: FontScaleArgs) => string
+export type FontScaleFunctionStr = (options?: FontScaleArgs) => string;
 
 export interface FontScaleArgs {
-	lineHeight?: LineHeight
-	fontWeight?: FontWeight
-	fontStyle?: FontStyle
-	unit?: ScaleUnit
+	lineHeight?: LineHeight;
+	fontWeight?: FontWeight;
+	fontStyle?: FontStyle;
+	unit?: ScaleUnit;
 }

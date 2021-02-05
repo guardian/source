@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const SvgPlay = () => {
 	return (
@@ -9,5 +9,5 @@ export const SvgPlay = () => {
 				d="M24.1749 15.15V14.45L8.575 8L8 8.45V21.15L8.575 21.55L24.1749 15.15Z"
 			/>
 		</svg>
-	)
-}
+	);
+};

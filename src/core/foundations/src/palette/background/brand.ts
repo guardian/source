@@ -1,4 +1,4 @@
-import { neutral, brand } from "../global"
+import { neutral, brand } from "../global";
 
 export const brandBackground = {
 	primary: brand[400],
@@ -8,4 +8,4 @@ export const brandBackground = {
 	ctaSecondary: brand[600],
 	ctaSecondaryHover: "#234B8A",
 	ctaTertiaryHover: brand[300],
-}
+};

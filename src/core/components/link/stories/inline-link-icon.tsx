@@ -1,18 +1,18 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { textSans } from "@guardian/src-foundations/typography"
-import { Link, linkDefault } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { textSans } from "@guardian/src-foundations/typography";
+import { Link, linkDefault } from "../index";
 import {
 	SvgArrowRightStraight,
 	SvgExternal,
 	SvgChevronRightSingle,
 	SvgChevronLeftSingle,
-} from "@guardian/src-icons"
+} from "@guardian/src-icons";
 
 const text = css`
 	${textSans.medium()}
-`
+`;
 
 export const inlineLinkIcon = () => (
 	<ThemeProvider theme={linkDefault}>
@@ -69,5 +69,5 @@ export const inlineLinkIcon = () => (
 			about our services
 		</p>
 	</ThemeProvider>
-)
-inlineLinkIcon.story = { name: "inline link icon" }
+);
+inlineLinkIcon.story = { name: "inline link icon" };

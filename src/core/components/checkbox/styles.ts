@@ -1,17 +1,17 @@
-import { css } from "@emotion/react"
-import { space, transitions } from "@guardian/src-foundations"
-import { height, width } from "@guardian/src-foundations/size"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { checkboxDefault } from "@guardian/src-foundations/themes"
-import { resets } from "@guardian/src-foundations/utils"
+import { css } from "@emotion/react";
+import { space, transitions } from "@guardian/src-foundations";
+import { height, width } from "@guardian/src-foundations/size";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { checkboxDefault } from "@guardian/src-foundations/themes";
+import { resets } from "@guardian/src-foundations/utils";
 
 export const fieldset = css`
 	${resets.fieldset};
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-`
+`;
 
 export const label = ({ checkbox } = checkboxDefault) => css`
 	position: relative;
@@ -25,12 +25,12 @@ export const label = ({ checkbox } = checkboxDefault) => css`
 			border-color: ${checkbox.borderHover};
 		}
 	}
-`
+`;
 
 export const labelWithSupportingText = css`
 	align-items: flex-start;
 	margin-bottom: ${space[3]}px;
-`
+`;
 
 export const checkbox = ({ checkbox } = checkboxDefault) => css`
 	flex: 0 0 auto;
@@ -77,22 +77,22 @@ export const checkbox = ({ checkbox } = checkboxDefault) => css`
 			}
 		}
 	}
-`
+`;
 
 export const labelText = ({ checkbox } = checkboxDefault) => css`
 	${textSans.medium({ lineHeight: "regular" })};
 	color: ${checkbox.textLabel};
 	width: 100%;
-`
+`;
 
 export const labelTextWithSupportingText = css`
 	${textSans.medium({ lineHeight: "regular" })};
-`
+`;
 
 export const supportingText = ({ checkbox } = checkboxDefault) => css`
 	${textSans.small({ lineHeight: "regular" })};
 	color: ${checkbox.textLabelSupporting};
-`
+`;
 
 export const tick = ({ checkbox } = checkboxDefault) => css`
 	@supports (appearance: none) {
@@ -141,21 +141,21 @@ export const tick = ({ checkbox } = checkboxDefault) => css`
 			transition-delay: 0.1s;
 		}
 	}
-`
+`;
 
 export const tickWithLabelText = css`
 	@supports (appearance: none) {
 		top: 15px;
 		left: 9px;
 	}
-`
+`;
 
 export const tickWithSupportingText = css`
 	@supports (appearance: none) {
 		top: 5px;
 	}
-`
+`;
 
 export const errorCheckbox = ({ checkbox } = checkboxDefault) => css`
 	border: 4px solid ${checkbox.borderError};
-`
+`;

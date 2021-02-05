@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { SvgCheckmark } from "@guardian/src-icons"
-import { space } from "@guardian/src-foundations"
-import { Button } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { SvgCheckmark } from "@guardian/src-icons";
+import { space } from "@guardian/src-foundations";
+import { Button } from "../index";
 
 /* eslint-disable react/jsx-key */
 const textIconButtons = [
@@ -10,7 +10,7 @@ const textIconButtons = [
 	<Button iconSide="right" icon={<SvgCheckmark />}>
 		Button: icon to the right
 	</Button>,
-]
+];
 
 const textIconButtonsSmall = [
 	<Button icon={<SvgCheckmark />} size="small">
@@ -19,7 +19,7 @@ const textIconButtonsSmall = [
 	<Button iconSide="right" icon={<SvgCheckmark />} size="small">
 		Small button: to the right
 	</Button>,
-]
+];
 
 const textIconButtonsXsmall = [
 	<Button icon={<SvgCheckmark />} size="xsmall">
@@ -28,7 +28,7 @@ const textIconButtonsXsmall = [
 	<Button iconSide="right" icon={<SvgCheckmark />} size="xsmall">
 		Extra small button: to the right
 	</Button>,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const flexStart = css`
@@ -39,11 +39,11 @@ const flexStart = css`
 	> div {
 		margin-right: ${space[9]}px;
 	}
-`
+`;
 
 const bottomSpacer = css`
 	margin-bottom: ${space[9]}px;
-`
+`;
 
 export const textAndIconButtons = () => (
 	<div>
@@ -63,7 +63,7 @@ export const textAndIconButtons = () => (
 			))}
 		</div>
 	</div>
-)
+);
 textAndIconButtons.story = {
 	name: "text and icon buttons",
-}
+};

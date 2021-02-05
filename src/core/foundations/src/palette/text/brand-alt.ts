@@ -1,4 +1,4 @@
-import { neutral } from "../global"
+import { neutral } from "../global";
 
 export const brandAltText = {
 	primary: neutral[7],
@@ -7,4 +7,4 @@ export const brandAltText = {
 	ctaSecondary: neutral[7],
 	ctaTertiary: neutral[7],
 	anchorPrimary: neutral[7],
-}
+};

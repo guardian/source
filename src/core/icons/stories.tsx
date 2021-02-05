@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
+import React from "react";
+import { css } from "@emotion/react";
 
-import { storybookBackgrounds } from "@guardian/src-helpers"
-import { width, height } from "@guardian/src-foundations/size"
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { width, height } from "@guardian/src-foundations/size";
 
 import {
 	SvgAlert,
@@ -41,11 +41,11 @@ import {
 	SvgStar,
 	SvgTickRound,
 	SvgTwitter,
-} from "./index"
+} from "./index";
 
 const iconWhite = css`
 	color: white;
-`
+`;
 
 const icon = css`
 	svg {
@@ -54,7 +54,7 @@ const icon = css`
 		fill: currentColor;
 		position: relative;
 	}
-`
+`;
 
 const iconMedium = css`
 	${icon};
@@ -62,7 +62,7 @@ const iconMedium = css`
 		width: ${width.iconMedium}px;
 		height: ${height.iconMedium}px;
 	}
-`
+`;
 
 const iconSmall = css`
 	${icon};
@@ -70,7 +70,7 @@ const iconSmall = css`
 		width: ${width.iconSmall}px;
 		height: ${width.iconSmall}px;
 	}
-`
+`;
 
 const iconXsmall = css`
 	${icon};
@@ -78,7 +78,7 @@ const iconXsmall = css`
 		width: ${width.iconXsmall}px;
 		height: ${width.iconXsmall}px;
 	}
-`
+`;
 
 const paymentIconMedium = css`
 	${icon};
@@ -86,7 +86,7 @@ const paymentIconMedium = css`
 		height: 30px;
 		padding-bottom: 10px;
 	}
-`
+`;
 
 const widePaymentIconMedium = css`
 	${icon};
@@ -94,35 +94,35 @@ const widePaymentIconMedium = css`
 		height: 20px;
 		padding-bottom: 10px;
 	}
-`
+`;
 
 const Xsmall = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={iconXsmall}>{children}</div>
-)
+);
 
 const Small = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={iconSmall}>{children}</div>
-)
+);
 
 const Medium = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={iconMedium}>{children}</div>
-)
+);
 
 const MediumBrand = ({
 	children,
 }: {
-	children: JSX.Element | JSX.Element[]
-}) => <div css={[iconMedium, iconWhite]}>{children}</div>
+	children: JSX.Element | JSX.Element[];
+}) => <div css={[iconMedium, iconWhite]}>{children}</div>;
 
 const Payment = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
 	<div css={paymentIconMedium}>{children}</div>
-)
+);
 
 const WidePayment = ({
 	children,
 }: {
-	children: JSX.Element | JSX.Element[]
-}) => <div css={widePaymentIconMedium}>{children}</div>
+	children: JSX.Element | JSX.Element[];
+}) => <div css={widePaymentIconMedium}>{children}</div>;
 
 /* eslint-disable react/jsx-key */
 const uiIcons = [
@@ -158,60 +158,60 @@ const uiIcons = [
 	<SvgStar />,
 	<SvgTickRound />,
 	<SvgTwitter />,
-]
+];
 /* eslint-enable react/jsx-key */
 
 export default {
 	title: "Icons",
-}
+};
 
 export const XsmallIcons = () => (
 	<>
 		<Xsmall>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
+				React.cloneElement(icon, { key: index })
 			)}
 		</Xsmall>
 	</>
-)
+);
 XsmallIcons.story = {
 	name: "ui icons xsmall light",
-}
+};
 export const SmallIcons = () => (
 	<>
 		<Small>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
+				React.cloneElement(icon, { key: index })
 			)}
 		</Small>
 	</>
-)
+);
 SmallIcons.story = {
 	name: "ui icons small light",
-}
+};
 
 export const MediumIcons = () => (
 	<>
 		<Medium>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
+				React.cloneElement(icon, { key: index })
 			)}
 		</Medium>
 	</>
-)
+);
 MediumIcons.story = {
 	name: "ui icons medium light",
-}
+};
 
 export const MediumBrandIcons = () => (
 	<>
 		<MediumBrand>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
+				React.cloneElement(icon, { key: index })
 			)}
 		</MediumBrand>
 	</>
-)
+);
 
 MediumBrandIcons.story = {
 	name: "ui icons medium brand",
@@ -221,7 +221,7 @@ MediumBrandIcons.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
 export const PaymentIcons = () => (
 	<>
@@ -234,8 +234,8 @@ export const PaymentIcons = () => (
 			<SvgDirectDebitWide />
 		</WidePayment>
 	</>
-)
+);
 
 PaymentIcons.story = {
 	name: "payment icons light",
-}
+};

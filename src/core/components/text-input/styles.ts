@@ -1,23 +1,23 @@
-import { css } from "@emotion/react"
-import { space } from "@guardian/src-foundations"
-import { height } from "@guardian/src-foundations/size"
-import { textSans } from "@guardian/src-foundations/typography"
-import { focusHalo } from "@guardian/src-foundations/accessibility"
-import { textInputDefault } from "@guardian/src-foundations/themes"
-import { resets } from "@guardian/src-foundations/utils"
+import { css } from "@emotion/react";
+import { space } from "@guardian/src-foundations";
+import { height } from "@guardian/src-foundations/size";
+import { textSans } from "@guardian/src-foundations/typography";
+import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { textInputDefault } from "@guardian/src-foundations/themes";
+import { resets } from "@guardian/src-foundations/utils";
 
 export const errorInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
-`
+`;
 
 export const successInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
-`
+`;
 
 export const textInput = (theme = textInputDefault) => {
-	const { textInput } = theme
+	const { textInput } = theme;
 
 	return css`
 		${resets.input};
@@ -46,22 +46,22 @@ export const textInput = (theme = textInputDefault) => {
 				${errorInput(theme)};
 			}
 		}
-	`
-}
+	`;
+};
 
 export const widthFluid = css`
 	width: 100%;
-`
+`;
 
 export const width30 = css`
 	width: 40ex;
 	max-width: 100%; /* prevent overflow on narrow viewports */
-`
+`;
 
 export const width10 = css`
 	width: 18ex;
-`
+`;
 
 export const width4 = css`
 	width: 9ex;
-`
+`;

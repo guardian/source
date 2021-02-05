@@ -5,9 +5,9 @@ import React, {
 	useState,
 	InputHTMLAttributes,
 	ChangeEventHandler,
-} from "react"
-import { SerializedStyles } from "@emotion/react"
-import { Legend } from "@guardian/src-label"
+} from "react";
+import { SerializedStyles } from "@emotion/react";
+import { Legend } from "@guardian/src-label";
 import {
 	fieldset,
 	flexContainer,
@@ -20,28 +20,28 @@ import {
 	errorChoiceCard,
 	contentWrapper,
 	contentWrapperLabelOnly,
-} from "./styles"
-import { InlineError } from "@guardian/src-user-feedback"
-import { Props } from "@guardian/src-helpers"
+} from "./styles";
+import { InlineError } from "@guardian/src-user-feedback";
+import { Props } from "@guardian/src-helpers";
 import {
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility"
+} from "@guardian/src-foundations/accessibility";
 
-export { choiceCardDefault } from "@guardian/src-foundations/themes"
+export { choiceCardDefault } from "@guardian/src-foundations/themes";
 
-export type Columns = 2 | 3 | 4 | 5
+export type Columns = 2 | 3 | 4 | 5;
 
 interface ChoiceCardGroupProps extends Props {
-	id?: string
-	name: string
-	label?: string
-	supporting?: string
-	multi?: boolean
-	error?: string
-	columns?: Columns
-	children: JSX.Element | JSX.Element[]
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	id?: string;
+	name: string;
+	label?: string;
+	supporting?: string;
+	multi?: boolean;
+	error?: string;
+	columns?: Columns;
+	children: JSX.Element | JSX.Element[];
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const ChoiceCardGroup = ({
@@ -56,7 +56,7 @@ const ChoiceCardGroup = ({
 	children,
 	...props
 }: ChoiceCardGroupProps) => {
-	const groupId = id || generateSourceId()
+	const groupId = id || generateSourceId();
 	return (
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
 			{label ? <Legend text={label} supporting={supporting} /> : ""}
@@ -81,32 +81,32 @@ const ChoiceCardGroup = ({
 								? {
 										error: true,
 										"aria-describedby": descriptionId(
-											groupId,
+											groupId
 										),
 								  }
 								: {},
 							{
 								name,
-							},
-						),
-					)
+							}
+						)
+					);
 				})}
 			</div>
 		</fieldset>
-	)
-}
+	);
+};
 
 interface ChoiceCardProps extends InputHTMLAttributes<HTMLInputElement>, Props {
-	id: string
-	label: ReactNode
-	value: string
-	supporting?: ReactNode
-	icon?: ReactElement
-	checked?: boolean
-	defaultChecked?: boolean
-	onChange?: ChangeEventHandler<HTMLInputElement>
-	error: boolean
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	id: string;
+	label: ReactNode;
+	value: string;
+	supporting?: ReactNode;
+	icon?: ReactElement;
+	checked?: boolean;
+	defaultChecked?: boolean;
+	onChange?: ChangeEventHandler<HTMLInputElement>;
+	error: boolean;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const ChoiceCard = ({
@@ -123,13 +123,13 @@ const ChoiceCard = ({
 }: ChoiceCardProps) => {
 	const isChecked = (): boolean => {
 		if (checked != null) {
-			return checked
+			return checked;
 		}
 
-		return !!defaultChecked
-	}
+		return !!defaultChecked;
+	};
 	// prevent the animation firing if a Choice Card has been checked by default
-	const [userChanged, setUserChanged] = useState(false)
+	const [userChanged, setUserChanged] = useState(false);
 
 	return (
 		<>
@@ -150,9 +150,9 @@ const ChoiceCard = ({
 				checked={checked != null ? isChecked() : undefined}
 				onChange={(event) => {
 					if (onChange) {
-						onChange(event)
+						onChange(event);
 					}
-					setUserChanged(true)
+					setUserChanged(true);
 				}}
 				{...props}
 			/>
@@ -175,15 +175,15 @@ const ChoiceCard = ({
 				<span css={(theme) => [tick(theme.checkbox && theme)]} />
 			</label>
 		</>
-	)
-}
+	);
+};
 
 const choiceCardDefaultProps = {
 	disabled: false,
 	type: "radio",
 	error: false,
-}
+};
 
-ChoiceCard.defaultProps = { ...choiceCardDefaultProps }
+ChoiceCard.defaultProps = { ...choiceCardDefaultProps };
 
-export { ChoiceCardGroup, ChoiceCard }
+export { ChoiceCardGroup, ChoiceCard };

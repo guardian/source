@@ -1,7 +1,7 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index";
 
 /* eslint-disable react/jsx-key */
 const multiChoiceCards = [
@@ -18,12 +18,12 @@ const multiChoiceCards = [
 		defaultChecked={true}
 	/>,
 	<ChoiceCard value="option-3" label="Option 3" id="multi-3" />,
-]
+];
 /* eslint-enable react/jsx-key */
 
 const medium = css`
 	width: 30em;
-`
+`;
 export const multiStateWithSupportingLabelLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<div css={medium}>
@@ -34,13 +34,13 @@ export const multiStateWithSupportingLabelLight = () => (
 				multi={true}
 			>
 				{multiChoiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index }),
+					React.cloneElement(choiceCard, { key: index })
 				)}
 			</ChoiceCardGroup>
 		</div>
 	</ThemeProvider>
-)
+);
 
 multiStateWithSupportingLabelLight.story = {
 	name: `multi state with supporting label light`,
-}
+};

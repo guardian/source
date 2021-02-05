@@ -1,36 +1,36 @@
-import React from "react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
-import { RadioGroup, Radio, radioBrand } from "../../index"
-import { ThemeProvider } from "@emotion/react"
+import React from "react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { RadioGroup, Radio, radioBrand } from "../../index";
+import { ThemeProvider } from "@emotion/react";
 
 /* eslint-disable react/jsx-key */
 const radios = [
 	<Radio value="red" label="Red" />,
 	<Radio value="green" label="Green" defaultChecked={true} />,
 	<Radio value="blue" label="Blue" />,
-]
+];
 /* eslint-enable react/jsx-key */
 
 export const legendLight = () => (
 	<RadioGroup name="colours" label="Select your preferred colour">
 		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
+			React.cloneElement(radio, { key: index })
 		)}
 	</RadioGroup>
-)
+);
 legendLight.story = {
 	name: `legend light`,
-}
+};
 
 export const legendBlue = () => (
 	<ThemeProvider theme={radioBrand}>
 		<RadioGroup name="colours" label="Select your preferred colour">
 			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
+				React.cloneElement(radio, { key: index })
 			)}
 		</RadioGroup>
 	</ThemeProvider>
-)
+);
 
 legendBlue.story = {
 	name: `legend blue`,
@@ -40,7 +40,7 @@ legendBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};
 
 export const legendHorizontal = () => (
 	<RadioGroup
@@ -51,11 +51,11 @@ export const legendHorizontal = () => (
 		<Radio value="yes" label="Yes" />
 		<Radio value="no" label="No" defaultChecked={true} />
 	</RadioGroup>
-)
+);
 
 legendHorizontal.story = {
 	name: `legend horizontal light`,
-}
+};
 
 export const legendHideLabelLight = () => (
 	<RadioGroup
@@ -64,10 +64,10 @@ export const legendHideLabelLight = () => (
 		hideLabel={true}
 	>
 		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
+			React.cloneElement(radio, { key: index })
 		)}
 	</RadioGroup>
-)
+);
 legendHideLabelLight.story = {
 	name: `visually hide legend light`,
-}
+};

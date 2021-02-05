@@ -1,12 +1,12 @@
-import React, { HTMLAttributes, ReactNode } from "react"
-import { SerializedStyles } from "@emotion/react"
-import { container, containerBorder } from "./styles"
-import { Props } from "@guardian/src-helpers"
+import React, { HTMLAttributes, ReactNode } from "react";
+import { SerializedStyles } from "@emotion/react";
+import { container, containerBorder } from "./styles";
+import { Props } from "@guardian/src-helpers";
 
 interface Container extends HTMLAttributes<HTMLDivElement>, Props {
-	border?: boolean
-	cssOverrides?: SerializedStyles | SerializedStyles[]
-	children: ReactNode
+	border?: boolean;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+	children: ReactNode;
 }
 
 const Container = ({
@@ -22,10 +22,10 @@ const Container = ({
 		>
 			{children}
 		</div>
-	)
-}
-const defaultProps = {}
+	);
+};
+const defaultProps = {};
 
-Container.defaultProps = { ...defaultProps }
+Container.defaultProps = { ...defaultProps };
 
-export { Container }
+export { Container };

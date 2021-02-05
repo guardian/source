@@ -1,6 +1,6 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { HTMLAttributes, ReactNode } from "react"
-import { SerializedStyles } from "@emotion/react"
+import React, { HTMLAttributes, ReactNode } from "react";
+import { SerializedStyles } from "@emotion/react";
 import {
 	footer,
 	copyright,
@@ -11,15 +11,15 @@ import {
 	linksWrapper,
 	linksWrapperSpace,
 	linksWrapperSpaceWithBackToTop,
-} from "./styles"
-import { Props } from "@guardian/src-helpers"
-import { SvgChevronUpSingle } from "@guardian/src-icons"
-export { footerBrand } from "@guardian/src-foundations/themes"
+} from "./styles";
+import { Props } from "@guardian/src-helpers";
+import { SvgChevronUpSingle } from "@guardian/src-icons";
+export { footerBrand } from "@guardian/src-foundations/themes";
 
 interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
-	showBackToTop: boolean
-	children?: ReactNode
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	showBackToTop: boolean;
+	children?: ReactNode;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const backToTopLink = (
@@ -29,7 +29,7 @@ const backToTopLink = (
 			<SvgChevronUpSingle />
 		</div>
 	</a>
-)
+);
 
 const Footer = ({
 	showBackToTop,
@@ -62,11 +62,11 @@ const Footer = ({
 				companies. All rights reserved.
 			</small>
 		</footer>
-	)
-}
+	);
+};
 
-const defaultProps = { showBackToTop: false }
+const defaultProps = { showBackToTop: false };
 
-Footer.defaultProps = { ...defaultProps }
+Footer.defaultProps = { ...defaultProps };
 
-export { Footer }
+export { Footer };

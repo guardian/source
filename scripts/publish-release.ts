@@ -1,6 +1,6 @@
-import execa, { ExecaReturnValue } from "execa"
-import { version } from "../package.json"
-import { paths, getComponentPaths } from "./paths"
+import execa, { ExecaReturnValue } from "execa";
+import { version } from "../package.json";
+import { paths, getComponentPaths } from "./paths";
 
 const publish = (dir: string) => {
 	return execa(
@@ -8,11 +8,11 @@ const publish = (dir: string) => {
 		["--cwd", `${dir}`, "run", "publish:public", "--new-version", version],
 		{
 			stdio: "inherit",
-		},
-	)
-}
+		}
+	);
+};
 
-const { foundations, icons, brand, helpers, coreComponents, editorial } = paths
+const { foundations, icons, brand, helpers, coreComponents, editorial } = paths;
 
 // Publish these packages in the specified order
 const prioritisedPackages = [
@@ -23,16 +23,16 @@ const prioritisedPackages = [
 	`${coreComponents}/user-feedback`,
 	`${coreComponents}/label`,
 	editorial,
-]
+];
 
 // Publish these packages in parallel
 const otherPackages = getComponentPaths().then((paths) =>
 	paths.filter((path) => {
-		if (!path) return false
+		if (!path) return false;
 
-		return !prioritisedPackages.includes(path)
-	}),
-)
+		return !prioritisedPackages.includes(path);
+	})
+);
 
 prioritisedPackages
 	.reduce(
@@ -41,26 +41,26 @@ prioritisedPackages
 				.then(() => publish(curr))
 				.catch((err) =>
 					Promise.reject(
-						`Error publishing prioritised package: ${err}`,
-					),
+						`Error publishing prioritised package: ${err}`
+					)
 				),
-		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
+		Promise.resolve() as Promise<void | ExecaReturnValue<string>>
 	)
 	.then(() =>
 		otherPackages.then((packages) =>
 			Promise.all(
 				packages.map((dir) => {
-					if (!dir) return
+					if (!dir) return;
 
-					return publish(dir)
-				}),
+					return publish(dir);
+				})
 			).catch((err) =>
-				Promise.reject(`Error publishing other packages: ${err}`),
-			),
-		),
+				Promise.reject(`Error publishing other packages: ${err}`)
+			)
+		)
 	)
 	.catch((err) => {
-		console.log("***PUBLISH FAILED***\n", err)
+		console.log("***PUBLISH FAILED***\n", err);
 
-		process.exit(1)
-	})
+		process.exit(1);
+	});

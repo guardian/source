@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { RadioGroup, Radio } from "../../index"
+import React, { useState } from "react";
+import { RadioGroup, Radio } from "../../index";
 
 const controlled = () => {
-	const [selected, setSelected] = useState<string | null>(null)
+	const [selected, setSelected] = useState<string | null>(null);
 
 	return (
 		<RadioGroup name="colours">
@@ -25,10 +25,10 @@ const controlled = () => {
 				onChange={() => setSelected("blue")}
 			/>
 		</RadioGroup>
-	)
-}
+	);
+};
 controlled.story = {
 	name: "controlled example",
-}
+};
 
-export { controlled }
+export { controlled };

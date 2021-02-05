@@ -1,4 +1,4 @@
-import { TypographyStyles } from "./types"
+import { TypographyStyles } from "./types";
 
 export const objectStylesToString = ({
 	fontFamily,
@@ -12,4 +12,4 @@ export const objectStylesToString = ({
 	line-height: ${lineHeight};
 	${fontWeight ? `font-weight: ${fontWeight}` : ""};
 	${fontStyle ? `font-style: ${fontStyle}` : ""};
-`
+`;

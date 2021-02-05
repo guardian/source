@@ -1,12 +1,12 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { ThemeProvider } from "@emotion/react"
-import { textSans } from "@guardian/src-foundations/typography"
-import { ButtonLink, linkDefault } from "../index"
+import React from "react";
+import { css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { textSans } from "@guardian/src-foundations/typography";
+import { ButtonLink, linkDefault } from "../index";
 
 const text = css`
 	${textSans.medium()}
-`
+`;
 
 export const inlineButtonLink = () => (
 	<ThemeProvider theme={linkDefault}>
@@ -18,5 +18,5 @@ export const inlineButtonLink = () => (
 			. Thanks!
 		</p>
 	</ThemeProvider>
-)
-inlineButtonLink.story = { name: "inline button links" }
+);
+inlineButtonLink.story = { name: "inline button links" };

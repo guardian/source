@@ -4,9 +4,9 @@ import React, {
 	ReactNode,
 	AnchorHTMLAttributes,
 	ButtonHTMLAttributes,
-} from "react"
-import { SerializedStyles } from "@emotion/react"
-import { LinkTheme } from "@guardian/src-foundations/themes"
+} from "react";
+import { SerializedStyles } from "@emotion/react";
+import { LinkTheme } from "@guardian/src-foundations/themes";
 import {
 	link,
 	buttonLink,
@@ -16,62 +16,62 @@ import {
 	icon,
 	iconRight,
 	iconLeft,
-} from "./styles"
-import { Props } from "@guardian/src-helpers"
+} from "./styles";
+import { Props } from "@guardian/src-helpers";
 
 export {
 	linkDefault,
 	linkBrand,
 	linkBrandAlt,
-} from "@guardian/src-foundations/themes"
+} from "@guardian/src-foundations/themes";
 
-export type Priority = "primary" | "secondary"
+export type Priority = "primary" | "secondary";
 
-type IconSide = "left" | "right"
+type IconSide = "left" | "right";
 
 const priorities: {
-	[key in Priority]: ({ link }: { link: LinkTheme }) => SerializedStyles
+	[key in Priority]: ({ link }: { link: LinkTheme }) => SerializedStyles;
 } = {
 	primary,
 	secondary,
-}
+};
 
 const iconSides: {
-	[key in IconSide]: SerializedStyles
+	[key in IconSide]: SerializedStyles;
 } = {
 	right: iconRight,
 	left: iconLeft,
-}
+};
 
 const linkContents = ({
 	children,
 	iconSvg,
 	iconSide,
 }: {
-	children: ReactNode
-	iconSvg?: ReactElement
-	iconSide: IconSide
+	children: ReactNode;
+	iconSvg?: ReactElement;
+	iconSide: IconSide;
 }) => {
 	// a bit of underlined space; the icon sits on top
-	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>
-	const linkContents = [children]
+	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>;
+	const linkContents = [children];
 
 	if (iconSvg) {
 		if (iconSide === "left") {
 			linkContents.unshift(
 				spacer,
-				React.cloneElement(iconSvg, { key: "svg" }),
-			)
+				React.cloneElement(iconSvg, { key: "svg" })
+			);
 		} else {
 			linkContents.push(
 				spacer,
-				React.cloneElement(iconSvg, { key: "svg" }),
-			)
+				React.cloneElement(iconSvg, { key: "svg" })
+			);
 		}
 	}
 
-	return linkContents
-}
+	return linkContents;
+};
 
 const linkStyles = ({
 	isButton,
@@ -81,12 +81,12 @@ const linkStyles = ({
 	iconSide,
 	cssOverrides,
 }: {
-	isButton?: boolean
-	priority: Priority
-	isSubdued: boolean
-	iconSvg?: ReactElement
-	iconSide: IconSide
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	isButton?: boolean;
+	priority: Priority;
+	isSubdued: boolean;
+	iconSvg?: ReactElement;
+	iconSide: IconSide;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }) => {
 	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 	return (theme: any) => [
@@ -97,27 +97,27 @@ const linkStyles = ({
 		iconSvg ? icon : "",
 		iconSvg ? iconSides[iconSide] : "",
 		cssOverrides,
-	]
-}
+	];
+};
 
 interface SharedLinkProps extends Props {
-	priority: Priority
-	subdued: boolean
-	icon?: ReactElement
-	iconSide: IconSide
-	children?: ReactNode
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	priority: Priority;
+	subdued: boolean;
+	icon?: ReactElement;
+	iconSide: IconSide;
+	children?: ReactNode;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 interface LinkProps
 	extends AnchorHTMLAttributes<HTMLAnchorElement>,
 		SharedLinkProps {
-	priority: Priority
-	subdued: boolean
-	icon?: ReactElement
-	iconSide: IconSide
-	children?: ReactNode
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	priority: Priority;
+	subdued: boolean;
+	icon?: ReactElement;
+	iconSide: IconSide;
+	children?: ReactNode;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const Link = ({
@@ -142,18 +142,18 @@ const Link = ({
 		>
 			{linkContents({ children, iconSvg, iconSide })}
 		</a>
-	)
-}
+	);
+};
 
 interface ButtonLinkProps
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
 		SharedLinkProps {
-	priority: Priority
-	subdued: boolean
-	icon?: ReactElement
-	iconSide: IconSide
-	children?: ReactNode
-	cssOverrides?: SerializedStyles | SerializedStyles[]
+	priority: Priority;
+	subdued: boolean;
+	icon?: ReactElement;
+	iconSide: IconSide;
+	children?: ReactNode;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const ButtonLink = ({
@@ -179,16 +179,16 @@ const ButtonLink = ({
 		>
 			{linkContents({ children, iconSvg, iconSide })}
 		</button>
-	)
-}
+	);
+};
 
 const defaultLinkProps = {
 	priority: "primary",
 	subdued: false,
 	iconSide: "left",
-}
+};
 
-Link.defaultProps = { ...defaultLinkProps }
-ButtonLink.defaultProps = { ...defaultLinkProps }
+Link.defaultProps = { ...defaultLinkProps };
+ButtonLink.defaultProps = { ...defaultLinkProps };
 
-export { Link, ButtonLink }
+export { Link, ButtonLink };

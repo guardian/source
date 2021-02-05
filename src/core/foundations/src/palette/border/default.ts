@@ -4,7 +4,7 @@ import {
 	success as _success,
 	brand,
 	sport,
-} from "../global"
+} from "../global";
 
 export const border = {
 	primary: neutral[60],
@@ -17,4 +17,4 @@ export const border = {
 	inputHover: brand[500],
 	inputActive: brand[500],
 	focusHalo: sport[500],
-}
+};

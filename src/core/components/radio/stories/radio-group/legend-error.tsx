@@ -1,14 +1,14 @@
-import React from "react"
-import { storybookBackgrounds } from "@guardian/src-helpers"
-import { RadioGroup, Radio, radioBrand } from "../../index"
-import { ThemeProvider } from "@emotion/react"
+import React from "react";
+import { storybookBackgrounds } from "@guardian/src-helpers";
+import { RadioGroup, Radio, radioBrand } from "../../index";
+import { ThemeProvider } from "@emotion/react";
 
 /* eslint-disable react/jsx-key */
 const radios = [
 	<Radio value="red" label="Red" />,
 	<Radio value="green" label="Green" />,
 	<Radio value="blue" label="Blue" />,
-]
+];
 /* eslint-enable react/jsx-key */
 
 export const legendErrorLight = () => (
@@ -19,13 +19,13 @@ export const legendErrorLight = () => (
 		error="Please select a colour"
 	>
 		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
+			React.cloneElement(radio, { key: index })
 		)}
 	</RadioGroup>
-)
+);
 legendErrorLight.story = {
 	name: `legend with error light`,
-}
+};
 
 export const legendErrorBlue = () => (
 	<ThemeProvider theme={radioBrand}>
@@ -36,11 +36,11 @@ export const legendErrorBlue = () => (
 			error="Please select a colour"
 		>
 			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
+				React.cloneElement(radio, { key: index })
 			)}
 		</RadioGroup>
 	</ThemeProvider>
-)
+);
 
 legendErrorBlue.story = {
 	name: `legend with error blue`,
@@ -50,4 +50,4 @@ legendErrorBlue.story = {
 			values: [storybookBackgrounds.brand],
 		},
 	},
-}
+};

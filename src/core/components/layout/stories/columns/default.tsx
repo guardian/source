@@ -1,12 +1,12 @@
-import React from "react"
-import { Columns, Column } from "../../index"
-import { sport } from "@guardian/src-foundations/palette"
-import { css } from "@emotion/react"
+import React from "react";
+import { Columns, Column } from "../../index";
+import { sport } from "@guardian/src-foundations/palette";
+import { css } from "@emotion/react";
 
 const contents = css`
 	text-align: center;
 	background-color: ${sport[600]};
-`
+`;
 
 export const columns = () => (
 	<Columns>
@@ -23,11 +23,11 @@ export const columns = () => (
 			<div css={contents}>4</div>
 		</Column>
 	</Columns>
-)
+);
 
 columns.story = {
 	name: "default",
-}
+};
 
 export const longText = () => (
 	<Columns>
@@ -86,8 +86,8 @@ export const longText = () => (
 			</div>
 		</Column>
 	</Columns>
-)
+);
 
 longText.story = {
 	name: "with long text",
-}
+};

@@ -1,14 +1,14 @@
-import { line } from "@guardian/src-foundations/palette"
-import { LineCount } from "."
+import { line } from "@guardian/src-foundations/palette";
+import { LineCount } from ".";
 
-const wavelength = 12
-const amplitude = 3
-const thickness = 1
-const gap = 3
-const squiggliness = wavelength / 8
+const wavelength = 12;
+const amplitude = 3;
+const thickness = 1;
+const gap = 3;
+const squiggliness = wavelength / 8;
 
 export const height = (count: LineCount): number =>
-	thickness + gap * Math.max(count, 1)
+	thickness + gap * Math.max(count, 1);
 
 const d = [
 	`M 0 ${thickness / 2}`,
@@ -17,12 +17,12 @@ const d = [
 	`t ${wavelength / 4} -${amplitude / 2}`,
 	`t ${wavelength / 4} -${amplitude / 2}`,
 	`t 12 0`,
-].join(" ")
+].join(" ");
 
 const squigglySvg = (count: LineCount): string => {
-	const repeatedLines = []
+	const repeatedLines = [];
 	for (let index = 1; index < count; index++) {
-		repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`)
+		repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`);
 	}
 
 	return encodeURIComponent(`
@@ -36,8 +36,8 @@ const squigglySvg = (count: LineCount): string => {
 		${repeatedLines.join()}
 	</g>
 </svg>
-`)
-}
+`);
+};
 
 export const squigglyImage = (count: LineCount = 4): string =>
-	`data:image/svg+xml;utf-8,${squigglySvg(count)}`
+	`data:image/svg+xml;utf-8,${squigglySvg(count)}`;

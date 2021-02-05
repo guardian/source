@@ -1,10 +1,10 @@
-; This file is for unifying the coding style for different editors and IDEs
-; See editorconfig.org
+# based on https://github.com/guardian/configs/blob/main/.editorconfig
 
 ; top-most EditorConfig file
 root = true
 
 [*]
+# For [accessibility reasons](https://alexandersandberg.com/tabs-for-accessibility/)
 indent_style = tab
 indent_size = 4
 end_of_line = lf
@@ -13,13 +13,16 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [package.json]
-indent_style = tab
+# `npm` autoformats `package.json` every time you install a new dependency.
 indent_size = 2
 
+# Because `yml`
 [*.yml]
 indent_style = space
 indent_size = 2
 
 [*.md]
+# Using tabs to indent pre-formatted code in markdown makes the spacing too extreme
+# when rendered on GitHub, so we revert back to spaces here.
 indent_style = space
 indent_size = 4
