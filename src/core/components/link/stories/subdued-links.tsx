@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { ThemeProvider } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { Link, linkDefault } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { Link, linkDefault } from '../index';
 
 /* eslint-disable react/jsx-key */
 const subduedLinks = [
@@ -33,4 +33,4 @@ export const subduedLight = () => (
 		</div>
 	</ThemeProvider>
 );
-subduedLight.story = { name: "subdued light" };
+subduedLight.story = { name: 'subdued light' };

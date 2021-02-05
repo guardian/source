@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { Container } from "../../index";
-import { textSans } from "@guardian/src-foundations/typography";
-import { sport } from "@guardian/src-foundations/palette";
+import React from 'react';
+import { css } from '@emotion/react';
+import { Container } from '../../index';
+import { textSans } from '@guardian/src-foundations/typography';
+import { sport } from '@guardian/src-foundations/palette';
 
 const contents = css`
 	${textSans.medium()};
@@ -21,7 +21,7 @@ export const defaultLight = () => (
 );
 
 defaultLight.story = {
-	name: "default light",
+	name: 'default light',
 };
 
 export const withBorder = () => (
@@ -31,5 +31,5 @@ export const withBorder = () => (
 );
 
 withBorder.story = {
-	name: "with border",
+	name: 'with border',
 };

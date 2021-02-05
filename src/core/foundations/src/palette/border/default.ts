@@ -4,7 +4,7 @@ import {
 	success as _success,
 	brand,
 	sport,
-} from "../global";
+} from '../global';
 
 export const border = {
 	primary: neutral[60],

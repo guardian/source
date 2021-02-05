@@ -1,7 +1,7 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { Button } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { Button } from '../index';
 
 /* eslint-disable react/jsx-key */
 const defaultSizeButtons = [
@@ -56,5 +56,5 @@ export const sizes = () => (
 	</div>
 );
 sizes.story = {
-	name: "sizes",
+	name: 'sizes',
 };

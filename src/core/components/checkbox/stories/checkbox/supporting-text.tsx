@@ -1,14 +1,14 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { ThemeProvider } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
+import React from 'react';
+import { css } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
 
 import {
 	CheckboxGroup,
 	Checkbox,
 	checkboxDefault,
 	checkboxBrand,
-} from "../../index";
+} from '../../index';
 
 /* eslint-disable react/jsx-key */
 const checkboxesWithSupportingText = [
@@ -28,7 +28,7 @@ const checkboxesWithSupportingText = [
 		label="Events & Masterclasses"
 		supporting={
 			<>
-				Learn from leading minds at our{" "}
+				Learn from leading minds at our{' '}
 				<strong>Guardian live events</strong>, including discussions and
 				debates, courses and training
 			</>
@@ -46,7 +46,7 @@ const supportingTextLight = () => (
 		<ThemeProvider theme={checkboxDefault}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingText.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index })
+					React.cloneElement(checkbox, { key: index }),
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>
@@ -54,7 +54,7 @@ const supportingTextLight = () => (
 );
 
 supportingTextLight.story = {
-	name: "supporting text light",
+	name: 'supporting text light',
 };
 
 const supportingTextBlue = () => (
@@ -62,7 +62,7 @@ const supportingTextBlue = () => (
 		<ThemeProvider theme={checkboxBrand}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingText.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index })
+					React.cloneElement(checkbox, { key: index }),
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>
@@ -70,10 +70,10 @@ const supportingTextBlue = () => (
 );
 
 supportingTextBlue.story = {
-	name: "supporting text blue",
+	name: 'supporting text blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

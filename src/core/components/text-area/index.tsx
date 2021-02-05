@@ -1,15 +1,15 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { InputHTMLAttributes } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { InlineError } from "@guardian/src-user-feedback";
-import { Label } from "@guardian/src-label";
-import { widthFluid, textArea, errorInput } from "./styles";
+import React, { InputHTMLAttributes } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { InlineError } from '@guardian/src-user-feedback';
+import { Label } from '@guardian/src-label';
+import { widthFluid, textArea, errorInput } from './styles';
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility";
-import { Props } from "@guardian/src-helpers";
+} from '@guardian/src-foundations/accessibility';
+import { Props } from '@guardian/src-helpers';
 
 interface TextAreaProps
 	extends InputHTMLAttributes<HTMLTextAreaElement>,
@@ -41,10 +41,10 @@ const TextArea = ({
 }: TextAreaProps) => {
 	const textAreaId = id || generateSourceId();
 	const getClassName = () => {
-		const HAS_VALUE_CLASS = "src-has-value";
+		const HAS_VALUE_CLASS = 'src-has-value';
 
 		if (className) {
-			return `${className}${value ? ` ${HAS_VALUE_CLASS}` : ""}`;
+			return `${className}${value ? ` ${HAS_VALUE_CLASS}` : ''}`;
 		}
 
 		if (value) {
@@ -70,13 +70,13 @@ const TextArea = ({
 				css={[
 					widthFluid,
 					textArea,
-					error ? errorInput : "",
+					error ? errorInput : '',
 					cssOverrides,
 				]}
 				id={textAreaId}
 				aria-required={!optional}
 				aria-invalid={!!error}
-				aria-describedby={error ? descriptionId(textAreaId) : ""}
+				aria-describedby={error ? descriptionId(textAreaId) : ''}
 				required={!optional}
 				rows={rows}
 				className={getClassName()}

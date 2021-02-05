@@ -1,5 +1,5 @@
-import React, { HTMLAttributes, ReactNode } from "react";
-import { SerializedStyles } from "@emotion/react";
+import React, { HTMLAttributes, ReactNode } from 'react';
+import { SerializedStyles } from '@emotion/react';
 import {
 	columns,
 	column,
@@ -11,18 +11,18 @@ import {
 	collapseBelowDesktop,
 	collapseBelowleftCol,
 	collapseBelowWide,
-} from "./styles";
-import { Breakpoint } from "@guardian/src-foundations/mq";
-import { Props } from "@guardian/src-helpers";
+} from './styles';
+import { Breakpoint } from '@guardian/src-foundations/mq';
+import { Props } from '@guardian/src-helpers';
 
 type GridBreakpoint = Extract<
 	Breakpoint,
-	"mobile" | "tablet" | "desktop" | "leftCol" | "wide"
+	'mobile' | 'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
 type CollapseBreakpoint = Extract<
 	GridBreakpoint,
-	"tablet" | "desktop" | "leftCol" | "wide"
+	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
 interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
@@ -57,8 +57,8 @@ const Columns = ({
 		<div
 			css={[
 				columns,
-				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : "",
-				collapseBelow ? collapseBelowMap[collapseBelow] : "",
+				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : '',
+				collapseBelow ? collapseBelowMap[collapseBelow] : '',
 				cssOverrides,
 			]}
 			{...props}

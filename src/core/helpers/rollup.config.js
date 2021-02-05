@@ -1,25 +1,25 @@
-import babel from "rollup-plugin-babel";
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
+import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import {
 	cjsPaths,
 	submodulePaths,
-} from "../../../scripts/foundations-submodules";
+} from '../../../scripts/foundations-submodules';
 
-const extensions = [".ts", ".tsx"];
+const extensions = ['.ts', '.tsx'];
 
 module.exports = {
-	input: "index.ts",
+	input: 'index.ts',
 	output: [
 		{
-			file: "dist/helpers.js",
-			format: "cjs",
+			file: 'dist/helpers.js',
+			format: 'cjs',
 			sourceMap: true,
 			paths: cjsPaths,
 		},
 		{
-			file: "dist/helpers.esm.js",
-			format: "esm",
+			file: 'dist/helpers.esm.js',
+			format: 'esm',
 			sourceMap: true,
 		},
 	],

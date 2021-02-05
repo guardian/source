@@ -21,7 +21,7 @@ export class InteractionModeEngine {
 
 	/** Enable behavior which applies the given className when in mouse mode. */
 	public start() {
-		this.container.addEventListener("mousedown", this.handleMouseDown);
+		this.container.addEventListener('mousedown', this.handleMouseDown);
 		this.isRunning = true;
 	}
 
@@ -34,16 +34,16 @@ export class InteractionModeEngine {
 	private reset() {
 		this.container.classList.remove(this.className);
 		this.container.removeEventListener(
-			"keydown",
-			this.handleKeyDown as (evt: Event) => void
+			'keydown',
+			this.handleKeyDown as (evt: Event) => void,
 		);
-		this.container.removeEventListener("mousedown", this.handleMouseDown);
+		this.container.removeEventListener('mousedown', this.handleMouseDown);
 	}
 
 	private handleKeyDown = (e: KeyboardEvent) => {
 		if (e.which === TAB_KEY_CODE) {
 			this.reset();
-			this.container.addEventListener("mousedown", this.handleMouseDown);
+			this.container.addEventListener('mousedown', this.handleMouseDown);
 		}
 	};
 
@@ -51,13 +51,13 @@ export class InteractionModeEngine {
 		this.reset();
 		this.container.classList.add(this.className);
 		this.container.addEventListener(
-			"keydown",
-			this.handleKeyDown as (evt: Event) => void
+			'keydown',
+			this.handleKeyDown as (evt: Event) => void,
 		);
 	};
 }
 
-const FOCUS_DISABLED = "src-focus-disabled";
+const FOCUS_DISABLED = 'src-focus-disabled';
 
 let _focusEngine: InteractionModeEngine;
 
@@ -65,7 +65,7 @@ const focusEngine = (): InteractionModeEngine => {
 	if (!_focusEngine)
 		_focusEngine = new InteractionModeEngine(
 			document.documentElement,
-			FOCUS_DISABLED
+			FOCUS_DISABLED,
 		);
 
 	return _focusEngine;

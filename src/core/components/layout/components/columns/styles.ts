@@ -1,6 +1,6 @@
-import { css } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { until } from "@guardian/src-foundations/mq";
+import { css } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { until } from '@guardian/src-foundations/mq';
 
 export const columns = css`
 	box-sizing: border-box;
@@ -77,7 +77,7 @@ export const collapseBelowWide = css`
 export const column = (width: number) => css`
 	box-sizing: border-box;
 	/* If a width is specified, don't allow column to grow. Use the width property */
-	flex: ${width ? "0 0 auto" : 1};
+	flex: ${width ? '0 0 auto' : 1};
 	/*
 		A set of Columns has n columns and n-1 gutters:
 		|    |g|    |g|    |g|    |
@@ -96,5 +96,5 @@ export const column = (width: number) => css`
 	 */
 	${width
 		? `width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);`
-		: ""}
+		: ''}
 `;

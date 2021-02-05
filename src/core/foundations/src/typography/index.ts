@@ -3,8 +3,8 @@ import {
 	headline as headlineAsObj,
 	body as bodyAsObj,
 	textSans as textSansAsObj,
-} from "./api";
-import { objectStylesToString } from "./object-styles-to-string";
+} from './api';
+import { objectStylesToString } from './object-styles-to-string';
 import {
 	titlepieceSizes,
 	headlineSizes,
@@ -17,7 +17,7 @@ import {
 	fontMapping,
 	fontWeightMapping,
 	lineHeightMapping,
-} from "./data";
+} from './data';
 import {
 	TitlepieceSizes,
 	HeadlineSizes,
@@ -25,10 +25,10 @@ import {
 	TextSansSizes,
 	FontScaleArgs,
 	FontScaleFunctionStr,
-} from "./types";
+} from './types';
 
 const fromEntries = <Sizes>(
-	entries: [keyof Sizes, FontScaleFunctionStr][]
+	entries: [keyof Sizes, FontScaleFunctionStr][],
 ): {
 	[key in keyof Sizes]: FontScaleFunctionStr;
 } =>
@@ -37,7 +37,7 @@ const fromEntries = <Sizes>(
 			acc: {
 				[key in keyof Sizes]: FontScaleFunctionStr;
 			},
-			[key, value]
+			[key, value],
 		) => {
 			acc[key] = value;
 
@@ -45,7 +45,7 @@ const fromEntries = <Sizes>(
 		},
 		{} as {
 			[key in keyof Sizes]: FontScaleFunctionStr;
-		}
+		},
 	);
 
 const titlepiece = fromEntries<TitlepieceSizes>(
@@ -54,7 +54,7 @@ const titlepiece = fromEntries<TitlepieceSizes>(
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
-	})
+	}),
 );
 const headline = fromEntries<HeadlineSizes>(
 	Object.entries(headlineAsObj).map(([key, func]) => {
@@ -62,7 +62,7 @@ const headline = fromEntries<HeadlineSizes>(
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
-	})
+	}),
 );
 const body = fromEntries<BodySizes>(
 	Object.entries(bodyAsObj).map(([key, func]) => {
@@ -70,7 +70,7 @@ const body = fromEntries<BodySizes>(
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
-	})
+	}),
 );
 const textSans = fromEntries<TextSansSizes>(
 	Object.entries(textSansAsObj).map(([key, func]) => {
@@ -78,7 +78,7 @@ const textSans = fromEntries<TextSansSizes>(
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
-	})
+	}),
 );
 
 export {

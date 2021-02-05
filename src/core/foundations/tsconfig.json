@@ -1,18 +1,18 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@guardian/src-foundations/palette": ["src/palette"]
-		},
-		"rootDir": "./src",
-		"outDir": ".",
-		"declaration": true,
-		"emitDeclarationOnly": true,
-		"declarationDir": ".",
-		"composite": true,
-		"strict": true,
-		"lib": ["es2019", "dom"],
-		"tsBuildInfoFile": "./tsconfig.tsbuildinfo"
-	},
-	"exclude": ["node_modules", "./scripts"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@guardian/src-foundations/palette": ["src/palette"]
+    },
+    "rootDir": "./src",
+    "outDir": ".",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": ".",
+    "composite": true,
+    "strict": true,
+    "lib": ["es2019", "dom"],
+    "tsBuildInfoFile": "./tsconfig.tsbuildinfo"
+  },
+  "exclude": ["node_modules", "./scripts"]
 }

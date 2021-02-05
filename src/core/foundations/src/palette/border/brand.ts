@@ -3,7 +3,7 @@ import {
 	success as _success,
 	error as _error,
 	brand,
-} from "../global";
+} from '../global';
 
 export const brandBorder = {
 	primary: brand[600],

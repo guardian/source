@@ -1,12 +1,12 @@
-import React from "react";
-import { Label, labelBrand } from "../index";
-import { ThemeProvider } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
+import React from 'react';
+import { Label, labelBrand } from '../index';
+import { ThemeProvider } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
 
 export const defaultLight = () => <Label text="First name" />;
 
 defaultLight.story = {
-	name: "default light",
+	name: 'default light',
 };
 
 export const defaultBlue = () => (
@@ -16,10 +16,10 @@ export const defaultBlue = () => (
 );
 
 defaultBlue.story = {
-	name: "default blue",
+	name: 'default blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

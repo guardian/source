@@ -1,13 +1,13 @@
-import React from "react";
-import { ThemeProvider } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
+import React from 'react';
+import { ThemeProvider } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
 
 import {
 	CheckboxGroup,
 	Checkbox,
 	checkboxDefault,
 	checkboxBrand,
-} from "../../index";
+} from '../../index';
 
 /* eslint-disable react/jsx-key */
 const checkboxes = [
@@ -25,14 +25,14 @@ const legendSupportingLight = () => (
 			id="emails"
 		>
 			{checkboxes.map((checkbox, index) =>
-				React.cloneElement(checkbox, { key: index })
+				React.cloneElement(checkbox, { key: index }),
 			)}
 		</CheckboxGroup>
 	</ThemeProvider>
 );
 
 legendSupportingLight.story = {
-	name: "legend and supporting text light",
+	name: 'legend and supporting text light',
 };
 
 const legendSupportingBlue = () => (
@@ -44,17 +44,17 @@ const legendSupportingBlue = () => (
 			id="emails"
 		>
 			{checkboxes.map((checkbox, index) =>
-				React.cloneElement(checkbox, { key: index })
+				React.cloneElement(checkbox, { key: index }),
 			)}
 		</CheckboxGroup>
 	</ThemeProvider>
 );
 
 legendSupportingBlue.story = {
-	name: "legend and supporting text blue",
+	name: 'legend and supporting text blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

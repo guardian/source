@@ -1,10 +1,10 @@
-import { Label } from "./index";
+import { Label } from './index';
 
 export default {
-	title: "Label",
+	title: 'Label',
 	component: Label,
 };
 
-export * from "./stories/default";
-export * from "./stories/optional";
-export * from "./stories/supporting";
+export * from './stories/default';
+export * from './stories/optional';
+export * from './stories/supporting';

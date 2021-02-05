@@ -1,20 +1,20 @@
 name: CI
 on:
-    push:
-        branches-ignore:
-            - "main"
-            - "gh-pages"
-            - "[0-9]+.[0-9]+"
+  push:
+    branches-ignore:
+      - 'main'
+      - 'gh-pages'
+      - '[0-9]+.[0-9]+'
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v1
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: 12
-            - name: build
-              run: |
-                  yarn
-                  yarn validate
-                  yarn ci:build
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: build
+        run: |
+          yarn
+          yarn validate
+          yarn ci:build

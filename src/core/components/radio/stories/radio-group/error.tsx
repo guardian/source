@@ -1,7 +1,7 @@
-import React from "react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { RadioGroup, Radio, radioDefault, radioBrand } from "../../index";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { RadioGroup, Radio, radioDefault, radioBrand } from '../../index';
+import { ThemeProvider } from '@emotion/react';
 
 /* eslint-disable react/jsx-key */
 const unselectedRadios = [
@@ -15,7 +15,7 @@ const errorLight = () => (
 	<ThemeProvider theme={radioDefault}>
 		<RadioGroup name="colours" error="Please select a colour">
 			{unselectedRadios.map((radio, index) =>
-				React.cloneElement(radio, { key: index })
+				React.cloneElement(radio, { key: index }),
 			)}
 		</RadioGroup>
 	</ThemeProvider>
@@ -25,7 +25,7 @@ errorLight.story = {
 	name: `error default`,
 	parameters: {
 		backgrounds: {
-			default: "default",
+			default: 'default',
 			values: [storybookBackgrounds.default],
 		},
 	},
@@ -35,7 +35,7 @@ const errorBlue = () => (
 	<ThemeProvider theme={radioBrand}>
 		<RadioGroup name="colours" error="Please select a colour">
 			{unselectedRadios.map((radio, index) =>
-				React.cloneElement(radio, { key: index })
+				React.cloneElement(radio, { key: index }),
 			)}
 		</RadioGroup>
 	</ThemeProvider>
@@ -45,7 +45,7 @@ errorBlue.story = {
 	name: `error brand`,
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

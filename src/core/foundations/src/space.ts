@@ -1,5 +1,5 @@
-import { space as _space } from "./theme";
-import { pxToRem } from "./utils";
+import { space as _space } from './theme';
+import { pxToRem } from './utils';
 
 const space = {
 	1: _space[1],

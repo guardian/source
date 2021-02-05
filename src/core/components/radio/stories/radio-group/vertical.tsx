@@ -1,7 +1,7 @@
-import React from "react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { RadioGroup, Radio, radioBrand } from "../../index";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { RadioGroup, Radio, radioBrand } from '../../index';
+import { ThemeProvider } from '@emotion/react';
 
 /* eslint-disable react/jsx-key */
 const radios = [
@@ -14,7 +14,7 @@ const radios = [
 export const verticalLight = () => (
 	<RadioGroup name="colours">
 		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index })
+			React.cloneElement(radio, { key: index }),
 		)}
 	</RadioGroup>
 );
@@ -26,7 +26,7 @@ export const verticalBlue = () => (
 	<ThemeProvider theme={radioBrand}>
 		<RadioGroup name="colours">
 			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index })
+				React.cloneElement(radio, { key: index }),
 			)}
 		</RadioGroup>
 	</ThemeProvider>
@@ -36,7 +36,7 @@ verticalBlue.story = {
 	name: `vertical blue`,
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

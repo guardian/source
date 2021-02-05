@@ -11,11 +11,11 @@ $ yarn add @guardian/src-checkbox
 ## Use
 
 ```js
-import { CheckboxGroup, Checkbox } from "@guardian/src-checkbox"
+import { CheckboxGroup, Checkbox } from '@guardian/src-checkbox';
 
 const Form = () => {
-    const [ukChecked, setUkChecked] = useState(false)
-    const [usChecked, setUsChecked] = useState(false)
+    const [ukChecked, setUkChecked] = useState(false);
+    const [usChecked, setUsChecked] = useState(false);
 
     return (
         <form>
@@ -42,8 +42,8 @@ const Form = () => {
                 />
             </CheckboxGroup>
         </form>
-    )
-}
+    );
+};
 ```
 
 ## `CheckboxGroup` Props

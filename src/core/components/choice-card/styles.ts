@@ -1,13 +1,13 @@
-import { css, SerializedStyles } from "@emotion/react";
-import { space, transitions } from "@guardian/src-foundations";
-import { visuallyHidden } from "@guardian/src-foundations/accessibility";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
-import { from } from "@guardian/src-foundations/mq";
-import { choiceCardDefault } from "@guardian/src-foundations/themes";
-import { width, height } from "@guardian/src-foundations/size";
-import { resets } from "@guardian/src-foundations/utils";
-import { Columns } from "./index";
+import { css, SerializedStyles } from '@emotion/react';
+import { space, transitions } from '@guardian/src-foundations';
+import { visuallyHidden } from '@guardian/src-foundations/accessibility';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { from } from '@guardian/src-foundations/mq';
+import { choiceCardDefault } from '@guardian/src-foundations/themes';
+import { width, height } from '@guardian/src-foundations/size';
+import { resets } from '@guardian/src-foundations/utils';
+import { Columns } from './index';
 
 export const fieldset = css`
 	${resets.fieldset};
@@ -160,7 +160,7 @@ export const contentWrapper = css`
 	}
 
 	& > * {
-		${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
+		${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
 		text-align: center;
 	}
 
@@ -207,7 +207,7 @@ export const tick = ({ choiceCard } = choiceCardDefault) => css`
 		display: block;
 		background-color: ${choiceCard.backgroundTick};
 		transition: all ${transitions.short} ease-in-out;
-		content: "";
+		content: '';
 	}
 
 	/* the short side */
