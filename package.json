@@ -1,50 +1,58 @@
 {
   "name": "source",
   "version": "3.2.0-rc.0",
-  "license": "Apache-2.0",
-  "scripts": {
-    "storybook": "yarn watch:foundations & yarn watch:icons & start-storybook",
-    "lint:styles": "stylelint src/core/**/styles.ts",
-    "lint:js": "eslint . --ext .ts,.tsx,.js",
-    "lint": "yarn lint:js && yarn lint:styles",
-    "fix": "yarn lint:js --fix",
-    "tsc": "tsc",
-    "test": "jest",
-    "validate": "yarn tsc && yarn lint && yarn test",
-    "clean": "rm -rf dist",
-    "build-storybook": "build-storybook -o dist",
-    "watch:foundations": "cd src/core/foundations && yarn watch",
-    "watch:icons": "cd src/core/icons && yarn watch",
-    "clean:all": "ts-node ./scripts/clean-all",
-    "build:all": "ts-node ./scripts/build-all",
-    "ci:build": "NODE_ENV=production build-storybook -o dist",
-    "publish:release": "ts-node ./scripts/publish-release",
-    "verbump:major": "yarn version --major --no-git-tag-version",
-    "verbump:minor": "yarn version --minor --no-git-tag-version",
-    "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
-    "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
-    "verbump:patch": "yarn version --patch --no-git-tag-version",
-    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
-    "verbump:preminor:all": "ts-node ./scripts/verbump-preminor-all && yarn verbump:deps:all",
-    "verbump:premajor:all": "ts-node ./scripts/verbump-premajor-all && yarn verbump:deps:all",
-    "verbump:major:all": "ts-node ./scripts/verbump-major-all && yarn verbump:deps:all",
-    "verbump:minor:all": "ts-node ./scripts/verbump-minor-all && yarn verbump:deps:all",
-    "verbump:patch:all": "ts-node ./scripts/verbump-patch-all && yarn verbump:deps:all",
-    "verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all && yarn verbump:deps:all",
-    "verbump:deps:all": "ts-node ./scripts/verbump-src-deps-all",
-    "release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn publish:release",
-    "release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
-    "release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn publish:release",
-    "release:prerelease:all": "yarn build:all && yarn validate && yarn publish:release",
-    "release:prerelease-bump:all": "yarn build:all && yarn validate && yarn verbump:prerelease:all && yarn publish:release",
-    "tag:beta:all": "ts-node ./scripts/tag-beta-all"
-  },
   "private": true,
+  "license": "Apache-2.0",
   "workspaces": [
     "src/core/*",
     "src/core/components/*",
     "src/editorial/web/components/*"
   ],
+  "scripts": {
+    "build-storybook": "build-storybook -o dist",
+    "build:all": "ts-node ./scripts/build-all",
+    "ci:build": "NODE_ENV=production build-storybook -o dist",
+    "clean": "rm -rf dist",
+    "clean:all": "ts-node ./scripts/clean-all",
+    "fix": "yarn lint:js --fix && yarn sort-package-json",
+    "lint": "yarn lint:js && yarn lint:styles",
+    "lint:js": "eslint . --ext .ts,.tsx,.js",
+    "lint:styles": "stylelint src/core/**/styles.ts",
+    "publish:release": "ts-node ./scripts/publish-release",
+    "release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn publish:release",
+    "release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
+    "release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn publish:release",
+    "release:prerelease-bump:all": "yarn build:all && yarn validate && yarn verbump:prerelease:all && yarn publish:release",
+    "release:prerelease:all": "yarn build:all && yarn validate && yarn publish:release",
+    "sort-package-json": "sort-package-json './package.json' './!(node_modules)/**/package.json'",
+    "storybook": "yarn watch:foundations & yarn watch:icons & start-storybook",
+    "tag:beta:all": "ts-node ./scripts/tag-beta-all",
+    "test": "jest",
+    "tsc": "tsc",
+    "validate": "yarn tsc && yarn lint && yarn test",
+    "verbump:deps:all": "ts-node ./scripts/verbump-src-deps-all",
+    "verbump:major": "yarn version --major --no-git-tag-version",
+    "verbump:major:all": "ts-node ./scripts/verbump-major-all && yarn verbump:deps:all",
+    "verbump:minor": "yarn version --minor --no-git-tag-version",
+    "verbump:minor:all": "ts-node ./scripts/verbump-minor-all && yarn verbump:deps:all",
+    "verbump:patch": "yarn version --patch --no-git-tag-version",
+    "verbump:patch:all": "ts-node ./scripts/verbump-patch-all && yarn verbump:deps:all",
+    "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
+    "verbump:premajor:all": "ts-node ./scripts/verbump-premajor-all && yarn verbump:deps:all",
+    "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
+    "verbump:preminor:all": "ts-node ./scripts/verbump-preminor-all && yarn verbump:deps:all",
+    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
+    "verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all && yarn verbump:deps:all",
+    "watch:foundations": "cd src/core/foundations && yarn watch",
+    "watch:icons": "cd src/core/icons && yarn watch"
+  },
+  "prettier": "@guardian/prettier",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -81,12 +89,5 @@
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3",
     "webpack": "^5.19.0"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules",
-      "<rootDir>/dist"
-    ]
-  },
-  "prettier": "@guardian/prettier"
+  }
 }

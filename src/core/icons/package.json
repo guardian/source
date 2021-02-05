@@ -1,39 +1,13 @@
 {
   "name": "@guardian/src-icons",
   "version": "3.2.0-rc.0",
-  "license": "Apache-2.0",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
   },
-  "scripts": {
-    "build": "yarn clean && tsc && rollup --config",
-    "watch": "rollup --config --watch",
-    "clean": "rm -rf dist *.d.ts",
-    "prepublish": "yarn build",
-    "publish:public": "yarn publish --access public",
-    "verbump:major": "yarn version --major --no-git-tag-version",
-    "verbump:minor": "yarn version --minor --no-git-tag-version",
-    "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
-    "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
-    "verbump:patch": "yarn version --patch --no-git-tag-version",
-    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.10.0",
-    "@babel/preset-react": "^7.10.0",
-    "@babel/preset-typescript": "^7.9.0",
-    "@emotion/react": "^11.1.2",
-    "@guardian/src-foundations": "^3.2.0-rc.0",
-    "@guardian/src-helpers": "^3.2.0-rc.0",
-    "rollup": "^1.17.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "typescript": "^4.1.3"
-  },
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "files": [
     "alert.tsx",
     "alert-round.tsx",
@@ -76,6 +50,32 @@
     "*.d.ts",
     "dist/*.js"
   ],
+  "scripts": {
+    "build": "yarn clean && tsc && rollup --config",
+    "clean": "rm -rf dist *.d.ts",
+    "prepublish": "yarn build",
+    "publish:public": "yarn publish --access public",
+    "verbump:major": "yarn version --major --no-git-tag-version",
+    "verbump:minor": "yarn version --minor --no-git-tag-version",
+    "verbump:patch": "yarn version --patch --no-git-tag-version",
+    "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
+    "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
+    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
+    "watch": "rollup --config --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.10.0",
+    "@babel/preset-react": "^7.10.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@emotion/react": "^11.1.2",
+    "@guardian/src-foundations": "^3.2.0-rc.0",
+    "@guardian/src-helpers": "^3.2.0-rc.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "typescript": "^4.1.3"
+  },
   "peerDependencies": {
     "react": "^17.0.1"
   }
