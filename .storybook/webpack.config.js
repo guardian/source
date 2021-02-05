@@ -17,17 +17,20 @@ module.exports = ({ config, mode }) => {
 	config.resolve.alias = {
 		'@guardian/src-foundations': path.resolve(
 			__dirname,
-			'../src/core/foundations/src',
+			'../packages/source/foundations/src',
 		),
 		'@guardian/src-label': path.resolve(
 			__dirname,
-			'../src/core/components/label',
+			'../packages/source/components/label',
 		),
 		'@guardian/src-user-feedback': path.resolve(
 			__dirname,
-			'../src/core/components/user-feedback',
+			'../packages/source/components/user-feedback',
 		),
-		'@guardian/src-helpers': path.resolve(__dirname, '../src/core/helpers'),
+		'@guardian/src-helpers': path.resolve(
+			__dirname,
+			'../packages/source/helpers',
+		),
 	};
 
 	return config;

@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "packages",
     "paths": {
-      "@guardian/src-foundations": ["core/foundations/src"],
-      "@guardian/src-foundations/mq": ["core/foundations/src/mq"],
+      "@guardian/src-foundations": ["source/foundations/src"],
+      "@guardian/src-foundations/mq": ["source/foundations/src/mq"],
       "@guardian/src-foundations/accessibility": [
-        "core/foundations/src/accessibility"
+        "source/foundations/src/accessibility"
       ],
-      "@guardian/src-foundations/palette": ["core/foundations/src/palette"],
-      "@guardian/src-foundations/size": ["core/foundations/src/size"],
-      "@guardian/src-foundations/themes": ["core/foundations/src/themes"],
+      "@guardian/src-foundations/palette": ["source/foundations/src/palette"],
+      "@guardian/src-foundations/size": ["source/foundations/src/size"],
+      "@guardian/src-foundations/themes": ["source/foundations/src/themes"],
       "@guardian/src-foundations/typography": [
-        "core/foundations/src/typography"
+        "source/foundations/src/typography"
       ],
-      "@guardian/src-foundations/utils": ["core/foundations/src/utils"],
-      "@guardian/src-label": ["core/components/label"],
-      "@guardian/src-user-feedback": ["core/components/user-feedback"],
-      "@guardian/src-helpers": ["core/helpers"],
-      "@guardian/src-icons": ["core/icons"]
+      "@guardian/src-foundations/utils": ["source/foundations/src/utils"],
+      "@guardian/src-label": ["source/components/label"],
+      "@guardian/src-user-feedback": ["source/components/user-feedback"],
+      "@guardian/src-helpers": ["source/helpers"],
+      "@guardian/src-icons": ["source/icons"]
     },
     "outDir": "dist",
     "module": "commonjs",
@@ -38,6 +38,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
+  "include": ["packages/**/*"],
   "exclude": ["node_modules"]
 }

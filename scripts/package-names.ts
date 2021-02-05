@@ -5,7 +5,7 @@ import { promisify } from 'util';
 const readdirP = promisify(readdir);
 const statP = promisify(stat);
 
-const coreComponents = join(__dirname, '../src/core/components');
+const coreComponents = join(__dirname, '../packages/source/components');
 const editorialComponents = join(__dirname, '../src/editorial/web/components');
 
 const isDirectory = (path: string) =>

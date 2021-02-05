@@ -6,12 +6,12 @@ const readdirP = promisify(readdir);
 const statP = promisify(stat);
 
 const root = join(__dirname, '..');
-const foundations = join(__dirname, '../src/core/foundations');
-const icons = join(__dirname, '../src/core/icons');
-const brand = join(__dirname, '../src/core/brand');
-const helpers = join(__dirname, '../src/core/helpers');
+const foundations = join(__dirname, '../packages/source/foundations');
+const icons = join(__dirname, '../packages/source/icons');
+const brand = join(__dirname, '../packages/source/brand');
+const helpers = join(__dirname, '../packages/source/helpers');
 const editorial = join(__dirname, '../src/editorial/web');
-const coreComponents = join(__dirname, '../src/core/components');
+const coreComponents = join(__dirname, '../packages/source/components');
 const editorialComponents = join(__dirname, '../src/editorial/web/components');
 
 const isDirectory = (path: string) =>

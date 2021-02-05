@@ -3,15 +3,15 @@ dist
 *.d.ts
 
 # for now ignore foundations script files
-src/core/foundations/scripts
+packages/source/foundations/scripts
 
 # ignore foundations dist files
-src/core/foundations/mq
-src/core/foundations/accessibility
-src/core/foundations/palette
-src/core/foundations/size
-src/core/foundations/themes
-src/core/foundations/typography
-src/core/foundations/utils
-src/core/foundations/foundations.js
-src/core/foundations/foundations.esm.js
+packages/source/foundations/mq
+packages/source/foundations/accessibility
+packages/source/foundations/palette
+packages/source/foundations/size
+packages/source/foundations/themes
+packages/source/foundations/typography
+packages/source/foundations/utils
+packages/source/foundations/foundations.js
+packages/source/foundations/foundations.esm.js
