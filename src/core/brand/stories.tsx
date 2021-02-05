@@ -1,7 +1,7 @@
 export default {
-	title: "Brand",
+	title: 'Brand',
 };
 
-export * from "./stories/guardian-live-logo";
-export * from "./stories/guardian-logo";
-export * from "./stories/roundel";
+export * from './stories/guardian-live-logo';
+export * from './stories/guardian-logo';
+export * from './stories/roundel';

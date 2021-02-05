@@ -5,9 +5,9 @@ import React, {
 	useState,
 	InputHTMLAttributes,
 	ChangeEventHandler,
-} from "react";
-import { SerializedStyles } from "@emotion/react";
-import { Legend } from "@guardian/src-label";
+} from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { Legend } from '@guardian/src-label';
 import {
 	fieldset,
 	flexContainer,
@@ -20,15 +20,15 @@ import {
 	errorChoiceCard,
 	contentWrapper,
 	contentWrapperLabelOnly,
-} from "./styles";
-import { InlineError } from "@guardian/src-user-feedback";
-import { Props } from "@guardian/src-helpers";
+} from './styles';
+import { InlineError } from '@guardian/src-user-feedback';
+import { Props } from '@guardian/src-helpers';
 import {
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility";
+} from '@guardian/src-foundations/accessibility';
 
-export { choiceCardDefault } from "@guardian/src-foundations/themes";
+export { choiceCardDefault } from '@guardian/src-foundations/themes';
 
 export type Columns = 2 | 3 | 4 | 5;
 
@@ -59,8 +59,8 @@ const ChoiceCardGroup = ({
 	const groupId = id || generateSourceId();
 	return (
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
-			{label ? <Legend text={label} supporting={supporting} /> : ""}
-			{typeof error === "string" && (
+			{label ? <Legend text={label} supporting={supporting} /> : ''}
+			{typeof error === 'string' && (
 				<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 			)}
 			<div
@@ -75,20 +75,20 @@ const ChoiceCardGroup = ({
 						child,
 						Object.assign(
 							{
-								type: multi ? "checkbox" : "radio",
+								type: multi ? 'checkbox' : 'radio',
 							},
 							error
 								? {
 										error: true,
-										"aria-describedby": descriptionId(
-											groupId
+										'aria-describedby': descriptionId(
+											groupId,
 										),
 								  }
 								: {},
 							{
 								name,
-							}
-						)
+							},
+						),
 					);
 				})}
 			</div>
@@ -137,7 +137,7 @@ const ChoiceCard = ({
 			<input
 				css={(theme) => [
 					input(theme.choiceCard && theme),
-					userChanged ? tickAnimation : "",
+					userChanged ? tickAnimation : '',
 					cssOverrides,
 				]}
 				id={id}
@@ -159,17 +159,17 @@ const ChoiceCard = ({
 			<label
 				css={(theme) => [
 					choiceCard(theme.choiceCard && theme),
-					error ? errorChoiceCard(theme.choiceCard && theme) : "",
+					error ? errorChoiceCard(theme.choiceCard && theme) : '',
 				]}
 				htmlFor={id}
 			>
 				<div
 					css={[
 						contentWrapper,
-						!iconSvg ? contentWrapperLabelOnly : "",
+						!iconSvg ? contentWrapperLabelOnly : '',
 					]}
 				>
-					{iconSvg ? iconSvg : ""}
+					{iconSvg ? iconSvg : ''}
 					<div>{labelContent}</div>
 				</div>
 				<span css={(theme) => [tick(theme.checkbox && theme)]} />
@@ -180,7 +180,7 @@ const ChoiceCard = ({
 
 const choiceCardDefaultProps = {
 	disabled: false,
-	type: "radio",
+	type: 'radio',
 	error: false,
 };
 

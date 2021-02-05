@@ -1,13 +1,13 @@
-import React from "react";
-import { css } from "@emotion/react";
+import React from 'react';
+import { css } from '@emotion/react';
 import {
 	SvgArrowRightStraight,
 	SvgIndent,
 	SvgExternal,
 	SvgChevronLeftSingle,
-} from "@guardian/src-icons";
-import { space } from "@guardian/src-foundations";
-import { Link } from "../index";
+} from '@guardian/src-icons';
+import { space } from '@guardian/src-foundations';
+import { Link } from '../index';
 
 const flexStart = css`
 	display: flex;
@@ -68,5 +68,5 @@ export const textAndIcon = () => (
 	</>
 );
 textAndIcon.story = {
-	name: "text and icon links",
+	name: 'text and icon links',
 };

@@ -1,9 +1,9 @@
-import { css } from "@emotion/react";
-import { width } from "@guardian/src-foundations/size";
-import { linkDefault, LinkTheme } from "@guardian/src-foundations/themes";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
-import { space } from "@guardian/src-foundations";
+import { css } from '@emotion/react';
+import { width } from '@guardian/src-foundations/size';
+import { linkDefault, LinkTheme } from '@guardian/src-foundations/themes';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { space } from '@guardian/src-foundations';
 
 export const link = css`
 	position: relative;

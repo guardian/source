@@ -1,6 +1,6 @@
-import React from "react";
-import { Radio, radioDefault } from "../../index";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { Radio, radioDefault } from '../../index';
+import { ThemeProvider } from '@emotion/react';
 
 const unlabelled = () => (
 	<ThemeProvider theme={radioDefault}>
@@ -9,7 +9,7 @@ const unlabelled = () => (
 );
 
 unlabelled.story = {
-	name: "unlabelled",
+	name: 'unlabelled',
 };
 
 export { unlabelled };

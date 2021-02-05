@@ -1,9 +1,9 @@
-import { css } from "@emotion/react";
-import { squigglyImage, height as squigglyImageHeight } from "./squiggly";
-import { dottedImage, height as dottedImageHeight } from "./dotted";
-import { line } from "@guardian/src-foundations/palette";
-import { remSpace } from "@guardian/src-foundations";
-import { LineCount } from ".";
+import { css } from '@emotion/react';
+import { squigglyImage, height as squigglyImageHeight } from './squiggly';
+import { dottedImage, height as dottedImageHeight } from './dotted';
+import { line } from '@guardian/src-foundations/palette';
+import { remSpace } from '@guardian/src-foundations';
+import { LineCount } from '.';
 
 const lineGap = remSpace[1];
 

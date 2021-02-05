@@ -1,5 +1,5 @@
-import { size as _size } from "../theme";
-import { pxToRem } from "../utils";
+import { size as _size } from '../theme';
+import { pxToRem } from '../utils';
 
 /*
    The size scale is based entirely on the medium, small and

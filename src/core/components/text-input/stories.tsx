@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { css } from "@emotion/react";
-import { ThemeProvider } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { textSans } from "@guardian/src-foundations/typography";
-import { from } from "@guardian/src-foundations/mq";
-import { TextInput, textInputDefault } from "./index";
+import React, { useState } from 'react';
+import { css } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { textSans } from '@guardian/src-foundations/typography';
+import { from } from '@guardian/src-foundations/mq';
+import { TextInput, textInputDefault } from './index';
 
 export default {
-	title: "TextInput",
+	title: 'TextInput',
 };
 
 const constrainedWith = css`
@@ -18,7 +18,7 @@ const constrainedWith = css`
 `;
 
 const defaultLight = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -49,7 +49,7 @@ optionalLight.story = {
 };
 
 const hideLabel = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -69,7 +69,7 @@ hideLabel.story = {
 };
 
 const supportingTextLight = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -91,7 +91,7 @@ const spacer = css`
 	margin-bottom: ${space[3]}px;
 `;
 const widthsLight = () => {
-	const [state, setState] = useState({ wide: "", medium: "", short: "" });
+	const [state, setState] = useState({ wide: '', medium: '', short: '' });
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={spacer}>
@@ -145,7 +145,7 @@ widthsLight.story = {
 };
 
 const errorWithMessageLight = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -165,7 +165,7 @@ errorWithMessageLight.story = {
 };
 
 const successWithMessageLight = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
@@ -185,7 +185,7 @@ successWithMessageLight.story = {
 };
 
 const constraintLight = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 
 	return (
 		<ThemeProvider theme={textInputDefault}>
@@ -212,7 +212,7 @@ const message = css`
 `;
 
 const controlled = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 
 	return (
 		<div css={constrainedWith}>
@@ -223,13 +223,13 @@ const controlled = () => {
 					onChange={(event) => setState(event.target.value)}
 				/>
 			</div>
-			<span css={message}>{state ? `Hello, ${state}` : ""}</span>
+			<span css={message}>{state ? `Hello, ${state}` : ''}</span>
 		</div>
 	);
 };
 
 controlled.story = {
-	name: "controlled example",
+	name: 'controlled example',
 };
 
 export {

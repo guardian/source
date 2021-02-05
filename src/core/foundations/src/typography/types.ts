@@ -1,8 +1,8 @@
-export type ScaleUnit = "rem" | "px";
-export type Category = "titlepiece" | "headline" | "body" | "textSans";
-export type LineHeight = "tight" | "regular" | "loose";
-export type FontWeight = "light" | "regular" | "medium" | "bold";
-export type FontStyle = "normal" | "italic";
+export type ScaleUnit = 'rem' | 'px';
+export type Category = 'titlepiece' | 'headline' | 'body' | 'textSans';
+export type LineHeight = 'tight' | 'regular' | 'loose';
+export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
+export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
 export type Option<A> = A | null;
 
@@ -48,7 +48,7 @@ export interface TextSansSizes extends TypographySizes {
 }
 
 export type Fs = (
-	category: Category
+	category: Category,
 ) => (
 	level: string,
 	{
@@ -61,7 +61,7 @@ export type Fs = (
 		fontWeight: FontWeight;
 		fontStyle: Option<FontStyle>;
 		unit: ScaleUnit;
-	}
+	},
 ) => TypographyStyles;
 
 export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles;

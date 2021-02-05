@@ -1,14 +1,14 @@
-import execa, { ExecaReturnValue } from "execa";
-import { version } from "../package.json";
-import { paths, getComponentPaths } from "./paths";
+import execa, { ExecaReturnValue } from 'execa';
+import { version } from '../package.json';
+import { paths, getComponentPaths } from './paths';
 
 const publish = (dir: string) => {
 	return execa(
-		"yarn",
-		["--cwd", `${dir}`, "run", "publish:public", "--new-version", version],
+		'yarn',
+		['--cwd', `${dir}`, 'run', 'publish:public', '--new-version', version],
 		{
-			stdio: "inherit",
-		}
+			stdio: 'inherit',
+		},
 	);
 };
 
@@ -31,7 +31,7 @@ const otherPackages = getComponentPaths().then((paths) =>
 		if (!path) return false;
 
 		return !prioritisedPackages.includes(path);
-	})
+	}),
 );
 
 prioritisedPackages
@@ -41,10 +41,10 @@ prioritisedPackages
 				.then(() => publish(curr))
 				.catch((err) =>
 					Promise.reject(
-						`Error publishing prioritised package: ${err}`
-					)
+						`Error publishing prioritised package: ${err}`,
+					),
 				),
-		Promise.resolve() as Promise<void | ExecaReturnValue<string>>
+		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
 	)
 	.then(() =>
 		otherPackages.then((packages) =>
@@ -53,14 +53,14 @@ prioritisedPackages
 					if (!dir) return;
 
 					return publish(dir);
-				})
+				}),
 			).catch((err) =>
-				Promise.reject(`Error publishing other packages: ${err}`)
-			)
-		)
+				Promise.reject(`Error publishing other packages: ${err}`),
+			),
+		),
 	)
 	.catch((err) => {
-		console.log("***PUBLISH FAILED***\n", err);
+		console.log('***PUBLISH FAILED***\n', err);
 
 		process.exit(1);
 	});

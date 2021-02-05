@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { Tiles } from "../../index";
-import { textSans } from "@guardian/src-foundations/typography";
-import { sport } from "@guardian/src-foundations/palette";
+import React from 'react';
+import { css } from '@emotion/react';
+import { Tiles } from '../../index';
+import { textSans } from '@guardian/src-foundations/typography';
+import { sport } from '@guardian/src-foundations/palette';
 
 const contents = css`
 	${textSans.medium()};
@@ -18,7 +18,7 @@ export const columns2 = () => (
 );
 
 columns2.story = {
-	name: "2 columns",
+	name: '2 columns',
 };
 
 export const columns3 = () => (
@@ -30,7 +30,7 @@ export const columns3 = () => (
 );
 
 columns3.story = {
-	name: "3 columns",
+	name: '3 columns',
 };
 
 export const columns4 = () => (
@@ -43,7 +43,7 @@ export const columns4 = () => (
 );
 
 columns4.story = {
-	name: "4 columns",
+	name: '4 columns',
 };
 
 export const columns3rows2 = () => (
@@ -57,13 +57,13 @@ export const columns3rows2 = () => (
 );
 
 columns3rows2.story = {
-	name: "3 columns 2 rows",
+	name: '3 columns 2 rows',
 };
 
 export const withLongText = () => (
 	<Tiles columns={3}>
 		<div css={contents}>
-			{" "}
+			{' '}
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus
 			nibh erat, eget rutrum ligula vehicula sit amet. Etiam scelerisque
 			dapibus pulvinar. Integer non accumsan justo. Duis et vehicula
@@ -74,13 +74,13 @@ export const withLongText = () => (
 			sed efficitur mi, sed suscipit urna.
 		</div>
 		<div css={contents}>
-			{" "}
+			{' '}
 			Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla
 			facilisi. Phasellus id aliquam odio. Aliquam tempus eu enim in
 			fermentum. Donec ut velit vel purus rutrum vulputate ut scelerisque
 			lacus. Vestibulum ante ipsum primis in faucibus orci luctus et
 			ultrices posuere cubilia curae; Maecenas sodales lacinia porta.
-			Suspendisse consequat egestas dui, non tempus diam laoreet vitae.{" "}
+			Suspendisse consequat egestas dui, non tempus diam laoreet vitae.{' '}
 		</div>
 		<div css={contents}>
 			Pellentesque id ornare turpis. Aliquam laoreet aliquet pharetra.
@@ -95,7 +95,7 @@ export const withLongText = () => (
 			bibendum quis neque sit amet lacinia. Aenean ac arcu enim.
 		</div>
 		<div css={contents}>
-			{" "}
+			{' '}
 			Nunc nec dapibus quam. Praesent nec neque vel velit mollis tempor.
 			Suspendisse justo eros, pharetra et elit sit amet, hendrerit laoreet
 			dui. Curabitur ut libero nibh. Duis finibus sollicitudin tortor, ac
@@ -111,5 +111,5 @@ export const withLongText = () => (
 );
 
 withLongText.story = {
-	name: "with long text",
+	name: 'with long text',
 };

@@ -1,12 +1,12 @@
 const submodules = [
-	"accessibility",
-	"mq",
-	"palette",
-	"size",
-	"themes",
-	"typography",
-	"typography/obj",
-	"utils",
+	'accessibility',
+	'mq',
+	'palette',
+	'size',
+	'themes',
+	'typography',
+	'typography/obj',
+	'utils',
 ];
 const submodulePaths = submodules.map((s) => `@guardian/src-foundations/${s}`);
 

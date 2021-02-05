@@ -11,8 +11,8 @@ $ yarn add @guardian/src-button
 ## Use
 
 ```js
-import { LinkButton, Button } from "@guardian/src-button"
-import { SvgCheckmark, SvgArrowRightStraight } from "@guardian/src-icons"
+import { LinkButton, Button } from '@guardian/src-button';
+import { SvgCheckmark, SvgArrowRightStraight } from '@guardian/src-icons';
 
 const Form = () => (
     <form>
@@ -32,13 +32,13 @@ const Form = () => (
             icon={<SvgCheckmark />}
             iconSide="left"
             onClick={() => {
-                alert("Thanks for clicking")
+                alert('Thanks for clicking');
             }}
         >
             Click me
         </Button>
     </form>
-)
+);
 ```
 
 ## `LinkButton` Props

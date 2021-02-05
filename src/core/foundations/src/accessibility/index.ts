@@ -1,4 +1,4 @@
-import { border } from "@guardian/src-foundations/palette";
+import { border } from '@guardian/src-foundations/palette';
 
 const visuallyHidden = `
 	position: absolute;

@@ -1,9 +1,9 @@
-import { css } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
-import { text, border, background } from "@guardian/src-foundations/palette";
-import { resets } from "@guardian/src-foundations/utils";
+import { css } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { text, border, background } from '@guardian/src-foundations/palette';
+import { resets } from '@guardian/src-foundations/utils';
 
 export const errorInput = css`
 	border: 4px solid ${border.error};
@@ -13,7 +13,7 @@ export const errorInput = css`
 export const textArea = css`
 	${resets.input};
 	box-sizing: border-box;
-	${textSans.medium({ lineHeight: "regular" })};
+	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${text.userInput};
 	background-color: ${background.input};
 	border: 2px solid ${border.input};

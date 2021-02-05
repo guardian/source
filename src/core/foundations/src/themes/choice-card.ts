@@ -1,5 +1,5 @@
-import { border, text, background } from "@guardian/src-foundations/palette";
-import { userFeedbackDefault } from "./user-feedback";
+import { border, text, background } from '@guardian/src-foundations/palette';
+import { userFeedbackDefault } from './user-feedback';
 
 export const choiceCardDefault = {
 	choiceCard: {
@@ -9,7 +9,7 @@ export const choiceCardDefault = {
 		textGroupLabelSupporting: text.groupLabelSupporting,
 		border: border.input,
 		textChecked: text.inputChecked,
-		backgroundChecked: "#E3F6FF",
+		backgroundChecked: '#E3F6FF',
 		backgroundTick: background.inputChecked,
 		borderChecked: border.inputChecked,
 		textHover: text.inputHover,

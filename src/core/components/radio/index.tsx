@@ -1,12 +1,12 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { ReactNode, InputHTMLAttributes } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { Legend } from "@guardian/src-label";
-import { InlineError } from "@guardian/src-user-feedback";
+import React, { ReactNode, InputHTMLAttributes } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { Legend } from '@guardian/src-label';
+import { InlineError } from '@guardian/src-user-feedback';
 import {
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility";
+} from '@guardian/src-foundations/accessibility';
 import {
 	fieldset,
 	label,
@@ -17,12 +17,12 @@ import {
 	supportingText,
 	horizontal,
 	vertical,
-} from "./styles";
-import { Props } from "@guardian/src-helpers";
+} from './styles';
+import { Props } from '@guardian/src-helpers';
 
-export { radioBrand, radioDefault } from "@guardian/src-foundations/themes";
+export { radioBrand, radioDefault } from '@guardian/src-foundations/themes';
 
-type Orientation = "vertical" | "horizontal";
+type Orientation = 'vertical' | 'horizontal';
 
 const orientationStyles = {
 	vertical: vertical,
@@ -57,7 +57,7 @@ const RadioGroup = ({
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 	) : (
-		""
+		''
 	);
 	const message = error && (
 		<InlineError id={descriptionId(groupId)}>{error}</InlineError>
@@ -82,13 +82,13 @@ const RadioGroup = ({
 					Object.assign(
 						error
 							? {
-									"aria-describedby": descriptionId(groupId),
+									'aria-describedby': descriptionId(groupId),
 							  }
 							: {},
 						{
 							name,
-						}
-					)
+						},
+					),
 				);
 			})}
 		</fieldset>
@@ -105,7 +105,7 @@ const LabelText = ({
 	return (
 		<div
 			css={(theme) => [
-				hasSupportingText ? labelTextWithSupportingText : "",
+				hasSupportingText ? labelTextWithSupportingText : '',
 				labelText(theme.radio && theme),
 			]}
 			className="src-radio-label-text"
@@ -164,7 +164,7 @@ const Radio = ({
 		<label
 			css={(theme) => [
 				label(theme.radio && theme),
-				supporting ? labelWithSupportingText : "",
+				supporting ? labelWithSupportingText : '',
 			]}
 		>
 			{radioControl}
@@ -187,7 +187,7 @@ const Radio = ({
 };
 
 const radioGroupDefaultProps = {
-	orientation: "vertical",
+	orientation: 'vertical',
 	hideLabel: false,
 };
 

@@ -13,12 +13,12 @@ $ npm install @guardian/editorial
 ## Use
 
 ```tsx
-import { Lines } from "@guardian/editorial"
+import { Lines } from '@guardian/editorial';
 
 const Section = () => (
     <>
         <Lines count={8} />
         <Lines effect="squiggly" />
     </>
-)
+);
 ```

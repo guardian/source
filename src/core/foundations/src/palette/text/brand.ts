@@ -4,7 +4,7 @@ import {
 	error as _error,
 	brand,
 	brandAlt,
-} from "../global";
+} from '../global';
 
 export const brandText = {
 	primary: neutral[100],

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { css } from "@emotion/react";
-import { textSans } from "@guardian/src-foundations/typography";
-import { text } from "@guardian/src-foundations/palette";
-import { space } from "@guardian/src-foundations";
-import { ChoiceCardGroup, ChoiceCard } from "../index";
+import React, { useState } from 'react';
+import { css } from '@emotion/react';
+import { textSans } from '@guardian/src-foundations/typography';
+import { text } from '@guardian/src-foundations/palette';
+import { space } from '@guardian/src-foundations';
+import { ChoiceCardGroup, ChoiceCard } from '../index';
 
 const medium = css`
 	width: 30em;
@@ -23,10 +23,10 @@ export const multiStateControlled = () => {
 	const selectedCards = Object.entries(state)
 		.filter((entry) => entry[1] === true)
 		.map((entry) => entry[0])
-		.join(", ");
+		.join(', ');
 	const messageText = selectedCards
 		? `${selectedCards} selected`
-		: "Nothing selected";
+		: 'Nothing selected';
 
 	return (
 		<div css={medium}>

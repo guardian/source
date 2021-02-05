@@ -4,7 +4,7 @@ import {
 	success as _success,
 	brand,
 	news,
-} from "../global";
+} from '../global';
 
 export const text = {
 	primary: neutral[7],

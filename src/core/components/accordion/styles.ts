@@ -1,10 +1,10 @@
-import { css } from "@emotion/react";
-import { space, remSpace, transitions } from "@guardian/src-foundations";
-import { visuallyHidden } from "@guardian/src-foundations/accessibility";
-import { headline, textSans } from "@guardian/src-foundations/typography";
-import { until, from } from "@guardian/src-foundations/mq";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
-import { accordionDefault } from "@guardian/src-foundations/themes";
+import { css } from '@emotion/react';
+import { space, remSpace, transitions } from '@guardian/src-foundations';
+import { visuallyHidden } from '@guardian/src-foundations/accessibility';
+import { headline, textSans } from '@guardian/src-foundations/typography';
+import { until, from } from '@guardian/src-foundations/mq';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { accordionDefault } from '@guardian/src-foundations/themes';
 
 export const accordion = ({ accordion } = accordionDefault) => css`
 	border-bottom: 1px solid ${accordion.borderPrimary};
@@ -44,7 +44,7 @@ export const noJsButton = ({ accordion } = accordionDefault) => css`
 `;
 
 export const labelText = css`
-	${headline.xxxsmall({ fontWeight: "bold" })};
+	${headline.xxxsmall({ fontWeight: 'bold' })};
 	margin-right: ${remSpace[4]};
 `;
 
@@ -85,24 +85,24 @@ export const collapsedBody = css`
 export const noJsInput = css`
 	${visuallyHidden};
 
-	&:focus + [data-target="label"] > [data-target="toggle"] {
+	&:focus + [data-target='label'] > [data-target='toggle'] {
 		${focusHalo};
 	}
 
-	&:not(:checked) ~ [data-target="body"] {
+	&:not(:checked) ~ [data-target='body'] {
 		${collapsedBodyStyles};
 		display: none;
 	}
 
-	&:checked ~ [data-target="body"] {
+	&:checked ~ [data-target='body'] {
 		${expandedBodyStyles};
 	}
 
-	&:not(:checked) + [data-target="label"] [data-target="toggle-label-hide"] {
+	&:not(:checked) + [data-target='label'] [data-target='toggle-label-hide'] {
 		display: none;
 	}
 
-	&:checked + [data-target="label"] [data-target="toggle-label-show"] {
+	&:checked + [data-target='label'] [data-target='toggle-label-show'] {
 		display: none;
 	}
 `;
@@ -114,7 +114,7 @@ export const toggle = css`
 `;
 
 export const toggleLabel = css`
-	${textSans.small({ fontWeight: "bold" })};
+	${textSans.small({ fontWeight: 'bold' })};
 
 	${until.tablet} {
 		${visuallyHidden}

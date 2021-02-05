@@ -11,10 +11,10 @@ $ yarn add @guardian/src-choice-card
 ## Use
 
 ```js
-import { ChoiceCardGroup, ChoiceCard } from "@guardian/src-choice-card"
+import { ChoiceCardGroup, ChoiceCard } from '@guardian/src-choice-card';
 
 const Form = () => {
-    const [selected, setSelected] = useState(null)
+    const [selected, setSelected] = useState(null);
     return (
         <form>
             <ChoiceCardGroup
@@ -27,20 +27,20 @@ const Form = () => {
                     value="no"
                     label="No"
                     supporting="I do not accept the terms"
-                    checked={selected === "no"}
-                    onChange={() => setSelected("no")}
+                    checked={selected === 'no'}
+                    onChange={() => setSelected('no')}
                 />
                 <ChoiceCard
                     value="yes"
                     label="Yes"
                     supporting="I accept the terms"
-                    checked={selected === "yes"}
-                    onChange={() => setSelected("yes")}
+                    checked={selected === 'yes'}
+                    onChange={() => setSelected('yes')}
                 />,
             </ChoiceCardGroup>
         </form>
-    )
-}
+    );
+};
 ```
 
 ## `ChoiceCardGroup` Props

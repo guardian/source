@@ -7,7 +7,9 @@
 ```sh
 $ yarn add @guardian/src-ed-lines @guardian/src-foundations
 ```
+
 or
+
 ```sh
 $ npm i @guardian/src-ed-lines @guardian/src-foundations
 ```
@@ -15,14 +17,14 @@ $ npm i @guardian/src-ed-lines @guardian/src-foundations
 ## Use
 
 ```js
-import { Lines } from "@guardian/src-ed-lines"
+import { Lines } from '@guardian/src-ed-lines';
 
 const Section = () => (
     <>
         <Lines count={8} />
         <Lines effect="squiggly" />
     </>
-)
+);
 ```
 
 ## `Lines` Props

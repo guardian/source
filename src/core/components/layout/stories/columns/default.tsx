@@ -1,7 +1,7 @@
-import React from "react";
-import { Columns, Column } from "../../index";
-import { sport } from "@guardian/src-foundations/palette";
-import { css } from "@emotion/react";
+import React from 'react';
+import { Columns, Column } from '../../index';
+import { sport } from '@guardian/src-foundations/palette';
+import { css } from '@emotion/react';
 
 const contents = css`
 	text-align: center;
@@ -26,7 +26,7 @@ export const columns = () => (
 );
 
 columns.story = {
-	name: "default",
+	name: 'default',
 };
 
 export const longText = () => (
@@ -51,12 +51,12 @@ export const longText = () => (
 				scelerisque lacus. Vestibulum ante ipsum primis in faucibus orci
 				luctus et ultrices posuere cubilia curae; Maecenas sodales
 				lacinia porta. Suspendisse consequat egestas dui, non tempus
-				diam laoreet vitae.{" "}
+				diam laoreet vitae.{' '}
 			</div>
 		</Column>
 		<Column>
 			<div css={contents}>
-				{" "}
+				{' '}
 				Pellentesque id ornare turpis. Aliquam laoreet aliquet pharetra.
 				Donec nec erat ac libero interdum sollicitudin. Nullam imperdiet
 				ut dolor non cursus. Integer et ante fringilla, luctus magna
@@ -67,7 +67,7 @@ export const longText = () => (
 				neque accumsan. Duis fringilla elit feugiat justo maximus, id
 				volutpat lacus congue. Fusce ornare imperdiet cursus. Sed in
 				turpis est. Nam id ultrices leo. Nullam bibendum quis neque sit
-				amet lacinia. Aenean ac arcu enim.{" "}
+				amet lacinia. Aenean ac arcu enim.{' '}
 			</div>
 		</Column>
 		<Column>
@@ -82,12 +82,12 @@ export const longText = () => (
 				scelerisque et. Donec convallis odio orci, efficitur maximus
 				metus rutrum in. Curabitur laoreet dui sed mi tempor tincidunt.
 				Nunc finibus ligula at arcu aliquet, maximus commodo lectus
-				dignissim.{" "}
+				dignissim.{' '}
 			</div>
 		</Column>
 	</Columns>
 );
 
 longText.story = {
-	name: "with long text",
+	name: 'with long text',
 };

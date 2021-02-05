@@ -1,7 +1,7 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers";
-import { SvgGuardianLogo } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { storybookBackgrounds, ThemeName } from '@guardian/src-helpers';
+import { SvgGuardianLogo } from '../index';
 
 const iconWhite = css`
 	color: white;
@@ -30,7 +30,7 @@ const Logo = ({
 }: {
 	theme?: ThemeName;
 	children: JSX.Element | JSX.Element[];
-}) => <div css={[logo, theme === "brand" ? iconWhite : ""]}>{children}</div>;
+}) => <div css={[logo, theme === 'brand' ? iconWhite : '']}>{children}</div>;
 
 export const logoDefaultBackground = () => (
 	<Logo>
@@ -39,7 +39,7 @@ export const logoDefaultBackground = () => (
 );
 
 logoDefaultBackground.story = {
-	name: "guardian logo default",
+	name: 'guardian logo default',
 };
 
 export const logoBrandBackground = () => (
@@ -49,10 +49,10 @@ export const logoBrandBackground = () => (
 );
 
 logoBrandBackground.story = {
-	name: "guardian logo default brand",
+	name: 'guardian logo default brand',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

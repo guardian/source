@@ -1,8 +1,8 @@
-import { Hide } from "./index";
+import { Hide } from './index';
 
 export default {
-	title: "Hide",
+	title: 'Hide',
 	component: Hide,
 };
 
-export * from "./stories/hide/default";
+export * from './stories/hide/default';

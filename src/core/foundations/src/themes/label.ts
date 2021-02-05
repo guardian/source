@@ -1,4 +1,4 @@
-import { text, brandText } from "@guardian/src-foundations/palette";
+import { text, brandText } from '@guardian/src-foundations/palette';
 
 export const labelDefault = {
 	label: {

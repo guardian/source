@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Columns, Column } from "../../index";
-import { sport } from "@guardian/src-foundations/palette";
-import { css } from "@emotion/react";
+import React from 'react';
+import { Container, Columns, Column } from '../../index';
+import { sport } from '@guardian/src-foundations/palette';
+import { css } from '@emotion/react';
 
 const contents = css`
 	text-align: center;
@@ -28,5 +28,5 @@ export const containerDefault = () => (
 );
 
 containerDefault.story = {
-	name: "with container",
+	name: 'with container',
 };
