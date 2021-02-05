@@ -48,3 +48,9 @@ _Note: the up or down chevron icon always appears._
 
 A line of text to summarise the information that lies within the expanded state.
 Appears in the collapsed state, as well as prominently at the top of the expanded state.
+
+### `onClick`
+
+**`(event: React.MouseEvent<HTMLButtonElement>) => void`** _= () => undefined_
+
+A callback function called when the component is opened or closed. Receives the click event as an argument.
