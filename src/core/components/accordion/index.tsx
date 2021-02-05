@@ -33,10 +33,14 @@ interface AccordionProps extends Props {
 const Accordion = ({
 	hideToggleLabel = false,
 	children,
+	cssOverrides,
 	...props
 }: AccordionProps) => {
 	return (
-		<div css={(theme) => accordion(theme.accordion && theme)} {...props}>
+		<div
+			css={(theme) => [accordion(theme.accordion && theme), cssOverrides]}
+			{...props}
+		>
 			{React.Children.map(children, (child) => {
 				return React.cloneElement(child, { hideToggleLabel });
 			})}
@@ -55,10 +59,18 @@ const NoJsRow = ({
 	label,
 	hideToggleLabel = false,
 	children,
+	onClick,
+	cssOverrides,
 	...props
 }: AccordionRowProps) => {
 	return (
-		<div css={(theme) => accordionRow(theme.accordion && theme)} {...props}>
+		<div
+			css={(theme) => [
+				accordionRow(theme.accordion && theme),
+				cssOverrides,
+			]}
+			{...props}
+		>
 			<label>
 				<input type="checkbox" css={noJsInput} role="button" />
 				<div
@@ -117,7 +129,8 @@ const AccordionRow = ({
 	label,
 	hideToggleLabel = false,
 	children,
-	onClick = () => {},
+	cssOverrides,
+	onClick = () => undefined,
 }: AccordionRowProps) => {
 	const [expanded, setExpanded] = useState(false);
 	const collapse = () => setExpanded(false);
@@ -135,8 +148,14 @@ const AccordionRow = ({
 
 	if (isBrowser) {
 		return (
-			<div css={(theme) => accordionRow(theme.accordion && theme)}>
+			<div
+				css={(theme) => [
+					accordionRow(theme.accordion && theme),
+					cssOverrides,
+				]}
+			>
 				<button
+					type="button"
 					aria-expanded={expanded}
 					onClick={handleClick}
 					css={(theme) => [
