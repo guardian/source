@@ -13,7 +13,7 @@ $ yarn add @guardian/src-brand
 Our brand SVGs are exported as React components.
 
 ```tsx
-import { SvgGuardianLogo } from "@guardian/src-brand"
+import { SvgGuardianLogo } from '@guardian/src-brand';
 
-React.render(<SvgGuardianLogo />, rootElement)
+React.render(<SvgGuardianLogo />, rootElement);
 ```

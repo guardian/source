@@ -1,17 +1,17 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { ThemeProvider } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { ButtonLink, linkDefault } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { ButtonLink, linkDefault } from '../index';
 
 /* eslint-disable react/jsx-key */
 const buttonLinks = [
-	<ButtonLink onClick={() => console.log("Primary clicked")}>
+	<ButtonLink onClick={() => console.log('Primary clicked')}>
 		Primary
 	</ButtonLink>,
 	<ButtonLink
 		priority="secondary"
-		onClick={() => console.log("Secondary clicked")}
+		onClick={() => console.log('Secondary clicked')}
 	>
 		Secondary
 	</ButtonLink>,
@@ -37,4 +37,4 @@ export const buttonLinkLight = () => (
 		</div>
 	</ThemeProvider>
 );
-buttonLinkLight.story = { name: "button links light" };
+buttonLinkLight.story = { name: 'button links light' };

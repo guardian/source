@@ -11,7 +11,7 @@ $ yarn add @guardian/src-accordion @guardian/src-foundations
 ## Use
 
 ```js
-import { Accordion, AccordionRow } from "@guardian/src-accordion"
+import { Accordion, AccordionRow } from '@guardian/src-accordion';
 
 const Page = () => (
     <Accordion hideToggleLabel={true}>
@@ -25,7 +25,7 @@ const Page = () => (
             your subscription letter.
         </AccordionRow>
     </Accordion>
-)
+);
 ```
 
 ## Accordion Props

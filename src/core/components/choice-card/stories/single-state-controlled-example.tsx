@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { css } from "@emotion/react";
-import { textSans } from "@guardian/src-foundations/typography";
-import { text } from "@guardian/src-foundations/palette";
-import { space } from "@guardian/src-foundations";
-import { ChoiceCardGroup, ChoiceCard } from "../index";
+import React, { useState } from 'react';
+import { css } from '@emotion/react';
+import { textSans } from '@guardian/src-foundations/typography';
+import { text } from '@guardian/src-foundations/palette';
+import { space } from '@guardian/src-foundations';
+import { ChoiceCardGroup, ChoiceCard } from '../index';
 
 const medium = css`
 	width: 30em;
@@ -19,7 +19,7 @@ const message = css`
 `;
 
 export const singleStateControlled = () => {
-	const [selected, setSelected] = useState<string | null>("green");
+	const [selected, setSelected] = useState<string | null>('green');
 
 	return (
 		<div css={medium}>
@@ -29,22 +29,22 @@ export const singleStateControlled = () => {
 						value="red"
 						label="Red"
 						id="default-red"
-						checked={selected === "red"}
-						onChange={() => setSelected("red")}
+						checked={selected === 'red'}
+						onChange={() => setSelected('red')}
 					/>
 					<ChoiceCard
 						value="green"
 						label="Green"
 						id="default-green"
-						checked={selected === "green"}
-						onChange={() => setSelected("green")}
+						checked={selected === 'green'}
+						onChange={() => setSelected('green')}
 					/>
 					<ChoiceCard
 						value="blue"
 						label="Blue"
 						id="default-blue"
-						checked={selected === "blue"}
-						onChange={() => setSelected("blue")}
+						checked={selected === 'blue'}
+						onChange={() => setSelected('blue')}
 					/>
 				</ChoiceCardGroup>
 			</div>

@@ -1,9 +1,9 @@
-import { css } from "@emotion/react";
-import { space, transitions } from "@guardian/src-foundations";
-import { height, width } from "@guardian/src-foundations/size";
-import { buttonDefault, ButtonTheme } from "@guardian/src-foundations/themes";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { css } from '@emotion/react';
+import { space, transitions } from '@guardian/src-foundations';
+import { height, width } from '@guardian/src-foundations/size';
+import { buttonDefault, ButtonTheme } from '@guardian/src-foundations/themes';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
 
 export const button = css`
 	display: inline-flex;
@@ -82,7 +82,7 @@ const fontSpacingVerticalOffset = css`
 `;
 
 export const defaultSize = css`
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: 'bold' })};
 	height: ${height.ctaMedium}px;
 	min-height: ${height.ctaMedium}px;
 	padding: 0 ${space[5]}px;
@@ -91,7 +91,7 @@ export const defaultSize = css`
 `;
 
 export const smallSize = css`
-	${textSans.medium({ fontWeight: "bold" })};
+	${textSans.medium({ fontWeight: 'bold' })};
 	height: ${height.ctaSmall}px;
 	min-height: ${height.ctaSmall}px;
 	padding: 0 ${space[4]}px;
@@ -100,7 +100,7 @@ export const smallSize = css`
 `;
 
 export const xsmallSize = css`
-	${textSans.small({ fontWeight: "bold" })};
+	${textSans.small({ fontWeight: 'bold' })};
 	height: ${height.ctaXsmall}px;
 	min-height: ${height.ctaXsmall}px;
 	padding: 0 ${space[3]}px;

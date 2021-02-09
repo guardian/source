@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { SvgArrowRightStraight } from "@guardian/src-icons";
-import { space } from "@guardian/src-foundations";
-import { LinkButton } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { SvgArrowRightStraight } from '@guardian/src-icons';
+import { space } from '@guardian/src-foundations';
+import { LinkButton } from '../index';
 
 /* eslint-disable react/jsx-key */
 const priorityLinkButtons = [
@@ -78,4 +78,4 @@ export const priorityLinkButtonsLight = () => (
 		</div>
 	</>
 );
-priorityLinkButtonsLight.story = { name: "priority link buttons" };
+priorityLinkButtonsLight.story = { name: 'priority link buttons' };

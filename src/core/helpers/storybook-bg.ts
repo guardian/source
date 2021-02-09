@@ -2,10 +2,10 @@ import {
 	background,
 	brandBackground,
 	brandAltBackground,
-} from "@guardian/src-foundations/palette";
-import { ThemeName } from "./types";
+} from '@guardian/src-foundations/palette';
+import { ThemeName } from './types';
 
-type Background = ThemeName | "inverse";
+type Background = ThemeName | 'inverse';
 
 const storybookBackgrounds: {
 	[key in Background]: {
@@ -13,11 +13,11 @@ const storybookBackgrounds: {
 		value: string;
 	};
 } = {
-	inverse: { name: "inverse", value: background.inverse },
-	default: { name: "default", value: background.primary },
-	brand: { name: "brand", value: brandBackground.primary },
+	inverse: { name: 'inverse', value: background.inverse },
+	default: { name: 'default', value: background.primary },
+	brand: { name: 'brand', value: brandBackground.primary },
 	brandAlt: {
-		name: "brandAlt",
+		name: 'brandAlt',
 		value: brandAltBackground.primary,
 	},
 };

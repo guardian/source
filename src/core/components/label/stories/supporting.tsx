@@ -1,7 +1,7 @@
-import React from "react";
-import { Label, labelBrand } from "../index";
-import { ThemeProvider } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
+import React from 'react';
+import { Label, labelBrand } from '../index';
+import { ThemeProvider } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
 
 export const withSupportingTextLight = () => (
 	<Label text="Email" supporting="alex@example.com" />
@@ -21,7 +21,7 @@ withSupportingTextBlue.story = {
 	name: `with supporting text blue`,
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

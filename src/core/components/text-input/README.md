@@ -11,10 +11,10 @@ $ yarn add @guardian/src-text-input
 ## Use
 
 ```js
-import { TextInput } from "@guardian/src-text-input"
+import { TextInput } from '@guardian/src-text-input';
 
 const Form = () => {
-    const [state, setState] = useState("")
+    const [state, setState] = useState('');
 
     return (
         <form>
@@ -27,8 +27,8 @@ const Form = () => {
                 width={30}
             />
         </form>
-    )
-}
+    );
+};
 ```
 
 ## Props

@@ -1,17 +1,17 @@
-import { css } from "@emotion/react";
-import { space, transitions } from "@guardian/src-foundations";
-import { height, width } from "@guardian/src-foundations/size";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
-import { radioDefault } from "@guardian/src-foundations/themes";
-import { resets } from "@guardian/src-foundations/utils";
+import { css } from '@emotion/react';
+import { space, transitions } from '@guardian/src-foundations';
+import { height, width } from '@guardian/src-foundations/size';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { radioDefault } from '@guardian/src-foundations/themes';
+import { resets } from '@guardian/src-foundations/utils';
 
 export const fieldset = ({ radio } = radioDefault) => css`
 	${resets.fieldset};
 	display: flex;
 	justify-content: flex-start;
 
-	&[aria-invalid="true"] input {
+	&[aria-invalid='true'] input {
 		border: 4px solid ${radio.borderError};
 	}
 `;
@@ -72,7 +72,7 @@ export const radio = ({ radio } = radioDefault) => css`
 		&:after {
 			background: currentColor;
 			position: absolute;
-			content: "";
+			content: '';
 			top: 0;
 			right: 0;
 			bottom: 0;
@@ -92,17 +92,17 @@ export const radio = ({ radio } = radioDefault) => css`
 `;
 
 export const labelText = ({ radio } = radioDefault) => css`
-	${textSans.medium({ lineHeight: "regular" })};
+	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${radio.textLabel};
 	width: 100%;
 `;
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ fontWeight: "bold", lineHeight: "regular" })};
+	${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
 `;
 
 export const supportingText = ({ radio } = radioDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
+	${textSans.small({ lineHeight: 'regular' })};
 	color: ${radio.textLabelSupporting};
 `;
 

@@ -1,9 +1,9 @@
 {
-	"compilerOptions": {
-		"outDir": ".",
-		"declaration": true,
-		"emitDeclarationOnly": true,
-		"composite": true
-	},
-	"exclude": ["node_modules"]
+  "compilerOptions": {
+    "outDir": ".",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "composite": true
+  },
+  "exclude": ["node_modules"]
 }

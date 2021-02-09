@@ -11,10 +11,10 @@ $ yarn add @guardian/src-radio
 ## Use
 
 ```js
-import { RadioGroup, Radio } from "@guardian/src-radio"
+import { RadioGroup, Radio } from '@guardian/src-radio';
 
 const Form = () => {
-    const [selected, setSelected] = useState(null)
+    const [selected, setSelected] = useState(null);
 
     return (
         <form>
@@ -28,20 +28,20 @@ const Form = () => {
                     value="no"
                     label="No"
                     supporting="I do not accept the terms"
-                    checked={selected === "no"}
-                    onChange={setSelected("no")}
+                    checked={selected === 'no'}
+                    onChange={setSelected('no')}
                 />
                 <Radio
                     value="yes"
                     label="Yes"
                     supporting="I accept the terms"
-                    checked={selected === "yes"}
-                    onChange={setSelected("yes")}
+                    checked={selected === 'yes'}
+                    onChange={setSelected('yes')}
                 />,
             </RadioGroup>
         </form>
-    )
-}
+    );
+};
 ```
 
 ## `RadioGroup` Props

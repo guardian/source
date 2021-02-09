@@ -1,7 +1,7 @@
-import React from "react";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { ThemeProvider } from '@emotion/react';
 
-import { Checkbox, checkboxDefault } from "../../index";
+import { Checkbox, checkboxDefault } from '../../index';
 
 const unlabelled = () => (
 	<ThemeProvider theme={checkboxDefault}>
@@ -14,7 +14,7 @@ const unlabelled = () => (
 );
 
 unlabelled.story = {
-	name: "unlabelled",
+	name: 'unlabelled',
 };
 
 export { unlabelled };

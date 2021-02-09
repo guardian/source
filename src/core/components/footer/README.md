@@ -11,9 +11,9 @@ $ yarn add @guardian/src-footer
 ## Use
 
 ```js
-import { Footer } from "@guardian/src-footer"
+import { Footer } from '@guardian/src-footer';
 
-const Wrapper = () => <Footer showBackToTop={true} />
+const Wrapper = () => <Footer showBackToTop={true} />;
 ```
 
 ## `Footer` Props

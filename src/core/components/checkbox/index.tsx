@@ -1,12 +1,12 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { ReactNode, InputHTMLAttributes } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { InlineError } from "@guardian/src-user-feedback";
+import React, { ReactNode, InputHTMLAttributes } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { InlineError } from '@guardian/src-user-feedback';
 import {
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility";
-import { Legend } from "@guardian/src-label";
+} from '@guardian/src-foundations/accessibility';
+import { Legend } from '@guardian/src-label';
 import {
 	fieldset,
 	label,
@@ -19,13 +19,13 @@ import {
 	tickWithLabelText,
 	tickWithSupportingText,
 	errorCheckbox,
-} from "./styles";
-import { Props } from "@guardian/src-helpers";
+} from './styles';
+import { Props } from '@guardian/src-helpers';
 
 export {
 	checkboxDefault,
 	checkboxBrand,
-} from "@guardian/src-foundations/themes";
+} from '@guardian/src-foundations/themes';
 
 interface CheckboxGroupProps extends Props {
 	id?: string;
@@ -53,14 +53,14 @@ const CheckboxGroup = ({
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 	) : (
-		""
+		''
 	);
 
 	const message =
-		typeof error === "string" ? (
+		typeof error === 'string' ? (
 			<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 		) : (
-			""
+			''
 		);
 
 	return (
@@ -74,13 +74,13 @@ const CheckboxGroup = ({
 						error
 							? {
 									error: true,
-									"aria-describedby": descriptionId(groupId),
+									'aria-describedby': descriptionId(groupId),
 							  }
 							: {},
 						{
 							name,
-						}
-					)
+						},
+					),
 				);
 			})}
 		</fieldset>
@@ -98,7 +98,7 @@ const LabelText = ({
 		<div
 			css={(theme) => [
 				labelText(theme.checkbox && theme),
-				hasSupportingText ? labelTextWithSupportingText : "",
+				hasSupportingText ? labelTextWithSupportingText : '',
 			]}
 		>
 			{children}
@@ -136,10 +136,10 @@ const Checkbox = ({
 	cssOverrides,
 	...props
 }: CheckboxProps) => {
-	const ariaChecked = (): boolean | "mixed" => {
+	const ariaChecked = (): boolean | 'mixed' => {
 		// Note: the indeterminate prop takes precedence over the checked prop
 		if (indeterminate) {
-			return "mixed";
+			return 'mixed';
 		}
 
 		if (checked != null) {
@@ -167,7 +167,7 @@ const Checkbox = ({
 				type="checkbox"
 				css={(theme) => [
 					checkbox(theme.checkbox && theme),
-					error ? errorCheckbox(theme.checkbox && theme) : "",
+					error ? errorCheckbox(theme.checkbox && theme) : '',
 					cssOverrides,
 				]}
 				value={value}
@@ -183,8 +183,8 @@ const Checkbox = ({
 			<span
 				css={(theme) => [
 					tick(theme.checkbox && theme),
-					labelContent || supporting ? tickWithLabelText : "",
-					supporting ? tickWithSupportingText : "",
+					labelContent || supporting ? tickWithLabelText : '',
+					supporting ? tickWithSupportingText : '',
 				]}
 			/>
 		</>
@@ -194,7 +194,7 @@ const Checkbox = ({
 		<label
 			css={(theme) => [
 				label(theme.checkbox && theme),
-				supporting ? labelWithSupportingText : "",
+				supporting ? labelWithSupportingText : '',
 			]}
 		>
 			{box}

@@ -1,16 +1,16 @@
-import { breakpoints } from "../index";
+import { breakpoints } from '../index';
 
 // Duplicated from breakpoints.ts because of some issue importing directly
 // babel * typescript * rollup = ¯\_(ツ)_/¯
 type Breakpoint =
-	| "mobile"
-	| "mobileMedium"
-	| "mobileLandscape"
-	| "phablet"
-	| "tablet"
-	| "desktop"
-	| "leftCol"
-	| "wide";
+	| 'mobile'
+	| 'mobileMedium'
+	| 'mobileLandscape'
+	| 'phablet'
+	| 'tablet'
+	| 'desktop'
+	| 'leftCol'
+	| 'wide';
 
 type BreakpointMap = {
 	[key in Breakpoint]: string;
@@ -54,11 +54,11 @@ const between = {
 		and: {
 			mobileMedium: minWidthMaxWidth(
 				breakpoints.mobile,
-				breakpoints.mobileMedium
+				breakpoints.mobileMedium,
 			),
 			mobileLandscape: minWidthMaxWidth(
 				breakpoints.mobile,
-				breakpoints.mobileLandscape
+				breakpoints.mobileLandscape,
 			),
 			phablet: minWidthMaxWidth(breakpoints.mobile, breakpoints.phablet),
 			tablet: minWidthMaxWidth(breakpoints.mobile, breakpoints.tablet),
@@ -71,23 +71,23 @@ const between = {
 		and: {
 			mobileLandscape: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.mobileLandscape
+				breakpoints.mobileLandscape,
 			),
 			phablet: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.phablet
+				breakpoints.phablet,
 			),
 			tablet: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.tablet
+				breakpoints.tablet,
 			),
 			desktop: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.desktop
+				breakpoints.desktop,
 			),
 			leftCol: minWidthMaxWidth(
 				breakpoints.mobileMedium,
-				breakpoints.leftCol
+				breakpoints.leftCol,
 			),
 			wide: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.wide),
 		},
@@ -96,23 +96,23 @@ const between = {
 		and: {
 			phablet: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.phablet
+				breakpoints.phablet,
 			),
 			tablet: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.tablet
+				breakpoints.tablet,
 			),
 			desktop: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.desktop
+				breakpoints.desktop,
 			),
 			leftCol: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.leftCol
+				breakpoints.leftCol,
 			),
 			wide: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
-				breakpoints.wide
+				breakpoints.wide,
 			),
 		},
 	},

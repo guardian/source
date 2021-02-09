@@ -4,11 +4,11 @@ import React, {
 	ReactNode,
 	ButtonHTMLAttributes,
 	AnchorHTMLAttributes,
-} from "react";
-import { css } from "@emotion/react";
-import { SerializedStyles } from "@emotion/react";
-import { ButtonTheme } from "@guardian/src-foundations/themes";
-import { visuallyHidden } from "@guardian/src-foundations/accessibility";
+} from 'react';
+import { css } from '@emotion/react';
+import { SerializedStyles } from '@emotion/react';
+import { ButtonTheme } from '@guardian/src-foundations/themes';
+import { visuallyHidden } from '@guardian/src-foundations/accessibility';
 import {
 	button,
 	primary,
@@ -27,23 +27,23 @@ import {
 	iconOnlySmall,
 	iconOnlyXsmall,
 	iconNudgeAnimation,
-} from "./styles";
-import { Props } from "@guardian/src-helpers";
+} from './styles';
+import { Props } from '@guardian/src-helpers';
 
 export {
 	buttonDefault,
 	buttonBrand,
 	buttonBrandAlt,
-} from "@guardian/src-foundations/themes";
+} from '@guardian/src-foundations/themes';
 export {
 	buttonReaderRevenue,
 	buttonReaderRevenueBrand,
 	buttonReaderRevenueBrandAlt,
-} from "./themes";
+} from './themes';
 
-export type Priority = "primary" | "secondary" | "tertiary" | "subdued";
-type IconSide = "left" | "right";
-type Size = "default" | "small" | "xsmall";
+export type Priority = 'primary' | 'secondary' | 'tertiary' | 'subdued';
+type IconSide = 'left' | 'right';
+type Size = 'default' | 'small' | 'xsmall';
 
 interface SharedButtonProps extends Props {
 	priority: Priority;
@@ -111,7 +111,7 @@ const buttonContents = ({
 		if (!hideLabel) {
 			contents.push(<div key="space" className="src-button-space" />);
 		}
-		contents.push(React.cloneElement(iconSvg, { key: "svg" }));
+		contents.push(React.cloneElement(iconSvg, { key: 'svg' }));
 	}
 	if (hideLabel) {
 		return (
@@ -145,10 +145,10 @@ const buttonStyles = ({
 		button,
 		sizes[size],
 		priorities[priority](theme.button && theme),
-		iconSvg ? iconSizes[size] : "",
-		iconSvg && !hideLabel ? iconSides[iconSide] : "",
-		nudgeIcon ? iconNudgeAnimation : "",
-		hideLabel ? iconOnlySizes[size] : "",
+		iconSvg ? iconSizes[size] : '',
+		iconSvg && !hideLabel ? iconSides[iconSide] : '',
+		nudgeIcon ? iconNudgeAnimation : '',
+		hideLabel ? iconOnlySizes[size] : '',
 		cssOverrides,
 	];
 
@@ -240,17 +240,17 @@ const LinkButton = ({
 );
 
 const defaultButtonProps = {
-	type: "button",
-	priority: "primary",
-	size: "default",
-	iconSide: "left",
+	type: 'button',
+	priority: 'primary',
+	size: 'default',
+	iconSide: 'left',
 	hideLabel: false,
 };
 
 const defaultLinkButtonProps = {
-	priority: "primary",
-	size: "default",
-	iconSide: "left",
+	priority: 'primary',
+	size: 'default',
+	iconSide: 'left',
 	hideLabel: false,
 };
 

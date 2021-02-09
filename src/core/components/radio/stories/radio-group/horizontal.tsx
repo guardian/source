@@ -1,5 +1,5 @@
-import React from "react";
-import { RadioGroup, Radio } from "../../index";
+import React from 'react';
+import { RadioGroup, Radio } from '../../index';
 
 const horizontal = () => (
 	<RadioGroup orientation="horizontal" name="yes-or-no">
@@ -8,7 +8,7 @@ const horizontal = () => (
 	</RadioGroup>
 );
 horizontal.story = {
-	name: "horizontal light",
+	name: 'horizontal light',
 };
 
 export { horizontal };

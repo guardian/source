@@ -13,7 +13,7 @@ $ yarn add @guardian/src-icons
 Our icon SVGs are exported as React components.
 
 ```tsx
-import { SvgCheckmark } from "@guardian/src-icons"
+import { SvgCheckmark } from '@guardian/src-icons';
 
-React.render(<SvgCheckmark />, rootElement)
+React.render(<SvgCheckmark />, rootElement);
 ```

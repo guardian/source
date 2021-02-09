@@ -1,8 +1,8 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { SelectHTMLAttributes, OptionHTMLAttributes } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { InlineError, InlineSuccess } from "@guardian/src-user-feedback";
-import { Label } from "@guardian/src-label";
+import React, { SelectHTMLAttributes, OptionHTMLAttributes } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
+import { Label } from '@guardian/src-label';
 import {
 	select,
 	selectWrapper,
@@ -10,16 +10,16 @@ import {
 	successChevron,
 	errorInput,
 	successInput,
-} from "./styles";
-import { Props } from "@guardian/src-helpers";
-import { SvgChevronDownSingle } from "@guardian/src-icons";
+} from './styles';
+import { Props } from '@guardian/src-helpers';
+import { SvgChevronDownSingle } from '@guardian/src-icons';
 
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility";
-export { selectDefault } from "@guardian/src-foundations/themes";
+} from '@guardian/src-foundations/accessibility';
+export { selectDefault } from '@guardian/src-foundations/themes';
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 	id?: string;
@@ -64,25 +64,25 @@ const Select = ({
 			<div
 				css={(theme) => [
 					selectWrapper(theme.select && theme),
-					error ? errorChevron(theme.select && theme) : "",
+					error ? errorChevron(theme.select && theme) : '',
 					!error && success
 						? successChevron(theme.select && theme)
-						: "",
+						: '',
 				]}
 			>
 				<select
 					css={(theme) => [
 						select(theme.select && theme),
-						error ? errorInput(theme.select && theme) : "",
+						error ? errorInput(theme.select && theme) : '',
 						!error && success
 							? successInput(theme.select && theme)
-							: "",
+							: '',
 						cssOverrides,
 					]}
 					aria-required={!optional}
 					aria-invalid={!!error}
 					aria-describedby={
-						error || success ? descriptionId(selectId) : ""
+						error || success ? descriptionId(selectId) : ''
 					}
 					id={selectId}
 					{...props}

@@ -1,5 +1,5 @@
-import { line } from "@guardian/src-foundations/palette";
-import { LineCount } from ".";
+import { line } from '@guardian/src-foundations/palette';
+import { LineCount } from '.';
 
 const dotRadius = 1;
 const gridSize = 3;
@@ -18,7 +18,7 @@ const dottedSvg = (count: LineCount): string => {
 			`<circle fill="${line.primary}" ` +
 				`cx="${gridSize / 2}" ` +
 				`cy="${gridSize * (index - 1 / 2)}" ` +
-				`r="${dotRadius}" />`
+				`r="${dotRadius}" />`,
 		);
 	}
 

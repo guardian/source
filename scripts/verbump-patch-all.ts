@@ -1,16 +1,16 @@
-import execa from "execa";
-import { paths, getComponentPaths } from "./paths";
+import execa from 'execa';
+import { paths, getComponentPaths } from './paths';
 
 const verbump = (dir: string) => {
-	return execa("yarn", ["--cwd", `${dir}`, "run", "verbump:patch"], {
-		stdio: "inherit",
+	return execa('yarn', ['--cwd', `${dir}`, 'run', 'verbump:patch'], {
+		stdio: 'inherit',
 	});
 };
 
 const { root, foundations, icons, brand, helpers, editorial } = paths;
 
 const packages = getComponentPaths().then((paths) =>
-	paths.concat([foundations, icons, brand, root, helpers, editorial])
+	paths.concat([foundations, icons, brand, root, helpers, editorial]),
 );
 
 packages.then((ps) => {
@@ -18,7 +18,7 @@ packages.then((ps) => {
 		if (!dir) return;
 
 		verbump(dir).catch((err) =>
-			console.log("Error bumping packages:", err)
+			console.log('Error bumping packages:', err),
 		);
 	});
 });

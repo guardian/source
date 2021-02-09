@@ -1,4 +1,4 @@
-import { background, text } from "../palette";
+import { background, text } from '../palette';
 
 ////////////////////////////
 // Element specific resets
