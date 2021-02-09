@@ -67,7 +67,7 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.10.0",
     "@babel/preset-react": "^7.10.0",
-    "@babel/preset-typescript": "^7.9.0",
+    "@babel/preset-typescript": "^7.12.13",
     "@emotion/react": "^11.1.2",
     "@guardian/src-foundations": "^3.2.0-rc.0",
     "@guardian/src-helpers": "^3.2.0-rc.0",
