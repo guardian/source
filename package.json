@@ -29,7 +29,7 @@
     "tag:beta:all": "ts-node ./scripts/tag-beta-all",
     "test": "jest",
     "tsc": "tsc",
-    "validate": "yarn tsc && yarn lint && yarn test",
+    "validate": "yarn tsc && yarn lint && yarn test && yarn sort-package-json --check",
     "verbump:deps:all": "ts-node ./scripts/verbump-src-deps-all",
     "verbump:major": "yarn version --major --no-git-tag-version",
     "verbump:major:all": "ts-node ./scripts/verbump-major-all && yarn verbump:deps:all",
