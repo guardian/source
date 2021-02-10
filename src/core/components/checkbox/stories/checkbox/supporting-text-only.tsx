@@ -1,14 +1,14 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { ThemeProvider } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
+import React from 'react';
+import { css } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
 
 import {
 	CheckboxGroup,
 	Checkbox,
 	checkboxDefault,
 	checkboxBrand,
-} from "../../index";
+} from '../../index';
 
 /* eslint-disable react/jsx-key */
 const checkboxesWithSupportingTextOnly = [
@@ -25,7 +25,7 @@ const checkboxesWithSupportingTextOnly = [
 		value="events"
 		supporting={
 			<>
-				Learn from leading minds at our{" "}
+				Learn from leading minds at our{' '}
 				<strong>Guardian live events</strong>, including discussions and
 				debates, courses and training
 			</>
@@ -43,7 +43,7 @@ const supportingTextOnlyLight = () => (
 		<ThemeProvider theme={checkboxDefault}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingTextOnly.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index })
+					React.cloneElement(checkbox, { key: index }),
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>
@@ -51,7 +51,7 @@ const supportingTextOnlyLight = () => (
 );
 
 supportingTextOnlyLight.story = {
-	name: "supporting text only light",
+	name: 'supporting text only light',
 };
 
 const supportingTextOnlyBlue = () => (
@@ -59,7 +59,7 @@ const supportingTextOnlyBlue = () => (
 		<ThemeProvider theme={checkboxBrand}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingTextOnly.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index })
+					React.cloneElement(checkbox, { key: index }),
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>
@@ -67,10 +67,10 @@ const supportingTextOnlyBlue = () => (
 );
 
 supportingTextOnlyBlue.story = {
-	name: "supporting text only blue",
+	name: 'supporting text only blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

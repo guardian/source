@@ -1,5 +1,5 @@
-import { neutral, brand, brandAlt } from "@guardian/src-foundations/palette";
-import { ButtonTheme } from "@guardian/src-foundations/themes";
+import { neutral, brand, brandAlt } from '@guardian/src-foundations/palette';
+import { ButtonTheme } from '@guardian/src-foundations/themes';
 
 const text = {
 	readerRevenue: {
@@ -18,18 +18,18 @@ const text = {
 const background = {
 	readerRevenue: {
 		ctaPrimary: brandAlt[400],
-		ctaPrimaryHover: "#FFD213",
-		ctaTertiaryHover: "#E5E5E5",
+		ctaPrimaryHover: '#FFD213',
+		ctaTertiaryHover: '#E5E5E5',
 	},
 	readerRevenueBrand: {
 		ctaPrimary: brandAlt[400],
-		ctaPrimaryHover: "#FFD213",
+		ctaPrimaryHover: '#FFD213',
 		ctaTertiaryHover: brand[300],
 	},
 	readerRevenueBrandAlt: {
 		ctaPrimary: neutral[7],
-		ctaPrimaryHover: "#454545",
-		ctaTertiaryHover: "#FFD213",
+		ctaPrimaryHover: '#454545',
+		ctaTertiaryHover: '#FFD213',
 	},
 };
 const border = {

@@ -1,12 +1,12 @@
-import { css } from "@emotion/react";
-import { userFeedbackDefault } from "@guardian/src-foundations/themes";
-import { textSans } from "@guardian/src-foundations/typography";
-import { remWidth, remHeight } from "@guardian/src-foundations/size";
+import { css } from '@emotion/react';
+import { userFeedbackDefault } from '@guardian/src-foundations/themes';
+import { textSans } from '@guardian/src-foundations/typography';
+import { remWidth, remHeight } from '@guardian/src-foundations/size';
 
 const inlineMessage = css`
 	display: flex;
 	align-items: flex-start;
-	${textSans.medium({ lineHeight: "regular" })};
+	${textSans.medium({ lineHeight: 'regular' })};
 
 	svg {
 		fill: currentColor;

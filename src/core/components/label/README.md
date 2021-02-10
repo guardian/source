@@ -11,7 +11,7 @@ $ yarn add @guardian/src-label
 ## Use
 
 ```tsx
-import { Label, Legend } from "@guardian/src-label"
+import { Label, Legend } from '@guardian/src-label';
 
 const Form = () => (
     <form>
@@ -19,7 +19,7 @@ const Form = () => (
             <input type="email" />
         </Label>
     </form>
-)
+);
 
 const Fieldset = () => (
     <fieldset>
@@ -33,7 +33,7 @@ const Fieldset = () => (
             Guardian Today: UK
         </label>
     </fieldset>
-)
+);
 ```
 
 ## Label and Legend Props

@@ -2,7 +2,7 @@ import {
 	text,
 	brandText,
 	brandAltText,
-} from "@guardian/src-foundations/palette";
+} from '@guardian/src-foundations/palette';
 
 export type LinkTheme = {
 	textPrimary: string;

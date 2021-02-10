@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { SvgCross } from "@guardian/src-icons";
-import { space } from "@guardian/src-foundations";
-import { Button } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { SvgCross } from '@guardian/src-icons';
+import { space } from '@guardian/src-foundations';
+import { Button } from '../index';
 
 /* eslint-disable react/jsx-key */
 const iconButtons = [
@@ -36,5 +36,5 @@ export const iconOnlyButtons = () => (
 	</div>
 );
 iconOnlyButtons.story = {
-	name: "icon only buttons",
+	name: 'icon only buttons',
 };

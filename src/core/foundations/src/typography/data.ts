@@ -1,5 +1,5 @@
-import { fontSizes, fonts, lineHeights, fontWeights } from "../theme";
-import { pxToRem } from "../utils";
+import { fontSizes, fonts, lineHeights, fontWeights } from '../theme';
+import { pxToRem } from '../utils';
 import {
 	Category,
 	LineHeight,
@@ -10,7 +10,7 @@ import {
 	BodySizes,
 	TextSansSizes,
 	TypographySizes,
-} from "./types";
+} from './types';
 
 const titlepieceSizes: TitlepieceSizes = {
 	small: fontSizes[8], //42px

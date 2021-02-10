@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { RadioGroup, Radio, radioDefault, radioBrand } from "../../index";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { css } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { RadioGroup, Radio, radioDefault, radioBrand } from '../../index';
+import { ThemeProvider } from '@emotion/react';
 
 /* eslint-disable react/jsx-key */
 const radiosWithSupportingTextOnly = [
@@ -36,7 +36,7 @@ const supportingTextOnlyLight = () => (
 		<div css={narrow}>
 			<RadioGroup name="payment-options">
 				{radiosWithSupportingTextOnly.map((radio, index) =>
-					React.cloneElement(radio, { key: index })
+					React.cloneElement(radio, { key: index }),
 				)}
 			</RadioGroup>
 		</div>
@@ -46,7 +46,7 @@ supportingTextOnlyLight.story = {
 	name: `supporting text only default`,
 	parameters: {
 		backgrounds: {
-			default: "default",
+			default: 'default',
 			values: [storybookBackgrounds.default],
 		},
 	},
@@ -57,7 +57,7 @@ const supportingTextOnlyBlue = () => (
 		<div css={narrow}>
 			<RadioGroup name="payment-options">
 				{radiosWithSupportingTextOnly.map((radio, index) =>
-					React.cloneElement(radio, { key: index })
+					React.cloneElement(radio, { key: index }),
 				)}
 			</RadioGroup>
 		</div>
@@ -67,7 +67,7 @@ supportingTextOnlyBlue.story = {
 	name: `supporting text only brand`,
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

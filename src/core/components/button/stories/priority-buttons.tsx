@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { space } from "@guardian/src-foundations";
-import { background } from "@guardian/src-foundations/palette";
+import React from 'react';
+import { css } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { space } from '@guardian/src-foundations';
+import { background } from '@guardian/src-foundations/palette';
 import {
 	Button,
 	buttonDefault,
@@ -11,29 +11,29 @@ import {
 	buttonReaderRevenue,
 	buttonReaderRevenueBrand,
 	buttonReaderRevenueBrandAlt,
-} from "../index";
-import { ThemeProvider } from "@emotion/react";
+} from '../index';
+import { ThemeProvider } from '@emotion/react';
 
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
-	<Button onClick={(e) => console.log("Primary clicked:", e.target)}>
+	<Button onClick={(e) => console.log('Primary clicked:', e.target)}>
 		Primary
 	</Button>,
 	<Button
-		onClick={(e) => console.log("Secondary clicked:", e.target)}
+		onClick={(e) => console.log('Secondary clicked:', e.target)}
 		priority="secondary"
 	>
 		Secondary
 	</Button>,
 	<Button
-		onClick={(e) => console.log("Tertiary clicked", e.target)}
+		onClick={(e) => console.log('Tertiary clicked', e.target)}
 		priority="tertiary"
 	>
 		Tertiary
 	</Button>,
 	<Button
 		priority="subdued"
-		onClick={(e) => console.log("Subdued clicked", e.target)}
+		onClick={(e) => console.log('Subdued clicked', e.target)}
 	>
 		Subdued
 	</Button>,
@@ -59,7 +59,7 @@ export const priorityLight = () => (
 		</div>
 	</ThemeProvider>
 );
-priorityLight.story = { name: "priority light" };
+priorityLight.story = { name: 'priority light' };
 
 export const priorityBlue = () => (
 	<ThemeProvider theme={buttonBrand}>
@@ -71,10 +71,10 @@ export const priorityBlue = () => (
 	</ThemeProvider>
 );
 priorityBlue.story = {
-	name: "priority blue",
+	name: 'priority blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -90,11 +90,11 @@ export const priorityGrey = () => (
 	</ThemeProvider>
 );
 priorityGrey.story = {
-	name: "priority grey",
+	name: 'priority grey',
 	parameters: {
 		backgrounds: {
-			default: "grey",
-			values: [{ name: "grey", value: background.secondary }],
+			default: 'grey',
+			values: [{ name: 'grey', value: background.secondary }],
 		},
 	},
 };
@@ -109,10 +109,10 @@ export const priorityYellow = () => (
 	</ThemeProvider>
 );
 priorityYellow.story = {
-	name: "priority yellow",
+	name: 'priority yellow',
 	parameters: {
 		backgrounds: {
-			default: "brandAlt",
+			default: 'brandAlt',
 			values: [storybookBackgrounds.brandAlt],
 		},
 	},
@@ -130,7 +130,7 @@ export const priorityReaderRevenueLight = () => (
 	</ThemeProvider>
 );
 priorityReaderRevenueLight.story = {
-	name: "priority reader revenue light",
+	name: 'priority reader revenue light',
 };
 
 export const priorityReaderRevenueBlue = () => (
@@ -143,10 +143,10 @@ export const priorityReaderRevenueBlue = () => (
 	</ThemeProvider>
 );
 priorityReaderRevenueBlue.story = {
-	name: "priority reader revenue blue",
+	name: 'priority reader revenue blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -162,10 +162,10 @@ export const priorityReaderRevenueYellow = () => (
 	</ThemeProvider>
 );
 priorityReaderRevenueYellow.story = {
-	name: "priority reader revenue yellow",
+	name: 'priority reader revenue yellow',
 	parameters: {
 		backgrounds: {
-			default: "brandAlt",
+			default: 'brandAlt',
 			values: [storybookBackgrounds.brandAlt],
 		},
 	},

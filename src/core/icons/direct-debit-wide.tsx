@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const SvgDirectDebitWide = () => (
 	<svg viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">

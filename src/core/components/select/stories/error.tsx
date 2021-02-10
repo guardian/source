@@ -1,7 +1,7 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { from } from "@guardian/src-foundations/mq";
-import { Select, Option } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { from } from '@guardian/src-foundations/mq';
+import { Select, Option } from '../index';
 
 const constrainedWith = css`
 	width: 100%;
@@ -24,5 +24,5 @@ export const errorWithMessageLight = () => (
 );
 
 errorWithMessageLight.story = {
-	name: "error with message  light",
+	name: 'error with message  light',
 };

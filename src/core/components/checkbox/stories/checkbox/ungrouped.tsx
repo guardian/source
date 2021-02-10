@@ -1,7 +1,7 @@
-import React from "react";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { ThemeProvider } from '@emotion/react';
 
-import { Checkbox, checkboxDefault } from "../../index";
+import { Checkbox, checkboxDefault } from '../../index';
 
 /* eslint-disable react/jsx-key */
 const checkboxes = [
@@ -13,13 +13,13 @@ const checkboxes = [
 const ungrouped = () => (
 	<ThemeProvider theme={checkboxDefault}>
 		{checkboxes.map((checkbox, index) =>
-			React.cloneElement(checkbox, { key: index })
+			React.cloneElement(checkbox, { key: index }),
 		)}
 	</ThemeProvider>
 );
 
 ungrouped.story = {
-	name: "ungrouped",
+	name: 'ungrouped',
 };
 
 export { ungrouped };

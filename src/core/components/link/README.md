@@ -11,8 +11,8 @@ $ yarn add @guardian/src-link
 ## Use
 
 ```js
-import { Link, ButtonLink } from "@guardian/src-link"
-import { SvgArrowRightStraight } from "@guardian/src-icons"
+import { Link, ButtonLink } from '@guardian/src-link';
+import { SvgArrowRightStraight } from '@guardian/src-icons';
 
 const Navigation = () => (
     <>
@@ -30,12 +30,12 @@ const Navigation = () => (
             subdued={true}
             icon={<SvgArrowRightStraight />}
             iconSide="right"
-            onClick={() => console.log("Clicked")}
+            onClick={() => console.log('Clicked')}
         >
             Click me
         </ButtonLink>
     </>
-)
+);
 ```
 
 ## `Link` and `ButtonLink` Props

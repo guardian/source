@@ -1,9 +1,9 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { ThemeProvider } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { SvgCamera, SvgAudio, SvgVideo } from "@guardian/src-icons";
-import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { SvgCamera, SvgAudio, SvgVideo } from '@guardian/src-icons';
+import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
 /* eslint-disable react/jsx-key */
 const iconChoiceCards = [
@@ -33,7 +33,7 @@ export const singleStateWithIconLight = () => (
 		<div css={medium}>
 			<ChoiceCardGroup name="colours" label="Media format">
 				{iconChoiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index })
+					React.cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
 		</div>
@@ -44,8 +44,8 @@ singleStateWithIconLight.story = {
 	name: `single state with icon light`,
 	parameters: {
 		backgrounds: {
-			default: "default",
-			values: [{ name: "default", value: storybookBackgrounds.default }],
+			default: 'default',
+			values: [{ name: 'default', value: storybookBackgrounds.default }],
 		},
 	},
 };

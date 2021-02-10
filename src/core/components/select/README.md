@@ -11,7 +11,7 @@ $ yarn add @guardian/src-select
 ## Use
 
 ```js
-import { Select, Option } from "@guardian/src-select"
+import { Select, Option } from '@guardian/src-select';
 
 const Form = () => (
     <form>
@@ -24,7 +24,7 @@ const Form = () => (
             <Option value="ca">California</Option>
         </Select>
     </form>
-)
+);
 ```
 
 ## Props

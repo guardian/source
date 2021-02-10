@@ -1,9 +1,9 @@
-import React from "react";
-import { Container, Columns, Column } from "../../index";
-import { textSans } from "@guardian/src-foundations/typography";
-import { sport } from "@guardian/src-foundations/palette";
-import { space } from "@guardian/src-foundations";
-import { css } from "@emotion/react";
+import React from 'react';
+import { Container, Columns, Column } from '../../index';
+import { textSans } from '@guardian/src-foundations/typography';
+import { sport } from '@guardian/src-foundations/palette';
+import { space } from '@guardian/src-foundations';
+import { css } from '@emotion/react';
 
 const contents = css`
 	${textSans.medium()};
@@ -80,23 +80,23 @@ const example = (
 export const withWidth = () => <>{example}</>;
 
 withWidth.story = {
-	name: "with width",
+	name: 'with width',
 };
 
 export const withWidthDesktop = () => <>{example}</>;
 
 withWidthDesktop.story = {
-	name: "with width desktop",
+	name: 'with width desktop',
 	parameters: {
-		viewport: { defaultViewport: "desktop" },
+		viewport: { defaultViewport: 'desktop' },
 	},
 };
 
 export const withWidthTablet = () => <>{example}</>;
 
 withWidthTablet.story = {
-	name: "with width tablet",
+	name: 'with width tablet',
 	parameters: {
-		viewport: { defaultViewport: "tablet" },
+		viewport: { defaultViewport: 'tablet' },
 	},
 };

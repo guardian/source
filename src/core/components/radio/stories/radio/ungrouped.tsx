@@ -1,6 +1,6 @@
-import React from "react";
-import { Radio, radioDefault } from "../../index";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { Radio, radioDefault } from '../../index';
+import { ThemeProvider } from '@emotion/react';
 
 /* eslint-disable react/jsx-key */
 const radios = [
@@ -13,13 +13,13 @@ const radios = [
 const ungrouped = () => (
 	<ThemeProvider theme={radioDefault}>
 		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index })
+			React.cloneElement(radio, { key: index }),
 		)}
 	</ThemeProvider>
 );
 
 ungrouped.story = {
-	name: "ungrouped",
+	name: 'ungrouped',
 };
 
 export { ungrouped };
