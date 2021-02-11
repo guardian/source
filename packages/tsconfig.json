@@ -11,18 +11,18 @@
     "target": "ES2020",
     "types": ["@emotion/react/types/css-prop", "@types/jest"],
     "paths": {
-      "@guardian/src-foundations": ["source/src/foundations/src"],
-      "@guardian/src-foundations/*": ["source/src/foundations/src/*"],
+      "@guardian/src-foundations": ["source/foundations/src"],
+      "@guardian/src-foundations/*": ["source/foundations/src/*"],
       "@guardian/src-foundations/types/themes": [
-        "source/src/foundations/types/themes"
+        "source/foundations/types/themes"
       ],
-      "@guardian/src-helpers": ["source/src/helpers"],
-      "@guardian/src-brand": ["source/src/brand"],
-      "@guardian/src-components/*": ["source/src/components/*"],
-      "@guardian/src-icons": ["source/src/icons"],
-      "@guardian/src-label": ["source/src/components/label"],
-      "@guardian/src-user-feedback": ["source/src/components/user-feedback"],
-      "@guardian/src-link": ["source/src/components/link"]
+      "@guardian/src-helpers": ["source/helpers"],
+      "@guardian/src-brand": ["source/brand"],
+      "@guardian/src-components/*": ["source/components/*"],
+      "@guardian/src-icons": ["source/icons"],
+      "@guardian/src-label": ["source/components/label"],
+      "@guardian/src-user-feedback": ["source/components/user-feedback"],
+      "@guardian/src-link": ["source/components/link"]
     }
   }
 }

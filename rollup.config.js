@@ -3,8 +3,8 @@ import { babel } from '@rollup/plugin-babel';
 
 export default {
 	input: {
-		editorial: 'packages/editorial/src/index.tsx',
-		source: 'packages/source/src/index.ts',
+		editorial: 'packages/editorial/index.ts',
+		source: 'packages/source/index.ts',
 	},
 	output: {
 		format: 'esm',
