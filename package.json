@@ -4,9 +4,7 @@
   "private": true,
   "license": "Apache-2.0",
   "workspaces": [
-    "src/core/*",
-    "src/core/components/*",
-    "src/editorial/web/components/*"
+    "packages"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",

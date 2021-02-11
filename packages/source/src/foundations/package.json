@@ -1,0 +1,62 @@
+{
+  "name": "@guardian/src-foundations",
+  "version": "3.2.0-rc.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guardian/source.git"
+  },
+  "license": "Apache-2.0",
+  "main": "foundations.js",
+  "module": "foundations.esm.js",
+  "files": [
+    "mq/**",
+    "accessibility/**",
+    "palette/**",
+    "size/**",
+    "themes/**",
+    "types/**",
+    "typography/**",
+    "utils/**",
+    "*.d.ts",
+    "foundations.esm.js",
+    "src/animation.ts",
+    "src/breakpoints.ts",
+    "src/index.ts",
+    "src/size.ts",
+    "src/space.ts",
+    "src/theme.ts",
+    "src/accessibility/index.ts",
+    "src/mq/index.ts",
+    "src/palette/**",
+    "src/size/**",
+    "src/themes/**",
+    "src/typography/**",
+    "src/utils/**"
+  ],
+  "scripts": {
+    "build": "yarn clean && tsc && rollup --config && yarn copy:types",
+    "clean": "rm -rf accessibility mq palette size themes typography utils foundations.js foundations.esm.js *.d.ts tsconfig.tsbuildinfo src/*.d.ts",
+    "copy:types": "ts-node --script-mode scripts/copy-type-definitions --esModuleInterop",
+    "prepublishOnly": "yarn build",
+    "publish:public": "yarn publish --access public",
+    "verbump:major": "yarn version --major --no-git-tag-version",
+    "verbump:minor": "yarn version --minor --no-git-tag-version",
+    "verbump:patch": "yarn version --patch --no-git-tag-version",
+    "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
+    "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
+    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
+    "watch": "yarn clean && tsc && rollup --config --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.10.0",
+    "@babel/preset-react": "^7.10.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "cpy": "^8.1.1",
+    "rollup": "^1.19.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "typescript": "^4.1.3"
+  }
+}

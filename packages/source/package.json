@@ -1,0 +1,10 @@
+{
+  "name": "@guardian/source",
+  "version": "3.2.0-rc.0",
+  "description": "The Guardian's design system",
+  "repository": "https://github.com/guardian/source.git",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts"
+}

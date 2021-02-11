@@ -1,0 +1,48 @@
+{
+  "name": "@guardian/src-layout",
+  "version": "3.2.0-rc.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guardian/source.git"
+  },
+  "license": "Apache-2.0",
+  "main": "dist/layout.js",
+  "module": "dist/layout.esm.js",
+  "files": [
+    "dist/*.js",
+    "index.tsx",
+    "components/**/*"
+  ],
+  "scripts": {
+    "build": "yarn clean && rollup --config",
+    "clean": "rm -rf dist",
+    "prepublish": "yarn build",
+    "publish:public": "yarn publish --access public",
+    "verbump:major": "yarn version --major --no-git-tag-version",
+    "verbump:minor": "yarn version --minor --no-git-tag-version",
+    "verbump:patch": "yarn version --patch --no-git-tag-version",
+    "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
+    "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
+    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
+  },
+  "dependencies": {
+    "@guardian/src-helpers": "^3.2.0-rc.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.10.0",
+    "@babel/preset-react": "^7.10.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
+    "@guardian/src-foundations": "^3.2.0-rc.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.1.2",
+    "@guardian/src-foundations": "^3.2.0-rc.0",
+    "react": "^17.0.1"
+  }
+}

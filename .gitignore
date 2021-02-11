@@ -7,4 +7,3 @@ dist
 package-lock.json
 .idea/
 .vscode/settings.json
-packages/source/src/icons/.components
