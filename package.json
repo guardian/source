@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",
-    "build:all": "ts-node ./scripts/build-all && rollup -c",
+    "build:all": "ts-node ./scripts/build-all",
+    "build:packages": "rollup -c",
     "ci:build": "NODE_ENV=production build-storybook -o dist",
     "clean": "rm -rf dist/*",
     "clean:all": "ts-node ./scripts/clean-all",
