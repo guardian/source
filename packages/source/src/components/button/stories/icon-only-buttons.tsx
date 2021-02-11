@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { SvgCross } from '@guardian/src-icons';
-import { space } from '@guardian/src-foundations';
+import { SvgCross } from '../../../icons';
+import { space } from '../../../foundations/src';
 import { Button } from '../index';
 
 /* eslint-disable react/jsx-key */

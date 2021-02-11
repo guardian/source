@@ -5,7 +5,7 @@ import {
 	brandBorder,
 	brandBackground,
 	brandText,
-} from '@guardian/src-foundations/palette';
+} from '../palette';
 import { userFeedbackDefault, userFeedbackBrand } from './user-feedback';
 import { labelDefault, labelBrand } from './label';
 

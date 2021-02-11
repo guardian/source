@@ -1,4 +1,4 @@
-import { text, border } from '@guardian/src-foundations/palette';
+import { text, border } from '../palette';
 
 export const accordionDefault = {
 	accordion: {

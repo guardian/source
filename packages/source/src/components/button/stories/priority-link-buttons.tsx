@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { SvgArrowRightStraight } from '@guardian/src-icons';
-import { space } from '@guardian/src-foundations';
+import { SvgArrowRightStraight } from '../../../icons';
+import { space } from '../../../foundations/src';
 import { LinkButton } from '../index';
 
 /* eslint-disable react/jsx-key */

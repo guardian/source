@@ -2,7 +2,7 @@ import {
 	brandBorder,
 	brandBackground,
 	brandText,
-} from '@guardian/src-foundations/palette';
+} from '../palette';
 
 export const footerBrand = {
 	footer: {

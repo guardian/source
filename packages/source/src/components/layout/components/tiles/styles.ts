@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Columns } from './tiles';
-import { from, until } from '@guardian/src-foundations/mq';
-import { space } from '@guardian/src-foundations';
+import { from, until } from '../../../../foundations/src/mq';
+import { space } from '../../../../foundations/src';
 
 const collapseBelowTilesSpacing = css`
 	display: block;

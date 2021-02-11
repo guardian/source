@@ -16,10 +16,10 @@ import {
 	noJsButton,
 } from './styles';
 import { css } from '@emotion/react';
-import { visuallyHidden as _visuallyHidden } from '@guardian/src-foundations/accessibility';
-import { Props } from '@guardian/src-helpers';
-import { SvgChevronDownSingle } from '@guardian/src-icons';
-export { accordionDefault } from '@guardian/src-foundations/themes';
+import { visuallyHidden as _visuallyHidden } from '../../foundations/src/accessibility';
+import { Props } from '../../helpers';
+import { SvgChevronDownSingle } from '../../icons';
+export { accordionDefault } from '../../foundations/src/themes';
 
 const visuallyHidden = css`
 	${_visuallyHidden}

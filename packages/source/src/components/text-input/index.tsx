@@ -1,8 +1,8 @@
 ///<reference types="@emotion/react/types/css-prop" />
 import React, { InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
-import { Label } from '@guardian/src-label';
+import { InlineError, InlineSuccess } from '../user-feedback';
+import { Label } from '../label';
 import {
 	widthFluid,
 	width30,
@@ -16,10 +16,10 @@ import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from '@guardian/src-foundations/accessibility';
-import { Props } from '@guardian/src-helpers';
+} from '../../foundations/src/accessibility';
+import { Props } from '../../helpers';
 
-export { textInputDefault } from '@guardian/src-foundations/themes';
+export { textInputDefault } from '../../foundations/src/themes';
 export type Width = 30 | 10 | 4;
 
 const widths: {

@@ -2,9 +2,9 @@
 import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from 'react';
 import { SerializedStyles, css } from '@emotion/react';
 import { legend, labelText, optionalText, supportingText } from './styles';
-import { Props } from '@guardian/src-helpers';
-export { labelDefault, labelBrand } from '@guardian/src-foundations/themes';
-import { visuallyHidden as _visuallyHidden } from '@guardian/src-foundations/accessibility';
+import { Props } from '../../helpers';
+export { labelDefault, labelBrand } from '../../foundations/src/themes';
+import { visuallyHidden as _visuallyHidden } from '../../foundations/src/accessibility';
 
 const visuallyHidden = css`
 	${_visuallyHidden}

@@ -2,7 +2,7 @@ import {
 	background,
 	brandBackground,
 	brandAltBackground,
-} from '@guardian/src-foundations/palette';
+} from '../foundations/src/palette';
 import { ThemeName } from './types';
 
 type Background = ThemeName | 'inverse';

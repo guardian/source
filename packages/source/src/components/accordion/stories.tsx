@@ -1,11 +1,11 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { Accordion, AccordionRow } from './index';
-import { background } from '@guardian/src-foundations/palette';
-import { body } from '@guardian/src-foundations/typography';
-import { from } from '@guardian/src-foundations/mq';
-import { space } from '@guardian/src-foundations';
-import { Link } from '@guardian/src-link';
+import { background } from '../../foundations/src/palette';
+import { body } from '../../foundations/src/typography';
+import { from } from '../../foundations/src/mq';
+import { space } from '../../foundations/src';
+import { Link } from '../link';
 
 /* eslint-disable react/jsx-key */
 const accordionRows = [

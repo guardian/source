@@ -7,7 +7,7 @@ import React, {
 	ChangeEventHandler,
 } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { Legend } from '@guardian/src-label';
+import { Legend } from '../label';
 import {
 	fieldset,
 	flexContainer,
@@ -21,14 +21,14 @@ import {
 	contentWrapper,
 	contentWrapperLabelOnly,
 } from './styles';
-import { InlineError } from '@guardian/src-user-feedback';
-import { Props } from '@guardian/src-helpers';
+import { InlineError } from '../user-feedback';
+import { Props } from '../../helpers';
 import {
 	descriptionId,
 	generateSourceId,
-} from '@guardian/src-foundations/accessibility';
+} from '../../foundations/src/accessibility';
 
-export { choiceCardDefault } from '@guardian/src-foundations/themes';
+export { choiceCardDefault } from '../../foundations/src/themes';
 
 export type ChoiceCardColumns = 2 | 3 | 4 | 5;
 

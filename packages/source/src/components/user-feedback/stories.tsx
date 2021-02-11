@@ -3,8 +3,8 @@ import { ThemeProvider } from '@emotion/react';
 import {
 	userFeedbackDefault,
 	userFeedbackBrand,
-} from '@guardian/src-foundations/themes';
-import { storybookBackgrounds } from '@guardian/src-helpers';
+} from '../../foundations/src/themes';
+import { storybookBackgrounds } from '../../helpers';
 import { InlineError, InlineSuccess } from './index';
 
 export default {

@@ -1,14 +1,14 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { textSans } from '@guardian/src-foundations/typography';
+import { textSans } from '../../../foundations/src/typography';
 import { Link, linkDefault } from '../index';
 import {
 	SvgArrowRightStraight,
 	SvgExternal,
 	SvgChevronRightSingle,
 	SvgChevronLeftSingle,
-} from '@guardian/src-icons';
+} from '../../../icons';
 
 const text = css`
 	${textSans.medium()}

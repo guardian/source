@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from '@guardian/src-icons';
+import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from '../../../icons';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
 /* eslint-disable react/jsx-key */

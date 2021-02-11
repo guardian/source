@@ -1,12 +1,12 @@
 ///<reference types="@emotion/react/types/css-prop" />
 import React, { ReactNode, InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { Legend } from '@guardian/src-label';
-import { InlineError } from '@guardian/src-user-feedback';
+import { Legend } from '../label';
+import { InlineError } from '../user-feedback';
 import {
 	descriptionId,
 	generateSourceId,
-} from '@guardian/src-foundations/accessibility';
+} from '../../foundations/src/accessibility';
 import {
 	fieldset,
 	label,
@@ -18,9 +18,9 @@ import {
 	horizontal,
 	vertical,
 } from './styles';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '../../helpers';
 
-export { radioBrand, radioDefault } from '@guardian/src-foundations/themes';
+export { radioBrand, radioDefault } from '../../foundations/src/themes';
 
 type Orientation = 'vertical' | 'horizontal';
 

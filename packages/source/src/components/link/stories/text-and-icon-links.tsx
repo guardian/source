@@ -5,8 +5,8 @@ import {
 	SvgIndent,
 	SvgExternal,
 	SvgChevronLeftSingle,
-} from '@guardian/src-icons';
-import { space } from '@guardian/src-foundations';
+} from '../../../icons';
+import { space } from '../../../foundations/src';
 import { Link } from '../index';
 
 const flexStart = css`

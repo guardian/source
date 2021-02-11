@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
-import { space, transitions } from '@guardian/src-foundations';
-import { height, width } from '@guardian/src-foundations/size';
-import { buttonDefault, ButtonTheme } from '@guardian/src-foundations/themes';
-import { textSans } from '@guardian/src-foundations/typography';
-import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { space, transitions } from '../../foundations/src';
+import { height, width } from '../../foundations/src/size';
+import { buttonDefault, ButtonTheme } from '../../foundations/src/themes';
+import { textSans } from '../../foundations/src/typography';
+import { focusHalo } from '../../foundations/src/accessibility';
 
 export const button = css`
 	display: inline-flex;

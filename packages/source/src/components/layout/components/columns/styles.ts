@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
-import { until } from '@guardian/src-foundations/mq';
+import { space } from '../../../../foundations/src';
+import { until } from '../../../../foundations/src/mq';
 
 export const columns = css`
 	box-sizing: border-box;

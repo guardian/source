@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from '@guardian/src-icons';
+import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from '../../../icons';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
 const medium = css`

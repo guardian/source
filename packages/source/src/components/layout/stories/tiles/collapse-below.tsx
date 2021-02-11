@@ -1,8 +1,8 @@
 import React from 'react';
 import { Tiles } from '../../index';
-import { sport } from '@guardian/src-foundations/palette';
+import { sport } from '../../../../foundations/src/palette';
 import { css } from '@emotion/react';
-import { textSans } from '@guardian/src-foundations/typography';
+import { textSans } from '../../../../foundations/src/typography';
 
 const contents = css`
 	${textSans.medium()};

@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
-import { space, remSpace, transitions } from '@guardian/src-foundations';
-import { visuallyHidden } from '@guardian/src-foundations/accessibility';
-import { headline, textSans } from '@guardian/src-foundations/typography';
-import { until, from } from '@guardian/src-foundations/mq';
-import { focusHalo } from '@guardian/src-foundations/accessibility';
-import { accordionDefault } from '@guardian/src-foundations/themes';
+import { space, remSpace, transitions } from '../../foundations/src';
+import { visuallyHidden } from '../../foundations/src/accessibility';
+import { headline, textSans } from '../../foundations/src/typography';
+import { until, from } from '../../foundations/src/mq';
+import { focusHalo } from '../../foundations/src/accessibility';
+import { accordionDefault } from '../../foundations/src/themes';
 
 export const accordion = ({ accordion } = accordionDefault) => css`
 	border-bottom: 1px solid ${accordion.borderPrimary};

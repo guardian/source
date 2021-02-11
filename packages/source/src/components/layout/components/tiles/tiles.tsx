@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '../../../../helpers';
 import { tileGridColumns, tilesGridContainer } from './styles';
 import {
 	tilesCollapseBelowDesktop,
@@ -12,7 +12,7 @@ import {
 	tilesCollapseBelowWide,
 	collapseBelowWideTiles,
 } from '../tiles/styles';
-import { Breakpoint } from '@guardian/src-foundations/mq';
+import { Breakpoint } from '../../../../foundations/src/mq';
 
 export type Columns = 2 | 3 | 4 | 5;
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
-import { space } from '@guardian/src-foundations';
-import { textSans } from '@guardian/src-foundations/typography';
-import { from } from '@guardian/src-foundations/mq';
-import { brandText, brandBorder } from '@guardian/src-foundations/palette';
+import { storybookBackgrounds } from '../../../helpers';
+import { space } from '../../../foundations/src';
+import { textSans } from '../../../foundations/src/typography';
+import { from } from '../../../foundations/src/mq';
+import { brandText, brandBorder } from '../../../foundations/src/palette';
 import { Footer } from '../index';
 
 const container = css`

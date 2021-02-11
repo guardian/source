@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { Legend, labelBrand } from '../index';
 import { ThemeProvider } from '@emotion/react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
+import { storybookBackgrounds } from '../../../helpers';
 
 const fieldsetReset = css`
 	border: 0;

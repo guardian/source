@@ -8,7 +8,7 @@ import {
 	brandAltText,
 	brandAltBackground,
 	brandAltBorder,
-} from '@guardian/src-foundations/palette';
+} from '../palette';
 
 export type ButtonTheme = {
 	textPrimary: string;

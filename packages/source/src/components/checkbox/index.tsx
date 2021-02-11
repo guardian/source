@@ -1,12 +1,12 @@
 ///<reference types="@emotion/react/types/css-prop" />
 import React, { ReactNode, InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { InlineError } from '@guardian/src-user-feedback';
+import { InlineError } from '../user-feedback';
 import {
 	descriptionId,
 	generateSourceId,
-} from '@guardian/src-foundations/accessibility';
-import { Legend } from '@guardian/src-label';
+} from '../../foundations/src/accessibility';
+import { Legend } from '../label';
 import {
 	fieldset,
 	label,
@@ -20,12 +20,12 @@ import {
 	tickWithSupportingText,
 	errorCheckbox,
 } from './styles';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '../../helpers';
 
 export {
 	checkboxDefault,
 	checkboxBrand,
-} from '@guardian/src-foundations/themes';
+} from '../../foundations/src/themes';
 
 interface CheckboxGroupProps extends Props {
 	id?: string;
