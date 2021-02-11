@@ -22,10 +22,7 @@ import {
 } from './styles';
 import { Props } from '../../helpers';
 
-export {
-	checkboxDefault,
-	checkboxBrand,
-} from '../../foundations/src/themes';
+export { checkboxDefault, checkboxBrand } from '../../foundations/src/themes';
 
 interface CheckboxGroupProps extends Props {
 	id?: string;
