@@ -1,0 +1,19 @@
+{
+  "name": "@guardian/editorial",
+  "version": "3.2.0-rc.0",
+  "license": "Apache-2.0",
+  "main": "dist/editorial.js",
+  "module": "dist/editorial.esm.js",
+  "files": [
+    "dist/*.js",
+    "components/**",
+    "index.tsx"
+  ],
+  "scripts": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "@emotion/react": "^11.1.2",
+    "@guardian/src-foundations": "^3.2.0-rc.0",
+    "react": "^17.0.1"
+  }
+}

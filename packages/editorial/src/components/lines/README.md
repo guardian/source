@@ -2,18 +2,6 @@
 
 📣 For more context and visual guides relating to lines usage, visit the [Source Design System website](https://www.theguardian.design)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-ed-lines @guardian/src-foundations
-```
-
-or
-
-```sh
-$ npm i @guardian/src-ed-lines @guardian/src-foundations
-```
-
 ## Use
 
 ```js
