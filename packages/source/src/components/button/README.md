@@ -2,17 +2,15 @@
 
 📣 For more context and visual guides relating to button usage, visit the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/435225-button/)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-button
-```
-
 ## Use
 
 ```js
-import { LinkButton, Button } from '@guardian/src-button';
-import { SvgCheckmark, SvgArrowRightStraight } from '@guardian/src-icons';
+import {
+    LinkButton,
+    Button,
+    SvgCheckmark,
+    SvgArrowRightStraight,
+} from '@guardian/source';
 
 const Form = () => (
     <form>

@@ -2,16 +2,10 @@
 
 📣 For more context and visual guides relating text area usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/77ee17-overview)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-text-area
-```
-
 ## Use
 
 ```js
-import { TextArea } from '@guardian/src-text-area';
+import { TextArea } from '@guardian/source';
 
 const Form = () => {
     const [state, setState] = useState('');

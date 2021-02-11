@@ -2,18 +2,12 @@
 
 📣 For more context and visual guides relating to `Layout` usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/309077-layout-components)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-layout
-```
-
 ## Container
 
 Centres the page content and applies a width that corresponds to the grid at the current breakpoint.
 
 ```tsx
-import { Container } from '@guardian/src-layout';
+import { Container } from '@guardian/source';
 
 const Wrapper = () => (
     <Container>
