@@ -41,12 +41,12 @@ export {
 	buttonReaderRevenueBrandAlt,
 } from './themes';
 
-export type Priority = 'primary' | 'secondary' | 'tertiary' | 'subdued';
+export type ButtonPriority = 'primary' | 'secondary' | 'tertiary' | 'subdued';
 type IconSide = 'left' | 'right';
 type Size = 'default' | 'small' | 'xsmall';
 
 interface SharedButtonProps extends Props {
-	priority: Priority;
+	priority: ButtonPriority;
 	size: Size;
 	iconSide: IconSide;
 	icon?: ReactElement;
@@ -55,7 +55,7 @@ interface SharedButtonProps extends Props {
 }
 
 const priorities: {
-	[key in Priority]: ({
+	[key in ButtonPriority]: ({
 		button,
 	}: {
 		button: ButtonTheme;
@@ -155,7 +155,7 @@ const buttonStyles = ({
 interface ButtonProps
 	extends SharedButtonProps,
 		ButtonHTMLAttributes<HTMLButtonElement> {
-	priority: Priority;
+	priority: ButtonPriority;
 	size: Size;
 	icon?: ReactElement;
 	iconSide: IconSide;
@@ -198,7 +198,7 @@ const Button = ({
 interface LinkButtonProps
 	extends SharedButtonProps,
 		AnchorHTMLAttributes<HTMLAnchorElement> {
-	priority: Priority;
+	priority: ButtonPriority;
 	size: Size;
 	iconSide: IconSide;
 	icon?: ReactElement;

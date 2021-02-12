@@ -30,7 +30,7 @@ import {
 
 export { choiceCardDefault } from '@guardian/src-foundations/themes';
 
-export type Columns = 2 | 3 | 4 | 5;
+export type ChoiceCardColumns = 2 | 3 | 4 | 5;
 
 interface ChoiceCardGroupProps extends Props {
 	id?: string;
@@ -39,7 +39,7 @@ interface ChoiceCardGroupProps extends Props {
 	supporting?: string;
 	multi?: boolean;
 	error?: string;
-	columns?: Columns;
+	columns?: ChoiceCardColumns;
 	children: JSX.Element | JSX.Element[];
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
