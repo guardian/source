@@ -10,6 +10,14 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 12 February 2021
+
+**`@guardian/src-accordion 3.2.0`**
+
+-   :sparkles: [3be8c40](https://github.com/guardian/source/commit/3be8c408677139765ea15dcc37c90396bcdbacf1) add optional onClick prop to accordion row (thanks @i-hardy)
+-   :sparkles: [8a27ee2](https://github.com/guardian/source/commit/8a27ee2df8b09e7d855eaa9e84b03483dd7490dc) add type attribute to accordion button and allow passing cssOverrides prop (thanks @i-hardy)
+-   :page_with_curl: [ace06c7](https://github.com/guardian/source/commit/ace06c7bfe27709e9db77e3380a7b63a1641149e) document onClick prop in README (thanks @i-hardy)
+
 ## 28 January 2021
 
 **`@guardian/editorial 3.1.0`**
