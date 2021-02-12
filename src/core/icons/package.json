@@ -1,6 +1,6 @@
 {
   "name": "@guardian/src-icons",
-  "version": "3.2.0",
+  "version": "3.3.0-rc.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
@@ -69,8 +69,8 @@
     "@babel/preset-react": "^7.10.0",
     "@babel/preset-typescript": "^7.9.0",
     "@emotion/react": "^11.1.2",
-    "@guardian/src-foundations": "^3.2.0",
-    "@guardian/src-helpers": "^3.2.0",
+    "@guardian/src-foundations": "^3.3.0-rc.0",
+    "@guardian/src-helpers": "^3.3.0-rc.0",
     "rollup": "^1.17.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
