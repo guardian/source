@@ -25,12 +25,12 @@ export {
 	linkBrandAlt,
 } from '@guardian/src-foundations/themes';
 
-export type Priority = 'primary' | 'secondary';
+export type LinkPriority = 'primary' | 'secondary';
 
 type IconSide = 'left' | 'right';
 
 const priorities: {
-	[key in Priority]: ({ link }: { link: LinkTheme }) => SerializedStyles;
+	[key in LinkPriority]: ({ link }: { link: LinkTheme }) => SerializedStyles;
 } = {
 	primary,
 	secondary,
@@ -82,7 +82,7 @@ const linkStyles = ({
 	cssOverrides,
 }: {
 	isButton?: boolean;
-	priority: Priority;
+	priority: LinkPriority;
 	isSubdued: boolean;
 	iconSvg?: ReactElement;
 	iconSide: IconSide;
@@ -101,7 +101,7 @@ const linkStyles = ({
 };
 
 interface SharedLinkProps extends Props {
-	priority: Priority;
+	priority: LinkPriority;
 	subdued: boolean;
 	icon?: ReactElement;
 	iconSide: IconSide;
@@ -112,7 +112,7 @@ interface SharedLinkProps extends Props {
 interface LinkProps
 	extends AnchorHTMLAttributes<HTMLAnchorElement>,
 		SharedLinkProps {
-	priority: Priority;
+	priority: LinkPriority;
 	subdued: boolean;
 	icon?: ReactElement;
 	iconSide: IconSide;
@@ -148,7 +148,7 @@ const Link = ({
 interface ButtonLinkProps
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
 		SharedLinkProps {
-	priority: Priority;
+	priority: LinkPriority;
 	subdued: boolean;
 	icon?: ReactElement;
 	iconSide: IconSide;
