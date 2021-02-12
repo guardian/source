@@ -7,3 +7,9 @@ dist
 package-lock.json
 .idea/
 .vscode/settings.json
+
+packages/source/brand
+packages/source/components
+packages/source/components
+packages/source/components
+packages/source/icons
