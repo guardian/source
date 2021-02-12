@@ -8,7 +8,7 @@
     "src/core/components/*",
     "src/editorial/web/*",
     "src/editorial/web/components/*",
-    "packages"
+    "packages/*"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",
