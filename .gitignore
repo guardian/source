@@ -8,4 +8,4 @@ package-lock.json
 .idea/
 .vscode/settings.json
 
-packages/**/*
+packages/source/**/*
