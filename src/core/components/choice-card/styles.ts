@@ -7,7 +7,7 @@ import { from } from '@guardian/src-foundations/mq';
 import { choiceCardDefault } from '@guardian/src-foundations/themes';
 import { width, height } from '@guardian/src-foundations/size';
 import { resets } from '@guardian/src-foundations/utils';
-import { Columns } from './index';
+import { ChoiceCardColumns } from './index';
 
 export const fieldset = css`
 	${resets.fieldset};
@@ -40,12 +40,12 @@ export const gridContainer = css`
 	}
 `;
 
-const gridColumnsStyle = (columns: Columns) => css`
+const gridColumnsStyle = (columns: ChoiceCardColumns) => css`
 	${from.mobileLandscape} {
 		grid-template-columns: repeat(${columns}, 1fr);
 	}
 `;
-export const gridColumns: { [key in Columns]: SerializedStyles } = {
+export const gridColumns: { [key in ChoiceCardColumns]: SerializedStyles } = {
 	2: gridColumnsStyle(2),
 	3: gridColumnsStyle(3),
 	4: gridColumnsStyle(4),
