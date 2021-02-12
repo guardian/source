@@ -1,14 +1,22 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const globby = require('globby');
+const mkdirp = require('mkdirp');
 const path = require('path');
 const fs = require('fs');
 
 const cwd = path.resolve('src/core');
+const dest = path.resolve('packages/source');
 
 (async () => {
-	const files = await globby('./**/*.(ts|tsx)', {
-		cwd,
-	});
-	console.log(files);
+	const files = (
+		await globby('./**/*.(ts|tsx)', {
+			cwd,
+		})
+	).filter((filePath) => !filePath.includes('node_modules'));
+
+	// console.dir(files);
+
 	for (const file of files) {
 		const contents = fs.readFileSync(path.resolve(cwd, file), 'utf8');
 
@@ -22,7 +30,12 @@ const cwd = path.resolve('src/core');
 				)}'`;
 			},
 		);
-		// fs.writeFileSync(path.resolve(cwd, file), fixed);
+		const packageFile = path.resolve(dest, file);
+		await mkdirp(path.dirname(packageFile));
+		fs.writeFileSync(path.resolve(dest, file), fixed);
+		// console.log(file);
+		// console.log(path.resolve(dest, file));
+		// console.log();
 	}
 })();
 
