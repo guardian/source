@@ -4,7 +4,7 @@ import { Breakpoint } from '@guardian/src-foundations';
 import { from, until } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
 
-interface HideProps extends HTMLAttributes<HTMLDivElement>, Props {
+export interface HideProps extends HTMLAttributes<HTMLDivElement>, Props {
 	children: ReactNode;
 	above?: Breakpoint;
 	below?: Breakpoint;

@@ -5,7 +5,7 @@ import { Props } from '@guardian/src-helpers';
 
 export type StackSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;
 
-interface StackProps extends HTMLAttributes<HTMLDivElement>, Props {
+export interface StackProps extends HTMLAttributes<HTMLDivElement>, Props {
 	space?: StackSpace;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;

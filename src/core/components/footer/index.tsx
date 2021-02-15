@@ -16,7 +16,7 @@ import { Props } from '@guardian/src-helpers';
 import { SvgChevronUpSingle } from '@guardian/src-icons';
 export { footerBrand } from '@guardian/src-foundations/themes';
 
-interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
+export interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
 	showBackToTop: boolean;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];

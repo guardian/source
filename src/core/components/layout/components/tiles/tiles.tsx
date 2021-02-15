@@ -26,7 +26,7 @@ type CollapseBreakpoint = Extract<
 	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
-interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
+export interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
 	columns: Columns;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;

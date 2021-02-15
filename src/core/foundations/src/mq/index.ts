@@ -144,4 +144,5 @@ const between = {
 	},
 };
 
-export { from, until, between, breakpoints, Breakpoint };
+export { from, until, between, breakpoints };
+export type { Breakpoint };
