@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",
-    "build:all": "ts-node ./scripts/build-all",
+    "build:all": "ts-node ./scripts/build-all && yarn workspace @guardian/source build",
     "ci:build": "NODE_ENV=production build-storybook -o dist",
     "clean": "rm -rf dist",
     "clean:all": "ts-node ./scripts/clean-all",
