@@ -1,0 +1,36 @@
+{
+  "name": "@guardian/source",
+  "version": "3.3.0-rc.0",
+  "description": "The Guardian's design system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guardian/source.git"
+  },
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist/*",
+    "build": "npm-run-all --parallel build:*",
+    "build:bundles": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist/types"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.16",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-typescript": "^8.2.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.39.0",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.1.2",
+    "react": "^17.0.1"
+  }
+}
