@@ -69,17 +69,12 @@ const Columns = ({
 };
 
 interface ColumnProps extends HTMLAttributes<HTMLDivElement>, Props {
-	width?: number;
+	width?: number | number[];
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;
 }
 
-const Column = ({
-	width = 0,
-	cssOverrides,
-	children,
-	...props
-}: ColumnProps) => {
+const Column = ({ width, cssOverrides, children, ...props }: ColumnProps) => {
 	return (
 		<div css={[column(width), cssOverrides]} {...props}>
 			{children}
