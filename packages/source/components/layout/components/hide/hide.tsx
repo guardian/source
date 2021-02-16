@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 import { css } from '@emotion/react';
 import { Breakpoint } from '../../../../foundations/src';
 import { from, until } from '../../../../foundations/src/mq';

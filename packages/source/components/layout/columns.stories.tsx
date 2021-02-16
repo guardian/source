@@ -1,4 +1,3 @@
-import React from 'react';
 import { Columns } from './index';
 
 const gridStoryWrapper = (storyFn: () => JSX.Element) => {

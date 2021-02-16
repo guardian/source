@@ -1,5 +1,3 @@
-import React from 'react';
-
 // TODO: Deprecated. Please only use filled versions
 export const SvgRoundel = () => {
 	return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Props } from '@guardian/source';
 import {
 	straightLines,
