@@ -10,9 +10,8 @@ const foundations = join(__dirname, '../src/core/foundations');
 const icons = join(__dirname, '../src/core/icons');
 const brand = join(__dirname, '../src/core/brand');
 const helpers = join(__dirname, '../src/core/helpers');
-const editorial = join(__dirname, '../src/editorial/web');
+const editorial = join(__dirname, '../src/editorial');
 const coreComponents = join(__dirname, '../src/core/components');
-const editorialComponents = join(__dirname, '../src/editorial/web/components');
 
 const isDirectory = (path: string) =>
 	statP(path).then((stats) => stats.isDirectory());
@@ -34,22 +33,7 @@ export const getComponentPaths = () =>
 				),
 			)
 			.then((paths) => Promise.resolve(paths.filter((path) => !!path))),
-		readdirP(editorialComponents)
-			.then((componentDirs) =>
-				Promise.all(
-					componentDirs.map((componentDirName) =>
-						isDirectory(
-							`${editorialComponents}/${componentDirName}`,
-						).then((isDir) => {
-							if (!isDir) return;
-
-							return `${editorialComponents}/${componentDirName}`;
-						}),
-					),
-				),
-			)
-			.then((paths) => Promise.resolve(paths.filter((path) => !!path))),
-	]).then(([corePaths, editorialPaths]) => [...corePaths, ...editorialPaths]);
+	]).then(([corePaths]) => [...corePaths]);
 
 export const paths = {
 	root,
@@ -59,5 +43,4 @@ export const paths = {
 	helpers,
 	editorial,
 	coreComponents,
-	editorialComponents,
 };

@@ -1,10 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import {
-	cjsPaths,
-	submodulePaths,
-} from '../../../scripts/foundations-submodules';
+import { cjsPaths, submodulePaths } from '../../scripts/foundations-submodules';
 
 const extensions = ['.ts', '.tsx'];
 
