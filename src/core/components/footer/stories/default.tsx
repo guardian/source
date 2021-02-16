@@ -1,5 +1,5 @@
 import React from 'react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
+import { storybookBackgrounds } from '../../../helpers';
 import { Footer } from '../index';
 
 export const defaultBlue = () => <Footer />;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
+import { space } from '../../../foundations/src';
 import { Link, linkDefault } from '../index';
 
 /* eslint-disable react/jsx-key */

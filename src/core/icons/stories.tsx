@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import { storybookBackgrounds } from '@guardian/src-helpers';
-import { width, height } from '@guardian/src-foundations/size';
+import { storybookBackgrounds } from '../helpers';
+import { width, height } from '../foundations/src/size';
 
 import {
 	SvgAlert,

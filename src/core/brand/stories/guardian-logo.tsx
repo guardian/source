@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { storybookBackgrounds, ThemeName } from '@guardian/src-helpers';
+import { storybookBackgrounds, ThemeName } from '../../helpers';
 import { SvgGuardianLogo } from '../index';
 
 const iconWhite = css`

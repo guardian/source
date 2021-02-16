@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
-import { space } from '@guardian/src-foundations';
-import { background } from '@guardian/src-foundations/palette';
+import { storybookBackgrounds } from '../../../helpers';
+import { space } from '../../../foundations/src';
+import { background } from '../../../foundations/src/palette';
 import {
 	Button,
 	buttonDefault,

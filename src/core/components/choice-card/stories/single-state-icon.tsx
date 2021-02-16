@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
-import { SvgCamera, SvgAudio, SvgVideo } from '@guardian/src-icons';
+import { storybookBackgrounds } from '../../../helpers';
+import { SvgCamera, SvgAudio, SvgVideo } from '../../../icons';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
 /* eslint-disable react/jsx-key */

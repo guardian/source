@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
-import { footerBrand } from '@guardian/src-foundations/themes';
-import { from, between } from '@guardian/src-foundations/mq';
-import { height, width } from '@guardian/src-foundations/size';
-import { textSans } from '@guardian/src-foundations/typography';
-import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { space } from '../../foundations/src';
+import { footerBrand } from '../../foundations/src/themes';
+import { from, between } from '../../foundations/src/mq';
+import { height, width } from '../../foundations/src/size';
+import { textSans } from '../../foundations/src/typography';
+import { focusHalo } from '../../foundations/src/accessibility';
 
 export const footer = ({ footer } = footerBrand) => css`
 	color: ${footer.text};

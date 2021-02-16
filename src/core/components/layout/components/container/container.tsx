@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { container, containerBorder } from './styles';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '../../../../helpers';
 
 interface Container extends HTMLAttributes<HTMLDivElement>, Props {
 	border?: boolean;

@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
+import { space } from '../../../../foundations/src';
 import { InlineSpace } from './inline';
 
 export const inline = css`

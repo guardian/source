@@ -1,7 +1,7 @@
 import React from 'react';
 import { Label, labelBrand } from '../index';
 import { ThemeProvider } from '@emotion/react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
+import { storybookBackgrounds } from '../../../helpers';
 
 export const defaultLight = () => <Label text="First name" />;
 

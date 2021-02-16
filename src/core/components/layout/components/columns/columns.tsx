@@ -12,8 +12,8 @@ import {
 	collapseBelowleftCol,
 	collapseBelowWide,
 } from './styles';
-import { Breakpoint } from '@guardian/src-foundations/mq';
-import { Props } from '@guardian/src-helpers';
+import { Breakpoint } from '../../../../foundations/src/mq';
+import { Props } from '../../../../helpers';
 
 type GridBreakpoint = Extract<
 	Breakpoint,

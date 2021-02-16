@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
+import { storybookBackgrounds } from '../../../../helpers';
 
 import {
 	CheckboxGroup,

@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { stack, stackSpace } from './styles';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '../../../../helpers';
 
 export type StackSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;
 

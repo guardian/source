@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import { textSans } from '@guardian/src-foundations/typography';
-import { labelDefault } from '@guardian/src-foundations/themes';
-import { resets } from '@guardian/src-foundations/utils';
+import { textSans } from '../../foundations/src/typography';
+import { labelDefault } from '../../foundations/src/themes';
+import { resets } from '../../foundations/src/utils';
 
 export const legend = css`
 	${resets.legend};

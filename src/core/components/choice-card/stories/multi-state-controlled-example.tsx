@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
-import { textSans } from '@guardian/src-foundations/typography';
-import { text } from '@guardian/src-foundations/palette';
-import { space } from '@guardian/src-foundations';
+import { textSans } from '../../../foundations/src/typography';
+import { text } from '../../../foundations/src/palette';
+import { space } from '../../../foundations/src';
 import { ChoiceCardGroup, ChoiceCard } from '../index';
 
 const medium = css`

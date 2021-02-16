@@ -1,6 +1,6 @@
 import React from 'react';
 import { Columns, Column } from '../../index';
-import { sport } from '@guardian/src-foundations/palette';
+import { sport } from '../../../../foundations/src/palette';
 import { css } from '@emotion/react';
 
 const contents = css`

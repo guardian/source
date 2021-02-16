@@ -6,7 +6,7 @@ import React, {
 	ButtonHTMLAttributes,
 } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { LinkTheme } from '@guardian/src-foundations/themes';
+import { LinkTheme } from '../../foundations/src/themes';
 import {
 	link,
 	buttonLink,
@@ -17,13 +17,13 @@ import {
 	iconRight,
 	iconLeft,
 } from './styles';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '../../helpers';
 
 export {
 	linkDefault,
 	linkBrand,
 	linkBrandAlt,
-} from '@guardian/src-foundations/themes';
+} from '../../foundations/src/themes';
 
 export type LinkPriority = 'primary' | 'secondary';
 

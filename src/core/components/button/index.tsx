@@ -7,8 +7,8 @@ import React, {
 } from 'react';
 import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/react';
-import { ButtonTheme } from '@guardian/src-foundations/themes';
-import { visuallyHidden } from '@guardian/src-foundations/accessibility';
+import { ButtonTheme } from '../../foundations/src/themes';
+import { visuallyHidden } from '../../foundations/src/accessibility';
 import {
 	button,
 	primary,
@@ -28,13 +28,13 @@ import {
 	iconOnlyXsmall,
 	iconNudgeAnimation,
 } from './styles';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '../../helpers';
 
 export {
 	buttonDefault,
 	buttonBrand,
 	buttonBrandAlt,
-} from '@guardian/src-foundations/themes';
+} from '../../foundations/src/themes';
 export {
 	buttonReaderRevenue,
 	buttonReaderRevenueBrand,

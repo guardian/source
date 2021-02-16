@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { storybookBackgrounds } from '@guardian/src-helpers';
-import { space } from '@guardian/src-foundations';
+import { storybookBackgrounds } from '../../../helpers';
+import { space } from '../../../foundations/src';
 import { Link, linkDefault, linkBrandAlt, linkBrand } from '../index';
 
 /* eslint-disable react/jsx-key */

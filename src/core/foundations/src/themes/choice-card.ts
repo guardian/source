@@ -1,4 +1,4 @@
-import { border, text, background } from '@guardian/src-foundations/palette';
+import { border, text, background } from '../palette';
 import { userFeedbackDefault } from './user-feedback';
 
 export const choiceCardDefault = {

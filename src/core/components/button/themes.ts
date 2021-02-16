@@ -1,5 +1,5 @@
-import { neutral, brand, brandAlt } from '@guardian/src-foundations/palette';
-import { ButtonTheme } from '@guardian/src-foundations/themes';
+import { neutral, brand, brandAlt } from '../../foundations/src/palette';
+import { ButtonTheme } from '../../foundations/src/themes';
 
 const text = {
 	readerRevenue: {

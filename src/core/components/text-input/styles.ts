@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
-import { height } from '@guardian/src-foundations/size';
-import { textSans } from '@guardian/src-foundations/typography';
-import { focusHalo } from '@guardian/src-foundations/accessibility';
-import { textInputDefault } from '@guardian/src-foundations/themes';
-import { resets } from '@guardian/src-foundations/utils';
+import { space } from '../../foundations/src';
+import { height } from '../../foundations/src/size';
+import { textSans } from '../../foundations/src/typography';
+import { focusHalo } from '../../foundations/src/accessibility';
+import { textInputDefault } from '../../foundations/src/themes';
+import { resets } from '../../foundations/src/utils';
 
 export const errorInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderError};

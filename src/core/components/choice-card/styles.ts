@@ -1,12 +1,12 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { space, transitions } from '@guardian/src-foundations';
-import { visuallyHidden } from '@guardian/src-foundations/accessibility';
-import { textSans } from '@guardian/src-foundations/typography';
-import { focusHalo } from '@guardian/src-foundations/accessibility';
-import { from } from '@guardian/src-foundations/mq';
-import { choiceCardDefault } from '@guardian/src-foundations/themes';
-import { width, height } from '@guardian/src-foundations/size';
-import { resets } from '@guardian/src-foundations/utils';
+import { space, transitions } from '../../foundations/src';
+import { visuallyHidden } from '../../foundations/src/accessibility';
+import { textSans } from '../../foundations/src/typography';
+import { focusHalo } from '../../foundations/src/accessibility';
+import { from } from '../../foundations/src/mq';
+import { choiceCardDefault } from '../../foundations/src/themes';
+import { width, height } from '../../foundations/src/size';
+import { resets } from '../../foundations/src/utils';
 import { ChoiceCardColumns } from './index';
 
 export const fieldset = css`

@@ -12,9 +12,9 @@ import {
 	linksWrapperSpace,
 	linksWrapperSpaceWithBackToTop,
 } from './styles';
-import { Props } from '@guardian/src-helpers';
-import { SvgChevronUpSingle } from '@guardian/src-icons';
-export { footerBrand } from '@guardian/src-foundations/themes';
+import { Props } from '../../helpers';
+import { SvgChevronUpSingle } from '../../icons';
+export { footerBrand } from '../../foundations/src/themes';
 
 interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
 	showBackToTop: boolean;

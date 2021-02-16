@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import { breakpoints, space } from '@guardian/src-foundations';
-import { from } from '@guardian/src-foundations/mq';
-import { border } from '@guardian/src-foundations/palette';
+import { breakpoints, space } from '../../../../foundations/src';
+import { from } from '../../../../foundations/src/mq';
+import { border } from '../../../../foundations/src/palette';
 
 export const container = css`
 	margin: 0 auto;

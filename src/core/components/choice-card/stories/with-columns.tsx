@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
+import { space } from '../../../foundations/src';
 import { ChoiceCardGroup, ChoiceCard } from '../index';
 
 const medium = css`

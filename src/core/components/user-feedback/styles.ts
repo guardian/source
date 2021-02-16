@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import { userFeedbackDefault } from '@guardian/src-foundations/themes';
-import { textSans } from '@guardian/src-foundations/typography';
-import { remWidth, remHeight } from '@guardian/src-foundations/size';
+import { userFeedbackDefault } from '../../foundations/src/themes';
+import { textSans } from '../../foundations/src/typography';
+import { remWidth, remHeight } from '../../foundations/src/size';
 
 const inlineMessage = css`
 	display: flex;

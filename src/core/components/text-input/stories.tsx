@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
-import { textSans } from '@guardian/src-foundations/typography';
-import { from } from '@guardian/src-foundations/mq';
+import { space } from '../../foundations/src';
+import { textSans } from '../../foundations/src/typography';
+import { from } from '../../foundations/src/mq';
 import { TextInput, textInputDefault } from './index';
 
 export default {

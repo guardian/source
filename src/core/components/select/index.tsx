@@ -1,8 +1,8 @@
 ///<reference types="@emotion/react/types/css-prop" />
 import React, { SelectHTMLAttributes, OptionHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
-import { Label } from '@guardian/src-label';
+import { InlineError, InlineSuccess } from '../user-feedback';
+import { Label } from '../label';
 import {
 	select,
 	selectWrapper,
@@ -11,15 +11,15 @@ import {
 	errorInput,
 	successInput,
 } from './styles';
-import { Props } from '@guardian/src-helpers';
-import { SvgChevronDownSingle } from '@guardian/src-icons';
+import { Props } from '../../helpers';
+import { SvgChevronDownSingle } from '../../icons';
 
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from '@guardian/src-foundations/accessibility';
-export { selectDefault } from '@guardian/src-foundations/themes';
+} from '../../foundations/src/accessibility';
+export { selectDefault } from '../../foundations/src/themes';
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 	id?: string;

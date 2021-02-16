@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Columns, Column } from '../../index';
-import { textSans } from '@guardian/src-foundations/typography';
-import { sport } from '@guardian/src-foundations/palette';
-import { space } from '@guardian/src-foundations';
+import { textSans } from '../../../../foundations/src/typography';
+import { sport } from '../../../../foundations/src/palette';
+import { space } from '../../../../foundations/src';
 import { css } from '@emotion/react';
 
 const contents = css`

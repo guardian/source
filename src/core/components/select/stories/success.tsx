@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { from } from '@guardian/src-foundations/mq';
+import { from } from '../../../foundations/src/mq';
 import { Select, Option } from '../index';
 
 const constrainedWith = css`

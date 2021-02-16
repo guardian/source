@@ -1,15 +1,15 @@
 ///<reference types="@emotion/react/types/css-prop" />
 import React, { InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { InlineError } from '@guardian/src-user-feedback';
-import { Label } from '@guardian/src-label';
+import { InlineError } from '../user-feedback';
+import { Label } from '../label';
 import { widthFluid, textArea, errorInput } from './styles';
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from '@guardian/src-foundations/accessibility';
-import { Props } from '@guardian/src-helpers';
+} from '../../foundations/src/accessibility';
+import { Props } from '../../helpers';
 
 interface TextAreaProps
 	extends InputHTMLAttributes<HTMLTextAreaElement>,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { textSans } from '@guardian/src-foundations/typography';
+import { textSans } from '../../../foundations/src/typography';
 import { Link, linkDefault } from '../index';
 
 const text = css`

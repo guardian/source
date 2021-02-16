@@ -1,8 +1,8 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { css } from '@emotion/react';
-import { Breakpoint } from '@guardian/src-foundations';
-import { from, until } from '@guardian/src-foundations/mq';
-import { Props } from '@guardian/src-helpers';
+import { Breakpoint } from '../../../../foundations/src';
+import { from, until } from '../../../../foundations/src/mq';
+import { Props } from '../../../../helpers';
 
 interface HideProps extends HTMLAttributes<HTMLDivElement>, Props {
 	children: ReactNode;
