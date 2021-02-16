@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./packages",
     "paths": {
       "@guardian/source": ["core"]
     },
@@ -23,6 +23,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
+  "include": ["packages/**/*"],
   "exclude": ["node_modules"]
 }

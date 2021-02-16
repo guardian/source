@@ -4,10 +4,7 @@
   "private": true,
   "license": "Apache-2.0",
   "workspaces": [
-    "src/core/*",
-    "src/core/components/*",
-    "src/editorial/web/*",
-    "src/editorial/web/components/*"
+    "packages/*"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",
@@ -18,7 +15,7 @@
     "fix": "yarn lint:js --fix",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
-    "lint:styles": "stylelint src/core/**/styles.ts",
+    "lint:styles": "stylelint packages/source/**/styles.ts",
     "publish:release": "ts-node ./scripts/publish-release",
     "release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn publish:release",
     "release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
@@ -43,8 +40,8 @@
     "verbump:preminor:all": "ts-node ./scripts/verbump-preminor-all && yarn verbump:deps:all",
     "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
     "verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all && yarn verbump:deps:all",
-    "watch:foundations": "cd src/core/foundations && yarn watch",
-    "watch:icons": "cd src/core/icons && yarn watch"
+    "watch:foundations": "cd packages/source/foundations && yarn watch",
+    "watch:icons": "cd packages/source/icons && yarn watch"
   },
   "husky": {
     "hooks": {
