@@ -1,4 +1,4 @@
 module.exports = {
-	stories: [`../src/**/*stories.tsx`],
+	stories: [`../packages/**/*stories.tsx`],
 	addons: ['@storybook/addon-backgrounds', '@storybook/addon-viewport'],
 };

@@ -1,4 +1,4 @@
-import { line } from '@guardian/src-foundations/palette';
+import { line } from '@guardian/source';
 import { LineCount } from '.';
 
 const wavelength = 12;

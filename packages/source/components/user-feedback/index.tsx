@@ -1,5 +1,4 @@
 ///<reference types="@emotion/react/types/css-prop" />
-///<reference types="@guardian/src-foundations/types/themes" />
 import React, { ReactNode, HTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { SvgAlertTriangle, SvgTickRound } from '../../icons';

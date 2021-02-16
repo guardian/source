@@ -23,6 +23,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["packages/**/*"],
+  "include": ["packages/**/*", ".storybook/**/*"],
   "exclude": ["node_modules"]
 }

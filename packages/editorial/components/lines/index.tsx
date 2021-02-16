@@ -1,5 +1,5 @@
 import React from 'react';
-import { Props } from '@guardian/src-helpers';
+import { Props } from '@guardian/source';
 import {
 	straightLines,
 	squigglyLines,

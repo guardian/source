@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { FocusStyleManager } from '@guardian/src-foundations/utils';
-import { breakpoints, Breakpoint } from '@guardian/src-foundations';
+import { breakpoints, Breakpoint } from '@guardian/source';
+import { FocusStyleManager } from '../packages/source/foundations/src/utils/focus-style-manager';
 
 type ViewportMeta = {
 	[key in Breakpoint]: {
