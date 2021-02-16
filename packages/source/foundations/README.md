@@ -2,18 +2,12 @@
 
 The Guardian's foundations are the atoms from which all our visual design is built. They are intended for use with a CSS-in-JS library such as Emotion.
 
-## Install
-
-```sh
-$ yarn add @guardian/src-foundations
-```
-
 ## Use
 
 ### [Palette](https://www.theguardian.design/2a1e5182b/p/28d868-overview)
 
 ```ts
-import { background } from '@guardian/src-foundations/palette';
+import { background } from '@guardian/source';
 
 const backgroundColor = css`
     background-color: ${background.primary};
@@ -23,7 +17,7 @@ const backgroundColor = css`
 ### [Typography](https://www.theguardian.design/2a1e5182b/p/930d69-typography/b/78d0d9)
 
 ```ts
-import { headline, body, textSans } from '@guardian/src-foundations/typography';
+import { headline, body, textSans } from '@guardian/source';
 
 const h1 = css`
     ${headline.large({ fontWeight: 'bold' })};
@@ -41,7 +35,7 @@ const copyright = css`
 ### Media queries
 
 ```ts
-import { from, until, between } from '@guardian/src-foundations/mq';
+import { from, until, between } from '@guardian/source';
 
 const styles = css`
     padding: 0 10px;
@@ -63,7 +57,7 @@ const styles = css`
 ### [Size](https://www.theguardian.design/2a1e5182b/p/38d9a9-overview)
 
 ```ts
-import { width, height } from '@guardian/src-foundations/size';
+import { width, height } from '@guardian/source';
 
 const checkbox = css`
     width: ${width.inputXsmall}px;
@@ -76,7 +70,7 @@ const checkbox = css`
 For elements that should not appear to sighted users, but are useful to assistive technology users.
 
 ```ts
-import { visuallyHidden } from '@guardian/src-foundations/accessibility';
+import { visuallyHidden } from '@guardian/source';
 
 const label = css`
     ${visuallyHidden};
@@ -88,7 +82,7 @@ const label = css`
 This mixin provides a [clear focus state](https://theguardian.design/2a1e5182b/p/08dc26-interaction-states/t/314e46) for elements that may receive keyboard focus.
 
 ```ts
-import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { focusHalo } from '@guardian/source';
 
 const input = css`
     ${focusHalo};
@@ -104,7 +98,7 @@ ID of an element that describes the first element. The generated ID should also 
 the [`aria-describedby`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) attribute on the first element.
 
 ```tsx
-import { descriptionId } from '@guardian/src-foundations/accessibility';
+import { descriptionId } from '@guardian/source';
 
 const Form = () => {
     const id = 'first_name';

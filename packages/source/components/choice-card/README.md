@@ -2,16 +2,10 @@
 
 📣 For more context and visual guides relating choice card usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/65ffe9)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-choice-card
-```
-
 ## Use
 
 ```js
-import { ChoiceCardGroup, ChoiceCard } from '@guardian/src-choice-card';
+import { ChoiceCardGroup, ChoiceCard } from '@guardian/source';
 
 const Form = () => {
     const [selected, setSelected] = useState(null);

@@ -2,16 +2,10 @@
 
 📣 For more context and visual guides relating to `Label` usage on the [Source Design System website](https://www.theguardian.design)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-label
-```
-
 ## Use
 
 ```tsx
-import { Label, Legend } from '@guardian/src-label';
+import { Label, Legend } from '@guardian/source';
 
 const Form = () => (
     <form>

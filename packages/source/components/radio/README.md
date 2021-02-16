@@ -2,16 +2,10 @@
 
 📣 For more context and visual guides relating radio usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/2891dd-radio-button/b/46940d)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-radio
-```
-
 ## Use
 
 ```js
-import { RadioGroup, Radio } from '@guardian/src-radio';
+import { RadioGroup, Radio } from '@guardian/source';
 
 const Form = () => {
     const [selected, setSelected] = useState(null);

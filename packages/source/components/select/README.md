@@ -2,16 +2,10 @@
 
 📣 For more context and visual guides relating to select box usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/663879-select-box)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-select
-```
-
 ## Use
 
 ```js
-import { Select, Option } from '@guardian/src-select';
+import { Select, Option } from '@guardian/source';
 
 const Form = () => (
     <form>

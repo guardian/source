@@ -2,16 +2,10 @@
 
 📣 For more context and visual guides relating checkbox usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/466fad-checkbox/b/33fc2f)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-checkbox
-```
-
 ## Use
 
 ```js
-import { CheckboxGroup, Checkbox } from '@guardian/src-checkbox';
+import { CheckboxGroup, Checkbox } from '@guardian/source';
 
 const Form = () => {
     const [ukChecked, setUkChecked] = useState(false);

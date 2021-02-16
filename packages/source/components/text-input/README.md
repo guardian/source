@@ -2,16 +2,10 @@
 
 📣 For more context and visual guides relating text input usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/097455-text-input-field/b/050445)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-text-input
-```
-
 ## Use
 
 ```js
-import { TextInput } from '@guardian/src-text-input';
+import { TextInput } from '@guardian/source';
 
 const Form = () => {
     const [state, setState] = useState('');

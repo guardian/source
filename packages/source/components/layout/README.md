@@ -2,18 +2,12 @@
 
 📣 For more context and visual guides relating to `Layout` usage on the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/309077-layout-components)
 
-## Install
-
-```sh
-$ yarn add @guardian/src-layout
-```
-
 ## Container
 
 Centres the page content and applies a width that corresponds to the grid at the current breakpoint.
 
 ```tsx
-import { Container } from '@guardian/src-layout';
+import { Container } from '@guardian/source';
 
 const Wrapper = () => (
     <Container>
@@ -35,7 +29,7 @@ Whether to show a border to the left and right of the Container
 Children will be stacked one on top of the other.
 
 ```tsx
-import { Stack } from '@guardian/src-layout';
+import { Stack } from '@guardian/source';
 
 const Wrapper = () => (
     <Stack>
@@ -61,7 +55,7 @@ Columns will be arranged side by side on a single row, with the specified width.
 Use Columns in conjunction with Container to help the columns align neatly with [the Guardian's grids](https://www.theguardian.design/2a1e5182b/p/41be19-grids).
 
 ```tsx
-import { Container, Columns, Column } from '@guardian/src-layout';
+import { Container, Columns, Column } from '@guardian/source';
 
 const Wrapper = () => (
     <Container>
@@ -95,7 +89,7 @@ Fraction of the parent container's width that the column will occupy. If no valu
 Hide a component above or below a certain breakpoint
 
 ```tsx
-import { Hide } from '@guardian/src-layout';
+import { Hide } from '@guardian/source';
 
 const Wrapper = () => (
     <>
@@ -126,7 +120,7 @@ Contents will be hidden at viewport widths less than the specified breakpoint
 ## Inline
 
 ```tsx
-import { Inline } from '@guardian/src-layout';
+import { Inline } from '@guardian/source';
 
 const Wrapper = () => (
     <Inline>
@@ -148,7 +142,7 @@ Units of space between inline items (one unit is 4px)
 ## Tiles
 
 ```tsx
-import { Tiles } from '@guardian/src-layout';
+import { Tiles } from '@guardian/source';
 
 const Wrapper = () => (
     <Tiles columns={3}>
