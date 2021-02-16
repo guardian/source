@@ -4,6 +4,7 @@
 
 // we need to be explicit about the index file while these directories are also packages,
 // otherwise the node require algorithm uses the package.json
+// TODO: we can drop the index file when we remove the package.jsons
 export * from './foundations/src/index';
 export * from './brand/index';
 export * from './components/accordion/index';
