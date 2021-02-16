@@ -6,7 +6,7 @@ declare module '@emotion/react' {
 			textPrimary: string;
 			borderPrimary: string;
 		};
-		button: {};
+		button: Record<string, unknown>;
 		checkbox: {
 			border: string;
 			borderHover: string;
@@ -46,8 +46,8 @@ declare module '@emotion/react' {
 			textError: string;
 			textSuccess: string;
 		};
-		layout: {};
-		link: {};
+		layout: Record<string, unknown>;
+		link: Record<string, unknown>;
 		radio: {
 			borderHover: string;
 			border: string;
@@ -69,7 +69,7 @@ declare module '@emotion/react' {
 			borderError: string;
 			borderSuccess: string;
 		};
-		textArea: {};
+		textArea: Record<string, unknown>;
 		textInput: {
 			textUserInput: string;
 			textLabel: string;

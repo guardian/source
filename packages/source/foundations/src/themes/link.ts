@@ -1,8 +1,4 @@
-import {
-	text,
-	brandText,
-	brandAltText,
-} from '../palette';
+import { text, brandText, brandAltText } from '../palette';
 
 export type LinkTheme = {
 	textPrimary: string;

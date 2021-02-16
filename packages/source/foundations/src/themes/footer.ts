@@ -1,8 +1,4 @@
-import {
-	brandBorder,
-	brandBackground,
-	brandText,
-} from '../palette';
+import { brandBorder, brandBackground, brandText } from '../palette';
 
 export const footerBrand = {
 	footer: {
