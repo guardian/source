@@ -13,7 +13,7 @@ module.exports = ({ config, mode }) => {
 			plugins: ['@babel/plugin-proposal-class-properties'],
 		},
 	});
-	config.resolve.extensions.push('.ts', '.tsx');
+	config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx');
 	config.resolve.alias = {
 		'@guardian/source': path.resolve(__dirname, '../packages/source'),
 	};

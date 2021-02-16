@@ -1,14 +1,8 @@
 import React, { useEffect } from 'react';
 import { breakpoints, Breakpoint } from '@guardian/source';
-import { FocusStyleManager } from '../packages/source/foundations/src/utils/focus-style-manager';
+import { FocusStyleManager } from '@guardian/source/foundations/src/utils/focus-style-manager';
 
-type ViewportMeta = {
-	[key in Breakpoint]: {
-		name: string;
-		type: string;
-	};
-};
-const viewportMeta: ViewportMeta = {
+const viewportMeta = {
 	mobile: {
 		name: 'Mobile',
 		type: 'mobile',
