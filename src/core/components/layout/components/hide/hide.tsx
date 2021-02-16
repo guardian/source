@@ -21,6 +21,7 @@ const Hide = ({ children, above, below }: HideProps) => {
 	}
 	if (above) {
 		whenToHide = css`
+			${whenToHide}
 			${from[above]} {
 				display: none;
 			}

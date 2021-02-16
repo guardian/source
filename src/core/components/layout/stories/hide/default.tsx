@@ -33,3 +33,17 @@ export const above = () => (
 above.story = {
 	name: 'above',
 };
+
+export const between = () => (
+	<Container>
+		<Hide below="tablet" above="leftCol">
+			<div css={contents}>
+				Will only appear between desktop and leftCol
+			</div>
+		</Hide>
+	</Container>
+);
+
+between.story = {
+	name: 'between',
+};
