@@ -1,0 +1,8 @@
+{
+  "name": "@guardian/source",
+  "version": "4.0.0-rc.0",
+  "description": "The Guardian's design system",
+  "repository": "https://github.com/guardian/source",
+  "license": "Apache-2.0",
+  "main": "dist/index.js"
+}

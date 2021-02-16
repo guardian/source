@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "./packages",
+    "baseUrl": ".",
     "paths": {
-      "@guardian/source": ["core"]
+      "@guardian/source": ["packages/source"]
     },
     "outDir": "dist",
     "module": "commonjs",
