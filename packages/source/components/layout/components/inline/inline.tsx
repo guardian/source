@@ -5,7 +5,7 @@ import { Props } from '../../../../helpers';
 
 export type InlineSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;
 
-interface InlineProps extends HTMLAttributes<HTMLDivElement>, Props {
+export interface InlineProps extends HTMLAttributes<HTMLDivElement>, Props {
 	space?: InlineSpace;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;

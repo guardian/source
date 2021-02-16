@@ -29,7 +29,7 @@ const orientationStyles = {
 	horizontal: horizontal,
 };
 
-interface RadioGroupProps extends Props {
+export interface RadioGroupProps extends Props {
 	id?: string;
 	name: string;
 	label?: string;
@@ -123,7 +123,9 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	);
 };
 
-interface RadioProps extends InputHTMLAttributes<HTMLInputElement>, Props {
+export interface RadioProps
+	extends InputHTMLAttributes<HTMLInputElement>,
+		Props {
 	value: string;
 	checked?: boolean;
 	defaultChecked?: boolean;

@@ -25,7 +25,7 @@ const visuallyHidden = css`
 	${_visuallyHidden}
 `;
 
-interface AccordionProps extends Props {
+export interface AccordionProps extends Props {
 	hideToggleLabel?: boolean;
 	children: ReactElement[];
 }

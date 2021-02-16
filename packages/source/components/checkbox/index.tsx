@@ -24,7 +24,7 @@ import { Props } from '../../helpers';
 
 export { checkboxDefault, checkboxBrand } from '../../foundations/src/themes';
 
-interface CheckboxGroupProps extends Props {
+export interface CheckboxGroupProps extends Props {
 	id?: string;
 	name: string;
 	label?: string;
@@ -111,7 +111,9 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 	);
 };
 
-interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement>, Props {
+export interface CheckboxProps
+	extends InputHTMLAttributes<HTMLInputElement>,
+		Props {
 	value: string;
 	checked?: boolean;
 	defaultChecked?: boolean;

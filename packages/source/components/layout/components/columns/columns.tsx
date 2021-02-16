@@ -25,7 +25,7 @@ type CollapseBreakpoint = Extract<
 	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
-interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
+export interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
 	collapseBelow?: CollapseBreakpoint;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;

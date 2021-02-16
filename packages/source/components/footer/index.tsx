@@ -16,7 +16,7 @@ import { Props } from '../../helpers';
 import { SvgChevronUpSingle } from '../../icons';
 export { footerBrand } from '../../foundations/src/themes';
 
-interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
+export interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
 	showBackToTop: boolean;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
