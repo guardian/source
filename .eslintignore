@@ -1,6 +1,5 @@
 node_modules
 dist
-*.d.ts
 
 # for now ignore foundations script files
 packages/source/foundations/scripts
