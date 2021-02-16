@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "npm-run-all -p build:*",
-    "build:cjs": "tsc --outDir dist/cjs --module CommonJS",
+    "build:cjs": "tsc --outDir dist/cjs --module CommonJS --target ES2018 --lib DOM,ES2018",
     "build:esm": "tsc --outDir dist/esm"
   },
   "peerDependencies": {
