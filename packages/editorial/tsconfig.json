@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@guardian/source": ["../source"]
+    }
+  },
+  "references": [
+    {
+      "path": "../source"
+    }
+  ],
+  "include": ["./**/*"]
+}

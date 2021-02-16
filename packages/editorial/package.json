@@ -9,6 +9,11 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "npm-run-all -p build:*",
+    "build:cjs": "tsc --outDir dist/cjs --module CommonJS",
+    "build:esm": "tsc --outDir dist/esm"
+  },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
     "@guardian/source": "^4.0.0-rc.0",
