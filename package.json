@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "prebuild": "npm-run-all clean bootstrap",
+    "prebuild": "npm-run-all bootstrap",
     "build": "npm-run-all build:source build:editorial",
     "build-storybook": "build-storybook -o dist",
     "build:editorial": "yarn workspace @guardian/editorial build",
@@ -19,6 +19,8 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
     "lint:styles": "stylelint packages/source/**/styles.ts",
+    "prepublishOnly": "npm-run-all build",
+    "release": "lerna publish",
     "storybook": "start-storybook",
     "test": "jest",
     "tsc": "tsc",
