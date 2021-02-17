@@ -17,5 +17,8 @@
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
     "react": "^17.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
