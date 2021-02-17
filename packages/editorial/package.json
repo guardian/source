@@ -1,6 +1,6 @@
 {
   "name": "@guardian/editorial",
-  "version": "4.0.0-pre.3",
+  "version": "4.0.0-pre.4",
   "description": "Extensions to the Guardian's design system for editorial",
   "repository": "https://github.com/guardian/source",
   "license": "Apache-2.0",
