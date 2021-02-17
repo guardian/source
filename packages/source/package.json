@@ -12,7 +12,8 @@
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:cjs": "tsc --outDir dist/cjs --module CommonJS --target ES2018 --lib DOM,ES2018",
-    "build:esm": "tsc --outDir dist/esm"
+    "build:esm": "tsc --outDir dist/esm",
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
@@ -20,5 +21,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "7d30ea6af0d1ed7fadc16b87d12f38e721770de9"
 }
