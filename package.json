@@ -19,7 +19,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
     "lint:styles": "stylelint packages/source/**/styles.ts",
-    "prepublishOnly": "npm-run-all build",
+    "prerelease": "npm-run-all build",
     "release": "lerna publish",
     "storybook": "start-storybook",
     "test": "jest",
