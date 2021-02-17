@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source",
-  "version": "4.0.0-rc.0",
+  "version": "4.0.0-pre.0",
   "description": "The Guardian's design system",
   "repository": "https://github.com/guardian/source",
   "license": "Apache-2.0",
