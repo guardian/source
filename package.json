@@ -9,7 +9,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "prebuild": "npm-run-all bootstrap",
-    "build": "npm-run-all build:source build:editorial",
+    "build": "npm-run-all --serial build:source build:editorial",
     "build-storybook": "build-storybook -o dist",
     "build:editorial": "yarn workspace @guardian/editorial build",
     "build:source": "yarn workspace @guardian/source build",

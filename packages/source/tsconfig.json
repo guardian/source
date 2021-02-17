@@ -6,5 +6,6 @@
     "composite": true,
     "rootDir": "."
   },
-  "include": ["./**/*"]
+  "include": ["./**/*"],
+  "exclude": ["dist"]
 }
