@@ -99,7 +99,7 @@ const calculateWidth = (width: number) => {
 			visibility: hidden;
 
 			/* offset the margin-left on the next sibling */
-			margin-right: -20px;
+			margin-right: ${-space[5]}px;
 		`;
 	}
 
