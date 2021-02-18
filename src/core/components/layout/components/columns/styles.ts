@@ -135,9 +135,23 @@ const generateWidthCSS = (width: number | number[]) => {
 	return calculateWidth(width);
 };
 
-export const column = (width?: number | number[]) => css`
-	box-sizing: border-box;
-	/* If a width is specified, don't allow column to grow. Use the width property */
-	flex: ${width !== undefined ? '0 0 auto' : 1};
-	${width !== undefined ? generateWidthCSS(width) : ''};
-`;
+export const column = (width?: number | number[]) => {
+	let flex;
+	let widthCSS;
+
+	if (width == null || (Array.isArray(width) && width.length === 0)) {
+		// If no width is specified, allow the column to grow
+		flex = 1;
+		widthCSS = css``;
+	} else {
+		// If a width is specified, don't allow column to grow. Use the width property
+		flex = '0 0 auto';
+		widthCSS = generateWidthCSS(width);
+	}
+
+	return css`
+		box-sizing: border-box;
+		flex: ${flex};
+		${widthCSS};
+	`;
+};
