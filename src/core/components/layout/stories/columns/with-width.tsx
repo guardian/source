@@ -89,6 +89,7 @@ withWidthDesktop.story = {
 	name: 'with width desktop',
 	parameters: {
 		viewport: { defaultViewport: 'desktop' },
+		layout: 'fullscreen',
 	},
 };
 
@@ -98,5 +99,6 @@ withWidthTablet.story = {
 	name: 'with width tablet',
 	parameters: {
 		viewport: { defaultViewport: 'tablet' },
+		layout: 'fullscreen',
 	},
 };
