@@ -2,7 +2,9 @@ import execa, { ExecaReturnValue } from 'execa';
 import { paths, getComponentPaths } from './paths';
 
 const build = (dir: string) => {
-	return execa('yarn', ['--cwd', `${dir}`, 'run', 'build'], {
+	console.log(`\nBuilding ${require(`${dir}/package.json`).name}`);
+
+	return execa('yarn', ['--cwd', dir, 'run', 'build'], {
 		stdio: 'inherit',
 	});
 };
