@@ -16,7 +16,6 @@
     "build:cjs": "tsc --emitDeclarationOnly false --outDir dist/cjs --module commonjs",
     "build:esm": "tsc --emitDeclarationOnly false --outDir dist/esm --module ES6",
     "clean": "rm -rf dist",
-    "copy:types": "ts-node --script-mode scripts/copy-type-definitions --esModuleInterop",
     "prepublishOnly": "yarn build",
     "publish:public": "yarn publish --access public",
     "references": "tsc -b",
