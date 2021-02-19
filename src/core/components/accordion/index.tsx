@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { useState, useEffect, ReactElement, ReactNode } from 'react';
 import {
 	accordion,
