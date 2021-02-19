@@ -20,12 +20,12 @@
       "@guardian/src-icons": ["core/icons"]
     },
     "outDir": "dist",
-    "module": "commonjs",
-    "lib": ["es5", "es6", "es7", "es2017", "es2019", "dom"],
+    "module": "ES2015", // set this to ES2020 in v4
+    "target": "ES2015", // set this to ES2020 in v4
     "strict": true,
     "sourceMap": true,
     "jsx": "react-jsx",
-	"jsxImportSource": "@emotion/react",
+    "jsxImportSource": "@emotion/react",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -37,7 +37,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
