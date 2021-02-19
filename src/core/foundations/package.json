@@ -24,8 +24,7 @@
     "verbump:patch": "yarn version --patch --no-git-tag-version",
     "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
     "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
-    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
-    "watch": "yarn clean && tsc && rollup --config --watch"
+    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",

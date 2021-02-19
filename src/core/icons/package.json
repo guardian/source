@@ -24,8 +24,7 @@
     "verbump:patch": "yarn version --patch --no-git-tag-version",
     "verbump:premajor": "yarn version --premajor --preid rc --no-git-tag-version",
     "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
-    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
-    "watch": "rollup --config --watch"
+    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
   },
   "devDependencies": {
     "@emotion/react": "^11.1.2",
