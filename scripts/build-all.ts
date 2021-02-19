@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 import execa, { ExecaReturnValue } from 'execa';
 import { paths, getComponentPaths } from './paths';
 
