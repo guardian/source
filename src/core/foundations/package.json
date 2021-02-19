@@ -8,17 +8,20 @@
   "license": "Apache-2.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
-    "dist"
+    "dist/esm",
+    "dist/cjs",
+    "dist/types"
   ],
   "scripts": {
-    "build": "npm-run-all clean references --parallel build:*",
-    "build:cjs": "tsc --emitDeclarationOnly false --outDir dist/cjs --module commonjs",
-    "build:esm": "tsc --emitDeclarationOnly false --outDir dist/esm --module ES6",
+    "build": "npm-run-all clean --parallel build:*",
+    "build:cjs": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/cjs --module commonjs",
+    "build:esm": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/esm --module ES6",
+    "build:types": "tsc -b",
     "clean": "rm -rf dist",
     "prepublishOnly": "yarn build",
     "publish:public": "yarn publish --access public",
-    "references": "tsc -b",
     "verbump:major": "yarn version --major --no-git-tag-version",
     "verbump:minor": "yarn version --minor --no-git-tag-version",
     "verbump:patch": "yarn version --patch --no-git-tag-version",
