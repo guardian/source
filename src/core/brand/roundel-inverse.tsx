@@ -1,4 +1,3 @@
-import React from 'react';
 import { SvgRoundelFilled } from './roundel-filled';
 import { neutral } from '@guardian/src-foundations/palette';
 
