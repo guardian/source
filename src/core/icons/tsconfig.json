@@ -1,12 +1,9 @@
 {
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "outDir": ".",
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "lib": ["es5", "es6", "es7", "es2017", "es2019", "dom"],
-    "types": ["@emotion/react/types/css-prop"]
+    "outDir": "dist",
+    "noEmit": false
   },
-  "exclude": ["node_modules"]
+  "include": ["."],
+  "exclude": ["dist", "stories.tsx"]
 }
