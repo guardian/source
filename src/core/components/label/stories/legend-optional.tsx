@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { Legend, labelBrand } from '../index';
 import { ThemeProvider } from '@emotion/react';

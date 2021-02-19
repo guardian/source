@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Columns, Column } from '../../index';
 import { textSans } from '@guardian/src-foundations/typography';
 import { sport } from '@guardian/src-foundations/palette';

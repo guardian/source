@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { Accordion, AccordionRow } from './index';
 import { background } from '@guardian/src-foundations/palette';

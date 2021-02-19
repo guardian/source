@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { Stack } from '../../index';
 import { textSans } from '@guardian/src-foundations/typography';

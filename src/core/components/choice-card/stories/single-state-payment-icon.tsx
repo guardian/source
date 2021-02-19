@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
 import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from '@guardian/src-icons';

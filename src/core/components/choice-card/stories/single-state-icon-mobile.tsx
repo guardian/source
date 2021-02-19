@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { SvgCamera, SvgAudio, SvgVideo } from '@guardian/src-icons';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';

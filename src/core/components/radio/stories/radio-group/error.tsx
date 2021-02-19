@@ -1,4 +1,3 @@
-import React from 'react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { RadioGroup, Radio, radioDefault, radioBrand } from '../../index';
 import { ThemeProvider } from '@emotion/react';

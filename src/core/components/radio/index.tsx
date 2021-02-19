@@ -1,5 +1,5 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, { ReactNode, InputHTMLAttributes } from 'react';
+import { ReactNode, InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { Legend } from '@guardian/src-label';
 import { InlineError } from '@guardian/src-user-feedback';

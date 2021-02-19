@@ -1,4 +1,3 @@
-import React from 'react';
 import { Radio, radioDefault } from '../../index';
 import { ThemeProvider } from '@emotion/react';
 

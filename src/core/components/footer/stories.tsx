@@ -1,4 +1,3 @@
-import React from 'react';
 import { Footer } from './index';
 import { css } from '@emotion/react';
 

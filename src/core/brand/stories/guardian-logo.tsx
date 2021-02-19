@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { storybookBackgrounds, ThemeName } from '@guardian/src-helpers';
 import { SvgGuardianLogo } from '../index';

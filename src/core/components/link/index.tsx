@@ -1,5 +1,5 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import React, {
+import {
 	ReactElement,
 	ReactNode,
 	AnchorHTMLAttributes,

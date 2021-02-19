@@ -1,4 +1,3 @@
-import React from 'react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { Footer } from '../index';
 

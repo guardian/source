@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
 import { space } from '@guardian/src-foundations';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Lines } from './index';
 
 export default {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Tiles } from '../../index';
 import { sport } from '@guardian/src-foundations/palette';
 import { css } from '@emotion/react';
