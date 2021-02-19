@@ -12,12 +12,13 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm-run-all clean --parallel build:*",
+    "build": "npm-run-all clean references --parallel build:*",
     "build:cjs": "tsc --emitDeclarationOnly false --outDir dist/cjs --module commonjs",
     "build:esm": "tsc --emitDeclarationOnly false --outDir dist/esm --module ES6",
     "clean": "rm -rf dist",
     "prepublish": "yarn build",
     "publish:public": "yarn publish --access public",
+    "references": "tsc -b",
     "verbump:major": "yarn version --major --no-git-tag-version",
     "verbump:minor": "yarn version --minor --no-git-tag-version",
     "verbump:patch": "yarn version --patch --no-git-tag-version",
