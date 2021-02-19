@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "dist/types",
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "composite": true
   },
   "include": ["."],
   "exclude": ["dist"],
