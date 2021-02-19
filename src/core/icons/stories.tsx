@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { css } from '@emotion/react';
 
 import { storybookBackgrounds } from '@guardian/src-helpers';
@@ -167,9 +168,7 @@ export default {
 export const XsmallIcons = () => (
 	<>
 		<Xsmall>
-			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
-			)}
+			{uiIcons.map((icon, index) => cloneElement(icon, { key: index }))}
 		</Xsmall>
 	</>
 );
@@ -179,9 +178,7 @@ XsmallIcons.story = {
 export const SmallIcons = () => (
 	<>
 		<Small>
-			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
-			)}
+			{uiIcons.map((icon, index) => cloneElement(icon, { key: index }))}
 		</Small>
 	</>
 );
@@ -192,9 +189,7 @@ SmallIcons.story = {
 export const MediumIcons = () => (
 	<>
 		<Medium>
-			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
-			)}
+			{uiIcons.map((icon, index) => cloneElement(icon, { key: index }))}
 		</Medium>
 	</>
 );
@@ -205,9 +200,7 @@ MediumIcons.story = {
 export const MediumBrandIcons = () => (
 	<>
 		<MediumBrand>
-			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index }),
-			)}
+			{uiIcons.map((icon, index) => cloneElement(icon, { key: index }))}
 		</MediumBrand>
 	</>
 );

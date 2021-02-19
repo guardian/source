@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { css } from '@emotion/react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { RadioGroup, Radio, radioDefault, radioBrand } from '../../index';
@@ -35,7 +36,7 @@ const supportingTextOnlyLight = () => (
 		<div css={narrow}>
 			<RadioGroup name="payment-options">
 				{radiosWithSupportingTextOnly.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
+					cloneElement(radio, { key: index }),
 				)}
 			</RadioGroup>
 		</div>
@@ -56,7 +57,7 @@ const supportingTextOnlyBlue = () => (
 		<div css={narrow}>
 			<RadioGroup name="payment-options">
 				{radiosWithSupportingTextOnly.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
+					cloneElement(radio, { key: index }),
 				)}
 			</RadioGroup>
 		</div>

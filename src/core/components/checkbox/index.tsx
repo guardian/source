@@ -1,5 +1,5 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import { ReactNode, InputHTMLAttributes } from 'react';
+import { ReactNode, InputHTMLAttributes, Children, cloneElement } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { InlineError } from '@guardian/src-user-feedback';
 import {
@@ -67,8 +67,8 @@ const CheckboxGroup = ({
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
 			{legend}
 			{message}
-			{React.Children.map(children, (child) => {
-				return React.cloneElement(
+			{Children.map(children, (child) => {
+				return cloneElement(
 					child,
 					Object.assign(
 						error

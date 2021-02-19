@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { RadioGroup, Radio, radioDefault, radioBrand } from '../../index';
 import { ThemeProvider } from '@emotion/react';
@@ -14,7 +15,7 @@ const errorLight = () => (
 	<ThemeProvider theme={radioDefault}>
 		<RadioGroup name="colours" error="Please select a colour">
 			{unselectedRadios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
+				cloneElement(radio, { key: index }),
 			)}
 		</RadioGroup>
 	</ThemeProvider>
@@ -34,7 +35,7 @@ const errorBlue = () => (
 	<ThemeProvider theme={radioBrand}>
 		<RadioGroup name="colours" error="Please select a colour">
 			{unselectedRadios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
+				cloneElement(radio, { key: index }),
 			)}
 		</RadioGroup>
 	</ThemeProvider>

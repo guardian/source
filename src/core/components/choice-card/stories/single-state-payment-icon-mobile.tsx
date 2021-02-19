@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from '@guardian/src-icons';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
@@ -30,7 +31,7 @@ export const singleStateWithPaymentIconMobileLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<ChoiceCardGroup name="colours" label="Payment method">
 			{paymentIconChoiceCards.map((choiceCard, index) =>
-				React.cloneElement(choiceCard, { key: index }),
+				cloneElement(choiceCard, { key: index }),
 			)}
 		</ChoiceCardGroup>
 	</ThemeProvider>

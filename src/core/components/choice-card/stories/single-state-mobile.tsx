@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
@@ -18,7 +19,7 @@ export const singleStateMobileLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<ChoiceCardGroup name="colours" label="What is your favourite colour?">
 			{choiceCards.map((choiceCard, index) =>
-				React.cloneElement(choiceCard, { key: index }),
+				cloneElement(choiceCard, { key: index }),
 			)}
 		</ChoiceCardGroup>
 	</ThemeProvider>

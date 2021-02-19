@@ -5,6 +5,8 @@ import {
 	useState,
 	InputHTMLAttributes,
 	ChangeEventHandler,
+	cloneElement,
+	Children,
 } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { Legend } from '@guardian/src-label';
@@ -70,8 +72,8 @@ const ChoiceCardGroup = ({
 						: flexContainer
 				}
 			>
-				{React.Children.map(children, (child) => {
-					return React.cloneElement(
+				{Children.map(children, (child) => {
+					return cloneElement(
 						child,
 						Object.assign(
 							{

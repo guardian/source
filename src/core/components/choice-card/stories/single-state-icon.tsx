@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import { ThemeProvider } from '@emotion/react';
+import { cloneElement } from 'react';
+import { css, ThemeProvider } from '@emotion/react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { SvgCamera, SvgAudio, SvgVideo } from '@guardian/src-icons';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
@@ -32,7 +32,7 @@ export const singleStateWithIconLight = () => (
 		<div css={medium}>
 			<ChoiceCardGroup name="colours" label="Media format">
 				{iconChoiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index }),
+					cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
 		</div>

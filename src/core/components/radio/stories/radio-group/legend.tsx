@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { RadioGroup, Radio, radioBrand } from '../../index';
 import { ThemeProvider } from '@emotion/react';
@@ -12,9 +13,7 @@ const radios = [
 
 export const legendLight = () => (
 	<RadioGroup name="colours" label="Select your preferred colour">
-		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
-		)}
+		{radios.map((radio, index) => cloneElement(radio, { key: index }))}
 	</RadioGroup>
 );
 legendLight.story = {
@@ -24,9 +23,7 @@ legendLight.story = {
 export const legendBlue = () => (
 	<ThemeProvider theme={radioBrand}>
 		<RadioGroup name="colours" label="Select your preferred colour">
-			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index }),
-			)}
+			{radios.map((radio, index) => cloneElement(radio, { key: index }))}
 		</RadioGroup>
 	</ThemeProvider>
 );
@@ -62,9 +59,7 @@ export const legendHideLabelLight = () => (
 		label="Select your preferred colour"
 		hideLabel={true}
 	>
-		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
-		)}
+		{radios.map((radio, index) => cloneElement(radio, { key: index }))}
 	</RadioGroup>
 );
 legendHideLabelLight.story = {

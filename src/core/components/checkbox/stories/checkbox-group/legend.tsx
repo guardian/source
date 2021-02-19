@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 
@@ -19,7 +20,7 @@ const legendLight = () => (
 	<ThemeProvider theme={checkboxDefault}>
 		<CheckboxGroup name="emails" label="Email newsletters" id="emails">
 			{checkboxes.map((checkbox, index) =>
-				React.cloneElement(checkbox, { key: index }),
+				cloneElement(checkbox, { key: index }),
 			)}
 		</CheckboxGroup>
 	</ThemeProvider>
@@ -33,7 +34,7 @@ const legendBlue = () => (
 	<ThemeProvider theme={checkboxBrand}>
 		<CheckboxGroup name="emails" label="Email newsletters" id="emails">
 			{checkboxes.map((checkbox, index) =>
-				React.cloneElement(checkbox, { key: index }),
+				cloneElement(checkbox, { key: index }),
 			)}
 		</CheckboxGroup>
 	</ThemeProvider>
@@ -58,7 +59,7 @@ const legendHideLabelLight = () => (
 			hideLabel={true}
 		>
 			{checkboxes.map((checkbox, index) =>
-				React.cloneElement(checkbox, { key: index }),
+				cloneElement(checkbox, { key: index }),
 			)}
 		</CheckboxGroup>
 	</ThemeProvider>

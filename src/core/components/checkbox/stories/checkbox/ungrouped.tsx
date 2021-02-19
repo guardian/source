@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { ThemeProvider } from '@emotion/react';
 
 import { Checkbox, checkboxDefault } from '../../index';
@@ -12,7 +13,7 @@ const checkboxes = [
 const ungrouped = () => (
 	<ThemeProvider theme={checkboxDefault}>
 		{checkboxes.map((checkbox, index) =>
-			React.cloneElement(checkbox, { key: index }),
+			cloneElement(checkbox, { key: index }),
 		)}
 	</ThemeProvider>
 );

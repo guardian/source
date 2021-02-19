@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent, cloneElement } from 'react';
 
 import { CheckboxGroup, Checkbox } from '../../index';
 
@@ -54,7 +54,7 @@ const selectAll = () => {
 			/>
 			<CheckboxGroup name="emails">
 				{selectableCheckboxes.map((checkbox, index) => {
-					return React.cloneElement(checkbox, { key: index });
+					return cloneElement(checkbox, { key: index });
 				})}
 			</CheckboxGroup>
 		</>

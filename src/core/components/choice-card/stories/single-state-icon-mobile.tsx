@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { SvgCamera, SvgAudio, SvgVideo } from '@guardian/src-icons';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
@@ -25,7 +26,7 @@ export const singleStateWithIconMobileLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<ChoiceCardGroup name="colours" label="Media format">
 			{iconChoiceCards.map((choiceCard, index) =>
-				React.cloneElement(choiceCard, { key: index }),
+				cloneElement(choiceCard, { key: index }),
 			)}
 		</ChoiceCardGroup>
 	</ThemeProvider>

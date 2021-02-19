@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import { ThemeProvider } from '@emotion/react';
+import { cloneElement } from 'react';
+import { css, ThemeProvider } from '@emotion/react';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 
 import {
@@ -42,7 +42,7 @@ const supportingTextOnlyLight = () => (
 		<ThemeProvider theme={checkboxDefault}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingTextOnly.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index }),
+					cloneElement(checkbox, { key: index }),
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>
@@ -58,7 +58,7 @@ const supportingTextOnlyBlue = () => (
 		<ThemeProvider theme={checkboxBrand}>
 			<CheckboxGroup name="emails">
 				{checkboxesWithSupportingTextOnly.map((checkbox, index) =>
-					React.cloneElement(checkbox, { key: index }),
+					cloneElement(checkbox, { key: index }),
 				)}
 			</CheckboxGroup>
 		</ThemeProvider>

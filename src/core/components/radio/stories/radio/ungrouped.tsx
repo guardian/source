@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { Radio, radioDefault } from '../../index';
 import { ThemeProvider } from '@emotion/react';
 
@@ -11,9 +12,7 @@ const radios = [
 
 const ungrouped = () => (
 	<ThemeProvider theme={radioDefault}>
-		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index }),
-		)}
+		{radios.map((radio, index) => cloneElement(radio, { key: index }))}
 	</ThemeProvider>
 );
 

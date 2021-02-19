@@ -1,5 +1,13 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import { useState, useEffect, ReactElement, ReactNode } from 'react';
+import {
+	useState,
+	useEffect,
+	ReactElement,
+	ReactNode,
+	Children,
+	cloneElement,
+	MouseEvent,
+} from 'react';
 import {
 	accordion,
 	accordionRow,
@@ -41,8 +49,8 @@ const Accordion = ({
 			css={(theme) => [accordion(theme.accordion && theme), cssOverrides]}
 			{...props}
 		>
-			{React.Children.map(children, (child) => {
-				return React.cloneElement(child, { hideToggleLabel });
+			{Children.map(children, (child) => {
+				return cloneElement(child, { hideToggleLabel });
 			})}
 		</div>
 	);
@@ -52,7 +60,7 @@ interface AccordionRowProps extends Props {
 	label: string;
 	hideToggleLabel?: boolean;
 	children: ReactNode;
-	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+	onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
 const NoJsRow = ({
@@ -137,7 +145,7 @@ const AccordionRow = ({
 	const expand = () => setExpanded(true);
 	const [isBrowser, setIsBrowser] = useState(false);
 
-	function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+	function handleClick(event: MouseEvent<HTMLButtonElement>) {
 		expanded ? collapse() : expand();
 		onClick(event);
 	}

@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
@@ -24,7 +25,7 @@ export const singleStateWithLabelLight = () => (
 		<div css={medium}>
 			<ChoiceCardGroup name="single" label="This is the question label">
 				{singleChoiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index }),
+					cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
 		</div>

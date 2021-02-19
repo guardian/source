@@ -1,5 +1,5 @@
 ///<reference types="@emotion/react/types/css-prop" />
-import { ReactNode, InputHTMLAttributes } from 'react';
+import { cloneElement, Children, ReactNode, InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { Legend } from '@guardian/src-label';
 import { InlineError } from '@guardian/src-user-feedback';
@@ -76,8 +76,8 @@ const RadioGroup = ({
 		>
 			{legend}
 			{message}
-			{React.Children.map(children, (child) => {
-				return React.cloneElement(
+			{Children.map(children, (child) => {
+				return cloneElement(
 					child,
 					Object.assign(
 						error

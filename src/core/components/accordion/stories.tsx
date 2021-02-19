@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { css } from '@emotion/react';
 import { Accordion, AccordionRow } from './index';
 import { background } from '@guardian/src-foundations/palette';
@@ -32,13 +33,13 @@ const accordionRows = [
 
 const accordion = (
 	<Accordion>
-		{accordionRows.map((row, i) => React.cloneElement(row, { key: i }))}
+		{accordionRows.map((row, i) => cloneElement(row, { key: i }))}
 	</Accordion>
 );
 
 const accordionHideToggleLabel = (
 	<Accordion hideToggleLabel={true}>
-		{accordionRows.map((row, i) => React.cloneElement(row, { key: i }))}
+		{accordionRows.map((row, i) => cloneElement(row, { key: i }))}
 	</Accordion>
 );
 

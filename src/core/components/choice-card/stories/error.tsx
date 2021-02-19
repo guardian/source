@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import { ThemeProvider } from '@emotion/react';
+import { cloneElement } from 'react';
+import { css, ThemeProvider } from '@emotion/react';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
 const medium = css`
@@ -22,7 +22,7 @@ export const errorLight = () => (
 				error="Please select a choice card to continue"
 			>
 				{unselectedChoiceCards.map((radio, index) =>
-					React.cloneElement(radio, { key: index }),
+					cloneElement(radio, { key: index }),
 				)}
 			</ChoiceCardGroup>
 		</div>

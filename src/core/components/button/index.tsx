@@ -1,5 +1,6 @@
 ///<reference types="@emotion/react/types/css-prop" />
 import {
+	cloneElement,
 	ReactElement,
 	ReactNode,
 	ButtonHTMLAttributes,
@@ -111,7 +112,7 @@ const buttonContents = ({
 		if (!hideLabel) {
 			contents.push(<div key="space" className="src-button-space" />);
 		}
-		contents.push(React.cloneElement(iconSvg, { key: 'svg' }));
+		contents.push(cloneElement(iconSvg, { key: 'svg' }));
 	}
 	if (hideLabel) {
 		return (

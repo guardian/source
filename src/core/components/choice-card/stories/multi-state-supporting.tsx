@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import { ThemeProvider } from '@emotion/react';
+import { cloneElement } from 'react';
+import { css, ThemeProvider } from '@emotion/react';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
 /* eslint-disable react/jsx-key */
@@ -33,7 +33,7 @@ export const multiStateWithSupportingLabelLight = () => (
 				multi={true}
 			>
 				{multiChoiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index }),
+					cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
 		</div>

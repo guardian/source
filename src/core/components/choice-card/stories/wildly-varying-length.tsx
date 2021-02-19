@@ -1,3 +1,4 @@
+import { cloneElement } from 'react';
 import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
 import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
@@ -23,7 +24,7 @@ export const wildlyVaryingLengthLight = () => (
 		<div css={wide}>
 			<ChoiceCardGroup name="options">
 				{wildlyVaryingContentChoiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index }),
+					cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
 		</div>
