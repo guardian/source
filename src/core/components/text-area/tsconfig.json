@@ -1,0 +1,16 @@
+{
+  "extends": "../../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["."],
+  "exclude": ["dist", "stories", "stories.tsx"],
+  "references": [
+    { "path": "../../icons" },
+    { "path": "../../helpers" },
+    { "path": "../label" },
+    { "path": "../user-feedback" }
+  ]
+}
