@@ -1,18 +1,16 @@
 {
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@guardian/src-foundations/palette": ["src/palette"]
     },
     "rootDir": "./src",
-    "outDir": ".",
+    "outDir": "dist/types",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": ".",
-    "composite": true,
-    "strict": true,
-    "lib": ["es2019", "dom"],
-    "tsBuildInfoFile": "./tsconfig.tsbuildinfo"
+    "composite": true
   },
-  "exclude": ["node_modules", "./scripts"]
+  "include": ["src"],
+  "exclude": ["scripts", "dist"]
 }
