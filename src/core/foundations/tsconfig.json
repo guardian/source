@@ -12,5 +12,5 @@
     "composite": true
   },
   "include": ["src"],
-  "exclude": ["scripts", "dist"]
+  "exclude": ["dist", "*.test.ts"]
 }
