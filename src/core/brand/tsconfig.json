@@ -3,8 +3,7 @@
   "compilerOptions": {
     "outDir": "dist/types",
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "composite": true
+    "emitDeclarationOnly": true
   },
   "include": ["."],
   "exclude": ["dist", "stories.tsx", "stories"],
