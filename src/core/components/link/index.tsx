@@ -54,6 +54,7 @@ const linkContents = ({
 	iconSide: IconSide;
 }) => {
 	// a bit of underlined space; the icon sits on top
+	// TODO: fix frgaments!
 	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>;
 	const linkContents = [children];
 
