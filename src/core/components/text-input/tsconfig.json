@@ -8,9 +8,17 @@
   "include": ["."],
   "exclude": ["dist", "stories", "stories.tsx"],
   "references": [
-    { "path": "../../helpers" },
-    { "path": "../label" },
-    { "path": "../user-feedback" },
-    { "path": "../../foundations" }
+    {
+      "path": "../../helpers"
+    },
+    {
+      "path": "../label"
+    },
+    {
+      "path": "../user-feedback"
+    },
+    {
+      "path": "../../foundations"
+    }
   ]
 }

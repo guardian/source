@@ -25,7 +25,7 @@
     "strict": true,
     "sourceMap": true,
     "jsx": "react-jsx",
-	"jsxImportSource": "@emotion/react",
+    "jsxImportSource": "@emotion/react",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
