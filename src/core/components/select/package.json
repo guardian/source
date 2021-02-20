@@ -41,7 +41,6 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
-    "@guardian/src-foundations": "^3.3.0-rc.0",
-    "react": "^17.0.1"
+    "@guardian/src-foundations": "^3.3.0-rc.0"
   }
 }
