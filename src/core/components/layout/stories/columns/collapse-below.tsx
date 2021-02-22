@@ -31,5 +31,6 @@ collapseBelowTablet.story = {
 	name: 'collapse below tablet',
 	parameters: {
 		viewport: { defaultViewport: 'phablet' },
+		layout: 'fullscreen',
 	},
 };
