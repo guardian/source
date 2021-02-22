@@ -1,6 +1,6 @@
 {
   "name": "@guardian/src-foundations",
-  "version": "3.2.1-rc.2",
+  "version": "3.2.1-rc.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
@@ -18,6 +18,7 @@
     "palette/package.json",
     "size/package.json",
     "themes/package.json",
+    "typography/package.json",
     "typography/obj/package.json",
     "utils/package.json"
   ],
