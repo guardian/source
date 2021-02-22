@@ -104,7 +104,7 @@ interface ChoiceCardProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	checked?: boolean;
 	defaultChecked?: boolean;
 	onChange?: ChangeEventHandler<HTMLInputElement>;
-	error: boolean;
+	error?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
@@ -118,6 +118,7 @@ const ChoiceCard = ({
 	cssOverrides,
 	error,
 	onChange,
+	type = 'radio',
 	...props
 }: ChoiceCardProps) => {
 	const isChecked = (): boolean => {
@@ -141,7 +142,7 @@ const ChoiceCard = ({
 				]}
 				id={id}
 				value={value}
-				aria-invalid={error}
+				aria-invalid={!!error}
 				aria-checked={isChecked()}
 				defaultChecked={
 					defaultChecked != null ? defaultChecked : undefined
@@ -153,6 +154,7 @@ const ChoiceCard = ({
 					}
 					setUserChanged(true);
 				}}
+				type={type}
 				{...props}
 			/>
 			<label
@@ -176,13 +178,5 @@ const ChoiceCard = ({
 		</>
 	);
 };
-
-const choiceCardDefaultProps = {
-	disabled: false,
-	type: 'radio',
-	error: false,
-};
-
-ChoiceCard.defaultProps = { ...choiceCardDefaultProps };
 
 export { ChoiceCardGroup, ChoiceCard };

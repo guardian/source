@@ -12,7 +12,7 @@ const visuallyHidden = css`
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	text: string;
 	supporting?: string;
-	optional: boolean;
+	optional?: boolean;
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children?: ReactNode;
@@ -20,7 +20,7 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	text: string;
 	supporting?: string;
-	optional: boolean;
+	optional?: boolean;
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -109,10 +109,5 @@ const Label = ({
 		</label>
 	);
 };
-
-const defaultProps = { optional: false };
-
-Label.defaultProps = { ...defaultProps };
-Legend.defaultProps = { ...defaultProps };
 
 export { Label, Legend };

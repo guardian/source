@@ -23,8 +23,8 @@ export { selectDefault } from '@guardian/src-foundations/themes';
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, Props {
 	id?: string;
 	label: string;
-	optional: boolean;
-	hideLabel: boolean;
+	optional?: boolean;
+	hideLabel?: boolean;
 	supporting?: string;
 	error?: string;
 	success?: string;
@@ -48,7 +48,7 @@ const Select = ({
 	return (
 		<Label
 			text={labelText}
-			optional={optional}
+			optional={!!optional}
 			supporting={supporting}
 			hideLabel={hideLabel}
 		>
@@ -106,13 +106,5 @@ const Option = ({ cssOverrides, children, ...props }: OptionProps) => {
 		</option>
 	);
 };
-
-const selectDefaultProps = {
-	disabled: false,
-	optional: false,
-	hideLabel: false,
-};
-
-Select.defaultProps = { ...selectDefaultProps };
 
 export { Select, Option };

@@ -30,7 +30,7 @@ interface CheckboxGroupProps extends Props {
 	id?: string;
 	name: string;
 	label?: string;
-	hideLabel: boolean;
+	hideLabel?: boolean;
 	supporting?: string;
 	error?: string;
 	children: JSX.Element | JSX.Element[];
@@ -119,8 +119,8 @@ interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	defaultChecked?: boolean;
 	label?: ReactNode;
 	supporting?: ReactNode;
-	indeterminate: boolean;
-	error: boolean;
+	indeterminate?: boolean;
+	error?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
@@ -156,7 +156,7 @@ const Checkbox = ({
 	};
 	const setIndeterminate = (el: HTMLInputElement | null): void => {
 		if (el) {
-			el.indeterminate = indeterminate;
+			el.indeterminate = !!indeterminate;
 		}
 	};
 
@@ -170,7 +170,7 @@ const Checkbox = ({
 					cssOverrides,
 				]}
 				value={value}
-				aria-invalid={error}
+				aria-invalid={!!error}
 				aria-checked={ariaChecked()}
 				ref={setIndeterminate}
 				defaultChecked={
@@ -212,18 +212,5 @@ const Checkbox = ({
 
 	return <>{labelContent || supportingText ? labelledBox : box}</>;
 };
-
-const checkboxDefaultProps = {
-	disabled: false,
-	indeterminate: false,
-	error: false,
-};
-
-const checkboxGroupDefaultProps = {
-	hideLabel: false,
-};
-
-Checkbox.defaultProps = { ...checkboxDefaultProps };
-CheckboxGroup.defaultProps = { ...checkboxGroupDefaultProps };
 
 export { CheckboxGroup, Checkbox };
