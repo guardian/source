@@ -33,9 +33,9 @@ interface RadioGroupProps extends Props {
 	id?: string;
 	name: string;
 	label?: string;
-	hideLabel: boolean;
+	hideLabel?: boolean;
 	supporting?: string;
-	orientation: Orientation;
+	orientation?: Orientation;
 	error?: string;
 	children: JSX.Element | JSX.Element[];
 	cssOverrides?: SerializedStyles | SerializedStyles[];
@@ -47,7 +47,7 @@ const RadioGroup = ({
 	label,
 	hideLabel,
 	supporting,
-	orientation,
+	orientation = 'vertical',
 	error,
 	cssOverrides,
 	children,
@@ -185,17 +185,5 @@ const Radio = ({
 		<>{labelContent || supporting ? labelledRadioControl : radioControl}</>
 	);
 };
-
-const radioGroupDefaultProps = {
-	orientation: 'vertical',
-	hideLabel: false,
-};
-
-const radioDefaultProps = {
-	disabled: false,
-};
-
-Radio.defaultProps = { ...radioDefaultProps };
-RadioGroup.defaultProps = { ...radioGroupDefaultProps };
 
 export { RadioGroup, Radio };

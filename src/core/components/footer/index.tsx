@@ -17,7 +17,7 @@ import { SvgChevronUpSingle } from '@guardian/src-icons';
 export { footerBrand } from '@guardian/src-foundations/themes';
 
 interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
-	showBackToTop: boolean;
+	showBackToTop?: boolean;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -64,9 +64,5 @@ const Footer = ({
 		</footer>
 	);
 };
-
-const defaultProps = { showBackToTop: false };
-
-Footer.defaultProps = { ...defaultProps };
 
 export { Footer };

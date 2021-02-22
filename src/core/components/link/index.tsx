@@ -78,14 +78,14 @@ const linkStyles = ({
 	priority,
 	isSubdued,
 	iconSvg,
-	iconSide,
+	iconSide = 'left',
 	cssOverrides,
 }: {
 	isButton?: boolean;
 	priority: LinkPriority;
-	isSubdued: boolean;
+	isSubdued?: boolean;
 	iconSvg?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }) => {
 	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
@@ -101,10 +101,10 @@ const linkStyles = ({
 };
 
 interface SharedLinkProps extends Props {
-	priority: LinkPriority;
-	subdued: boolean;
+	priority?: LinkPriority;
+	subdued?: boolean;
 	icon?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -112,19 +112,19 @@ interface SharedLinkProps extends Props {
 interface LinkProps
 	extends AnchorHTMLAttributes<HTMLAnchorElement>,
 		SharedLinkProps {
-	priority: LinkPriority;
-	subdued: boolean;
+	priority?: LinkPriority;
+	subdued?: boolean;
 	icon?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const Link = ({
-	priority,
+	priority = 'primary',
 	subdued: isSubdued,
 	icon: iconSvg,
-	iconSide,
+	iconSide = 'left',
 	cssOverrides,
 	children,
 	...props
@@ -148,19 +148,19 @@ const Link = ({
 interface ButtonLinkProps
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
 		SharedLinkProps {
-	priority: LinkPriority;
-	subdued: boolean;
+	priority?: LinkPriority;
+	subdued?: boolean;
 	icon?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const ButtonLink = ({
-	priority,
+	priority = 'primary',
 	subdued: isSubdued,
 	icon: iconSvg,
-	iconSide,
+	iconSide = 'left',
 	cssOverrides,
 	children,
 	...props
@@ -181,14 +181,5 @@ const ButtonLink = ({
 		</button>
 	);
 };
-
-const defaultLinkProps = {
-	priority: 'primary',
-	subdued: false,
-	iconSide: 'left',
-};
-
-Link.defaultProps = { ...defaultLinkProps };
-ButtonLink.defaultProps = { ...defaultLinkProps };
 
 export { Link, ButtonLink };

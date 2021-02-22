@@ -46,11 +46,11 @@ type IconSide = 'left' | 'right';
 type Size = 'default' | 'small' | 'xsmall';
 
 interface SharedButtonProps extends Props {
-	priority: ButtonPriority;
-	size: Size;
-	iconSide: IconSide;
+	priority?: ButtonPriority;
+	size?: Size;
+	iconSide?: IconSide;
 	icon?: ReactElement;
-	hideLabel: boolean;
+	hideLabel?: boolean;
 	nudgeIcon?: boolean;
 }
 
@@ -101,7 +101,7 @@ const buttonContents = ({
 	iconSvg,
 	children,
 }: {
-	hideLabel: boolean;
+	hideLabel?: boolean;
 	iconSvg?: ReactElement;
 	children: ReactNode;
 }) => {
@@ -132,11 +132,11 @@ const buttonContents = ({
 };
 
 const buttonStyles = ({
-	priority,
-	size,
+	priority = 'primary',
+	size = 'default',
 	icon: iconSvg,
 	hideLabel,
-	iconSide,
+	iconSide = 'left',
 	nudgeIcon,
 	cssOverrides,
 }: SharedButtonProps) =>
@@ -155,11 +155,11 @@ const buttonStyles = ({
 interface ButtonProps
 	extends SharedButtonProps,
 		ButtonHTMLAttributes<HTMLButtonElement> {
-	priority: ButtonPriority;
-	size: Size;
+	priority?: ButtonPriority;
+	size?: Size;
 	icon?: ReactElement;
-	iconSide: IconSide;
-	hideLabel: boolean;
+	iconSide?: IconSide;
+	hideLabel?: boolean;
 	nudgeIcon?: boolean;
 	children: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
@@ -171,6 +171,7 @@ const Button = ({
 	iconSide,
 	hideLabel,
 	nudgeIcon,
+	type = 'button',
 	cssOverrides,
 	children,
 	...props
@@ -185,6 +186,7 @@ const Button = ({
 			nudgeIcon,
 			cssOverrides,
 		})}
+		type={type}
 		{...props}
 	>
 		{buttonContents({
@@ -198,12 +200,12 @@ const Button = ({
 interface LinkButtonProps
 	extends SharedButtonProps,
 		AnchorHTMLAttributes<HTMLAnchorElement> {
-	priority: ButtonPriority;
-	size: Size;
-	iconSide: IconSide;
+	priority?: ButtonPriority;
+	size?: Size;
+	iconSide?: IconSide;
 	icon?: ReactElement;
 	nudgeIcon?: boolean;
-	hideLabel: boolean;
+	hideLabel?: boolean;
 	children: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -238,23 +240,5 @@ const LinkButton = ({
 		})}
 	</a>
 );
-
-const defaultButtonProps = {
-	type: 'button',
-	priority: 'primary',
-	size: 'default',
-	iconSide: 'left',
-	hideLabel: false,
-};
-
-const defaultLinkButtonProps = {
-	priority: 'primary',
-	size: 'default',
-	iconSide: 'left',
-	hideLabel: false,
-};
-
-Button.defaultProps = { ...defaultButtonProps };
-LinkButton.defaultProps = { ...defaultLinkButtonProps };
 
 export { Button, LinkButton };
