@@ -1,9 +1,16 @@
 {
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "outDir": ".",
+    "outDir": "dist/types",
     "declaration": true,
     "emitDeclarationOnly": true,
     "composite": true
   },
-  "exclude": ["node_modules"]
+  "include": ["."],
+  "exclude": ["dist"],
+  "references": [
+    {
+      "path": "../foundations"
+    }
+  ]
 }

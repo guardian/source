@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from 'react';
 import { SerializedStyles, css } from '@emotion/react';
 import { legend, labelText, optionalText, supportingText } from './styles';

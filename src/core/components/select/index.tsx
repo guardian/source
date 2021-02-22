@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { SelectHTMLAttributes, OptionHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
