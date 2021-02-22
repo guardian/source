@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { Props } from '@guardian/src-helpers';
 import { tileGridColumns, tilesGridContainer } from './styles';
