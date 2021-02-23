@@ -1,10 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
+    "composite": true,
+    "outDir": "dist/esm",
+    "declarationDir": "dist/types",
     "rootDir": "src",
-    "declarationDir": "dist/types"
+    "tsBuildInfoFile": "./.tsbuildinfo"
   },
-  "files": ["index.ts"],
+  "include": ["src"],
   "exclude": ["dist", "**/*.test.*", "**/stories", "**/*stories.*"]
 }

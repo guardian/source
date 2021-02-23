@@ -6,10 +6,10 @@
   ],
   "scripts": {
     "prebuild": "lerna bootstrap",
-    "build": "lerna run build",
+    "build": "lerna run build --stream",
     "build-storybook": "build-storybook -o dist",
     "ci:build": "NODE_ENV=production build-storybook -o dist",
-    "clean": "rm -rf {,packages/**/}dist",
+    "clean": "lerna run clean",
     "fix": "yarn lint:js --fix",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint . --ext .ts,.tsx,.js",

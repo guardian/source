@@ -1,11 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "declarationDir": "dist/types"
+    "outDir": "dist/esm",
+    "declarationDir": "dist/types",
+    "paths": {
+      "@guardian/source": ["./packages/source"]
+    },
+    "rootDir": "src"
   },
-  "files": ["index.ts"],
+  "include": ["src"],
   "exclude": ["dist", "**/*.test.*", "**/stories", "**/*stories.*"],
   "references": [{ "path": "../source" }]
 }

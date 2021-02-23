@@ -11,10 +11,10 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rm -rf dist *.tsbuildinfo",
-    "build": "npm-run-all -p build:*",
-    "build:cjs": "tsc --outDir dist/cjs --module CommonJS --target ES2018 --lib DOM,ES2018",
-    "build:esm": "tsc --outDir dist/esm"
+    "build": "npm-run-all clean --parallel compile:esm compile:cjs",
+    "clean": "rm -rf dist .tsbuildinfo",
+    "compile:cjs": "tsc --project tsconfig.cjs.json",
+    "compile:esm": "tsc"
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
