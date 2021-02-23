@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
+    "lib": ["es5", "es6", "es7", "es2017", "es2019", "es2020", "dom"],
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",

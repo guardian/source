@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { InlineError, InlineSuccess } from '../user-feedback';
@@ -33,8 +32,8 @@ const widths: {
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	id?: string;
 	label: string;
-	optional: boolean;
-	hideLabel: boolean;
+	optional?: boolean;
+	hideLabel?: boolean;
 	supporting?: string;
 	width?: Width;
 	error?: string;
@@ -58,7 +57,7 @@ const TextInput = ({
 	return (
 		<Label
 			text={labelText}
-			optional={optional}
+			optional={!!optional}
 			hideLabel={hideLabel}
 			supporting={supporting}
 		>
@@ -82,6 +81,7 @@ const TextInput = ({
 						: '',
 					cssOverrides,
 				]}
+				type="text"
 				id={textInputId}
 				aria-required={!optional}
 				aria-invalid={!!error}
@@ -94,14 +94,5 @@ const TextInput = ({
 		</Label>
 	);
 };
-
-const defaultProps = {
-	disabled: false,
-	type: 'text',
-	optional: false,
-	hideLabel: false,
-};
-
-TextInput.defaultProps = { ...defaultProps };
 
 export { TextInput };

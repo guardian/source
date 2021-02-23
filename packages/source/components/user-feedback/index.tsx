@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { ReactNode, HTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { SvgAlertTriangle, SvgTickRound } from '../../icons';

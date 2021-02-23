@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { InlineError } from '../user-feedback';
@@ -17,8 +16,8 @@ interface TextAreaProps
 	id?: string;
 	value?: string;
 	label: string;
-	optional: boolean;
-	hideLabel: boolean;
+	optional?: boolean;
+	hideLabel?: boolean;
 	supporting?: string;
 	error?: string;
 	rows?: number;
@@ -58,7 +57,7 @@ const TextArea = ({
 		<Label
 			text={labelText}
 			supporting={supporting}
-			optional={optional}
+			optional={!!optional}
 			hideLabel={hideLabel}
 		>
 			{error && (
@@ -85,13 +84,5 @@ const TextArea = ({
 		</Label>
 	);
 };
-
-const defaultProps = {
-	disabled: false,
-	optional: false,
-	hideLabel: false,
-};
-
-TextArea.defaultProps = { ...defaultProps };
 
 export { TextArea };

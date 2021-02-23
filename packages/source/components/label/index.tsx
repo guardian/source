@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from 'react';
 import { SerializedStyles, css } from '@emotion/react';
 import { legend, labelText, optionalText, supportingText } from './styles';
@@ -15,7 +14,7 @@ export interface LabelProps
 		Props {
 	text: string;
 	supporting?: string;
-	optional: boolean;
+	optional?: boolean;
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children?: ReactNode;
@@ -23,7 +22,7 @@ export interface LabelProps
 export interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	text: string;
 	supporting?: string;
-	optional: boolean;
+	optional?: boolean;
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -112,10 +111,5 @@ const Label = ({
 		</label>
 	);
 };
-
-const defaultProps = { optional: false };
-
-Label.defaultProps = { ...defaultProps };
-Legend.defaultProps = { ...defaultProps };
 
 export { Label, Legend };

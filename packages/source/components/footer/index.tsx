@@ -1,4 +1,3 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import {
@@ -17,7 +16,7 @@ import { SvgChevronUpSingle } from '../../icons';
 export { footerBrand } from '../../foundations/src/themes';
 
 export interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
-	showBackToTop: boolean;
+	showBackToTop?: boolean;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -64,9 +63,5 @@ const Footer = ({
 		</footer>
 	);
 };
-
-const defaultProps = { showBackToTop: false };
-
-Footer.defaultProps = { ...defaultProps };
 
 export { Footer };
