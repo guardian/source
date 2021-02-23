@@ -7,8 +7,12 @@
     "jsxImportSource": "@emotion/react",
     "module": "ES2020",
     "moduleResolution": "node",
+    "noEmit": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
+    "paths": {
+      "@guardian/source": ["./packages/source/src"]
+    },
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,

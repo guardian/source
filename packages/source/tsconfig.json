@@ -2,11 +2,12 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "composite": true,
-    "outDir": "dist/esm",
     "declarationDir": "dist/types",
+    "noEmit": false,
+    "outDir": "dist/esm",
     "rootDir": "src",
     "tsBuildInfoFile": "./.tsbuildinfo"
   },
-  "include": ["src"],
-  "exclude": ["dist", "**/*.test.*", "**/stories", "**/*stories.*"]
+  "exclude": ["dist", "**/*.test.*", "**/stories", "**/*stories.*"],
+  "include": ["src"]
 }

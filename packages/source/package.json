@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "npm-run-all clean --parallel compile:esm compile:cjs",
-    "clean": "rm -rf dist .tsbuildinfo",
+    "clean": "rm -rf dist",
     "compile:cjs": "tsc --project tsconfig.cjs.json",
     "compile:esm": "tsc"
   },
