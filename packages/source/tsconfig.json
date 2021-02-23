@@ -1,11 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "noEmit": false,
-    "declaration": true,
-    "composite": true,
-    "rootDir": "."
+    "outDir": "dist",
+    "rootDir": "src",
+    "declarationDir": "dist/types"
   },
-  "include": ["./**/*"],
-  "exclude": ["dist"]
+  "files": ["index.ts"],
+  "exclude": ["dist", "**/*.test.*", "**/stories", "**/*stories.*"]
 }

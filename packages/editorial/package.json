@@ -6,14 +6,18 @@
   "license": "Apache-2.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf dist *.tsbuildinfo",
     "build": "npm-run-all -p build:*",
     "build:cjs": "tsc --outDir dist/cjs --module CommonJS --target ES2018 --lib DOM,ES2018",
     "build:esm": "tsc --outDir dist/esm"
+  },
+  "devDependencies": {
+    "@guardian/source": "^4.0.0-pre.7"
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
