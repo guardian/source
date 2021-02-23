@@ -7,6 +7,7 @@
   "scripts": {
     "prebuild": "lerna bootstrap",
     "build": "lerna run build --stream",
+    "prebuild-storybook": "yarn build",
     "build-storybook": "build-storybook -o dist",
     "ci:build": "NODE_ENV=production build-storybook -o dist",
     "clean": "lerna run clean",
