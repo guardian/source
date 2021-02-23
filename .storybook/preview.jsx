@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { breakpoints, Breakpoint } from '@guardian/source';
-import { FocusStyleManager } from '@guardian/source/foundations/src/utils/focus-style-manager';
+import { FocusStyleManager } from '@guardian/source';
 
 const viewportMeta = {
 	mobile: {
