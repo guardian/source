@@ -12,7 +12,15 @@
   "files": [
     "dist/esm",
     "dist/cjs",
-    "dist/types"
+    "dist/types",
+    "accessibility/package.json",
+    "mq/package.json",
+    "palette/package.json",
+    "size/package.json",
+    "themes/package.json",
+    "typography/package.json",
+    "typography/obj/package.json",
+    "utils/package.json"
   ],
   "scripts": {
     "build": "npm-run-all clean --parallel build:*",
