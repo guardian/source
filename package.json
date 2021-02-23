@@ -30,7 +30,10 @@
     }
   },
   "lint-staged": {
-    "package.json": "sort-package-json"
+    "package.json": "sort-package-json",
+    "**/*.{js,jsx,ts,tsx,yml}": [
+      "prettier --write"
+    ]
   },
   "prettier": "@guardian/prettier",
   "jest": {
