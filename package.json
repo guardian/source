@@ -6,7 +6,7 @@
   "workspaces": [
     "src/core/*",
     "src/core/components/*",
-    "src/editorial/web/*",
+    "src/editorial/web",
     "src/editorial/web/components/*"
   ],
   "scripts": {
@@ -23,9 +23,9 @@
     "release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn publish:release",
     "release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
     "release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn publish:release",
-    "release:prerelease-bump:all": "yarn build:all && yarn validate && yarn verbump:prerelease:all && yarn publish:release",
-    "release:prerelease:all": "yarn build:all && yarn validate && yarn publish:release",
-    "storybook": "yarn watch:foundations & yarn watch:icons & start-storybook",
+    "release:prerelease-bump:all": "yarn validate && yarn verbump:prerelease:all && yarn publish:release",
+    "release:prerelease:all": "yarn validate && yarn publish:release",
+    "storybook": "start-storybook",
     "tag:beta:all": "ts-node ./scripts/tag-beta-all",
     "test": "jest",
     "tsc": "tsc",

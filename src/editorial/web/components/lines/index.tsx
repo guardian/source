@@ -1,4 +1,3 @@
-import React from 'react';
 import { Props } from '@guardian/src-helpers';
 import {
 	straightLines,
@@ -12,7 +11,7 @@ type LineEffectType = 'squiggly' | 'dotted' | 'straight';
 
 export type LineCount = 4 | 8;
 
-interface LinesProps extends Props {
+export interface LinesProps extends Props {
 	effect?: LineEffectType;
 	count?: LineCount;
 }
