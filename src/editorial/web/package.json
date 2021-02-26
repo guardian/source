@@ -1,6 +1,6 @@
 {
   "name": "@guardian/editorial",
-  "version": "3.3.0-rc.0",
+  "version": "3.3.0",
   "license": "Apache-2.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -31,7 +31,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
-    "@guardian/src-foundations": "^3.3.0-rc.0",
+    "@guardian/src-foundations": "^3.3.0",
     "react": "^17.0.1"
   }
 }
