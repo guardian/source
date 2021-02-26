@@ -10,6 +10,14 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 26 February 2021
+
+**`@guardian/src-layout 3.3.0`**
+
+-   :sparkles: [ed3161a](https://github.com/guardian/source/commit/ed3161a17c50c25054e83e8b978914f17c8356ca) supporting hiding above and below breakpoints
+-   :sparkles: [29107ab](https://github.com/guardian/source/commit/29107ab7ba0628a4f71129d23e59c70b5e99ef0d) support responsive column widths
+-   :bug: [3ff8beb](https://github.com/guardian/source/commit/3ff8beb976d14058e8e2ffbb656d2b46b51655cd) handle empty column width array
+
 ## 12 February 2021
 
 **`@guardian/src-accordion 3.2.0`**
