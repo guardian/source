@@ -86,9 +86,16 @@ Columns will be stacked one on top of the other at viewport widths lower than th
 
 #### `width`
 
-**`number`**
+**`number | number[]`**
 
-Fraction of the parent container's width that the column will occupy. If no value is provided, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns)
+Fraction of the parent container's width that the column will occupy.
+
+Pass 0 to hide the column completely.
+
+Pass an array of fractions to set the width that the column occupies at different breakpoints. The first value in the array will
+reflect the width at mobile, the second value at tablet, then desktop, leftCol and wide.
+
+If no value is provided, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns)
 
 ## Hide
 
