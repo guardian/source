@@ -24,39 +24,39 @@ const example = (
 				<Column span={4}>
 					<div css={contents}>4</div>
 				</Column>
-				<Column>
-					<div css={contents}>*</div>
+				<Column span={[0, 4, 4]}>
+					<div css={contents}>[0, 4]</div>
 				</Column>
-				<Column>
-					<div css={contents}>*</div>
-				</Column>
-			</Columns>
-		</Container>
-
-		<Container>
-			<Columns>
-				<Column span={12}>
-					<div css={contents}>12</div>
-				</Column>
-				<Column>
-					<div css={contents}>*</div>
-				</Column>
-				<Column>
-					<div css={contents}>*</div>
+				<Column span={[0, 4, 4, 6, 8]}>
+					<div css={contents}>[0, 0, 4, 6, 8]</div>
 				</Column>
 			</Columns>
 		</Container>
 
 		<Container>
 			<Columns>
+				<Column>
+					<div css={contents}>*</div>
+				</Column>
+				<Column span={[0, 0, 2]}>
+					<div css={contents}>[0, 0, 2]</div>
+				</Column>
+				<Column span={[0, 0, 2]}>
+					<div css={contents}>[0, 0, 2]</div>
+				</Column>
+			</Columns>
+		</Container>
+
+		<Container>
+			<Columns>
 				<Column span={1}>
 					<div css={contents}>1</div>
 				</Column>
 				<Column span={1}>
 					<div css={contents}>1</div>
-				</Column >
-				<Column span={1}>
-					<div css={contents}>1</div>
+				</Column>
+				<Column span={2}>
+					<div css={contents}>2</div>
 				</Column>
 			</Columns>
 		</Container>
@@ -69,8 +69,8 @@ const example = (
 				<Column>
 					<div css={contents}>*</div>
 				</Column>
-				<Column span={2}>
-					<div css={contents}>2</div>
+				<Column span={1}>
+					<div css={contents}>1</div>
 				</Column>
 			</Columns>
 		</Container>
