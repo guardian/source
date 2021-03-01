@@ -1,10 +1,6 @@
 import { css } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
-<<<<<<< HEAD
-import { Breakpoint, from, until } from '@guardian/src-foundations/mq';
-=======
-import { from, until, between } from '@guardian/src-foundations/mq';
->>>>>>> c71ea3ce... Working span with single number of columns per component
+import { Breakpoint, from, until, between } from '@guardian/src-foundations/mq';
 
 export const columns = css`
 	box-sizing: border-box;
@@ -133,7 +129,85 @@ const generateWidthCSS = (width: number | number[]) => {
 	return calculateWidth(width);
 };
 
-export const column = (width?: number | number[]) => {
+const generateSpanCSS = (span: number | number[]) => {
+	if (Array.isArray(span)) {
+		const breakpoints: Breakpoint[] = [
+			'mobile',
+			'tablet',
+			'desktop',
+			'leftCol',
+			'wide',
+		];
+
+		return span.reduce((styles, w, i) => {
+			return css`
+				${styles}
+				${from[breakpoints[i]]} {
+					${calculateSpan(w)};
+				}
+			`;
+		}, css``);
+	}
+
+	return calculateSpan(span);
+};
+
+type ColumnBreakpoints = Array<ColumnBreakpoint>;
+type ColumnBreakpoint = {
+	first?: Breakpoint;
+	last?: Breakpoint;
+	totalColumns: number;
+};
+
+export const columnBreakpoints: ColumnBreakpoints = [
+	{ first: undefined, last: 'tablet', totalColumns: 4 },
+	{ first: 'tablet', last: 'leftCol', totalColumns: 12 },
+	{ first: 'leftCol', last: 'wide', totalColumns: 14 },
+	{ first: 'wide', last: undefined, totalColumns: 16 },
+];
+
+const calculateSpan = (span: number) => {
+	const columnBreakpointCss = columnBreakpoints.reduce(
+		(acc: string, cur: ColumnBreakpoint) => {
+			// if span == cur.columns then 100%
+			if (span >= cur.totalColumns) return `width: 100%; display: block;`;
+
+			// if span == 0 then not visible
+			console.log(span);
+			if (span === 0) return `display: none;`;
+
+			const inferredWidth = span / cur.totalColumns;
+			const cssForBreakpoint = `{ width: calc((100% + ${space[5]}px) * ${inferredWidth} - ${space[5]}px); display: block; }\n`;
+			if (cur.first && cur.last) {
+				return (
+					// Typescript cannot infer that combinations will always be valid
+					// eslint-disable-next-line
+					// @ts-ignore next-line
+					acc + between[cur.first].and[cur.last] + cssForBreakpoint
+				);
+			}
+			if (cur.first) {
+				return acc + from[cur.first] + cssForBreakpoint;
+			}
+			return acc + until[cur.last as Breakpoint] + cssForBreakpoint;
+		},
+		'',
+	);
+
+	console.log(columnBreakpointCss);
+
+	return css`
+		box-sizing: border-box;
+		flex: ${span ? '0 0 auto' : 1};
+		${columnBreakpointCss}
+	`;
+};
+
+export const column = (width?: number | number[], span?: number | number[]) => {
+	if (!width && (span || span === 0)) {
+		return generateSpanCSS(span);
+	}
+
 	let flex;
 	let widthCSS;
 
@@ -149,31 +223,7 @@ export const column = (width?: number | number[]) => {
 
 	return css`
 		box-sizing: border-box;
-<<<<<<< HEAD
 		flex: ${flex};
 		${widthCSS};
-=======
-		/* If a width is specified, don't allow column to grow. Use the width property */
-		flex: ${width ? '0 0 auto' : 1};
-		/*
-		A set of Columns has n columns and n-1 gutters:
-		|    |g|    |g|    |g|    |
-		This means if we take a simple fraction of the width of the set of Columns,
-		our Column will stop part-way through a gutter:
-		|    |g|    |g|    |g|    |
-		|====50%=====|====50%=====|
-		To calculate width of a Column correctly, we must add an imaginary extra gutter
-		and take a fraction of the whole:
-		|    |g|    |g|    |g|    |g|
-		|=====50%=====||====50%=====|
-		This will create a Column which is x columns and x gutters wide. We really want the
-		Column to be x columns and x-1 gutters, so we must subtract a gutter at the end:
-		|    |g|    |g|    |g|    |g|
-		|====50%====| |====50%====|
-	 */
-		${width
-			? `width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);`
-			: ''}
->>>>>>> c71ea3ce... Working span with single number of columns per component
 	`;
 };

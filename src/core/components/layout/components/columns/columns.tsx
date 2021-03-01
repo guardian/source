@@ -69,15 +69,15 @@ const Columns = ({
 };
 
 interface ColumnProps extends HTMLAttributes<HTMLDivElement>, Props {
-	width?: number;
-	span?: number;
+	width?: number | number[];
+	span?: number | number[];
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;
 }
 
 const Column = ({
-	width = 0,
-	span = 0,
+	width,
+	span,
 	cssOverrides,
 	children,
 	...props
