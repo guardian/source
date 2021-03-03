@@ -2,6 +2,11 @@ import { css } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
 import { Breakpoint, from, until, between } from '@guardian/src-foundations/mq';
 
+type ColumnBreakpoint = {
+	totalColumns: number;
+	rule: string;
+};
+
 export const columns = css`
 	box-sizing: border-box;
 	display: flex;
@@ -152,49 +157,26 @@ const generateSpanCSS = (span: number | number[]) => {
 	return calculateSpan(span);
 };
 
-type ColumnBreakpoints = Array<ColumnBreakpoint>;
-type ColumnBreakpoint = {
-	first?: Breakpoint;
-	last?: Breakpoint;
-	totalColumns: number;
-};
-
-export const columnBreakpoints: ColumnBreakpoints = [
-	{ first: undefined, last: 'tablet', totalColumns: 4 },
-	{ first: 'tablet', last: 'leftCol', totalColumns: 12 },
-	{ first: 'leftCol', last: 'wide', totalColumns: 14 },
-	{ first: 'wide', last: undefined, totalColumns: 16 },
+const columnBreakpoints: Array<ColumnBreakpoint> = [
+	{ totalColumns: 4, rule: until.tablet },
+	{ totalColumns: 12, rule: between.tablet.and.leftCol },
+	{ totalColumns: 14, rule: between.leftCol.and.wide },
+	{ totalColumns: 16, rule: from.wide },
 ];
 
 const calculateSpan = (span: number) => {
 	const columnBreakpointCss = columnBreakpoints.reduce(
 		(acc: string, cur: ColumnBreakpoint) => {
-			// if span == cur.columns then 100%
-			if (span >= cur.totalColumns) return `width: 100%; display: block;`;
-
-			// if span == 0 then not visible
-			console.log(span);
 			if (span === 0) return `display: none;`;
+			if (span >= cur.totalColumns) return `width: 100%; display: block;`;
 
 			const inferredWidth = span / cur.totalColumns;
 			const cssForBreakpoint = `{ width: calc((100% + ${space[5]}px) * ${inferredWidth} - ${space[5]}px); display: block; }\n`;
-			if (cur.first && cur.last) {
-				return (
-					// Typescript cannot infer that combinations will always be valid
-					// eslint-disable-next-line
-					// @ts-ignore next-line
-					acc + between[cur.first].and[cur.last] + cssForBreakpoint
-				);
-			}
-			if (cur.first) {
-				return acc + from[cur.first] + cssForBreakpoint;
-			}
-			return acc + until[cur.last as Breakpoint] + cssForBreakpoint;
+
+			return acc + cur.rule + cssForBreakpoint;
 		},
 		'',
 	);
-
-	console.log(columnBreakpointCss);
 
 	return css`
 		box-sizing: border-box;
