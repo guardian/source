@@ -11,14 +11,36 @@ const contents = css`
 	background-color: ${sport[600]};
 `;
 
+const label = css`
+	${textSans.medium()};
+	text-align: left;
+`;
+
+const code = css`
+	${textSans.medium()};
+	margin-right: 4px;
+	font-family: monospace;
+	padding: 4px;
+	font-size: 14px;
+	background: #f7f7f7;
+	border-radius: 4px;
+	margin-left: 4px;
+`;
+
 const spaceOut = css`
 	& > * + * {
 		margin-top: ${space[5]}px !important;
 	}
 `;
+// eslint-disable max-len
 
 const example = (
 	<div css={spaceOut}>
+		<Container css={label}>
+			<p>
+				An array of <code css={code}>span</code> values can be specified for relevant breakpoints:
+			</p>
+		</Container>
 		<Container>
 			<Columns>
 				<Column span={4}>
@@ -33,6 +55,21 @@ const example = (
 			</Columns>
 		</Container>
 
+		<Container css={label}>
+			<p>
+				<code css={code}>span</code> will not extend beyond 100% of the browser width:
+			</p>
+		</Container>
+		<Container>
+			<Columns>
+				<Column span={12}>
+					<div css={contents}>12</div>
+				</Column>
+			</Columns>
+		</Container>
+		<p>
+			A <code css={code}>span</code> of 0 will cause the element not to be displayed.
+		</p>
 		<Container>
 			<Columns>
 				<Column>
@@ -71,6 +108,23 @@ const example = (
 				</Column>
 				<Column span={1}>
 					<div css={contents}>1</div>
+				</Column>
+			</Columns>
+		</Container>
+
+		<Container css={label}>
+			<p>
+				<code css={code}>span</code> is overruled by <code css={code}>width</code> prop:
+			</p>
+		</Container>
+
+		<Container>
+			<Columns>
+				<Column span={2} width={3 / 4}>
+					<div css={contents}>span: 2, width: 1/4</div>
+				</Column>
+				<Column width={1 / 4}>
+					<div css={contents}>width: 3/4</div>
 				</Column>
 			</Columns>
 		</Container>
