@@ -33,9 +33,43 @@ const spaceOut = css`
 	}
 `;
 // eslint-disable max-len
-
+const gridDocsUrl = 'https://theguardian.design/2a1e5182b/p/41be19-grids'
 const example = (
 	<div css={spaceOut}>
+		<Container css={label}>
+			<p>
+				Elements with a <code css={code}>span</code> prop will scale at
+				our <a href={gridDocsUrl}> established breakpoints</a>:
+			</p>
+		</Container>
+		<Container>
+			<Columns>
+				<Column span={1}>
+					<div css={contents}>1</div>
+				</Column>
+				<Column span={1}>
+					<div css={contents}>1</div>
+				</Column>
+				<Column span={2}>
+					<div css={contents}>2</div>
+				</Column>
+			</Columns>
+		</Container>
+
+		<Container>
+			<Columns>
+				<Column span={2}>
+					<div css={contents}>2</div>
+				</Column>
+				<Column>
+					<div css={contents}>*</div>
+				</Column>
+				<Column span={1}>
+					<div css={contents}>1</div>
+				</Column>
+			</Columns>
+		</Container>
+
 		<Container css={label}>
 			<p>
 				An array of <code css={code}>span</code> values can be specified for relevant breakpoints:
@@ -57,7 +91,7 @@ const example = (
 
 		<Container css={label}>
 			<p>
-				<code css={code}>span</code> will not extend beyond 100% of the browser width:
+				An element with a <code css={code}>span</code> will not extend beyond 100% of the browser width:
 			</p>
 		</Container>
 		<Container>
@@ -67,9 +101,11 @@ const example = (
 				</Column>
 			</Columns>
 		</Container>
-		<p>
-			A <code css={code}>span</code> of 0 will cause the element not to be displayed.
-		</p>
+		<Container css={label}>
+			<p>
+				A <code css={code}>span</code> of 0 will cause the element not to be displayed.
+			</p>
+		</Container>
 		<Container>
 			<Columns>
 				<Column>
@@ -80,34 +116,6 @@ const example = (
 				</Column>
 				<Column span={[0, 0, 2]}>
 					<div css={contents}>[0, 0, 2]</div>
-				</Column>
-			</Columns>
-		</Container>
-
-		<Container>
-			<Columns>
-				<Column span={1}>
-					<div css={contents}>1</div>
-				</Column>
-				<Column span={1}>
-					<div css={contents}>1</div>
-				</Column>
-				<Column span={2}>
-					<div css={contents}>2</div>
-				</Column>
-			</Columns>
-		</Container>
-
-		<Container>
-			<Columns>
-				<Column span={2}>
-					<div css={contents}>2</div>
-				</Column>
-				<Column>
-					<div css={contents}>*</div>
-				</Column>
-				<Column span={1}>
-					<div css={contents}>1</div>
 				</Column>
 			</Columns>
 		</Container>
