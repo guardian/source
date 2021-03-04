@@ -72,7 +72,8 @@ const example = (
 
 		<Container css={label}>
 			<p>
-				An array of <code css={code}>span</code> values can be specified for relevant breakpoints:
+				An array of <code css={code}>span</code> values can be specified
+				for relevant breakpoints:
 			</p>
 		</Container>
 		<Container>
@@ -91,7 +92,8 @@ const example = (
 
 		<Container css={label}>
 			<p>
-				An element with a <code css={code}>span</code> will not extend beyond 100% of the browser width:
+				An element with a <code css={code}>span</code> will not extend
+				beyond 100% of the browser width:
 			</p>
 		</Container>
 		<Container>
@@ -103,7 +105,8 @@ const example = (
 		</Container>
 		<Container css={label}>
 			<p>
-				A <code css={code}>span</code> of 0 will cause the element not to be displayed.
+				A <code css={code}>span</code> of 0 will cause the element not
+				to be displayed.
 			</p>
 		</Container>
 		<Container>
@@ -122,7 +125,8 @@ const example = (
 
 		<Container css={label}>
 			<p>
-				<code css={code}>span</code> is overruled by <code css={code}>width</code> prop:
+				<code css={code}>span</code> is overruled by
+				<code css={code}>width</code> prop:
 			</p>
 		</Container>
 
