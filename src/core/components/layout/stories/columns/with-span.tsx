@@ -32,8 +32,8 @@ const spaceOut = css`
 		margin-top: ${space[5]}px !important;
 	}
 `;
-// eslint-disable max-len
-const gridDocsUrl = 'https://theguardian.design/2a1e5182b/p/41be19-grids'
+
+const gridDocsUrl = 'https://theguardian.design/2a1e5182b/p/41be19-grids';
 const example = (
 	<div css={spaceOut}>
 		<Container css={label}>
