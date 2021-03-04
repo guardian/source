@@ -2,7 +2,6 @@ import { breakpoints } from '../index';
 
 // Duplicated from breakpoints.ts because of some issue importing directly
 // babel * typescript * rollup = ¯\_(ツ)_/¯
-
 type Breakpoint =
 	| 'mobile'
 	| 'mobileMedium'
