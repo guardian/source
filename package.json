@@ -68,7 +68,7 @@
     "@babel/preset-typescript": "^7.9.0",
     "@emotion/babel-preset-css-prop": "^11.0.0",
     "@emotion/react": "^11.1.2",
-    "@guardian/prettier": "^0.4.2",
+    "@guardian/prettier": "^0.5.0",
     "@storybook/addon-backgrounds": "^6.1.21",
     "@storybook/addon-viewport": "^6.1.21",
     "@storybook/react": "^6.1.21",
