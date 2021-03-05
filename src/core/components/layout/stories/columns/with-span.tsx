@@ -133,10 +133,10 @@ const example = (
 		<Container>
 			<Columns>
 				<Column span={2} width={3 / 4}>
-					<div css={contents}>span: 2, width: 1/4</div>
+					<div css={contents}>span: 2, width: 3/4</div>
 				</Column>
 				<Column width={1 / 4}>
-					<div css={contents}>width: 3/4</div>
+					<div css={contents}>width: 1/4</div>
 				</Column>
 			</Columns>
 		</Container>
