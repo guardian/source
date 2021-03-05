@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Hide } from "../../index";
-import { css } from "@emotion/react";
-import { sport } from "@guardian/src-foundations/palette";
-import { textSans } from "@guardian/src-foundations/typography";
+import React from 'react';
+import { Container, Hide } from '../../index';
+import { css } from '@emotion/react';
+import { sport } from '@guardian/src-foundations/palette';
+import { textSans } from '@guardian/src-foundations/typography';
 
 const contents = css`
 	${textSans.medium()};
@@ -19,7 +19,7 @@ export const below = () => (
 );
 
 below.story = {
-	name: "below",
+	name: 'below',
 };
 
 export const above = () => (
@@ -31,5 +31,19 @@ export const above = () => (
 );
 
 above.story = {
-	name: "above",
+	name: 'above',
+};
+
+export const between = () => (
+	<Container>
+		<Hide below="tablet" above="leftCol">
+			<div css={contents}>
+				Will only appear between desktop and leftCol
+			</div>
+		</Hide>
+	</Container>
+);
+
+between.story = {
+	name: 'between',
 };

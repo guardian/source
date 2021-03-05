@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { css } from "@emotion/react";
-import { from } from "@guardian/src-foundations/mq";
-import { textSans } from "@guardian/src-foundations/typography";
-import { Select, Option } from "../index";
+import React, { useState } from 'react';
+import { css } from '@emotion/react';
+import { from } from '@guardian/src-foundations/mq';
+import { textSans } from '@guardian/src-foundations/typography';
+import { Select, Option } from '../index';
 
 const constrainedWith = css`
 	width: 100%;
@@ -16,7 +16,7 @@ const message = css`
 `;
 
 export const controlled = () => {
-	const [state, setState] = useState("al");
+	const [state, setState] = useState('al');
 
 	return (
 		<div css={constrainedWith}>
@@ -30,12 +30,12 @@ export const controlled = () => {
 				<Option value="ca">California</Option>
 			</Select>
 			<span css={message}>
-				{state ? `You have selected: ${state}` : ""}
+				{state ? `You have selected: ${state}` : ''}
 			</span>
 		</div>
 	);
 };
 
 controlled.story = {
-	name: "controlled example",
+	name: 'controlled example',
 };

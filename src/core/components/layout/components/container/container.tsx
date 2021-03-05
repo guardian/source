@@ -1,7 +1,7 @@
-import React, { HTMLAttributes, ReactNode } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { container, containerBorder } from "./styles";
-import { Props } from "@guardian/src-helpers";
+import { HTMLAttributes, ReactNode } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { container, containerBorder } from './styles';
+import { Props } from '@guardian/src-helpers';
 
 interface Container extends HTMLAttributes<HTMLDivElement>, Props {
 	border?: boolean;
@@ -17,7 +17,7 @@ const Container = ({
 }: Container) => {
 	return (
 		<div
-			css={[container, border ? containerBorder : "", cssOverrides]}
+			css={[container, border ? containerBorder : '', cssOverrides]}
 			{...props}
 		>
 			{children}

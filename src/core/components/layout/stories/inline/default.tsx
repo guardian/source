@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { Inline } from "../../index";
-import { textSans } from "@guardian/src-foundations/typography";
-import { sport } from "@guardian/src-foundations/palette";
+import React from 'react';
+import { css } from '@emotion/react';
+import { Inline } from '../../index';
+import { textSans } from '@guardian/src-foundations/typography';
+import { sport } from '@guardian/src-foundations/palette';
 
 const contents = css`
 	${textSans.medium()};
@@ -19,7 +19,7 @@ export const noSpace = () => (
 );
 
 noSpace.story = {
-	name: "no space",
+	name: 'no space',
 };
 
 export const space1 = () => (
@@ -31,7 +31,7 @@ export const space1 = () => (
 );
 
 space1.story = {
-	name: "space 1",
+	name: 'space 1',
 };
 
 export const space2 = () => (
@@ -43,7 +43,7 @@ export const space2 = () => (
 );
 
 space2.story = {
-	name: "space 2",
+	name: 'space 2',
 };
 
 export const space3 = () => (
@@ -55,7 +55,7 @@ export const space3 = () => (
 );
 
 space3.story = {
-	name: "space 3",
+	name: 'space 3',
 };
 
 export const space4 = () => (
@@ -67,7 +67,7 @@ export const space4 = () => (
 );
 
 space4.story = {
-	name: "space 4",
+	name: 'space 4',
 };
 
 export const space5 = () => (
@@ -79,7 +79,7 @@ export const space5 = () => (
 );
 
 space5.story = {
-	name: "space 5",
+	name: 'space 5',
 };
 
 export const space6 = () => (
@@ -91,7 +91,7 @@ export const space6 = () => (
 );
 
 space6.story = {
-	name: "space 6",
+	name: 'space 6',
 };
 
 export const space9 = () => (
@@ -103,7 +103,7 @@ export const space9 = () => (
 );
 
 space9.story = {
-	name: "space 9",
+	name: 'space 9',
 };
 
 export const space12 = () => (
@@ -115,7 +115,7 @@ export const space12 = () => (
 );
 
 space12.story = {
-	name: "space 12",
+	name: 'space 12',
 };
 
 export const space24 = () => (
@@ -127,7 +127,7 @@ export const space24 = () => (
 );
 
 space24.story = {
-	name: "space 24",
+	name: 'space 24',
 };
 
 export const lotsOfItems = () => (
@@ -145,5 +145,5 @@ export const lotsOfItems = () => (
 );
 
 lotsOfItems.story = {
-	name: "lots of items",
+	name: 'lots of items',
 };

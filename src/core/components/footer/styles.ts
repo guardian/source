@@ -1,10 +1,10 @@
-import { css } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { footerBrand } from "@guardian/src-foundations/themes";
-import { from, between } from "@guardian/src-foundations/mq";
-import { height, width } from "@guardian/src-foundations/size";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
+import { css } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { footerBrand } from '@guardian/src-foundations/themes';
+import { from, between } from '@guardian/src-foundations/mq';
+import { height, width } from '@guardian/src-foundations/size';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
 
 export const footer = ({ footer } = footerBrand) => css`
 	color: ${footer.text};
@@ -69,7 +69,7 @@ export const backToTop = ({ footer } = footerBrand) => css`
 	height: ${height.ctaMedium}px;
 	padding-left: ${space[2]}px;
 
-	${textSans.small({ fontWeight: "bold" })};
+	${textSans.small({ fontWeight: 'bold' })};
 	color: ${footer.anchor};
 	background-color: ${footer.background};
 	text-decoration: none;

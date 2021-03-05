@@ -1,4 +1,4 @@
-import { size, remSize, iconSize, remIconSize } from "./global";
+import { size, remSize, iconSize, remIconSize } from './global';
 
 const height = {
 	ctaMedium: size.medium,

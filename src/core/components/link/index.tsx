@@ -1,12 +1,11 @@
-///<reference types="@emotion/react/types/css-prop" />
 import React, {
 	ReactElement,
 	ReactNode,
 	AnchorHTMLAttributes,
 	ButtonHTMLAttributes,
-} from "react";
-import { SerializedStyles } from "@emotion/react";
-import { LinkTheme } from "@guardian/src-foundations/themes";
+} from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { LinkTheme } from '@guardian/src-foundations/themes';
 import {
 	link,
 	buttonLink,
@@ -16,21 +15,21 @@ import {
 	icon,
 	iconRight,
 	iconLeft,
-} from "./styles";
-import { Props } from "@guardian/src-helpers";
+} from './styles';
+import { Props } from '@guardian/src-helpers';
 
 export {
 	linkDefault,
 	linkBrand,
 	linkBrandAlt,
-} from "@guardian/src-foundations/themes";
+} from '@guardian/src-foundations/themes';
 
-export type Priority = "primary" | "secondary";
+export type LinkPriority = 'primary' | 'secondary';
 
-type IconSide = "left" | "right";
+type IconSide = 'left' | 'right';
 
 const priorities: {
-	[key in Priority]: ({ link }: { link: LinkTheme }) => SerializedStyles;
+	[key in LinkPriority]: ({ link }: { link: LinkTheme }) => SerializedStyles;
 } = {
 	primary,
 	secondary,
@@ -57,15 +56,15 @@ const linkContents = ({
 	const linkContents = [children];
 
 	if (iconSvg) {
-		if (iconSide === "left") {
+		if (iconSide === 'left') {
 			linkContents.unshift(
 				spacer,
-				React.cloneElement(iconSvg, { key: "svg" })
+				React.cloneElement(iconSvg, { key: 'svg' }),
 			);
 		} else {
 			linkContents.push(
 				spacer,
-				React.cloneElement(iconSvg, { key: "svg" })
+				React.cloneElement(iconSvg, { key: 'svg' }),
 			);
 		}
 	}
@@ -78,33 +77,33 @@ const linkStyles = ({
 	priority,
 	isSubdued,
 	iconSvg,
-	iconSide,
+	iconSide = 'left',
 	cssOverrides,
 }: {
 	isButton?: boolean;
-	priority: Priority;
-	isSubdued: boolean;
+	priority: LinkPriority;
+	isSubdued?: boolean;
 	iconSvg?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }) => {
 	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 	return (theme: any) => [
 		link,
-		isButton ? buttonLink : "",
+		isButton ? buttonLink : '',
 		priorities[priority](theme.link && theme),
-		isSubdued ? subdued : "",
-		iconSvg ? icon : "",
-		iconSvg ? iconSides[iconSide] : "",
+		isSubdued ? subdued : '',
+		iconSvg ? icon : '',
+		iconSvg ? iconSides[iconSide] : '',
 		cssOverrides,
 	];
 };
 
 interface SharedLinkProps extends Props {
-	priority: Priority;
-	subdued: boolean;
+	priority?: LinkPriority;
+	subdued?: boolean;
 	icon?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -112,19 +111,19 @@ interface SharedLinkProps extends Props {
 interface LinkProps
 	extends AnchorHTMLAttributes<HTMLAnchorElement>,
 		SharedLinkProps {
-	priority: Priority;
-	subdued: boolean;
+	priority?: LinkPriority;
+	subdued?: boolean;
 	icon?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const Link = ({
-	priority,
+	priority = 'primary',
 	subdued: isSubdued,
 	icon: iconSvg,
-	iconSide,
+	iconSide = 'left',
 	cssOverrides,
 	children,
 	...props
@@ -148,19 +147,19 @@ const Link = ({
 interface ButtonLinkProps
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
 		SharedLinkProps {
-	priority: Priority;
-	subdued: boolean;
+	priority?: LinkPriority;
+	subdued?: boolean;
 	icon?: ReactElement;
-	iconSide: IconSide;
+	iconSide?: IconSide;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 const ButtonLink = ({
-	priority,
+	priority = 'primary',
 	subdued: isSubdued,
 	icon: iconSvg,
-	iconSide,
+	iconSide = 'left',
 	cssOverrides,
 	children,
 	...props
@@ -181,14 +180,5 @@ const ButtonLink = ({
 		</button>
 	);
 };
-
-const defaultLinkProps = {
-	priority: "primary",
-	subdued: false,
-	iconSide: "left",
-};
-
-Link.defaultProps = { ...defaultLinkProps };
-ButtonLink.defaultProps = { ...defaultLinkProps };
 
 export { Link, ButtonLink };

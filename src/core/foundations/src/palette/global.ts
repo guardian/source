@@ -19,7 +19,7 @@
 // If a context-specific colour is not available for your use case, consider raising a pull
 // request to add it, rather than consuming the global colour.
 
-import { colors } from "../theme";
+import { colors } from '../theme';
 
 export const brand = {
 	100: colors.blues[7],

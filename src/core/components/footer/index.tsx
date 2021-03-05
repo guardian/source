@@ -1,6 +1,5 @@
-///<reference types="@emotion/react/types/css-prop" />
-import React, { HTMLAttributes, ReactNode } from "react";
-import { SerializedStyles } from "@emotion/react";
+import React, { HTMLAttributes, ReactNode } from 'react';
+import { SerializedStyles } from '@emotion/react';
 import {
 	footer,
 	copyright,
@@ -11,13 +10,13 @@ import {
 	linksWrapper,
 	linksWrapperSpace,
 	linksWrapperSpaceWithBackToTop,
-} from "./styles";
-import { Props } from "@guardian/src-helpers";
-import { SvgChevronUpSingle } from "@guardian/src-icons";
-export { footerBrand } from "@guardian/src-foundations/themes";
+} from './styles';
+import { Props } from '@guardian/src-helpers';
+import { SvgChevronUpSingle } from '@guardian/src-icons';
+export { footerBrand } from '@guardian/src-foundations/themes';
 
 interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
-	showBackToTop: boolean;
+	showBackToTop?: boolean;
 	children?: ReactNode;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -53,10 +52,10 @@ const Footer = ({
 				<div css={(theme) => links(theme.footer && theme)}>
 					{children}
 				</div>
-				{showBackToTop ? backToTopLink : ""}
+				{showBackToTop ? backToTopLink : ''}
 			</div>
 			<small
-				css={[copyright, showBackToTop ? copyrightExtraPadding : ""]}
+				css={[copyright, showBackToTop ? copyrightExtraPadding : '']}
 			>
 				&copy; 2021 Guardian News and Media Limited or its affiliated
 				companies. All rights reserved.
@@ -64,9 +63,5 @@ const Footer = ({
 		</footer>
 	);
 };
-
-const defaultProps = { showBackToTop: false };
-
-Footer.defaultProps = { ...defaultProps };
 
 export { Footer };

@@ -1,14 +1,14 @@
-import React from "react";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { ThemeProvider } from '@emotion/react';
 import {
 	userFeedbackDefault,
 	userFeedbackBrand,
-} from "@guardian/src-foundations/themes";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { InlineError, InlineSuccess } from "./index";
+} from '@guardian/src-foundations/themes';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { InlineError, InlineSuccess } from './index';
 
 export default {
-	title: "UserFeedback",
+	title: 'UserFeedback',
 };
 
 const errorLight = () => (
@@ -21,7 +21,7 @@ errorLight.story = {
 	name: `inline error default`,
 	parameters: {
 		backgrounds: {
-			default: "default",
+			default: 'default',
 			values: [storybookBackgrounds.default],
 		},
 	},
@@ -37,7 +37,7 @@ errorBlue.story = {
 	name: `inline error brand`,
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -53,7 +53,7 @@ successLight.story = {
 	name: `inline success default`,
 	parameters: {
 		backgrounds: {
-			default: "default",
+			default: 'default',
 			values: [storybookBackgrounds.default],
 		},
 	},
@@ -69,7 +69,7 @@ successBlue.story = {
 	name: `inline success brand`,
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -84,7 +84,7 @@ const errorLongLightMobile = () => (
 errorLongLightMobile.story = {
 	name: `long inline error light mobile`,
 	parameters: {
-		viewport: { defaultViewport: "mobileMedium" },
+		viewport: { defaultViewport: 'mobileMedium' },
 	},
 };
 

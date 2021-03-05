@@ -1,12 +1,15 @@
 {
-	"compilerOptions": {
-		"outDir": ".",
-		"declaration": true,
-		"emitDeclarationOnly": true,
-		"jsx": "preserve",
-		"esModuleInterop": true,
-		"lib": ["es5", "es6", "es7", "es2017", "es2019", "dom"],
-		"types": ["@emotion/react/types/css-prop"]
-	},
-	"exclude": ["node_modules"]
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["."],
+  "exclude": ["dist", "stories.tsx", "stories"],
+  "references": [
+    {
+      "path": "../foundations"
+    }
+  ]
 }

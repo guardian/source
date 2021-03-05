@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { css } from "@emotion/react";
-import { textSans } from "@guardian/src-foundations/typography";
+import React, { useState } from 'react';
+import { css } from '@emotion/react';
+import { textSans } from '@guardian/src-foundations/typography';
 
-import { TextArea } from "./index";
+import { TextArea } from './index';
 
 const wrapperStyles = css`
 	width: 400px;
 `;
 
 export default {
-	title: "TextArea",
+	title: 'TextArea',
 };
 
 const defaultLight = () => (
@@ -82,7 +82,7 @@ const withMaxLength = () => (
 );
 
 withMaxLength.story = {
-	name: "with maxlength",
+	name: 'with maxlength',
 };
 
 errorWithMessageLight.story = {
@@ -94,7 +94,7 @@ const wordCount = css`
 `;
 
 const controlled = () => {
-	const [state, setState] = useState("");
+	const [state, setState] = useState('');
 	return (
 		<div css={wrapperStyles}>
 			<TextArea
@@ -104,15 +104,15 @@ const controlled = () => {
 				onChange={(event) => setState(event.target.value)}
 			/>
 			<span css={wordCount}>
-				Word count:{" "}
-				{state.length > 0 ? state.trim().split(" ").length : 0}
+				Word count:{' '}
+				{state.length > 0 ? state.trim().split(' ').length : 0}
 			</span>
 		</div>
 	);
 };
 
 controlled.story = {
-	name: "controlled example",
+	name: 'controlled example',
 };
 
 export {

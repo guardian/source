@@ -1,7 +1,7 @@
-import React from "react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { RadioGroup, Radio, radioBrand } from "../../index";
-import { ThemeProvider } from "@emotion/react";
+import React from 'react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { RadioGroup, Radio, radioBrand } from '../../index';
+import { ThemeProvider } from '@emotion/react';
 
 /* eslint-disable react/jsx-key */
 const radios = [
@@ -18,7 +18,7 @@ export const legendSupportingTextLight = () => (
 		supporting="You can always change it later"
 	>
 		{radios.map((radio, index) =>
-			React.cloneElement(radio, { key: index })
+			React.cloneElement(radio, { key: index }),
 		)}
 	</RadioGroup>
 );
@@ -34,7 +34,7 @@ export const legendSupportingTextBlue = () => (
 			supporting="You can always change it later"
 		>
 			{radios.map((radio, index) =>
-				React.cloneElement(radio, { key: index })
+				React.cloneElement(radio, { key: index }),
 			)}
 		</RadioGroup>
 	</ThemeProvider>
@@ -44,7 +44,7 @@ legendSupportingTextBlue.story = {
 	name: `legend supporting text blue`,
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

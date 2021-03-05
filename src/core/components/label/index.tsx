@@ -1,10 +1,9 @@
-///<reference types="@emotion/react/types/css-prop" />
-import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from "react";
-import { SerializedStyles, css } from "@emotion/react";
-import { legend, labelText, optionalText, supportingText } from "./styles";
-import { Props } from "@guardian/src-helpers";
-export { labelDefault, labelBrand } from "@guardian/src-foundations/themes";
-import { visuallyHidden as _visuallyHidden } from "@guardian/src-foundations/accessibility";
+import React, { ReactNode, LabelHTMLAttributes, HTMLAttributes } from 'react';
+import { SerializedStyles, css } from '@emotion/react';
+import { legend, labelText, optionalText, supportingText } from './styles';
+import { Props } from '@guardian/src-helpers';
+export { labelDefault, labelBrand } from '@guardian/src-foundations/themes';
+import { visuallyHidden as _visuallyHidden } from '@guardian/src-foundations/accessibility';
 
 const visuallyHidden = css`
 	${_visuallyHidden}
@@ -13,7 +12,7 @@ const visuallyHidden = css`
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 	text: string;
 	supporting?: string;
-	optional: boolean;
+	optional?: boolean;
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children?: ReactNode;
@@ -21,7 +20,7 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	text: string;
 	supporting?: string;
-	optional: boolean;
+	optional?: boolean;
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
@@ -37,7 +36,7 @@ const SupportingText = ({
 		<p
 			css={(theme) => [
 				supportingText(theme.label && theme),
-				hideLabel ? visuallyHidden : "",
+				hideLabel ? visuallyHidden : '',
 			]}
 		>
 			{children}
@@ -49,16 +48,16 @@ const Text = ({ text, optional, hideLabel }: LabelProps) => (
 	<div
 		css={(theme) => [
 			labelText(theme.label && theme),
-			hideLabel ? visuallyHidden : "",
+			hideLabel ? visuallyHidden : '',
 		]}
 	>
-		{text}{" "}
+		{text}{' '}
 		{optional ? (
 			<span css={(theme) => optionalText(theme.label && theme)}>
 				Optional
 			</span>
 		) : (
-			""
+			''
 		)}
 	</div>
 );
@@ -81,7 +80,7 @@ const Legend = ({
 					{supporting}
 				</SupportingText>
 			) : (
-				""
+				''
 			)}
 		</>
 	);
@@ -104,16 +103,11 @@ const Label = ({
 					{supporting}
 				</SupportingText>
 			) : (
-				""
+				''
 			)}
 			{children}
 		</label>
 	);
 };
-
-const defaultProps = { optional: false };
-
-Label.defaultProps = { ...defaultProps };
-Legend.defaultProps = { ...defaultProps };
 
 export { Label, Legend };

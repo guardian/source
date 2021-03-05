@@ -1,5 +1,5 @@
-import { line } from "@guardian/src-foundations/palette";
-import { LineCount } from ".";
+import { line } from '@guardian/src-foundations/palette';
+import { LineCount } from '.';
 
 const wavelength = 12;
 const amplitude = 3;
@@ -17,7 +17,7 @@ const d = [
 	`t ${wavelength / 4} -${amplitude / 2}`,
 	`t ${wavelength / 4} -${amplitude / 2}`,
 	`t 12 0`,
-].join(" ");
+].join(' ');
 
 const squigglySvg = (count: LineCount): string => {
 	const repeatedLines = [];

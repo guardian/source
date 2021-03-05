@@ -1,13 +1,13 @@
-import React from "react";
-import { css } from "@emotion/react";
+import React from 'react';
+import { css } from '@emotion/react';
 import {
 	SvgArrowRightStraight,
 	SvgIndent,
 	SvgExternal,
 	SvgChevronLeftSingle,
-} from "@guardian/src-icons";
-import { space } from "@guardian/src-foundations";
-import { ButtonLink } from "../index";
+} from '@guardian/src-icons';
+import { space } from '@guardian/src-foundations';
+import { ButtonLink } from '../index';
 
 const flexStart = css`
 	display: flex;
@@ -27,7 +27,7 @@ export const textAndIconButtonLinks = () => (
 		<div css={spacer}>
 			<ButtonLink
 				icon={<SvgExternal />}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Terms and conditions
 			</ButtonLink>
@@ -35,14 +35,14 @@ export const textAndIconButtonLinks = () => (
 		<div css={[flexStart, spacer]}>
 			<ButtonLink
 				icon={<SvgChevronLeftSingle />}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Previous
 			</ButtonLink>
 			<ButtonLink
 				iconSide="right"
 				icon={<SvgArrowRightStraight />}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Next
 			</ButtonLink>
@@ -51,7 +51,7 @@ export const textAndIconButtonLinks = () => (
 			<ButtonLink
 				iconSide="left"
 				icon={<SvgIndent />}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Indent
 			</ButtonLink>
@@ -60,7 +60,7 @@ export const textAndIconButtonLinks = () => (
 			<ButtonLink
 				icon={<SvgExternal />}
 				subdued={true}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Terms and conditions
 			</ButtonLink>
@@ -69,7 +69,7 @@ export const textAndIconButtonLinks = () => (
 			<ButtonLink
 				icon={<SvgChevronLeftSingle />}
 				subdued={true}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Previous
 			</ButtonLink>
@@ -77,7 +77,7 @@ export const textAndIconButtonLinks = () => (
 				iconSide="right"
 				icon={<SvgArrowRightStraight />}
 				subdued={true}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Next
 			</ButtonLink>
@@ -87,7 +87,7 @@ export const textAndIconButtonLinks = () => (
 				iconSide="left"
 				icon={<SvgIndent />}
 				subdued={true}
-				onClick={() => console.log("Clicked")}
+				onClick={() => console.log('Clicked')}
 			>
 				Indent
 			</ButtonLink>
@@ -95,5 +95,5 @@ export const textAndIconButtonLinks = () => (
 	</>
 );
 textAndIconButtonLinks.story = {
-	name: "text and icon button links",
+	name: 'text and icon button links',
 };

@@ -1,7 +1,7 @@
-import React, { HTMLAttributes, ReactNode } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { stack, stackSpace } from "./styles";
-import { Props } from "@guardian/src-helpers";
+import { HTMLAttributes, ReactNode } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { stack, stackSpace } from './styles';
+import { Props } from '@guardian/src-helpers';
 
 export type StackSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;
 
@@ -14,7 +14,7 @@ interface StackProps extends HTMLAttributes<HTMLDivElement>, Props {
 const Stack = ({ cssOverrides, children, space, ...props }: StackProps) => {
 	return (
 		<div
-			css={[stack, space ? stackSpace[space] : "", cssOverrides]}
+			css={[stack, space ? stackSpace[space] : '', cssOverrides]}
 			{...props}
 		>
 			{children}

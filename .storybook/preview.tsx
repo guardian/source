@@ -1,47 +1,47 @@
-import React, { useEffect } from "react"
-import { FocusStyleManager } from "@guardian/src-foundations/utils"
-import { breakpoints, Breakpoint } from "@guardian/src-foundations"
+import React, { useEffect } from 'react';
+import { FocusStyleManager } from '@guardian/src-foundations/utils';
+import { breakpoints, Breakpoint } from '@guardian/src-foundations';
 
 type ViewportMeta = {
 	[key in Breakpoint]: {
-		name: string
-		type: string
-	}
-}
+		name: string;
+		type: string;
+	};
+};
 const viewportMeta: ViewportMeta = {
 	mobile: {
-		name: "Mobile",
-		type: "mobile",
+		name: 'Mobile',
+		type: 'mobile',
 	},
 	mobileMedium: {
-		name: "Mobile Medium",
-		type: "mobile",
+		name: 'Mobile Medium',
+		type: 'mobile',
 	},
 	mobileLandscape: {
-		name: "Mobile Landscape",
-		type: "mobile",
+		name: 'Mobile Landscape',
+		type: 'mobile',
 	},
 	phablet: {
-		name: "Phablet",
-		type: "mobile",
+		name: 'Phablet',
+		type: 'mobile',
 	},
 	tablet: {
-		name: "Tablet",
-		type: "tablet",
+		name: 'Tablet',
+		type: 'tablet',
 	},
 	desktop: {
-		name: "Desktop",
-		type: "desktop",
+		name: 'Desktop',
+		type: 'desktop',
 	},
 	leftCol: {
-		name: "Left Col",
-		type: "desktop",
+		name: 'Left Col',
+		type: 'desktop',
 	},
 	wide: {
-		name: "Wide",
-		type: "desktop",
+		name: 'Wide',
+		type: 'desktop',
 	},
-}
+};
 const viewportEntries = Object.entries(breakpoints).map(([name, width]) => {
 	return [
 		name,
@@ -49,40 +49,40 @@ const viewportEntries = Object.entries(breakpoints).map(([name, width]) => {
 			name: viewportMeta[name].name,
 			styles: {
 				width: `${width}px`,
-				height: "100%",
+				height: '100%',
 			},
 			type: viewportMeta[name].type,
 		},
-	]
-})
+	];
+});
 const viewports = {
 	responsive: {
-		name: "Responsive",
+		name: 'Responsive',
 		styles: {
-			width: "100%",
-			height: "100%",
-			border: "none",
-			display: "block",
-			margin: "0",
-			boxShadow: "none",
+			width: '100%',
+			height: '100%',
+			border: 'none',
+			display: 'block',
+			margin: '0',
+			boxShadow: 'none',
 		},
 	},
 	...Object.fromEntries(viewportEntries),
-}
+};
 
 export const parameters = {
 	viewport: {
 		viewports,
-		defaultViewport: "responsive",
+		defaultViewport: 'responsive',
 	},
-}
+};
 
 const FocusManagerDecorator = (storyFn) => {
 	useEffect(() => {
-		FocusStyleManager.onlyShowFocusOnTabs()
-	})
+		FocusStyleManager.onlyShowFocusOnTabs();
+	});
 
-	return <div>{storyFn()}</div>
-}
+	return <div>{storyFn()}</div>;
+};
 
-export const decorators = [FocusManagerDecorator]
+export const decorators = [FocusManagerDecorator];

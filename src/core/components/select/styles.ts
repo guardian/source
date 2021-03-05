@@ -1,9 +1,9 @@
-import { css } from "@emotion/react";
-import { space } from "@guardian/src-foundations";
-import { height, width } from "@guardian/src-foundations/size";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
-import { selectDefault } from "@guardian/src-foundations/themes";
+import { css } from '@emotion/react';
+import { space } from '@guardian/src-foundations';
+import { height, width } from '@guardian/src-foundations/size';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { selectDefault } from '@guardian/src-foundations/themes';
 
 export const errorInput = ({ select } = selectDefault) => css`
 	border: 4px solid ${select.borderError};
@@ -50,7 +50,7 @@ export const select = (theme = selectDefault) => {
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
 		width: 100%;
-		${textSans.medium({ lineHeight: "regular" })};
+		${textSans.medium({ lineHeight: 'regular' })};
 		background-color: ${select.backgroundInput};
 		border: 2px solid ${select.border};
 		padding-left: ${space[2]}px;

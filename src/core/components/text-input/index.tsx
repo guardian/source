@@ -1,8 +1,7 @@
-///<reference types="@emotion/react/types/css-prop" />
-import React, { InputHTMLAttributes } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { InlineError, InlineSuccess } from "@guardian/src-user-feedback";
-import { Label } from "@guardian/src-label";
+import React, { InputHTMLAttributes } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
+import { Label } from '@guardian/src-label';
 import {
 	widthFluid,
 	width30,
@@ -11,15 +10,15 @@ import {
 	textInput,
 	errorInput,
 	successInput,
-} from "./styles";
+} from './styles';
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
 	generateSourceId,
-} from "@guardian/src-foundations/accessibility";
-import { Props } from "@guardian/src-helpers";
+} from '@guardian/src-foundations/accessibility';
+import { Props } from '@guardian/src-helpers';
 
-export { textInputDefault } from "@guardian/src-foundations/themes";
+export { textInputDefault } from '@guardian/src-foundations/themes';
 export type Width = 30 | 10 | 4;
 
 const widths: {
@@ -33,8 +32,8 @@ const widths: {
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, Props {
 	id?: string;
 	label: string;
-	optional: boolean;
-	hideLabel: boolean;
+	optional?: boolean;
+	hideLabel?: boolean;
 	supporting?: string;
 	width?: Width;
 	error?: string;
@@ -58,7 +57,7 @@ const TextInput = ({
 	return (
 		<Label
 			text={labelText}
-			optional={optional}
+			optional={!!optional}
 			hideLabel={hideLabel}
 			supporting={supporting}
 		>
@@ -76,17 +75,18 @@ const TextInput = ({
 				css={(theme) => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
-					error ? errorInput(theme.textInput && theme) : "",
+					error ? errorInput(theme.textInput && theme) : '',
 					!error && success
 						? successInput(theme.textInput && theme)
-						: "",
+						: '',
 					cssOverrides,
 				]}
+				type="text"
 				id={textInputId}
 				aria-required={!optional}
 				aria-invalid={!!error}
 				aria-describedby={
-					error || success ? descriptionId(textInputId) : ""
+					error || success ? descriptionId(textInputId) : ''
 				}
 				required={!optional}
 				{...props}
@@ -94,14 +94,5 @@ const TextInput = ({
 		</Label>
 	);
 };
-
-const defaultProps = {
-	disabled: false,
-	type: "text",
-	optional: false,
-	hideLabel: false,
-};
-
-TextInput.defaultProps = { ...defaultProps };
 
 export { TextInput };

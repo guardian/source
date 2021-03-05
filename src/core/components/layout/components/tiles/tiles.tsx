@@ -1,7 +1,7 @@
-import React, { HTMLAttributes, ReactNode } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { Props } from "@guardian/src-helpers";
-import { tileGridColumns, tilesGridContainer } from "./styles";
+import { HTMLAttributes, ReactNode } from 'react';
+import { SerializedStyles } from '@emotion/react';
+import { Props } from '@guardian/src-helpers';
+import { tileGridColumns, tilesGridContainer } from './styles';
 import {
 	tilesCollapseBelowDesktop,
 	collapseBelowDesktopTiles,
@@ -11,19 +11,19 @@ import {
 	collapseBelowTabletTiles,
 	tilesCollapseBelowWide,
 	collapseBelowWideTiles,
-} from "../tiles/styles";
-import { Breakpoint } from "@guardian/src-foundations/mq";
+} from '../tiles/styles';
+import { Breakpoint } from '@guardian/src-foundations/mq';
 
 export type Columns = 2 | 3 | 4 | 5;
 
 type GridBreakpoint = Extract<
 	Breakpoint,
-	"mobile" | "tablet" | "desktop" | "leftCol" | "wide"
+	'mobile' | 'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
 type CollapseBreakpoint = Extract<
 	GridBreakpoint,
-	"tablet" | "desktop" | "leftCol" | "wide"
+	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
 interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
@@ -61,8 +61,8 @@ const Tiles = ({
 			css={[
 				tilesGridContainer,
 				tileGridColumns[columns],
-				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : "",
-				collapseBelow ? collapseBelowMap[collapseBelow] : "",
+				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : '',
+				collapseBelow ? collapseBelowMap[collapseBelow] : '',
 			]}
 			{...props}
 		>

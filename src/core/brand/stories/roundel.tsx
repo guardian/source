@@ -1,12 +1,12 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
+import React from 'react';
+import { css } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
 import {
 	SvgRoundelDefault,
 	SvgRoundelInverse,
 	SvgRoundelBrand,
 	SvgRoundelBrandInverse,
-} from "../index";
+} from '../index';
 
 const icon = css`
 	svg {
@@ -36,7 +36,7 @@ export const defaultRoundel = () => (
 );
 
 defaultRoundel.story = {
-	name: "default roundel",
+	name: 'default roundel',
 };
 
 export const brandRoundel = () => (
@@ -46,10 +46,10 @@ export const brandRoundel = () => (
 );
 
 brandRoundel.story = {
-	name: "brand roundel",
+	name: 'brand roundel',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -62,10 +62,10 @@ export const inverseRoundel = () => (
 );
 
 inverseRoundel.story = {
-	name: "inverse roundel",
+	name: 'inverse roundel',
 	parameters: {
 		backgrounds: {
-			default: "inverse",
+			default: 'inverse',
 			values: [storybookBackgrounds.inverse],
 		},
 	},
@@ -78,10 +78,10 @@ export const inverseBrandRoundel = () => (
 );
 
 inverseBrandRoundel.story = {
-	name: "inverse brand roundel",
+	name: 'inverse brand roundel',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},

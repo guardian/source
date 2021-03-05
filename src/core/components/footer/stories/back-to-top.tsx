@@ -1,14 +1,14 @@
-import React from "react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { Footer } from "../index";
+import React from 'react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { Footer } from '../index';
 
 export const backToTopBlue = () => <Footer showBackToTop={true} />;
 
 backToTopBlue.story = {
-	name: "back to top blue",
+	name: 'back to top blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -17,25 +17,25 @@ backToTopBlue.story = {
 export const backToTopBlueTablet = () => <Footer showBackToTop={true} />;
 
 backToTopBlueTablet.story = {
-	name: "back to top blue tablet",
+	name: 'back to top blue tablet',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
-		viewport: { defaultViewport: "tablet" },
+		viewport: { defaultViewport: 'tablet' },
 	},
 };
 
 export const backToTopBlueMobile = () => <Footer showBackToTop={true} />;
 
 backToTopBlueMobile.story = {
-	name: "back to top blue mobile",
+	name: 'back to top blue mobile',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
-		viewport: { defaultViewport: "mobileMedium" },
+		viewport: { defaultViewport: 'mobileMedium' },
 	},
 };

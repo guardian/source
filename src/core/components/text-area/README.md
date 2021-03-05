@@ -11,10 +11,10 @@ $ yarn add @guardian/src-text-area
 ## Use
 
 ```js
-import { TextArea } from "@guardian/src-text-area"
+import { TextArea } from '@guardian/src-text-area';
 
 const Form = () => {
-    const [state, setState] = useState("")
+    const [state, setState] = useState('');
 
     return (
         <form>
@@ -26,8 +26,8 @@ const Form = () => {
                 onChange={(event) => setState(event.target.value)}
             />
         </form>
-    )
-}
+    );
+};
 ```
 
 ## Props

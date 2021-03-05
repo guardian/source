@@ -1,22 +1,22 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent } from 'react';
 
-import { CheckboxGroup, Checkbox } from "../../index";
+import { CheckboxGroup, Checkbox } from '../../index';
 
 const selectAll = () => {
 	const checkboxData = [
 		{
-			label: "Guardian Today: UK",
-			value: "today_uk",
+			label: 'Guardian Today: UK',
+			value: 'today_uk',
 		},
 		{
-			label: "Guardian Today: US",
-			value: "today_us",
+			label: 'Guardian Today: US',
+			value: 'today_us',
 		},
 	];
 	const [checked, setCheckCount] = useState(checkboxData.map(() => false));
 	const handleCheckboxClick = (
 		event: ChangeEvent<HTMLInputElement>,
-		pos: number
+		pos: number,
 	) => {
 		const newChecked = checked.slice();
 
@@ -24,7 +24,7 @@ const selectAll = () => {
 		setCheckCount(newChecked);
 	};
 	const handleMasterCheckboxClick = (
-		event: ChangeEvent<HTMLInputElement>
+		event: ChangeEvent<HTMLInputElement>,
 	) => {
 		setCheckCount(checkboxData.map(() => event.target.checked));
 	};
@@ -62,7 +62,7 @@ const selectAll = () => {
 };
 
 selectAll.story = {
-	name: "select all",
+	name: 'select all',
 };
 
 export { selectAll };

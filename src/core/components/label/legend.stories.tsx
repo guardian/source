@@ -1,10 +1,10 @@
-import { Legend } from "./index";
+import { Legend } from './index';
 
 export default {
-	title: "Legend",
+	title: 'Legend',
 	component: Legend,
 };
 
-export * from "./stories/legend";
-export * from "./stories/legend-optional";
-export * from "./stories/legend-supporting";
+export * from './stories/legend';
+export * from './stories/legend-optional';
+export * from './stories/legend-supporting';

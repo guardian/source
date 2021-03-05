@@ -1,7 +1,7 @@
-export * from "./animation";
-export * from "./breakpoints";
-export * from "./palette";
-export * from "./space";
+export * from './animation';
+export * from './breakpoints';
+export * from './palette';
+export * from './space';
 
 // Avoid importing the entire palette directly in your application. Prefer using the named exports
 // defined within the /palette folder
@@ -39,7 +39,7 @@ import {
 	culture,
 	lifestyle,
 	labs,
-} from "./palette";
+} from './palette';
 
 export const palette = {
 	// functional colours (default)

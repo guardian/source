@@ -1,4 +1,4 @@
-import { transitions as _transitions } from "./theme";
+import { transitions as _transitions } from './theme';
 
 const transitions = {
 	short: _transitions[0],

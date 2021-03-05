@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { ThemeProvider } from "@emotion/react";
-import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-icons";
-import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
+import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from '@guardian/src-icons';
+import { ChoiceCardGroup, ChoiceCard, choiceCardDefault } from '../index';
 
 const medium = css`
 	width: 30em;
@@ -37,7 +37,7 @@ export const singleStateWithPaymentIconLight = () => (
 		<div css={medium}>
 			<ChoiceCardGroup name="colours" label="Payment method">
 				{paymentIconChoiceCards.map((choiceCard, index) =>
-					React.cloneElement(choiceCard, { key: index })
+					React.cloneElement(choiceCard, { key: index }),
 				)}
 			</ChoiceCardGroup>
 		</div>

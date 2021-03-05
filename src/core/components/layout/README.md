@@ -13,13 +13,13 @@ $ yarn add @guardian/src-layout
 Centres the page content and applies a width that corresponds to the grid at the current breakpoint.
 
 ```tsx
-import { Container } from "@guardian/src-layout"
+import { Container } from '@guardian/src-layout';
 
 const Wrapper = () => (
     <Container>
         <div css={contents}>Contents</div>
     </Container>
-)
+);
 ```
 
 ### Props
@@ -35,7 +35,7 @@ Whether to show a border to the left and right of the Container
 Children will be stacked one on top of the other.
 
 ```tsx
-import { Stack } from "@guardian/src-layout"
+import { Stack } from '@guardian/src-layout';
 
 const Wrapper = () => (
     <Stack>
@@ -43,7 +43,7 @@ const Wrapper = () => (
         <div css={contents}>Item 2</div>
         <div css={contents}>Item 3</div>
     </Stack>
-)
+);
 ```
 
 ### Props
@@ -61,7 +61,7 @@ Columns will be arranged side by side on a single row, with the specified width.
 Use Columns in conjunction with Container to help the columns align neatly with [the Guardian's grids](https://www.theguardian.design/2a1e5182b/p/41be19-grids).
 
 ```tsx
-import { Container, Columns, Column } from "@guardian/src-layout"
+import { Container, Columns, Column } from '@guardian/src-layout';
 
 const Wrapper = () => (
     <Container>
@@ -71,7 +71,7 @@ const Wrapper = () => (
             <Column>*</Column>
         </Columns>
     </Container>
-)
+);
 ```
 
 ### Columns Props
@@ -86,16 +86,23 @@ Columns will be stacked one on top of the other at viewport widths lower than th
 
 #### `width`
 
-**`number`**
+**`number | number[]`**
 
-Fraction of the parent container's width that the column will occupy. If no value is provided, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns)
+Fraction of the parent container's width that the column will occupy.
+
+Pass 0 to hide the column completely.
+
+Pass an array of fractions to set the width that the column occupies at different breakpoints. The first value in the array will
+reflect the width at mobile, the second value at tablet, then desktop, leftCol and wide.
+
+If no value is provided, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns)
 
 ## Hide
 
 Hide a component above or below a certain breakpoint
 
 ```tsx
-import { Hide } from "@guardian/src-layout"
+import { Hide } from '@guardian/src-layout';
 
 const Wrapper = () => (
     <>
@@ -106,7 +113,7 @@ const Wrapper = () => (
             <DesktopNavigation />
         </Hide>
     </>
-)
+);
 ```
 
 ### Props
@@ -126,7 +133,7 @@ Contents will be hidden at viewport widths less than the specified breakpoint
 ## Inline
 
 ```tsx
-import { Inline } from "@guardian/src-layout"
+import { Inline } from '@guardian/src-layout';
 
 const Wrapper = () => (
     <Inline>
@@ -134,7 +141,7 @@ const Wrapper = () => (
         <div css={contents}>Item 2</div>
         <div css={contents}>Item 3</div>
     </Inline>
-)
+);
 ```
 
 ### Props
@@ -148,7 +155,7 @@ Units of space between inline items (one unit is 4px)
 ## Tiles
 
 ```tsx
-import { Tiles } from "@guardian/src-layout"
+import { Tiles } from '@guardian/src-layout';
 
 const Wrapper = () => (
     <Tiles columns={3}>
@@ -156,7 +163,7 @@ const Wrapper = () => (
         <div css={contents}>Item 2</div>
         <div css={contents}>Item 3</div>
     </Tiles>
-)
+);
 ```
 
 ### Props

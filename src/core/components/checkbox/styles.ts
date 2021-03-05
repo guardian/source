@@ -1,10 +1,10 @@
-import { css } from "@emotion/react";
-import { space, transitions } from "@guardian/src-foundations";
-import { height, width } from "@guardian/src-foundations/size";
-import { textSans } from "@guardian/src-foundations/typography";
-import { focusHalo } from "@guardian/src-foundations/accessibility";
-import { checkboxDefault } from "@guardian/src-foundations/themes";
-import { resets } from "@guardian/src-foundations/utils";
+import { css } from '@emotion/react';
+import { space, transitions } from '@guardian/src-foundations';
+import { height, width } from '@guardian/src-foundations/size';
+import { textSans } from '@guardian/src-foundations/typography';
+import { focusHalo } from '@guardian/src-foundations/accessibility';
+import { checkboxDefault } from '@guardian/src-foundations/themes';
+import { resets } from '@guardian/src-foundations/utils';
 
 export const fieldset = css`
 	${resets.fieldset};
@@ -69,7 +69,7 @@ export const checkbox = ({ checkbox } = checkboxDefault) => css`
 			&:after {
 				${textSans.xlarge()};
 				color: ${checkbox.textIndeterminate};
-				content: "-";
+				content: '-';
 				position: absolute;
 				top: -10px;
 				left: 5px;
@@ -80,17 +80,17 @@ export const checkbox = ({ checkbox } = checkboxDefault) => css`
 `;
 
 export const labelText = ({ checkbox } = checkboxDefault) => css`
-	${textSans.medium({ lineHeight: "regular" })};
+	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabel};
 	width: 100%;
 `;
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ lineHeight: "regular" })};
+	${textSans.medium({ lineHeight: 'regular' })};
 `;
 
 export const supportingText = ({ checkbox } = checkboxDefault) => css`
-	${textSans.small({ lineHeight: "regular" })};
+	${textSans.small({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabelSupporting};
 `;
 
@@ -120,7 +120,7 @@ export const tick = ({ checkbox } = checkboxDefault) => css`
 			display: block;
 			background-color: ${checkbox.backgroundChecked};
 			transition: all ${transitions.short} ease-in-out;
-			content: "";
+			content: '';
 		}
 
 		/* the short side */

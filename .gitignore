@@ -6,3 +6,4 @@ dist
 *.tgz
 package-lock.json
 .idea/
+.vscode/settings.json

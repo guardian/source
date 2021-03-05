@@ -1,11 +1,11 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { Accordion, AccordionRow } from "./index";
-import { background } from "@guardian/src-foundations/palette";
-import { body } from "@guardian/src-foundations/typography";
-import { from } from "@guardian/src-foundations/mq";
-import { space } from "@guardian/src-foundations";
-import { Link } from "@guardian/src-link";
+import React from 'react';
+import { css } from '@emotion/react';
+import { Accordion, AccordionRow } from './index';
+import { background } from '@guardian/src-foundations/palette';
+import { body } from '@guardian/src-foundations/typography';
+import { from } from '@guardian/src-foundations/mq';
+import { space } from '@guardian/src-foundations';
+import { Link } from '@guardian/src-link';
 
 /* eslint-disable react/jsx-key */
 const accordionRows = [
@@ -51,7 +51,7 @@ const container = css`
 	}
 
 	p {
-		${body.medium({ lineHeight: "regular" })};
+		${body.medium({ lineHeight: 'regular' })};
 		margin-bottom: ${space[3]}px;
 	}
 `;
@@ -61,7 +61,7 @@ const lightGrey = css`
 `;
 
 export default {
-	title: "Accordion",
+	title: 'Accordion',
 	component: Accordion,
 };
 
@@ -89,7 +89,7 @@ const defaultMobileLight = () => <div css={container}>{accordion}</div>;
 defaultMobileLight.story = {
 	name: `default mobile light`,
 	parameters: {
-		viewport: { defaultViewport: "mobileMedium" },
+		viewport: { defaultViewport: 'mobileMedium' },
 	},
 };
 

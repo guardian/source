@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "@emotion/react";
+import React from 'react';
+import { css } from '@emotion/react';
 
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { width, height } from "@guardian/src-foundations/size";
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { width, height } from '@guardian/src-foundations/size';
 
 import {
 	SvgAlert,
@@ -45,7 +45,7 @@ import {
 	SvgTickRound,
 	SvgTwitter,
 	SvgWhatsApp,
-} from "./index";
+} from './index';
 
 const iconWhite = css`
 	color: white;
@@ -170,62 +170,62 @@ const uiIcons = [
 /* eslint-enable react/jsx-key */
 
 export default {
-	title: "Icons",
+	title: 'Icons',
 };
 
 export const XsmallIcons = () => (
 	<>
 		<Xsmall>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index })
+				React.cloneElement(icon, { key: index }),
 			)}
 		</Xsmall>
 	</>
 );
 XsmallIcons.story = {
-	name: "ui icons xsmall light",
+	name: 'ui icons xsmall light',
 };
 export const SmallIcons = () => (
 	<>
 		<Small>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index })
+				React.cloneElement(icon, { key: index }),
 			)}
 		</Small>
 	</>
 );
 SmallIcons.story = {
-	name: "ui icons small light",
+	name: 'ui icons small light',
 };
 
 export const MediumIcons = () => (
 	<>
 		<Medium>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index })
+				React.cloneElement(icon, { key: index }),
 			)}
 		</Medium>
 	</>
 );
 MediumIcons.story = {
-	name: "ui icons medium light",
+	name: 'ui icons medium light',
 };
 
 export const MediumBrandIcons = () => (
 	<>
 		<MediumBrand>
 			{uiIcons.map((icon, index) =>
-				React.cloneElement(icon, { key: index })
+				React.cloneElement(icon, { key: index }),
 			)}
 		</MediumBrand>
 	</>
 );
 
 MediumBrandIcons.story = {
-	name: "ui icons medium brand",
+	name: 'ui icons medium brand',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -245,5 +245,5 @@ export const PaymentIcons = () => (
 );
 
 PaymentIcons.story = {
-	name: "payment icons light",
+	name: 'payment icons light',
 };

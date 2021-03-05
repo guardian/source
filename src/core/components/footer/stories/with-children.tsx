@@ -1,11 +1,11 @@
-import React from "react";
-import { css } from "@emotion/react";
-import { storybookBackgrounds } from "@guardian/src-helpers";
-import { space } from "@guardian/src-foundations";
-import { textSans } from "@guardian/src-foundations/typography";
-import { from } from "@guardian/src-foundations/mq";
-import { brandText, brandBorder } from "@guardian/src-foundations/palette";
-import { Footer } from "../index";
+import React from 'react';
+import { css } from '@emotion/react';
+import { storybookBackgrounds } from '@guardian/src-helpers';
+import { space } from '@guardian/src-foundations';
+import { textSans } from '@guardian/src-foundations/typography';
+import { from } from '@guardian/src-foundations/mq';
+import { brandText, brandBorder } from '@guardian/src-foundations/palette';
+import { Footer } from '../index';
 
 const container = css`
 	${from.desktop} {
@@ -16,7 +16,7 @@ const container = css`
 `;
 
 const para = css`
-	${textSans.small({ lineHeight: "tight" })};
+	${textSans.small({ lineHeight: 'tight' })};
 	max-width: 58.75rem;
 
 	${from.desktop} {
@@ -32,12 +32,12 @@ const ul = css`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
-		"link1 link3"
-		"link2 link4";
+		'link1 link3'
+		'link2 link4';
 
 	${from.desktop} {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-areas: "link1 link2 link3 link4";
+		grid-template-areas: 'link1 link2 link3 link4';
 		margin-bottom: 0;
 	}
 `;
@@ -54,7 +54,7 @@ const li = css`
 `;
 
 const anchor = css`
-	${textSans.small({ lineHeight: "regular" })};
+	${textSans.small({ lineHeight: 'regular' })};
 	color: ${brandText.anchorPrimary};
 	text-decoration: none;
 
@@ -123,10 +123,10 @@ const footerContents = (
 export const withChildrenBlue = () => <Footer>{footerContents}</Footer>;
 
 withChildrenBlue.story = {
-	name: "with children blue",
+	name: 'with children blue',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
 	},
@@ -135,25 +135,25 @@ withChildrenBlue.story = {
 export const withChildrenBlueTablet = () => <Footer>{footerContents}</Footer>;
 
 withChildrenBlueTablet.story = {
-	name: "with children blue tablet",
+	name: 'with children blue tablet',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
-		viewport: { defaultViewport: "tablet" },
+		viewport: { defaultViewport: 'tablet' },
 	},
 };
 
 export const withChildrenBlueMobile = () => <Footer>{footerContents}</Footer>;
 
 withChildrenBlueMobile.story = {
-	name: "with children blue mobile",
+	name: 'with children blue mobile',
 	parameters: {
 		backgrounds: {
-			default: "brand",
+			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
-		viewport: { defaultViewport: "mobileMedium" },
+		viewport: { defaultViewport: 'mobileMedium' },
 	},
 };

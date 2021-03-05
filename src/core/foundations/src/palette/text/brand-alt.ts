@@ -1,4 +1,4 @@
-import { neutral } from "../global";
+import { neutral } from '../global';
 
 export const brandAltText = {
 	primary: neutral[7],

@@ -10,6 +10,22 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 26 February 2021
+
+**`@guardian/src-layout 3.3.0`**
+
+-   :sparkles: [ed3161a](https://github.com/guardian/source/commit/ed3161a17c50c25054e83e8b978914f17c8356ca) supporting hiding above and below breakpoints
+-   :sparkles: [29107ab](https://github.com/guardian/source/commit/29107ab7ba0628a4f71129d23e59c70b5e99ef0d) support responsive column widths
+-   :bug: [3ff8beb](https://github.com/guardian/source/commit/3ff8beb976d14058e8e2ffbb656d2b46b51655cd) handle empty column width array
+
+## 12 February 2021
+
+**`@guardian/src-accordion 3.2.0`**
+
+-   :sparkles: [3be8c40](https://github.com/guardian/source/commit/3be8c408677139765ea15dcc37c90396bcdbacf1) add optional onClick prop to accordion row (thanks @i-hardy)
+-   :sparkles: [8a27ee2](https://github.com/guardian/source/commit/8a27ee2df8b09e7d855eaa9e84b03483dd7490dc) add type attribute to accordion button and allow passing cssOverrides prop (thanks @i-hardy)
+-   :page_with_curl: [ace06c7](https://github.com/guardian/source/commit/ace06c7bfe27709e9db77e3380a7b63a1641149e) document onClick prop in README (thanks @i-hardy)
+
 ## 28 January 2021
 
 **`@guardian/editorial 3.1.0`**
