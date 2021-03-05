@@ -1,4 +1,6 @@
-// Global colour names that correspond to https://www.theguardian.design/2a1e5182b/p/938810-colour/b/587ef3
+// Global colour names that correspond to our palettes
+// Light: https://www.theguardian.design/2a1e5182b/p/492a30-light-palette
+// Dark: https://www.theguardian.design/2a1e5182b/p/75f7ca-dark-palette
 //
 // As a general rule, avoid using these directly in your application. Prefer the context
 // specific colours:
@@ -11,10 +13,7 @@
 // Why?
 // 1) Using context-specific colours ensures your application's colour usage is consistent with
 // the Guardian's visual language.
-// 2) The higher level of abstraction provided. This means that
-// changes to colours at the theme level, or changes to global colours names, are less likely to
-// have a large impact on your application.
-// 3) Context-specific colours are tested and provide better accessibility guarantees.
+// 2) Context-specific colours are tested and provide better accessibility guarantees.
 //
 // If a context-specific colour is not available for your use case, consider raising a pull
 // request to add it, rather than consuming the global colour.
