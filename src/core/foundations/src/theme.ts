@@ -58,6 +58,7 @@ const colors = {
 		'#CB4700', //opinion-300
 		'#E05E00', //opinion-400
 		'#FF7F0F', //opinion-500
+		'#FF9941', //opinion-550
 		'#F9B376', //opinion-600
 		'#FEF9F5', //opinion-800
 	],
