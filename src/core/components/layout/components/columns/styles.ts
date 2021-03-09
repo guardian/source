@@ -169,16 +169,25 @@ const columnBreakpoints: Array<ColumnBreakpoint> = [
 
 const calculateSpan = (span: number) => {
 	const columnBreakpointCss = columnBreakpoints.reduce(
-		(acc: string, cur: ColumnBreakpoint) => {
-			if (span === 0) return `display: none;`;
-			if (span >= cur.totalColumns) return `width: 100%; display: block;`;
+		(acc, cur: ColumnBreakpoint) => {
+			if (span === 0)
+				return css`
+					display: none;
+				`;
 
 			const inferredWidth = span / cur.totalColumns;
-			const cssForBreakpoint = `{ width: calc((100% + ${space[5]}px) * ${inferredWidth} - ${space[5]}px); display: block; }\n`;
+			const cappedWidth = inferredWidth < 1 ? inferredWidth : 1;
+			const cssForBreakpoint = calculateWidth(cappedWidth);
 
-			return acc + cur.rule + cssForBreakpoint;
+			return css`
+				${acc}
+				${cur.rule} {
+					${cssForBreakpoint}
+					display: block;
+				}
+			`;
 		},
-		'',
+		css``,
 	);
 
 	return css`
