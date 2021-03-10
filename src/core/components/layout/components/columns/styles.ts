@@ -197,27 +197,24 @@ const calculateSpan = (span: number) => {
 	`;
 };
 
-export const column = (width?: number | number[], span?: number | number[]) => {
-	if (!width && (span || span === 0)) {
-		return generateSpanCSS(span);
-	}
+// always gets applied
+export const column = css`
+	box-sizing: border-box;
+`;
 
-	let flex;
-	let widthCSS;
+// get applied when no width or span is specified
+export const flexGrow = css`
+	flex: 1;
+`;
 
-	if (width == null || (Array.isArray(width) && width.length === 0)) {
-		// If no width is specified, allow the column to grow
-		flex = 1;
-		widthCSS = css``;
-	} else {
-		// If a width is specified, don't allow column to grow. Use the width property
-		flex = '0 0 auto';
-		widthCSS = generateWidthCSS(width);
-	}
+// width is specified
+export const setWidth = (value: number | number[]) => css`
+	flex: 0 0 auto;
+	${generateWidthCSS(value)};
+`;
 
-	return css`
-		box-sizing: border-box;
-		flex: ${flex};
-		${widthCSS};
-	`;
-};
+// span is specified
+export const setSpan = (value: number | number[]) => css`
+	flex: 0 0 auto;
+	${generateSpanCSS(value)};
+`;

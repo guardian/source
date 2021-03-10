@@ -11,6 +11,9 @@ import {
 	collapseBelowDesktop,
 	collapseBelowleftCol,
 	collapseBelowWide,
+	setWidth,
+	setSpan,
+	flexGrow,
 } from './styles';
 import { Breakpoint } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
@@ -82,8 +85,17 @@ const Column = ({
 	children,
 	...props
 }: ColumnProps) => {
+	const columnCss = [column];
+	if (width) {
+		columnCss.push(setWidth(width));
+	} else if (span) {
+		columnCss.push(setSpan(span));
+	} else {
+		columnCss.push(flexGrow);
+	}
+
 	return (
-		<div css={[column(width, span), cssOverrides]} {...props}>
+		<div css={[columnCss, cssOverrides]} {...props}>
 			{children}
 		</div>
 	);
