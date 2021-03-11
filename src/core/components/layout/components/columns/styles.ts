@@ -191,8 +191,6 @@ const calculateSpan = (span: number) => {
 	);
 
 	return css`
-		box-sizing: border-box;
-		flex: ${span ? '0 0 auto' : 1};
 		${columnBreakpointCss}
 	`;
 };
@@ -215,6 +213,5 @@ export const setWidth = (value: number | number[]) => css`
 
 // span is specified
 export const setSpan = (value: number | number[]) => css`
-	flex: 0 0 auto;
 	${generateSpanCSS(value)};
 `;
