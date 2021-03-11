@@ -30,17 +30,21 @@ import {
 	SvgHouse,
 	SvgIndent,
 	SvgInfo,
+	SvgLinkedIn,
+	SvgMessenger,
 	SvgMinus,
 	SvgPayPal,
 	SvgPerson,
 	SvgPlay,
 	SvgPlus,
+	SvgPinterest,
 	SvgQuote,
 	SvgSettings,
 	SvgSpeechBubble,
 	SvgStar,
 	SvgTickRound,
 	SvgTwitter,
+	SvgWhatsApp,
 } from './index';
 
 const iconWhite = css`
@@ -146,10 +150,13 @@ const uiIcons = [
 	<SvgCheckmark />,
 	<SvgCamera />,
 	<SvgCross />,
+	<SvgLinkedIn />,
+	<SvgMessenger />,
 	<SvgMinus />,
 	<SvgPlay />,
 	<SvgPlus />,
 	<SvgPerson />,
+	<SvgPinterest />,
 	<SvgQuote />,
 	<SvgIndent />,
 	<SvgInfo />,
@@ -158,6 +165,7 @@ const uiIcons = [
 	<SvgStar />,
 	<SvgTickRound />,
 	<SvgTwitter />,
+	<SvgWhatsApp />,
 ];
 /* eslint-enable react/jsx-key */
 
