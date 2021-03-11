@@ -69,8 +69,9 @@ export const opinion = {
 	300: colors.oranges[2],
 	400: colors.oranges[3],
 	500: colors.oranges[4],
-	600: colors.oranges[5],
-	800: colors.oranges[6],
+	550: colors.oranges[5],
+	600: colors.oranges[6],
+	800: colors.oranges[7],
 };
 export const sport = {
 	100: colors.blues[0],
