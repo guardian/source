@@ -97,7 +97,7 @@ export const collapseBelowWide = css`
 */
 const calculateWidth = (width: number) => {
 	if (width === 0) {
-		return css`
+		return `
 			width: 0;
 			/* Hide the column from screen readers */
 			visibility: hidden;
@@ -106,7 +106,7 @@ const calculateWidth = (width: number) => {
 		`;
 	}
 
-	return css`
+	return `
 		width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);
 		/* Reset values that might have been set at a lower breakpoint */
 		visibility: visible;
@@ -125,13 +125,13 @@ const generateWidthCSS = (width: number | number[]) => {
 		];
 
 		return width.reduce((styles, w, i) => {
-			return css`
+			return `
 				${styles}
 				${from[breakpoints[i]]} {
 					${calculateWidth(w)};
 				}
 			`;
-		}, css``);
+		}, ``);
 	}
 
 	return calculateWidth(width);
@@ -148,13 +148,19 @@ const generateSpanCSS = (span: number | number[]) => {
 		];
 
 		return span.reduce((styles, w, i) => {
-			return css`
+			console.log(`
+			${styles}
+			${from[breakpoints[i]]} {
+					${calculateSpan(w)};
+				}
+			`);
+			return `
 				${styles}
 				${from[breakpoints[i]]} {
 					${calculateSpan(w)};
 				}
 			`;
-		}, css``);
+		}, ``);
 	}
 
 	return calculateSpan(span);
@@ -171,7 +177,7 @@ const calculateSpan = (span: number) => {
 	const columnBreakpointCss = columnBreakpoints.reduce(
 		(acc, cur: ColumnBreakpoint) => {
 			if (span === 0)
-				return css`
+				return `
 					display: none;
 				`;
 
@@ -179,18 +185,18 @@ const calculateSpan = (span: number) => {
 			const cappedWidth = inferredWidth < 1 ? inferredWidth : 1;
 			const cssForBreakpoint = calculateWidth(cappedWidth);
 
-			return css`
-				${acc}
+			return `
+				${acc};
 				${cur.rule} {
-					${cssForBreakpoint}
+					${cssForBreakpoint};
 					display: block;
 				}
 			`;
 		},
-		css``,
+		``,
 	);
 
-	return css`
+	return `
 		${columnBreakpointCss}
 	`;
 };
