@@ -3,6 +3,7 @@ import React, {
 	ReactNode,
 	AnchorHTMLAttributes,
 	ButtonHTMLAttributes,
+	Fragment,
 } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { LinkTheme } from '@guardian/src-foundations/themes';
@@ -52,7 +53,9 @@ const linkContents = ({
 	iconSide: IconSide;
 }) => {
 	// a bit of underlined space; the icon sits on top
-	const spacer = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>;
+	const spacer = (
+		<Fragment key="spacer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Fragment>
+	);
 	const linkContents = [children];
 
 	if (iconSvg) {
