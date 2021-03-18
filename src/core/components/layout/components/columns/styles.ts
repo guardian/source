@@ -5,17 +5,18 @@ import { Breakpoint, from, until } from '@guardian/src-foundations/mq';
 export const columns = css`
 	box-sizing: border-box;
 	display: flex;
-	& > * + * {
-		margin-left: ${space[5]}px;
+	& > :last-of-type {
+		margin-right: 0;
+	}
+	& > * {
+		margin-right: ${space[5]}px;
 	}
 `;
 
 const collapseBelowSpacing = css`
 	display: block;
-	& > * + * {
-		margin-left: 0;
-	}
 	& > * {
+		margin-right: 0;
 		margin-bottom: ${space[5]}px;
 	}
 `;
@@ -93,22 +94,15 @@ export const collapseBelowWide = css`
 const calculateWidth = (width: number) => {
 	if (width === 0) {
 		return css`
-			width: 0;
-
-			/* Hide the column from screen readers */
-			visibility: hidden;
-
-			/* offset the margin-left on the next sibling */
-			margin-right: ${-space[5]}px;
+			display: none;
 		`;
 	}
 
 	return css`
 		width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);
 
-		/* Reset values that might have been set at a lower breakpoint */
-		visibility: visible;
-		margin-right: 0;
+		/* Reset value that might have been set at a lower breakpoint */
+		display: block;
 	`;
 };
 
