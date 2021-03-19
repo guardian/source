@@ -196,12 +196,10 @@ export const flexGrow = css`
 
 // width is specified
 export const setWidth = (value: number | number[]) => css`
-	/* flex: 0 0 auto; */
 	${generateWidthCSS(value)};
 `;
 
 // span is specified
 export const setSpan = (value: number | number[]) => css`
-	/* flex: 0 0 auto; */
 	${generateSpanCSS(value)};
 `;
