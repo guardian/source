@@ -25,10 +25,13 @@ type CollapseBreakpoint = Extract<
 	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
+export type ColumnsSpaceY = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;
+
 interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
 	collapseBelow?: CollapseBreakpoint;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;
+	spaceY?: ColumnsSpaceY;
 }
 
 const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
@@ -39,7 +42,7 @@ const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
 };
 
 const collapseBelowColumnsMap: {
-	[key in CollapseBreakpoint]: SerializedStyles;
+	[key in CollapseBreakpoint]: (number: ColumnsSpaceY) => SerializedStyles;
 } = {
 	tablet: collapseBelowTabletColumns,
 	desktop: collapseBelowDesktopColumns,
@@ -51,13 +54,16 @@ const Columns = ({
 	collapseBelow,
 	cssOverrides,
 	children,
+	spaceY,
 	...props
 }: ColumnsProps) => {
 	return (
 		<div
 			css={[
 				columns,
-				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : '',
+				collapseBelow
+					? collapseBelowColumnsMap[collapseBelow](spaceY || 5)
+					: '',
 				collapseBelow ? collapseBelowMap[collapseBelow] : '',
 				cssOverrides,
 			]}

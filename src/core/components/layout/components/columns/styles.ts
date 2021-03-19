@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
 import { Breakpoint, from, until } from '@guardian/src-foundations/mq';
+import { ColumnsSpaceY } from './columns';
 
 export const columns = css`
 	box-sizing: border-box;
@@ -13,32 +14,32 @@ export const columns = css`
 	}
 `;
 
-const collapseBelowSpacing = css`
+const collapseBelowSpacing = (number: ColumnsSpaceY) => css`
 	display: block;
 	& > * {
 		margin-right: 0;
-		margin-bottom: ${space[5]}px;
+		margin-bottom: ${space[number]}px;
 	}
 `;
 
-export const collapseBelowTabletColumns = css`
+export const collapseBelowTabletColumns = (number: ColumnsSpaceY) => css`
 	${until.tablet} {
-		${collapseBelowSpacing}
+		${collapseBelowSpacing(number)}
 	}
 `;
-export const collapseBelowDesktopColumns = css`
+export const collapseBelowDesktopColumns = (number: ColumnsSpaceY) => css`
 	${until.desktop} {
-		${collapseBelowSpacing}
+		${collapseBelowSpacing(number)}
 	}
 `;
-export const collapseBelowLeftColColumns = css`
+export const collapseBelowLeftColColumns = (number: ColumnsSpaceY) => css`
 	${until.leftCol} {
-		${collapseBelowSpacing}
+		${collapseBelowSpacing(number)}
 	}
 `;
-export const collapseBelowWideColumns = css`
+export const collapseBelowWideColumns = (number: ColumnsSpaceY) => css`
 	${until.wide} {
-		${collapseBelowSpacing}
+		${collapseBelowSpacing(number)}
 	}
 `;
 
