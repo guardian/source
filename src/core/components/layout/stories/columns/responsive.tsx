@@ -25,6 +25,7 @@ responsive.story = {
 	name: 'responsive columns',
 	parameters: {
 		viewport: { defaultViewport: 'tablet' },
+		layout: 'fullscreen',
 	},
 };
 
@@ -47,5 +48,6 @@ responsivelyHide.story = {
 	name: 'responsively hide columns',
 	parameters: {
 		viewport: { defaultViewport: 'tablet' },
+		layout: 'fullscreen',
 	},
 };

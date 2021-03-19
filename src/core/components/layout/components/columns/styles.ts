@@ -10,16 +10,14 @@ type ColumnBreakpoint = {
 export const columns = css`
 	box-sizing: border-box;
 	display: flex;
-	& > * + * {
-		margin-left: ${space[5]}px;
+	margin-right: -${space[5]}px;
+	& > * {
+		margin-right: ${space[5]}px;
 	}
 `;
 
 const collapseBelowSpacing = css`
 	display: block;
-	& > * + * {
-		margin-left: 0;
-	}
 	& > * {
 		margin-bottom: ${space[5]}px;
 	}
@@ -98,19 +96,15 @@ export const collapseBelowWide = css`
 const calculateWidth = (width: number) => {
 	if (width === 0) {
 		return `
-			width: 0;
-			/* Hide the column from screen readers */
-			visibility: hidden;
-			/* offset the margin-left on the next sibling */
-			margin-right: ${-space[5]}px;
+			display: none;
 		`;
 	}
 
 	return `
 		width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);
-		/* Reset values that might have been set at a lower breakpoint */
-		visibility: visible;
-		margin-right: 0;
+
+		/* Reset value that might have been set at a lower breakpoint */
+		display: block;
 	`;
 };
 
@@ -176,11 +170,6 @@ const columnBreakpoints: Array<ColumnBreakpoint> = [
 const calculateSpan = (span: number) => {
 	const columnBreakpointCss = columnBreakpoints.reduce(
 		(acc, cur: ColumnBreakpoint) => {
-			if (span === 0)
-				return `
-					display: none;
-				`;
-
 			const inferredWidth = span / cur.totalColumns;
 			const cappedWidth = inferredWidth < 1 ? inferredWidth : 1;
 			const cssForBreakpoint = calculateWidth(cappedWidth);
@@ -189,7 +178,6 @@ const calculateSpan = (span: number) => {
 				${acc};
 				${cur.rule} {
 					${cssForBreakpoint};
-					display: block;
 				}
 			`;
 		},
@@ -213,7 +201,7 @@ export const flexGrow = css`
 
 // width is specified
 export const setWidth = (value: number | number[]) => css`
-	flex: 0 0 auto;
+	flex: 1 1 auto;
 	${generateWidthCSS(value)};
 `;
 
