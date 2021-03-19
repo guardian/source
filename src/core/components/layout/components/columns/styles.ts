@@ -18,6 +18,7 @@ export const columns = css`
 
 const collapseBelowSpacing = css`
 	display: block;
+	margin-right: 0;
 	& > * {
 		margin-bottom: ${space[5]}px;
 	}
@@ -101,7 +102,7 @@ const calculateWidth = (width: number) => {
 	}
 
 	return `
-		width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);
+		width: calc((100%) * ${width} - ${space[5]}px);
 
 		/* Reset value that might have been set at a lower breakpoint */
 		display: block;
@@ -196,16 +197,17 @@ export const column = css`
 
 // get applied when no width or span is specified
 export const flexGrow = css`
-	flex: 1;
+	flex: 1 0 0;
 `;
 
 // width is specified
 export const setWidth = (value: number | number[]) => css`
-	flex: 1 1 auto;
+	/* flex: 0 0 auto; */
 	${generateWidthCSS(value)};
 `;
 
 // span is specified
 export const setSpan = (value: number | number[]) => css`
+	/* flex: 0 0 auto; */
 	${generateSpanCSS(value)};
 `;
