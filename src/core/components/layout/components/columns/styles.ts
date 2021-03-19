@@ -14,32 +14,32 @@ export const columns = css`
 	}
 `;
 
-const collapseBelowSpacing = (number: ColumnsSpaceY) => css`
+const collapseBelowSpacing = (spaceY: ColumnsSpaceY) => css`
 	display: block;
 	& > * {
 		margin-right: 0;
-		margin-bottom: ${space[number]}px;
+		margin-bottom: ${space[spaceY]}px;
 	}
 `;
 
-export const collapseBelowTabletColumns = (number: ColumnsSpaceY) => css`
+export const collapseBelowTabletColumns = (spaceY: ColumnsSpaceY) => css`
 	${until.tablet} {
-		${collapseBelowSpacing(number)}
+		${collapseBelowSpacing(spaceY)}
 	}
 `;
-export const collapseBelowDesktopColumns = (number: ColumnsSpaceY) => css`
+export const collapseBelowDesktopColumns = (spaceY: ColumnsSpaceY) => css`
 	${until.desktop} {
-		${collapseBelowSpacing(number)}
+		${collapseBelowSpacing(spaceY)}
 	}
 `;
-export const collapseBelowLeftColColumns = (number: ColumnsSpaceY) => css`
+export const collapseBelowLeftColColumns = (spaceY: ColumnsSpaceY) => css`
 	${until.leftCol} {
-		${collapseBelowSpacing(number)}
+		${collapseBelowSpacing(spaceY)}
 	}
 `;
-export const collapseBelowWideColumns = (number: ColumnsSpaceY) => css`
+export const collapseBelowWideColumns = (spaceY: ColumnsSpaceY) => css`
 	${until.wide} {
-		${collapseBelowSpacing(number)}
+		${collapseBelowSpacing(spaceY)}
 	}
 `;
 

@@ -42,7 +42,7 @@ const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
 };
 
 const collapseBelowColumnsMap: {
-	[key in CollapseBreakpoint]: (number: ColumnsSpaceY) => SerializedStyles;
+	[key in CollapseBreakpoint]: (spaceY: ColumnsSpaceY) => SerializedStyles;
 } = {
 	tablet: collapseBelowTabletColumns,
 	desktop: collapseBelowDesktopColumns,
