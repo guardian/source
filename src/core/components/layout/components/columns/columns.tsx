@@ -54,7 +54,7 @@ const Columns = ({
 	collapseBelow,
 	cssOverrides,
 	children,
-	spaceY,
+	spaceY = 5,
 	...props
 }: ColumnsProps) => {
 	return (
@@ -62,7 +62,7 @@ const Columns = ({
 			css={[
 				columns,
 				collapseBelow
-					? collapseBelowColumnsMap[collapseBelow](spaceY || 5)
+					? collapseBelowColumnsMap[collapseBelow](spaceY)
 					: '',
 				collapseBelow ? collapseBelowMap[collapseBelow] : '',
 				cssOverrides,
