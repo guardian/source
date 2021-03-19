@@ -143,12 +143,6 @@ const generateSpanCSS = (span: number | number[]) => {
 		];
 
 		return span.reduce((styles, w, i) => {
-			console.log(`
-			${styles}
-			${from[breakpoints[i]]} {
-					${calculateSpan(w)};
-				}
-			`);
 			return `
 				${styles}
 				${from[breakpoints[i]]} {
