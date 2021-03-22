@@ -18,8 +18,8 @@ export const columns = css`
 
 const collapseBelowSpacing = css`
 	display: block;
-	margin-right: 0;
 	& > * {
+		margin-right: 0;
 		margin-bottom: ${space[5]}px;
 	}
 `;
