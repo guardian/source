@@ -146,7 +146,7 @@ const generateSpanCSS = (span: number | number[]) => {
 			return `
 				${styles}
 				${from[breakpoints[i]]} {
-					${calculateSpan(w)};
+					${calculateSpan(w)}
 				}
 			`;
 		}, ``);
@@ -165,14 +165,19 @@ const columnBreakpoints: Array<ColumnBreakpoint> = [
 const calculateSpan = (span: number) => {
 	const columnBreakpointCss = columnBreakpoints.reduce(
 		(acc, cur: ColumnBreakpoint) => {
+			if (span === 0)
+				// Reduces number of redundant breakpoint rules
+				return `
+					display: none;
+				`;
 			const inferredWidth = span / cur.totalColumns;
 			const cappedWidth = inferredWidth < 1 ? inferredWidth : 1;
 			const cssForBreakpoint = calculateWidth(cappedWidth);
 
 			return `
-				${acc};
+				${acc}
 				${cur.rule} {
-					${cssForBreakpoint};
+					${cssForBreakpoint}
 				}
 			`;
 		},
@@ -201,5 +206,5 @@ export const setWidth = (value: number | number[]) => css`
 
 // span is specified
 export const setSpan = (value: number | number[]) => css`
-	${generateSpanCSS(value)};
+	${generateSpanCSS(value)}
 `;
