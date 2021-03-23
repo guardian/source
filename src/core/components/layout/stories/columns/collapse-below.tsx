@@ -16,31 +16,7 @@ const contents = css`
 	background-color: ${sport[600]};
 `;
 
-export const collapseBelowTablet = () => (
-	<Container border={true}>
-		<Columns collapseBelow="tablet">
-			<Column>
-				<div css={contents}>1</div>
-			</Column>
-			<Column>
-				<div css={contents}>2</div>
-			</Column>
-			<Column>
-				<div css={contents}>3</div>
-			</Column>
-			<Column>
-				<div css={contents}>4</div>
-			</Column>
-		</Columns>
-	</Container>
-);
-
-collapseBelowTablet.story = {
-	...defaultStoryOptions,
-	name: 'collapse below tablet with default spacing',
-};
-
-const collapseBelowTabletWithSpace = (space: ColumnsSpaceY) => (
+const collapseBelowTabletWithSpace = (space?: ColumnsSpaceY) => (
 	<Container border={true}>
 		<Columns collapseBelow="tablet" spaceY={space}>
 			<Column>
@@ -58,6 +34,13 @@ const collapseBelowTabletWithSpace = (space: ColumnsSpaceY) => (
 		</Columns>
 	</Container>
 );
+
+export const collapseBelowTablet = () => collapseBelowTabletWithSpace();
+
+collapseBelowTablet.story = {
+	...defaultStoryOptions,
+	name: 'collapse below tablet with no spacing',
+};
 
 export const collapseBelowTabletWithSpace1 = () =>
 	collapseBelowTabletWithSpace(1);

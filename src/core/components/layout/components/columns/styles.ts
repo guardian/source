@@ -14,30 +14,30 @@ export const columns = css`
 	}
 `;
 
-const collapseBelowSpacing = (spaceY: ColumnsSpaceY) => css`
+const collapseBelowSpacing = (spaceY?: ColumnsSpaceY) => css`
 	display: block;
 	& > * {
 		margin-right: 0;
-		margin-bottom: ${space[spaceY]}px;
+		${spaceY ? `margin-bottom: ${space[spaceY]}px;` : ''}
 	}
 `;
 
-export const collapseBelowTabletColumns = (spaceY: ColumnsSpaceY) => css`
+export const collapseBelowTabletColumns = (spaceY?: ColumnsSpaceY) => css`
 	${until.tablet} {
 		${collapseBelowSpacing(spaceY)}
 	}
 `;
-export const collapseBelowDesktopColumns = (spaceY: ColumnsSpaceY) => css`
+export const collapseBelowDesktopColumns = (spaceY?: ColumnsSpaceY) => css`
 	${until.desktop} {
 		${collapseBelowSpacing(spaceY)}
 	}
 `;
-export const collapseBelowLeftColColumns = (spaceY: ColumnsSpaceY) => css`
+export const collapseBelowLeftColColumns = (spaceY?: ColumnsSpaceY) => css`
 	${until.leftCol} {
 		${collapseBelowSpacing(spaceY)}
 	}
 `;
-export const collapseBelowWideColumns = (spaceY: ColumnsSpaceY) => css`
+export const collapseBelowWideColumns = (spaceY?: ColumnsSpaceY) => css`
 	${until.wide} {
 		${collapseBelowSpacing(spaceY)}
 	}

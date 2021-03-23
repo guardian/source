@@ -42,7 +42,7 @@ const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
 };
 
 const collapseBelowColumnsMap: {
-	[key in CollapseBreakpoint]: (spaceY: ColumnsSpaceY) => SerializedStyles;
+	[key in CollapseBreakpoint]: (spaceY?: ColumnsSpaceY) => SerializedStyles;
 } = {
 	tablet: collapseBelowTabletColumns,
 	desktop: collapseBelowDesktopColumns,
@@ -54,7 +54,7 @@ const Columns = ({
 	collapseBelow,
 	cssOverrides,
 	children,
-	spaceY = 5,
+	spaceY,
 	...props
 }: ColumnsProps) => {
 	return (
