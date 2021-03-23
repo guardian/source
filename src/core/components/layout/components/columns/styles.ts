@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
 import { Breakpoint, from, until } from '@guardian/src-foundations/mq';
-import { ColumnsSpaceY } from './columns';
+import { CollapseBreakpoint, ColumnsSpaceY } from './columns';
 
 export const columns = css`
 	box-sizing: border-box;
@@ -22,23 +22,11 @@ const collapseBelowSpacing = (spaceY?: ColumnsSpaceY) => css`
 	}
 `;
 
-export const collapseBelowTabletColumns = (spaceY?: ColumnsSpaceY) => css`
-	${until.tablet} {
-		${collapseBelowSpacing(spaceY)}
-	}
-`;
-export const collapseBelowDesktopColumns = (spaceY?: ColumnsSpaceY) => css`
-	${until.desktop} {
-		${collapseBelowSpacing(spaceY)}
-	}
-`;
-export const collapseBelowLeftColColumns = (spaceY?: ColumnsSpaceY) => css`
-	${until.leftCol} {
-		${collapseBelowSpacing(spaceY)}
-	}
-`;
-export const collapseBelowWideColumns = (spaceY?: ColumnsSpaceY) => css`
-	${until.wide} {
+export const collapseBelowColumns = (
+	breakpoint: CollapseBreakpoint,
+	spaceY?: ColumnsSpaceY,
+) => css`
+	${until[breakpoint]} {
 		${collapseBelowSpacing(spaceY)}
 	}
 `;

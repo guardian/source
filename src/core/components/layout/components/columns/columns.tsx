@@ -3,14 +3,11 @@ import { SerializedStyles } from '@emotion/react';
 import {
 	columns,
 	column,
-	collapseBelowTabletColumns,
-	collapseBelowDesktopColumns,
-	collapseBelowLeftColColumns,
-	collapseBelowWideColumns,
 	collapseBelowTablet,
 	collapseBelowDesktop,
 	collapseBelowleftCol,
 	collapseBelowWide,
+	collapseBelowColumns,
 } from './styles';
 import { Breakpoint } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
@@ -20,7 +17,7 @@ type GridBreakpoint = Extract<
 	'mobile' | 'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
-type CollapseBreakpoint = Extract<
+export type CollapseBreakpoint = Extract<
 	GridBreakpoint,
 	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
@@ -41,15 +38,6 @@ const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
 	wide: collapseBelowWide,
 };
 
-const collapseBelowColumnsMap: {
-	[key in CollapseBreakpoint]: (spaceY?: ColumnsSpaceY) => SerializedStyles;
-} = {
-	tablet: collapseBelowTabletColumns,
-	desktop: collapseBelowDesktopColumns,
-	leftCol: collapseBelowLeftColColumns,
-	wide: collapseBelowWideColumns,
-};
-
 const Columns = ({
 	collapseBelow,
 	cssOverrides,
@@ -62,7 +50,7 @@ const Columns = ({
 			css={[
 				columns,
 				collapseBelow
-					? collapseBelowColumnsMap[collapseBelow](spaceY)
+					? collapseBelowColumns(collapseBelow, spaceY)
 					: '',
 				collapseBelow ? collapseBelowMap[collapseBelow] : '',
 				cssOverrides,
