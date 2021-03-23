@@ -95,7 +95,23 @@ Pass 0 to hide the column completely.
 Pass an array of fractions to set the width that the column occupies at different breakpoints. The first value in the array will
 reflect the width at mobile, the second value at tablet, then desktop, leftCol and wide.
 
-If no value is provided, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns)
+If neither `width` nor `span` is passed, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns).
+
+If both `width` and `span` are passed, `width` takes priority.
+
+#### `span`
+
+**`number | number[]`**
+
+Number of [grid columns](https://theguardian.design/2a1e5182b/p/41be19-grids) that the column will occupy.
+
+Pass 0 to hide the column completely.
+
+Pass an array of numbers to set the number of grid columns the column component occupies at different breakpoints. The first value in the array will reflect the width at mobile, the second value at tablet, then desktop, leftCol and wide.
+
+If neither `width` nor `span` is passed, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns).
+
+If both `width` and `span` are passed, `width` takes priority.
 
 ## Hide
 
