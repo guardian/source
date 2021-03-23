@@ -147,4 +147,7 @@ export const withSpan = () => <>{example}</>;
 
 withSpan.story = {
 	name: 'with span',
+	parameters: {
+		layout: 'fullscreen',
+	},
 };
