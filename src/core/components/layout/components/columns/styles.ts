@@ -18,6 +18,7 @@ export const columns = css`
 
 const collapseBelowSpacing = css`
 	display: block;
+	margin-right: 0;
 	& > * {
 		margin-right: 0;
 		margin-bottom: ${space[5]}px;
@@ -196,7 +197,7 @@ export const column = css`
 
 // get applied when no width or span is specified
 export const flexGrow = css`
-	flex: 1 0 0;
+	flex: 1;
 `;
 
 // width is specified
