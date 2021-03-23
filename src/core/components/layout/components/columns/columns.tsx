@@ -11,6 +11,9 @@ import {
 	collapseBelowDesktop,
 	collapseBelowleftCol,
 	collapseBelowWide,
+	setWidth,
+	setSpan,
+	flexGrow,
 } from './styles';
 import { Breakpoint } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
@@ -70,13 +73,29 @@ const Columns = ({
 
 interface ColumnProps extends HTMLAttributes<HTMLDivElement>, Props {
 	width?: number | number[];
+	span?: number | number[];
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;
 }
 
-const Column = ({ width, cssOverrides, children, ...props }: ColumnProps) => {
+const Column = ({
+	width,
+	span,
+	cssOverrides,
+	children,
+	...props
+}: ColumnProps) => {
+	const columnCss = [column];
+	if (width) {
+		columnCss.push(setWidth(width));
+	} else if (span) {
+		columnCss.push(setSpan(span));
+	} else {
+		columnCss.push(flexGrow);
+	}
+
 	return (
-		<div css={[column(width), cssOverrides]} {...props}>
+		<div css={[columnCss, cssOverrides]} {...props}>
 			{children}
 		</div>
 	);
