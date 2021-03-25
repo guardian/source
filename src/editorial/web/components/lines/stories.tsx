@@ -23,3 +23,9 @@ fourSquigglyLines.story = { name: 'four squiggly lines' };
 
 export const eightSquigglyLines = () => <Lines count={8} effect="squiggly" />;
 eightSquigglyLines.story = { name: 'eight squiggly lines' };
+
+export const twoLabsLines = () => <Lines count={2} effect="labs" />;
+twoLabsLines.story = { name: 'two labs lines' };
+
+export const fourLabsLines = () => <Lines effect="labs" />;
+fourLabsLines.story = { name: 'four labs lines' };
