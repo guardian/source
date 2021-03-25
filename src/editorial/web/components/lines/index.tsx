@@ -6,6 +6,7 @@ import {
 	fourLines,
 	eightLines,
 	dashedLines,
+	oneLine,
 } from './styles';
 
 type LineEffectType = 'squiggly' | 'dotted' | 'straight' | 'dashed';
@@ -27,5 +28,13 @@ export const Lines = ({ effect = 'straight', count = 4 }: LinesProps) => {
 	if (effect === 'dashed') {
 		return <div css={dashedLines(count)} />;
 	}
-	return <div css={[straightLines, count === 4 ? fourLines : eightLines]} />;
+
+	return (
+		<div
+			css={[
+				straightLines,
+				count === 1 ? oneLine : count === 4 ? fourLines : eightLines,
+			]}
+		/>
+	);
 };

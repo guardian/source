@@ -20,6 +20,11 @@ export const straightLines = css`
 	background-position: top;
 `;
 
+export const oneLine = css`
+	background-size: 1px;
+	height: 1px;
+`;
+
 export const fourLines = css`
 	background-size: 1px calc(${lineGap} * 3 + 1px);
 	height: calc(${lineGap} * 3 + 1px);
