@@ -5,12 +5,12 @@ import {
 	dottedLines,
 	fourLines,
 	eightLines,
-	labsLines,
+	dashedLines,
 } from './styles';
 
-type LineEffectType = 'squiggly' | 'dotted' | 'straight' | 'labs';
+type LineEffectType = 'squiggly' | 'dotted' | 'straight' | 'dashed';
 
-export type LineCount = 2 | 4 | 8;
+export type LineCount = 1 | 4 | 8;
 
 export interface LinesProps extends Props {
 	effect?: LineEffectType;
@@ -24,8 +24,8 @@ export const Lines = ({ effect = 'straight', count = 4 }: LinesProps) => {
 	if (effect === 'dotted') {
 		return <div css={dottedLines(count)} />;
 	}
-	if (effect === 'labs') {
-		return <div css={labsLines(count)} />;
+	if (effect === 'dashed') {
+		return <div css={dashedLines(count)} />;
 	}
 	return <div css={[straightLines, count === 4 ? fourLines : eightLines]} />;
 };
