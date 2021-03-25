@@ -24,7 +24,7 @@ export const Lines = ({ effect = 'straight', count = 4 }: LinesProps) => {
 	if (effect === 'dotted') {
 		return <div css={dottedLines(count)} />;
 	}
-	if(effect === 'labs') {
+	if (effect === 'labs') {
 		return <div css={labsLines(count)} />;
 	}
 	return <div css={[straightLines, count === 4 ? fourLines : eightLines]} />;

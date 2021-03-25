@@ -8,8 +8,7 @@ const width = gapHorizontal + thickness;
 const viewHeight = (thickness + gapVertical) * 2;
 
 export const height = (count: LineCount): number =>
-	viewHeight * count / 2 - gapVertical;
-
+	(viewHeight * count) / 2 - gapVertical;
 
 const labsSvg = (count: LineCount): string => {
 	return encodeURIComponent(`

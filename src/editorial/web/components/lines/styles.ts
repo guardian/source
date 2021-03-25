@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { squigglyImage, height as squigglyImageHeight } from './squiggly';
 import { dottedImage, height as dottedImageHeight } from './dotted';
-import { labsImage, height as labsImageHeight} from './labs'
+import { labsImage, height as labsImageHeight } from './labs';
 import { line } from '@guardian/src-foundations/palette';
 import { remSpace } from '@guardian/src-foundations';
 import { LineCount } from '.';
@@ -42,9 +42,9 @@ export const dottedLines = (count: LineCount) => css`
 	height: ${dottedImageHeight(count)}px;
 `;
 
-export const labsLines = (count : LineCount) => css`
+export const labsLines = (count: LineCount) => css`
 	background-image: url(${labsImage(count)});
 	background-repeat: repeat;
 	background-position: top center;
 	height: ${labsImageHeight(count)}px;
-`
+`;
