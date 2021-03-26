@@ -35,15 +35,7 @@ const collapseBelowSpaceYCSS = (spaceY: ColumnsSpaceY) => css`
 `;
 
 export const collapseBelowSpaceY: {
-	1: SerializedStyles;
-	2: SerializedStyles;
-	3: SerializedStyles;
-	4: SerializedStyles;
-	5: SerializedStyles;
-	6: SerializedStyles;
-	9: SerializedStyles;
-	12: SerializedStyles;
-	24: SerializedStyles;
+	[key in ColumnsSpaceY]: SerializedStyles;
 } = {
 	1: collapseBelowSpaceYCSS(1),
 	2: collapseBelowSpaceYCSS(2),
