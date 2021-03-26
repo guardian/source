@@ -16,7 +16,7 @@ $ npm i @guardian/src-ed-lines @guardian/src-foundations
 
 ## Use
 
-```js
+```jsx
 import { Lines } from '@guardian/src-ed-lines';
 
 const Section = () => (
@@ -31,12 +31,12 @@ const Section = () => (
 
 ### `effect`
 
-**`"straight" | "dotted" | "squiggly"`** _= "straight"_
+**`"straight" | "squiggly" | "dotted" | "dashed"`** _= "straight"_
 
 The appearance of the lines.
 
 ### `count`
 
-**`4 | 8`** _= 4_
+**`1 | 4 | 8`** _= 4_
 
 How many lines appear.
