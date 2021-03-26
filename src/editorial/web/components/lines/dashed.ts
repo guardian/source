@@ -6,7 +6,6 @@ const thickness = 1;
 const gapHorizontal = 1;
 const viewHeight = space[1];
 const width = thickness + gapHorizontal;
-// const viewHeight = thickness + gapVertical;
 
 export const height = (count: LineCount): number =>
 	viewHeight * (count - 1) + thickness;
