@@ -1,7 +1,7 @@
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
-import { CollapseBreakpoint, ColumnsSpaceY } from './columns';
 import { Breakpoint, from, until, between } from '@guardian/src-foundations/mq';
+import { ColumnsSpaceY } from './columns';
 
 type ColumnBreakpoint = {
 	totalColumns: number;
@@ -17,23 +17,44 @@ export const columns = css`
 	}
 `;
 
-const collapseBelowSpacing = (spaceY?: ColumnsSpaceY) => css`
-	display: block;
-	margin-right: 0;
-	& > * {
+export const collapseBelowColumnsCSS = (breakpoint: Breakpoint) => css`
+	${until[breakpoint]} {
+		display: block;
 		margin-right: 0;
-		${spaceY ? `margin-bottom: ${space[spaceY]}px;` : ''}
+		& > * {
+			margin-right: 0;
+		}
 	}
 `;
 
-export const collapseBelowColumns = (
-	breakpoint: CollapseBreakpoint,
-	spaceY?: ColumnsSpaceY,
-) => css`
-	${until[breakpoint]} {
-		${collapseBelowSpacing(spaceY)}
+const collapseBelowSpaceYCSS = (spaceY: ColumnsSpaceY) => css`
+	margin-bottom: ${-space[spaceY]}px;
+	& > * {
+		margin-bottom: ${space[spaceY]}px;
 	}
 `;
+
+export const collapseBelowSpaceY: {
+	1: SerializedStyles;
+	2: SerializedStyles;
+	3: SerializedStyles;
+	4: SerializedStyles;
+	5: SerializedStyles;
+	6: SerializedStyles;
+	9: SerializedStyles;
+	12: SerializedStyles;
+	24: SerializedStyles;
+} = {
+	1: collapseBelowSpaceYCSS(1),
+	2: collapseBelowSpaceYCSS(2),
+	3: collapseBelowSpaceYCSS(3),
+	4: collapseBelowSpaceYCSS(4),
+	5: collapseBelowSpaceYCSS(5),
+	6: collapseBelowSpaceYCSS(6),
+	9: collapseBelowSpaceYCSS(9),
+	12: collapseBelowSpaceYCSS(12),
+	24: collapseBelowSpaceYCSS(24),
+};
 
 const collapseBelowWidth = css`
 	width: 100% !important;

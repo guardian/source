@@ -7,10 +7,11 @@ import {
 	collapseBelowDesktop,
 	collapseBelowleftCol,
 	collapseBelowWide,
-	collapseBelowColumns,
 	setWidth,
 	setSpan,
 	flexGrow,
+	collapseBelowColumnsCSS,
+	collapseBelowSpaceY,
 } from './styles';
 import { Breakpoint } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
@@ -41,6 +42,15 @@ const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
 	wide: collapseBelowWide,
 };
 
+const collapseBelowColumnsMap: {
+	[key in CollapseBreakpoint]: SerializedStyles;
+} = {
+	tablet: collapseBelowColumnsCSS('tablet'),
+	desktop: collapseBelowColumnsCSS('desktop'),
+	leftCol: collapseBelowColumnsCSS('leftCol'),
+	wide: collapseBelowColumnsCSS('wide'),
+};
+
 const Columns = ({
 	collapseBelow,
 	cssOverrides,
@@ -52,10 +62,9 @@ const Columns = ({
 		<div
 			css={[
 				columns,
-				collapseBelow
-					? collapseBelowColumns(collapseBelow, spaceY)
-					: '',
+				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : '',
 				collapseBelow ? collapseBelowMap[collapseBelow] : '',
+				spaceY ? collapseBelowSpaceY[spaceY] : '',
 				cssOverrides,
 			]}
 			{...props}
