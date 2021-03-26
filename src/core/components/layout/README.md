@@ -82,6 +82,12 @@ const Wrapper = () => (
 
 Columns will be stacked one on top of the other at viewport widths lower than the specified breakpoint
 
+#### `spaceY`
+
+**`1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24`**
+
+Units of space between columns vertically when collapsed (one unit is 4px)
+
 ### Column Props
 
 #### `width`
