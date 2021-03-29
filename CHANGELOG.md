@@ -10,6 +10,33 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 29 March 2021
+
+**`@guardian/src-foundations 3.4.0`**
+
+-   :page_with_curl: [15cb541](https://github.com/guardian/source/commit/15cb541d76bb629a6552943957fcfd609c66d63b) Improve global palette caveat
+-   :sparkles: [e363776](https://github.com/guardian/source/commit/e363776ad038a1c0274ee46c32934f1d4cf19067) Add opinion 550 to theme and globals
+
+**`@guardian/src-icons 3.4.0`**
+
+-   :nail_care: [ca3ed2a](https://github.com/guardian/source/commit/ca3ed2aaad1e9a5656bb5f7e6f20e6215dc461bc) re-export icons from figma (thanks @jamie-lynch)
+-   :sparkles: [324e0cc](https://github.com/guardian/source/commit/324e0ccba09605284174fc58ec1d124d02a8b9ec) Add share SVG icons (thanks @liywjl)
+
+**`@guardian/src-layout 3.4.0`**
+
+-   :page_with_curl: [e3e65ef](https://github.com/guardian/source/commit/e3e65ef390e4893084bc1d481791a51a1e04c72c) remove storybook padding from responsive stories
+-   :bug: [2b4acd8](https://github.com/guardian/source/commit/2b4acd811d6584d3c69b38691c49977ee9acc6f1) apply margin right to all but last column
+-   :sparkles: [4c2c1ba](https://github.com/guardian/source/commit/4c2c1baaa9e2f34576d1f7d206baf6df7a26a826) Responsive columns based on number of grid columns spanned (thanks @rhystmills)
+-   :sparkles: [c8eb6a1](https://github.com/guardian/source/commit/c8eb6a1f14e5a7c17e99fa506620e05e2b531d92) Configurable column spacing (thanks @jamie-lynch)
+
+**`@guardian/src-link 3.4.0`**
+
+-   :bug: [14bfcaa](https://github.com/guardian/source/commit/14bfcaa566dc872fe8c83ed16b910e90725791d0) add key to link contents spacer to remove key warnings (thanks @jamie-lynch)
+
+**`@editorial/lines 3.4.0`**
+
+-   :sparkles: [6da5d0f](https://github.com/guardian/source/commit/6da5d0fdc4e2be5a080c73a12bb2df54dbce8092) Dashed lines (for labs) (thanks @mxdvl)
+
 ## 26 February 2021
 
 **`@guardian/src-layout 3.3.0`**
