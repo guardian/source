@@ -1,45 +1,52 @@
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
-import { Breakpoint, from, until } from '@guardian/src-foundations/mq';
+import { Breakpoint, from, until, between } from '@guardian/src-foundations/mq';
+import { ColumnsSpaceY } from './columns';
+
+type ColumnBreakpoint = {
+	totalColumns: number;
+	rule: string;
+};
 
 export const columns = css`
 	box-sizing: border-box;
 	display: flex;
-	& > * + * {
-		margin-left: ${space[5]}px;
-	}
-`;
-
-const collapseBelowSpacing = css`
-	display: block;
-	& > * + * {
-		margin-left: 0;
-	}
+	margin-right: -${space[5]}px;
 	& > * {
-		margin-bottom: ${space[5]}px;
+		margin-right: ${space[5]}px;
 	}
 `;
 
-export const collapseBelowTabletColumns = css`
-	${until.tablet} {
-		${collapseBelowSpacing}
+export const collapseBelowColumnsCSS = (breakpoint: Breakpoint) => css`
+	${until[breakpoint]} {
+		display: block;
+		margin-right: 0;
+		& > * {
+			margin-right: 0;
+		}
 	}
 `;
-export const collapseBelowDesktopColumns = css`
-	${until.desktop} {
-		${collapseBelowSpacing}
+
+const collapseBelowSpaceYCSS = (spaceY: ColumnsSpaceY) => css`
+	margin-bottom: ${-space[spaceY]}px;
+	& > * {
+		margin-bottom: ${space[spaceY]}px;
 	}
 `;
-export const collapseBelowLeftColColumns = css`
-	${until.leftCol} {
-		${collapseBelowSpacing}
-	}
-`;
-export const collapseBelowWideColumns = css`
-	${until.wide} {
-		${collapseBelowSpacing}
-	}
-`;
+
+export const collapseBelowSpaceY: {
+	[key in ColumnsSpaceY]: SerializedStyles;
+} = {
+	1: collapseBelowSpaceYCSS(1),
+	2: collapseBelowSpaceYCSS(2),
+	3: collapseBelowSpaceYCSS(3),
+	4: collapseBelowSpaceYCSS(4),
+	5: collapseBelowSpaceYCSS(5),
+	6: collapseBelowSpaceYCSS(6),
+	9: collapseBelowSpaceYCSS(9),
+	12: collapseBelowSpaceYCSS(12),
+	24: collapseBelowSpaceYCSS(24),
+};
 
 const collapseBelowWidth = css`
 	width: 100% !important;
@@ -92,23 +99,16 @@ export const collapseBelowWide = css`
 */
 const calculateWidth = (width: number) => {
 	if (width === 0) {
-		return css`
-			width: 0;
-
-			/* Hide the column from screen readers */
-			visibility: hidden;
-
-			/* offset the margin-left on the next sibling */
-			margin-right: ${-space[5]}px;
+		return `
+			display: none;
 		`;
 	}
 
-	return css`
-		width: calc((100% + ${space[5]}px) * ${width} - ${space[5]}px);
+	return `
+		width: calc((100%) * ${width} - ${space[5]}px);
 
-		/* Reset values that might have been set at a lower breakpoint */
-		visibility: visible;
-		margin-right: 0;
+		/* Reset value that might have been set at a lower breakpoint */
+		display: block;
 	`;
 };
 
@@ -123,35 +123,91 @@ const generateWidthCSS = (width: number | number[]) => {
 		];
 
 		return width.reduce((styles, w, i) => {
-			return css`
+			return `
 				${styles}
 				${from[breakpoints[i]]} {
 					${calculateWidth(w)};
 				}
 			`;
-		}, css``);
+		}, ``);
 	}
 
 	return calculateWidth(width);
 };
 
-export const column = (width?: number | number[]) => {
-	let flex;
-	let widthCSS;
+const generateSpanCSS = (span: number | number[]) => {
+	if (Array.isArray(span)) {
+		const breakpoints: Breakpoint[] = [
+			'mobile',
+			'tablet',
+			'desktop',
+			'leftCol',
+			'wide',
+		];
 
-	if (width == null || (Array.isArray(width) && width.length === 0)) {
-		// If no width is specified, allow the column to grow
-		flex = 1;
-		widthCSS = css``;
-	} else {
-		// If a width is specified, don't allow column to grow. Use the width property
-		flex = '0 0 auto';
-		widthCSS = generateWidthCSS(width);
+		return span.reduce((styles, w, i) => {
+			return `
+				${styles}
+				${from[breakpoints[i]]} {
+					${calculateSpan(w)}
+				}
+			`;
+		}, ``);
 	}
 
-	return css`
-		box-sizing: border-box;
-		flex: ${flex};
-		${widthCSS};
+	return calculateSpan(span);
+};
+
+const columnBreakpoints: Array<ColumnBreakpoint> = [
+	{ totalColumns: 4, rule: until.tablet },
+	{ totalColumns: 12, rule: between.tablet.and.leftCol },
+	{ totalColumns: 14, rule: between.leftCol.and.wide },
+	{ totalColumns: 16, rule: from.wide },
+];
+
+const calculateSpan = (span: number) => {
+	const columnBreakpointCss = columnBreakpoints.reduce(
+		(acc, cur: ColumnBreakpoint) => {
+			if (span === 0)
+				// Reduces number of redundant breakpoint rules
+				return `
+					display: none;
+				`;
+			const inferredWidth = span / cur.totalColumns;
+			const cappedWidth = inferredWidth < 1 ? inferredWidth : 1;
+			const cssForBreakpoint = calculateWidth(cappedWidth);
+
+			return `
+				${acc}
+				${cur.rule} {
+					${cssForBreakpoint}
+				}
+			`;
+		},
+		``,
+	);
+
+	return `
+		${columnBreakpointCss}
 	`;
 };
+
+// always gets applied
+export const column = css`
+	box-sizing: border-box;
+`;
+
+// get applied when no width or span is specified
+export const flexGrow = css`
+	flex: 1;
+`;
+
+// width is specified
+export const setWidth = (value: number | number[]) => css`
+	${generateWidthCSS(value)};
+`;
+
+// span is specified
+export const setSpan = (value: number | number[]) => css`
+	${generateSpanCSS(value)}
+`;

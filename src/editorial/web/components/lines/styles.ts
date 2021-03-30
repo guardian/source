@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { squigglyImage, height as squigglyImageHeight } from './squiggly';
 import { dottedImage, height as dottedImageHeight } from './dotted';
+import { dashedImage, height as labsImageHeight } from './dashed';
 import { line } from '@guardian/src-foundations/palette';
 import { remSpace } from '@guardian/src-foundations';
 import { LineCount } from '.';
@@ -17,6 +18,11 @@ export const straightLines = css`
 	);
 	background-repeat: repeat-x;
 	background-position: top;
+`;
+
+export const oneLine = css`
+	background-size: 1px;
+	height: 1px;
 `;
 
 export const fourLines = css`
@@ -39,4 +45,11 @@ export const squigglyLines = (count: LineCount) => css`
 export const dottedLines = (count: LineCount) => css`
 	background-image: url(${dottedImage(count)});
 	height: ${dottedImageHeight(count)}px;
+`;
+
+export const dashedLines = (count: LineCount) => css`
+	background-image: url(${dashedImage(count)});
+	background-repeat: repeat;
+	background-position: top center;
+	height: ${labsImageHeight(count)}px;
 `;
