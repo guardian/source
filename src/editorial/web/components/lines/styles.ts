@@ -7,12 +7,12 @@ import { LineCount } from '.';
 
 const lineGap = remSpace[1];
 
-export const straightLines = (count: LineCount, colour: string) => {
+export const straightLines = (count: LineCount, color: string) => {
 	const baseStyles = css`
 		background-image: repeating-linear-gradient(
 			to bottom,
-			${colour},
-			${colour} 1px,
+			${color},
+			${color} 1px,
 			transparent 1px,
 			transparent ${lineGap}
 		);
@@ -42,20 +42,20 @@ export const straightLines = (count: LineCount, colour: string) => {
 	}
 };
 
-export const squigglyLines = (count: LineCount, colour: string) => css`
-	background-image: url(${squigglyImage(count, colour)});
+export const squigglyLines = (count: LineCount, color: string) => css`
+	background-image: url(${squigglyImage(count, color)});
 	background-repeat: repeat-x;
 	background-position: left;
 	height: ${squigglyImageHeight(count)}px;
 `;
 
-export const dottedLines = (count: LineCount, colour: string) => css`
-	background-image: url(${dottedImage(count, colour)});
+export const dottedLines = (count: LineCount, color: string) => css`
+	background-image: url(${dottedImage(count, color)});
 	height: ${dottedImageHeight(count)}px;
 `;
 
-export const dashedLines = (count: LineCount, colour: string) => css`
-	background-image: url(${dashedImage(count, colour)});
+export const dashedLines = (count: LineCount, color: string) => css`
+	background-image: url(${dashedImage(count, color)});
 	background-repeat: repeat;
 	background-position: top center;
 	height: ${labsImageHeight(count)}px;

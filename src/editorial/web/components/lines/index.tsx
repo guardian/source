@@ -14,23 +14,23 @@ export type LineCount = 1 | 4 | 8;
 export interface LinesProps extends Props {
 	effect?: LineEffectType;
 	count?: LineCount;
-	colour?: string;
+	color?: string;
 }
 
 export const Lines = ({
 	effect = 'straight',
 	count = 4,
-	colour = line.primary,
+	color = line.primary,
 }: LinesProps) => {
 	switch (effect) {
 		case 'squiggly':
-			return <div css={squigglyLines(count, colour)} />;
+			return <div css={squigglyLines(count, color)} />;
 		case 'dotted':
-			return <div css={dottedLines(count, colour)} />;
+			return <div css={dottedLines(count, color)} />;
 		case 'dashed':
-			return <div css={dashedLines(count, colour)} />;
+			return <div css={dashedLines(count, color)} />;
 		case 'straight':
 		default:
-			return <div css={straightLines(count, colour)} />;
+			return <div css={straightLines(count, color)} />;
 	}
 };

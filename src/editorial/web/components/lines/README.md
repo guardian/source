@@ -42,7 +42,7 @@ The appearance of the lines.
 
 How many lines appear.
 
-### `colour`
+### `color`
 
 **`string`** _= line.primary_
 

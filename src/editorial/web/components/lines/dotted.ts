@@ -5,7 +5,7 @@ const gridSize = 3;
 
 export const height = (count: LineCount): number => gridSize * count;
 
-const dottedSvg = (count: LineCount, colour: string): string => {
+const dottedSvg = (count: LineCount, color: string): string => {
 	const svg = [
 		`<svg xmlns="http://www.w3.org/2000/svg" ` +
 			`width="${gridSize}" height="${height(count)}" ` +
@@ -14,7 +14,7 @@ const dottedSvg = (count: LineCount, colour: string): string => {
 
 	for (let index = 1; index <= count; index++) {
 		svg.push(
-			`<circle fill="${colour}" ` +
+			`<circle fill="${color}" ` +
 				`cx="${gridSize / 2}" ` +
 				`cy="${gridSize * (index - 1 / 2)}" ` +
 				`r="${dotRadius}" />`,
@@ -25,5 +25,5 @@ const dottedSvg = (count: LineCount, colour: string): string => {
 	return encodeURIComponent(svg.join());
 };
 
-export const dottedImage = (count: LineCount, colour: string) =>
-	`data:image/svg+xml,${dottedSvg(count, colour)}`;
+export const dottedImage = (count: LineCount, color: string) =>
+	`data:image/svg+xml,${dottedSvg(count, color)}`;

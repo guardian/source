@@ -18,7 +18,7 @@ const d = [
 	`t 12 0`,
 ].join(' ');
 
-const squigglySvg = (count: LineCount, colour: string): string => {
+const squigglySvg = (count: LineCount, color: string): string => {
 	const repeatedLines = [];
 	for (let index = 1; index < count; index++) {
 		repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`);
@@ -30,7 +30,7 @@ const squigglySvg = (count: LineCount, colour: string): string => {
 	width="${wavelength}" height="${height(count)}"
 	viewBox="0 0 ${wavelength} ${height(count)}"
 >
-	<g stroke-width="${thickness}" stroke="${colour}" fill="none">
+	<g stroke-width="${thickness}" stroke="${color}" fill="none">
 		<path id="squiggle" d="${d}" />
 		${repeatedLines.join()}
 	</g>
@@ -38,5 +38,5 @@ const squigglySvg = (count: LineCount, colour: string): string => {
 `);
 };
 
-export const squigglyImage = (count: LineCount = 4, colour: string): string =>
-	`data:image/svg+xml;utf-8,${squigglySvg(count, colour)}`;
+export const squigglyImage = (count: LineCount = 4, color: string): string =>
+	`data:image/svg+xml;utf-8,${squigglySvg(count, color)}`;
