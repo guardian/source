@@ -23,6 +23,7 @@ const Section = () => (
     <>
         <Lines count={8} />
         <Lines effect="squiggly" />
+        <Lines count={4} effect="dotted" colour="blue" />
     </>
 );
 ```
@@ -40,3 +41,9 @@ The appearance of the lines.
 **`1 | 4 | 8`** _= 4_
 
 How many lines appear.
+
+### `color`
+
+**`string`** _= line.primary_
+
+The colour of the lines
