@@ -2,18 +2,17 @@ import { css } from '@emotion/react';
 import { squigglyImage, height as squigglyImageHeight } from './squiggly';
 import { dottedImage, height as dottedImageHeight } from './dotted';
 import { dashedImage, height as labsImageHeight } from './dashed';
-import { line } from '@guardian/src-foundations/palette';
 import { remSpace } from '@guardian/src-foundations';
 import { LineCount } from '.';
 
 const lineGap = remSpace[1];
 
-export const straightLines = (count: LineCount) => {
+export const straightLines = (count: LineCount, colour: string) => {
 	const baseStyles = css`
 		background-image: repeating-linear-gradient(
 			to bottom,
-			${line.primary},
-			${line.primary} 1px,
+			${colour},
+			${colour} 1px,
 			transparent 1px,
 			transparent ${lineGap}
 		);
@@ -43,20 +42,20 @@ export const straightLines = (count: LineCount) => {
 	}
 };
 
-export const squigglyLines = (count: LineCount) => css`
-	background-image: url(${squigglyImage(count)});
+export const squigglyLines = (count: LineCount, colour: string) => css`
+	background-image: url(${squigglyImage(count, colour)});
 	background-repeat: repeat-x;
 	background-position: left;
 	height: ${squigglyImageHeight(count)}px;
 `;
 
-export const dottedLines = (count: LineCount) => css`
-	background-image: url(${dottedImage(count)});
+export const dottedLines = (count: LineCount, colour: string) => css`
+	background-image: url(${dottedImage(count, colour)});
 	height: ${dottedImageHeight(count)}px;
 `;
 
-export const dashedLines = (count: LineCount) => css`
-	background-image: url(${dashedImage(count)});
+export const dashedLines = (count: LineCount, colour: string) => css`
+	background-image: url(${dashedImage(count, colour)});
 	background-repeat: repeat;
 	background-position: top center;
 	height: ${labsImageHeight(count)}px;
