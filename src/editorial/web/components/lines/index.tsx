@@ -1,12 +1,10 @@
 import { Props } from '@guardian/src-helpers';
+import { line } from '@guardian/src-foundations/palette';
 import {
 	straightLines,
 	squigglyLines,
 	dottedLines,
-	fourLines,
-	eightLines,
 	dashedLines,
-	oneLine,
 } from './styles';
 
 type LineEffectType = 'squiggly' | 'dotted' | 'straight' | 'dashed';
@@ -16,25 +14,23 @@ export type LineCount = 1 | 4 | 8;
 export interface LinesProps extends Props {
 	effect?: LineEffectType;
 	count?: LineCount;
+	color?: string;
 }
 
-export const Lines = ({ effect = 'straight', count = 4 }: LinesProps) => {
-	if (effect === 'squiggly') {
-		return <div css={squigglyLines(count)} />;
+export const Lines = ({
+	effect = 'straight',
+	count = 4,
+	color = line.primary,
+}: LinesProps) => {
+	switch (effect) {
+		case 'squiggly':
+			return <div css={squigglyLines(count, color)} />;
+		case 'dotted':
+			return <div css={dottedLines(count, color)} />;
+		case 'dashed':
+			return <div css={dashedLines(count, color)} />;
+		case 'straight':
+		default:
+			return <div css={straightLines(count, color)} />;
 	}
-	if (effect === 'dotted') {
-		return <div css={dottedLines(count)} />;
-	}
-	if (effect === 'dashed') {
-		return <div css={dashedLines(count)} />;
-	}
-
-	return (
-		<div
-			css={[
-				straightLines,
-				count === 1 ? oneLine : count === 4 ? fourLines : eightLines,
-			]}
-		/>
-	);
 };

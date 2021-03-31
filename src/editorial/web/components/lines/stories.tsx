@@ -69,3 +69,18 @@ export const dashedLines = () => (
 	</Container>
 );
 dashedLines.story = { name: 'dashed lines' };
+
+export const colouredLines = () => (
+	<Container>
+		<h2>Blue Lines</h2>
+		<h3>straight</h3>
+		<Lines effect="straight" color="blue" />
+		<h3>dotted</h3>
+		<Lines effect="dotted" color="blue" />
+		<h3>squiggly</h3>
+		<Lines effect="squiggly" color="blue" />
+		<h3>dashed</h3>
+		<Lines effect="dashed" color="blue" />
+	</Container>
+);
+colouredLines.story = { name: 'coloured lines' };
