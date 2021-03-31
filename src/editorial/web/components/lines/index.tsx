@@ -25,6 +25,6 @@ export const Lines = ({ effect = 'straight', count = 4 }: LinesProps) => {
 			return <div css={dashedLines(count)} />;
 		case 'straight':
 		default:
-			return <div css={[straightLines(count)]} />;
+			return <div css={straightLines(count)} />;
 	}
 };
