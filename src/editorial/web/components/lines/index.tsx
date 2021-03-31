@@ -19,22 +19,26 @@ export interface LinesProps extends Props {
 }
 
 export const Lines = ({ effect = 'straight', count = 4 }: LinesProps) => {
-	if (effect === 'squiggly') {
-		return <div css={squigglyLines(count)} />;
+	switch (effect) {
+		case 'squiggly':
+			return <div css={squigglyLines(count)} />;
+		case 'dotted':
+			return <div css={dottedLines(count)} />;
+		case 'dashed':
+			return <div css={dashedLines(count)} />;
+		case 'straight':
+		default:
+			return (
+				<div
+					css={[
+						straightLines,
+						count === 1
+							? oneLine
+							: count === 4
+							? fourLines
+							: eightLines,
+					]}
+				/>
+			);
 	}
-	if (effect === 'dotted') {
-		return <div css={dottedLines(count)} />;
-	}
-	if (effect === 'dashed') {
-		return <div css={dashedLines(count)} />;
-	}
-
-	return (
-		<div
-			css={[
-				straightLines,
-				count === 1 ? oneLine : count === 4 ? fourLines : eightLines,
-			]}
-		/>
-	);
 };
