@@ -11,14 +11,14 @@ export const height = (count: LineCount): number =>
 
 const dashedSvg = (color: string): string => {
 	return encodeURIComponent(`
-	<svg xmlns="http://www.w3.org/2000/svg"
-		width="${width}" height="${viewHeight}"
-		viewBox="0 0 ${width} ${viewHeight}"
-		stroke="${color}"
-		stroke-width="${thickness}"
-	>
-		<path d="M0,${thickness / 2} h${thickness} " />
-	</svg>
+		<svg xmlns="http://www.w3.org/2000/svg"
+			width="${width}" height="${viewHeight}"
+			viewBox="0 0 ${width} ${viewHeight}"
+			stroke="${color}"
+			stroke-width="${thickness}"
+		>
+			<path d="M0,${thickness / 2} h${thickness} " />
+		</svg>
 	`);
 };
 
