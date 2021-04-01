@@ -12,6 +12,7 @@ export const straightLines = (count: LineCount, color: string) => {
 		case 1:
 			return css`
 				background-color: ${color};
+				background-repeat: repeat-x;
 				background-size: 1px;
 				height: 1px;
 			`;
