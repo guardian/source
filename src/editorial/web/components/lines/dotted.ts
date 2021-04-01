@@ -1,4 +1,5 @@
 import { LineCount } from '.';
+import { svgImageUrl } from './svgStringToImage';
 
 const dotRadius = 1;
 const gridSize = 3;
@@ -22,8 +23,8 @@ const dottedSvg = (count: LineCount, color: string): string => {
 	}
 
 	svg.push(`</svg>`);
-	return encodeURIComponent(svg.join());
+	return svg.join();
 };
 
 export const dottedImage = (count: LineCount, color: string) =>
-	`data:image/svg+xml,${dottedSvg(count, color)}`;
+	svgImageUrl(dottedSvg(count, color));

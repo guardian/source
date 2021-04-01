@@ -1,4 +1,5 @@
 import { LineCount } from '.';
+import { svgImageUrl } from './svgStringToImage';
 
 const wavelength = 12;
 const amplitude = 3;
@@ -24,19 +25,19 @@ const squigglySvg = (count: LineCount, color: string): string => {
 		repeatedLines.push(`<use y="${gap * index}" xlink:href="#squiggle" />`);
 	}
 
-	return encodeURIComponent(`
-<svg xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	width="${wavelength}" height="${height(count)}"
-	viewBox="0 0 ${wavelength} ${height(count)}"
->
-	<g stroke-width="${thickness}" stroke="${color}" fill="none">
-		<path id="squiggle" d="${d}" />
-		${repeatedLines.join()}
-	</g>
-</svg>
-`);
+	return `
+		<svg xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			width="${wavelength}" height="${height(count)}"
+			viewBox="0 0 ${wavelength} ${height(count)}"
+		>
+			<g stroke-width="${thickness}" stroke="${color}" fill="none">
+				<path id="squiggle" d="${d}" />
+				${repeatedLines.join()}
+			</g>
+		</svg>
+	`;
 };
 
 export const squigglyImage = (count: LineCount = 4, color: string): string =>
-	`data:image/svg+xml;utf-8,${squigglySvg(count, color)}`;
+	svgImageUrl(squigglySvg(count, color));

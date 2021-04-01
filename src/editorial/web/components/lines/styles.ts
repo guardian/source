@@ -35,19 +35,19 @@ export const straightLines = (count: LineCount, color: string) => {
 };
 
 export const squigglyLines = (count: LineCount, color: string) => css`
-	background-image: url(${squigglyImage(count, color)});
+	background-image: ${squigglyImage(count, color)};
 	background-repeat: repeat-x;
 	background-position: left;
 	height: ${squigglyImageHeight(count)}px;
 `;
 
 export const dottedLines = (count: LineCount, color: string) => css`
-	background-image: url(${dottedImage(count, color)});
+	background-image: ${dottedImage(count, color)};
 	height: ${dottedImageHeight(count)}px;
 `;
 
 export const dashedLines = (count: LineCount, color: string) => css`
-	background-image: url(${dashedImage(color)});
+	background-image: ${dashedImage(color)};
 	background-repeat: repeat;
 	background-position: top center;
 	height: ${labsImageHeight(count)}px;
