@@ -10,6 +10,12 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 1 April 2021
+
+**`@editorial/lines 3.5.0`**
+
+-   :sparkles: [13b6041](https://github.com/guardian/source/commit/13b604153732b1560807a6c18d1cd10af15e2ed8) Coloured lines (thanks @oliverlloyd)
+
 ## 29 March 2021
 
 **`@guardian/src-foundations 3.4.0`**
