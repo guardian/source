@@ -47,7 +47,7 @@ export const dottedLines = (count: LineCount, color: string) => css`
 `;
 
 export const dashedLines = (count: LineCount, color: string) => css`
-	background-image: url(${dashedImage(count, color)});
+	background-image: url(${dashedImage(color)});
 	background-repeat: repeat;
 	background-position: top center;
 	height: ${labsImageHeight(count)}px;

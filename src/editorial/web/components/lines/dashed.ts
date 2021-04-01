@@ -9,7 +9,7 @@ const width = thickness + gapHorizontal;
 export const height = (count: LineCount): number =>
 	viewHeight * (count - 1) + thickness;
 
-const dashedSvg = (count: LineCount, color: string): string => {
+const dashedSvg = (color: string): string => {
 	return encodeURIComponent(`
 	<svg xmlns="http://www.w3.org/2000/svg"
 		width="${width}" height="${viewHeight}"
@@ -22,5 +22,5 @@ const dashedSvg = (count: LineCount, color: string): string => {
 	`);
 };
 
-export const dashedImage = (count: LineCount = 1, color: string): string =>
-	`data:image/svg+xml;utf-8,${dashedSvg(count, color)}`;
+export const dashedImage = (color: string): string =>
+	`data:image/svg+xml;utf-8,${dashedSvg(color)}`;
