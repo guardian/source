@@ -1,5 +1,6 @@
 import { space } from '@guardian/src-foundations';
 import { LineCount } from '.';
+import { svgImageUrl } from './svgStringToImage';
 
 const thickness = 1;
 const gapHorizontal = 1;
@@ -9,18 +10,18 @@ const width = thickness + gapHorizontal;
 export const height = (count: LineCount): number =>
 	viewHeight * (count - 1) + thickness;
 
-const dashedSvg = (count: LineCount, color: string): string => {
-	return encodeURIComponent(`
-	<svg xmlns="http://www.w3.org/2000/svg"
-		width="${width}" height="${viewHeight}"
-		viewBox="0 0 ${width} ${viewHeight}"
-		stroke="${color}"
-		stroke-width="${thickness}"
-	>
-		<path d="M0,${thickness / 2} h${thickness} " />
-	</svg>
-	`);
+const dashedSvg = (color: string): string => {
+	return `
+		<svg xmlns="http://www.w3.org/2000/svg"
+			width="${width}" height="${viewHeight}"
+			viewBox="0 0 ${width} ${viewHeight}"
+			stroke="${color}"
+			stroke-width="${thickness}"
+		>
+			<path d="M0,${thickness / 2} h${thickness} " />
+		</svg>
+	`;
 };
 
-export const dashedImage = (count: LineCount = 1, color: string): string =>
-	`data:image/svg+xml;utf-8,${dashedSvg(count, color)}`;
+export const dashedImage = (color: string): string =>
+	svgImageUrl(dashedSvg(color));
