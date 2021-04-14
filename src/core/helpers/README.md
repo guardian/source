@@ -10,7 +10,7 @@ This package exports a `darkModeCss` function, which is a variant of the standar
 (supportsDarkMode: boolean) => (styles: TemplateStringsArray, ...placeholders: string[]) => SerializedStyles
 ```
 
-The first parameter allows the caller to choose whether they want these dark mode styles included - if set to `false` they won't be. The rest of the parameters turned this into a [template literal "tag"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates), which allows it to operate on template strings in the same way as the `css` function.
+The first parameter allows the caller to choose whether they want these dark mode styles included - if set to `false` they won't be. The rest of the parameters turn this into a [template literal "tag"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates), which allows it to operate on template strings in the same way as the `css` function.
 
 ### Example
 
