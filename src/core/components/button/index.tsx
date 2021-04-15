@@ -240,4 +240,4 @@ const LinkButton = ({
 	</a>
 );
 
-export { Button, LinkButton, ButtonProps };
+export { Button, LinkButton, ButtonProps, LinkButtonProps };
