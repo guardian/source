@@ -3,7 +3,9 @@ import { css } from '@emotion/react';
 import { Design, Display, Format, Pillar, Special } from '@guardian/types';
 import {
 	Button as CoreButton,
-	ButtonProps,
+	ButtonProps as CoreButtonProps,
+	LinkButton as CoreLinkButton,
+	LinkButtonProps as CoreLinkButtonProps,
 	ButtonPriority,
 } from '@guardian/src-button';
 import {
@@ -17,7 +19,13 @@ import {
 	neutral,
 } from '@guardian/src-foundations';
 
-export interface Props extends ButtonProps {
+export interface ButtonProps extends CoreButtonProps {
+	format?: Format;
+	priority?: ButtonPriority;
+	children: React.ReactNode;
+}
+
+export interface LinkButtonProps extends CoreLinkButtonProps {
 	format?: Format;
 	priority?: ButtonPriority;
 	children: React.ReactNode;
@@ -220,7 +228,7 @@ export const Button = ({
 	children,
 	priority = 'primary',
 	...props
-}: Props) => {
+}: ButtonProps) => {
 	const backgroundOverrides = decideBackground(format, priority);
 	const borderOverrides = decideBorder(format, priority);
 	const fontOverrides = decideFont(format, priority);
@@ -233,5 +241,26 @@ export const Button = ({
 		>
 			{children}
 		</CoreButton>
+	);
+};
+
+export const LinkButton = ({
+	format = defaultFormat,
+	children,
+	priority = 'primary',
+	...props
+}: LinkButtonProps) => {
+	const backgroundOverrides = decideBackground(format, priority);
+	const borderOverrides = decideBorder(format, priority);
+	const fontOverrides = decideFont(format, priority);
+
+	return (
+		<CoreLinkButton
+			priority={priority}
+			cssOverrides={[backgroundOverrides, borderOverrides, fontOverrides]}
+			{...props}
+		>
+			{children}
+		</CoreLinkButton>
 	);
 };

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { Design, Display, Pillar, Special } from '@guardian/types';
 import React from 'react';
-import { Button } from './index';
+import { Button, LinkButton } from './index';
 
 export default {
 	title: 'Editorial/Button',
@@ -189,7 +189,7 @@ Secondary.story = { name: 'when secondary' };
 
 export const Tertiary = () => (
 	<Row>
-		<Button
+		<LinkButton
 			priority="tertiary"
 			size="small"
 			format={{
@@ -199,8 +199,8 @@ export const Tertiary = () => (
 			}}
 		>
 			News
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="tertiary"
 			size="small"
 			format={{
@@ -210,8 +210,8 @@ export const Tertiary = () => (
 			}}
 		>
 			Sport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="tertiary"
 			size="small"
 			format={{
@@ -221,8 +221,8 @@ export const Tertiary = () => (
 			}}
 		>
 			Culture
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="tertiary"
 			size="small"
 			format={{
@@ -232,8 +232,8 @@ export const Tertiary = () => (
 			}}
 		>
 			Lifestyle
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="tertiary"
 			size="small"
 			format={{
@@ -243,8 +243,8 @@ export const Tertiary = () => (
 			}}
 		>
 			Opinion
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="tertiary"
 			size="small"
 			format={{
@@ -254,8 +254,8 @@ export const Tertiary = () => (
 			}}
 		>
 			SpecialReport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="tertiary"
 			size="small"
 			format={{
@@ -265,7 +265,7 @@ export const Tertiary = () => (
 			}}
 		>
 			Labs
-		</Button>
+		</LinkButton>
 	</Row>
 );
 Tertiary.story = { name: 'when tertiary' };
@@ -375,7 +375,8 @@ Overrides.story = { name: 'with overrides overriden' };
 
 export const DefaultStory = () => (
 	<Row>
-		<Button>Default</Button>
+		<Button onClick={() => null}>Default</Button>
+		<LinkButton href="example.com">Default</LinkButton>
 	</Row>
 );
 DefaultStory.story = { name: 'with defaults' };
