@@ -43,7 +43,7 @@ const StarRating = ({
 	...props
 }: StarRatingProps) => {
 	const backgroundImage = css`
-		background-image: url('data:image/svg+xml,${starBackground(rating)}');
+		background-image: ${starBackground(rating)};
 		background-repeat: no-repeat;
 	`;
 

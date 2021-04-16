@@ -1,4 +1,5 @@
 import { neutral } from '@guardian/src-foundations/palette';
+import { svgBackgroundImage } from '@guardian/src-helpers';
 
 const spacing = 15;
 
@@ -40,4 +41,4 @@ const starSvg = (rating: number): string => {
 };
 
 export const starBackground = (rating: number): string =>
-	encodeURIComponent(starSvg(rating));
+	svgBackgroundImage(starSvg(rating));
