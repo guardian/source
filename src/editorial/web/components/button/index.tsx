@@ -109,67 +109,10 @@ const decideBorder = (format: Format, priority: ButtonPriority) => {
 	switch (priority) {
 		case 'primary':
 		case 'secondary':
-			switch (format.theme) {
-				case Pillar.News:
-					return css`
-						border: 1px solid ${news[300]};
-					`;
-				case Pillar.Culture:
-					return css`
-						border: 1px solid ${culture[300]};
-					`;
-				case Pillar.Lifestyle:
-					return css`
-						border: 1px solid ${lifestyle[300]};
-					`;
-				case Pillar.Sport:
-					return css`
-						border: 1px solid ${sport[300]};
-					`;
-				case Pillar.Opinion:
-					return css`
-						border: 1px solid ${opinion[300]};
-					`;
-				case Special.Labs:
-					return css`
-						border: 1px solid ${labs[300]};
-					`;
-				case Special.SpecialReport:
-					return css`
-						border: 1px solid ${specialReport[300]};
-					`;
-			}
 		case 'tertiary':
-			switch (format.theme) {
-				case Pillar.News:
-					return css`
-						border: 1px solid ${news[400]};
-					`;
-				case Pillar.Culture:
-					return css`
-						border: 1px solid ${culture[400]};
-					`;
-				case Pillar.Lifestyle:
-					return css`
-						border: 1px solid ${lifestyle[400]};
-					`;
-				case Pillar.Sport:
-					return css`
-						border: 1px solid ${sport[400]};
-					`;
-				case Pillar.Opinion:
-					return css`
-						border: 1px solid ${opinion[400]};
-					`;
-				case Special.Labs:
-					return css`
-						border: 1px solid ${labs[400]};
-					`;
-				case Special.SpecialReport:
-					return css`
-						border: 1px solid ${specialReport[400]};
-					`;
-			}
+			return css`
+				border: 1px solid currentColor;
+			`;
 		case 'subdued':
 			return css`
 				border: none;
