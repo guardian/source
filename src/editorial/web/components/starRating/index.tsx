@@ -49,7 +49,7 @@ const StarRating = ({
 
 	return (
 		<div
-			css={[determineSize(size), cssOverrides, backgroundImage]}
+			css={[determineSize(size), backgroundImage, cssOverrides]}
 			{...props}
 		></div>
 	);
