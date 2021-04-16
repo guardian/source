@@ -21,14 +21,10 @@ import {
 
 export interface ButtonProps extends CoreButtonProps {
 	format?: Format;
-	priority?: ButtonPriority;
-	children: React.ReactNode;
 }
 
 export interface LinkButtonProps extends CoreLinkButtonProps {
 	format?: Format;
-	priority?: ButtonPriority;
-	children: React.ReactNode;
 }
 
 const defaultFormat = {
