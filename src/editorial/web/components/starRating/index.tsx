@@ -45,13 +45,25 @@ const StarRating = ({
 	const backgroundImage = css`
 		background-image: ${starBackground(rating)};
 		background-repeat: no-repeat;
+		display: block;
+		margin: 0;
+		overflow: hidden;
+
+		figcaption {
+			text-indent: -1000px;
+		}
 	`;
 
 	return (
-		<div
+		<figure
+			role="complementary"
 			css={[determineSize(size), backgroundImage, cssOverrides]}
 			{...props}
-		></div>
+		>
+			<figcaption>
+				{rating} star{rating > 1 && 's'} out of 5
+			</figcaption>
+		</figure>
 	);
 };
 
