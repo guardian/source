@@ -1,6 +1,6 @@
 import { space } from '@guardian/src-foundations';
 import { LineCount } from '.';
-import { svgImageUrl } from './svgStringToImage';
+import { svgBackgroundImage } from '@guardian/src-helpers';
 
 const thickness = 1;
 const gapHorizontal = 1;
@@ -24,4 +24,4 @@ const dashedSvg = (color: string): string => {
 };
 
 export const dashedImage = (color: string): string =>
-	svgImageUrl(dashedSvg(color));
+	svgBackgroundImage(dashedSvg(color));
