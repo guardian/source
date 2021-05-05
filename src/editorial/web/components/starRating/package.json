@@ -1,5 +1,5 @@
 {
-  "name": "@guardian/src-ed-lines",
+  "name": "@guardian/src-ed-star-rating",
   "version": "3.5.0",
   "repository": {
     "type": "git",
@@ -39,6 +39,8 @@
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
     "@guardian/src-foundations": "^3.5.0",
+    "@guardian/src-icons": "^3.5.0",
+    "@guardian/types": "^6.0.0",
     "react": "^17.0.1"
   }
 }
