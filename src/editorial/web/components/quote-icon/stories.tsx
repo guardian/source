@@ -57,7 +57,7 @@ export const Primary = () => (
 				}}
 			/>
 			<span>
-				I look life a buffoon. I feel incredible. And then I vomit
+				I look like a buffoon. I feel incredible. And then I vomit
 			</span>
 		</div>
 		<div>
