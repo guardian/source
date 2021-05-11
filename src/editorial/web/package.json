@@ -25,10 +25,9 @@
     "verbump:preminor": "yarn version --preminor --preid rc --no-git-tag-version",
     "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
   },
-  "dependencies": {
-    "@guardian/types": "^6.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@guardian/types": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^4.1.3"
   },
