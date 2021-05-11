@@ -1,5 +1,5 @@
 import { LineCount } from '.';
-import { svgImageUrl } from './svgStringToImage';
+import { svgBackgroundImage } from '@guardian/src-helpers';
 
 const wavelength = 12;
 const amplitude = 3;
@@ -40,4 +40,4 @@ const squigglySvg = (count: LineCount, color: string): string => {
 };
 
 export const squigglyImage = (count: LineCount = 4, color: string): string =>
-	svgImageUrl(squigglySvg(count, color));
+	svgBackgroundImage(squigglySvg(count, color));
