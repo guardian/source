@@ -38,7 +38,7 @@ const Section = () => (
 
 ### `size`
 
-**`"tiny" | "small" | "medium" | "large"`**
+**`"xsmall" | "small" | "medium" | "large"`**
 
 The size of the quote.
 

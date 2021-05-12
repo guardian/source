@@ -46,10 +46,10 @@ const LargeHeadline = ({ children }: { children: React.ReactNode }) => (
 
 export const Primary = () => (
 	<>
-		<h1>Tiny</h1>
+		<h1>XSmall</h1>
 		<div>
 			<QuoteIcon
-				size="tiny"
+				size="xsmall"
 				format={{
 					display: Display.Standard,
 					design: Design.Article,
@@ -62,7 +62,7 @@ export const Primary = () => (
 		</div>
 		<div>
 			<QuoteIcon
-				size="tiny"
+				size="xsmall"
 				format={{
 					display: Display.Standard,
 					design: Design.Article,
@@ -75,7 +75,7 @@ export const Primary = () => (
 		</div>
 		<div>
 			<QuoteIcon
-				size="tiny"
+				size="xsmall"
 				format={{
 					display: Display.Standard,
 					design: Design.Article,
@@ -88,7 +88,7 @@ export const Primary = () => (
 		</div>
 		<div>
 			<QuoteIcon
-				size="tiny"
+				size="xsmall"
 				format={{
 					display: Display.Standard,
 					design: Design.Article,
@@ -101,7 +101,7 @@ export const Primary = () => (
 		</div>
 		<div>
 			<QuoteIcon
-				size="tiny"
+				size="xsmall"
 				format={{
 					display: Display.Standard,
 					design: Design.Article,
@@ -114,7 +114,7 @@ export const Primary = () => (
 		</div>
 		<div>
 			<QuoteIcon
-				size="tiny"
+				size="xsmall"
 				format={{
 					display: Display.Standard,
 					design: Design.Article,
@@ -128,7 +128,7 @@ export const Primary = () => (
 
 		<div>
 			<QuoteIcon
-				size="tiny"
+				size="xsmall"
 				format={{
 					display: Display.Standard,
 					design: Design.Article,

@@ -66,11 +66,11 @@ const quoteColor = (format: Format) => {
 	}
 };
 
-type HeadlineSize = 'tiny' | 'small' | 'medium' | 'large';
+type HeadlineSize = 'xsmall' | 'small' | 'medium' | 'large';
 
 const sizeStyles = (size: HeadlineSize) => {
 	switch (size) {
-		case 'tiny':
+		case 'xsmall':
 			return css`
 				svg {
 					height: 22px;
