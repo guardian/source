@@ -10,6 +10,29 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 17 May 2021
+
+**`@guardian/src-icons 3.6.0`**
+
+-   :sparkles: [7e683f2](https://github.com/guardian/source/commit/7e683f28d600c325895abd94dcae7d24518df062) Add double chevron icons (thanks @tjmw @abeddow91)
+
+**`@editorial/button 3.6.0`**
+
+-   :sparkles: [fa8e9af](https://github.com/guardian/source/commit/fa8e9afa4244419f5e0389c577041748190f4626) Add Editorial Button (thanks @oliverlloyd)
+
+**`@editorial/lines 3.6.0`**
+
+-   :robot: [7e2c3d4](https://github.com/guardian/source/commit/7e2c3d431f2da0103b9eff43eff3f8f5a8dc460d) Lines optimisations (thanks @maxdvl)
+-   :page_with_curl: [a40bf5c](https://github.com/guardian/source/commit/a40bf5c63b6044f4de6707c48a6ad9205dac467a) Add a Editorial section title to storybook (thanks @oliverlloyd)
+
+**`@editorial/quote-icon 3.6.0`**
+
+-   :sparkles: [83fc04a](https://github.com/guardian/source/commit/83fc04a5f381b391c952245b0866a74bc888a9a7) Add QuoteIcon Component (thanks @oliverlloyd)
+
+**`@editorial/star-rating 3.6.0`**
+
+-   :sparkles: [f8e3b36](https://github.com/guardian/source/commit/f8e3b365371a1519e0185f6c3d9276a8ec9e29b4) Add StarRating Component (thanks @maxdvl)
+
 ## 1 April 2021
 
 **`@editorial/lines 3.5.0`**
