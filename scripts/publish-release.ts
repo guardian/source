@@ -22,6 +22,7 @@ const prioritisedPackages = [
 	brand,
 	`${coreComponents}/user-feedback`,
 	`${coreComponents}/label`,
+	`${coreComponents}/button`,
 	editorial,
 ];
 
