@@ -25,14 +25,18 @@ export const container = css`
 	}
 `;
 
-export const containerBorder = css`
-	border-style: solid;
-	border-color: ${border.secondary};
-	border-width: 0;
+export const containerSideBorders = (color?: string) => css`
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-color: ${color || border.secondary};
+	border-right-color: ${color || border.secondary};
+	border-left-width: 0;
+	border-right-width: 0;
 
 	${from.tablet} {
 		width: ${breakpoints.tablet + 2}px;
-		border-width: 0 1px 0 1px;
+		border-left-width: 1px;
+		border-right-width: 1px;
 	}
 	${from.desktop} {
 		width: ${breakpoints.desktop + 2}px;
@@ -43,4 +47,12 @@ export const containerBorder = css`
 	${from.wide} {
 		width: ${breakpoints.wide + 2}px;
 	}
+`;
+
+export const containerTopBorder = (color: string) => css`
+	border-top: 1px solid ${color};
+`;
+
+export const containerBackground = (color: string) => css`
+	background-color: ${color};
 `;
