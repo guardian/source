@@ -22,7 +22,7 @@
 
 **`@editorial/lines 3.6.0`**
 
--   :robot: [7e2c3d4](https://github.com/guardian/source/commit/7e2c3d431f2da0103b9eff43eff3f8f5a8dc460d) Lines optimisations (thanks @maxdvl)
+-   :robot: [7e2c3d4](https://github.com/guardian/source/commit/7e2c3d431f2da0103b9eff43eff3f8f5a8dc460d) Lines optimisations (thanks @mxdvl)
 -   :page_with_curl: [a40bf5c](https://github.com/guardian/source/commit/a40bf5c63b6044f4de6707c48a6ad9205dac467a) Add a Editorial section title to storybook (thanks @oliverlloyd)
 
 **`@editorial/quote-icon 3.6.0`**
@@ -31,7 +31,7 @@
 
 **`@editorial/star-rating 3.6.0`**
 
--   :sparkles: [f8e3b36](https://github.com/guardian/source/commit/f8e3b365371a1519e0185f6c3d9276a8ec9e29b4) Add StarRating Component (thanks @maxdvl)
+-   :sparkles: [f8e3b36](https://github.com/guardian/source/commit/f8e3b365371a1519e0185f6c3d9276a8ec9e29b4) Add StarRating Component (thanks @mxdvl)
 
 ## 1 April 2021
 
