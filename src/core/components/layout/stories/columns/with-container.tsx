@@ -9,7 +9,7 @@ const contents = css`
 `;
 
 export const containerDefault = () => (
-	<Container sideBorders={true} topBorder={true}>
+	<Container sideBorders={true}>
 		<Columns>
 			<Column>
 				<div css={contents}>1</div>
