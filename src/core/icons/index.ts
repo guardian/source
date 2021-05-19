@@ -1,6 +1,7 @@
 export * from './alert';
 export * from './alert-round';
 export * from './alert-triangle';
+export * from './apple-brand';
 export * from './arrow-down-straight';
 export * from './arrow-left-straight';
 export * from './arrow-right-straight';
@@ -23,6 +24,8 @@ export * from './external';
 export * from './eye';
 export * from './eye-strike';
 export * from './facebook';
+export * from './facebook-brand';
+export * from './google-brand';
 export * from './house';
 export * from './indent';
 export * from './info';
