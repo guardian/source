@@ -17,7 +17,7 @@ const contents = css`
 `;
 
 const collapseBelowTabletWithSpace = (space?: ColumnsSpaceY) => (
-	<Container border={true}>
+	<Container sideBorders={true} topBorder={true}>
 		<Columns collapseBelow="tablet" spaceY={space}>
 			<Column>
 				<div css={contents}>1</div>
