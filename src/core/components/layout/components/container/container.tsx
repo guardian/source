@@ -4,6 +4,7 @@ import {
 	container,
 	containerSideBorders,
 	containerTopBorder,
+	containerBorderColor,
 	containerBackground,
 } from './styles';
 import { Props } from '@guardian/src-helpers';
@@ -38,8 +39,9 @@ const Container = ({
 				css={[
 					container,
 					backgroundColor && containerBackground(backgroundColor),
-					topBorder && containerTopBorder(borderColor),
-					(sideBorders || border) && containerSideBorders(borderColor),
+					topBorder && containerTopBorder,
+					(sideBorders || border) && containerSideBorders,
+					borderColor && containerBorderColor(borderColor),
 				]}
 			>
 				{children}

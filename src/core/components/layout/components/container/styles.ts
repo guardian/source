@@ -25,11 +25,9 @@ export const container = css`
 	}
 `;
 
-export const containerSideBorders = (color?: string) => css`
+export const containerSideBorders = css`
 	border-left-style: solid;
 	border-right-style: solid;
-	border-left-color: ${color || border.secondary};
-	border-right-color: ${color || border.secondary};
 	border-left-width: 0;
 	border-right-width: 0;
 
@@ -49,8 +47,13 @@ export const containerSideBorders = (color?: string) => css`
 	}
 `;
 
-export const containerTopBorder = (color: string) => css`
-	border-top: 1px solid ${color};
+export const containerTopBorder = css`
+	border-top-width: 1px;
+	border-top-style: solid;
+`;
+
+export const containerBorderColor = (color: string) => css`
+	border-color: ${color || border.secondary};
 `;
 
 export const containerBackground = (color: string) => css`
