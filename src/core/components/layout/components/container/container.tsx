@@ -9,7 +9,7 @@ import {
 import { Props } from '@guardian/src-helpers';
 import { border as borderPalette } from '@guardian/src-foundations/palette';
 
-interface Container extends HTMLAttributes<HTMLDivElement>, Props {
+interface Container extends HTMLAttributes<HTMLElement>, Props {
 	border?: boolean; // TODO: Deprecated. Please use `sideBorders` instead
 	sideBorders?: boolean;
 	topBorder?: boolean;
@@ -31,7 +31,8 @@ const Container = ({
 }: Container) => {
 	return (
 		<section
-			css={[backgroundColor && containerBackground(backgroundColor)]}
+			css={[backgroundColor && containerBackground(backgroundColor), cssOverrides]}
+			{...props}
 		>
 			<div
 				css={[
@@ -39,9 +40,7 @@ const Container = ({
 					backgroundColor && containerBackground(backgroundColor),
 					topBorder && containerTopBorder(borderColor),
 					(sideBorders || border) && containerSideBorders(borderColor),
-					cssOverrides,
 				]}
-				{...props}
 			>
 				{children}
 			</div>
