@@ -23,6 +23,7 @@ export const container = css`
 	${from.wide} {
 		width: ${breakpoints.wide}px;
 	}
+	border-color: ${border.secondary};
 `;
 
 export const containerSideBorders = css`
@@ -53,7 +54,7 @@ export const containerTopBorder = css`
 `;
 
 export const containerBorderColor = (color: string) => css`
-	border-color: ${color || border.secondary};
+	border-color: ${color};
 `;
 
 export const containerBackground = (color: string) => css`

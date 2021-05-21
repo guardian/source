@@ -25,7 +25,7 @@ const Container = ({
 	sideBorders = false,
 	topBorder = false,
 	backgroundColor,
-	borderColor = borderPalette.secondary,
+	borderColor,
 	cssOverrides,
 	children,
 	...props
