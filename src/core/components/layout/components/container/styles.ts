@@ -23,16 +23,19 @@ export const container = css`
 	${from.wide} {
 		width: ${breakpoints.wide}px;
 	}
+	border-color: ${border.secondary};
 `;
 
-export const containerBorder = css`
-	border-style: solid;
-	border-color: ${border.secondary};
-	border-width: 0;
+export const containerSideBorders = css`
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-width: 0;
+	border-right-width: 0;
 
 	${from.tablet} {
 		width: ${breakpoints.tablet + 2}px;
-		border-width: 0 1px 0 1px;
+		border-left-width: 1px;
+		border-right-width: 1px;
 	}
 	${from.desktop} {
 		width: ${breakpoints.desktop + 2}px;
@@ -43,4 +46,17 @@ export const containerBorder = css`
 	${from.wide} {
 		width: ${breakpoints.wide + 2}px;
 	}
+`;
+
+export const containerTopBorder = css`
+	border-top-width: 1px;
+	border-top-style: solid;
+`;
+
+export const containerBorderColor = (color: string) => css`
+	border-color: ${color};
+`;
+
+export const containerBackground = (color: string) => css`
+	background-color: ${color};
 `;

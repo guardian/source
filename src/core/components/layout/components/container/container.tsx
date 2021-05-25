@@ -1,27 +1,54 @@
 import { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { container, containerBorder } from './styles';
+import {
+	container,
+	containerSideBorders,
+	containerTopBorder,
+	containerBorderColor,
+	containerBackground,
+} from './styles';
 import { Props } from '@guardian/src-helpers';
 
-interface Container extends HTMLAttributes<HTMLDivElement>, Props {
-	border?: boolean;
+interface Container extends HTMLAttributes<HTMLElement>, Props {
+	border?: boolean; // TODO: Deprecated. Please use `sideBorders` instead
+	sideBorders?: boolean;
+	topBorder?: boolean;
+	backgroundColor?: string;
+	borderColor?: string;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children: ReactNode;
 }
 
 const Container = ({
 	border = false,
+	sideBorders = false,
+	topBorder = false,
+	backgroundColor,
+	borderColor,
 	cssOverrides,
 	children,
 	...props
 }: Container) => {
 	return (
-		<div
-			css={[container, border ? containerBorder : '', cssOverrides]}
+		<section
+			css={[
+				backgroundColor && containerBackground(backgroundColor),
+				cssOverrides,
+			]}
 			{...props}
 		>
-			{children}
-		</div>
+			<div
+				css={[
+					container,
+					backgroundColor && containerBackground(backgroundColor),
+					topBorder && containerTopBorder,
+					(sideBorders || border) && containerSideBorders,
+					borderColor && containerBorderColor(borderColor),
+				]}
+			>
+				{children}
+			</div>
+		</section>
 	);
 };
 const defaultProps = {};
