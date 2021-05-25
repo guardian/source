@@ -1,4 +1,4 @@
-export const SvgAppleBlack = () => {
+export const SvgAppleBrand = () => {
 	return (
 		<svg
 			width="30"

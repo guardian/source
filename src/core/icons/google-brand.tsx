@@ -1,4 +1,4 @@
-export const SvgGoogleColor = () => {
+export const SvgGoogleBrand = () => {
 	return (
 		<svg
 			width="30"

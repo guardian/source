@@ -1,4 +1,4 @@
-export const SvgFacebookColor = () => {
+export const SvgFacebookBrand = () => {
 	return (
 		<svg
 			width="30"
