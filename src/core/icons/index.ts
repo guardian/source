@@ -23,6 +23,7 @@ export * from './external';
 export * from './eye';
 export * from './eye-strike';
 export * from './facebook';
+export * from './gift';
 export * from './house';
 export * from './indent';
 export * from './info';
