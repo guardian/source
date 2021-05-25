@@ -25,6 +25,7 @@ export * from './eye';
 export * from './eye-strike';
 export * from './facebook';
 export * from './facebook-brand';
+export * from './gift';
 export * from './google-brand';
 export * from './house';
 export * from './indent';
