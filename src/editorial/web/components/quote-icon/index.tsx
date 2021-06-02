@@ -66,7 +66,7 @@ const quoteColor = (format: Format) => {
 	}
 };
 
-type HeadlineSize = 'xsmall' | 'small' | 'medium' | 'large';
+export type HeadlineSize = 'xsmall' | 'small' | 'medium' | 'large';
 
 const sizeStyles = (size: HeadlineSize) => {
 	switch (size) {
