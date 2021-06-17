@@ -10,6 +10,22 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 17 June 2021
+
+**`@guardian/src-icons 3.7.0`**
+
+-   :sparkles: [c3fbcc8](https://github.com/guardian/source/commit/c3fbcc88b8251ac2c8b11cf3b203e9a9c7c021d6) Add gift icon svg (thanks @abeddow91)
+-   :sparkles: [8f3d3f9](https://github.com/guardian/source/commit/8f3d3f9a7d7c0973d706713a9bdd779568b0ff45) Add brand colour icons for Google, Facebook and Apple (thanks @oliverlloyd)
+-   :sparkles: [006a974](https://github.com/guardian/source/commit/006a974ed63739502f022eccac8cab7a8ba679e0) Add globe icon
+
+**`@guardian/src-layout 3.7.0`**
+
+-   :sparkles: [ff25b19](https://github.com/guardian/source/commit/ff25b19e4fc1ab632fd86a963fd04fecf27e0fea) Container as a Section (thanks @oliverlloyd)
+
+**`@editorial/quote-icon 3.7.0`**
+
+-   :robot: [a6d73ec](https://github.com/guardian/source/commit/a6d73ecf98e9ee1d92b424db4d2290c3d87aad6a) Export HeadlineSize type for QuoteIcon (thanks @liywjl )
+
 ## 17 May 2021
 
 **`@guardian/src-icons 3.6.0`**
