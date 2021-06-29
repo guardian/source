@@ -19,7 +19,7 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, Props {
 }
 interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	text: string;
-	supporting?: string;
+	supporting?: string | JSX.Element;
 	optional?: boolean;
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];

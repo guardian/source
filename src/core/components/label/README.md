@@ -46,9 +46,9 @@ The label text
 
 ### `supporting`
 
-**`string`**
+**`string | JSX.Element`**
 
-Additional text that appears below the label
+Additional text or component that appears below the label.
 
 ### `optional`
 
