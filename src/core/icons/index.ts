@@ -15,6 +15,7 @@ export * from './chevron-left-single';
 export * from './chevron-right-double';
 export * from './chevron-right-single';
 export * from './chevron-up-single';
+export * from './clock';
 export * from './credit-card';
 export * from './cross';
 export * from './direct-debit';
