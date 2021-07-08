@@ -18,7 +18,7 @@ $ yarn add @guardian/src-foundations
 
 The Foundations package is divided into several submodules.
 
-> 💡 **CommonJS users:** Submodules under `**@guardian/src-foundations**` are exposed as ES Modules. If you require CommonJS modules, [see the FAQs](09-faqs.md) for solutions.
+> 💡 **CommonJS users:** Submodules under `@guardian/src-foundations` are exposed as ES Modules. If you require CommonJS modules, [see the FAQs](09-faqs.md) for solutions.
 
 ### Colour
 
@@ -38,7 +38,7 @@ const headline = css`
 
 The palette comprises **colour tokens** and **global colours**.
 
-[Colour tokens](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb) are organised by the context in which they may be used (e.g. `**text.primary**`). Where possible, prefer using colour tokens.
+[Colour tokens](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb) are organised by the context in which they may be used (e.g. `text.primary`). Where possible, prefer using colour tokens.
 
 [Global colours](https://theguardian.design/2a1e5182b/p/492a30-light-palette) do not specify a context, and should be used only if an appropriate colour token is not available.
 

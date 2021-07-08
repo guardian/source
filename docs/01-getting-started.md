@@ -52,9 +52,9 @@ For full details, see the [Components docs](03-components.md).
 
 Foundations and components are independently installable. However, it is important to try to keep the version numbers consistent between all Source packages.
 
-For instance, `**@guardian/src-foundations@2.7.1**` and `**@guardian/src-button@2.8.0**` are **not guaranteed to be compatible**.
+For instance, `@guardian/src-foundations@2.7.1` and `@guardian/src-button@2.8.0` are **not guaranteed to be compatible**.
 
-In this case, we would advise upgrading `**@guardian/src-foundations**` to version 2.8.0.
+In this case, we would advise upgrading `@guardian/src-foundations` to version 2.8.0.
 
 ### Upgrading all Source packages
 
@@ -64,9 +64,9 @@ It can be a chore to manually upgrade a whole bunch of Source packages to the la
 $ npx npm-check-updates "/^@guardian/src-.*\$/" -u --target greatest
 ```
 
-You can then run `**yarn**`  or `**npm install**`  to install these updates into your `**node_modules**` folder.
+You can then run `yarn`  or `npm install`  to install these updates into your `node_modules` folder.
 
-If you find yourself doing this often, you can install npm-check-updates locally and add a script to your `**package.json**` that does this. For example:
+If you find yourself doing this often, you can install npm-check-updates locally and add a script to your `package.json` that does this. For example:
 
 ```json
 {
