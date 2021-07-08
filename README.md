@@ -1,6 +1,6 @@
 <img src="assets/logo.png" height="320" width="620" >
 
-> A component library for the Guardian design system.
+> A component library for the Guardian's Design System.
 
 ## Components ⚛️
 
@@ -20,9 +20,9 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 
 ## Using the Design System 🎨
 
-These components make using the design system easier.
+These components make using the Design System easier.
 
-To understand how the design system _works_, see the [Source Design System](https://theguardian.design) documentation.
+To understand how the Design System _works_, see the [Design System documentation](https://theguardian.design).
 
 ## Contributing 💝
 

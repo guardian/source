@@ -56,7 +56,7 @@ const spaceAfter = css`
 // margin-bottom: 12px;
 ```
 
-Visit the [space overview](https://theguardian.design/2a1e5182b/p/449bd5) to learn how to use space appropriately.
+See the Design System documentation's [space overview](https://theguardian.design/2a1e5182b/p/449bd5) to learn how to use space appropriately.
 
 ### Size
 
@@ -74,7 +74,7 @@ const checkbox = css`
 // height: 24px;
 ```
 
-Visit [size](https://www.theguardian.design/2a1e5182b/p/38d9a9-overview) to learn how to use our size units appropriately.
+See the Design System documentation's [size section](https://www.theguardian.design/2a1e5182b/p/38d9a9-overview) to learn how to use our size units appropriately.
 
 ### Typography
 
@@ -91,7 +91,7 @@ const h1 = css`
 // font-size: 2.13rem;
 ```
 
-Visit [typography](https://theguardian.design/2a1e5182b/p/930d69/b/78d0d9) to learn about our fonts, sizing scales and the [typography API](https://theguardian.design/2a1e5182b/p/930d69/b/06df96).
+See the Design System documentation's [typography section](https://theguardian.design/2a1e5182b/p/930d69/b/78d0d9) to learn about our fonts, sizing scales and the [typography API](https://theguardian.design/2a1e5182b/p/930d69/b/06df96).
 
 ### Media queries
 

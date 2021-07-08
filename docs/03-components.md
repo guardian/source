@@ -10,7 +10,7 @@
 
 Components are individually installable as JavaScript packages via NPM or Yarn. Each component package exposes its React components, themes and TypeScript types.
 
-For detailed instructions on specific components, check out the [components overview](https://theguardian.design/2a1e5182b/p/77ee17-overview).
+For detailed instructions on specific components, check out the [components overview in the Design System documentation](https://theguardian.design/2a1e5182b/p/77ee17-overview).
 
 Alternatively you can visit the folder for the component under [`src/core/components`](../src/core/components).
 
