@@ -4,7 +4,7 @@
 
 ## Requirements
 
-`react`, `@emotion/core` and `@guardian/src-foundations` are `peerDependencies` of Source components. You must install all of these packages into your application to use Source components.
+`react`, `@emotion/react` and `@guardian/src-foundations` are `peerDependencies` of Source components. You must install all of these packages into your application to use Source components.
 
 ## Introduction
 
@@ -37,4 +37,3 @@ const Form = () => (
     </form>
 );
 ```
-
