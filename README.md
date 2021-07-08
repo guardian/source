@@ -1,6 +1,6 @@
 <img src="assets/logo.png" height="320" width="620" >
 
-> A component library for the Guardian's Design System.
+> A component library for [the Guardian's Design System](https://theguardian.design).
 
 ## Components ⚛️
 
