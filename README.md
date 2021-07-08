@@ -1,30 +1,34 @@
-# Source
+<img src="assets/logo.png" height="320" width="620" >
 
-A shared components library for Guardian Digital. Uses the Guardian's [Source Design System](https://theguardian.design).
+> A component library for the Guardian design system.
 
-## Usage
+## Components ⚛️
 
-Check out our [Getting Started guide](docs/01-getting-started.md).
+See [the Source storybook](https://guardian.github.io/source) for examples of available components.
 
-## Contributing
+## Docs 📖
 
-We welcome contributions to the Source Design System! Before you begin, please read our
+-   [Getting started](docs/01-getting-started.md)
+-   [Foundations](docs/02-foundations.md)
+-   [Components](docs/03-components.md)
+-   [Using Emotion](docs/04-using-emotion.md)
+-   [Theming](docs/05-theming.md)
+-   [Accessibility](docs/06-accessibility.md)
+-   [Overriding styles](docs/07-overriding-styles.md)
+-   [Contributing](docs/08-contributing.md)
+-   [FAQs](docs/09-faqs.md)
+
+## Using the Design System 🎨
+
+These components make using the design system easier.
+
+To understand how the design system _works_, see the [Source Design System](https://theguardian.design) documentation.
+
+## Contributing 💝
+
+We welcome contributions to the Source component library!
+
+Before you begin, please read our
 [Contributing Guidelines](docs/08-contributing.md)
 
 We also have a chat room (internal) at [Digital/Design system 👩‍🎨](https://chat.google.com/room/AAAAGDIhXQs).
-
-### Install
-
-```shell
-$ yarn
-```
-
-### Develop
-
-We develop components using Storybook:
-
-```shell
-$ yarn storybook
-```
-
-On merge, our Storybook instance is automatically deployed to [GitHub pages](https://guardian.github.io/source).
