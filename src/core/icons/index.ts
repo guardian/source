@@ -35,6 +35,7 @@ export * from './info';
 export * from './linked-in';
 export * from './messenger';
 export * from './minus';
+export * from './offline-cloud';
 export * from './person';
 export * from './paypal';
 export * from './play';
