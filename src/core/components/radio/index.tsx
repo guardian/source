@@ -33,7 +33,7 @@ interface RadioGroupProps extends Props {
 	name: string;
 	label?: string;
 	hideLabel?: boolean;
-	supporting?: string;
+	supporting?: string | JSX.Element;
 	orientation?: Orientation;
 	error?: string;
 	children: JSX.Element | JSX.Element[];
