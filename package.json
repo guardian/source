@@ -19,6 +19,7 @@
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
     "lint:styles": "stylelint src/core/**/styles.ts",
+    "prepare": "husky install",
     "publish:release": "ts-node ./scripts/publish-release",
     "release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn publish:release",
     "release:minor:all": "yarn build:all && yarn validate && yarn verbump:minor:all && yarn publish:release",
@@ -45,11 +46,6 @@
     "verbump:prerelease:all": "ts-node ./scripts/verbump-prerelease-all && yarn verbump:deps:all",
     "watch:foundations": "cd src/core/foundations && yarn watch",
     "watch:icons": "cd src/core/icons && yarn watch"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "package.json": "sort-package-json"
@@ -84,7 +80,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
     "execa": "^5.0.0",
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "jest": "^26.6.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
