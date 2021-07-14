@@ -82,6 +82,7 @@ const colors = {
 		'#3E3323', //culture-100
 		'#574835', //culture-200
 		'#6B5840', //culture-300
+		'#866D50', //culture-350
 		'#A1845C', //culture-400
 		'#EACCA0', //culture-500
 		'#E7D4B9', //culture-600
