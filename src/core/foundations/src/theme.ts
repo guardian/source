@@ -55,7 +55,7 @@ const colors = {
 	oranges: [
 		'#672005', //opinion-100
 		'#8D2700', //opinion-200
-		'#CB4700', //opinion-300
+		'#C74600', //opinion-300
 		'#E05E00', //opinion-400
 		'#FF7F0F', //opinion-500
 		'#FF9941', //opinion-550
