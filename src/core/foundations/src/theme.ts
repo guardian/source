@@ -66,7 +66,7 @@ const colors = {
 		'#003C60', //sport-100
 		'#004E7C', //sport-200
 		'#005689', //sport-300
-		'#0084C6', //sport-400
+		'#0077B6', //sport-400
 		'#00B2FF', //sport-500
 		'#90DCFF', //sport-600
 		'#F1F8FC', //sport-800
