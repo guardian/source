@@ -55,7 +55,7 @@ const colors = {
 	oranges: [
 		'#672005', //opinion-100
 		'#8D2700', //opinion-200
-		'#CB4700', //opinion-300
+		'#C74600', //opinion-300
 		'#E05E00', //opinion-400
 		'#FF7F0F', //opinion-500
 		'#FF9941', //opinion-550
@@ -66,7 +66,7 @@ const colors = {
 		'#003C60', //sport-100
 		'#004E7C', //sport-200
 		'#005689', //sport-300
-		'#0084C6', //sport-400
+		'#0077B6', //sport-400
 		'#00B2FF', //sport-500
 		'#90DCFF', //sport-600
 		'#F1F8FC', //sport-800
@@ -82,6 +82,7 @@ const colors = {
 		'#3E3323', //culture-100
 		'#574835', //culture-200
 		'#6B5840', //culture-300
+		'#866D50', //culture-350
 		'#A1845C', //culture-400
 		'#EACCA0', //culture-500
 		'#E7D4B9', //culture-600
