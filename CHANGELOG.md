@@ -10,6 +10,25 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 16 July 2021
+
+**`@guardian/src-foundations 3.8.0`**
+
+-   :nail_care: [0566752](https://github.com/guardian/source/commit/0566752b3ce5851bc1a907db017e74819fcdcec1) Update culture, sport and opinion colours
+
+**`@guardian/src-icons 3.8.0`**
+
+-   :sparkles: [0d333a7](https://github.com/guardian/source/commit/0d333a7beebb53871b7ba301224e5047d1f94fe3) Add clock icon (thanks @tjmw)
+-   :sparkles: [2f0d480](https://github.com/guardian/source/commit/2f0d480b3f81b9227c4e60f760d726c4d34f644c) Add offline SVG icon (thanks @joecowton1)
+
+**`@guardian/src-label 3.8.0`**
+
+-   :sparkles: [a01e7b8](https://github.com/guardian/source/commit/a01e7b8931a10cd515edc9fc606a27c31ee7619a) Add media to supporting prop on legend (thanks @joecowton1)
+
+**`@guardian/src-radio 3.8.0`**
+
+-   :sparkles: [949264b](https://github.com/guardian/source/commit/949264b8c3293b7abf24b6302418dcb91dbcac95) Add media to supporting prop (thanks @joecowton1)
+
 ## 17 June 2021
 
 **`@guardian/src-icons 3.7.0`**
