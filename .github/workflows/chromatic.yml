@@ -1,14 +1,9 @@
 name: Chromatic
 on:
-  workflow_run:
-    workflows: ['Dependabot PR Check']
-    types:
-      - completed
   push:
     branches-ignore:
       - 'gh-pages'
       - '[0-9]+.[0-9]+'
-      - 'dependabot/**'
 jobs:
   test:
     runs-on: ubuntu-latest
