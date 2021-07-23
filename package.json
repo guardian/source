@@ -26,7 +26,7 @@
     "release:patch:all": "yarn build:all && yarn validate && yarn verbump:patch:all && yarn publish:release",
     "release:prerelease-bump:all": "yarn validate && yarn verbump:prerelease:all && yarn publish:release",
     "release:prerelease:all": "yarn validate && yarn publish:release",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -p 6006",
     "tag:beta:all": "ts-node ./scripts/tag-beta-all",
     "test": "jest",
     "tsc": "tsc",
