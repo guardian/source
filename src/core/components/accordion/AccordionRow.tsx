@@ -22,6 +22,17 @@ const visuallyHidden = css`
 `;
 
 export interface AccordionRowProps extends Props {
+	/**
+	 * A line of text to summarise the information that lies within the expanded state. Appears in the collapsed state, as well as prominently at the top of the expanded state.
+	 */
+	label: string;
+	/**
+	 * A callback function called when the component is opened or closed. Receives the click event as an argument.
+	 */
+	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+	/**
+	 * @ignore passed down by the parent <Accordion />
+	 */
 	hideToggleLabel?: boolean;
 	children: ReactNode;
 }
