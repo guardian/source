@@ -6,7 +6,7 @@
     "emitDeclarationOnly": true
   },
   "include": [".", "../../foundations/types/themes.d.ts"],
-  "exclude": ["dist", "stories.tsx", "stories/**/*"],
+  "exclude": ["dist", "index.stories.tsx", "stories/**/*"],
   "references": [
     {
       "path": "../../foundations"
