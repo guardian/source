@@ -24,6 +24,7 @@ export const Accordion = ({
 	cssOverrides,
 	...props
 }: AccordionProps) => {
+	// AUDIT https://www.sarasoueidan.com/blog/accordion-markup/
 	return (
 		<div
 			css={(theme) => [accordion(theme.accordion && theme), cssOverrides]}
