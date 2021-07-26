@@ -4,7 +4,9 @@ import { accordion } from './styles';
 
 export interface AccordionProps extends Props {
 	/**
-	 * Determine whether to display the "show" and "hide" labels that toggle the collapsing and expanding of the menu. When set to `true`, the label will no longer appear. It may be useful to toggle this flag when there is limited space.
+	 * Determine whether to display the "show" and "hide" labels that toggle the
+	 * collapsing and expanding of the menu. When set to `true`, the label will no
+	 * longer appear. It may be useful to toggle this flag when there is limited space.
 	 *
 	 * _Note: the up or down chevron icon always appears._
 	 */
@@ -17,6 +19,18 @@ export interface AccordionProps extends Props {
  * [Design System](https://theguardian.design/2a1e5182b/p/38c5aa-accordion/b/92b71e) •
  * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/accordion) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-accordion)
+ *
+ * ### Example
+ * ```js
+ * import { Accordion, AccordionRow } from '@guardian/src-accordion';
+ *
+ * const MyAccordion = () => (
+ *     <Accordion hideToggleLabel={true}>
+ *         <AccordionRow label=""></AccordionRow>
+ *         <AccordionRow label=""></AccordionRow>
+ *     </Accordion>
+ * )
+ * ```
  */
 export const Accordion = ({
 	hideToggleLabel = false,
