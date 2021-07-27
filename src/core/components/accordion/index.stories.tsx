@@ -1,7 +1,7 @@
 import { Accordion, AccordionProps, AccordionRow } from './index';
 
 export default {
-	title: 'Accordion',
+	title: 'Source/src-accordion/Accordion',
 	component: Accordion,
 	subcomponents: { AccordionRow },
 };
@@ -27,4 +27,4 @@ Default.args = {
 	hideToggleLabel: false,
 };
 
-Default.story = { name: 'default' };
+Default.story = { name: 'Accordion' };
