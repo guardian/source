@@ -26,14 +26,14 @@ Demo.args = {
 
 export const WithCTALabels = (args: AccordionProps) => (
 	<Accordion {...args} hideToggleLabel={false}>
-		<AccordionRow label="" />
-		<AccordionRow label="" />
+		<AccordionRow label="Lorem ipsum dolor sit amet" />
+		<AccordionRow label="Consectetur adipiscing elit" />
 	</Accordion>
 );
 
 export const WithoutCTALabels = (args: AccordionProps) => (
 	<Accordion {...args} hideToggleLabel={true}>
-		<AccordionRow label="" />
-		<AccordionRow label="" />
+		<AccordionRow label="Lorem ipsum dolor sit amet" />
+		<AccordionRow label="Consectetur adipiscing elit" />
 	</Accordion>
 );
