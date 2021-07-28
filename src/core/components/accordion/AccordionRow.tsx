@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect, HTMLAttributes } from 'react';
 import { Props } from '@guardian/src-helpers';
 import { SvgChevronDownSingle } from '@guardian/src-icons';
 import {
@@ -21,7 +21,9 @@ const visuallyHidden = css`
 	${_visuallyHidden}
 `;
 
-export interface AccordionRowProps extends Props {
+export interface AccordionRowProps
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'onClick'>,
+		Props {
 	/**
 	 * A line of text to summarise the information that lies within the expanded state.
 	 * Appears in the collapsed state, as well as prominently at the top of the expanded state.
@@ -36,7 +38,6 @@ export interface AccordionRowProps extends Props {
 	 * @ignore passed down by the parent <Accordion />
 	 */
 	hideToggleLabel?: boolean;
-	children: ReactNode;
 }
 
 export const AccordionRow = ({
