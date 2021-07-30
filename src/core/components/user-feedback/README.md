@@ -10,21 +10,9 @@ $ yarn add @guardian/src-user-feedback
 
 ## Usage
 
-```tsx
-import { InlineError, InlineSuccess } from "@guardian/src-user-feedback"
+### API
 
-const Form = () => (
-    <form>
-        <label>First name</label>
-        <InlineError>Please enter your name</InlineError>
-        <input type="text">
-
-        <label>Voucher code</label>
-        <InlineSuccess>Your voucher code is valid</InlineSuccess>
-        <input type="text">
-    </form>
-)
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-user-feedback-inlineerror--demo)
 
 ## Supported themes
 
