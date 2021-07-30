@@ -64,7 +64,7 @@ export interface TextInputProps
 	 */
 	success?: string;
 	/**
-	 * The contents of the text input field. This is necessary when using the controlled approach to form state management.
+	 * The contents of the text input field. This is necessary when using the [controlled approach](https://reactjs.org/docs/forms.html#controlled-components) to form state management.
 	 *
 	 * _Note: if you pass the `value` prop, you MUST also pass an `onChange` handler, or the field will be rendered as read-only_
 	 */
