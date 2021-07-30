@@ -59,7 +59,7 @@ export const DefaultLight = (args: TextInputProps) => {
 	);
 };
 
-export const optionalLight = (args: TextInputProps) => (
+export const OptionalLight = (args: TextInputProps) => (
 	<ThemeProvider theme={textInputDefault}>
 		<div css={constrainedWith}>
 			<TextInput {...args} label="First name" optional={true} />
@@ -67,7 +67,7 @@ export const optionalLight = (args: TextInputProps) => (
 	</ThemeProvider>
 );
 
-export const hideLabel = (args: TextInputProps) => {
+export const HideLabel = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
@@ -84,7 +84,7 @@ export const hideLabel = (args: TextInputProps) => {
 	);
 };
 
-export const supportingTextLight = (args: TextInputProps) => {
+export const SupportingTextLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
@@ -105,7 +105,7 @@ const spacer = css`
 	margin-bottom: ${space[3]}px;
 `;
 
-export const widthsLight = (args: TextInputProps) => {
+export const WidthsLight = (args: TextInputProps) => {
 	const [state, setState] = useState({ wide: '', medium: '', short: '' });
 	return (
 		<ThemeProvider theme={textInputDefault}>
@@ -158,7 +158,7 @@ export const widthsLight = (args: TextInputProps) => {
 	);
 };
 
-export const errorWithMessageLight = (args: TextInputProps) => {
+export const ErrorWithMessageLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
@@ -175,7 +175,7 @@ export const errorWithMessageLight = (args: TextInputProps) => {
 	);
 };
 
-export const successWithMessageLight = (args: TextInputProps) => {
+export const SuccessWithMessageLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
@@ -192,7 +192,7 @@ export const successWithMessageLight = (args: TextInputProps) => {
 	);
 };
 
-export const constraintLight = (args: TextInputProps) => {
+export const ConstraintLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 
 	return (
@@ -216,7 +216,7 @@ const message = css`
 	${textSans.medium()}
 `;
 
-export const controlled = (args: TextInputProps) => {
+export const ControlledExample = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 
 	return (
