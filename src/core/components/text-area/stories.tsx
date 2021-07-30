@@ -2,102 +2,92 @@ import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { textSans } from '@guardian/src-foundations/typography';
 
-import { TextArea } from './index';
+import { TextArea, TextAreaProps } from './index';
 
 const wrapperStyles = css`
 	width: 400px;
 `;
 
 export default {
-	title: 'TextArea',
+	title: 'Source/src-text-area/TextArea',
+	component: TextArea,
 };
 
-const defaultLight = () => (
+export const Demo = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea label="Comments" />
+		<TextArea {...args} />
 	</div>
 );
 
-defaultLight.story = {
-	name: `default light`,
+Demo.args = {
+	label: 'Comments',
+	optional: false,
+	hideLabel: false,
+	supporting: '',
+	error: '',
+	rows: 3,
 };
 
-const withRows = () => (
+export const DefaultLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea label="Comments" rows={10} />
+		<TextArea {...args} label="Comments" />
 	</div>
 );
 
-withRows.story = {
-	name: `with rows`,
-};
-
-const optionalLight = () => (
+export const WithRows = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea label="Comments" optional={true} />
+		<TextArea {...args} label="Comments" rows={10} />
 	</div>
 );
 
-optionalLight.story = {
-	name: `optional light`,
-};
-
-const hideLabelLight = () => (
+export const OptionalLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea label="Comments" hideLabel={true} />
+		<TextArea {...args} label="Comments" optional={true} />
 	</div>
 );
 
-hideLabelLight.story = {
-	name: `visually hide label light`,
-};
+export const VisuallyHideLabelLight = (args: TextAreaProps) => (
+	<div css={wrapperStyles}>
+		<TextArea {...args} label="Comments" hideLabel={true} />
+	</div>
+);
 
-const supportingTextLight = () => (
+export const SupportingTextLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
 		<TextArea
+			{...args}
 			label="Comments"
 			supporting="Please keep comments respectful and abide by the community guidelines."
 		/>
 	</div>
 );
 
-supportingTextLight.story = {
-	name: `supporting text light`,
-};
-
-const errorWithMessageLight = () => (
+export const ErrorWithMessageLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea label="Comments" error="Please tell us your views" />
+		<TextArea
+			{...args}
+			label="Comments"
+			error="Please tell us your views"
+		/>
 	</div>
 );
 
-errorWithMessageLight.story = {
-	name: `error with message light`,
-};
-
-const withMaxLength = () => (
+export const WithMaxLength = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea label="Comments" maxLength={10} />
+		<TextArea {...args} label="Comments" maxLength={10} />
 	</div>
 );
-
-withMaxLength.story = {
-	name: 'with maxlength',
-};
-
-errorWithMessageLight.story = {
-	name: `error with message light`,
-};
 
 const wordCount = css`
 	${textSans.medium()}
 `;
 
-const controlled = () => {
+export const ControlledExample = (args: TextAreaProps) => {
 	const [state, setState] = useState('');
 	return (
 		<div css={wrapperStyles}>
 			<TextArea
+				{...args}
 				label="Comments"
 				supporting="Please keep comments respectful and abide by the community guidelines."
 				value={state}
@@ -109,19 +99,4 @@ const controlled = () => {
 			</span>
 		</div>
 	);
-};
-
-controlled.story = {
-	name: 'controlled example',
-};
-
-export {
-	defaultLight,
-	withRows,
-	optionalLight,
-	hideLabelLight,
-	supportingTextLight,
-	errorWithMessageLight,
-	withMaxLength,
-	controlled,
 };

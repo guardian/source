@@ -1,5 +1,4 @@
-import React, { InputHTMLAttributes } from 'react';
-import { SerializedStyles } from '@emotion/react';
+import { InputHTMLAttributes } from 'react';
 import { InlineError } from '@guardian/src-user-feedback';
 import { Label } from '@guardian/src-label';
 import { widthFluid, textArea, errorInput } from './styles';
@@ -10,26 +9,55 @@ import {
 } from '@guardian/src-foundations/accessibility';
 import { Props } from '@guardian/src-helpers';
 
-interface TextAreaProps
+export interface TextAreaProps
 	extends InputHTMLAttributes<HTMLTextAreaElement>,
 		Props {
 	id?: string;
+	/**
+	 * The contents of the text area. This is necessary when using the [controlled approach](https://reactjs.org/docs/forms.html#controlled-components) to form state management.
+	 *
+	 * _Note: if you pass the `value` prop, you MUST also pass an `onChange` handler, or the field will be rendered as read-only._
+	 */
 	value?: string;
+	/**
+	 * Appears above the text area
+	 */
 	label: string;
+	/**
+	 * Adds the word "Optional" after the label. Non-optional fields are rendered with the `required` attribute.
+	 */
 	optional?: boolean;
+	/**
+	 * Visually hides the label and the "Optional" text set by the `optional` flag.
+	 */
 	hideLabel?: boolean;
+	/**
+	 * Additional text that appears below the label
+	 */
 	supporting?: string;
+	/**
+	 * Whether error styling should apply to this text area. The string appears as an inline error message.
+	 */
 	error?: string;
+	/**
+	 * Specify the number of rows the component should display by default.
+	 */
 	rows?: number;
-	cssOverrides?: SerializedStyles | SerializedStyles[];
-	className?: string;
 }
 
-const TextArea = ({
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-text-area-text-area--demo) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/567182-text-area/b/42916b) •
+ * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/text-area) •
+ * [NPM](https://www.npmjs.com/package/@guardian/src-text-area)
+ *
+ * The following themes are supported: `light`
+ */
+export const TextArea = ({
 	id,
 	label: labelText,
-	optional,
-	hideLabel,
+	optional = false,
+	hideLabel = false,
 	supporting,
 	error,
 	cssOverrides,
@@ -84,5 +112,3 @@ const TextArea = ({
 		</Label>
 	);
 };
-
-export { TextArea };
