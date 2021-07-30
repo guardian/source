@@ -1,3 +1,10 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/08 Contributing"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
 # Contributing
 
 > How to contribute to the Source Design System for developers.
@@ -29,7 +36,8 @@ $ yarn storybook
 -   Prefer composing styles using the `css` tag and the `css` prop.
 -   Avoid using `styled` to create or extend components.
     -   Every styled component rendered creates an additional `Context.Consumer` component, which can lead to [performance issues](https://calendar.perfplanet.com/2019/the-unseen-performance-costs-of-css-in-js-in-react-apps/).
--   <em>Avoid dynamic styles</em>. Prefer using conditional logic in the component to compose numerous small chunks of CSS using the `css` prop.
+-   <em>Avoid dynamic styles</em>. Prefer using conditional logic in the
+    component to compose numerous small chunks of CSS using the `css` prop.
 -   One example of unavoidable dynamic styles is Theming.
 
 ### Themes

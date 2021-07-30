@@ -1,3 +1,10 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/02 Foundations"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
 # Foundations
 
 > The atoms from which all our visual design is built.
@@ -28,8 +35,8 @@ Colours are available on the palette module.
 import { text, background } from '@guardian/src-foundations/palette';
 
 const headline = css`
-    color: ${text.primary};
-    background: ${background.primary};
+	color: ${text.primary};
+	background: ${background.primary};
 `;
 
 // color: #121212;
@@ -50,7 +57,7 @@ Our space system is structured as increments of 4px.
 import { space } from '@guardian/src-foundations';
 
 const spaceAfter = css`
-    margin-bottom: ${space[3]}px;
+	margin-bottom: ${space[3]}px;
 `;
 
 // margin-bottom: 12px;
@@ -66,8 +73,8 @@ Size units may be used to set the height, max-height, width or max-width of a co
 import { width, height } from '@guardian/src-foundations/size';
 
 const checkbox = css`
-    width: ${width.inputXsmall}px;
-    height: ${height.inputXsmall}px;
+	width: ${width.inputXsmall}px;
+	height: ${height.inputXsmall}px;
 `;
 
 // width: 24px;
@@ -84,7 +91,7 @@ Each of our custom fonts has an associated import, exposing methods that return 
 import { headline } from '@guardian/src-foundations/typography';
 
 const h1 = css`
-    ${headline.medium()};
+	${headline.medium()};
 `;
 
 // font-family: GH Guardian Headline, Georgia, serif;

@@ -1,3 +1,10 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/09 FAQs"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
 # FAQs
 
 ### My build or tests fail with `SyntaxError: Unexpected token export`
@@ -12,7 +19,7 @@ If you experience the problem when running tests with Jest, you can tell babel-j
 
 ```json
 {
-    "transformIgnorePatterns": ["node_modules/(?!@guardian/src-foundations/)"]
+	"transformIgnorePatterns": ["node_modules/(?!@guardian/src-foundations/)"]
 }
 ```
 
@@ -20,9 +27,9 @@ Alternatively, you can add a `moduleNameMapper` to map ES modules to CJS modules
 
 ```json
 {
-    "moduleNameMapper": {
-        "^@guardian/src-foundations/(.*)(?<!cjs)$": "@guardian/src-foundations/$1/cjs"
-    }
+	"moduleNameMapper": {
+		"^@guardian/src-foundations/(.*)(?<!cjs)$": "@guardian/src-foundations/$1/cjs"
+	}
 }
 ```
 
