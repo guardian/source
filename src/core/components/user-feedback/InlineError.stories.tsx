@@ -18,14 +18,13 @@ export const Demo = (args: UserFeedbackProps) => (
 	</ThemeProvider>
 );
 
-export const errorLight = (args: UserFeedbackProps) => (
+export const InlineErrorDefault = (args: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackDefault}>
 		<InlineError {...args}>Please enter your name</InlineError>
 	</ThemeProvider>
 );
 
-errorLight.story = {
-	name: `Inline error default`,
+InlineErrorDefault.story = {
 	parameters: {
 		backgrounds: {
 			default: 'default',
@@ -34,14 +33,13 @@ errorLight.story = {
 	},
 };
 
-export const errorBlue = (args: UserFeedbackProps) => (
+export const InlineErrorBrand = (args: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackBrand}>
 		<InlineError {...args}>Please enter your name</InlineError>
 	</ThemeProvider>
 );
 
-errorBlue.story = {
-	name: `Inline error brand`,
+InlineErrorBrand.story = {
 	parameters: {
 		backgrounds: {
 			default: 'brand',
@@ -50,14 +48,13 @@ errorBlue.story = {
 	},
 };
 
-export const errorLongLightMobile = (args: UserFeedbackProps) => (
+export const LongInlineErrorLightMobile = (args: UserFeedbackProps) => (
 	<InlineError {...args}>
 		Please pick a date in the future, but not a leap year
 	</InlineError>
 );
 
-errorLongLightMobile.story = {
-	name: `Long inline error light mobile`,
+LongInlineErrorLightMobile.story = {
 	parameters: {
 		viewport: { defaultViewport: 'mobileMedium' },
 	},
