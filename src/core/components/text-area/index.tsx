@@ -36,7 +36,7 @@ export interface TextAreaProps
 	 */
 	supporting?: string;
 	/**
-	 * Whether error styling should apply to this text area. The string appears as an inline error message.
+	 * Appears as an inline error message.
 	 */
 	error?: string;
 	/**
