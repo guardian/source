@@ -14,6 +14,10 @@ $ yarn add @guardian/src-text-input
 
 See [storybook](https://guardian.github.io/source/?path=/docs/source-src-text-area-text-area--demo)
 
+### How to use
+
+For context and visual guides relating to usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/097455-text-input-field/b/050445).
+
 ## Supported themes
 
 ### Standard
