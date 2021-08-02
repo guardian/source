@@ -55,11 +55,11 @@ export interface TextInputProps
 	 */
 	width?: Width;
 	/**
-	 * Whether error styling should apply to this text input. The string appears as an inline error message.
+	 * Appears as an inline error message.
 	 */
 	error?: string;
 	/**
-	 * Whether success styling should apply to this text input. The string appears as an inline success message.
+	 * Appears as an inline success message.
 	 * This prop should not have a value set at the same time as the error prop. In the event that both are set, errors take precedence.
 	 */
 	success?: string;
