@@ -5,9 +5,11 @@ import { space } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
 import { from } from '@guardian/src-foundations/mq';
 import { TextInput, textInputDefault } from './index';
+import type { TextInputProps } from './index';
 
 export default {
-	title: 'TextInput',
+	title: 'Source/src-text-input/TextInput',
+	component: TextInput,
 };
 
 const constrainedWith = css`
@@ -17,12 +19,37 @@ const constrainedWith = css`
 	}
 `;
 
-const defaultLight = () => {
+export const Demo = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
+					{...args}
+					value={state}
+					onChange={(event) => setState(event.target.value)}
+				/>
+			</div>
+		</ThemeProvider>
+	);
+};
+
+Demo.args = {
+	label: 'First name',
+	optional: false,
+	hideLabel: false,
+	supporting: '',
+	error: '',
+	success: '',
+};
+
+export const DefaultLight = (args: TextInputProps) => {
+	const [state, setState] = useState('');
+	return (
+		<ThemeProvider theme={textInputDefault}>
+			<div css={constrainedWith}>
+				<TextInput
+					{...args}
 					label="First name"
 					value={state}
 					onChange={(event) => setState(event.target.value)}
@@ -32,28 +59,21 @@ const defaultLight = () => {
 	);
 };
 
-defaultLight.story = {
-	name: `default light`,
-};
-
-const optionalLight = () => (
+export const OptionalLight = (args: TextInputProps) => (
 	<ThemeProvider theme={textInputDefault}>
 		<div css={constrainedWith}>
-			<TextInput label="First name" optional={true} />
+			<TextInput {...args} label="First name" optional={true} />
 		</div>
 	</ThemeProvider>
 );
 
-optionalLight.story = {
-	name: `optional light`,
-};
-
-const hideLabel = () => {
+export const HideLabel = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
+					{...args}
 					label="First name"
 					hideLabel={true}
 					value={state}
@@ -64,16 +84,13 @@ const hideLabel = () => {
 	);
 };
 
-hideLabel.story = {
-	name: `visually hide label light`,
-};
-
-const supportingTextLight = () => {
+export const SupportingTextLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
+					{...args}
 					label="Email"
 					supporting="alex@example.com"
 					value={state}
@@ -83,19 +100,18 @@ const supportingTextLight = () => {
 		</ThemeProvider>
 	);
 };
-supportingTextLight.story = {
-	name: `supporting text light`,
-};
 
 const spacer = css`
 	margin-bottom: ${space[3]}px;
 `;
-const widthsLight = () => {
+
+export const WidthsLight = (args: TextInputProps) => {
 	const [state, setState] = useState({ wide: '', medium: '', short: '' });
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={spacer}>
 				<TextInput
+					{...args}
 					label="First name"
 					width={30}
 					value={state.wide}
@@ -110,6 +126,7 @@ const widthsLight = () => {
 			</div>
 			<div css={spacer}>
 				<TextInput
+					{...args}
 					label="Postcode"
 					width={10}
 					value={state.medium}
@@ -124,6 +141,7 @@ const widthsLight = () => {
 			</div>
 			<div css={spacer}>
 				<TextInput
+					{...args}
 					label="Year of birth"
 					width={4}
 					value={state.short}
@@ -140,16 +158,13 @@ const widthsLight = () => {
 	);
 };
 
-widthsLight.story = {
-	name: `widths light`,
-};
-
-const errorWithMessageLight = () => {
+export const ErrorWithMessageLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
+					{...args}
 					label="First name"
 					error="Enter your first name below"
 					value={state}
@@ -160,16 +175,13 @@ const errorWithMessageLight = () => {
 	);
 };
 
-errorWithMessageLight.story = {
-	name: `error with message light`,
-};
-
-const successWithMessageLight = () => {
+export const SuccessWithMessageLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
+					{...args}
 					label="Input Code"
 					success="This code is valid"
 					value={state}
@@ -180,17 +192,14 @@ const successWithMessageLight = () => {
 	);
 };
 
-successWithMessageLight.story = {
-	name: `success with message ${name}`,
-};
-
-const constraintLight = () => {
+export const ConstraintLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
+					{...args}
 					label="Phone number"
 					pattern="[0-9]{1,11}"
 					title="11 digit phone number"
@@ -203,21 +212,18 @@ const constraintLight = () => {
 	);
 };
 
-constraintLight.story = {
-	name: `with constraint light`,
-};
-
 const message = css`
 	${textSans.medium()}
 `;
 
-const controlled = () => {
+export const ControlledExample = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 
 	return (
 		<div css={constrainedWith}>
 			<div css={spacer}>
 				<TextInput
+					{...args}
 					label="First name"
 					value={state}
 					onChange={(event) => setState(event.target.value)}
@@ -226,20 +232,4 @@ const controlled = () => {
 			<span css={message}>{state ? `Hello, ${state}` : ''}</span>
 		</div>
 	);
-};
-
-controlled.story = {
-	name: 'controlled example',
-};
-
-export {
-	defaultLight,
-	optionalLight,
-	hideLabel,
-	supportingTextLight,
-	widthsLight,
-	errorWithMessageLight,
-	successWithMessageLight,
-	constraintLight,
-	controlled,
 };

@@ -10,7 +10,7 @@ $ yarn add @guardian/src-accordion @guardian/src-foundations
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/story/accordion).
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-accordion-accordion--demo).
 
 ### How to use
 
