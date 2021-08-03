@@ -1,6 +1,10 @@
-import { SvgRoundelFilled } from './roundel-filled';
+import { SvgRoundel } from './SvgRoundel';
 import { neutral } from '@guardian/src-foundations/palette';
 
-export const SvgRoundelDefault = () => {
-	return <SvgRoundelFilled text="white" background={neutral[7]} />;
+export type SvgRoundelDefaultProps = {
+	width?: number;
+};
+
+export const SvgRoundelDefault = (args: SvgRoundelDefaultProps) => {
+	return <SvgRoundel textColor="white" bgColor={neutral[7]} {...args} />;
 };

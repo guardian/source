@@ -1,6 +1,10 @@
-import { SvgRoundelFilled } from './roundel-filled';
+import { SvgRoundel } from './SvgRoundel';
 import { neutral } from '@guardian/src-foundations/palette';
 
-export const SvgRoundelInverse = () => {
-	return <SvgRoundelFilled text={neutral[7]} background="white" />;
+export type SvgRoundelInverseProps = {
+	width?: number;
+};
+
+export const SvgRoundelInverse = (args: SvgRoundelInverseProps) => {
+	return <SvgRoundel textColor={neutral[7]} bgColor="white" {...args} />;
 };
