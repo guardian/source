@@ -6,7 +6,7 @@ The Source storybook can be run locally using `yarn storybook`
 
 ## Story Configuration
 
-1. Story files should either be names `stories.tsx` or `MyComponent.stories.tsx`
+1. Story files should be named `${Component}.stories.tsx` e.g. `MyComponent.stories.tsx`
 1. Story titles should follow the pattern `${Source | Editorial}/${package}/${component}` e.g. `Source/src-radio/RadioGroup`
 1. Each component should have a Demo story which is designed for documentation purposes and a series of stories detailing specific cases for visual regression testing
 1. Stories should have PascalCase names
