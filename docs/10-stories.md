@@ -18,18 +18,6 @@ The Source storybook can be run locally using `yarn storybook`
     ```ts
     export const Story = ...
 
-    Story.parameters = {
-        controls: {
-            disabled: true
-        }
-    }
-    ```
-
-    or
-
-    ```ts
-    export const Story = ...
-
     Story.story = {
         parameters: {
             controls: {
