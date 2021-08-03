@@ -12,7 +12,7 @@ The Source storybook can be run locally using `yarn storybook`
 1. Stories should have PascalCase names
 1. The `args` property should be passed to all stories so that the source code is displayed on the docs page
 1. Props should all be commented to autofill the args table
-1. Components should all have doc strings to auto fill the docs page (see [example](#example) below)
+1. Components should all have JSDoc comments to auto fill the docs page (see [example](#example) below)
 1. Controls should be disabled for all stories except the Demo story
 
     ```ts
