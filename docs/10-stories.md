@@ -154,7 +154,7 @@ interface StoryProps {
     label: string | JSX.Element;
 }
 
-export const Story = ({label}: StoryProps ) => ...
+export const Story = ({ label }: StoryProps) => ...
 
 Story.story = {
 	argTypes: {
