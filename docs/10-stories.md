@@ -121,23 +121,27 @@ Demo.story = {
 	},
 };
 
-export const NoValue = (args: MyComponentProps) => (
-	<MyComponent {...args} label="Label"/>
+export const NoValue = (_: MyComponentProps) => (
+	<MyComponent label="Label"/>
 );
 
-NoValue.parameters = {
-    controls: {
-        disabled: true
+NoValue.story = {
+    parameters: {
+        controls: {
+            disabled: true
+        }
     }
 }
 
-export const HideLabel = (args: MyComponentProps) => (
-	<MyComponent {...args} label="Label" hideLabel={true} value="Value" />
+export const HideLabel = (_: MyComponentProps) => (
+	<MyComponent label="Label" hideLabel={true} value="Value" />
 );
 
-HideLabel.parameters = {
-    controls: {
-        disabled: true
+HideLabel.story = {
+    parameters: {
+        controls: {
+            disabled: true
+        }
     }
 }
 ```
