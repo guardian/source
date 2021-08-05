@@ -44,7 +44,7 @@ The Source storybook can be run locally using `yarn storybook`
     }
     ```
 
-1. Any args that should not be shown in docs should be marked with the `@ignore` annotation and a comment explaining why
+1. Any props that should not be documented should be marked with the `@ignore` annotation and a comment explaining why
 
     ```tsx
     interface MyChildComponentProps {
