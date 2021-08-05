@@ -44,6 +44,17 @@ The Source storybook can be run locally using `yarn storybook`
     }
     ```
 
+1. Any args that should not be shown in docs should be marked with the `@ignore` annotation and a comment explaining why
+
+    ```tsx
+    interface MyChildComponentProps {
+        /**
+         * @ignore passed down by the parent <MyComponent />
+         */
+        hideToggleLabel?: boolean;
+    }
+    ```
+
 ### Example
 
 ```tsx
