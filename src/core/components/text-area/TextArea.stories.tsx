@@ -8,6 +8,10 @@ const wrapperStyles = css`
 	width: 400px;
 `;
 
+const wordCount = css`
+	${textSans.medium()}
+`;
+
 export default {
 	title: 'Source/src-text-area/TextArea',
 	component: TextArea,
@@ -19,13 +23,20 @@ export const Demo = (args: TextAreaProps) => (
 	</div>
 );
 
-Demo.args = {
-	label: 'Comments',
-	optional: false,
-	hideLabel: false,
-	supporting: '',
-	error: '',
-	rows: 3,
+Demo.story = {
+	args: {
+		label: 'Comments',
+		optional: false,
+		hideLabel: false,
+		supporting: '',
+		error: '',
+		rows: 3,
+	},
+	argTypes: {
+		id: { control: null },
+		cssOverrides: { control: null },
+		value: { control: null },
+	},
 };
 
 export const DefaultLight = (args: TextAreaProps) => (
@@ -34,11 +45,27 @@ export const DefaultLight = (args: TextAreaProps) => (
 	</div>
 );
 
+DefaultLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const WithRows = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
 		<TextArea {...args} label="Comments" rows={10} />
 	</div>
 );
+
+WithRows.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const OptionalLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
@@ -46,11 +73,27 @@ export const OptionalLight = (args: TextAreaProps) => (
 	</div>
 );
 
+OptionalLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const VisuallyHideLabelLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
 		<TextArea {...args} label="Comments" hideLabel={true} />
 	</div>
 );
+
+VisuallyHideLabelLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const SupportingTextLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
@@ -62,6 +105,14 @@ export const SupportingTextLight = (args: TextAreaProps) => (
 	</div>
 );
 
+SupportingTextLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const ErrorWithMessageLight = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
 		<TextArea
@@ -72,15 +123,27 @@ export const ErrorWithMessageLight = (args: TextAreaProps) => (
 	</div>
 );
 
+ErrorWithMessageLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const WithMaxLength = (args: TextAreaProps) => (
 	<div css={wrapperStyles}>
 		<TextArea {...args} label="Comments" maxLength={10} />
 	</div>
 );
 
-const wordCount = css`
-	${textSans.medium()}
-`;
+WithMaxLength.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const ControlledExample = (args: TextAreaProps) => {
 	const [state, setState] = useState('');
@@ -99,4 +162,12 @@ export const ControlledExample = (args: TextAreaProps) => {
 			</span>
 		</div>
 	);
+};
+
+ControlledExample.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
 };

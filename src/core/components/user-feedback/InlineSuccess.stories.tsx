@@ -18,6 +18,22 @@ export const Demo = (args: UserFeedbackProps) => (
 	</ThemeProvider>
 );
 
+Demo.story = {
+	argTypes: {
+		className: {
+			control: null,
+		},
+		cssOverrides: {
+			control: null,
+		},
+	},
+	parameters: {
+		controls: {
+			hideNoControlsWarning: true,
+		},
+	},
+};
+
 export const successLight = (args: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackDefault}>
 		<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
@@ -30,6 +46,9 @@ successLight.story = {
 		backgrounds: {
 			default: 'default',
 			values: [storybookBackgrounds.default],
+		},
+		controls: {
+			disabled: true,
 		},
 	},
 };
@@ -46,6 +65,9 @@ successBlue.story = {
 		backgrounds: {
 			default: 'brand',
 			values: [storybookBackgrounds.brand],
+		},
+		controls: {
+			disabled: true,
 		},
 	},
 };

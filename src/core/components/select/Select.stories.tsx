@@ -18,6 +18,10 @@ const constrainedWith = css`
 	}
 `;
 
+const message = css`
+	${textSans.medium()}
+`;
+
 export const Demo = (args: SelectProps) => (
 	<div css={constrainedWith}>
 		<Select {...args}>
@@ -28,18 +32,20 @@ export const Demo = (args: SelectProps) => (
 	</div>
 );
 
-Demo.args = {
-	label: 'State',
-	optional: false,
-	hideLabel: false,
-	supporting: '',
-	error: '',
-	success: '',
+Demo.story = {
+	args: {
+		label: 'State',
+		optional: false,
+		hideLabel: false,
+		supporting: '',
+		error: '',
+		success: '',
+	},
+	argTypes: {
+		id: { control: null },
+		cssOverrides: { control: null },
+	},
 };
-
-const message = css`
-	${textSans.medium()}
-`;
 
 export const ControlledExample = (args: SelectProps) => {
 	const [state, setState] = useState('al');
@@ -63,6 +69,14 @@ export const ControlledExample = (args: SelectProps) => {
 	);
 };
 
+ControlledExample.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const DefaultLight = (args: SelectProps) => (
 	<div css={constrainedWith}>
 		<Select {...args} label="State">
@@ -72,6 +86,14 @@ export const DefaultLight = (args: SelectProps) => (
 		</Select>
 	</div>
 );
+
+DefaultLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const ErrorWithMessageLight = (args: SelectProps) => (
 	<div css={constrainedWith}>
@@ -87,6 +109,14 @@ export const ErrorWithMessageLight = (args: SelectProps) => (
 	</div>
 );
 
+ErrorWithMessageLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const VisuallyHideLabelLight = (args: SelectProps) => (
 	<div css={constrainedWith}>
 		<Select {...args} label="State" hideLabel={true}>
@@ -97,6 +127,14 @@ export const VisuallyHideLabelLight = (args: SelectProps) => (
 	</div>
 );
 
+VisuallyHideLabelLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const OptionalLight = (args: SelectProps) => (
 	<div css={constrainedWith}>
 		<Select {...args} label="State" optional={true}>
@@ -106,6 +144,14 @@ export const OptionalLight = (args: SelectProps) => (
 		</Select>
 	</div>
 );
+
+OptionalLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const SuccessWithMessageLight = (args: SelectProps) => (
 	<div css={constrainedWith}>
@@ -123,6 +169,14 @@ export const SuccessWithMessageLight = (args: SelectProps) => (
 	</div>
 );
 
+SuccessWithMessageLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const SupportingTextLight = (args: SelectProps) => (
 	<div css={constrainedWith}>
 		<Select
@@ -136,3 +190,11 @@ export const SupportingTextLight = (args: SelectProps) => (
 		</Select>
 	</div>
 );
+
+SupportingTextLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};

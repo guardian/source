@@ -18,6 +18,22 @@ export const Demo = (args: UserFeedbackProps) => (
 	</ThemeProvider>
 );
 
+Demo.story = {
+	argTypes: {
+		className: {
+			control: null,
+		},
+		cssOverrides: {
+			control: null,
+		},
+	},
+	parameters: {
+		controls: {
+			hideNoControlsWarning: true,
+		},
+	},
+};
+
 export const InlineErrorDefault = (args: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackDefault}>
 		<InlineError {...args}>Please enter your name</InlineError>
@@ -29,6 +45,9 @@ InlineErrorDefault.story = {
 		backgrounds: {
 			default: 'default',
 			values: [storybookBackgrounds.default],
+		},
+		controls: {
+			disabled: true,
 		},
 	},
 };
@@ -45,6 +64,9 @@ InlineErrorBrand.story = {
 			default: 'brand',
 			values: [storybookBackgrounds.brand],
 		},
+		controls: {
+			disabled: true,
+		},
 	},
 };
 
@@ -56,6 +78,9 @@ export const LongInlineErrorLightMobile = (args: UserFeedbackProps) => (
 
 LongInlineErrorLightMobile.story = {
 	parameters: {
+		controls: {
+			disabled: true,
+		},
 		viewport: { defaultViewport: 'mobileMedium' },
 	},
 };

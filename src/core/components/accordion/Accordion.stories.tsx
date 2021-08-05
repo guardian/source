@@ -20,8 +20,18 @@ export const Demo = (args: AccordionProps) => (
 	</Accordion>
 );
 
-Demo.args = {
-	hideToggleLabel: false,
+Demo.story = {
+	args: {
+		hideToggleLabel: false,
+	},
+	argTypes: {
+		className: {
+			control: null,
+		},
+		cssOverrides: {
+			control: null,
+		},
+	},
 };
 
 export const WithCTALabels = (args: AccordionProps) => (
@@ -31,9 +41,25 @@ export const WithCTALabels = (args: AccordionProps) => (
 	</Accordion>
 );
 
+WithCTALabels.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const WithoutCTALabels = (args: AccordionProps) => (
 	<Accordion {...args} hideToggleLabel={true}>
 		<AccordionRow label="Lorem ipsum dolor sit amet" />
 		<AccordionRow label="Consectetur adipiscing elit" />
 	</Accordion>
 );
+
+WithoutCTALabels.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};

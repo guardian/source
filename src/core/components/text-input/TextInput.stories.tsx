@@ -19,6 +19,14 @@ const constrainedWith = css`
 	}
 `;
 
+const spacer = css`
+	margin-bottom: ${space[3]}px;
+`;
+
+const message = css`
+	${textSans.medium()}
+`;
+
 export const Demo = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
@@ -34,13 +42,21 @@ export const Demo = (args: TextInputProps) => {
 	);
 };
 
-Demo.args = {
-	label: 'First name',
-	optional: false,
-	hideLabel: false,
-	supporting: '',
-	error: '',
-	success: '',
+Demo.story = {
+	args: {
+		label: 'First name',
+		optional: false,
+		hideLabel: false,
+		supporting: '',
+		error: '',
+		success: '',
+	},
+	argTypes: {
+		id: { control: null },
+		className: { control: null },
+		cssOverrides: { control: null },
+		value: { control: null },
+	},
 };
 
 export const DefaultLight = (args: TextInputProps) => {
@@ -59,6 +75,14 @@ export const DefaultLight = (args: TextInputProps) => {
 	);
 };
 
+DefaultLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const OptionalLight = (args: TextInputProps) => (
 	<ThemeProvider theme={textInputDefault}>
 		<div css={constrainedWith}>
@@ -66,6 +90,14 @@ export const OptionalLight = (args: TextInputProps) => (
 		</div>
 	</ThemeProvider>
 );
+
+OptionalLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const HideLabel = (args: TextInputProps) => {
 	const [state, setState] = useState('');
@@ -82,6 +114,14 @@ export const HideLabel = (args: TextInputProps) => {
 			</div>
 		</ThemeProvider>
 	);
+};
+
+HideLabel.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
 };
 
 export const SupportingTextLight = (args: TextInputProps) => {
@@ -101,9 +141,13 @@ export const SupportingTextLight = (args: TextInputProps) => {
 	);
 };
 
-const spacer = css`
-	margin-bottom: ${space[3]}px;
-`;
+SupportingTextLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const WidthsLight = (args: TextInputProps) => {
 	const [state, setState] = useState({ wide: '', medium: '', short: '' });
@@ -158,6 +202,14 @@ export const WidthsLight = (args: TextInputProps) => {
 	);
 };
 
+WidthsLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const ErrorWithMessageLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
@@ -175,6 +227,14 @@ export const ErrorWithMessageLight = (args: TextInputProps) => {
 	);
 };
 
+ErrorWithMessageLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
+
 export const SuccessWithMessageLight = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
@@ -190,6 +250,14 @@ export const SuccessWithMessageLight = (args: TextInputProps) => {
 			</div>
 		</ThemeProvider>
 	);
+};
+
+SuccessWithMessageLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
 };
 
 export const ConstraintLight = (args: TextInputProps) => {
@@ -212,9 +280,13 @@ export const ConstraintLight = (args: TextInputProps) => {
 	);
 };
 
-const message = css`
-	${textSans.medium()}
-`;
+ConstraintLight.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
+};
 
 export const ControlledExample = (args: TextInputProps) => {
 	const [state, setState] = useState('');
@@ -232,4 +304,12 @@ export const ControlledExample = (args: TextInputProps) => {
 			<span css={message}>{state ? `Hello, ${state}` : ''}</span>
 		</div>
 	);
+};
+
+ControlledExample.story = {
+	parameters: {
+		controls: {
+			disabled: true,
+		},
+	},
 };
