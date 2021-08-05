@@ -47,13 +47,12 @@ Demo.story = {
 	},
 };
 
-export const ControlledExample = (args: SelectProps) => {
+export const ControlledExample = (_: SelectProps) => {
 	const [state, setState] = useState('al');
 
 	return (
 		<div css={constrainedWith}>
 			<Select
-				{...args}
 				label="State"
 				value={state}
 				onChange={(event) => setState(event.target.value)}
@@ -77,9 +76,9 @@ ControlledExample.story = {
 	},
 };
 
-export const DefaultLight = (args: SelectProps) => (
+export const DefaultLight = (_: SelectProps) => (
 	<div css={constrainedWith}>
-		<Select {...args} label="State">
+		<Select label="State">
 			<Option value="">Select a state</Option>
 			<Option value="al">Alabama</Option>
 			<Option value="ca">California</Option>
@@ -95,10 +94,9 @@ DefaultLight.story = {
 	},
 };
 
-export const ErrorWithMessageLight = (args: SelectProps) => (
+export const ErrorWithMessageLight = (_: SelectProps) => (
 	<div css={constrainedWith}>
 		<Select
-			{...args}
 			label="State"
 			error="Please select your home state. This service is unavailable outside of the US."
 		>
@@ -117,9 +115,9 @@ ErrorWithMessageLight.story = {
 	},
 };
 
-export const VisuallyHideLabelLight = (args: SelectProps) => (
+export const VisuallyHideLabelLight = (_: SelectProps) => (
 	<div css={constrainedWith}>
-		<Select {...args} label="State" hideLabel={true}>
+		<Select label="State" hideLabel={true}>
 			<Option value="">Select a state</Option>
 			<Option value="al">Alabama</Option>
 			<Option value="ca">California</Option>
@@ -135,9 +133,9 @@ VisuallyHideLabelLight.story = {
 	},
 };
 
-export const OptionalLight = (args: SelectProps) => (
+export const OptionalLight = (_: SelectProps) => (
 	<div css={constrainedWith}>
-		<Select {...args} label="State" optional={true}>
+		<Select label="State" optional={true}>
 			<Option value="">Select a state</Option>
 			<Option value="al">Alabama</Option>
 			<Option value="ca">California</Option>
@@ -153,13 +151,9 @@ OptionalLight.story = {
 	},
 };
 
-export const SuccessWithMessageLight = (args: SelectProps) => (
+export const SuccessWithMessageLight = (_: SelectProps) => (
 	<div css={constrainedWith}>
-		<Select
-			{...args}
-			label="State"
-			success="This service is available in your state"
-		>
+		<Select label="State" success="This service is available in your state">
 			<Option value="">Select a state</Option>
 			<Option value="al" selected={true}>
 				Alabama
@@ -177,10 +171,9 @@ SuccessWithMessageLight.story = {
 	},
 };
 
-export const SupportingTextLight = (args: SelectProps) => (
+export const SupportingTextLight = (_: SelectProps) => (
 	<div css={constrainedWith}>
 		<Select
-			{...args}
 			label="State"
 			supporting="Leave blank if you are not within the US"
 		>

@@ -34,9 +34,9 @@ Demo.story = {
 	},
 };
 
-export const successLight = (args: UserFeedbackProps) => (
+export const successLight = (_: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackDefault}>
-		<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
+		<InlineSuccess>Your voucher code is valid</InlineSuccess>
 	</ThemeProvider>
 );
 
@@ -53,9 +53,9 @@ successLight.story = {
 	},
 };
 
-export const successBlue = (args: UserFeedbackProps) => (
+export const successBlue = (_: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackBrand}>
-		<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
+		<InlineSuccess>Your voucher code is valid</InlineSuccess>
 	</ThemeProvider>
 );
 

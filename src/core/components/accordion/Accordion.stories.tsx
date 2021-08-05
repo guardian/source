@@ -34,8 +34,8 @@ Demo.story = {
 	},
 };
 
-export const WithCTALabels = (args: AccordionProps) => (
-	<Accordion {...args} hideToggleLabel={false}>
+export const WithCTALabels = (_: AccordionProps) => (
+	<Accordion hideToggleLabel={false}>
 		<AccordionRow label="Lorem ipsum dolor sit amet" />
 		<AccordionRow label="Consectetur adipiscing elit" />
 	</Accordion>
@@ -49,8 +49,8 @@ WithCTALabels.story = {
 	},
 };
 
-export const WithoutCTALabels = (args: AccordionProps) => (
-	<Accordion {...args} hideToggleLabel={true}>
+export const WithoutCTALabels = (_: AccordionProps) => (
+	<Accordion hideToggleLabel={true}>
 		<AccordionRow label="Lorem ipsum dolor sit amet" />
 		<AccordionRow label="Consectetur adipiscing elit" />
 	</Accordion>

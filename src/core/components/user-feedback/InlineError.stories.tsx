@@ -34,9 +34,9 @@ Demo.story = {
 	},
 };
 
-export const InlineErrorDefault = (args: UserFeedbackProps) => (
+export const InlineErrorDefault = (_: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackDefault}>
-		<InlineError {...args}>Please enter your name</InlineError>
+		<InlineError>Please enter your name</InlineError>
 	</ThemeProvider>
 );
 
@@ -52,9 +52,9 @@ InlineErrorDefault.story = {
 	},
 };
 
-export const InlineErrorBrand = (args: UserFeedbackProps) => (
+export const InlineErrorBrand = (_: UserFeedbackProps) => (
 	<ThemeProvider theme={userFeedbackBrand}>
-		<InlineError {...args}>Please enter your name</InlineError>
+		<InlineError>Please enter your name</InlineError>
 	</ThemeProvider>
 );
 
@@ -70,8 +70,8 @@ InlineErrorBrand.story = {
 	},
 };
 
-export const LongInlineErrorLightMobile = (args: UserFeedbackProps) => (
-	<InlineError {...args}>
+export const LongInlineErrorLightMobile = (_: UserFeedbackProps) => (
+	<InlineError>
 		Please pick a date in the future, but not a leap year
 	</InlineError>
 );

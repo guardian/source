@@ -53,9 +53,9 @@ DefaultLight.story = {
 	},
 };
 
-export const WithRows = (args: TextAreaProps) => (
+export const WithRows = (_: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea {...args} label="Comments" rows={10} />
+		<TextArea label="Comments" rows={10} />
 	</div>
 );
 
@@ -67,9 +67,9 @@ WithRows.story = {
 	},
 };
 
-export const OptionalLight = (args: TextAreaProps) => (
+export const OptionalLight = (_: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea {...args} label="Comments" optional={true} />
+		<TextArea label="Comments" optional={true} />
 	</div>
 );
 
@@ -81,9 +81,9 @@ OptionalLight.story = {
 	},
 };
 
-export const VisuallyHideLabelLight = (args: TextAreaProps) => (
+export const VisuallyHideLabelLight = (_: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea {...args} label="Comments" hideLabel={true} />
+		<TextArea label="Comments" hideLabel={true} />
 	</div>
 );
 
@@ -95,10 +95,9 @@ VisuallyHideLabelLight.story = {
 	},
 };
 
-export const SupportingTextLight = (args: TextAreaProps) => (
+export const SupportingTextLight = (_: TextAreaProps) => (
 	<div css={wrapperStyles}>
 		<TextArea
-			{...args}
 			label="Comments"
 			supporting="Please keep comments respectful and abide by the community guidelines."
 		/>
@@ -113,13 +112,9 @@ SupportingTextLight.story = {
 	},
 };
 
-export const ErrorWithMessageLight = (args: TextAreaProps) => (
+export const ErrorWithMessageLight = (_: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea
-			{...args}
-			label="Comments"
-			error="Please tell us your views"
-		/>
+		<TextArea label="Comments" error="Please tell us your views" />
 	</div>
 );
 
@@ -131,9 +126,9 @@ ErrorWithMessageLight.story = {
 	},
 };
 
-export const WithMaxLength = (args: TextAreaProps) => (
+export const WithMaxLength = (_: TextAreaProps) => (
 	<div css={wrapperStyles}>
-		<TextArea {...args} label="Comments" maxLength={10} />
+		<TextArea label="Comments" maxLength={10} />
 	</div>
 );
 
@@ -145,12 +140,11 @@ WithMaxLength.story = {
 	},
 };
 
-export const ControlledExample = (args: TextAreaProps) => {
+export const ControlledExample = (_: TextAreaProps) => {
 	const [state, setState] = useState('');
 	return (
 		<div css={wrapperStyles}>
 			<TextArea
-				{...args}
 				label="Comments"
 				supporting="Please keep comments respectful and abide by the community guidelines."
 				value={state}

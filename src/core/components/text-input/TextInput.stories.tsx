@@ -59,13 +59,12 @@ Demo.story = {
 	},
 };
 
-export const DefaultLight = (args: TextInputProps) => {
+export const DefaultLight = (_: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
-					{...args}
 					label="First name"
 					value={state}
 					onChange={(event) => setState(event.target.value)}
@@ -83,10 +82,10 @@ DefaultLight.story = {
 	},
 };
 
-export const OptionalLight = (args: TextInputProps) => (
+export const OptionalLight = (_: TextInputProps) => (
 	<ThemeProvider theme={textInputDefault}>
 		<div css={constrainedWith}>
-			<TextInput {...args} label="First name" optional={true} />
+			<TextInput label="First name" optional={true} />
 		</div>
 	</ThemeProvider>
 );
@@ -99,13 +98,12 @@ OptionalLight.story = {
 	},
 };
 
-export const HideLabel = (args: TextInputProps) => {
+export const HideLabel = (_: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
-					{...args}
 					label="First name"
 					hideLabel={true}
 					value={state}
@@ -124,13 +122,12 @@ HideLabel.story = {
 	},
 };
 
-export const SupportingTextLight = (args: TextInputProps) => {
+export const SupportingTextLight = (_: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
-					{...args}
 					label="Email"
 					supporting="alex@example.com"
 					value={state}
@@ -149,13 +146,12 @@ SupportingTextLight.story = {
 	},
 };
 
-export const WidthsLight = (args: TextInputProps) => {
+export const WidthsLight = (_: TextInputProps) => {
 	const [state, setState] = useState({ wide: '', medium: '', short: '' });
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={spacer}>
 				<TextInput
-					{...args}
 					label="First name"
 					width={30}
 					value={state.wide}
@@ -170,7 +166,6 @@ export const WidthsLight = (args: TextInputProps) => {
 			</div>
 			<div css={spacer}>
 				<TextInput
-					{...args}
 					label="Postcode"
 					width={10}
 					value={state.medium}
@@ -185,7 +180,6 @@ export const WidthsLight = (args: TextInputProps) => {
 			</div>
 			<div css={spacer}>
 				<TextInput
-					{...args}
 					label="Year of birth"
 					width={4}
 					value={state.short}
@@ -210,13 +204,12 @@ WidthsLight.story = {
 	},
 };
 
-export const ErrorWithMessageLight = (args: TextInputProps) => {
+export const ErrorWithMessageLight = (_: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
-					{...args}
 					label="First name"
 					error="Enter your first name below"
 					value={state}
@@ -235,13 +228,12 @@ ErrorWithMessageLight.story = {
 	},
 };
 
-export const SuccessWithMessageLight = (args: TextInputProps) => {
+export const SuccessWithMessageLight = (_: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
-					{...args}
 					label="Input Code"
 					success="This code is valid"
 					value={state}
@@ -260,14 +252,13 @@ SuccessWithMessageLight.story = {
 	},
 };
 
-export const ConstraintLight = (args: TextInputProps) => {
+export const ConstraintLight = (_: TextInputProps) => {
 	const [state, setState] = useState('');
 
 	return (
 		<ThemeProvider theme={textInputDefault}>
 			<div css={constrainedWith}>
 				<TextInput
-					{...args}
 					label="Phone number"
 					pattern="[0-9]{1,11}"
 					title="11 digit phone number"
@@ -288,14 +279,13 @@ ConstraintLight.story = {
 	},
 };
 
-export const ControlledExample = (args: TextInputProps) => {
+export const ControlledExample = (_: TextInputProps) => {
 	const [state, setState] = useState('');
 
 	return (
 		<div css={constrainedWith}>
 			<div css={spacer}>
 				<TextInput
-					{...args}
 					label="First name"
 					value={state}
 					onChange={(event) => setState(event.target.value)}
