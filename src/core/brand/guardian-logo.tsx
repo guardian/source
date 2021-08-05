@@ -1,7 +1,26 @@
 export type SvgGuardianLogoProps = {
+	/**
+	 * The text colour.
+	 *
+	 * This should probably come from
+	 * [`@guardian/src-foundation`](https://theguardian.design/2a1e5182b/p/2668c8-code).
+	 */
 	textColor?: string;
+	/**
+	 * The width the SVG will display at (height is automatically adjusted
+	 * to maintain the correct aspect ratio).
+	 */
 	width?: number;
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-brand-svgguardianlogo--story) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/8909e0-assets/t/184eb9) •
+ * [GitHub](https://github.com/guardian/source/tree/main/src/core/brand) •
+ * [NPM](https://www.npmjs.com/package/@guardian/src-brand)
+ *
+ * The Guardian logo.
+ */
 
 export const SvgGuardianLogo = ({ textColor, width }: SvgGuardianLogoProps) => {
 	return (
