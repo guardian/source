@@ -33,6 +33,8 @@ export interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
  * [NPM](https://www.npmjs.com/package/@guardian/src-label)
  *
  * A legend describes a group of fields, such as a checkbox group or radio group.
+ *
+ * The following themes are supported: `light`, `brand`.
  * */
 export const Legend = ({
 	text,

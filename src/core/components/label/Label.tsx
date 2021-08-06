@@ -34,6 +34,8 @@ export interface LabelProps
  * [NPM](https://www.npmjs.com/package/@guardian/src-label)
  *
  * A label describes a user input field.
+ *
+ * The following themes are supported: `light`, `brand`.
  * */
 export const Label = ({
 	text,
