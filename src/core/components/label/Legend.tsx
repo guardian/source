@@ -37,8 +37,8 @@ export interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 export const Legend = ({
 	text,
 	supporting,
-	optional,
-	hideLabel,
+	optional = false,
+	hideLabel = false,
 	cssOverrides,
 	...props
 }: LegendProps) => {

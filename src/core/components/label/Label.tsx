@@ -38,8 +38,8 @@ export interface LabelProps
 export const Label = ({
 	text,
 	supporting,
-	optional,
-	hideLabel,
+	optional = false,
+	hideLabel = false,
 	cssOverrides,
 	children,
 	...props
