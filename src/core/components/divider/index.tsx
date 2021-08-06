@@ -94,7 +94,7 @@ export const Divider = ({
 				css`
 					height: 1px;
 					border: 0;
-					margin-bottom: 3px;
+					margin-bottom: ${space[1]}px;
 					background-color: ${border.secondary};
 				`,
 				size === 'partial' ? partialStyles : fullStyles,
