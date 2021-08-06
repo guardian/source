@@ -4,20 +4,12 @@ import { border, text } from '@guardian/src-foundations/palette';
 import { space } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
 
+import { partialStyles, fullStyles } from './styles';
 type Props = {
 	size?: 'full' | 'partial';
 	spaceAbove?: 'tight' | 'loose';
 	displayText?: string;
 };
-
-const fullStyles = css`
-	margin-left: -10px;
-	width: calc(100% + 20px);
-`;
-const partialStyles = css`
-	margin-left: -10px;
-	width: 160px;
-`;
 
 const decideSpace = (
 	spaceAbove: 'tight' | 'loose',
