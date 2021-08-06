@@ -2,10 +2,10 @@
 
 By default, all components are styled using their light theme.
 
-To apply a different theme, we recommend using [emotion-theming](https://5faaafd0bd0f3f0008469537--emotion.netlify.app/docs/theming). You can import the desired theme from `@guardian/src-foundations/themes`
+To apply a different theme, we recommend using [Emotion's theming API](https://emotion.sh/docs/theming). You can import the desired theme from `@guardian/src-foundations/themes`
 
 ```jsx
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import { Button } from '@guardian/src-button';
 import { TextInput } from '@guardian/src-text-input';
 import { brand } from '@guardian/src-foundations/themes';
@@ -25,7 +25,7 @@ const Form = () => (
 To compose themes for specific components:
 
 ```jsx
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import { Button, buttonBrand } from '@guardian/src-button';
 import { TextInput, textInputBrand } from '@guardian/src-text-input';
 
@@ -60,7 +60,7 @@ If you plan to override the styles of several components in a similar way, consi
 Themes are JavaScript object literals that expose a groups of colour properties.
 
 ```jsx
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import { Button } from '@guardian/src-button';
 import { Link } from '@guardian/src-link';
 
