@@ -13,9 +13,7 @@ export default {
 };
 
 export const Demo = (args: UserFeedbackProps) => (
-	<ThemeProvider theme={userFeedbackDefault}>
-		<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
-	</ThemeProvider>
+	<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
 );
 
 Demo.story = {

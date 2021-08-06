@@ -13,9 +13,7 @@ export default {
 };
 
 export const Demo = (args: UserFeedbackProps) => (
-	<ThemeProvider theme={userFeedbackDefault}>
-		<InlineError {...args}>Please enter your name</InlineError>
-	</ThemeProvider>
+	<InlineError {...args}>Please enter your name</InlineError>
 );
 
 Demo.story = {

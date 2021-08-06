@@ -17,11 +17,7 @@ export default {
 	component: TextArea,
 };
 
-export const Demo = (args: TextAreaProps) => (
-	<div css={wrapperStyles}>
-		<TextArea {...args} />
-	</div>
-);
+export const Demo = (args: TextAreaProps) => <TextArea {...args} />;
 
 Demo.story = {
 	args: {

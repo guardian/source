@@ -30,15 +30,11 @@ const message = css`
 export const Demo = (args: TextInputProps) => {
 	const [state, setState] = useState('');
 	return (
-		<ThemeProvider theme={textInputDefault}>
-			<div css={constrainedWith}>
-				<TextInput
-					{...args}
-					value={state}
-					onChange={(event) => setState(event.target.value)}
-				/>
-			</div>
-		</ThemeProvider>
+		<TextInput
+			{...args}
+			value={state}
+			onChange={(event) => setState(event.target.value)}
+		/>
 	);
 };
 

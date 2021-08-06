@@ -23,13 +23,11 @@ const message = css`
 `;
 
 export const Demo = (args: SelectProps) => (
-	<div css={constrainedWith}>
-		<Select {...args}>
-			<Option value="">Select a state</Option>
-			<Option value="al">Alabama</Option>
-			<Option value="ca">California</Option>
-		</Select>
-	</div>
+	<Select {...args}>
+		<Option value="">Select a state</Option>
+		<Option value="al">Alabama</Option>
+		<Option value="ca">California</Option>
+	</Select>
 );
 
 Demo.story = {
