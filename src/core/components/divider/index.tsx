@@ -97,7 +97,7 @@ export const Divider = ({
 					margin-bottom: 3px;
 					background-color: ${border.secondary};
 				`,
-				size === 'partial' ? partialStyles : fullStypes,
+				size === 'partial' ? partialStyles : fullStyles,
 				decideSpace(spaceAbove),
 			]}
 		/>
