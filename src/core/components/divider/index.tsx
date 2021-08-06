@@ -10,7 +10,7 @@ type Props = {
 	displayText?: string;
 };
 
-const fullStypes = css`
+const fullStyles = css`
 	margin-left: -10px;
 	width: calc(100% + 20px);
 `;
