@@ -7,14 +7,34 @@ import { Text } from './Text';
 export interface LabelProps
 	extends LabelHTMLAttributes<HTMLLabelElement>,
 		Props {
+	/**
+	 * The label text
+	 */
 	text: string;
+	/**
+	 * Additional text or component that appears below the label
+	 */
 	supporting?: string;
+	/**
+	 * Adds the word "Optional" after the label
+	 */
 	optional?: boolean;
+	/**
+	 * Visually hides the label
+	 */
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children?: ReactNode;
 }
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-label-label-) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/40151e-label/b/86af7d) •
+ * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/label) •
+ * [NPM](https://www.npmjs.com/package/@guardian/src-label)
+ *
+ * A label describes a user input field.
+ * */
 export const Label = ({
 	text,
 	supporting,
