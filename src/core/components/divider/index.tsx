@@ -27,7 +27,7 @@ const decideSpace = (
 		case 'tight':
 			return displayText
 				? css`
-						margin-top: -3px;
+						margin-top: -${space[1]}px;
 				  `
 				: css`
 						margin-top: ${space[6]}px;
