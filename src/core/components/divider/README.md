@@ -35,7 +35,7 @@ const Content = () => (
 **`'partial' | 'full'` **
 
 `full` means the divider will span the full width of the content
-`partual` left aligns the divider and limits its length
+`partial` left aligns the divider and limits its length
 
 ### `spaceAbove`
 
