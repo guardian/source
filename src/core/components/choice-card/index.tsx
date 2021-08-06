@@ -79,8 +79,9 @@ const ChoiceCardGroup = ({
 							error
 								? {
 										error: true,
-										'aria-describedby':
-											descriptionId(groupId),
+										'aria-describedby': descriptionId(
+											groupId,
+										),
 								  }
 								: {},
 							{

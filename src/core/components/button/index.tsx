@@ -130,28 +130,26 @@ const buttonContents = ({
 	}
 };
 
-const buttonStyles =
-	({
-		priority = 'primary',
-		size = 'default',
-		icon: iconSvg,
-		hideLabel,
-		iconSide = 'left',
-		nudgeIcon,
-		cssOverrides,
-	}: SharedButtonProps) =>
+const buttonStyles = ({
+	priority = 'primary',
+	size = 'default',
+	icon: iconSvg,
+	hideLabel,
+	iconSide = 'left',
+	nudgeIcon,
+	cssOverrides,
+}: SharedButtonProps) =>
 	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-	(theme: any) =>
-		[
-			button,
-			sizes[size],
-			priorities[priority](theme.button && theme),
-			iconSvg ? iconSizes[size] : '',
-			iconSvg && !hideLabel ? iconSides[iconSide] : '',
-			nudgeIcon ? iconNudgeAnimation : '',
-			hideLabel ? iconOnlySizes[size] : '',
-			cssOverrides,
-		];
+	(theme: any) => [
+		button,
+		sizes[size],
+		priorities[priority](theme.button && theme),
+		iconSvg ? iconSizes[size] : '',
+		iconSvg && !hideLabel ? iconSides[iconSide] : '',
+		nudgeIcon ? iconNudgeAnimation : '',
+		hideLabel ? iconOnlySizes[size] : '',
+		cssOverrides,
+	];
 
 interface ButtonProps
 	extends SharedButtonProps,
