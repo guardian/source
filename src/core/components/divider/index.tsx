@@ -35,7 +35,7 @@ const decideSpace = (
 		case 'loose':
 			return displayText
 				? css`
-						margin-top: 37px;
+						margin-top: ${space[9]}px;
 				  `
 				: css`
 						margin-top: ${space[12]}px;
