@@ -10,5 +10,7 @@ export type SvgRoundelInverseProps = {
 };
 
 export const SvgRoundelInverse = (args: SvgRoundelInverseProps) => {
-	return <SvgRoundel textColor={neutral[7]} bgColor="white" {...args} />;
+	return (
+		<SvgRoundel textColor={neutral[7]} backgroundColor="white" {...args} />
+	);
 };

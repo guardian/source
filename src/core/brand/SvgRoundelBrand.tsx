@@ -10,7 +10,9 @@ export type SvgRoundelBrandProps = {
 };
 
 export const SvgRoundelBrand = (args: SvgRoundelBrandProps) => {
-	return <SvgRoundel textColor="white" bgColor={brand[400]} {...args} />;
+	return (
+		<SvgRoundel textColor="white" backgroundColor={brand[400]} {...args} />
+	);
 };
 SvgRoundelBrand.args = {
 	width: 300,

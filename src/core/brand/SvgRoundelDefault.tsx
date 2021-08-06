@@ -10,5 +10,7 @@ export type SvgRoundelDefaultProps = {
 };
 
 export const SvgRoundelDefault = (args: SvgRoundelDefaultProps) => {
-	return <SvgRoundel textColor="white" bgColor={neutral[7]} {...args} />;
+	return (
+		<SvgRoundel textColor="white" backgroundColor={neutral[7]} {...args} />
+	);
 };

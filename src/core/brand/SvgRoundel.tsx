@@ -12,7 +12,7 @@ export type SvgRoundelProps = {
 	 * This should probably come from
 	 * [`@guardian/src-foundation`](https://theguardian.design/2a1e5182b/p/2668c8-code).
 	 */
-	bgColor?: string;
+	backgroundColor?: string;
 	/**
 	 * The width the SVG will display at (height is automatically adjusted
 	 * to maintain the correct aspect ratio).
@@ -27,7 +27,7 @@ export type SvgRoundelProps = {
 
 export const SvgRoundel = ({
 	textColor = '#fff',
-	bgColor = '#000',
+	backgroundColor: bgColor = '#000',
 	width,
 }: SvgRoundelProps) => {
 	return (
