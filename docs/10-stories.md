@@ -55,6 +55,9 @@ The Source storybook can be run locally using `yarn storybook`
     }
     ```
 
+1. Demo stories should avoid using any styling and, where possible, theming
+1. Styling should be minimised in all other stories
+
 ### Example
 
 ```tsx
