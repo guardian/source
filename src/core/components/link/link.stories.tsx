@@ -56,15 +56,9 @@ const spacer = css`
 `;
 
 export const Demo = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<p css={text}>
-			You can{' '}
-			<Link {...args} href="#">
-				read more
-			</Link>{' '}
-			about our services
-		</p>
-	</ThemeProvider>
+	<Link {...args} href="#">
+		Click Me
+	</Link>
 );
 
 Demo.story = {

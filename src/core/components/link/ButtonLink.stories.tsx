@@ -51,18 +51,9 @@ const text = css`
 `;
 
 export const Demo = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<p css={text}>
-			Please{' '}
-			<ButtonLink
-				{...args}
-				onClick={() => console.log('Button link clicked')}
-			>
-				click me
-			</ButtonLink>
-			. Thanks!
-		</p>
-	</ThemeProvider>
+	<ButtonLink {...args} onClick={() => console.log('Button link clicked')}>
+		Click Me
+	</ButtonLink>
 );
 
 Demo.story = {
