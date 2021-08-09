@@ -1,4 +1,3 @@
-import React from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { Props } from '@guardian/src-helpers';
 import { HTMLAttributes } from 'react';
