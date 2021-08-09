@@ -9,4 +9,8 @@ export type Args = {
 	[key: string]: any;
 };
 
-export type Story = { (arg0: Args): any; args: Args; parameters: Args };
+export type Story = {
+	(arg0: Args): any;
+	args?: Args;
+	parameters?: Args;
+};
