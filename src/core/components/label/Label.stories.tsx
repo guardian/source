@@ -13,15 +13,13 @@ export default {
 
 export const Demo = (args: LabelProps) => (
 	<Label {...args}>
-		<span role="img" aria-label="Hello!">
-			👋
-		</span>
+		<input type="text" />
 	</Label>
 );
 
 Demo.args = {
 	text: 'Hello world',
-	supporting: 'Here I am',
+	supporting: 'Who are you?',
 	optional: false,
 	hideLabel: false,
 };
@@ -40,7 +38,7 @@ const getStories = (
 	const baseArgs = {
 		theme: themes[themeName],
 		text: 'Email',
-		children: <p>child content</p>,
+		children: <input type="email" />,
 	};
 
 	const baseParameters = {
@@ -59,7 +57,7 @@ const getStories = (
 
 			<ThemeProvider theme={${themeName}}>
 			  <Label ${codeProps}>
-			    <p>child content</p>
+			    <input type="email" />
 			  </Label>
 			</ThemeProvider>`;
 	};

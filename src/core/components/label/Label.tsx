@@ -35,6 +35,9 @@ export interface LabelProps
  *
  * A label describes a user input field.
  *
+ * Label is used by other Source components, such as TextInput. Only use Label
+ * if you are building your own form components.
+ *
  * The following themes are supported: `light`, `brand`.
  * */
 export const Label = ({

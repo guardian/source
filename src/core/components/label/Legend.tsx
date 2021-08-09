@@ -34,6 +34,9 @@ export interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
  *
  * A legend describes a group of fields, such as a checkbox group or radio group.
  *
+ * Legend is used by other Source components, such as RadioGroup. Only use Legend
+ * if you are building your own form components.
+ *
  * The following themes are supported: `light`, `brand`.
  * */
 export const Legend = ({
