@@ -24,6 +24,13 @@ Demo.args = {
 	hideLabel: false,
 };
 
+// This is intended to make it easier to update multiple stories at once.
+// I couldn't decide whether it was better use a story factory or just
+// have lots of stories.
+//
+// If you're reading this in the future and wish it was just a load of
+// separate stories, you might be right. Feel free to change it.
+
 const getStories = (
 	themeName: 'labelDefault' | 'labelBrand',
 	background?: string,
