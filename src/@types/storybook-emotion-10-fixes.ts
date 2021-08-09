@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- These are quick stubs to fix the Storybook / Emotion 10 issue */
+
 // These types are needed to workaround an issue with Storybook's usage of Emotion 10
 // conflicting with Source's usage of Emotion 11
 // They should come from @storybook/react
