@@ -3,7 +3,7 @@ import {
 	error as _error,
 	success as _success,
 	brand,
-	sport,
+	focus,
 } from '../global';
 
 export const border = {
@@ -16,5 +16,5 @@ export const border = {
 	inputChecked: brand[500],
 	inputHover: brand[500],
 	inputActive: brand[500],
-	focusHalo: sport[500],
+	focusHalo: focus[400],
 };
