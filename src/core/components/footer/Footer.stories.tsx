@@ -1,101 +1,126 @@
 import { Footer, FooterProps } from './Footer';
-import type { Story } from '../../../@types/storybook-emotion-10-fixes';
+import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
+import { Story } from '../../../@types/storybook-emotion-10-fixes';
 
 export default {
 	component: Footer,
 	title: 'Source/src-footer/Footer',
+	argTypes: {
+		children: {
+			options: ['with', 'without'],
+			mapping: {
+				without: undefined,
+				with: (
+					<p>
+						<strong>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit.
+						</strong>
+						<br />
+						Ut proverbia non nulla veriora sint quam vestra dogmata.
+						Ampulla enim sit necne sit, quis non iure optimo
+						irrideatur, si laboret? Quae quo sunt excelsiores, eo
+						dant clariora indicia naturae.
+					</p>
+				),
+			},
+			control: { type: 'radio' },
+		},
+	},
 };
 
-export const Demo: Story = (args: FooterProps) => (
-	<Footer {...args}>
-		<p>
-			<strong>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			</strong>
-			<br />
-			Ut proverbia non nulla veriora sint quam vestra dogmata. Ampulla
-			enim sit necne sit, quis non iure optimo irrideatur, si laboret?
-			Quae quo sunt excelsiores, eo dant clariora indicia naturae.
-		</p>
-	</Footer>
-);
+const Template: Story = (args: FooterProps) => <Footer {...args} />;
+
+export const Demo = Template.bind({});
 Demo.args = {
 	showBackToTop: false,
+	children: 'with',
 };
+asPlayground(Demo);
 
-export const DefaultTablet = Demo.bind({});
+export const Default = Template.bind({});
+Default.args = { children: 'with' };
+asChromaticStory(Default);
+
+export const DefaultTablet = Template.bind({});
+DefaultTablet.args = { children: 'with' };
 DefaultTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
-	controls: { disabled: true },
 };
+asChromaticStory(DefaultTablet);
 
-export const DefaultMobile = Demo.bind({});
+export const DefaultMobile = Template.bind({});
+DefaultMobile.args = { children: 'with' };
 DefaultMobile.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
-	controls: { disabled: true },
 };
+asChromaticStory(DefaultMobile);
 
-export const WithBackToTop = Demo.bind({});
-WithBackToTop.args = { showBackToTop: true };
-WithBackToTop.parameters = { controls: { disabled: true } };
+export const WithBackToTop = Template.bind({});
+WithBackToTop.args = { showBackToTop: true, children: 'with' };
+asChromaticStory(WithBackToTop);
 
-export const WithBackToTopTablet = Demo.bind({});
-WithBackToTopTablet.args = { showBackToTop: true };
+export const WithBackToTopTablet = Template.bind({});
+WithBackToTopTablet.args = {
+	showBackToTop: true,
+	children: 'with',
+};
 WithBackToTopTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
-	controls: { disabled: true },
 };
+asChromaticStory(WithBackToTopTablet);
 
-export const WithBackToTopMobile = Demo.bind({});
-WithBackToTopMobile.args = { showBackToTop: true };
+export const WithBackToTopMobile = Template.bind({});
+WithBackToTopMobile.args = {
+	showBackToTop: true,
+	children: 'with',
+};
 WithBackToTopMobile.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
-	controls: { disabled: true },
 };
+asChromaticStory(WithBackToTopMobile);
 
-export const WithoutChildren = (args: FooterProps) => <Footer {...args} />;
-WithoutChildren.parameters = {
-	controls: { disabled: true },
-};
+export const WithoutChildren = Template.bind({});
+WithoutChildren.args = { children: 'without' };
+asChromaticStory(WithoutChildren);
 
-export const WithoutChildrenTablet = (args: FooterProps) => (
-	<Footer {...args} />
-);
+export const WithoutChildrenTablet = Template.bind({});
+WithoutChildrenTablet.args = { children: 'without' };
 WithoutChildrenTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
-	controls: { disabled: true },
 };
+asChromaticStory(WithoutChildrenTablet);
 
-export const WithoutChildrenMobile = (args: FooterProps) => (
-	<Footer {...args} />
-);
+export const WithoutChildrenMobile = Template.bind({});
+WithoutChildrenMobile.args = { children: 'without' };
 WithoutChildrenMobile.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
-	controls: { disabled: true },
 };
+asChromaticStory(WithoutChildrenMobile);
 
-export const WithoutChildrenWithBackToTop = (args: FooterProps) => (
-	<Footer {...args} />
-);
-WithoutChildrenWithBackToTop.args = { showBackToTop: true };
-WithoutChildrenWithBackToTop.parameters = {
-	controls: { disabled: true },
+export const WithoutChildrenWithBackToTop = Template.bind({});
+WithoutChildrenWithBackToTop.args = {
+	showBackToTop: true,
+	children: 'without',
 };
+asChromaticStory(WithoutChildrenWithBackToTop);
 
-export const WithoutChildrenWithBackToTopTablet = (args: FooterProps) => (
-	<Footer {...args} />
-);
-WithoutChildrenWithBackToTopTablet.args = { showBackToTop: true };
+export const WithoutChildrenWithBackToTopTablet = Template.bind({});
+WithoutChildrenWithBackToTopTablet.args = {
+	showBackToTop: true,
+	children: 'without',
+};
 WithoutChildrenWithBackToTopTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
-	controls: { disabled: true },
 };
+asChromaticStory(WithoutChildrenWithBackToTopTablet);
 
-export const WithoutChildrenWithBackToTopMobile = (args: FooterProps) => (
-	<Footer {...args} />
-);
-WithoutChildrenWithBackToTopMobile.args = { showBackToTop: true };
+export const WithoutChildrenWithBackToTopMobile = Template.bind({});
+WithoutChildrenWithBackToTopMobile.args = {
+	showBackToTop: true,
+	children: 'without',
+};
 WithoutChildrenWithBackToTopMobile.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
-	controls: { disabled: true },
 };
+asChromaticStory(WithoutChildrenWithBackToTopMobile);
