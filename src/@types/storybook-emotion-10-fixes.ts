@@ -14,7 +14,7 @@ export type Parameters = {
 };
 
 export type Story = {
-	(arg0: Args): any;
+	(arg0: any): JSX.Element;
 	args?: Args;
 	parameters?: Parameters;
 	storyName?: string;
