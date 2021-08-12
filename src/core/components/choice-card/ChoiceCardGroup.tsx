@@ -23,7 +23,7 @@ export interface ChoiceCardGroupProps
 	 */
 	label?: string;
 	/**
-	 * Additional text that appears below the `label`
+	 * Additional text that appears below the `label` (does nothing without one).
 	 */
 	supporting?: string;
 	/**

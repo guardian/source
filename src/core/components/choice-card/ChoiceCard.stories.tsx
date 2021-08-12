@@ -1,7 +1,7 @@
-import { ChoiceCard, ChoiceCardProps } from './ChoiceCard';
 import { SvgCamera } from '@guardian/src-icons';
-import { asPlayground } from '../../../lib/story-intents';
 import { Story } from '../../../@types/storybook-emotion-10-fixes';
+import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
+import { ChoiceCard, ChoiceCardProps } from './ChoiceCard';
 
 export default {
 	title: 'Source/src-choice-card/ChoiceCard',
@@ -10,7 +10,6 @@ export default {
 		id: 'option-1-id',
 		value: 'option-1',
 		label: 'string',
-		icon: 'undefined',
 	},
 	argTypes: {
 		// include all args so they render in the correct order
@@ -24,19 +23,47 @@ export default {
 		},
 		value: undefined,
 		checked: undefined,
-		defaultChecked: undefined,
+		defaultChecked: {
+			control: { disable: true },
+		},
 		icon: {
-			options: ['undefined', 'icon'],
+			options: ['undefined', 'JSX element'],
 			mapping: {
 				undefined: undefined,
-				icon: <SvgCamera />,
+				'JSX element': <SvgCamera />,
 			},
+			control: { type: 'radio' },
 		},
-		onChange: undefined,
+		onChange: { action: 'choice changed' },
 	},
 };
 
 const Template: Story = (args: ChoiceCardProps) => <ChoiceCard {...args} />;
 
 export const Playground = Template.bind({});
+Playground.args = {
+	icon: 'undefined',
+	checked: false,
+};
 asPlayground(Playground);
+
+export const Default = Template.bind({});
+asChromaticStory(Default);
+
+export const Checked = Template.bind({});
+Checked.args = {
+	checked: true,
+};
+asChromaticStory(Checked);
+
+export const Error = Template.bind({});
+Error.args = {
+	error: true,
+};
+asChromaticStory(Error);
+
+export const Icon = Template.bind({});
+Icon.args = {
+	icon: <SvgCamera />,
+};
+asChromaticStory(Icon);

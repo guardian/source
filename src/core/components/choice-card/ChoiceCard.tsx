@@ -31,6 +31,9 @@ export interface ChoiceCardProps
 	 * **Note**: if you pass the `checked` prop, you must also pass an `onChange` handler, or the field will be rendered as read-only.
 	 */
 	checked?: boolean;
+	/**
+	 * _Deprecated_ – use `checked` with `onChange` in a [controlled approach](https://reactjs.org/docs/forms.html#controlled-components).
+	 */
 	defaultChecked?: boolean;
 	/**
 	 * An icon that appears inside the button, alongside text
@@ -43,6 +46,12 @@ export interface ChoiceCardProps
 	error?: boolean;
 }
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-choice-card-choicecardgroup) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/65ffe9-choice-card) •
+ * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/choice-card) •
+ * [NPM](https://www.npmjs.com/package/@guardian/src-choice-card)
+ */
 export const ChoiceCard = ({
 	id,
 	label: labelContent,
