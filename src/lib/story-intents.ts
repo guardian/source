@@ -5,7 +5,7 @@ import { Story } from '../@types/storybook-emotion-10-fixes';
  * - renders the story in a storybook docs view
  * - does not create a storybook canvas view
  * - enables controls and removes the canvas tab for this story
- * - renames the story in the nav to `Playground 🧶`
+ * - renames the story in the nav to `🧶 Playground`
  *
  * Make sure all props are configurable in storybook's controls table.
  *
@@ -20,7 +20,7 @@ export const asPlayground = (story: Story) => {
 			},
 		},
 	};
-	story.storyName = 'Playground 🧶';
+	story.storyName = '🧶 Playground';
 };
 
 /**
