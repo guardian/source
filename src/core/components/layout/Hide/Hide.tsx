@@ -29,8 +29,3 @@ const Hide = ({ children, above, below }: HideProps) => {
 
 	return <span css={whenToHide}>{children}</span>;
 };
-const defaultProps = {};
-
-Hide.defaultProps = { ...defaultProps };
-
-export { Hide };
