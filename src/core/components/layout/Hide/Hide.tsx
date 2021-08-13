@@ -1,27 +1,35 @@
 import { HTMLAttributes } from 'react';
 import { css } from '@emotion/react';
 import { Breakpoint } from '@guardian/src-foundations';
-import { from, until } from '@guardian/src-foundations/mq';
+import { from as fromMq, until as untilMq } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
 
 export interface HideProps extends HTMLAttributes<HTMLDivElement>, Props {
+	from?: Breakpoint;
+	until?: Breakpoint;
 	above?: Breakpoint;
 	below?: Breakpoint;
 }
 
-const Hide = ({ children, above, below }: HideProps) => {
+export const Hide = ({
+	children,
+	above, // deprecated
+	below, // deprecated
+	from = above,
+	until = below,
+}: HideProps) => {
 	let whenToHide;
-	if (below) {
+	if (until) {
 		whenToHide = css`
-			${until[below]} {
+			${untilMq[until]} {
 				display: none;
 			}
 		`;
 	}
-	if (above) {
+	if (from) {
 		whenToHide = css`
 			${whenToHide}
-			${from[above]} {
+			${fromMq[from]} {
 				display: none;
 			}
 		`;
