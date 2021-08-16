@@ -28,13 +28,6 @@ export type CollapseBreakpoint = Extract<
 
 export type ColumnsSpaceY = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;
 
-interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
-	collapseBelow?: CollapseBreakpoint;
-	cssOverrides?: SerializedStyles | SerializedStyles[];
-	children: ReactNode;
-	spaceY?: ColumnsSpaceY;
-}
-
 const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
 	tablet: collapseBelowTablet,
 	desktop: collapseBelowDesktop,
@@ -51,7 +44,14 @@ const collapseBelowColumnsMap: {
 	wide: collapseBelowColumnsCSS('wide'),
 };
 
-const Columns = ({
+export interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
+	collapseBelow?: CollapseBreakpoint;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+	children: ReactNode;
+	spaceY?: ColumnsSpaceY;
+}
+
+export const Columns = ({
 	collapseBelow,
 	cssOverrides,
 	children,
@@ -74,14 +74,12 @@ const Columns = ({
 	);
 };
 
-interface ColumnProps extends HTMLAttributes<HTMLDivElement>, Props {
+export interface ColumnProps extends HTMLAttributes<HTMLDivElement>, Props {
 	width?: number | number[];
 	span?: number | number[];
-	cssOverrides?: SerializedStyles | SerializedStyles[];
-	children: ReactNode;
 }
 
-const Column = ({
+export const Column = ({
 	width,
 	span,
 	cssOverrides,
@@ -103,8 +101,3 @@ const Column = ({
 		</div>
 	);
 };
-
-Columns.defaultProps = {};
-Column.defaultProps = {};
-
-export { Columns, Column };

@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
 import { Breakpoint, from, until, between } from '@guardian/src-foundations/mq';
-import { ColumnsSpaceY } from './columns';
+import { ColumnsSpaceY } from './Columns';
 
 type ColumnBreakpoint = {
 	totalColumns: number;

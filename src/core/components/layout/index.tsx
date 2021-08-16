@@ -1,4 +1,4 @@
-export { Columns, Column } from './components/columns/columns';
+export { Columns, Column } from './Columns/Columns';
 export { Container } from './components/container/container';
 export { Hide } from './components/hide/hide';
 export { Stack } from './components/stack/stack';
