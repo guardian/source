@@ -294,7 +294,7 @@ asChromaticStory(HideLabelBrandTheme);
 
 ### `string | JSX.Element` Controls
 
-For props where the type is either a string or some complex element, it may be desirable to configure the control to be a text type so that users can try it out more easily in Storybook.
+For props where the type is either a string or a JSX element, you can provide options for the value that let the user see a possible value for either type.
 
 ```ts
 interface StoryProps {
@@ -306,10 +306,12 @@ export const Story = ({ label }: StoryProps) => ...
 Story.story = {
     argTypes: {
         label: {
-            control: {
-                type: 'text',
+            options: ['string', 'JSX element'],
+            mapping: {
+                string: 'Option 1',
+                'JSX element': <em>Option 1</em>,
             },
-        }
+        },
     }
 }
 ```
