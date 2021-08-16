@@ -60,16 +60,16 @@ import type { Story } from '../../../@types/storybook-emotion-10-fixes';
 import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
-	title: 'Source/src-my-component/MyComponent',
-	component: MyComponent,
+    title: 'Source/src-my-component/MyComponent',
+    component: MyComponent,
     argTypes: {
-		id: { control: null },
-	},
-	args: {
-		label: 'Label',
-		hideLabel: false,
-		value: 'Value',
-	},
+        id: { control: null },
+    },
+    args: {
+        label: 'Label',
+        hideLabel: false,
+        value: 'Value',
+    },
 };
 
 const Template: Story = (args: MyComponentProps) => <MyComponent {...args} />;
@@ -87,14 +87,14 @@ asChromaticStory(Default);
 // *****************************************************************************
 
 export const DefaultBrandTheme = (args: MyComponentProps) => (
-	<ThemeProvider theme={myComponentBrand}>
-		<Template {...args} />
-	</ThemeProvider>
+    <ThemeProvider theme={myComponentBrand}>
+        <Template {...args} />
+    </ThemeProvider>
 );
 DefaultBrandTheme.parameters = {
-	backgrounds: {
-		default: 'brandBackground.primary',
-	},
+    backgrounds: {
+        default: 'brandBackground.primary',
+    },
 };
 asChromaticStory(DefaultBrandTheme);
 
@@ -109,17 +109,17 @@ asChromaticStory(HideLabel);
 // *****************************************************************************
 
 export const HideLabelBrandTheme = (args: MyComponentProps) => (
-	<ThemeProvider theme={myComponentBrand}>
-		<Template {...args} />
-	</ThemeProvider>
+    <ThemeProvider theme={myComponentBrand}>
+        <Template {...args} />
+    </ThemeProvider>
 );
 HideLabelLightTheme.args = {
     hideLabel: true
 }
 HideLabelBrandTheme.parameters = {
-	backgrounds: {
-		default: 'brandBackground.primary',
-	},
+    backgrounds: {
+        default: 'brandBackground.primary',
+    },
 };
 asChromaticStory(HideLabelBrandTheme);
 ```
@@ -304,12 +304,12 @@ interface StoryProps {
 export const Story = ({ label }: StoryProps) => ...
 
 Story.story = {
-	argTypes: {
-		label: {
-			control: {
-				type: 'text',
-			},
-		}
+    argTypes: {
+        label: {
+            control: {
+                type: 'text',
+            },
+        }
     }
 }
 ```
