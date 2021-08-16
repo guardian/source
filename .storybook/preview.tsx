@@ -18,11 +18,6 @@ export const parameters = {
 			method: 'alphabetical',
 		},
 	},
-	docs: {
-		source: {
-			state: 'open',
-		},
-	},
 };
 
 export const decorators = [FocusManagerDecorator];
