@@ -8,15 +8,28 @@ import {
 	containerTopBorder,
 } from './styles';
 
-	border?: boolean; // TODO: Deprecated. Please use `sideBorders` instead
 export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
+	/**
+	 * **Deprecated**
+	 *
+	 * Use `sideBorders` instead.
+	 */
+	border?: boolean;
 	sideBorders?: boolean;
 	topBorder?: boolean;
 	backgroundColor?: string;
 	borderColor?: string;
 }
 
-const Container = ({
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-container) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/440a83-container) •
+ * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/layout/Container) •
+ * [NPM](https://www.npmjs.com/package/@guardian/src-layout)
+ *
+ * Centres the page content and applies a width that corresponds to the grid at the current breakpoint.
+ */
+export const Container = ({
 	border = false,
 	sideBorders = false,
 	topBorder = false,
