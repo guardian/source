@@ -1,6 +1,8 @@
 # Stories
 
-Source uses [storybook](https://storybook.js.org/) for its API documentation as well as for visual regression testing.
+Source uses [storybook][storybook] for its API documentation as well as for visual regression testing.
+
+[storybook]: https://storybook.js.org/
 
 The Source storybook can be run locally using `yarn storybook`
 
@@ -48,8 +50,9 @@ export MyComponent = ({}: MyComponentProps) => (
         <div className="my-component-value">{value ?? "No value set"}</div>
     </div>
 )
+```
 
-
+```tsx
 // MyComponent.stories.tsx
 
 import { MyComponent } from './MyComponent';
@@ -102,8 +105,8 @@ asChromaticStory(DefaultBrandTheme);
 
 export const HideLabel = Template.bind({});
 HideLabel.args = {
-    hideLabel: true
-}
+    hideLabel: true,
+};
 asChromaticStory(HideLabel);
 
 // *****************************************************************************
@@ -114,8 +117,8 @@ export const HideLabelBrandTheme = (args: MyComponentProps) => (
     </ThemeProvider>
 );
 HideLabelLightTheme.args = {
-    hideLabel: true
-}
+    hideLabel: true,
+};
 HideLabelBrandTheme.parameters = {
     backgrounds: {
         default: 'brandBackground.primary',
@@ -127,19 +130,19 @@ asChromaticStory(HideLabelBrandTheme);
 ### Files and Naming
 
 1. Name story files following the pattern `${Component}.stories.tsx` e.g. `MyComponent.stories.tsx`
-1. Each exported component should have it's own `stories.tsx`
+1. Each exported component should have its own `stories.tsx`
 1. Story titles should follow the pattern `${Source | Editorial}/${package}/${component}` e.g. `Source/src-radio/RadioGroup`
 1. Use PascalCase names for stories
 
 ### Story Structure
 
-1. Define a template for each each set of stories
+1. Define a template for each set of stories
 
     ```ts
     const Template: Story = (args: ComponentProps) => <Component {...args} />;
     ```
 
-1. Set the default [story args](https://storybook.js.org/docs/react/writing-stories/args) and [argTypes](https://storybook.js.org/docs/react/api/argtypes) on the [default export](https://storybook.js.org/docs/react/writing-stories/introduction#default-export)
+1. Set the default [story args][story-args] and [argTypes][argtypes] on the [default export][default-export]
 
     ```ts
         export default {
@@ -150,8 +153,8 @@ asChromaticStory(HideLabelBrandTheme);
         };
     ```
 
-1. Define a Playground story for each component to document it's behaviour
-1. Wrap Playground stories with the `asPlayground` function
+1. Define a Playground story for each component to document its behaviour
+1. Wrap Playground stories with the [`asPlayground`][asplayground] function
 
     ```ts
         export const Playground = Template.bind({})
@@ -160,7 +163,7 @@ asChromaticStory(HideLabelBrandTheme);
     ```
 
 1. Define a series of stories detailing all possible states of each component for visual regression testing
-1. Wrap these stories with the `asChromaticStory` function
+1. Wrap these stories with the [`asChromaticStory`][aschromaticstory] function
 
     ```ts
         export const Story = Template.bind({})
@@ -202,6 +205,12 @@ asChromaticStory(HideLabelBrandTheme);
     ```
 
 1. Avoid styling and theming Playground stories
+
+[story-args]: https://storybook.js.org/docs/react/writing-stories/args
+[argtypes]: https://storybook.js.org/docs/react/api/argtypes
+[default-export]: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+[asplayground]: https://github.com/guardian/source/blob/245fc1362d553d842d7ae3d99b241e6c49268b26/src/lib/story-intents.ts#L13-L24
+[aschromaticstory]: https://github.com/guardian/source/blob/245fc1362d553d842d7ae3d99b241e6c49268b26/src/lib/story-intents.ts#L34-L46
 
 ### Documentation / Comments
 
@@ -245,7 +254,7 @@ asChromaticStory(HideLabelBrandTheme);
 
 ### Sub-components
 
-1. Set the `subcomponents` value in the default export for components that have sub-components
+1. Set the `subcomponents` value in the default export for components that have [sub-components](https://storybook.js.org/docs/react/workflows/stories-for-multiple-components)
 
     ```ts
     export default {
@@ -259,7 +268,7 @@ asChromaticStory(HideLabelBrandTheme);
 
 1. Pass any sub-component's default story args through to the sub-component in the template of the component story
 
-    ```ts
+    ```tsx
     // SubComponent.stories.tsx
 
     export default {
@@ -271,9 +280,9 @@ asChromaticStory(HideLabelBrandTheme);
             arg1: 1,
         },
     };
+    ```
 
-    ...
-
+    ```tsx
     // Component.stories.tsx
 
     ...
@@ -294,7 +303,7 @@ asChromaticStory(HideLabelBrandTheme);
 
 ### `string | JSX.Element` Controls
 
-For props where the type is either a string or a JSX element, you can provide options for the value that let the user see a possible value for either type.
+For props where the type is either a string or a JSX element, you can [provide options for the value][mapping-arg-values] that let the user see a possible value for either type.
 
 ```ts
 interface StoryProps {
@@ -315,3 +324,5 @@ Story.story = {
     }
 }
 ```
+
+[mapping-arg-values]: https://storybook.js.org/docs/react/writing-stories/args#mapping-to-complex-arg-values
