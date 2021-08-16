@@ -32,7 +32,7 @@ export interface ChoiceCardProps
 	 */
 	checked?: boolean;
 	/**
-	 * _Deprecated_ – use `checked` with `onChange` in a [controlled approach](https://reactjs.org/docs/forms.html#controlled-components).
+	 * Set the checked state in when using an [uncontrolled approach](https://reactjs.org/docs/uncontrolled-components.html).
 	 */
 	defaultChecked?: boolean;
 	/**
