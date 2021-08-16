@@ -40,6 +40,8 @@ export default {
 
 const Template: Story = (args: ChoiceCardProps) => <ChoiceCard {...args} />;
 
+// *****************************************************************************
+
 export const Playground = Template.bind({});
 Playground.args = {
 	icon: 'undefined',
@@ -47,8 +49,12 @@ Playground.args = {
 };
 asPlayground(Playground);
 
+// *****************************************************************************
+
 export const Default = Template.bind({});
 asChromaticStory(Default);
+
+// *****************************************************************************
 
 export const Checked = Template.bind({});
 Checked.args = {
@@ -56,11 +62,15 @@ Checked.args = {
 };
 asChromaticStory(Checked);
 
+// *****************************************************************************
+
 export const Error = Template.bind({});
 Error.args = {
 	error: true,
 };
 asChromaticStory(Error);
+
+// *****************************************************************************
 
 export const Icon = Template.bind({});
 Icon.args = {

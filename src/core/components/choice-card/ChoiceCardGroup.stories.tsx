@@ -3,50 +3,57 @@ import { choiceCardDefault } from '@guardian/src-foundations/themes';
 import React, { useState } from 'react';
 import { Story } from '../../../@types/storybook-emotion-10-fixes';
 import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
-import ChoiceCard from './ChoiceCard.stories';
+import { ChoiceCard } from './ChoiceCard';
+import ChoiceCardStories from './ChoiceCard.stories';
 import { ChoiceCardGroup, ChoiceCardGroupProps } from './ChoiceCardGroup';
 
 export default {
 	title: 'Source/src-choice-card/ChoiceCardGroup',
 	component: ChoiceCardGroup,
-	subcomponents: { ChoiceCard: ChoiceCard.component },
+	subcomponents: { ChoiceCard },
 	args: {
 		name: 'colours',
 		label: 'Choose an option',
 		supporting: 'These are your options',
 		multi: false,
 		children: [
-			<ChoiceCard.component
+			<ChoiceCard
+				{...ChoiceCardStories.args}
 				id="abc1"
 				value="option-1"
 				label="Option 1"
 				key={1}
 			/>,
-			<ChoiceCard.component
+			<ChoiceCard
+				{...ChoiceCardStories.args}
 				id="abc2"
 				value="option-2"
 				label="Option 2"
 				key={2}
 			/>,
-			<ChoiceCard.component
+			<ChoiceCard
+				{...ChoiceCardStories.args}
 				id="abc3"
 				value="option-3"
 				label="Option 3"
 				key={3}
 			/>,
-			<ChoiceCard.component
+			<ChoiceCard
+				{...ChoiceCardStories.args}
 				id="abc4"
 				value="option-4"
 				label="Option 4"
 				key={4}
 			/>,
-			<ChoiceCard.component
+			<ChoiceCard
+				{...ChoiceCardStories.args}
 				id="abc5"
 				value="option-5"
 				label="Option 5"
 				key={5}
 			/>,
-			<ChoiceCard.component
+			<ChoiceCard
+				{...ChoiceCardStories.args}
 				id="abc6"
 				value="option-6"
 				label="Option 6"
@@ -70,8 +77,12 @@ const Template: Story = (args: ChoiceCardGroupProps) => (
 	<ChoiceCardGroup {...args} />
 );
 
+// *****************************************************************************
+
 export const Playground = Template.bind({});
 asPlayground(Playground);
+
+// *****************************************************************************
 
 export const Default = Template.bind({});
 Default.args = {
@@ -79,6 +90,8 @@ Default.args = {
 	supporting: undefined,
 };
 asChromaticStory(Default);
+
+// *****************************************************************************
 
 export const DefaultMobile = Template.bind({});
 DefaultMobile.args = {
@@ -90,6 +103,8 @@ DefaultMobile.parameters = {
 };
 asChromaticStory(DefaultMobile);
 
+// *****************************************************************************
+
 export const DefaultTablet = Template.bind({});
 DefaultTablet.args = {
 	label: undefined,
@@ -100,6 +115,8 @@ DefaultTablet.parameters = {
 };
 asChromaticStory(DefaultTablet);
 
+// *****************************************************************************
+
 export const DefaultIn2Columns = Template.bind({});
 DefaultIn2Columns.args = {
 	label: undefined,
@@ -107,6 +124,8 @@ DefaultIn2Columns.args = {
 	columns: 2,
 };
 asChromaticStory(DefaultIn2Columns);
+
+// *****************************************************************************
 
 export const DefaultIn3Columns = Template.bind({});
 DefaultIn3Columns.args = {
@@ -116,6 +135,8 @@ DefaultIn3Columns.args = {
 };
 asChromaticStory(DefaultIn3Columns);
 
+// *****************************************************************************
+
 export const DefaultIn4Columns = Template.bind({});
 DefaultIn4Columns.args = {
 	label: undefined,
@@ -123,6 +144,8 @@ DefaultIn4Columns.args = {
 	columns: 4,
 };
 asChromaticStory(DefaultIn4Columns);
+
+// *****************************************************************************
 
 export const DefaultIn5Columns = Template.bind({});
 DefaultIn5Columns.args = {
@@ -132,12 +155,18 @@ DefaultIn5Columns.args = {
 };
 asChromaticStory(DefaultIn5Columns);
 
+// *****************************************************************************
+
 export const WithLabel = Template.bind({});
 WithLabel.args = { supporting: undefined };
 asChromaticStory(WithLabel);
 
+// *****************************************************************************
+
 export const WithSupporting = Template.bind({});
 asChromaticStory(WithSupporting);
+
+// *****************************************************************************
 
 export const WithError = Template.bind({});
 WithError.args = {
@@ -147,6 +176,8 @@ WithError.args = {
 };
 asChromaticStory(WithError);
 
+// *****************************************************************************
+
 export const WithLabelAndError = Template.bind({});
 WithLabelAndError.args = {
 	error: 'Please select a choice card to continue',
@@ -154,36 +185,37 @@ WithLabelAndError.args = {
 };
 asChromaticStory(WithLabelAndError);
 
+// *****************************************************************************
+
 export const WithLabelAndSupportingAndError = Template.bind({});
 WithLabelAndSupportingAndError.args = {
 	error: 'Please select a choice card to continue',
 };
 asChromaticStory(WithLabelAndSupportingAndError);
 
+// *****************************************************************************
+
 export const WithWildlyVaryingLengths = Template.bind({});
 WithWildlyVaryingLengths.args = {
 	children: [
-		<ChoiceCard.component
+		<ChoiceCard
 			id="abc1"
 			value="option-1"
 			label="A very, very, very, very, very, very, very long piece of text indeed"
 			key={1}
 		/>,
-		<ChoiceCard.component
+		<ChoiceCard
 			id="abc2"
 			value="option-2"
 			label="Something probable"
 			key={2}
 		/>,
-		<ChoiceCard.component
-			id="abc3"
-			value="option-3"
-			label="Short"
-			key={3}
-		/>,
+		<ChoiceCard id="abc3" value="option-3" label="Short" key={3} />,
 	],
 };
 asChromaticStory(WithWildlyVaryingLengths);
+
+// *****************************************************************************
 
 export const WithWildlyVaryingLengthsMobile = Template.bind({});
 WithWildlyVaryingLengthsMobile.args = WithWildlyVaryingLengths.args;
@@ -192,6 +224,8 @@ WithWildlyVaryingLengthsMobile.parameters = {
 };
 asChromaticStory(WithWildlyVaryingLengthsMobile);
 
+// *****************************************************************************
+
 export const WithWildlyVaryingLengthsTablet = Template.bind({});
 WithWildlyVaryingLengthsTablet.args = WithWildlyVaryingLengths.args;
 WithWildlyVaryingLengthsTablet.parameters = {
@@ -199,12 +233,16 @@ WithWildlyVaryingLengthsTablet.parameters = {
 };
 asChromaticStory(WithWildlyVaryingLengthsTablet);
 
+// *****************************************************************************
+
 export const WithTheme = (args: ChoiceCardGroupProps) => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<Template {...args} />
 	</ThemeProvider>
 );
 asChromaticStory(WithTheme);
+
+// *****************************************************************************
 
 export const MultiSelect: Story = (args: ChoiceCardGroupProps) => {
 	const [state, setState] = useState({
@@ -214,14 +252,14 @@ export const MultiSelect: Story = (args: ChoiceCardGroupProps) => {
 	return (
 		<>
 			<ChoiceCardGroup {...args}>
-				<ChoiceCard.component
+				<ChoiceCard
 					id="abc1"
 					value="option-1"
 					label="Option 1"
 					checked={state.opt1}
 					onChange={() => setState({ ...state, opt1: !state.opt1 })}
 				/>
-				<ChoiceCard.component
+				<ChoiceCard
 					id="abc2"
 					value="option-2"
 					label="Option 2"
@@ -242,20 +280,22 @@ MultiSelect.args = {
 };
 asChromaticStory(MultiSelect);
 
+// *****************************************************************************
+
 export const SingleSelect: Story = (args: ChoiceCardGroupProps) => {
 	const [selected, setSelected] = useState<string | null>('option-2');
 
 	return (
 		<>
 			<ChoiceCardGroup {...args}>
-				<ChoiceCard.component
+				<ChoiceCard
 					id="abc1"
 					value="option-1"
 					label="Option 1"
 					checked={selected === 'option-1'}
 					onChange={() => setSelected('option-1')}
 				/>
-				<ChoiceCard.component
+				<ChoiceCard
 					id="abc2"
 					value="option-2"
 					label="Option 2"
