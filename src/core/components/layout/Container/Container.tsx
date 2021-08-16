@@ -1,22 +1,19 @@
-import { HTMLAttributes, ReactNode } from 'react';
-import { SerializedStyles } from '@emotion/react';
+import { Props } from '@guardian/src-helpers';
+import { HTMLAttributes } from 'react';
 import {
 	container,
+	containerBackground,
+	containerBorderColor,
 	containerSideBorders,
 	containerTopBorder,
-	containerBorderColor,
-	containerBackground,
 } from './styles';
-import { Props } from '@guardian/src-helpers';
 
-interface Container extends HTMLAttributes<HTMLElement>, Props {
 	border?: boolean; // TODO: Deprecated. Please use `sideBorders` instead
+export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
 	sideBorders?: boolean;
 	topBorder?: boolean;
 	backgroundColor?: string;
 	borderColor?: string;
-	cssOverrides?: SerializedStyles | SerializedStyles[];
-	children: ReactNode;
 }
 
 const Container = ({
@@ -28,7 +25,7 @@ const Container = ({
 	cssOverrides,
 	children,
 	...props
-}: Container) => {
+}: ContainerProps) => {
 	return (
 		<section
 			css={[
@@ -51,8 +48,3 @@ const Container = ({
 		</section>
 	);
 };
-const defaultProps = {};
-
-Container.defaultProps = { ...defaultProps };
-
-export { Container };
