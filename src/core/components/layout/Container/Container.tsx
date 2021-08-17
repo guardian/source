@@ -15,9 +15,21 @@ export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
 	 * Use `sideBorders` instead.
 	 */
 	border?: boolean;
+	/**
+	 * Add borders to the sides of the component
+	 */
 	sideBorders?: boolean;
+	/**
+	 * Add a border to the top of the component
+	 */
 	topBorder?: boolean;
+	/**
+	 * Set a background colour on the component
+	 */
 	backgroundColor?: string;
+	/**
+	 * Set the colour of any borders
+	 */
 	borderColor?: string;
 }
 
