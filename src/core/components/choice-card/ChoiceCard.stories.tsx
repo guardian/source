@@ -12,7 +12,7 @@ export default {
 		label: 'string',
 	},
 	argTypes: {
-		// include all args so they render in the correct order
+		// sorted by required,alpha
 		id: undefined,
 		label: {
 			options: ['string', 'JSX element'],

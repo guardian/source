@@ -18,6 +18,8 @@ export default {
 		multi: false,
 	},
 	argTypes: {
+		// sorted by required,alpha
+		name: undefined,
 		columns: {
 			options: [undefined, 2, 3, 4, 5],
 			control: { type: 'select' },
@@ -26,6 +28,9 @@ export default {
 			options: [undefined, 'example error message'],
 			control: { type: 'select' },
 		},
+		label: undefined,
+		multi: undefined,
+		supporting: undefined,
 	},
 };
 
