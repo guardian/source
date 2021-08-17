@@ -30,10 +30,10 @@ export const asPlayground = (story: Story) => {
 	story.argTypes = {
 		...story.argTypes,
 		cssOverrides: {
-			options: ['undefined', '{ backgroundColor: "red" }'],
+			options: ['undefined', 'css`background-color: red;`'],
 			mapping: {
 				undefined: undefined,
-				'{ backgroundColor: "red" }': { backgroundColor: 'red' },
+				'css`background-color: red;`': { backgroundColor: 'red' },
 			},
 			control: { type: 'radio' },
 		},
