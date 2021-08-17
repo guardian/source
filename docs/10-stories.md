@@ -326,3 +326,22 @@ Story.story = {
 ```
 
 [mapping-arg-values]: https://storybook.js.org/docs/react/writing-stories/args#mapping-to-complex-arg-values
+
+### Controls with `undefined`
+
+For props whose behaviour depends on whether the value is defined or not, you can configure two options for the user to choose between to see the different states.
+
+```tsx
+export const Story = ({ error }: StoryProps) => ...
+
+Story.argTypes = {
+    error: {
+        options: ['undefined', 'string'],
+        mapping: {
+            undefined: undefined,
+            'string': "An error has occurred",
+        },
+        control: { type: 'radio' },
+    }
+}
+```
