@@ -19,6 +19,7 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 -   [Overriding styles](docs/07-overriding-styles.md)
 -   [Contributing](docs/08-contributing.md)
 -   [FAQs](docs/09-faqs.md)
+-   [Stories](docs/10-stories.md)
 
 ## Using the Design System 🎨
 
