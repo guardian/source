@@ -1,3 +1,5 @@
+import { Story } from '../../@types/storybook-emotion-10-fixes';
+import { asChromaticStory, asPlayground } from '../../lib/story-intents';
 import { SvgRoundelBrand, SvgRoundelBrandProps } from './SvgRoundelBrand';
 
 export default {
@@ -10,10 +12,19 @@ export default {
 	},
 };
 
-export const Demo = (args: SvgRoundelBrandProps) => (
+const Template: Story = (args: SvgRoundelBrandProps) => (
 	<SvgRoundelBrand {...args} />
 );
-Demo.storyName = 'SvgRoundelBrand';
-Demo.args = {
+
+// *****************************************************************************
+
+export const Playground = Template.bind({});
+Playground.args = {
 	width: 300,
 };
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const Default = Template.bind({});
+asChromaticStory(Default);
