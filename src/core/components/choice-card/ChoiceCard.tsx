@@ -51,6 +51,9 @@ export interface ChoiceCardProps
  * [Design System](https://theguardian.design/2a1e5182b/p/65ffe9-choice-card) •
  * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/choice-card) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-choice-card)
+ *
+ * Choice cards are a tactile, single or multi-select mechanism used to group related options.
+ *
  */
 export const ChoiceCard = ({
 	id,
