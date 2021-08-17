@@ -6,8 +6,6 @@ export default {
 	title: 'Source/src-layout/Hide',
 	component: Hide,
 	argTypes: {
-		until: {}, // display first
-		from: {}, // display first
 		above: {
 			control: { disable: true },
 		},
