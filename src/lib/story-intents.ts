@@ -19,6 +19,24 @@ export const asPlayground = (story: Story) => {
 				hidden: true,
 			},
 		},
+		// className is part of react API anyway, we don't need to document it
+		controls: { exclude: ['className'] },
+		chromatic: { disable: true },
+	};
+	story.args = {
+		...story.args,
+		cssOverrides: 'undefined',
+	};
+	story.argTypes = {
+		...story.argTypes,
+		cssOverrides: {
+			options: ['undefined', 'css`background-color: red;`'],
+			mapping: {
+				undefined: undefined,
+				'css`background-color: red;`': { backgroundColor: 'red' },
+			},
+			control: { type: 'radio' },
+		},
 	};
 	story.storyName = '🧶 Playground';
 };
@@ -42,5 +60,6 @@ export const asChromaticStory = (story: Story) => {
 		},
 		docs: { disable: true },
 		controls: { disabled: true },
+		chromatic: { disable: false },
 	};
 };
