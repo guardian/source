@@ -8,7 +8,7 @@ export interface ButtonLinkProps
 		SharedLinkProps {}
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-link-button-link--demo) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-link-button-link) •
  * [Design System](https://theguardian.design/2a1e5182b/p/43c26b-link/b/048fd1) •
  * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/link) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-link)
