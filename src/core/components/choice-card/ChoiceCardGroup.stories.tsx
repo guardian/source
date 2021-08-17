@@ -252,7 +252,7 @@ asChromaticStory(WithDefaultTheme);
 
 // *****************************************************************************
 
-export const MultiSelect: Story = (args: ChoiceCardGroupProps) => {
+export const ControlledMultiSelect: Story = (args: ChoiceCardGroupProps) => {
 	const [state, setState] = useState({
 		opt1: true,
 		opt2: true,
@@ -283,14 +283,14 @@ export const MultiSelect: Story = (args: ChoiceCardGroupProps) => {
 		</>
 	);
 };
-MultiSelect.args = {
+ControlledMultiSelect.args = {
 	multi: true,
 };
-asChromaticStory(MultiSelect);
+asChromaticStory(ControlledMultiSelect);
 
 // *****************************************************************************
 
-export const SingleSelect: Story = (args: ChoiceCardGroupProps) => {
+export const ControlledSingleSelect: Story = (args: ChoiceCardGroupProps) => {
 	const [selected, setSelected] = useState<string | null>('option-2');
 
 	return (
@@ -319,7 +319,50 @@ export const SingleSelect: Story = (args: ChoiceCardGroupProps) => {
 		</>
 	);
 };
-SingleSelect.args = {
+ControlledSingleSelect.args = {
 	multi: false,
 };
-asChromaticStory(SingleSelect);
+asChromaticStory(ControlledSingleSelect);
+
+// *****************************************************************************
+
+export const UnControlledMultiSelect: Story = (args: ChoiceCardGroupProps) => (
+	<ChoiceCardGroup {...args}>
+		<ChoiceCard
+			id="abc1"
+			value="option-1"
+			label="Option 1"
+			defaultChecked
+		/>
+		<ChoiceCard
+			id="abc2"
+			value="option-2"
+			label="Option 2"
+			defaultChecked
+		/>
+	</ChoiceCardGroup>
+);
+UnControlledMultiSelect.args = {
+	multi: true,
+};
+UnControlledMultiSelect.storyName = 'Un-controlled Multi Select';
+asChromaticStory(UnControlledMultiSelect);
+
+// *****************************************************************************
+
+export const UnControlledSingleSelect: Story = (args: ChoiceCardGroupProps) => (
+	<ChoiceCardGroup {...args}>
+		<ChoiceCard id="abc1" value="option-1" label="Option 1" />
+		<ChoiceCard
+			id="abc2"
+			value="option-2"
+			label="Option 2"
+			defaultChecked
+		/>
+	</ChoiceCardGroup>
+);
+UnControlledSingleSelect.args = {
+	multi: false,
+};
+UnControlledSingleSelect.storyName = 'Un-controlled Single Select';
+asChromaticStory(UnControlledSingleSelect);
