@@ -19,6 +19,8 @@ export const asPlayground = (story: Story) => {
 				hidden: true,
 			},
 		},
+		// className is part of react API anyway, we don't need to document it
+		controls: { exclude: ['className'] },
 	};
 	story.args = {
 		...story.args,
