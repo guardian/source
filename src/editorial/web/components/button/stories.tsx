@@ -4,7 +4,7 @@ import React from 'react';
 import { Button, LinkButton } from './index';
 
 export default {
-	title: 'Editorial/Button',
+	title: 'Editorial/src-ed-button/Button',
 	component: Button,
 };
 
