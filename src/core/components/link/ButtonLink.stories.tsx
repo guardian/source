@@ -1,62 +1,14 @@
-import React from 'react';
-import { css } from '@emotion/react';
-import {
-	SvgArrowRightStraight,
-	SvgIndent,
-	SvgExternal,
-	SvgChevronLeftSingle,
-} from '@guardian/src-icons';
-import { space } from '@guardian/src-foundations';
+import { SvgExternal } from '@guardian/src-icons';
 import { ThemeProvider } from '@emotion/react';
 import { ButtonLink } from './ButtonLink';
 import { linkDefault } from './index';
-import { textSans } from '@guardian/src-foundations/typography';
 import { ButtonLinkProps } from './ButtonLink';
+import type { Story } from '../../../@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-link/ButtonLink',
 	component: ButtonLink,
-};
-
-/* eslint-disable react/jsx-key */
-const buttonLinks = [
-	<ButtonLink onClick={() => console.log('Primary clicked')}>
-		Primary
-	</ButtonLink>,
-	<ButtonLink
-		priority="secondary"
-		onClick={() => console.log('Secondary clicked')}
-	>
-		Secondary
-	</ButtonLink>,
-];
-/* eslint-enable react/jsx-key */
-
-const flexStart = css`
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-
-	> * {
-		margin-right: ${space[9]}px;
-	}
-`;
-
-const spacer = css`
-	margin-bottom: ${space[4]}px;
-`;
-
-const text = css`
-	${textSans.medium()}
-`;
-
-export const Demo = (args: ButtonLinkProps) => (
-	<ButtonLink {...args} onClick={() => console.log('Button link clicked')}>
-		Click Me
-	</ButtonLink>
-);
-
-Demo.story = {
 	args: {
 		priority: 'primary',
 		subdued: false,
@@ -64,125 +16,121 @@ Demo.story = {
 		iconSide: 'left',
 	},
 	argTypes: {
-		icon: { control: null },
-		cssOverrides: { control: null },
+		icon: {
+			options: ['undefined', 'SvgExternal'],
+			mapping: {
+				undefined: undefined,
+				SvgExternal: <SvgExternal />,
+			},
+			control: { type: 'radio' },
+		},
 	},
 };
 
-export const InlineButtonLink = (_: ButtonLinkProps) => (
+const Template: Story = (args: ButtonLinkProps) => (
+	<ButtonLink {...args}>Click Me</ButtonLink>
+);
+
+// *****************************************************************************
+
+export const Playground = Template.bind({});
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const PrimaryButtonLinkLightTheme = (args: ButtonLinkProps) => (
 	<ThemeProvider theme={linkDefault}>
-		<p css={text}>
-			Please{' '}
-			<ButtonLink onClick={() => console.log('Button link clicked')}>
-				click me
-			</ButtonLink>
-			. Thanks!
-		</p>
+		<Template {...args} />
 	</ThemeProvider>
 );
-
-InlineButtonLink.story = {
-	parameters: {
-		controls: {
-			disabled: true,
-		},
-	},
+PrimaryButtonLinkLightTheme.args = {
+	icon: undefined,
 };
+asChromaticStory(PrimaryButtonLinkLightTheme);
 
-export const ButtonLinksLight = (_: ButtonLinkProps) => (
+// *****************************************************************************
+
+export const SecondaryButtonLinkLightTheme = (args: ButtonLinkProps) => (
 	<ThemeProvider theme={linkDefault}>
-		<div css={flexStart}>
-			{buttonLinks.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<Template {...args} />
 	</ThemeProvider>
 );
-
-ButtonLinksLight.story = {
-	parameters: {
-		controls: {
-			disabled: true,
-		},
-	},
+SecondaryButtonLinkLightTheme.args = {
+	priority: 'secondary',
+	icon: undefined,
 };
+asChromaticStory(SecondaryButtonLinkLightTheme);
 
-export const TextAndIconButtonLinks = (_: ButtonLinkProps) => (
-	<>
-		<div css={spacer}>
-			<ButtonLink
-				icon={<SvgExternal />}
-				onClick={() => console.log('Clicked')}
-			>
-				Terms and conditions
-			</ButtonLink>
-		</div>
-		<div css={[flexStart, spacer]}>
-			<ButtonLink
-				icon={<SvgChevronLeftSingle />}
-				onClick={() => console.log('Clicked')}
-			>
-				Previous
-			</ButtonLink>
-			<ButtonLink
-				iconSide="right"
-				icon={<SvgArrowRightStraight />}
-				onClick={() => console.log('Clicked')}
-			>
-				Next
-			</ButtonLink>
-		</div>
-		<div css={spacer}>
-			<ButtonLink
-				iconSide="left"
-				icon={<SvgIndent />}
-				onClick={() => console.log('Clicked')}
-			>
-				Indent
-			</ButtonLink>
-		</div>
-		<div css={spacer}>
-			<ButtonLink
-				icon={<SvgExternal />}
-				subdued={true}
-				onClick={() => console.log('Clicked')}
-			>
-				Terms and conditions
-			</ButtonLink>
-		</div>
-		<div css={[flexStart, spacer]}>
-			<ButtonLink
-				icon={<SvgChevronLeftSingle />}
-				subdued={true}
-				onClick={() => console.log('Clicked')}
-			>
-				Previous
-			</ButtonLink>
-			<ButtonLink
-				iconSide="right"
-				icon={<SvgArrowRightStraight />}
-				subdued={true}
-				onClick={() => console.log('Clicked')}
-			>
-				Next
-			</ButtonLink>
-		</div>
-		<div css={spacer}>
-			<ButtonLink
-				iconSide="left"
-				icon={<SvgIndent />}
-				subdued={true}
-				onClick={() => console.log('Clicked')}
-			>
-				Indent
-			</ButtonLink>
-		</div>
-	</>
+// *****************************************************************************
+
+export const PrimarySubduedButtonLinkLightTheme = (args: ButtonLinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
 );
-TextAndIconButtonLinks.story = {
-	parameters: {
-		controls: {
-			disabled: true,
-		},
-	},
+PrimarySubduedButtonLinkLightTheme.args = {
+	subdued: true,
+	icon: undefined,
 };
+asChromaticStory(PrimarySubduedButtonLinkLightTheme);
+
+// *****************************************************************************
+
+export const SecondarySubduedButtonLinkLightTheme = (args: ButtonLinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+SecondarySubduedButtonLinkLightTheme.args = {
+	priority: 'secondary',
+	subdued: true,
+	icon: undefined,
+};
+asChromaticStory(SecondarySubduedButtonLinkLightTheme);
+
+// *****************************************************************************
+
+export const PrimaryIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+asChromaticStory(PrimaryIconButtonLinkLightTheme);
+
+// *****************************************************************************
+
+export const SecondaryIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+SecondaryIconButtonLinkLightTheme.args = {
+	priority: 'secondary',
+};
+asChromaticStory(SecondaryIconButtonLinkLightTheme);
+
+// *****************************************************************************
+
+export const SubduedIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+SubduedIconButtonLinkLightTheme.args = {
+	subdued: true,
+};
+asChromaticStory(SubduedIconButtonLinkLightTheme);
+
+// *****************************************************************************
+
+export const RightIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+RightIconButtonLinkLightTheme.args = {
+	iconSide: 'right',
+};
+asChromaticStory(RightIconButtonLinkLightTheme);
+
+// *****************************************************************************

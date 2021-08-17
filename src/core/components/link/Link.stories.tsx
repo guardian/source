@@ -1,67 +1,15 @@
 import React from 'react';
-import { css } from '@emotion/react';
 import { ThemeProvider } from '@emotion/react';
-import { textSans } from '@guardian/src-foundations/typography';
 import { linkDefault, linkBrandAlt, linkBrand } from './index';
 import { Link, LinkProps } from './Link';
-import {
-	SvgArrowRightStraight,
-	SvgExternal,
-	SvgChevronRightSingle,
-	SvgChevronLeftSingle,
-	SvgIndent,
-} from '@guardian/src-icons';
-import { space } from '@guardian/src-foundations';
+import { SvgExternal } from '@guardian/src-icons';
 import { storybookBackgrounds } from '@guardian/src-helpers';
+import type { Story } from '../../../@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-link/Link',
 	component: Link,
-};
-
-const text = css`
-	${textSans.medium()}
-`;
-
-/* eslint-disable react/jsx-key */
-const priorityLinks = [
-	<Link href="#">Primary</Link>,
-	<Link priority="secondary" href="#">
-		Secondary
-	</Link>,
-];
-
-const subduedLinks = [
-	<Link subdued={true} href="#">
-		Primary subdued
-	</Link>,
-	<Link subdued={true} priority="secondary" href="#">
-		Secondary subdued
-	</Link>,
-];
-/* eslint-enable react/jsx-key */
-
-const flexStart = css`
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-
-	> * {
-		margin-right: ${space[9]}px;
-	}
-`;
-
-const spacer = css`
-	margin-bottom: ${space[4]}px;
-`;
-
-export const Demo = (args: LinkProps) => (
-	<Link {...args} href="#">
-		Click Me
-	</Link>
-);
-
-Demo.story = {
 	args: {
 		priority: 'primary',
 		subdued: false,
@@ -69,214 +17,281 @@ Demo.story = {
 		iconSide: 'left',
 	},
 	argTypes: {
-		icon: { control: null },
-		cssOverrides: { control: null },
-	},
-};
-
-export const InlineLink = (_: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<p css={text}>
-			You can <Link href="#">read more</Link> about our services
-		</p>
-	</ThemeProvider>
-);
-
-InlineLink.story = {
-	parameters: {
-		controls: {
-			disabled: true,
+		icon: {
+			options: ['undefined', 'SvgExternal'],
+			mapping: {
+				undefined: undefined,
+				SvgExternal: <SvgExternal />,
+			},
+			control: { type: 'radio' },
 		},
 	},
 };
 
-export const InlineLinkIcon = (_: LinkProps) => (
+const Template: Story = (args: LinkProps) => <Link {...args}>Click Me</Link>;
+
+// *****************************************************************************
+
+export const Playground = Template.bind({});
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const PrimaryLinkLightTheme = (args: LinkProps) => (
 	<ThemeProvider theme={linkDefault}>
-		<p css={text}>
-			You can{' '}
-			<Link
-				iconSide="right"
-				icon={<SvgArrowRightStraight />}
-				subdued={true}
-				href="#"
-			>
-				click this link to read more and find out all the important
-				information
-			</Link>{' '}
-			about our services
-		</p>
-		<p css={text}>
-			You can{' '}
-			<Link
-				iconSide="left"
-				icon={<SvgExternal />}
-				subdued={true}
-				href="#"
-			>
-				click this link to read more and find out all the important
-				information
-			</Link>{' '}
-			about our services
-		</p>
-		<p css={text}>
-			Some more text here to test different wrapping points. You can{' '}
-			<Link
-				iconSide="right"
-				icon={<SvgChevronRightSingle />}
-				subdued={true}
-				href="#"
-			>
-				click this link to read more and find out all the important
-				information
-			</Link>{' '}
-			about our services
-		</p>
-		<p css={text}>
-			Some more text here to test different wrapping points. You can{' '}
-			<Link
-				iconSide="left"
-				icon={<SvgChevronLeftSingle />}
-				subdued={true}
-				href="#"
-			>
-				click this link to read more and find out all the important
-				information
-			</Link>{' '}
-			about our services
-		</p>
+		<Template {...args} />
 	</ThemeProvider>
 );
-
-InlineLinkIcon.story = {
-	parameters: {
-		controls: {
-			disabled: true,
-		},
-	},
+PrimaryLinkLightTheme.args = {
+	icon: undefined,
 };
+asChromaticStory(PrimaryLinkLightTheme);
 
-export const PriorityLight = (_: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<div css={flexStart}>
-			{priorityLinks.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
-	</ThemeProvider>
-);
+// *****************************************************************************
 
-PriorityLight.story = {
-	parameters: {
-		controls: {
-			disabled: true,
-		},
-	},
-};
-
-export const PriorityBlue = (_: LinkProps) => (
+export const PrimaryLinkBrandTheme = (args: LinkProps) => (
 	<ThemeProvider theme={linkBrand}>
-		<Link href="#">Primary</Link>
+		<Template {...args} />
 	</ThemeProvider>
 );
-
-PriorityBlue.story = {
-	parameters: {
-		backgrounds: {
-			default: 'brand',
-			values: [storybookBackgrounds.brand],
-		},
-		controls: {
-			disabled: true,
-		},
+PrimaryLinkBrandTheme.args = {
+	icon: undefined,
+};
+PrimaryLinkBrandTheme.parameters = {
+	backgrounds: {
+		default: 'brand',
+		values: [storybookBackgrounds.brand],
 	},
 };
+asChromaticStory(PrimaryLinkBrandTheme);
 
-export const PriorityYellow = (_: LinkProps) => (
+// *****************************************************************************
+
+export const PrimaryLinkBrandAltTheme = (args: LinkProps) => (
 	<ThemeProvider theme={linkBrandAlt}>
-		<Link href="#">Primary</Link>
+		<Template {...args} />
 	</ThemeProvider>
 );
-
-PriorityYellow.story = {
-	parameters: {
-		backgrounds: {
-			default: 'brandAlt',
-			values: [storybookBackgrounds.brandAlt],
-		},
-		controls: {
-			disabled: true,
-		},
+PrimaryLinkBrandAltTheme.args = {
+	icon: undefined,
+};
+PrimaryLinkBrandAltTheme.parameters = {
+	backgrounds: {
+		default: 'brandAlt',
+		values: [storybookBackgrounds.brandAlt],
 	},
 };
+asChromaticStory(PrimaryLinkBrandAltTheme);
 
-export const SubduedLight = (_: LinkProps) => (
+// *****************************************************************************
+
+export const SecondaryLinkLightTheme = (args: LinkProps) => (
 	<ThemeProvider theme={linkDefault}>
-		<div css={flexStart}>
-			{subduedLinks.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
+		<Template {...args} />
 	</ThemeProvider>
 );
-
-SubduedLight.story = {
-	parameters: {
-		controls: {
-			disabled: true,
-		},
-	},
+SecondaryLinkLightTheme.args = {
+	priority: 'secondary',
+	icon: undefined,
 };
+asChromaticStory(SecondaryLinkLightTheme);
 
-export const TextAndIconLinks = (_: LinkProps) => (
-	<>
-		<div css={spacer}>
-			<Link icon={<SvgExternal />} href="#">
-				Terms and conditions
-			</Link>
-		</div>
-		<div css={[flexStart, spacer]}>
-			<Link icon={<SvgChevronLeftSingle />} href="#">
-				Previous
-			</Link>
-			<Link iconSide="right" icon={<SvgArrowRightStraight />} href="#">
-				Next
-			</Link>
-		</div>
-		<div css={spacer}>
-			<Link iconSide="left" icon={<SvgIndent />} href="#">
-				Indent
-			</Link>
-		</div>
-		<div css={spacer}>
-			<Link icon={<SvgExternal />} subdued={true} href="#">
-				Terms and conditions
-			</Link>
-		</div>
-		<div css={[flexStart, spacer]}>
-			<Link icon={<SvgChevronLeftSingle />} subdued={true} href="#">
-				Previous
-			</Link>
-			<Link
-				iconSide="right"
-				icon={<SvgArrowRightStraight />}
-				subdued={true}
-				href="#"
-			>
-				Next
-			</Link>
-		</div>
-		<div css={spacer}>
-			<Link iconSide="left" icon={<SvgIndent />} subdued={true} href="#">
-				Indent
-			</Link>
-		</div>
-	</>
+// *****************************************************************************
+
+export const PrimarySubduedLinkLightTheme = (args: LinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
 );
-
-TextAndIconLinks.story = {
-	parameters: {
-		controls: {
-			disabled: true,
-		},
-	},
+PrimarySubduedLinkLightTheme.args = {
+	subdued: true,
+	icon: undefined,
 };
+asChromaticStory(PrimarySubduedLinkLightTheme);
+
+// *****************************************************************************
+
+export const SecondarySubduedLinkLightTheme = (args: LinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+SecondarySubduedLinkLightTheme.args = {
+	priority: 'secondary',
+	subdued: true,
+	icon: undefined,
+};
+asChromaticStory(SecondarySubduedLinkLightTheme);
+
+// *****************************************************************************
+
+export const PrimaryIconLinkLightTheme = (args: LinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+asChromaticStory(PrimaryIconLinkLightTheme);
+
+// *****************************************************************************
+
+export const SecondaryIconLinkLightTheme = (args: LinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+SecondaryIconLinkLightTheme.args = {
+	priority: 'secondary',
+};
+asChromaticStory(SecondaryIconLinkLightTheme);
+
+// *****************************************************************************
+
+export const SubduedIconLinkLightTheme = (args: LinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+SubduedIconLinkLightTheme.args = {
+	subdued: true,
+};
+asChromaticStory(SubduedIconLinkLightTheme);
+
+// *****************************************************************************
+
+export const RightIconLinkLightTheme = (args: LinkProps) => (
+	<ThemeProvider theme={linkDefault}>
+		<Template {...args} />
+	</ThemeProvider>
+);
+RightIconLinkLightTheme.args = {
+	iconSide: 'right',
+};
+asChromaticStory(RightIconLinkLightTheme);
+
+// *****************************************************************************
+
+// export const PriorityLight = (_: LinkProps) => (
+// 	<ThemeProvider theme={linkDefault}>
+// 		<div css={flexStart}>
+// 			{priorityLinks.map((button, index) => (
+// 				<div key={index}>{button}</div>
+// 			))}
+// 		</div>
+// 	</ThemeProvider>
+// );
+
+// PriorityLight.story = {
+// 	parameters: {
+// 		controls: {
+// 			disabled: true,
+// 		},
+// 	},
+// };
+
+// export const PriorityBlue = (_: LinkProps) => (
+// 	<ThemeProvider theme={linkBrand}>
+// 		<Link href="#">Primary</Link>
+// 	</ThemeProvider>
+// );
+
+// PriorityBlue.story = {
+// 	parameters: {
+// 		backgrounds: {
+// 			default: 'brand',
+// 			values: [storybookBackgrounds.brand],
+// 		},
+// 		controls: {
+// 			disabled: true,
+// 		},
+// 	},
+// };
+
+// export const PriorityYellow = (_: LinkProps) => (
+// 	<ThemeProvider theme={linkBrandAlt}>
+// 		<Link href="#">Primary</Link>
+// 	</ThemeProvider>
+// );
+
+// PriorityYellow.story = {
+// 	parameters: {
+// 		backgrounds: {
+// 			default: 'brandAlt',
+// 			values: [storybookBackgrounds.brandAlt],
+// 		},
+// 		controls: {
+// 			disabled: true,
+// 		},
+// 	},
+// };
+
+// export const SubduedLight = (_: LinkProps) => (
+// 	<ThemeProvider theme={linkDefault}>
+// 		<div css={flexStart}>
+// 			{subduedLinks.map((button, index) => (
+// 				<div key={index}>{button}</div>
+// 			))}
+// 		</div>
+// 	</ThemeProvider>
+// );
+
+// SubduedLight.story = {
+// 	parameters: {
+// 		controls: {
+// 			disabled: true,
+// 		},
+// 	},
+// };
+
+// export const TextAndIconLinks = (_: LinkProps) => (
+// 	<>
+// 		<div css={spacer}>
+// 			<Link icon={<SvgExternal />} href="#">
+// 				Terms and conditions
+// 			</Link>
+// 		</div>
+// 		<div css={[flexStart, spacer]}>
+// 			<Link icon={<SvgChevronLeftSingle />} href="#">
+// 				Previous
+// 			</Link>
+// 			<Link iconSide="right" icon={<SvgArrowRightStraight />} href="#">
+// 				Next
+// 			</Link>
+// 		</div>
+// 		<div css={spacer}>
+// 			<Link iconSide="left" icon={<SvgIndent />} href="#">
+// 				Indent
+// 			</Link>
+// 		</div>
+// 		<div css={spacer}>
+// 			<Link icon={<SvgExternal />} subdued={true} href="#">
+// 				Terms and conditions
+// 			</Link>
+// 		</div>
+// 		<div css={[flexStart, spacer]}>
+// 			<Link icon={<SvgChevronLeftSingle />} subdued={true} href="#">
+// 				Previous
+// 			</Link>
+// 			<Link
+// 				iconSide="right"
+// 				icon={<SvgArrowRightStraight />}
+// 				subdued={true}
+// 				href="#"
+// 			>
+// 				Next
+// 			</Link>
+// 		</div>
+// 		<div css={spacer}>
+// 			<Link iconSide="left" icon={<SvgIndent />} subdued={true} href="#">
+// 				Indent
+// 			</Link>
+// 		</div>
+// 	</>
+// );
+
+// TextAndIconLinks.story = {
+// 	parameters: {
+// 		controls: {
+// 			disabled: true,
+// 		},
+// 	},
+// };
