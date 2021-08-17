@@ -20,6 +20,21 @@ export const asPlayground = (story: Story) => {
 			},
 		},
 	};
+	story.args = {
+		...story.args,
+		cssOverrides: 'undefined',
+	};
+	story.argTypes = {
+		...story.argTypes,
+		cssOverrides: {
+			options: ['undefined', '{ backgroundColor: "red" }'],
+			mapping: {
+				undefined: undefined,
+				'{ backgroundColor: "red" }': { backgroundColor: 'red' },
+			},
+			control: { type: 'radio' },
+		},
+	};
 	story.storyName = '🧶 Playground';
 };
 
