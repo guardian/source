@@ -238,12 +238,12 @@ asChromaticStory(WithWildlyVaryingLengthsTablet);
 
 // *****************************************************************************
 
-export const WithTheme = (args: ChoiceCardGroupProps) => (
+export const WithDefaultTheme = (args: ChoiceCardGroupProps) => (
 	<ThemeProvider theme={choiceCardDefault}>
 		<Template {...args} />
 	</ThemeProvider>
 );
-asChromaticStory(WithTheme);
+asChromaticStory(WithDefaultTheme);
 
 // *****************************************************************************
 
