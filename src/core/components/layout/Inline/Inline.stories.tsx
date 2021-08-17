@@ -8,8 +8,6 @@ export default {
 	component: Inline,
 };
 
-// export * from '../stories/inline/default';
-
 const Template: Story = (args: InlineProps) => (
 	<Inline {...args}>
 		{args.children ?? (
