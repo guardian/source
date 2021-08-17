@@ -21,6 +21,7 @@ export const asPlayground = (story: Story) => {
 		},
 		// className is part of react API anyway, we don't need to document it
 		controls: { exclude: ['className'] },
+		chromatic: { disable: true },
 	};
 	story.args = {
 		...story.args,
@@ -59,5 +60,6 @@ export const asChromaticStory = (story: Story) => {
 		},
 		docs: { disable: true },
 		controls: { disabled: true },
+		chromatic: { disable: false },
 	};
 };
