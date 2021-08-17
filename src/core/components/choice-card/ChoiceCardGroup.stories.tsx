@@ -16,50 +16,6 @@ export default {
 		label: 'Choose an option',
 		supporting: 'These are your options',
 		multi: false,
-		children: [
-			<ChoiceCard
-				{...ChoiceCardStories.args}
-				id="abc1"
-				value="option-1"
-				label="Option 1"
-				key={1}
-			/>,
-			<ChoiceCard
-				{...ChoiceCardStories.args}
-				id="abc2"
-				value="option-2"
-				label="Option 2"
-				key={2}
-			/>,
-			<ChoiceCard
-				{...ChoiceCardStories.args}
-				id="abc3"
-				value="option-3"
-				label="Option 3"
-				key={3}
-			/>,
-			<ChoiceCard
-				{...ChoiceCardStories.args}
-				id="abc4"
-				value="option-4"
-				label="Option 4"
-				key={4}
-			/>,
-			<ChoiceCard
-				{...ChoiceCardStories.args}
-				id="abc5"
-				value="option-5"
-				label="Option 5"
-				key={5}
-			/>,
-			<ChoiceCard
-				{...ChoiceCardStories.args}
-				id="abc6"
-				value="option-6"
-				label="Option 6"
-				key={6}
-			/>,
-		],
 	},
 	argTypes: {
 		columns: {
@@ -74,7 +30,54 @@ export default {
 };
 
 const Template: Story = (args: ChoiceCardGroupProps) => (
-	<ChoiceCardGroup {...args} />
+	<ChoiceCardGroup {...args}>
+		{args.children ?? (
+			<>
+				<ChoiceCard
+					{...ChoiceCardStories.args}
+					id="abc1"
+					value="option-1"
+					label="Option 1"
+					key={1}
+				/>
+				<ChoiceCard
+					{...ChoiceCardStories.args}
+					id="abc2"
+					value="option-2"
+					label="Option 2"
+					key={2}
+				/>
+				<ChoiceCard
+					{...ChoiceCardStories.args}
+					id="abc3"
+					value="option-3"
+					label="Option 3"
+					key={3}
+				/>
+				<ChoiceCard
+					{...ChoiceCardStories.args}
+					id="abc4"
+					value="option-4"
+					label="Option 4"
+					key={4}
+				/>
+				<ChoiceCard
+					{...ChoiceCardStories.args}
+					id="abc5"
+					value="option-5"
+					label="Option 5"
+					key={5}
+				/>
+				<ChoiceCard
+					{...ChoiceCardStories.args}
+					id="abc6"
+					value="option-6"
+					label="Option 6"
+					key={6}
+				/>
+			</>
+		)}
+	</ChoiceCardGroup>
 );
 
 // *****************************************************************************
