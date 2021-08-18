@@ -13,7 +13,7 @@ const FakeHeader = ({ children }: { children: React.ReactNode }) => {
 		<div
 			css={css`
 				background-color: #052962;
-				height: 400px;
+				height: 440px;
 				padding: 20px;
 			`}
 		>
