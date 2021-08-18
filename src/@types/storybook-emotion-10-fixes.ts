@@ -13,9 +13,10 @@ export type Parameters = {
 	[key: string]: any;
 };
 
-export type Story = {
-	(arg0: any): JSX.Element;
+export type Story<T = Args> = {
+	(arg0: Args & T): JSX.Element;
 	args?: Args;
 	parameters?: Parameters;
+	argTypes?: Args;
 	storyName?: string;
 };

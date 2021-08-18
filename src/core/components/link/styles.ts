@@ -1,9 +1,11 @@
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import { width } from '@guardian/src-foundations/size';
 import { linkDefault, LinkTheme } from '@guardian/src-foundations/themes';
 import { textSans } from '@guardian/src-foundations/typography';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { space } from '@guardian/src-foundations';
+import { IconSide, LinkPriority } from './types';
+import { ReactElement } from 'react';
 
 export const link = css`
 	position: relative;
@@ -76,3 +78,44 @@ export const iconLeft = css`
 		margin-right: ${space[1]}px;
 	}
 `;
+
+const priorities: {
+	[key in LinkPriority]: ({ link }: { link: LinkTheme }) => SerializedStyles;
+} = {
+	primary,
+	secondary,
+};
+
+const iconSides: {
+	[key in IconSide]: SerializedStyles;
+} = {
+	right: iconRight,
+	left: iconLeft,
+};
+
+export const linkStyles = ({
+	isButton,
+	priority,
+	isSubdued,
+	iconSvg,
+	iconSide = 'left',
+	cssOverrides,
+}: {
+	isButton?: boolean;
+	priority: LinkPriority;
+	isSubdued?: boolean;
+	iconSvg?: ReactElement;
+	iconSide?: IconSide;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
+}) => {
+	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+	return (theme: any) => [
+		link,
+		isButton ? buttonLink : '',
+		priorities[priority](theme.link && theme),
+		isSubdued ? subdued : '',
+		iconSvg ? icon : '',
+		iconSvg ? iconSides[iconSide] : '',
+		cssOverrides,
+	];
+};
