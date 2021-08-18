@@ -103,6 +103,3 @@ Columns5CollapseBelowTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
 asChromaticStory(Columns5CollapseBelowTabletAtTablet);
-
-// export * from './stories/tiles/default';
-// export * from './stories/tiles/collapse-below';
