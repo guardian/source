@@ -1,18 +1,19 @@
-import { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import { Props } from '@guardian/src-helpers';
-import { tileGridColumns, tilesGridContainer } from './styles';
-import {
-	tilesCollapseBelowDesktop,
-	collapseBelowDesktopTiles,
-	tilesCollapseBelowleftCol,
-	collapseBelowLeftColTiles,
-	tilesCollapseBelowTablet,
-	collapseBelowTabletTiles,
-	tilesCollapseBelowWide,
-	collapseBelowWideTiles,
-} from '../tiles/styles';
 import { Breakpoint } from '@guardian/src-foundations/mq';
+import { Props } from '@guardian/src-helpers';
+import { HTMLAttributes } from 'react';
+import {
+	collapseBelowDesktopTiles,
+	collapseBelowLeftColTiles,
+	collapseBelowTabletTiles,
+	collapseBelowWideTiles,
+	tileGridColumns,
+	tilesCollapseBelowDesktop,
+	tilesCollapseBelowleftCol,
+	tilesCollapseBelowTablet,
+	tilesCollapseBelowWide,
+	tilesGridContainer,
+} from './styles';
 
 export type Columns = 2 | 3 | 4 | 5;
 
@@ -25,13 +26,6 @@ type CollapseBreakpoint = Extract<
 	GridBreakpoint,
 	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
-
-interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
-	columns: Columns;
-	cssOverrides?: SerializedStyles | SerializedStyles[];
-	children: ReactNode;
-	collapseBelow?: CollapseBreakpoint;
-}
 
 const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
 	tablet: tilesCollapseBelowTablet,
@@ -49,7 +43,12 @@ const collapseBelowColumnsMap: {
 	wide: collapseBelowWideTiles,
 };
 
-const Tiles = ({
+export interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
+	columns: Columns;
+	collapseBelow?: CollapseBreakpoint;
+}
+
+export const Tiles = ({
 	collapseBelow,
 	cssOverrides,
 	children,
@@ -63,6 +62,7 @@ const Tiles = ({
 				tileGridColumns[columns],
 				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : '',
 				collapseBelow ? collapseBelowMap[collapseBelow] : '',
+				cssOverrides,
 			]}
 			{...props}
 		>
@@ -70,9 +70,3 @@ const Tiles = ({
 		</div>
 	);
 };
-
-const defaultProps = {};
-
-Tiles.defaultProps = { ...defaultProps };
-
-export { Tiles };
