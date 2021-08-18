@@ -1,14 +1,12 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import { Meta } from '@storybook/react';
-
 import { Logo } from '.';
 
 export default {
 	title: 'Editorial/Logo',
 	component: Logo,
-} as Meta;
+};
 
 const FakeHeader = ({ children }: { children: React.ReactNode }) => {
 	return (
