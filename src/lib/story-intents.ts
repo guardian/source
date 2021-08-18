@@ -10,7 +10,7 @@ import { Story } from '../@types/storybook-emotion-10-fixes';
  * Make sure all props are configurable in storybook's controls table.
  *
  */
-export const asPlayground = (story: Story) => {
+export const asPlayground = (story: Story<any>) => {
 	story.parameters = {
 		...story.parameters,
 		viewMode: 'docs',
@@ -49,7 +49,7 @@ export const asPlayground = (story: Story) => {
  *
  * Make sure you have one of these for every possible state of your component.
  */
-export const asChromaticStory = (story: Story) => {
+export const asChromaticStory = (story: Story<any>) => {
 	story.parameters = {
 		...story.parameters,
 		viewMode: 'canvas',
