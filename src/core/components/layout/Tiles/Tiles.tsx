@@ -50,7 +50,13 @@ export interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
 	columns: Columns;
 	/**
 	 * Child components will be stacked in a single column at viewport widths narrower than the
-	 * specified breakpoint (they will always be collapsed into a single column below `mobileLandscape`).
+	 * specified breakpoint (they will always be collapsed into a single column if the viewport is narrower than `mobileLandscape`).
+	 */
+	collapseUntil?: CollapseBreakpoint;
+	/**
+	 * **Deprecated**
+	 *
+	 * Use `collapseUntil` instead.
 	 */
 	collapseBelow?: CollapseBreakpoint;
 }
@@ -68,7 +74,8 @@ export interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
  */
 export const Tiles = ({
 	columns,
-	collapseBelow,
+	collapseBelow, // deprecated
+	collapseUntil = collapseBelow,
 	cssOverrides,
 	children,
 	...props
