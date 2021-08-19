@@ -1,7 +1,7 @@
-export * from './guardian-logo';
-export * from './guardian-live-logo';
-export * from './roundel';
-export * from './roundel-brand';
-export * from './roundel-brand-inverse';
-export * from './roundel-default';
-export * from './roundel-inverse';
+export * from './SvgGuardianLogo';
+export * from './SvgGuardianLiveLogo';
+
+export * from './SvgRoundelBrand';
+export * from './SvgRoundelBrandInverse';
+export * from './SvgRoundelDefault';
+export * from './SvgRoundelInverse';

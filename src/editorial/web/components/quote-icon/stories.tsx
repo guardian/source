@@ -7,7 +7,7 @@ import { headline } from '@guardian/src-foundations/typography';
 import { QuoteIcon } from './index';
 
 export default {
-	title: 'Editorial/QuoteIcon',
+	title: 'Editorial/src-ed-quote-icon/QuoteIcon',
 	component: QuoteIcon,
 };
 
