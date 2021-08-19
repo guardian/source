@@ -1,10 +1,10 @@
 import { Props } from '@guardian/src-helpers';
-// @ts-ignore: React is needed by Chromatic for fragments for some reason
+// We shouldn't need to import React, but for some reason Storybook's Babel
+// config needs React here to understand fragments
 import React, {
 	ChangeEventHandler,
 	InputHTMLAttributes,
 	ReactElement,
-	ReactNode,
 	useState,
 } from 'react';
 import {
@@ -24,7 +24,7 @@ export interface ChoiceCardProps
 	/**
 	 * Appears inside the choice card
 	 */
-	label: ReactNode;
+	label: React.ReactNode;
 	value: string;
 	/**
 	 * Sets whether choice card is checked. Required when using the [controlled approach](https://reactjs.org/docs/forms.html#controlled-components) to form state management.
