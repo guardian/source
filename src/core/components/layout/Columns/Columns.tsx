@@ -1,20 +1,16 @@
-import { HTMLAttributes, ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/react';
-import {
-	columns,
-	column,
-	collapseBelowTablet,
-	collapseBelowDesktop,
-	collapseBelowleftCol,
-	collapseBelowWide,
-	setWidth,
-	setSpan,
-	flexGrow,
-	collapseBelowColumnsCSS,
-	collapseBelowSpaceY,
-} from './styles';
 import { Breakpoint } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
+import { HTMLAttributes } from 'react';
+import {
+	collapseBelowColumnsCSS,
+	collapseBelowDesktop,
+	collapseBelowleftCol,
+	collapseBelowSpaceY,
+	collapseBelowTablet,
+	collapseBelowWide,
+	columns,
+} from './styles';
 
 type GridBreakpoint = Extract<
 	Breakpoint,
@@ -45,12 +41,33 @@ const collapseBelowColumnsMap: {
 };
 
 export interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
+	/**
+	 * Child components will be stacked in a single column at viewport widths
+	 * narrower than the specified breakpoint (they will always be collapsed
+	 * into a single column if the viewport is narrower than `mobileLandscape`).
+	 */
 	collapseBelow?: CollapseBreakpoint;
-	cssOverrides?: SerializedStyles | SerializedStyles[];
-	children: ReactNode;
+	/**
+	 * Vertical [units of
+	 * space](https://www.theguardian.design/2a1e5182b/p/449bd5-space) between
+	 * between columns vertically when collapsed (one unit is 4px).
+	 */
 	spaceY?: ColumnsSpaceY;
 }
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-columns) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/41cd49-columns) •
+ * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/layout/Columns) •
+ * [NPM](https://www.npmjs.com/package/@guardian/src-layout)
+ *
+ * `Columns` arranges child `Column`s side by side on a single row, with the
+ * specified width.
+ *
+ * They become really useful when used in conjunction with the [Container](https://guardian.github.io/source/?path=/docs/source-src-layout-container)
+ * component. This ensures the columns conform to the Guardian's grid layouts at
+ * every breakpoint.
+ */
 export const Columns = ({
 	collapseBelow,
 	cssOverrides,
