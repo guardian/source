@@ -84,22 +84,24 @@ asChromaticStory(Columns5);
 
 // *****************************************************************************
 
-export const Columns5CollapseBelowTabletAtMobile = Template.bind({});
-Columns5CollapseBelowTabletAtMobile.args = {
+export const Columns5CollapseUntilTabletAtMobile = Template.bind({});
+Columns5CollapseUntilTabletAtMobile.args = {
 	columns: '5',
+	collapseUntil: 'Tablet',
 };
-Columns5CollapseBelowTabletAtMobile.parameters = {
+Columns5CollapseUntilTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
 };
-asChromaticStory(Columns5CollapseBelowTabletAtMobile);
+asChromaticStory(Columns5CollapseUntilTabletAtMobile);
 
 // *****************************************************************************
 
-export const Columns5CollapseBelowTabletAtTablet = Template.bind({});
-Columns5CollapseBelowTabletAtTablet.args = {
+export const Columns5CollapseUntilTabletAtTablet = Template.bind({});
+Columns5CollapseUntilTabletAtTablet.args = {
 	columns: '5',
+	collapseUntil: 'Tablet',
 };
-Columns5CollapseBelowTabletAtTablet.parameters = {
+Columns5CollapseUntilTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
-asChromaticStory(Columns5CollapseBelowTabletAtTablet);
+asChromaticStory(Columns5CollapseUntilTabletAtTablet);
