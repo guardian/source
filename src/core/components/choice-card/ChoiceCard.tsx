@@ -1,5 +1,6 @@
 import { Props } from '@guardian/src-helpers';
-import {
+// @ts-ignore: React is needed by Chromatic for fragments for some reason
+import React, {
 	ChangeEventHandler,
 	InputHTMLAttributes,
 	ReactElement,
