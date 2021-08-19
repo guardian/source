@@ -1,4 +1,5 @@
-export { Columns, Column } from './Columns/Columns';
+export { Columns, ColumnsProps } from './Columns/Columns';
+export { Column, ColumnProps } from './Columns/Column';
 export { Container, ContainerProps } from './Container/Container';
 export { Hide, HideProps } from './Hide/Hide';
 export { Stack } from './Stack/Stack';

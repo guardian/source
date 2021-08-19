@@ -73,31 +73,3 @@ export const Columns = ({
 		</div>
 	);
 };
-
-export interface ColumnProps extends HTMLAttributes<HTMLDivElement>, Props {
-	width?: number | number[];
-	span?: number | number[];
-}
-
-export const Column = ({
-	width,
-	span,
-	cssOverrides,
-	children,
-	...props
-}: ColumnProps) => {
-	const columnCss = [column];
-	if (width) {
-		columnCss.push(setWidth(width));
-	} else if (span) {
-		columnCss.push(setSpan(span));
-	} else {
-		columnCss.push(flexGrow);
-	}
-
-	return (
-		<div css={[columnCss, cssOverrides]} {...props}>
-			{children}
-		</div>
-	);
-};
