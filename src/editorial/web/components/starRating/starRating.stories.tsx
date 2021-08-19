@@ -1,5 +1,5 @@
 export * from './stories/default';
 
 export default {
-	title: 'Editorial/Star Rating',
+	title: 'Editorial/src-ed-star-rating/Star Rating',
 };

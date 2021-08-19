@@ -10,7 +10,7 @@ import { Story } from '../@types/storybook-emotion-10-fixes';
  * Make sure all props are configurable in storybook's controls table.
  *
  */
-export const asPlayground = (story: Story) => {
+export const asPlayground = <Args>(story: Story<Args>) => {
 	story.parameters = {
 		...story.parameters,
 		viewMode: 'docs',
@@ -18,6 +18,24 @@ export const asPlayground = (story: Story) => {
 			canvas: {
 				hidden: true,
 			},
+		},
+		// className is part of react API anyway, we don't need to document it
+		controls: { exclude: ['className'] },
+		chromatic: { disable: true },
+	};
+	story.args = {
+		...story.args,
+		cssOverrides: 'undefined',
+	};
+	story.argTypes = {
+		...story.argTypes,
+		cssOverrides: {
+			options: ['undefined', 'css`background-color: red;`'],
+			mapping: {
+				undefined: undefined,
+				'css`background-color: red;`': { backgroundColor: 'red' },
+			},
+			control: { type: 'radio' },
 		},
 	};
 	story.storyName = '🧶 Playground';
@@ -31,7 +49,7 @@ export const asPlayground = (story: Story) => {
  *
  * Make sure you have one of these for every possible state of your component.
  */
-export const asChromaticStory = (story: Story) => {
+export const asChromaticStory = <Args>(story: Story<Args>) => {
 	story.parameters = {
 		...story.parameters,
 		viewMode: 'canvas',
@@ -42,5 +60,6 @@ export const asChromaticStory = (story: Story) => {
 		},
 		docs: { disable: true },
 		controls: { disabled: true },
+		chromatic: { disable: false },
 	};
 };
