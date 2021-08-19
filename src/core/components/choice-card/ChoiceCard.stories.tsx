@@ -38,7 +38,9 @@ export default {
 	},
 };
 
-const Template: Story = (args: ChoiceCardProps) => <ChoiceCard {...args} />;
+const Template: Story<ChoiceCardProps> = (args: ChoiceCardProps) => (
+	<ChoiceCard {...args} />
+);
 
 // *****************************************************************************
 

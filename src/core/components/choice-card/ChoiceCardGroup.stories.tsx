@@ -34,7 +34,7 @@ export default {
 	},
 };
 
-const Template: Story = (args: ChoiceCardGroupProps) => (
+const Template: Story<ChoiceCardGroupProps> = (args: ChoiceCardGroupProps) => (
 	<ChoiceCardGroup {...args}>
 		{args.children ?? (
 			<>
@@ -252,7 +252,9 @@ asChromaticStory(WithDefaultTheme);
 
 // *****************************************************************************
 
-export const ControlledMultiSelect: Story = (args: ChoiceCardGroupProps) => {
+export const ControlledMultiSelect: Story<ChoiceCardGroupProps> = (
+	args: ChoiceCardGroupProps,
+) => {
 	const [state, setState] = useState({
 		opt1: true,
 		opt2: true,
@@ -290,7 +292,9 @@ asChromaticStory(ControlledMultiSelect);
 
 // *****************************************************************************
 
-export const ControlledSingleSelect: Story = (args: ChoiceCardGroupProps) => {
+export const ControlledSingleSelect: Story<ChoiceCardGroupProps> = (
+	args: ChoiceCardGroupProps,
+) => {
 	const [selected, setSelected] = useState<string | null>('option-2');
 
 	return (
@@ -326,7 +330,9 @@ asChromaticStory(ControlledSingleSelect);
 
 // *****************************************************************************
 
-export const UnControlledMultiSelect: Story = (args: ChoiceCardGroupProps) => (
+export const UnControlledMultiSelect: Story<ChoiceCardGroupProps> = (
+	args: ChoiceCardGroupProps,
+) => (
 	<ChoiceCardGroup {...args}>
 		<ChoiceCard
 			id="abc1"
@@ -350,7 +356,9 @@ asChromaticStory(UnControlledMultiSelect);
 
 // *****************************************************************************
 
-export const UnControlledSingleSelect: Story = (args: ChoiceCardGroupProps) => (
+export const UnControlledSingleSelect: Story<ChoiceCardGroupProps> = (
+	args: ChoiceCardGroupProps,
+) => (
 	<ChoiceCardGroup {...args}>
 		<ChoiceCard id="abc1" value="option-1" label="Option 1" />
 		<ChoiceCard
