@@ -87,7 +87,7 @@ asChromaticStory(Columns5);
 export const Columns5CollapseUntilTabletAtMobile = Template.bind({});
 Columns5CollapseUntilTabletAtMobile.args = {
 	columns: '5',
-	collapseUntil: 'Tablet',
+	collapseUntil: 'tablet',
 };
 Columns5CollapseUntilTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
@@ -99,7 +99,7 @@ asChromaticStory(Columns5CollapseUntilTabletAtMobile);
 export const Columns5CollapseUntilTabletAtTablet = Template.bind({});
 Columns5CollapseUntilTabletAtTablet.args = {
 	columns: '5',
-	collapseUntil: 'Tablet',
+	collapseUntil: 'tablet',
 };
 Columns5CollapseUntilTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
