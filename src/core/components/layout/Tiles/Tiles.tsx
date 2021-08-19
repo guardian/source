@@ -3,15 +3,15 @@ import { Breakpoint } from '@guardian/src-foundations/mq';
 import { Props } from '@guardian/src-helpers';
 import { HTMLAttributes } from 'react';
 import {
-	collapseBelowDesktopTiles,
-	collapseBelowLeftColTiles,
-	collapseBelowTabletTiles,
-	collapseBelowWideTiles,
+	collapseUntilDesktopTiles,
+	collapseUntilLeftColTiles,
+	collapseUntilTabletTiles,
+	collapseUntilWideTiles,
 	tileGridColumns,
-	tilesCollapseBelowDesktop,
-	tilesCollapseBelowleftCol,
-	tilesCollapseBelowTablet,
-	tilesCollapseBelowWide,
+	tilesCollapseUntilDesktop,
+	tilesCollapseUntilleftCol,
+	tilesCollapseUntilTablet,
+	tilesCollapseUntilWide,
 	tilesGridContainer,
 } from './styles';
 
@@ -27,20 +27,20 @@ type CollapseBreakpoint = Extract<
 	'tablet' | 'desktop' | 'leftCol' | 'wide'
 >;
 
-const collapseBelowMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
-	tablet: tilesCollapseBelowTablet,
-	desktop: tilesCollapseBelowDesktop,
-	leftCol: tilesCollapseBelowleftCol,
-	wide: tilesCollapseBelowWide,
+const collapseUntilMap: { [key in CollapseBreakpoint]: SerializedStyles } = {
+	tablet: tilesCollapseUntilTablet,
+	desktop: tilesCollapseUntilDesktop,
+	leftCol: tilesCollapseUntilleftCol,
+	wide: tilesCollapseUntilWide,
 };
 
-const collapseBelowColumnsMap: {
+const collapseUntilColumnsMap: {
 	[key in CollapseBreakpoint]: SerializedStyles;
 } = {
-	tablet: collapseBelowTabletTiles,
-	desktop: collapseBelowDesktopTiles,
-	leftCol: collapseBelowLeftColTiles,
-	wide: collapseBelowWideTiles,
+	tablet: collapseUntilTabletTiles,
+	desktop: collapseUntilDesktopTiles,
+	leftCol: collapseUntilLeftColTiles,
+	wide: collapseUntilWideTiles,
 };
 
 export interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
@@ -70,7 +70,7 @@ export interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
  * Child components will be arranged with equal width and spacing with the specified number of columns,
  * wrapping onto a new row as necessary.
  *
- * Below `mobileLandscape`, child components will be collapsed into a single column.
+ * Until `mobileLandscape`, child components will be collapsed into a single column.
  */
 export const Tiles = ({
 	columns,
@@ -85,8 +85,8 @@ export const Tiles = ({
 			css={[
 				tilesGridContainer,
 				tileGridColumns[columns],
-				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : '',
-				collapseBelow ? collapseBelowMap[collapseBelow] : '',
+				collapseUntil ? collapseUntilColumnsMap[collapseUntil] : '',
+				collapseUntil ? collapseUntilMap[collapseUntil] : '',
 				cssOverrides,
 			]}
 			{...props}

@@ -3,7 +3,7 @@ import { Columns } from './Tiles';
 import { from, until } from '@guardian/src-foundations/mq';
 import { space } from '@guardian/src-foundations';
 
-const collapseBelowTilesSpacing = css`
+const collapseUntilTilesSpacing = css`
 	display: block;
 	& > * + * {
 		margin-left: 0;
@@ -13,56 +13,56 @@ const collapseBelowTilesSpacing = css`
 	}
 `;
 
-export const collapseBelowTabletTiles = css`
+export const collapseUntilTabletTiles = css`
 	${until.tablet} {
-		${collapseBelowTilesSpacing}
+		${collapseUntilTilesSpacing}
 	}
 `;
-export const collapseBelowDesktopTiles = css`
+export const collapseUntilDesktopTiles = css`
 	${until.desktop} {
-		${collapseBelowTilesSpacing}
+		${collapseUntilTilesSpacing}
 	}
 `;
-export const collapseBelowLeftColTiles = css`
+export const collapseUntilLeftColTiles = css`
 	${until.leftCol} {
-		${collapseBelowTilesSpacing}
+		${collapseUntilTilesSpacing}
 	}
 `;
-export const collapseBelowWideTiles = css`
+export const collapseUntilWideTiles = css`
 	${until.wide} {
-		${collapseBelowTilesSpacing}
+		${collapseUntilTilesSpacing}
 	}
 `;
 
-const collapseBelowWidth = css`
+const collapseUntilWidth = css`
 	width: 100% !important;
 `;
 
-export const tilesCollapseBelowTablet = css`
+export const tilesCollapseUntilTablet = css`
 	& > * {
 		${until.tablet} {
-			${collapseBelowWidth}
+			${collapseUntilWidth}
 		}
 	}
 `;
-export const tilesCollapseBelowDesktop = css`
+export const tilesCollapseUntilDesktop = css`
 	& > * {
 		${until.desktop} {
-			${collapseBelowWidth}
+			${collapseUntilWidth}
 		}
 	}
 `;
-export const tilesCollapseBelowleftCol = css`
+export const tilesCollapseUntilleftCol = css`
 	& > * {
 		${until.leftCol} {
-			${collapseBelowWidth}
+			${collapseUntilWidth}
 		}
 	}
 `;
-export const tilesCollapseBelowWide = css`
+export const tilesCollapseUntilWide = css`
 	& > * {
 		${until.wide} {
-			${collapseBelowWidth}
+			${collapseUntilWidth}
 		}
 	}
 `;
