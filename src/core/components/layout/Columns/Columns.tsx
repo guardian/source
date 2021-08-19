@@ -46,6 +46,12 @@ export interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
 	 * narrower than the specified breakpoint (they will always be collapsed
 	 * into a single column if the viewport is narrower than `mobileLandscape`).
 	 */
+	collapseUntil?: CollapseBreakpoint;
+	/**
+	 * **Deprecated**
+	 *
+	 * Use `collapseUntil` instead.
+	 */
 	collapseBelow?: CollapseBreakpoint;
 	/**
 	 * Vertical [units of
@@ -70,6 +76,7 @@ export interface ColumnsProps extends HTMLAttributes<HTMLDivElement>, Props {
  */
 export const Columns = ({
 	collapseBelow,
+	collapseUntil = collapseBelow, // deprecated
 	cssOverrides,
 	children,
 	spaceY,
@@ -79,8 +86,8 @@ export const Columns = ({
 		<div
 			css={[
 				columns,
-				collapseBelow ? collapseBelowColumnsMap[collapseBelow] : '',
-				collapseBelow ? collapseBelowMap[collapseBelow] : '',
+				collapseUntil ? collapseBelowColumnsMap[collapseUntil] : '',
+				collapseUntil ? collapseBelowMap[collapseUntil] : '',
 				spaceY ? collapseBelowSpaceY[spaceY] : '',
 				cssOverrides,
 			]}
