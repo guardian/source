@@ -1,5 +1,5 @@
 import { Props } from '@guardian/src-helpers';
-import React, {
+import {
 	ChangeEventHandler,
 	InputHTMLAttributes,
 	ReactElement,
