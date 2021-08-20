@@ -1,0 +1,12 @@
+{
+  "color": {
+    "text": {
+      "primary": { "value": "{color.base.neutral.7.value}" },
+      "supporting": { "value": "{color.base.neutral.46.value}" },
+      "userInput": { "value": "{color.text.primary.value}" },
+      "inputLabel": { "value": "{color.text.primary.value}" },
+      "error": { "value": "{color.base.error.400.value}" },
+      "success": { "value": "{color.base.success.400.value}" }
+    }
+  }
+}
