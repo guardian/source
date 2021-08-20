@@ -10,18 +10,16 @@ type Props = { logoType?: LogoType };
 
 const svgSize = css`
 	svg {
-		height: 65px;
 		width: 146px;
+		height: auto;
 		${from.mobileMedium} {
 			width: 195px;
 		}
 		${from.tablet} {
 			width: 224px;
-			height: 75px;
 		}
 		${from.desktop} {
 			width: 295px;
-			height: 98px;
 		}
 	}
 `;
