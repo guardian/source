@@ -118,6 +118,8 @@ export const Logo = ({ logoType = 'standard' }: Props) => (
 		title="The Guardian Homepage"
 		subdued={true}
 		cssOverrides={css`
+			/* Adding block display here so that the focus halo correctly covers the content */
+			display: block;
 			color: ${brandText.primary};
 			:hover {
 				color: ${brandText.primary};
