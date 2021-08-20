@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import { Logo } from '.';
 
 export default {
-	title: 'Editorial/Logo',
+	title: 'Editorial/src-ed-logo/Logo',
 	component: Logo,
 };
 
