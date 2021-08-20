@@ -1,5 +1,4 @@
 import { SvgExternal } from '@guardian/src-icons';
-import { ThemeProvider } from '@emotion/react';
 import { ButtonLink } from './ButtonLink';
 import { linkDefault } from './index';
 import { ButtonLinkProps } from './ButtonLink';
@@ -38,98 +37,90 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const PrimaryButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimaryButtonLinkLightTheme = Template.bind({});
 PrimaryButtonLinkLightTheme.args = {
 	icon: undefined,
+};
+PrimaryButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(PrimaryButtonLinkLightTheme);
 
 // *****************************************************************************
 
-export const SecondaryButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SecondaryButtonLinkLightTheme = Template.bind({});
 SecondaryButtonLinkLightTheme.args = {
 	priority: 'secondary',
 	icon: undefined,
+};
+SecondaryButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(SecondaryButtonLinkLightTheme);
 
 // *****************************************************************************
 
-export const PrimarySubduedButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimarySubduedButtonLinkLightTheme = Template.bind({});
 PrimarySubduedButtonLinkLightTheme.args = {
 	subdued: true,
 	icon: undefined,
+};
+PrimarySubduedButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(PrimarySubduedButtonLinkLightTheme);
 
 // *****************************************************************************
 
-export const SecondarySubduedButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SecondarySubduedButtonLinkLightTheme = Template.bind({});
 SecondarySubduedButtonLinkLightTheme.args = {
 	priority: 'secondary',
 	subdued: true,
 	icon: undefined,
 };
+SecondarySubduedButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
+};
 asChromaticStory(SecondarySubduedButtonLinkLightTheme);
 
 // *****************************************************************************
 
-export const PrimaryIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimaryIconButtonLinkLightTheme = Template.bind({});
+PrimaryIconButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
+};
 asChromaticStory(PrimaryIconButtonLinkLightTheme);
 
 // *****************************************************************************
 
-export const SecondaryIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SecondaryIconButtonLinkLightTheme = Template.bind({});
 SecondaryIconButtonLinkLightTheme.args = {
 	priority: 'secondary',
+};
+SecondaryIconButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(SecondaryIconButtonLinkLightTheme);
 
 // *****************************************************************************
 
-export const SubduedIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SubduedIconButtonLinkLightTheme = Template.bind({});
 SubduedIconButtonLinkLightTheme.args = {
 	subdued: true,
+};
+SubduedIconButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(SubduedIconButtonLinkLightTheme);
 
 // *****************************************************************************
 
-export const RightIconButtonLinkLightTheme = (args: ButtonLinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const RightIconButtonLinkLightTheme = Template.bind({});
 RightIconButtonLinkLightTheme.args = {
 	iconSide: 'right',
+};
+RightIconButtonLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(RightIconButtonLinkLightTheme);
 

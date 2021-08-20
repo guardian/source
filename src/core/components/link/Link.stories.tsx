@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@emotion/react';
 import { linkDefault, linkBrandAlt, linkBrand } from './index';
 import { Link, LinkProps } from './Link';
 import { SvgExternal } from '@guardian/src-icons';
@@ -36,23 +35,18 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const PrimaryLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimaryLinkLightTheme = Template.bind({});
 PrimaryLinkLightTheme.args = {
 	icon: undefined,
+};
+PrimaryLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(PrimaryLinkLightTheme);
 
 // *****************************************************************************
 
-export const PrimaryLinkBrandTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkBrand}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimaryLinkBrandTheme = Template.bind({});
 PrimaryLinkBrandTheme.args = {
 	icon: undefined,
 };
@@ -61,16 +55,13 @@ PrimaryLinkBrandTheme.parameters = {
 		default: 'brand',
 		values: [storybookBackgrounds.brand],
 	},
+	theme: linkBrand,
 };
 asChromaticStory(PrimaryLinkBrandTheme);
 
 // *****************************************************************************
 
-export const PrimaryLinkBrandAltTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkBrandAlt}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimaryLinkBrandAltTheme = Template.bind({});
 PrimaryLinkBrandAltTheme.args = {
 	icon: undefined,
 };
@@ -79,90 +70,84 @@ PrimaryLinkBrandAltTheme.parameters = {
 		default: 'brandAlt',
 		values: [storybookBackgrounds.brandAlt],
 	},
+	theme: linkBrandAlt,
 };
 asChromaticStory(PrimaryLinkBrandAltTheme);
 
 // *****************************************************************************
 
-export const SecondaryLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SecondaryLinkLightTheme = Template.bind({});
 SecondaryLinkLightTheme.args = {
 	priority: 'secondary',
 	icon: undefined,
+};
+SecondaryLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(SecondaryLinkLightTheme);
 
 // *****************************************************************************
 
-export const PrimarySubduedLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimarySubduedLinkLightTheme = Template.bind({});
 PrimarySubduedLinkLightTheme.args = {
 	subdued: true,
 	icon: undefined,
+};
+PrimarySubduedLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(PrimarySubduedLinkLightTheme);
 
 // *****************************************************************************
 
-export const SecondarySubduedLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SecondarySubduedLinkLightTheme = Template.bind({});
 SecondarySubduedLinkLightTheme.args = {
 	priority: 'secondary',
 	subdued: true,
 	icon: undefined,
 };
+SecondarySubduedLinkLightTheme.parameters = {
+	theme: linkDefault,
+};
 asChromaticStory(SecondarySubduedLinkLightTheme);
 
 // *****************************************************************************
 
-export const PrimaryIconLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const PrimaryIconLinkLightTheme = Template.bind({});
+PrimaryIconLinkLightTheme.parameters = {
+	theme: linkDefault,
+};
 asChromaticStory(PrimaryIconLinkLightTheme);
 
 // *****************************************************************************
 
-export const SecondaryIconLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SecondaryIconLinkLightTheme = Template.bind({});
 SecondaryIconLinkLightTheme.args = {
 	priority: 'secondary',
+};
+SecondaryIconLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(SecondaryIconLinkLightTheme);
 
 // *****************************************************************************
 
-export const SubduedIconLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SubduedIconLinkLightTheme = Template.bind({});
 SubduedIconLinkLightTheme.args = {
 	subdued: true,
+};
+SubduedIconLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(SubduedIconLinkLightTheme);
 
 // *****************************************************************************
 
-export const RightIconLinkLightTheme = (args: LinkProps) => (
-	<ThemeProvider theme={linkDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const RightIconLinkLightTheme = Template.bind({});
 RightIconLinkLightTheme.args = {
 	iconSide: 'right',
+};
+RightIconLinkLightTheme.parameters = {
+	theme: linkDefault,
 };
 asChromaticStory(RightIconLinkLightTheme);
