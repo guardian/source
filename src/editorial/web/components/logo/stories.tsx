@@ -54,6 +54,22 @@ Tablet.parameters = {
 	},
 };
 
+export const MobileMedium = () => (
+	<FakeHeader>
+		<Logo logoType="standard" />
+		<br />
+		<Logo logoType="anniversary" />
+		<br />
+		<Logo logoType="bestWebsite" />
+	</FakeHeader>
+);
+MobileMedium.storyName = 'mobileMedium';
+MobileMedium.parameters = {
+	viewport: {
+		defaultViewport: 'mobileMedium',
+	},
+};
+
 export const Mobile = () => (
 	<FakeHeader>
 		<Logo logoType="standard" />
@@ -66,6 +82,6 @@ export const Mobile = () => (
 Mobile.storyName = 'mobile';
 Mobile.parameters = {
 	viewport: {
-		defaultViewport: 'mobileMedium',
+		defaultViewport: 'mobile',
 	},
 };

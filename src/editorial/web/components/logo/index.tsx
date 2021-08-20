@@ -10,8 +10,11 @@ type Props = { logoType?: LogoType };
 
 const svgSize = css`
 	svg {
-		width: 195px;
 		height: 65px;
+		width: 146px;
+		${from.mobileMedium} {
+			width: 195px;
+		}
 		${from.tablet} {
 			width: 224px;
 			height: 75px;
