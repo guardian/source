@@ -345,3 +345,16 @@ Story.argTypes = {
     }
 }
 ```
+
+### Theming
+
+A decorator is available to simplify creating stories with different themes. To make use of it, simply pass the required theme in as a parameter.
+
+```tsx
+...
+
+const MyComponentBrandTheme = Template.bind({})
+MyComponentBrandTheme.parameters = {
+    theme: myComponentBrand
+}
+```
