@@ -9,7 +9,7 @@ module.exports = {
 			files: [
 				...categories.map(category => ({
 					destination: `${category}.js`,
-					format: "javascript/module",
+					format: "javascript/es6",
 					filter: {
 						attributes: {
 							category: category
@@ -18,7 +18,7 @@ module.exports = {
 				})),
 				...categories.map(category => ({
 					destination: `${category}.d.ts`,
-					format: "typescript/module-declarations",
+					format: "typescript/es6-declarations",
 					filter: {
 						attributes: {
 							category: category
