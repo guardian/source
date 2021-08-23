@@ -1,12 +1,7 @@
-import { ReactElement, ReactNode, AnchorHTMLAttributes } from 'react';
-import { SerializedStyles } from '@emotion/react';
-import { buttonStyles, buttonContents } from './shared';
-import type {
-	SharedButtonProps,
-	ButtonPriority,
-	Size,
-	IconSide,
-} from './types';
+import { AnchorHTMLAttributes } from 'react';
+import { buttonContents } from './shared';
+import { buttonStyles } from './styles';
+import type { SharedButtonProps } from './types';
 
 export interface LinkButtonProps
 	extends SharedButtonProps,
