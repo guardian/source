@@ -10,16 +10,7 @@ import type {
 
 export interface LinkButtonProps
 	extends SharedButtonProps,
-		AnchorHTMLAttributes<HTMLAnchorElement> {
-	priority?: ButtonPriority;
-	size?: Size;
-	iconSide?: IconSide;
-	icon?: ReactElement;
-	nudgeIcon?: boolean;
-	hideLabel?: boolean;
-	children: ReactNode;
-	cssOverrides?: SerializedStyles | SerializedStyles[];
-}
+		AnchorHTMLAttributes<HTMLAnchorElement> {}
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-button-button--playground) •
