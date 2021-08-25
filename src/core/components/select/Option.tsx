@@ -2,7 +2,9 @@ import { OptionHTMLAttributes } from 'react';
 import { Props } from '@guardian/src-helpers';
 import { visuallyHidden as _visuallyHidden } from '@guardian/src-foundations/accessibility';
 
-interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement>, Props {
+export interface OptionProps
+	extends OptionHTMLAttributes<HTMLOptionElement>,
+		Props {
 	children: string;
 }
 
