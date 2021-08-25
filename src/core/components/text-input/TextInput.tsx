@@ -71,7 +71,7 @@ export interface TextInputProps
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-text-area-text-area--demo) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-text-input-textinput--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/097455-text-input-field/b/050445) •
  * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/text-input) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-text-input)
