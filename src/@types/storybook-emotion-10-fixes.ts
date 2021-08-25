@@ -19,4 +19,5 @@ export type Story<T = Args> = {
 	parameters?: Parameters;
 	argTypes?: Args;
 	storyName?: string;
+	decorators?: ((story: Story) => JSX.Element)[];
 };
