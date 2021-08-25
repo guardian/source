@@ -1,9 +1,5 @@
 import { Select, SelectProps } from './Select';
 import { Option } from './Option';
-import { css } from '@emotion/react';
-import { textSans } from '@guardian/src-foundations/typography';
-// Using `import { useState } ...` results in a "React is undefined error"
-import React from 'react';
 import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 import type { Story } from '../../../@types/storybook-emotion-10-fixes';
 
@@ -101,25 +97,3 @@ SupportingTextLight.args = {
 asChromaticStory(SupportingTextLight);
 
 // *****************************************************************************
-
-const message = css`
-	${textSans.medium()}
-`;
-
-export const ControlledExample = (args: SelectProps) => {
-	const [state, setState] = React.useState('al');
-
-	return (
-		<>
-			<Template
-				{...args}
-				value={state}
-				onChange={(event) => setState(event.target.value)}
-			/>
-			<span css={message}>
-				{state ? `You have selected: ${state}` : ''}
-			</span>
-		</>
-	);
-};
-asChromaticStory(ControlledExample);
