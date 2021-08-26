@@ -1,11 +1,18 @@
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import { space, transitions } from '@guardian/src-foundations';
 import { height, width } from '@guardian/src-foundations/size';
 import { buttonDefault, ButtonTheme } from '@guardian/src-foundations/themes';
 import { textSans } from '@guardian/src-foundations/typography';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 
-export const button = css`
+import type {
+	ButtonPriority,
+	IconSide,
+	Size,
+	SharedButtonProps,
+} from './types';
+
+const button = css`
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
@@ -22,9 +29,7 @@ export const button = css`
 	}
 `;
 
-export const primary = ({
-	button,
-}: { button: ButtonTheme } = buttonDefault) => css`
+const primary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
 	background-color: ${button.backgroundPrimary};
 	color: ${button.textPrimary};
 
@@ -33,9 +38,7 @@ export const primary = ({
 	}
 `;
 
-export const secondary = ({
-	button,
-}: { button: ButtonTheme } = buttonDefault) => css`
+const secondary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
 	background-color: ${button.backgroundSecondary};
 	color: ${button.textSecondary};
 
@@ -44,9 +47,7 @@ export const secondary = ({
 	}
 `;
 
-export const tertiary = ({
-	button,
-}: { button: ButtonTheme } = buttonDefault) => css`
+const tertiary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
 	color: ${button.textTertiary};
 	border: 1px solid ${button.borderTertiary};
 
@@ -55,9 +56,7 @@ export const tertiary = ({
 	}
 `;
 
-export const subdued = ({
-	button,
-}: { button: ButtonTheme } = buttonDefault) => css`
+const subdued = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
 	padding: 0;
 	background-color: transparent;
 	color: ${button.textSubdued};
@@ -81,7 +80,7 @@ const fontSpacingVerticalOffset = css`
 	padding-bottom: 2px;
 `;
 
-export const defaultSize = css`
+const defaultSize = css`
 	${textSans.medium({ fontWeight: 'bold' })};
 	height: ${height.ctaMedium}px;
 	min-height: ${height.ctaMedium}px;
@@ -90,7 +89,7 @@ export const defaultSize = css`
 	${fontSpacingVerticalOffset};
 `;
 
-export const smallSize = css`
+const smallSize = css`
 	${textSans.medium({ fontWeight: 'bold' })};
 	height: ${height.ctaSmall}px;
 	min-height: ${height.ctaSmall}px;
@@ -99,7 +98,7 @@ export const smallSize = css`
 	${fontSpacingVerticalOffset};
 `;
 
-export const xsmallSize = css`
+const xsmallSize = css`
 	${textSans.small({ fontWeight: 'bold' })};
 	height: ${height.ctaXsmall}px;
 	min-height: ${height.ctaXsmall}px;
@@ -108,7 +107,7 @@ export const xsmallSize = css`
 	${fontSpacingVerticalOffset};
 `;
 
-export const iconDefault = css`
+const iconDefault = css`
 	svg {
 		flex: 0 0 auto;
 		display: block;
@@ -122,7 +121,7 @@ export const iconDefault = css`
 	}
 `;
 
-export const iconSmall = css`
+const iconSmall = css`
 	svg {
 		flex: 0 0 auto;
 		display: block;
@@ -136,7 +135,7 @@ export const iconSmall = css`
 	}
 `;
 
-export const iconXsmall = css`
+const iconXsmall = css`
 	svg {
 		flex: 0 0 auto;
 		display: block;
@@ -156,13 +155,13 @@ export const iconXsmall = css`
  */
 const pullIconTowardEdge = -space[1];
 
-export const iconLeft = css`
+const iconLeft = css`
 	flex-direction: row-reverse;
 	svg {
 		margin-left: ${pullIconTowardEdge}px;
 	}
 `;
-export const iconRight = css`
+const iconRight = css`
 	svg {
 		margin-right: ${pullIconTowardEdge}px;
 	}
@@ -173,22 +172,22 @@ const iconOnly = css`
 	padding: 0;
 `;
 
-export const iconOnlyDefault = css`
+const iconOnlyDefault = css`
 	${iconOnly};
 	width: ${width.ctaMedium}px;
 `;
 
-export const iconOnlySmall = css`
+const iconOnlySmall = css`
 	${iconOnly};
 	width: ${width.ctaSmall}px;
 `;
 
-export const iconOnlyXsmall = css`
+const iconOnlyXsmall = css`
 	${iconOnly};
 	width: ${width.ctaXsmall}px;
 `;
 
-export const iconNudgeAnimation = css`
+const iconNudgeAnimation = css`
 	svg {
 		transform: translate(0, 0);
 		transition: ${transitions.short};
@@ -200,3 +199,68 @@ export const iconNudgeAnimation = css`
 		}
 	}
 `;
+
+const priorities: {
+	[key in ButtonPriority]: ({
+		button,
+	}: {
+		button: ButtonTheme;
+	}) => SerializedStyles;
+} = {
+	primary,
+	secondary,
+	tertiary,
+	subdued,
+};
+
+const iconSides: {
+	[key in IconSide]: SerializedStyles;
+} = {
+	right: iconRight,
+	left: iconLeft,
+};
+
+const sizes: {
+	[key in Size]: SerializedStyles;
+} = {
+	default: defaultSize,
+	small: smallSize,
+	xsmall: xsmallSize,
+};
+const iconSizes: {
+	[key in Size]: SerializedStyles;
+} = {
+	default: iconDefault,
+	small: iconSmall,
+	xsmall: iconXsmall,
+};
+const iconOnlySizes: {
+	[key in Size]: SerializedStyles;
+} = {
+	default: iconOnlyDefault,
+	small: iconOnlySmall,
+	xsmall: iconOnlyXsmall,
+};
+
+export const buttonStyles =
+	({
+		priority = 'primary',
+		size = 'default',
+		icon: iconSvg,
+		hideLabel,
+		iconSide = 'left',
+		nudgeIcon,
+		cssOverrides,
+	}: SharedButtonProps) =>
+	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+	(theme: any) =>
+		[
+			button,
+			sizes[size],
+			priorities[priority](theme.button && theme),
+			iconSvg ? iconSizes[size] : '',
+			iconSvg && !hideLabel ? iconSides[iconSide] : '',
+			nudgeIcon ? iconNudgeAnimation : '',
+			hideLabel ? iconOnlySizes[size] : '',
+			cssOverrides,
+		];

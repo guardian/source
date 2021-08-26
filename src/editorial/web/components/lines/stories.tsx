@@ -3,7 +3,7 @@ import React from 'react';
 import { Lines } from './index';
 
 export default {
-	title: 'Editorial/Lines',
+	title: 'Editorial/src-ed-lines/Lines',
 	component: Lines,
 };
 

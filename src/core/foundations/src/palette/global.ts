@@ -119,3 +119,7 @@ export const specialReport = {
 	700: colors.grays[16],
 	800: colors.grays[17],
 };
+
+export const focus = {
+	400: colors.blues[13],
+};
