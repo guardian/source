@@ -4,7 +4,7 @@
     "outDir": "dist/types",
     "declaration": true,
     "emitDeclarationOnly": true,
-	"composite": true
+    "composite": true
   },
   "include": [".", "../../foundations/types/themes.d.ts"],
   "exclude": ["dist", "**/*.stories.tsx"],
