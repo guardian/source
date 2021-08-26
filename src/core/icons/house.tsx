@@ -1,6 +1,13 @@
-export const SvgHouse = () => {
+import { iconSize } from '@guardian/src-foundations/size';
+import type { IconProps } from './types';
+
+export const SvgHouse = ({ size }: IconProps) => {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width={size ? iconSize[size] : undefined}
+			viewBox="0 0 30 30"
+		>
 			<path
 				fillRule="evenodd"
 				clipRule="evenodd"
