@@ -14,4 +14,4 @@ See [storybook](https://guardian.github.io/source/?path=/docs/source-src-accordi
 
 ### How to use
 
-For context and visual guides relating to usage see the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/38c5aa-accordion).
+For context and visual guides relating to accordion usage see the [Source Design System website](https://www.theguardian.design/2a1e5182b/p/38c5aa-accordion).
