@@ -6,6 +6,11 @@
     "emitDeclarationOnly": true,
     "composite": true
   },
-  "include": ["."],
-  "exclude": ["dist", "stories.tsx"]
+  "include": [".", "../foundations/types/themes.d.ts"],
+  "exclude": ["dist", "*.stories.tsx"],
+  "references": [
+    {
+      "path": "../foundations"
+    }
+  ]
 }

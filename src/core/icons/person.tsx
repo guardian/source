@@ -1,6 +1,13 @@
-export const SvgPerson = () => {
+import { iconSize } from '@guardian/src-foundations/size';
+import type { IconProps } from './types';
+
+export const SvgPerson = ({ size }: IconProps) => {
 	return (
-		<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+		<svg
+			viewBox="0 0 30 30"
+			xmlns="http://www.w3.org/2000/svg"
+			width={size ? iconSize[size] : undefined}
+		>
 			<path
 				fillRule="evenodd"
 				clipRule="evenodd"
