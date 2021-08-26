@@ -10,6 +10,71 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 26 August 2021
+
+**`@guardian/src-accordion 3.9.0`**
+
+-   :page_with_curl: [637b470](https://github.com/guardian/source/commit/637b470842e9a381f4d9f209c925944990e608df) add API docs for accordion component
+-   :page_with_curl: [f9cf5f1](https://github.com/guardian/source/commit/f9cf5f1fe3c8af015b7cc22b8379d9888623e536) Show packages in storybook nav
+-   :page_with_curl: [795fb6e](https://github.com/guardian/source/commit/795fb6e2b7b0d68afdef98d15e58592b97bb9d70) update Accordion stories to latest recommendations
+-   :page_with_curl: [a005c78](https://github.com/guardian/source/commit/a005c78d6e844ce1322ffdbefa4716e8ae2b2e12) Fix "how to use" readme text
+-   :page_with_curl: [72cb716](https://github.com/guardian/source/commit/72cb71688a2db3693b8d6834934742859e93a3da) update accordion storybook link
+
+**`@guardian/src-brand 3.9.0`**
+
+-   :sparkles: [f180423](https://github.com/guardian/source/commit/f1804239d570238ca97a7fb2cb215ffbd832a0c2) Add colour and width props to brand icons
+
+**`@guardian/src-button 3.9.0`**
+
+-   :robot: [1506a50](https://github.com/guardian/source/commit/1506a503ff451b5fbc3bf4bb05f6bf5f8d53e4ca) export ButtonProps as type
+-   :page_with_curl: [a34202c](https://github.com/guardian/source/commit/a34202c8bad78a046fc6cf9eb813272179fd855b) Add Button and LinkButton API docs
+
+**`@guardian/src-checkbox 3.9.0`**
+
+-   :page_with_curl: [df6d678](https://github.com/guardian/source/commit/df6d6783578f0fc4a136889733943c158c362195) Add Checkbox and CheckboxGroup APIs to Storybook
+
+**`@guardian/src-choice-card 3.9.0`**
+
+-   :page_with_curl: [2db1631](https://github.com/guardian/source/commit/2db1631980dfd76520c996c4f1b7353cd1eced07) Add api docs for src-choice-card
+
+**`@guardian/src-footer 3.9.0`**
+
+-   :page_with_curl: [c22813e](https://github.com/guardian/source/commit/c22813e6a06a453b8de6b403e9d848f7d0eda419) Add API docs for src-footer
+-   :page_with_curl: [0d5725a](https://github.com/guardian/source/commit/0d5725a646ea172a5811f93c430fe67ac8753d46) use story intent helpers in footer
+
+**`@guardian/src-foundations 3.9.0`**
+
+-   :globe_with_meridians: [429a9e7](https://github.com/guardian/source/commit/429a9e7cde0227f5d131adc0847141edbe55f0b1) Make focus halo darker blue (thanks @frederickobrien)
+-   :globe_with_meridians: [e40085b](https://github.com/guardian/source/commit/e40085bcf367ede5343ea1003815b4717295ff16) Update gray.46
+
+**`@guardian/src-icons 3.9.0`**
+
+-   :nail_care: [dcf2cd3](https://github.com/guardian/source/commit/dcf2cd306f15a115e741f63c56a75a04a3f5d4d3) Update offline cloud SVG
+-   :page_with_curl: [0bad7e5](https://github.com/guardian/source/commit/0bad7e579542be472c3febecb0e08a74cf02dea3) Add playground to icon storybook
+
+**`@guardian/src-label 3.9.0`**
+
+-   :page_with_curl: [66b286f](https://github.com/guardian/source/commit/66b286f84705ae0cfe195a2fc44b24a5901aec1d) Move API docs for label/legend
+
+**`@guardian/src-select 3.9.0`**
+
+-   :page_with_curl: [8aa9ef8](https://github.com/guardian/source/commit/8aa9ef82a9d5c3e0f75633453a95af06f85eea28) Add Select docs to storybook
+
+**`@guardian/src-text-area 3.9.0`**
+
+-   :page_with_curl: [9d9f90b](https://github.com/guardian/source/commit/9d9f90bffb84cb8da3ca850e5f8b4e461376b123) Add TextArea docs to storybook
+
+**`@guardian/src-text-input 3.9.0`**
+
+-   :page_with_curl: [10f1d96](https://github.com/guardian/source/commit/10f1d960c901a426caa7930fd0feeed70f221ace) Add TextInput docs to storybook
+
+**`@guardian/src-user-feedback 3.9.0`**
+
+-   :page_with_curl: [845521a](https://github.com/guardian/source/commit/845521ab39b003c3044600695ab70c864f4718e1) add API docs for user feedback component
+    **`@editorial/logo 3.9.0`**
+-   :sparkles: [5665125](https://github.com/guardian/source/commit/566512544259a3aa93829ce0b7518bcb17ea42e8) Added src-ed-logo (thanks @oliverlloyd)
+-   :globe_with_meridians: [04a1506](https://github.com/guardian/source/commit/04a1506f011da86fbac70f5a4c163c6240a4b721) Ensure focus halo covers svg children (thanks @oliverlloyd)
+
 ## 16 July 2021
 
 **`@guardian/src-foundations 3.8.0`**
