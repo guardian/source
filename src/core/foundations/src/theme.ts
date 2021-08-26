@@ -117,7 +117,7 @@ const colors = {
 		'#121212', //neutral-7
 		'#1A1A1A', //neutral-10
 		'#333333', //neutral-20
-		'#767676', //neutral-46
+		'#707070', //neutral-46
 		'#999999', //neutral-60
 		'#DCDCDC', //neutral-86
 		'#EDEDED', //neutral-93
