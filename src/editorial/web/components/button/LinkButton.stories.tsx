@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 import { Design, Display, Pillar, Special } from '@guardian/types';
 import React from 'react';
-import { Button, LinkButton } from './index';
+import { LinkButton } from './index';
 
 export default {
-	title: 'Editorial/src-ed-button/Button',
-	component: Button,
+	title: 'Editorial/src-ed-button/LinkButton',
+	component: LinkButton,
 };
 
 const Row = ({ children }: { children: React.ReactNode }) => (
@@ -23,7 +23,7 @@ const Row = ({ children }: { children: React.ReactNode }) => (
 
 export const Primary = () => (
 	<Row>
-		<Button
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -33,8 +33,8 @@ export const Primary = () => (
 			}}
 		>
 			News
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -44,8 +44,8 @@ export const Primary = () => (
 			}}
 		>
 			Sport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -55,8 +55,8 @@ export const Primary = () => (
 			}}
 		>
 			Culture
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -66,8 +66,8 @@ export const Primary = () => (
 			}}
 		>
 			Lifestyle
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -77,8 +77,8 @@ export const Primary = () => (
 			}}
 		>
 			Opinion
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -88,8 +88,8 @@ export const Primary = () => (
 			}}
 		>
 			SpecialReport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -99,14 +99,14 @@ export const Primary = () => (
 			}}
 		>
 			Labs
-		</Button>
+		</LinkButton>
 	</Row>
 );
 Primary.story = { name: 'when primary' };
 
 export const Secondary = () => (
 	<Row>
-		<Button
+		<LinkButton
 			priority="secondary"
 			size="small"
 			format={{
@@ -116,8 +116,8 @@ export const Secondary = () => (
 			}}
 		>
 			News
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="secondary"
 			size="small"
 			format={{
@@ -127,8 +127,8 @@ export const Secondary = () => (
 			}}
 		>
 			Sport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="secondary"
 			size="small"
 			format={{
@@ -138,8 +138,8 @@ export const Secondary = () => (
 			}}
 		>
 			Culture
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="secondary"
 			size="small"
 			format={{
@@ -149,8 +149,8 @@ export const Secondary = () => (
 			}}
 		>
 			Lifestyle
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="secondary"
 			size="small"
 			format={{
@@ -160,8 +160,8 @@ export const Secondary = () => (
 			}}
 		>
 			Opinion
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="secondary"
 			size="small"
 			format={{
@@ -171,8 +171,8 @@ export const Secondary = () => (
 			}}
 		>
 			SpecialReport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="secondary"
 			size="small"
 			format={{
@@ -182,7 +182,7 @@ export const Secondary = () => (
 			}}
 		>
 			Labs
-		</Button>
+		</LinkButton>
 	</Row>
 );
 Secondary.story = { name: 'when secondary' };
@@ -272,7 +272,7 @@ Tertiary.story = { name: 'when tertiary' };
 
 export const Subdued = () => (
 	<Row>
-		<Button
+		<LinkButton
 			priority="subdued"
 			size="small"
 			format={{
@@ -282,8 +282,8 @@ export const Subdued = () => (
 			}}
 		>
 			News
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="subdued"
 			size="small"
 			format={{
@@ -293,8 +293,8 @@ export const Subdued = () => (
 			}}
 		>
 			Sport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="subdued"
 			size="small"
 			format={{
@@ -304,8 +304,8 @@ export const Subdued = () => (
 			}}
 		>
 			Culture
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="subdued"
 			size="small"
 			format={{
@@ -315,8 +315,8 @@ export const Subdued = () => (
 			}}
 		>
 			Lifestyle
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="subdued"
 			size="small"
 			format={{
@@ -326,8 +326,8 @@ export const Subdued = () => (
 			}}
 		>
 			Opinion
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="subdued"
 			size="small"
 			format={{
@@ -337,8 +337,8 @@ export const Subdued = () => (
 			}}
 		>
 			SpecialReport
-		</Button>
-		<Button
+		</LinkButton>
+		<LinkButton
 			priority="subdued"
 			size="small"
 			format={{
@@ -348,14 +348,14 @@ export const Subdued = () => (
 			}}
 		>
 			Labs
-		</Button>
+		</LinkButton>
 	</Row>
 );
 Subdued.story = { name: 'when subdued' };
 
 export const Overrides = () => (
 	<Row>
-		<Button
+		<LinkButton
 			priority="primary"
 			size="small"
 			format={{
@@ -368,15 +368,14 @@ export const Overrides = () => (
 			`}
 		>
 			Pink News
-		</Button>
+		</LinkButton>
 	</Row>
 );
 Overrides.story = { name: 'with overrides overriden' };
 
 export const DefaultStory = () => (
 	<Row>
-		<Button onClick={() => null}>Default</Button>
-		<LinkButton href="example.com">Default</LinkButton>
+		<LinkButton onClick={() => null}>Default</LinkButton>
 	</Row>
 );
 DefaultStory.story = { name: 'with defaults' };
