@@ -1,14 +1,96 @@
 import { css } from '@emotion/react';
 import { Design, Display, Pillar, Special } from '@guardian/types';
-import React from 'react';
-import { LinkButton } from './index';
+import { LinkButton, LinkButtonProps } from './index';
+import { SvgCross } from '@guardian/src-icons';
+import type { Story } from '../../../../@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
+
+const defaultFormat = {
+	display: Display.Standard,
+	design: Design.Article,
+};
 
 export default {
 	title: 'Editorial/src-ed-button/LinkButton',
 	component: LinkButton,
+	argTypes: {
+		format: {
+			options: [
+				'news',
+				'sport',
+				'culture',
+				'lifestyle',
+				'opinion',
+				'special_report',
+				'labs',
+			],
+			mapping: {
+				news: { ...defaultFormat, theme: Pillar.News },
+				sport: { ...defaultFormat, theme: Pillar.Sport },
+				culture: { ...defaultFormat, theme: Pillar.Culture },
+				lifestyle: { ...defaultFormat, theme: Pillar.Lifestyle },
+				opinion: { ...defaultFormat, theme: Pillar.Opinion },
+				special_report: {
+					...defaultFormat,
+					theme: Special.SpecialReport,
+				},
+				labs: { ...defaultFormat, theme: Special.Labs },
+			},
+			control: { type: 'radio' },
+		},
+		icon: {
+			options: ['undefined', 'cross'],
+			mapping: {
+				undefined: undefined,
+				cross: <SvgCross />,
+			},
+			control: { type: 'radio' },
+		},
+	},
+	args: {
+		size: 'default',
+		hideLabel: false,
+		icon: undefined,
+		priority: 'primary',
+		iconSide: 'left',
+		nudgeIcon: false,
+	},
 };
 
-const Row = ({ children }: { children: React.ReactNode }) => (
+const Template: Story = (args: LinkButtonProps) => {
+	// Providing any value for cssOverrides, even undefined, overrides the custom styles
+	// for the editorial button so only pass through if it's defined
+	const { cssOverrides, ...rest } = args;
+	const props = rest as LinkButtonProps;
+
+	if (cssOverrides) {
+		props.cssOverrides = cssOverrides;
+	}
+
+	return <LinkButton {...props}>Click Me</LinkButton>;
+};
+
+export const Playground = Template.bind({});
+Playground.args = {
+	format: 'news',
+};
+asPlayground(Playground);
+
+// *****************************************************************************
+
+const pillars = [
+	Pillar.News,
+	Pillar.Sport,
+	Pillar.Culture,
+	Pillar.Lifestyle,
+	Pillar.Opinion,
+	Special.SpecialReport,
+	Special.Labs,
+];
+
+const RowTemplate: Story<LinkButtonProps> = (
+	args: Partial<LinkButtonProps>,
+) => (
 	<div
 		css={css`
 			display: flex;
@@ -17,365 +99,62 @@ const Row = ({ children }: { children: React.ReactNode }) => (
 			width: 800px;
 		`}
 	>
-		{children}
+		{pillars.map((pillar) => (
+			<Template
+				key={pillar}
+				{...args}
+				format={{ ...defaultFormat, theme: pillar }}
+			/>
+		))}
 	</div>
 );
 
-export const Primary = () => (
-	<Row>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</LinkButton>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</LinkButton>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</LinkButton>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</LinkButton>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</LinkButton>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</LinkButton>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</LinkButton>
-	</Row>
-);
-Primary.story = { name: 'when primary' };
+export const WhenPrimary = RowTemplate.bind({});
+WhenPrimary.args = {
+	priority: 'primary',
+	size: 'small',
+};
+asChromaticStory(WhenPrimary);
 
-export const Secondary = () => (
-	<Row>
-		<LinkButton
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</LinkButton>
-		<LinkButton
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</LinkButton>
-		<LinkButton
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</LinkButton>
-		<LinkButton
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</LinkButton>
-		<LinkButton
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</LinkButton>
-		<LinkButton
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</LinkButton>
-		<LinkButton
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</LinkButton>
-	</Row>
-);
-Secondary.story = { name: 'when secondary' };
+// *****************************************************************************
 
-export const Tertiary = () => (
-	<Row>
-		<LinkButton
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</LinkButton>
-		<LinkButton
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</LinkButton>
-		<LinkButton
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</LinkButton>
-		<LinkButton
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</LinkButton>
-		<LinkButton
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</LinkButton>
-		<LinkButton
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</LinkButton>
-		<LinkButton
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</LinkButton>
-	</Row>
-);
-Tertiary.story = { name: 'when tertiary' };
+export const WhenSecondary = RowTemplate.bind({});
+WhenSecondary.args = {
+	priority: 'secondary',
+	size: 'small',
+};
+asChromaticStory(WhenSecondary);
 
-export const Subdued = () => (
-	<Row>
-		<LinkButton
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</LinkButton>
-		<LinkButton
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</LinkButton>
-		<LinkButton
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</LinkButton>
-		<LinkButton
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</LinkButton>
-		<LinkButton
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</LinkButton>
-		<LinkButton
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</LinkButton>
-		<LinkButton
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</LinkButton>
-	</Row>
-);
-Subdued.story = { name: 'when subdued' };
+// *****************************************************************************
 
-export const Overrides = () => (
-	<Row>
-		<LinkButton
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-			cssOverrides={css`
-				background-color: pink;
-			`}
-		>
-			Pink News
-		</LinkButton>
-	</Row>
-);
-Overrides.story = { name: 'with overrides overriden' };
+export const WhenTertiary = RowTemplate.bind({});
+WhenTertiary.args = {
+	priority: 'tertiary',
+	size: 'small',
+};
+asChromaticStory(WhenTertiary);
 
-export const DefaultStory = () => (
-	<Row>
-		<LinkButton onClick={() => null}>Default</LinkButton>
-	</Row>
-);
-DefaultStory.story = { name: 'with defaults' };
+// *****************************************************************************
+
+export const WhenSubdued = RowTemplate.bind({});
+WhenSubdued.args = {
+	priority: 'subdued',
+	size: 'small',
+};
+asChromaticStory(WhenSubdued);
+
+// *****************************************************************************
+
+export const WithOverrides = Template.bind({});
+WithOverrides.args = {
+	cssOverrides: css`
+		background-color: pink;
+	`,
+};
+asChromaticStory(WithOverrides);
+
+// *****************************************************************************
+
+export const WithDefaults = Template.bind({});
+WithDefaults.args = {};
+asChromaticStory(WithDefaults);

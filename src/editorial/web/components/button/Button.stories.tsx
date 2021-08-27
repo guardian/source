@@ -1,14 +1,92 @@
 import { css } from '@emotion/react';
 import { Design, Display, Pillar, Special } from '@guardian/types';
-import React from 'react';
-import { Button } from './index';
+import { Button, ButtonProps } from './index';
+import { SvgCross } from '@guardian/src-icons';
+import type { Story } from '../../../../@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
+
+const defaultFormat = {
+	display: Display.Standard,
+	design: Design.Article,
+};
 
 export default {
 	title: 'Editorial/src-ed-button/Button',
 	component: Button,
+	argTypes: {
+		format: {
+			options: [
+				'news',
+				'sport',
+				'culture',
+				'lifestyle',
+				'opinion',
+				'special_report',
+				'labs',
+			],
+			mapping: {
+				news: { ...defaultFormat, theme: Pillar.News },
+				sport: { ...defaultFormat, theme: Pillar.Sport },
+				culture: { ...defaultFormat, theme: Pillar.Culture },
+				lifestyle: { ...defaultFormat, theme: Pillar.Lifestyle },
+				opinion: { ...defaultFormat, theme: Pillar.Opinion },
+				special_report: {
+					...defaultFormat,
+					theme: Special.SpecialReport,
+				},
+				labs: { ...defaultFormat, theme: Special.Labs },
+			},
+			control: { type: 'radio' },
+		},
+		icon: {
+			options: ['undefined', 'cross'],
+			mapping: {
+				undefined: undefined,
+				cross: <SvgCross />,
+			},
+			control: { type: 'radio' },
+		},
+	},
+	args: {
+		size: 'default',
+		hideLabel: false,
+		icon: undefined,
+		priority: 'primary',
+		iconSide: 'left',
+		nudgeIcon: false,
+	},
 };
 
-const Row = ({ children }: { children: React.ReactNode }) => (
+const Template: Story = (args: ButtonProps) => {
+	// Providing any value for cssOverrides, even undefined, overrides the custom styles
+	// for the editorial button so only pass through if it's defined
+	const { cssOverrides, ...rest } = args;
+	const props = rest as ButtonProps;
+
+	if (cssOverrides) {
+		props.cssOverrides = cssOverrides;
+	}
+
+	return <Button {...props}>Click Me</Button>;
+};
+
+export const Playground = Template.bind({});
+Playground.args = {
+	format: 'news',
+};
+asPlayground(Playground);
+
+const pillars = [
+	Pillar.News,
+	Pillar.Sport,
+	Pillar.Culture,
+	Pillar.Lifestyle,
+	Pillar.Opinion,
+	Special.SpecialReport,
+	Special.Labs,
+];
+
+const RowTemplate: Story<ButtonProps> = (args: Partial<ButtonProps>) => (
 	<div
 		css={css`
 			display: flex;
@@ -17,365 +95,62 @@ const Row = ({ children }: { children: React.ReactNode }) => (
 			width: 800px;
 		`}
 	>
-		{children}
+		{pillars.map((pillar) => (
+			<Template
+				key={pillar}
+				{...args}
+				format={{ ...defaultFormat, theme: pillar }}
+			/>
+		))}
 	</div>
 );
 
-export const Primary = () => (
-	<Row>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</Button>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</Button>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</Button>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</Button>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</Button>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</Button>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</Button>
-	</Row>
-);
-Primary.story = { name: 'when primary' };
+export const WhenPrimary = RowTemplate.bind({});
+WhenPrimary.args = {
+	priority: 'primary',
+	size: 'small',
+};
+asChromaticStory(WhenPrimary);
 
-export const Secondary = () => (
-	<Row>
-		<Button
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</Button>
-		<Button
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</Button>
-		<Button
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</Button>
-		<Button
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</Button>
-		<Button
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</Button>
-		<Button
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</Button>
-		<Button
-			priority="secondary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</Button>
-	</Row>
-);
-Secondary.story = { name: 'when secondary' };
+// *****************************************************************************
 
-export const Tertiary = () => (
-	<Row>
-		<Button
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</Button>
-		<Button
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</Button>
-		<Button
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</Button>
-		<Button
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</Button>
-		<Button
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</Button>
-		<Button
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</Button>
-		<Button
-			priority="tertiary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</Button>
-	</Row>
-);
-Tertiary.story = { name: 'when tertiary' };
+export const WhenSecondary = RowTemplate.bind({});
+WhenSecondary.args = {
+	priority: 'secondary',
+	size: 'small',
+};
+asChromaticStory(WhenSecondary);
 
-export const Subdued = () => (
-	<Row>
-		<Button
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-		>
-			News
-		</Button>
-		<Button
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Sport,
-			}}
-		>
-			Sport
-		</Button>
-		<Button
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Culture,
-			}}
-		>
-			Culture
-		</Button>
-		<Button
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Lifestyle,
-			}}
-		>
-			Lifestyle
-		</Button>
-		<Button
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.Opinion,
-			}}
-		>
-			Opinion
-		</Button>
-		<Button
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.SpecialReport,
-			}}
-		>
-			SpecialReport
-		</Button>
-		<Button
-			priority="subdued"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Special.Labs,
-			}}
-		>
-			Labs
-		</Button>
-	</Row>
-);
-Subdued.story = { name: 'when subdued' };
+// *****************************************************************************
 
-export const Overrides = () => (
-	<Row>
-		<Button
-			priority="primary"
-			size="small"
-			format={{
-				display: Display.Standard,
-				design: Design.Article,
-				theme: Pillar.News,
-			}}
-			cssOverrides={css`
-				background-color: pink;
-			`}
-		>
-			Pink News
-		</Button>
-	</Row>
-);
-Overrides.story = { name: 'with overrides overriden' };
+export const WhenTertiary = RowTemplate.bind({});
+WhenTertiary.args = {
+	priority: 'tertiary',
+	size: 'small',
+};
+asChromaticStory(WhenTertiary);
 
-export const DefaultStory = () => (
-	<Row>
-		<Button onClick={() => null}>Default</Button>
-	</Row>
-);
-DefaultStory.story = { name: 'with defaults' };
+// *****************************************************************************
+
+export const WhenSubdued = RowTemplate.bind({});
+WhenSubdued.args = {
+	priority: 'subdued',
+	size: 'small',
+};
+asChromaticStory(WhenSubdued);
+
+// *****************************************************************************
+
+export const WithOverrides = Template.bind({});
+WithOverrides.args = {
+	cssOverrides: css`
+		background-color: pink;
+	`,
+};
+asChromaticStory(WithOverrides);
+
+// *****************************************************************************
+
+export const WithDefaults = Template.bind({});
+WithDefaults.args = {};
+asChromaticStory(WithDefaults);
