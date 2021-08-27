@@ -1,4 +1,3 @@
-import { Format } from '@guardian/types';
 import {
 	LinkButton as CoreLinkButton,
 	LinkButtonProps as CoreLinkButtonProps,
@@ -9,24 +8,11 @@ import {
 	decideFont,
 	defaultFormat,
 } from './styles';
+import { SharedEditorialButtonProps } from './types';
 
-export interface LinkButtonProps extends CoreLinkButtonProps {
-	/**
-	 * A format object denoting the style of the button using the enums
-	 * available from [@guardian/libs](https://github.com/guardian/libs/blob/main/src/format.ts).
-	 *
-	 * For example:
-	 *
-	 * ```ts
-	 * {
-	 *   display: Display.Standard,
-	 *   design: Design.Article,
-	 *   theme: Pillar.News,
-	 * }
-	 * ```
-	 */
-	format?: Format;
-}
+export interface LinkButtonProps
+	extends CoreLinkButtonProps,
+		SharedEditorialButtonProps {}
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-button-link-button--playground) •
