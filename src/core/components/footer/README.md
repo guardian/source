@@ -10,19 +10,13 @@ $ yarn add @guardian/src-footer
 
 ## Use
 
-```js
-import { Footer } from '@guardian/src-footer';
+### API
 
-const Wrapper = () => <Footer showBackToTop={true} />;
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-footer-footer--playground).
 
-## `Footer` Props
+### How to use
 
-### `showBackToTop`
-
-**`boolean`** _= false_
-
-Whether the "Back to top" link is visible in the footer
+For context and visual guides relating to button usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/12ce79--footer/b/09ee0e).
 
 ## Supported themes
 
