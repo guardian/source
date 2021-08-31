@@ -9,13 +9,13 @@ Also exported is `LinkButton` which, like in core, offers a href version of the 
 ## Install
 
 ```sh
-$ yarn add @guardian/src-ed-button @guardian/src-foundations
+$ yarn add @guardian/source-kitchen-react @guardian/src-foundations
 ```
 
 or
 
 ```sh
-$ npm i @guardian/src-ed-button @guardian/src-foundations
+$ npm i @guardian/source-kitchen-react @guardian/src-foundations
 ```
 
 ## Use

@@ -7,7 +7,13 @@ Displays a rating, 1-5, using star SVGs. See the accompanying stories for visual
 ## Install
 
 ```sh
-$ yarn add @guardian/src-ed-star-rating
+$ yarn add @guardian/source-kitchen-react
+```
+
+or
+
+```sh
+$ npm i @guardian/source-kitchen-react
 ```
 
 ## Use

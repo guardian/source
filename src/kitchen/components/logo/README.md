@@ -5,13 +5,13 @@ The Guardian logo appears in the header on most editorial pages
 ## Install
 
 ```sh
-$ yarn add @guardian/src-ed-logo
+$ yarn add @guardian/source-kitchen-react
 ```
 
 or
 
 ```sh
-$ npm i @guardian/src-ed-logo
+$ npm i @guardian/source-kitchen-react
 ```
 
 ## Use

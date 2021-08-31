@@ -5,13 +5,13 @@
 ## Install
 
 ```sh
-$ yarn add @guardian/src-ed-lines @guardian/src-foundations
+$ yarn add @guardian/source-kitchen-react @guardian/src-foundations
 ```
 
 or
 
 ```sh
-$ npm i @guardian/src-ed-lines @guardian/src-foundations
+$ npm i @guardian/source-kitchen-react @guardian/src-foundations
 ```
 
 ## Use

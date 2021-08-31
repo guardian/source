@@ -5,13 +5,13 @@ The Guardian quote icon is used in kickers, headlines, drop caps and pull quotes
 ## Install
 
 ```sh
-$ yarn add @guardian/src-ed-quote-icon
+$ yarn add @guardian/source-kitchen-react
 ```
 
 or
 
 ```sh
-$ npm i @guardian/src-ed-quote-icon
+$ npm i @guardian/source-kitchen-react
 ```
 
 ## Use
