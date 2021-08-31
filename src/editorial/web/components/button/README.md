@@ -20,42 +20,10 @@ $ npm i @guardian/src-ed-button @guardian/src-foundations
 
 ## Use
 
-```jsx
-import { Button } from '@guardian/src-ed-button';
+### API
 
-const SomeButtons = () => (
-    <Button
-        priority="primay"
-        onClick={() => {}}
-        format={{
-            display: Display.Standard,
-            design: Design.Article,
-            theme: Pillar.News,
-        }}
-    >
-        Click me
-    </Button>
-    <LinkButton
-        priority="subdued"
-        size="small"
-        href="https://www.theguardian.com/uk"
-        format={{
-            display: Display.Standard,
-            design: Design.Article,
-            theme: Special.Labs,
-        }}
-    >
-        Click me too
-    </LinkButton>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-button-button--playground)
 
-## `Button` Props
+### How to use
 
-In addition to all the standard `Button` and `LinkButton` props, we also have
-
-### `format`
-
-See **`@guardian/types`**: https://github.com/guardian/types/blob/main/src/format.ts
-
-Which is what we use to decide the editorial styling overrides
+For context and visual guides relating to usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/435225-button).
