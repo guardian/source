@@ -1,9 +1,9 @@
 import { css } from '@emotion/react';
 import { Design, Display, Pillar, Special } from '@guardian/types';
-import { LinkButton, LinkButtonProps } from './index';
+import { Button, ButtonProps } from './index';
 import { SvgCross } from '@guardian/src-icons';
-import type { Story } from '../../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
+import type { Story } from '../../../@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 const defaultFormat = {
 	display: Display.Standard,
@@ -11,8 +11,8 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Editorial/src-ed-button/LinkButton',
-	component: LinkButton,
+	title: 'Editorial/src-ed-button/Button',
+	component: Button,
 	argTypes: {
 		format: {
 			options: [
@@ -57,17 +57,17 @@ export default {
 	},
 };
 
-const Template: Story = (args: LinkButtonProps) => {
+const Template: Story = (args: ButtonProps) => {
 	// Providing any value for cssOverrides, even undefined, overrides the custom styles
 	// for the editorial button so only pass through if it's defined
 	const { cssOverrides, ...rest } = args;
-	const props = rest as LinkButtonProps;
+	const props = rest as ButtonProps;
 
 	if (cssOverrides) {
 		props.cssOverrides = cssOverrides;
 	}
 
-	return <LinkButton {...props}>Click Me</LinkButton>;
+	return <Button {...props}>Click Me</Button>;
 };
 
 export const Playground = Template.bind({});
@@ -75,8 +75,6 @@ Playground.args = {
 	format: 'news',
 };
 asPlayground(Playground);
-
-// *****************************************************************************
 
 const pillars = [
 	Pillar.News,
@@ -88,9 +86,7 @@ const pillars = [
 	Special.Labs,
 ];
 
-const RowTemplate: Story<LinkButtonProps> = (
-	args: Partial<LinkButtonProps>,
-) => (
+const RowTemplate: Story<ButtonProps> = (args: Partial<ButtonProps>) => (
 	<div
 		css={css`
 			display: flex;

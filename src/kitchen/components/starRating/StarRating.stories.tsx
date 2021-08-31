@@ -1,6 +1,6 @@
 import { StarRating, StarRatingProps } from './StarRating';
-import type { Story } from '../../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
+import type { Story } from '../../../@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
 	title: 'Editorial/src-ed-star-rating/Star Rating',
