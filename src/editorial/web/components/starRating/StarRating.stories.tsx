@@ -22,14 +22,6 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const NoStars = Template.bind({});
-NoStars.args = {
-	rating: 0,
-};
-asChromaticStory(NoStars);
-
-// *****************************************************************************
-
 export const OneStar = Template.bind({});
 OneStar.args = {
 	rating: 1,
