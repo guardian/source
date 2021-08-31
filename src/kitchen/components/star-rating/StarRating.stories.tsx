@@ -3,7 +3,7 @@ import type { Story } from '../../../@types/storybook-emotion-10-fixes';
 import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
-	title: 'Editorial/src-ed-star-rating/Star Rating',
+	title: 'Kitchen/source-kitchen-react/Star Rating',
 	component: StarRating,
 	args: {
 		size: 'medium',

@@ -20,7 +20,7 @@ $ npm i @guardian/source-kitchen-react
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-star-rating-star-rating--storybook)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-kitchen-react-star-rating--playground)
 
 ### How to use
 

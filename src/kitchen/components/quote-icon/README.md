@@ -18,7 +18,7 @@ $ npm i @guardian/source-kitchen-react
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-quote-icon-quote-icon--storybook)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-kitchen-react-quote-icon--playground)
 
 ### How to use
 

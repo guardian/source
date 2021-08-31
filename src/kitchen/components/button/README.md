@@ -22,7 +22,7 @@ $ npm i @guardian/source-kitchen-react @guardian/src-foundations
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-button-button--playground)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-kitchen-react-button--playground)
 
 ### How to use
 

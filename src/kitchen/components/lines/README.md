@@ -18,7 +18,7 @@ $ npm i @guardian/source-kitchen-react @guardian/src-foundations
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-lines-lines--storybook)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-kitchen-react-lines--playground)
 
 ### How to use
 

@@ -9,7 +9,7 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Editorial/src-ed-quote-icon/QuoteIcon',
+	title: 'Kitchen/source-kitchen-react/QuoteIcon',
 	component: QuoteIcon,
 	argTypes: {
 		format: {
