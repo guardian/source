@@ -4,33 +4,18 @@ Displays a rating, 1-5, using star SVGs. See the accompanying stories for visual
 
 📣 For more context and visual guides relating to `StarRating` usage, visit the [Source Design System website](https://www.theguardian.design).
 
-## Use
+## Install
 
-```tsx
-import { StarRating } from '@guardian/editorial';
-
-const ReviewPage = () => (
-    <article>
-        <h1>Review Of A Film</h1>
-        <StarRating
-            rating={3}
-            size="medium"
-        />
-        <p>Reasons why this film is 3 stars.</p>
-    </article>
-);
+```sh
+$ yarn add @guardian/src-ed-star-rating
 ```
 
-## `StarRating` Props
+## Use
 
-### `rating`
+### API
 
-**`number`**
+See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-star-rating-star-rating--storybook)
 
-The rating itself - expected to be `1`, `2`, `3`, `4` or `5`.
+### How to use
 
-### `size`
-
-**`"large" | "medium" | "small"`**
-
-Determines how large the stars are. See the accompanying stories for visual examples.
+For context and visual guides relating to usage see the [Source Design System website](https://theguardian.design).

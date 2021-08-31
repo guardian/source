@@ -16,34 +16,10 @@ $ npm i @guardian/src-ed-quote-icon
 
 ## Use
 
-```jsx
-import { QuoteIcon } from '@guardian/src-ed-quote-icon';
+### API
 
-const Section = () => (
-    <>
-        <QuoteIcon
-            size="medium"
-            format={{
-                display: Display.Standard,
-                design: Design.Article,
-                theme: Pillar.News,
-            }}
-        />
-        <blockquote>I said this</blockquote>
-    </>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-quote-icon-quote-icon--storybook)
 
-## `QuoteIcon` Props
+### How to use
 
-### `size`
-
-**`"xsmall" | "small" | "medium" | "large"`**
-
-The size of the quote.
-
-### `format`
-
-See **`@guardian/types`**: https://github.com/guardian/types/blob/main/src/format.ts
-
-What we use to decide the editorial colour for the quotes
+For context and visual guides relating to usage see the [Source Design System website](https://theguardian.design).
