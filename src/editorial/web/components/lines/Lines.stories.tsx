@@ -57,6 +57,14 @@ asChromaticStory(SingleLine);
 
 // *****************************************************************************
 
+export const FourLines = Template.bind({});
+FourLines.args = {
+	count: 4,
+};
+asChromaticStory(FourLines);
+
+// *****************************************************************************
+
 export const EightLines = Template.bind({});
 EightLines.args = {
 	count: 8,
