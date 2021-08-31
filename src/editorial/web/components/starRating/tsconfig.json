@@ -5,13 +5,8 @@
     "declaration": true,
     "emitDeclarationOnly": true
   },
-  "include": [
-    "."
-  ],
-  "exclude": [
-    "dist",
-    "stories.tsx"
-  ],
+  "include": ["."],
+  "exclude": ["dist", "*.stories.tsx"],
   "references": [
     {
       "path": "../../../../core/helpers"
