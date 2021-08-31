@@ -16,7 +16,7 @@ See [storybook](https://guardian.github.io/source/?path=/docs/source-src-label-l
 
 ### How to use
 
-For context and visual guides relating to button usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/40151e-label/b/86af7d).
+For context and visual guides relating to label usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/40151e-label/b/86af7d).
 
 ## Supported themes
 

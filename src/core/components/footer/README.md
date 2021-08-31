@@ -16,7 +16,7 @@ See [storybook](https://guardian.github.io/source/?path=/docs/source-src-footer-
 
 ### How to use
 
-For context and visual guides relating to button usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/12ce79--footer/b/09ee0e).
+For context and visual guides relating to footer usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/12ce79--footer/b/09ee0e).
 
 ## Supported themes
 
