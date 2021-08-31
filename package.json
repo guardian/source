@@ -6,8 +6,7 @@
   "workspaces": [
     "src/core/*",
     "src/core/components/*",
-    "src/editorial/web",
-    "src/editorial/web/components/*"
+    "src/kitchen"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",
