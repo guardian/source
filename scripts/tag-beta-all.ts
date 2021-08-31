@@ -8,10 +8,10 @@ const tag = (packageName: string) => {
 	});
 };
 
-const { foundations, icons, brand, helpers, editorial } = packageNames;
+const { foundations, icons, brand, helpers } = packageNames;
 
 const packages = getComponentPackageNames().then((ps) =>
-	ps.concat([foundations, icons, brand, helpers, editorial]),
+	ps.concat([foundations, icons, brand, helpers]),
 );
 
 packages.then((ps) => {
