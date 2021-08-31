@@ -12,47 +12,25 @@ $ yarn add @guardian/src-layout
 
 Centres the page content and applies a width that corresponds to the grid at the current breakpoint.
 
-```tsx
-import { Container } from '@guardian/src-layout';
+### API
 
-const Wrapper = () => (
-    <Container>
-        <div css={contents}>Contents</div>
-    </Container>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-container).
 
-### Props
+### How to use
 
-#### `border`
-
-**`boolean`** _= false_
-
-Whether to show a border to the left and right of the Container
+For context and visual guides relating to Container usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/440a83-container).
 
 ## Stack
 
 Children will be stacked one on top of the other.
 
-```tsx
-import { Stack } from '@guardian/src-layout';
+### API
 
-const Wrapper = () => (
-    <Stack>
-        <div css={contents}>Item 1</div>
-        <div css={contents}>Item 2</div>
-        <div css={contents}>Item 3</div>
-    </Stack>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-stack).
 
-### Props
+### How to use
 
-#### `space`
-
-**`1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24`**
-
-Units of space between stack items (one unit is 4px)
+For context and visual guides relating to Stack usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/827581-stack).
 
 ## Columns
 
@@ -60,138 +38,42 @@ Columns will be arranged side by side on a single row, with the specified width.
 
 Use Columns in conjunction with Container to help the columns align neatly with [the Guardian's grids](https://www.theguardian.design/2a1e5182b/p/41be19-grids).
 
-```tsx
-import { Container, Columns, Column } from '@guardian/src-layout';
+### API
 
-const Wrapper = () => (
-    <Container>
-        <Columns collapseBelow={tablet}>
-            <Column width={1 / 4}>1/4</Column>
-            <Column width={1 / 4}>1/4</Column>
-            <Column>*</Column>
-        </Columns>
-    </Container>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-columns).
 
-### Columns Props
+### How to use
 
-#### `collapseBelow`
-
-**`Breakpoint`**
-
-Columns will be stacked one on top of the other at viewport widths lower than the specified breakpoint
-
-#### `spaceY`
-
-**`1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24`**
-
-Units of space between columns vertically when collapsed (one unit is 4px)
-
-### Column Props
-
-#### `width`
-
-**`number | number[]`**
-
-Fraction of the parent container's width that the column will occupy.
-
-Pass 0 to hide the column completely.
-
-Pass an array of fractions to set the width that the column occupies at different breakpoints. The first value in the array will
-reflect the width at mobile, the second value at tablet, then desktop, leftCol and wide.
-
-If neither `width` nor `span` is passed, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns).
-
-If both `width` and `span` are passed, `width` takes priority.
-
-#### `span`
-
-**`number | number[]`**
-
-Number of [grid columns](https://theguardian.design/2a1e5182b/p/41be19-grids) that the column will occupy.
-
-Pass 0 to hide the column completely.
-
-Pass an array of numbers to set the number of grid columns the column component occupies at different breakpoints. The first value in the array will reflect the width at mobile, the second value at tablet, then desktop, leftCol and wide.
-
-If neither `width` nor `span` is passed, the column width will be fluid (i.e. take up remaining space, divided between all fluid columns).
-
-If both `width` and `span` are passed, `width` takes priority.
+For context and visual guides relating to Columns usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/41cd49-columns).
 
 ## Hide
 
 Hide a component above or below a certain breakpoint
 
-```tsx
-import { Hide } from '@guardian/src-layout';
+### API
 
-const Wrapper = () => (
-    <>
-        <Hide above="tablet">
-            <MobileNavigation />
-        </Hide>
-        <Hide below="desktop">
-            <DesktopNavigation />
-        </Hide>
-    </>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-hide).
 
-### Props
+### How to use
 
-#### `above`
-
-**`Breakpoint`**
-
-Contents will be hidden at viewport widths greater than the specified breakpoint
-
-#### `below`
-
-**`Breakpoint`**
-
-Contents will be hidden at viewport widths less than the specified breakpoint
+For context and visual guides relating to Hide usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/78cb73-hide).
 
 ## Inline
 
-```tsx
-import { Inline } from '@guardian/src-layout';
+### API
 
-const Wrapper = () => (
-    <Inline>
-        <div css={contents}>Item 1</div>
-        <div css={contents}>Item 2</div>
-        <div css={contents}>Item 3</div>
-    </Inline>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-inline).
 
-### Props
+### How to use
 
-#### `space`
-
-**`1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24`**
-
-Units of space between inline items (one unit is 4px)
+For context and visual guides relating to Inline usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/99f3c1-inline).
 
 ## Tiles
 
-```tsx
-import { Tiles } from '@guardian/src-layout';
+### API
 
-const Wrapper = () => (
-    <Tiles columns={3}>
-        <div css={contents}>Item 1</div>
-        <div css={contents}>Item 2</div>
-        <div css={contents}>Item 3</div>
-    </Tiles>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-tiles).
 
-### Props
+### How to use
 
-#### `collapseBelow`
-
-**`Breakpoint`**
-
-Tiles will be stacked one on top of the other at viewport widths lower than the specified breakpoint.
+For context and visual guides relating to Tiles usage see the [Source Design System website](https://theguardian.design/2a1e5182b/p/00e9f5-tiles).
