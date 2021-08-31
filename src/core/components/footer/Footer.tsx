@@ -19,7 +19,7 @@ export interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-footer-footer--demo) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-footer-footer--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/12ce79--footer/b/09ee0e) •
  * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/footer) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-footer)

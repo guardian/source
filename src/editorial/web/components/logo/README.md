@@ -16,23 +16,10 @@ $ npm i @guardian/src-ed-logo
 
 ## Use
 
-```jsx
-import { Logo } from '@guardian/src-ed-logo';
+### API
 
-const Header = () => {
-    return (
-        <header css={headerStyles}>
-            <p>Some other header things</p>
-            <Logo />
-        </header>
-    );
-};
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-logo-logo--storybook)
 
-## `Logo` Props
+### How to use
 
-### `logoType`
-
-**`"standard" | "anniversary" | "bestWebsite"`**
-
-The type of logo to return
+For context and visual guides relating to usage see the [Source Design System website](https://theguardian.design).
