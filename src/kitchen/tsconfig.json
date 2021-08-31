@@ -6,10 +6,13 @@
     "emitDeclarationOnly": true
   },
   "include": ["."],
-  "exclude": ["dist"],
+  "exclude": ["dist", "components/**/*.stories.tsx"],
   "references": [
     {
       "path": "../core/foundations"
+    },
+    {
+      "path": "../core/helpers"
     }
   ]
 }
