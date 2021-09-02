@@ -58,7 +58,7 @@ Components that are valuable may be promoted to stable. In order to achieve this
 
 ## Publishing
 
-The Development Kitchen is published as it's own package, independent of the stable components in the `@guardian/source-react` package. This:
+The Development Kitchen is published as it's own package, independent of the stable components in the `@guardian/src-*` packages. This:
 
 -   Allows the kitchen to move faster than stable
 -   Allows us to make frequent breaking changes while preserving semver. The kitchen can often release new major versions, whereas with the stable library it is desirable for major versions to change at a slower pace, in order to set expectations and preserve developer confidence.
