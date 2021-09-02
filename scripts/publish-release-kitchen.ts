@@ -3,7 +3,7 @@ import { paths } from './paths';
 
 const { kitchen } = paths;
 
-console.log('Publishing @guardian/src-kitchen-react');
+console.log('Publishing @guardian/source-kitchen-react');
 
 import(`${kitchen}/package.json`)
 	.then(({ version }) => {
