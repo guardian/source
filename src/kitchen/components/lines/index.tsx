@@ -1,1 +1,2 @@
-export { LineCount, LinesProps, Lines } from './Lines';
+export { Lines } from './Lines';
+export type { LinesProps, LineCount } from './Lines';
