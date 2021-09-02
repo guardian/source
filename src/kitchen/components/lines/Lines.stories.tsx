@@ -3,7 +3,7 @@ import type { Story } from '../../../@types/storybook-emotion-10-fixes';
 import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
-	title: 'Kitchen/source-kitchen-react/Lines',
+	title: 'Kitchen/Lines',
 	component: Lines,
 	args: {
 		effect: 'straight',

@@ -11,7 +11,7 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Kitchen/source-kitchen-react/Button',
+	title: 'Kitchen/Button',
 	component: Button,
 	argTypes: {
 		format: {

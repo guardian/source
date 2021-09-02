@@ -11,7 +11,7 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Kitchen/source-kitchen-react/LinkButton',
+	title: 'Kitchen/LinkButton',
 	component: LinkButton,
 	argTypes: {
 		format: {
