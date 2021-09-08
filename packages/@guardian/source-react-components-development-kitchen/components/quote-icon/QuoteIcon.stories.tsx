@@ -1,4 +1,9 @@
-import { Design, Display, Pillar, Special } from '@guardian/types';
+import {
+	ArticleDesign,
+	ArticleDisplay,
+	ArticlePillar,
+	ArticleSpecial,
+} from '@guardian/libs';
 import { QuoteIcon, QuoteIconProps } from './QuoteIcon';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
@@ -7,8 +12,8 @@ import {
 } from '../../../../../lib/story-intents';
 
 const defaultFormat = {
-	display: Display.Standard,
-	design: Design.Article,
+	display: ArticleDisplay.Standard,
+	design: ArticleDesign.Standard,
 };
 
 export default {
@@ -26,16 +31,16 @@ export default {
 				'labs',
 			],
 			mapping: {
-				news: { ...defaultFormat, theme: Pillar.News },
-				sport: { ...defaultFormat, theme: Pillar.Sport },
-				culture: { ...defaultFormat, theme: Pillar.Culture },
-				lifestyle: { ...defaultFormat, theme: Pillar.Lifestyle },
-				opinion: { ...defaultFormat, theme: Pillar.Opinion },
+				news: { ...defaultFormat, theme: ArticlePillar.News },
+				sport: { ...defaultFormat, theme: ArticlePillar.Sport },
+				culture: { ...defaultFormat, theme: ArticlePillar.Culture },
+				lifestyle: { ...defaultFormat, theme: ArticlePillar.Lifestyle },
+				opinion: { ...defaultFormat, theme: ArticlePillar.Opinion },
 				special_report: {
 					...defaultFormat,
-					theme: Special.SpecialReport,
+					theme: ArticleSpecial.SpecialReport,
 				},
-				labs: { ...defaultFormat, theme: Special.Labs },
+				labs: { ...defaultFormat, theme: ArticleSpecial.Labs },
 			},
 			control: { type: 'radio' },
 		},
@@ -54,7 +59,11 @@ const Template: Story<QuoteIconProps> = (args: QuoteIconProps) => (
 export const Playground = Template.bind({});
 Playground.args = {
 	size: 'xsmall',
-	format: 'news',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.News,
+	},
 };
 asPlayground(Playground);
 
@@ -63,7 +72,11 @@ asPlayground(Playground);
 export const News = Template.bind({});
 News.args = {
 	size: 'medium',
-	format: 'news',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.News,
+	},
 };
 asChromaticStory(News);
 
@@ -72,7 +85,11 @@ asChromaticStory(News);
 export const Sport = Template.bind({});
 Sport.args = {
 	size: 'medium',
-	format: 'sport',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.Sport,
+	},
 };
 asChromaticStory(Sport);
 
@@ -81,7 +98,11 @@ asChromaticStory(Sport);
 export const Culture = Template.bind({});
 Culture.args = {
 	size: 'medium',
-	format: 'culture',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.Culture,
+	},
 };
 asChromaticStory(Culture);
 
@@ -90,7 +111,11 @@ asChromaticStory(Culture);
 export const Lifestyle = Template.bind({});
 Lifestyle.args = {
 	size: 'medium',
-	format: 'lifestyle',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.Lifestyle,
+	},
 };
 asChromaticStory(Lifestyle);
 
@@ -99,7 +124,11 @@ asChromaticStory(Lifestyle);
 export const Opinion = Template.bind({});
 Opinion.args = {
 	size: 'medium',
-	format: 'opinion',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.Opinion,
+	},
 };
 asChromaticStory(Opinion);
 
@@ -108,7 +137,11 @@ asChromaticStory(Opinion);
 export const SpecialReport = Template.bind({});
 SpecialReport.args = {
 	size: 'medium',
-	format: 'special_report',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticleSpecial.SpecialReport,
+	},
 };
 asChromaticStory(SpecialReport);
 
@@ -117,7 +150,11 @@ asChromaticStory(SpecialReport);
 export const Labs = Template.bind({});
 Labs.args = {
 	size: 'medium',
-	format: 'labs',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticleSpecial.Labs,
+	},
 };
 asChromaticStory(Labs);
 
@@ -126,7 +163,11 @@ asChromaticStory(Labs);
 export const XSmall = Template.bind({});
 XSmall.args = {
 	size: 'xsmall',
-	format: 'news',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.News,
+	},
 };
 asChromaticStory(XSmall);
 
@@ -135,7 +176,11 @@ asChromaticStory(XSmall);
 export const Small = Template.bind({});
 Small.args = {
 	size: 'small',
-	format: 'news',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.News,
+	},
 };
 asChromaticStory(Small);
 
@@ -144,7 +189,11 @@ asChromaticStory(Small);
 export const Medium = Template.bind({});
 Medium.args = {
 	size: 'medium',
-	format: 'news',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.News,
+	},
 };
 asChromaticStory(Medium);
 
@@ -153,6 +202,10 @@ asChromaticStory(Medium);
 export const Large = Template.bind({});
 Large.args = {
 	size: 'large',
-	format: 'news',
+	format: {
+		display: ArticleDisplay.Standard,
+		design: ArticleDesign.Standard,
+		theme: ArticlePillar.News,
+	},
 };
 asChromaticStory(Large);
