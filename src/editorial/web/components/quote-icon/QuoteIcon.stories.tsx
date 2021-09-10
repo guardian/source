@@ -51,11 +51,7 @@ const Template: Story<QuoteIconProps> = (args: QuoteIconProps) => (
 export const Playground = Template.bind({});
 Playground.args = {
 	size: 'xsmall',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.News,
-	},
+	format: 'news',
 };
 asPlayground(Playground);
 
@@ -64,11 +60,7 @@ asPlayground(Playground);
 export const News = Template.bind({});
 News.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.News,
-	},
+	format: 'news',
 };
 asChromaticStory(News);
 
@@ -77,11 +69,7 @@ asChromaticStory(News);
 export const Sport = Template.bind({});
 Sport.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.Sport,
-	},
+	format: 'sport',
 };
 asChromaticStory(Sport);
 
@@ -90,11 +78,7 @@ asChromaticStory(Sport);
 export const Culture = Template.bind({});
 Culture.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.Culture,
-	},
+	format: 'culture',
 };
 asChromaticStory(Culture);
 
@@ -103,11 +87,7 @@ asChromaticStory(Culture);
 export const Lifestyle = Template.bind({});
 Lifestyle.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.Lifestyle,
-	},
+	format: 'lifestyle',
 };
 asChromaticStory(Lifestyle);
 
@@ -116,11 +96,7 @@ asChromaticStory(Lifestyle);
 export const Opinion = Template.bind({});
 Opinion.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.Opinion,
-	},
+	format: 'opinion',
 };
 asChromaticStory(Opinion);
 
@@ -129,11 +105,7 @@ asChromaticStory(Opinion);
 export const SpecialReport = Template.bind({});
 SpecialReport.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Special.SpecialReport,
-	},
+	format: 'special_report',
 };
 asChromaticStory(SpecialReport);
 
@@ -142,11 +114,7 @@ asChromaticStory(SpecialReport);
 export const Labs = Template.bind({});
 Labs.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Special.Labs,
-	},
+	format: 'labs',
 };
 asChromaticStory(Labs);
 
@@ -155,11 +123,7 @@ asChromaticStory(Labs);
 export const XSmall = Template.bind({});
 XSmall.args = {
 	size: 'xsmall',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.News,
-	},
+	format: 'news',
 };
 asChromaticStory(XSmall);
 
@@ -168,11 +132,7 @@ asChromaticStory(XSmall);
 export const Small = Template.bind({});
 Small.args = {
 	size: 'small',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.News,
-	},
+	format: 'news',
 };
 asChromaticStory(Small);
 
@@ -181,11 +141,7 @@ asChromaticStory(Small);
 export const Medium = Template.bind({});
 Medium.args = {
 	size: 'medium',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.News,
-	},
+	format: 'news',
 };
 asChromaticStory(Medium);
 
@@ -194,10 +150,6 @@ asChromaticStory(Medium);
 export const Large = Template.bind({});
 Large.args = {
 	size: 'large',
-	format: {
-		display: Display.Standard,
-		design: Design.Article,
-		theme: Pillar.News,
-	},
+	format: 'news',
 };
 asChromaticStory(Large);
