@@ -7,20 +7,20 @@ Displays a rating, 1-5, using star SVGs. See the accompanying stories for visual
 ## Install
 
 ```sh
-$ yarn add @guardian/source-kitchen-react
+$ yarn add @guardian/source-react-components-development-kitchen
 ```
 
 or
 
 ```sh
-$ npm i @guardian/source-kitchen-react
+$ npm i @guardian/source-react-components-development-kitchen
 ```
 
 ## Use
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-kitchen-react-star-rating--playground)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-star-rating--playground)
 
 ### How to use
 

@@ -5,20 +5,20 @@ The Guardian quote icon is used in kickers, headlines, drop caps and pull quotes
 ## Install
 
 ```sh
-$ yarn add @guardian/source-kitchen-react
+$ yarn add @guardian/source-react-components-development-kitchen
 ```
 
 or
 
 ```sh
-$ npm i @guardian/source-kitchen-react
+$ npm i @guardian/source-react-components-development-kitchen
 ```
 
 ## Use
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-kitchen-react-quote-icon--playground)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-quote-icon--playground)
 
 ### How to use
 

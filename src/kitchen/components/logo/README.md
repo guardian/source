@@ -5,20 +5,20 @@ The Guardian logo appears in the header on most editorial pages
 ## Install
 
 ```sh
-$ yarn add @guardian/source-kitchen-react
+$ yarn add @guardian/source-react-components-development-kitchen
 ```
 
 or
 
 ```sh
-$ npm i @guardian/source-kitchen-react
+$ npm i @guardian/source-react-components-development-kitchen
 ```
 
 ## Use
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-kitchen-react-logo--playground)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-logo--playground)
 
 ### How to use
 

@@ -1,5 +1,5 @@
 {
-  "name": "@guardian/source-kitchen-react",
+  "name": "@guardian/source-react-components-development-kitchen",
   "version": "0.0.1",
   "license": "Apache-2.0",
   "main": "dist/cjs/index.js",

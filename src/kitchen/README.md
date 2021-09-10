@@ -7,19 +7,19 @@ The Development Kitchen is a new concept which we hope to improve over time. If 
 ## Install
 
 ```sh
-$ yarn add @guardian/source-kitchen-react
+$ yarn add @guardian/source-react-components-development-kitchen
 ```
 
 or
 
 ```sh
-$ npm install @guardian/source-kitchen-react
+$ npm install @guardian/source-react-components-development-kitchen
 ```
 
 ## Use
 
 ```tsx
-import { Lines } from '@guardian/source-kitchen-react';
+import { Lines } from '@guardian/source-react-components-development-kitchen';
 
 const Section = () => (
     <>

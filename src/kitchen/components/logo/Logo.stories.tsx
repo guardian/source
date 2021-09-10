@@ -3,7 +3,7 @@ import type { Story } from '../../../@types/storybook-emotion-10-fixes';
 import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
-	title: 'Kitchen/Logo',
+	title: 'Kitchen/source-react-components-development-kitchen/Logo',
 	component: Logo,
 	args: {
 		logoType: 'standard',

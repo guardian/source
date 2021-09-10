@@ -32,5 +32,5 @@ export const packageNames = {
 	icons: '@guardian/src-icons',
 	brand: '@guardian/src-brand',
 	helpers: '@guardian/src-helpers',
-	kitchen: '@guardian/source-kitchen-react',
+	kitchen: '@guardian/source-react-components-development-kitchen',
 };
