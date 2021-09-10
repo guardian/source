@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
     "outDir": "dist/types",
     "declaration": true,
@@ -9,10 +9,10 @@
   "exclude": ["dist", "components/**/*.stories.tsx"],
   "references": [
     {
-      "path": "../core/foundations"
+      "path": "../../../src/core/foundations"
     },
     {
-      "path": "../core/helpers"
+      "path": "../../../src/core/helpers"
     }
   ]
 }

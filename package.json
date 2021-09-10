@@ -6,7 +6,7 @@
   "workspaces": [
     "src/core/*",
     "src/core/components/*",
-    "src/kitchen"
+    "packages/@guardian/*"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",

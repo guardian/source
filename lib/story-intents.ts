@@ -1,4 +1,4 @@
-import { Story } from '../@types/storybook-emotion-10-fixes';
+import { Story } from './@types/storybook-emotion-10-fixes';
 
 /**
  * Turns a standard story into a playground/[API documentation story](https://storybook.js.org/addons/@storybook/addon-docs):

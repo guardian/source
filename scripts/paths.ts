@@ -10,7 +10,10 @@ const foundations = join(__dirname, '../src/core/foundations');
 const icons = join(__dirname, '../src/core/icons');
 const brand = join(__dirname, '../src/core/brand');
 const helpers = join(__dirname, '../src/core/helpers');
-const kitchen = join(__dirname, '../src/kitchen');
+const kitchen = join(
+	__dirname,
+	'../packages/@guardian/source-react-components-development-kitchen',
+);
 const coreComponents = join(__dirname, '../src/core/components');
 
 const isDirectory = (path: string) =>

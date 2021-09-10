@@ -2,8 +2,11 @@ import { css } from '@emotion/react';
 import { Design, Display, Pillar, Special } from '@guardian/types';
 import { Button, ButtonProps } from './index';
 import { SvgCross } from '@guardian/src-icons';
-import type { Story } from '../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asPlayground,
+	asChromaticStory,
+} from '../../../../../lib/story-intents';
 
 const defaultFormat = {
 	display: Display.Standard,

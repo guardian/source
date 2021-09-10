@@ -20,7 +20,7 @@ $ yarn storybook
 
 ### Creating new components
 
--   New components should be added to the [Development Kitchen](../src/kitchen).
+-   New components should be added to the [Development Kitchen](../packages/@guardian/source-react-components-development-kitchen).
 -   New components must have a CODEOWNER.
 
 ### Using Emotion
