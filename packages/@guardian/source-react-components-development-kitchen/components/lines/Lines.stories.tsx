@@ -10,7 +10,7 @@ export default {
 	component: Lines,
 	args: {
 		effect: 'straight',
-		count: 4,
+		count: '4',
 	},
 };
 
@@ -54,7 +54,7 @@ asChromaticStory(DashedLines);
 
 export const SingleLine = Template.bind({});
 SingleLine.args = {
-	count: 1,
+	count: '1',
 };
 asChromaticStory(SingleLine);
 
@@ -62,7 +62,7 @@ asChromaticStory(SingleLine);
 
 export const FourLines = Template.bind({});
 FourLines.args = {
-	count: 4,
+	count: '4',
 };
 asChromaticStory(FourLines);
 
@@ -70,7 +70,7 @@ asChromaticStory(FourLines);
 
 export const EightLines = Template.bind({});
 EightLines.args = {
-	count: 8,
+	count: '8',
 };
 asChromaticStory(EightLines);
 
