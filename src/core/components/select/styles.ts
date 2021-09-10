@@ -4,6 +4,7 @@ import { height, width } from '@guardian/src-foundations/size';
 import { textSans } from '@guardian/src-foundations/typography';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { selectDefault } from '@guardian/src-foundations/themes';
+import { appearance } from '@guardian/src-foundations/utils';
 
 export const errorInput = ({ select } = selectDefault) => css`
 	border: 4px solid ${select.borderError};
@@ -55,7 +56,7 @@ export const select = (theme = selectDefault) => {
 		border: 2px solid ${select.border};
 		padding-left: ${space[2]}px;
 
-		@supports (appearance: none) {
+		@supports (${appearance}) {
 			appearance: none;
 			padding-right: ${space[2]}px;
 
