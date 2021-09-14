@@ -9,6 +9,7 @@
     "packages/@guardian/*"
   ],
   "scripts": {
+    "analysis": "ts-node ./scripts/analysis",
     "build-storybook": "build-storybook -o dist",
     "build:all": "ts-node ./scripts/build-all",
     "ci:build": "NODE_ENV=production build-storybook -o dist",
