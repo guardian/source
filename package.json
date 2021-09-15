@@ -6,7 +6,8 @@
   "workspaces": [
     "src/core/*",
     "src/core/components/*",
-    "packages/@guardian/*"
+    "packages/@guardian/*",
+		"scripts/analysis"
   ],
   "scripts": {
     "analysis": "ts-node ./scripts/analysis",

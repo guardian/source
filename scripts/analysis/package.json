@@ -1,0 +1,17 @@
+{
+  "name": "@guardian/source-analysis",
+  "version": "1.0.0",
+  "description": "This script runs analysis on a pre-configured list of repositories to discover their use of Source",
+  "license": "Apache-2.0",
+  "author": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/rimraf": "^3.0.2"
+  }
+}
