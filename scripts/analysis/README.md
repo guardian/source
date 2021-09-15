@@ -13,7 +13,7 @@ The scripts outputs a `json` file containing:
 
 Having this information is useful to Source maintainers as it can inform decisions around the improvement or retirement of components.
 
-It is also useful when making changes to know which projects will be affected and so solicit feedback or target comms accordinly.
+It is also useful when making changes to know which projects will be affected and so solicit feedback or target comms accordingly.
 
 ## How?
 
