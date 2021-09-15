@@ -26,7 +26,7 @@ The steps taken are:
     1. Run [`react-scanner`](https://github.com/moroshko/react-scanner)
     1. Extract the results
 1. Collate the results from each repository
-1. Write out the results to a `csv` and `json` file
+1. Write out the results to a `json` file
 
 ## Running the script
 
@@ -37,7 +37,16 @@ The steps taken are:
 
 ### Config
 
-The config file looks like:
+The configuration object expects a `repos` key which is an array of objects.
+
+Each object requires a name, which is the name of the repository to analyse. Currently, the expectation that these repositories are in the `guardian` organisation is hardcoded into the script.
+
+Each object must also contain a `project` key which provides an array of objects each of which have the following keys:
+
+-   name - this is the name of the project to be used in the results file(s)
+-   paths - is a `|` split list of directories to analyse for a particular project
+
+For example:
 
 ```json
 {
@@ -71,8 +80,6 @@ The config file looks like:
     ]
 }
 ```
-
-where `paths` is a `|` split list of directories to analyse for a particular project
 
 ## Improvements
 
