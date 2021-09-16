@@ -3,6 +3,7 @@ import { cwd, chdir } from 'process';
 import { execSync } from 'child_process';
 import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs';
 import rimraf from 'rimraf';
+import { getAlComponentsAndPackages } from './get-all-components';
 
 const getReactScannerConfig = ({
 	name,
@@ -45,6 +46,7 @@ const getStatsByComponent = (
 
 const main = async () => {
 	console.log('Running Source analysis ');
+	const { componentsWithPackage } = await getAlComponentsAndPackages();
 
 	// Get the current working directory so we can restore that at the end
 	// If it's not the root source directory then fall over as the script won't work
@@ -97,9 +99,14 @@ const main = async () => {
 		console.log(`Formatting data`);
 
 		// Also get the data split by component
+		const byComponent = getStatsByComponent(componentUsage);
+		const usedComponents = Object.keys(byComponent);
 		const data = {
-			by_project: componentUsage,
-			by_component: getStatsByComponent(componentUsage),
+			byProject: componentUsage,
+			byComponent,
+			unusedComponents: componentsWithPackage.filter(
+				(c) => !usedComponents.includes(c),
+			),
 		};
 
 		if (!existsSync('./results')) {
