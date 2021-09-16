@@ -75,7 +75,9 @@ const main = async () => {
 		// For each repository, and each project within that repository
 		// Get all of the components that are used
 		for (const repo of repos) {
-			execSync(`git clone git@github.com:guardian/${repo.repo}.git`);
+			execSync(
+				`git clone --depth 1 git@github.com:guardian/${repo.repo}.git`,
+			);
 			chdir(repo.repo);
 			for (const project of repo.projects) {
 				console.log(`Analysing ${project.name}`);
