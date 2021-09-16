@@ -81,7 +81,9 @@ const main = async () => {
 				console.log(`Analysing ${project.name}`);
 				const configFileName = `${project.name}.scan.config`;
 				writeFileSync(configFileName, getReactScannerConfig(project));
-				execSync(`npx react-scanner -c ${configFileName}`);
+				execSync(
+					`../../node_modules/.bin/react-scanner -c ${configFileName}`,
+				);
 				componentUsage[project.name] = JSON.parse(
 					readFileSync(
 						`${project.name}.component-usage.json`,
