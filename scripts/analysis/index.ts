@@ -119,6 +119,18 @@ const main = async () => {
 
 		// Write out one JSON file
 		writeFileSync('results/results.json', JSON.stringify(data, null, 2));
+		writeFileSync(
+			'results/results.csv',
+			Object.entries(byComponent)
+				.map(
+					([component, packages]) =>
+						`${component},${Object.values(packages).reduce(
+							(a, b) => a + b,
+							0,
+						)}`,
+				)
+				.join('\n'),
+		);
 	} catch (e) {
 		console.error(e);
 	} finally {
