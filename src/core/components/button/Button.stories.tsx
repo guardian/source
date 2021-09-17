@@ -8,11 +8,11 @@ import {
 	buttonReaderRevenueBrandAlt,
 } from './index';
 import { SvgCross } from '@guardian/src-icons';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
 import type {
 	Story,
 	Parameters,
-} from '../../../@types/storybook-emotion-10-fixes';
+} from '../../../../lib/@types/storybook-emotion-10-fixes';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 

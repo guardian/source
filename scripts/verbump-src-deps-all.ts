@@ -13,10 +13,10 @@ const verbump = (dir: string) => {
 	});
 };
 
-const { root, foundations, icons, brand, helpers, editorial } = paths;
+const { root, foundations, icons, brand, helpers } = paths;
 
 const packages = getComponentPaths().then((paths) =>
-	paths.concat([foundations, icons, brand, root, helpers, editorial]),
+	paths.concat([foundations, icons, brand, root, helpers]),
 );
 
 packages.then((ps) => {

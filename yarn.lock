@@ -1453,9 +1453,9 @@
   integrity sha512-RN8GBRth5BXHoWymCZIYDbmZM8DkUbgecf+wyv+9hdXA/ad4Ob4qP9u/ARU689qMo+JSC1z3FRKelvkkjtYzJw==
 
 "@guardian/types@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@guardian/types/-/types-6.0.0.tgz#65f4001e390fc8c22f196676742121b89ff28651"
-  integrity sha512-HAYOUfy+Xm1WodByJ7fUH4emSSzVh3YW8euJx1r4TopsG/tIsI94IntOI38s6kwtsClY90gFKG25UiasKJL/Jw==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@guardian/types/-/types-6.1.0.tgz#5189c34c5cc4da1e549f70706c78276fa69ef7d3"
+  integrity sha512-CP1bmqOutfG/hLQrAzBaqj9EitCNPJQ1qTyHfiCAElFsWKofYuEzMgHYM2ut5nSrkSC+n0AhXUt3qItl+2A3eQ==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
