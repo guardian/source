@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { Design, Display, Pillar, Special } from '@guardian/types';
-import { Button, ButtonProps } from './index';
+import { EditorialButton, EditorialButtonProps } from './index';
 import { SvgCross } from '@guardian/src-icons';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
@@ -14,8 +14,8 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/Button',
-	component: Button,
+	title: 'Kitchen/source-react-components-development-kitchen/EditorialButton',
+	component: EditorialButton,
 	argTypes: {
 		format: {
 			options: [
@@ -60,17 +60,17 @@ export default {
 	},
 };
 
-const Template: Story = (args: ButtonProps) => {
+const Template: Story = (args: EditorialButtonProps) => {
 	// Providing any value for cssOverrides, even undefined, overrides the custom styles
 	// for the editorial button so only pass through if it's defined
 	const { cssOverrides, ...rest } = args;
-	const props = rest as ButtonProps;
+	const props = rest as EditorialButtonProps;
 
 	if (cssOverrides) {
 		props.cssOverrides = cssOverrides;
 	}
 
-	return <Button {...props}>Click Me</Button>;
+	return <EditorialButton {...props}>Click Me</EditorialButton>;
 };
 
 export const Playground = Template.bind({});
@@ -89,7 +89,9 @@ const pillars = [
 	Special.Labs,
 ];
 
-const RowTemplate: Story<ButtonProps> = (args: Partial<ButtonProps>) => (
+const RowTemplate: Story<EditorialButtonProps> = (
+	args: Partial<EditorialButtonProps>,
+) => (
 	<div
 		css={css`
 			display: flex;

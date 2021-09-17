@@ -1,5 +1,11 @@
-export { Button, LinkButton } from './components/button';
-export type { ButtonProps, LinkButtonProps } from './components/button';
+export {
+	EditorialButton,
+	EditorialLinkButton,
+} from './components/editorial-button';
+export type {
+	EditorialButtonProps,
+	EditorialLinkButtonProps,
+} from './components/editorial-button';
 
 export { Lines } from './components/lines';
 export type { LineCount, LinesProps } from './components/lines';

@@ -1,10 +1,10 @@
-# Button
+# EditorialButton
 
 This is the editorial version of the core `Button` coomponent. This editorial version
 requires the `format` prop and uses that to override `Button` styles based on
 `format.theme`
 
-Also exported is `LinkButton` which, like in core, offers a href version of the buttom
+Also exported is `EditorialLinkButton` which, like in core, offers a href version of the buttom
 
 ## Install
 
@@ -22,7 +22,7 @@ $ npm i @guardian/source-react-components-development-kitchen
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-button--playground)
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-editorial-button--playground)
 
 ### How to use
 

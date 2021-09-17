@@ -10,26 +10,26 @@ import {
 } from './styles';
 import { SharedEditorialButtonProps } from './types';
 
-export interface ButtonProps
+export interface EditorialButtonProps
 	extends CoreButtonProps,
 		SharedEditorialButtonProps {}
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-button-button--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-editorialbutton--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/435225-button) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/editorial/web/components/button) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-ed-button)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/editorial-button) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
  * This is the editorial version of the core Button coomponent.
  * This editorial version requires the format prop and uses that to override Button styles based on `format.theme`
  *
  */
-export const Button = ({
+export const EditorialButton = ({
 	format = defaultFormat,
 	children,
 	priority = 'primary',
 	...props
-}: ButtonProps) => {
+}: EditorialButtonProps) => {
 	const backgroundOverrides = decideBackground(format, priority);
 	const borderOverrides = decideBorder(format, priority);
 	const fontOverrides = decideFont(format, priority);
