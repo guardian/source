@@ -30,6 +30,7 @@
     "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
   },
   "dependencies": {
+    "@guardian/libs": "^3.2.1",
     "@guardian/src-helpers": "^3.9.0"
   },
   "devDependencies": {

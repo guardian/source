@@ -1,4 +1,9 @@
-import { Design, Display, Pillar, Special } from '@guardian/types';
+import {
+	ArticleDesign,
+	ArticleDisplay,
+	ArticlePillar,
+	ArticleSpecial,
+} from '@guardian/libs';
 import { QuoteIcon, QuoteIconProps } from './QuoteIcon';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
@@ -7,8 +12,8 @@ import {
 } from '../../../../../lib/story-intents';
 
 const defaultFormat = {
-	display: Display.Standard,
-	design: Design.Article,
+	display: ArticleDisplay.Standard,
+	design: ArticleDesign.Standard,
 };
 
 export default {
@@ -26,16 +31,16 @@ export default {
 				'labs',
 			],
 			mapping: {
-				news: { ...defaultFormat, theme: Pillar.News },
-				sport: { ...defaultFormat, theme: Pillar.Sport },
-				culture: { ...defaultFormat, theme: Pillar.Culture },
-				lifestyle: { ...defaultFormat, theme: Pillar.Lifestyle },
-				opinion: { ...defaultFormat, theme: Pillar.Opinion },
+				news: { ...defaultFormat, theme: ArticlePillar.News },
+				sport: { ...defaultFormat, theme: ArticlePillar.Sport },
+				culture: { ...defaultFormat, theme: ArticlePillar.Culture },
+				lifestyle: { ...defaultFormat, theme: ArticlePillar.Lifestyle },
+				opinion: { ...defaultFormat, theme: ArticlePillar.Opinion },
 				special_report: {
 					...defaultFormat,
-					theme: Special.SpecialReport,
+					theme: ArticleSpecial.SpecialReport,
 				},
-				labs: { ...defaultFormat, theme: Special.Labs },
+				labs: { ...defaultFormat, theme: ArticleSpecial.Labs },
 			},
 			control: { type: 'radio' },
 		},
