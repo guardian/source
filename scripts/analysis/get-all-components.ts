@@ -1,64 +1,16 @@
-import { join } from 'path';
-import { readdir, stat, readdirSync, readFileSync } from 'fs';
-import { promisify } from 'util';
-import { packageNames } from '../package-names';
-import { paths } from '../paths';
+import { readdirSync, readFileSync } from 'fs';
+import {
+	packageNames,
+	getComponentPackageNamesWithPaths,
+} from '../package-names';
+import { paths, getKitchenComponentPaths } from '../paths';
 import { parse } from '@typescript-eslint/typescript-estree';
 
-const readdirP = promisify(readdir);
-const statP = promisify(stat);
+const getPackageComponents = (path: string | string[]): string[] => {
+	if (Array.isArray(path)) {
+		return path.flatMap((p) => getPackageComponents(p));
+	}
 
-const coreComponents = join(__dirname, '../../src/core/components');
-const editorialComponents = join(
-	__dirname,
-	'../../src/editorial/web/components',
-);
-
-const isDirectory = (path: string) =>
-	statP(path).then((stats) => stats.isDirectory());
-
-const getComponentPackageNamesAndPaths = () =>
-	Promise.all([
-		readdirP(coreComponents)
-			.then((componentDirs) =>
-				Promise.all(
-					componentDirs.map((componentDirName) =>
-						isDirectory(
-							`${coreComponents}/${componentDirName}`,
-						).then((isDir) => {
-							if (!isDir) return;
-
-							return {
-								[`@guardian/src-${componentDirName}`]: `${coreComponents}/${componentDirName}`,
-							};
-						}),
-					),
-				),
-			)
-			.then((paths) => Promise.resolve(Object.assign({}, ...paths))),
-		readdirP(editorialComponents)
-			.then((componentDirs) =>
-				Promise.all(
-					componentDirs.map((componentDirName) =>
-						isDirectory(
-							`${editorialComponents}/${componentDirName}`,
-						).then((isDir) => {
-							if (!isDir) return;
-
-							return {
-								[`@guardian/src-ed-${componentDirName}`]: `${editorialComponents}/${componentDirName}`,
-							};
-						}),
-					),
-				),
-			)
-			.then((paths) => Promise.resolve(Object.assign({}, ...paths))),
-	]).then(([corePaths, editorialPaths]) => ({
-		...corePaths,
-		...editorialPaths,
-	}));
-
-const getPackageComponents = (path: string): string[] => {
 	const contents = readdirSync(path);
 
 	if (contents.includes('index.tsx')) {
@@ -115,10 +67,11 @@ const getExportsFromFile = (path: string): string[] => {
 };
 
 export const getAllComponentsAndPackages = async () => {
-	const packages: Record<string, string> = {
+	const packages: Record<string, string | string[]> = {
 		[packageNames.brand]: paths.brand,
 		[packageNames.icons]: paths.icons,
-		...(await getComponentPackageNamesAndPaths()),
+		[packageNames.kitchen]: await getKitchenComponentPaths(),
+		...(await getComponentPackageNamesWithPaths()),
 	};
 
 	const components: Record<string, string[]> = {};

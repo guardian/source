@@ -16,7 +16,7 @@ module.exports = {
 	crawlFrom: '.',
 	globs: ['**/(${paths})/**/!(*.test|*.spec).@(js|ts)?(x)'],
 	includeSubComponents: true,
-	importedFrom: /^(@guardian\\/src-(?!foundations)).*/,
+	importedFrom: /^(@guardian\\/(((src-(?!foundations)).*)|(source-react-components-development-kitchen)))/,
 	getComponentName: ({ imported, moduleName }) => {
 		return moduleName + '/' + imported;
 	},
