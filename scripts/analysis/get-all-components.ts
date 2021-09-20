@@ -114,7 +114,7 @@ const getExportsFromFile = (path: string): string[] => {
 	return exports;
 };
 
-export const getAlComponentsAndPackages = async () => {
+export const getAllComponentsAndPackages = async () => {
 	const packages: Record<string, string> = {
 		[packageNames.brand]: paths.brand,
 		[packageNames.icons]: paths.icons,
