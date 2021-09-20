@@ -17,6 +17,7 @@
     "clean": "rm -rf dist",
     "clean:all": "ts-node ./scripts/clean-all",
     "fix": "yarn lint:js --fix",
+    "foundations": "yarn workspace @guardian/source-foundations",
     "kitchen": "yarn workspace @guardian/source-react-components-development-kitchen",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
