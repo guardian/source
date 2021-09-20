@@ -56,11 +56,13 @@ const defaults = `
 `;
 
 ////////////////////////////
-// Meyer resets
+// Reset CSS
 ////////////////////////////
+// Designed to be a 'complete' css reset, using meyers + defaults resets
 // Originally sourced from https://github.com/shannonmoeller/reset-css
-// and https://meyerweb.com/eric/tools/css/reset/
 const resetCSS = `
+	${defaults}
+
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 	a, abbr, acronym, address, big, cite, code,
@@ -108,8 +110,6 @@ const resetCSS = `
 		border-collapse: collapse;
 		border-spacing: 0;
 	}
-
-	${defaults}
 `;
 
 export const resets = {
