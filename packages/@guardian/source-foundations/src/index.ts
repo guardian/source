@@ -1,1 +1,2 @@
-export { transitions } from '../../../../src/core/foundations/src/animation';
+// animation
+export { transitions } from './animation';
