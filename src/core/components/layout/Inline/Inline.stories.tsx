@@ -1,7 +1,10 @@
 import React from 'react';
-import { Story } from '../../../../@types/storybook-emotion-10-fixes';
+import { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import { Inline, InlineProps } from './Inline';
-import { asChromaticStory, asPlayground } from '../../../../lib/story-intents';
+import {
+	asChromaticStory,
+	asPlayground,
+} from '../../../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-layout/Inline',

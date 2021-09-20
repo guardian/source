@@ -1,5 +1,8 @@
-import { Story } from '../../../../@types/storybook-emotion-10-fixes';
-import { asChromaticStory, asPlayground } from '../../../../lib/story-intents';
+import { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asChromaticStory,
+	asPlayground,
+} from '../../../../../lib/story-intents';
 import { Tiles, TilesProps } from '../index';
 
 export default {

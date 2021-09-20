@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { asPlayground, asChromaticStory } from '../../lib/story-intents';
-import type { Story } from '../../@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 

@@ -1466,15 +1466,15 @@
     eslint-plugin-import "2.24.0"
     eslint-plugin-prettier "3.4.0"
 
+"@guardian/libs@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-3.2.1.tgz#96368fcd76f63b842708ea1489275bd3200f5e4b"
+  integrity sha512-/o84jYYlodIfKs+aRj1QoluHnQ/OdgJN/v1FONwGCf7eGn6RYn9BCh5QvHRujpoSqzgq435tzx5Ug3EF1wWvfQ==
+
 "@guardian/prettier@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@guardian/prettier/-/prettier-0.6.0.tgz#b3dcbef0e2a9232d2afe04dff075426b2939f44e"
   integrity sha512-RN8GBRth5BXHoWymCZIYDbmZM8DkUbgecf+wyv+9hdXA/ad4Ob4qP9u/ARU689qMo+JSC1z3FRKelvkkjtYzJw==
-
-"@guardian/types@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@guardian/types/-/types-6.0.0.tgz#65f4001e390fc8c22f196676742121b89ff28651"
-  integrity sha512-HAYOUfy+Xm1WodByJ7fUH4emSSzVh3YW8euJx1r4TopsG/tIsI94IntOI38s6kwtsClY90gFKG25UiasKJL/Jw==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"

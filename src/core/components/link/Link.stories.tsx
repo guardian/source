@@ -2,8 +2,8 @@ import { linkDefault, linkBrandAlt, linkBrand } from './index';
 import { Link, LinkProps } from './Link';
 import { SvgExternal } from '@guardian/src-icons';
 import { storybookBackgrounds } from '@guardian/src-helpers';
-import type { Story } from '../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-link/Link',

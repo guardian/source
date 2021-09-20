@@ -2,8 +2,8 @@ import React from 'react';
 import { Radio } from './Radio';
 import type { RadioProps } from './Radio';
 import { radioBrand } from './index';
-import type { Story } from '../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
 
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
