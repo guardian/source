@@ -10,7 +10,8 @@
     "ecmaVersion": 2020,
     "ecmaFeatures": {
       "modules": true
-    }
+    },
+    "project": "./tsconfig.json"
   },
   "extends": ["@guardian/eslint-config"],
   "ignorePatterns": ["dist", "coverage"],
