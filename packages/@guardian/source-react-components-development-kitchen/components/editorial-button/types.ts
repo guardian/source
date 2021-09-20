@@ -1,4 +1,4 @@
-import { Format } from '@guardian/types';
+import { ArticleFormat } from '@guardian/libs';
 
 export interface SharedEditorialButtonProps {
 	/**
@@ -15,5 +15,5 @@ export interface SharedEditorialButtonProps {
 	 * }
 	 * ```
 	 */
-	format?: Format;
+	format?: ArticleFormat;
 }

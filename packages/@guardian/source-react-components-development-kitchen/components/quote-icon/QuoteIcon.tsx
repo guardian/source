@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Format, Pillar, Special } from '@guardian/types';
+import { ArticleFormat, ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import { SvgQuote } from '@guardian/src-icons';
 import {
 	culture,
@@ -11,51 +11,51 @@ import {
 	sport,
 } from '@guardian/src-foundations';
 
-const quoteColor = (format: Format) => {
+const quoteColor = (format: ArticleFormat) => {
 	switch (format.theme) {
-		case Pillar.News: {
+		case ArticlePillar.News: {
 			return css`
 				svg {
 					fill: ${news[400]};
 				}
 			`;
 		}
-		case Pillar.Opinion: {
+		case ArticlePillar.Opinion: {
 			return css`
 				svg {
 					fill: ${opinion[400]};
 				}
 			`;
 		}
-		case Pillar.Culture: {
+		case ArticlePillar.Culture: {
 			return css`
 				svg {
 					fill: ${culture[400]};
 				}
 			`;
 		}
-		case Pillar.Sport: {
+		case ArticlePillar.Sport: {
 			return css`
 				svg {
 					fill: ${sport[400]};
 				}
 			`;
 		}
-		case Pillar.Lifestyle: {
+		case ArticlePillar.Lifestyle: {
 			return css`
 				svg {
 					fill: ${lifestyle[400]};
 				}
 			`;
 		}
-		case Special.SpecialReport: {
+		case ArticleSpecial.SpecialReport: {
 			return css`
 				svg {
 					fill: ${specialReport[400]};
 				}
 			`;
 		}
-		case Special.Labs: {
+		case ArticleSpecial.Labs: {
 			return css`
 				svg {
 					fill: ${labs[400]};
@@ -112,7 +112,7 @@ export type QuoteIconProps = {
 	/**
 	 * What we use to decide the editorial colour for the quotes
 	 */
-	format: Format;
+	format: ArticleFormat;
 	/**
 	 * The size of the quote.
 	 */

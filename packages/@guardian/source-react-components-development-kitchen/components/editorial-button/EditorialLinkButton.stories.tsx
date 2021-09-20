@@ -1,5 +1,10 @@
 import { css } from '@emotion/react';
-import { Design, Display, Pillar, Special } from '@guardian/types';
+import {
+	ArticleDesign,
+	ArticleDisplay,
+	ArticlePillar,
+	ArticleSpecial,
+} from '@guardian/libs';
 import { EditorialLinkButton, EditorialLinkButtonProps } from './index';
 import { SvgCross } from '@guardian/src-icons';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
@@ -9,8 +14,8 @@ import {
 } from '../../../../../lib/story-intents';
 
 const defaultFormat = {
-	display: Display.Standard,
-	design: Design.Article,
+	display: ArticleDisplay.Standard,
+	design: ArticleDesign.Standard,
 };
 
 export default {
@@ -28,16 +33,16 @@ export default {
 				'labs',
 			],
 			mapping: {
-				news: { ...defaultFormat, theme: Pillar.News },
-				sport: { ...defaultFormat, theme: Pillar.Sport },
-				culture: { ...defaultFormat, theme: Pillar.Culture },
-				lifestyle: { ...defaultFormat, theme: Pillar.Lifestyle },
-				opinion: { ...defaultFormat, theme: Pillar.Opinion },
+				news: { ...defaultFormat, theme: ArticlePillar.News },
+				sport: { ...defaultFormat, theme: ArticlePillar.Sport },
+				culture: { ...defaultFormat, theme: ArticlePillar.Culture },
+				lifestyle: { ...defaultFormat, theme: ArticlePillar.Lifestyle },
+				opinion: { ...defaultFormat, theme: ArticlePillar.Opinion },
 				special_report: {
 					...defaultFormat,
-					theme: Special.SpecialReport,
+					theme: ArticleSpecial.SpecialReport,
 				},
-				labs: { ...defaultFormat, theme: Special.Labs },
+				labs: { ...defaultFormat, theme: ArticleSpecial.Labs },
 			},
 			control: { type: 'radio' },
 		},
@@ -82,13 +87,13 @@ asPlayground(Playground);
 // *****************************************************************************
 
 const pillars = [
-	Pillar.News,
-	Pillar.Sport,
-	Pillar.Culture,
-	Pillar.Lifestyle,
-	Pillar.Opinion,
-	Special.SpecialReport,
-	Special.Labs,
+	ArticlePillar.News,
+	ArticlePillar.Sport,
+	ArticlePillar.Culture,
+	ArticlePillar.Lifestyle,
+	ArticlePillar.Opinion,
+	ArticleSpecial.SpecialReport,
+	ArticleSpecial.Labs,
 ];
 
 const RowTemplate: Story<EditorialLinkButtonProps> = (
