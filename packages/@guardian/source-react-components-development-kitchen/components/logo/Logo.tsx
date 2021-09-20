@@ -118,10 +118,10 @@ const DecideLogo = ({ logoType }: { logoType: LogoType }) => {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-logo-logo--storybook) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-logo--storybook) •
  * [Design System](https://theguardian.design) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/editorial/web/components/logo) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-ed-logo)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/logo) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  */
 export const Logo = ({ logoType = 'standard' }: LogoProps) => (
 	<Link
