@@ -43,10 +43,10 @@ export interface StarRatingProps extends Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/editorial-src-ed-star-rating-star-rating--storybook) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-star-rating--playground) •
  * [Design System](https://theguardian.design) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/editorial/web/components/star-rating) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-ed-star-rating)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/star-rating) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
  * Displays a rating, 1-5, using star SVGs. See the accompanying stories for visual examples.
  *

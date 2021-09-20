@@ -120,10 +120,10 @@ export type QuoteIconProps = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-radio-radio--demo) •
- * [Design System](https://theguardian.design/2a1e5182b/p/2891dd-radio-button/b/46940d) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/radio) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-radio)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-quote-icon--demo) •
+ * [Design System](https://theguardian.design) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/quote-icon) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
  * The Guardian quote icon is used in kickers, headlines, drop caps and pull quotes to denote quoted text.
  *
