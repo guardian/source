@@ -52,4 +52,6 @@ export { height, iconSize, remHeight, remWidth, size, width } from './size';
 export { space, remSpace } from './space';
 
 // utils
+export { FocusStyleManager } from './utils/focus-style-manager';
 export { pxToRem, rootPixelFontSize } from './utils/px-to-rem';
+export { resets } from './utils/resets';

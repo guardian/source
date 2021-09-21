@@ -42,3 +42,4 @@
 ## `@guardian/source-foundations/utils`
 
 -   All exports moved to root. Path removed
+-   Removed `InteractionModeEngine` export (previously available from `@guardian/src-foundations/utils/focus-style-manager`)
