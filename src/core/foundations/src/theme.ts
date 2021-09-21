@@ -138,12 +138,6 @@ const space = [0, 4, 8, 12, 16, 20, 24, 36, 48, 96];
 
 const size = [24, 36, 44];
 
-const transitions = [
-	'.2s cubic-bezier(.64, .57, .67, 1.53)',
-	'.3s ease-in-out',
-	'.65s ease-in-out',
-];
-
 export {
 	fontSizes,
 	fonts,
@@ -152,5 +146,4 @@ export {
 	colors,
 	space,
 	size,
-	transitions,
 };
