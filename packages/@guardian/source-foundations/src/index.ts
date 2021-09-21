@@ -1,3 +1,11 @@
+// accessibility
+export {
+	descriptionId,
+	focusHalo,
+	generateSourceId,
+	visuallyHidden,
+} from './accessibility';
+
 // animation
 export { transitions } from './animation';
 
