@@ -138,21 +138,4 @@ const space = [0, 4, 8, 12, 16, 20, 24, 36, 48, 96];
 
 const size = [24, 36, 44];
 
-const breakpoints = [740, 980, 1140, 1300];
-
-// Diverges from https://system-ui.com
-// At these widths, there are tweaks to the
-// fluid grid on mobile devices
-const tweakpoints = [320, 375, 480, 660];
-
-export {
-	fontSizes,
-	fonts,
-	lineHeights,
-	fontWeights,
-	colors,
-	space,
-	size,
-	breakpoints,
-	tweakpoints,
-};
+export { fontSizes, fonts, lineHeights, fontWeights, colors, space, size };
