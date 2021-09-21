@@ -35,6 +35,10 @@
 
 -   All exports moved to root. Path removed
 
+## `@guardian/source-foundations/theme`
+
+-   All exports to be moved to their respective components. Path removed
+
 ## `@guardian/source-foundations/utils`
 
 -   All exports moved to root. Path removed
