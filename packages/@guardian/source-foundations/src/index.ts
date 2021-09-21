@@ -45,6 +45,9 @@ export {
 	brandAltText,
 } from './palette';
 
+// size
+export { height, iconSize, remHeight, remWidth, size, width } from './size';
+
 // space
 export { space, remSpace } from './space';
 

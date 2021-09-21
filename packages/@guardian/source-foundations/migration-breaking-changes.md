@@ -26,6 +26,11 @@
 
 -   All exports moved to root. Path removed
 
+## `@guardian/source-foundations/size`
+
+-   All exports moved to root. Path removed
+-   Removed `remSize` and `remIconSize` exports (previously available from `@guardian/src-foundations/size/global`)
+
 ## `@guardian/source-foundations/space`
 
 -   All exports moved to root. Path removed
