@@ -13,6 +13,9 @@ export { transitions } from './animation';
 export type { Breakpoint } from './breakpoints';
 export { breakpoints } from './breakpoints';
 
+// mq
+export { between, from, until } from './mq';
+
 // palette
 export {
 	brand,
@@ -42,8 +45,13 @@ export {
 	brandAltText,
 } from './palette';
 
+// size
+export { height, iconSize, remHeight, remWidth, size, width } from './size';
+
 // space
 export { space, remSpace } from './space';
 
 // utils
+export { FocusStyleManager } from './utils/focus-style-manager';
 export { pxToRem, rootPixelFontSize } from './utils/px-to-rem';
+export { resets } from './utils/resets';

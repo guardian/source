@@ -38,6 +38,4 @@ const lineHeights = [1.15, 1.35, 1.5];
 
 const fontWeights = [300, 400, 500, 700];
 
-const size = [24, 36, 44];
-
-export { fontSizes, fonts, lineHeights, fontWeights, size };
+export { fontSizes, fonts, lineHeights, fontWeights };
