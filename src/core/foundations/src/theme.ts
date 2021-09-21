@@ -145,12 +145,6 @@ const breakpoints = [740, 980, 1140, 1300];
 // fluid grid on mobile devices
 const tweakpoints = [320, 375, 480, 660];
 
-const transitions = [
-	'.2s cubic-bezier(.64, .57, .67, 1.53)',
-	'.3s ease-in-out',
-	'.65s ease-in-out',
-];
-
 export {
 	fontSizes,
 	fonts,
@@ -161,5 +155,4 @@ export {
 	size,
 	breakpoints,
 	tweakpoints,
-	transitions,
 };
