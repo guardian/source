@@ -15,3 +15,11 @@
 ## `@guardian/source-foundations/palette`
 
 -   All exports moved to root. Path removed
+
+## `@guardian/source-foundations/space`
+
+-   All exports moved to root. Path removed
+
+## `@guardian/source-foundations/utils`
+
+-   All exports moved to root. Path removed
