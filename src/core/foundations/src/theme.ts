@@ -138,12 +138,4 @@ const space = [0, 4, 8, 12, 16, 20, 24, 36, 48, 96];
 
 const size = [24, 36, 44];
 
-export {
-	fontSizes,
-	fonts,
-	lineHeights,
-	fontWeights,
-	colors,
-	space,
-	size,
-};
+export { fontSizes, fonts, lineHeights, fontWeights, colors, space, size };
