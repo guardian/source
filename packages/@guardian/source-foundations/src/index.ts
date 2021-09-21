@@ -33,3 +33,9 @@ export {
 	brandText,
 	brandAltText,
 } from './palette';
+
+// space
+export { space, remSpace } from './space';
+
+// utils
+export { pxToRem, rootPixelFontSize } from './utils/px-to-rem';

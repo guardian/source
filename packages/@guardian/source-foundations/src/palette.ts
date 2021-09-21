@@ -1,3 +1,7 @@
+// FYI
+// src/core/foundations/src/palette.ts SYMLINKS TO
+// packages/@guardian/source-foundations/src/palette.ts
+
 // Arrays of colours should have pillar colors first
 // e.g. for sport:
 // const [sport300, sport400, sport500, sport600, sport800] = colors.blue
