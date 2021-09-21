@@ -11,6 +11,9 @@ const TAB_KEY_CODE = 9;
  * when entering "mouse mode" (on a `mousedown` event) and remove it when entering "keyboard mode"
  * (on a `tab` key `keydown` event).
  * Requires @babel/plugin-proposal-class-properties
+ *
+ * Modifications to original source:
+ * - Add return types to `isActive`, `start` and `stop` functions
  */
 export class InteractionModeEngine {
 	private isRunning = false;
@@ -19,18 +22,18 @@ export class InteractionModeEngine {
 	constructor(private container: Element, private className: string) {}
 
 	/** Returns whether the engine is currently running. */
-	public isActive() {
+	public isActive(): boolean {
 		return this.isRunning;
 	}
 
 	/** Enable behavior which applies the given className when in mouse mode. */
-	public start() {
+	public start(): void {
 		this.container.addEventListener('mousedown', this.handleMouseDown);
 		this.isRunning = true;
 	}
 
 	/** Disable interaction mode behavior and remove className from container. */
-	public stop() {
+	public stop(): void {
 		this.reset();
 		this.isRunning = false;
 	}
@@ -76,7 +79,7 @@ const focusEngine = (): InteractionModeEngine => {
 };
 
 export const FocusStyleManager = {
-	alwaysShowFocus: () => focusEngine().stop(),
-	isActive: () => focusEngine().isActive(),
-	onlyShowFocusOnTabs: () => focusEngine().start(),
+	alwaysShowFocus: (): void => focusEngine().stop(),
+	isActive: (): boolean => focusEngine().isActive(),
+	onlyShowFocusOnTabs: (): void => focusEngine().start(),
 };
