@@ -35,6 +35,11 @@
 
 -   All exports moved to root. Path removed
 
+## `@guardian/source-foundations/typography`
+
+-   All non-index exports removed (e.g. @guardian/src-foundations/typography/fs)
+-   All other exports moved to root. Path removed
+
 ## `@guardian/source-foundations/theme`
 
 -   All exports to be moved to their respective components. Path removed

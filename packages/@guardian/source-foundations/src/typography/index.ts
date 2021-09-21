@@ -1,38 +1,40 @@
 import {
-	titlepiece as titlepieceAsObj,
-	headline as headlineAsObj,
 	body as bodyAsObj,
+	headline as headlineAsObj,
 	textSans as textSansAsObj,
+	titlepiece as titlepieceAsObj,
 } from './api';
-import { objectStylesToString } from './object-styles-to-string';
 import {
-	titlepieceSizes,
-	headlineSizes,
 	bodySizes,
-	textSansSizes,
-	remTitlepieceSizes,
-	remHeadlineSizes,
-	remBodySizes,
-	remTextSansSizes,
 	fontMapping,
 	fontWeightMapping,
+	headlineSizes,
 	lineHeightMapping,
+	remBodySizes,
+	remHeadlineSizes,
+	remTextSansSizes,
+	remTitlepieceSizes,
+	textSansSizes,
+	titlepieceSizes,
 } from './data';
-import {
-	TitlepieceSizes,
-	HeadlineSizes,
+import { objectStylesToString } from './object-styles-to-string';
+import type {
 	BodySizes,
-	TextSansSizes,
 	FontScaleArgs,
 	FontScaleFunctionStr,
+	HeadlineSizes,
+	TextSansSizes,
+	TitlepieceSizes,
 } from './types';
 
 const fromEntries = <Sizes>(
-	entries: [keyof Sizes, FontScaleFunctionStr][],
+	entries: Array<[keyof Sizes, FontScaleFunctionStr]>,
 ): {
 	[key in keyof Sizes]: FontScaleFunctionStr;
 } =>
-	entries.reduce(
+	entries.reduce<{
+		[key in keyof Sizes]: FontScaleFunctionStr;
+	}>(
 		(
 			acc: {
 				[key in keyof Sizes]: FontScaleFunctionStr;
@@ -43,9 +45,7 @@ const fromEntries = <Sizes>(
 
 			return acc;
 		},
-		{} as {
-			[key in keyof Sizes]: FontScaleFunctionStr;
-		},
+		{},
 	);
 
 const titlepiece = fromEntries<TitlepieceSizes>(

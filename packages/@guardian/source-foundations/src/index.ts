@@ -51,6 +51,44 @@ export { height, iconSize, remHeight, remWidth, size, width } from './size';
 // space
 export { space, remSpace } from './space';
 
+// typography
+export {
+	titlepiece,
+	headline,
+	body,
+	textSans,
+	titlepieceSizes,
+	headlineSizes,
+	bodySizes,
+	textSansSizes,
+	remTitlepieceSizes,
+	remHeadlineSizes,
+	remBodySizes,
+	remTextSansSizes,
+	fonts,
+	fontWeights,
+	lineHeights,
+} from './typography';
+export type {
+	ScaleUnit,
+	Category,
+	LineHeight,
+	FontWeight,
+	FontStyle,
+	FontWeightDefinition,
+	Option,
+	TypographyStyles,
+	TypographySizes,
+	TitlepieceSizes,
+	HeadlineSizes,
+	BodySizes,
+	TextSansSizes,
+	Fs,
+	FontScaleFunction,
+	FontScaleFunctionStr,
+	FontScaleArgs,
+} from './typography/types';
+
 // utils
 export { FocusStyleManager } from './utils/focus-style-manager';
 export { pxToRem, rootPixelFontSize } from './utils/px-to-rem';
