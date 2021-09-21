@@ -13,6 +13,9 @@ export { transitions } from './animation';
 export type { Breakpoint } from './breakpoints';
 export { breakpoints } from './breakpoints';
 
+// mq
+export { between, from, until } from './mq';
+
 // palette
 export {
 	brand,

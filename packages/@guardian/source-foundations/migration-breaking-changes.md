@@ -15,6 +15,12 @@
 ## `@guardian/source-foundations/breakpoints`
 
 -   All exports moved to root. Path removed
+-   `Breakpoint` is now exported as a type
+
+## `@guardian/source-foundations/mq`
+
+-   All exports moved to root. Path removed
+-   No longer re-exports `breakpoints` and `Breakpoint` from `breakpoints.ts`
 
 ## `@guardian/source-foundations/palette`
 
