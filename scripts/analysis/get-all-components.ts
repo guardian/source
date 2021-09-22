@@ -19,7 +19,7 @@ const getPackageComponents = (path: string | string[]): string[] => {
 		return contents
 			.filter(
 				(item) =>
-					item.endsWith('.tsx') && !item.endsWith('stories.tsx'),
+					!item.endsWith('stories.tsx') && item.endsWith('.tsx'),
 			)
 			.flatMap((file) => getExportsFromFile(`${path}/${file}`));
 	}

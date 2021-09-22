@@ -7,10 +7,9 @@
     "src/core/*",
     "src/core/components/*",
     "packages/@guardian/*",
-		"scripts/analysis"
+    "scripts/analysis"
   ],
   "scripts": {
-    "analysis": "ts-node ./scripts/analysis",
     "build-storybook": "build-storybook -o dist",
     "build:all": "ts-node ./scripts/build-all",
     "ci:build": "NODE_ENV=production build-storybook -o dist",
@@ -18,6 +17,7 @@
     "clean:all": "ts-node ./scripts/clean-all",
     "fix": "yarn lint:js --fix",
     "foundations": "yarn workspace @guardian/source-foundations",
+    "get-usage": "ts-node ./scripts/analysis",
     "kitchen": "yarn workspace @guardian/source-react-components-development-kitchen",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
