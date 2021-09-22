@@ -1,0 +1,28 @@
+{
+  "name": "shakedown",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@guardian/src-accordion": "^3.9.0",
+    "@guardian/src-brand": "^3.9.0",
+    "@guardian/src-button": "^3.9.0",
+    "@guardian/src-checkbox": "^3.9.0",
+    "@guardian/src-choice-card": "^3.9.0",
+    "@guardian/src-footer": "^3.9.0",
+    "@guardian/src-foundations": "^3.9.0",
+    "@guardian/src-helpers": "^3.9.0",
+    "@guardian/src-icons": "^3.9.0",
+    "@guardian/src-label": "^3.9.0",
+    "@guardian/src-layout": "^3.9.0",
+    "@guardian/src-link": "^3.9.0",
+    "@guardian/src-radio": "^3.9.0",
+    "@guardian/src-select": "^3.9.0",
+    "@guardian/src-text-area": "^3.9.0",
+    "@guardian/src-text-input": "^3.9.0",
+    "@guardian/src-user-feedback": "^3.9.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
