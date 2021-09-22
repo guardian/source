@@ -6,8 +6,6 @@
   "workspaces": [
     "src/core/*",
     "src/core/components/*",
-    "src/editorial/web",
-    "src/editorial/web/components/*",
     "packages/@guardian/*"
   ],
   "scripts": {
