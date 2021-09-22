@@ -1,16 +1,16 @@
-import { titlepiece, headline, body, textSans } from '../api';
+import { body, headline, textSans, titlepiece } from '../api';
 import {
-	titlepieceSizes,
-	headlineSizes,
 	bodySizes,
-	textSansSizes,
-	remTitlepieceSizes,
-	remHeadlineSizes,
-	remBodySizes,
-	remTextSansSizes,
 	fontMapping,
 	fontWeightMapping,
+	headlineSizes,
 	lineHeightMapping,
+	remBodySizes,
+	remHeadlineSizes,
+	remTextSansSizes,
+	remTitlepieceSizes,
+	textSansSizes,
+	titlepieceSizes,
 } from '../data';
 
 export {
