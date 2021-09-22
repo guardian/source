@@ -1,12 +1,12 @@
-import {
-	TitlepieceSizes,
-	HeadlineSizes,
+import { fs } from './fs';
+import type {
 	BodySizes,
-	TextSansSizes,
 	FontScaleArgs,
 	FontScaleFunction,
+	HeadlineSizes,
+	TextSansSizes,
+	TitlepieceSizes,
 } from './types';
-import { fs } from './fs';
 
 type TitlepieceFunctions = {
 	[key in keyof TitlepieceSizes]: FontScaleFunction;

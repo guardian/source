@@ -1,12 +1,12 @@
 import {
+	availableFonts,
 	fontMapping,
 	fontSizeMapping,
-	remFontSizeMapping,
-	lineHeightMapping,
 	fontWeightMapping,
-	availableFonts,
+	lineHeightMapping,
+	remFontSizeMapping,
 } from './data';
-import { Fs, FontWeightDefinition, FontStyle, Option } from './types';
+import type { FontStyle, FontWeightDefinition, Fs, Option } from './types';
 
 function getFontStyle(
 	font: FontWeightDefinition | undefined,
@@ -14,7 +14,7 @@ function getFontStyle(
 ): Option<FontStyle> {
 	switch (fontStyle) {
 		case 'italic':
-			return font && font.hasItalic ? 'italic' : null;
+			return font?.hasItalic ? 'italic' : null;
 		case 'normal':
 			return 'normal';
 		case null:

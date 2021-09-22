@@ -1,16 +1,31 @@
-import { fontSizes, fonts, lineHeights, fontWeights } from '../theme';
-import { pxToRem } from '../utils';
-import {
+import { pxToRem } from '../utils/px-to-rem';
+import type {
+	BodySizes,
 	Category,
-	LineHeight,
 	FontWeight,
 	FontWeightDefinition,
-	TitlepieceSizes,
 	HeadlineSizes,
-	BodySizes,
+	LineHeight,
 	TextSansSizes,
+	TitlepieceSizes,
 	TypographySizes,
 } from './types';
+
+const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70];
+
+const fonts = {
+	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
+	headlineSerif:
+		'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
+	bodySerif:
+		'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
+	bodySans:
+		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
+};
+
+const lineHeights = [1.15, 1.35, 1.5];
+
+const fontWeights = [300, 400, 500, 700];
 
 const titlepieceSizes: TitlepieceSizes = {
 	small: fontSizes[8], //42px

@@ -1,10 +1,10 @@
 import {
-	headline,
 	fonts,
-	headlineSizes,
-	remHeadlineSizes,
 	fontWeights,
+	headline,
+	headlineSizes,
 	lineHeights,
+	remHeadlineSizes,
 } from './index';
 
 it('should return styles containing the specified font family', () => {

@@ -69,6 +69,12 @@ export {
 	fontWeights,
 	lineHeights,
 } from './typography';
+export {
+	body as bodyObjectStyles,
+	headline as headlineObjectStyles,
+	textSans as textSansObjectStyles,
+	titlepiece as titlepieceObjectStyles,
+} from './typography/obj';
 export type {
 	ScaleUnit,
 	Category,
