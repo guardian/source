@@ -15,7 +15,7 @@ export const Defaults = () => (
 	</span>
 );
 Defaults.story = {
-	name: 'with defaults',
+	name: 'With defaults',
 };
 
 export const Tight = () => (
@@ -27,7 +27,7 @@ export const Tight = () => (
 	</span>
 );
 Tight.story = {
-	name: 'with less space above',
+	name: 'With less space above',
 };
 
 export const Full = () => (
@@ -39,7 +39,7 @@ export const Full = () => (
 	</span>
 );
 Full.story = {
-	name: 'with size set to full',
+	name: 'With size set to full',
 };
 
 export const FullText = () => (
@@ -51,7 +51,7 @@ export const FullText = () => (
 	</span>
 );
 FullText.story = {
-	name: 'with text and size full',
+	name: 'With text and size full',
 };
 
 export const PartialText = () => (
@@ -63,5 +63,5 @@ export const PartialText = () => (
 	</span>
 );
 PartialText.story = {
-	name: 'with text and size partial',
+	name: 'With text and size partial',
 };
