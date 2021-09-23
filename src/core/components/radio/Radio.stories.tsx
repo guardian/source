@@ -2,9 +2,8 @@ import React from 'react';
 import { Radio } from './Radio';
 import type { RadioProps } from './Radio';
 import { radioBrand } from './index';
-import { ThemeProvider } from '@emotion/react';
-import type { Story } from '../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
 
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
@@ -49,15 +48,12 @@ asChromaticStory(DefaultLightTheme);
 
 // *****************************************************************************
 
-export const DefaultBrandTheme = (args: RadioProps) => (
-	<ThemeProvider theme={radioBrand}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const DefaultBrandTheme = Template.bind({});
 DefaultBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
+	theme: radioBrand,
 };
 asChromaticStory(DefaultBrandTheme);
 
@@ -71,15 +67,12 @@ asChromaticStory(SupportingTextLightTheme);
 
 // *****************************************************************************
 
-export const SupportingTextBrandTheme: Story = (args: RadioProps) => (
-	<ThemeProvider theme={radioBrand}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SupportingTextBrandTheme = Template.bind({});
 SupportingTextBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
+	theme: radioBrand,
 };
 SupportingTextBrandTheme.args = {
 	supporting: '#ff0000',
@@ -97,17 +90,12 @@ asChromaticStory(SupportingTextOnlyLightTheme);
 
 // *****************************************************************************
 
-export const SupportingTextOnlyBrandTheme = (args: RadioProps) => (
-	<ThemeProvider theme={radioBrand}>
-		<Template {...args} />
-	</ThemeProvider>
-);
-SupportingTextOnlyBrandTheme.story = {
-	parameters: {
-		backgrounds: {
-			default: 'brandBackground.primary',
-		},
+export const SupportingTextOnlyBrandTheme = Template.bind({});
+SupportingTextOnlyBrandTheme.parameters = {
+	backgrounds: {
+		default: 'brandBackground.primary',
 	},
+	theme: radioBrand,
 };
 SupportingTextOnlyBrandTheme.args = {
 	supporting: '#ff0000',

@@ -12,7 +12,7 @@ const publish = (dir: string) => {
 	);
 };
 
-const { foundations, icons, brand, helpers, coreComponents, editorial } = paths;
+const { foundations, icons, brand, helpers, coreComponents } = paths;
 
 // Publish these packages in the specified order
 const prioritisedPackages = [
@@ -23,7 +23,6 @@ const prioritisedPackages = [
 	`${coreComponents}/user-feedback`,
 	`${coreComponents}/label`,
 	`${coreComponents}/button`,
-	editorial,
 ];
 
 // Publish these packages in parallel

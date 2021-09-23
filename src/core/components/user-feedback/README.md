@@ -12,7 +12,7 @@ $ yarn add @guardian/src-user-feedback
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/source-src-user-feedback-inlineerror--demo)
+See [storybook](https://guardian.github.io/source/?path=/docs/source-src-user-feedback-inlineerror--playground)
 
 ### How to use
 

@@ -18,6 +18,11 @@ $ yarn storybook
 
 ## Guidelines
 
+### Creating new components
+
+-   New components should be added to the [Development Kitchen](../packages/@guardian/source-react-components-development-kitchen).
+-   New components must have a CODEOWNER.
+
 ### Using Emotion
 
 -   First familiarise yourself with Emotion's excellent documentation (we use [the React flavour](https://emotion.sh/docs/introduction#react))

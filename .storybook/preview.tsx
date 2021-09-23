@@ -1,6 +1,7 @@
 import { viewport } from './preview/viewport';
 import { backgrounds } from './preview/backgrounds';
 import { FocusManagerDecorator } from './preview/FocusManagerDecorator';
+import { ThemeProviderDecorator } from './preview/ThemeProviderDecorator';
 
 export const parameters = {
 	viewport,
@@ -20,4 +21,4 @@ export const parameters = {
 	},
 };
 
-export const decorators = [FocusManagerDecorator];
+export const decorators = [FocusManagerDecorator, ThemeProviderDecorator];

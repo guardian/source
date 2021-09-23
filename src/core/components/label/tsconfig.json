@@ -7,7 +7,7 @@
     "composite": true
   },
   "include": [".", "../../foundations/types/themes.d.ts"],
-  "exclude": ["dist", "stories", "*.stories.tsx"],
+  "exclude": ["dist", "*.stories.tsx"],
   "references": [
     {
       "path": "../../helpers"

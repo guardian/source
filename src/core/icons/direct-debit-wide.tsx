@@ -1,5 +1,16 @@
-export const SvgDirectDebitWide = () => (
-	<svg viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
+import { iconSize } from '@guardian/src-foundations/size';
+import type { IconProps } from './types';
+
+export const SvgDirectDebitWide = ({ size }: IconProps) => (
+	<svg
+		viewBox="0 0 50 20"
+		xmlns="http://www.w3.org/2000/svg"
+		/**
+		 * This is a one-off icon that doesn't conform to the standard square
+		 * shape
+		 * */
+		height={size ? iconSize[size] : undefined}
+	>
 		<path
 			fillRule="evenodd"
 			clipRule="evenodd"

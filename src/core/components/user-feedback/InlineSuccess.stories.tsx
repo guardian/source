@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@emotion/react';
 import {
 	userFeedbackDefault,
 	userFeedbackBrand,
@@ -6,46 +5,43 @@ import {
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { InlineSuccess } from './index';
 import { UserFeedbackProps } from './types';
+import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-user-feedback/InlineSuccess',
 	component: InlineSuccess,
 };
 
-export const Demo = (args: UserFeedbackProps) => (
-	<ThemeProvider theme={userFeedbackDefault}>
-		<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
-	</ThemeProvider>
+const Template: Story<UserFeedbackProps> = (args: UserFeedbackProps) => (
+	<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
 );
 
-export const successLight = (args: UserFeedbackProps) => (
-	<ThemeProvider theme={userFeedbackDefault}>
-		<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
-	</ThemeProvider>
-);
+// *****************************************************************************
 
-successLight.story = {
-	name: `Inline success default`,
-	parameters: {
-		backgrounds: {
-			default: 'default',
-			values: [storybookBackgrounds.default],
-		},
+export const Playground = Template.bind({});
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const InlineSuccessLight = Template.bind({});
+InlineSuccessLight.parameters = {
+	backgrounds: {
+		default: 'default',
+		values: [storybookBackgrounds.default],
 	},
+	theme: userFeedbackDefault,
 };
+asChromaticStory(InlineSuccessLight);
 
-export const successBlue = (args: UserFeedbackProps) => (
-	<ThemeProvider theme={userFeedbackBrand}>
-		<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
-	</ThemeProvider>
-);
+// *****************************************************************************
 
-successBlue.story = {
-	name: `Inline success brand`,
-	parameters: {
-		backgrounds: {
-			default: 'brand',
-			values: [storybookBackgrounds.brand],
-		},
+export const InlineSuccessBrand = Template.bind({});
+InlineSuccessBrand.parameters = {
+	backgrounds: {
+		default: 'brand',
+		values: [storybookBackgrounds.brand],
 	},
+	theme: userFeedbackBrand,
 };
+asChromaticStory(InlineSuccessBrand);

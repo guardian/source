@@ -40,6 +40,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "packages", "lib"],
   "exclude": ["node_modules"]
 }

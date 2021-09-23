@@ -1,10 +1,9 @@
 import { RadioGroup, RadioGroupProps } from './RadioGroup';
 import { Radio } from './Radio';
 import { radioBrand } from './index';
-import { ThemeProvider } from '@emotion/react';
 import RadioStories from './Radio.stories';
-import type { Story } from '../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 
@@ -60,15 +59,12 @@ asChromaticStory(DefaultLightTheme);
 
 // *****************************************************************************
 
-export const DefaultBrandTheme: Story = (args: RadioGroupProps) => (
-	<ThemeProvider theme={radioBrand}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const DefaultBrandTheme = Template.bind({});
 DefaultBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
+	theme: radioBrand,
 };
 asChromaticStory(DefaultBrandTheme);
 
@@ -98,15 +94,12 @@ asChromaticStory(SupportingTextLightTheme);
 
 // *****************************************************************************
 
-export const SupportingTextBrandTheme: Story = (args: RadioGroupProps) => (
-	<ThemeProvider theme={radioBrand}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const SupportingTextBrandTheme = Template.bind({});
 SupportingTextBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
+	theme: radioBrand,
 };
 SupportingTextBrandTheme.args = {
 	supporting: 'You can always change it later',
@@ -131,11 +124,7 @@ asChromaticStory(ErrorLightTheme);
 
 // *****************************************************************************
 
-export const ErrorBrandTheme: Story = (args: RadioGroupProps) => (
-	<ThemeProvider theme={radioBrand}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const ErrorBrandTheme = Template.bind({});
 ErrorBrandTheme.args = {
 	error: 'Please select a colour',
 };
@@ -143,6 +132,7 @@ ErrorBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
+	theme: radioBrand,
 };
 asChromaticStory(ErrorBrandTheme);
 

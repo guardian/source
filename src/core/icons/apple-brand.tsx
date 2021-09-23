@@ -1,11 +1,13 @@
+import { iconSize } from '@guardian/src-foundations/size';
+import type { IconProps } from './types';
+
 // The viewBox is changed from "6 6 44 44" to "15 15 26 26" for a ~60% zoom
-export const SvgAppleBrand = () => {
+export const SvgAppleBrand = ({ size }: IconProps) => {
 	return (
 		<svg
-			width="30"
-			height="30"
 			viewBox="15 15 26 26"
 			xmlns="http://www.w3.org/2000/svg"
+			width={size ? iconSize[size] : undefined}
 		>
 			<path
 				fillRule="nonzero"
