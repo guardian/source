@@ -5,13 +5,19 @@ Inserts a line on the page acting as a section break dividing content
 ## Install
 
 ```sh
-$ yarn add @guardian/src-divider
+$ yarn add @guardian/source-react-components-development-kitchen
+```
+
+or
+
+```sh
+$ npm i @guardian/source-react-components-development-kitchen
 ```
 
 ## Use
 
 ```tsx
-import { Divider } from '@guardian/src-divider';
+import { Divider } from '@guardian/source-react-components-development-kitchen';
 
 const Content = () => (
     <>
