@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import { Divider } from './Divider';
 
 export default {
-	title: 'Divider',
+	title: 'Kitchen/source-react-components-development-kitchen/Divider',
 	component: Divider,
 	parameters: { layout: 'fullscreen' },
 };
