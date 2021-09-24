@@ -1,4 +1,6 @@
-import { Accordion, AccordionProps, AccordionRow } from './index';
+import { Accordion } from './Accordion';
+import { AccordionRow } from './AccordionRow';
+import type { AccordionProps } from './Accordion';
 import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
 import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
 
