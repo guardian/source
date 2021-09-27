@@ -14,5 +14,9 @@ jobs:
       - name: build
         run: |
           yarn
-          yarn validate
+          yarn validate:ci
           yarn ci:build
+      - name: Report coverage
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
