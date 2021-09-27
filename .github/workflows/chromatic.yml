@@ -12,8 +12,10 @@ jobs:
         with:
           fetch-depth: 0
       - uses: guardian/actions-setup-node@main
+        with:
+          cache: 'yarn'
       - run: |
-          yarn
+          yarn install --frozen-lockfile
           yarn ci:build
       - uses: chromaui/action@v1
         with:
