@@ -5,7 +5,7 @@ import { space } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
 
 import { partialStyles, fullStyles } from './styles';
-type Props = {
+export type DividerProps = {
 	size?: 'full' | 'partial';
 	spaceAbove?: 'tight' | 'loose';
 	displayText?: string;
@@ -39,7 +39,7 @@ export const Divider = ({
 	size = 'partial',
 	spaceAbove = 'loose',
 	displayText,
-}: Props) => {
+}: DividerProps) => {
 	if (displayText) {
 		return (
 			<div

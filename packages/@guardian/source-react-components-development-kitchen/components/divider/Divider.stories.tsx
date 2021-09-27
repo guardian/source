@@ -1,67 +1,53 @@
-import { css } from '@emotion/react';
-import { Divider } from './Divider';
+import { Divider, DividerProps } from './index';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asPlayground,
+	asChromaticStory,
+} from '../../../../../lib/story-intents';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Divider',
 	component: Divider,
 };
 
-export const Defaults = () => (
+const Template: Story = (args: DividerProps) => (
 	<span>
-		<h2>The default divider</h2>
 		<p>Some text</p>
-		<Divider />
+		<Divider {...args} />
 		<p>Some text</p>
 	</span>
 );
-Defaults.story = {
-	name: 'With defaults',
-};
 
-export const Tight = () => (
-	<span>
-		<h2>When tight</h2>
-		<p>Some text</p>
-		<Divider spaceAbove="tight" />
-		<p>Some text</p>
-	</span>
-);
-Tight.story = {
-	name: 'With less space above',
-};
+// *****************************************************************************
 
-export const Full = () => (
-	<span>
-		<h2>With size full</h2>
-		<p>Some text</p>
-		<Divider size="full" />
-		<p>Some text</p>
-	</span>
-);
-Full.story = {
-	name: 'With size set to full',
-};
+export const Playground = Template.bind({});
+asPlayground(Playground);
 
-export const FullText = () => (
-	<span>
-		<h2>With text and size full</h2>
-		<p>Some text</p>
-		<Divider displayText="I am centered" size="full" />
-		<p>Some text</p>
-	</span>
-);
-FullText.story = {
-	name: 'With text and size full',
-};
+// *****************************************************************************
 
-export const PartialText = () => (
-	<span>
-		<h2>With text and size partial</h2>
-		<p>Some text</p>
-		<Divider displayText="I am centered" size="partial" />
-		<p>Some text</p>
-	</span>
-);
-PartialText.story = {
-	name: 'With text and size partial',
+export const DefaultDivider = Template.bind({});
+asChromaticStory(DefaultDivider);
+
+// *****************************************************************************
+
+export const TightDivider = Template.bind({});
+TightDivider.args = {
+	spaceAbove: 'tight',
 };
+asChromaticStory(TightDivider);
+
+// *****************************************************************************
+
+export const FullDivider = Template.bind({});
+FullDivider.args = {
+	size: 'full',
+};
+asChromaticStory(FullDivider);
+
+// *****************************************************************************
+
+export const TextDivider = Template.bind({});
+TextDivider.args = {
+	displayText: 'I am centred',
+};
+asChromaticStory(TextDivider);
