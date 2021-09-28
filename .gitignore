@@ -8,8 +8,8 @@ package-lock.json
 .idea/
 .vscode/settings.json
 
-# scripts/analysis
-scripts/analysis/config.json
-scripts/analysis/config.*.json
-scripts/analysis/results/
-scripts/analysis/tmp/
+# scripts/get-usage
+scripts/get-usage/config.json
+scripts/get-usage/config.*.json
+scripts/get-usage/results/
+scripts/get-usage/tmp/

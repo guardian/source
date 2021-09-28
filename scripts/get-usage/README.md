@@ -1,4 +1,4 @@
-# Source Analysis
+# Get Source Usage
 
 This script runs analysis on a pre-configured list of repositories to discover their use of Source
 

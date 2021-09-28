@@ -1,5 +1,5 @@
 {
-  "name": "@guardian/source-analysis",
+  "name": "@guardian/source-get-usage",
   "version": "1.0.0",
   "description": "This script runs analysis on a pre-configured list of repositories to discover their use of Source",
   "license": "Apache-2.0",

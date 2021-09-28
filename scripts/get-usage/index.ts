@@ -45,7 +45,7 @@ const getStatsByComponent = (
 };
 
 const main = async () => {
-	console.log('Running Source analysis ');
+	console.log('Finding Source usage');
 	const { componentsWithPackage } = await getAllComponentsAndPackages();
 
 	// Get the current working directory so we can restore that at the end
@@ -57,7 +57,7 @@ const main = async () => {
 	}
 
 	try {
-		chdir('./scripts/analysis');
+		chdir('./scripts/get-usage');
 
 		// The script cleans up after itself so if there's already a tmp directory it might have something
 		// else in it which we don't want to delete
