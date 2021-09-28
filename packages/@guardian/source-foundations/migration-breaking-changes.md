@@ -3,6 +3,7 @@
 ## `@guardian/source-foundations`
 
 -   Removed `palette` object
+-   Removed `@guardian/src-foundations/theme` path
 
 ## `@guardian/source-foundations/accessibility`
 
@@ -35,7 +36,13 @@
 
 -   All exports moved to root. Path removed
 
-## `@guardian/source-foundations/theme`
+## `@guardian/source-foundations/typography`
+
+-   All non-index exports removed (e.g. @guardian/src-foundations/typography/fs)
+-   All other exports moved to root. Path removed
+-   Remove `@guardian/src-foundations/typography/obj` path. All differing exports now available from root with `ObjectStyles` suffix (e.g. `headlineObjectStyles`)
+
+## `@guardian/source-foundations/themes`
 
 -   All exports to be moved to their respective components. Path removed
 

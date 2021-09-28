@@ -1,85 +1,71 @@
 import {
-	titlepiece as titlepieceAsObj,
-	headline as headlineAsObj,
 	body as bodyAsObj,
+	headline as headlineAsObj,
 	textSans as textSansAsObj,
+	titlepiece as titlepieceAsObj,
 } from './api';
-import { objectStylesToString } from './object-styles-to-string';
 import {
-	titlepieceSizes,
-	headlineSizes,
 	bodySizes,
-	textSansSizes,
-	remTitlepieceSizes,
-	remHeadlineSizes,
-	remBodySizes,
-	remTextSansSizes,
 	fontMapping,
 	fontWeightMapping,
+	headlineSizes,
 	lineHeightMapping,
+	remBodySizes,
+	remHeadlineSizes,
+	remTextSansSizes,
+	remTitlepieceSizes,
+	textSansSizes,
+	titlepieceSizes,
 } from './data';
-import {
-	TitlepieceSizes,
-	HeadlineSizes,
+import { objectStylesToString } from './object-styles-to-string';
+import type {
 	BodySizes,
-	TextSansSizes,
 	FontScaleArgs,
 	FontScaleFunctionStr,
+	HeadlineSizes,
+	TextSansSizes,
+	TitlepieceSizes,
 } from './types';
 
-const fromEntries = <Sizes>(
-	entries: [keyof Sizes, FontScaleFunctionStr][],
-): {
+type TypographyApi<Sizes> = {
 	[key in keyof Sizes]: FontScaleFunctionStr;
-} =>
-	entries.reduce(
-		(
-			acc: {
-				[key in keyof Sizes]: FontScaleFunctionStr;
-			},
-			[key, value],
-		) => {
-			acc[key] = value;
+};
 
-			return acc;
-		},
-		{} as {
-			[key in keyof Sizes]: FontScaleFunctionStr;
-		},
-	);
-
-const titlepiece = fromEntries<TitlepieceSizes>(
+const titlepiece = Object.fromEntries(
 	Object.entries(titlepieceAsObj).map(([key, func]) => {
 		return [
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
 	}),
-);
-const headline = fromEntries<HeadlineSizes>(
+) as TypographyApi<TitlepieceSizes>;
+
+const headline = Object.fromEntries(
 	Object.entries(headlineAsObj).map(([key, func]) => {
 		return [
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
 	}),
-);
-const body = fromEntries<BodySizes>(
+) as TypographyApi<HeadlineSizes>;
+
+const body = Object.fromEntries(
 	Object.entries(bodyAsObj).map(([key, func]) => {
 		return [
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
 	}),
-);
-const textSans = fromEntries<TextSansSizes>(
+) as TypographyApi<BodySizes>;
+
+const textSans = Object.fromEntries(
 	Object.entries(textSansAsObj).map(([key, func]) => {
 		return [
 			key,
 			(options?: FontScaleArgs) => objectStylesToString(func(options)),
 		];
 	}),
-);
+) as TypographyApi<TextSansSizes>;
 
 export {
 	titlepiece,

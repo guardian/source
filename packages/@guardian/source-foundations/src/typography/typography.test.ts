@@ -1,11 +1,11 @@
 import {
-	headline,
 	fonts,
-	headlineSizes,
-	remHeadlineSizes,
 	fontWeights,
+	headline,
+	headlineSizes,
 	lineHeights,
-} from './index';
+	remHeadlineSizes,
+} from '.';
 
 it('should return styles containing the specified font family', () => {
 	const mediumHeadlineStyles = headline.medium();
