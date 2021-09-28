@@ -32,8 +32,8 @@ The steps taken are:
 
 1. Clone the Source repository
 1. Install all dependencies: `yarn`
-1. Create a `config.json` file in the `scripts/analysis` directory (ask a maintainer for their copy)
-1. Run `yarn analysis`
+1. Create a `config.json` file in the `scripts/get-usage` directory (ask a maintainer for their copy)
+1. Run `yarn get-usage`
 
 ### Config
 
