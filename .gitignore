@@ -7,3 +7,8 @@ dist
 package-lock.json
 .idea/
 .vscode/settings.json
+
+# scripts/get-usage
+scripts/get-usage/config.*.json
+scripts/get-usage/results/
+scripts/get-usage/tmp/
