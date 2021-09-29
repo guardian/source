@@ -36,7 +36,7 @@
     "release:prerelease:all": "yarn validate && yarn publish:release",
     "release:prerelease:kitchen": "yarn validate && yarn publish:release:kitchen",
     "shakedown": "yarn workspace @guardian/source-shakedown",
-    "shakedown:test": "yarn build:all && yarn shakedown test",
+    "shakedown:shakedown": "yarn build:all && yarn shakedown shakedown",
     "storybook": "start-storybook -p 6006",
     "tag:beta:all": "ts-node ./scripts/tag-beta-all",
     "test": "jest",
