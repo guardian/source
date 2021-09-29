@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
-      - uses: guardian/actions-setup-node@v2.4.0
+      - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'yarn'
       - name: build
         run: |
           yarn install --frozen-lockfile
           yarn validate:ci
-          yarn ci:build
+          yarn build:ci
       - name: Report coverage
         uses: coverallsapp/github-action@master
         with:

@@ -4,7 +4,7 @@ import { height, width } from '@guardian/src-foundations/size';
 import { textSans } from '@guardian/src-foundations/typography';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { checkboxDefault } from '@guardian/src-foundations/themes';
-import { resets } from '@guardian/src-foundations/utils';
+import { resets, appearance } from '@guardian/src-foundations/utils';
 
 export const fieldset = css`
 	${resets.fieldset};
@@ -52,7 +52,7 @@ export const checkbox = ({ checkbox } = checkboxDefault) => css`
 		${focusHalo};
 	}
 
-	@supports (appearance: none) {
+	@supports (${appearance}) {
 		appearance: none;
 		&:checked {
 			border: 2px solid ${checkbox.borderChecked};
@@ -95,7 +95,10 @@ export const supportingText = ({ checkbox } = checkboxDefault) => css`
 `;
 
 export const tick = ({ checkbox } = checkboxDefault) => css`
-	@supports (appearance: none) {
+	@supports (
+		(appearance: none) or (-webkit-appearance: none) or
+			(-moz-appearance: none)
+	) {
 		/* overall positional properties */
 		position: absolute;
 		width: 6px;
@@ -144,14 +147,14 @@ export const tick = ({ checkbox } = checkboxDefault) => css`
 `;
 
 export const tickWithLabelText = css`
-	@supports (appearance: none) {
+	@supports (${appearance}) {
 		top: 15px;
 		left: 9px;
 	}
 `;
 
 export const tickWithSupportingText = css`
-	@supports (appearance: none) {
+	@supports (${appearance}) {
 		top: 5px;
 	}
 `;
