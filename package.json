@@ -35,7 +35,7 @@
     "release:prerelease-bump:kitchen": "yarn validate && yarn kitchen verbump:prerelease && yarn publish:release:kitchen",
     "release:prerelease:all": "yarn validate && yarn publish:release",
     "release:prerelease:kitchen": "yarn validate && yarn publish:release:kitchen",
-    "shakedown": "start-storybook -p 7007 -c .storybook/shakedown",
+    "shakedown": "yarn build:all && yarn test",
     "storybook": "start-storybook -p 6006",
     "tag:beta:all": "ts-node ./scripts/tag-beta-all",
     "test": "jest",
