@@ -15,6 +15,10 @@ const kitchen = join(
 	'../packages/@guardian/source-react-components-development-kitchen',
 );
 const coreComponents = join(__dirname, '../src/core/components');
+const kitchenComponents = join(
+	__dirname,
+	'../packages/@guardian/source-react-components-development-kitchen/components',
+);
 
 const isDirectory = (path: string) =>
 	statP(path).then((stats) => stats.isDirectory());
@@ -31,6 +35,23 @@ export const getComponentPaths = () =>
 							return `${coreComponents}/${componentDirName}`;
 						},
 					),
+				),
+			),
+		)
+		.then((paths) => Promise.resolve(paths.filter((path) => !!path)));
+
+export const getKitchenComponentPaths = () =>
+	readdirP(kitchenComponents)
+		.then((componentDirs) =>
+			Promise.all(
+				componentDirs.map((componentDirName) =>
+					isDirectory(
+						`${kitchenComponents}/${componentDirName}`,
+					).then((isDir) => {
+						if (!isDir) return;
+
+						return `${kitchenComponents}/${componentDirName}`;
+					}),
 				),
 			),
 		)
