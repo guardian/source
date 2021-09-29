@@ -16,5 +16,9 @@ jobs:
       - name: build
         run: |
           yarn install --frozen-lockfile
-          yarn validate
+          yarn validate:ci
           yarn build:ci
+      - name: Report coverage
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
