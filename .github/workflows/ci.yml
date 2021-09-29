@@ -28,7 +28,7 @@ jobs:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
       - run: yarn build:ci
-  build-packages:
+  shakedown:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
@@ -36,4 +36,4 @@ jobs:
         with:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn build:all
+      - run: yarn shakedown:shakedown
