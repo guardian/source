@@ -16,7 +16,7 @@ jobs:
           cache: 'yarn'
       - run: |
           yarn install --frozen-lockfile
-          yarn ci:build
+          yarn build:ci
       - uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
