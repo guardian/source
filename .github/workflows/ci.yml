@@ -17,4 +17,4 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn validate
-          yarn ci:build
+          yarn build:ci
