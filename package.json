@@ -83,7 +83,7 @@
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.31.1",
-    "babel-jest": "^26.6.3",
+    "babel-jest": "^27.2.3",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.9.2",
     "eslint": "^7.31.0",
