@@ -27,6 +27,25 @@ export const getComponentPackageNames = () =>
 		)
 		.then((paths) => Promise.resolve(paths.filter((path) => !!path)));
 
+export const getComponentPackageNamesWithPaths = () =>
+	readdirP(coreComponents)
+		.then((componentDirs) =>
+			Promise.all(
+				componentDirs.map((componentDirName) =>
+					isDirectory(`${coreComponents}/${componentDirName}`).then(
+						(isDir) => {
+							if (!isDir) return;
+
+							return {
+								[`@guardian/src-${componentDirName}`]: `${coreComponents}/${componentDirName}`,
+							};
+						},
+					),
+				),
+			),
+		)
+		.then((paths) => Promise.resolve(Object.assign({}, ...paths)));
+
 export const packageNames = {
 	foundations: '@guardian/src-foundations',
 	icons: '@guardian/src-icons',

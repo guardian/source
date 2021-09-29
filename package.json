@@ -6,7 +6,8 @@
   "workspaces": [
     "src/core/*",
     "src/core/components/*",
-    "packages/@guardian/*"
+    "packages/@guardian/*",
+    "scripts/get-usage"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",
@@ -16,6 +17,7 @@
     "clean:all": "ts-node ./scripts/clean-all",
     "fix": "yarn lint:js --fix",
     "foundations": "yarn workspace @guardian/source-foundations",
+    "get-usage": "ts-node ./scripts/get-usage",
     "kitchen": "yarn workspace @guardian/source-react-components-development-kitchen",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
