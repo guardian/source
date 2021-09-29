@@ -15,7 +15,7 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn validate
-          yarn ci:build
+          yarn build:ci
       - name: deploy
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
