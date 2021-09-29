@@ -1,7 +1,8 @@
 {
   "name": "@guardian/source-react-components-development-kitchen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "Apache-2.0",
+  "sideEffects": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
