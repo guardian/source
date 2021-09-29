@@ -4,7 +4,8 @@
   "license": "Apache-2.0",
   "main": "index.js",
   "scripts": {
-    "shakedown": "yarn test",
-    "test": "jest"
+    "shakedown": "yarn test:components && yarn test:types",
+    "test:components": "jest",
+    "test:types": "tsc"
   }
 }
