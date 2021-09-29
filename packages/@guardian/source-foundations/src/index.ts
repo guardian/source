@@ -96,6 +96,7 @@ export type {
 } from './typography/types';
 
 // utils
+export { appearance } from './utils/supports-queries';
 export { FocusStyleManager } from './utils/focus-style-manager';
 export { pxToRem, rootPixelFontSize } from './utils/px-to-rem';
 export { resets } from './utils/resets';

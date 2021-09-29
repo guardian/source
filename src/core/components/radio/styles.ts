@@ -4,7 +4,7 @@ import { height, width } from '@guardian/src-foundations/size';
 import { textSans } from '@guardian/src-foundations/typography';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { radioDefault } from '@guardian/src-foundations/themes';
-import { resets } from '@guardian/src-foundations/utils';
+import { appearance, resets } from '@guardian/src-foundations/utils';
 
 export const fieldset = ({ radio } = radioDefault) => css`
 	${resets.fieldset};
@@ -65,7 +65,7 @@ export const radio = ({ radio } = radioDefault) => css`
 	I have chosen to keep these styles in the @supports block as
 	moving them out makes radio buttons look horrible on older browsers
 	*/
-	@supports (appearance: none) {
+	@supports (${appearance}) {
 		appearance: none;
 		background-color: transparent;
 
