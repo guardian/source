@@ -25,6 +25,7 @@ describe('No exports have changed in the ', () => {
 	it('@guardian/source-foundations package', () => {
 		expect(packageExports(sourceFoundations)).toEqual([
 			'FocusStyleManager',
+			'appearance',
 			'background',
 			'between',
 			'body',
