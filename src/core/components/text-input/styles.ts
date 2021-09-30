@@ -9,11 +9,13 @@ import { resets } from '@guardian/src-foundations/utils';
 export const errorInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
+	margin-top: 0;
 `;
 
 export const successInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
+	margin-top: 0;
 `;
 
 export const textInput = (theme = textInputDefault) => {
@@ -48,6 +50,14 @@ export const textInput = (theme = textInputDefault) => {
 		}
 	`;
 };
+
+export const labelMargin = css`
+	margin-top: ${space[1]}px;
+`;
+
+export const supportingTextMargin = css`
+	margin-top: 6px;
+`;
 
 export const widthFluid = css`
 	width: 100%;

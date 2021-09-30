@@ -10,6 +10,8 @@ import {
 	textInput,
 	errorInput,
 	successInput,
+	supportingTextMargin,
+	labelMargin,
 } from './styles';
 import {
 	visuallyHidden as _visuallyHidden,
@@ -114,6 +116,7 @@ export const TextInput = ({
 				css={(theme) => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
+					supporting ? supportingTextMargin : labelMargin,
 					error ? errorInput(theme.textInput && theme) : '',
 					!error && success
 						? successInput(theme.textInput && theme)
