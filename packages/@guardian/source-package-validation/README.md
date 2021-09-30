@@ -1,4 +1,4 @@
-# Source Shakedown
+# Source Package Validation
 
 This project is used to verify the output of the Source packages.
 
@@ -16,8 +16,8 @@ It runs two checks:
 
 ## Running locally
 
-Shakedown requires all packages to be built before running.
+Validation requires all packages to be built before running.
 
-You can run the tests including the build step by running (from the root directory): `yarn shakedown:shakedown`
+You can run the tests including the build step by running (from the root directory): `yarn package-validation:validate`
 
-If you are running locally and want to avoid rebuilding all packages each time then you can just rebuild the package(s) that have changed an then run: `yarn shakedown shakedown`
+If you are running locally and want to avoid rebuilding all packages each time then you can just rebuild the package(s) that have changed an then run: `yarn package-validation validate`

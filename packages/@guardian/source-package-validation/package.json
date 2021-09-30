@@ -1,0 +1,11 @@
+{
+  "name": "@guardian/source-package-validation",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "scripts": {
+    "test:components": "jest",
+    "test:types": "tsc",
+    "validate": "yarn test:components && yarn test:types"
+  }
+}
