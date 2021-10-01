@@ -7,4 +7,6 @@ export {
 export type { LinkPriority } from './types';
 
 export { Link } from './Link';
+export type { LinkProps } from './Link';
 export { ButtonLink } from './ButtonLink';
+export type { ButtonLinkProps } from './ButtonLink';
