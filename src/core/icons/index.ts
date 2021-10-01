@@ -49,3 +49,5 @@ export * from './tick-round';
 export * from './twitter';
 export * from './video';
 export * from './whats-app';
+
+export type { IconProps, IconSize } from './types';
