@@ -59,6 +59,10 @@ export const supportingTextMargin = css`
 	margin-top: 6px;
 `;
 
+export const inlineMessageMargin = css`
+	margin-top: 2px;
+`;
+
 export const widthFluid = css`
 	width: 100%;
 `;
