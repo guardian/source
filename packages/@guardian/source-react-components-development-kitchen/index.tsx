@@ -1,3 +1,6 @@
+export { Divider } from './components/divider';
+export type { DividerProps } from './components/divider';
+
 export {
 	EditorialButton,
 	EditorialLinkButton,
@@ -18,3 +21,9 @@ export type { HeadlineSize, QuoteIconProps } from './components/quote-icon';
 
 export { StarRating } from './components/star-rating';
 export type { StarRatingProps } from './components/star-rating';
+
+export { ErrorSummary, SuccessSummary } from './components/summary';
+export type {
+	ErrorSummaryProps,
+	SuccessSummaryProps,
+} from './components/summary';
