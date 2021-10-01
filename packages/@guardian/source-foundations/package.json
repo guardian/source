@@ -13,7 +13,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && rollup -c",
+    "build": "yarn clean && rollup -c",
+    "clean": "rm -rf dist",
     "tsc": "tsc -b"
   },
   "devDependencies": {
