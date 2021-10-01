@@ -11,11 +11,20 @@ const build = (dir: string) => {
 	});
 };
 
-const { foundations, icons, brand, helpers, kitchen, coreComponents } = paths;
+const {
+	foundations,
+	sourceFoundations,
+	icons,
+	brand,
+	helpers,
+	kitchen,
+	coreComponents,
+} = paths;
 
 // Build these packages in the specified order
 const prioritisedPackages = [
 	foundations,
+	sourceFoundations,
 	helpers,
 	icons,
 	brand,
