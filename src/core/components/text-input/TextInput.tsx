@@ -10,6 +10,9 @@ import {
 	textInput,
 	errorInput,
 	successInput,
+	supportingTextMargin,
+	labelMargin,
+	inlineMessageMargin,
 } from './styles';
 import {
 	visuallyHidden as _visuallyHidden,
@@ -101,19 +104,24 @@ export const TextInput = ({
 			supporting={supporting}
 		>
 			{error && (
-				<InlineError id={descriptionId(textInputId)}>
-					{error}
-				</InlineError>
+				<div css={inlineMessageMargin}>
+					<InlineError id={descriptionId(textInputId)}>
+						{error}
+					</InlineError>
+				</div>
 			)}
 			{!error && success && (
-				<InlineSuccess id={descriptionId(textInputId)}>
-					{success}
-				</InlineSuccess>
+				<div css={inlineMessageMargin}>
+					<InlineSuccess id={descriptionId(textInputId)}>
+						{success}
+					</InlineSuccess>
+				</div>
 			)}
 			<input
 				css={(theme) => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput && theme),
+					supporting ? supportingTextMargin : labelMargin,
 					error ? errorInput(theme.textInput && theme) : '',
 					!error && success
 						? successInput(theme.textInput && theme)

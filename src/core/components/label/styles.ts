@@ -21,5 +21,5 @@ export const optionalText = ({ label } = labelDefault) => css`
 export const supportingText = ({ label } = labelDefault) => css`
 	${textSans.small({ lineHeight: 'regular' })};
 	color: ${label.textSupporting};
-	margin: 0;
+	margin: 2px 0 0;
 `;
