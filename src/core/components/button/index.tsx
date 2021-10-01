@@ -10,5 +10,7 @@ export {
 } from './themes';
 
 export type { ButtonPriority, IconSide, Size } from './types';
-export { Button, ButtonProps } from './Button';
-export { LinkButton, LinkButtonProps } from './LinkButton';
+export { Button } from './Button';
+export type { ButtonProps } from './Button';
+export { LinkButton } from './LinkButton';
+export type { LinkButtonProps } from './LinkButton';
