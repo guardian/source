@@ -1,2 +1,3 @@
 export { textInputDefault } from '@guardian/src-foundations/themes';
-export { TextInput, TextInputProps } from './TextInput';
+export { TextInput } from './TextInput';
+export type { TextInputProps } from './TextInput';

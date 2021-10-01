@@ -1,3 +1,3 @@
 export { storybookBackgrounds } from './storybook-bg';
-export * from './types';
+export type { ThemeName, Props } from './types';
 export { svgBackgroundImage } from './svgBackgroundImage';
