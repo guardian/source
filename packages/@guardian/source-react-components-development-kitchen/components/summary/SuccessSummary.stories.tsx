@@ -10,6 +10,7 @@ export default {
 	component: SuccessSummary,
 	args: {
 		success: 'Your request was successful',
+		context: '',
 	},
 };
 

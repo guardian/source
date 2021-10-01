@@ -10,6 +10,7 @@ export default {
 	component: ErrorSummary,
 	args: {
 		error: 'There has been a problem',
+		context: '',
 	},
 };
 
