@@ -8,6 +8,7 @@ import { resets } from '@guardian/src-foundations/utils';
 export const errorInput = css`
 	border: 4px solid ${border.error};
 	color: ${text.error};
+	margin-top: 0;
 `;
 
 export const textArea = css`
@@ -39,6 +40,18 @@ export const textArea = css`
 			${errorInput}
 		}
 	}
+`;
+
+export const labelMargin = css`
+	margin-top: ${space[1]}px;
+`;
+
+export const supportingTextMargin = css`
+	margin-top: 6px;
+`;
+
+export const inlineMessageMargin = css`
+	margin-top: 2px;
 `;
 
 export const widthFluid = css`
