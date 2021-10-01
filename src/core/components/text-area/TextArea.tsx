@@ -1,7 +1,14 @@
 import { InputHTMLAttributes } from 'react';
 import { InlineError } from '@guardian/src-user-feedback';
 import { Label } from '@guardian/src-label';
-import { widthFluid, textArea, errorInput } from './styles';
+import {
+	widthFluid,
+	textArea,
+	errorInput,
+	labelMargin,
+	supportingTextMargin,
+	inlineMessageMargin,
+} from './styles';
 import {
 	visuallyHidden as _visuallyHidden,
 	descriptionId,
@@ -89,14 +96,17 @@ export const TextArea = ({
 			hideLabel={hideLabel}
 		>
 			{error && (
-				<InlineError id={descriptionId(textAreaId)}>
-					{error}
-				</InlineError>
+				<div css={inlineMessageMargin}>
+					<InlineError id={descriptionId(textAreaId)}>
+						{error}
+					</InlineError>
+				</div>
 			)}
 			<textarea
 				css={[
 					widthFluid,
 					textArea,
+					supporting ? supportingTextMargin : labelMargin,
 					error ? errorInput : '',
 					cssOverrides,
 				]}
