@@ -96,12 +96,15 @@ describe('No exports have changed in the ', () => {
 	it('@guardian/source-react-components-development-kitchen package', () => {
 		expect(packageExports(sourceReactComponentsDevelopmentKitchen)).toEqual(
 			[
+				'Divider',
 				'EditorialButton',
 				'EditorialLinkButton',
+				'ErrorSummary',
 				'Lines',
 				'Logo',
 				'QuoteIcon',
 				'StarRating',
+				'SuccessSummary',
 			],
 		);
 	});
