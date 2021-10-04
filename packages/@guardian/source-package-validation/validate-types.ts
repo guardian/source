@@ -92,7 +92,6 @@ import type { UserFeedbackProps } from '@guardian/src-user-feedback';
 
 import type { ThemeName, Props } from '@guardian/src-helpers';
 
-// TODO: Work out how to test all of the paths
 import type { Breakpoint as SrcBreakpoint } from '@guardian/src-foundations';
 
 import type { IconSize, IconProps } from '@guardian/src-icons';
