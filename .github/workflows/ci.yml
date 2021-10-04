@@ -2,9 +2,9 @@ name: CI
 on:
   pull_request:
     branches-ignore:
-      - 'main'
       - 'gh-pages'
       - '[0-9]+.[0-9]+'
+  workflow_dispatch:
 jobs:
   validate:
     runs-on: ubuntu-latest
