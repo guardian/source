@@ -1,18 +1,20 @@
 import { css, SerializedStyles } from '@emotion/react';
-
 import { border, text } from '@guardian/src-foundations/palette';
 import { space } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
-
 import { partialStyles, fullStyles } from './styles';
-export type DividerProps = {
-	size?: 'full' | 'partial';
-	spaceAbove?: 'tight' | 'loose';
+import { Props } from '@guardian/src-helpers';
+
+type Size = 'full' | 'partial';
+type Space = 'tight' | 'loose';
+export interface DividerProps extends Props {
+	size?: Size;
+	spaceAbove?: Space;
 	displayText?: string;
-};
+}
 
 const decideSpace = (
-	spaceAbove: 'tight' | 'loose',
+	spaceAbove: Space,
 	displayText?: string,
 ): SerializedStyles => {
 	switch (spaceAbove) {
@@ -39,6 +41,7 @@ export const Divider = ({
 	size = 'partial',
 	spaceAbove = 'loose',
 	displayText,
+	cssOverrides,
 }: DividerProps) => {
 	if (displayText) {
 		return (
@@ -73,6 +76,7 @@ export const Divider = ({
 						}
 					`,
 					decideSpace(spaceAbove, displayText),
+					cssOverrides,
 				]}
 			>
 				{displayText}
@@ -91,6 +95,7 @@ export const Divider = ({
 				`,
 				size === 'partial' ? partialStyles : fullStyles,
 				decideSpace(spaceAbove),
+				cssOverrides,
 			]}
 		/>
 	);

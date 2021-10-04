@@ -4,6 +4,7 @@ import {
 	asPlayground,
 	asChromaticStory,
 } from '../../../../../lib/story-intents';
+import { css } from '@emotion/react';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Divider',
@@ -64,3 +65,13 @@ TextDivider.args = {
 	displayText: 'I am centred',
 };
 asChromaticStory(TextDivider);
+
+// *****************************************************************************
+
+export const CssOverridesDivider = Template.bind({});
+CssOverridesDivider.args = {
+	cssOverrides: css`
+		background: red;
+	`,
+};
+asChromaticStory(CssOverridesDivider);

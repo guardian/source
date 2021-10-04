@@ -54,3 +54,9 @@ How much space is given above the divider
 **`string`**
 
 This text is centered inside the dividing line
+
+### `cssOverrides`
+
+**`SerializedStyles | SerializedStyles[] | undefined`**
+
+An escape hatch, used to override default styles if needed.
