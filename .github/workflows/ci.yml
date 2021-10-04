@@ -36,4 +36,5 @@ jobs:
         with:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn package-validation:validate
+      - run: yarn build:all
+      # - run: yarn package-validation:validate
