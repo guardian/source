@@ -12,7 +12,6 @@
   "scripts": {
     "build-storybook": "build-storybook -o dist",
     "build:all": "ts-node ./scripts/build-all",
-    "build:all:ci": "ts-node ./scripts/build-all-series",
     "build:ci": "NODE_ENV=production build-storybook -o dist",
     "clean": "rm -rf dist",
     "clean:all": "ts-node ./scripts/clean-all",

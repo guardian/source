@@ -3,7 +3,8 @@
 import execa, { ExecaReturnValue } from 'execa';
 import { paths, getComponentPaths } from './paths';
 
-const build = (dir: string) => {
+const build = (dir?: string) => {
+	if (!dir) return;
 	console.log(`\nBuilding ${require(`${dir}/package.json`).name}`);
 
 	return execa('yarn', ['--cwd', dir, 'run', 'build'], {
@@ -43,29 +44,16 @@ const otherPackages = getComponentPaths().then((paths) =>
 	}),
 );
 
-prioritisedPackages
-	.reduce(
-		(prev, curr) =>
-			prev
-				.then(() => build(curr))
-				.catch((err) =>
-					Promise.reject(
-						`Error building prioritised package: ${err}`,
+otherPackages
+	.then((packages) =>
+		[...prioritisedPackages, ...packages].reduce(
+			(prev, curr) =>
+				prev
+					.then(() => build(curr))
+					.catch((err) =>
+						Promise.reject(`Error building package: ${err}`),
 					),
-				),
-		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
-	)
-	.then(() =>
-		otherPackages.then((packages) =>
-			Promise.all(
-				packages.map((dir) => {
-					if (!dir) return;
-
-					return build(dir);
-				}),
-			).catch((err) =>
-				Promise.reject(`Error building other packages: ${err}`),
-			),
+			Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
 		),
 	)
 	.catch((err: string) => {
