@@ -38,14 +38,15 @@ const Content = () => (
 
 ### `size`
 
-**`'partial' | 'full'` **
+**`'partial' | 'full' | 'fit'` **
 
 `full` means the divider will span the full width of the content
 `partial` left aligns the divider and limits its length
+`fit` means the divider will fit to the container and not overlap the sides
 
 ### `spaceAbove`
 
-**`'tight' | 'loose'`**
+**`'tight' | 'loose' | 'none'`**
 
 How much space is given above the divider
 

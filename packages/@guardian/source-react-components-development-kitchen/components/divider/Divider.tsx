@@ -1,18 +1,19 @@
 import { css, SerializedStyles } from '@emotion/react';
-
 import { border, text } from '@guardian/src-foundations/palette';
 import { space } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
-
 import { partialStyles, fullStyles } from './styles';
+
+type Sizes = 'full' | 'partial' | 'fit';
+type Spaces = 'tight' | 'loose' | 'none';
 export type DividerProps = {
-	size?: 'full' | 'partial';
-	spaceAbove?: 'tight' | 'loose';
+	size?: Sizes;
+	spaceAbove?: Spaces;
 	displayText?: string;
 };
 
 const decideSpace = (
-	spaceAbove: 'tight' | 'loose',
+	spaceAbove: Spaces,
 	displayText?: string,
 ): SerializedStyles => {
 	switch (spaceAbove) {
@@ -32,6 +33,51 @@ const decideSpace = (
 				: css`
 						margin-top: ${space[12]}px;
 				  `;
+		case 'none':
+			return css`
+				margin-top: 0;
+			`;
+	}
+};
+
+const decideSize = (size: Sizes, displayText?: string) => {
+	switch (size) {
+		case 'fit':
+			return displayText
+				? css`
+						:before {
+							margin-left: 0;
+						}
+
+						:after {
+							margin-right: 0;
+						}
+				  `
+				: null;
+		case 'full':
+			return displayText
+				? css`
+						:before {
+							margin-left: -10px;
+						}
+
+						:after {
+							margin-right: -10px;
+						}
+				  `
+				: fullStyles;
+		case 'partial':
+			return displayText
+				? css`
+						:before {
+							margin-left: 30%;
+						}
+
+						:after {
+							margin-right: 30%;
+						}
+				  `
+				: partialStyles;
 	}
 };
 
@@ -60,18 +106,13 @@ export const Divider = ({
 							margin: auto;
 						}
 						:before {
-							margin-left: ${size === 'partial'
-								? '30%'
-								: '-10px'};
 							margin-right: 10px;
 						}
 						:after {
-							margin-right: ${size === 'partial'
-								? '30%'
-								: '-10px'};
 							margin-left: 10px;
 						}
 					`,
+					decideSize(size, displayText),
 					decideSpace(spaceAbove, displayText),
 				]}
 			>
@@ -89,7 +130,7 @@ export const Divider = ({
 					margin-bottom: ${space[1]}px;
 					background-color: ${border.secondary};
 				`,
-				size === 'partial' ? partialStyles : fullStyles,
+				decideSize(size),
 				decideSpace(spaceAbove),
 			]}
 		/>

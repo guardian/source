@@ -51,6 +51,14 @@ asChromaticStory(TightDivider);
 
 // *****************************************************************************
 
+export const NoneDivider = Template.bind({});
+NoneDivider.args = {
+	spaceAbove: 'none',
+};
+asChromaticStory(NoneDivider);
+
+// *****************************************************************************
+
 export const FullDivider = Template.bind({});
 FullDivider.args = {
 	size: 'full',
@@ -64,3 +72,11 @@ TextDivider.args = {
 	displayText: 'I am centred',
 };
 asChromaticStory(TextDivider);
+
+// *****************************************************************************
+
+export const FitDivider = Template.bind({});
+FitDivider.args = {
+	size: 'fit',
+};
+asChromaticStory(FitDivider);
