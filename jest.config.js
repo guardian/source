@@ -5,6 +5,6 @@ module.exports = {
 	testPathIgnorePatterns: [
 		'/node_modules',
 		'/dist',
-		'packages/@guardian/source-package-validation',
+		'/scripts/package-validation',
 	],
 };
