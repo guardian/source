@@ -12,7 +12,7 @@ It runs two checks:
 
 2. Verify that no types have been removed
 
-    This test works by importing all of the types from all packages into a file and then running `tsc`. It will capture types that have been removed but not fail when new types are added so, for now, the onus is on contributors and reviewers to remember to add new types to this file.
+    This test works by importing all of the types from all packages into a file and then running `tsc`. It will capture types that have been removed but not fail when new types are added so, for now, the onus is on contributors and reviewers to **remember to add new types to this file**.
 
 ## Running locally
 
