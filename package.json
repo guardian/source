@@ -11,11 +11,11 @@
     "scripts/validate-dist"
   ],
   "scripts": {
-    "build-storybook": "build-storybook -o dist",
     "build:all": "ts-node ./scripts/build-all",
-    "build:ci": "NODE_ENV=production build-storybook -o dist",
     "clean": "rm -rf dist",
     "clean:all": "ts-node ./scripts/clean-all",
+    "build:storybook": "build-storybook -o dist",
+    "build:storybook:ci": "NODE_ENV=production build-storybook -o dist",
     "fix": "yarn lint:js --fix",
     "foundations": "yarn workspace @guardian/source-foundations",
     "get-usage": "ts-node ./scripts/get-usage",
