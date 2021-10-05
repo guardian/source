@@ -79,7 +79,7 @@ export const AlertSwitch = ({
 	const background = decideBackground(theme);
 
 	return (
-		<div css={() => [alertSwitchStyles(background), cssOverrides]}>
+		<div css={[alertSwitchStyles(background), cssOverrides]}>
 			<button
 				role="switch"
 				aria-checked={isChecked()}
