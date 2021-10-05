@@ -2,9 +2,9 @@ import { css } from '@emotion/react';
 import { ArticlePillar, ArticleTheme } from '@guardian/libs';
 import { textSans } from '@guardian/src-foundations/typography';
 import type { Props } from '@guardian/src-helpers';
-import { decideBackground, alertSwitchStyles } from './styles';
+import { decideBackground, toggleSwitchStyles } from './styles';
 
-export interface AlertSwitchProps extends Props {
+export interface ToggleSwitchProps extends Props {
 	/**
 	 * A theme object denoting the style of the button using the enums
 	 * available from [@guardian/libs](https://github.com/guardian/libs/blob/main/src/format.ts).
@@ -43,12 +43,12 @@ export interface AlertSwitchProps extends Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-alert-switch--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-toggle-switch--playground) •
  * [Design System](https://theguardian.design) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/alert-switch) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
- * Displays an on/off alert switch.
+ * Displays an on/off toggle switch.
  *
  */
 
@@ -56,7 +56,7 @@ const labelStyles = css`
 	${textSans.small()};
 `;
 
-export const AlertSwitch = ({
+export const ToggleSwitch = ({
 	theme = ArticlePillar.News,
 	checked,
 	label,
@@ -64,7 +64,7 @@ export const AlertSwitch = ({
 	cssOverrides,
 	onClick = () => undefined,
 	...props
-}: AlertSwitchProps) => {
+}: ToggleSwitchProps) => {
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
 			return checked;
@@ -76,7 +76,7 @@ export const AlertSwitch = ({
 	const background = decideBackground(theme);
 
 	return (
-		<div css={[alertSwitchStyles(background), cssOverrides]}>
+		<div css={[toggleSwitchStyles(background), cssOverrides]}>
 			<button
 				role="switch"
 				aria-checked={isChecked()}

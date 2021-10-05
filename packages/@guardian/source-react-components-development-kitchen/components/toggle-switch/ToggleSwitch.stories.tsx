@@ -1,4 +1,4 @@
-import { AlertSwitch, AlertSwitchProps } from './AlertSwitch';
+import { ToggleSwitch, ToggleSwitchProps } from './ToggleSwitch';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asPlayground,
@@ -9,15 +9,15 @@ import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import { css } from '@emotion/react';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/AlertSwitch',
-	component: AlertSwitch,
+	title: 'Kitchen/source-react-components-development-kitchen/ToggleSwitch',
+	component: ToggleSwitch,
 	args: {},
 };
 
-const Template: Story<AlertSwitchProps> = (args: AlertSwitchProps) => {
+const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 	const [checked, setChecked] = useState(args.checked);
 	return (
-		<AlertSwitch
+		<ToggleSwitch
 			{...args}
 			checked={checked}
 			onClick={(e) => {
@@ -64,8 +64,8 @@ const pillars = [
 	{ pillar: ArticleSpecial.SpecialReport, label: 'SpecialReport' },
 	{ pillar: ArticleSpecial.Labs, label: 'Labs' },
 ];
-const RowTemplate: Story<AlertSwitchProps> = (
-	args: Partial<AlertSwitchProps>,
+const RowTemplate: Story<ToggleSwitchProps> = (
+	args: Partial<ToggleSwitchProps>,
 ) => (
 	<div
 		css={css`

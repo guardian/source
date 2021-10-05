@@ -38,7 +38,7 @@ export const decideBackground = (theme: ArticleTheme) => {
 	}
 };
 
-export const alertSwitchStyles = (background: SerializedStyles) => css`
+export const toggleSwitchStyles = (background: SerializedStyles) => css`
 	button {
 		border: none;
 		margin: 0 8px 0 0;
