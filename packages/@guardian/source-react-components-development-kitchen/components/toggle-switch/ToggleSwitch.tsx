@@ -17,7 +17,7 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	theme?: ArticleTheme;
 	/**
-	 * Whether checkbox is checked. This is necessary when using the
+	 * Whether the ToggleSwitch is checked. This is necessary when using the
 	 * [controlled approach](https://reactjs.org/docs/forms.html#controlled-components)
 	 * (recommended) to form state management.
 	 *
