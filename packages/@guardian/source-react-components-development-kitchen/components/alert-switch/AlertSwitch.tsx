@@ -4,9 +4,6 @@ import { textSans } from '@guardian/src-foundations/typography';
 import type { Props } from '@guardian/src-helpers';
 import { decideBackground, alertSwitchStyles } from './styles';
 
-// https://docs.google.com/spreadsheets/d/1QUa5Kh734J4saFc8ERjCYHZu10_-Hj7llNa2rr8urNg/edit?usp=sharing
-// A list style variations for each breakpoint
-
 export interface AlertSwitchProps extends Props {
 	/**
 	 * A theme object denoting the style of the button using the enums
