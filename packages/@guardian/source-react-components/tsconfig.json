@@ -25,10 +25,5 @@
     "target": "esnext"
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["src"],
-  "references": [
-    {
-      "path": "../../../src/core/foundations"
-    }
-  ]
+  "include": ["src"]
 }
