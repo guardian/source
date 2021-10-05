@@ -65,3 +65,4 @@ $ yarn storybook
 
 -   Don’t bump the package version as part of a pull request. Maintainers will take care of this as part of the release process.
 -   Test that your component can be used in a real project (e.g. [dotcom-rendering](https://github.com/guardian/dotcom-rendering)). Use [`yarn link`](https://yarnpkg.com/en/docs/cli/link) to avoid having to perform a real publish, and [`yarn pack`](https://yarnpkg.com/en/docs/cli/pack) to see exactly which files would be published.
+- If your change extends the API of a component or the foundations (e.g. you are adding a new component, a new prop or exporting a new type), please update the [`source-package-validation`](packages/@guardian/source-package-validation/README.md) package.
