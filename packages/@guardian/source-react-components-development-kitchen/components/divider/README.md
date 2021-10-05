@@ -16,47 +16,10 @@ $ npm i @guardian/source-react-components-development-kitchen
 
 ## Use
 
-```tsx
-import { Divider } from '@guardian/source-react-components-development-kitchen';
+### API
 
-const Content = () => (
-    <>
-        <p>Some text</p>
-        <Divider />
-        <p>Some text</p>
-        <Divider
-            size="small"
-            spaceAbove="loose"
-            displayText="I am centered inside the divider"
-        />
-        <p>Some text</p>
-    </>
-);
-```
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-divider--playground)
 
-## Divider Props
+### How to use
 
-### `size`
-
-**`'partial' | 'full'` **
-
-`full` means the divider will span the full width of the content
-`partial` left aligns the divider and limits its length
-
-### `spaceAbove`
-
-**`'tight' | 'loose'`**
-
-How much space is given above the divider
-
-### `displayText`
-
-**`string`**
-
-This text is centered inside the dividing line
-
-### `cssOverrides`
-
-**`SerializedStyles | SerializedStyles[] | undefined`**
-
-An escape hatch, used to override default styles if needed.
+For context and visual guides relating to usage see the [Source Design System website](https://theguardian.design).
