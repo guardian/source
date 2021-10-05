@@ -105,6 +105,7 @@ describe('No exports have changed in the ', () => {
 				'QuoteIcon',
 				'StarRating',
 				'SuccessSummary',
+				'ToggleSwitch',
 			],
 		);
 	});
