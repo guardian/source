@@ -12,8 +12,6 @@ import {
 export const defaultTheme = ArticlePillar.News;
 
 export const decideBackground = (theme: ArticleTheme) => {
-	console.log('${news[200]} is: ');
-	console.log(news[200]);
 	switch (theme) {
 		case ArticlePillar.News:
 		case ArticleSpecial.Labs:
