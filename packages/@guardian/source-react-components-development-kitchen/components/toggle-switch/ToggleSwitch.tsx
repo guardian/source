@@ -27,7 +27,7 @@ export interface ToggleSwitchProps extends Props {
 	checked?: boolean;
 	/**
 	 * When using the [uncontrolled approach](https://reactjs.org/docs/uncontrolled-components.html),
-	 * use defaultChecked to indicate the whether the checkbox is checked intially.
+	 * use defaultChecked to indicate the whether the ToggleSwitch is checked intially.
 	 */
 	defaultChecked?: boolean;
 	/**
