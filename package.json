@@ -36,7 +36,7 @@
     "test:coverage": "jest --coverage",
     "tsc": "tsc",
     "validate": "yarn tsc && yarn lint && yarn test",
-    "validate-dist": "yarn build:all && yarn workspace @guardian/source-validate-dist validate",
+    "validate-dist": "yarn build:all && yarn workspace validate-dist validate",
     "validate:ci": "yarn tsc && yarn lint && yarn test:coverage --ci",
     "verbump:deps:all": "ts-node ./scripts/verbump-src-deps-all",
     "verbump:major": "yarn version --major --no-git-tag-version",

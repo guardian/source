@@ -41,5 +41,5 @@
     "resolveJsonModule": true
   },
   "include": ["src/**/*", "packages", "lib"],
-  "exclude": ["node_modules", "packages/@guardian/source-package-validation"]
+  "exclude": ["node_modules", "scripts/validate-dist"]
 }

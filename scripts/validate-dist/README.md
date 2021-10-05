@@ -20,4 +20,4 @@ Validation requires all packages to be built before running.
 
 You can run the tests including the build step by running (from the root directory): `yarn validate-dist`
 
-If you are running locally and want to avoid rebuilding all packages each time then you can just rebuild the package(s) that have changed an then run: `yarn workspace @guardian/source-validate-dist validate`
+If you are running locally and want to avoid rebuilding all packages each time then you can just rebuild the package(s) that have changed an then run: `yarn workspace validate-dist validate`
