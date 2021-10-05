@@ -1,4 +1,3 @@
-export { ToggleSwitch } from './components/toggle-switch';
 export { Divider } from './components/divider';
 export type { DividerProps } from './components/divider';
 
@@ -28,3 +27,6 @@ export type {
 	ErrorSummaryProps,
 	SuccessSummaryProps,
 } from './components/summary';
+
+export { ToggleSwitch } from './components/toggle-switch';
+export type { ToggleSwitchProps } from './components/toggle-switch';
