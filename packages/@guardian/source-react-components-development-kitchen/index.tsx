@@ -1,3 +1,4 @@
+export { AlertSwitch } from './components/alert-switch';
 export { Divider } from './components/divider';
 export type { DividerProps } from './components/divider';
 
