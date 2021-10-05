@@ -120,10 +120,6 @@ const DecideLogo = ({ logoType }: { logoType: LogoType }) => {
 const logoStyles = css`
 	/* Adding block display here so that the focus halo correctly covers the content */
 	display: block;
-	color: ${brandText.primary};
-	:hover {
-		color: ${brandText.primary};
-	}
 `;
 
 /**
