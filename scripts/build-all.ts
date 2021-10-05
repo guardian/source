@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-import execa, { ExecaReturnValue } from 'execa';
+import execa from 'execa';
 import { paths, getComponentPaths } from './paths';
 
-const build = (dir: string) => {
+const build = (dir?: string) => {
+	if (!dir) return;
 	console.log(`\nBuilding ${require(`${dir}/package.json`).name}`);
 
-	return execa('yarn', ['--cwd', dir, 'run', 'build'], {
+	return execa.sync('yarn', ['--cwd', dir, 'run', 'build'], {
 		stdio: 'inherit',
 	});
 };
@@ -43,30 +44,15 @@ const otherPackages = getComponentPaths().then((paths) =>
 	}),
 );
 
-prioritisedPackages
-	.reduce(
-		(prev, curr) =>
-			prev
-				.then(() => build(curr))
-				.catch((err) =>
-					Promise.reject(
-						`Error building prioritised package: ${err}`,
-					),
-				),
-		Promise.resolve() as Promise<void | ExecaReturnValue<string>>,
-	)
-	.then(() =>
-		otherPackages.then((packages) =>
-			Promise.all(
-				packages.map((dir) => {
-					if (!dir) return;
-
-					return build(dir);
-				}),
-			).catch((err) =>
-				Promise.reject(`Error building other packages: ${err}`),
-			),
-		),
+otherPackages
+	.then((packages) =>
+		[...prioritisedPackages, ...packages].forEach((pkg) => {
+			try {
+				build(pkg);
+			} catch (err) {
+				console.error(`Error building package: ${err}`);
+			}
+		}),
 	)
 	.catch((err: string) => {
 		console.log('***BUILD FAILED***\n', err);
