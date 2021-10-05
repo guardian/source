@@ -46,7 +46,7 @@ export interface AlertSwitchProps extends Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-star-rating--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-alert-switch--playground) •
  * [Design System](https://theguardian.design) •
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/alert-switch) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
