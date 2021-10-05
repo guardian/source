@@ -29,6 +29,7 @@
     "lint:styles": "stylelint src/core/**/styles.ts",
     "prepare": "husky install",
     "publish:release": "ts-node ./scripts/publish-release",
+    "release:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen release",
     "release:major:src": "yarn build:src && yarn validate && yarn verbump:major:src && yarn publish:release",
     "release:minor:src": "yarn build:src && yarn validate && yarn verbump:minor:src && yarn publish:release",
     "release:patch:src": "yarn build:src && yarn validate && yarn verbump:patch:src && yarn publish:release",
