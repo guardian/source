@@ -28,6 +28,7 @@ export type {
 	HeadlineSize,
 	QuoteIconProps,
 	StarRatingProps,
+	ToggleSwitchProps,
 } from '@guardian/source-react-components-development-kitchen';
 
 export type {
