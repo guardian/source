@@ -8,7 +8,7 @@
     "src/core/components/*",
     "packages/@guardian/*",
     "scripts/get-usage",
-    "scripts/package-validation"
+    "scripts/validate-dist"
   ],
   "scripts": {
     "build-storybook": "build-storybook -o dist",
@@ -23,8 +23,6 @@
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
     "lint:styles": "stylelint src/core/**/styles.ts",
-    "package-validation": "yarn workspace @guardian/source-package-validation",
-    "package-validation:validate": "yarn build:all && yarn package-validation validate",
     "prepare": "husky install",
     "publish:release": "ts-node ./scripts/publish-release",
     "release:major:all": "yarn build:all && yarn validate && yarn verbump:major:all && yarn publish:release",
@@ -38,6 +36,7 @@
     "test:coverage": "jest --coverage",
     "tsc": "tsc",
     "validate": "yarn tsc && yarn lint && yarn test",
+    "validate-dist": "yarn build:all && yarn workspace @guardian/source-validate-dist validate",
     "validate:ci": "yarn tsc && yarn lint && yarn test:coverage --ci",
     "verbump:deps:all": "ts-node ./scripts/verbump-src-deps-all",
     "verbump:major": "yarn version --major --no-git-tag-version",

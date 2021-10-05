@@ -5,6 +5,6 @@ module.exports = {
 	testPathIgnorePatterns: [
 		'/node_modules',
 		'/dist',
-		'/scripts/package-validation',
+		'/scripts/validate-dist',
 	],
 };
