@@ -9,7 +9,7 @@ import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import { css } from '@emotion/react';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/Alert Switch',
+	title: 'Kitchen/source-react-components-development-kitchen/AlertSwitch',
 	component: AlertSwitch,
 	args: {},
 };
