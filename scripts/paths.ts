@@ -7,17 +7,9 @@ const statP = promisify(stat);
 
 const root = join(__dirname, '..');
 const foundations = join(__dirname, '../src/core/foundations');
-const sourceFoundations = join(
-	__dirname,
-	'../packages/@guardian/source-foundations',
-);
 const icons = join(__dirname, '../src/core/icons');
 const brand = join(__dirname, '../src/core/brand');
 const helpers = join(__dirname, '../src/core/helpers');
-const kitchen = join(
-	__dirname,
-	'../packages/@guardian/source-react-components-development-kitchen',
-);
 const coreComponents = join(__dirname, '../src/core/components');
 const kitchenComponents = join(
 	__dirname,
@@ -64,10 +56,8 @@ export const getKitchenComponentPaths = () =>
 export const paths = {
 	root,
 	foundations,
-	sourceFoundations,
 	icons,
 	brand,
 	helpers,
-	kitchen,
 	coreComponents,
 };

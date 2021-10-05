@@ -12,27 +12,17 @@ const build = (dir?: string) => {
 	});
 };
 
-const {
-	foundations,
-	sourceFoundations,
-	icons,
-	brand,
-	helpers,
-	kitchen,
-	coreComponents,
-} = paths;
+const { foundations, icons, brand, helpers, coreComponents } = paths;
 
 // Build these packages in the specified order
 const prioritisedPackages = [
 	foundations,
-	sourceFoundations,
 	helpers,
 	icons,
 	brand,
 	`${coreComponents}/user-feedback`,
 	`${coreComponents}/label`,
 	`${coreComponents}/button`,
-	kitchen,
 ];
 
 // Build these packages in parallel
