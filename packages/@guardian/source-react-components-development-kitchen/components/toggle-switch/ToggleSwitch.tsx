@@ -36,6 +36,11 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	label?: string;
 	/**
+	 * When set to true, the toggle will be slim
+	 *
+	 */
+	slim?: boolean;
+	/**
 	 * A callback function called when the component is opened or closed.
 	 * Receives the click event as an argument.
 	 */
@@ -62,6 +67,7 @@ export const ToggleSwitch = ({
 	label,
 	defaultChecked,
 	cssOverrides,
+	slim = false,
 	onClick = () => undefined,
 	...props
 }: ToggleSwitchProps) => {
@@ -76,7 +82,7 @@ export const ToggleSwitch = ({
 	const background = decideBackground(theme);
 
 	return (
-		<div css={[toggleSwitchStyles(background), cssOverrides]}>
+		<div css={[toggleSwitchStyles(background, slim), cssOverrides]}>
 			<button
 				role="switch"
 				aria-checked={isChecked()}

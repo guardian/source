@@ -47,6 +47,15 @@ asChromaticStory(WithLabel);
 
 // *****************************************************************************
 
+export const Slim = Template.bind({});
+Slim.args = {
+	label: 'Get alerts on this story',
+	slim: true,
+};
+asChromaticStory(Slim);
+
+// *****************************************************************************
+
 export const DefaultChecked = Template.bind({});
 DefaultChecked.args = {
 	label: 'Get alerts on this story',
@@ -96,3 +105,20 @@ AllPillarsChecked.args = {
 	defaultChecked: true,
 };
 asChromaticStory(AllPillarsChecked);
+
+// *****************************************************************************
+
+export const AllPillarsSlimUnchecked = RowTemplate.bind({});
+AllPillarsSlimUnchecked.args = {
+	slim: true,
+};
+asChromaticStory(AllPillarsSlimUnchecked);
+
+// *****************************************************************************
+
+export const AllPillarsSlimChecked = RowTemplate.bind({});
+AllPillarsSlimChecked.args = {
+	defaultChecked: true,
+	slim: true,
+};
+asChromaticStory(AllPillarsSlimChecked);
