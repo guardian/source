@@ -1,0 +1,13 @@
+{
+  "packages": [
+    "packages/@guardian/source-react-components-development-kitchen"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "ignoreChanges": ["src/**/*", "packages/@guardian/source-foundations"]
+    }
+  }
+}
