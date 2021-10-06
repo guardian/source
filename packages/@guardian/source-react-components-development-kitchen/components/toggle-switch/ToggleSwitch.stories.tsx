@@ -50,7 +50,7 @@ asChromaticStory(WithLabel);
 export const Slim = Template.bind({});
 Slim.args = {
 	label: 'Get alerts on this story',
-	slim: true,
+	size: 'slim',
 };
 asChromaticStory(Slim);
 
@@ -110,7 +110,7 @@ asChromaticStory(AllPillarsChecked);
 
 export const AllPillarsSlimUnchecked = RowTemplate.bind({});
 AllPillarsSlimUnchecked.args = {
-	slim: true,
+	size: 'slim',
 };
 asChromaticStory(AllPillarsSlimUnchecked);
 
@@ -119,6 +119,6 @@ asChromaticStory(AllPillarsSlimUnchecked);
 export const AllPillarsSlimChecked = RowTemplate.bind({});
 AllPillarsSlimChecked.args = {
 	defaultChecked: true,
-	slim: true,
+	size: 'slim',
 };
 asChromaticStory(AllPillarsSlimChecked);

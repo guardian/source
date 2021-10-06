@@ -39,16 +39,11 @@ export const decideBackground = (theme: ArticleTheme) => {
 	}
 };
 
-export const toggleSwitchStyles = (
-	background: SerializedStyles,
-	slim: boolean,
-) => css`
+export const toggleSwitchStyles = (background: SerializedStyles) => css`
 	button {
 		border: none;
 		margin: 0 8px 0 0;
 		padding: 0;
-		width: ${slim ? '1.625rem' : '3.75em'};
-		height: ${slim ? '0.75rem' : '1.9rem'};
 		display: inline-block;
 		vertical-align: middle;
 		text-align: center;
@@ -60,10 +55,7 @@ export const toggleSwitchStyles = (
 	button:after {
 		content: '';
 		position: absolute;
-		height: ${slim ? '1.125rem' : '1.6rem'};
-		width: ${slim ? '1.125rem' : '1.6rem'};
 		border-radius: 50%;
-		top: ${slim ? '-0.2rem' : '0.15rem'};
 		background: #fff;
 		transition: left 0.15s ease-in-out;
 		will-change: left;
@@ -72,18 +64,55 @@ export const toggleSwitchStyles = (
 	button[aria-checked='false'] {
 		${background}
 	}
+`;
+
+export const thickStyles = () => css`
+	button {
+		width: 3.125rem;
+		height: 1.9rem;
+	}
+
+	button:after {
+		height: 1.6rem;
+		width: 1.6rem;
+		top: 0.15rem;
+	}
+
 	button[aria-checked='false']:after {
-		left: ${slim ? '-0.2rem' : '0.1rem'};
+		left: 0.1rem;
 	}
+
 	button[aria-checked='true'] {
-		background: ${slim
-			? css`
-					${success[500]}50
-			  `
-			: success[500]};
+		background: ${success[500]};
 	}
+
 	button[aria-checked='true']:after {
-		left: ${slim ? '0.7rem' : '1.4rem'};
-		background: ${slim ? success[500] : neutral[100]};
+		left: 1.4rem;
+		background: ${neutral[100]};
+	}
+`;
+export const slimStyles = () => css`
+	button {
+		width: 1.625rem;
+		height: 0.75rem;
+	}
+
+	button:after {
+		height: 1.125rem;
+		width: 1.125rem;
+		top: -0.2rem;
+	}
+
+	button[aria-checked='false']:after {
+		left: -0.2rem;
+	}
+
+	button[aria-checked='true'] {
+		background: ${success[500]}50;
+	}
+
+	button[aria-checked='true']:after {
+		left: 0.7rem;
+		background: ${success[500]};
 	}
 `;

@@ -2,8 +2,14 @@ import { css } from '@emotion/react';
 import { ArticlePillar, ArticleTheme } from '@guardian/libs';
 import { textSans } from '@guardian/src-foundations/typography';
 import type { Props } from '@guardian/src-helpers';
-import { decideBackground, toggleSwitchStyles } from './styles';
+import {
+	decideBackground,
+	toggleSwitchStyles,
+	slimStyles,
+	thickStyles,
+} from './styles';
 
+export type Size = 'normal' | 'slim';
 export interface ToggleSwitchProps extends Props {
 	/**
 	 * A theme object denoting the style of the button using the enums
@@ -39,7 +45,7 @@ export interface ToggleSwitchProps extends Props {
 	 * When set to true, the toggle will be slim
 	 *
 	 */
-	slim?: boolean;
+	size?: Size;
 	/**
 	 * A callback function called when the component is opened or closed.
 	 * Receives the click event as an argument.
@@ -67,7 +73,7 @@ export const ToggleSwitch = ({
 	label,
 	defaultChecked,
 	cssOverrides,
-	slim = false,
+	size = 'normal',
 	onClick = () => undefined,
 	...props
 }: ToggleSwitchProps) => {
@@ -80,9 +86,17 @@ export const ToggleSwitch = ({
 	};
 
 	const background = decideBackground(theme);
+	const isSlim = size === 'slim';
 
 	return (
-		<div css={[toggleSwitchStyles(background, slim), cssOverrides]}>
+		<div
+			css={[
+				toggleSwitchStyles(background),
+				isSlim ? slimStyles() : thickStyles(),
+				cssOverrides,
+			]}
+			{...props}
+		>
 			<button
 				role="switch"
 				aria-checked={isChecked()}
