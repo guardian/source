@@ -1,122 +1,186 @@
-import { ThemeProvider } from '@emotion/react';
-import * as themes from '@guardian/src-foundations/themes';
-import type {
-	Args,
-	Story,
-} from '../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
+import { labelBrand, labelDefault } from '@guardian/src-foundations/themes';
+
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-import { dedent } from 'ts-dedent';
 import { Legend, LegendProps } from './Legend';
+import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-label/Legend',
+	args: {
+		text: 'Hello World',
+		supporting: 'undefined',
+		optional: false,
+		hideLabel: false,
+	},
+	argTypes: {
+		supporting: {
+			options: ['undefined', 'text', 'component'],
+			mapping: {
+				undefined: undefined,
+				text: 'Here I am',
+				component: (
+					<span role="img" aria-label="Image of a letter">
+						💌
+					</span>
+				),
+			},
+			control: { type: 'radio' },
+		},
+	},
 	component: Legend,
 };
 
-export const Demo = (args: LegendProps) => (
+const Template: Story<LegendProps> = (args: LegendProps) => (
 	<fieldset>
 		<Legend {...args} />
 	</fieldset>
 );
 
+export const Demo = Template.bind({});
 Demo.args = {
 	text: 'Hello world',
-	supporting: 'Here I am',
-	optional: false,
-	hideLabel: false,
+	supporting: 'text',
 };
+asPlayground(Demo);
 
-// This is intended to make it easier to update multiple stories at once.
-// I couldn't decide whether it was better use a story factory or just
-// have lots of stories.
-//
-// If you're reading this in the future and wish it was just a load of
-// separate stories, you might be right. Feel free to change it.
+// *****************************************************************************
 
-const getStories = (
-	themeName: 'labelDefault' | 'labelBrand',
-	background?: string,
-) => {
-	const baseArgs = {
-		theme: themes[themeName],
-		text: 'Email',
-	};
-
-	const baseParameters = {
-		controls: { disabled: true },
-		backgrounds: { default: background },
-	};
-
-	const getDemoCode = ({ theme, children, ...props }: Args) => {
-		const codeProps = Object.entries(props)
-			.map(([k, v]) => `${k}="${v}"`)
-			.join(' ');
-		return dedent`
-			import { ThemeProvider } from '@emotion/react';
-			import { ${themeName} } from '@guardian/src-foundations/themes';
-			import { Legend } from '@guardian/src-label';
-
-			<fieldset>
-			  <ThemeProvider theme={${themeName}}>
-			    <Legend ${codeProps} />
-			  </ThemeProvider>
-			<fieldset>`;
-	};
-
-	const story = (args?: Args) => {
-		const story: Story = ({ theme, text, ...args }) => (
-			<fieldset>
-				<ThemeProvider theme={theme}>
-					<Legend text={text} {...args} />
-				</ThemeProvider>
-			</fieldset>
-		);
-		story.args = { ...baseArgs, ...args };
-		story.parameters = {
-			...baseParameters,
-			docs: {
-				source: {
-					code: getDemoCode({ ...story.args }),
-				},
-			},
-		};
-		return story;
-	};
-
-	return [
-		story(),
-		story({
-			supporting: 'alex@example.com',
-		}),
-		story({
-			supporting: (
-				<span role="img" aria-label="Image of a letter">
-					💌
-				</span>
-			),
-		}),
-		story({
-			optional: true,
-		}),
-		story({
-			hideLabel: true,
-		}),
-	];
+export const DefaultTheme = Template.bind({});
+DefaultTheme.parameters = {
+	backgrounds: {
+		default: 'background.primary',
+	},
+	theme: labelDefault,
 };
+asChromaticStory(DefaultTheme);
 
-export const [
-	DefaultTheme,
-	DefaultThemeWithSupportingText,
-	DefaultThemeWithSupportingComponent,
-	DefaultThemeWithOptional,
-	DefaultThemeWithHiddenLabel,
-] = getStories('labelDefault');
+// *****************************************************************************
 
-export const [
-	BrandTheme,
-	BrandThemeWithSupportingText,
-	BrandThemeWithSupportingComponent,
-	BrandThemeWithOptional,
-	BrandThemeWithHiddenLabel,
-] = getStories('labelBrand', 'brandBackground.primary');
+export const DefaultThemeWithSupportingText = Template.bind({});
+DefaultThemeWithSupportingText.args = {
+	supporting: 'alex@example.com',
+};
+DefaultThemeWithSupportingText.parameters = {
+	backgrounds: {
+		default: 'background.primary',
+	},
+	theme: labelDefault,
+};
+asChromaticStory(DefaultThemeWithSupportingText);
+
+// *****************************************************************************
+
+export const DefaultThemeWithSupportingComponent = Template.bind({});
+DefaultThemeWithSupportingComponent.args = {
+	supporting: 'component',
+};
+DefaultThemeWithSupportingComponent.parameters = {
+	backgrounds: {
+		default: 'background.primary',
+	},
+	theme: labelDefault,
+};
+asChromaticStory(DefaultThemeWithSupportingComponent);
+
+// *****************************************************************************
+
+export const DefaultThemeWithOptional = Template.bind({});
+DefaultThemeWithOptional.args = {
+	optional: true,
+};
+DefaultThemeWithOptional.parameters = {
+	backgrounds: {
+		default: 'background.primary',
+	},
+	theme: labelDefault,
+};
+asChromaticStory(DefaultThemeWithOptional);
+
+// *****************************************************************************
+
+export const DefaultThemeWithHiddenLabel = Template.bind({});
+DefaultThemeWithHiddenLabel.args = {
+	hideLabel: true,
+};
+DefaultThemeWithHiddenLabel.parameters = {
+	backgrounds: {
+		default: 'background.primary',
+	},
+	theme: labelDefault,
+};
+asChromaticStory(DefaultThemeWithHiddenLabel);
+
+// *****************************************************************************
+
+export const BrandTheme = Template.bind({});
+BrandTheme.parameters = {
+	backgrounds: {
+		default: 'brandBackground.primary',
+	},
+	theme: labelBrand,
+};
+asChromaticStory(BrandTheme);
+
+// *****************************************************************************
+
+export const BrandThemeWithSupportingText = Template.bind({});
+BrandThemeWithSupportingText.args = {
+	supporting: 'alex@example.com',
+};
+BrandThemeWithSupportingText.parameters = {
+	backgrounds: {
+		default: 'brandBackground.primary',
+	},
+	theme: labelBrand,
+};
+asChromaticStory(BrandThemeWithSupportingText);
+
+// *****************************************************************************
+
+export const BrandThemeWithSupportingComponent = Template.bind({});
+BrandThemeWithSupportingComponent.args = {
+	supporting: (
+		<span role="img" aria-label="Image of a letter">
+			💌
+		</span>
+	),
+};
+BrandThemeWithSupportingComponent.parameters = {
+	backgrounds: {
+		default: 'brandBackground.primary',
+	},
+	theme: labelBrand,
+};
+asChromaticStory(BrandThemeWithSupportingComponent);
+
+// *****************************************************************************
+
+export const BrandThemeWithOptional = Template.bind({});
+BrandThemeWithOptional.args = {
+	optional: true,
+};
+BrandThemeWithOptional.parameters = {
+	backgrounds: {
+		default: 'brandBackground.primary',
+	},
+	theme: labelBrand,
+};
+asChromaticStory(BrandThemeWithOptional);
+
+// *****************************************************************************
+
+export const BrandThemeWithHiddenLabel = Template.bind({});
+BrandThemeWithHiddenLabel.args = {
+	hideLabel: true,
+};
+BrandThemeWithHiddenLabel.parameters = {
+	backgrounds: {
+		default: 'brandBackground.primary',
+	},
+	theme: labelBrand,
+};
+asChromaticStory(BrandThemeWithHiddenLabel);
+
+// *****************************************************************************
