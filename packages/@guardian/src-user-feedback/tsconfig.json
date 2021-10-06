@@ -1,22 +1,22 @@
 {
-  "extends": "../../../../tsconfig.json",
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
     "outDir": "dist/types",
     "declaration": true,
     "emitDeclarationOnly": true,
     "composite": true
   },
-  "include": [".", "../../foundations/types/themes.d.ts"],
+  "include": [".", "../../../src/core/foundations/types/themes.d.ts"],
   "exclude": ["dist", "*.stories.tsx"],
   "references": [
     {
-      "path": "../../foundations"
+      "path": "../../../src/core/foundations"
     },
     {
-      "path": "../../icons"
+      "path": "../../../src/core/icons"
     },
     {
-      "path": "../../helpers"
+      "path": "../../../src/core/helpers"
     }
   ]
 }

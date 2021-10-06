@@ -15,7 +15,7 @@
       ],
       "@guardian/src-foundations/utils": ["src/core/foundations/src/utils"],
       "@guardian/src-label": ["packages/@guardian/src-label"],
-      "@guardian/src-user-feedback": ["src/core/components/user-feedback"],
+      "@guardian/src-user-feedback": ["packages/@guardian/src-user-feedback"],
       "@guardian/src-helpers": ["src/core/helpers"],
       "@guardian/src-icons": ["src/core/icons"]
     },
