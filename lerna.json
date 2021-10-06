@@ -4,7 +4,11 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "ignoreChanges": ["src/**/*", "packages/@guardian/source-foundations"]
+      "ignoreChanges": [
+        "src/**/*",
+        "scripts/**/*",
+        "packages/@guardian/source-foundations"
+      ]
     }
   }
 }
