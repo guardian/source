@@ -6,7 +6,7 @@ import {
 	decideBackground,
 	toggleSwitchStyles,
 	slimStyles,
-	thickStyles,
+	mediumStyles,
 } from './styles';
 
 export type Size = 'medium' | 'slim';
@@ -92,7 +92,7 @@ export const ToggleSwitch = ({
 		<div
 			css={[
 				toggleSwitchStyles(background),
-				isSlim ? slimStyles() : thickStyles(),
+				isSlim ? slimStyles() : mediumStyles(),
 				cssOverrides,
 			]}
 			{...props}

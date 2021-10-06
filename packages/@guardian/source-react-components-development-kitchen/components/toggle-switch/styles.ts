@@ -66,7 +66,7 @@ export const toggleSwitchStyles = (background: SerializedStyles) => css`
 	}
 `;
 
-export const thickStyles = () => css`
+export const mediumStyles = () => css`
 	button {
 		width: 3.125rem;
 		height: 1.9rem;
