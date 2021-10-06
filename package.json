@@ -29,6 +29,7 @@
     "lint:styles": "stylelint src/core/**/styles.ts",
     "prepare": "husky install",
     "publish:release": "ts-node ./scripts/publish-release",
+    "release:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen release",
     "release:major:src": "yarn build:src && yarn validate && yarn verbump:major:src && yarn publish:release",
     "release:minor:src": "yarn build:src && yarn validate && yarn verbump:minor:src && yarn publish:release",
     "release:patch:src": "yarn build:src && yarn validate && yarn verbump:patch:src && yarn publish:release",
@@ -67,7 +68,7 @@
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-typescript": "^7.14.5",
-    "@emotion/babel-preset-css-prop": "^11.0.0",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.1.2",
     "@guardian/prettier": "^0.6.0",
     "@storybook/addon-a11y": "^6.3.6",
@@ -97,13 +98,13 @@
     "regenerator-runtime": "^0.13.7",
     "sort-package-json": "^1.48.1",
     "stylelint": "^13.13.1",
-    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "ts-dedent": "^2.2.0",
     "ts-jest": "^27.0.5",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3",
-    "webpack": "^5.50.0"
+    "webpack": "^5.57.1"
   }
 }
