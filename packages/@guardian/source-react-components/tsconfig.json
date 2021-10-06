@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@guardian/source-foundations": ["../../source-foundations/src"]
+    },
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationMap": true,
