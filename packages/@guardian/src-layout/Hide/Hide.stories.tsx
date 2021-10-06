@@ -1,9 +1,6 @@
 import { Hide, HideProps } from './Hide';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
-import { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import { asChromaticStory, asPlayground } from '../../../../lib/story-intents';
+import { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
 
 export default {
 	title: 'Source/src-layout/Hide',

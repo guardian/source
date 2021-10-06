@@ -1,21 +1,23 @@
-import { Stack, StackProps } from './Stack';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
-import { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import React from 'react';
+import { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
+import { Inline, InlineProps } from './Inline';
+import { asChromaticStory, asPlayground } from '../../../../lib/story-intents';
 
 export default {
-	title: 'Source/src-layout/Stack',
-	component: Stack,
+	title: 'Source/src-layout/Inline',
+	component: Inline,
 };
 
-const Template: Story = (args: StackProps) => (
-	<Stack {...args}>
-		<div>Item 1</div>
-		<div>Item 2</div>
-		<div>Item 3</div>
-	</Stack>
+const Template: Story = (args: InlineProps) => (
+	<Inline {...args}>
+		{args.children ?? (
+			<>
+				<div>[Item 1]</div>
+				<div>[Item 2]</div>
+				<div>[Item 3]</div>
+			</>
+		)}
+	</Inline>
 );
 
 // *****************************************************************************
@@ -25,8 +27,8 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const Default = Template.bind({});
-asChromaticStory(Default);
+export const NoSpace = Template.bind({});
+asChromaticStory(NoSpace);
 
 // *****************************************************************************
 
@@ -99,3 +101,32 @@ Space24.args = {
 	space: 24,
 };
 asChromaticStory(Space24);
+
+// *****************************************************************************
+
+export const LotsOfItems = Template.bind({});
+LotsOfItems.args = {
+	children: [
+		<div key={1}>[Item 1]</div>,
+		<div key={2}>[Item 2]</div>,
+		<div key={3}>[Item 3]</div>,
+		<div key={4}>[Item 4]</div>,
+		<div key={5}>[Item 5]</div>,
+		<div key={6}>[Item 6]</div>,
+		<div key={7}>[Item 7]</div>,
+		<div key={8}>[Item 8]</div>,
+		<div key={9}>[Item 9]</div>,
+		<div key={10}>[Item 10]</div>,
+		<div key={11}>[Item 11]</div>,
+		<div key={12}>[Item 12]</div>,
+		<div key={13}>[Item 13]</div>,
+		<div key={14}>[Item 14]</div>,
+		<div key={15}>[Item 15]</div>,
+		<div key={16}>[Item 16]</div>,
+		<div key={17}>[Item 17]</div>,
+		<div key={18}>[Item 18]</div>,
+		<div key={19}>[Item 19]</div>,
+		<div key={20}>[Item 20]</div>,
+	],
+};
+asChromaticStory(LotsOfItems);
