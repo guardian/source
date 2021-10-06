@@ -3,7 +3,7 @@ import * as themes from '@guardian/src-foundations/themes';
 import type {
 	Args,
 	Story,
-} from '../../../../lib/@types/storybook-emotion-10-fixes';
+} from '../../../lib/@types/storybook-emotion-10-fixes';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 import { dedent } from 'ts-dedent';
