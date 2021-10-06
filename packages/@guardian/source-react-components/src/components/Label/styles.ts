@@ -1,6 +1,11 @@
 import { css } from '@emotion/react';
 import type { SerializedStyles } from '@emotion/react';
-import { _visuallyHidden, labelDefault, resets, textSans } from './foundations';
+import {
+	_visuallyHidden,
+	labelDefault,
+	resets,
+	textSans,
+} from './temporary-reexports';
 
 export const legend = css`
 	${resets.legend};
