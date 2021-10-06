@@ -1,13 +1,12 @@
-import { css } from '@emotion/react';
-import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { LabelProps } from './Label';
-import { labelText, optionalText } from './styles';
+import { labelText, optionalText, visuallyHidden } from './styles';
 
-const visuallyHidden = css`
-	${_visuallyHidden}
-`;
-
-export const Text = ({ text, optional, hideLabel }: LabelProps) => (
+export const Text = ({
+	text,
+	optional,
+	hideLabel,
+}: LabelProps): EmotionJSX.Element => (
 	<div
 		css={(theme) => [
 			labelText(theme.label && theme),

@@ -1,11 +1,6 @@
-import { css } from '@emotion/react';
-import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { ReactNode } from 'react';
-import { supportingText } from './styles';
-
-const visuallyHidden = css`
-	${_visuallyHidden}
-`;
+import { supportingText, visuallyHidden } from './styles';
 
 export const SupportingText = ({
 	hideLabel,
@@ -13,7 +8,7 @@ export const SupportingText = ({
 }: {
 	hideLabel?: boolean;
 	children: ReactNode;
-}) => {
+}): EmotionJSX.Element => {
 	return (
 		<p
 			css={(theme) => [
