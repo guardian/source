@@ -18,6 +18,7 @@
     "tsc": "tsc -b"
   },
   "dependencies": {
+    "@guardian/src-accordion": "3.9.0",
     "@guardian/src-label": "3.9.0"
   },
   "devDependencies": {

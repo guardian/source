@@ -1,7 +1,7 @@
 brand: ['src/core/brand']
 foundations: ['src/core/foundations']
 icons: ['src/core/icons']
-accordion: ['src/core/components/accordion']
+accordion: ['packages/@guardian/src-accordion']
 button: ['src/core/components/button']
 checkbox: ['src/core/components/checkbox']
 choice card: ['src/core/components/choice-card']

@@ -14,6 +14,7 @@
     "build": "npm-run-all build:src -p build:kitchen build:foundations -s build:storybook",
     "build:foundations": "yarn workspace @guardian/source-foundations build",
     "build:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen build",
+    "build:react-components": "yarn workspace @guardian/source-react-components build",
     "build:src": "ts-node ./scripts/build-src",
     "build:storybook": "build-storybook -o dist",
     "build:storybook:ci": "NODE_ENV=production build-storybook -o dist",
