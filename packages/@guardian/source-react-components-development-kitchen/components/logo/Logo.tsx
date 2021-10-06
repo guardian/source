@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
 import { brandAlt, brandText } from '@guardian/src-foundations/palette';
-import { Link } from '@guardian/src-link';
 import { from } from '@guardian/src-foundations/mq';
 import { visuallyHidden } from '@guardian/src-foundations/accessibility';
 import { SvgGuardianLogo } from '@guardian/src-brand';
