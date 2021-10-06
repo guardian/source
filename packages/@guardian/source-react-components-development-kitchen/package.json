@@ -17,7 +17,8 @@
     "build:esm": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/esm --module ES6",
     "build:types": "tsc -b",
     "clean": "rm -rf dist",
-    "prepublish": "yarn build",
+    "prepack": "yarn build",
+    "prepublishOnly": "yarn build",
     "release": "np"
   },
   "dependencies": {
