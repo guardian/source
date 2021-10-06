@@ -9,7 +9,7 @@ import {
 	thickStyles,
 } from './styles';
 
-export type Size = 'normal' | 'slim';
+export type Size = 'medium' | 'slim';
 export interface ToggleSwitchProps extends Props {
 	/**
 	 * A theme object denoting the style of the button using the enums
@@ -73,7 +73,7 @@ export const ToggleSwitch = ({
 	label,
 	defaultChecked,
 	cssOverrides,
-	size = 'normal',
+	size = 'medium',
 	onClick = () => undefined,
 	...props
 }: ToggleSwitchProps) => {
