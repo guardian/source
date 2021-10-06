@@ -1,11 +1,6 @@
 import { css } from '@emotion/react';
 import type { SerializedStyles } from '@emotion/react';
-import {
-	visuallyHidden as _visuallyHidden,
-	resets,
-	textSans,
-} from '@guardian/source-foundations';
-import { labelDefault } from './theme';
+import { _visuallyHidden, labelDefault, resets, textSans } from './foundations';
 
 export const legend = css`
 	${resets.legend};
