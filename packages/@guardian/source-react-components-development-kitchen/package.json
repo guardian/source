@@ -16,7 +16,8 @@
     "build:cjs": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/cjs --module commonjs",
     "build:esm": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/esm --module ES6",
     "build:types": "tsc -b",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@guardian/src-button": "^3.9.0",
