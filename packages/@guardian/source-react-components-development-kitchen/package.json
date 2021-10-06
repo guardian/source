@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components-development-kitchen",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "dist/cjs/index.js",
@@ -12,7 +12,7 @@
     "dist/types"
   ],
   "scripts": {
-    "build": "npm-run-all clean --parallel build:*",
+    "build": "npm-run-all clean build:types --parallel build:cjs build:esm",
     "build:cjs": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/cjs --module commonjs",
     "build:esm": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/esm --module ES6",
     "build:types": "tsc -b",
