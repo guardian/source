@@ -30,7 +30,7 @@ export interface LabelProps
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-label-label-) •
  * [Design System](https://theguardian.design/2a1e5182b/p/40151e-label/b/86af7d) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/label) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/src-label) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-label)
  *
  * A label describes a user input field.
