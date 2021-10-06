@@ -2,9 +2,7 @@
 // way of doing things. e.g. `@guardian/source-foundations` vs `@guardian/src-foundations`
 // It will be removed once migration is complete.
 
-export {
-	visuallyHidden as _visuallyHidden,
-	resets,
-	textSans,
-} from '@guardian/source-foundations';
-export { labelDefault, labelBrand } from './theme';
+export type {
+	Args,
+	Story,
+} from '../../../../lib/@types/storybook-emotion-10-fixes';

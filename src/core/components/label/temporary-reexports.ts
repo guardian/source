@@ -3,6 +3,6 @@
 // It will be removed once migration is complete.
 
 export { textSans } from '@guardian/src-foundations/typography';
-export { labelDefault } from '@guardian/src-foundations/themes';
+export { labelDefault, labelBrand } from '@guardian/src-foundations/themes';
 export { resets } from '@guardian/src-foundations/utils';
 export { visuallyHidden as _visuallyHidden } from '@guardian/src-foundations/accessibility';

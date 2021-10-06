@@ -1,15 +1,14 @@
 import { ThemeProvider } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import * as themes from '@guardian/source-foundations';
+import { labelBrand, labelDefault } from './temporary-reexports';
 import { dedent } from 'ts-dedent';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-import type {
-	Args,
-	Story,
-} from '../../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Args, Story } from './temporary-story-reexports';
 import type { LegendProps } from './Legend';
 import { Legend } from './Legend';
+
+const themes = { labelBrand, labelDefault };
 
 export default {
 	title: 'Source/src-label/Legend',
