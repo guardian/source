@@ -2,8 +2,8 @@ import { SvgExternal } from '@guardian/src-icons';
 import { ButtonLink } from './ButtonLink';
 import { linkDefault } from './index';
 import { ButtonLinkProps } from './ButtonLink';
-import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
+import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-link/ButtonLink',
