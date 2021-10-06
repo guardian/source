@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Checkbox, CheckboxGroup, checkboxBrand } from './index';
 import CheckboxStories from './Checkbox.stories';
 import type { CheckboxGroupProps } from './CheckboxGroup';
-import type { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../../lib/story-intents';
+import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
+import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 
 export default {
 	title: 'Source/src-checkbox/CheckboxGroup',
