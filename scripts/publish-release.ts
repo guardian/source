@@ -20,9 +20,9 @@ const prioritisedPackages = [
 	helpers,
 	icons,
 	brand,
-	`${coreComponents}/user-feedback`,
-	`${coreComponents}/label`,
-	`${coreComponents}/button`,
+	`${coreComponents}/src-user-feedback`,
+	`${coreComponents}/src-label`,
+	`${coreComponents}/src-button`,
 ];
 
 // Publish these packages in parallel

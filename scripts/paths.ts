@@ -10,7 +10,7 @@ const foundations = join(__dirname, '../src/core/foundations');
 const icons = join(__dirname, '../src/core/icons');
 const brand = join(__dirname, '../src/core/brand');
 const helpers = join(__dirname, '../src/core/helpers');
-const coreComponents = join(__dirname, '../src/core/components');
+const coreComponents = join(__dirname, '../packages/@guardian');
 const kitchenComponents = join(
 	__dirname,
 	'../packages/@guardian/source-react-components-development-kitchen/components',
@@ -23,15 +23,17 @@ export const getComponentPaths = () =>
 	readdirP(coreComponents)
 		.then((componentDirs) =>
 			Promise.all(
-				componentDirs.map((componentDirName) =>
-					isDirectory(`${coreComponents}/${componentDirName}`).then(
-						(isDir) => {
+				componentDirs
+					.filter((name) => name.startsWith('src-'))
+					.map((componentDirName) =>
+						isDirectory(
+							`${coreComponents}/${componentDirName}`,
+						).then((isDir) => {
 							if (!isDir) return;
 
 							return `${coreComponents}/${componentDirName}`;
-						},
+						}),
 					),
-				),
 			),
 		)
 		.then((paths) => Promise.resolve(paths.filter((path) => !!path)));
