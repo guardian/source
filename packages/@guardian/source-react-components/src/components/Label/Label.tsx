@@ -1,4 +1,5 @@
 import type { SerializedStyles } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { Props } from '@guardian/src-helpers';
 import type { LabelHTMLAttributes, ReactNode } from 'react';
 import { SupportingText } from './SupportingText';
@@ -48,7 +49,7 @@ export const Label = ({
 	cssOverrides,
 	children,
 	...props
-}: LabelProps) => {
+}: LabelProps): EmotionJSX.Element => {
 	return (
 		<label css={cssOverrides} {...props}>
 			<Text hideLabel={hideLabel} text={text} optional={optional} />

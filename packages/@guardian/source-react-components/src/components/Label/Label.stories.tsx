@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import * as themes from '@guardian/source-foundations';
 import { dedent } from 'ts-dedent';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
@@ -15,7 +16,7 @@ export default {
 	component: Label,
 };
 
-export const Demo = (args: LabelProps) => (
+export const Demo = (args: LabelProps): EmotionJSX.Element => (
 	<Label {...args}>
 		<input type="text" />
 	</Label>
