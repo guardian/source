@@ -4,15 +4,16 @@ import { Link } from '@guardian/src-link';
 import { from } from '@guardian/src-foundations/mq';
 import { visuallyHidden } from '@guardian/src-foundations/accessibility';
 import { SvgGuardianLogo } from '@guardian/src-brand';
+import type { Props } from '@guardian/src-helpers';
 
 type LogoType = 'standard' | 'anniversary' | 'bestWebsite';
 
-export type LogoProps = {
+export interface LogoProps extends Props {
 	/**
 	 * The type of logo to return
 	 */
 	logoType?: LogoType;
-};
+}
 
 const svgSize = css`
 	svg {
@@ -114,25 +115,22 @@ const DecideLogo = ({ logoType }: { logoType: LogoType }) => {
 	}
 };
 
+const logoStyles = css`
+	/* Adding block display here so that the focus halo correctly covers the content */
+	display: block;
+`;
+
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-logo--storybook) •
  * [Design System](https://theguardian.design) •
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/logo) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  */
-export const Logo = ({ logoType = 'standard' }: LogoProps) => (
-	<Link
+export const Logo = ({ logoType = 'standard', cssOverrides }: LogoProps) => (
+	<a
 		href="https://www.theguardian.com"
 		title="The Guardian Homepage"
-		subdued={true}
-		cssOverrides={css`
-			/* Adding block display here so that the focus halo correctly covers the content */
-			display: block;
-			color: ${brandText.primary};
-			:hover {
-				color: ${brandText.primary};
-			}
-		`}
+		css={[logoStyles, cssOverrides]}
 	>
 		<span
 			css={css`
@@ -142,5 +140,5 @@ export const Logo = ({ logoType = 'standard' }: LogoProps) => (
 			The Guardian - Back to home
 		</span>
 		<DecideLogo logoType={logoType} />
-	</Link>
+	</a>
 );
