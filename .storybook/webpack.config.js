@@ -42,7 +42,10 @@ module.exports = ({ config, mode }) => {
 			__dirname,
 			'../packages/@guardian/src-user-feedback',
 		),
-		'@guardian/src-helpers': path.resolve(__dirname, '../src/core/helpers'),
+		'@guardian/src-helpers': path.resolve(
+			__dirname,
+			'../packages/@guardian/src-helpers',
+		),
 	};
 
 	return config;
