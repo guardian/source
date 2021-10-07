@@ -1612,26 +1612,6 @@
   resolved "https://registry.yarnpkg.com/@guardian/prettier/-/prettier-0.6.0.tgz#b3dcbef0e2a9232d2afe04dff075426b2939f44e"
   integrity sha512-RN8GBRth5BXHoWymCZIYDbmZM8DkUbgecf+wyv+9hdXA/ad4Ob4qP9u/ARU689qMo+JSC1z3FRKelvkkjtYzJw==
 
-"@guardian/src-button@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.npmjs.org/@guardian/src-button/-/src-button-3.9.0.tgz#566a6d1b559c7bf6fed60fc7b6cb5a53b270246e"
-  integrity sha512-8li8HJjAT0Yo07bDnSIulnLcDfo9U+zrEin60opMWt4viokDSndxDTH43n0h9590XxxKBpe94rSSHCaWhEecQg==
-  dependencies:
-    "@guardian/src-helpers" "^3.9.0"
-
-"@guardian/src-foundations@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.npmjs.org/@guardian/src-foundations/-/src-foundations-3.9.0.tgz#573cc294ff607698941f90e544826f598fd66fad"
-  integrity sha512-jc0tA10MFeJ/mXKFSQngF9CAQIpZVvUD3GI/qWlMyRUttjEBsYlEbvFddqsTz2GdFZxrzyERSfIVunNQ8jTQgA==
-
-"@guardian/src-helpers@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.npmjs.org/@guardian/src-helpers/-/src-helpers-3.9.0.tgz#257b8d158aac28177fcfc0a1a5379c41733ab273"
-  integrity sha512-JjP31frx+E1cN8cajE8wC6eLxEFW0w8H5vOiPgXlYmSV0sWAtH4bqo/ohQBl+ra6RPYrReAbNDmMjJJ57m3lMQ==
-  dependencies:
-    "@guardian/src-foundations" "^3.9.0"
-    mini-svg-data-uri "^1.3.3"
-
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
