@@ -28,7 +28,7 @@
   "include": ["."],
   "references": [
     {
-      "path": "../../../src/core/foundations"
+      "path": "../src-foundations"
     }
   ]
 }

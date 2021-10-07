@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/mq/mq.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/mq/mq.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/mq.ts
 
 import { breakpoints } from './breakpoints';

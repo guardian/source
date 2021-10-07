@@ -5,12 +5,12 @@ import {
 	brandBackground,
 	brandAltBackground,
 	text,
-} from '../src/core/foundations/src';
+} from '../packages/@guardian/src-foundations/src';
 import {
 	headline,
 	body,
 	textSans,
-} from '../src/core/foundations/src/typography/obj';
+} from '../packages/@guardian/src-foundations/src/typography/obj';
 
 export const theme = create({
 	base: 'light',
