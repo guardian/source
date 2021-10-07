@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/breakpoints.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/breakpoints.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/breakpoints.ts
 
 export type Breakpoint =

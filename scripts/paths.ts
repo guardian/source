@@ -6,8 +6,8 @@ const readdirP = promisify(readdir);
 const statP = promisify(stat);
 
 const root = join(__dirname, '..');
-const foundations = join(__dirname, '../src/core/foundations');
-const icons = join(__dirname, '../src/core/icons');
+const foundations = join(__dirname, '../packages/@guardian/src-foundations');
+const icons = join(__dirname, '../packages/@guardian/src-icons');
 const brand = join(__dirname, '../src/core/brand');
 const helpers = join(__dirname, '../packages/@guardian/src-helpers');
 const coreComponents = join(__dirname, '../packages/@guardian');
