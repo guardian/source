@@ -20,8 +20,8 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@guardian/src-button": "^3.9.0",
-    "@guardian/src-helpers": "^3.9.0"
+    "@guardian/src-button": "^3.9.1",
+    "@guardian/src-helpers": "^3.9.1"
   },
   "devDependencies": {
     "@guardian/libs": "^3.2.1",
@@ -32,8 +32,8 @@
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
     "@guardian/libs": "^3.2.1",
-    "@guardian/src-foundations": "^3.9.0",
-    "@guardian/src-icons": "^3.9.0",
+    "@guardian/src-foundations": "^3.9.1",
+    "@guardian/src-icons": "^3.9.1",
     "react": "^17.0.1"
   },
   "publishConfig": {

@@ -1,6 +1,6 @@
 {
   "name": "@guardian/src-brand",
-  "version": "3.9.1-rc.1",
+  "version": "3.9.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
@@ -36,7 +36,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
-    "@guardian/src-foundations": "^3.9.1-rc.1",
+    "@guardian/src-foundations": "^3.9.1",
     "react": "^17.0.1"
   }
 }
