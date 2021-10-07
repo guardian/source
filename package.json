@@ -5,7 +5,6 @@
   "license": "Apache-2.0",
   "workspaces": [
     "src/core/*",
-    "src/core/components/*",
     "packages/@guardian/*",
     "scripts/get-usage",
     "scripts/validate-dist"
