@@ -1,0 +1,24 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "include": [".", "../../../src/core/foundations/types/themes.d.ts"],
+  "exclude": ["dist", "*.stories.tsx"],
+  "references": [
+    {
+      "path": "../../../src/core/foundations"
+    },
+    {
+      "path": "../../../src/core/helpers"
+    },
+    {
+      "path": "../src-user-feedback"
+    },
+    {
+      "path": "../src-label"
+    }
+  ]
+}

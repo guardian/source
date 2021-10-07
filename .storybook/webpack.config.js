@@ -36,11 +36,11 @@ module.exports = ({ config, mode }) => {
 		),
 		'@guardian/src-label': path.resolve(
 			__dirname,
-			'../src/core/components/label',
+			'../packages/@guardian/src-label',
 		),
 		'@guardian/src-user-feedback': path.resolve(
 			__dirname,
-			'../src/core/components/user-feedback',
+			'../packages/@guardian/src-user-feedback',
 		),
 		'@guardian/src-helpers': path.resolve(__dirname, '../src/core/helpers'),
 	};
