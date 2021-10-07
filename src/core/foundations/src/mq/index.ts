@@ -1,2 +1,3 @@
 export { from, until, between } from './mq';
-export { Breakpoint, breakpoints } from '../breakpoints';
+export { breakpoints } from '../breakpoints';
+export type { Breakpoint } from '../breakpoints';
