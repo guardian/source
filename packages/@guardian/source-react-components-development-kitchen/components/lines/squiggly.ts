@@ -1,5 +1,5 @@
-import { LineCount } from '.';
 import { svgBackgroundImage } from '@guardian/src-helpers';
+import type { LineCount } from '.';
 
 const wavelength = 12;
 const amplitude = 3;

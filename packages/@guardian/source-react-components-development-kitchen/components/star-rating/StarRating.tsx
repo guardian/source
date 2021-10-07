@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { remSpace } from '@guardian/src-foundations';
 import type { Props } from '@guardian/src-helpers';
 import { starBackground } from './star';
@@ -56,7 +57,7 @@ export const StarRating = ({
 	size,
 	cssOverrides,
 	...props
-}: StarRatingProps) => {
+}: StarRatingProps): EmotionJSX.Element => {
 	const backgroundImage = css`
 		background-image: ${starBackground(rating)};
 		background-repeat: no-repeat;

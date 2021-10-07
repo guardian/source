@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
-import { ArticleFormat, ArticlePillar, ArticleSpecial } from '@guardian/libs';
-import { SvgQuote } from '@guardian/src-icons';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import type { ArticleFormat } from '@guardian/libs';
+import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import {
 	culture,
 	labs,
@@ -10,6 +11,7 @@ import {
 	specialReport,
 	sport,
 } from '@guardian/src-foundations';
+import { SvgQuote } from '@guardian/src-icons';
 
 const quoteColor = (format: ArticleFormat) => {
 	switch (format.theme) {
@@ -128,7 +130,10 @@ export type QuoteIconProps = {
  * The Guardian quote icon is used in kickers, headlines, drop caps and pull quotes to denote quoted text.
  *
  */
-export const QuoteIcon = ({ format, size }: QuoteIconProps) => (
+export const QuoteIcon = ({
+	format,
+	size,
+}: QuoteIconProps): EmotionJSX.Element => (
 	<span css={[sizeStyles(size), quoteColor(format)]}>
 		<SvgQuote />
 	</span>

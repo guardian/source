@@ -1,5 +1,5 @@
-import { LineCount } from '.';
 import { svgBackgroundImage } from '@guardian/src-helpers';
+import type { LineCount } from '.';
 
 const dotRadius = 1;
 const gridSize = 3;
@@ -26,5 +26,5 @@ const dottedSvg = (count: LineCount, color: string): string => {
 	return svg.join();
 };
 
-export const dottedImage = (count: LineCount, color: string) =>
+export const dottedImage = (count: LineCount, color: string): string =>
 	svgBackgroundImage(dottedSvg(count, color));

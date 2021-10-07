@@ -1,4 +1,4 @@
-import { ArticleFormat } from '@guardian/libs';
+import type { ArticleFormat } from '@guardian/libs';
 
 export interface SharedEditorialButtonProps {
 	/**

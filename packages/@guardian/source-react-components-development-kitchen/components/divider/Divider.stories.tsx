@@ -1,9 +1,10 @@
-import { Divider, DividerProps } from './index';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import type { DividerProps } from './index';
+import { Divider } from './index';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Divider',

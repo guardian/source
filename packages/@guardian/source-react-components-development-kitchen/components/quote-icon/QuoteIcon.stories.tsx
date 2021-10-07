@@ -4,12 +4,13 @@ import {
 	ArticlePillar,
 	ArticleSpecial,
 } from '@guardian/libs';
-import { QuoteIcon, QuoteIconProps } from './QuoteIcon';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import type { QuoteIconProps } from './QuoteIcon';
+import { QuoteIcon } from './QuoteIcon';
 
 const defaultFormat = {
 	display: ArticleDisplay.Standard,

@@ -1,9 +1,10 @@
-import { SuccessSummary, SuccessSummaryProps } from './SuccessSummary';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import type { SuccessSummaryProps } from './SuccessSummary';
+import { SuccessSummary } from './SuccessSummary';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Success Summary',

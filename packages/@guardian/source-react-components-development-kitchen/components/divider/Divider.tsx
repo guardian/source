@@ -1,9 +1,11 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { border, text } from '@guardian/src-foundations/palette';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { space } from '@guardian/src-foundations';
+import { border, text } from '@guardian/src-foundations/palette';
 import { textSans } from '@guardian/src-foundations/typography';
-import { partialStyles, fullStyles } from './styles';
-import { Props } from '@guardian/src-helpers';
+import type { Props } from '@guardian/src-helpers';
+import { fullStyles, partialStyles } from './styles';
 
 type Size = 'full' | 'partial';
 type Space = 'tight' | 'loose';
@@ -42,7 +44,7 @@ export const Divider = ({
 	spaceAbove = 'loose',
 	displayText,
 	cssOverrides,
-}: DividerProps) => {
+}: DividerProps): EmotionJSX.Element => {
 	if (displayText) {
 		return (
 			<div

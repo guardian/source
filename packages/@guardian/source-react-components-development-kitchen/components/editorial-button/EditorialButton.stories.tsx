@@ -5,13 +5,14 @@ import {
 	ArticlePillar,
 	ArticleSpecial,
 } from '@guardian/libs';
-import { EditorialButton, EditorialButtonProps } from './index';
 import { SvgCross } from '@guardian/src-icons';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import { EditorialButton } from './index';
+import type { EditorialButtonProps } from './index';
 
 const defaultFormat = {
 	display: ArticleDisplay.Standard,

@@ -1,16 +1,17 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { space } from '@guardian/src-foundations';
-import { textSans } from '@guardian/src-foundations/typography';
 import { size } from '@guardian/src-foundations/size';
+import { textSans } from '@guardian/src-foundations/typography';
 
-export const wrapperStyles = (color: string) => css`
+export const wrapperStyles = (color: string): SerializedStyles => css`
 	border: 4px solid ${color};
 	padding: ${space[1]}px;
 
 	display: flex;
 `;
 
-export const iconStyles = (color: string) => css`
+export const iconStyles = (color: string): SerializedStyles => css`
 	display: flex;
 	flex: 0 1 auto;
 	margin-top: 1px;
@@ -21,7 +22,7 @@ export const iconStyles = (color: string) => css`
 	}
 `;
 
-export const messageStyles = (color: string) => css`
+export const messageStyles = (color: string): SerializedStyles => css`
 	${textSans.medium({ fontWeight: 'bold' })}
 	color: ${color};
 `;

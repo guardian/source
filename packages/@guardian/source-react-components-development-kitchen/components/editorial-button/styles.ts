@@ -1,22 +1,22 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-
+import type { ArticleFormat } from '@guardian/libs';
 import {
 	ArticleDesign,
 	ArticleDisplay,
-	ArticleFormat,
 	ArticlePillar,
 	ArticleSpecial,
 } from '@guardian/libs';
-import { ButtonPriority } from '@guardian/src-button';
+import type { ButtonPriority } from '@guardian/src-button';
 import {
 	culture,
 	labs,
 	lifestyle,
+	neutral,
 	news,
 	opinion,
 	specialReport,
 	sport,
-	neutral,
 } from '@guardian/src-foundations';
 
 export const defaultFormat = {
@@ -30,7 +30,7 @@ const WHITE = neutral[100];
 export const decideBackground = (
 	format: ArticleFormat,
 	priority: ButtonPriority,
-) => {
+): SerializedStyles => {
 	switch (priority) {
 		case 'primary':
 		case 'secondary':
@@ -92,6 +92,7 @@ export const decideBackground = (
 						}
 					`;
 			}
+		// falls through
 		case 'subdued':
 		case 'tertiary':
 			return css`
@@ -103,7 +104,7 @@ export const decideBackground = (
 export const decideBorder = (
 	format: ArticleFormat,
 	priority: ButtonPriority,
-) => {
+): SerializedStyles => {
 	switch (priority) {
 		case 'primary':
 		case 'secondary':
@@ -118,7 +119,10 @@ export const decideBorder = (
 	}
 };
 
-export const decideFont = (format: ArticleFormat, priority: ButtonPriority) => {
+export const decideFont = (
+	format: ArticleFormat,
+	priority: ButtonPriority,
+): SerializedStyles => {
 	switch (priority) {
 		case 'primary':
 		case 'secondary':

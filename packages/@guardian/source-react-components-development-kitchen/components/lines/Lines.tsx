@@ -1,10 +1,11 @@
-import { Props } from '@guardian/src-helpers';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { line } from '@guardian/src-foundations/palette';
+import type { Props } from '@guardian/src-helpers';
 import {
-	straightLines,
-	squigglyLines,
-	dottedLines,
 	dashedLines,
+	dottedLines,
+	squigglyLines,
+	straightLines,
 } from './styles';
 
 type LineEffectType = 'squiggly' | 'dotted' | 'straight' | 'dashed';
@@ -36,7 +37,7 @@ export const Lines = ({
 	effect = 'straight',
 	count = 4,
 	color = line.primary,
-}: LinesProps) => {
+}: LinesProps): EmotionJSX.Element => {
 	switch (effect) {
 		case 'squiggly':
 			return <div css={squigglyLines(count, color)} />;

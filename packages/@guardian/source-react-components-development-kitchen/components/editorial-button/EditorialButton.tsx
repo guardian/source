@@ -1,14 +1,13 @@
-import {
-	Button as CoreButton,
-	ButtonProps as CoreButtonProps,
-} from '@guardian/src-button';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import type { ButtonProps as CoreButtonProps } from '@guardian/src-button';
+import { Button as CoreButton } from '@guardian/src-button';
 import {
 	decideBackground,
 	decideBorder,
 	decideFont,
 	defaultFormat,
 } from './styles';
-import { SharedEditorialButtonProps } from './types';
+import type { SharedEditorialButtonProps } from './types';
 
 export interface EditorialButtonProps
 	extends CoreButtonProps,
@@ -29,7 +28,7 @@ export const EditorialButton = ({
 	children,
 	priority = 'primary',
 	...props
-}: EditorialButtonProps) => {
+}: EditorialButtonProps): EmotionJSX.Element => {
 	const backgroundOverrides = decideBackground(format, priority);
 	const borderOverrides = decideBorder(format, priority);
 	const fontOverrides = decideFont(format, priority);

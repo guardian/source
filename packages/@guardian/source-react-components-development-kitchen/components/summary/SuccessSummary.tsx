@@ -1,13 +1,14 @@
-import { SvgTickRound } from '@guardian/src-icons';
-import type { Props } from '@guardian/src-helpers';
-import {
-	wrapperStyles,
-	iconStyles,
-	messageWrapperStyles,
-	messageStyles,
-	contextStyles,
-} from './styles';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { success as successColors } from '@guardian/src-foundations';
+import type { Props } from '@guardian/src-helpers';
+import { SvgTickRound } from '@guardian/src-icons';
+import {
+	contextStyles,
+	iconStyles,
+	messageStyles,
+	messageWrapperStyles,
+	wrapperStyles,
+} from './styles';
 
 export interface SuccessSummaryProps extends Props {
 	/**
@@ -25,7 +26,7 @@ export const SuccessSummary = ({
 	context,
 	cssOverrides,
 	...props
-}: SuccessSummaryProps) => (
+}: SuccessSummaryProps): EmotionJSX.Element => (
 	<div css={[wrapperStyles(successColors[400]), cssOverrides]} {...props}>
 		<div css={iconStyles(successColors[400])}>
 			<SvgTickRound />

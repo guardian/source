@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
-import { ArticlePillar, ArticleTheme } from '@guardian/libs';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import type { ArticleTheme } from '@guardian/libs';
+import { ArticlePillar } from '@guardian/libs';
 import { textSans } from '@guardian/src-foundations/typography';
 import type { Props } from '@guardian/src-helpers';
 import { decideBackground, toggleSwitchStyles } from './styles';
@@ -63,8 +65,7 @@ export const ToggleSwitch = ({
 	defaultChecked,
 	cssOverrides,
 	onClick = () => undefined,
-	...props
-}: ToggleSwitchProps) => {
+}: ToggleSwitchProps): EmotionJSX.Element => {
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
 			return checked;

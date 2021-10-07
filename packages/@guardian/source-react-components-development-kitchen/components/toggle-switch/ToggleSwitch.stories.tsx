@@ -1,12 +1,13 @@
-import { ToggleSwitch, ToggleSwitchProps } from './ToggleSwitch';
+import { css } from '@emotion/react';
+import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
+import { useState } from 'react';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
-import { useState } from 'react';
-import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
-import { css } from '@emotion/react';
+import type { ToggleSwitchProps } from './ToggleSwitch';
+import { ToggleSwitch } from './ToggleSwitch';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/ToggleSwitch',
@@ -20,7 +21,7 @@ const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 		<ToggleSwitch
 			{...args}
 			checked={checked}
-			onClick={(e) => {
+			onClick={() => {
 				setChecked(!checked);
 			}}
 		/>

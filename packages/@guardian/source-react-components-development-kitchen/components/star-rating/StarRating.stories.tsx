@@ -1,9 +1,10 @@
-import { StarRating, StarRatingProps } from './StarRating';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import type { StarRatingProps } from './StarRating';
+import { StarRating } from './StarRating';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Star Rating',

@@ -1,5 +1,7 @@
-import { css, SerializedStyles } from '@emotion/react';
-import { ArticleTheme, ArticlePillar, ArticleSpecial } from '@guardian/libs';
+import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+import type { ArticleTheme } from '@guardian/libs';
+import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import {
 	culture,
 	lifestyle,
@@ -11,7 +13,7 @@ import {
 
 export const defaultTheme = ArticlePillar.News;
 
-export const decideBackground = (theme: ArticleTheme) => {
+export const decideBackground = (theme: ArticleTheme): SerializedStyles => {
 	switch (theme) {
 		case ArticlePillar.News:
 		case ArticleSpecial.Labs:
@@ -38,7 +40,9 @@ export const decideBackground = (theme: ArticleTheme) => {
 	}
 };
 
-export const toggleSwitchStyles = (background: SerializedStyles) => css`
+export const toggleSwitchStyles = (
+	background: SerializedStyles,
+): SerializedStyles => css`
 	button {
 		border: none;
 		margin: 0 8px 0 0;

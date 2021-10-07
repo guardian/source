@@ -1,9 +1,10 @@
-import { Logo, LogoProps } from './Logo';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import type { LogoProps } from './Logo';
+import { Logo } from './Logo';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Logo',
@@ -27,7 +28,7 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-const TripleTemplate: Story = (args: LogoProps) => (
+const TripleTemplate: Story = () => (
 	<div>
 		<Logo logoType="standard" />
 		<br />

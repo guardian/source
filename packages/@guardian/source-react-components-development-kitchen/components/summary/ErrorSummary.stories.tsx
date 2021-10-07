@@ -1,9 +1,10 @@
-import { ErrorSummary, ErrorSummaryProps } from './ErrorSummary';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import type { ErrorSummaryProps } from './ErrorSummary';
+import { ErrorSummary } from './ErrorSummary';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Error Summary',

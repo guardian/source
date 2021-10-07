@@ -1,9 +1,10 @@
-import { Lines, LinesProps } from './index';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
-	asPlayground,
 	asChromaticStory,
+	asPlayground,
 } from '../../../../../lib/story-intents';
+import type { LinesProps } from './index';
+import { Lines } from './index';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Lines',

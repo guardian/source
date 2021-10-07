@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
-import { brandText } from '@guardian/src-foundations/palette';
-import { from } from '@guardian/src-foundations/mq';
-import { visuallyHidden } from '@guardian/src-foundations/accessibility';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { SvgGuardianLogo } from '@guardian/src-brand';
+import { visuallyHidden } from '@guardian/src-foundations/accessibility';
+import { from } from '@guardian/src-foundations/mq';
+import { brandText } from '@guardian/src-foundations/palette';
 import type { Props } from '@guardian/src-helpers';
 
 type LogoType = 'standard' | 'anniversary' | 'bestWebsite';
@@ -128,7 +129,10 @@ const logoStyles = css`
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/logo) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  */
-export const Logo = ({ logoType = 'standard', cssOverrides }: LogoProps) => (
+export const Logo = ({
+	logoType = 'standard',
+	cssOverrides,
+}: LogoProps): EmotionJSX.Element => (
 	<a
 		href="https://www.theguardian.com"
 		title="The Guardian Homepage"
