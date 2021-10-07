@@ -1,6 +1,6 @@
 brand: ['src/core/brand']
 foundations: ['packages/@guardian/src-foundations']
-icons: ['src/core/icons']
+icons: ['packages/@guardian/src-icons']
 accordion: ['packages/@guardian/src-accordion']
 button: ['packages/@guardian/src-button']
 checkbox: ['packages/@guardian/src-checkbox']

@@ -9,7 +9,7 @@
   "exclude": ["dist", "*.stories.tsx"],
   "references": [
     {
-      "path": "../../../src/core/icons"
+      "path": "../src-icons"
     },
     {
       "path": "../src-helpers"
