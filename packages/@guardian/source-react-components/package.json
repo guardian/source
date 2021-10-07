@@ -18,19 +18,19 @@
     "tsc": "tsc -b"
   },
   "dependencies": {
-    "@guardian/src-accordion": "3.9.0",
-    "@guardian/src-button": "3.9.0",
-    "@guardian/src-checkbox": "3.9.0",
-    "@guardian/src-choice-card": "3.9.0",
-    "@guardian/src-footer": "3.9.0",
-    "@guardian/src-label": "3.9.0",
-    "@guardian/src-layout": "3.9.0",
-    "@guardian/src-link": "3.9.0",
-    "@guardian/src-radio": "3.9.0",
-    "@guardian/src-select": "3.9.0",
-    "@guardian/src-text-area": "3.9.0",
-    "@guardian/src-text-input": "3.9.0",
-    "@guardian/src-user-feedback": "3.9.0"
+    "@guardian/src-accordion": "3.9.1-rc.1",
+    "@guardian/src-button": "3.9.1-rc.1",
+    "@guardian/src-checkbox": "3.9.1-rc.1",
+    "@guardian/src-choice-card": "3.9.1-rc.1",
+    "@guardian/src-footer": "3.9.1-rc.1",
+    "@guardian/src-label": "3.9.1-rc.1",
+    "@guardian/src-layout": "3.9.1-rc.1",
+    "@guardian/src-link": "3.9.1-rc.1",
+    "@guardian/src-radio": "3.9.1-rc.1",
+    "@guardian/src-select": "3.9.1-rc.1",
+    "@guardian/src-text-area": "3.9.1-rc.1",
+    "@guardian/src-text-input": "3.9.1-rc.1",
+    "@guardian/src-user-feedback": "3.9.1-rc.1"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
