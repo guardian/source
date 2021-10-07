@@ -32,7 +32,7 @@ module.exports = ({ config, mode }) => {
 	config.resolve.alias = {
 		'@guardian/src-foundations': path.resolve(
 			__dirname,
-			'../src/core/foundations/src',
+			'../packages/@guardian/src-foundations/src',
 		),
 		'@guardian/src-label': path.resolve(
 			__dirname,

@@ -2,18 +2,28 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@guardian/src-foundations": ["src/core/foundations/src"],
-      "@guardian/src-foundations/mq": ["src/core/foundations/src/mq"],
+      "@guardian/src-foundations": ["packages/@guardian/src-foundations/src"],
+      "@guardian/src-foundations/mq": [
+        "packages/@guardian/src-foundations/src/mq"
+      ],
       "@guardian/src-foundations/accessibility": [
-        "src/core/foundations/src/accessibility"
+        "packages/@guardian/src-foundations/src/accessibility"
       ],
-      "@guardian/src-foundations/palette": ["src/core/foundations/src/palette"],
-      "@guardian/src-foundations/size": ["src/core/foundations/src/size"],
-      "@guardian/src-foundations/themes": ["src/core/foundations/src/themes"],
+      "@guardian/src-foundations/palette": [
+        "packages/@guardian/src-foundations/src/palette"
+      ],
+      "@guardian/src-foundations/size": [
+        "packages/@guardian/src-foundations/src/size"
+      ],
+      "@guardian/src-foundations/themes": [
+        "packages/@guardian/src-foundations/src/themes"
+      ],
       "@guardian/src-foundations/typography": [
-        "src/core/foundations/src/typography"
+        "packages/@guardian/src-foundations/src/typography"
       ],
-      "@guardian/src-foundations/utils": ["src/core/foundations/src/utils"],
+      "@guardian/src-foundations/utils": [
+        "packages/@guardian/src-foundations/src/utils"
+      ],
       "@guardian/src-label": ["packages/@guardian/src-label"],
       "@guardian/src-user-feedback": ["packages/@guardian/src-user-feedback"],
       "@guardian/src-helpers": ["packages/@guardian/src-helpers"],
