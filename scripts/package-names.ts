@@ -10,12 +10,23 @@ const coreComponents = join(__dirname, '../packages/@guardian');
 const isDirectory = (path: string) =>
 	statP(path).then((stats) => stats.isDirectory());
 
+const nonComponentDirectories = [
+	'src-foundations',
+	'src-icons',
+	'src-brand',
+	'src-helpers',
+];
+
 export const getComponentPackageNames = () =>
 	readdirP(coreComponents)
 		.then((componentDirs) =>
 			Promise.all(
 				componentDirs
-					.filter((name) => name.startsWith('src-'))
+					.filter(
+						(name) =>
+							name.startsWith('src-') &&
+							!nonComponentDirectories.includes(name),
+					)
 					.map((componentDirName) =>
 						isDirectory(
 							`${coreComponents}/${componentDirName}`,
@@ -33,17 +44,23 @@ export const getComponentPackageNamesWithPaths = () =>
 	readdirP(coreComponents)
 		.then((componentDirs) =>
 			Promise.all(
-				componentDirs.map((componentDirName) =>
-					isDirectory(`${coreComponents}/${componentDirName}`).then(
-						(isDir) => {
+				componentDirs
+					.filter(
+						(name) =>
+							name.startsWith('src-') &&
+							!nonComponentDirectories.includes(name),
+					)
+					.map((componentDirName) =>
+						isDirectory(
+							`${coreComponents}/${componentDirName}`,
+						).then((isDir) => {
 							if (!isDir) return;
 
 							return {
 								[`@guardian/${componentDirName}`]: `${coreComponents}/${componentDirName}`,
 							};
-						},
+						}),
 					),
-				),
 			),
 		)
 		.then((paths) => Promise.resolve(Object.assign({}, ...paths)));
