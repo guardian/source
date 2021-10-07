@@ -6,7 +6,7 @@
     "emitDeclarationOnly": true
   },
   "include": ["src"],
-  "exclude": ["dist", "components/**/*.stories.tsx"],
+  "exclude": ["dist", "src/**/*.stories.tsx"],
   "references": [
     {
       "path": "../src-foundations"
