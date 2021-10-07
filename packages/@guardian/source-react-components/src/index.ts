@@ -18,6 +18,23 @@ export type {
 	Size,
 } from '@guardian/src-button';
 
+export {
+	SvgGuardianLogo,
+	SvgGuardianLiveLogo,
+	SvgRoundelBrand,
+	SvgRoundelBrandInverse,
+	SvgRoundelDefault,
+	SvgRoundelInverse,
+} from '@guardian/src-brand';
+export type {
+	SvgGuardianLogoProps,
+	SvgGuardianLiveLogoProps,
+	SvgRoundelBrandProps,
+	SvgRoundelBrandInverseProps,
+	SvgRoundelDefaultProps,
+	SvgRoundelInverseProps,
+} from '@guardian/src-brand';
+
 export { Checkbox, CheckboxGroup } from '@guardian/src-checkbox';
 export type { CheckboxGroupProps, CheckboxProps } from '@guardian/src-checkbox';
 

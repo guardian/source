@@ -1,4 +1,4 @@
-brand: ['src/core/brand']
+brand: ['packages/@guardian/src-brand']
 foundations: ['packages/@guardian/src-foundations']
 icons: ['packages/@guardian/src-icons']
 accordion: ['packages/@guardian/src-accordion']
