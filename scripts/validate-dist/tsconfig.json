@@ -16,7 +16,8 @@
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "noEmit": true
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "include": ["."],
   "exclude": ["dist"]
