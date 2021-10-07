@@ -5,7 +5,7 @@
     "declaration": true,
     "emitDeclarationOnly": true
   },
-  "include": ["."],
+  "include": ["src"],
   "exclude": ["dist", "components/**/*.stories.tsx"],
   "references": [
     {
