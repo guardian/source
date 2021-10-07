@@ -12,7 +12,7 @@
       "path": "../../../src/core/foundations"
     },
     {
-      "path": "../../../src/core/helpers"
+      "path": "../src-helpers"
     }
   ]
 }

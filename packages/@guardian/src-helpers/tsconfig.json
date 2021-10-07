@@ -10,7 +10,7 @@
   "exclude": ["dist"],
   "references": [
     {
-      "path": "../foundations"
+      "path": "../../../src/core/foundations"
     }
   ]
 }

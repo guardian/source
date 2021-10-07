@@ -12,7 +12,7 @@
       "path": "../../../src/core/icons"
     },
     {
-      "path": "../../../src/core/helpers"
+      "path": "../src-helpers"
     },
     {
       "path": "../src-label"
