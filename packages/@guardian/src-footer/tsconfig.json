@@ -5,11 +5,11 @@
     "declaration": true,
     "emitDeclarationOnly": true
   },
-  "include": [".", "../../../src/core/foundations/types/themes.d.ts"],
+  "include": [".", "../src-foundations/types/themes.d.ts"],
   "exclude": ["dist", "*.stories.tsx"],
   "references": [
     {
-      "path": "../../../src/core/foundations"
+      "path": "../src-foundations"
     },
     {
       "path": "../../../src/core/icons"

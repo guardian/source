@@ -36,7 +36,7 @@ $ yarn storybook
 
 -   Ensure each variant of the component works against the [default theme](https://www.theguardian.design/2a1e5182b/p/1377a6-themes/b/293ddb).
     -   Some components may also need to work against [core brand](https://www.theguardian.design/2a1e5182b/p/1377a6-themes/b/4893db) and [alternative brand](https://www.theguardian.design/2a1e5182b/p/1377a6-themes/b/21c6cc) backgrounds.
--   Theme colours should be added to a corresponding module under src/core/foundations/themes. These are passed to the `<ThemeProvider>`, and subsequently down to the component via the `css` prop.
+-   Theme colours should be added to a corresponding module under packages/@guardian/src-foundations/src/themes. These are passed to the `<ThemeProvider>`, and subsequently down to the component via the `css` prop.
 -   Ensure the theme package only contains theme-related colours. Some colours may apply to all themes. These should be defined in the component package, in `styles.tsx`.
 
 ### Documentation
@@ -65,4 +65,4 @@ $ yarn storybook
 
 -   Don’t bump the package version as part of a pull request. Maintainers will take care of this as part of the release process.
 -   Test that your component can be used in a real project (e.g. [dotcom-rendering](https://github.com/guardian/dotcom-rendering)). Use [`yarn link`](https://yarnpkg.com/en/docs/cli/link) to avoid having to perform a real publish, and [`yarn pack`](https://yarnpkg.com/en/docs/cli/pack) to see exactly which files would be published.
-- If your change extends the API of a component or the foundations (e.g. you are adding a new component, a new prop or exporting a new type), please update the [`source-package-validation`](packages/@guardian/source-package-validation/README.md) package.
+-   If your change extends the API of a component or the foundations (e.g. you are adding a new component, a new prop or exporting a new type), please update the [`source-package-validation`](packages/@guardian/source-package-validation/README.md) package.

@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/utils/supports-queries.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/utils/supports-queries.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/utils/supports-queries.ts
 
 export const appearance =

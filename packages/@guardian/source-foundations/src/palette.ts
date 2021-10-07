@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/palette.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/palette.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/palette.ts
 
 // Arrays of colours should have pillar colors first

@@ -1,5 +1,5 @@
 brand: ['src/core/brand']
-foundations: ['src/core/foundations']
+foundations: ['packages/@guardian/src-foundations']
 icons: ['src/core/icons']
 accordion: ['packages/@guardian/src-accordion']
 button: ['packages/@guardian/src-button']
