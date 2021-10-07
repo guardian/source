@@ -9,7 +9,7 @@ import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
 export default {
 	title: 'Source/src-label/Legend',
 	args: {
-		text: 'Hello World',
+		text: 'Email',
 		supporting: 'undefined',
 		optional: false,
 		hideLabel: false,
@@ -19,7 +19,7 @@ export default {
 			options: ['undefined', 'text', 'component'],
 			mapping: {
 				undefined: undefined,
-				text: 'Here I am',
+				text: 'alex@example.com',
 				component: (
 					<span role="img" aria-label="Image of a letter">
 						💌
@@ -40,7 +40,7 @@ const Template: Story<LegendProps> = (args: LegendProps) => (
 
 export const Demo = Template.bind({});
 Demo.args = {
-	text: 'Hello world',
+	text: 'Email',
 	supporting: 'text',
 };
 asPlayground(Demo);

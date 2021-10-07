@@ -8,7 +8,7 @@ import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
 export default {
 	title: 'Source/src-label/Label',
 	args: {
-		text: 'Hello World',
+		text: 'Email',
 		optional: false,
 		hideLabel: false,
 	},
@@ -17,14 +17,14 @@ export default {
 
 const Template: Story<LabelProps> = (args: LabelProps) => (
 	<Label {...args}>
-		<input type="text" />
+		<input type="email" />
 	</Label>
 );
 
 export const Demo = Template.bind({});
 Demo.args = {
-	text: 'Hello world',
-	supporting: 'Who are you?',
+	text: 'Email',
+	supporting: 'alex@example.com',
 };
 asPlayground(Demo);
 
