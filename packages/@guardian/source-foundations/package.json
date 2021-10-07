@@ -15,7 +15,7 @@
   "scripts": {
     "build": "yarn clean && rollup -c",
     "clean": "rm -rf dist",
-    "tsc": "tsc -b"
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",

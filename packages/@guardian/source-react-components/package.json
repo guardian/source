@@ -15,7 +15,7 @@
   "scripts": {
     "build": "yarn clean && rollup -c",
     "clean": "rm -rf dist",
-    "tsc": "tsc -b"
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@guardian/src-accordion": "3.9.1",
