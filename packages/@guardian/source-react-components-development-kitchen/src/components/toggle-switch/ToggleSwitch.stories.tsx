@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import { useState } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asChromaticStory,
 	asPlayground,
-} from '../../../../../lib/story-intents';
+} from '../../../../../../lib/story-intents';
 import type { ToggleSwitchProps } from './ToggleSwitch';
 import { ToggleSwitch } from './ToggleSwitch';
 
