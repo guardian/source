@@ -56,7 +56,7 @@
     "verbump:preminor:src": "ts-node ./scripts/verbump-preminor-src && yarn verbump:deps:src",
     "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
     "verbump:prerelease:src": "ts-node ./scripts/verbump-prerelease-src && yarn verbump:deps:src",
-    "watch:foundations": "cd src/core/foundations && yarn watch",
+    "watch:foundations": "cd packages/@guardian/src-foundations && yarn watch",
     "watch:icons": "cd src/core/icons && yarn watch"
   },
   "lint-staged": {
