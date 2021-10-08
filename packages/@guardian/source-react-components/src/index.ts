@@ -3,12 +3,8 @@ export type {
 	AccordionProps,
 	AccordionRowProps,
 } from '@guardian/src-accordion';
+export { accordionDefault } from './themes/accordion';
 
-// export {
-// 	buttonReaderRevenue,
-// 	buttonReaderRevenueBrand,
-// 	buttonReaderRevenueBrandAlt,
-// } from './themes';
 export { Button, LinkButton } from '@guardian/src-button';
 export type {
 	ButtonPriority,
@@ -17,6 +13,15 @@ export type {
 	LinkButtonProps,
 	Size,
 } from '@guardian/src-button';
+export {
+	buttonReaderRevenue,
+	buttonReaderRevenueBrand,
+	buttonReaderRevenueBrandAlt,
+	buttonBrand,
+	buttonBrandAlt,
+	buttonDefault,
+} from './themes/button';
+export type { ButtonTheme } from './themes/button';
 
 export {
 	SvgGuardianLogo,
@@ -37,6 +42,7 @@ export type {
 
 export { Checkbox, CheckboxGroup } from '@guardian/src-checkbox';
 export type { CheckboxGroupProps, CheckboxProps } from '@guardian/src-checkbox';
+export { checkboxBrand, checkboxDefault } from './themes/checkbox';
 
 export { ChoiceCard, ChoiceCardGroup } from '@guardian/src-choice-card';
 export type {
@@ -44,9 +50,11 @@ export type {
 	ChoiceCardGroupProps,
 	ChoiceCardProps,
 } from '@guardian/src-choice-card';
+export { choiceCardDefault } from './themes/choice-card';
 
 export { Footer } from '@guardian/src-footer';
 export type { FooterProps } from '@guardian/src-footer';
+export { footerBrand } from './themes/footer';
 
 export {
 	SvgAlert,
@@ -105,6 +113,7 @@ export type { IconProps, IconSize } from '@guardian/src-icons';
 
 export { Label, Legend } from '@guardian/src-label';
 export type { LabelProps, LegendProps } from '@guardian/src-label';
+export { labelDefault, labelBrand } from './themes/label';
 
 export {
 	Column,
@@ -131,18 +140,24 @@ export type {
 	LinkPriority,
 	LinkProps,
 } from '@guardian/src-link';
+export { linkBrand, linkBrandAlt, linkDefault } from './themes/link';
+export type { LinkTheme } from './themes/link';
 
 export { Radio, RadioGroup } from '@guardian/src-radio';
 export type { RadioGroupProps, RadioProps } from '@guardian/src-radio';
+export { radioBrand, radioDefault } from './themes/radio';
 
 export { Option, Select } from '@guardian/src-select';
 export type { OptionProps, SelectProps } from '@guardian/src-select';
+export { selectDefault } from './themes/select';
 
 export { TextArea } from '@guardian/src-text-area';
 export type { TextAreaProps } from '@guardian/src-text-area';
 
 export { TextInput } from '@guardian/src-text-input';
 export type { TextInputProps } from '@guardian/src-text-input';
+export { textInputDefault } from './themes/text-input';
 
 export { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
 export type { UserFeedbackProps } from '@guardian/src-user-feedback';
+export { userFeedbackBrand, userFeedbackDefault } from './themes/user-feedback';
