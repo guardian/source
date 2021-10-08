@@ -10,7 +10,7 @@ const ruleTester = new RuleTester({
 });
 
 ruleTester.run('valid-import-paths', validImportPaths, {
-	valid: [`import {Label} from '@guardian/source-foundations'`],
+	valid: [`import { Label } from '@guardian/source-foundations'`],
 	invalid: [
 		{
 			code: "import { Label } from '@guardian/src-label';",
@@ -20,6 +20,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 						"Import from deprecated '@guardian/src-label' package",
 				},
 			],
+			output: "import { Label } from '@guardian/source-react-components';",
 		},
 	],
 });

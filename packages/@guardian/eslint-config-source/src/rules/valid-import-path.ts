@@ -24,6 +24,12 @@ export const validImportPaths: Rule.RuleModule = {
 					return context.report({
 						node,
 						message: `Import from deprecated ${node.source.raw} package`,
+						fix: (fixer) => {
+							return fixer.replaceTextRange(
+								node.source.range ?? [0, 0],
+								"'@guardian/source-react-components'",
+							);
+						},
 					});
 				}
 			},
