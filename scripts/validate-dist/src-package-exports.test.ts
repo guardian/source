@@ -1,5 +1,3 @@
-import * as sourceFoundations from '@guardian/source-foundations';
-import * as sourceReactComponentsDevelopmentKitchen from '@guardian/source-react-components-development-kitchen';
 import * as srcBrand from '@guardian/src-brand';
 import * as srcAccordion from '@guardian/src-accordion';
 import * as srcButton from '@guardian/src-button';
@@ -22,94 +20,6 @@ const packageExports = (pkg: Record<string, unknown>) =>
 	Object.keys(pkg).sort();
 
 describe('No exports have changed in the ', () => {
-	it('@guardian/source-foundations package', () => {
-		expect(packageExports(sourceFoundations)).toEqual([
-			'FocusStyleManager',
-			'appearance',
-			'background',
-			'between',
-			'body',
-			'bodyObjectStyles',
-			'bodySizes',
-			'border',
-			'brand',
-			'brandAlt',
-			'brandAltBackground',
-			'brandAltBorder',
-			'brandAltLine',
-			'brandAltText',
-			'brandBackground',
-			'brandBorder',
-			'brandLine',
-			'brandText',
-			'breakpoints',
-			'culture',
-			'descriptionId',
-			'error',
-			'focus',
-			'focusHalo',
-			'fontWeights',
-			'fonts',
-			'from',
-			'generateSourceId',
-			'headline',
-			'headlineObjectStyles',
-			'headlineSizes',
-			'height',
-			'iconSize',
-			'labs',
-			'lifestyle',
-			'line',
-			'lineHeights',
-			'neutral',
-			'news',
-			'opinion',
-			'pxToRem',
-			'remBodySizes',
-			'remHeadlineSizes',
-			'remHeight',
-			'remSpace',
-			'remTextSansSizes',
-			'remTitlepieceSizes',
-			'remWidth',
-			'resets',
-			'rootPixelFontSize',
-			'size',
-			'space',
-			'specialReport',
-			'sport',
-			'success',
-			'text',
-			'textSans',
-			'textSansObjectStyles',
-			'textSansSizes',
-			'titlepiece',
-			'titlepieceObjectStyles',
-			'titlepieceSizes',
-			'transitions',
-			'until',
-			'visuallyHidden',
-			'width',
-		]);
-	});
-
-	it('@guardian/source-react-components-development-kitchen package', () => {
-		expect(packageExports(sourceReactComponentsDevelopmentKitchen)).toEqual(
-			[
-				'Divider',
-				'EditorialButton',
-				'EditorialLinkButton',
-				'ErrorSummary',
-				'Lines',
-				'Logo',
-				'QuoteIcon',
-				'StarRating',
-				'SuccessSummary',
-				'ToggleSwitch',
-			],
-		);
-	});
-
 	it('@guardian/src-brand package', () => {
 		expect(packageExports(srcBrand)).toEqual([
 			'SvgGuardianLiveLogo',
