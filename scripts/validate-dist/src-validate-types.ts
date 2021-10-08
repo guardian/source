@@ -1,37 +1,4 @@
 export type {
-	Breakpoint,
-	ScaleUnit,
-	Category,
-	LineHeight,
-	FontWeight,
-	FontStyle,
-	FontWeightDefinition,
-	Option,
-	TypographyStyles,
-	TypographySizes,
-	TitlepieceSizes,
-	HeadlineSizes,
-	BodySizes,
-	TextSansSizes,
-	Fs,
-	FontScaleFunction,
-	FontScaleFunctionStr,
-	FontScaleArgs,
-} from '@guardian/source-foundations';
-
-export type {
-	EditorialButtonProps,
-	EditorialLinkButtonProps,
-	LineCount,
-	LinesProps,
-	LogoProps,
-	HeadlineSize,
-	QuoteIconProps,
-	StarRatingProps,
-	ToggleSwitchProps,
-} from '@guardian/source-react-components-development-kitchen';
-
-export type {
 	SvgGuardianLiveLogoProps,
 	SvgGuardianLogoProps,
 	SvgRoundelBrandProps,
