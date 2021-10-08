@@ -42,6 +42,9 @@
     "rollup-plugin-esbuild": "^4.5.0",
     "typescript": "^4.4.3"
   },
+  "peerDependencies": {
+    "@guardian/src-foundations": "3.9.1"
+  },
   "publishConfig": {
     "access": "public"
   }
