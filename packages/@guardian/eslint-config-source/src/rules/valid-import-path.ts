@@ -1,5 +1,15 @@
 import { Rule } from 'eslint';
 
+const getNewPackage = (oldPackage: string): string => {
+	if (oldPackage === "'@guardian/src-foundations/themes'") {
+		return "'@guardian/source-react-components'";
+	} else if (oldPackage.startsWith("'@guardian/src-foundations")) {
+		return "'@guardian/source-foundations'";
+	} else {
+		return "'@guardian/source-react-components'";
+	}
+};
+
 export const validImportPaths: Rule.RuleModule = {
 	meta: {
 		type: 'problem',
@@ -19,11 +29,7 @@ export const validImportPaths: Rule.RuleModule = {
 
 				if (!importSource?.startsWith("'@guardian/src-")) return;
 
-				const newPackage = importSource.startsWith(
-					"'@guardian/src-foundations",
-				)
-					? "'@guardian/source-foundations'"
-					: "'@guardian/source-react-components'";
+				const newPackage = getNewPackage(importSource);
 
 				return context.report({
 					node,
