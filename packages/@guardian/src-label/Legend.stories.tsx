@@ -60,7 +60,7 @@ asChromaticStory(DefaultTheme);
 
 export const DefaultThemeWithSupportingText = Template.bind({});
 DefaultThemeWithSupportingText.args = {
-	supporting: 'alex@example.com',
+	supporting: 'text',
 };
 DefaultThemeWithSupportingText.parameters = {
 	backgrounds: {
@@ -127,7 +127,7 @@ asChromaticStory(BrandTheme);
 
 export const BrandThemeWithSupportingText = Template.bind({});
 BrandThemeWithSupportingText.args = {
-	supporting: 'alex@example.com',
+	supporting: 'text',
 };
 BrandThemeWithSupportingText.parameters = {
 	backgrounds: {
@@ -141,11 +141,7 @@ asChromaticStory(BrandThemeWithSupportingText);
 
 export const BrandThemeWithSupportingComponent = Template.bind({});
 BrandThemeWithSupportingComponent.args = {
-	supporting: (
-		<span role="img" aria-label="Image of a letter">
-			💌
-		</span>
-	),
+	supporting: 'component',
 };
 BrandThemeWithSupportingComponent.parameters = {
 	backgrounds: {
