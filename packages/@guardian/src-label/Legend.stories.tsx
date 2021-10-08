@@ -1,5 +1,5 @@
 import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
-import { labelBrand, labelDefault } from '@guardian/src-foundations/themes';
+import { labelBrand } from '@guardian/src-foundations/themes';
 
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
@@ -48,12 +48,6 @@ asPlayground(Demo);
 // *****************************************************************************
 
 export const DefaultTheme = Template.bind({});
-DefaultTheme.parameters = {
-	backgrounds: {
-		default: 'background.primary',
-	},
-	theme: labelDefault,
-};
 asChromaticStory(DefaultTheme);
 
 // *****************************************************************************
@@ -61,12 +55,6 @@ asChromaticStory(DefaultTheme);
 export const DefaultThemeWithSupportingText = Template.bind({});
 DefaultThemeWithSupportingText.args = {
 	supporting: 'text',
-};
-DefaultThemeWithSupportingText.parameters = {
-	backgrounds: {
-		default: 'background.primary',
-	},
-	theme: labelDefault,
 };
 asChromaticStory(DefaultThemeWithSupportingText);
 
@@ -76,12 +64,6 @@ export const DefaultThemeWithSupportingComponent = Template.bind({});
 DefaultThemeWithSupportingComponent.args = {
 	supporting: 'component',
 };
-DefaultThemeWithSupportingComponent.parameters = {
-	backgrounds: {
-		default: 'background.primary',
-	},
-	theme: labelDefault,
-};
 asChromaticStory(DefaultThemeWithSupportingComponent);
 
 // *****************************************************************************
@@ -90,12 +72,6 @@ export const DefaultThemeWithOptional = Template.bind({});
 DefaultThemeWithOptional.args = {
 	optional: true,
 };
-DefaultThemeWithOptional.parameters = {
-	backgrounds: {
-		default: 'background.primary',
-	},
-	theme: labelDefault,
-};
 asChromaticStory(DefaultThemeWithOptional);
 
 // *****************************************************************************
@@ -103,12 +79,6 @@ asChromaticStory(DefaultThemeWithOptional);
 export const DefaultThemeWithHiddenLabel = Template.bind({});
 DefaultThemeWithHiddenLabel.args = {
 	hideLabel: true,
-};
-DefaultThemeWithHiddenLabel.parameters = {
-	backgrounds: {
-		default: 'background.primary',
-	},
-	theme: labelDefault,
 };
 asChromaticStory(DefaultThemeWithHiddenLabel);
 
