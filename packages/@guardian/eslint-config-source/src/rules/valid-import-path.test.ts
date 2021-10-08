@@ -23,7 +23,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-label' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
 				},
 			],
 			output: "import { Label } from '@guardian/source-react-components';",
@@ -34,7 +34,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: "import { transitions } from '@guardian/source-foundations';",
@@ -45,7 +45,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations/size' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: "import { height } from '@guardian/source-foundations';",
@@ -56,7 +56,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-label' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
 				},
 			],
 			output: "import type { LabelProps } from '@guardian/source-react-components';",
@@ -67,7 +67,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: "import type { Breakpoint } from '@guardian/source-foundations';",
@@ -78,7 +78,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations/mq' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: "import type { Breakpoint } from '@guardian/source-foundations';",
@@ -89,7 +89,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-label' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
 				},
 			],
 			output: "import { Label, Legend } from '@guardian/source-react-components';",
@@ -103,7 +103,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: "import { breakpoints, height } from '@guardian/source-foundations';",
@@ -117,7 +117,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-label' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
 				},
 			],
 			output: "import { Button, Label } from '@guardian/source-react-components';",
@@ -132,7 +132,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-label' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
 				},
 			],
 			output: `
@@ -146,7 +146,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import 'remSize' no longer exported from '@guardian/source-foundations'",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: undefined,
@@ -157,7 +157,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: `import { headlineObjectStyles } from '@guardian/source-foundations';`,
@@ -168,7 +168,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
 				},
 			],
 			output: `import { headlineObjectStyles, bodySizes } from '@guardian/source-foundations';`,
@@ -179,7 +179,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			errors: [
 				{
 					message:
-						"Import from deprecated '@guardian/src-foundations' package",
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
 				},
 			],
 			output: `import { labelDefault } from '@guardian/source-react-components';`,
