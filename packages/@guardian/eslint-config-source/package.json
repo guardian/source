@@ -1,0 +1,25 @@
+{
+  "name": "@guardian/eslint-config-source",
+  "version": "0.7.0",
+  "description": "ESLint config for Guardian projects using `@guardian/source-*` packages.",
+  "homepage": "https://github.com/guardian/source#readme",
+  "bugs": {
+    "url": "https://github.com/guardian/source/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardian/source.git"
+  },
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "4.29.2",
+    "@typescript-eslint/parser": "4.29.2"
+  },
+  "peerDependencies": {
+    "typescript": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
