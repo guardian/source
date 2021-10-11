@@ -40,7 +40,7 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			output: "import { transitions } from '@guardian/source-foundations';",
 		},
 		{
-			// A simple import from a sub-module of foundations
+			// A single import from a sub-module of foundations
 			code: "import { height } from '@guardian/src-foundations/size';",
 			errors: [
 				{
