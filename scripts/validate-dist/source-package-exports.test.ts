@@ -181,6 +181,7 @@ describe('No exports have changed in the ', () => {
 			'TextArea',
 			'TextInput',
 			'Tiles',
+			'accordionThemeDefault',
 		]);
 	});
 });

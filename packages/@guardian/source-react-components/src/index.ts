@@ -2,6 +2,7 @@ export { Accordion } from './Accordion/Accordion';
 export type { AccordionProps } from './Accordion/Accordion';
 export { AccordionRow } from './Accordion/AccordionRow';
 export type { AccordionRowProps } from './Accordion/AccordionRow';
+export { accordionThemeDefault } from './Accordion/themes';
 
 // export {
 // 	buttonReaderRevenue,
