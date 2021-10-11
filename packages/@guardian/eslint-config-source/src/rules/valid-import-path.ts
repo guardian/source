@@ -35,6 +35,13 @@ const getRemovedExports = (
 	}) as ImportSpecifier[];
 };
 
+const getImportName = (i: ImportSpecifier): string => {
+	const imported = i.imported.name;
+	const local = i.local.name;
+
+	return imported === local ? imported : `${imported} as ${local}`;
+};
+
 const getRenameImportFixers = (
 	node: ImportDeclaration & Rule.NodeParentExtension,
 	removedExports: ImportSpecifier[],
@@ -69,7 +76,7 @@ const getRenameImportFixers = (
 			fixer.insertTextBeforeRange(
 				node.range ?? [0, 0],
 				`import { ${removedExports
-					.map((i) => i.imported.name)
+					.map((i) => getImportName(i))
 					.join(', ')} } from ${node.source.raw};\n`,
 			),
 		);

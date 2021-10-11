@@ -118,6 +118,29 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 import {  size } from '@guardian/source-foundations';`,
 		},
 		{
+			// Exports that aren't available from foundations any more using an alias
+			code: `import { remSize as rs } from '@guardian/src-foundations/size/global';`,
+			errors: [
+				{
+					message:
+						'The following export(s) have been removed: remSize.',
+				},
+			],
+			output: `import { remSize as rs } from '@guardian/src-foundations/size/global';`,
+		},
+		{
+			// Exports that aren't available from foundations any more using an alias, plus one that is
+			code: `import { remSize as rs, size as s } from '@guardian/src-foundations/size/global';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.\nThe following export(s) have been removed: remSize.",
+				},
+			],
+			output: `import { remSize as rs } from '@guardian/src-foundations/size/global';
+import {  size as s } from '@guardian/source-foundations';`,
+		},
+		{
 			// Exports that have changed names (foundations typography)
 			code: `import { headline } from '@guardian/src-foundations/typography/obj';`,
 			errors: [
@@ -138,6 +161,28 @@ import {  size } from '@guardian/source-foundations';`,
 				},
 			],
 			output: `import { headlineObjectStyles, bodySizes } from '@guardian/source-foundations';`,
+		},
+		{
+			// Exports that have changed names using an alias (foundations typography)
+			code: `import { headline as hl } from '@guardian/src-foundations/typography/obj';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.",
+				},
+			],
+			output: `import { headlineObjectStyles as hl } from '@guardian/source-foundations';`,
+		},
+		{
+			// Exports that have changed names, alongside some that haven't, using an alias
+			code: `import { headline as hl, bodySizes as bs } from '@guardian/src-foundations/typography/obj';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.",
+				},
+			],
+			output: `import { headlineObjectStyles as hl, bodySizes as bs } from '@guardian/source-foundations';`,
 		},
 		{
 			// Themes that now come from react-components
