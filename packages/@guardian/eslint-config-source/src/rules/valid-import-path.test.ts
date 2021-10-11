@@ -95,52 +95,6 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			output: "import { Label, Legend } from '@guardian/source-react-components';",
 		},
 		{
-			// Multiple imports from different parts of foundations
-			code: `
-				import { height } from '@guardian/src-foundations/size';
-				import { breakpoints } from '@guardian/src-foundations';
-			`,
-			errors: [
-				{
-					message:
-						"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead",
-				},
-			],
-			output: "import { breakpoints, height } from '@guardian/source-foundations';",
-		},
-		{
-			// Multiple imports from multiple component packages
-			code: `
-				import { Button } from '@guardian/src-button';
-				import { Label } from '@guardian/src-label';
-			`,
-			errors: [
-				{
-					message:
-						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
-				},
-			],
-			output: "import { Button, Label } from '@guardian/source-react-components';",
-		},
-		{
-			// Multiple imports from multiple component packages
-			code: `
-				import { Button } from '@guardian/src-button';
-				import { something } from 'somewhere-else';
-				import { Label } from '@guardian/src-label';
-			`,
-			errors: [
-				{
-					message:
-						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
-				},
-			],
-			output: `
-				import { Button, Label } from '@guardian/source-react-components';
-				import { something } from 'somewhere-else';
-			`,
-		},
-		{
 			// Exports that aren't available from foundations any more
 			code: `import { remSize } from '@guardian/src-foundations/size/global';`,
 			errors: [
