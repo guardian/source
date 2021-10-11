@@ -1,27 +1,15 @@
 import { css } from '@emotion/react';
-import { ArticlePillar, ArticleTheme } from '@guardian/libs';
 import { textSans } from '@guardian/src-foundations/typography';
 import type { Props } from '@guardian/src-helpers';
-import {
-	decideBackground,
-	toggleSwitchStyles,
-	slimStyles,
-	mediumStyles,
-} from './styles';
+import { toggleSwitchStyles, slimStyles, mediumStyles } from './styles';
 
 export type Size = 'medium' | 'slim';
 export interface ToggleSwitchProps extends Props {
 	/**
-	 * A theme object denoting the style of the button using the enums
-	 * available from [@guardian/libs](https://github.com/guardian/libs/blob/main/src/format.ts).
-	 *
-	 * For example:
-	 *
-	 * ```ts
-	 *   Pillar.News,
-	 * ```
+	 * different color theme is used whether the component is used
+	 * in light or dark background
 	 */
-	theme?: ArticleTheme;
+	isDarkBackground?: boolean;
 	/**
 	 * Whether the ToggleSwitch is checked. This is necessary when using the
 	 * [controlled approach](https://reactjs.org/docs/forms.html#controlled-components)
@@ -63,12 +51,15 @@ export interface ToggleSwitchProps extends Props {
  *
  */
 
-const labelStyles = css`
+const labelStyles = (isDarkBackground: boolean) => css`
 	${textSans.small()};
+	display: inline-block;
+	transform: translateY(2px);
+	color: ${isDarkBackground ? 'rgb(255, 255, 255)' : 'rgb(18, 18, 18)'};
 `;
 
 export const ToggleSwitch = ({
-	theme = ArticlePillar.News,
+	isDarkBackground = false,
 	checked,
 	label,
 	defaultChecked,
@@ -85,25 +76,28 @@ export const ToggleSwitch = ({
 		return !!defaultChecked;
 	};
 
-	const background = decideBackground(theme);
 	const isSlim = size === 'slim';
 
 	return (
 		<div
 			css={[
-				toggleSwitchStyles(background),
-				isSlim ? slimStyles() : mediumStyles(),
+				toggleSwitchStyles(isDarkBackground),
+				isSlim
+					? slimStyles(isDarkBackground)
+					: mediumStyles(isDarkBackground),
 				cssOverrides,
 			]}
 			{...props}
 		>
-			<button
-				role="switch"
-				aria-checked={isChecked()}
-				aria-labelledby="notify"
-				onClick={onClick}
-			></button>
-			<span css={labelStyles} id="notify">
+			<span>
+				<button
+					role="switch"
+					aria-checked={isChecked()}
+					aria-labelledby="notify"
+					onClick={onClick}
+				></button>
+			</span>
+			<span css={labelStyles(isDarkBackground)} id="notify">
 				{label}
 			</span>
 		</div>

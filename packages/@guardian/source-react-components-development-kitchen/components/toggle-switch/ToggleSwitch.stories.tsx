@@ -5,7 +5,6 @@ import {
 	asChromaticStory,
 } from '../../../../../lib/story-intents';
 import { useState } from 'react';
-import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import { css } from '@emotion/react';
 
 export default {
@@ -27,6 +26,27 @@ const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 	);
 };
 
+const DarkBackgroundTemplate: Story<ToggleSwitchProps> = (
+	args: ToggleSwitchProps,
+) => {
+	const [checked, setChecked] = useState(args.checked);
+	return (
+		<div
+			css={css`
+				background: rgb(139, 0, 0);
+			`}
+		>
+			<ToggleSwitch
+				{...args}
+				checked={checked}
+				onClick={(e) => {
+					setChecked(!checked);
+				}}
+			/>
+		</div>
+	);
+};
+
 // *****************************************************************************
 
 export const Playground = Template.bind({});
@@ -34,91 +54,56 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const NoLabel = Template.bind({});
-asChromaticStory(NoLabel);
-
-// *****************************************************************************
-
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-	label: 'Get alerts on this story',
-};
-asChromaticStory(WithLabel);
-
-// *****************************************************************************
-
-export const Slim = Template.bind({});
-Slim.args = {
-	label: 'Get alerts on this story',
+export const SlimNoLabelLightBackground = Template.bind({});
+SlimNoLabelLightBackground.args = {
 	size: 'slim',
 };
-asChromaticStory(Slim);
+asChromaticStory(SlimNoLabelLightBackground);
 
 // *****************************************************************************
 
-export const DefaultChecked = Template.bind({});
-DefaultChecked.args = {
+export const MediumNoLabelLightBackground = Template.bind({});
+MediumNoLabelLightBackground.args = {
+	size: 'medium',
+};
+asChromaticStory(MediumNoLabelLightBackground);
+
+// *****************************************************************************
+
+export const SlimLabelLightBackground = Template.bind({});
+SlimLabelLightBackground.args = {
 	label: 'Get alerts on this story',
-	defaultChecked: true,
-};
-asChromaticStory(DefaultChecked);
-
-// *****************************************************************************
-const pillars = [
-	{ pillar: ArticlePillar.News, label: 'News' },
-	{ pillar: ArticlePillar.Sport, label: 'Sport' },
-	{ pillar: ArticlePillar.Culture, label: 'Culture' },
-	{ pillar: ArticlePillar.Lifestyle, label: 'Lifestyle' },
-	{ pillar: ArticlePillar.Opinion, label: 'Opinion' },
-	{ pillar: ArticleSpecial.SpecialReport, label: 'SpecialReport' },
-	{ pillar: ArticleSpecial.Labs, label: 'Labs' },
-];
-const RowTemplate: Story<ToggleSwitchProps> = (
-	args: Partial<ToggleSwitchProps>,
-) => (
-	<div
-		css={css`
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			width: 800px;
-		`}
-	>
-		{pillars.map((pillar) => (
-			<Template
-				key={pillar.pillar}
-				{...args}
-				theme={pillar.pillar}
-				label={pillar.label}
-			/>
-		))}
-	</div>
-);
-
-export const AllPillarsUnchecked = RowTemplate.bind({});
-asChromaticStory(AllPillarsUnchecked);
-
-// *****************************************************************************
-
-export const AllPillarsChecked = RowTemplate.bind({});
-AllPillarsChecked.args = {
-	defaultChecked: true,
-};
-asChromaticStory(AllPillarsChecked);
-
-// *****************************************************************************
-
-export const AllPillarsSlimUnchecked = RowTemplate.bind({});
-AllPillarsSlimUnchecked.args = {
 	size: 'slim',
+	isDarkBackground: false,
 };
-asChromaticStory(AllPillarsSlimUnchecked);
+asChromaticStory(SlimLabelLightBackground);
 
 // *****************************************************************************
 
-export const AllPillarsSlimChecked = RowTemplate.bind({});
-AllPillarsSlimChecked.args = {
-	defaultChecked: true,
+export const SlimLabelDarkBackground = DarkBackgroundTemplate.bind({});
+SlimLabelDarkBackground.args = {
+	label: 'Get alerts on this story',
 	size: 'slim',
+	isDarkBackground: true,
 };
-asChromaticStory(AllPillarsSlimChecked);
+asChromaticStory(SlimLabelDarkBackground);
+
+// *****************************************************************************
+
+export const MediumLabelLightBackground = Template.bind({});
+MediumLabelLightBackground.args = {
+	label: 'Get alerts on this story',
+	size: 'medium',
+	isDarkBackground: false,
+};
+asChromaticStory(MediumLabelLightBackground);
+
+// *****************************************************************************
+
+export const MediumLabelDarkBackground = DarkBackgroundTemplate.bind({});
+MediumLabelDarkBackground.args = {
+	label: 'Get alerts on this story',
+	size: 'medium',
+	isDarkBackground: true,
+};
+asChromaticStory(MediumLabelDarkBackground);
