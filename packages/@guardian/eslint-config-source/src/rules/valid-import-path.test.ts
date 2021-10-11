@@ -195,5 +195,27 @@ import {  size as s } from '@guardian/source-foundations';`,
 			],
 			output: `import { labelDefault } from '@guardian/source-react-components';`,
 		},
+		{
+			// Import default
+			code: `import themes from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+				},
+			],
+			output: `import themes from '@guardian/source-react-components';`,
+		},
+		{
+			// Import everything
+			code: `import * as themes from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+				},
+			],
+			output: `import * as themes from '@guardian/source-react-components';`,
+		},
 	],
 });
