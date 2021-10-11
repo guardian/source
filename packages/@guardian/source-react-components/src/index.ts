@@ -5,16 +5,19 @@ export type {
 } from '@guardian/src-accordion';
 export { accordionDefault as accordionThemeDefault } from '@guardian/src-foundations/themes';
 
-export { Button, LinkButton } from '@guardian/src-button';
+export {
+	Button,
+	LinkButton,
+	buttonReaderRevenue as buttonThemeReaderRevenue,
+	buttonReaderRevenueBrand as buttonThemeReaderRevenueBrand,
+	buttonReaderRevenueBrandAlt as buttonThemeReaderRevenueBrandAlt,
+} from '@guardian/src-button';
 export type {
 	ButtonPriority,
 	ButtonProps,
 	IconSide,
 	LinkButtonProps,
 	Size,
-	buttonReaderRevenue as buttonThemeReaderRevenue,
-	buttonReaderRevenueBrand as buttonThemeReaderRevenueBrand,
-	buttonReaderRevenueBrandAlt as buttonThemeReaderRevenueBrandAlt,
 } from '@guardian/src-button';
 export {
 	buttonBrand as buttonThemeBrand,
