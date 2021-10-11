@@ -26,5 +26,5 @@
     "target": "esnext"
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["src"]
+  "include": ["src", "../src-foundations/types/themes.d.ts"]
 }
