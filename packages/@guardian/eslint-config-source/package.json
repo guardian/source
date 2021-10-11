@@ -12,6 +12,10 @@
   },
   "license": "Apache-2.0",
   "main": "dist/index.js",
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "clean": "rm -rf dist"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "4.29.2",
     "@typescript-eslint/parser": "4.29.2"
