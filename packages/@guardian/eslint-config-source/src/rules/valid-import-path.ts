@@ -1,3 +1,4 @@
+import { ImportDeclaration } from 'estree';
 import { Rule } from 'eslint';
 
 const getNewPackage = (oldPackage: string): string => {
@@ -8,6 +9,33 @@ const getNewPackage = (oldPackage: string): string => {
 	} else {
 		return "'@guardian/source-react-components'";
 	}
+};
+
+const typographyObjChanges = ['body', 'headline', 'textSans', 'titlepiece'];
+
+const getRenameImportFixers = (
+	node: ImportDeclaration & Rule.NodeParentExtension,
+	fixer: Rule.RuleFixer,
+): Rule.Fix[] => {
+	if (node.source.raw !== "'@guardian/src-foundations/typography/obj'")
+		return [];
+
+	const fixers: Rule.Fix[] = [];
+	for (const i of node.specifiers) {
+		if (
+			i.type === 'ImportSpecifier' &&
+			typographyObjChanges.includes(i.imported.name)
+		) {
+			fixers.push(
+				fixer.replaceTextRange(
+					i.imported.range ?? [0, 0],
+					`${i.imported.name}ObjectStyles`,
+				),
+			);
+		}
+	}
+
+	return fixers;
 };
 
 export const validImportPaths: Rule.RuleModule = {
@@ -35,10 +63,13 @@ export const validImportPaths: Rule.RuleModule = {
 					node,
 					message: `@guardian/src-* packages are deprecated. Import from ${newPackage} instead`,
 					fix: (fixer) => {
-						return fixer.replaceTextRange(
-							node.source.range ?? [0, 0],
-							newPackage,
-						);
+						return [
+							...getRenameImportFixers(node, fixer),
+							fixer.replaceTextRange(
+								node.source.range ?? [0, 0],
+								newPackage,
+							),
+						];
 					},
 				});
 			},
