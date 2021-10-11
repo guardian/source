@@ -1,8 +1,7 @@
-export { Accordion, AccordionRow } from '@guardian/src-accordion';
-export type {
-	AccordionProps,
-	AccordionRowProps,
-} from '@guardian/src-accordion';
+export { Accordion } from './Accordion/Accordion';
+export type { AccordionProps } from './Accordion/Accordion';
+export { AccordionRow } from './Accordion/AccordionRow';
+export type { AccordionRowProps } from './Accordion/AccordionRow';
 
 // export {
 // 	buttonReaderRevenue,
