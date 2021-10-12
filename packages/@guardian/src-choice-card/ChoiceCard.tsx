@@ -1,7 +1,5 @@
 import { Props } from '@guardian/src-helpers';
-// We shouldn't need to import React, but for some reason Storybook's Babel
-// config needs React here to understand fragments
-import React, {
+import {
 	ChangeEventHandler,
 	InputHTMLAttributes,
 	ReactElement,

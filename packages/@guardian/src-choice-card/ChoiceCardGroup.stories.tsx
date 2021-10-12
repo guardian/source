@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react';
 import { choiceCardDefault } from '@guardian/src-foundations/themes';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
 import { ChoiceCard } from './ChoiceCard';

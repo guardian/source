@@ -1,5 +1,5 @@
 import { Props } from '@guardian/src-helpers';
-import React, { ReactElement } from 'react';
+import { Children, cloneElement, ReactElement } from 'react';
 import { accordion } from './styles';
 
 export interface AccordionProps extends Props {
@@ -32,8 +32,8 @@ export const Accordion = ({
 			css={(theme) => [accordion(theme.accordion && theme), cssOverrides]}
 			{...props}
 		>
-			{React.Children.map(children, (child) => {
-				return React.cloneElement(child, { hideToggleLabel });
+			{Children.map(children, (child) => {
+				return cloneElement(child, { hideToggleLabel });
 			})}
 		</div>
 	);

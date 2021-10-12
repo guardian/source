@@ -1,4 +1,3 @@
-import React from 'react';
 import { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
 import { Inline, InlineProps } from './Inline';
 import { asChromaticStory, asPlayground } from '../../../../lib/story-intents';

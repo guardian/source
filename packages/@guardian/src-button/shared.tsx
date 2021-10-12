@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react';
+import { cloneElement, ReactElement, ReactNode } from 'react';
 import { css } from '@emotion/react';
 import { visuallyHidden } from '@guardian/src-foundations/accessibility';
 
@@ -17,7 +17,7 @@ export const buttonContents = ({
 		if (!hideLabel) {
 			contents.push(<div key="space" className="src-button-space" />);
 		}
-		contents.push(React.cloneElement(iconSvg, { key: 'svg' }));
+		contents.push(cloneElement(iconSvg, { key: 'svg' }));
 	}
 	if (hideLabel) {
 		return (
