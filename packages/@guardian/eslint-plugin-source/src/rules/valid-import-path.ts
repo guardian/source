@@ -7,6 +7,11 @@ const removedImports: Record<string, string[]> = {
 	"'@guardian/source-foundations/utils'": ['InteractionModeEngine'],
 	"'@guardian/src-foundations/size/global'": ['remSize', 'remIconSize'],
 	"'@guardian/src-foundations/themes'": ['defaultTheme', 'brand', 'brandAlt'],
+	"'@guardian/src-helpers'": [
+		'storybookBackgrounds',
+		'ThemeName',
+		'svgBackgroundImage',
+	],
 };
 
 const getNewPackage = (oldPackage: string): string => {

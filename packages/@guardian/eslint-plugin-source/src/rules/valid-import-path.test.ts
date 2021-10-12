@@ -218,15 +218,25 @@ import {  size as s } from '@guardian/source-foundations';`,
 			output: `import * as themes from '@guardian/source-react-components';`,
 		},
 		{
-			// Helpers
+			// Helpers removed exports
 			code: `import { storybookBackgrounds } from '@guardian/src-helpers';`,
 			errors: [
 				{
 					message:
-						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
+						'The following export(s) have been removed: storybookBackgrounds.',
 				},
 			],
-			output: undefined,
+			output: `import { storybookBackgrounds } from '@guardian/src-helpers';`,
+		},
+		{
+			// Helpers moved exports
+			code: `import type { Props } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `import type { Props } from '@guardian/source-react-components';`,
 		},
 	],
 });
