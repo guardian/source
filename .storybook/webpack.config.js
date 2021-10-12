@@ -17,9 +17,18 @@ module.exports = ({ config, mode }) => {
 			presets: [
 				'@babel/preset-env',
 				'@babel/preset-typescript',
-				'@emotion/babel-preset-css-prop',
+				[
+					'@babel/preset-react',
+					{
+						runtime: 'automatic',
+						importSource: '@emotion/react',
+					},
+				],
 			],
-			plugins: ['@babel/plugin-proposal-class-properties'],
+			plugins: [
+				'@babel/plugin-proposal-class-properties',
+				'@emotion/babel-plugin',
+			],
 		},
 	});
 
