@@ -217,5 +217,16 @@ import {  size as s } from '@guardian/source-foundations';`,
 			],
 			output: `import * as themes from '@guardian/source-react-components';`,
 		},
+		{
+			// Helpers
+			code: `import { storybookBackgrounds } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead",
+				},
+			],
+			output: undefined,
+		},
 	],
 });
