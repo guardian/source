@@ -32,7 +32,7 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	label?: string;
 	/**
-	 * When set to true, the toggle will be slim
+	 * slim or medium toggle would be different in size and colors
 	 *
 	 */
 	size?: Size;
