@@ -238,5 +238,75 @@ import {  size as s } from '@guardian/source-foundations';`,
 			],
 			output: `import type { Props } from '@guardian/source-react-components';`,
 		},
+		{
+			// Export everything from a component
+			code: `export * from '@guardian/src-button';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export * from '@guardian/source-react-components';`,
+		},
+		{
+			// Export everything from the root of foundations
+			code: `export * from '@guardian/src-foundations';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
+				},
+			],
+			output: `export * from '@guardian/source-foundations';`,
+		},
+		{
+			// Export everything from a submodule of foundations
+			code: `export * from '@guardian/foundations/size';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
+				},
+			],
+			output: `export * from '@guardian/foundations';`,
+		},
+		{
+			// Export everything from helpers
+			code: `export * from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export * from '@guardian/source-react-components';`,
+		},
+		{
+			// Export something from helpers
+			code: `export type { Props } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export type { Props } from '@guardian/source-react-components';`,
+		},
+		{
+			// Export something that's gone from helpers
+			code: `export { storybookBackgrounds } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `The following export(s) have been removed: storybookBackgrounds.`,
+				},
+			],
+			output: `export { storybookBackgrounds } from '@guardian/src-helpers';`,
+		},
+		{
+			// Export something that's changed names from foundations
+			code: `export { headline } from '@guardian/src-foundations/typography/obj';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export { headline } from '@guardian/source-foundations';`,
+		},
 	],
 });
