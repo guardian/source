@@ -1,7 +1,9 @@
 import { css } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { neutral } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
 import type { Props } from '@guardian/src-helpers';
-import { toggleSwitchStyles, slimStyles, mediumStyles } from './styles';
+import { mediumStyles, slimStyles, toggleSwitchStyles } from './styles';
 
 export type Size = 'medium' | 'slim';
 export interface ToggleSwitchProps extends Props {
@@ -54,8 +56,8 @@ export interface ToggleSwitchProps extends Props {
 const labelStyles = (isDarkBackground: boolean) => css`
 	${textSans.small()};
 	display: inline-block;
-	transform: translateY(2px);
-	color: ${isDarkBackground ? 'rgb(255, 255, 255)' : 'rgb(18, 18, 18)'};
+	transform: translateY(1px);
+	color: ${isDarkBackground ? neutral[100] : neutral[7]};
 `;
 
 export const ToggleSwitch = ({
@@ -67,7 +69,7 @@ export const ToggleSwitch = ({
 	size = 'medium',
 	onClick = () => undefined,
 	...props
-}: ToggleSwitchProps) => {
+}: ToggleSwitchProps): EmotionJSX.Element => {
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
 			return checked;
@@ -81,7 +83,7 @@ export const ToggleSwitch = ({
 	return (
 		<div
 			css={[
-				toggleSwitchStyles(isDarkBackground),
+				toggleSwitchStyles,
 				isSlim
 					? slimStyles(isDarkBackground)
 					: mediumStyles(isDarkBackground),

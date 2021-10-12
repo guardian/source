@@ -1,10 +1,11 @@
 import { css } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { neutral, success } from '@guardian/src-foundations';
 
-export const toggleSwitchStyles = (isDarkBackground: boolean) => css`
+export const toggleSwitchStyles = css`
 	button {
 		border: none;
-		margin: 0 8px 0 0;
+		margin: 8px;
 		padding: 0;
 		display: inline-block;
 		vertical-align: middle;
@@ -12,7 +13,6 @@ export const toggleSwitchStyles = (isDarkBackground: boolean) => css`
 		border-radius: 15px;
 		position: relative;
 		transition: background 0.15s ease-in-out;
-		margin: 8px;
 	}
 
 	button:after {
@@ -26,12 +26,11 @@ export const toggleSwitchStyles = (isDarkBackground: boolean) => css`
 			rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
 			rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 	}
-
-	button[aria-checked='false'] {
-	}
 `;
 
-export const mediumStyles = (isDarkBackground: boolean) => css`
+export const mediumStyles = (
+	isDarkBackground: boolean,
+): SerializedStyles => css`
 	button {
 		width: 3.125rem;
 		height: 1.875rem;
@@ -48,7 +47,7 @@ export const mediumStyles = (isDarkBackground: boolean) => css`
 
 	button[aria-checked='false'] {
 		background-color: ${isDarkBackground
-			? 'rgba(255, 255, 255, 0.6)'
+			? 'rgba(255, 255, 255, 0.4)'
 			: 'rgba(153, 153, 153, 0.4)'};
 	}
 
@@ -61,7 +60,7 @@ export const mediumStyles = (isDarkBackground: boolean) => css`
 		background: ${neutral[100]};
 	}
 `;
-export const slimStyles = (isDarkBackground: boolean) => css`
+export const slimStyles = (isDarkBackground: boolean): SerializedStyles => css`
 	button {
 		width: 1.625rem;
 		height: 0.75rem;
@@ -74,7 +73,9 @@ export const slimStyles = (isDarkBackground: boolean) => css`
 	}
 
 	button[aria-checked='false'] {
-		background: rgba(153, 153, 153, 0.4);
+		background: ${isDarkBackground
+			? 'rgba(255, 255, 255, 0.4)'
+			: 'rgba(112, 112, 112, 0.4)'};
 	}
 
 	button[aria-checked='false']:after {
