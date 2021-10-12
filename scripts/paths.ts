@@ -13,7 +13,7 @@ const helpers = join(__dirname, '../packages/@guardian/src-helpers');
 const coreComponents = join(__dirname, '../packages/@guardian');
 const kitchenComponents = join(
 	__dirname,
-	'../packages/@guardian/source-react-components-development-kitchen/components',
+	'../packages/@guardian/source-react-components-development-kitchen/src/components',
 );
 
 const isDirectory = (path: string) =>
