@@ -1,4 +1,4 @@
-import React, { useState, useEffect, HTMLAttributes } from 'react';
+import { useState, useEffect, HTMLAttributes } from 'react';
 import { Props } from '@guardian/src-helpers';
 import { SvgChevronDownSingle } from '@guardian/src-icons';
 import {

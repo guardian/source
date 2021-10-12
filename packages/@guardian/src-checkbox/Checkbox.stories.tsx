@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
 import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10

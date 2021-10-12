@@ -5,7 +5,7 @@ import {
 import { Props } from '@guardian/src-helpers';
 import { Legend } from '@guardian/src-label';
 import { InlineError } from '@guardian/src-user-feedback';
-import React, { FieldsetHTMLAttributes } from 'react';
+import { Children, cloneElement, FieldsetHTMLAttributes } from 'react';
 import { fieldset, flexContainer, gridColumns, gridContainer } from './styles';
 
 export type ChoiceCardColumns = 2 | 3 | 4 | 5;
@@ -77,8 +77,8 @@ export const ChoiceCardGroup = ({
 						: flexContainer
 				}
 			>
-				{React.Children.map(children, (child) => {
-					return React.cloneElement(
+				{Children.map(children, (child) => {
+					return cloneElement(
 						child,
 						Object.assign(
 							{
