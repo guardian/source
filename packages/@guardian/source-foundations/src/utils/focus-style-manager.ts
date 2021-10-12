@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/utils/focus-style-manager.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/utils/focus-style-manager.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/utils/focus-style-manager.ts
 
 const TAB_KEY_CODE = 9;

@@ -1,23 +1,33 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@guardian/src-foundations": ["core/foundations/src"],
-      "@guardian/src-foundations/mq": ["core/foundations/src/mq"],
+      "@guardian/src-foundations": ["packages/@guardian/src-foundations/src"],
+      "@guardian/src-foundations/mq": [
+        "packages/@guardian/src-foundations/src/mq"
+      ],
       "@guardian/src-foundations/accessibility": [
-        "core/foundations/src/accessibility"
+        "packages/@guardian/src-foundations/src/accessibility"
       ],
-      "@guardian/src-foundations/palette": ["core/foundations/src/palette"],
-      "@guardian/src-foundations/size": ["core/foundations/src/size"],
-      "@guardian/src-foundations/themes": ["core/foundations/src/themes"],
+      "@guardian/src-foundations/palette": [
+        "packages/@guardian/src-foundations/src/palette"
+      ],
+      "@guardian/src-foundations/size": [
+        "packages/@guardian/src-foundations/src/size"
+      ],
+      "@guardian/src-foundations/themes": [
+        "packages/@guardian/src-foundations/src/themes"
+      ],
       "@guardian/src-foundations/typography": [
-        "core/foundations/src/typography"
+        "packages/@guardian/src-foundations/src/typography"
       ],
-      "@guardian/src-foundations/utils": ["core/foundations/src/utils"],
-      "@guardian/src-label": ["core/components/label"],
-      "@guardian/src-user-feedback": ["core/components/user-feedback"],
-      "@guardian/src-helpers": ["core/helpers"],
-      "@guardian/src-icons": ["core/icons"]
+      "@guardian/src-foundations/utils": [
+        "packages/@guardian/src-foundations/src/utils"
+      ],
+      "@guardian/src-label": ["packages/@guardian/src-label"],
+      "@guardian/src-user-feedback": ["packages/@guardian/src-user-feedback"],
+      "@guardian/src-helpers": ["packages/@guardian/src-helpers"],
+      "@guardian/src-icons": ["packages/@guardian/src-icons"]
     },
     "outDir": "dist",
     "module": "commonjs",
@@ -40,6 +50,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "packages", "lib"],
+  "include": ["src", "packages", "lib"],
   "exclude": ["node_modules", "scripts/validate-dist"]
 }

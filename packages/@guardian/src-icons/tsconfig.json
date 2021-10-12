@@ -1,0 +1,19 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "composite": true
+  },
+  "include": [
+    ".",
+    "../../../packages/@guardian/src-foundations/types/themes.d.ts"
+  ],
+  "exclude": ["dist", "*.stories.tsx"],
+  "references": [
+    {
+      "path": "../../../packages/@guardian/src-foundations"
+    }
+  ]
+}

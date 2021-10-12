@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/accessibility.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/accessibility.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/accessibility.ts
 
 import { border } from './palette';

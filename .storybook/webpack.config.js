@@ -32,17 +32,20 @@ module.exports = ({ config, mode }) => {
 	config.resolve.alias = {
 		'@guardian/src-foundations': path.resolve(
 			__dirname,
-			'../src/core/foundations/src',
+			'../packages/@guardian/src-foundations/src',
 		),
 		'@guardian/src-label': path.resolve(
 			__dirname,
-			'../src/core/components/label',
+			'../packages/@guardian/src-label',
 		),
 		'@guardian/src-user-feedback': path.resolve(
 			__dirname,
-			'../src/core/components/user-feedback',
+			'../packages/@guardian/src-user-feedback',
 		),
-		'@guardian/src-helpers': path.resolve(__dirname, '../src/core/helpers'),
+		'@guardian/src-helpers': path.resolve(
+			__dirname,
+			'../packages/@guardian/src-helpers',
+		),
 	};
 
 	return config;

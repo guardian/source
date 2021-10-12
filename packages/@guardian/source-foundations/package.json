@@ -6,6 +6,7 @@
     "url": "https://github.com/guardian/source.git"
   },
   "license": "Apache-2.0",
+  "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -15,7 +16,7 @@
   "scripts": {
     "build": "yarn clean && rollup -c",
     "clean": "rm -rf dist",
-    "tsc": "tsc -b"
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
@@ -25,5 +26,8 @@
     "rollup-plugin-dts": "^4.0.0",
     "rollup-plugin-esbuild": "^4.5.0",
     "typescript": "^4.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

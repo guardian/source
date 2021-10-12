@@ -1,0 +1,48 @@
+{
+  "name": "@guardian/source-react-components",
+  "version": "4.0.0-alpha.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guardian/source.git"
+  },
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean && rollup -c",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@guardian/src-accordion": "3.9.1",
+    "@guardian/src-button": "3.9.1",
+    "@guardian/src-checkbox": "3.9.1",
+    "@guardian/src-choice-card": "3.9.1",
+    "@guardian/src-footer": "3.9.1",
+    "@guardian/src-label": "3.9.1",
+    "@guardian/src-layout": "3.9.1",
+    "@guardian/src-link": "3.9.1",
+    "@guardian/src-radio": "3.9.1",
+    "@guardian/src-select": "3.9.1",
+    "@guardian/src-text-area": "3.9.1",
+    "@guardian/src-text-input": "3.9.1",
+    "@guardian/src-user-feedback": "3.9.1"
+  },
+  "devDependencies": {
+    "@guardian/eslint-config": "^0.7.0",
+    "@guardian/eslint-config-typescript": "^0.7.0",
+    "esbuild": "^0.12.28",
+    "rollup": "^2.56.3",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "typescript": "^4.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
