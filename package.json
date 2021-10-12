@@ -6,11 +6,12 @@
   "workspaces": [
     "packages/@guardian/*",
     "scripts/get-usage",
-    "scripts/validate-dist"
+    "scripts/validate-dist",
+    "scripts/eslint-integration-test"
   ],
   "scripts": {
     "build": "npm-run-all build:src -p build:kitchen build:foundations build:react-components -s build:storybook",
-    "build:eslint": "yarn workspace @guardian/eslint-config-source build",
+    "build:eslint": "yarn workspace @guardian/eslint-plugin-source build",
     "build:foundations": "yarn workspace @guardian/source-foundations build",
     "build:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen build",
     "build:react-components": "yarn workspace @guardian/source-react-components build",
