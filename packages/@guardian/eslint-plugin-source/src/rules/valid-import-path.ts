@@ -171,6 +171,17 @@ const createReport = (context: Rule.RuleContext, node: Node) => {
 	if (!importSource?.startsWith("'@guardian/src-")) return;
 
 	const newPackage = getNewPackage(importSource);
+	const nonNamedImports =
+		node.type === 'ImportDeclaration' &&
+		!node.specifiers.every((s) => s.type === 'ImportSpecifier');
+
+	if (nonNamedImports) {
+		return context.report({
+			node,
+			message: getMessage(newPackage, [], node),
+		});
+	}
+
 	const removedExports = getRemovedExports(node);
 
 	const nodeSource = context.getSourceCode().getText(node);

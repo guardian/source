@@ -204,7 +204,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
 				},
 			],
-			output: `import themes from '@guardian/source-react-components';`,
+			output: `import themes from '@guardian/src-foundations/themes';`,
 		},
 		{
 			// Import everything
@@ -215,7 +215,18 @@ import {  size as s } from '@guardian/source-foundations';`,
 						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
 				},
 			],
-			output: `import * as themes from '@guardian/source-react-components';`,
+			output: `import * as themes from '@guardian/src-foundations/themes';`,
+		},
+		{
+			// Import default, and some named things
+			code: `import themes, {labelBrand} from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+				},
+			],
+			output: `import themes, {labelBrand} from '@guardian/src-foundations/themes';`,
 		},
 		{
 			// Helpers removed exports
