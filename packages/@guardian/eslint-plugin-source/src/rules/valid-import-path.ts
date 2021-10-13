@@ -1,5 +1,13 @@
 import type { Rule } from 'eslint';
-import type { ImportDeclaration, ImportSpecifier } from 'estree';
+import type {
+	ExportNamedDeclaration,
+	ExportSpecifier,
+	ImportDeclaration,
+	ImportSpecifier,
+} from 'estree';
+
+type Node = (ImportDeclaration | ExportNamedDeclaration) &
+	Rule.NodeParentExtension;
 
 const typographyObjChanges = ['body', 'headline', 'textSans', 'titlepiece'];
 
@@ -14,6 +22,9 @@ const removedImports: Record<string, string[]> = {
 	],
 };
 
+const capitalise = (str: string): string =>
+	str.charAt(0).toUpperCase() + str.slice(1);
+
 const getNewPackage = (oldPackage: string): string => {
 	if (oldPackage === "'@guardian/src-foundations/themes'") {
 		return "'@guardian/source-react-components'";
@@ -25,36 +36,49 @@ const getNewPackage = (oldPackage: string): string => {
 };
 
 const getRemovedExports = (
-	node: ImportDeclaration & Rule.NodeParentExtension,
-): ImportSpecifier[] => {
-	return node.specifiers.filter((i) => {
-		const source = node.source.raw;
-		if (!source || !Object.keys(removedImports).includes(source))
-			return false;
+	node: Node,
+): ImportSpecifier[] | ExportSpecifier[] => {
+	switch (node.type) {
+		case 'ImportDeclaration':
+			return node.specifiers.filter((i) => {
+				const source = node.source.raw;
+				if (!source || !Object.keys(removedImports).includes(source))
+					return false;
 
-		const removedImportsForSource = removedImports[source];
-		return (
-			i.type === 'ImportSpecifier' &&
-			removedImportsForSource.includes(i.imported.name)
-		);
-	}) as ImportSpecifier[];
+				const removedImportsForSource = removedImports[source];
+				return (
+					i.type === 'ImportSpecifier' &&
+					removedImportsForSource.includes(i.imported.name)
+				);
+			}) as ImportSpecifier[];
+		case 'ExportNamedDeclaration':
+			return node.specifiers.filter((i) => {
+				const source = node.source?.raw;
+				if (!source || !Object.keys(removedImports).includes(source))
+					return false;
+
+				const removedImportsForSource = removedImports[source];
+				return removedImportsForSource.includes(i.exported.name);
+			});
+	}
 };
 
-const getImportName = (i: ImportSpecifier): string => {
-	const imported = i.imported.name;
+const getImportName = (i: ImportSpecifier | ExportSpecifier): string => {
+	const imported =
+		i.type === 'ImportSpecifier' ? i.imported.name : i.exported.name;
 	const local = i.local.name;
 
 	return imported === local ? imported : `${imported} as ${local}`;
 };
 
 const getRenameImportFixers = (
-	node: ImportDeclaration & Rule.NodeParentExtension,
-	removedExports: ImportSpecifier[],
+	node: Node,
+	removedExports: ImportSpecifier[] | ExportSpecifier[],
 	fixer: Rule.RuleFixer,
 	nodeSource: string,
 ): Rule.Fix[] => {
 	const fixers: Rule.Fix[] = [];
-	if (!node.source.raw) return fixers;
+	if (!node.source?.raw) return fixers;
 	if (node.source.raw === "'@guardian/src-foundations/typography/obj'") {
 		for (const i of node.specifiers) {
 			if (
@@ -77,12 +101,19 @@ const getRenameImportFixers = (
 			fixers.push(fixer.removeRange([i.range[0], comma ? end + 1 : end]));
 		}
 
+		const importsArray: string[] = [];
+
+		for (const rExport of removedExports) {
+			const newName = getImportName(rExport);
+			importsArray.push(newName);
+		}
+
 		fixers.push(
 			fixer.insertTextBeforeRange(
 				node.range ?? [0, 0],
-				`import { ${removedExports
-					.map((i) => getImportName(i))
-					.join(', ')} } from ${node.source.raw};\n`,
+				`import { ${importsArray.join(', ')} } from ${
+					node.source.raw
+				};\n`,
 			),
 		);
 	}
@@ -92,19 +123,33 @@ const getRenameImportFixers = (
 
 const getMessage = (
 	newPackage: string,
-	removedExports: ImportSpecifier[],
-	node: ImportDeclaration & Rule.NodeParentExtension,
+	removedExports: ImportSpecifier[] | ExportSpecifier[],
+	node: Node,
 ): string => {
-	const newPackageMessage = `@guardian/src-* packages are deprecated. Import from ${newPackage} instead.`;
+	const importOrExport =
+		node.type === 'ExportNamedDeclaration' ? 'export' : 'import';
+
+	const newPackageMessage = `@guardian/src-* packages are deprecated. ${capitalise(
+		importOrExport,
+	)} from ${newPackage} instead.`;
 	if (!removedExports.length) {
 		return newPackageMessage;
 	}
 
 	const totalImports = node.specifiers.length;
-	const removedExportsString = removedExports
-		.map((i) => i.imported.name)
-		.join(', ');
-	const removedExportsMessage = `The following export(s) have been removed: ${removedExportsString}.`;
+	const removedExportsArray: string[] = [];
+
+	for (const rExport of removedExports) {
+		removedExportsArray.push(
+			rExport.type === 'ImportSpecifier'
+				? rExport.imported.name
+				: rExport.exported.name,
+		);
+	}
+
+	const removedExportsMessage = `The following export(s) have been removed: ${removedExportsArray.join(
+		', ',
+	)}.`;
 
 	if (totalImports === removedExports.length) {
 		return removedExportsMessage;
@@ -113,11 +158,8 @@ const getMessage = (
 	}
 };
 
-const createReport = (
-	context: Rule.RuleContext,
-	node: ImportDeclaration & Rule.NodeParentExtension,
-) => {
-	const importSource = node.source.raw;
+const createReport = (context: Rule.RuleContext, node: Node) => {
+	const importSource = node.source?.raw;
 	if (!importSource?.startsWith("'@guardian/src-")) return;
 
 	const newPackage = getNewPackage(importSource);
@@ -139,7 +181,7 @@ const createReport = (
 							nodeSource,
 						),
 						fixer.replaceTextRange(
-							node.source.range ?? [0, 0],
+							node.source?.range ?? [0, 0],
 							newPackage,
 						),
 				  ];
@@ -162,6 +204,10 @@ export const validImportPaths: Rule.RuleModule = {
 	create(context: Rule.RuleContext): Rule.RuleListener {
 		return {
 			ImportDeclaration(node) {
+				return createReport(context, node);
+			},
+			ExportNamedDeclaration(node) {
+				// e.g. export {Props} from '@guardian/src-helpers'
 				return createReport(context, node);
 			},
 		};

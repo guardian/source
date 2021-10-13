@@ -259,6 +259,26 @@ import {  size as s } from '@guardian/source-foundations';`,
 			output: `export * from '@guardian/source-foundations';`,
 		},
 		{
+			// Export everything with an alias from the root of foundations
+			code: `export * as foundations from '@guardian/src-foundations';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
+				},
+			],
+			output: `export * as foundations from '@guardian/source-foundations';`,
+		},
+		{
+			// Export everything with an alias from themes
+			code: `export * from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
+				},
+			],
+			output: `export * as themes from '@guardian/source-react-components';`,
+		},
+		{
 			// Export everything from a submodule of foundations
 			code: `export * from '@guardian/foundations/size';`,
 			errors: [
@@ -303,7 +323,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 			code: `export { headline } from '@guardian/src-foundations/typography/obj';`,
 			errors: [
 				{
-					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
 				},
 			],
 			output: `export { headline } from '@guardian/source-foundations';`,
