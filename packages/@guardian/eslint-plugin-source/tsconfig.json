@@ -8,9 +8,7 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["es5", "es6", "es7", "es2017", "es2019", "es2020", "dom"],
-    "module": "esnext",
     "moduleResolution": "node",
-    "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -20,8 +18,9 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "esnext"
+    "target": "es5",
+    "module": "commonjs"
   },
-  "exclude": ["src/rules/*.test.ts"],
+  "exclude": ["src/rules/*.test.ts", "dist"],
   "include": ["."]
 }
