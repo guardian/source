@@ -246,7 +246,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
 				},
 			],
-			output: `export * from '@guardian/source-react-components';`,
+			output: `export * from '@guardian/src-button';`,
 		},
 		{
 			// Export everything from the root of foundations
@@ -256,7 +256,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
 				},
 			],
-			output: `export * from '@guardian/source-foundations';`,
+			output: `export * from '@guardian/src-foundations';`,
 		},
 		{
 			// Export everything with an alias from the root of foundations
@@ -266,27 +266,27 @@ import {  size as s } from '@guardian/source-foundations';`,
 					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
 				},
 			],
-			output: `export * as foundations from '@guardian/source-foundations';`,
+			output: `export * as foundations from '@guardian/src-foundations';`,
 		},
 		{
 			// Export everything with an alias from themes
 			code: `export * from '@guardian/src-foundations/themes';`,
 			errors: [
 				{
-					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
 				},
 			],
-			output: `export * as themes from '@guardian/source-react-components';`,
+			output: `export * from '@guardian/src-foundations/themes';`,
 		},
 		{
 			// Export everything from a submodule of foundations
-			code: `export * from '@guardian/foundations/size';`,
+			code: `export * from '@guardian/src-foundations/size';`,
 			errors: [
 				{
 					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
 				},
 			],
-			output: `export * from '@guardian/foundations';`,
+			output: `export * from '@guardian/src-foundations/size';`,
 		},
 		{
 			// Export everything from helpers
@@ -296,7 +296,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
 				},
 			],
-			output: `export * from '@guardian/source-react-components';`,
+			output: `export * from '@guardian/src-helpers';`,
 		},
 		{
 			// Export something from helpers

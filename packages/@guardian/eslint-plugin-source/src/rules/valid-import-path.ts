@@ -1,12 +1,17 @@
 import type { Rule } from 'eslint';
 import type {
+	ExportAllDeclaration,
 	ExportNamedDeclaration,
 	ExportSpecifier,
 	ImportDeclaration,
 	ImportSpecifier,
 } from 'estree';
 
-type Node = (ImportDeclaration | ExportNamedDeclaration) &
+type Node = (
+	| ImportDeclaration
+	| ExportNamedDeclaration
+	| ExportAllDeclaration
+) &
 	Rule.NodeParentExtension;
 
 const typographyObjChanges = ['body', 'headline', 'textSans', 'titlepiece'];
@@ -60,6 +65,8 @@ const getRemovedExports = (
 				const removedImportsForSource = removedImports[source];
 				return removedImportsForSource.includes(i.exported.name);
 			});
+		case 'ExportAllDeclaration':
+			return [];
 	}
 };
 
@@ -78,7 +85,8 @@ const getRenameImportFixers = (
 	nodeSource: string,
 ): Rule.Fix[] => {
 	const fixers: Rule.Fix[] = [];
-	if (!node.source?.raw) return fixers;
+	if (!node.source?.raw || node.type === 'ExportAllDeclaration')
+		return fixers;
 	if (node.source.raw === "'@guardian/src-foundations/typography/obj'") {
 		for (const i of node.specifiers) {
 			if (
@@ -126,13 +134,13 @@ const getMessage = (
 	removedExports: ImportSpecifier[] | ExportSpecifier[],
 	node: Node,
 ): string => {
-	const importOrExport =
-		node.type === 'ExportNamedDeclaration' ? 'export' : 'import';
+	const importOrExport = node.type.startsWith('Export') ? 'export' : 'import';
 
 	const newPackageMessage = `@guardian/src-* packages are deprecated. ${capitalise(
 		importOrExport,
 	)} from ${newPackage} instead.`;
-	if (!removedExports.length) {
+
+	if (!removedExports.length || node.type === 'ExportAllDeclaration') {
 		return newPackageMessage;
 	}
 
@@ -171,20 +179,27 @@ const createReport = (context: Rule.RuleContext, node: Node) => {
 		node,
 		message: getMessage(newPackage, removedExports, node),
 		fix: (fixer) => {
-			return node.specifiers.length === removedExports.length
-				? null
-				: [
-						...getRenameImportFixers(
-							node,
-							removedExports,
-							fixer,
-							nodeSource,
-						),
-						fixer.replaceTextRange(
-							node.source?.range ?? [0, 0],
-							newPackage,
-						),
-				  ];
+			if (node.type === 'ExportAllDeclaration') {
+				return fixer.replaceTextRange(
+					node.source.range ?? [0, 0],
+					newPackage,
+				);
+			} else {
+				return node.specifiers.length === removedExports.length
+					? null
+					: [
+							...getRenameImportFixers(
+								node,
+								removedExports,
+								fixer,
+								nodeSource,
+							),
+							fixer.replaceTextRange(
+								node.source?.range ?? [0, 0],
+								newPackage,
+							),
+					  ];
+			}
 		},
 	});
 };
@@ -209,6 +224,17 @@ export const validImportPaths: Rule.RuleModule = {
 			ExportNamedDeclaration(node) {
 				// e.g. export {Props} from '@guardian/src-helpers'
 				return createReport(context, node);
+			},
+			ExportAllDeclaration(node) {
+				// e.g. export * from '@guardian/src-foundations'`
+				return context.report({
+					node,
+					message: getMessage(
+						getNewPackage(node.source.raw ?? ''),
+						[],
+						node,
+					),
+				});
 			},
 		};
 	},
