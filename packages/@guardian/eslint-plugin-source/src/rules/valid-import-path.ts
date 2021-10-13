@@ -238,10 +238,11 @@ export const validImportPaths: Rule.RuleModule = {
 			},
 			ExportAllDeclaration(node) {
 				// e.g. export * from '@guardian/src-foundations'`
+				if (!node.source.raw?.startsWith("'@guardian/src-")) return;
 				return context.report({
 					node,
 					message: getMessage(
-						getNewPackage(node.source.raw ?? ''),
+						getNewPackage(node.source.raw),
 						[],
 						node,
 					),
