@@ -2,7 +2,9 @@
   "root": true,
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {
+        "alwaysTryTypes": true
+      }
     }
   },
   "env": {

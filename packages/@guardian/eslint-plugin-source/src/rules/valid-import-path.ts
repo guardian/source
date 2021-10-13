@@ -1,5 +1,5 @@
-import { ImportDeclaration, ImportSpecifier } from 'estree';
-import { Rule } from 'eslint';
+import type { Rule } from 'eslint';
+import type { ImportDeclaration, ImportSpecifier } from 'estree';
 
 const typographyObjChanges = ['body', 'headline', 'textSans', 'titlepiece'];
 
@@ -54,7 +54,7 @@ const getRenameImportFixers = (
 	nodeSource: string,
 ): Rule.Fix[] => {
 	const fixers: Rule.Fix[] = [];
-
+	if (!node.source.raw) return fixers;
 	if (node.source.raw === "'@guardian/src-foundations/typography/obj'") {
 		for (const i of node.specifiers) {
 			if (
