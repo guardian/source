@@ -20,7 +20,6 @@
     "build:esm": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/esm --module ES6",
     "build:types": "tsc -b",
     "clean": "rm -rf dist",
-    "prepublish": "yarn build",
     "publish:public": "yarn publish --access public",
     "verbump:major": "yarn version --major --no-git-tag-version",
     "verbump:minor": "yarn version --minor --no-git-tag-version",
