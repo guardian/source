@@ -14,7 +14,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean && rollup -c",
+    "build": "rollup -c",
     "clean": "rm -rf dist",
     "prepublishOnly": "yarn build"
   },
