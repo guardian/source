@@ -87,6 +87,8 @@ const getRenameImportFixers = (
 	const fixers: Rule.Fix[] = [];
 	if (!node.source?.raw || node.type === 'ExportAllDeclaration')
 		return fixers;
+
+	// Some of the typography obj exports have changed name
 	if (node.source.raw === "'@guardian/src-foundations/typography/obj'") {
 		for (const i of node.specifiers) {
 			if (
@@ -101,9 +103,14 @@ const getRenameImportFixers = (
 				);
 			}
 		}
-	} else if (removedExports.length) {
+	}
+
+	// If anything has been removed then remove it from the fixed import
+	// Also add a new line which imports the removed exports from the original source
+	if (removedExports.length) {
 		for (const i of removedExports) {
 			if (!i.range) break;
+			// Account for a possible comma after the import (e.g. import {one, two} from 'source')
 			const end = i.range[1];
 			const comma = nodeSource.slice(end, end + 1);
 			fixers.push(fixer.removeRange([i.range[0], comma ? end + 1 : end]));
@@ -171,6 +178,18 @@ const createReport = (context: Rule.RuleContext, node: Node) => {
 	if (!importSource?.startsWith("'@guardian/src-")) return;
 
 	const newPackage = getNewPackage(importSource);
+
+	// Check if the export statement is exporting everything
+	// If so, we won't autofix
+	if (node.type === 'ExportAllDeclaration') {
+		return context.report({
+			node,
+			message: getMessage(newPackage, [], node),
+		});
+	}
+
+	// Check if the import statement contains any all or default imports
+	// If so, we won't autofix
 	const nonNamedImports =
 		node.type === 'ImportDeclaration' &&
 		!node.specifiers.every((s) => s.type === 'ImportSpecifier');
@@ -182,6 +201,8 @@ const createReport = (context: Rule.RuleContext, node: Node) => {
 		});
 	}
 
+	// Some exports are no longer available from the new packages
+	// We need to account for these
 	const removedExports = getRemovedExports(node);
 
 	const nodeSource = context.getSourceCode().getText(node);
@@ -190,27 +211,21 @@ const createReport = (context: Rule.RuleContext, node: Node) => {
 		node,
 		message: getMessage(newPackage, removedExports, node),
 		fix: (fixer) => {
-			if (node.type === 'ExportAllDeclaration') {
-				return fixer.replaceTextRange(
-					node.source.range ?? [0, 0],
-					newPackage,
-				);
-			} else {
-				return node.specifiers.length === removedExports.length
-					? null
-					: [
-							...getRenameImportFixers(
-								node,
-								removedExports,
-								fixer,
-								nodeSource,
-							),
-							fixer.replaceTextRange(
-								node.source?.range ?? [0, 0],
-								newPackage,
-							),
-					  ];
-			}
+			// If all of the exports have been removed then don't autofix
+			return node.specifiers.length === removedExports.length
+				? null
+				: [
+						...getRenameImportFixers(
+							node,
+							removedExports,
+							fixer,
+							nodeSource,
+						),
+						fixer.replaceTextRange(
+							node.source?.range ?? [0, 0],
+							newPackage,
+						),
+				  ];
 		},
 	});
 };
@@ -238,15 +253,7 @@ export const validImportPaths: Rule.RuleModule = {
 			},
 			ExportAllDeclaration(node) {
 				// e.g. export * from '@guardian/src-foundations'`
-				if (!node.source.raw?.startsWith("'@guardian/src-")) return;
-				return context.report({
-					node,
-					message: getMessage(
-						getNewPackage(node.source.raw),
-						[],
-						node,
-					),
-				});
+				return createReport(context, node);
 			},
 		};
 	},
