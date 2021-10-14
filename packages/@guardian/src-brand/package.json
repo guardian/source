@@ -37,5 +37,8 @@
     "@emotion/react": "^11.1.2",
     "@guardian/src-foundations": "^3.9.2-rc.0",
     "react": "^17.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
