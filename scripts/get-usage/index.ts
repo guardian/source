@@ -79,7 +79,7 @@ const getComponentUsage = (): Record<string, Record<string, number>> => {
 
 const main = async () => {
 	console.log('Finding Source usage');
-	const { componentsWithPackage } = await getAllComponentsAndPackages();
+	const componentsWithPackage = await getAllComponentsAndPackages();
 
 	// Get the current working directory so we can restore that at the end
 	// If it's not the root source directory then fall over as the script won't work

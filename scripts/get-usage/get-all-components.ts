@@ -80,12 +80,17 @@ export const getAllComponentsAndPackages = async () => {
 		components[pkg] = getPackageComponents(path);
 	});
 
-	return {
-		componetsByPackage: components,
-		components: Object.values(components).flatMap((c) => c),
-		packages: Object.keys(components),
-		componentsWithPackage: Object.entries(components).flatMap(([pkg, cs]) =>
+	const componentsWithPackages = [
+		...Object.entries(components).flatMap(([pkg, cs]) =>
 			cs.flatMap((c) => `${pkg}/${c}`),
 		),
-	};
+		'@guardian/src-ed-lines/Lines',
+		'@guardian/src-ed-quote-icon/QuoteIcon',
+		'@guardian/src-ed-logo/Logo',
+		'@guardian/src-ed-star-rating/StarRating',
+		'@guardian/src-ed-button/Button',
+		'@guardian/src-ed-button/LinkButton',
+	];
+
+	return componentsWithPackages;
 };
