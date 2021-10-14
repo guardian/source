@@ -44,6 +44,21 @@ const getStatsByComponent = (
 	return byComponent;
 };
 
+const getUnusedComponentsPercentage = (
+	allComponents: string[],
+	usedComponents: string[],
+): number => {
+	const prefixesToIgnore = ['@guardian/src-ed', '@guardian/source-'];
+
+	const relevantComponentsFilter = (component: string): boolean =>
+		prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
+
+	const fraction =
+		usedComponents.filter(relevantComponentsFilter).length /
+		allComponents.filter(relevantComponentsFilter).length;
+	return Math.round(fraction * 100);
+};
+
 const getComponentUsage = (): Record<string, Record<string, number>> => {
 	const componentUsage: Record<string, Record<string, number>> = {};
 
@@ -117,6 +132,10 @@ const main = async () => {
 			byComponent,
 			unusedComponents: componentsWithPackage.filter(
 				(c) => !usedComponents.includes(c),
+			),
+			unusedComponentsPercentage: getUnusedComponentsPercentage(
+				componentsWithPackage,
+				usedComponents,
 			),
 		};
 
