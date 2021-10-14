@@ -1,6 +1,6 @@
 {
   "name": "source",
-  "version": "3.9.2-rc.0",
+  "version": "3.10.1",
   "private": true,
   "license": "Apache-2.0",
   "workspaces": [
