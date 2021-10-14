@@ -29,7 +29,7 @@
     "lint:styles": "stylelint packages/**/styles.ts",
     "prepare": "husky install",
     "publish:release": "ts-node ./scripts/publish-release",
-    "release": "lerna publish --no-private",
+    "release": "yarn clean && yarn build:src -p build:kitchen build:foundations build:react-components && lerna publish --no-private",
     "release:major:src": "yarn build:src && yarn validate && yarn verbump:major:src && yarn publish:release",
     "release:minor:src": "yarn build:src && yarn validate && yarn verbump:minor:src && yarn publish:release",
     "release:patch:src": "yarn build:src && yarn validate && yarn verbump:patch:src && yarn publish:release",
