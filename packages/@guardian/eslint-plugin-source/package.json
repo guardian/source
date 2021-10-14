@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean && tsc",
+    "build": "tsc",
     "clean": "rm -rf dist"
   },
   "dependencies": {
