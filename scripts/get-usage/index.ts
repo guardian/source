@@ -44,7 +44,7 @@ const getStatsByComponent = (
 	return byComponent;
 };
 
-const getUnusedComponentsPercentage = (
+const getUsedComponentsPercentage = (
 	allComponents: string[],
 	usedComponents: string[],
 ): number => {
@@ -133,7 +133,7 @@ const main = async () => {
 			unusedComponents: componentsWithPackage.filter(
 				(c) => !usedComponents.includes(c),
 			),
-			unusedComponentsPercentage: getUnusedComponentsPercentage(
+			usedComponentsPercentage: getUsedComponentsPercentage(
 				componentsWithPackage,
 				usedComponents,
 			),
