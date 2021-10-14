@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { neutral } from '@guardian/src-foundations';
 import { useState } from 'react';
 import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
@@ -27,27 +28,6 @@ const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 	);
 };
 
-const DarkBackgroundTemplate: Story<ToggleSwitchProps> = (
-	args: ToggleSwitchProps,
-) => {
-	const [checked, setChecked] = useState(args.checked);
-	return (
-		<div
-			css={css`
-				background: rgb(139, 0, 0);
-			`}
-		>
-			<ToggleSwitch
-				{...args}
-				checked={checked}
-				onClick={() => {
-					setChecked(!checked);
-				}}
-			/>
-		</div>
-	);
-};
-
 // *****************************************************************************
 
 export const Playground = Template.bind({});
@@ -55,56 +35,64 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const SlimNoLabelLightBackground = Template.bind({});
-SlimNoLabelLightBackground.args = {
+export const SlimNoLabel = Template.bind({});
+SlimNoLabel.args = {
 	size: 'slim',
 };
-asChromaticStory(SlimNoLabelLightBackground);
+asChromaticStory(SlimNoLabel);
 
 // *****************************************************************************
 
-export const MediumNoLabelLightBackground = Template.bind({});
-MediumNoLabelLightBackground.args = {
+export const MediumNoLabel = Template.bind({});
+MediumNoLabel.args = {
 	size: 'medium',
 };
-asChromaticStory(MediumNoLabelLightBackground);
+asChromaticStory(MediumNoLabel);
 
 // *****************************************************************************
 
-export const SlimLabelLightBackground = Template.bind({});
-SlimLabelLightBackground.args = {
+export const SlimWithLabel = Template.bind({});
+SlimWithLabel.args = {
 	label: 'Get alerts on this story',
 	size: 'slim',
-	isDarkBackground: false,
 };
-asChromaticStory(SlimLabelLightBackground);
+asChromaticStory(SlimWithLabel);
 
 // *****************************************************************************
 
-export const SlimLabelDarkBackground = DarkBackgroundTemplate.bind({});
-SlimLabelDarkBackground.args = {
+export const MediumWithLabel = Template.bind({});
+MediumWithLabel.args = {
+	label: 'Get alerts on this story',
+	size: 'medium',
+};
+asChromaticStory(MediumWithLabel);
+
+// *****************************************************************************
+const stylesForDarkBackground = css`
+	background: rgb(139, 0, 0);
+	button[aria-checked='false'] {
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	label {
+		color: ${neutral[100]};
+	}
+`;
+
+export const SlimLabelCssOverrideForDarkBackground = Template.bind({});
+SlimLabelCssOverrideForDarkBackground.args = {
 	label: 'Get alerts on this story',
 	size: 'slim',
-	isDarkBackground: true,
+	cssOverrides: stylesForDarkBackground,
 };
-asChromaticStory(SlimLabelDarkBackground);
+asChromaticStory(SlimLabelCssOverrideForDarkBackground);
 
 // *****************************************************************************
 
-export const MediumLabelLightBackground = Template.bind({});
-MediumLabelLightBackground.args = {
+export const MediumLabelCssOverrideForDarkBackground = Template.bind({});
+MediumLabelCssOverrideForDarkBackground.args = {
 	label: 'Get alerts on this story',
 	size: 'medium',
-	isDarkBackground: false,
+	cssOverrides: stylesForDarkBackground,
 };
-asChromaticStory(MediumLabelLightBackground);
-
-// *****************************************************************************
-
-export const MediumLabelDarkBackground = DarkBackgroundTemplate.bind({});
-MediumLabelDarkBackground.args = {
-	label: 'Get alerts on this story',
-	size: 'medium',
-	isDarkBackground: true,
-};
-asChromaticStory(MediumLabelDarkBackground);
+asChromaticStory(MediumLabelCssOverrideForDarkBackground);
