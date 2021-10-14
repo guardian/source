@@ -1,0 +1,20 @@
+# https://github.com/marketplace/actions/labeler
+
+brand: packages/@guardian/src-brand/**/*
+foundations: packages/@guardian/src-foundations/**/*
+icons: packages/@guardian/src-icons/**/*
+accordion: packages/@guardian/src-accordion/**/*
+button: packages/@guardian/src-button/**/*
+checkbox: packages/@guardian/src-checkbox/**/*
+choice card: packages/@guardian/src-choice-card/**/*
+footer: packages/@guardian/src-footer/**/*
+kitchen: packages/@guardian/source-react-components-development-kitchen/**/*
+react-components: packages/@guardian/source-react-components/**/*
+label: packages/@guardian/src-label/**/*
+layout: packages/@guardian/src-layout/**/*
+link: packages/@guardian/src-link/**/*
+radio: packages/@guardian/src-radio/**/*
+select: packages/@guardian/src-select/**/*
+text area: packages/@guardian/src-text-area/**/*
+text input: packages/@guardian/src-text-input/**/*
+user feedback: packages/@guardian/src-user-feedback/**/*
