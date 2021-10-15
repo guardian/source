@@ -48,7 +48,11 @@ const BestWebsiteLogo = () => {
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 300 116"
 			css={svgSize}
+			aria-labelledby="BestWebsiteLogoTitle"
 		>
+			<title id="BestWebsiteLogoTitle">
+				The Guardian. For 200 years. News website of the year.
+			</title>
 			<g fill={brandText.primary}>
 				<path
 					data-content="The Guardian"
@@ -80,7 +84,11 @@ const AnniversaryLogo = () => {
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 300 124"
 			css={svgSize}
+			aria-labelledby="AnniversaryLogoTitle"
 		>
+			<title id="AnniversaryLogoTitle">
+				The Guardian. For 200 years.
+			</title>
 			<g fill={brandText.primary}>
 				<path
 					data-content="The Guardian"
