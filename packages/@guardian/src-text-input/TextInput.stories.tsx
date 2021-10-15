@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { TextInput } from './index';
 import type { TextInputProps } from './index';
 import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
@@ -37,7 +37,7 @@ export default {
 };
 
 const Template: Story<TextInputProps> = (args: TextInputProps) => {
-	const [state, setState] = React.useState('');
+	const [state, setState] = useState('');
 	return (
 		<TextInput
 			{...args}

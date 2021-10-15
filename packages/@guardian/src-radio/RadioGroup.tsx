@@ -1,4 +1,4 @@
-import React, { FieldsetHTMLAttributes } from 'react';
+import { Children, cloneElement, FieldsetHTMLAttributes } from 'react';
 import { Legend } from '@guardian/src-label';
 import { InlineError } from '@guardian/src-user-feedback';
 import {
@@ -86,8 +86,8 @@ export const RadioGroup = ({
 		>
 			{legend}
 			{message}
-			{React.Children.map(children, (child) => {
-				return React.cloneElement(
+			{Children.map(children, (child) => {
+				return cloneElement(
 					child as React.ReactElement,
 					Object.assign(
 						error

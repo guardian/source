@@ -1,4 +1,3 @@
-import React from 'react';
 import { Radio } from './Radio';
 import type { RadioProps } from './Radio';
 import { radioBrand } from './index';

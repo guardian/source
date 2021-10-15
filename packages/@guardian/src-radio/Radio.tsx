@@ -1,4 +1,4 @@
-import React, { ReactNode, InputHTMLAttributes } from 'react';
+import { ReactNode, InputHTMLAttributes } from 'react';
 import {
 	label,
 	labelWithSupportingText,

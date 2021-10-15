@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 import { Story } from '../../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory, asPlayground } from '../../../../lib/story-intents';
 import { Container } from '../Container/Container';

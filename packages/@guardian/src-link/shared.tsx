@@ -1,4 +1,4 @@
-import React, { Fragment, ReactElement, ReactNode } from 'react';
+import { cloneElement, Fragment, ReactElement, ReactNode } from 'react';
 import { IconSide } from './types';
 
 export const linkContents = ({
@@ -18,15 +18,9 @@ export const linkContents = ({
 
 	if (iconSvg) {
 		if (iconSide === 'left') {
-			linkContents.unshift(
-				spacer,
-				React.cloneElement(iconSvg, { key: 'svg' }),
-			);
+			linkContents.unshift(spacer, cloneElement(iconSvg, { key: 'svg' }));
 		} else {
-			linkContents.push(
-				spacer,
-				React.cloneElement(iconSvg, { key: 'svg' }),
-			);
+			linkContents.push(spacer, cloneElement(iconSvg, { key: 'svg' }));
 		}
 	}
 

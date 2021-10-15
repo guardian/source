@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Checkbox, CheckboxGroup, checkboxBrand } from './index';
 import CheckboxStories from './Checkbox.stories';
 import type { CheckboxGroupProps } from './CheckboxGroup';
