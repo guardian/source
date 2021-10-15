@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/animation.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/animation.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/animation.ts
 
 const transitions = {

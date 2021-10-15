@@ -1,5 +1,5 @@
 // FYI
-// src/core/foundations/src/space.ts SYMLINKS TO
+// packages/@guardian/src-foundations/src/space.ts SYMLINKS TO
 // packages/@guardian/source-foundations/src/space.ts
 
 import { pxToRem } from './utils/px-to-rem';

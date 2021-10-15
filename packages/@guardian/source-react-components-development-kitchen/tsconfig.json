@@ -5,14 +5,14 @@
     "declaration": true,
     "emitDeclarationOnly": true
   },
-  "include": ["."],
-  "exclude": ["dist", "components/**/*.stories.tsx"],
+  "include": ["src"],
+  "exclude": ["dist", "src/**/*.stories.tsx"],
   "references": [
     {
-      "path": "../../../src/core/foundations"
+      "path": "../src-foundations"
     },
     {
-      "path": "../../../src/core/helpers"
+      "path": "../src-helpers"
     }
   ]
 }

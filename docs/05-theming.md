@@ -91,4 +91,4 @@ const Form = () => (
 );
 ```
 
-To see which properties can be themed for each component, take a look in the [themes folder of our Foundations](https://github.com/guardian/source/tree/main/src/core/foundations/src/themes).
+To see which properties can be themed for each component, take a look in the [themes folder of our Foundations](https://github.com/guardian/source/tree/main/packages/@guardian/src-foundations/src/themes).
