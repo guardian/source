@@ -1,6 +1,6 @@
 import { ExecError, Test, TestResult } from './types';
 import { readTestFile, writeToTestfile } from './file';
-import { testFileName } from './config';
+import { testFileName, eslintConfigFileName } from './config';
 import { execSync } from 'child_process';
 import { cwd } from 'process';
 import ora from 'ora';
@@ -89,7 +89,7 @@ export const test = (config: Test): TestResult => {
 		execSync(
 			`yarn eslint ${testFileName} --ext .ts ${
 				config.fix ? '--fix' : ''
-			}`,
+			} -c ${eslintConfigFileName} --no-eslintrc`,
 			{
 				encoding: 'utf-8',
 				stdio: 'pipe',
