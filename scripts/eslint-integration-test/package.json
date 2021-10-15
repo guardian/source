@@ -8,7 +8,11 @@
   "main": "index.ts",
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx,.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node ./src/index.ts"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
   },
   "devDependencies": {
     "@guardian/eslint-plugin-source": "file:../../packages/@guardian/eslint-plugin-source"
