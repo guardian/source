@@ -67,7 +67,7 @@ const getErrorsFromExecError = (err: ExecError): string[] | null => {
 	return errors;
 };
 
-const errorsEqual = (expected: string[], actual: string[]): boolean => {
+const errorsEqual = (expected: string[] = [], actual: string[]): boolean => {
 	const sortedExpected = expected.sort();
 	const sortedActual = actual.sort();
 
@@ -109,17 +109,14 @@ export const test = (config: Test): TestResult => {
 			};
 		}
 
-		if (
-			config.expectedErrors &&
-			!errorsEqual(config.expectedErrors, errors)
-		) {
+		if (!errorsEqual(config.expectedErrors, errors)) {
 			spinner.fail();
 			return {
 				...config,
 				pass: false,
 				failureMessage: `
   Expected the following errors:
-  ${chalk.green(config.expectedErrors.join('\n'))}
+  ${chalk.green(config.expectedErrors?.join('\n') ?? 'undefined')}
   Received:
   ${chalk.red(errors.join('\n'))}`,
 			};
