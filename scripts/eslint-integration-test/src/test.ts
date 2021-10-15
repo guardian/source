@@ -134,7 +134,7 @@ export const test = (config: Test): TestResult => {
   Expected output to equal:
   ${chalk.green(config.expectedOutput)}
   Received:
-  ${chalk.red(actualOutput)}}`,
+  ${chalk.red(actualOutput)}`,
 			};
 		}
 	}
