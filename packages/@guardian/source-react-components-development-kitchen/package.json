@@ -10,9 +10,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean && rollup -c",
-    "clean": "rm -rf dist",
-    "prepublishOnly": "yarn build"
+    "build": "rollup -c",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@guardian/src-button": "^3.9.1",
