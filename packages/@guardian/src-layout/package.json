@@ -1,6 +1,6 @@
 {
   "name": "@guardian/src-layout",
-  "version": "3.10.0",
+  "version": "3.10.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
@@ -15,12 +15,11 @@
     "dist/types"
   ],
   "scripts": {
-    "build": "npm-run-all clean --parallel build:*",
+    "build": "npm-run-all --parallel build:*",
     "build:cjs": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/cjs --module commonjs",
     "build:esm": "tsc --composite false --declaration false --emitDeclarationOnly false --outDir dist/esm --module ES6",
     "build:types": "tsc -b",
     "clean": "rm -rf dist",
-    "prepublish": "yarn build",
     "publish:public": "yarn publish --access public",
     "verbump:major": "yarn version --major --no-git-tag-version",
     "verbump:minor": "yarn version --minor --no-git-tag-version",
@@ -30,7 +29,7 @@
     "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
   },
   "dependencies": {
-    "@guardian/src-helpers": "^3.10.0"
+    "@guardian/src-helpers": "^3.10.1"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
@@ -38,7 +37,10 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
-    "@guardian/src-foundations": "^3.9.2-rc.0",
+    "@guardian/src-foundations": "^3.10.1",
     "react": "^17.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
