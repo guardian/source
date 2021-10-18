@@ -1,13 +1,11 @@
-import { css } from '@emotion/react';
-import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import { useState } from 'react';
 import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../../lib/story-intents';
-import type { ToggleSwitchProps } from './ToggleSwitch';
 import { ToggleSwitch } from './ToggleSwitch';
+import type { ToggleSwitchProps } from './ToggleSwitch';
 
 export default {
 	title: 'Kitchen/source-react-components-development-kitchen/ToggleSwitch',
@@ -35,65 +33,34 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const NoLabel = Template.bind({});
-asChromaticStory(NoLabel);
+export const SlimNoLabel = Template.bind({});
+SlimNoLabel.args = {
+	size: 'slim',
+};
+asChromaticStory(SlimNoLabel);
 
 // *****************************************************************************
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
+export const MediumNoLabel = Template.bind({});
+MediumNoLabel.args = {
+	size: 'medium',
+};
+asChromaticStory(MediumNoLabel);
+
+// *****************************************************************************
+
+export const SlimWithLabel = Template.bind({});
+SlimWithLabel.args = {
 	label: 'Get alerts on this story',
+	size: 'slim',
 };
-asChromaticStory(WithLabel);
+asChromaticStory(SlimWithLabel);
 
 // *****************************************************************************
 
-export const DefaultChecked = Template.bind({});
-DefaultChecked.args = {
+export const MediumWithLabel = Template.bind({});
+MediumWithLabel.args = {
 	label: 'Get alerts on this story',
-	defaultChecked: true,
+	size: 'medium',
 };
-asChromaticStory(DefaultChecked);
-
-// *****************************************************************************
-const pillars = [
-	{ pillar: ArticlePillar.News, label: 'News' },
-	{ pillar: ArticlePillar.Sport, label: 'Sport' },
-	{ pillar: ArticlePillar.Culture, label: 'Culture' },
-	{ pillar: ArticlePillar.Lifestyle, label: 'Lifestyle' },
-	{ pillar: ArticlePillar.Opinion, label: 'Opinion' },
-	{ pillar: ArticleSpecial.SpecialReport, label: 'SpecialReport' },
-	{ pillar: ArticleSpecial.Labs, label: 'Labs' },
-];
-const RowTemplate: Story<ToggleSwitchProps> = (
-	args: Partial<ToggleSwitchProps>,
-) => (
-	<div
-		css={css`
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			width: 800px;
-		`}
-	>
-		{pillars.map((pillar) => (
-			<Template
-				key={pillar.pillar}
-				{...args}
-				theme={pillar.pillar}
-				label={pillar.label}
-			/>
-		))}
-	</div>
-);
-
-export const AllPillarsUnchecked = RowTemplate.bind({});
-asChromaticStory(AllPillarsUnchecked);
-
-// *****************************************************************************
-
-export const AllPillarsChecked = RowTemplate.bind({});
-AllPillarsChecked.args = {
-	defaultChecked: true,
-};
-asChromaticStory(AllPillarsChecked);
+asChromaticStory(MediumWithLabel);

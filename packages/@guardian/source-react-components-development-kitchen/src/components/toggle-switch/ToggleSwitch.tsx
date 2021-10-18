@@ -1,30 +1,22 @@
-import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import type { ArticleTheme } from '@guardian/libs';
-import { ArticlePillar } from '@guardian/libs';
-import { textSans } from '@guardian/src-foundations/typography';
 import type { Props } from '@guardian/src-helpers';
-import { decideBackground, toggleSwitchStyles } from './styles';
+import {
+	labelStyles,
+	mediumStyles,
+	slimStyles,
+	toggleSwitchStyles,
+} from './styles';
+
+export type Size = 'medium' | 'slim';
 
 export interface ToggleSwitchProps extends Props {
-	/**
-	 * A theme object denoting the style of the button using the enums
-	 * available from [@guardian/libs](https://github.com/guardian/libs/blob/main/src/format.ts).
-	 *
-	 * For example:
-	 *
-	 * ```ts
-	 *   Pillar.News,
-	 * ```
-	 */
-	theme?: ArticleTheme;
 	/**
 	 * Whether the ToggleSwitch is checked. This is necessary when using the
 	 * [controlled approach](https://reactjs.org/docs/forms.html#controlled-components)
 	 * (recommended) to form state management.
 	 *
-	 * _Note: if you pass the `checked` prop, you MUST also pass an `onClick`
-	 * handler, or the field will be rendered as read-only._
+	 * Note: if you pass the `checked` prop, you MUST also pass an `onClick`
+	 * handler, or the field will be rendered as read-only.
 	 */
 	checked?: boolean;
 	/**
@@ -38,7 +30,14 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	label?: string;
 	/**
-	 * A callback function called when the component is opened or closed.
+	 * slim or medium toggle would be different in size and colors.
+	 * slim has the size and look of an android toggle switch and
+	 * medium has the ios switch look and feel.
+	 *
+	 */
+	size?: Size;
+	/**
+	 * A callback function called when the component is checked or unchecked.
 	 * Receives the click event as an argument.
 	 */
 	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -50,21 +49,19 @@ export interface ToggleSwitchProps extends Props {
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
- * Displays an on/off toggle switch.
+ * Displays an on/off toggle switch. This toggle has default styling and can be used in andriod or ios.
+ * To give it more custome styling cssOverride may be used.
  *
  */
 
-const labelStyles = css`
-	${textSans.small()};
-`;
-
 export const ToggleSwitch = ({
-	theme = ArticlePillar.News,
 	checked,
 	label,
 	defaultChecked,
 	cssOverrides,
+	size = 'medium',
 	onClick = () => undefined,
+	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
@@ -74,19 +71,26 @@ export const ToggleSwitch = ({
 		return !!defaultChecked;
 	};
 
-	const background = decideBackground(theme);
+	const isSlim = size === 'slim';
 
 	return (
-		<div css={[toggleSwitchStyles(background), cssOverrides]}>
+		<div
+			css={[
+				toggleSwitchStyles,
+				isSlim ? slimStyles : mediumStyles,
+				cssOverrides,
+			]}
+			{...props}
+		>
 			<button
 				role="switch"
 				aria-checked={isChecked()}
 				aria-labelledby="notify"
 				onClick={onClick}
 			></button>
-			<span css={labelStyles} id="notify">
+			<label css={labelStyles} id="notify">
 				{label}
-			</span>
+			</label>
 		</div>
 	);
 };
