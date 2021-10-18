@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components-development-kitchen",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -10,9 +10,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean && rollup -c",
-    "clean": "rm -rf dist",
-    "prepublishOnly": "yarn build"
+    "build": "rollup -c",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@guardian/src-button": "^3.9.1",

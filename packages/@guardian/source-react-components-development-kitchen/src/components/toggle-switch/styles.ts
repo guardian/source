@@ -1,84 +1,93 @@
-import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import type { ArticleTheme } from '@guardian/libs';
-import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
-import {
-	culture,
-	lifestyle,
-	news,
-	opinion,
-	sport,
-	success,
-} from '@guardian/src-foundations';
+import { neutral, success } from '@guardian/src-foundations';
+import { textSans } from '@guardian/src-foundations/typography';
 
-export const defaultTheme = ArticlePillar.News;
-
-export const decideBackground = (theme: ArticleTheme): SerializedStyles => {
-	switch (theme) {
-		case ArticlePillar.News:
-		case ArticleSpecial.Labs:
-		case ArticleSpecial.SpecialReport:
-			return css`
-				background: ${news[200]}40;
-			`;
-		case ArticlePillar.Culture:
-			return css`
-				background-color: ${culture[200]}40;
-			`;
-		case ArticlePillar.Lifestyle:
-			return css`
-				background-color: ${lifestyle[200]}40;
-			`;
-		case ArticlePillar.Sport:
-			return css`
-				background-color: ${sport[100]}40;
-			`;
-		case ArticlePillar.Opinion:
-			return css`
-				background-color: ${opinion[200]}40;
-			`;
-	}
-};
-
-export const toggleSwitchStyles = (
-	background: SerializedStyles,
-): SerializedStyles => css`
+export const toggleSwitchStyles = css`
 	button {
 		border: none;
-		margin: 0 8px 0 0;
+		margin: 8px;
 		padding: 0;
-		width: 3.75em;
-		height: 1.9rem;
 		display: inline-block;
 		vertical-align: middle;
 		text-align: center;
-		border-radius: 1.2rem;
 		position: relative;
-		transition: background 0.15s ease-in-out;
+		transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 	}
 
 	button:after {
 		content: '';
 		position: absolute;
-		height: 1.6rem;
-		width: 1.6rem;
 		border-radius: 50%;
-		top: 0.15rem;
 		background: #fff;
-		transition: left 0.15s ease-in-out;
 		will-change: left;
+		transition: left 0.15s ease-in-out;
+	}
+`;
+
+export const mediumStyles = css`
+	button {
+		width: 3.188rem;
+		height: 1.938rem;
+		border-radius: 15.5px;
+	}
+
+	button:after {
+		height: 1.688rem;
+		width: 1.688rem;
+		margin: 2px;
+		top: 0;
+		left: 0;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.306272);
 	}
 
 	button[aria-checked='false'] {
-		${background}
+		background-color: rgba(153, 153, 153, 0.5);
 	}
-	button[aria-checked='false']:after {
-		left: 0.1em;
-	}
+
 	button[aria-checked='true'] {
 		background: ${success[500]};
 	}
+
 	button[aria-checked='true']:after {
-		left: 1.4rem;
+		left: 20px;
+		background: ${neutral[100]};
 	}
+`;
+export const slimStyles = css`
+	button {
+		width: 1.625rem;
+		height: 0.75rem;
+		border-radius: 6px;
+	}
+
+	button:after {
+		height: 1.125rem;
+		width: 1.125rem;
+		top: -3px;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+	}
+
+	button[aria-checked='false'] {
+		background: rgb(112, 112, 112, 0.5);
+	}
+
+	button[aria-checked='false']:after {
+		left: -2px;
+	}
+
+	button[aria-checked='true'] {
+		background: rgba(88, 208, 139, 0.65);
+	}
+
+	button[aria-checked='true']:after {
+		left: 8px;
+		background: ${success[500]};
+	}
+`;
+
+export const labelStyles = css`
+	${textSans.small()};
+	display: inline-block;
+	transform: translateY(1px);
+	color: ${neutral[7]};
 `;

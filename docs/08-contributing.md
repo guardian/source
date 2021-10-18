@@ -66,3 +66,33 @@ $ yarn storybook
 -   Don’t bump the package version as part of a pull request. Maintainers will take care of this as part of the release process.
 -   Test that your component can be used in a real project (e.g. [dotcom-rendering](https://github.com/guardian/dotcom-rendering)). Use [`yarn link`](https://yarnpkg.com/en/docs/cli/link) to avoid having to perform a real publish, and [`yarn pack`](https://yarnpkg.com/en/docs/cli/pack) to see exactly which files would be published.
 -   If your change extends the API of a component or the foundations (e.g. you are adding a new component, a new prop or exporting a new type), please update the [`source-package-validation`](packages/@guardian/source-package-validation/README.md) package.
+
+## Publishing
+
+To publish Source, you must be on a clean `main` branch, logged into npm on
+your terminal with an account under the [Guardian's npm
+organisation](https://www.npmjs.com/settings/guardian/packages).
+
+To publish `source-*` packages that have changed since the last release, run:
+
+```sh
+$ yarn release
+```
+
+The command line tool will highlight packages that have changed, and ask you to
+specify the type of release you are performing (e.g. major / minor / patch).
+
+To publish `src-*` packages that have changed since the last release, you should
+first run:
+
+```sh
+$ yarn verbump:prerelease:src
+```
+
+Changes should be committed to git. This ensures all `src-*` packages have
+changed and will be updated at the same time with the same version number. You
+may then run:
+
+```sh
+$ yarn release
+```
