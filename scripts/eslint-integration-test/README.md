@@ -22,7 +22,7 @@ For each of the [configured](#configuration) tests, the contents is written to a
 
 The tests can be run using the following command:
 
-`yarn workspce eslint-integration-test lint`
+`yarn workspace eslint-integration-test lint`
 
 ### Configuration
 
