@@ -193,7 +193,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
 				},
 			],
-			output: `import { labelDefault } from '@guardian/source-react-components';`,
+			output: `import { labelThemeDefault } from '@guardian/source-react-components';`,
 		},
 		{
 			// Import default
@@ -337,7 +337,49 @@ import {  size as s } from '@guardian/source-foundations';`,
 					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
 				},
 			],
-			output: `export { headline } from '@guardian/source-foundations';`,
+			output: `export { headlineObjectStyles } from '@guardian/source-foundations';`,
+		},
+		{
+			// Rename theme imports in imports
+			code: `import { choiceCardDefault } from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `import { choiceCardThemeDefault } from '@guardian/source-react-components';`,
+		},
+		{
+			// Rename theme imports in exports
+			code: `export { choiceCardDefault } from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export { choiceCardThemeDefault } from '@guardian/source-react-components';`,
+		},
+		{
+			// Rename and remove theme imports
+			code: `import { choiceCardDefault, brand } from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been removed: brand.`,
+				},
+			],
+			output: `import { brand } from '@guardian/src-foundations/themes';
+import { choiceCardThemeDefault, } from '@guardian/source-react-components';`,
+		},
+		{
+			// Rename and remove theme imports regardless of order
+			code: `import { brand, choiceCardDefault } from '@guardian/src-foundations/themes';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been removed: brand.`,
+				},
+			],
+			output: `import { brand } from '@guardian/src-foundations/themes';
+import {  choiceCardThemeDefault } from '@guardian/source-react-components';`,
 		},
 	],
 });
