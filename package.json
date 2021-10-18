@@ -70,7 +70,7 @@
     "@babel/preset-typescript": "^7.14.5",
     "@emotion/babel-plugin": "^11.3.0",
     "@emotion/react": "^11.1.2",
-    "@guardian/prettier": "^0.6.0",
+    "@guardian/prettier": "^0.7.0",
     "@storybook/addon-a11y": "^6.3.10",
     "@storybook/addon-actions": "^6.3.10",
     "@storybook/addon-essentials": "^6.3.10",
