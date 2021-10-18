@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components-development-kitchen",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "dist/index.js",
@@ -14,8 +14,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@guardian/src-button": "^3.9.1",
-    "@guardian/src-helpers": "^3.9.1"
+    "@guardian/src-button": "^3.10.2-alpha.0",
+    "@guardian/src-helpers": "^3.10.2-alpha.0"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
