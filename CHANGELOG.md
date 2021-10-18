@@ -35,12 +35,13 @@
 - :nail_care: [7417208](https://github.com/guardian/source/commit/7417208779fbb88a6ae3f6375698fcc11ee13df9) add margin-top to TextInput (thanks @coldlink)
 - :nail_care: [ff89289](https://github.com/guardian/source/commit/ff8928995ea2c097a5572950b847da7d9c98893c) add 2px margin to to inline messages in TextInput (thanks @coldlink)
 
-**`@editorial/button 3.10.0`**
-- :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate from @guardian/types to @guardian/libs
-
-**`@editorial/quote-icon 3.10.0`**
-- :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate from @guardian/types to @guardian/libs
-
+**`@guardian/source-react-components-development-kitchen 0.0.14`**
+- :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate editorial button from @guardian/types to @guardian/libs
+- :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate quote icon from @guardian/types to @guardian/libs
+- :sparkles: [beab58b](https://github.com/guardian/source/commit/beab58b6c22be863f187fbab8f4518da7287b3c5) create toggle switch in development kitchen (thanks @marjisound)
+- :sparkles: [58365e6](https://github.com/guardian/source/commit/58365e68516960996f82bddbec596153ac64a12b) Allow passing of cssOverrides prop to the Divider (thanks @ob6160)
+- :bug: [19d5eaa](https://github.com/guardian/source/commit/19d5eaac2b6645b475a97993344896ccb7bcee4d) Update `Logo` component to use `a` tag, and `cssOverrides` (thanks @coldlink)
+- :sparkles: [4324bba](https://github.com/guardian/source/commit/4324bba0dbf4ed3b855264b8aa885d21534a238d) Add ErrorSummary and SuccessSummary components to the kitchen (thanks @coldlink)
 ## 26 August 2021
 
 **`@guardian/src-accordion 3.9.0`**
