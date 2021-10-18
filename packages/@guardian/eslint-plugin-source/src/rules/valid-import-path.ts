@@ -78,6 +78,16 @@ const getImportName = (i: ImportSpecifier | ExportSpecifier): string => {
 	return imported === local ? imported : `${imported} as ${local}`;
 };
 
+const getSpecifierName = (i: ImportSpecifier | ExportSpecifier): string => {
+	return i.type === 'ImportSpecifier' ? i.imported.name : i.exported.name;
+};
+
+const getSpecifierRange = (
+	i: ImportSpecifier | ExportSpecifier,
+): [number, number] | undefined => {
+	return i.type === 'ImportSpecifier' ? i.imported.range : i.exported.range;
+};
+
 const getRenameImportFixers = (
 	node: Node,
 	removedExports: ImportSpecifier[] | ExportSpecifier[],
@@ -92,13 +102,18 @@ const getRenameImportFixers = (
 	if (node.source.raw === "'@guardian/src-foundations/typography/obj'") {
 		for (const i of node.specifiers) {
 			if (
-				i.type === 'ImportSpecifier' &&
-				typographyObjChanges.includes(i.imported.name)
-			) {
+				i.type === 'ImportNamespaceSpecifier' ||
+				i.type === 'ImportDefaultSpecifier'
+			)
+				continue;
+
+			const name = getSpecifierName(i);
+			const range = getSpecifierRange(i);
+			if (typographyObjChanges.includes(name)) {
 				fixers.push(
 					fixer.replaceTextRange(
-						i.imported.range ?? [0, 0],
-						`${i.imported.name}ObjectStyles`,
+						range ?? [0, 0],
+						`${name}ObjectStyles`,
 					),
 				);
 			}
