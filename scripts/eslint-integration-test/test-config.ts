@@ -16,20 +16,6 @@ export const testConfig: Test[] = [
 		expectedOutput: `import {Button} from '@guardian/source-react-components'`,
 	},
 	{
-		name: 'Errors for an import from src-foundations',
-		contents: `import {breakpoints} from '@guardian/src-foundations'`,
-		fix: false,
-		expectedErrors: [
-			`@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead`,
-		],
-	},
-	{
-		name: 'Fixes a single import from src-foundations',
-		contents: `import {breakpoints} from '@guardian/src-foundations'`,
-		fix: true,
-		expectedOutput: `import {breakpoints} from '@guardian/source-foundations'`,
-	},
-	{
 		name: `Errors if it can't autofix something`,
 		contents: `import {remSize} from '@guardian/src-foundations/size/global'`,
 		fix: true,
