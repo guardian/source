@@ -30,12 +30,14 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	label?: string;
 	/**
-	 * slim or medium toggle would be different in size and colors
+	 * slim or medium toggle would be different in size and colors.
+	 * slim has the size and look of an android toggle switch and
+	 * medium has the ios switch look and feel.
 	 *
 	 */
 	size?: Size;
 	/**
-	 * A callback function called when the component is opened or closed.
+	 * A callback function called when the component is checked or unchecked.
 	 * Receives the click event as an argument.
 	 */
 	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -47,7 +49,8 @@ export interface ToggleSwitchProps extends Props {
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
- * Displays an on/off toggle switch.
+ * Displays an on/off toggle switch. This toggle has default styling and can be used in andriod or ios.
+ * To give it more custome styling cssOverride may be used.
  *
  */
 
