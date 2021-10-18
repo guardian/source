@@ -16,7 +16,7 @@ module.exports = {
 	crawlFrom: '.',
 	globs: ['**/(${paths})/**/!(*.test|*.spec).@(js|ts)?(x)'],
 	includeSubComponents: true,
-	importedFrom: /^(@guardian\\/(((src-(?!foundations)).*)|(source-react-components-development-kitchen)))/,
+	importedFrom: /^(@guardian\\/(((src-(?!foundations)).*)|(((source-(?!foundations)).*))))/,
 	getComponentName: ({ imported, moduleName }) => {
 		return moduleName + '/' + imported;
 	},
@@ -44,9 +44,57 @@ const getStatsByComponent = (
 	return byComponent;
 };
 
+const getUsedComponentsPercentage = (
+	allComponents: string[],
+	usedComponents: string[],
+): number => {
+	const prefixesToIgnore = ['@guardian/src-ed', '@guardian/source-'];
+
+	const relevantComponentsFilter = (component: string): boolean =>
+		prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
+
+	const fraction =
+		usedComponents.filter(relevantComponentsFilter).length /
+		allComponents.filter(relevantComponentsFilter).length;
+	return Math.round(fraction * 100);
+};
+
+const getComponentUsage = (): Record<string, Record<string, number>> => {
+	const componentUsage: Record<string, Record<string, number>> = {};
+
+	// Make a temp directory to clone all of the repos into
+	mkdirSync('./tmp');
+	chdir('./tmp');
+
+	// For each repository, and each project within that repository
+	// Get all of the components that are used
+	for (const repo of repos) {
+		execSync(
+			`git clone --depth 1 git@github.com:guardian/${repo.repo}.git`,
+		);
+		chdir(repo.repo);
+		for (const project of repo.projects) {
+			console.log(`Analysing ${project.name}`);
+			const configFileName = `${project.name}.scan.config`;
+			writeFileSync(configFileName, getReactScannerConfig(project));
+			execSync(
+				`../../node_modules/.bin/react-scanner -c ${configFileName}`,
+			);
+			componentUsage[project.name] = JSON.parse(
+				readFileSync(`${project.name}.component-usage.json`, 'utf-8'),
+			);
+		}
+		chdir('../');
+	}
+
+	chdir('../');
+
+	return componentUsage;
+};
+
 const main = async () => {
 	console.log('Finding Source usage');
-	const { componentsWithPackage } = await getAllComponentsAndPackages();
+	const componentsWithPackage = await getAllComponentsAndPackages();
 
 	// Get the current working directory so we can restore that at the end
 	// If it's not the root source directory then fall over as the script won't work
@@ -67,37 +115,9 @@ const main = async () => {
 			);
 		}
 
-		mkdirSync('./tmp');
-		chdir('./tmp');
+		const componentUsage = getComponentUsage();
 
-		const componentUsage: Record<string, Record<string, number>> = {};
-
-		// For each repository, and each project within that repository
-		// Get all of the components that are used
-		for (const repo of repos) {
-			execSync(
-				`git clone --depth 1 git@github.com:guardian/${repo.repo}.git`,
-			);
-			chdir(repo.repo);
-			for (const project of repo.projects) {
-				console.log(`Analysing ${project.name}`);
-				const configFileName = `${project.name}.scan.config`;
-				writeFileSync(configFileName, getReactScannerConfig(project));
-				execSync(
-					`../../node_modules/.bin/react-scanner -c ${configFileName}`,
-				);
-				componentUsage[project.name] = JSON.parse(
-					readFileSync(
-						`${project.name}.component-usage.json`,
-						'utf-8',
-					),
-				);
-			}
-			chdir('../');
-		}
-
-		chdir('../');
-
+		// Delete all of the cloned repos
 		console.log(`Deleting ${cwd()}/tmp`);
 		rimraf.sync(`${cwd()}/tmp`);
 		console.log(`Formatting data`);
@@ -105,11 +125,17 @@ const main = async () => {
 		// Also get the data split by component
 		const byComponent = getStatsByComponent(componentUsage);
 		const usedComponents = Object.keys(byComponent);
+
+		// Construct the output data object
 		const data = {
 			byProject: componentUsage,
 			byComponent,
 			unusedComponents: componentsWithPackage.filter(
 				(c) => !usedComponents.includes(c),
+			),
+			usedComponentsPercentage: getUsedComponentsPercentage(
+				componentsWithPackage,
+				usedComponents,
 			),
 		};
 
