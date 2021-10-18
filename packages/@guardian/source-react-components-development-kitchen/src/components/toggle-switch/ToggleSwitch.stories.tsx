@@ -1,5 +1,3 @@
-import { css } from '@emotion/react';
-import { neutral } from '@guardian/src-foundations';
 import { useState } from 'react';
 import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
@@ -66,33 +64,3 @@ MediumWithLabel.args = {
 	size: 'medium',
 };
 asChromaticStory(MediumWithLabel);
-
-// *****************************************************************************
-const stylesForDarkBackground = css`
-	background: rgb(139, 0, 0);
-	button[aria-checked='false'] {
-		background-color: rgba(255, 255, 255, 0.5);
-	}
-
-	label {
-		color: ${neutral[100]};
-	}
-`;
-
-export const SlimLabelCssOverrideForDarkBackground = Template.bind({});
-SlimLabelCssOverrideForDarkBackground.args = {
-	label: 'Get alerts on this story',
-	size: 'slim',
-	cssOverrides: stylesForDarkBackground,
-};
-asChromaticStory(SlimLabelCssOverrideForDarkBackground);
-
-// *****************************************************************************
-
-export const MediumLabelCssOverrideForDarkBackground = Template.bind({});
-MediumLabelCssOverrideForDarkBackground.args = {
-	label: 'Get alerts on this story',
-	size: 'medium',
-	cssOverrides: stylesForDarkBackground,
-};
-asChromaticStory(MediumLabelCssOverrideForDarkBackground);
