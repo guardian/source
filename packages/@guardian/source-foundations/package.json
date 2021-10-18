@@ -14,9 +14,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean && rollup -c",
-    "clean": "rm -rf dist",
-    "prepublishOnly": "yarn build"
+    "build": "rollup -c",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
