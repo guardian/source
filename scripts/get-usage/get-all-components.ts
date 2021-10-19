@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from 'fs';
 import {
 	packageNames,
 	getComponentPackageNamesWithPaths,
-} from '../package-names';
+} from './package-names';
 import { paths, getKitchenComponentPaths } from '../paths';
 import { parse } from '@typescript-eslint/typescript-estree';
 
