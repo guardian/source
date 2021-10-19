@@ -9,7 +9,7 @@
     "scripts/validate-dist"
   ],
   "scripts": {
-    "build": "npm-run-all build:src -p build:kitchen build:foundations build:react-components -s build:storybook",
+    "build": "npm-run-all build:packages build:storybook",
     "build:foundations": "yarn workspace @guardian/source-foundations build",
     "build:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen build",
     "build:packages": "npm-run-all build:src -p build:kitchen build:foundations build:react-components",
