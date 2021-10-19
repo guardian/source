@@ -72,4 +72,5 @@ export type {
 	SvgRoundelBrandInverseProps,
 	SvgRoundelDefaultProps,
 	SvgRoundelInverseProps,
+	Props,
 } from '@guardian/source-react-components';
