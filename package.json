@@ -10,10 +10,11 @@
     "scripts/eslint-integration-test"
   ],
   "scripts": {
-    "build": "npm-run-all build:src -p build:kitchen build:foundations build:react-components build:eslint -s build:storybook",
+    "build": "npm-run-all build:packages build:storybook",
     "build:eslint": "yarn workspace @guardian/eslint-plugin-source build",
     "build:foundations": "yarn workspace @guardian/source-foundations build",
     "build:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen build",
+    "build:packages": "npm-run-all build:src -p build:kitchen build:foundations build:react-components",
     "build:react-components": "yarn workspace @guardian/source-react-components build",
     "build:src": "ts-node ./scripts/build-src",
     "build:storybook": "build-storybook -o dist",
@@ -31,7 +32,7 @@
     "lint:js": "eslint . --ext .ts,.tsx,.js",
     "lint:styles": "stylelint packages/**/styles.ts",
     "prepare": "husky install",
-    "release": "yarn clean && yarn build:src -p build:kitchen build:foundations build:react-components && lerna publish --no-private",
+    "release": "yarn clean && build:packages && lerna publish --no-private",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
     "test:coverage": "jest --coverage",
