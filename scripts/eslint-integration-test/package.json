@@ -1,0 +1,16 @@
+{
+  "name": "eslint-integration-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This script tests the custom Source eslint configuration",
+  "license": "Apache-2.0",
+  "author": "",
+  "main": "index.ts",
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@guardian/eslint-plugin-source": "file:../../packages/@guardian/eslint-plugin-source"
+  }
+}
