@@ -20,7 +20,7 @@
     "build:storybook": "build-storybook -o dist",
     "build:storybook:ci": "NODE_ENV=production build-storybook -o dist",
     "clean": "npm-run-all clean:*",
-    "clean:eslint": "yarn workspace @guardian/eslint-config-source clean",
+    "clean:eslint": "yarn workspace @guardian/eslint-plugin-source clean",
     "clean:foundations": "yarn workspace @guardian/source-foundations clean",
     "clean:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen clean",
     "clean:react-components": "yarn workspace @guardian/source-react-components clean",
