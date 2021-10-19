@@ -180,3 +180,5 @@ export {
 	userFeedbackBrand as userFeedbackThemeBrand,
 	userFeedbackDefault as userFeedbackThemeDefault,
 } from '@guardian/src-foundations/themes';
+
+export type { Props } from '@guardian/src-helpers';
