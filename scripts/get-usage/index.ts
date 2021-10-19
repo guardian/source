@@ -44,7 +44,7 @@ const getStatsByComponent = (
 	return byComponent;
 };
 
-const getUsedComponentsPercentage = (
+const getUnusedComponentsPercentage = (
 	allComponents: string[],
 	usedComponents: string[],
 ): number => {
@@ -55,6 +55,33 @@ const getUsedComponentsPercentage = (
 
 	const fraction =
 		usedComponents.filter(relevantComponentsFilter).length /
+		allComponents.filter(relevantComponentsFilter).length;
+	return Math.round(100 - fraction * 100);
+};
+
+const getComponentsUsedInTwoCodebasesPercentage = (
+	allComponents: string[],
+	componentUsage: Record<string, Record<string, number>>,
+	prefixesToIgnore: string[] = [],
+): number => {
+	const _prefixesToIgnore = [
+		...prefixesToIgnore,
+		'@guardian/src-ed',
+		'@guardian/source-',
+	];
+
+	const usedInTwo = [];
+	for (const [component, codebases] of Object.entries(componentUsage)) {
+		if (Object.keys(codebases).length > 1) {
+			usedInTwo.push(component);
+		}
+	}
+
+	const relevantComponentsFilter = (component: string): boolean =>
+		_prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
+
+	const fraction =
+		usedInTwo.filter(relevantComponentsFilter).length /
 		allComponents.filter(relevantComponentsFilter).length;
 	return Math.round(fraction * 100);
 };
@@ -133,10 +160,20 @@ const main = async () => {
 			unusedComponents: componentsWithPackage.filter(
 				(c) => !usedComponents.includes(c),
 			),
-			usedComponentsPercentage: getUsedComponentsPercentage(
+			unusedComponentsPercentage: getUnusedComponentsPercentage(
 				componentsWithPackage,
 				usedComponents,
 			),
+			usedInTwoCodebases: getComponentsUsedInTwoCodebasesPercentage(
+				componentsWithPackage,
+				byComponent,
+			),
+			usedInTwoCodebasesIgnoreIcons:
+				getComponentsUsedInTwoCodebasesPercentage(
+					componentsWithPackage,
+					byComponent,
+					['@guardian/src-icons'],
+				),
 		};
 
 		if (!existsSync('./results')) {
