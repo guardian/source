@@ -29,10 +29,10 @@ If you are not making changes to the design, please delete this section.
 
 ### Accessibility
 
--   [ ] [Tested with screen reader](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/78ac51)
--   [ ] [Navigable with keyboard](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/009027)
--   [ ] [Colour contrast passed](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/58dbf2)
--   [ ] [The component doesn't use only colour to convey meaning](https://www.theguardian.design/2a1e5182b/p/6691bb-accessibility/t/61524d)
+-   [ ] [Tested with screen reader](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#screen-readers)
+-   [ ] [Navigable with keyboard](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#keyboard-navigation)
+-   [ ] [Colour contrast passed](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#colour-contrast)
+-   [ ] [The component doesn't use only colour to convey meaning](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#use-of-colour)
 
 ### Cross browser and device testing
 
