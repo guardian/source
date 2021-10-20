@@ -1,6 +1,6 @@
 {
   "name": "@guardian/eslint-plugin-source",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0-alpha.2",
   "description": "ESLint plugin for Guardian projects using `@guardian/source-*` packages.",
   "homepage": "https://github.com/guardian/source#readme",
   "bugs": {
