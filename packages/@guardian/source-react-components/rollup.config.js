@@ -28,14 +28,12 @@ export default [
 			{
 				file: pkg.main,
 				format: 'cjs',
-				file: 'dist/index.cjs.js',
 				sourcemap: true,
 				paths,
 			},
 			{
 				file: pkg.module,
 				format: 'es',
-				file: 'dist/index.js',
 				sourcemap: true,
 				paths,
 			},
