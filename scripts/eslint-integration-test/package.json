@@ -1,0 +1,20 @@
+{
+  "name": "eslint-integration-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This script tests the custom Source eslint configuration",
+  "license": "Apache-2.0",
+  "author": "",
+  "main": "index.ts",
+  "scripts": {
+    "lint": "eslint index.ts --ext .ts,.tsx,.js -c .test.eslintrc.json --no-eslintrc",
+    "test": "ts-node ./src/index.ts"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@guardian/eslint-plugin-source": "file:../../packages/@guardian/eslint-plugin-source"
+  }
+}
