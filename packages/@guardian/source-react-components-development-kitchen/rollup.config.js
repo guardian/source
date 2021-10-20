@@ -1,5 +1,5 @@
 import dts from 'rollup-plugin-dts';
-import esbuild from 'rollup-plugin-esbuild';
+import ts from 'rollup-plugin-ts';
 import pkg from './package.json';
 
 const bundle = (config) => ({
@@ -11,7 +11,7 @@ const bundle = (config) => ({
 // eslint-disable-next-line import/no-default-export -- it's what rollup wants
 export default [
 	bundle({
-		plugins: [esbuild()],
+		plugins: [ts()],
 		output: [
 			{
 				file: pkg.main,

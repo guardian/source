@@ -82,6 +82,8 @@ $ yarn release
 The command line tool will highlight packages that have changed, and ask you to
 specify the type of release you are performing (e.g. major / minor / patch).
 
+### Publishing src-* packages
+
 To publish `src-*` packages that have changed since the last release, you should
 first run:
 
@@ -96,3 +98,14 @@ may then run:
 ```sh
 $ yarn release
 ```
+
+### Force publishing unchanged packages
+
+There are times when you want Lerna to publish a new version of a package even
+when the package source code hasn't changed. In these cases, you should:
+
+- manually bump the version of the package in its `package.json`
+- commit the version bump change
+- run `yarn release:from-package`
+
+The package will be published at the version you specified in the `package.json`.
