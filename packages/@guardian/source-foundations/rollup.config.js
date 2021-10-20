@@ -16,11 +16,13 @@ export default [
 			{
 				file: pkg.main,
 				format: 'cjs',
+				file: 'dist/index.cjs.js',
 				sourcemap: true,
 			},
 			{
 				file: pkg.module,
 				format: 'es',
+				file: 'dist/index.js',
 				sourcemap: true,
 			},
 		],
