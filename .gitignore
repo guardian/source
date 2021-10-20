@@ -13,3 +13,6 @@ coverage/
 scripts/get-usage/config.*.json
 scripts/get-usage/results/
 scripts/get-usage/tmp/
+
+# scripts/eslint-integration-test
+scripts/eslint-integration-test/integration-test-content.ts

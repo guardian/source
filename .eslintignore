@@ -15,6 +15,3 @@ packages/@guardian/src-foundations/typography
 packages/@guardian/src-foundations/utils
 packages/@guardian/src-foundations/foundations.js
 packages/@guardian/src-foundations/foundations.esm.js
-
-# ignore eslint integration test
-scripts/eslint-integration-test
