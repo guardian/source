@@ -27,6 +27,31 @@ const removedImports: Record<string, string[]> = {
 	],
 };
 
+const newThemeNames: Record<string, string> = {
+	accordionDefault: 'accordionThemeDefault',
+	buttonReaderRevenue: 'buttonThemeReaderRevenue',
+	buttonReaderRevenueBrand: 'buttonThemeReaderRevenueBrand',
+	buttonReaderRevenueBrandAlt: 'buttonThemeReaderRevenueBrandAlt',
+	buttonBrand: 'buttonThemeBrand',
+	buttonBrandAlt: 'buttonThemeBrandAlt',
+	buttonDefault: 'buttonThemeDefault',
+	checkboxBrand: 'checkboxThemeBrand',
+	checkboxDefault: 'checkboxThemeDefault',
+	choiceCardDefault: 'choiceCardThemeDefault',
+	footerBrand: 'footerThemeBrand',
+	labelDefault: 'labelThemeDefault',
+	labelBrand: 'labelThemeBrand',
+	linkBrand: 'linkThemeBrand',
+	linkBrandAlt: 'linkThemeBrandAlt',
+	linkDefault: 'linkThemeDefault',
+	radioBrand: 'radioThemeBrand',
+	radioDefault: 'radioThemeDefault',
+	selectDefault: 'selectThemeDefault',
+	textInputDefault: 'textInputThemeDefault',
+	userFeedbackBrand: 'userFeedbackThemeBrand',
+	userFeedbackDefault: 'userFeedbackThemeDefault',
+};
+
 const capitalise = (str: string): string =>
 	str.charAt(0).toUpperCase() + str.slice(1);
 
@@ -78,6 +103,16 @@ const getImportName = (i: ImportSpecifier | ExportSpecifier): string => {
 	return imported === local ? imported : `${imported} as ${local}`;
 };
 
+const getSpecifierName = (i: ImportSpecifier | ExportSpecifier): string => {
+	return i.type === 'ImportSpecifier' ? i.imported.name : i.exported.name;
+};
+
+const getSpecifierRange = (
+	i: ImportSpecifier | ExportSpecifier,
+): [number, number] | undefined => {
+	return i.type === 'ImportSpecifier' ? i.imported.range : i.exported.range;
+};
+
 const getRenameImportFixers = (
 	node: Node,
 	removedExports: ImportSpecifier[] | ExportSpecifier[],
@@ -92,13 +127,40 @@ const getRenameImportFixers = (
 	if (node.source.raw === "'@guardian/src-foundations/typography/obj'") {
 		for (const i of node.specifiers) {
 			if (
-				i.type === 'ImportSpecifier' &&
-				typographyObjChanges.includes(i.imported.name)
-			) {
+				i.type === 'ImportNamespaceSpecifier' ||
+				i.type === 'ImportDefaultSpecifier'
+			)
+				continue;
+
+			const name = getSpecifierName(i);
+			const range = getSpecifierRange(i);
+			if (typographyObjChanges.includes(name)) {
 				fixers.push(
 					fixer.replaceTextRange(
-						i.imported.range ?? [0, 0],
-						`${i.imported.name}ObjectStyles`,
+						range ?? [0, 0],
+						`${name}ObjectStyles`,
+					),
+				);
+			}
+		}
+	}
+
+	// Some of the theme exports have changed name
+	if (node.source.raw === "'@guardian/src-foundations/themes'") {
+		for (const i of node.specifiers) {
+			if (
+				i.type === 'ImportNamespaceSpecifier' ||
+				i.type === 'ImportDefaultSpecifier'
+			)
+				continue;
+
+			const name = getSpecifierName(i);
+			const range = getSpecifierRange(i);
+			if (name in newThemeNames) {
+				fixers.push(
+					fixer.replaceTextRange(
+						range ?? [0, 0],
+						`${newThemeNames[name]}`,
 					),
 				);
 			}
