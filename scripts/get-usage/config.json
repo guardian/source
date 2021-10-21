@@ -64,15 +64,6 @@
       ]
     },
     {
-      "repo": "create-src-component",
-      "projects": [
-        {
-          "name": "create-src-component",
-          "paths": "component"
-        }
-      ]
-    },
-    {
       "repo": "discussion-rendering",
       "projects": [
         {
@@ -189,15 +180,6 @@
       ]
     },
     {
-      "repo": "image-rendering",
-      "projects": [
-        {
-          "name": "image-rendering",
-          "paths": "src"
-        }
-      ]
-    },
-    {
       "repo": "interview-questions",
       "projects": [
         {
@@ -288,15 +270,6 @@
         {
           "name": "support-frontend-migration",
           "paths": "support-frontend/migration"
-        }
-      ]
-    },
-    {
-      "repo": "test-source-project",
-      "projects": [
-        {
-          "name": "test-source-project",
-          "paths": "pages|components"
         }
       ]
     },
