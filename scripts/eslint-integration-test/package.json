@@ -15,6 +15,7 @@
     "ora": "^5.4.1"
   },
   "devDependencies": {
-    "@guardian/eslint-plugin-source": "file:../../packages/@guardian/eslint-plugin-source"
+    "@guardian/eslint-plugin-source-foundations": "file:../../packages/@guardian/eslint-plugin-source-foundations",
+    "@guardian/eslint-plugin-source-react-components": "file:../../packages/@guardian/eslint-plugin-source-react-components"
   }
 }

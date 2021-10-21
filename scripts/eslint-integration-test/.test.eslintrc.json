@@ -1,7 +1,10 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:@guardian/source/recommended"],
+  "extends": [
+    "plugin:@guardian/source-foundations/recommended",
+    "plugin:@guardian/source-react-components/recommended"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
