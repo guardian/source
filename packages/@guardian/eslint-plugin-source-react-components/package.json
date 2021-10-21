@@ -34,6 +34,9 @@
     "rollup-plugin-ts": "^1.4.7",
     "typescript": "^4.4.3"
   },
+  "peerDependencies": {
+    "@guardian/source-react-components": "4.0.0-alpha.4"
+  },
   "publishConfig": {
     "access": "public"
   }
