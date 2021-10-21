@@ -1,5 +1,8 @@
 import { RuleTester } from 'eslint';
-import { validImportPaths } from './valid-import-path';
+import {
+	validFoundationsImportPath,
+	validComponentsImportPath,
+} from './valid-import-path';
 
 const ruleTester = new RuleTester({
 	parser: require.resolve('@typescript-eslint/parser'),
@@ -9,25 +12,12 @@ const ruleTester = new RuleTester({
 	},
 });
 
-ruleTester.run('valid-import-paths', validImportPaths, {
+ruleTester.run('valid-foundations-import-path', validFoundationsImportPath, {
 	valid: [
-		`import { Label } from '@guardian/source-react-components'`,
-		`import type { LabelProps } from '@guardian/source-react-components'`,
 		`import { breakpoints } from '@guardian/source-foundations'`,
 		`import type { Breakpoint } from '@guardian/source-foundations'`,
 	],
 	invalid: [
-		{
-			// A single component import from a component package
-			code: "import { Label } from '@guardian/src-label';",
-			errors: [
-				{
-					message:
-						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
-				},
-			],
-			output: "import { Label } from '@guardian/source-react-components';",
-		},
 		{
 			// A single import from the root of foundations
 			code: "import { transitions } from '@guardian/src-foundations';",
@@ -51,17 +41,6 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 			output: "import { height } from '@guardian/source-foundations';",
 		},
 		{
-			// A single type import from a component package
-			code: "import type { LabelProps } from '@guardian/src-label';",
-			errors: [
-				{
-					message:
-						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
-				},
-			],
-			output: "import type { LabelProps } from '@guardian/source-react-components';",
-		},
-		{
 			// A single type import from the root of foundations
 			code: "import type { Breakpoint } from '@guardian/src-foundations';",
 			errors: [
@@ -82,17 +61,6 @@ ruleTester.run('valid-import-paths', validImportPaths, {
 				},
 			],
 			output: "import type { Breakpoint } from '@guardian/source-foundations';",
-		},
-		{
-			// Multiple imports from a single package
-			code: "import { Label, Legend } from '@guardian/src-label';",
-			errors: [
-				{
-					message:
-						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
-				},
-			],
-			output: "import { Label, Legend } from '@guardian/source-react-components';",
 		},
 		{
 			// Exports that aren't available from foundations any more
@@ -229,37 +197,6 @@ import {  size as s } from '@guardian/source-foundations';`,
 			output: `import themes, {labelBrand} from '@guardian/src-foundations/themes';`,
 		},
 		{
-			// Helpers removed exports
-			code: `import { storybookBackgrounds } from '@guardian/src-helpers';`,
-			errors: [
-				{
-					message:
-						'The following export(s) have been removed: storybookBackgrounds.',
-				},
-			],
-			output: `import { storybookBackgrounds } from '@guardian/src-helpers';`,
-		},
-		{
-			// Helpers moved exports
-			code: `import type { Props } from '@guardian/src-helpers';`,
-			errors: [
-				{
-					message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.`,
-				},
-			],
-			output: `import type { Props } from '@guardian/source-react-components';`,
-		},
-		{
-			// Export everything from a component
-			code: `export * from '@guardian/src-button';`,
-			errors: [
-				{
-					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
-				},
-			],
-			output: `export * from '@guardian/src-button';`,
-		},
-		{
 			// Export everything from the root of foundations
 			code: `export * from '@guardian/src-foundations';`,
 			errors: [
@@ -298,36 +235,6 @@ import {  size as s } from '@guardian/source-foundations';`,
 				},
 			],
 			output: `export * from '@guardian/src-foundations/size';`,
-		},
-		{
-			// Export everything from helpers
-			code: `export * from '@guardian/src-helpers';`,
-			errors: [
-				{
-					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
-				},
-			],
-			output: `export * from '@guardian/src-helpers';`,
-		},
-		{
-			// Export something from helpers
-			code: `export type { Props } from '@guardian/src-helpers';`,
-			errors: [
-				{
-					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
-				},
-			],
-			output: `export type { Props } from '@guardian/source-react-components';`,
-		},
-		{
-			// Export something that's gone from helpers
-			code: `export { storybookBackgrounds } from '@guardian/src-helpers';`,
-			errors: [
-				{
-					message: `The following export(s) have been removed: storybookBackgrounds.`,
-				},
-			],
-			output: `export { storybookBackgrounds } from '@guardian/src-helpers';`,
 		},
 		{
 			// Export something that's changed names from foundations
@@ -380,6 +287,109 @@ import { choiceCardThemeDefault, } from '@guardian/source-react-components';`,
 			],
 			output: `import { brand } from '@guardian/src-foundations/themes';
 import {  choiceCardThemeDefault } from '@guardian/source-react-components';`,
+		},
+	],
+});
+
+ruleTester.run('valid-components-import-path', validComponentsImportPath, {
+	valid: [
+		`import { Label } from '@guardian/source-react-components'`,
+		`import type { LabelProps } from '@guardian/source-react-components'`,
+	],
+	invalid: [
+		{
+			// A single component import from a component package
+			code: "import { Label } from '@guardian/src-label';",
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+				},
+			],
+			output: "import { Label } from '@guardian/source-react-components';",
+		},
+		{
+			// A single type import from a component package
+			code: "import type { LabelProps } from '@guardian/src-label';",
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+				},
+			],
+			output: "import type { LabelProps } from '@guardian/source-react-components';",
+		},
+		{
+			// Multiple imports from a single package
+			code: "import { Label, Legend } from '@guardian/src-label';",
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+				},
+			],
+			output: "import { Label, Legend } from '@guardian/source-react-components';",
+		},
+		{
+			// Helpers removed exports
+			code: `import { storybookBackgrounds } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message:
+						'The following export(s) have been removed: storybookBackgrounds.',
+				},
+			],
+			output: `import { storybookBackgrounds } from '@guardian/src-helpers';`,
+		},
+		{
+			// Helpers moved exports
+			code: `import type { Props } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `import type { Props } from '@guardian/source-react-components';`,
+		},
+		{
+			// Export everything from a component
+			code: `export * from '@guardian/src-button';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export * from '@guardian/src-button';`,
+		},
+		{
+			// Export everything from helpers
+			code: `export * from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export * from '@guardian/src-helpers';`,
+		},
+		{
+			// Export something from helpers
+			code: `export type { Props } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				},
+			],
+			output: `export type { Props } from '@guardian/source-react-components';`,
+		},
+		{
+			// Export something that's gone from helpers
+			code: `export { storybookBackgrounds } from '@guardian/src-helpers';`,
+			errors: [
+				{
+					message: `The following export(s) have been removed: storybookBackgrounds.`,
+				},
+			],
+			output: `export { storybookBackgrounds } from '@guardian/src-helpers';`,
 		},
 	],
 });
