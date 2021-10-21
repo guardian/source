@@ -2,7 +2,7 @@ import { RuleTester } from 'eslint';
 import { noStarImportsOrExports } from './no-star-imports-or-exports';
 
 const ruleTester = new RuleTester({
-	parser: `${__dirname}/../../node_modules/@typescript-eslint/parser`,
+	parser: require.resolve('@typescript-eslint/parser'),
 	parserOptions: {
 		ecmaVersion: 2020,
 		sourceType: 'module',
