@@ -21,6 +21,13 @@ const foundationsTestConfig: Test[] = [
 		fix: true,
 		expectedOutput: `import {breakpoints} from '@guardian/source-foundations'`,
 	},
+	{
+		name: 'Ignores component imports',
+		contents: `import {Button} from '@guardian/src-button'`,
+		eslintConfig: foundationsEslintConfig,
+		fix: true,
+		expectedOutput: `import {Button} from '@guardian/src-button'`,
+	},
 ];
 
 const componentsTestConfig: Test[] = [
@@ -60,6 +67,13 @@ const componentsTestConfig: Test[] = [
 		eslintConfig: componentsEslintConfig,
 		fix: true,
 		expectedOutput: `import {Button} from '@guardian/somewhere-else';`,
+	},
+	{
+		name: 'Fixes a single import from src-foundations',
+		contents: `import {breakpoints} from '@guardian/src-foundations'`,
+		eslintConfig: componentsEslintConfig,
+		fix: true,
+		expectedOutput: `import {breakpoints} from '@guardian/source-foundations'`,
 	},
 ];
 
