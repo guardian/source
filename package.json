@@ -8,7 +8,7 @@
     "scripts/*"
   ],
   "scripts": {
-    "build": "npm-run-all build:packages build:storybook",
+    "build": "npm-run-all build:packages build:eslint build:storybook",
     "build:eslint": "yarn workspace @guardian/eslint-plugin-source-foundations build && yarn workspace @guardian/eslint-plugin-source-react-components build",
     "build:foundations": "yarn workspace @guardian/source-foundations build",
     "build:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen build",
