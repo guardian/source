@@ -1,5 +1,5 @@
 import { ExecError, Test, TestResult } from './types';
-import { readTestFile, writeToTestfile } from './file';
+import { readTestFile, writeToTestfile, writeToEslintConfigfile } from './file';
 import { testFileName, eslintConfigFileName } from './config';
 import { execSync } from 'child_process';
 import { cwd } from 'process';
@@ -84,6 +84,7 @@ export const test = (config: Test): TestResult => {
 	const spinner = ora(config.name).start();
 
 	writeToTestfile(config.contents);
+	writeToEslintConfigfile(config.eslintConfig);
 
 	try {
 		execSync(
