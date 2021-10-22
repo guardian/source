@@ -5,9 +5,9 @@
   "description": "This script tests the custom Source eslint configuration",
   "license": "Apache-2.0",
   "author": "",
-  "main": "index.ts",
+  "main": "playground.ts",
   "scripts": {
-    "lint": "eslint index.ts --ext .ts,.tsx,.js -c .playground.eslintrc.json --no-eslintrc",
+    "lint": "eslint playground.ts --ext .ts,.tsx,.js -c .playground.eslintrc.json --no-eslintrc",
     "test": "ts-node ./src/index.ts"
   },
   "dependencies": {
