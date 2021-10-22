@@ -1,7 +1,29 @@
 import type { Test } from './src/types';
-import { componentsEslintConfig } from './src/eslint-config';
+import {
+	componentsEslintConfig,
+	foundationsEslintConfig,
+} from './src/eslint-config';
 
-export const testConfig: Test[] = [
+const foundationsTestConfig: Test[] = [
+	{
+		name: 'Errors for an import from src-foundations',
+		contents: `import {breakpoints} from '@guardian/src-foundations'`,
+		eslintConfig: foundationsEslintConfig,
+		fix: false,
+		expectedErrors: [
+			`@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead`,
+		],
+	},
+	{
+		name: 'Fixes a single import from src-foundations',
+		contents: `import {breakpoints} from '@guardian/src-foundations'`,
+		eslintConfig: foundationsEslintConfig,
+		fix: true,
+		expectedOutput: `import {breakpoints} from '@guardian/source-foundations'`,
+	},
+];
+
+const componentsTestConfig: Test[] = [
 	{
 		name: 'Errors for an import from a src component package',
 		contents: `import {Button} from '@guardian/src-button'`,
@@ -40,3 +62,5 @@ export const testConfig: Test[] = [
 		expectedOutput: `import {Button} from '@guardian/somewhere-else';`,
 	},
 ];
+
+export const testConfig = [...foundationsTestConfig, ...componentsTestConfig];
