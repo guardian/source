@@ -1,7 +1,7 @@
-import { validComponentsImportPath } from '../../../../lib/eslint/rules/valid-import-path';
+import { validImportPath } from '../../../../lib/eslint/rules/valid-import-path';
 
 export const rules = {
-	'valid-components-import-path': validComponentsImportPath,
+	'valid-import-path': validImportPath,
 };
 
 export const configs = {
@@ -13,10 +13,7 @@ export const configs = {
 		],
 
 		rules: {
-			'@guardian/source-react-components/valid-components-import-path':
-				'error',
-			'@guardian/source-foundations/valid-foundations-import-path':
-				'error',
+			'@guardian/source-react-components/valid-import-path': 'error',
 			'@guardian/source-foundations/no-star-imports-or-exports': 'error',
 			'import/no-duplicates': 'error',
 		},
