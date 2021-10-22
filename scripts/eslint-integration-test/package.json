@@ -7,7 +7,7 @@
   "author": "",
   "main": "index.ts",
   "scripts": {
-    "lint": "eslint index.ts --ext .ts,.tsx,.js -c .test.eslintrc.json --no-eslintrc",
+    "lint": "eslint index.ts --ext .ts,.tsx,.js -c .playground.eslintrc.json --no-eslintrc",
     "test": "ts-node ./src/index.ts"
   },
   "dependencies": {
