@@ -14,7 +14,7 @@ type Node = (
 ) &
 	Rule.NodeParentExtension;
 
-type Package = 'foundations' | 'components';
+type Package = 'foundations' | 'all';
 
 const typographyObjChanges = ['body', 'headline', 'textSans', 'titlepiece'];
 
@@ -244,11 +244,7 @@ const relevantImportSource = (importSource: string, pkg: Package): boolean => {
 	)
 		return true;
 
-	if (
-		pkg === 'components' &&
-		importSource.startsWith("'@guardian/src-") &&
-		!importSource.startsWith("'@guardian/src-foundations")
-	)
+	if (pkg === 'all' && importSource.startsWith("'@guardian/src-"))
 		return true;
 
 	return false;
@@ -312,7 +308,7 @@ const createReport = (context: Rule.RuleContext, node: Node, pkg: Package) => {
 	});
 };
 
-export const validComponentsImportPath: Rule.RuleModule = {
+export const validImportPath: Rule.RuleModule = {
 	meta: {
 		type: 'problem',
 		docs: {
@@ -327,15 +323,15 @@ export const validComponentsImportPath: Rule.RuleModule = {
 	create(context: Rule.RuleContext): Rule.RuleListener {
 		return {
 			ImportDeclaration(node) {
-				return createReport(context, node, 'components');
+				return createReport(context, node, 'all');
 			},
 			ExportNamedDeclaration(node) {
 				// e.g. export {Props} from '@guardian/src-helpers'
-				return createReport(context, node, 'components');
+				return createReport(context, node, 'all');
 			},
 			ExportAllDeclaration(node) {
 				// e.g. export * from '@guardian/src-foundations'`
-				return createReport(context, node, 'components');
+				return createReport(context, node, 'all');
 			},
 		};
 	},
