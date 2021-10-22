@@ -1,8 +1,10 @@
 import { cwd, chdir } from 'process';
 import { existsSync, writeFileSync, unlinkSync } from 'fs';
-import { testFileName } from './config';
+import { testFileName, eslintConfigFileName } from './config';
 
 let _cwd: string;
+
+const temporaryFiles = [testFileName, eslintConfigFileName];
 
 export const preflightChecks = () => {
 	_cwd = cwd();
@@ -16,17 +18,22 @@ export const preflightChecks = () => {
 		process.exit(1);
 	}
 
-	if (existsSync(testFileName)) {
-		throw new Error(
-			`${cwd()}/${testFileName} already exists. Please check the contents, remove if possible and try again.`,
-		);
-	}
+	// Ensure temporary files were removed after the last run
+	temporaryFiles.forEach((fileName) => {
+		if (existsSync(fileName)) {
+			throw new Error(
+				`${cwd()}/${fileName} already exists. Please check the contents, remove if possible and try again.`,
+			);
+		}
 
-	writeFileSync(testFileName, '');
+		writeFileSync(fileName, '');
+	});
 };
 
 export const cleanup = () => {
-	unlinkSync(`${cwd()}/${testFileName}`);
+	temporaryFiles.forEach((fileName) => {
+		unlinkSync(`${cwd()}/${fileName}`);
+	});
 };
 
 export const finalCleanup = () => {
