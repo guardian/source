@@ -28,6 +28,15 @@ const foundationsTestConfig: Test[] = [
 		fix: true,
 		expectedOutput: `import {Button} from '@guardian/src-button'`,
 	},
+	{
+		name: 'Errors if * is imported from source-foundations',
+		contents: `import * as foundations from '@guardian/source-foundations'`,
+		eslintConfig: foundationsEslintConfig,
+		fix: false,
+		expectedErrors: [
+			`Importing * from @guardian/src-* and @guardian/source-* packages is not recommended. Use named imports instead`,
+		],
+	},
 ];
 
 const componentsTestConfig: Test[] = [
@@ -74,6 +83,15 @@ const componentsTestConfig: Test[] = [
 		eslintConfig: componentsEslintConfig,
 		fix: true,
 		expectedOutput: `import {breakpoints} from '@guardian/source-foundations'`,
+	},
+	{
+		name: 'Errors if * is imported from a source-react-components',
+		contents: `import * as foundations from '@guardian/source-react-components'`,
+		eslintConfig: componentsEslintConfig,
+		fix: false,
+		expectedErrors: [
+			`Importing * from @guardian/src-* and @guardian/source-* packages is not recommended. Use named imports instead`,
+		],
 	},
 ];
 
