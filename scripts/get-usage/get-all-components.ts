@@ -15,6 +15,8 @@ const getPackageComponents = (path: string | string[]): string[] => {
 
 	if (contents.includes('index.tsx')) {
 		return getExportsFromFile(`${path}/index.tsx`);
+	} else if (contents.includes('index.ts')) {
+		return getExportsFromFile(`${path}/index.ts`);
 	} else {
 		return contents
 			.filter(
