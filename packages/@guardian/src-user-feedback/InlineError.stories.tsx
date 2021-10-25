@@ -1,7 +1,4 @@
-import {
-	userFeedbackDefault,
-	userFeedbackBrand,
-} from '@guardian/src-foundations/themes';
+import { userFeedbackBrand } from '@guardian/src-foundations/themes';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { InlineError } from './index';
 import { UserFeedbackProps } from './types';
@@ -28,13 +25,6 @@ asPlayground(Playground);
 // *****************************************************************************
 
 export const InlineErrorDefault = Template.bind({});
-InlineErrorDefault.parameters = {
-	backgrounds: {
-		default: 'default',
-		values: [storybookBackgrounds.default],
-	},
-	theme: userFeedbackDefault,
-};
 asChromaticStory(InlineErrorDefault);
 
 // *****************************************************************************

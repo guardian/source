@@ -1,4 +1,4 @@
-import { linkDefault, linkBrandAlt, linkBrand } from './index';
+import { linkBrandAlt, linkBrand } from './index';
 import { Link, LinkProps } from './Link';
 import { SvgExternal } from '@guardian/src-icons';
 import { storybookBackgrounds } from '@guardian/src-helpers';
@@ -39,9 +39,6 @@ export const PrimaryLinkLightTheme = Template.bind({});
 PrimaryLinkLightTheme.args = {
 	icon: undefined,
 };
-PrimaryLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
 asChromaticStory(PrimaryLinkLightTheme);
 
 // *****************************************************************************
@@ -81,9 +78,6 @@ SecondaryLinkLightTheme.args = {
 	priority: 'secondary',
 	icon: undefined,
 };
-SecondaryLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
 asChromaticStory(SecondaryLinkLightTheme);
 
 // *****************************************************************************
@@ -92,9 +86,6 @@ export const PrimarySubduedLinkLightTheme = Template.bind({});
 PrimarySubduedLinkLightTheme.args = {
 	subdued: true,
 	icon: undefined,
-};
-PrimarySubduedLinkLightTheme.parameters = {
-	theme: linkDefault,
 };
 asChromaticStory(PrimarySubduedLinkLightTheme);
 
@@ -106,17 +97,11 @@ SecondarySubduedLinkLightTheme.args = {
 	subdued: true,
 	icon: undefined,
 };
-SecondarySubduedLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
 asChromaticStory(SecondarySubduedLinkLightTheme);
 
 // *****************************************************************************
 
 export const PrimaryIconLinkLightTheme = Template.bind({});
-PrimaryIconLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
 asChromaticStory(PrimaryIconLinkLightTheme);
 
 // *****************************************************************************
@@ -124,9 +109,6 @@ asChromaticStory(PrimaryIconLinkLightTheme);
 export const SecondaryIconLinkLightTheme = Template.bind({});
 SecondaryIconLinkLightTheme.args = {
 	priority: 'secondary',
-};
-SecondaryIconLinkLightTheme.parameters = {
-	theme: linkDefault,
 };
 asChromaticStory(SecondaryIconLinkLightTheme);
 
@@ -136,9 +118,6 @@ export const SubduedIconLinkLightTheme = Template.bind({});
 SubduedIconLinkLightTheme.args = {
 	subdued: true,
 };
-SubduedIconLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
 asChromaticStory(SubduedIconLinkLightTheme);
 
 // *****************************************************************************
@@ -146,8 +125,5 @@ asChromaticStory(SubduedIconLinkLightTheme);
 export const RightIconLinkLightTheme = Template.bind({});
 RightIconLinkLightTheme.args = {
 	iconSide: 'right',
-};
-RightIconLinkLightTheme.parameters = {
-	theme: linkDefault,
 };
 asChromaticStory(RightIconLinkLightTheme);

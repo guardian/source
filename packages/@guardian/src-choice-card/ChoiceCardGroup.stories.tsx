@@ -1,5 +1,3 @@
-import { ThemeProvider } from '@emotion/react';
-import { choiceCardDefault } from '@guardian/src-foundations/themes';
 import { useState } from 'react';
 import { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
@@ -243,11 +241,7 @@ asChromaticStory(WithWildlyVaryingLengthsTablet);
 
 // *****************************************************************************
 
-export const WithDefaultTheme = (args: ChoiceCardGroupProps) => (
-	<ThemeProvider theme={choiceCardDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
+export const WithDefaultTheme = Template.bind({});
 asChromaticStory(WithDefaultTheme);
 
 // *****************************************************************************
