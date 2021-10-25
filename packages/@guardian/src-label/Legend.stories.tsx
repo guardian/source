@@ -38,115 +38,115 @@ const Template: Story<LegendProps> = (args: LegendProps) => (
 	</fieldset>
 );
 
-export const Demo = Template.bind({});
-Demo.args = {
+export const Playground = Template.bind({});
+Playground.args = {
 	text: 'Email',
 	supporting: 'text',
 };
-asPlayground(Demo);
+asPlayground(Playground);
 
 // *****************************************************************************
 
-export const DefaultTheme = Template.bind({});
-asChromaticStory(DefaultTheme);
+export const DefaultDefaultTheme = Template.bind({});
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultThemeWithSupportingText = Template.bind({});
-DefaultThemeWithSupportingText.args = {
+export const WithSupportingTextDefaultTheme = Template.bind({});
+WithSupportingTextDefaultTheme.args = {
 	supporting: 'text',
 };
-asChromaticStory(DefaultThemeWithSupportingText);
+asChromaticStory(WithSupportingTextDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultThemeWithSupportingComponent = Template.bind({});
-DefaultThemeWithSupportingComponent.args = {
+export const WithSupportingComponentDefaultTheme = Template.bind({});
+WithSupportingComponentDefaultTheme.args = {
 	supporting: 'component',
 };
-asChromaticStory(DefaultThemeWithSupportingComponent);
+asChromaticStory(WithSupportingComponentDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultThemeWithOptional = Template.bind({});
-DefaultThemeWithOptional.args = {
+export const WithOptionalDefaultTheme = Template.bind({});
+WithOptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(DefaultThemeWithOptional);
+asChromaticStory(WithOptionalDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultThemeWithHiddenLabel = Template.bind({});
-DefaultThemeWithHiddenLabel.args = {
+export const WithHiddenLabelDefaultTheme = Template.bind({});
+WithHiddenLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(DefaultThemeWithHiddenLabel);
+asChromaticStory(WithHiddenLabelDefaultTheme);
 
 // *****************************************************************************
 
-export const BrandTheme = Template.bind({});
-BrandTheme.parameters = {
+export const DefaultBrandTheme = Template.bind({});
+DefaultBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
 	theme: labelBrand,
 };
-asChromaticStory(BrandTheme);
+asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
-export const BrandThemeWithSupportingText = Template.bind({});
-BrandThemeWithSupportingText.args = {
+export const WithSupportingTextBrandTheme = Template.bind({});
+WithSupportingTextBrandTheme.args = {
 	supporting: 'text',
 };
-BrandThemeWithSupportingText.parameters = {
+WithSupportingTextBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
 	theme: labelBrand,
 };
-asChromaticStory(BrandThemeWithSupportingText);
+asChromaticStory(WithSupportingTextBrandTheme);
 
 // *****************************************************************************
 
-export const BrandThemeWithSupportingComponent = Template.bind({});
-BrandThemeWithSupportingComponent.args = {
+export const WithSupportingComponentBrandTheme = Template.bind({});
+WithSupportingComponentBrandTheme.args = {
 	supporting: 'component',
 };
-BrandThemeWithSupportingComponent.parameters = {
+WithSupportingComponentBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
 	theme: labelBrand,
 };
-asChromaticStory(BrandThemeWithSupportingComponent);
+asChromaticStory(WithSupportingComponentBrandTheme);
 
 // *****************************************************************************
 
-export const BrandThemeWithOptional = Template.bind({});
-BrandThemeWithOptional.args = {
+export const WithOptionalBrandTheme = Template.bind({});
+WithOptionalBrandTheme.args = {
 	optional: true,
 };
-BrandThemeWithOptional.parameters = {
+WithOptionalBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
 	theme: labelBrand,
 };
-asChromaticStory(BrandThemeWithOptional);
+asChromaticStory(WithOptionalBrandTheme);
 
 // *****************************************************************************
 
-export const BrandThemeWithHiddenLabel = Template.bind({});
-BrandThemeWithHiddenLabel.args = {
+export const WithHiddenLabelBrandTheme = Template.bind({});
+WithHiddenLabelBrandTheme.args = {
 	hideLabel: true,
 };
-BrandThemeWithHiddenLabel.parameters = {
+WithHiddenLabelBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
 	theme: labelBrand,
 };
-asChromaticStory(BrandThemeWithHiddenLabel);
+asChromaticStory(WithHiddenLabelBrandTheme);
 
 // *****************************************************************************

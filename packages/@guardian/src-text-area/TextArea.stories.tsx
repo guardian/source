@@ -43,11 +43,11 @@ asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
-export const WithRows = Template.bind({});
-WithRows.args = {
+export const WithRowsDefaultTheme = Template.bind({});
+WithRowsDefaultTheme.args = {
 	rows: 10,
 };
-asChromaticStory(WithRows);
+asChromaticStory(WithRowsDefaultTheme);
 
 // *****************************************************************************
 
@@ -84,10 +84,10 @@ asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 
-export const WithMaxLength = Template.bind({});
-WithMaxLength.args = {
+export const WithMaxLengthDefaultTheme = Template.bind({});
+WithMaxLengthDefaultTheme.args = {
 	maxLengh: 10,
 };
-asChromaticStory(WithMaxLength);
+asChromaticStory(WithMaxLengthDefaultTheme);
 
 // *****************************************************************************

@@ -67,11 +67,11 @@ asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
-export const HideLabel = Template.bind({});
-HideLabel.args = {
+export const HideLabelDefaultTheme = Template.bind({});
+HideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(HideLabel);
+asChromaticStory(HideLabelDefaultTheme);
 
 // *****************************************************************************
 

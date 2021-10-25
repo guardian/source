@@ -32,13 +32,13 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const WithCTALabels = Template.bind({});
-asChromaticStory(WithCTALabels);
+export const WithCTALabelsDefaultTheme = Template.bind({});
+asChromaticStory(WithCTALabelsDefaultTheme);
 
 // *****************************************************************************
 
-export const WithoutCTALabels = Template.bind({});
-WithoutCTALabels.args = {
+export const WithoutCTALabelsDefaultTheme = Template.bind({});
+WithoutCTALabelsDefaultTheme.args = {
 	hideToggleLabel: true,
 };
-asChromaticStory(WithoutCTALabels);
+asChromaticStory(WithoutCTALabelsDefaultTheme);
