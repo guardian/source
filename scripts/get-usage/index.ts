@@ -18,7 +18,8 @@ module.exports = {
 	includeSubComponents: true,
 	importedFrom: /^(@guardian\\/(((src-(?!foundations)).*)|(((source-(?!foundations)).*))))/,
 	getComponentName: ({ imported, moduleName }) => {
-		return moduleName + '/' + imported;
+		const parsedModuleName = moduleName.split("/").slice(0,2).join("/");
+		return parsedModuleName + '/' + imported;
 	},
 	processors: [
 		['count-components', { outputTo: '${name}.component-usage.json' }],
