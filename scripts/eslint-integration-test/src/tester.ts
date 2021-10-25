@@ -105,7 +105,9 @@ export const test = (config: Test): TestResult => {
 				...config,
 				pass: false,
 				failureMessage: `
-  An unexpected error occurred: ${err.message}`,
+  An unexpected error occurred: ${err.message}
+
+  ${err.stdout}`,
 			};
 		}
 

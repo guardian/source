@@ -1,3 +1,10 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/05 Theming"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
 # Theming
 
 By default, all components are styled using their light theme.
@@ -11,12 +18,12 @@ import { TextInput } from '@guardian/src-text-input';
 import { brand } from '@guardian/src-foundations/themes';
 
 const Form = () => (
-    <ThemeProvider theme={brand}>
-        <form>
-            <TextInput label="First Name" />
-            <Button>Click me</Button>
-        </form>
-    </ThemeProvider>
+	<ThemeProvider theme={brand}>
+		<form>
+			<TextInput label="First Name" />
+			<Button>Click me</Button>
+		</form>
+	</ThemeProvider>
 );
 ```
 
@@ -30,12 +37,12 @@ import { Button, buttonBrand } from '@guardian/src-button';
 import { TextInput, textInputBrand } from '@guardian/src-text-input';
 
 const Form = () => (
-    <ThemeProvider theme={{ ...buttonBrand, ...textInputBrand }}>
-        <form>
-            <TextInput label="First Name" />
-            <Button>Click me</Button>
-        </form>
-    </ThemeProvider>
+	<ThemeProvider theme={{ ...buttonBrand, ...textInputBrand }}>
+		<form>
+			<TextInput label="First Name" />
+			<Button>Click me</Button>
+		</form>
+	</ThemeProvider>
 );
 ```
 
@@ -65,29 +72,29 @@ import { Button } from '@guardian/src-button';
 import { Link } from '@guardian/src-link';
 
 const customTheme = {
-    button: {
-        textPrimary: text.ctaPrimary,
-        backgroundPrimary: background.ctaPrimary,
-        backgroundPrimaryHover: background.ctaPrimaryHover,
-        textSecondary: text.ctaSecondary,
-        backgroundSecondary: background.ctaSecondary,
-        backgroundSecondaryHover: background.ctaSecondaryHover,
-    },
-    link: {
-        textPrimary: text.anchorPrimary,
-        textPrimaryHover: text.anchorPrimary,
-        textSecondary: text.anchorSecondary,
-        textSecondaryHover: text.anchorSecondary,
-    },
+	button: {
+		textPrimary: text.ctaPrimary,
+		backgroundPrimary: background.ctaPrimary,
+		backgroundPrimaryHover: background.ctaPrimaryHover,
+		textSecondary: text.ctaSecondary,
+		backgroundSecondary: background.ctaSecondary,
+		backgroundSecondaryHover: background.ctaSecondaryHover,
+	},
+	link: {
+		textPrimary: text.anchorPrimary,
+		textPrimaryHover: text.anchorPrimary,
+		textSecondary: text.anchorSecondary,
+		textSecondaryHover: text.anchorSecondary,
+	},
 };
 
 const Form = () => (
-    <ThemeProvider theme={customTheme}>
-        <form>
-            <Button>Click me</Button>
-            <Link href="/">Go back</Link>
-        </form>
-    </ThemeProvider>
+	<ThemeProvider theme={customTheme}>
+		<form>
+			<Button>Click me</Button>
+			<Link href="/">Go back</Link>
+		</form>
+	</ThemeProvider>
 );
 ```
 

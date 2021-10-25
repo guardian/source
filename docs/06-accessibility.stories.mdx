@@ -1,3 +1,10 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/06 Accessibility"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
 # Accessibility
 
 > Supporting assistive technology.
@@ -80,7 +87,7 @@ The focus halo may be imported and applied to custom elements.
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 
 const customButton = css`
-    ${focusHalo};
+	${focusHalo};
 `;
 ```
 
@@ -108,7 +115,7 @@ Source provides a snippet of CSS that can be imported and applied to elements th
 import { visuallyHidden } from '@guardian/src-foundations/accessibility';
 
 const label = css`
-    ${visuallyHidden};
+	${visuallyHidden};
 `;
 ```
 
@@ -120,12 +127,12 @@ A function that takes the ID of an element and generates a new ID. This should b
 import { descriptionId } from '@guardian/src-foundations/accessibility';
 
 const Form = () => {
-    const id = 'first_name';
-    return (
-        <form>
-            <input id={id} type="text" aria-describedby={descriptionId(id)} />
-            <p class="error" id={descriptionId(id)} />
-        </form>
-    );
+	const id = 'first_name';
+	return (
+		<form>
+			<input id={id} type="text" aria-describedby={descriptionId(id)} />
+			<p class="error" id={descriptionId(id)} />
+		</form>
+	);
 };
 ```
