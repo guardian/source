@@ -4,6 +4,23 @@
 
 import { pxToRem } from './utils/px-to-rem';
 
+/**
+ * Space
+ *
+ * The following units can be applied to margin or padding properties, vertically or horizontally.
+ * @see https://theguardian.design/2a1e5182b/p/449bd5-space
+ *
+ * Space scale
+ * 1 -> 4px
+ * 2 -> 8px
+ * 3 -> 12px
+ * 4 -> 16px
+ * 5 -> 20px
+ * 6 -> 24px
+ * 9 -> 36px
+ * 12 -> 48px
+ * 24 -> 96px
+ */
 export const space = {
 	1: 4,
 	2: 8,
@@ -14,7 +31,7 @@ export const space = {
 	9: 36,
 	12: 48,
 	24: 96,
-};
+} as const;
 
 /* TODO: this should be exposed as a number instead of a string,
    so consumers can perform calculations on it */
