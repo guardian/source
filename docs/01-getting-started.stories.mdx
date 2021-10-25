@@ -1,3 +1,10 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/01 Getting Started"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
 # Getting started
 
 > Installing our shared components, foundations and utilities into your application.
@@ -24,7 +31,7 @@ We recommend installing the following packages:
 $ yarn add react@^17.0.1 @emotion/react@^11.1.2 @guardian/src-foundations
 ```
 
-> See [Using Emotion](04-using-emotion.md) for guidance on how to configure Babel to use Emotion's css prop.
+> See [Using Emotion](https://guardian.github.io/source/?path=/docs/docs-04-using-emotion--page) for guidance on how to configure Babel to use Emotion's css prop.
 
 ## Foundations
 
@@ -34,7 +41,7 @@ Foundations are the atoms from which all our visual design is built. They are in
 $ yarn add @guardian/src-foundations
 ```
 
-For full details, see the [Foundations docs](02-foundations.md).
+For full details, see the [Foundations docs](https://guardian.github.io/source/?path=/docs/docs-02-foundations--page).
 
 ## Components
 
@@ -46,7 +53,7 @@ Install them using Yarn. For example, to install our [Button component](https://
 $ yarn add @guardian/src-button
 ```
 
-For full details, see the [Components docs](03-components.md).
+For full details, see the [Components docs](https://guardian.github.io/source/?path=/docs/docs-03-components--page).
 
 ## Version numbers
 
@@ -64,15 +71,14 @@ It can be a chore to manually upgrade a whole bunch of Source packages to the la
 $ npx npm-check-updates "/^@guardian/src-.*\$/" -u --target greatest
 ```
 
-You can then run `yarn`  or `npm install`  to install these updates into your `node_modules` folder.
+You can then run `yarn` or `npm install` to install these updates into your `node_modules` folder.
 
 If you find yourself doing this often, you can install npm-check-updates locally and add a script to your `package.json` that does this. For example:
 
 ```json
 {
-  "scripts": {
-	"upgrade-src": "yarn ncu \"/^@guardian/src-.*$/\" -u --target greatest && yarn"
-  }
+	"scripts": {
+		"upgrade-src": "yarn ncu \"/^@guardian/src-.*$/\" -u --target greatest && yarn"
+	}
 }
 ```
-
