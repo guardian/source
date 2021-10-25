@@ -1,3 +1,5 @@
+import type { Breakpoint } from '../packages/@guardian/source-foundations/src';
+import { breakpoints } from '../packages/@guardian/source-foundations/src';
 import { Story } from './@types/storybook-emotion-10-fixes';
 
 /**
@@ -50,6 +52,14 @@ export const asPlayground = <Args>(story: Story<Args>) => {
  * Make sure you have one of these for every possible state of your component.
  */
 export const asChromaticStory = <Args>(story: Story<Args>) => {
+	const defaultViewport = story.parameters?.viewport?.defaultViewport;
+
+	const chromatic: Record<string, unknown> = { disable: false };
+
+	if (defaultViewport && defaultViewport in breakpoints) {
+		chromatic.viewports = [breakpoints[defaultViewport as Breakpoint]];
+	}
+
 	story.parameters = {
 		...story.parameters,
 		viewMode: 'canvas',
@@ -60,6 +70,6 @@ export const asChromaticStory = <Args>(story: Story<Args>) => {
 		},
 		docs: { disable: true },
 		controls: { disabled: true },
-		chromatic: { disable: false },
+		chromatic,
 	};
 };
