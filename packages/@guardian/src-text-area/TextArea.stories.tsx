@@ -38,8 +38,8 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const DefaultLight = Template.bind({});
-asChromaticStory(DefaultLight);
+export const DefaultDefaultTheme = Template.bind({});
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -51,36 +51,36 @@ asChromaticStory(WithRows);
 
 // *****************************************************************************
 
-export const OptionalLight = Template.bind({});
-OptionalLight.args = {
+export const OptionalDefaultTheme = Template.bind({});
+OptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(OptionalLight);
+asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
-export const VisuallyHideLabelLight = Template.bind({});
-VisuallyHideLabelLight.args = {
+export const VisuallyHideLabelDefaultTheme = Template.bind({});
+VisuallyHideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLabelLight);
+asChromaticStory(VisuallyHideLabelDefaultTheme);
 
 // *****************************************************************************
 
-export const SupportingTextLight = Template.bind({});
-SupportingTextLight.args = {
+export const SupportingTextDefaultTheme = Template.bind({});
+SupportingTextDefaultTheme.args = {
 	supporting:
 		'Please keep comments respectful and abide by the community guidelines.',
 };
-asChromaticStory(SupportingTextLight);
+asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
-export const ErrorWithMessageLight = Template.bind({});
-ErrorWithMessageLight.args = {
+export const ErrorWithMessageDefaultTheme = Template.bind({});
+ErrorWithMessageDefaultTheme.args = {
 	error: 'Please tell us your views',
 };
-asChromaticStory(ErrorWithMessageLight);
+asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 

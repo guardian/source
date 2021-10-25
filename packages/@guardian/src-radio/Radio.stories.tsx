@@ -42,8 +42,8 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const DefaultLightTheme = Template.bind({});
-asChromaticStory(DefaultLightTheme);
+export const DefaultDefaultTheme = Template.bind({});
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -58,11 +58,11 @@ asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
-export const SupportingTextLightTheme = Template.bind({});
-SupportingTextLightTheme.args = {
+export const SupportingTextDefaultTheme = Template.bind({});
+SupportingTextDefaultTheme.args = {
 	supporting: '#ff0000',
 };
-asChromaticStory(SupportingTextLightTheme);
+asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -80,12 +80,12 @@ asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
-export const SupportingTextOnlyLightTheme = Template.bind({});
-SupportingTextOnlyLightTheme.args = {
+export const SupportingTextOnlyDefaultTheme = Template.bind({});
+SupportingTextOnlyDefaultTheme.args = {
 	supporting: '#ff0000',
 	label: null,
 };
-asChromaticStory(SupportingTextOnlyLightTheme);
+asChromaticStory(SupportingTextOnlyDefaultTheme);
 
 // *****************************************************************************
 
@@ -104,8 +104,8 @@ asChromaticStory(SupportingTextOnlyBrandTheme);
 
 // *****************************************************************************
 
-export const UnlabelledLightTheme = Template.bind({});
-UnlabelledLightTheme.args = {
+export const UnlabelledDefaultTheme = Template.bind({});
+UnlabelledDefaultTheme.args = {
 	label: undefined,
 };
-asChromaticStory(UnlabelledLightTheme);
+asChromaticStory(UnlabelledDefaultTheme);

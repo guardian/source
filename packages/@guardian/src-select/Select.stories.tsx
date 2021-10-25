@@ -53,47 +53,47 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const DefaultLight = Template.bind({});
-asChromaticStory(DefaultLight);
+export const DefaultDefaultTheme = Template.bind({});
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
-export const ErrorWithMessageLight = Template.bind({});
-ErrorWithMessageLight.args = {
+export const ErrorWithMessageDefaultTheme = Template.bind({});
+ErrorWithMessageDefaultTheme.args = {
 	error: 'Please select your home state. This service is unavailable outside of the US.',
 };
-asChromaticStory(ErrorWithMessageLight);
+asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 
-export const VisuallyHideLabelLight = Template.bind({});
-VisuallyHideLabelLight.args = {
+export const VisuallyHideLabelDefaultTheme = Template.bind({});
+VisuallyHideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLabelLight);
+asChromaticStory(VisuallyHideLabelDefaultTheme);
 
 // *****************************************************************************
 
-export const OptionalLight = Template.bind({});
-OptionalLight.args = {
+export const OptionalDefaultTheme = Template.bind({});
+OptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(OptionalLight);
+asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
-export const SuccessWithMessageLight = Template.bind({});
-SuccessWithMessageLight.args = {
+export const SuccessWithMessageDefaultTheme = Template.bind({});
+SuccessWithMessageDefaultTheme.args = {
 	success: 'This service is available in your state',
 };
-asChromaticStory(SuccessWithMessageLight);
+asChromaticStory(SuccessWithMessageDefaultTheme);
 
 // *****************************************************************************
 
-export const SupportingTextLight = Template.bind({});
-SupportingTextLight.args = {
+export const SupportingTextDefaultTheme = Template.bind({});
+SupportingTextDefaultTheme.args = {
 	supporting: 'Leave blank if you are not within the US',
 };
-asChromaticStory(SupportingTextLight);
+asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************

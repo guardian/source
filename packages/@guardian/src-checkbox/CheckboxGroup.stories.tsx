@@ -40,8 +40,8 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const DefaultLightTheme = Template.bind({});
-asChromaticStory(DefaultLightTheme);
+export const DefaultDefaultTheme = Template.bind({});
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -56,11 +56,11 @@ asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
-export const VisuallyHideLegendLightTheme = Template.bind({});
-VisuallyHideLegendLightTheme.args = {
+export const VisuallyHideLegendDefaultTheme = Template.bind({});
+VisuallyHideLegendDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLegendLightTheme);
+asChromaticStory(VisuallyHideLegendDefaultTheme);
 
 // *****************************************************************************
 
@@ -78,11 +78,11 @@ asChromaticStory(VisuallyHideLegendBrandTheme);
 
 // *****************************************************************************
 
-export const SupportingTextLightTheme = Template.bind({});
-SupportingTextLightTheme.args = {
+export const SupportingTextDefaultTheme = Template.bind({});
+SupportingTextDefaultTheme.args = {
 	supporting: 'Supporting text',
 };
-asChromaticStory(SupportingTextLightTheme);
+asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -100,11 +100,11 @@ asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
-export const ErrorLightTheme = Template.bind({});
-ErrorLightTheme.args = {
+export const ErrorDefaultTheme = Template.bind({});
+ErrorDefaultTheme.args = {
 	error: 'Error message',
 };
-asChromaticStory(ErrorLightTheme);
+asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 

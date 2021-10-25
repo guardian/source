@@ -21,17 +21,17 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const InlineSuccessLight = Template.bind({});
-asChromaticStory(InlineSuccessLight);
+export const InlineSuccessDefaultTheme = Template.bind({});
+asChromaticStory(InlineSuccessDefaultTheme);
 
 // *****************************************************************************
 
-export const InlineSuccessBrand = Template.bind({});
-InlineSuccessBrand.parameters = {
+export const InlineSuccessBrandTheme = Template.bind({});
+InlineSuccessBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brand',
 		values: [storybookBackgrounds.brand],
 	},
 	theme: userFeedbackBrand,
 };
-asChromaticStory(InlineSuccessBrand);
+asChromaticStory(InlineSuccessBrandTheme);

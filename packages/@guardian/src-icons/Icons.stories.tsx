@@ -172,30 +172,30 @@ const Template: Story<IconChromaticStoryArgs> = (
 
 // *****************************************************************************
 
-export const XsmallIconsLightTheme = Template.bind({});
-XsmallIconsLightTheme.args = {
+export const XsmallIconsDefaultTheme = Template.bind({});
+XsmallIconsDefaultTheme.args = {
 	size: 'xsmall',
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(XsmallIconsLightTheme);
+asChromaticStory(XsmallIconsDefaultTheme);
 
 // *****************************************************************************
 
-export const SmallIconsLightTheme = Template.bind({});
-SmallIconsLightTheme.args = {
+export const SmallIconsDefaultTheme = Template.bind({});
+SmallIconsDefaultTheme.args = {
 	size: 'small',
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(SmallIconsLightTheme);
+asChromaticStory(SmallIconsDefaultTheme);
 
 // *****************************************************************************
 
-export const MediumIconsLightTheme = Template.bind({});
-MediumIconsLightTheme.args = {
+export const MediumIconsDefaultTheme = Template.bind({});
+MediumIconsDefaultTheme.args = {
 	size: 'medium',
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(MediumIconsLightTheme);
+asChromaticStory(MediumIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -226,18 +226,18 @@ asChromaticStory(MediumIconsBrandTheme);
 
 // *****************************************************************************
 
-export const PaymentIconsLightTheme = Template.bind({});
-PaymentIconsLightTheme.args = {
+export const PaymentIconsDefaultTheme = Template.bind({});
+PaymentIconsDefaultTheme.args = {
 	size: 'medium',
 	icons: Object.values(paymentIcons),
 };
-asChromaticStory(PaymentIconsLightTheme);
+asChromaticStory(PaymentIconsDefaultTheme);
 
 // *****************************************************************************
 
-export const WidePaymentIconsLightTheme = Template.bind({});
-WidePaymentIconsLightTheme.args = {
+export const WidePaymentIconsDefaultTheme = Template.bind({});
+WidePaymentIconsDefaultTheme.args = {
 	size: 'medium',
 	icons: Object.values(widePaymentIcons),
 };
-asChromaticStory(WidePaymentIconsLightTheme);
+asChromaticStory(WidePaymentIconsDefaultTheme);

@@ -35,11 +35,11 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const PrimaryLinkLightTheme = Template.bind({});
-PrimaryLinkLightTheme.args = {
+export const PrimaryLinkDefaultTheme = Template.bind({});
+PrimaryLinkDefaultTheme.args = {
 	icon: undefined,
 };
-asChromaticStory(PrimaryLinkLightTheme);
+asChromaticStory(PrimaryLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -73,57 +73,57 @@ asChromaticStory(PrimaryLinkBrandAltTheme);
 
 // *****************************************************************************
 
-export const SecondaryLinkLightTheme = Template.bind({});
-SecondaryLinkLightTheme.args = {
+export const SecondaryLinkDefaultTheme = Template.bind({});
+SecondaryLinkDefaultTheme.args = {
 	priority: 'secondary',
 	icon: undefined,
 };
-asChromaticStory(SecondaryLinkLightTheme);
+asChromaticStory(SecondaryLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const PrimarySubduedLinkLightTheme = Template.bind({});
-PrimarySubduedLinkLightTheme.args = {
+export const PrimarySubduedLinkDefaultTheme = Template.bind({});
+PrimarySubduedLinkDefaultTheme.args = {
 	subdued: true,
 	icon: undefined,
 };
-asChromaticStory(PrimarySubduedLinkLightTheme);
+asChromaticStory(PrimarySubduedLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const SecondarySubduedLinkLightTheme = Template.bind({});
-SecondarySubduedLinkLightTheme.args = {
+export const SecondarySubduedLinkDefaultTheme = Template.bind({});
+SecondarySubduedLinkDefaultTheme.args = {
 	priority: 'secondary',
 	subdued: true,
 	icon: undefined,
 };
-asChromaticStory(SecondarySubduedLinkLightTheme);
+asChromaticStory(SecondarySubduedLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const PrimaryIconLinkLightTheme = Template.bind({});
-asChromaticStory(PrimaryIconLinkLightTheme);
+export const PrimaryIconLinkDefaultTheme = Template.bind({});
+asChromaticStory(PrimaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const SecondaryIconLinkLightTheme = Template.bind({});
-SecondaryIconLinkLightTheme.args = {
+export const SecondaryIconLinkDefaultTheme = Template.bind({});
+SecondaryIconLinkDefaultTheme.args = {
 	priority: 'secondary',
 };
-asChromaticStory(SecondaryIconLinkLightTheme);
+asChromaticStory(SecondaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const SubduedIconLinkLightTheme = Template.bind({});
-SubduedIconLinkLightTheme.args = {
+export const SubduedIconLinkDefaultTheme = Template.bind({});
+SubduedIconLinkDefaultTheme.args = {
 	subdued: true,
 };
-asChromaticStory(SubduedIconLinkLightTheme);
+asChromaticStory(SubduedIconLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const RightIconLinkLightTheme = Template.bind({});
-RightIconLinkLightTheme.args = {
+export const RightIconLinkDefaultTheme = Template.bind({});
+RightIconLinkDefaultTheme.args = {
 	iconSide: 'right',
 };
-asChromaticStory(RightIconLinkLightTheme);
+asChromaticStory(RightIconLinkDefaultTheme);
