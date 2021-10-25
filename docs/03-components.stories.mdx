@@ -1,3 +1,10 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/03 Components"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
 # Components
 
 > Individually installable components.
@@ -12,7 +19,7 @@ Components are individually installable as JavaScript packages via NPM or Yarn. 
 
 For detailed instructions on specific components, check out the [components overview in the Design System documentation](https://theguardian.design/2a1e5182b/p/77ee17-overview).
 
-Alternatively you can visit the folder for the component under [`src/core/components`](../src/core/components).
+Alternatively you can visit the folder for the component under the [`packages/@guardian` folder](https://github.com/guardian/source/tree/main/packages/%40guardian).
 
 ## Example usage
 
@@ -32,8 +39,8 @@ Import the Button component. Visit the [API documentation](https://theguardian.d
 import { Button } from '@guardian/src-button';
 
 const Form = () => (
-    <form>
-        <Button>Click me</Button>
-    </form>
+	<form>
+		<Button>Click me</Button>
+	</form>
 );
 ```
