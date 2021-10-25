@@ -153,27 +153,46 @@ const main = async () => {
 		const byComponent = getStatsByComponent(componentUsage);
 		const usedComponents = Object.keys(byComponent);
 
+		const unusedComponents = componentsWithPackage
+			.filter((c) => !usedComponents.includes(c))
+			.sort();
+
 		// Construct the output data object
 		const data = {
-			byProject: componentUsage,
-			byComponent,
-			unusedComponents: componentsWithPackage.filter(
-				(c) => !usedComponents.includes(c),
-			),
-			unusedComponentsPercentage: getUnusedComponentsPercentage(
-				componentsWithPackage,
-				usedComponents,
-			),
-			usedInTwoCodebases: getComponentsUsedInTwoCodebasesPercentage(
-				componentsWithPackage,
+			usage: {
+				byProject: componentUsage,
 				byComponent,
-			),
-			usedInTwoCodebasesIgnoreIcons:
-				getComponentsUsedInTwoCodebasesPercentage(
-					componentsWithPackage,
-					byComponent,
-					['@guardian/src-icons'],
-				),
+			},
+			unusedComponents: {
+				notUsedAnywhere: unusedComponents,
+				onlyUsedInOneCodebase: Object.keys(byComponent)
+					.filter((c) => Object.keys(byComponent[c]).length === 1)
+					.sort(),
+			},
+			metrics: {
+				percentageOfComponentsNotUsedAnywhere:
+					getUnusedComponentsPercentage(
+						componentsWithPackage,
+						usedComponents,
+					),
+				percentageOfComponentsUsedInAtLeastTwoCodebases:
+					getComponentsUsedInTwoCodebasesPercentage(
+						componentsWithPackage,
+						byComponent,
+					),
+				percentageOfComponentsUsedInAtLeastTwoCodebasesIgnoringIcons:
+					getComponentsUsedInTwoCodebasesPercentage(
+						componentsWithPackage,
+						byComponent,
+						['@guardian/src-icons'],
+					),
+				percentageOfComponentsUsedInAtLeastTwoCodebasesIgnoringIconsAndBrand:
+					getComponentsUsedInTwoCodebasesPercentage(
+						componentsWithPackage,
+						byComponent,
+						['@guardian/src-icons', '@guardian/src-brand'],
+					),
+			},
 		};
 
 		if (!existsSync('./results')) {
