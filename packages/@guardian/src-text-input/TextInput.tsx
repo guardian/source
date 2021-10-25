@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from 'react';
+import { forwardRef, InputHTMLAttributes } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
 import { Label } from '@guardian/src-label';
@@ -83,61 +83,69 @@ export interface TextInputProps
  *
  * The following themes are supported: `light`
  */
-export const TextInput = ({
-	id,
-	label: labelText,
-	optional = false,
-	hideLabel = false,
-	supporting,
-	width,
-	error,
-	success,
-	cssOverrides,
-	...props
-}: TextInputProps) => {
-	const textInputId = id || generateSourceId();
-	return (
-		<Label
-			text={labelText}
-			optional={!!optional}
-			hideLabel={hideLabel}
-			supporting={supporting}
-		>
-			{error && (
-				<div css={inlineMessageMargin}>
-					<InlineError id={descriptionId(textInputId)}>
-						{error}
-					</InlineError>
-				</div>
-			)}
-			{!error && success && (
-				<div css={inlineMessageMargin}>
-					<InlineSuccess id={descriptionId(textInputId)}>
-						{success}
-					</InlineSuccess>
-				</div>
-			)}
-			<input
-				css={(theme) => [
-					width ? widths[width] : widthFluid,
-					textInput(theme.textInput && theme),
-					supporting ? supportingTextMargin : labelMargin,
-					error ? errorInput(theme.textInput && theme) : '',
-					!error && success
-						? successInput(theme.textInput && theme)
-						: '',
-					cssOverrides,
-				]}
-				type="text"
-				id={textInputId}
-				aria-required={!optional}
-				aria-invalid={!!error}
-				aria-describedby={
-					error || success ? descriptionId(textInputId) : ''
-				}
-				required={!optional}
-				{...props}
-			/>
-		</Label>
-	);
-};
+export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
+	(
+		{
+			id,
+			label: labelText,
+			optional = false,
+			hideLabel = false,
+			supporting,
+			width,
+			error,
+			success,
+			cssOverrides,
+			...props
+		}: TextInputProps,
+		ref,
+	) => {
+		const textInputId = id || generateSourceId();
+		return (
+			<Label
+				text={labelText}
+				optional={!!optional}
+				hideLabel={hideLabel}
+				supporting={supporting}
+			>
+				{error && (
+					<div css={inlineMessageMargin}>
+						<InlineError id={descriptionId(textInputId)}>
+							{error}
+						</InlineError>
+					</div>
+				)}
+				{!error && success && (
+					<div css={inlineMessageMargin}>
+						<InlineSuccess id={descriptionId(textInputId)}>
+							{success}
+						</InlineSuccess>
+					</div>
+				)}
+				<input
+					ref={ref}
+					css={(theme) => [
+						width ? widths[width] : widthFluid,
+						textInput(theme.textInput && theme),
+						supporting ? supportingTextMargin : labelMargin,
+						error ? errorInput(theme.textInput && theme) : '',
+						!error && success
+							? successInput(theme.textInput && theme)
+							: '',
+						cssOverrides,
+					]}
+					type="text"
+					id={textInputId}
+					aria-required={!optional}
+					aria-invalid={!!error}
+					aria-describedby={
+						error || success ? descriptionId(textInputId) : ''
+					}
+					required={!optional}
+					{...props}
+				/>
+			</Label>
+		);
+	},
+);
+
+TextInput.displayName = 'TextInput';
