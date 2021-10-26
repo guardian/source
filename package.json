@@ -69,7 +69,7 @@
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.31.1",
     "babel-loader": "^8.2.2",
-    "chromatic": "^5.9.2",
+    "chromatic": "^6.0.4",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
