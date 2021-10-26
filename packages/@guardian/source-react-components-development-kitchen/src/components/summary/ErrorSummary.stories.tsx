@@ -12,7 +12,8 @@ export default {
 	args: {
 		error: 'There has been a problem',
 		context: '',
-	},
+		errorReportUrl: '',
+	} as ErrorSummaryProps,
 };
 
 const Template: Story<ErrorSummaryProps> = (args: ErrorSummaryProps) => (
@@ -40,3 +41,13 @@ WithContext.args = {
 	context: 'This is some more information about this error message',
 };
 asChromaticStory(WithContext);
+
+// *****************************************************************************
+
+export const WithReportLink = Template.bind({});
+WithReportLink.args = {
+	error: 'Here is an error',
+	context: 'This is some more information about this error message',
+	errorReportUrl: 'https://www.theguardian.com/info/tech-feedback',
+};
+asChromaticStory(WithReportLink);
