@@ -1,4 +1,4 @@
-import { linkDefault, linkBrandAlt, linkBrand } from './index';
+import { linkBrandAlt, linkBrand } from './index';
 import { Link, LinkProps } from './Link';
 import { SvgExternal } from '@guardian/src-icons';
 import { storybookBackgrounds } from '@guardian/src-helpers';
@@ -35,14 +35,11 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const PrimaryLinkLightTheme = Template.bind({});
-PrimaryLinkLightTheme.args = {
+export const PrimaryLinkDefaultTheme = Template.bind({});
+PrimaryLinkDefaultTheme.args = {
 	icon: undefined,
 };
-PrimaryLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(PrimaryLinkLightTheme);
+asChromaticStory(PrimaryLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -76,78 +73,57 @@ asChromaticStory(PrimaryLinkBrandAltTheme);
 
 // *****************************************************************************
 
-export const SecondaryLinkLightTheme = Template.bind({});
-SecondaryLinkLightTheme.args = {
+export const SecondaryLinkDefaultTheme = Template.bind({});
+SecondaryLinkDefaultTheme.args = {
 	priority: 'secondary',
 	icon: undefined,
 };
-SecondaryLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(SecondaryLinkLightTheme);
+asChromaticStory(SecondaryLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const PrimarySubduedLinkLightTheme = Template.bind({});
-PrimarySubduedLinkLightTheme.args = {
+export const PrimarySubduedLinkDefaultTheme = Template.bind({});
+PrimarySubduedLinkDefaultTheme.args = {
 	subdued: true,
 	icon: undefined,
 };
-PrimarySubduedLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(PrimarySubduedLinkLightTheme);
+asChromaticStory(PrimarySubduedLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const SecondarySubduedLinkLightTheme = Template.bind({});
-SecondarySubduedLinkLightTheme.args = {
+export const SecondarySubduedLinkDefaultTheme = Template.bind({});
+SecondarySubduedLinkDefaultTheme.args = {
 	priority: 'secondary',
 	subdued: true,
 	icon: undefined,
 };
-SecondarySubduedLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(SecondarySubduedLinkLightTheme);
+asChromaticStory(SecondarySubduedLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const PrimaryIconLinkLightTheme = Template.bind({});
-PrimaryIconLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(PrimaryIconLinkLightTheme);
+export const PrimaryIconLinkDefaultTheme = Template.bind({});
+asChromaticStory(PrimaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const SecondaryIconLinkLightTheme = Template.bind({});
-SecondaryIconLinkLightTheme.args = {
+export const SecondaryIconLinkDefaultTheme = Template.bind({});
+SecondaryIconLinkDefaultTheme.args = {
 	priority: 'secondary',
 };
-SecondaryIconLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(SecondaryIconLinkLightTheme);
+asChromaticStory(SecondaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const SubduedIconLinkLightTheme = Template.bind({});
-SubduedIconLinkLightTheme.args = {
+export const SubduedIconLinkDefaultTheme = Template.bind({});
+SubduedIconLinkDefaultTheme.args = {
 	subdued: true,
 };
-SubduedIconLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(SubduedIconLinkLightTheme);
+asChromaticStory(SubduedIconLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const RightIconLinkLightTheme = Template.bind({});
-RightIconLinkLightTheme.args = {
+export const RightIconLinkDefaultTheme = Template.bind({});
+RightIconLinkDefaultTheme.args = {
 	iconSide: 'right',
 };
-RightIconLinkLightTheme.parameters = {
-	theme: linkDefault,
-};
-asChromaticStory(RightIconLinkLightTheme);
+asChromaticStory(RightIconLinkDefaultTheme);

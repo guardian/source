@@ -1,5 +1,3 @@
-import { ThemeProvider } from '@emotion/react';
-import { choiceCardDefault } from '@guardian/src-foundations/themes';
 import { useState } from 'react';
 import { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory, asPlayground } from '../../../lib/story-intents';
@@ -92,119 +90,119 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const Default = Template.bind({});
-Default.args = {
+export const DefaultDefaultTheme = Template.bind({});
+DefaultDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 };
-asChromaticStory(Default);
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultMobile = Template.bind({});
-DefaultMobile.args = {
+export const DefaultMobileDefaultTheme = Template.bind({});
+DefaultMobileDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 };
-DefaultMobile.parameters = {
+DefaultMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
 };
-asChromaticStory(DefaultMobile);
+asChromaticStory(DefaultMobileDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultTablet = Template.bind({});
-DefaultTablet.args = {
+export const DefaultTabletDefaultTheme = Template.bind({});
+DefaultTabletDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 };
-DefaultTablet.parameters = {
+DefaultTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
-asChromaticStory(DefaultTablet);
+asChromaticStory(DefaultTabletDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultIn2Columns = Template.bind({});
-DefaultIn2Columns.args = {
+export const DefaultIn2ColumnsDefaultTheme = Template.bind({});
+DefaultIn2ColumnsDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 	columns: 2,
 };
-asChromaticStory(DefaultIn2Columns);
+asChromaticStory(DefaultIn2ColumnsDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultIn3Columns = Template.bind({});
-DefaultIn3Columns.args = {
+export const DefaultIn3ColumnsDefaultTheme = Template.bind({});
+DefaultIn3ColumnsDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 	columns: 3,
 };
-asChromaticStory(DefaultIn3Columns);
+asChromaticStory(DefaultIn3ColumnsDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultIn4Columns = Template.bind({});
-DefaultIn4Columns.args = {
+export const DefaultIn4ColumnsDefaultTheme = Template.bind({});
+DefaultIn4ColumnsDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 	columns: 4,
 };
-asChromaticStory(DefaultIn4Columns);
+asChromaticStory(DefaultIn4ColumnsDefaultTheme);
 
 // *****************************************************************************
 
-export const DefaultIn5Columns = Template.bind({});
-DefaultIn5Columns.args = {
+export const DefaultIn5ColumnsDefaultTheme = Template.bind({});
+DefaultIn5ColumnsDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 	columns: 5,
 };
-asChromaticStory(DefaultIn5Columns);
+asChromaticStory(DefaultIn5ColumnsDefaultTheme);
 
 // *****************************************************************************
 
-export const WithLabel = Template.bind({});
-WithLabel.args = { supporting: undefined };
-asChromaticStory(WithLabel);
+export const WithLabelDefaultTheme = Template.bind({});
+WithLabelDefaultTheme.args = { supporting: undefined };
+asChromaticStory(WithLabelDefaultTheme);
 
 // *****************************************************************************
 
-export const WithSupporting = Template.bind({});
-asChromaticStory(WithSupporting);
+export const WithSupportingDefaultTheme = Template.bind({});
+asChromaticStory(WithSupportingDefaultTheme);
 
 // *****************************************************************************
 
-export const WithError = Template.bind({});
-WithError.args = {
+export const WithErrorDefaultTheme = Template.bind({});
+WithErrorDefaultTheme.args = {
 	error: 'Please select a choice card to continue',
 	label: undefined,
 	supporting: undefined,
 };
-asChromaticStory(WithError);
+asChromaticStory(WithErrorDefaultTheme);
 
 // *****************************************************************************
 
-export const WithLabelAndError = Template.bind({});
-WithLabelAndError.args = {
+export const WithLabelAndErrorDefaultTheme = Template.bind({});
+WithLabelAndErrorDefaultTheme.args = {
 	error: 'Please select a choice card to continue',
 	supporting: undefined,
 };
-asChromaticStory(WithLabelAndError);
+asChromaticStory(WithLabelAndErrorDefaultTheme);
 
 // *****************************************************************************
 
-export const WithLabelAndSupportingAndError = Template.bind({});
-WithLabelAndSupportingAndError.args = {
+export const WithLabelAndSupportingAndErrorDefaultTheme = Template.bind({});
+WithLabelAndSupportingAndErrorDefaultTheme.args = {
 	error: 'Please select a choice card to continue',
 };
-asChromaticStory(WithLabelAndSupportingAndError);
+asChromaticStory(WithLabelAndSupportingAndErrorDefaultTheme);
 
 // *****************************************************************************
 
-export const WithWildlyVaryingLengths = Template.bind({});
-WithWildlyVaryingLengths.args = {
+export const WithWildlyVaryingLengthsDefaultTheme = Template.bind({});
+WithWildlyVaryingLengthsDefaultTheme.args = {
 	children: [
 		<ChoiceCard
 			id="abc1"
@@ -221,38 +219,31 @@ WithWildlyVaryingLengths.args = {
 		<ChoiceCard id="abc3" value="option-3" label="Short" key={3} />,
 	],
 };
-asChromaticStory(WithWildlyVaryingLengths);
+asChromaticStory(WithWildlyVaryingLengthsDefaultTheme);
 
 // *****************************************************************************
 
-export const WithWildlyVaryingLengthsMobile = Template.bind({});
-WithWildlyVaryingLengthsMobile.args = WithWildlyVaryingLengths.args;
-WithWildlyVaryingLengthsMobile.parameters = {
+export const WithWildlyVaryingLengthsMobileDefaultTheme = Template.bind({});
+WithWildlyVaryingLengthsMobileDefaultTheme.args =
+	WithWildlyVaryingLengthsDefaultTheme.args;
+WithWildlyVaryingLengthsMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobile' },
 };
-asChromaticStory(WithWildlyVaryingLengthsMobile);
+asChromaticStory(WithWildlyVaryingLengthsMobileDefaultTheme);
 
 // *****************************************************************************
 
-export const WithWildlyVaryingLengthsTablet = Template.bind({});
-WithWildlyVaryingLengthsTablet.args = WithWildlyVaryingLengths.args;
-WithWildlyVaryingLengthsTablet.parameters = {
+export const WithWildlyVaryingLengthsTabletDefaultTheme = Template.bind({});
+WithWildlyVaryingLengthsTabletDefaultTheme.args =
+	WithWildlyVaryingLengthsDefaultTheme.args;
+WithWildlyVaryingLengthsTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
-asChromaticStory(WithWildlyVaryingLengthsTablet);
+asChromaticStory(WithWildlyVaryingLengthsTabletDefaultTheme);
 
 // *****************************************************************************
 
-export const WithDefaultTheme = (args: ChoiceCardGroupProps) => (
-	<ThemeProvider theme={choiceCardDefault}>
-		<Template {...args} />
-	</ThemeProvider>
-);
-asChromaticStory(WithDefaultTheme);
-
-// *****************************************************************************
-
-export const ControlledMultiSelect: Story<ChoiceCardGroupProps> = (
+export const ControlledMultiSelectDefaultTheme: Story<ChoiceCardGroupProps> = (
 	args: ChoiceCardGroupProps,
 ) => {
 	const [state, setState] = useState({
@@ -285,14 +276,14 @@ export const ControlledMultiSelect: Story<ChoiceCardGroupProps> = (
 		</>
 	);
 };
-ControlledMultiSelect.args = {
+ControlledMultiSelectDefaultTheme.args = {
 	multi: true,
 };
-asChromaticStory(ControlledMultiSelect);
+asChromaticStory(ControlledMultiSelectDefaultTheme);
 
 // *****************************************************************************
 
-export const ControlledSingleSelect: Story<ChoiceCardGroupProps> = (
+export const ControlledSingleSelectDefaultTheme: Story<ChoiceCardGroupProps> = (
 	args: ChoiceCardGroupProps,
 ) => {
 	const [selected, setSelected] = useState<string | null>('option-2');
@@ -323,54 +314,52 @@ export const ControlledSingleSelect: Story<ChoiceCardGroupProps> = (
 		</>
 	);
 };
-ControlledSingleSelect.args = {
+ControlledSingleSelectDefaultTheme.args = {
 	multi: false,
 };
-asChromaticStory(ControlledSingleSelect);
+asChromaticStory(ControlledSingleSelectDefaultTheme);
 
 // *****************************************************************************
 
-export const UnControlledMultiSelect: Story<ChoiceCardGroupProps> = (
-	args: ChoiceCardGroupProps,
-) => (
-	<ChoiceCardGroup {...args}>
-		<ChoiceCard
-			id="abc1"
-			value="option-1"
-			label="Option 1"
-			defaultChecked
-		/>
-		<ChoiceCard
-			id="abc2"
-			value="option-2"
-			label="Option 2"
-			defaultChecked
-		/>
-	</ChoiceCardGroup>
-);
-UnControlledMultiSelect.args = {
+export const UnControlledMultiSelectDefaultTheme: Story<ChoiceCardGroupProps> =
+	(args: ChoiceCardGroupProps) => (
+		<ChoiceCardGroup {...args}>
+			<ChoiceCard
+				id="abc1"
+				value="option-1"
+				label="Option 1"
+				defaultChecked
+			/>
+			<ChoiceCard
+				id="abc2"
+				value="option-2"
+				label="Option 2"
+				defaultChecked
+			/>
+		</ChoiceCardGroup>
+	);
+UnControlledMultiSelectDefaultTheme.args = {
 	multi: true,
 };
-UnControlledMultiSelect.storyName = 'Un-controlled Multi Select';
-asChromaticStory(UnControlledMultiSelect);
+UnControlledMultiSelectDefaultTheme.storyName = 'Un-controlled Multi Select';
+asChromaticStory(UnControlledMultiSelectDefaultTheme);
 
 // *****************************************************************************
 
-export const UnControlledSingleSelect: Story<ChoiceCardGroupProps> = (
-	args: ChoiceCardGroupProps,
-) => (
-	<ChoiceCardGroup {...args}>
-		<ChoiceCard id="abc1" value="option-1" label="Option 1" />
-		<ChoiceCard
-			id="abc2"
-			value="option-2"
-			label="Option 2"
-			defaultChecked
-		/>
-	</ChoiceCardGroup>
-);
-UnControlledSingleSelect.args = {
+export const UnControlledSingleSelectDefaultTheme: Story<ChoiceCardGroupProps> =
+	(args: ChoiceCardGroupProps) => (
+		<ChoiceCardGroup {...args}>
+			<ChoiceCard id="abc1" value="option-1" label="Option 1" />
+			<ChoiceCard
+				id="abc2"
+				value="option-2"
+				label="Option 2"
+				defaultChecked
+			/>
+		</ChoiceCardGroup>
+	);
+UnControlledSingleSelectDefaultTheme.args = {
 	multi: false,
 };
-UnControlledSingleSelect.storyName = 'Un-controlled Single Select';
-asChromaticStory(UnControlledSingleSelect);
+UnControlledSingleSelectDefaultTheme.storyName = 'Un-controlled Single Select';
+asChromaticStory(UnControlledSingleSelectDefaultTheme);

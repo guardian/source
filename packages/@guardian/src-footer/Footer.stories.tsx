@@ -31,96 +31,96 @@ export default {
 
 const Template: Story = (args: FooterProps) => <Footer {...args} />;
 
-export const Demo = Template.bind({});
-Demo.args = {
+export const Playground = Template.bind({});
+Playground.args = {
 	showBackToTop: false,
 	children: 'with',
 };
-asPlayground(Demo);
+asPlayground(Playground);
 
-export const Default = Template.bind({});
-Default.args = { children: 'with' };
-asChromaticStory(Default);
+export const DefaultDefaultTheme = Template.bind({});
+DefaultDefaultTheme.args = { children: 'with' };
+asChromaticStory(DefaultDefaultTheme);
 
-export const DefaultTablet = Template.bind({});
-DefaultTablet.args = { children: 'with' };
-DefaultTablet.parameters = {
+export const DefaultTabletDefaultTheme = Template.bind({});
+DefaultTabletDefaultTheme.args = { children: 'with' };
+DefaultTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
-asChromaticStory(DefaultTablet);
+asChromaticStory(DefaultTabletDefaultTheme);
 
-export const DefaultMobile = Template.bind({});
-DefaultMobile.args = { children: 'with' };
-DefaultMobile.parameters = {
+export const DefaultMobileDefaultTheme = Template.bind({});
+DefaultMobileDefaultTheme.args = { children: 'with' };
+DefaultMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
 };
-asChromaticStory(DefaultMobile);
+asChromaticStory(DefaultMobileDefaultTheme);
 
-export const WithBackToTop = Template.bind({});
-WithBackToTop.args = { showBackToTop: true, children: 'with' };
-asChromaticStory(WithBackToTop);
+export const WithBackToTopDefaultTheme = Template.bind({});
+WithBackToTopDefaultTheme.args = { showBackToTop: true, children: 'with' };
+asChromaticStory(WithBackToTopDefaultTheme);
 
-export const WithBackToTopTablet = Template.bind({});
-WithBackToTopTablet.args = {
+export const WithBackToTopTabletDefaultTheme = Template.bind({});
+WithBackToTopTabletDefaultTheme.args = {
 	showBackToTop: true,
 	children: 'with',
 };
-WithBackToTopTablet.parameters = {
+WithBackToTopTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
-asChromaticStory(WithBackToTopTablet);
+asChromaticStory(WithBackToTopTabletDefaultTheme);
 
-export const WithBackToTopMobile = Template.bind({});
-WithBackToTopMobile.args = {
+export const WithBackToTopMobileDefaultTheme = Template.bind({});
+WithBackToTopMobileDefaultTheme.args = {
 	showBackToTop: true,
 	children: 'with',
 };
-WithBackToTopMobile.parameters = {
+WithBackToTopMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
 };
-asChromaticStory(WithBackToTopMobile);
+asChromaticStory(WithBackToTopMobileDefaultTheme);
 
-export const WithoutChildren = Template.bind({});
-WithoutChildren.args = { children: 'without' };
-asChromaticStory(WithoutChildren);
+export const WithoutChildrenDefaultTheme = Template.bind({});
+WithoutChildrenDefaultTheme.args = { children: 'without' };
+asChromaticStory(WithoutChildrenDefaultTheme);
 
-export const WithoutChildrenTablet = Template.bind({});
-WithoutChildrenTablet.args = { children: 'without' };
-WithoutChildrenTablet.parameters = {
+export const WithoutChildrenTabletDefaultTheme = Template.bind({});
+WithoutChildrenTabletDefaultTheme.args = { children: 'without' };
+WithoutChildrenTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
-asChromaticStory(WithoutChildrenTablet);
+asChromaticStory(WithoutChildrenTabletDefaultTheme);
 
-export const WithoutChildrenMobile = Template.bind({});
-WithoutChildrenMobile.args = { children: 'without' };
-WithoutChildrenMobile.parameters = {
+export const WithoutChildrenMobileDefaultTheme = Template.bind({});
+WithoutChildrenMobileDefaultTheme.args = { children: 'without' };
+WithoutChildrenMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
 };
-asChromaticStory(WithoutChildrenMobile);
+asChromaticStory(WithoutChildrenMobileDefaultTheme);
 
-export const WithoutChildrenWithBackToTop = Template.bind({});
-WithoutChildrenWithBackToTop.args = {
+export const WithoutChildrenWithBackToTopDefaultTheme = Template.bind({});
+WithoutChildrenWithBackToTopDefaultTheme.args = {
 	showBackToTop: true,
 	children: 'without',
 };
-asChromaticStory(WithoutChildrenWithBackToTop);
+asChromaticStory(WithoutChildrenWithBackToTopDefaultTheme);
 
-export const WithoutChildrenWithBackToTopTablet = Template.bind({});
-WithoutChildrenWithBackToTopTablet.args = {
+export const WithoutChildrenWithBackToTopTabletDefaultTheme = Template.bind({});
+WithoutChildrenWithBackToTopTabletDefaultTheme.args = {
 	showBackToTop: true,
 	children: 'without',
 };
-WithoutChildrenWithBackToTopTablet.parameters = {
+WithoutChildrenWithBackToTopTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 };
-asChromaticStory(WithoutChildrenWithBackToTopTablet);
+asChromaticStory(WithoutChildrenWithBackToTopTabletDefaultTheme);
 
-export const WithoutChildrenWithBackToTopMobile = Template.bind({});
-WithoutChildrenWithBackToTopMobile.args = {
+export const WithoutChildrenWithBackToTopMobileDefaultTheme = Template.bind({});
+WithoutChildrenWithBackToTopMobileDefaultTheme.args = {
 	showBackToTop: true,
 	children: 'without',
 };
-WithoutChildrenWithBackToTopMobile.parameters = {
+WithoutChildrenWithBackToTopMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
 };
-asChromaticStory(WithoutChildrenWithBackToTopMobile);
+asChromaticStory(WithoutChildrenWithBackToTopMobileDefaultTheme);
