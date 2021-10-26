@@ -1,7 +1,4 @@
-import {
-	userFeedbackDefault,
-	userFeedbackBrand,
-} from '@guardian/src-foundations/themes';
+import { userFeedbackBrand } from '@guardian/src-foundations/themes';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { InlineSuccess } from './index';
 import { UserFeedbackProps } from './types';
@@ -24,24 +21,17 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const InlineSuccessLight = Template.bind({});
-InlineSuccessLight.parameters = {
-	backgrounds: {
-		default: 'default',
-		values: [storybookBackgrounds.default],
-	},
-	theme: userFeedbackDefault,
-};
-asChromaticStory(InlineSuccessLight);
+export const InlineSuccessDefaultTheme = Template.bind({});
+asChromaticStory(InlineSuccessDefaultTheme);
 
 // *****************************************************************************
 
-export const InlineSuccessBrand = Template.bind({});
-InlineSuccessBrand.parameters = {
+export const InlineSuccessBrandTheme = Template.bind({});
+InlineSuccessBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brand',
 		values: [storybookBackgrounds.brand],
 	},
 	theme: userFeedbackBrand,
 };
-asChromaticStory(InlineSuccessBrand);
+asChromaticStory(InlineSuccessBrandTheme);
