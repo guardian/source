@@ -10,6 +10,10 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 27 October 2021
+
+**`@guardian/src-accordion 3.10.2`**
+- :nail_care: [1e39736](https://github.com/guardian/source/commit/1e3973653b5e1e8a5938fc6c05766a0b8e684f9f) Optimise best logo SVG (thanks @mxdvl)
 ## 14 October 2021
 
 **`@guardian/src-checkbox 3.10.0`**
