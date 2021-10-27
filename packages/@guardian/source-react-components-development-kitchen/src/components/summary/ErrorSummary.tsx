@@ -16,13 +16,18 @@ export interface ErrorSummaryProps extends Props {
 	 */
 	error: string;
 	/**
+	 * The error report link URL
+	 */
+	errorReportUrl?: string;
+	/**
 	 * Optional context information about the error
 	 */
-	context?: string;
+	context?: React.ReactNode | string;
 }
 
 export const ErrorSummary = ({
 	error,
+	errorReportUrl,
 	context,
 	cssOverrides,
 	...props
@@ -33,6 +38,14 @@ export const ErrorSummary = ({
 		</div>
 		<div css={messageWrapperStyles}>
 			<div css={messageStyles(errorColors[400])}>{error}</div>
+			{errorReportUrl && (
+				<a
+					css={messageStyles(errorColors[400], false)}
+					href={errorReportUrl}
+				>
+					Report this error
+				</a>
+			)}
 			{context && <div css={contextStyles}>{context}</div>}
 		</div>
 	</div>
