@@ -22,7 +22,7 @@ export interface ErrorSummaryProps extends Props {
 	/**
 	 * Optional context information about the error
 	 */
-	context?: string;
+	context?: React.ReactNode | string;
 }
 
 export const ErrorSummary = ({
