@@ -22,8 +22,11 @@ export const iconStyles = (color: string): SerializedStyles => css`
 	}
 `;
 
-export const messageStyles = (color: string): SerializedStyles => css`
-	${textSans.medium({ fontWeight: 'bold' })}
+export const messageStyles = (
+	color: string,
+	isBold = true,
+): SerializedStyles => css`
+	${textSans.medium({ fontWeight: isBold ? 'bold' : 'regular' })}
 	color: ${color};
 `;
 
