@@ -33,6 +33,7 @@
     "lint:styles": "stylelint packages/**/styles.ts",
     "prepare": "husky install",
     "release": "yarn clean && yarn build:packages && lerna publish --no-private",
+    "release:dry-run": "yarn clean && yarn build:packages && lerna publish --no-git-tag-version --no-push --no-private",
     "release:from-package": "yarn clean && yarn build:packages && lerna publish from-package --no-private",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
