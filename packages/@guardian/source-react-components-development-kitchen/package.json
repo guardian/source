@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components-development-kitchen",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "dist/index.cjs.js",
@@ -14,7 +14,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@guardian/src-button": "^3.10.2-alpha.1",
+    "@guardian/src-button": "^3.10.2",
     "@guardian/src-helpers": "^3.10.2-alpha.1"
   },
   "devDependencies": {
