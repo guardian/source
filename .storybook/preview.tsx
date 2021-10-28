@@ -26,7 +26,7 @@ export const decorators = [FocusManagerDecorator, ThemeProviderDecorator];
 // Hacky way of making sure that we're on the docs page if it's available
 // Polls for href changes as there's not event emitted when changing stories
 // Inspired by https://github.com/storybookjs/storybook/issues/13128#issuecomment-798927176
-var currentPage = window.location.href;
+let currentPage = window.location.href;
 window.setInterval(() => {
 	if (window.location.href !== currentPage) {
 		currentPage = window.location.href;
