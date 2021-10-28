@@ -29,10 +29,10 @@ If you are not making changes to the design, please delete this section.
 
 ### Accessibility
 
--   [ ] [Tested with screen reader](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#screen-readers)
--   [ ] [Navigable with keyboard](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#keyboard-navigation)
--   [ ] [Colour contrast passed](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#colour-contrast)
--   [ ] [The component doesn't use only colour to convey meaning](https://github.com/guardian/source/blob/main/docs/06-accessibility.md#use-of-colour)
+-   [ ] [Tested with screen reader](https://github.com/guardian/source/blob/main/docs/06-accessibility.stories.mdx#screen-readers)
+-   [ ] [Navigable with keyboard](https://github.com/guardian/source/blob/main/docs/06-accessibility.stories.mdx#keyboard-navigation)
+-   [ ] [Colour contrast passed](https://github.com/guardian/source/blob/main/docs/06-accessibility.stories.mdx#colour-contrast)
+-   [ ] [The component doesn't use only colour to convey meaning](https://github.com/guardian/source/blob/main/docs/06-accessibility.stories.mdx#use-of-colour)
 
 ### Cross browser and device testing
 
