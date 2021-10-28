@@ -16,7 +16,7 @@ Each font family has an associated import, exposing methods that return snippets
 of CSS depending on the desired font size.
 
 ```tsx
-import { headline, body, textSans } from '@guardian/src-foundations/typography';
+import { headline, body, textSans } from '@guardian/source-foundations';
 
 const h1 = css`
 	${headline.large()};
@@ -34,10 +34,10 @@ const copyright = css`
 You can also use the [object style syntax](https://emotion.sh/docs/object-styles):
 
 ```tsx
-import { headline } from '@guardian/src-foundations/typography/obj';
+import { headlineObjectStyles } from '@guardian/source-foundations';
 
 const h1 = {
-	...headline.large(),
+	...headlineObjectStyles.large(),
 };
 ```
 
