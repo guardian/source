@@ -23,7 +23,7 @@ export default {
 			control: { type: 'select' },
 		},
 		error: {
-			options: [undefined, 'example error message'],
+			options: [undefined, 'Please select a choice card to continue'],
 			control: { type: 'select' },
 		},
 		label: undefined,
