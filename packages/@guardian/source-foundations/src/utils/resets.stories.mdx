@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Foundations/CSS reset"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# CSS reset
+
+Source provides an optional CSS reset that sets some sensible default CSS rules. The intention is to provide a base for a consistent environment across projects and browsers.
+
+The reset is minimal and is optional for consumers of Source. In a future major version upgrade, consuming the reset will become mandatory for consumers of Source. To get ahead of the game, we recommend trying to consume them today.
+
+## Example
+
+```tsx
+import { resets } from '@guardian/source-foundations';
+
+const document = () => (
+	<html>
+		<head>
+			<style>{resets.resetCSS}</style>
+		</head>
+		<body>{/* … */}</body>
+	</html>
+);
+```
