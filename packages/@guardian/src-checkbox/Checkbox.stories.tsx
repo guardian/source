@@ -101,6 +101,7 @@ asChromaticStory(SupportingTextOnlyBrandTheme);
 
 export const IndeterminateDefaultTheme = Template.bind({});
 IndeterminateDefaultTheme.args = {
+	checked: undefined,
 	indeterminate: true,
 };
 asChromaticStory(IndeterminateDefaultTheme);

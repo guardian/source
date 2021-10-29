@@ -62,7 +62,7 @@ export const [
 
 export const TextAndIconLeftDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconLeftDefaultSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 };
 asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
@@ -70,7 +70,7 @@ asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 export const TextAndIconRightDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconRightDefaultSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	iconSide: 'right',
 };
 asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
@@ -79,7 +79,7 @@ asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 export const TextAndIconLeftSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftSmallSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	size: 'small',
 };
 asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
@@ -88,7 +88,7 @@ asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 export const TextAndIconRightSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightSmallSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	iconSide: 'right',
 	size: 'small',
 };
@@ -98,7 +98,7 @@ asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 export const TextAndIconLeftXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftXSmallSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	size: 'xsmall',
 };
 asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
@@ -107,7 +107,7 @@ asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 export const TextAndIconRightXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightXSmallSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	iconSide: 'right',
 	size: 'xsmall',
 };
@@ -117,7 +117,7 @@ asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 export const TextAndIconLeftWithNudgeDefaultTheme = Template.bind({});
 TextAndIconLeftWithNudgeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	nudgeIcon: true,
 };
 asChromaticStory(TextAndIconLeftWithNudgeDefaultTheme);
@@ -126,7 +126,7 @@ asChromaticStory(TextAndIconLeftWithNudgeDefaultTheme);
 
 export const TextAndIconRightWithNudgeDefaultTheme = Template.bind({});
 TextAndIconRightWithNudgeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	iconSide: 'right',
 	nudgeIcon: true,
 };
@@ -136,7 +136,7 @@ asChromaticStory(TextAndIconRightWithNudgeDefaultTheme);
 
 export const IconOnlyDefaultSizeDefaultTheme = Template.bind({});
 IconOnlyDefaultSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	hideLabel: true,
 };
 asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
@@ -145,7 +145,7 @@ asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 export const IconOnlySmallSizeDefaultTheme = Template.bind({});
 IconOnlySmallSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	size: 'small',
 	hideLabel: true,
 };
@@ -155,7 +155,7 @@ asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 export const IconOnlyXSmallSizeDefaultTheme = Template.bind({});
 IconOnlyXSmallSizeDefaultTheme.args = {
-	icon: <SvgArrowRightStraight />,
+	icon: 'arrow',
 	size: 'xsmall',
 	hideLabel: true,
 };

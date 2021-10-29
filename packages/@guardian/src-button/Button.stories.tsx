@@ -181,7 +181,7 @@ asChromaticStory(XSmallSizeDefaultTheme);
 
 export const TextAndIconLeftDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconLeftDefaultSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 };
 asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
@@ -189,7 +189,7 @@ asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 export const TextAndIconRightDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconRightDefaultSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	iconSide: 'right',
 };
 asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
@@ -198,7 +198,7 @@ asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 export const TextAndIconLeftSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftSmallSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	size: 'small',
 };
 asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
@@ -207,7 +207,7 @@ asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 export const TextAndIconRightSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightSmallSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	iconSide: 'right',
 	size: 'small',
 };
@@ -217,7 +217,7 @@ asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 export const TextAndIconLeftXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftXSmallSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	size: 'xsmall',
 };
 asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
@@ -226,7 +226,7 @@ asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 export const TextAndIconRightXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightXSmallSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	iconSide: 'right',
 	size: 'xsmall',
 };
@@ -236,7 +236,7 @@ asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 export const IconOnlyDefaultSizeDefaultTheme = Template.bind({});
 IconOnlyDefaultSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	hideLabel: true,
 };
 asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
@@ -245,7 +245,7 @@ asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 export const IconOnlySmallSizeDefaultTheme = Template.bind({});
 IconOnlySmallSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	hideLabel: true,
 	size: 'small',
 };
@@ -255,7 +255,7 @@ asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 export const IconOnlyXSmallSizeDefaultTheme = Template.bind({});
 IconOnlyXSmallSizeDefaultTheme.args = {
-	icon: <SvgCross />,
+	icon: 'cross',
 	hideLabel: true,
 	size: 'xsmall',
 };
