@@ -1,0 +1,13 @@
+{
+  "name": "get-icons",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn ts-node index.ts"
+  },
+  "dependencies": {
+    "node-fetch": "^3.0.0"
+  }
+}
