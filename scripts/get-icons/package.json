@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "yarn ts-node index.ts"
   },
   "dependencies": {
-    "node-fetch": "^3.0.0"
+    "axios": "^0.24.0"
   }
 }
