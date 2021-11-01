@@ -1,6 +1,7 @@
 export interface Test {
 	name: string;
 	contents: string;
+	eslintConfig: string;
 	fix: boolean;
 	expectedErrors?: string[];
 	expectedOutput?: string;

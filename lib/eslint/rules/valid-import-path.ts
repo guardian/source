@@ -14,6 +14,8 @@ type Node = (
 ) &
 	Rule.NodeParentExtension;
 
+type Package = 'foundations' | 'all';
+
 const typographyObjChanges = ['body', 'headline', 'textSans', 'titlepiece'];
 
 const removedImports: Record<string, string[]> = {
@@ -235,9 +237,23 @@ const getMessage = (
 	}
 };
 
-const createReport = (context: Rule.RuleContext, node: Node) => {
+const relevantImportSource = (importSource: string, pkg: Package): boolean => {
+	if (
+		pkg === 'foundations' &&
+		importSource.startsWith("'@guardian/src-foundations")
+	)
+		return true;
+
+	if (pkg === 'all' && importSource.startsWith("'@guardian/src-"))
+		return true;
+
+	return false;
+};
+
+const createReport = (context: Rule.RuleContext, node: Node, pkg: Package) => {
 	const importSource = node.source?.raw;
-	if (!importSource?.startsWith("'@guardian/src-")) return;
+
+	if (!importSource || !relevantImportSource(importSource, pkg)) return;
 
 	const newPackage = getNewPackage(importSource);
 
@@ -292,7 +308,7 @@ const createReport = (context: Rule.RuleContext, node: Node) => {
 	});
 };
 
-export const validImportPaths: Rule.RuleModule = {
+export const validImportPath: Rule.RuleModule = {
 	meta: {
 		type: 'problem',
 		docs: {
@@ -307,15 +323,43 @@ export const validImportPaths: Rule.RuleModule = {
 	create(context: Rule.RuleContext): Rule.RuleListener {
 		return {
 			ImportDeclaration(node) {
-				return createReport(context, node);
+				return createReport(context, node, 'all');
 			},
 			ExportNamedDeclaration(node) {
 				// e.g. export {Props} from '@guardian/src-helpers'
-				return createReport(context, node);
+				return createReport(context, node, 'all');
 			},
 			ExportAllDeclaration(node) {
 				// e.g. export * from '@guardian/src-foundations'`
-				return createReport(context, node);
+				return createReport(context, node, 'all');
+			},
+		};
+	},
+};
+export const validFoundationsImportPath: Rule.RuleModule = {
+	meta: {
+		type: 'problem',
+		docs: {
+			description: 'Get Source imports from v4 packages',
+			category: 'Deprecated',
+			url: 'https://github.com/guardian/source',
+		},
+		fixable: 'code',
+		schema: [],
+	},
+
+	create(context: Rule.RuleContext): Rule.RuleListener {
+		return {
+			ImportDeclaration(node) {
+				return createReport(context, node, 'foundations');
+			},
+			ExportNamedDeclaration(node) {
+				// e.g. export {Props} from '@guardian/src-helpers'
+				return createReport(context, node, 'foundations');
+			},
+			ExportAllDeclaration(node) {
+				// e.g. export * from '@guardian/src-foundations'`
+				return createReport(context, node, 'foundations');
 			},
 		};
 	},
