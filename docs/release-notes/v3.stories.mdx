@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/Release notes/Source v3"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# What's new in v3.0.0
+
+## Breaking changes
+
+There are a small number of breaking changes. A detailed breakdown can be found in our [v3.0.0 migration guide](https://docs.google.com/document/d/1qmHSCCCRs98LI9vN2B8I0yjqBAsRfJclEqcPma0wqbI/edit) (internal document).
+
+## New peer dependencies
+
+We are upgrading the following peer dependencies:
+
+-   `@emotion/core@^10.0.14` to `@emotion/react@^11.1.2`
+-   `react@^16.8.6` to `react@^17.0.1`
+
+## Package deletions
+
+The following legacy packages have been replaced:
+
+-   `@guardian/src-inline-error` with `@guardian/src-user-feedback`
+-   `@guardian/src-svgs` with `@guardian/src-icons`
+
+## Icon rename
+
+The icon `SvgAlert` has been renamed to `SvgAlertTriangle`.
+
+## Colour deletion
+
+The colour `dynamo[400]` has been deleted.
+
+## Typography option rename
+
+The typography option `textSans.xsmall` has been renamed to `textSans.xxsmall`.
+
+## CSS reset
+
+From v3.0.0, Source will provide an optional CSS reset that sets some sensible default CSS rules. The intention is to provide a base for a consistent environment across projects and browsers. See the [discussion in Client Side Infra](https://github.com/orgs/guardian/teams/client-side-infra/discussions/17).
+
+The reset is minimal and is optional for consumers of Source v3.0.0. In a future major version upgrade, consuming the reset will become mandatory for consumers of Source. To get ahead of the game, we recommend trying to consume it when you upgrade to Source v3.
+
+```tsx
+import { resets } from '@guardian/src-foundations/utils';
+
+const document = () => (
+	<html>
+		<head>
+			<style>{resets.defaults}</style>
+		</head>
+		<body>{/* … */}</body>
+	</html>
+);
+```
+
+## Internal stuff
+
+### Labels and legends
+
+All input field components are now consuming the [Label](https://guardian.github.io/source/?path=/docs/source-src-label-label--playground) and [Legend](https://guardian.github.io/source/?path=/docs/source-src-label-legend--playground) components found in `@guardian/src-label`. This should bring further consistency. In the longer term it will reduce the amount of JavaScript that gets shipped.
+
+### IDs for input fields
+
+Under the hood, all elements for input field components receive an ID attribute. This is for accessibility, ensuring error messages get associated with the correct input field element.
+
+It is not necessary to explicitly pass an ID to all components. If you don't pass an ID, an ID gets generated automatically.
+
+### Get in touch
+
+If you have any questions, suggestions or concerns, we would love to hear from you. There are a number of ways to [contact the Design System Team](https://theguardian.design/2a1e5182b/v/14821/p/231f6b-contact-us), so please feel free to drop us a line ☎️
