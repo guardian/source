@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Docs/Release notes/Source v4"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Introducing Source v4
+
+The latest version, v4, of Source brings a big change to how the packages are structured. Previously, the `@guardian/src-foundations` package contained the atoms from which all our visual design is built (colours, spacing, typography). A number of packages following the `@guardian/src-*` naming pattern provided React components designed for this system.
+
+In v4, `@guardian/source-foundations` replaces `@guardian/src-foundations` as the place to get those atoms. `@guardian/source-react-components` makes all components available from a single package.
+
+We hope this will make it easier to consume and contribute to these packages!
+
+## What else has changed?
+
+We have attempted to minimise further breaking changes in an effort to keep migration as simple as possible. Additional breaking changes are documented in the following places:
+
+[Breaking changes to the foundations package](https://github.com/guardian/source/blob/main/packages/%40guardian/source-foundations/migration-breaking-changes.md)
+
+[Breaking changes to the component packages](https://github.com/guardian/source/blob/main/packages/%40guardian/source-react-components/migration-breaking-changes.md)
+
+## What will be different going forwards?
+
+Going forwards the versions of `@guardian/source-foundations` and `@guardian/source-react-components` will no longer remain in sync. Instead, you should refer to the version specified in peerDependencies.
+
+## How do I migrate?
+
+### Automagically
+
+A new eslint plugin is available which can be used to complete the migration automatically. This plugin also contains Source specific linting rules that are recommended for your project. The steps for automatic migration are:
+
+-   Remove any `@guardian/src-*` packages from your `package.json`
+-   Add the `@guardian/source-foundations` and/or `@guardian/source-react-components` packages, depending on your use requirements
+-   Add the `@guardian/eslint-plugin-source` package as a devDependency
+-   [Add the recommended plugin config to your eslint plugin](https://github.com/guardian/source/tree/main/packages/%40guardian/eslint-plugin-source#usage)
+-   Run eslint with the [fix](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) option
+
+### Manually
+
+It is recommended to follow the steps for [automatic migration](#automagically) however it is also possible to migrate manually. On the whole, migration involves updating import statements for `@guardian/src-*` to either `@guardian/source-foundations` or `@guardian/source-react-components`. Some further changes may be required in specific cases. More information in these can be found in the [What else has changed?](#what-else-has-changed) section.
+
+The recommended manual steps are:
+
+-   Remove any `@guardian/src-*` packages from your `package.json`
+-   Add the `@guardian/source-foundations` and/or `@guardian/source-react-components` packages, depending on your use requirements
+-   Search for all ocurrences of `@guardian/src-` and fix as required
