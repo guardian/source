@@ -1659,7 +1659,7 @@
     eslint-plugin-prettier "3.4.0"
 
 "@guardian/eslint-plugin-source@file:packages/@guardian/eslint-plugin-source":
-  version "4.0.0-alpha.2"
+  version "4.0.0-alpha.3"
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.33.0"
     "@typescript-eslint/parser" "4.29.2"
