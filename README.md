@@ -19,7 +19,6 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 -   [Contributing](docs/07-contributing.md)
 -   [FAQs](docs/08-faqs.md)
 -   [Stories](docs/09-stories.md)
--   [Migrating from v3 to v4](docs/10-v3-to-v4.md)
 
 ## Using the Design System 🎨
 
