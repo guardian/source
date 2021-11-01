@@ -1,4 +1,5 @@
 import { ComponentUsageData } from './types';
+import { deduplicateComponents } from './deduplicate-components';
 
 const getStatsByComponent = (
 	byPackage: Record<string, Record<string, number>>,
@@ -72,6 +73,8 @@ export const getEnrichedResults = (
 		.filter((c) => !usedComponents.includes(c))
 		.sort();
 
+	const unusedComponentsCombined = deduplicateComponents(unusedComponents);
+
 	// Construct the output data object
 	return {
 		usage: {
@@ -83,6 +86,12 @@ export const getEnrichedResults = (
 			onlyUsedInOneCodebase: Object.keys(byComponent)
 				.filter((c) => Object.keys(byComponent[c]).length === 1)
 				.sort(),
+			notUsedAnywhereCombined: unusedComponentsCombined,
+			onlyUsedInOneCodebaseCombined: deduplicateComponents(
+				Object.keys(byComponent)
+					.filter((c) => Object.keys(byComponent[c]).length === 1)
+					.sort(),
+			),
 		},
 		metrics: {
 			percentageOfComponentsNotUsedAnywhere:
