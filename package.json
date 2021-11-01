@@ -5,9 +5,7 @@
   "license": "Apache-2.0",
   "workspaces": [
     "packages/@guardian/*",
-    "scripts/get-usage",
-    "scripts/validate-dist",
-    "scripts/eslint-integration-test"
+    "scripts/*"
   ],
   "scripts": {
     "build": "npm-run-all build:packages build:storybook",
