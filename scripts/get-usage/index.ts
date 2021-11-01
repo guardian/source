@@ -1,124 +1,9 @@
-import { repos } from './config.json';
 import { cwd, chdir } from 'process';
-import { execSync } from 'child_process';
-import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs';
+import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import rimraf from 'rimraf';
 import { getAllComponentsAndPackages } from './get-all-components';
-
-const getReactScannerConfig = ({
-	name,
-	paths,
-}: {
-	name: string;
-	paths: string;
-}) => `
-module.exports = {
-	crawlFrom: '.',
-	globs: ['**/(${paths})/**/!(*.test|*.spec).@(js|ts)?(x)'],
-	includeSubComponents: true,
-	importedFrom: /^(@guardian\\/(((src-(?!foundations)).*)|(((source-(?!foundations)).*))))/,
-	getComponentName: ({ imported, moduleName }) => {
-		const parsedModuleName = moduleName.split("/").slice(0,2).join("/");
-		return parsedModuleName + '/' + imported;
-	},
-	processors: [
-		['count-components', { outputTo: '${name}.component-usage.json' }],
-	],
-};
-`;
-
-const getStatsByComponent = (
-	byPackage: Record<string, Record<string, number>>,
-) => {
-	const byComponent: Record<string, Record<string, number>> = {};
-	Object.entries(byPackage).forEach(([pkg, components]) => {
-		Object.entries(components).forEach(([component, number]) => {
-			if (Object.keys(byComponent).includes(component)) {
-				byComponent[component][pkg] = number;
-			} else {
-				byComponent[component] = {
-					[pkg]: number,
-				};
-			}
-		});
-	});
-	return byComponent;
-};
-
-const getUnusedComponentsPercentage = (
-	allComponents: string[],
-	usedComponents: string[],
-): number => {
-	const prefixesToIgnore = ['@guardian/src-ed', '@guardian/source-'];
-
-	const relevantComponentsFilter = (component: string): boolean =>
-		prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
-
-	const fraction =
-		usedComponents.filter(relevantComponentsFilter).length /
-		allComponents.filter(relevantComponentsFilter).length;
-	return Math.round(100 - fraction * 100);
-};
-
-const getComponentsUsedInTwoCodebasesPercentage = (
-	allComponents: string[],
-	componentUsage: Record<string, Record<string, number>>,
-	prefixesToIgnore: string[] = [],
-): number => {
-	const _prefixesToIgnore = [
-		...prefixesToIgnore,
-		'@guardian/src-ed',
-		'@guardian/source-',
-	];
-
-	const usedInTwo = [];
-	for (const [component, codebases] of Object.entries(componentUsage)) {
-		if (Object.keys(codebases).length > 1) {
-			usedInTwo.push(component);
-		}
-	}
-
-	const relevantComponentsFilter = (component: string): boolean =>
-		_prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
-
-	const fraction =
-		usedInTwo.filter(relevantComponentsFilter).length /
-		allComponents.filter(relevantComponentsFilter).length;
-	return Math.round(fraction * 100);
-};
-
-const getComponentUsage = (): Record<string, Record<string, number>> => {
-	const componentUsage: Record<string, Record<string, number>> = {};
-
-	// Make a temp directory to clone all of the repos into
-	mkdirSync('./tmp');
-	chdir('./tmp');
-
-	// For each repository, and each project within that repository
-	// Get all of the components that are used
-	for (const repo of repos) {
-		execSync(
-			`git clone --depth 1 git@github.com:guardian/${repo.repo}.git`,
-		);
-		chdir(repo.repo);
-		for (const project of repo.projects) {
-			console.log(`Analysing ${project.name}`);
-			const configFileName = `${project.name}.scan.config`;
-			writeFileSync(configFileName, getReactScannerConfig(project));
-			execSync(
-				`../../node_modules/.bin/react-scanner -c ${configFileName}`,
-			);
-			componentUsage[project.name] = JSON.parse(
-				readFileSync(`${project.name}.component-usage.json`, 'utf-8'),
-			);
-		}
-		chdir('../');
-	}
-
-	chdir('../');
-
-	return componentUsage;
-};
+import { getComponentUsage } from './get-component-usage';
+import { getEnrichedResults } from './get-enriched-results';
 
 const main = async () => {
 	console.log('Finding Source usage');
@@ -150,70 +35,13 @@ const main = async () => {
 		rimraf.sync(`${cwd()}/tmp`);
 		console.log(`Formatting data`);
 
-		// Also get the data split by component
-		const byComponent = getStatsByComponent(componentUsage);
-		const usedComponents = Object.keys(byComponent);
-
-		const unusedComponents = componentsWithPackage
-			.filter((c) => !usedComponents.includes(c))
-			.sort();
-
-		// Construct the output data object
-		const data = {
-			usage: {
-				byProject: componentUsage,
-				byComponent,
-			},
-			unusedComponents: {
-				notUsedAnywhere: unusedComponents,
-				onlyUsedInOneCodebase: Object.keys(byComponent)
-					.filter((c) => Object.keys(byComponent[c]).length === 1)
-					.sort(),
-			},
-			metrics: {
-				percentageOfComponentsNotUsedAnywhere:
-					getUnusedComponentsPercentage(
-						componentsWithPackage,
-						usedComponents,
-					),
-				percentageOfComponentsUsedInAtLeastTwoCodebases:
-					getComponentsUsedInTwoCodebasesPercentage(
-						componentsWithPackage,
-						byComponent,
-					),
-				percentageOfComponentsUsedInAtLeastTwoCodebasesIgnoringIcons:
-					getComponentsUsedInTwoCodebasesPercentage(
-						componentsWithPackage,
-						byComponent,
-						['@guardian/src-icons'],
-					),
-				percentageOfComponentsUsedInAtLeastTwoCodebasesIgnoringIconsAndBrand:
-					getComponentsUsedInTwoCodebasesPercentage(
-						componentsWithPackage,
-						byComponent,
-						['@guardian/src-icons', '@guardian/src-brand'],
-					),
-			},
-		};
+		const data = getEnrichedResults(componentUsage, componentsWithPackage);
 
 		if (!existsSync('./results')) {
 			mkdirSync('./results');
 		}
 
-		// Write out one JSON file
 		writeFileSync('results/results.json', JSON.stringify(data, null, 2));
-		writeFileSync(
-			'results/results.csv',
-			Object.entries(byComponent)
-				.map(
-					([component, packages]) =>
-						`${component},${Object.values(packages).reduce(
-							(a, b) => a + b,
-							0,
-						)}`,
-				)
-				.join('\n'),
-		);
 	} catch (e) {
 		console.error(e);
 	} finally {
