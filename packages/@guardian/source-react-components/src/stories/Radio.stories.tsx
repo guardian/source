@@ -1,29 +1,8 @@
-import { Radio } from '../../../src-radio/Radio';
+import defaultStoryConfig from '../../../src-radio/Radio.stories';
 
 export default {
+	...defaultStoryConfig,
 	title: 'Source v4/source-react-components/Radio',
-	component: Radio,
-	argTypes: {
-		label: {
-			control: {
-				type: 'text',
-			},
-		},
-		supporting: {
-			control: {
-				type: 'text',
-			},
-		},
-		cssOverrides: {
-			control: null,
-		},
-	},
-	args: {
-		label: 'Red',
-		value: 'red',
-		supporting: '',
-		checked: true,
-	},
 };
 
 export * from '../../../src-radio/Radio.stories';

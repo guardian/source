@@ -1,13 +1,8 @@
-import { SvgRoundelDefault } from '../../../src-brand/SvgRoundelDefault';
+import defaultStoryConfig from '../../../src-brand/SvgRoundelDefault.stories';
 
 export default {
+	...defaultStoryConfig,
 	title: 'Source v4/source-react-components/SvgRoundelDefault',
-	component: SvgRoundelDefault,
-	argTypes: {
-		width: {
-			control: { type: 'range', min: 10, max: 600 },
-		},
-	},
 };
 
 export * from '../../../src-brand/SvgRoundelDefault.stories';

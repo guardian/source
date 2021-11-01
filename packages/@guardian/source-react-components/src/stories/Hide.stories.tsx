@@ -1,16 +1,8 @@
-import { Hide } from '../../../src-layout/Hide/Hide';
+import defaultStoryConfig from '../../../src-layout/Hide/Hide.stories';
 
 export default {
+	...defaultStoryConfig,
 	title: 'Source v4/source-react-components/Hide',
-	component: Hide,
-	argTypes: {
-		above: {
-			control: { disable: true },
-		},
-		below: {
-			control: { disable: true },
-		},
-	},
 };
 
 export * from '../../../src-layout/Hide/Hide.stories';

@@ -1,8 +1,8 @@
-import { Stack } from '../../../src-layout/Stack/Stack';
+import defaultStoryConfig from '../../../src-layout/Stack/Stack.stories';
 
 export default {
+	...defaultStoryConfig,
 	title: 'Source v4/source-react-components/Stack',
-	component: Stack,
 };
 
 export * from '../../../src-layout/Stack/Stack.stories';

@@ -1,19 +1,8 @@
-import { Container } from '../../../src-layout/Container/Container';
+import defaultStoryConfig from '../../../src-layout/Container/Container.stories';
 
 export default {
+	...defaultStoryConfig,
 	title: 'Source v4/source-react-components/Container',
-	component: Container,
-	argTypes: {
-		border: {
-			control: {
-				disable: true,
-			},
-		},
-	},
-	args: {
-		sideBorders: false,
-		topBorder: false,
-	},
 };
 
 export * from '../../../src-layout/Container/Container.stories';

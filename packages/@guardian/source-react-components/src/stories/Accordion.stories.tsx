@@ -1,13 +1,8 @@
-import { Accordion } from '../../../src-accordion/Accordion';
-import { AccordionRow } from '../../../src-accordion/AccordionRow';
+import defaultStoryConfig from '../../../src-accordion/Accordion.stories';
 
 export default {
+	...defaultStoryConfig,
 	title: 'Source v4/source-react-components/Accordion',
-	component: Accordion,
-	subcomponents: { AccordionRow },
-	args: {
-		hideToggleLabel: false,
-	},
 };
 
 export * from '../../../src-accordion/Accordion.stories';

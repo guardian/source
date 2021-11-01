@@ -1,8 +1,8 @@
-import { InlineError } from '../../../src-user-feedback/InlineError';
+import defaultStoryConfig from '../../../src-user-feedback/InlineError.stories';
 
 export default {
+	...defaultStoryConfig,
 	title: 'Source v4/source-react-components/InlineError',
-	component: InlineError,
 };
 
 export * from '../../../src-user-feedback/InlineError.stories';
