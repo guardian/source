@@ -102,6 +102,34 @@ export const getEnrichedResults = (
 
 	// Construct the output data object
 	return {
+		docs: {
+			usage: {
+				byProject:
+					'This object lists all of the configured projects along with a list of the components they use and how many times each of those components are imported.',
+				byComponent:
+					'This object lists all of the Source components that are used by the configured projects and, for each one, the projects that use them and how many times they are imported in each project',
+			},
+			unusedComponents: {
+				notUsedAnywhere:
+					'This is a list of all components that are not imported in any of the configured projects',
+				onlyUsedInOneCodebase:
+					'This is a list of components that are only imported once across the configured projects',
+				notUsedAnywhereNewOrOld:
+					'This is a list of components, with the new and old equivalents grouped, that are not imported in any of the configured projects',
+				onlyUsedInOneCodebaseNewOrOld:
+					'This is a list of components, with the new and old equivalents grouped, that are only imported once across the configured projects',
+			},
+			metrics: {
+				percentageOfComponentsNotUsedAnywhere:
+					'This metric is the percentage of components, with the new and old equivalents grouped, that are not used anywhere',
+				percentageOfComponentsUsedInAtLeastTwoCodebases:
+					'This metric is the percentage of components, with the new and old equivalents grouped, that are used in at least two codebases. It ignores components from @guardian/src-ed-* packages and from the kitchen.',
+				percentageOfComponentsUsedInAtLeastTwoCodebasesIgnoringIconsAndBrand:
+					'This metric is the percentage of components, with the new and old equivalents grouped, that are used in at least two codebases. It ignores components from @guardian/src-ed-*, @guardian/src-brand and @guardian/src-icons packages as well as the kitchen and anything from @guardian/srouce-react-components that starts with Svg.',
+				percentageOfComponentsFromSourcePackages:
+					'This metric is the percentage of the components which are used that come from an @guardian/source-* package.',
+			},
+		},
 		usage: {
 			byProject: componentUsage,
 			byComponent,
