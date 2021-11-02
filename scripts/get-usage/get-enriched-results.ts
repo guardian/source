@@ -133,6 +133,12 @@ export const getEnrichedResults = (
 						'@guardian/source-react-components/Svg',
 					],
 				),
+			percentageOfComponentsFromSourcePackages: Math.round(
+				(usedComponents.filter((c) => c.startsWith('@guardian/source'))
+					.length /
+					usedComponents.length) *
+					100,
+			),
 		},
 	};
 };
