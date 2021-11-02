@@ -17,7 +17,16 @@ const maxWidth = (until: number): string =>
 const minWidthMaxWidth = (from: number, until: number): string =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
-// e.g. from.*
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-media-queries--page#from)
+ *
+ * @example
+ *	const styles = css`
+ *		${from.mobileLandscape} {
+ *			padding: 0 20px;
+ *		}
+ * `;
+ */
 export const from: BreakpointMap = {
 	mobile: minWidth(breakpoints.mobile),
 	mobileMedium: minWidth(breakpoints.mobileMedium),
@@ -29,7 +38,16 @@ export const from: BreakpointMap = {
 	wide: minWidth(breakpoints.wide),
 };
 
-// e.g. until.*
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-media-queries--page#until)
+ *
+ * @example
+ *	const styles = css`
+ *		${until.wide} {
+ *			padding: 0 40px;
+ *		}
+ * `;
+ */
 export const until: BreakpointMap = {
 	mobile: maxWidth(breakpoints.mobile),
 	mobileMedium: maxWidth(breakpoints.mobileMedium),
@@ -41,7 +59,16 @@ export const until: BreakpointMap = {
 	wide: maxWidth(breakpoints.wide),
 };
 
-// e.g. between.*.and.*
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-media-queries--page#betweenand)
+ *
+ * @example
+ *	const styles = css`
+ *		${between.phablet.and.desktop} {
+ *			padding: 0 32px;
+ *		}
+ * `;
+ */
 export const between = {
 	mobile: {
 		and: {
