@@ -14,7 +14,7 @@ const v4StoriesNotInV3 = v4Stories.filter(
 );
 
 if (v3StoriesNotInV4.length || v4StoriesNotInV3.length) {
-	console.error('v4 and v4 stories are out of sync');
+	console.error('v3 and v4 stories are out of sync');
 	if (v3StoriesNotInV4.length)
 		console.error(
 			'The following stories are present in v3 but not v4: ',
