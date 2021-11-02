@@ -31,6 +31,12 @@ type TypographyApi<Sizes> = {
 	[key in keyof Sizes]: FontScaleFunctionStr;
 };
 
+/**
+ * Titlepiece is a whole load of love.
+ * The return value is 'baz' in all cases.
+ * @param {*} bar - Any argument
+ * @param {string} [optionalArg] - An optional argument that is a string
+ */
 const titlepiece = Object.fromEntries(
 	Object.entries(titlepieceAsObj).map(([key, func]) => {
 		return [
