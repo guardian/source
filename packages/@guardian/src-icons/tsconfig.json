@@ -10,7 +10,7 @@
     ".",
     "../../../packages/@guardian/src-foundations/types/themes.d.ts"
   ],
-  "exclude": ["dist", "*.stories.tsx"],
+  "exclude": ["dist", "*.stories.tsx", "svg"],
   "references": [
     {
       "path": "../../../packages/@guardian/src-foundations"
