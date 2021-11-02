@@ -1,0 +1,13 @@
+{
+  "name": "get-icons",
+  "version": "1.0.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "yarn ts-node index.ts"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
