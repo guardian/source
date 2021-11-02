@@ -32,10 +32,18 @@ type TypographyApi<Sizes> = {
 };
 
 /**
- * Titlepiece is a whole load of love.
- * The return value is 'baz' in all cases.
- * @param {*} bar - Any argument
- * @param {string} [optionalArg] - An optional argument that is a string
+ * [Storybook](https://guardian.github.io/source/?path=/docs/foundations-typography--page#titlepiece) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/358767)
+ *
+ * ```
+ * font-family: 'GT Guardian Titlepiece';
+ * ```
+ *
+ * `titlepiece.small()` -> 42px
+ *
+ * `titlepiece.medium()` -> 50px
+ *
+ * `titlepiece.large()` -> 70px
  */
 const titlepiece = Object.fromEntries(
 	Object.entries(titlepieceAsObj).map(([key, func]) => {
