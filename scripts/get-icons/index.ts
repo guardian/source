@@ -5,7 +5,7 @@ const ICON_FILE = 'Ai7AELHC6KCz38qKZkvuHo';
 
 const ICON_FRAME = 'UI icons 24(w)x24(w)';
 
-const OUTPUT_DIR = '../../packages/@guardian/src-icons/svg';
+const OUTPUT_DIR = '../../packages/@guardian/src-icons/svgs';
 
 const FIGMA_OPTIONS = {
 	headers: {
