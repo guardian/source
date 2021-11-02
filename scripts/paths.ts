@@ -57,7 +57,7 @@ export const getKitchenComponentPaths = () =>
 					isDirectory(
 						`${kitchenComponents}/${componentDirName}`,
 					).then((isDir) => {
-						if (!isDir) return;
+						if (!isDir) return '';
 
 						return `${kitchenComponents}/${componentDirName}`;
 					}),

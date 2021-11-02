@@ -21,17 +21,28 @@ const getStatsByComponent = (
 
 const getUnusedComponentsPercentage = (
 	allComponents: string[],
-	usedComponents: string[],
+	unusedComponents: string[],
 ): number => {
-	const prefixesToIgnore = ['@guardian/src-ed', '@guardian/source-'];
+	const prefixesToIgnore = [
+		'@guardian/src-ed',
+		'@guardian/source-react-components-development-kitchen',
+	];
 
-	const relevantComponentsFilter = (component: string): boolean =>
-		prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
+	const relevantComponentsFilter = (component: string): boolean => {
+		const split = component.split(' | ');
+		for (const s of split) {
+			for (const prefix of prefixesToIgnore) {
+				if (s.startsWith(prefix)) return true;
+			}
+		}
+
+		return false;
+	};
 
 	const fraction =
-		usedComponents.filter(relevantComponentsFilter).length /
+		unusedComponents.filter(relevantComponentsFilter).length /
 		allComponents.filter(relevantComponentsFilter).length;
-	return Math.round(100 - fraction * 100);
+	return Math.round(fraction * 100);
 };
 
 const getComponentsUsedInTwoCodebasesPercentage = (
@@ -42,7 +53,7 @@ const getComponentsUsedInTwoCodebasesPercentage = (
 	const _prefixesToIgnore = [
 		...prefixesToIgnore,
 		'@guardian/src-ed',
-		'@guardian/source-',
+		'@guardian/source-react-components-development-kitchen',
 	];
 
 	const usedInTwo = [];
@@ -56,8 +67,10 @@ const getComponentsUsedInTwoCodebasesPercentage = (
 		_prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
 
 	const fraction =
-		usedInTwo.filter(relevantComponentsFilter).length /
-		allComponents.filter(relevantComponentsFilter).length;
+		deduplicateComponents(usedInTwo.filter(relevantComponentsFilter))
+			.length /
+		deduplicateComponents(allComponents.filter(relevantComponentsFilter))
+			.length;
 	return Math.round(fraction * 100);
 };
 
@@ -73,7 +86,19 @@ export const getEnrichedResults = (
 		.filter((c) => !usedComponents.includes(c))
 		.sort();
 
-	const unusedComponentsCombined = deduplicateComponents(unusedComponents);
+	const onlyOneCodebaseComponents = Object.keys(byComponent)
+		.filter((c) => Object.keys(byComponent[c]).length === 1)
+		.sort();
+
+	const combinedComponents = deduplicateComponents(componentsWithPackage);
+
+	const unusedComponentsCombined = combinedComponents.filter((c) =>
+		usedComponents.every((used) => !c.split(' | ').includes(used)),
+	);
+
+	const onlyOneCodebaseComponentsCombined = deduplicateComponents(
+		onlyOneCodebaseComponents,
+	);
 
 	// Construct the output data object
 	return {
@@ -83,38 +108,30 @@ export const getEnrichedResults = (
 		},
 		unusedComponents: {
 			notUsedAnywhere: unusedComponents,
-			onlyUsedInOneCodebase: Object.keys(byComponent)
-				.filter((c) => Object.keys(byComponent[c]).length === 1)
-				.sort(),
-			notUsedAnywhereCombined: unusedComponentsCombined,
-			onlyUsedInOneCodebaseCombined: deduplicateComponents(
-				Object.keys(byComponent)
-					.filter((c) => Object.keys(byComponent[c]).length === 1)
-					.sort(),
-			),
+			onlyUsedInOneCodebase: onlyOneCodebaseComponents,
+			notUsedAnywhereNewOrOld: unusedComponentsCombined,
+			onlyUsedInOneCodebaseNewOrOld: onlyOneCodebaseComponentsCombined,
 		},
 		metrics: {
 			percentageOfComponentsNotUsedAnywhere:
 				getUnusedComponentsPercentage(
-					componentsWithPackage,
-					usedComponents,
+					combinedComponents,
+					unusedComponentsCombined,
 				),
 			percentageOfComponentsUsedInAtLeastTwoCodebases:
 				getComponentsUsedInTwoCodebasesPercentage(
 					componentsWithPackage,
 					byComponent,
 				),
-			percentageOfComponentsUsedInAtLeastTwoCodebasesIgnoringIcons:
-				getComponentsUsedInTwoCodebasesPercentage(
-					componentsWithPackage,
-					byComponent,
-					['@guardian/src-icons'],
-				),
 			percentageOfComponentsUsedInAtLeastTwoCodebasesIgnoringIconsAndBrand:
 				getComponentsUsedInTwoCodebasesPercentage(
 					componentsWithPackage,
 					byComponent,
-					['@guardian/src-icons', '@guardian/src-brand'],
+					[
+						'@guardian/src-icons',
+						'@guardian/src-brand',
+						'@guardian/source-react-components/Svg',
+					],
 				),
 		},
 	};
