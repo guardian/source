@@ -41,6 +41,12 @@ const h1 = {
 };
 ```
 
+## Where can I find The Guardian's fonts?
+
+The canonical source of fonts is https://github.com/guardian/fonts
+
+They should be loaded from the locations specified in [font-faces.css](https://github.com/guardian/fonts/blob/main/fonts/web/font-faces.css). This optimises for consistency and performance across The Guardian's digital products.
+
 ## Sizing scale
 
 A range of font sizes are available for each font family. The `medium` font size
@@ -50,6 +56,12 @@ Pixel values are given below for ease of understanding, but by default the
 typography API assigns font size in rems.
 
 ### Headline
+
+```css
+font-family: 'GH Guardian Headline';
+```
+
+For headlines, headings and any short form text, like standfirst, pull quotes, bylines and titles.
 
 -   `headline.xxxsmall()` -> 17px
 -   `headline.xxsmall()` -> 20px
@@ -61,10 +73,24 @@ typography API assigns font size in rems.
 
 ### Body
 
+```css
+font-family: 'GuardianTextEgyptian';
+```
+
+For multiple sentences/paragraphs of text, like the body copy in articles, or paragraphs of text on marketing pages.
+
 -   `body.small()` -> 15px
 -   `body.medium()` -> 17px
 
 ### Text sans
+
+```css
+font-family: 'GuardianTextSans';
+```
+
+For interactive page elements like buttons and text input fields and for meta information like datelines, image captions and data visualisations.
+
+Note: Text Sans is used across the board on paid content templates to help differentiate from editorial content.
 
 -   `textSans.xxsmall()` -> 12px
 -   `textSans.xsmall()` -> 14px
@@ -74,6 +100,18 @@ typography API assigns font size in rems.
 -   `textSans.xlarge()` -> 24px
 -   `textSans.xxlarge()` -> 28px
 -   `textSans.xxxlarge()` -> 34px
+
+### Titlepiece
+
+```css
+font-family: 'GT Guardian Titlepiece';
+```
+
+For impact. Ideal for marketing messages, page headers and numerals. Use sparingly and at large sizes only.
+
+-   `titlepiece.small()` -> 42px
+-   `titlepiece.medium()` -> 50px
+-   `titlepiece.large()` -> 70px
 
 ## Options
 
