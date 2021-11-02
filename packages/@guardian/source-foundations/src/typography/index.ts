@@ -54,6 +54,28 @@ const titlepiece = Object.fromEntries(
 	}),
 ) as TypographyApi<TitlepieceSizes>;
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/foundations-typography--page#headline) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/7310bd)
+ *
+ * ```
+ * font-family: 'GH Guardian Headline';
+ * ```
+ *
+ * `headline.xxxsmall()` -> 17px
+ *
+ * `headline.xxsmall()` -> 20px
+ *
+ * `headline.xsmall()` -> 24px
+ *
+ * `headline.small()` -> 28px
+ *
+ * `headline.medium()` -> 34px
+ *
+ * `headline.large()` -> 42px
+ *
+ * `headline.xlarge()` -> 50px
+ */
 const headline = Object.fromEntries(
 	Object.entries(headlineAsObj).map(([key, func]) => {
 		return [
@@ -63,6 +85,18 @@ const headline = Object.fromEntries(
 	}),
 ) as TypographyApi<HeadlineSizes>;
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/foundations-typography--page#body) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/88cd8e)
+ *
+ * ```
+ * font-family: 'GuardianTextEgyptian';
+ * ```
+ *
+ * `body.small()` -> 15px
+ *
+ * `body.medium()` -> 17px
+ */
 const body = Object.fromEntries(
 	Object.entries(bodyAsObj).map(([key, func]) => {
 		return [
@@ -72,6 +106,30 @@ const body = Object.fromEntries(
 	}),
 ) as TypographyApi<BodySizes>;
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/foundations-typography--page#text-sans) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/076605)
+ *
+ * ```
+ * font-family: 'GuardianTextSans';
+ * ```
+ *
+ * `textSans.xxsmall()` -> 12px
+ *
+ * `textSans.xsmall()` -> 14px
+ *
+ * `textSans.small()` -> 15px
+ *
+ * `textSans.medium()` -> 17px
+ *
+ * `textSans.large()` -> 20px
+ *
+ * `textSans.xlarge()` -> 24px
+ *
+ * `textSans.xxlarge()` -> 28px
+ *
+ * `textSans.xxxlarge()` -> 34px
+ */
 const textSans = Object.fromEntries(
 	Object.entries(textSansAsObj).map(([key, func]) => {
 		return [
