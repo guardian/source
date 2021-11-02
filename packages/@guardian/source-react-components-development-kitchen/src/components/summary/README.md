@@ -2,7 +2,7 @@
 
 Summary messages appear at the top of a group of content to summarise any actions that the user has taken or errors that have occurred.
 
-There are two components available, `ErrorSummary` and `SuccessSummary`.
+There are three components available, `ErrorSummary`, `SuccessSummary`, and `InfoSummary`.
 
 ## Install
 
@@ -27,6 +27,10 @@ See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-rea
 #### `Success Summary`
 
 See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-success-summary--playground)
+
+#### `Info Summary`
+
+See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-info-summary--playground)
 
 ### How to use
 

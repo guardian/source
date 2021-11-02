@@ -1,6 +1,5 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { success as successColors } from '@guardian/src-foundations';
-import type { Props } from '@guardian/src-helpers';
 import { SvgTickRound } from '@guardian/src-icons';
 import {
 	contextStyles,
@@ -9,20 +8,12 @@ import {
 	messageWrapperStyles,
 	wrapperStyles,
 } from './styles';
+import type { SummaryProps } from '.';
 
-export interface SuccessSummaryProps extends Props {
-	/**
-	 * The main success message
-	 */
-	success: string;
-	/**
-	 * Optional context information about the success
-	 */
-	context?: string;
-}
+export type SuccessSummaryProps = SummaryProps;
 
 export const SuccessSummary = ({
-	success,
+	message,
 	context,
 	cssOverrides,
 	...props
@@ -32,7 +23,7 @@ export const SuccessSummary = ({
 			<SvgTickRound />
 		</div>
 		<div css={messageWrapperStyles}>
-			<div css={messageStyles(successColors[400])}>{success}</div>
+			<div css={messageStyles(successColors[400])}>{message}</div>
 			{context && <div css={contextStyles}>{context}</div>}
 		</div>
 	</div>

@@ -1,6 +1,5 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { error as errorColors } from '@guardian/src-foundations';
-import type { Props } from '@guardian/src-helpers';
 import { SvgAlertTriangle } from '@guardian/src-icons';
 import {
 	contextStyles,
@@ -9,24 +8,17 @@ import {
 	messageWrapperStyles,
 	wrapperStyles,
 } from './styles';
+import type { SummaryProps } from '.';
 
-export interface ErrorSummaryProps extends Props {
-	/**
-	 * The main error message
-	 */
-	error: string;
+export interface ErrorSummaryProps extends SummaryProps {
 	/**
 	 * The error report link URL
 	 */
 	errorReportUrl?: string;
-	/**
-	 * Optional context information about the error
-	 */
-	context?: React.ReactNode | string;
 }
 
 export const ErrorSummary = ({
-	error,
+	message,
 	errorReportUrl,
 	context,
 	cssOverrides,
@@ -37,7 +29,7 @@ export const ErrorSummary = ({
 			<SvgAlertTriangle />
 		</div>
 		<div css={messageWrapperStyles}>
-			<div css={messageStyles(errorColors[400])}>{error}</div>
+			<div css={messageStyles(errorColors[400])}>{message}</div>
 			{errorReportUrl && (
 				<a
 					css={messageStyles(errorColors[400], false)}

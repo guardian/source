@@ -3,20 +3,20 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../../lib/story-intents';
-import type { SuccessSummaryProps } from './SuccessSummary';
-import { SuccessSummary } from './SuccessSummary';
+import type { InfoSummaryProps } from './InfoSummary';
+import { InfoSummary } from './InfoSummary';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/Success Summary',
-	component: SuccessSummary,
+	title: 'Kitchen/source-react-components-development-kitchen/Info Summary',
+	component: InfoSummary,
 	args: {
-		message: 'Your request was successful',
+		message: 'Here is some information',
 		context: '',
 	},
 };
 
-const Template: Story<SuccessSummaryProps> = (args: SuccessSummaryProps) => (
-	<SuccessSummary {...args} />
+const Template: Story<InfoSummaryProps> = (args: InfoSummaryProps) => (
+	<InfoSummary {...args} />
 );
 
 // *****************************************************************************
@@ -26,18 +26,18 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const SuccessOnly = Template.bind({});
-SuccessOnly.args = {
-	message: 'This is an example with a success message only',
+export const InfoOnly = Template.bind({});
+InfoOnly.args = {
+	message: 'This is an example with a info message only',
 };
-asChromaticStory(SuccessOnly);
+asChromaticStory(InfoOnly);
 
 // *****************************************************************************
 
 export const WithContext = Template.bind({});
 WithContext.args = {
-	message: 'It was successful',
-	context: 'This is some more information about this success message',
+	message: 'It was insightful',
+	context: 'This is some more information about this info message',
 };
 asChromaticStory(WithContext);
 
@@ -45,7 +45,7 @@ asChromaticStory(WithContext);
 
 export const WithContextAsReactNode = Template.bind({});
 WithContextAsReactNode.args = {
-	message: 'It was successful',
+	message: 'It was insightful',
 	context: (
 		<>
 			This is the context as a <b>ReactNode</b>
