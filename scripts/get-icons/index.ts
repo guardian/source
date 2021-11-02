@@ -35,38 +35,30 @@ interface NodeWithUrl extends Node {
 }
 
 const getUrlsForNodes = (nodes: Node[]): Promise<NodeWithUrl[]> => {
-	return new Promise((resolve) => {
-		return axios
-			.get(
-				`https://api.figma.com/v1/images/${ICON_FILE}/?ids=${nodes
-					.map(({ node_id }) => node_id)
-					.join(',')}&format=svg`,
-				FIGMA_OPTIONS,
-			)
-			.then((res) => {
-				return resolve(
-					nodes.map((node) => ({
-						...node,
-						url: res.data.images[node.node_id],
-					})),
-				);
-			});
-	});
+	return axios
+		.get(
+			`https://api.figma.com/v1/images/${ICON_FILE}/?ids=${nodes
+				.map(({ node_id }) => node_id)
+				.join(',')}&format=svg`,
+			FIGMA_OPTIONS,
+		)
+		.then((res) => {
+			return nodes.map((node) => ({
+				...node,
+				url: res.data.images[node.node_id],
+			}));
+		});
 };
 
 const getAndWriteSVGForNode = (node: NodeWithUrl) => {
-	return new Promise((resolve) => {
-		return axios
-			.get(node.url)
-			.then((res) => {
-				return resolve(
-					writeFileSync(`${OUTPUT_DIR}/${node.name}.svg`, res.data),
-				);
-			})
-			.catch((err) => {
-				console.log(`Failed to write SVG for ${node.name}: ${err}`);
-			});
-	});
+	return axios
+		.get(node.url)
+		.then((res) => {
+			return writeFileSync(`${OUTPUT_DIR}/${node.name}.svg`, res.data);
+		})
+		.catch((err) => {
+			console.log(`Failed to write SVG for ${node.name}: ${err}`);
+		});
 };
 
 if (!existsSync(OUTPUT_DIR)) {
