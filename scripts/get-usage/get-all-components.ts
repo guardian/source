@@ -3,7 +3,6 @@ import {
 	packageNames,
 	getComponentPackageNamesWithPaths,
 } from './package-names';
-import { join } from 'path';
 import { paths, getKitchenComponentPaths } from '../paths';
 import { parse } from '@typescript-eslint/typescript-estree';
 
@@ -74,10 +73,7 @@ export const getAllComponentsAndPackages = async () => {
 		[packageNames.brand]: paths.brand,
 		[packageNames.icons]: paths.icons,
 		...(await getComponentPackageNamesWithPaths()),
-		'@guardian/source-react-components': join(
-			__dirname +
-				'../../../packages/@guardian/source-react-components/src',
-		),
+		[packageNames.reactComponents]: paths.reactComponents,
 		[packageNames.kitchen]: await getKitchenComponentPaths(),
 	};
 
