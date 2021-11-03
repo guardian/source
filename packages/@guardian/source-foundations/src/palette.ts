@@ -98,6 +98,12 @@ const colors = {
 	],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/66411c)
+ *
+ * Our core brand colour – `brand[400]` – and extended brand colours
+ */
 export const brand = {
 	100: colors.blues[7],
 	300: colors.blues[8],
@@ -106,11 +112,25 @@ export const brand = {
 	600: colors.blues[11],
 	800: colors.blues[12],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/32d461)
+ *
+ * Our alternative brand colours
+ */
 export const brandAlt = {
 	200: colors.yellows[0],
 	300: colors.yellows[1],
 	400: colors.yellows[2],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/70dd5c)
+ *
+ * Neutral colours
+ */
 export const neutral = {
 	0: colors.grays[0],
 	7: colors.grays[1],
@@ -123,14 +143,35 @@ export const neutral = {
 	97: colors.grays[8],
 	100: colors.grays[9],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/98b901)
+ *
+ * Error colours
+ */
 export const error = {
 	400: colors.reds[3],
 	500: colors.reds[5],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/82798f)
+ *
+ * Success colours
+ */
 export const success = {
 	400: colors.greens[1],
 	500: colors.greens[2],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/97d77e)
+ *
+ * News colours
+ */
 export const news = {
 	100: colors.reds[0],
 	200: colors.reds[1],
@@ -141,6 +182,13 @@ export const news = {
 	600: colors.reds[6],
 	800: colors.reds[7],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/0539ef)
+ *
+ * Opinion colours
+ */
 export const opinion = {
 	100: colors.oranges[0],
 	200: colors.oranges[1],
@@ -151,6 +199,13 @@ export const opinion = {
 	600: colors.oranges[6],
 	800: colors.oranges[7],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/957a45)
+ *
+ * Sport colours
+ */
 export const sport = {
 	100: colors.blues[0],
 	200: colors.blues[1],
@@ -160,6 +215,13 @@ export const sport = {
 	600: colors.blues[5],
 	800: colors.blues[6],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/068eb2)
+ *
+ * Culture colours
+ */
 export const culture = {
 	50: colors.browns[0],
 	100: colors.browns[1],
@@ -172,6 +234,13 @@ export const culture = {
 	700: colors.browns[8],
 	800: colors.browns[9],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/2236b4)
+ *
+ * Lifestyle colours
+ */
 export const lifestyle = {
 	100: colors.pinks[0],
 	200: colors.pinks[1],
@@ -181,12 +250,25 @@ export const lifestyle = {
 	600: colors.pinks[5],
 	800: colors.pinks[6],
 };
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/59b08c)
+ *
+ * Labs colours
+ */
 export const labs = {
 	200: colors.greens[3],
 	300: colors.greens[4],
 	400: colors.greens[5],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/31c634)
+ *
+ * Special report colours
+ */
 export const specialReport = {
 	100: colors.grays[10],
 	200: colors.grays[11],
@@ -198,6 +280,12 @@ export const specialReport = {
 	800: colors.grays[17],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/188e86)
+ *
+ * Focus state colour
+ */
 export const focus = {
 	400: colors.blues[13],
 };
@@ -205,6 +293,12 @@ export const focus = {
 // Hover colours are snowflakes as they are manipulations of colours from the
 // main palette.
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/9280ee)
+ *
+ * Default theme background colours
+ */
 export const background = {
 	primary: neutral[100],
 	secondary: neutral[97],
@@ -218,6 +312,12 @@ export const background = {
 	inputChecked: brand[500],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/63cc10)
+ *
+ * Brand theme background colours
+ */
 export const brandBackground = {
 	primary: brand[400],
 	inputChecked: neutral[100],
@@ -228,6 +328,12 @@ export const brandBackground = {
 	ctaTertiaryHover: brand[300],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/743232)
+ *
+ * Alternative brand theme background colours
+ */
 export const brandAltBackground = {
 	primary: brandAlt[400],
 	ctaPrimary: neutral[7],
@@ -237,6 +343,12 @@ export const brandAltBackground = {
 	ctaTertiaryHover: '#FFD213',
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/69c92f)
+ *
+ * Default theme border colours
+ */
 export const border = {
 	primary: neutral[60],
 	secondary: neutral[86],
@@ -250,6 +362,12 @@ export const border = {
 	focusHalo: focus[400],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/04883b)
+ *
+ * Brand theme border colours
+ */
 export const brandBorder = {
 	primary: brand[600],
 	secondary: brand[600],
@@ -261,22 +379,52 @@ export const brandBorder = {
 	inputHover: neutral[100],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/21c6cc)
+ *
+ * Alternative brand theme border colours
+ */
 export const brandAltBorder = {
 	ctaTertiary: neutral[7],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/593cc9)
+ *
+ * Default theme line colours
+ */
 export const line = {
 	primary: neutral[86],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/66455d)
+ *
+ * Brand theme line colours
+ */
 export const brandLine = {
 	primary: brand[600],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/89955e)
+ *
+ * Alternative brand theme line colours
+ */
 export const brandAltLine = {
 	primary: neutral[7],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/85d3b0)
+ *
+ * Default theme text colours
+ */
 export const text = {
 	primary: neutral[7],
 	supporting: neutral[46],
@@ -297,6 +445,12 @@ export const text = {
 	newsInverse: news[550],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/244480)
+ *
+ * Brand theme text colours
+ */
 export const brandText = {
 	primary: neutral[100],
 	supporting: brand[800],
@@ -312,6 +466,12 @@ export const brandText = {
 	inputLabelSupporting: brand[800],
 };
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/11d5fd)
+ *
+ * Alternative brand theme text colours
+ */
 export const brandAltText = {
 	primary: neutral[7],
 	supporting: neutral[60],
