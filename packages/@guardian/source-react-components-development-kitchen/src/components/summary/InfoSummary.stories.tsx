@@ -1,0 +1,55 @@
+import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asChromaticStory,
+	asPlayground,
+} from '../../../../../../lib/story-intents';
+import type { InfoSummaryProps } from './InfoSummary';
+import { InfoSummary } from './InfoSummary';
+
+export default {
+	title: 'Kitchen/source-react-components-development-kitchen/Info Summary',
+	component: InfoSummary,
+	args: {
+		message: 'Here is some information',
+		context: '',
+	},
+};
+
+const Template: Story<InfoSummaryProps> = (args: InfoSummaryProps) => (
+	<InfoSummary {...args} />
+);
+
+// *****************************************************************************
+
+export const Playground = Template.bind({});
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const InfoOnly = Template.bind({});
+InfoOnly.args = {
+	message: 'This is an example with a info message only',
+};
+asChromaticStory(InfoOnly);
+
+// *****************************************************************************
+
+export const WithContext = Template.bind({});
+WithContext.args = {
+	message: 'It was insightful',
+	context: 'This is some more information about this info message',
+};
+asChromaticStory(WithContext);
+
+// *****************************************************************************
+
+export const WithContextAsReactNode = Template.bind({});
+WithContextAsReactNode.args = {
+	message: 'It was insightful',
+	context: (
+		<>
+			This is the context as a <b>ReactNode</b>
+		</>
+	),
+};
+asChromaticStory(WithContextAsReactNode);

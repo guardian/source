@@ -43,10 +43,10 @@ asPlayground(Playground);
 // *****************************************************************************
 
 export const [
-	PrimaryPriorityLightTheme,
-	SecondaryPriorityLightTheme,
-	TertiaryPriorityLightTheme,
-	SubduedPriorityLightTheme,
+	PrimaryPriorityDefaultTheme,
+	SecondaryPriorityDefaultTheme,
+	TertiaryPriorityDefaultTheme,
+	SubduedPriorityDefaultTheme,
 ] = priorityArgs.map((priority) => {
 	const story = Template.bind({});
 
@@ -60,103 +60,103 @@ export const [
 
 // *****************************************************************************
 
-export const TextAndIconLeftDefaultSizeLightTheme = Template.bind({});
-TextAndIconLeftDefaultSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconLeftDefaultSizeDefaultTheme = Template.bind({});
+TextAndIconLeftDefaultSizeDefaultTheme.args = {
+	icon: 'arrow',
 };
-asChromaticStory(TextAndIconLeftDefaultSizeLightTheme);
+asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const TextAndIconRightDefaultSizeLightTheme = Template.bind({});
-TextAndIconRightDefaultSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconRightDefaultSizeDefaultTheme = Template.bind({});
+TextAndIconRightDefaultSizeDefaultTheme.args = {
+	icon: 'arrow',
 	iconSide: 'right',
 };
-asChromaticStory(TextAndIconRightDefaultSizeLightTheme);
+asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const TextAndIconLeftSmallSizeLightTheme = Template.bind({});
-TextAndIconLeftSmallSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconLeftSmallSizeDefaultTheme = Template.bind({});
+TextAndIconLeftSmallSizeDefaultTheme.args = {
+	icon: 'arrow',
 	size: 'small',
 };
-asChromaticStory(TextAndIconLeftSmallSizeLightTheme);
+asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const TextAndIconRightSmallSizeLightTheme = Template.bind({});
-TextAndIconRightSmallSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconRightSmallSizeDefaultTheme = Template.bind({});
+TextAndIconRightSmallSizeDefaultTheme.args = {
+	icon: 'arrow',
 	iconSide: 'right',
 	size: 'small',
 };
-asChromaticStory(TextAndIconRightSmallSizeLightTheme);
+asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const TextAndIconLeftXSmallSizeLightTheme = Template.bind({});
-TextAndIconLeftXSmallSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconLeftXSmallSizeDefaultTheme = Template.bind({});
+TextAndIconLeftXSmallSizeDefaultTheme.args = {
+	icon: 'arrow',
 	size: 'xsmall',
 };
-asChromaticStory(TextAndIconLeftXSmallSizeLightTheme);
+asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const TextAndIconRightXSmallSizeLightTheme = Template.bind({});
-TextAndIconRightXSmallSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconRightXSmallSizeDefaultTheme = Template.bind({});
+TextAndIconRightXSmallSizeDefaultTheme.args = {
+	icon: 'arrow',
 	iconSide: 'right',
 	size: 'xsmall',
 };
-asChromaticStory(TextAndIconRightXSmallSizeLightTheme);
+asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const TextAndIconLeftWithNudgeLightTheme = Template.bind({});
-TextAndIconLeftWithNudgeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconLeftWithNudgeDefaultTheme = Template.bind({});
+TextAndIconLeftWithNudgeDefaultTheme.args = {
+	icon: 'arrow',
 	nudgeIcon: true,
 };
-asChromaticStory(TextAndIconLeftWithNudgeLightTheme);
+asChromaticStory(TextAndIconLeftWithNudgeDefaultTheme);
 
 // *****************************************************************************
 
-export const TextAndIconRightWithNudgeLightTheme = Template.bind({});
-TextAndIconRightWithNudgeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const TextAndIconRightWithNudgeDefaultTheme = Template.bind({});
+TextAndIconRightWithNudgeDefaultTheme.args = {
+	icon: 'arrow',
 	iconSide: 'right',
 	nudgeIcon: true,
 };
-asChromaticStory(TextAndIconRightWithNudgeLightTheme);
+asChromaticStory(TextAndIconRightWithNudgeDefaultTheme);
 
 // *****************************************************************************
 
-export const IconOnlyDefaultSizeLightTheme = Template.bind({});
-IconOnlyDefaultSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const IconOnlyDefaultSizeDefaultTheme = Template.bind({});
+IconOnlyDefaultSizeDefaultTheme.args = {
+	icon: 'arrow',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlyDefaultSizeLightTheme);
+asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const IconOnlySmallSizeLightTheme = Template.bind({});
-IconOnlySmallSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const IconOnlySmallSizeDefaultTheme = Template.bind({});
+IconOnlySmallSizeDefaultTheme.args = {
+	icon: 'arrow',
 	size: 'small',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlySmallSizeLightTheme);
+asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const IconOnlyXSmallSizeLightTheme = Template.bind({});
-IconOnlyXSmallSizeLightTheme.args = {
-	icon: <SvgArrowRightStraight />,
+export const IconOnlyXSmallSizeDefaultTheme = Template.bind({});
+IconOnlyXSmallSizeDefaultTheme.args = {
+	icon: 'arrow',
 	size: 'xsmall',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlyXSmallSizeLightTheme);
+asChromaticStory(IconOnlyXSmallSizeDefaultTheme);

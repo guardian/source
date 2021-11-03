@@ -22,10 +22,15 @@ export type { HeadlineSize, QuoteIconProps } from './components/quote-icon';
 export { StarRating } from './components/star-rating';
 export type { StarRatingProps } from './components/star-rating';
 
-export { ErrorSummary, SuccessSummary } from './components/summary';
+export {
+	ErrorSummary,
+	SuccessSummary,
+	InfoSummary,
+} from './components/summary';
 export type {
 	ErrorSummaryProps,
 	SuccessSummaryProps,
+	InfoSummaryProps,
 } from './components/summary';
 
 export { ToggleSwitch } from './components/toggle-switch';

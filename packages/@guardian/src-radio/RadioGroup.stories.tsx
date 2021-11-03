@@ -54,8 +54,8 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const DefaultLightTheme = Template.bind({});
-asChromaticStory(DefaultLightTheme);
+export const DefaultDefaultTheme = Template.bind({});
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -70,27 +70,27 @@ asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
-export const HorizontalLightTheme = Template.bind({});
-HorizontalLightTheme.args = {
+export const HorizontalDefaultTheme = Template.bind({});
+HorizontalDefaultTheme.args = {
 	orientation: 'horizontal',
 };
-asChromaticStory(HorizontalLightTheme);
+asChromaticStory(HorizontalDefaultTheme);
 
 // *****************************************************************************
 
-export const VisuallyHideLegendLightTheme = Template.bind({});
-VisuallyHideLegendLightTheme.args = {
+export const VisuallyHideLegendDefaultTheme = Template.bind({});
+VisuallyHideLegendDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLegendLightTheme);
+asChromaticStory(VisuallyHideLegendDefaultTheme);
 
 // *****************************************************************************
 
-export const SupportingTextLightTheme = Template.bind({});
-SupportingTextLightTheme.args = {
+export const SupportingTextDefaultTheme = Template.bind({});
+SupportingTextDefaultTheme.args = {
 	supporting: 'You can always change it later',
 };
-asChromaticStory(SupportingTextLightTheme);
+asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -108,19 +108,19 @@ asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
-export const SupportingMediaLightTheme = Template.bind({});
-SupportingMediaLightTheme.args = {
+export const SupportingMediaDefaultTheme = Template.bind({});
+SupportingMediaDefaultTheme.args = {
 	supporting: <Image />,
 };
-asChromaticStory(SupportingMediaLightTheme);
+asChromaticStory(SupportingMediaDefaultTheme);
 
 // *****************************************************************************
 
-export const ErrorLightTheme = Template.bind({});
-ErrorLightTheme.args = {
+export const ErrorDefaultTheme = Template.bind({});
+ErrorDefaultTheme.args = {
 	error: 'Please select a colour',
 };
-asChromaticStory(ErrorLightTheme);
+asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -138,9 +138,9 @@ asChromaticStory(ErrorBrandTheme);
 
 // *****************************************************************************
 
-export const SupportingMediaWithErrorLightTheme = Template.bind({});
-SupportingMediaWithErrorLightTheme.args = {
+export const SupportingMediaWithErrorDefaultTheme = Template.bind({});
+SupportingMediaWithErrorDefaultTheme.args = {
 	error: 'Please select a colour',
 	supporting: <Image />,
 };
-asChromaticStory(SupportingMediaWithErrorLightTheme);
+asChromaticStory(SupportingMediaWithErrorDefaultTheme);

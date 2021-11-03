@@ -10,9 +10,10 @@ export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Error Summary',
 	component: ErrorSummary,
 	args: {
-		error: 'There has been a problem',
+		message: 'There has been a problem',
 		context: '',
-	},
+		errorReportUrl: '',
+	} as ErrorSummaryProps,
 };
 
 const Template: Story<ErrorSummaryProps> = (args: ErrorSummaryProps) => (
@@ -28,7 +29,7 @@ asPlayground(Playground);
 
 export const ErrorOnly = Template.bind({});
 ErrorOnly.args = {
-	error: 'This is an example with an error message only',
+	message: 'This is an example with an error message only',
 };
 asChromaticStory(ErrorOnly);
 
@@ -36,7 +37,30 @@ asChromaticStory(ErrorOnly);
 
 export const WithContext = Template.bind({});
 WithContext.args = {
-	error: 'Here is an error',
+	message: 'Here is an error',
 	context: 'This is some more information about this error message',
 };
 asChromaticStory(WithContext);
+
+// *****************************************************************************
+
+export const WithContextAsReactNode = Template.bind({});
+WithContextAsReactNode.args = {
+	message: 'Here is an error',
+	context: (
+		<>
+			This is the context as a <b>ReactNode</b>
+		</>
+	),
+};
+asChromaticStory(WithContextAsReactNode);
+
+// *****************************************************************************
+
+export const WithReportLink = Template.bind({});
+WithReportLink.args = {
+	message: 'Here is an error',
+	context: 'This is some more information about this error message',
+	errorReportUrl: 'https://www.theguardian.com/info/tech-feedback',
+};
+asChromaticStory(WithReportLink);

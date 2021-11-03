@@ -84,6 +84,7 @@ describe('No exports have changed in the ', () => {
 				'EditorialButton',
 				'EditorialLinkButton',
 				'ErrorSummary',
+				'InfoSummary',
 				'Lines',
 				'Logo',
 				'QuoteIcon',

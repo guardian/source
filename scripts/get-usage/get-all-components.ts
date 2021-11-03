@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from 'fs';
 import {
 	packageNames,
 	getComponentPackageNamesWithPaths,
-} from '../package-names';
+} from './package-names';
 import { paths, getKitchenComponentPaths } from '../paths';
 import { parse } from '@typescript-eslint/typescript-estree';
 
@@ -15,6 +15,8 @@ const getPackageComponents = (path: string | string[]): string[] => {
 
 	if (contents.includes('index.tsx')) {
 		return getExportsFromFile(`${path}/index.tsx`);
+	} else if (contents.includes('index.ts')) {
+		return getExportsFromFile(`${path}/index.ts`);
 	} else {
 		return contents
 			.filter(

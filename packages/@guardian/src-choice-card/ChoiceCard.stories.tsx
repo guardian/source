@@ -53,29 +53,29 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const Default = Template.bind({});
-asChromaticStory(Default);
+export const DefaultDefaultTheme = Template.bind({});
+asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
-export const Checked = Template.bind({});
-Checked.args = {
+export const CheckedDefaultTheme = Template.bind({});
+CheckedDefaultTheme.args = {
 	checked: true,
 };
-asChromaticStory(Checked);
+asChromaticStory(CheckedDefaultTheme);
 
 // *****************************************************************************
 
-export const Error = Template.bind({});
-Error.args = {
+export const ErrorDefaultTheme = Template.bind({});
+ErrorDefaultTheme.args = {
 	error: true,
 };
-asChromaticStory(Error);
+asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 
-export const Icon = Template.bind({});
-Icon.args = {
-	icon: <SvgCamera />,
+export const IconDefaultTheme = Template.bind({});
+IconDefaultTheme.args = {
+	icon: 'JSX element',
 };
-asChromaticStory(Icon);
+asChromaticStory(IconDefaultTheme);

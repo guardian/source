@@ -1,0 +1,178 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Source v4/source-foundations/Typography"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Typography
+
+Typographic choices affect how textual content is interpreted; influencing tone,
+hierarchy and legibility.
+
+## Example
+
+Each font family has an associated import, exposing methods that return snippets
+of CSS depending on the desired font size.
+
+```tsx
+import { headline, body, textSans } from '@guardian/source-foundations';
+
+const h1 = css`
+	${headline.large()};
+`;
+
+const p = css`
+	${body.medium()};
+`;
+
+const copyright = css`
+	${textSans.xsmall()};
+`;
+```
+
+You can also use the [object style syntax](https://emotion.sh/docs/object-styles):
+
+```tsx
+import { headlineObjectStyles } from '@guardian/source-foundations';
+
+const h1 = {
+	...headlineObjectStyles.large(),
+};
+```
+
+## Where can I find The Guardian's fonts?
+
+The canonical source of fonts is https://github.com/guardian/fonts
+
+They should be loaded from the locations specified in [font-faces.css](https://github.com/guardian/fonts/blob/main/fonts/web/font-faces.css). This optimises for consistency and performance across The Guardian's digital products.
+
+## Sizing scale
+
+A range of font sizes are available for each font family. The `medium` font size
+should be considered the default.
+
+Pixel values are given below for ease of understanding, but by default the
+typography API assigns font size in rems.
+
+### Headline
+
+```css
+font-family: 'GH Guardian Headline';
+```
+
+For headlines, headings and any short form text, like standfirst, pull quotes, bylines and titles.
+
+-   `headline.xxxsmall()` -> 17px
+-   `headline.xxsmall()` -> 20px
+-   `headline.xsmall()` -> 24px
+-   `headline.small()` -> 28px
+-   `headline.medium()` -> 34px
+-   `headline.large()` -> 42px
+-   `headline.xlarge()` -> 50px
+
+### Body
+
+```css
+font-family: 'GuardianTextEgyptian';
+```
+
+For multiple sentences/paragraphs of text, like the body copy in articles, or paragraphs of text on marketing pages.
+
+-   `body.small()` -> 15px
+-   `body.medium()` -> 17px
+
+### Text sans
+
+```css
+font-family: 'GuardianTextSans';
+```
+
+For interactive page elements like buttons and text input fields and for meta information like datelines, image captions and data visualisations.
+
+Note: Text Sans is used across the board on paid content templates to help differentiate from editorial content.
+
+-   `textSans.xxsmall()` -> 12px
+-   `textSans.xsmall()` -> 14px
+-   `textSans.small()` -> 15px
+-   `textSans.medium()` -> 17px
+-   `textSans.large()` -> 20px
+-   `textSans.xlarge()` -> 24px
+-   `textSans.xxlarge()` -> 28px
+-   `textSans.xxxlarge()` -> 34px
+
+### Titlepiece
+
+```css
+font-family: 'GT Guardian Titlepiece';
+```
+
+For impact. Ideal for marketing messages, page headers and numerals. Use sparingly and at large sizes only.
+
+-   `titlepiece.small()` -> 42px
+-   `titlepiece.medium()` -> 50px
+-   `titlepiece.large()` -> 70px
+
+## Options
+
+Each method may receive an `options` object. Missing options are merged with sensible defaults for each font family.
+
+### Line height
+
+```tsx
+headline.medium({ lineHeight: 'loose' });
+```
+
+-   `loose` -> 1.5
+-   `regular` -> 1.35
+-   `tight` -> 1.15
+
+The default for body and textSans is `loose`. This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
+
+The default for headline and titlepiece is `tight`.
+
+### Font weight
+
+```tsx
+headline.medium({ fontWeight: 'bold' });
+```
+
+-   `light` -> 300
+-   `regular` -> 400
+-   `medium` -> 500
+-   `bold` -> 700
+
+The default for body and textSans is `regular`. The `light` and `medium` font weights are not available for these fonts.
+
+The default for headline is `medium`. The `regular` font-weight is not available for this font.
+
+The default and only font-weight for titlepiece is `bold`.
+
+### Font style
+
+```tsx
+headline.medium({ fontStyle: 'italic' });
+```
+
+`normal` (default) is available for all fonts.
+
+`italic` is available for the following fonts:
+
+-   headline light
+-   headline medium
+-   body regular
+-   body bold
+-   textSans regular
+-   textSans bold
+
+### Unit
+
+```tsx
+headline.medium({ unit: 'px' });
+```
+
+Specifies units for the font-size and line-height values.
+
+By default, font-size is expressed in `rem`, and line-height is expressed as a [unitless value](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#values).
+
+You can override this behaviour by setting the `unit` option to `px`. As a result, both font-size and line-height will be expressed in `px` values.

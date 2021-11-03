@@ -1,7 +1,4 @@
-import {
-	userFeedbackDefault,
-	userFeedbackBrand,
-} from '@guardian/src-foundations/themes';
+import { userFeedbackBrand } from '@guardian/src-foundations/themes';
 import { storybookBackgrounds } from '@guardian/src-helpers';
 import { InlineError } from './index';
 import { UserFeedbackProps } from './types';
@@ -27,38 +24,31 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const InlineErrorDefault = Template.bind({});
-InlineErrorDefault.parameters = {
-	backgrounds: {
-		default: 'default',
-		values: [storybookBackgrounds.default],
-	},
-	theme: userFeedbackDefault,
-};
-asChromaticStory(InlineErrorDefault);
+export const InlineErrorDefaultTheme = Template.bind({});
+asChromaticStory(InlineErrorDefaultTheme);
 
 // *****************************************************************************
 
-export const InlineErrorBrand = Template.bind({});
-InlineErrorBrand.parameters = {
+export const InlineErrorBrandTheme = Template.bind({});
+InlineErrorBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brand',
 		values: [storybookBackgrounds.brand],
 	},
 	theme: userFeedbackBrand,
 };
-asChromaticStory(InlineErrorBrand);
+asChromaticStory(InlineErrorBrandTheme);
 
 // *****************************************************************************
 
-export const LongInlineErrorLightMobile = Template.bind({});
-LongInlineErrorLightMobile.parameters = {
+export const LongInlineErrorDefaultThemeMobile = Template.bind({});
+LongInlineErrorDefaultThemeMobile.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
 };
-LongInlineErrorLightMobile.args = {
+LongInlineErrorDefaultThemeMobile.args = {
 	children: 'Please pick a date in the future, but not a leap year',
 };
 
-asChromaticStory(LongInlineErrorLightMobile);
+asChromaticStory(LongInlineErrorDefaultThemeMobile);
 
 // *****************************************************************************

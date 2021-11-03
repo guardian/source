@@ -15,11 +15,10 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 -   [Components](docs/03-components.md)
 -   [Using Emotion](docs/04-using-emotion.md)
 -   [Theming](docs/05-theming.md)
--   [Accessibility](docs/06-accessibility.md)
--   [Overriding styles](docs/07-overriding-styles.md)
--   [Contributing](docs/08-contributing.md)
--   [FAQs](docs/09-faqs.md)
--   [Stories](docs/10-stories.md)
+-   [Overriding styles](docs/06-overriding-styles.md)
+-   [Contributing](docs/07-contributing.md)
+-   [FAQs](docs/08-faqs.md)
+-   [Stories](docs/09-stories.md)
 
 ## Using the Design System 🎨
 

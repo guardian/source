@@ -10,7 +10,7 @@ export default {
 	title: 'Kitchen/source-react-components-development-kitchen/Success Summary',
 	component: SuccessSummary,
 	args: {
-		success: 'Your request was successful',
+		message: 'Your request was successful',
 		context: '',
 	},
 };
@@ -28,7 +28,7 @@ asPlayground(Playground);
 
 export const SuccessOnly = Template.bind({});
 SuccessOnly.args = {
-	success: 'This is an example with a success message only',
+	message: 'This is an example with a success message only',
 };
 asChromaticStory(SuccessOnly);
 
@@ -36,7 +36,20 @@ asChromaticStory(SuccessOnly);
 
 export const WithContext = Template.bind({});
 WithContext.args = {
-	success: 'It was successful',
+	message: 'It was successful',
 	context: 'This is some more information about this success message',
 };
 asChromaticStory(WithContext);
+
+// *****************************************************************************
+
+export const WithContextAsReactNode = Template.bind({});
+WithContextAsReactNode.args = {
+	message: 'It was successful',
+	context: (
+		<>
+			This is the context as a <b>ReactNode</b>
+		</>
+	),
+};
+asChromaticStory(WithContextAsReactNode);
