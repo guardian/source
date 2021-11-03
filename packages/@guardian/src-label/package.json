@@ -1,6 +1,6 @@
 {
   "name": "@guardian/src-label",
-  "version": "3.10.2",
+  "version": "3.10.3-rc.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
@@ -29,7 +29,7 @@
     "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
   },
   "dependencies": {
-    "@guardian/src-helpers": "^3.10.2-alpha.1"
+    "@guardian/src-helpers": "^3.10.3-rc.0"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
@@ -37,7 +37,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
-    "@guardian/src-foundations": "^3.10.1",
+    "@guardian/src-foundations": "^3.10.3-rc.0",
     "react": "^17.0.1"
   },
   "publishConfig": {
