@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components-development-kitchen",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "dist/index.cjs.js",
@@ -14,8 +14,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@guardian/src-button": "^3.10.3-rc.0",
-    "@guardian/src-helpers": "^3.10.3-rc.0"
+    "@guardian/src-button": "^3.10.3",
+    "@guardian/src-helpers": "^3.10.3"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
