@@ -1,9 +1,9 @@
-import { deduplicateComponents } from './deduplicate-components';
+import { groupSrcAndSourceEquivalentComponents } from './group-components';
 
-describe('The deduplicateComponents function', () => {
+describe('The groupSrcAndSourceEquivalentComponents function', () => {
 	it('combines components from src-* and source-react-components', () => {
 		expect(
-			deduplicateComponents([
+			groupSrcAndSourceEquivalentComponents([
 				'@guardian/src-button/Button',
 				'@guardian/source-react-components/Button',
 			]),
@@ -14,7 +14,7 @@ describe('The deduplicateComponents function', () => {
 
 	it('combines components from src-ed-* and source-react-components-development-kitchen', () => {
 		expect(
-			deduplicateComponents([
+			groupSrcAndSourceEquivalentComponents([
 				'@guardian/src-ed-quote-icon/QuoteIcon',
 				'@guardian/source-react-components-development-kitchen/QuoteIcon',
 			]),
@@ -25,7 +25,7 @@ describe('The deduplicateComponents function', () => {
 
 	it('combines components that have changed namefrom src-ed-* and source-react-components-development-kitchen', () => {
 		expect(
-			deduplicateComponents([
+			groupSrcAndSourceEquivalentComponents([
 				'@guardian/src-ed-button/Button',
 				'@guardian/source-react-components-development-kitchen/EditorialButton',
 			]),
@@ -36,7 +36,7 @@ describe('The deduplicateComponents function', () => {
 
 	it('does not combine components from src-ed-* and source-react-components', () => {
 		expect(
-			deduplicateComponents([
+			groupSrcAndSourceEquivalentComponents([
 				'@guardian/src-ed-button/Button',
 				'@guardian/source-react-components/Button',
 			]),
@@ -48,7 +48,7 @@ describe('The deduplicateComponents function', () => {
 
 	it('does not combine components from src-* and src-ed-*', () => {
 		expect(
-			deduplicateComponents([
+			groupSrcAndSourceEquivalentComponents([
 				'@guardian/src-button/Button',
 				'@guardian/src-ed-button/Button',
 			]),
@@ -60,7 +60,7 @@ describe('The deduplicateComponents function', () => {
 
 	it('handles multiple entries', () => {
 		expect(
-			deduplicateComponents([
+			groupSrcAndSourceEquivalentComponents([
 				'@guardian/src-button/Button',
 				'@guardian/source-react-components/Button',
 				'@guardian/src-link/Link',
@@ -74,7 +74,7 @@ describe('The deduplicateComponents function', () => {
 
 	it('handles unmatched components', () => {
 		expect(
-			deduplicateComponents([
+			groupSrcAndSourceEquivalentComponents([
 				'@guardian/src-button/Button',
 				'@guardian/source-react-components/Button',
 				'@guardian/source-react-components/Test',

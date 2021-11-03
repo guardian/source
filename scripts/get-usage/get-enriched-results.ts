@@ -1,5 +1,5 @@
 import { ComponentUsageData } from './types';
-import { deduplicateComponents } from './deduplicate-components';
+import { groupSrcAndSourceEquivalentComponents } from './group-components';
 
 const getStatsByComponent = (
 	byPackage: Record<string, Record<string, number>>,
@@ -67,10 +67,12 @@ const getComponentsUsedInTwoCodebasesPercentage = (
 		_prefixesToIgnore.every((prefix) => !component.startsWith(prefix));
 
 	const fraction =
-		deduplicateComponents(usedInTwo.filter(relevantComponentsFilter))
-			.length /
-		deduplicateComponents(allComponents.filter(relevantComponentsFilter))
-			.length;
+		groupSrcAndSourceEquivalentComponents(
+			usedInTwo.filter(relevantComponentsFilter),
+		).length /
+		groupSrcAndSourceEquivalentComponents(
+			allComponents.filter(relevantComponentsFilter),
+		).length;
 	return Math.round(fraction * 100);
 };
 
@@ -90,15 +92,16 @@ export const getEnrichedResults = (
 		.filter((c) => Object.keys(byComponent[c]).length === 1)
 		.sort();
 
-	const combinedComponents = deduplicateComponents(componentsWithPackage);
+	const combinedComponents = groupSrcAndSourceEquivalentComponents(
+		componentsWithPackage,
+	);
 
 	const unusedComponentsCombined = combinedComponents.filter((c) =>
 		usedComponents.every((used) => !c.split(' | ').includes(used)),
 	);
 
-	const onlyOneCodebaseComponentsCombined = deduplicateComponents(
-		onlyOneCodebaseComponents,
-	);
+	const onlyOneCodebaseComponentsCombined =
+		groupSrcAndSourceEquivalentComponents(onlyOneCodebaseComponents);
 
 	// Construct the output data object
 	return {
