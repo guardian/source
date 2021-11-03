@@ -3,9 +3,12 @@ import { neutral, success } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
 
 export const toggleSwitchStyles = css`
+	display: flex;
+	align-items: center;
 	button {
 		border: none;
 		margin: 8px;
+		margin-left: 0;
 		padding: 0;
 		display: inline-block;
 		vertical-align: middle;
@@ -90,4 +93,5 @@ export const labelStyles = css`
 	display: inline-block;
 	transform: translateY(1px);
 	color: ${neutral[7]};
+	flex-shrink: 100;
 `;
