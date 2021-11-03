@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import { useState } from 'react';
 import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
@@ -64,3 +65,18 @@ MediumWithLabel.args = {
 	size: 'medium',
 };
 asChromaticStory(MediumWithLabel);
+
+// *****************************************************************************
+
+const toggleCssOverrides = css`
+	width: 150px;
+	background-color: lightblue;
+`;
+
+export const limitedWidth = Template.bind({});
+limitedWidth.args = {
+	label: 'Get alerts on this story',
+	size: 'medium',
+	cssOverrides: toggleCssOverrides,
+};
+asChromaticStory(limitedWidth);
