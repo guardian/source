@@ -91,7 +91,6 @@ export const slimStyles = css`
 export const labelStyles = css`
 	${textSans.small()};
 	display: inline-block;
-	transform: translateY(1px);
 	color: ${neutral[7]};
 	flex-shrink: 100;
 `;
