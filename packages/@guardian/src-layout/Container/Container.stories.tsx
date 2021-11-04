@@ -73,3 +73,11 @@ WithBackgroundColour.args = {
 asChromaticStory(WithBackgroundColour);
 
 // *****************************************************************************
+
+export const WithAsideElement = Template.bind({});
+WithAsideElement.args = {
+	element: 'aside',
+};
+asChromaticStory(WithAsideElement);
+
+// *****************************************************************************
