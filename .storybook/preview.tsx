@@ -32,6 +32,7 @@ let currentPage = window.location.href;
 window.setInterval(() => {
 	if (window.location.href !== currentPage) {
 		currentPage = window.location.href;
+		if (currentPage.includes('#')) return;
 		try {
 			// Find all buttons containing the text Docs within the <div role="main"> tag
 			const docsButtonSelector = window.parent.document.evaluate(
