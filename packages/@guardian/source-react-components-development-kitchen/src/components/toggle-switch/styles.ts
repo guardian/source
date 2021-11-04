@@ -6,6 +6,7 @@ export const toggleSwitchStyles = css`
 	display: flex;
 	align-items: center;
 	button {
+		flex: none;
 		border: none;
 		margin: 8px;
 		margin-left: 0;
@@ -92,5 +93,4 @@ export const labelStyles = css`
 	${textSans.small()};
 	display: inline-block;
 	color: ${neutral[7]};
-	flex-shrink: 100;
 `;
