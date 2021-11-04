@@ -48,4 +48,6 @@ export const packageNames = {
 	brand: '@guardian/src-brand',
 	helpers: '@guardian/src-helpers',
 	kitchen: '@guardian/source-react-components-development-kitchen',
+	reactComponents: '@guardian/source-react-components',
+	sourceFoundations: '@guardian/source-foundations',
 };

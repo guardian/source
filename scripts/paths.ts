@@ -11,6 +11,14 @@ const icons = join(__dirname, '../packages/@guardian/src-icons');
 const brand = join(__dirname, '../packages/@guardian/src-brand');
 const helpers = join(__dirname, '../packages/@guardian/src-helpers');
 const coreComponents = join(__dirname, '../packages/@guardian');
+const reactComponents = join(
+	__dirname,
+	'../packages/@guardian/source-react-components/src',
+);
+const sourceFoundations = join(
+	__dirname,
+	'../packages/@guardian/source-foundations',
+);
 const kitchenComponents = join(
 	__dirname,
 	'../packages/@guardian/source-react-components-development-kitchen/src/components',
@@ -57,7 +65,7 @@ export const getKitchenComponentPaths = () =>
 					isDirectory(
 						`${kitchenComponents}/${componentDirName}`,
 					).then((isDir) => {
-						if (!isDir) return;
+						if (!isDir) return '';
 
 						return `${kitchenComponents}/${componentDirName}`;
 					}),
@@ -73,4 +81,6 @@ export const paths = {
 	brand,
 	helpers,
 	coreComponents,
+	reactComponents,
+	sourceFoundations,
 };

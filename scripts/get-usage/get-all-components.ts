@@ -72,27 +72,35 @@ export const getAllComponentsAndPackages = async () => {
 	const packages: Record<string, string | string[]> = {
 		[packageNames.brand]: paths.brand,
 		[packageNames.icons]: paths.icons,
-		[packageNames.kitchen]: await getKitchenComponentPaths(),
 		...(await getComponentPackageNamesWithPaths()),
+		[packageNames.reactComponents]: paths.reactComponents,
+		[packageNames.kitchen]: await getKitchenComponentPaths(),
 	};
 
-	const components: Record<string, string[]> = {};
+	let components: Record<string, string[]> = {};
 
 	Object.entries(packages).forEach(([pkg, path]) => {
 		components[pkg] = getPackageComponents(path);
 	});
 
+	components = {
+		...components,
+		'@guardian/src-ed-lines': ['Lines'],
+		'@guardian/src-ed-quote-icon': ['QuoteIcon'],
+		'@guardian/src-ed-logo': ['Logo'],
+		'@guardian/src-ed-star-rating': ['StarRating'],
+		'@guardian/src-ed-button': ['Button', 'LinkButton'],
+	};
+
 	const componentsWithPackages = [
 		...Object.entries(components).flatMap(([pkg, cs]) =>
 			cs.flatMap((c) => `${pkg}/${c}`),
 		),
-		'@guardian/src-ed-lines/Lines',
-		'@guardian/src-ed-quote-icon/QuoteIcon',
-		'@guardian/src-ed-logo/Logo',
-		'@guardian/src-ed-star-rating/StarRating',
-		'@guardian/src-ed-button/Button',
-		'@guardian/src-ed-button/LinkButton',
 	];
 
 	return componentsWithPackages;
 };
+
+if (require.main === module) {
+	void (async () => await getAllComponentsAndPackages())();
+}
