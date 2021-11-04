@@ -31,7 +31,7 @@ export const focusHalo = `
 `;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-accessibility-helpers--page#focus-halo)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-accessibility-helpers--page#description-id)
  *
  * Takes the ID of an element and generates a new ID. This should be set as the ID of an element that describes the first element. The generated ID should also be passed to the `aria-describedby` attribute on the first element.
  *
