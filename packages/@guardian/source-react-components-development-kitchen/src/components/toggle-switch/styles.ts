@@ -7,7 +7,7 @@ export const toggleSwitchStyles = css`
 	align-items: center;
 `;
 
-const buttonStyles = css`
+export const buttonStyles = css`
 	flex: none;
 	border: none;
 	margin: 8px;
@@ -30,7 +30,6 @@ const buttonStyles = css`
 `;
 
 export const mediumStyles = css`
-	${buttonStyles}
 	width: 3.188rem;
 	height: 1.938rem;
 	border-radius: 15.5px;
@@ -58,7 +57,6 @@ export const mediumStyles = css`
 	}
 `;
 export const slimStyles = css`
-	${buttonStyles}
 	width: 1.625rem;
 	height: 0.75rem;
 	border-radius: 6px;

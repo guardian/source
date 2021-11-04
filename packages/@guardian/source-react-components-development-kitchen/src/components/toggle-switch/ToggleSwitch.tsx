@@ -1,6 +1,7 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { Props } from '@guardian/src-helpers';
 import {
+	buttonStyles,
 	labelStyles,
 	mediumStyles,
 	slimStyles,
@@ -76,7 +77,7 @@ export const ToggleSwitch = ({
 	return (
 		<div css={[toggleSwitchStyles, cssOverrides]} {...props}>
 			<button
-				css={[isSlim ? slimStyles : mediumStyles]}
+				css={[buttonStyles, isSlim ? slimStyles : mediumStyles]}
 				role="switch"
 				aria-checked={isChecked()}
 				aria-labelledby="notify"
