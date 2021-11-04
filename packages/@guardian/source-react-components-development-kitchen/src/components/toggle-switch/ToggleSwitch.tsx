@@ -74,15 +74,9 @@ export const ToggleSwitch = ({
 	const isSlim = size === 'slim';
 
 	return (
-		<div
-			css={[
-				toggleSwitchStyles,
-				isSlim ? slimStyles : mediumStyles,
-				cssOverrides,
-			]}
-			{...props}
-		>
+		<div css={[toggleSwitchStyles, cssOverrides]} {...props}>
 			<button
+				css={[isSlim ? slimStyles : mediumStyles]}
 				role="switch"
 				aria-checked={isChecked()}
 				aria-labelledby="notify"
