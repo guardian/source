@@ -437,6 +437,7 @@ export const text = {
 	anchorSecondary: neutral[7],
 	userInput: neutral[7],
 	inputLabel: neutral[7],
+	inputError: neutral[7],
 	inputLabelSupporting: neutral[46],
 	inputChecked: brand[400], //choice card only
 	inputHover: brand[400], //choice card only
