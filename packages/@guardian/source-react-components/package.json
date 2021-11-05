@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
-    "@guardian/source-foundations": "4.0.0-alpha.0",
+    "@guardian/source-foundations": "^4.0.0-rc.1",
     "react": "^17.0.1"
   },
   "publishConfig": {
