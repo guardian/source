@@ -5,21 +5,20 @@
 import { pxToRem } from './utils/px-to-rem';
 
 /**
- * Space
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-space--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/05f835-space)
  *
- * The following units can be applied to margin or padding properties, vertically or horizontally.
- * @see https://theguardian.design/2a1e5182b/p/449bd5-space
+ * Can be applied to margin or padding properties, vertically or horizontally.
  *
- * Space scale
- * 1 -> 4px
- * 2 -> 8px
- * 3 -> 12px
- * 4 -> 16px
- * 5 -> 20px
- * 6 -> 24px
- * 9 -> 36px
- * 12 -> 48px
- * 24 -> 96px
+ ** `space[1]` -> 4px
+ ** `space[2]` -> 8px
+ ** `space[3]` -> 12px
+ ** `space[4]` -> 16px
+ ** `space[5]` -> 20px
+ ** `space[6]` -> 24px
+ ** `space[9]` -> 36px
+ ** `space[12]` -> 48px
+ ** `space[24]` -> 96px
  */
 export const space = {
 	1: 4,
@@ -33,8 +32,22 @@ export const space = {
 	24: 96,
 } as const;
 
-/* TODO: this should be exposed as a number instead of a string,
-   so consumers can perform calculations on it */
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-space--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/05f835-space)
+ *
+ * Can be applied to margin or padding properties, vertically or horizontally.
+ *
+ ** `remSpace[1]` -> 0.25rem
+ ** `remSpace[2]` -> 0.5rem
+ ** `remSpace[3]` -> 0.75rem
+ ** `remSpace[4]` -> 1rem
+ ** `remSpace[5]` -> 1.25rem
+ ** `remSpace[6]` -> 1.5rem
+ ** `remSpace[9]` -> 2.25rem
+ ** `remSpace[12]` -> 3rem
+ ** `remSpace[24]` -> 6rem
+ */
 export const remSpace: { [K in keyof typeof space]: string } = {
 	1: `${pxToRem(space[1])}rem`,
 	2: `${pxToRem(space[2])}rem`,
@@ -46,3 +59,6 @@ export const remSpace: { [K in keyof typeof space]: string } = {
 	12: `${pxToRem(space[12])}rem`,
 	24: `${pxToRem(space[24])}rem`,
 };
+
+/* TODO: this should be exposed as a number instead of a string,
+   so consumers can perform calculations on it */
