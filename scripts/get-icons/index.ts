@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'fs';
 
 const ICON_FILE = 'Ai7AELHC6KCz38qKZkvuHo';
 
-const ICON_FRAME = 'UI icons 24(w)x24(w)';
+const ICON_FRAMES = ['UI icons 24(w)x24(w)', 'Payment icons 24 x 24'];
 
 const OUTPUT_DIR = '../../packages/@guardian/src-icons/svgs';
 
@@ -73,7 +73,10 @@ axios
 	.then((res) => {
 		const svgNodes = res.data.meta.components
 			.filter((c) => {
-				return c.containing_frame?.name === ICON_FRAME;
+				return (
+					c.containing_frame &&
+					ICON_FRAMES.includes(c.containing_frame.name)
+				);
 			})
 			.map(({ node_id, name }) => {
 				return {
