@@ -1,7 +1,7 @@
 import { parse } from 'node-html-parser';
 
 const svgAttributesToRemove = ['fill', 'width', 'height'];
-const pathAttributesToRemove = ['fill'];
+const childAttributesToRemove = ['fill'];
 
 const svgsToIgnore = [
 	'apple-brand',
@@ -20,9 +20,9 @@ export const stripAttributes = (name: string, svg: string): string => {
 		svgAttributesToRemove.forEach((attr) => svgTag.removeAttribute(attr));
 
 	// Remove attributes from <path>s
-	const pathTag = root.querySelectorAll('svg > *');
-	pathTag.forEach((path) => {
-		pathAttributesToRemove.forEach((attr) => path.removeAttribute(attr));
+	const childElements = root.querySelectorAll('svg > *');
+	childElements.forEach((child) => {
+		childAttributesToRemove.forEach((attr) => child.removeAttribute(attr));
 	});
 
 	return selfClosePathTags(root.toString());
