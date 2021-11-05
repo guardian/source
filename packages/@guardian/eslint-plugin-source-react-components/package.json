@@ -36,7 +36,7 @@
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "@guardian/source-react-components": "4.0.0-alpha.4"
+    "@guardian/source-react-components": "^4.0.0-rc.1"
   },
   "publishConfig": {
     "access": "public"
