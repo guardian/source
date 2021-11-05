@@ -96,7 +96,7 @@ const colors = {
 		'#E4E5E8', //specialReport-700
 		'#EFF1F2', //specialReport-800
 	],
-};
+} as const;
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •

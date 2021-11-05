@@ -42,4 +42,4 @@ export const breakpoints = {
 	desktop: 980,
 	leftCol: 1140,
 	wide: 1300,
-};
+} as const;

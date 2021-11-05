@@ -18,7 +18,7 @@ export const size = {
 	xsmall: 24,
 	small: 36,
 	medium: 44, // meets WCAG 2.1 AAA compliance for touch targets.
-};
+} as const;
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-size--page#global-size-values) •
@@ -46,7 +46,7 @@ export const iconSize = {
 	xsmall: 20,
 	small: 26,
 	medium: 30,
-};
+} as const;
 
 const remIconSize: { [K in keyof typeof iconSize]: number } = {
 	xsmall: pxToRem(iconSize.xsmall),
