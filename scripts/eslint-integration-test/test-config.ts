@@ -37,6 +37,20 @@ const foundationsTestConfig: Test[] = [
 			`Importing * from @guardian/src-* and @guardian/source-* packages is not recommended. Use named imports instead`,
 		],
 	},
+	{
+		name: 'Handles multiple lines',
+		contents: `import { space } from '@guardian/src-foundations';
+import {
+	brandText,
+	brandAlt,
+	neutral,
+} from '@guardian/src-foundations/palette';
+import { textSans, headline } from '@guardian/src-foundations/typography';
+import { from, until } from '@guardian/src-foundations/mq';`,
+		eslintConfig: foundationsEslintConfig,
+		fix: true,
+		expectedOutput: `import { space, brandText, brandAlt, neutral, textSans, headline, from, until } from '@guardian/source-foundations';`,
+	},
 ];
 
 const componentsTestConfig: Test[] = [
