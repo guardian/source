@@ -7,6 +7,7 @@ import {
 	ICON_FRAMES,
 	OUTPUT_DIR,
 } from './config';
+import { stripAttributes } from './process';
 
 interface FigmaComponentsResponse {
 	meta: {
@@ -49,7 +50,10 @@ const getAndWriteSVGForNode = (node: NodeWithUrl) => {
 	return axios
 		.get(node.url)
 		.then((res) => {
-			return writeFileSync(`${OUTPUT_DIR}/${node.name}.svg`, res.data);
+			return writeFileSync(
+				`${OUTPUT_DIR}/${node.name}.svg`,
+				stripAttributes(node.name, res.data),
+			);
 		})
 		.catch((err) => {
 			console.log(`Failed to write SVG for ${node.name}: ${err}`);
