@@ -5,7 +5,6 @@ import pkg from './package.json';
 const bundle = (config) => ({
 	...config,
 	input: 'src/index.ts',
-	external: (id) => !/^[./]/.test(id),
 });
 
 // eslint-disable-next-line import/no-default-export -- it's what rollup wants
