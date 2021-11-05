@@ -31,6 +31,17 @@ export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
 	 * Set the colour of any borders
 	 */
 	borderColor?: string;
+	/**
+	 * The element type to use.
+	 */
+	element?:
+		| 'div'
+		| 'article'
+		| 'aside'
+		| 'footer'
+		| 'header'
+		| 'nav'
+		| 'section';
 }
 
 /**
@@ -42,6 +53,7 @@ export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
  * Centres the page content and applies a width that corresponds to the grid at the current breakpoint.
  */
 export const Container = ({
+	element: Element = 'section',
 	border = false,
 	sideBorders = false,
 	topBorder = false,
@@ -52,7 +64,7 @@ export const Container = ({
 	...props
 }: ContainerProps) => {
 	return (
-		<section
+		<Element
 			css={[
 				backgroundColor && containerBackground(backgroundColor),
 				cssOverrides,
@@ -70,6 +82,6 @@ export const Container = ({
 			>
 				{children}
 			</div>
-		</section>
+		</Element>
 	);
 };
