@@ -23,6 +23,10 @@ export interface ChoiceCardGroupProps
 	 */
 	label?: string;
 	/**
+	 * Hide the label text visually
+	 */
+	hideLabel?: boolean;
+	/**
 	 * Additional text that appears below the `label` (does nothing without one).
 	 */
 	supporting?: string;
@@ -55,6 +59,7 @@ export const ChoiceCardGroup = ({
 	id,
 	name,
 	label,
+	hideLabel,
 	supporting,
 	multi,
 	error,
@@ -66,7 +71,15 @@ export const ChoiceCardGroup = ({
 	const groupId = id || generateSourceId();
 	return (
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
-			{label ? <Legend text={label} supporting={supporting} /> : ''}
+			{label ? (
+				<Legend
+					text={label}
+					supporting={supporting}
+					hideLabel={hideLabel}
+				/>
+			) : (
+				''
+			)}
 			{typeof error === 'string' && (
 				<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 			)}
