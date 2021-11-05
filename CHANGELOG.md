@@ -10,42 +10,67 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 5 November 2021
+
+**`@guardian/src-foundations 3.11.0`**
+
+-   :nail_care: [8a11309](https://github.com/guardian/source/commit/8a11309ddb24a60d4b1332d8883ef866c89d2593) change text colour of input with error to be neutral.7 (thanks @ob6160)
+
+**`@guardian/src-layout 3.11.0`**
+
+-   :sparkles: [d58c517](https://github.com/guardian/source/commit/d58c517996af84ffb69738ac5574931d4606f869) Allow element type to be chosen for Container
+
+**`@guardian/source-react-components-development-kitchen 0.0.22`**
+
+-   :nail_care: [ee78a82](https://github.com/guardian/source/commit/ee78a822cb8e230bda8ea4f1bc3d4ef64ad36a68) Improve toggle styling (thanks @marjisound)
+
 ## 27 October 2021
 
 **`@guardian/src-accordion 3.10.2`**
-- :nail_care: [1e39736](https://github.com/guardian/source/commit/1e3973653b5e1e8a5938fc6c05766a0b8e684f9f) Optimise best logo SVG (thanks @mxdvl)
+
+-   :nail_care: [1e39736](https://github.com/guardian/source/commit/1e3973653b5e1e8a5938fc6c05766a0b8e684f9f) Optimise best logo SVG (thanks @mxdvl)
+
 ## 14 October 2021
 
 **`@guardian/src-checkbox 3.10.0`**
-- :bug: [4c49f51](https://github.com/guardian/source/commit/4c49f514a95ac9b69bde20520fe75fe5df2f7231) vendor prefix appearance in supports decl for checkbox
+
+-   :bug: [4c49f51](https://github.com/guardian/source/commit/4c49f514a95ac9b69bde20520fe75fe5df2f7231) vendor prefix appearance in supports decl for checkbox
 
 **`@guardian/src-foundations 3.10.0`**
-- :bug: [59f63a5](https://github.com/guardian/source/commit/59f63a557a1a17103e9eba209ed404c744ca1cb6) add prefixed appearance snippet to foundations/utils
-- :sparkles: [df202a5](https://github.com/guardian/source/commit/df202a5d22d2ff991584cf69ccc0e170c2a990fd) Expand CSS Resets - Add "meyer" resets
+
+-   :bug: [59f63a5](https://github.com/guardian/source/commit/59f63a557a1a17103e9eba209ed404c744ca1cb6) add prefixed appearance snippet to foundations/utils
+-   :sparkles: [df202a5](https://github.com/guardian/source/commit/df202a5d22d2ff991584cf69ccc0e170c2a990fd) Expand CSS Resets - Add "meyer" resets
 
 **`@guardian/src-layout 3.10.0`**
-- :nail_care: [8ca5628](https://github.com/guardian/source/commit/8ca5628b55652be5b601e40147080deb56a2c21f) add 2px spacing between supportingText and labelText (thanks @coldlink)
+
+-   :nail_care: [8ca5628](https://github.com/guardian/source/commit/8ca5628b55652be5b601e40147080deb56a2c21f) add 2px spacing between supportingText and labelText (thanks @coldlink)
 
 **`@guardian/src-radio 3.10.0`**
-- :bug: [8d571e9](https://github.com/guardian/source/commit/8d571e9352bc74275c89597a0d42cb80060790b3) vendor prefix appearance in supports decl for radio
+
+-   :bug: [8d571e9](https://github.com/guardian/source/commit/8d571e9352bc74275c89597a0d42cb80060790b3) vendor prefix appearance in supports decl for radio
 
 **`@guardian/src-select 3.10.0`**
-- :bug: [b720a10](https://github.com/guardian/source/commit/b720a1021e471b9dccd2dc62630563369229a31c) vendor prefix appearance in supports decl for select
+
+-   :bug: [b720a10](https://github.com/guardian/source/commit/b720a1021e471b9dccd2dc62630563369229a31c) vendor prefix appearance in supports decl for select
 
 **`@guardian/src-text-area 3.10.0`**
-- :nail_care: [6960034](https://github.com/guardian/source/commit/6960034e00e2882978ee0816a8fda217e8045b40)  (thanks @coldlink)
+
+-   :nail_care: [6960034](https://github.com/guardian/source/commit/6960034e00e2882978ee0816a8fda217e8045b40) (thanks @coldlink)
 
 **`@guardian/src-text-input 3.10.0`**
-- :nail_care: [7417208](https://github.com/guardian/source/commit/7417208779fbb88a6ae3f6375698fcc11ee13df9) add margin-top to TextInput (thanks @coldlink)
-- :nail_care: [ff89289](https://github.com/guardian/source/commit/ff8928995ea2c097a5572950b847da7d9c98893c) add 2px margin to to inline messages in TextInput (thanks @coldlink)
+
+-   :nail_care: [7417208](https://github.com/guardian/source/commit/7417208779fbb88a6ae3f6375698fcc11ee13df9) add margin-top to TextInput (thanks @coldlink)
+-   :nail_care: [ff89289](https://github.com/guardian/source/commit/ff8928995ea2c097a5572950b847da7d9c98893c) add 2px margin to to inline messages in TextInput (thanks @coldlink)
 
 **`@guardian/source-react-components-development-kitchen 0.0.14`**
-- :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate editorial button from @guardian/types to @guardian/libs
-- :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate quote icon from @guardian/types to @guardian/libs
-- :sparkles: [beab58b](https://github.com/guardian/source/commit/beab58b6c22be863f187fbab8f4518da7287b3c5) create toggle switch in development kitchen (thanks @marjisound)
-- :sparkles: [58365e6](https://github.com/guardian/source/commit/58365e68516960996f82bddbec596153ac64a12b) Allow passing of cssOverrides prop to the Divider (thanks @ob6160)
-- :bug: [19d5eaa](https://github.com/guardian/source/commit/19d5eaac2b6645b475a97993344896ccb7bcee4d) Update `Logo` component to use `a` tag, and `cssOverrides` (thanks @coldlink)
-- :sparkles: [4324bba](https://github.com/guardian/source/commit/4324bba0dbf4ed3b855264b8aa885d21534a238d) Add ErrorSummary and SuccessSummary components to the kitchen (thanks @coldlink)
+
+-   :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate editorial button from @guardian/types to @guardian/libs
+-   :boom: :robot: [a0d0c68](https://github.com/guardian/source/commit/a0d0c68515b08cac944075d651ca40f3f5ce61ba) migrate quote icon from @guardian/types to @guardian/libs
+-   :sparkles: [beab58b](https://github.com/guardian/source/commit/beab58b6c22be863f187fbab8f4518da7287b3c5) create toggle switch in development kitchen (thanks @marjisound)
+-   :sparkles: [58365e6](https://github.com/guardian/source/commit/58365e68516960996f82bddbec596153ac64a12b) Allow passing of cssOverrides prop to the Divider (thanks @ob6160)
+-   :bug: [19d5eaa](https://github.com/guardian/source/commit/19d5eaac2b6645b475a97993344896ccb7bcee4d) Update `Logo` component to use `a` tag, and `cssOverrides` (thanks @coldlink)
+-   :sparkles: [4324bba](https://github.com/guardian/source/commit/4324bba0dbf4ed3b855264b8aa885d21534a238d) Add ErrorSummary and SuccessSummary components to the kitchen (thanks @coldlink)
+
 ## 26 August 2021
 
 **`@guardian/src-accordion 3.9.0`**
