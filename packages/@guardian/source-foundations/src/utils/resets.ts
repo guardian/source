@@ -112,6 +112,11 @@ const resetCSS = `
 	${defaults}
 `;
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-css-reset--page)
+ *
+ * `resets.resetCSS`: sensible default CSS rules to provide a base for a consistent environment across projects and browsers.
+ */
 export const resets = {
 	legend,
 	fieldset,
