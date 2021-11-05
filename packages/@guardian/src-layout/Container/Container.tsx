@@ -40,7 +40,6 @@ export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
 		| 'aside'
 		| 'footer'
 		| 'header'
-		| 'main'
 		| 'nav'
 		| 'section';
 }
