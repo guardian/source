@@ -1798,28 +1798,68 @@
     eslint-plugin-prettier "3.4.0"
 
 "@guardian/eslint-plugin-source-foundations@file:packages/@guardian/eslint-plugin-source-foundations":
-  version "4.0.0-alpha.2"
+  version "4.0.0-alpha.4"
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.33.0"
     "@typescript-eslint/parser" "4.29.2"
     eslint-plugin-import "2.24.0"
 
 "@guardian/eslint-plugin-source-react-components@file:packages/@guardian/eslint-plugin-source-react-components":
-  version "4.0.0-alpha.2"
+  version "4.0.0-alpha.4"
   dependencies:
-    "@guardian/eslint-plugin-source-foundations" "4.0.0-alpha.2"
+    "@guardian/eslint-plugin-source-foundations" "^4.0.0-alpha.3"
     "@typescript-eslint/eslint-plugin" "4.29.2"
     "@typescript-eslint/parser" "4.29.2"
 
 "@guardian/libs@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-3.2.1.tgz#96368fcd76f63b842708ea1489275bd3200f5e4b"
-  integrity sha512-/o84jYYlodIfKs+aRj1QoluHnQ/OdgJN/v1FONwGCf7eGn6RYn9BCh5QvHRujpoSqzgq435tzx5Ug3EF1wWvfQ==
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-3.5.0.tgz#2bfcc554d1d4dd8b3bca92c3824c623dbd26b1f7"
+  integrity sha512-G6n2Flox39condhlALyJ48oMv2kRqbH+1M84SAYNjZZ9oFmpjdDf3mqU7YEX0Cxx5r+89PvUbqEYZLolnMUn2A==
 
 "@guardian/prettier@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@guardian/prettier/-/prettier-0.7.0.tgz#360256e1cb77cba2873ceb1317484956d96039b7"
   integrity sha512-1FPQ3QDbb5lPcOKJJy0aU6lU9h9CSe91FI4J9ZZ6Qc9Ewb2XS5VL1eX2df2YJOGZ+nXo90Q/YG7+LUUYtcQKKw==
+
+"@guardian/src-button@^3.10.3":
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/@guardian/src-button/-/src-button-3.10.3.tgz#b277e5b786ef8e8d5fdb494d2c0c92dea5e8a858"
+  integrity sha512-GJPSiC8mPxBXDFS9m+ALR9nYRZM9fGTSUP/Lo26pKBeBwuO4eJftqcRA6bg42qsmqaHaz6s5OvRq5f43w1u6ew==
+  dependencies:
+    "@guardian/src-helpers" "^3.10.3"
+
+"@guardian/src-foundations@^3.10.3", "@guardian/src-foundations@^3.10.3-rc.1":
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-3.10.3.tgz#6e533aaa7f45e657f3ded257e6f9ad8a71445ebe"
+  integrity sha512-GKmCOOhIvJIhxuH0+Qk6tTqCU24KTAMSpklx+VLbYJ1lzGSgPX6ivVbAWPaKi/SO1KfOYy+YKcFruAWNxGEecg==
+
+"@guardian/src-helpers@^3.10.3", "@guardian/src-helpers@^3.10.3-rc.1":
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-3.10.3.tgz#d34f555b5289b7957fb07499239a327bf591f7e5"
+  integrity sha512-ptK5Squ1f2PAE8eQ8T7MaYNgaFOZQ3qQxCtKS8wOVN7OaOZO6kVbu6ax92rCF7nkbVWDwYYWWYtlCb5XIeLFcg==
+  dependencies:
+    "@guardian/src-foundations" "^3.10.3"
+    mini-svg-data-uri "^1.3.3"
+
+"@guardian/src-icons@^3.10.3", "@guardian/src-icons@^3.10.3-rc.1":
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-3.10.3.tgz#8bc84d98851a9769b4af38c767e2abce083db76c"
+  integrity sha512-DVChSicSjwNz1t5uHUWjbSSlO5B3bnz3qjA6qQkkY5dsLn9exXayocPgKIEw+TMtEH677L4dFtsS/qCcoRLGOA==
+
+"@guardian/src-label@^3.10.3-rc.1":
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/@guardian/src-label/-/src-label-3.10.3.tgz#fbe4e2a47eeed87fde1f38e1599b9887ef7d97b6"
+  integrity sha512-mktMoix2FWpCqwE2Oai7yACCCOE1JAX0lZJkF7pPgzMRvSgXB9XQXouZceWzoSsvay2HOczSVWPuJnad5eK8uA==
+  dependencies:
+    "@guardian/src-helpers" "^3.10.3"
+
+"@guardian/src-user-feedback@^3.10.3-rc.1":
+  version "3.10.3"
+  resolved "https://registry.yarnpkg.com/@guardian/src-user-feedback/-/src-user-feedback-3.10.3.tgz#8fb4bd5463c13339d545f4c688a46ffb889eac0a"
+  integrity sha512-Mj6MIdR0vAV2tn8vOehRMBd4dqDV5eMORwowaiSVE1NamaB67KXzahYtGKZ/tqW0mU7cKoy5bZI1ZGmF9vAkEw==
+  dependencies:
+    "@guardian/src-helpers" "^3.10.3"
+    "@guardian/src-icons" "^3.10.3"
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
