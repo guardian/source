@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components",
-  "version": "4.0.0-rc.0",
+  "version": "4.0.0-rc.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
-    "@guardian/source-foundations": "4.0.0-alpha.0",
+    "@guardian/source-foundations": "^4.0.0-rc.1",
     "react": "^17.0.1"
   },
   "publishConfig": {
