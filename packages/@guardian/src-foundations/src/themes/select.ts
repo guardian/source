@@ -7,7 +7,7 @@ export const selectDefault = {
 		textLabel: text.inputLabel,
 		textLabelOptional: text.supporting,
 		textLabelSupporting: text.supporting,
-		textError: text.error,
+		textError: text.inputError,
 		textSuccess: text.success,
 		backgroundInput: background.input,
 		border: border.input,

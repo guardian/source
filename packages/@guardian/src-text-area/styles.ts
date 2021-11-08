@@ -7,7 +7,7 @@ import { resets } from '@guardian/src-foundations/utils';
 
 export const errorInput = css`
 	border: 4px solid ${border.error};
-	color: ${text.error};
+	color: ${text.inputError};
 	margin-top: 0;
 `;
 
