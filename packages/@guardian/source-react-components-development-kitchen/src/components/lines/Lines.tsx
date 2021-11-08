@@ -37,16 +37,17 @@ export const Lines = ({
 	effect = 'straight',
 	count = 4,
 	color = line.primary,
+	cssOverrides,
 }: LinesProps): EmotionJSX.Element => {
 	switch (effect) {
 		case 'squiggly':
-			return <div css={squigglyLines(count, color)} />;
+			return <div css={[squigglyLines(count, color), cssOverrides]} />;
 		case 'dotted':
-			return <div css={dottedLines(count, color)} />;
+			return <div css={[dottedLines(count, color), cssOverrides]} />;
 		case 'dashed':
-			return <div css={dashedLines(count, color)} />;
+			return <div css={[dashedLines(count, color), cssOverrides]} />;
 		case 'straight':
 		default:
-			return <div css={straightLines(count, color)} />;
+			return <div css={[straightLines(count, color), cssOverrides]} />;
 	}
 };
