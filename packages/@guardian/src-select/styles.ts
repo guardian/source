@@ -18,7 +18,7 @@ export const errorInput = ({ select } = selectDefault) => css`
 export const successInput = ({ select } = selectDefault) => css`
 	border: 4px solid ${select.borderSuccess};
 	color: ${select.textSuccess};
-	/* When select is active and in an error state, we want the border to remain the same. */
+	/* When select is active and in an success state, we want the border to remain the same. */
 	&:active {
 		border: 4px solid ${select.borderSuccess};
 	}
