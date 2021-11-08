@@ -9,10 +9,6 @@ import { pxToRem } from './utils/px-to-rem';
  * [Design System](https://theguardian.design/2a1e5182b/p/24a3ec-size/t/329aef)
  *
  * May be used for call to action buttons and user input fields.
- *
- ** `size.medium` -> 44px
- ** `size.small` -> 36px
- ** `size.xsmall` -> 24px
  */
 export const size = {
 	xsmall: 24,
