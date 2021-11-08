@@ -20,15 +20,9 @@ import {
 import { objectStylesToString } from './object-styles-to-string';
 import type {
 	BodySizes,
-	Category,
 	FontScaleArgs,
 	FontScaleFunctionStr,
-	FontStyle,
-	FontWeight,
-	FontWeightDefinition,
 	HeadlineSizes,
-	LineHeight,
-	ScaleUnit,
 	TextSansSizes,
 	TitlepieceSizes,
 } from './types';
@@ -161,13 +155,4 @@ export {
 	fontMapping as fonts,
 	fontWeightMapping as fontWeights,
 	lineHeightMapping as lineHeights,
-};
-
-export type {
-	ScaleUnit,
-	Category,
-	LineHeight,
-	FontWeight,
-	FontStyle,
-	FontWeightDefinition,
 };
