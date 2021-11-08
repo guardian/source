@@ -9,16 +9,12 @@ import { pxToRem } from './utils/px-to-rem';
  * [Design System](https://theguardian.design/2a1e5182b/p/24a3ec-size/t/329aef)
  *
  * May be used for call to action buttons and user input fields.
- *
- ** `size.medium` -> 44px
- ** `size.small` -> 36px
- ** `size.xsmall` -> 24px
  */
 export const size = {
 	xsmall: 24,
 	small: 36,
 	medium: 44, // meets WCAG 2.1 AAA compliance for touch targets.
-};
+} as const;
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-size--page#global-size-values) •
@@ -46,7 +42,7 @@ export const iconSize = {
 	xsmall: 20,
 	small: 26,
 	medium: 30,
-};
+} as const;
 
 const remIconSize: { [K in keyof typeof iconSize]: number } = {
 	xsmall: pxToRem(iconSize.xsmall),
