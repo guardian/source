@@ -14,6 +14,7 @@ export default {
 		label: 'Choose an option',
 		supporting: 'These are your options',
 		multi: false,
+		hideLabel: false,
 	},
 	argTypes: {
 		// sorted by required,alpha
@@ -27,6 +28,7 @@ export default {
 			control: { type: 'select' },
 		},
 		label: undefined,
+		hideLabel: undefined,
 		multi: undefined,
 		supporting: undefined,
 	},
