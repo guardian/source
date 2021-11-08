@@ -22,6 +22,7 @@ const removedImports: Record<string, string[]> = {
 	"'@guardian/source-foundations/utils'": ['InteractionModeEngine'],
 	"'@guardian/src-foundations/size/global'": ['remSize', 'remIconSize'],
 	"'@guardian/src-foundations/themes'": ['defaultTheme', 'brand', 'brandAlt'],
+	"'@guardian/src-foundations'": ['palette'],
 	"'@guardian/src-helpers'": [
 		'storybookBackgrounds',
 		'ThemeName',
