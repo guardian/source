@@ -394,5 +394,15 @@ ruleTester.run('valid-import-path', validImportPath, {
 			],
 			output: `export { storybookBackgrounds } from '@guardian/src-helpers';`,
 		},
+		{
+			// Import something that's gone from foundations
+			code: `import { palette } from '@guardian/src-foundations';`,
+			errors: [
+				{
+					message: `The following export(s) have been removed: palette.`,
+				},
+			],
+			output: `import { palette } from '@guardian/src-foundations';`,
+		},
 	],
 });
