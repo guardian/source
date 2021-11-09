@@ -34,6 +34,9 @@ A new eslint plugin is available which can be used to complete the migration aut
 -   Remove any `@guardian/src-*` packages from your `package.json`
 -   Add the `@guardian/source-foundations` and/or `@guardian/source-react-components` packages, depending on your use requirements
 -   Add the `@guardian/eslint-plugin-source-foundations` or `@guardian/eslint-plugin-source-react-components` package as a devDependency
+
+    If you are _only_ using foundations then use `@guardian/eslint-plugin-source-foundations`, else use _only_ `@guardian/eslint-plugin-source-react-components`.
+
 -   Add the recommended config for either [@guardian/eslint-plugin-source-foundations](https://github.com/guardian/source/tree/main/packages/%40guardian/eslint-plugin-source-foundations#usage) or [@guardian/eslint-plugin-source-react-components](https://github.com/guardian/source/tree/main/packages/%40guardian/eslint-plugin-source-react-components#usage) to your eslint configuration
 -   Run eslint with the [fix](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) option
 
