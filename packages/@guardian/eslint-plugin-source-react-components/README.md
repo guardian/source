@@ -19,9 +19,25 @@ npm install --save-dev @guardian/eslint-plugin-source-react-components
 ```js
 // ESLint configuration file
 {
-    "extends": "plugin:@guardian/eslint-plugin-source-react-components/recommended"
+    "extends": "plugin:@guardian/source-react-components/recommended"
 }
 ```
+
+Note that this plugin extends `@guardian/eslint-plugin-source-foundations` and so only this plygin is required.
+
+### Valid import path
+
+This rules errors for imports from a `@guardian/src-*` package. If possible, it will autofix the import to the new location.
+
+Some breaking changes can not be autofixed, for example, in cases where the `palette` object has been imported directly from `@guardian/src-foundations`, developers must manually replace the palette object with imports from global colours or colour tokens.
+
+### No \* imports or exports
+
+This rule errors for import or export `*` statements from any `src-*` or `source-*` package as this pattern is not recommended.
+
+### No duplicate imports
+
+This rule, from [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import), errors when multiple import statements import from the same pacakge. These issues can be autofixed. This rule is included as, due to the remove of sub modules and the consolidation of component packages, many import statements are fixed by the `valid-import-path` rule to import from the same location in v4.
 
 ## Known Issues
 
