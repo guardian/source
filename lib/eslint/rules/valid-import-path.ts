@@ -149,24 +149,23 @@ const getRenameImportFixers = (
 	}
 
 	// Some of the theme exports have changed name
-	if (node.source.raw === "'@guardian/src-foundations/themes'") {
-		for (const i of node.specifiers) {
-			if (
-				i.type === 'ImportNamespaceSpecifier' ||
-				i.type === 'ImportDefaultSpecifier'
-			)
-				continue;
 
-			const name = getSpecifierName(i);
-			const range = getSpecifierRange(i);
-			if (name in newThemeNames) {
-				fixers.push(
-					fixer.replaceTextRange(
-						range ?? [0, 0],
-						`${newThemeNames[name]}`,
-					),
-				);
-			}
+	for (const i of node.specifiers) {
+		if (
+			i.type === 'ImportNamespaceSpecifier' ||
+			i.type === 'ImportDefaultSpecifier'
+		)
+			continue;
+
+		const name = getSpecifierName(i);
+		const range = getSpecifierRange(i);
+		if (name in newThemeNames) {
+			fixers.push(
+				fixer.replaceTextRange(
+					range ?? [0, 0],
+					`${newThemeNames[name]}`,
+				),
+			);
 		}
 	}
 

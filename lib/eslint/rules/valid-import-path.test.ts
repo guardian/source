@@ -146,7 +146,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 		output: `import { headlineObjectStyles as hl, bodySizes as bs } from '@guardian/source-foundations';`,
 	},
 	{
-		// Themes that now come from react-components
+		// Themes that now come from react-components and have changed names (from foundations)
 		code: `import { labelDefault } from '@guardian/src-foundations/themes';`,
 		errors: [
 			{
@@ -403,6 +403,17 @@ ruleTester.run('valid-import-path', validImportPath, {
 				},
 			],
 			output: `import { palette } from '@guardian/src-foundations';`,
+		},
+		{
+			// Themes that now come from react-components and have changed names (from component)
+			code: `import { buttonReaderRevenue } from '@guardian/src-button';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+				},
+			],
+			output: `import { buttonThemeReaderRevenue } from '@guardian/source-react-components';`,
 		},
 	],
 });
