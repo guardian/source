@@ -1,6 +1,12 @@
 import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-import { FIGMA_OPTIONS, ICON_FILE, ICON_FRAMES, OUTPUT_DIR } from './config';
+import {
+	FIGMA_OPTIONS,
+	ICONS_TO_IGNORE,
+	ICON_FILE,
+	ICON_FRAMES,
+	OUTPUT_DIR,
+} from './config';
 
 interface FigmaComponentsResponse {
 	meta: {
@@ -63,8 +69,11 @@ axios
 		const svgNodes = res.data.meta.components
 			.filter((c) => {
 				return (
+					// Only get icons that are in a certain frame
 					c.containing_frame &&
-					ICON_FRAMES.includes(c.containing_frame.name)
+					ICON_FRAMES.includes(c.containing_frame.name) &&
+					// Ignore some icons
+					!ICONS_TO_IGNORE.includes(c.name)
 				);
 			})
 			.map(({ node_id, name }) => {

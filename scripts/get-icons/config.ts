@@ -9,3 +9,10 @@ export const FIGMA_OPTIONS = {
 		'X-Figma-Token': process.env.FIGMA_TOKEN ?? 'ADD ME!!!',
 	},
 };
+
+export const ICONS_TO_IGNORE = [
+	'apple-brand',
+	'facebook-brand',
+	'google-brand',
+	'paypal',
+];
