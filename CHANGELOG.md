@@ -10,6 +10,24 @@
 > -   :globe_with_meridians: [Accessibility improvement]
 > -   :page_with_curl: [Documentation]
 
+## 8 November 2021
+
+**`@guardian/src-choice-card 3.12.0`**
+
+-   :sparkles: [044a1f2](https://github.com/guardian/source/commit/044a1f2e10b8fc8bea749c16aa3ba6a04d56d9b6) Adding hideLabel prop to choice card group (thanks @marialani @i-hardy)
+
+**`@guardian/src-foundations 3.12.0`**
+
+-   :robot: [27cc39f](https://github.com/guardian/source/commit/27cc39f0647ec11478389c0e6e028575f2ac3be7) Use as const hint to help IDE autocomplete (thanks @mxdvl)
+
+**`@guardian/src-select 3.12.0`**
+
+-   :nail_care: [df08a38](https://github.com/guardian/source/commit/df08a38009011e8a5899530c94416d270fa8b14d) Use text.inputError for select text colour on error (thanks @ob6160)
+
+**`@guardian/src-text-area 3.12.0`**
+
+-   :nail_care: [df08a38](https://github.com/guardian/source/commit/df08a38009011e8a5899530c94416d270fa8b14d) Use text.inputError for textarea text colour on error (thanks @ob6160)
+
 ## 5 November 2021
 
 **`@guardian/src-foundations 3.11.0`**
