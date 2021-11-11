@@ -22,9 +22,7 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "esnext",
-    "composite": true,
-    "emitDeclarationOnly": true
+    "target": "esnext"
   },
   "exclude": ["node_modules", "dist"],
   "include": ["."],

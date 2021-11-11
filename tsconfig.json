@@ -27,11 +27,7 @@
       "@guardian/src-label": ["packages/@guardian/src-label"],
       "@guardian/src-user-feedback": ["packages/@guardian/src-user-feedback"],
       "@guardian/src-helpers": ["packages/@guardian/src-helpers"],
-      "@guardian/src-icons": ["packages/@guardian/src-icons"],
-      "@guardian/source-foundations": ["packages/@guardian/source-foundations"],
-      "@guardian/source-react-components": [
-        "packages/@guardian/source-reat-components"
-      ]
+      "@guardian/src-icons": ["packages/@guardian/src-icons"]
     },
     "outDir": "dist",
     "module": "commonjs",
