@@ -32,6 +32,16 @@ SuccessOnly.args = {
 };
 asChromaticStory(SuccessOnly);
 
+export const SuccessOnlyAsReactNode = Template.bind({});
+SuccessOnlyAsReactNode.args = {
+	message: (
+		<>
+			This is the success message as a <s>ReactNode</s>
+		</>
+	),
+};
+asChromaticStory(SuccessOnlyAsReactNode);
+
 // *****************************************************************************
 
 export const WithContext = Template.bind({});
