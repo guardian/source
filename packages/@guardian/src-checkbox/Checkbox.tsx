@@ -53,7 +53,7 @@ export interface CheckboxProps
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-checkbox-checkbox--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/466fad-checkbox/b/33fc2f) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/checkbox) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-checkbox) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-checkbox)
  *
  * Checkboxes allow users to select multiple options from a list of individual

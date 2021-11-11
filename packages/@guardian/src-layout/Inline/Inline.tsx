@@ -14,7 +14,7 @@ export interface InlineProps extends HTMLAttributes<HTMLDivElement>, Props {
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-inline) •
  * [Design System](https://theguardian.design/2a1e5182b/p/99f3c1-inline) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/layout/Inline) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-layout/Inline) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-layout)
  *
  * `Inline` components will be laid out one next to the other.
