@@ -18,6 +18,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
+    "composite": true,
     "paths": {
       "@guardian/src-accordion": ["../src-accordion/index"],
       "@guardian/src-brand": ["../src-brand/index"],
