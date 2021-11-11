@@ -34,6 +34,18 @@ asChromaticStory(InfoOnly);
 
 // *****************************************************************************
 
+export const InfoOnlyAsReactNode = Template.bind({});
+InfoOnlyAsReactNode.args = {
+	message: (
+		<>
+			This is the info message as a <s>ReactNode</s>
+		</>
+	),
+};
+asChromaticStory(InfoOnlyAsReactNode);
+
+// *****************************************************************************
+
 export const WithContext = Template.bind({});
 WithContext.args = {
 	message: 'It was insightful',
