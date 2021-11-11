@@ -68,9 +68,9 @@ export interface RadioProps
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-radio-radio--demo) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-radio-radio--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/2891dd-radio-button/b/46940d) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/radio) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-radio) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-radio)
  *
  * Radio buttons allow users to make a single selection from a set of options.

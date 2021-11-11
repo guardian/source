@@ -53,9 +53,9 @@ export interface TextAreaProps
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-text-area-text-area--demo) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-text-area-textarea--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/567182-text-area/b/42916b) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/text-area) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-text-area) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-text-area)
  *
  * The following themes are supported: `light`

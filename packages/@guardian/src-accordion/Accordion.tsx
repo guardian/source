@@ -15,7 +15,7 @@ export interface AccordionProps extends Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-accordion-accordion--demo) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-accordion-accordion--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/38c5aa-accordion/b/92b71e) •
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/src-accordion) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-accordion)

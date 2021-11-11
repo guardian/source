@@ -8,9 +8,9 @@ export interface LinkButtonProps
 		AnchorHTMLAttributes<HTMLAnchorElement> {}
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-button-button--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-button-linkbutton--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/435225-button) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/button) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-button) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-button)
  *
  * Buttons enable users to make choices or perform actions.
