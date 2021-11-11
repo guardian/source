@@ -63,6 +63,7 @@ describe('No exports have changed in the ', () => {
 			'specialReport',
 			'sport',
 			'success',
+			'svgBackgroundImage',
 			'text',
 			'textSans',
 			'textSansObjectStyles',
