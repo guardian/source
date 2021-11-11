@@ -23,7 +23,8 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "esnext",
-    "composite": true
+    "composite": true,
+    "emitDeclarationOnly": true
   },
   "exclude": ["node_modules", "dist"],
   "include": ["."],

@@ -1490,16 +1490,16 @@
     eslint-plugin-prettier "3.4.0"
 
 "@guardian/eslint-plugin-source-foundations@file:packages/@guardian/eslint-plugin-source-foundations":
-  version "4.0.0-rc.1"
+  version "4.0.0-rc.2"
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.33.0"
     "@typescript-eslint/parser" "4.29.2"
     eslint-plugin-import "2.24.0"
 
 "@guardian/eslint-plugin-source-react-components@file:packages/@guardian/eslint-plugin-source-react-components":
-  version "4.0.0-rc.1"
+  version "4.0.0-rc.2"
   dependencies:
-    "@guardian/eslint-plugin-source-foundations" "^4.0.0-rc.1"
+    "@guardian/eslint-plugin-source-foundations" "^4.0.0-rc.2"
     "@typescript-eslint/eslint-plugin" "4.29.2"
     "@typescript-eslint/parser" "4.29.2"
 
