@@ -3,16 +3,12 @@
   "compilerOptions": {
     "outDir": "dist/types",
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@guardian/source-foundations": ["../source-foundations/index"],
+      "@guardian/source-react-components": ["../source-react-components/index"]
+    }
   },
   "include": ["src"],
-  "exclude": ["dist", "src/**/*.stories.tsx"],
-  "references": [
-    {
-      "path": "../src-foundations"
-    },
-    {
-      "path": "../src-helpers"
-    }
-  ]
+  "exclude": ["dist", "src/**/*.stories.tsx"]
 }

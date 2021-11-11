@@ -5,7 +5,7 @@ import {
 	ArticlePillar,
 	ArticleSpecial,
 } from '@guardian/libs';
-import { SvgCross } from '@guardian/src-icons';
+import { SvgCross } from '@guardian/source-react-components';
 import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asChromaticStory,

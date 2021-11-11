@@ -1,5 +1,4 @@
-import { neutral } from '@guardian/src-foundations/palette';
-import { svgBackgroundImage } from '@guardian/src-helpers';
+import { neutral, svgBackgroundImage } from '@guardian/source-foundations';
 
 const spacing = 15;
 

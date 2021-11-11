@@ -1,10 +1,13 @@
 import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { SvgGuardianLogo } from '@guardian/src-brand';
-import { visuallyHidden } from '@guardian/src-foundations/accessibility';
-import { from } from '@guardian/src-foundations/mq';
-import { brandAlt, brandText } from '@guardian/src-foundations/palette';
-import type { Props } from '@guardian/src-helpers';
+import {
+	brandAlt,
+	brandText,
+	from,
+	visuallyHidden,
+} from '@guardian/source-foundations';
+import { SvgGuardianLogo } from '@guardian/source-react-components';
+import type { Props } from '@guardian/source-react-components';
 
 type LogoType = 'standard' | 'anniversary' | 'bestWebsite';
 
