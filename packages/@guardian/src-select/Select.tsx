@@ -50,9 +50,9 @@ export interface SelectProps
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-select-select--demo) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-select-select--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/663879-select-box/b/10875c) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/select) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-select) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-select)
  *
  * Select boxes allow the user to make a choice from a long list of similar options.

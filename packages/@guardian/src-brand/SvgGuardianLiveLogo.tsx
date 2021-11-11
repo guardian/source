@@ -14,7 +14,7 @@ export type SvgGuardianLiveLogoProps = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-brand-svgguardianlivelogo--story) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-brand-svgguardianlivelogo--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/8909e0-assets/t/05bdd0) •
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/src-brand) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-brand)

@@ -50,7 +50,7 @@ export interface ChoiceCardGroupProps
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-choice-card-choicecardgroup) •
  * [Design System](https://theguardian.design/2a1e5182b/p/65ffe9-choice-card) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/choice-card) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-choice-card) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-choice-card)
  *
  * The following themes are supported: `choiceCardDefault`.
