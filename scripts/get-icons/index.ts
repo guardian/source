@@ -52,7 +52,7 @@ const getAndWriteSVGForNode = (node: NodeWithUrl) => {
 		.then((res) => {
 			return writeFileSync(
 				`${OUTPUT_DIR}/${node.name}.svg`,
-				stripAttributes(node.name, res.data),
+				stripAttributes(res.data),
 			);
 		})
 		.catch((err) => {

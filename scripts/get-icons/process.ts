@@ -3,15 +3,7 @@ import { parse } from 'node-html-parser';
 const svgAttributesToRemove = ['fill', 'width', 'height'];
 const childAttributesToRemove = ['fill'];
 
-const svgsToIgnore = [
-	'apple-brand',
-	'facebook-brand',
-	'google-brand',
-	'paypal',
-];
-
-export const stripAttributes = (name: string, svg: string): string => {
-	if (svgsToIgnore.includes(name)) return svg;
+export const stripAttributes = (svg: string): string => {
 	const root = parse(svg);
 
 	// Remove attributes from <svg>
