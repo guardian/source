@@ -158,9 +158,9 @@ export {
 	remHeadlineSizes,
 	remBodySizes,
 	remTextSansSizes,
-	fontMapping as fonts,
-	fontWeightMapping as fontWeights,
-	lineHeightMapping as lineHeights,
+	fontMapping,
+	fontWeightMapping,
+	lineHeightMapping,
 };
 
 export type {

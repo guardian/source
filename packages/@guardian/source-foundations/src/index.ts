@@ -65,9 +65,9 @@ export {
 	remHeadlineSizes,
 	remBodySizes,
 	remTextSansSizes,
-	fonts,
-	fontWeights,
-	lineHeights,
+	fontMapping as fonts,
+	fontWeightMapping as fontWeights,
+	lineHeightMapping as lineHeights,
 } from './typography';
 export {
 	body as bodyObjectStyles,
