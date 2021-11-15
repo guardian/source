@@ -39,6 +39,14 @@ module.exports = ({ config, mode }) => {
 
 	config.resolve.extensions.push('.ts', '.tsx');
 	config.resolve.alias = {
+		'@guardian/source-foundations': path.resolve(
+			__dirname,
+			'../packages/@guardian/source-foundations/src',
+		),
+		'@guardian/source-react-components': path.resolve(
+			__dirname,
+			'../packages/@guardian/source-react-components/src',
+		),
 		'@guardian/src-foundations': path.resolve(
 			__dirname,
 			'../packages/@guardian/src-foundations/src',
