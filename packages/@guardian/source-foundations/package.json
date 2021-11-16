@@ -17,6 +17,9 @@
     "build": "rollup -c",
     "clean": "rm -rf dist"
   },
+  "dependencies": {
+    "mini-svg-data-uri": "^1.3.3"
+  },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
     "@guardian/eslint-config-typescript": "^0.7.0",
