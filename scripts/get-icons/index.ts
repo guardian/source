@@ -1,17 +1,6 @@
 import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-
-const ICON_FILE = 'Ai7AELHC6KCz38qKZkvuHo';
-
-const ICON_FRAMES = ['UI icons 24(w)x24(w)', 'Payment icons 24 x 24'];
-
-const OUTPUT_DIR = '../../packages/@guardian/src-icons/svgs';
-
-const FIGMA_OPTIONS = {
-	headers: {
-		'X-Figma-Token': process.env.FIGMA_TOKEN ?? 'ADD ME!!!',
-	},
-};
+import { FIGMA_OPTIONS, ICON_FILE, ICON_FRAMES, OUTPUT_DIR } from './config';
 
 interface FigmaComponentsResponse {
 	meta: {
