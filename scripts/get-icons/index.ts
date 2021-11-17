@@ -1,17 +1,12 @@
 import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-
-const ICON_FILE = 'Ai7AELHC6KCz38qKZkvuHo';
-
-const ICON_FRAMES = ['UI icons 24(w)x24(w)', 'Payment icons 24 x 24'];
-
-const OUTPUT_DIR = '../../packages/@guardian/src-icons/svgs';
-
-const FIGMA_OPTIONS = {
-	headers: {
-		'X-Figma-Token': process.env.FIGMA_TOKEN ?? 'ADD ME!!!',
-	},
-};
+import {
+	FIGMA_OPTIONS,
+	ICONS_TO_IGNORE,
+	ICON_FILE,
+	ICON_FRAMES,
+	OUTPUT_DIR,
+} from './config';
 
 interface FigmaComponentsResponse {
 	meta: {
@@ -74,8 +69,11 @@ axios
 		const svgNodes = res.data.meta.components
 			.filter((c) => {
 				return (
+					// Only get icons that are in a certain frame
 					c.containing_frame &&
-					ICON_FRAMES.includes(c.containing_frame.name)
+					ICON_FRAMES.includes(c.containing_frame.name) &&
+					// Ignore some icons
+					!ICONS_TO_IGNORE.includes(c.name)
 				);
 			})
 			.map(({ node_id, name }) => {
