@@ -1,9 +1,6 @@
 name: Chromatic
 on:
-  workflow_run:
-    workflows: ['Dependabot PR Check']
-    types:
-      - completed
+  workflow_dispatch:
   push:
     branches-ignore:
       - 'gh-pages'
