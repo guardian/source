@@ -35,6 +35,18 @@ asChromaticStory(ErrorOnly);
 
 // *****************************************************************************
 
+export const ErrorOnlyAsReactNode = Template.bind({});
+ErrorOnlyAsReactNode.args = {
+	message: (
+		<>
+			This is the error message as a <s>ReactNode</s>
+		</>
+	),
+};
+asChromaticStory(ErrorOnlyAsReactNode);
+
+// *****************************************************************************
+
 export const WithContext = Template.bind({});
 WithContext.args = {
 	message: 'Here is an error',

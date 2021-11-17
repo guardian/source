@@ -65,9 +65,9 @@ export {
 	remHeadlineSizes,
 	remBodySizes,
 	remTextSansSizes,
-	fonts,
-	fontWeights,
-	lineHeights,
+	fontMapping as fonts,
+	fontWeightMapping as fontWeights,
+	lineHeightMapping as lineHeights,
 } from './typography';
 export {
 	body as bodyObjectStyles,
@@ -100,3 +100,4 @@ export { appearance } from './utils/supports-queries';
 export { FocusStyleManager } from './utils/focus-style-manager';
 export { pxToRem, rootPixelFontSize } from './utils/px-to-rem';
 export { resets } from './utils/resets';
+export { svgBackgroundImage } from './utils/svg-background-image';

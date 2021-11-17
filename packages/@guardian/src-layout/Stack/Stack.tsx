@@ -14,7 +14,7 @@ export interface StackProps extends HTMLAttributes<HTMLDivElement>, Props {
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-stack) •
  * [Design System](https://theguardian.design/2a1e5182b/p/827581-stack) •
- * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/layout/Stack) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-layout/Stack) •
  * [NPM](https://www.npmjs.com/package/@guardian/src-layout)
  *
  * `Stack` components will be stacked one on top of the other.

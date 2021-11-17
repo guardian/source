@@ -1,0 +1,1 @@
+../source-foundations/src/utils/svg-background-image.ts
