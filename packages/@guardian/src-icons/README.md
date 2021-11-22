@@ -17,3 +17,7 @@ import { SvgCheckmark } from '@guardian/src-icons';
 
 React.render(<SvgCheckmark />, rootElement);
 ```
+
+## SVGs
+
+The `svgs` directory contains the equivalent svg files for each of the icons. Mostly these are pulled in from Figma using the [get-icons script](../../../scripts/get-icons), with a few notable [exceptions](../../../scripts/get-icons#exceptions).
