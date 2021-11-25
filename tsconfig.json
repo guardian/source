@@ -2,6 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@guardian/source-foundations": [
+        "packages/@guardian/source-foundations/src"
+      ],
+      "@guardian/source-react-components": [
+        "packages/@guardian/source-react-components/src"
+      ],
       "@guardian/src-foundations": ["packages/@guardian/src-foundations/src"],
       "@guardian/src-foundations/mq": [
         "packages/@guardian/src-foundations/src/mq"

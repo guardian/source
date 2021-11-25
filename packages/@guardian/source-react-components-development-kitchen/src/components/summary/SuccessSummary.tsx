@@ -1,6 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { success as successColors } from '@guardian/src-foundations';
-import { SvgTickRound } from '@guardian/src-icons';
+import { success as successColors } from '@guardian/source-foundations';
+import { SvgTickRound } from '@guardian/source-react-components';
 import {
 	contextStyles,
 	iconStyles,

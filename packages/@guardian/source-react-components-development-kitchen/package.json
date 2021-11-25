@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components-development-kitchen",
-  "version": "0.0.23",
+  "version": "1.0.0-rc.1",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "dist/index.cjs.js",
@@ -12,10 +12,6 @@
   "scripts": {
     "build": "rollup -c",
     "clean": "rm -rf dist"
-  },
-  "dependencies": {
-    "@guardian/src-button": "^3.12.0",
-    "@guardian/src-helpers": "^3.12.0"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
@@ -31,8 +27,8 @@
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
     "@guardian/libs": "^3.2.1",
-    "@guardian/src-foundations": "^3.9.1",
-    "@guardian/src-icons": "^3.9.1",
+    "@guardian/source-foundations": "^4.0.0-rc.3",
+    "@guardian/source-react-components": "^4.0.0-rc.2",
     "react": "^17.0.1"
   },
   "publishConfig": {
