@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "js-beautify": "^1.14.0",
     "node-html-parser": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/js-beautify": "^1.13.0"
   }
 }
