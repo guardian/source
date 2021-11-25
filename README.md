@@ -10,15 +10,15 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 
 ## Docs 📖
 
--   [Getting started](docs/01-getting-started.md)
--   [Foundations](docs/02-foundations.md)
--   [Components](docs/03-components.md)
--   [Using Emotion](docs/04-using-emotion.md)
--   [Theming](docs/05-theming.md)
--   [Overriding styles](docs/06-overriding-styles.md)
--   [Contributing](docs/07-contributing.md)
--   [FAQs](docs/08-faqs.md)
--   [Stories](docs/09-stories.md)
+-   [Getting started](https://guardian.github.io/source/?path=/docs/docs-01-getting-started--page)
+-   [Foundations](https://guardian.github.io/source/?path=/docs/docs-02-foundations--page)
+-   [Components](https://guardian.github.io/source/?path=/docs/docs-03-components--page)
+-   [Using Emotion](https://guardian.github.io/source/?path=/docs/docs-04-using-emotion--page)
+-   [Theming](https://guardian.github.io/source/?path=/docs/docs-05-theming--page)
+-   [Overriding styles](https://guardian.github.io/source/?path=/docs/docs-06-overriding-styles--page)
+-   [Contributing](https://guardian.github.io/source/?path=/docs/docs-07-contributing--page)
+-   [FAQs](https://guardian.github.io/source/?path=/docs/docs-08-faqs--page)
+-   [Stories](https://guardian.github.io/source/?path=/docs/docs-09-stories--page)
 
 ## Using the Design System 🎨
 
