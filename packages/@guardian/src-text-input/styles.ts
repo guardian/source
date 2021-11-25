@@ -10,12 +10,20 @@ export const errorInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
 	margin-top: 0;
+	/* When input is active and in an error state, we want the border to remain the same. */
+	&:active {
+		border: 4px solid ${textInput.borderError};
+	}
 `;
 
 export const successInput = ({ textInput } = textInputDefault) => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
 	margin-top: 0;
+	/* When input is active and in a success state, we want the border to remain the same. */
+	&:active {
+		border: 4px solid ${textInput.borderSuccess};
+	}
 `;
 
 export const textInput = (theme = textInputDefault) => {
