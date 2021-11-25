@@ -7,7 +7,8 @@
   "author": "",
   "main": "playground.ts",
   "scripts": {
-    "lint": "eslint playground.ts --ext .ts,.tsx,.js -c .playground.eslintrc.json --no-eslintrc",
+    "lint:foundations": "eslint foundations-playground.ts --ext .ts,.tsx,.js -c .foundations-playground.eslintrc.json --no-eslintrc",
+    "lint:react-components": "eslint react-components-playground.ts --ext .ts,.tsx,.js -c .react-components-playground.eslintrc.json --no-eslintrc",
     "test": "ts-node ./src/index.ts"
   },
   "dependencies": {

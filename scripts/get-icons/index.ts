@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { formatSVG } from './format';
 import {
 	FIGMA_OPTIONS,
 	ICONS_TO_IGNORE,
@@ -52,7 +53,7 @@ const getAndWriteSVGForNode = (node: NodeWithUrl) => {
 		.then((res) => {
 			return writeFileSync(
 				`${OUTPUT_DIR}/${node.name}.svg`,
-				stripAttributes(res.data),
+				formatSVG(stripAttributes(res.data)),
 			);
 		})
 		.catch((err) => {

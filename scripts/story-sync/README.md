@@ -4,8 +4,8 @@ This script is used to compare and sync the v3 and v4 stories during migration. 
 
 You can run the scripts using:
 
-`yarn workspace story-sync compare`
+`yarn workspace story-sync compare` to check if v3 and v4 stories are in sync, and warn if not.
 
 and
 
-`yarn workspace story-sync sync`
+`yarn workspace story-sync sync` to sync the stories between v3 and v4.
