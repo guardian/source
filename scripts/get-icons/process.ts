@@ -1,9 +1,10 @@
 import { parse } from 'node-html-parser';
+import { ICONS_WITH_FILL_COLOURS } from './config';
 
 const svgAttributesToRemove = ['fill', 'width', 'height'];
 const childAttributesToRemove = ['fill'];
 
-export const stripAttributes = (svg: string): string => {
+export const stripAttributes = (name: string, svg: string): string => {
 	const root = parse(svg);
 
 	// Remove attributes from <svg>
@@ -12,10 +13,14 @@ export const stripAttributes = (svg: string): string => {
 		svgAttributesToRemove.forEach((attr) => svgTag.removeAttribute(attr));
 
 	// Remove attributes from <path>s
-	const childElements = root.querySelectorAll('svg > *');
-	childElements.forEach((child) => {
-		childAttributesToRemove.forEach((attr) => child.removeAttribute(attr));
-	});
+	if (!ICONS_WITH_FILL_COLOURS.includes(name)) {
+		const childElements = root.querySelectorAll('svg > *');
+		childElements.forEach((child) => {
+			childAttributesToRemove.forEach((attr) =>
+				child.removeAttribute(attr),
+			);
+		});
+	}
 
 	return selfClosePathTags(root.toString());
 };

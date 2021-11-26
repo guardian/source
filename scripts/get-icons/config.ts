@@ -10,7 +10,9 @@ export const FIGMA_OPTIONS = {
 	},
 };
 
-export const ICONS_TO_IGNORE = [
+// For some icons, generally those of brands, we retain the
+// fill colours
+export const ICONS_WITH_FILL_COLOURS = [
 	'apple-brand',
 	'facebook-brand',
 	'google-brand',
