@@ -1,13 +1,7 @@
 import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { formatSVG } from './format';
-import {
-	FIGMA_OPTIONS,
-	ICONS_TO_IGNORE,
-	ICON_FILE,
-	ICON_FRAMES,
-	OUTPUT_DIR,
-} from './config';
+import { FIGMA_OPTIONS, ICON_FILE, ICON_FRAMES, OUTPUT_DIR } from './config';
 import { stripAttributes } from './process';
 
 interface FigmaComponentsResponse {
@@ -53,7 +47,7 @@ const getAndWriteSVGForNode = (node: NodeWithUrl) => {
 		.then((res) => {
 			return writeFileSync(
 				`${OUTPUT_DIR}/${node.name}.svg`,
-				formatSVG(stripAttributes(res.data)),
+				formatSVG(stripAttributes(node.name, res.data)),
 			);
 		})
 		.catch((err) => {
@@ -76,9 +70,7 @@ axios
 				return (
 					// Only get icons that are in a certain frame
 					c.containing_frame &&
-					ICON_FRAMES.includes(c.containing_frame.name) &&
-					// Ignore some icons
-					!ICONS_TO_IGNORE.includes(c.name)
+					ICON_FRAMES.includes(c.containing_frame.name)
 				);
 			})
 			.map(({ node_id, name }) => {
