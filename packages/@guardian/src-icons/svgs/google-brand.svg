@@ -1,6 +1,5 @@
 <svg
 	viewBox="0 0 24 24"
-	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<path
@@ -10,7 +9,7 @@
 		fill="#D7282A"
 	/>
 	<mask
-		id="mask0_1356:2237"
+		id="mask0_1356_2237"
 		style="mask-type:alpha"
 		maskUnits="userSpaceOnUse"
 		x="3"
@@ -25,9 +24,7 @@
 			fill="white"
 		/>
 	</mask>
-	<g
-		mask="url(#mask0_1356:2237)"
-	>
+	<g mask="url(#mask0_1356_2237)">
 		<path
 			fill-rule="evenodd"
 			clip-rule="evenodd"
@@ -36,7 +33,7 @@
 		/>
 	</g>
 	<mask
-		id="mask1_1356:2237"
+		id="mask1_1356_2237"
 		style="mask-type:alpha"
 		maskUnits="userSpaceOnUse"
 		x="12"
@@ -51,9 +48,7 @@
 			fill="white"
 		/>
 	</mask>
-	<g
-		mask="url(#mask1_1356:2237)"
-	>
+	<g mask="url(#mask1_1356_2237)">
 		<path
 			fill-rule="evenodd"
 			clip-rule="evenodd"
