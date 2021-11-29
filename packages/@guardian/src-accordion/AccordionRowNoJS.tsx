@@ -29,16 +29,13 @@ export const AccordionRowNoJS = ({
 }: AccordionRowProps) => {
 	return (
 		<div
-			css={(theme) => [
-				accordionRow(theme.accordion && theme),
-				cssOverrides,
-			]}
+			css={(theme) => [accordionRow(theme.accordion), cssOverrides]}
 			{...props}
 		>
 			<label>
 				<input type="checkbox" css={noJsInput} role="button" />
 				<div
-					css={(theme) => noJsButton(theme.accordion && theme)}
+					css={(theme) => noJsButton(theme.accordion)}
 					data-target="label"
 				>
 					<strong css={labelText}>{label}</strong>

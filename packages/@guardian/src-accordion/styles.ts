@@ -6,11 +6,11 @@ import { until, from } from '@guardian/src-foundations/mq';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { accordionDefault } from '@guardian/src-foundations/themes';
 
-export const accordion = ({ accordion } = accordionDefault) => css`
+export const accordion = (accordion = accordionDefault.accordion) => css`
 	border-bottom: 1px solid ${accordion.borderPrimary};
 `;
 
-export const accordionRow = ({ accordion } = accordionDefault) => css`
+export const accordionRow = (accordion = accordionDefault.accordion) => css`
 	border-top: 1px solid ${accordion.borderPrimary};
 `;
 
@@ -23,7 +23,7 @@ const buttonStyles = css`
 	cursor: pointer;
 `;
 
-export const button = ({ accordion } = accordionDefault) => css`
+export const button = (accordion = accordionDefault.accordion) => css`
 	${buttonStyles};
 	color: ${accordion.textPrimary};
 
@@ -38,7 +38,7 @@ export const button = ({ accordion } = accordionDefault) => css`
 	}
 `;
 
-export const noJsButton = ({ accordion } = accordionDefault) => css`
+export const noJsButton = (accordion = accordionDefault.accordion) => css`
 	${buttonStyles};
 	color: ${accordion.textPrimary};
 `;

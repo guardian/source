@@ -63,18 +63,13 @@ export const AccordionRow = ({
 
 	if (isBrowser) {
 		return (
-			<div
-				css={(theme) => [
-					accordionRow(theme.accordion && theme),
-					cssOverrides,
-				]}
-			>
+			<div css={(theme) => [accordionRow(theme.accordion), cssOverrides]}>
 				<button
 					type="button"
 					aria-expanded={expanded}
 					onClick={handleClick}
 					css={(theme) => [
-						button(theme.accordion && theme),
+						button(theme.accordion),
 						expanded ? chevronIconUp : chevronIconDown,
 						!hideToggleLabel ? toggleIconWithLabel : '',
 					]}
