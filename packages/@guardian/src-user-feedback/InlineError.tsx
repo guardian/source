@@ -19,10 +19,7 @@ export const InlineError = ({
 	...props
 }: UserFeedbackProps) => (
 	<span
-		css={(theme) => [
-			inlineError(theme.userFeedback && theme),
-			cssOverrides,
-		]}
+		css={(theme) => [inlineError(theme.userFeedback), cssOverrides]}
 		{...props}
 	>
 		<SvgAlertTriangle />

@@ -120,12 +120,10 @@ export const TextInput = ({
 			<input
 				css={(theme) => [
 					width ? widths[width] : widthFluid,
-					textInput(theme.textInput && theme),
+					textInput(theme.textInput),
 					supporting ? supportingTextMargin : labelMargin,
-					error ? errorInput(theme.textInput && theme) : '',
-					!error && success
-						? successInput(theme.textInput && theme)
-						: '',
+					error ? errorInput(theme.textInput) : '',
+					!error && success ? successInput(theme.textInput) : '',
 					cssOverrides,
 				]}
 				type="text"

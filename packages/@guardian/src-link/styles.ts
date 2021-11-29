@@ -112,7 +112,7 @@ export const linkStyles = ({
 	return (theme: any) => [
 		link,
 		isButton ? buttonLink : '',
-		priorities[priority](theme.link && theme),
+		priorities[priority](theme.link),
 		isSubdued ? subdued : '',
 		iconSvg ? icon : '',
 		iconSvg ? iconSides[iconSide] : '',

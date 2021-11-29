@@ -19,10 +19,7 @@ export const InlineSuccess = ({
 	...props
 }: UserFeedbackProps) => (
 	<span
-		css={(theme) => [
-			inlineSuccess(theme.userFeedback && theme),
-			cssOverrides,
-		]}
+		css={(theme) => [inlineSuccess(theme.userFeedback), cssOverrides]}
 		{...props}
 	>
 		<SvgTickRound />

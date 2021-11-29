@@ -33,7 +33,7 @@ export const Footer = ({
 }: FooterProps) => {
 	return (
 		<footer
-			css={(theme) => [footer(theme.footer && theme), cssOverrides]}
+			css={(theme) => [footer(theme.footer), cssOverrides]}
 			{...props}
 		>
 			<div
@@ -44,9 +44,7 @@ export const Footer = ({
 						: linksWrapperSpace,
 				]}
 			>
-				<div css={(theme) => links(theme.footer && theme)}>
-					{children}
-				</div>
+				<div css={(theme) => links(theme.footer)}>{children}</div>
 				{showBackToTop ? BackToTop : ''}
 			</div>
 			<small

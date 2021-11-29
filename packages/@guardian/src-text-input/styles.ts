@@ -6,7 +6,7 @@ import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { textInputDefault } from '@guardian/src-foundations/themes';
 import { resets } from '@guardian/src-foundations/utils';
 
-export const errorInput = ({ textInput } = textInputDefault) => css`
+export const errorInput = (textInput = textInputDefault.textInput) => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
 	margin-top: 0;
@@ -16,7 +16,7 @@ export const errorInput = ({ textInput } = textInputDefault) => css`
 	}
 `;
 
-export const successInput = ({ textInput } = textInputDefault) => css`
+export const successInput = (textInput = textInputDefault.textInput) => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
 	margin-top: 0;
@@ -26,9 +26,7 @@ export const successInput = ({ textInput } = textInputDefault) => css`
 	}
 `;
 
-export const textInput = (theme = textInputDefault) => {
-	const { textInput } = theme;
-
+export const textInput = (textInput = textInputDefault.textInput) => {
 	return css`
 		${resets.input};
 		box-sizing: border-box;
@@ -53,7 +51,7 @@ export const textInput = (theme = textInputDefault) => {
 			but stop short of applying it to empty required fields.
 			*/
 			&[value]:not([value='']) {
-				${errorInput(theme)};
+				${errorInput(textInput)};
 			}
 		}
 	`;

@@ -6,7 +6,7 @@ import { height, width } from '@guardian/src-foundations/size';
 import { textSans } from '@guardian/src-foundations/typography';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
 
-export const footer = ({ footer } = footerBrand) => css`
+export const footer = (footer = footerBrand.footer) => css`
 	color: ${footer.text};
 	background-color: ${footer.background};
 	padding: 0 ${space[3]}px ${space[3]}px ${space[3]}px;
@@ -37,7 +37,7 @@ export const linksWrapperSpaceWithBackToTop = css`
 	}
 `;
 
-export const links = ({ footer } = footerBrand) => css`
+export const links = (footer = footerBrand.footer) => css`
 	border-style: solid;
 	border-color: ${footer.border};
 	border-width: 0 0 1px 0;
@@ -63,7 +63,7 @@ export const copyrightExtraPadding = css`
 	}
 `;
 
-export const backToTop = ({ footer } = footerBrand) => css`
+export const backToTop = (footer = footerBrand.footer) => css`
 	display: flex;
 	align-items: center;
 	height: ${height.ctaMedium}px;
@@ -83,7 +83,7 @@ export const backToTop = ({ footer } = footerBrand) => css`
 	}
 `;
 
-export const backToTopIcon = ({ footer } = footerBrand) => css`
+export const backToTopIcon = (footer = footerBrand.footer) => css`
 	height: ${height.ctaMedium}px;
 	width: ${width.ctaMedium}px;
 	display: flex;

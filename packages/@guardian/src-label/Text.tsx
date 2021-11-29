@@ -10,15 +10,13 @@ const visuallyHidden = css`
 export const Text = ({ text, optional, hideLabel }: LabelProps) => (
 	<div
 		css={(theme) => [
-			labelText(theme.label && theme),
+			labelText(theme.label),
 			hideLabel ? visuallyHidden : '',
 		]}
 	>
 		{text}{' '}
 		{optional ? (
-			<span css={(theme) => optionalText(theme.label && theme)}>
-				Optional
-			</span>
+			<span css={(theme) => optionalText(theme.label)}>Optional</span>
 		) : (
 			''
 		)}

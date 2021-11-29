@@ -17,7 +17,7 @@ export const SupportingText = ({
 	return (
 		<p
 			css={(theme) => [
-				supportingText(theme.label && theme),
+				supportingText(theme.label),
 				hideLabel ? visuallyHidden : '',
 			]}
 		>
