@@ -26,6 +26,7 @@ module.exports = ({ config, mode }) => {
 				],
 			],
 			plugins: [
+				['@babel/plugin-proposal-decorators', { legacy: true }],
 				'@babel/plugin-proposal-class-properties',
 				'@emotion/babel-plugin',
 			],
