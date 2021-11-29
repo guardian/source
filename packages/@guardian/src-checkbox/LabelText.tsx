@@ -11,7 +11,7 @@ export const LabelText = ({
 	return (
 		<div
 			css={(theme) => [
-				labelText(theme.checkbox && theme),
+				labelText(theme.checkbox),
 				hasSupportingText ? labelTextWithSupportingText : '',
 			]}
 		>

@@ -13,7 +13,7 @@ export const fieldset = css`
 	flex-direction: column;
 `;
 
-export const label = ({ checkbox } = checkboxDefault) => css`
+export const label = (checkbox = checkboxDefault.checkbox) => css`
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -32,7 +32,7 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `;
 
-export const checkbox = ({ checkbox } = checkboxDefault) => css`
+export const checkbox = (checkbox = checkboxDefault.checkbox) => css`
 	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
@@ -79,7 +79,7 @@ export const checkbox = ({ checkbox } = checkboxDefault) => css`
 	}
 `;
 
-export const labelText = ({ checkbox } = checkboxDefault) => css`
+export const labelText = (checkbox = checkboxDefault.checkbox) => css`
 	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabel};
 	width: 100%;
@@ -89,12 +89,12 @@ export const labelTextWithSupportingText = css`
 	${textSans.medium({ lineHeight: 'regular' })};
 `;
 
-export const supportingText = ({ checkbox } = checkboxDefault) => css`
+export const supportingText = (checkbox = checkboxDefault.checkbox) => css`
 	${textSans.small({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabelSupporting};
 `;
 
-export const tick = ({ checkbox } = checkboxDefault) => css`
+export const tick = (checkbox = checkboxDefault.checkbox) => css`
 	@supports (
 		(appearance: none) or (-webkit-appearance: none) or
 			(-moz-appearance: none)
@@ -159,6 +159,6 @@ export const tickWithSupportingText = css`
 	}
 `;
 
-export const errorCheckbox = ({ checkbox } = checkboxDefault) => css`
+export const errorCheckbox = (checkbox = checkboxDefault.checkbox) => css`
 	border: 4px solid ${checkbox.borderError};
 `;
