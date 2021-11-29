@@ -1,9 +1,7 @@
 import { ThemeProvider } from '@emotion/react';
 
 export const ThemeProviderDecorator = (storyFn, context) => {
-	const theme = {
-		// accordion: undefined,
-	};
+	const theme = context.parameters.theme;
 	return theme ? (
 		<ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
 	) : (
