@@ -110,12 +110,6 @@ const getSpecifierName = (i: ImportSpecifier | ExportSpecifier): string => {
 	return i.type === 'ImportSpecifier' ? i.imported.name : i.exported.name;
 };
 
-const getSpecifierRange = (
-	i: ImportSpecifier | ExportSpecifier,
-): [number, number] | undefined => {
-	return i.type === 'ImportSpecifier' ? i.imported.range : i.exported.range;
-};
-
 const getRenameImportFixers = (
 	node: Node,
 	removedExports: ImportSpecifier[] | ExportSpecifier[],
@@ -125,49 +119,6 @@ const getRenameImportFixers = (
 	const fixers: Rule.Fix[] = [];
 	if (!node.source?.raw || node.type === 'ExportAllDeclaration')
 		return fixers;
-
-	// Some of the typography obj exports have changed name
-	if (node.source.raw === "'@guardian/src-foundations/typography/obj'") {
-		for (const i of node.specifiers) {
-			if (
-				i.type === 'ImportNamespaceSpecifier' ||
-				i.type === 'ImportDefaultSpecifier'
-			)
-				continue;
-
-			const name = getSpecifierName(i);
-			const range = getSpecifierRange(i);
-			if (typographyObjChanges.includes(name)) {
-				fixers.push(
-					fixer.replaceTextRange(
-						range ?? [0, 0],
-						`${name}ObjectStyles`,
-					),
-				);
-			}
-		}
-	}
-
-	// Some of the theme exports have changed name
-
-	for (const i of node.specifiers) {
-		if (
-			i.type === 'ImportNamespaceSpecifier' ||
-			i.type === 'ImportDefaultSpecifier'
-		)
-			continue;
-
-		const name = getSpecifierName(i);
-		const range = getSpecifierRange(i);
-		if (name in newThemeNames) {
-			fixers.push(
-				fixer.replaceTextRange(
-					range ?? [0, 0],
-					`${newThemeNames[name]}`,
-				),
-			);
-		}
-	}
 
 	// If anything has been removed then remove it from the fixed import
 	// Also add a new line which imports the removed exports from the original source
@@ -211,8 +162,53 @@ const getMessage = (
 		importOrExport,
 	)} from ${newPackage} instead.`;
 
-	if (!removedExports.length || node.type === 'ExportAllDeclaration') {
+	if (node.type === 'ExportAllDeclaration') {
 		return newPackageMessage;
+	}
+
+	const renamedExports: Array<[string, string]> = [];
+
+	// Some of the typography obj exports have changed name
+	if (node.source?.raw === "'@guardian/src-foundations/typography/obj'") {
+		for (const i of node.specifiers) {
+			if (
+				i.type === 'ImportNamespaceSpecifier' ||
+				i.type === 'ImportDefaultSpecifier'
+			)
+				continue;
+
+			const name = getSpecifierName(i);
+			if (typographyObjChanges.includes(name)) {
+				renamedExports.push([name, `${name}ObjectStyles`]);
+			}
+		}
+	}
+
+	// Some of the theme exports have changed name
+	for (const i of node.specifiers) {
+		if (
+			i.type === 'ImportNamespaceSpecifier' ||
+			i.type === 'ImportDefaultSpecifier'
+		)
+			continue;
+
+		const name = getSpecifierName(i);
+		if (name in newThemeNames) {
+			renamedExports.push([name, `${newThemeNames[name]}`]);
+		}
+	}
+
+	let renamedExportsMessage = '';
+	if (renamedExports.length) {
+		renamedExportsMessage = `The following export(s) have been renamed [from -> to]: ${renamedExports
+			.map(([oldName, newName]) => `${oldName} -> ${newName}`)
+			.join(', ')}`;
+	}
+
+	if (!removedExports.length) {
+		return renamedExportsMessage
+			? `${newPackageMessage}\n${renamedExportsMessage}`
+			: newPackageMessage;
 	}
 
 	const totalImports = node.specifiers.length;
@@ -233,7 +229,9 @@ const getMessage = (
 	if (totalImports === removedExports.length) {
 		return removedExportsMessage;
 	} else {
-		return `${newPackageMessage}\n${removedExportsMessage}`;
+		return [newPackageMessage, removedExportsMessage, renamedExportsMessage]
+			.filter((s) => !!s)
+			.join('\n');
 	}
 };
 
