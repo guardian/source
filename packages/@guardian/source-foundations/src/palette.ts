@@ -96,7 +96,7 @@ const colors = {
 		'#E4E5E8', //specialReport-700
 		'#EFF1F2', //specialReport-800
 	],
-};
+} as const;
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
@@ -310,7 +310,7 @@ export const background = {
 	ctaTertiaryHover: '#E5E5E5',
 	input: neutral[100],
 	inputChecked: brand[500],
-};
+} as const;
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
@@ -326,7 +326,7 @@ export const brandBackground = {
 	ctaSecondary: brand[600],
 	ctaSecondaryHover: '#234B8A',
 	ctaTertiaryHover: brand[300],
-};
+} as const;
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
@@ -341,7 +341,7 @@ export const brandAltBackground = {
 	ctaSecondary: brandAlt[200],
 	ctaSecondaryHover: '#F2AE00',
 	ctaTertiaryHover: '#FFD213',
-};
+} as const;
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •

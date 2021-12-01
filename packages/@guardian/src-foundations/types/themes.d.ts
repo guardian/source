@@ -1,91 +1,33 @@
 import '@emotion/react';
 
+import {
+	accordionDefault,
+	buttonDefault,
+	checkboxDefault,
+	choiceCardDefault,
+	labelDefault,
+	linkDefault,
+	footerBrand,
+	radioDefault,
+	selectDefault,
+	textInputDefault,
+	userFeedbackDefault,
+} from '@guardian/src-foundations/themes';
+
 declare module '@emotion/react' {
 	export interface Theme {
-		accordion: {
-			textPrimary: string;
-			borderPrimary: string;
-		};
-		button: {};
-		checkbox: {
-			border: string;
-			borderHover: string;
-			borderChecked: string;
-			borderError: string;
-			backgroundChecked: string;
-			textLabel: string;
-			textLabelSupporting: string;
-			textIndeterminate: string;
-		};
-		choiceCard: {
-			textLabel: string;
-			textLabelSupporting: string;
-			textGroupLabel: string;
-			textGroupLabelSupporting: string;
-			border: string;
-			textChecked: string;
-			backgroundChecked: string;
-			backgroundTick: string;
-			borderChecked: string;
-			textHover: string;
-			borderHover: string;
-			textError: string;
-			borderError: string;
-		};
-		footer: {
-			border: string;
-			background: string;
-			text: string;
-			anchor: string;
-			anchorHover: string;
-		};
-		label: {
-			textLabel: string;
-			textOptional: string;
-			textSupporting: string;
-			textError: string;
-			textSuccess: string;
-		};
+		accordion: typeof accordionDefault.accordion;
+		button: typeof buttonDefault.button;
+		checkbox: typeof checkboxDefault.checkbox;
+		choiceCard: typeof choiceCardDefault.choiceCard;
+		footer: typeof footerBrand.footer;
+		label: typeof labelDefault.label;
 		layout: {};
-		link: {};
-		radio: {
-			borderHover: string;
-			border: string;
-			backgroundChecked: string;
-			textLabel: string;
-			textLabelSupporting: string;
-			borderError: string;
-		};
-		select: {
-			textUserInput: string;
-			textLabel: string;
-			textLabelOptional: string;
-			textLabelSupporting: string;
-			textError: string;
-			textSuccess: string;
-			backgroundInput: string;
-			border: string;
-			borderActive: string;
-			borderError: string;
-			borderSuccess: string;
-		};
+		link: typeof linkDefault.link;
+		radio: typeof radioDefault.radio;
+		select: typeof selectDefault.select;
 		textArea: {};
-		textInput: {
-			textUserInput: string;
-			textLabel: string;
-			textLabelOptional: string;
-			textLabelSupporting: string;
-			textError: string;
-			textSuccess: string;
-			backgroundInput: string;
-			border: string;
-			borderActive: string;
-			borderError: string;
-			borderSuccess: string;
-		};
-		userFeedback: {
-			textSuccess: string;
-			textError: string;
-		};
+		textInput: typeof textInputDefault.textInput;
+		userFeedback: typeof userFeedbackDefault.userFeedback;
 	}
 }
