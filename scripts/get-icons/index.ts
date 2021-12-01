@@ -1,8 +1,16 @@
 import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { formatSVG } from './format';
-import { FIGMA_OPTIONS, ICON_FILE, ICON_FRAMES, OUTPUT_DIR } from './config';
+import {
+	FIGMA_OPTIONS,
+	ICON_FILE,
+	ICON_FRAMES,
+	REACT_COMPONENT_OUTPUT_DIR,
+	SVG_OUTPUT_DIR,
+} from './config';
 import { stripAttributes } from './process';
+import { generateReactComponent } from './components';
+import { kebabToTitle } from './case';
 
 interface FigmaComponentsResponse {
 	meta: {
@@ -41,13 +49,18 @@ const getUrlsForNodes = (nodes: Node[]): Promise<NodeWithUrl[]> => {
 		});
 };
 
-const getAndWriteSVGForNode = (node: NodeWithUrl) => {
+const getContentsAndWriteOutputForNode = (node: NodeWithUrl) => {
 	return axios
 		.get(node.url)
 		.then((res) => {
-			return writeFileSync(
-				`${OUTPUT_DIR}/${node.name}.svg`,
-				formatSVG(stripAttributes(node.name, res.data)),
+			const formattedSvg = formatSVG(
+				stripAttributes(node.name, res.data),
+			);
+			const titleCaseName = kebabToTitle(node.name);
+			writeFileSync(`${SVG_OUTPUT_DIR}/${node.name}.svg`, formattedSvg);
+			writeFileSync(
+				`${REACT_COMPONENT_OUTPUT_DIR}/icons/${titleCaseName}Icon.tsx`,
+				generateReactComponent(titleCaseName, formattedSvg.trimEnd()),
 			);
 		})
 		.catch((err) => {
@@ -55,8 +68,11 @@ const getAndWriteSVGForNode = (node: NodeWithUrl) => {
 		});
 };
 
-if (!existsSync(OUTPUT_DIR)) {
-	mkdirSync(OUTPUT_DIR);
+if (!existsSync(SVG_OUTPUT_DIR)) {
+	mkdirSync(SVG_OUTPUT_DIR);
+}
+if (!existsSync(REACT_COMPONENT_OUTPUT_DIR)) {
+	mkdirSync(REACT_COMPONENT_OUTPUT_DIR);
 }
 
 axios
@@ -84,7 +100,7 @@ axios
 	.then((nodes) => {
 		return Promise.all(
 			nodes.map((node) => {
-				return getAndWriteSVGForNode(node);
+				return getContentsAndWriteOutputForNode(node);
 			}),
 		);
 	})
