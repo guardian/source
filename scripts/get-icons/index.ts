@@ -9,7 +9,7 @@ import {
 	SVG_OUTPUT_DIR,
 } from './config';
 import { stripAttributes } from './process';
-import { generateReactComponent } from './components';
+import { generateReactComponent, writeComponentsIndex } from './components';
 import { kebabToTitle } from './case';
 
 interface FigmaComponentsResponse {
@@ -75,6 +75,8 @@ if (!existsSync(REACT_COMPONENT_OUTPUT_DIR)) {
 	mkdirSync(REACT_COMPONENT_OUTPUT_DIR);
 }
 
+let nodeNames: string[] = [];
+
 axios
 	.get<FigmaComponentsResponse>(
 		`https://api.figma.com/v1/files/${ICON_FILE}/components`,
@@ -98,11 +100,15 @@ axios
 		return getUrlsForNodes(svgNodes);
 	})
 	.then((nodes) => {
+		nodeNames = nodes.map((n) => n.name);
 		return Promise.all(
 			nodes.map((node) => {
 				return getContentsAndWriteOutputForNode(node);
 			}),
 		);
+	})
+	.then(() => {
+		return writeComponentsIndex(nodeNames);
 	})
 	.then(() => {
 		console.log('Icons imported successfully');

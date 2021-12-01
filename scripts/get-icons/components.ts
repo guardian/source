@@ -1,3 +1,7 @@
+import { writeFileSync } from 'fs';
+import { kebabToTitle } from './case';
+import { REACT_COMPONENT_OUTPUT_DIR } from './config';
+
 export const generateReactComponent = (name: string, svg: string): string => {
 	return `import { iconSize } from '@guardian/src-foundations/size';
 import type { IconProps } from '../types';
@@ -41,3 +45,16 @@ const getStyleReplacement = (style: string): string => {
 };
 
 export const _ = { replaceStyleAttribute, getStyleReplacement };
+
+export const writeComponentsIndex = (nodeNames: string[]): void => {
+	const typeExport = `export type { IconProps, IconSize } from '../types';`;
+	const componentExports = nodeNames.sort().map((name) => {
+		const iconName = `${kebabToTitle(name)}Icon`;
+		return `export { ${iconName} } from './icons/${iconName}';`;
+	});
+
+	writeFileSync(
+		`${REACT_COMPONENT_OUTPUT_DIR}/index.ts`,
+		`${typeExport}\n\n${componentExports.join('\n')}\n`,
+	);
+};
