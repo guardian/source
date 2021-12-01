@@ -3,6 +3,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { formatSVG } from './format';
 import { FIGMA_OPTIONS, ICON_FILE, ICON_FRAMES, OUTPUT_DIR } from './config';
 import { stripAttributes } from './process';
+import { Log } from './log';
 
 interface FigmaComponentsResponse {
 	meta: {
@@ -59,6 +60,10 @@ if (!existsSync(OUTPUT_DIR)) {
 	mkdirSync(OUTPUT_DIR);
 }
 
+if (!process.env.FIGMA_TOKEN) {
+	Log.error('\x1b[31mFIGMA_TOKEN env var not set\x1b[0m');
+	process.exit(1);
+}
 axios
 	.get<FigmaComponentsResponse>(
 		`https://api.figma.com/v1/files/${ICON_FILE}/components`,
