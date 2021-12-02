@@ -61,7 +61,7 @@ if (!existsSync(OUTPUT_DIR)) {
 }
 
 if (!process.env.FIGMA_TOKEN) {
-	Log.error('\x1b[31mFIGMA_TOKEN env var not set\x1b[0m');
+	Log.error('FIGMA_TOKEN env var not set');
 	process.exit(1);
 }
 axios
