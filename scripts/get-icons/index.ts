@@ -11,6 +11,7 @@ import {
 import { stripAttributes } from './process';
 import { generateReactComponent, writeComponentsIndex } from './components';
 import { kebabToTitle } from './case';
+import { Log } from './log';
 
 interface FigmaComponentsResponse {
 	meta: {
@@ -73,6 +74,11 @@ if (!existsSync(SVG_OUTPUT_DIR)) {
 }
 if (!existsSync(REACT_COMPONENT_OUTPUT_DIR)) {
 	mkdirSync(REACT_COMPONENT_OUTPUT_DIR);
+}
+
+if (!process.env.FIGMA_TOKEN) {
+	Log.error('FIGMA_TOKEN env var not set');
+	process.exit(1);
 }
 
 let nodeNames: string[] = [];
