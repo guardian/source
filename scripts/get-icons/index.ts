@@ -1,8 +1,16 @@
 import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { formatSVG } from './format';
-import { FIGMA_OPTIONS, ICON_FILE, ICON_FRAMES, OUTPUT_DIR } from './config';
+import {
+	FIGMA_OPTIONS,
+	ICON_FILE,
+	ICON_FRAMES,
+	REACT_COMPONENT_OUTPUT_DIR,
+	SVG_OUTPUT_DIR,
+} from './config';
 import { stripAttributes } from './process';
+import { generateReactComponent, writeComponentsIndex } from './components';
+import { kebabToTitle } from './case';
 import { Log } from './log';
 
 interface FigmaComponentsResponse {
@@ -42,13 +50,18 @@ const getUrlsForNodes = (nodes: Node[]): Promise<NodeWithUrl[]> => {
 		});
 };
 
-const getAndWriteSVGForNode = (node: NodeWithUrl) => {
+const getContentsAndWriteOutputForNode = (node: NodeWithUrl) => {
 	return axios
 		.get(node.url)
 		.then((res) => {
-			return writeFileSync(
-				`${OUTPUT_DIR}/${node.name}.svg`,
-				formatSVG(stripAttributes(node.name, res.data)),
+			const formattedSvg = formatSVG(
+				stripAttributes(node.name, res.data),
+			);
+			const titleCaseName = kebabToTitle(node.name);
+			writeFileSync(`${SVG_OUTPUT_DIR}/${node.name}.svg`, formattedSvg);
+			writeFileSync(
+				`${REACT_COMPONENT_OUTPUT_DIR}/icons/${titleCaseName}Icon.tsx`,
+				generateReactComponent(titleCaseName, formattedSvg.trimEnd()),
 			);
 		})
 		.catch((err) => {
@@ -56,14 +69,20 @@ const getAndWriteSVGForNode = (node: NodeWithUrl) => {
 		});
 };
 
-if (!existsSync(OUTPUT_DIR)) {
-	mkdirSync(OUTPUT_DIR);
+if (!existsSync(SVG_OUTPUT_DIR)) {
+	mkdirSync(SVG_OUTPUT_DIR);
+}
+if (!existsSync(REACT_COMPONENT_OUTPUT_DIR)) {
+	mkdirSync(REACT_COMPONENT_OUTPUT_DIR);
 }
 
 if (!process.env.FIGMA_TOKEN) {
 	Log.error('FIGMA_TOKEN env var not set');
 	process.exit(1);
 }
+
+let nodeNames: string[] = [];
+
 axios
 	.get<FigmaComponentsResponse>(
 		`https://api.figma.com/v1/files/${ICON_FILE}/components`,
@@ -87,11 +106,15 @@ axios
 		return getUrlsForNodes(svgNodes);
 	})
 	.then((nodes) => {
+		nodeNames = nodes.map((n) => n.name);
 		return Promise.all(
 			nodes.map((node) => {
-				return getAndWriteSVGForNode(node);
+				return getContentsAndWriteOutputForNode(node);
 			}),
 		);
+	})
+	.then(() => {
+		return writeComponentsIndex(nodeNames);
 	})
 	.then(() => {
 		console.log('Icons imported successfully');
