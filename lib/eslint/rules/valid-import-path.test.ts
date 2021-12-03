@@ -107,10 +107,10 @@ import {  size as s } from '@guardian/source-foundations';`,
 		errors: [
 			{
 				message:
-					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.",
+					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.\nThe following export(s) have been renamed [from -> to]: headline -> headlineObjectStyles",
 			},
 		],
-		output: `import { headlineObjectStyles } from '@guardian/source-foundations';`,
+		output: `import { headline } from '@guardian/source-foundations';`,
 	},
 	{
 		// Exports that have changed names, alongside some that haven't
@@ -118,10 +118,10 @@ import {  size as s } from '@guardian/source-foundations';`,
 		errors: [
 			{
 				message:
-					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.",
+					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.\nThe following export(s) have been renamed [from -> to]: headline -> headlineObjectStyles",
 			},
 		],
-		output: `import { headlineObjectStyles, bodySizes } from '@guardian/source-foundations';`,
+		output: `import { headline, bodySizes } from '@guardian/source-foundations';`,
 	},
 	{
 		// Exports that have changed names using an alias (foundations typography)
@@ -129,10 +129,10 @@ import {  size as s } from '@guardian/source-foundations';`,
 		errors: [
 			{
 				message:
-					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.",
+					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.\nThe following export(s) have been renamed [from -> to]: headline -> headlineObjectStyles",
 			},
 		],
-		output: `import { headlineObjectStyles as hl } from '@guardian/source-foundations';`,
+		output: `import { headline as hl } from '@guardian/source-foundations';`,
 	},
 	{
 		// Exports that have changed names, alongside some that haven't, using an alias
@@ -140,21 +140,21 @@ import {  size as s } from '@guardian/source-foundations';`,
 		errors: [
 			{
 				message:
-					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.",
+					"@guardian/src-* packages are deprecated. Import from '@guardian/source-foundations' instead.\nThe following export(s) have been renamed [from -> to]: headline -> headlineObjectStyles",
 			},
 		],
-		output: `import { headlineObjectStyles as hl, bodySizes as bs } from '@guardian/source-foundations';`,
+		output: `import { headline as hl, bodySizes as bs } from '@guardian/source-foundations';`,
 	},
 	{
-		// Themes that now come from react-components
+		// Themes that now come from react-components and have changed names (from foundations)
 		code: `import { labelDefault } from '@guardian/src-foundations/themes';`,
 		errors: [
 			{
 				message:
-					"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+					"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been renamed [from -> to]: labelDefault -> labelThemeDefault",
 			},
 		],
-		output: `import { labelThemeDefault } from '@guardian/source-react-components';`,
+		output: `import { labelDefault } from '@guardian/source-react-components';`,
 	},
 	{
 		// Import default
@@ -184,7 +184,7 @@ import {  size as s } from '@guardian/source-foundations';`,
 		errors: [
 			{
 				message:
-					"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
+					"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been renamed [from -> to]: labelBrand -> labelThemeBrand",
 			},
 		],
 		output: `import themes, {labelBrand} from '@guardian/src-foundations/themes';`,
@@ -234,52 +234,52 @@ import {  size as s } from '@guardian/source-foundations';`,
 		code: `export { headline } from '@guardian/src-foundations/typography/obj';`,
 		errors: [
 			{
-				message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.`,
+				message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-foundations' instead.\nThe following export(s) have been renamed [from -> to]: headline -> headlineObjectStyles`,
 			},
 		],
-		output: `export { headlineObjectStyles } from '@guardian/source-foundations';`,
+		output: `export { headline } from '@guardian/source-foundations';`,
 	},
 	{
 		// Rename theme imports in imports
 		code: `import { choiceCardDefault } from '@guardian/src-foundations/themes';`,
 		errors: [
 			{
-				message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.`,
+				message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been renamed [from -> to]: choiceCardDefault -> choiceCardThemeDefault`,
 			},
 		],
-		output: `import { choiceCardThemeDefault } from '@guardian/source-react-components';`,
+		output: `import { choiceCardDefault } from '@guardian/source-react-components';`,
 	},
 	{
 		// Rename theme imports in exports
 		code: `export { choiceCardDefault } from '@guardian/src-foundations/themes';`,
 		errors: [
 			{
-				message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.`,
+				message: `@guardian/src-* packages are deprecated. Export from '@guardian/source-react-components' instead.\nThe following export(s) have been renamed [from -> to]: choiceCardDefault -> choiceCardThemeDefault`,
 			},
 		],
-		output: `export { choiceCardThemeDefault } from '@guardian/source-react-components';`,
+		output: `export { choiceCardDefault } from '@guardian/source-react-components';`,
 	},
 	{
 		// Rename and remove theme imports
 		code: `import { choiceCardDefault, brand } from '@guardian/src-foundations/themes';`,
 		errors: [
 			{
-				message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been removed: brand.`,
+				message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been removed: brand.\nThe following export(s) have been renamed [from -> to]: choiceCardDefault -> choiceCardThemeDefault`,
 			},
 		],
 		output: `import { brand } from '@guardian/src-foundations/themes';
-import { choiceCardThemeDefault, } from '@guardian/source-react-components';`,
+import { choiceCardDefault, } from '@guardian/source-react-components';`,
 	},
 	{
 		// Rename and remove theme imports regardless of order
 		code: `import { brand, choiceCardDefault } from '@guardian/src-foundations/themes';`,
 		errors: [
 			{
-				message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been removed: brand.`,
+				message: `@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been removed: brand.\nThe following export(s) have been renamed [from -> to]: choiceCardDefault -> choiceCardThemeDefault`,
 			},
 		],
 		output: `import { brand } from '@guardian/src-foundations/themes';
-import {  choiceCardThemeDefault } from '@guardian/source-react-components';`,
+import {  choiceCardDefault } from '@guardian/source-react-components';`,
 	},
 ];
 
@@ -403,6 +403,17 @@ ruleTester.run('valid-import-path', validImportPath, {
 				},
 			],
 			output: `import { palette } from '@guardian/src-foundations';`,
+		},
+		{
+			// Themes that now come from react-components and have changed names (from component)
+			code: `import { buttonReaderRevenue } from '@guardian/src-button';`,
+			errors: [
+				{
+					message:
+						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.\nThe following export(s) have been renamed [from -> to]: buttonReaderRevenue -> buttonThemeReaderRevenue",
+				},
+			],
+			output: `import { buttonReaderRevenue } from '@guardian/source-react-components';`,
 		},
 	],
 });
