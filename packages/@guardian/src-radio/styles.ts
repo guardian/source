@@ -6,7 +6,7 @@ import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { radioDefault } from '@guardian/src-foundations/themes';
 import { appearance, resets } from '@guardian/src-foundations/utils';
 
-export const fieldset = ({ radio } = radioDefault) => css`
+export const fieldset = (radio = radioDefault.radio) => css`
 	${resets.fieldset};
 	display: flex;
 	justify-content: flex-start;
@@ -16,7 +16,7 @@ export const fieldset = ({ radio } = radioDefault) => css`
 	}
 `;
 
-export const label = ({ radio } = radioDefault) => css`
+export const label = (radio = radioDefault.radio) => css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -34,7 +34,7 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `;
 
-export const radio = ({ radio } = radioDefault) => css`
+export const radio = (radio = radioDefault.radio) => css`
 	flex: 0 0 auto;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -91,7 +91,7 @@ export const radio = ({ radio } = radioDefault) => css`
 	}
 `;
 
-export const labelText = ({ radio } = radioDefault) => css`
+export const labelText = (radio = radioDefault.radio) => css`
 	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${radio.textLabel};
 	width: 100%;
@@ -101,7 +101,7 @@ export const labelTextWithSupportingText = css`
 	${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
 `;
 
-export const supportingText = ({ radio } = radioDefault) => css`
+export const supportingText = (radio = radioDefault.radio) => css`
 	${textSans.small({ lineHeight: 'regular' })};
 	color: ${radio.textLabelSupporting};
 `;

@@ -78,7 +78,7 @@ export const RadioGroup = ({
 			aria-invalid={!!error}
 			id={groupId}
 			css={(theme) => [
-				fieldset(theme.radio && theme),
+				fieldset(theme.radio),
 				orientationStyles[orientation],
 				cssOverrides,
 			]}

@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { css, SerializedStyles, Theme } from '@emotion/react';
 import { space, transitions } from '@guardian/src-foundations';
 import { height, width } from '@guardian/src-foundations/size';
 import { buttonDefault, ButtonTheme } from '@guardian/src-foundations/themes';
@@ -29,7 +29,7 @@ const button = css`
 	}
 `;
 
-const primary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
+const primary = (button: ButtonTheme = buttonDefault.button) => css`
 	background-color: ${button.backgroundPrimary};
 	color: ${button.textPrimary};
 
@@ -38,7 +38,7 @@ const primary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
 	}
 `;
 
-const secondary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
+const secondary = (button: ButtonTheme = buttonDefault.button) => css`
 	background-color: ${button.backgroundSecondary};
 	color: ${button.textSecondary};
 
@@ -47,7 +47,7 @@ const secondary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
 	}
 `;
 
-const tertiary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
+const tertiary = (button: ButtonTheme = buttonDefault.button) => css`
 	color: ${button.textTertiary};
 	border: 1px solid ${button.borderTertiary};
 
@@ -56,7 +56,7 @@ const tertiary = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
 	}
 `;
 
-const subdued = ({ button }: { button: ButtonTheme } = buttonDefault) => css`
+const subdued = (button: ButtonTheme = buttonDefault.button) => css`
 	padding: 0;
 	background-color: transparent;
 	color: ${button.textSubdued};
@@ -201,11 +201,7 @@ const iconNudgeAnimation = css`
 `;
 
 const priorities: {
-	[key in ButtonPriority]: ({
-		button,
-	}: {
-		button: ButtonTheme;
-	}) => SerializedStyles;
+	[key in ButtonPriority]: (button?: ButtonTheme) => SerializedStyles;
 } = {
 	primary,
 	secondary,
@@ -252,12 +248,11 @@ export const buttonStyles =
 		nudgeIcon,
 		cssOverrides,
 	}: SharedButtonProps) =>
-	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-	(theme: any) =>
+	(theme: Theme) =>
 		[
 			button,
 			sizes[size],
-			priorities[priority](theme.button && theme),
+			priorities[priority](theme.button),
 			iconSvg ? iconSizes[size] : '',
 			iconSvg && !hideLabel ? iconSides[iconSide] : '',
 			nudgeIcon ? iconNudgeAnimation : '',

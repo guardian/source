@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { css, SerializedStyles, Theme } from '@emotion/react';
 import { width } from '@guardian/src-foundations/size';
 import { linkDefault, LinkTheme } from '@guardian/src-foundations/themes';
 import { textSans } from '@guardian/src-foundations/typography';
@@ -28,7 +28,7 @@ export const buttonLink = css`
 	padding: 0;
 `;
 
-export const primary = ({ link }: { link: LinkTheme } = linkDefault) => css`
+export const primary = (link: LinkTheme = linkDefault.link) => css`
 	color: ${link.textPrimary};
 
 	&:hover {
@@ -36,7 +36,7 @@ export const primary = ({ link }: { link: LinkTheme } = linkDefault) => css`
 	}
 `;
 
-export const secondary = ({ link }: { link: LinkTheme } = linkDefault) => css`
+export const secondary = (link: LinkTheme = linkDefault.link) => css`
 	color: ${link.textSecondary};
 
 	&:hover {
@@ -80,7 +80,7 @@ export const iconLeft = css`
 `;
 
 const priorities: {
-	[key in LinkPriority]: ({ link }: { link: LinkTheme }) => SerializedStyles;
+	[key in LinkPriority]: (link?: LinkTheme) => SerializedStyles;
 } = {
 	primary,
 	secondary,
@@ -109,10 +109,10 @@ export const linkStyles = ({
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }) => {
 	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-	return (theme: any) => [
+	return (theme: Theme) => [
 		link,
 		isButton ? buttonLink : '',
-		priorities[priority](theme.link && theme),
+		priorities[priority](theme.link),
 		isSubdued ? subdued : '',
 		iconSvg ? icon : '',
 		iconSvg ? iconSides[iconSide] : '',

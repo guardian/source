@@ -83,7 +83,7 @@ export const ChoiceCard = ({
 			{/* eslint-disable-next-line jsx-a11y/role-supports-aria-props*/}
 			<input
 				css={(theme) => [
-					input(theme.choiceCard && theme),
+					input(theme.choiceCard),
 					userChanged ? tickAnimation : '',
 					cssOverrides,
 				]}
@@ -106,8 +106,8 @@ export const ChoiceCard = ({
 			/>
 			<label
 				css={(theme) => [
-					choiceCard(theme.choiceCard && theme),
-					error ? errorChoiceCard(theme.choiceCard && theme) : '',
+					choiceCard(theme.choiceCard),
+					error ? errorChoiceCard(theme.choiceCard) : '',
 				]}
 				htmlFor={id}
 			>
@@ -120,7 +120,7 @@ export const ChoiceCard = ({
 					{iconSvg ? iconSvg : ''}
 					<div>{labelContent}</div>
 				</div>
-				<span css={(theme) => [tick(theme.checkbox && theme)]} />
+				<span css={(theme) => [tick(theme.choiceCard)]} />
 			</label>
 		</>
 	);

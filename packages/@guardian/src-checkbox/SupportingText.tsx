@@ -3,8 +3,6 @@ import { supportingText } from './styles';
 
 export const SupportingText = ({ children }: { children: ReactNode }) => {
 	return (
-		<div css={(theme) => supportingText(theme.checkbox && theme)}>
-			{children}
-		</div>
+		<div css={(theme) => supportingText(theme.checkbox)}>{children}</div>
 	);
 };

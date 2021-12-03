@@ -29,7 +29,7 @@ export const Accordion = ({
 	// AUDIT https://www.sarasoueidan.com/blog/accordion-markup/
 	return (
 		<div
-			css={(theme) => [accordion(theme.accordion && theme), cssOverrides]}
+			css={(theme) => [accordion(theme.accordion), cssOverrides]}
 			{...props}
 		>
 			{Children.map(children, (child) => {

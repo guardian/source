@@ -6,7 +6,7 @@ import { focusHalo } from '@guardian/src-foundations/accessibility';
 import { selectDefault } from '@guardian/src-foundations/themes';
 import { appearance } from '@guardian/src-foundations/utils';
 
-export const errorInput = ({ select } = selectDefault) => css`
+export const errorInput = (select = selectDefault.select) => css`
 	border: 4px solid ${select.borderError};
 	color: ${select.textError};
 	/* When select is active and in an error state, we want the border to remain the same. */
@@ -15,7 +15,7 @@ export const errorInput = ({ select } = selectDefault) => css`
 	}
 `;
 
-export const successInput = ({ select } = selectDefault) => css`
+export const successInput = (select = selectDefault.select) => css`
 	border: 4px solid ${select.borderSuccess};
 	color: ${select.textSuccess};
 	/* When select is active and in an success state, we want the border to remain the same. */
@@ -24,19 +24,19 @@ export const successInput = ({ select } = selectDefault) => css`
 	}
 `;
 
-export const errorChevron = ({ select } = selectDefault) => css`
+export const errorChevron = (select = selectDefault.select) => css`
 	svg {
 		fill: ${select.textError};
 	}
 `;
 
-export const successChevron = ({ select } = selectDefault) => css`
+export const successChevron = (select = selectDefault.select) => css`
 	svg {
 		fill: ${select.textSuccess};
 	}
 `;
 
-export const selectWrapper = ({ select } = selectDefault) => css`
+export const selectWrapper = (select = selectDefault.select) => css`
 	position: relative;
 
 	svg {
@@ -51,9 +51,7 @@ export const selectWrapper = ({ select } = selectDefault) => css`
 	}
 `;
 
-export const select = (theme = selectDefault) => {
-	const { select } = theme;
-
+export const select = (select = selectDefault.select) => {
 	return css`
 		color: ${select.textUserInput};
 		box-sizing: border-box;
@@ -82,7 +80,7 @@ export const select = (theme = selectDefault) => {
 		}
 
 		&:invalid {
-			${errorInput(theme)};
+			${errorInput(select)};
 		}
 	`;
 };
