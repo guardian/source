@@ -23,12 +23,16 @@ const inlineMessage = css`
 	}
 `;
 
-export const inlineError = ({ userFeedback } = userFeedbackDefault) => css`
+export const inlineError = (
+	userFeedback = userFeedbackDefault.userFeedback,
+) => css`
 	${inlineMessage};
 	color: ${userFeedback.textError};
 `;
 
-export const inlineSuccess = ({ userFeedback } = userFeedbackDefault) => css`
+export const inlineSuccess = (
+	userFeedback = userFeedbackDefault.userFeedback,
+) => css`
 	${inlineMessage};
 	color: ${userFeedback.textSuccess};
 `;

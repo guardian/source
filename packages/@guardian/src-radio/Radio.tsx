@@ -20,7 +20,7 @@ const LabelText = ({
 		<div
 			css={(theme) => [
 				hasSupportingText ? labelTextWithSupportingText : '',
-				labelText(theme.radio && theme),
+				labelText(theme.radio),
 			]}
 			className="src-radio-label-text"
 		>
@@ -30,11 +30,7 @@ const LabelText = ({
 };
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
-	return (
-		<div css={(theme) => supportingText(theme.radio && theme)}>
-			{children}
-		</div>
-	);
+	return <div css={(theme) => supportingText(theme.radio)}>{children}</div>;
 };
 
 export interface RadioProps
@@ -96,7 +92,7 @@ export const Radio = ({
 	const radioControl = (
 		<input
 			type="radio"
-			css={(theme) => [radio(theme.radio && theme), cssOverrides]}
+			css={(theme) => [radio(theme.radio), cssOverrides]}
 			value={value}
 			aria-checked={isChecked()}
 			defaultChecked={defaultChecked != null ? defaultChecked : undefined}
@@ -108,7 +104,7 @@ export const Radio = ({
 	const labelledRadioControl = (
 		<label
 			css={(theme) => [
-				label(theme.radio && theme),
+				label(theme.radio),
 				supporting ? labelWithSupportingText : '',
 			]}
 		>

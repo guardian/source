@@ -52,7 +52,7 @@ export const gridColumns: { [key in ChoiceCardColumns]: SerializedStyles } = {
 	5: gridColumnsStyle(5),
 };
 
-export const input = ({ choiceCard } = choiceCardDefault) => css`
+export const input = (choiceCard = choiceCardDefault.choiceCard) => css`
 	${visuallyHidden};
 
 	&:focus + label {
@@ -120,7 +120,7 @@ export const tickAnimation = css`
 	}
 `;
 
-export const choiceCard = ({ choiceCard } = choiceCardDefault) => css`
+export const choiceCard = (choiceCard = choiceCardDefault.choiceCard) => css`
 	flex: 1;
 	display: flex;
 	justify-content: center;
@@ -190,7 +190,7 @@ export const contentWrapperLabelOnly = css`
 
 // TODO: most of this is duplicated in the checkbox component
 // We should extract it into its own module somewhere
-export const tick = ({ choiceCard } = choiceCardDefault) => css`
+export const tick = (choiceCard = choiceCardDefault.choiceCard) => css`
 	/* overall positional properties */
 	position: absolute;
 	top: 50%;
@@ -229,7 +229,9 @@ export const tick = ({ choiceCard } = choiceCardDefault) => css`
 	}
 `;
 
-export const errorChoiceCard = ({ choiceCard } = choiceCardDefault) => css`
+export const errorChoiceCard = (
+	choiceCard = choiceCardDefault.choiceCard,
+) => css`
 	box-shadow: inset 0 0 0 4px ${choiceCard.borderError};
 
 	& > * {

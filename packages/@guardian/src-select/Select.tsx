@@ -89,20 +89,16 @@ export const Select = ({
 			)}
 			<div
 				css={(theme) => [
-					selectWrapper(theme.select && theme),
-					error ? errorChevron(theme.select && theme) : '',
-					!error && success
-						? successChevron(theme.select && theme)
-						: '',
+					selectWrapper(theme.select),
+					error ? errorChevron(theme.select) : '',
+					!error && success ? successChevron(theme.select) : '',
 				]}
 			>
 				<select
 					css={(theme) => [
-						select(theme.select && theme),
-						error ? errorInput(theme.select && theme) : '',
-						!error && success
-							? successInput(theme.select && theme)
-							: '',
+						select(theme.select),
+						error ? errorInput(theme.select) : '',
+						!error && success ? successInput(theme.select) : '',
 						cssOverrides,
 					]}
 					aria-required={!optional}

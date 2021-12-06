@@ -101,8 +101,8 @@ export const Checkbox = ({
 			<input
 				type="checkbox"
 				css={(theme) => [
-					checkbox(theme.checkbox && theme),
-					error ? errorCheckbox(theme.checkbox && theme) : '',
+					checkbox(theme.checkbox),
+					error ? errorCheckbox(theme.checkbox) : '',
 					cssOverrides,
 				]}
 				aria-invalid={!!error}
@@ -116,7 +116,7 @@ export const Checkbox = ({
 			/>
 			<span
 				css={(theme) => [
-					tick(theme.checkbox && theme),
+					tick(theme.checkbox),
 					labelContent || supporting ? tickWithLabelText : '',
 					supporting ? tickWithSupportingText : '',
 				]}
@@ -127,7 +127,7 @@ export const Checkbox = ({
 	const labelledBox = (
 		<label
 			css={(theme) => [
-				label(theme.checkbox && theme),
+				label(theme.checkbox),
 				supporting ? labelWithSupportingText : '',
 			]}
 		>
