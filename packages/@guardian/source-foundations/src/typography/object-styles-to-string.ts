@@ -1,4 +1,4 @@
-import type { TypographyStyles } from './types';
+import type { ScaleUnit, TypographyStyles } from './types';
 
 export const objectStylesToString = ({
 	fontFamily,
@@ -6,7 +6,7 @@ export const objectStylesToString = ({
 	lineHeight,
 	fontWeight,
 	fontStyle,
-}: TypographyStyles): string => `
+}: TypographyStyles<ScaleUnit>): string => `
 	font-family: ${fontFamily};
 	font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
 	line-height: ${lineHeight};

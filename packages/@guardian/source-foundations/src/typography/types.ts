@@ -14,12 +14,14 @@ export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
 export type Option<A> = A | null;
 
-export type TypographyStyles = {
+export type TypographyStyles<Unit extends ScaleUnit> = {
 	fontFamily: string;
-	fontSize: string | number;
+	fontSize: Unit extends 'px' ? number : `${number}rem`;
 	lineHeight: string | number;
-	fontWeight?: number;
-	fontStyle?: string;
+	fontWeight?:
+		| typeof fontWeightMapping[keyof typeof fontWeightMapping]
+		| FontWeight;
+	fontStyle?: 'normal' | 'italic';
 };
 export type TypographySizes = {
 	[key in string]: number;
@@ -54,9 +56,11 @@ export type Fs = <C extends Category>(
 		fontStyle: Option<FontStyle>;
 		unit: ScaleUnit;
 	},
-) => TypographyStyles;
+) => TypographyStyles<ScaleUnit>;
 
-export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles;
+export type FontScaleFunction = (
+	options?: FontScaleArgs,
+) => TypographyStyles<ScaleUnit>;
 
 // returns styles as a template literal
 export type FontScaleFunctionStr = (options?: FontScaleArgs) => string;
