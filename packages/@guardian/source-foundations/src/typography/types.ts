@@ -1,13 +1,14 @@
-import type { lineHeights } from './data';
 import type {
 	bodySizes,
+	fontWeightMapping,
 	headlineSizes,
+	lineHeightMapping,
 	textSansSizes,
 	titlepieceSizes,
-} from '.';
+} from './data';
 
 export type ScaleUnit = 'rem' | 'px';
-export type LineHeight = typeof lineHeights;
+export type LineHeight = keyof typeof lineHeightMapping;
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };

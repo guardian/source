@@ -13,7 +13,7 @@ const fonts = {
 		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
 };
 
-export const lineHeights = [1.15, 1.35, 1.5] as const;
+const lineHeights = [1.15, 1.35, 1.5] as const;
 
 const fontWeights = [300, 400, 500, 700] as const;
 
