@@ -30,7 +30,7 @@ export const fs: Fs =
 		const fontSizeValue: `${number}rem` | number =
 			unit === 'px'
 				? Number(fontSizeMapping[category][level])
-				: // @ts-expect-error -- the types actually overlap
+				: // @ts-expect-error -- the types actually overlap, see https://gist.github.com/mxdvl/5e31fd5b13670b6a41ddac6c65efeee4
 				  `${Number(remFontSizeMapping[category][level])}rem`;
 		const lineHeightValue: `${number}px` | number =
 			unit === 'px'
