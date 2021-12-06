@@ -11,7 +11,7 @@ const fonts = {
 		'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
 	bodySans:
 		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
-};
+} as const;
 
 const lineHeights = [1.15, 1.35, 1.5] as const;
 
