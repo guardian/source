@@ -69,7 +69,6 @@ export const asChromaticStory = <Args>(story: Story<Args>) => {
 			},
 		},
 		docs: { disable: true },
-		controls: { disabled: true },
 		chromatic,
 	};
 };
