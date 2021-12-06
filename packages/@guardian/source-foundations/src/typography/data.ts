@@ -1,14 +1,5 @@
 import { pxToRem } from '../utils/px-to-rem';
-import type {
-	BodySizes,
-	Category,
-	FontWeight,
-	FontWeightDefinition,
-	HeadlineSizes,
-	LineHeight,
-	TextSansSizes,
-	TitlepieceSizes,
-} from './types';
+import type { Category, FontWeight, FontWeightDefinition } from './types';
 
 const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70] as const;
 
@@ -22,9 +13,9 @@ const fonts = {
 		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
 };
 
-const lineHeights = [1.15, 1.35, 1.5];
+export const lineHeights = [1.15, 1.35, 1.5] as const;
 
-const fontWeights = [300, 400, 500, 700];
+const fontWeights = [300, 400, 500, 700] as const;
 
 const titlepieceSizes = {
 	small: fontSizes[8], //42px
@@ -32,7 +23,7 @@ const titlepieceSizes = {
 	large: fontSizes[10], //70px
 } as const;
 
-const headlineSizes: HeadlineSizes = {
+const headlineSizes = {
 	xxxsmall: fontSizes[3], //17px
 	xxsmall: fontSizes[4], //20px
 	xsmall: fontSizes[5], //24px
@@ -40,14 +31,14 @@ const headlineSizes: HeadlineSizes = {
 	medium: fontSizes[7], //34px
 	large: fontSizes[8], //42px
 	xlarge: fontSizes[9], //50px
-};
+} as const;
 
-const bodySizes: BodySizes = {
+const bodySizes = {
 	small: fontSizes[2], //15px
 	medium: fontSizes[3], //17px
-};
+} as const;
 
-const textSansSizes: TextSansSizes = {
+const textSansSizes = {
 	xxsmall: fontSizes[0], //12px
 	xsmall: fontSizes[1], //14px
 	small: fontSizes[2], //15px
@@ -56,7 +47,7 @@ const textSansSizes: TextSansSizes = {
 	xlarge: fontSizes[5], //24px
 	xxlarge: fontSizes[6], //28px
 	xxxlarge: fontSizes[7], //34px
-};
+} as const;
 
 const fontSizeMapping = {
 	titlepiece: titlepieceSizes,
@@ -67,13 +58,13 @@ const fontSizeMapping = {
 
 const remFontSizes = fontSizes.map((fontSize) => pxToRem(fontSize));
 
-const remTitlepieceSizes: Record<keyof TitlepieceSizes, number> = {
+const remTitlepieceSizes = {
 	small: remFontSizes[8], //42px
 	medium: remFontSizes[9], //50px
 	large: remFontSizes[10], //70px
-};
+} as const;
 
-const remHeadlineSizes: HeadlineSizes = {
+const remHeadlineSizes = {
 	xxxsmall: remFontSizes[3], //17px
 	xxsmall: remFontSizes[4], //20px
 	xsmall: remFontSizes[5], //24px
@@ -81,14 +72,14 @@ const remHeadlineSizes: HeadlineSizes = {
 	medium: remFontSizes[7], //34px
 	large: remFontSizes[8], //42px
 	xlarge: remFontSizes[9], //50px
-};
+} as const;
 
-const remBodySizes: BodySizes = {
+const remBodySizes = {
 	small: remFontSizes[2], //15px
 	medium: remFontSizes[3], //17px
-};
+} as const;
 
-const remTextSansSizes: TextSansSizes = {
+const remTextSansSizes = {
 	xxsmall: remFontSizes[0], //12px
 	xsmall: remFontSizes[1], //14px
 	small: remFontSizes[2], //15px
@@ -97,7 +88,7 @@ const remTextSansSizes: TextSansSizes = {
 	xlarge: remFontSizes[5], //24px
 	xxlarge: remFontSizes[6], //28px
 	xxxlarge: remFontSizes[7], //34px
-};
+} as const;
 
 const remFontSizeMapping = {
 	titlepiece: remTitlepieceSizes,
@@ -113,18 +104,18 @@ const fontMapping = {
 	textSans: fonts.bodySans,
 } as const;
 
-const lineHeightMapping: { [lineHight in LineHeight]: number } = {
+const lineHeightMapping = {
 	tight: lineHeights[0],
 	regular: lineHeights[1],
 	loose: lineHeights[2],
-};
+} as const;
 
-const fontWeightMapping: { [fontWeight in FontWeight]: number } = {
+const fontWeightMapping = {
 	light: fontWeights[0],
 	regular: fontWeights[1],
 	medium: fontWeights[2],
 	bold: fontWeights[3],
-};
+} as const;
 
 const availableFonts: {
 	[cat in Category]: {

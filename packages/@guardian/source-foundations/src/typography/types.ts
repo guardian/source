@@ -1,7 +1,13 @@
-import type { titlepieceSizes } from '.';
+import type { lineHeights } from './data';
+import type {
+	bodySizes,
+	headlineSizes,
+	textSansSizes,
+	titlepieceSizes,
+} from '.';
 
 export type ScaleUnit = 'rem' | 'px';
-export type LineHeight = 'tight' | 'regular' | 'loose';
+export type LineHeight = typeof lineHeights;
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
@@ -19,30 +25,9 @@ export type TypographySizes = {
 };
 
 export type TitlepieceSizes = typeof titlepieceSizes;
-
-export interface HeadlineSizes extends TypographySizes {
-	xxxsmall: number;
-	xxsmall: number;
-	xsmall: number;
-	small: number;
-	medium: number;
-	large: number;
-	xlarge: number;
-}
-export interface BodySizes extends TypographySizes {
-	small: number;
-	medium: number;
-}
-export interface TextSansSizes extends TypographySizes {
-	xxsmall: number;
-	xsmall: number;
-	small: number;
-	medium: number;
-	large: number;
-	xlarge: number;
-	xxlarge: number;
-	xxxlarge: number;
-}
+export type HeadlineSizes = typeof headlineSizes;
+export type BodySizes = typeof bodySizes;
+export type TextSansSizes = typeof textSansSizes;
 
 type Categories = {
 	titlepiece: TitlepieceSizes;
