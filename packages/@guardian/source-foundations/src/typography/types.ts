@@ -1,5 +1,6 @@
+import type { titlepieceSizes } from '.';
+
 export type ScaleUnit = 'rem' | 'px';
-export type Category = 'titlepiece' | 'headline' | 'body' | 'textSans';
 export type LineHeight = 'tight' | 'regular' | 'loose';
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontStyle = 'normal' | 'italic';
@@ -17,11 +18,7 @@ export type TypographySizes = {
 	[key in string]: number;
 };
 
-export interface TitlepieceSizes extends TypographySizes {
-	small: number;
-	medium: number;
-	large: number;
-}
+export type TitlepieceSizes = typeof titlepieceSizes;
 
 export interface HeadlineSizes extends TypographySizes {
 	xxxsmall: number;
@@ -47,8 +44,19 @@ export interface TextSansSizes extends TypographySizes {
 	xxxlarge: number;
 }
 
-export type Fs = (category: Category) => (
-	level: string,
+type Categories = {
+	titlepiece: TitlepieceSizes;
+	headline: HeadlineSizes;
+	body: BodySizes;
+	textSans: TextSansSizes;
+};
+
+export type Category = keyof Categories;
+
+export type Fs = <C extends Category>(
+	category: C,
+) => (
+	level: keyof Categories[C],
 	{
 		lineHeight,
 		fontWeight,

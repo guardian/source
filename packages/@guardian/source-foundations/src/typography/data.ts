@@ -8,10 +8,9 @@ import type {
 	LineHeight,
 	TextSansSizes,
 	TitlepieceSizes,
-	TypographySizes,
 } from './types';
 
-const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70];
+const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70] as const;
 
 const fonts = {
 	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
@@ -27,11 +26,11 @@ const lineHeights = [1.15, 1.35, 1.5];
 
 const fontWeights = [300, 400, 500, 700];
 
-const titlepieceSizes: TitlepieceSizes = {
+const titlepieceSizes = {
 	small: fontSizes[8], //42px
 	medium: fontSizes[9], //50px
 	large: fontSizes[10], //70px
-};
+} as const;
 
 const headlineSizes: HeadlineSizes = {
 	xxxsmall: fontSizes[3], //17px
@@ -59,18 +58,16 @@ const textSansSizes: TextSansSizes = {
 	xxxlarge: fontSizes[7], //34px
 };
 
-const fontSizeMapping: {
-	[cat in Category]: TypographySizes;
-} = {
+const fontSizeMapping = {
 	titlepiece: titlepieceSizes,
 	headline: headlineSizes,
 	body: bodySizes,
 	textSans: textSansSizes,
-};
+} as const;
 
 const remFontSizes = fontSizes.map((fontSize) => pxToRem(fontSize));
 
-const remTitlepieceSizes: TitlepieceSizes = {
+const remTitlepieceSizes: Record<keyof TitlepieceSizes, number> = {
 	small: remFontSizes[8], //42px
 	medium: remFontSizes[9], //50px
 	large: remFontSizes[10], //70px
@@ -102,21 +99,19 @@ const remTextSansSizes: TextSansSizes = {
 	xxxlarge: remFontSizes[7], //34px
 };
 
-const remFontSizeMapping: {
-	[cat in Category]: TypographySizes;
-} = {
+const remFontSizeMapping = {
 	titlepiece: remTitlepieceSizes,
 	headline: remHeadlineSizes,
 	body: remBodySizes,
 	textSans: remTextSansSizes,
-};
+} as const;
 
-const fontMapping: { [cat in Category]: string } = {
+const fontMapping = {
 	titlepiece: fonts.titlepiece,
 	headline: fonts.headlineSerif,
 	body: fonts.bodySerif,
 	textSans: fonts.bodySans,
-};
+} as const;
 
 const lineHeightMapping: { [lineHight in LineHeight]: number } = {
 	tight: lineHeights[0],
