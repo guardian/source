@@ -41,10 +41,13 @@ type Categories = {
 
 export type Category = keyof Categories;
 
-export type Fs = <C extends Category>(
-	category: C,
+export type Fs = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
 ) => (
-	level: keyof Categories[C],
+	level: Level,
 	{
 		lineHeight,
 		fontWeight,
