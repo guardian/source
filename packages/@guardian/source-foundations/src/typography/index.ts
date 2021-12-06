@@ -51,14 +51,14 @@ type TypographyApi<Sizes> = {
  *
  * `titlepiece.large()` -> 70px
  */
-const titlepiece = Object.fromEntries(
-	Object.entries(titlepieceAsObj).map(([key, func]) => {
-		return [
-			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
-		];
-	}),
-) as TypographyApi<TitlepieceSizes>;
+const titlepiece: TypographyApi<TitlepieceSizes> = {
+	small: (options?: FontScaleArgs) =>
+		objectStylesToString(titlepieceAsObj.small(options)),
+	medium: (options?: FontScaleArgs) =>
+		objectStylesToString(titlepieceAsObj.medium(options)),
+	large: (options?: FontScaleArgs) =>
+		objectStylesToString(titlepieceAsObj.large(options)),
+};
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--page#headline) •
@@ -82,14 +82,22 @@ const titlepiece = Object.fromEntries(
  *
  * `headline.xlarge()` -> 50px
  */
-const headline = Object.fromEntries(
-	Object.entries(headlineAsObj).map(([key, func]) => {
-		return [
-			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
-		];
-	}),
-) as TypographyApi<HeadlineSizes>;
+const headline: TypographyApi<HeadlineSizes> = {
+	xxxsmall: (options?: FontScaleArgs) =>
+		objectStylesToString(headlineAsObj.xxxsmall(options)),
+	xxsmall: (options?: FontScaleArgs) =>
+		objectStylesToString(headlineAsObj.xxsmall(options)),
+	xsmall: (options?: FontScaleArgs) =>
+		objectStylesToString(headlineAsObj.xsmall(options)),
+	small: (options?: FontScaleArgs) =>
+		objectStylesToString(headlineAsObj.small(options)),
+	medium: (options?: FontScaleArgs) =>
+		objectStylesToString(headlineAsObj.medium(options)),
+	large: (options?: FontScaleArgs) =>
+		objectStylesToString(headlineAsObj.large(options)),
+	xlarge: (options?: FontScaleArgs) =>
+		objectStylesToString(headlineAsObj.xlarge(options)),
+};
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--page#body) •
@@ -103,14 +111,12 @@ const headline = Object.fromEntries(
  *
  * `body.medium()` -> 17px
  */
-const body = Object.fromEntries(
-	Object.entries(bodyAsObj).map(([key, func]) => {
-		return [
-			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
-		];
-	}),
-) as TypographyApi<BodySizes>;
+const body: TypographyApi<BodySizes> = {
+	small: (options?: FontScaleArgs) =>
+		objectStylesToString(bodyAsObj.small(options)),
+	medium: (options?: FontScaleArgs) =>
+		objectStylesToString(bodyAsObj.medium(options)),
+};
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--page#text-sans) •
@@ -136,14 +142,24 @@ const body = Object.fromEntries(
  *
  * `textSans.xxxlarge()` -> 34px
  */
-const textSans = Object.fromEntries(
-	Object.entries(textSansAsObj).map(([key, func]) => {
-		return [
-			key,
-			(options?: FontScaleArgs) => objectStylesToString(func(options)),
-		];
-	}),
-) as TypographyApi<TextSansSizes>;
+const textSans: TypographyApi<TextSansSizes> = {
+	xxsmall: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.xxsmall(options)),
+	xsmall: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.xsmall(options)),
+	small: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.small(options)),
+	medium: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.medium(options)),
+	large: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.large(options)),
+	xlarge: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.xlarge(options)),
+	xxlarge: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.xxlarge(options)),
+	xxxlarge: (options?: FontScaleArgs) =>
+		objectStylesToString(textSansAsObj.xxxlarge(options)),
+};
 
 export {
 	titlepiece,
