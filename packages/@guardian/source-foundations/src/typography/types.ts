@@ -23,9 +23,6 @@ export type TypographyStyles<Unit extends ScaleUnit> = {
 		| FontWeight;
 	fontStyle?: 'normal' | 'italic';
 };
-export type TypographySizes = {
-	[key in string]: number;
-};
 
 export type TitlepieceSizes = typeof titlepieceSizes;
 export type HeadlineSizes = typeof headlineSizes;
