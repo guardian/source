@@ -1,21 +1,22 @@
-import { useState, useEffect, HTMLAttributes } from 'react';
-import { Props } from '@guardian/src-helpers';
-import { SvgChevronDownSingle } from '@guardian/src-icons';
+import { css } from '@emotion/react';
+import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
+import { useEffect, useState } from 'react';
+import type { HTMLAttributes } from 'react';
+import type { Props } from '../../../src-helpers';
+import { SvgChevronDownSingle } from '../../../src-icons';
+import { AccordionRowNoJS } from './AccordionRowNoJS';
 import {
 	accordionRow,
 	button,
+	chevronIconDown,
+	chevronIconUp,
+	collapsedBody,
+	expandedBody,
 	labelText,
 	toggle,
-	toggleLabel,
-	chevronIconUp,
-	chevronIconDown,
 	toggleIconWithLabel,
-	expandedBody,
-	collapsedBody,
+	toggleLabel,
 } from './styles';
-import { css } from '@emotion/react';
-import { visuallyHidden as _visuallyHidden } from '@guardian/src-foundations/accessibility';
-import { AccordionRowNoJS } from './AccordionRowNoJS';
 
 const visuallyHidden = css`
 	${_visuallyHidden}

@@ -1,9 +1,7 @@
-export { Accordion, AccordionRow } from '@guardian/src-accordion';
-export type {
-	AccordionProps,
-	AccordionRowProps,
-} from '@guardian/src-accordion';
-export { accordionDefault as accordionThemeDefault } from '@guardian/src-foundations/themes';
+export type { AccordionProps } from './accordion/Accordion';
+export { AccordionRow } from './accordion/AccordionRow';
+export type { AccordionRowProps } from './accordion/AccordionRow';
+export { accordionThemeDefault } from './accordion/theme';
 
 export {
 	Button,

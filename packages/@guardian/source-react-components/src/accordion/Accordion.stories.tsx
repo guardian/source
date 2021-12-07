@@ -1,9 +1,14 @@
-import { Accordion, AccordionProps, AccordionRow } from './index';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
-import type { Story } from '../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asChromaticStory,
+	asPlayground,
+} from '../../../../../lib/story-intents';
+import type { AccordionProps } from './Accordion';
+import { Accordion } from './Accordion';
+import { AccordionRow } from './AccordionRow';
 
 export default {
-	title: 'Source/src-accordion/Accordion',
+	title: 'Packages/source-react-components/Accordion',
 	component: Accordion,
 	subcomponents: { AccordionRow },
 	args: {

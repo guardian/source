@@ -1,19 +1,19 @@
-import { SvgChevronDownSingle } from '@guardian/src-icons';
+import { css } from '@emotion/react';
+import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
+import { SvgChevronDownSingle } from '../../../src-icons';
+import type { AccordionRowProps } from './AccordionRow';
 import {
 	accordionRow,
-	labelText,
-	toggle,
-	toggleLabel,
-	chevronIconUp,
 	chevronIconDown,
-	toggleIconWithLabel,
+	chevronIconUp,
 	collapsedBody,
-	noJsInput,
+	labelText,
 	noJsButton,
+	noJsInput,
+	toggle,
+	toggleIconWithLabel,
+	toggleLabel,
 } from './styles';
-import { visuallyHidden as _visuallyHidden } from '@guardian/src-foundations/accessibility';
-import { AccordionRowProps } from './AccordionRow';
-import { css } from '@emotion/react';
 
 const visuallyHidden = css`
 	${_visuallyHidden}

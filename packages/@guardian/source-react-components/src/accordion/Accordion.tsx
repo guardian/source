@@ -1,5 +1,6 @@
-import { Props } from '@guardian/src-helpers';
-import { Children, cloneElement, ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import { Children, cloneElement } from 'react';
+import type { Props } from '../../../src-helpers';
 import { accordion } from './styles';
 
 export interface AccordionProps extends Props {
