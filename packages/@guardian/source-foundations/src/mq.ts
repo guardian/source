@@ -18,7 +18,7 @@ const minWidthMaxWidth = (from: number, until: number): string =>
 	`@media (min-width: ${`${from}px`}) and (max-width: ${`${until - 1}px`})`;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-media-queries--page#from)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-media-queries--page#from)
  *
  * @example
  *	const styles = css`
@@ -39,7 +39,7 @@ export const from: BreakpointMap = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-media-queries--page#until)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-media-queries--page#until)
  *
  * @example
  *	const styles = css`
@@ -60,7 +60,7 @@ export const until: BreakpointMap = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-media-queries--page#betweenand)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-media-queries--page#betweenand)
  *
  * @example
  *	const styles = css`

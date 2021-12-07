@@ -38,7 +38,7 @@ type TypographyApi<Sizes> = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-typography--page#titlepiece) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--page#titlepiece) •
  * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/358767)
  *
  * ```
@@ -61,7 +61,7 @@ const titlepiece = Object.fromEntries(
 ) as TypographyApi<TitlepieceSizes>;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-typography--page#headline) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--page#headline) •
  * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/7310bd)
  *
  * ```
@@ -92,7 +92,7 @@ const headline = Object.fromEntries(
 ) as TypographyApi<HeadlineSizes>;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-typography--page#body) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--page#body) •
  * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/88cd8e)
  *
  * ```
@@ -113,7 +113,7 @@ const body = Object.fromEntries(
 ) as TypographyApi<BodySizes>;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-typography--page#text-sans) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--page#text-sans) •
  * [Design System](https://theguardian.design/2a1e5182b/p/602314-typography/t/076605)
  *
  * ```
