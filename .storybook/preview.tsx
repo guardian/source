@@ -15,7 +15,7 @@ export const parameters = {
 	},
 	options: {
 		storySort: {
-			order: ['Docs', 'Source', 'Editorial'],
+			order: ['Docs', 'Packages'],
 			method: 'alphabetical',
 		},
 	},
