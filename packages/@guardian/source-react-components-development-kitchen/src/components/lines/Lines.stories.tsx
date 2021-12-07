@@ -7,7 +7,7 @@ import type { LinesProps } from './index';
 import { Lines } from './index';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/Lines',
+	title: 'Packages/source-react-components-development-kitchen/Lines',
 	component: Lines,
 	args: {
 		effect: 'straight',
