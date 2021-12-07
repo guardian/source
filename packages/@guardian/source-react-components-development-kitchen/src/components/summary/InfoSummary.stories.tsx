@@ -7,7 +7,7 @@ import type { InfoSummaryProps } from './InfoSummary';
 import { InfoSummary } from './InfoSummary';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/Info Summary',
+	title: 'Packages/source-react-components-development-kitchen/Info Summary',
 	component: InfoSummary,
 	args: {
 		message: 'Here is some information',

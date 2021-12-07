@@ -18,7 +18,7 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/QuoteIcon',
+	title: 'Packages/source-react-components-development-kitchen/QuoteIcon',
 	component: QuoteIcon,
 	argTypes: {
 		format: {

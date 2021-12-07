@@ -7,7 +7,7 @@ import type { LogoProps } from './Logo';
 import { Logo } from './Logo';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/Logo',
+	title: 'Packages/source-react-components-development-kitchen/Logo',
 	component: Logo,
 	args: {
 		logoType: 'standard',
