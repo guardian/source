@@ -7,7 +7,7 @@ import type { ErrorSummaryProps } from './ErrorSummary';
 import { ErrorSummary } from './ErrorSummary';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/Error Summary',
+	title: 'Packages/source-react-components-development-kitchen/Error Summary',
 	component: ErrorSummary,
 	args: {
 		message: 'There has been a problem',
