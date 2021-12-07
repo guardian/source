@@ -1,8 +1,34 @@
-import defaultStoryConfig from '../../../src-brand/SvgGuardianLogo.stories';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asChromaticStory,
+	asPlayground,
+} from '../../../../../lib/story-intents';
+import type { SvgGuardianLogoProps } from '../../../src-brand/SvgGuardianLogo';
+import { SvgGuardianLogo } from '../../../src-brand/SvgGuardianLogo';
 
 export default {
-	...defaultStoryConfig,
-	title: 'Source v4/source-react-components/SvgGuardianLogo',
+	title: 'Packages/source-react-components/SvgGuardianLogo',
+	component: SvgGuardianLogo,
+	argTypes: {
+		width: {
+			control: { type: 'range', min: 10, max: 600 },
+		},
+	},
 };
 
-export * from '../../../src-brand/SvgGuardianLogo.stories';
+const Template: Story = (args: SvgGuardianLogoProps) => (
+	<SvgGuardianLogo {...args} />
+);
+
+// *****************************************************************************
+
+export const Playground = Template.bind({});
+Playground.args = {
+	width: 300,
+};
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const Default = Template.bind({});
+asChromaticStory(Default);
