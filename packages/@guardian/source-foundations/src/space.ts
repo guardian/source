@@ -5,7 +5,7 @@
 import { pxToRem } from './utils/px-to-rem';
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-space--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-space--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/05f835-space)
  *
  * Can be applied to margin or padding properties, vertically or horizontally.
@@ -33,7 +33,7 @@ export const space = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-space--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-space--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/05f835-space)
  *
  * Can be applied to margin or padding properties, vertically or horizontally.
