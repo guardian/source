@@ -1,8 +1,34 @@
-import defaultStoryConfig from '../../../src-brand/SvgRoundelBrandInverse.stories';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asChromaticStory,
+	asPlayground,
+} from '../../../../../lib/story-intents';
+import type { SvgRoundelBrandInverseProps } from '../../../src-brand/SvgRoundelBrandInverse';
+import { SvgRoundelBrandInverse } from '../../../src-brand/SvgRoundelBrandInverse';
 
 export default {
-	...defaultStoryConfig,
-	title: 'Source v4/source-react-components/SvgRoundelBrandInverse',
+	title: 'Packages/source-react-components/SvgRoundelBrandInverse',
+	component: SvgRoundelBrandInverse,
+	argTypes: {
+		width: {
+			control: { type: 'range', min: 10, max: 600 },
+		},
+	},
 };
 
-export * from '../../../src-brand/SvgRoundelBrandInverse.stories';
+const Template: Story = (args: SvgRoundelBrandInverseProps) => (
+	<SvgRoundelBrandInverse {...args} />
+);
+
+// *****************************************************************************
+
+export const Playground = Template.bind({});
+Playground.args = {
+	width: 300,
+};
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const Default = Template.bind({});
+asChromaticStory(Default);
