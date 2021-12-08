@@ -1,8 +1,34 @@
-import defaultStoryConfig from '../../../src-brand/SvgRoundelBrand.stories';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import {
+	asChromaticStory,
+	asPlayground,
+} from '../../../../../lib/story-intents';
+import type { SvgRoundelBrandProps } from '../../../src-brand/SvgRoundelBrand';
+import { SvgRoundelBrand } from '../../../src-brand/SvgRoundelBrand';
 
 export default {
-	...defaultStoryConfig,
-	title: 'Source v4/source-react-components/SvgRoundelBrand',
+	title: 'Packages/source-react-components/SvgRoundelBrand',
+	component: SvgRoundelBrand,
+	argTypes: {
+		width: {
+			control: { type: 'range', min: 10, max: 600 },
+		},
+	},
 };
 
-export * from '../../../src-brand/SvgRoundelBrand.stories';
+const Template: Story = (args: SvgRoundelBrandProps) => (
+	<SvgRoundelBrand {...args} />
+);
+
+// *****************************************************************************
+
+export const Playground = Template.bind({});
+Playground.args = {
+	width: 300,
+};
+asPlayground(Playground);
+
+// *****************************************************************************
+
+export const Default = Template.bind({});
+asChromaticStory(Default);

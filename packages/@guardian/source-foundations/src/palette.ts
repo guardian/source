@@ -99,7 +99,7 @@ const colors = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/66411c)
  *
  * Our core brand colour – `brand[400]` – and extended brand colours
@@ -114,7 +114,7 @@ export const brand = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/32d461)
  *
  * Our alternative brand colours
@@ -126,7 +126,7 @@ export const brandAlt = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/70dd5c)
  *
  * Neutral colours
@@ -145,7 +145,7 @@ export const neutral = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/98b901)
  *
  * Error colours
@@ -156,7 +156,7 @@ export const error = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/82798f)
  *
  * Success colours
@@ -167,7 +167,7 @@ export const success = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/97d77e)
  *
  * News colours
@@ -184,7 +184,7 @@ export const news = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/0539ef)
  *
  * Opinion colours
@@ -201,7 +201,7 @@ export const opinion = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/957a45)
  *
  * Sport colours
@@ -217,7 +217,7 @@ export const sport = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/068eb2)
  *
  * Culture colours
@@ -236,7 +236,7 @@ export const culture = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/2236b4)
  *
  * Lifestyle colours
@@ -252,7 +252,7 @@ export const lifestyle = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/59b08c)
  *
  * Labs colours
@@ -264,7 +264,7 @@ export const labs = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/31c634)
  *
  * Special report colours
@@ -281,7 +281,7 @@ export const specialReport = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette/t/188e86)
  *
  * Focus state colour
@@ -294,7 +294,7 @@ export const focus = {
 // main palette.
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/9280ee)
  *
  * Default theme background colours
@@ -313,7 +313,7 @@ export const background = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/63cc10)
  *
  * Brand theme background colours
@@ -329,7 +329,7 @@ export const brandBackground = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/743232)
  *
  * Alternative brand theme background colours
@@ -344,7 +344,7 @@ export const brandAltBackground = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/69c92f)
  *
  * Default theme border colours
@@ -363,7 +363,7 @@ export const border = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/04883b)
  *
  * Brand theme border colours
@@ -380,7 +380,7 @@ export const brandBorder = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/21c6cc)
  *
  * Alternative brand theme border colours
@@ -390,7 +390,7 @@ export const brandAltBorder = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/593cc9)
  *
  * Default theme line colours
@@ -400,7 +400,7 @@ export const line = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/66455d)
  *
  * Brand theme line colours
@@ -410,7 +410,7 @@ export const brandLine = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/89955e)
  *
  * Alternative brand theme line colours
@@ -420,7 +420,7 @@ export const brandAltLine = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/85d3b0)
  *
  * Default theme text colours
@@ -447,7 +447,7 @@ export const text = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/244480)
  *
  * Brand theme text colours
@@ -468,7 +468,7 @@ export const brandText = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/11d5fd)
  *
  * Alternative brand theme text colours

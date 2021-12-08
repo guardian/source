@@ -5,7 +5,7 @@
 import { border } from './palette';
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-accessibility-helpers--page#visually-hidden-elements)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-accessibility-helpers--page#visually-hidden-elements)
  *
  * For elements that need to be hidden from sighted users and displayed to screen reader users.
  */
@@ -19,7 +19,7 @@ export const visuallyHidden = `
 `;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-accessibility-helpers--page#focus-halo)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-accessibility-helpers--page#focus-halo)
  *
  * Provides a clear focus state to support keyboard navigation.
  */
@@ -31,7 +31,7 @@ export const focusHalo = `
 `;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-accessibility-helpers--page#description-id)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-accessibility-helpers--page#description-id)
  *
  * Takes the ID of an element and generates a new ID. This should be set as the ID of an element that describes the first element. The generated ID should also be passed to the `aria-describedby` attribute on the first element.
  *
