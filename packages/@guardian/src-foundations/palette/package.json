@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/palette",
-  "module": "../dist/esm/palette",
-  "types": "../dist/types/palette",
-  "what is this?": "this is a hack to get @guardian/src-foundations/* submodules working with dist till v4"
-}
