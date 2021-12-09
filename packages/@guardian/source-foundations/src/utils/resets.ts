@@ -1,8 +1,4 @@
-// FYI
-// packages/@guardian/src-foundations/src/utils/resets.ts SYMLINKS TO
-// packages/@guardian/source-foundations/src/utils/resets.ts
-
-import { background, text } from '../palette';
+import { background, text } from '../colour/palette';
 
 ////////////////////////////
 // Element specific resets

@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/utils",
-  "module": "../dist/esm/utils",
-  "types": "../dist/types/utils",
-  "what is this?": "this is a hack to get @guardian/src-foundations/* submodules working with dist till v4"
-}
