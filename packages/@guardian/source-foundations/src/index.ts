@@ -1,20 +1,18 @@
 // accessibility
-export {
-	descriptionId,
-	focusHalo,
-	generateSourceId,
-	visuallyHidden,
-} from './accessibility';
+export { descriptionId } from './accessibility/description-id';
+export { focusHalo } from './accessibility/focus-halo';
+export { generateSourceId } from './accessibility/generate-source-id';
+export { visuallyHidden } from './accessibility/visually-hidden';
 
 // animation
-export { transitions } from './animation';
+export { transitions } from './animation/transitions';
 
 // breakpoints
-export type { Breakpoint } from './breakpoints';
-export { breakpoints } from './breakpoints';
+export type { Breakpoint } from './breakpoints/breakpoints';
+export { breakpoints } from './breakpoints/breakpoints';
 
 // mq
-export { between, from, until } from './mq';
+export { between, from, until } from './mq/mq';
 
 // palette
 export {
@@ -43,13 +41,20 @@ export {
 	text,
 	brandText,
 	brandAltText,
-} from './palette';
+} from './colour/palette';
 
 // size
-export { height, iconSize, remHeight, remWidth, size, width } from './size';
+export {
+	height,
+	iconSize,
+	remHeight,
+	remWidth,
+	size,
+	width,
+} from './size/size';
 
 // space
-export { space, remSpace } from './space';
+export { space, remSpace } from './space/space';
 
 // typography
 export {
