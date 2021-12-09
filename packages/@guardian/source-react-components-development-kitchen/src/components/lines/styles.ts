@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { remSpace } from '@guardian/src-foundations';
+import { remSpace } from '@guardian/source-foundations';
 import { dashedImage, height as labsImageHeight } from './dashed';
 import { dottedImage, height as dottedImageHeight } from './dotted';
 import { squigglyImage, height as squigglyImageHeight } from './squiggly';

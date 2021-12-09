@@ -1,6 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { line } from '@guardian/src-foundations/palette';
-import type { Props } from '@guardian/src-helpers';
+import { line } from '@guardian/source-foundations';
+import type { Props } from '@guardian/source-react-components';
 import {
 	dashedLines,
 	dottedLines,

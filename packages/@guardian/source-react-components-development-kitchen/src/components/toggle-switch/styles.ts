@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
-import { neutral, success } from '@guardian/src-foundations';
-import { textSans } from '@guardian/src-foundations/typography';
+import { neutral, success, textSans } from '@guardian/source-foundations';
 
 export const toggleSwitchStyles = css`
 	display: flex;

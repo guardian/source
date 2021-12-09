@@ -1,4 +1,4 @@
-import { svgBackgroundImage } from '@guardian/src-helpers';
+import { svgBackgroundImage } from '@guardian/source-foundations';
 import type { LineCount } from '.';
 
 const wavelength = 12;

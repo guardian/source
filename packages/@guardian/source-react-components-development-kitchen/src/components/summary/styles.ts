@@ -1,8 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { space } from '@guardian/src-foundations';
-import { size } from '@guardian/src-foundations/size';
-import { textSans } from '@guardian/src-foundations/typography';
+import { size, space, textSans } from '@guardian/source-foundations';
 
 export const wrapperStyles = (color: string): SerializedStyles => css`
 	border: 4px solid ${color};

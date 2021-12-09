@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import type { Props } from '@guardian/src-helpers';
+import type { Props } from '@guardian/source-react-components';
 import {
 	androidStyles,
 	buttonStyles,
