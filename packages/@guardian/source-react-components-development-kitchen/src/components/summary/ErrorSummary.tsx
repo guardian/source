@@ -1,6 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { error as errorColors } from '@guardian/src-foundations';
-import { SvgAlertTriangle } from '@guardian/src-icons';
+import { error as errorColors } from '@guardian/source-foundations';
+import { SvgAlertTriangle } from '@guardian/source-react-components';
 import {
 	contextStyles,
 	iconStyles,
