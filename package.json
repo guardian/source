@@ -12,9 +12,8 @@
     "build:eslint": "yarn workspace @guardian/eslint-plugin-source-foundations build && yarn workspace @guardian/eslint-plugin-source-react-components build",
     "build:foundations": "yarn workspace @guardian/source-foundations build",
     "build:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen build",
-    "build:packages": "npm-run-all build:src -p build:kitchen build:foundations build:react-components build:eslint",
+    "build:packages": "npm-run-all -p build:kitchen build:foundations build:react-components build:eslint",
     "build:react-components": "yarn workspace @guardian/source-react-components build",
-    "build:src": "ts-node ./scripts/build-src",
     "build:storybook": "build-storybook -o dist",
     "build:storybook:ci": "NODE_ENV=production build-storybook -o dist",
     "clean": "npm-run-all clean:*",
@@ -23,7 +22,6 @@
     "clean:kitchen": "yarn workspace @guardian/source-react-components-development-kitchen clean",
     "clean:react-components": "yarn workspace @guardian/source-react-components clean",
     "clean:root": "rm -rf dist",
-    "clean:src": "ts-node ./scripts/clean-src",
     "fix": "yarn lint:js --fix",
     "get-usage": "ts-node ./scripts/get-usage",
     "lint": "yarn lint:js && yarn lint:styles",
@@ -40,9 +38,7 @@
     "validate": "yarn tsc && yarn lint && yarn test",
     "validate-dist": "yarn build && yarn workspace validate-dist validate",
     "validate:ci": "yarn tsc && yarn lint && yarn test:coverage --ci",
-    "verbump:deps:src": "ts-node ./scripts/verbump-src-deps-src",
-    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version",
-    "verbump:prerelease:src": "ts-node ./scripts/verbump-prerelease-src && yarn verbump:deps:src"
+    "verbump:prerelease": "yarn version --prerelease --preid rc --no-git-tag-version"
   },
   "lint-staged": {
     "package.json": "sort-package-json"
