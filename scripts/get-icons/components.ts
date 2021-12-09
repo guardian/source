@@ -3,7 +3,7 @@ import { kebabToTitle } from './case';
 import { REACT_COMPONENT_OUTPUT_DIR } from './config';
 
 export const generateReactComponent = (name: string, svg: string): string => {
-	return `import { iconSize } from '@guardian/src-foundations/size';
+	return `import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
 export const ${name}Icon = ({ size }: IconProps) => {
