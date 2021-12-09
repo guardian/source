@@ -1,0 +1,43 @@
+import type { AnchorHTMLAttributes } from 'react';
+import { linkContents } from './shared';
+import { linkStyles } from './styles';
+import type { SharedLinkProps } from './types';
+
+export interface LinkProps
+	extends AnchorHTMLAttributes<HTMLAnchorElement>,
+		SharedLinkProps {}
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-link-link--playground) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/43c26b-link/b/048fd1) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-link) •
+ * [NPM](https://www.npmjs.com/package/@guardian/src-link)
+ *
+ * Links are used as navigational aids. They may appear inline in a paragraph, as items in a list or as stand alone text elements.
+ *
+ * The following themes are supported: `light`, `brand`, `brandYellow`
+ */
+export const Link = ({
+	priority = 'primary',
+	subdued: isSubdued,
+	icon: iconSvg,
+	iconSide = 'left',
+	cssOverrides,
+	children,
+	...props
+}: LinkProps) => {
+	return (
+		<a
+			css={linkStyles({
+				priority,
+				isSubdued,
+				iconSvg,
+				iconSide,
+				cssOverrides,
+			})}
+			{...props}
+		>
+			{linkContents({ children, iconSvg, iconSide })}
+		</a>
+	);
+};
