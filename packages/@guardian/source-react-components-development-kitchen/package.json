@@ -13,10 +13,6 @@
     "build": "rollup -c",
     "clean": "rm -rf dist"
   },
-  "dependencies": {
-    "@guardian/src-button": "^3.12.1",
-    "@guardian/src-helpers": "^3.12.1"
-  },
   "devDependencies": {
     "@guardian/eslint-config": "^0.7.0",
     "@guardian/eslint-config-typescript": "^0.7.0",
@@ -31,8 +27,8 @@
   "peerDependencies": {
     "@emotion/react": "^11.1.2",
     "@guardian/libs": "^3.2.1",
-    "@guardian/src-foundations": "^3.9.1",
-    "@guardian/src-icons": "^3.9.1",
+    "@guardian/source-foundations": "^4.0.0",
+    "@guardian/source-react-components": "^4.0.0",
     "react": "^17.0.1"
   },
   "publishConfig": {

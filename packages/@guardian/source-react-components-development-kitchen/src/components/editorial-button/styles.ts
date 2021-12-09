@@ -7,7 +7,6 @@ import {
 	ArticlePillar,
 	ArticleSpecial,
 } from '@guardian/libs';
-import type { ButtonPriority } from '@guardian/src-button';
 import {
 	culture,
 	labs,
@@ -17,7 +16,8 @@ import {
 	opinion,
 	specialReport,
 	sport,
-} from '@guardian/src-foundations';
+} from '@guardian/source-foundations';
+import type { ButtonPriority } from '@guardian/source-react-components';
 
 export const defaultFormat = {
 	display: ArticleDisplay.Standard,

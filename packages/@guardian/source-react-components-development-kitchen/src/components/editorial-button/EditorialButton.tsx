@@ -1,6 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import type { ButtonProps as CoreButtonProps } from '@guardian/src-button';
-import { Button as CoreButton } from '@guardian/src-button';
+import type { ButtonProps as CoreButtonProps } from '@guardian/source-react-components';
+import { Button as CoreButton } from '@guardian/source-react-components';
 import {
 	decideBackground,
 	decideBorder,
