@@ -1,4 +1,7 @@
-import { breakpoints, Breakpoint } from '@guardian/src-foundations';
+import {
+	breakpoints,
+	Breakpoint,
+} from '../../packages/@guardian/source-foundations/src';
 
 type ViewportMeta = {
 	[key in Breakpoint]: {
