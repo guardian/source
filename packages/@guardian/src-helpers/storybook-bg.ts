@@ -2,8 +2,8 @@ import {
 	background,
 	brandBackground,
 	brandAltBackground,
-} from '@guardian/src-foundations/palette';
-import { ThemeName } from './types';
+} from '@guardian/source-foundations';
+import { ThemeName } from '../source-react-components/src/types';
 
 type Background = ThemeName | 'inverse';
 
