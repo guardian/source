@@ -1,17 +1,5 @@
 import { create } from '@storybook/theming';
 
-import {
-	background,
-	brandBackground,
-	brandAltBackground,
-	text,
-} from '../packages/@guardian/src-foundations/src';
-import {
-	headline,
-	body,
-	textSans,
-} from '../packages/@guardian/src-foundations/src/typography/obj';
-
 export const theme = create({
 	base: 'light',
 	brandTitle: '@guardian/source',
