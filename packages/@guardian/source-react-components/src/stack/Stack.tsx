@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 import { stack, stackSpace } from './styles';
 
 export type StackSpace = 1 | 2 | 3 | 4 | 5 | 6 | 9 | 12 | 24;

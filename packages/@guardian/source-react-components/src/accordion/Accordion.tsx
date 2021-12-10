@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import { Children, cloneElement } from 'react';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 import { accordion } from './styles';
 
 export interface AccordionProps extends Props {

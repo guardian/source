@@ -1,5 +1,5 @@
 import type { InputHTMLAttributes, ReactNode } from 'react';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 import { LabelText } from './LabelText';
 import {
 	checkbox,

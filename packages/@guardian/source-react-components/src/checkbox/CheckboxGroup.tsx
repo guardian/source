@@ -1,7 +1,7 @@
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import { Children, cloneElement } from 'react';
 import { Legend } from '../label/Legend';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 import { InlineError } from '../user-feedback/InlineError';
 import { fieldset } from './styles';
 

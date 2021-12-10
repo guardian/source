@@ -5,7 +5,7 @@ import {
 } from '@guardian/source-foundations';
 import type { InputHTMLAttributes } from 'react';
 import { Label } from '../label/Label';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 import { InlineError } from '../user-feedback/InlineError';
 import {
 	errorInput,

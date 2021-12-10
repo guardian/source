@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 
 export type LinkPriority = 'primary' | 'secondary';
 
