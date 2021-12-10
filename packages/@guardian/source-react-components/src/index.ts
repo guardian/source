@@ -1,5 +1,5 @@
 export type { AccordionProps } from './accordion/Accordion';
-
+export { Accordion } from './accordion/Accordion';
 export { AccordionRow } from './accordion/AccordionRow';
 export type { AccordionRowProps } from './accordion/AccordionRow';
 export { accordionThemeDefault } from './accordion/theme';
