@@ -1,6 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { brand as brandColors, text } from '@guardian/src-foundations';
-import { SvgInfo } from '@guardian/src-icons';
+import { brand as brandColors, text } from '@guardian/source-foundations';
+import { SvgInfo } from '@guardian/source-react-components';
 import {
 	contextStyles,
 	iconStyles,

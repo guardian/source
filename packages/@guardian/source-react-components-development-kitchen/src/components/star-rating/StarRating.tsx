@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { remSpace } from '@guardian/src-foundations';
-import type { Props } from '@guardian/src-helpers';
+import { remSpace } from '@guardian/source-foundations';
+import type { Props } from '@guardian/source-react-components';
 import { starBackground } from './star';
 
 // https://docs.google.com/spreadsheets/d/1QUa5Kh734J4saFc8ERjCYHZu10_-Hj7llNa2rr8urNg/edit?usp=sharing

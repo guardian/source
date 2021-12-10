@@ -2,7 +2,7 @@ import {
 	background,
 	brandBackground,
 	brandAltBackground,
-} from '@guardian/src-foundations';
+} from '@guardian/source-foundations';
 
 export const backgrounds = {
 	default: 'background.primary',

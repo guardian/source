@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/themes",
-  "module": "../dist/esm/themes",
-  "types": "../dist/types/themes",
-  "what is this?": "this is a hack to get @guardian/src-foundations/* submodules working with dist till v4"
-}

@@ -39,21 +39,17 @@ module.exports = ({ config, mode }) => {
 
 	config.resolve.extensions.push('.ts', '.tsx');
 	config.resolve.alias = {
-		'@guardian/src-foundations': path.resolve(
+		'@guardian/source-foundations': path.resolve(
 			__dirname,
-			'../packages/@guardian/src-foundations/src',
+			'../packages/@guardian/source-foundations/src',
 		),
-		'@guardian/src-label': path.resolve(
+		'@guardian/source-react-components': path.resolve(
 			__dirname,
-			'../packages/@guardian/src-label',
+			'../packages/@guardian/source-react-components/src',
 		),
-		'@guardian/src-user-feedback': path.resolve(
+		'@guardian/source-react-components-development-kitchen': path.resolve(
 			__dirname,
-			'../packages/@guardian/src-user-feedback',
-		),
-		'@guardian/src-helpers': path.resolve(
-			__dirname,
-			'../packages/@guardian/src-helpers',
+			'../packages/@guardian/source-react-components-development-kitchen/src',
 		),
 	};
 

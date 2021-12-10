@@ -1,5 +1,4 @@
-import { space } from '@guardian/src-foundations';
-import { svgBackgroundImage } from '@guardian/src-helpers';
+import { space, svgBackgroundImage } from '@guardian/source-foundations';
 import type { LineCount } from '.';
 
 const thickness = 1;

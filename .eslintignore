@@ -2,16 +2,3 @@ node_modules
 dist
 *.d.ts
 
-# for now ignore foundations script files
-packages/@guardian/src-foundations/scripts
-
-# ignore foundations dist files
-packages/@guardian/src-foundations/mq
-packages/@guardian/src-foundations/accessibility
-packages/@guardian/src-foundations/palette
-packages/@guardian/src-foundations/size
-packages/@guardian/src-foundations/themes
-packages/@guardian/src-foundations/typography
-packages/@guardian/src-foundations/utils
-packages/@guardian/src-foundations/foundations.js
-packages/@guardian/src-foundations/foundations.esm.js

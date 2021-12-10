@@ -1,184 +1,181 @@
-export { Accordion, AccordionRow } from '@guardian/src-accordion';
-export type {
-	AccordionProps,
-	AccordionRowProps,
-} from '@guardian/src-accordion';
-export { accordionDefault as accordionThemeDefault } from '@guardian/src-foundations/themes';
+export type { AccordionProps } from './accordion/Accordion';
+export { Accordion } from './accordion/Accordion';
+export { AccordionRow } from './accordion/AccordionRow';
+export type { AccordionRowProps } from './accordion/AccordionRow';
+export { accordionThemeDefault } from './accordion/theme';
 
+export { Button } from './button/Button';
+export { LinkButton } from './button/LinkButton';
+export type { LinkButtonProps } from './button/LinkButton';
 export {
-	Button,
-	LinkButton,
-	buttonReaderRevenue as buttonThemeReaderRevenue,
-	buttonReaderRevenueBrand as buttonThemeReaderRevenueBrand,
-	buttonReaderRevenueBrandAlt as buttonThemeReaderRevenueBrandAlt,
-} from '@guardian/src-button';
-export type {
-	ButtonPriority,
-	ButtonProps,
-	IconSide,
-	LinkButtonProps,
-	Size,
-} from '@guardian/src-button';
+	buttonThemeReaderRevenue,
+	buttonThemeReaderRevenueBrand,
+	buttonThemeReaderRevenueBrandAlt,
+} from './button/theme-reader-revenue';
+export type { ButtonProps } from './button/Button';
+export type { ButtonPriority, IconSide, Size } from './button/types';
 export {
-	buttonBrand as buttonThemeBrand,
-	buttonBrandAlt as buttonThemeBrandAlt,
-	buttonDefault as buttonThemeDefault,
-} from '@guardian/src-foundations/themes';
-export type { ButtonTheme } from '@guardian/src-foundations/themes';
+	buttonThemeBrand,
+	buttonThemeBrandAlt,
+	buttonThemeDefault,
+} from './button/theme';
+export type { ButtonTheme } from './button/theme';
 
-export {
-	SvgGuardianLogo,
-	SvgGuardianLiveLogo,
-	SvgRoundelBrand,
-	SvgRoundelBrandInverse,
-	SvgRoundelDefault,
-	SvgRoundelInverse,
-} from '@guardian/src-brand';
-export type {
-	SvgGuardianLogoProps,
-	SvgGuardianLiveLogoProps,
-	SvgRoundelBrandProps,
-	SvgRoundelBrandInverseProps,
-	SvgRoundelDefaultProps,
-	SvgRoundelInverseProps,
-} from '@guardian/src-brand';
+export { SvgGuardianLogo } from './brand/SvgGuardianLogo';
+export type { SvgGuardianLogoProps } from './brand/SvgGuardianLogo';
 
-export { Checkbox, CheckboxGroup } from '@guardian/src-checkbox';
-export type { CheckboxGroupProps, CheckboxProps } from '@guardian/src-checkbox';
-export {
-	checkboxBrand as checkboxThemeBrand,
-	checkboxDefault as checkboxThemeDefault,
-} from '@guardian/src-foundations/themes';
+export { SvgGuardianLiveLogo } from './brand/SvgGuardianLiveLogo';
+export type { SvgGuardianLiveLogoProps } from './brand/SvgGuardianLiveLogo';
 
-export { ChoiceCard, ChoiceCardGroup } from '@guardian/src-choice-card';
+export { SvgRoundelBrand } from './brand/SvgRoundelBrand';
+export type { SvgRoundelBrandProps } from './brand/SvgRoundelBrand';
+
+export { SvgRoundelBrandInverse } from './brand/SvgRoundelBrandInverse';
+export type { SvgRoundelBrandInverseProps } from './brand/SvgRoundelBrandInverse';
+
+export { SvgRoundelDefault } from './brand/SvgRoundelDefault';
+export type { SvgRoundelDefaultProps } from './brand/SvgRoundelDefault';
+
+export { SvgRoundelInverse } from './brand/SvgRoundelInverse';
+export type { SvgRoundelInverseProps } from './brand/SvgRoundelInverse';
+
+export { CheckboxGroup } from './checkbox/CheckboxGroup';
+export type { CheckboxGroupProps } from './checkbox/CheckboxGroup';
+export { Checkbox } from './checkbox/Checkbox';
+export type { CheckboxProps } from './checkbox/Checkbox';
+export { checkboxThemeBrand, checkboxThemeDefault } from './checkbox/theme';
+
+export { ChoiceCardGroup } from './choice-card/ChoiceCardGroup';
+export { ChoiceCard } from './choice-card/ChoiceCard';
 export type {
 	ChoiceCardColumns,
 	ChoiceCardGroupProps,
-	ChoiceCardProps,
-} from '@guardian/src-choice-card';
-export { choiceCardDefault as choiceCardThemeDefault } from '@guardian/src-foundations/themes';
+} from './choice-card/ChoiceCardGroup';
+export type { ChoiceCardProps } from './choice-card/ChoiceCard';
+export { choiceCardThemeDefault } from './choice-card/theme';
 
-export { Footer } from '@guardian/src-footer';
-export type { FooterProps } from '@guardian/src-footer';
-export { footerBrand as footerThemeBrand } from '@guardian/src-foundations/themes';
+export { Footer } from './footer/Footer';
+export type { FooterProps } from './footer/Footer';
+export { footerThemeBrand } from './footer/theme';
+
+export { SvgAlert } from './icons/SvgAlert';
+export { SvgAlertRound } from './icons/SvgAlertRound';
+export { SvgAlertTriangle } from './icons/SvgAlertTriangle';
+export { SvgAppleBrand } from './icons/SvgAppleBrand';
+export { SvgArrowDownStraight } from './icons/SvgArrowDownStraight';
+export { SvgArrowLeftStraight } from './icons/SvgArrowLeftStraight';
+export { SvgArrowRightStraight } from './icons/SvgArrowRightStraight';
+export { SvgArrowUpStraight } from './icons/SvgArrowUpStraight';
+export { SvgAudio } from './icons/SvgAudio';
+export { SvgCamera } from './icons/SvgCamera';
+export { SvgCheckmark } from './icons/SvgCheckmark';
+export { SvgChevronDownSingle } from './icons/SvgChevronDownSingle';
+export { SvgChevronLeftDouble } from './icons/SvgChevronLeftDouble';
+export { SvgChevronLeftSingle } from './icons/SvgChevronLeftSingle';
+export { SvgChevronRightDouble } from './icons/SvgChevronRightDouble';
+export { SvgChevronRightSingle } from './icons/SvgChevronRightSingle';
+export { SvgChevronUpSingle } from './icons/SvgChevronUpSingle';
+export { SvgClock } from './icons/SvgClock';
+export { SvgCreditCard } from './icons/SvgCreditCard';
+export { SvgCross } from './icons/SvgCross';
+export { SvgDirectDebit } from './icons/SvgDirectDebit';
+export { SvgDirectDebitWide } from './icons/SvgDirectDebitWide';
+export { SvgEnvelope } from './icons/SvgEnvelope';
+export { SvgExternal } from './icons/SvgExternal';
+export { SvgEyeStrike } from './icons/SvgEyeStrike';
+export { SvgEye } from './icons/SvgEye';
+export { SvgFacebook } from './icons/SvgFacebook';
+export { SvgFacebookBrand } from './icons/SvgFacebookBrand';
+export { SvgGift } from './icons/SvgGift';
+export { SvgGlobe } from './icons/SvgGlobe';
+export { SvgGoogleBrand } from './icons/SvgGoogleBrand';
+export { SvgHouse } from './icons/SvgHouse';
+export { SvgIndent } from './icons/SvgIndent';
+export { SvgInfo } from './icons/SvgInfo';
+export { SvgLinkedIn } from './icons/SvgLinkedIn';
+export { SvgMessenger } from './icons/SvgMessenger';
+export { SvgMinus } from './icons/SvgMinus';
+export { SvgOfflineCloud } from './icons/SvgOfflineCloud';
+export { SvgPayPal } from './icons/SvgPayPal';
+export { SvgPerson } from './icons/SvgPerson';
+export { SvgPinterest } from './icons/SvgPinterest';
+export { SvgPlay } from './icons/SvgPlay';
+export { SvgPlus } from './icons/SvgPlus';
+export { SvgQuote } from './icons/SvgQuote';
+export { SvgSettings } from './icons/SvgSettings';
+export { SvgSpeechBubble } from './icons/SvgSpeechBubble';
+export { SvgStar } from './icons/SvgStar';
+export { SvgTickRound } from './icons/SvgTickRound';
+export { SvgTwitter } from './icons/SvgTwitter';
+export { SvgVideo } from './icons/SvgVideo';
+export { SvgWhatsApp } from './icons/SvgWhatsApp';
+
+export type { IconProps, IconSize } from './icons/types';
+
+export { labelThemeDefault, labelThemeBrand } from './label/theme';
+export { Label } from './label/Label';
+export type { LabelProps } from './label/types';
+export { Legend } from './label/Legend';
+export type { LegendProps } from './label/types';
+
+export { Columns } from './columns/Columns';
+export type { ColumnsProps } from './columns/Columns';
+
+export { Column } from './columns/Column';
+export type { ColumnProps } from './columns/Column';
+
+export { Container } from './container/Container';
+export type { ContainerProps } from './container/Container';
+
+export { Hide } from './hide/Hide';
+export type { HideProps } from './hide/Hide';
+
+export { Stack } from './stack/Stack';
+export type { StackProps } from './stack/Stack';
+
+export { Tiles } from './tiles/Tiles';
+export type { TilesProps } from './tiles/Tiles';
+
+export { Inline } from './inline/Inline';
+export type { InlineProps } from './inline/Inline';
 
 export {
-	SvgAlert,
-	SvgAlertRound,
-	SvgAlertTriangle,
-	SvgAppleBrand,
-	SvgArrowDownStraight,
-	SvgArrowLeftStraight,
-	SvgArrowRightStraight,
-	SvgArrowUpStraight,
-	SvgAudio,
-	SvgCamera,
-	SvgCheckmark,
-	SvgChevronDownSingle,
-	SvgChevronLeftDouble,
-	SvgChevronLeftSingle,
-	SvgChevronRightDouble,
-	SvgChevronRightSingle,
-	SvgChevronUpSingle,
-	SvgClock,
-	SvgCreditCard,
-	SvgCross,
-	SvgDirectDebit,
-	SvgDirectDebitWide,
-	SvgEnvelope,
-	SvgExternal,
-	SvgEye,
-	SvgEyeStrike,
-	SvgFacebook,
-	SvgFacebookBrand,
-	SvgGift,
-	SvgGlobe,
-	SvgGoogleBrand,
-	SvgHouse,
-	SvgIndent,
-	SvgInfo,
-	SvgLinkedIn,
-	SvgMessenger,
-	SvgMinus,
-	SvgOfflineCloud,
-	SvgPayPal,
-	SvgPerson,
-	SvgPinterest,
-	SvgPlay,
-	SvgPlus,
-	SvgQuote,
-	SvgSettings,
-	SvgSpeechBubble,
-	SvgStar,
-	SvgTickRound,
-	SvgTwitter,
-	SvgVideo,
-	SvgWhatsApp,
-} from '@guardian/src-icons';
-export type { IconProps, IconSize } from '@guardian/src-icons';
+	linkThemeDefault,
+	linkThemeBrand,
+	linkThemeBrandAlt,
+} from './link/theme';
+export type { LinkPriority } from './link/types';
+export { Link } from './link/Link';
+export type { LinkProps } from './link/Link';
+export { ButtonLink } from './link//ButtonLink';
+export type { ButtonLinkProps } from './link/ButtonLink';
 
-export { Label, Legend } from '@guardian/src-label';
-export type { LabelProps, LegendProps } from '@guardian/src-label';
+export { RadioGroup } from './radio/RadioGroup';
+export type { RadioGroupProps } from './radio/RadioGroup';
+export { Radio } from './radio/Radio';
+export type { RadioProps } from './radio/Radio';
+export { radioThemeBrand, radioThemeDefault } from './radio/theme';
+
+export { Option } from './select/Option';
+export type { OptionProps } from './select/Option';
+export { Select } from './select/Select';
+export type { SelectProps } from './select/Select';
+export { selectThemeDefault } from './select/theme';
+
+export { TextArea } from './text-area/TextArea';
+export type { TextAreaProps } from './text-area/TextArea';
+
+export { TextInput } from './text-input/TextInput';
+export type { TextInputProps } from './text-input/TextInput';
+
+export { textInputThemeDefault } from './text-input/theme';
+
+export { InlineError } from './user-feedback/InlineError';
+export { InlineSuccess } from './user-feedback/InlineSuccess';
+export type { UserFeedbackProps } from './user-feedback/types';
 export {
-	labelDefault as labelThemeDefault,
-	labelBrand as labelThemeBrand,
-} from '@guardian/src-foundations/themes';
+	userFeedbackThemeBrand,
+	userFeedbackThemeDefault,
+} from './user-feedback/theme';
 
-export {
-	Column,
-	Columns,
-	Container,
-	Hide,
-	Inline,
-	Stack,
-	Tiles,
-} from '@guardian/src-layout';
-export type {
-	ColumnProps,
-	ColumnsProps,
-	ContainerProps,
-	HideProps,
-	InlineProps,
-	StackProps,
-	TilesProps,
-} from '@guardian/src-layout';
-
-export { ButtonLink, Link } from '@guardian/src-link';
-export type {
-	ButtonLinkProps,
-	LinkPriority,
-	LinkProps,
-} from '@guardian/src-link';
-export {
-	linkBrand as linkThemeBrand,
-	linkBrandAlt as linkThemeBrandAlt,
-	linkDefault as linkThemeDefault,
-} from '@guardian/src-foundations/themes';
-export type { LinkTheme } from '@guardian/src-foundations/themes';
-
-export { Radio, RadioGroup } from '@guardian/src-radio';
-export type { RadioGroupProps, RadioProps } from '@guardian/src-radio';
-export {
-	radioBrand as radioThemeBrand,
-	radioDefault as radioThemeDefault,
-} from '@guardian/src-foundations/themes';
-
-export { Option, Select } from '@guardian/src-select';
-export type { OptionProps, SelectProps } from '@guardian/src-select';
-export { selectDefault as selectThemeDefault } from '@guardian/src-foundations/themes';
-
-export { TextArea } from '@guardian/src-text-area';
-export type { TextAreaProps } from '@guardian/src-text-area';
-
-export { TextInput } from '@guardian/src-text-input';
-export type { TextInputProps } from '@guardian/src-text-input';
-export { textInputDefault as textInputThemeDefault } from '@guardian/src-foundations/themes';
-
-export { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
-export type { UserFeedbackProps } from '@guardian/src-user-feedback';
-export {
-	userFeedbackBrand as userFeedbackThemeBrand,
-	userFeedbackDefault as userFeedbackThemeDefault,
-} from '@guardian/src-foundations/themes';
-
-export type { Props } from '@guardian/src-helpers';
+export type { Props } from './@types/Props';

@@ -1,1 +1,0 @@
-../../../../../packages/@guardian/source-foundations/src/utils/focus-style-manager.ts

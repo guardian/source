@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/mq",
-  "module": "../dist/esm/mq",
-  "types": "../dist/types/mq",
-  "what is this?": "this is a hack to get @guardian/src-foundations/* submodules working with dist till v4"
-}
