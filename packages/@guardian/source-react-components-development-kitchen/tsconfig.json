@@ -1,5 +1,5 @@
 {
   "extends": "../../../tsconfig.json",
-  "include": ["src"],
+  "include": ["src", "../source-react-components/src/@types/Theme.d.ts"],
   "exclude": ["dist", "src/**/*.stories.tsx"]
 }
