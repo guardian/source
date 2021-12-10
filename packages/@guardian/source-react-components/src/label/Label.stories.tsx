@@ -102,14 +102,14 @@ asChromaticStory(WithOptionalBrandTheme);
 
 // *****************************************************************************
 
-export const WithHiddenlabelThemeBrandTheme = Template.bind({});
-WithHiddenlabelThemeBrandTheme.args = {
+export const WithHiddenLabelThemeBrandTheme = Template.bind({});
+WithHiddenLabelThemeBrandTheme.args = {
 	hideLabel: true,
 };
-WithHiddenlabelThemeBrandTheme.parameters = {
+WithHiddenLabelThemeBrandTheme.parameters = {
 	backgrounds: {
 		default: 'brandBackground.primary',
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithHiddenlabelThemeBrandTheme);
+asChromaticStory(WithHiddenLabelThemeBrandTheme);
