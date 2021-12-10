@@ -3,7 +3,6 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { storybookBackgrounds } from '../../../src-helpers/storybook-bg';
 import { SvgExternal } from '../icons/SvgExternal';
 import { Link } from './Link';
 import type { LinkProps } from './Link';
@@ -54,8 +53,7 @@ PrimaryLinkBrandTheme.args = {
 };
 PrimaryLinkBrandTheme.parameters = {
 	backgrounds: {
-		default: 'brand',
-		values: [storybookBackgrounds.brand],
+		default: 'brandBackground.primary',
 	},
 	theme: linkThemeBrand,
 };
@@ -69,8 +67,7 @@ PrimaryLinkBrandAltTheme.args = {
 };
 PrimaryLinkBrandAltTheme.parameters = {
 	backgrounds: {
-		default: 'brandAlt',
-		values: [storybookBackgrounds.brandAlt],
+		default: 'brandAltBackground.primary',
 	},
 	theme: linkThemeBrandAlt,
 };
