@@ -80,7 +80,7 @@ export const TextArea = ({
 	value,
 	...props
 }: TextAreaProps) => {
-	const textAreaId = id || generateSourceId();
+	const textAreaId = id ?? generateSourceId();
 	const getClassName = () => {
 		const HAS_VALUE_CLASS = 'src-has-value';
 

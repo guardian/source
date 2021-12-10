@@ -1,7 +1,5 @@
 import { css } from '@emotion/react';
-import { breakpoints, space } from '@guardian/source-foundations';
-import { from } from '@guardian/source-foundations';
-import { border } from '@guardian/source-foundations';
+import { border, breakpoints, from, space } from '@guardian/source-foundations';
 
 export const container = css`
 	margin: 0 auto;

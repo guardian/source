@@ -53,7 +53,7 @@ export const CheckboxGroup = ({
 	children,
 	...props
 }: CheckboxGroupProps) => {
-	const groupId = id || generateSourceId();
+	const groupId = id ?? generateSourceId();
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 	) : (
