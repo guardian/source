@@ -8,10 +8,10 @@ export interface ButtonProps
 		ButtonHTMLAttributes<HTMLButtonElement> {}
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-button-button--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-button--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/435225-button) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-button) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-button)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/button/Button.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * Buttons enable users to make choices or perform actions.
  *

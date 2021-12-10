@@ -12,10 +12,10 @@ export interface StackProps extends HTMLAttributes<HTMLDivElement>, Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-stack) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-stack) •
  * [Design System](https://theguardian.design/2a1e5182b/p/827581-stack) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-layout/Stack) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-layout)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/stack/Stack.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * `Stack` components will be stacked one on top of the other.
  */

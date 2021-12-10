@@ -45,10 +45,10 @@ export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-layout-container) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-container) •
  * [Design System](https://theguardian.design/2a1e5182b/p/440a83-container) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-layout/Container) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-layout)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/container/Container.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * Centres the page content and applies a width that corresponds to the grid at the current breakpoint.
  */
