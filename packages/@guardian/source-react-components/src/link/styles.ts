@@ -112,7 +112,6 @@ export const linkStyles = ({
 	iconSide?: IconSide;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }) => {
-	/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 	return (theme: Theme) => [
 		link,
 		isButton ? buttonLink : '',

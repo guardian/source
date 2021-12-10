@@ -6,7 +6,6 @@ import {
 	errorCheckbox,
 	label,
 	labelWithSupportingText,
-	supportingText,
 	tick,
 	tickWithLabelText,
 	tickWithSupportingText,
@@ -146,5 +145,5 @@ export const Checkbox = ({
 		</label>
 	);
 
-	return <>{labelContent || supportingText ? labelledBox : box}</>;
+	return <>{labelContent || supporting ? labelledBox : box}</>;
 };

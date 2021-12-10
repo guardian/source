@@ -71,7 +71,7 @@ export const Select = ({
 	children,
 	...props
 }: SelectProps) => {
-	const selectId = id || generateSourceId();
+	const selectId = id ?? generateSourceId();
 	return (
 		<Label
 			text={labelText}

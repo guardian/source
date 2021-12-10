@@ -66,7 +66,7 @@ export const ChoiceCardGroup = ({
 	children,
 	...props
 }: ChoiceCardGroupProps) => {
-	const groupId = id || generateSourceId();
+	const groupId = id ?? generateSourceId();
 	return (
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
 			{label ? (
