@@ -4,7 +4,7 @@ import type {
 	ReactElement,
 } from 'react';
 import { useState } from 'react';
-import type { Props } from '../@types/types';
+import { Props } from '../@types/Props';
 import {
 	choiceCard,
 	contentWrapper,

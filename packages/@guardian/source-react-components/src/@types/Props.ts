@@ -1,6 +1,4 @@
-import type { SerializedStyles } from '@emotion/react';
-
-export type ThemeName = 'default' | 'brand' | 'brandAlt';
+import { SerializedStyles } from '@emotion/react';
 
 export interface Props {
 	className?: string;
