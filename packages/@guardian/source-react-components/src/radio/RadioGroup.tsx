@@ -61,7 +61,7 @@ export const RadioGroup = ({
 	children,
 	...props
 }: RadioGroupProps) => {
-	const groupId = id || generateSourceId();
+	const groupId = id ?? generateSourceId();
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 	) : (

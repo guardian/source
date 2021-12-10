@@ -22,7 +22,7 @@ export type SvgRoundelProps = {
 
 /**
  * @package This component is used to construct the public components.
- * It's not for public consumption – do not export or document.
+ * It's not for public consumption – do not export or document.
  */
 
 export const SvgRoundel = ({

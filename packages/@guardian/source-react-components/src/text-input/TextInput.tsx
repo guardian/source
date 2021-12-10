@@ -96,7 +96,7 @@ export const TextInput = ({
 	cssOverrides,
 	...props
 }: TextInputProps) => {
-	const textInputId = id || generateSourceId();
+	const textInputId = id ?? generateSourceId();
 	return (
 		<Label
 			text={labelText}
