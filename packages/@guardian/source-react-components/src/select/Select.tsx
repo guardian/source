@@ -4,9 +4,9 @@ import {
 	generateSourceId,
 } from '@guardian/source-foundations';
 import type { SelectHTMLAttributes } from 'react';
+import type { Props } from '../@types/Props';
 import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';
 import { Label } from '../label/Label';
-import { Props } from '../@types/Props';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';
 import {

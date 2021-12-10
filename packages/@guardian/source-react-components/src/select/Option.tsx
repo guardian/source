@@ -1,6 +1,6 @@
 import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
 import type { OptionHTMLAttributes } from 'react';
-import { Props } from '../@types/Props';
+import type { Props } from '../@types/Props';
 
 export interface OptionProps
 	extends OptionHTMLAttributes<HTMLOptionElement>,
