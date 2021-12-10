@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react';
-import { Props } from '../@types/Props';
+import type { Props } from '../@types/Props';
 import { column, flexGrow, setSpan, setWidth } from './styles';
 
 export interface ColumnProps extends HTMLAttributes<HTMLDivElement>, Props {
