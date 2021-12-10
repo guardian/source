@@ -21,6 +21,8 @@ We have attempted to minimise further breaking changes in an effort to keep migr
 
 [Breaking changes to the component packages](https://github.com/guardian/source/blob/main/packages/%40guardian/source-react-components/migration-breaking-changes.md)
 
+Note: To conform with the Guardian's [NPM package recommendations](https://github.com/guardian/recommendations/blob/main/npm-packages.md#using-guardian-npm-packages), we [removed an inline polyfill](https://github.com/guardian/source/pull/982/files#diff-1d4bbfb57a73b4844eea8bf903faf617deb06f41c4d06c05e835eb82d2ebaa68L30-L49) for `Object.fromEntries`. If you support [IE11 or another unsupported browser](https://caniuse.com/mdn-javascript_builtins_object_fromentries), you will need to provide a polyfill for this method.
+
 ## What will be different going forwards?
 
 Going forwards the versions of `@guardian/source-foundations` and `@guardian/source-react-components` will no longer remain in sync. Instead, you should refer to the version specified in peerDependencies.
