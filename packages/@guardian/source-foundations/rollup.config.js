@@ -11,7 +11,7 @@ const bundle = (config) => ({
 // eslint-disable-next-line import/no-default-export -- it's what rollup wants
 export default [
 	bundle({
-		plugins: [ts()],
+		plugins: [ts({ tsconfig: '../../../tsconfig.json' })],
 		output: [
 			{
 				file: pkg.main,
