@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react';
-import type { Props } from '../@types/types';
+import { Props } from '../@types/Props';
 import {
 	container,
 	containerBackground,

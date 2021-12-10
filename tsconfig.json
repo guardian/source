@@ -35,6 +35,6 @@
     "strictNullChecks": true,
     "target": "esnext"
   },
-  "include": ["packages", "lib"],
+  "include": ["packages", "lib", "@types"],
   "exclude": ["node_modules", "scripts/validate-dist"]
 }

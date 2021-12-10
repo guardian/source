@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import type { Props } from '../@types/types';
+import { Props } from '../@types/Props';
 
 export type ButtonPriority = 'primary' | 'secondary' | 'tertiary' | 'subdued';
 export type IconSide = 'left' | 'right';
