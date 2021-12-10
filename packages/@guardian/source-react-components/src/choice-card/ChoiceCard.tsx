@@ -46,10 +46,10 @@ export interface ChoiceCardProps
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-choice-card-choicecardgroup) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-choicecard) •
  * [Design System](https://theguardian.design/2a1e5182b/p/65ffe9-choice-card) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-choice-card) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-choice-card)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/choice-card/ChoiceCard.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * Choice cards are a tactile, single or multi-select mechanism used to group related options.
  *

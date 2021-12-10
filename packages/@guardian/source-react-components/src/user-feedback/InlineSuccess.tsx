@@ -3,10 +3,10 @@ import { inlineSuccess } from './styles';
 import type { UserFeedbackProps } from './types';
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-user-feedback-inlinesuccess--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-inlinesuccess--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/108ed3-user-feedback/b/3803b4) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-user-feedback) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-user-feedback)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/user-feedback/InlineSuccess.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * Success messages acknowledge a user's action and do not require further action. They inform the user of processes happening in the background. For example, "Your account details have been saved."
  *
