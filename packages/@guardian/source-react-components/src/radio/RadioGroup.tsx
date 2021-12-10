@@ -40,10 +40,10 @@ export interface RadioGroupProps
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-radio-radiogroup--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-radiogroup--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/2891dd-radio-button/b/46940d) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-radio) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-radio)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/radio/RadioGroup.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * Radio buttons allow users to make a single selection from a set of options.
  *

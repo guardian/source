@@ -14,10 +14,10 @@ export type SvgGuardianLiveLogoProps = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-brand-svgguardianlivelogo--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-svgguardianlivelogo--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/8909e0-assets/t/05bdd0) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/src-brand) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-brand)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/brand/SvgGuardianLiveLogo.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  */
 
 export const SvgGuardianLiveLogo = ({

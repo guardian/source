@@ -10,10 +10,10 @@ export type SvgRoundelBrandInverseProps = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-brand-svgroundelbrandinverse--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-svgroundelbrandinverse--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/8909e0-assets/t/37168b) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/src-brand) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-brand)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/brand/SvgRoundelBrandInverse.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  */
 export const SvgRoundelBrandInverse = (args: SvgRoundelBrandInverseProps) => {
 	return (

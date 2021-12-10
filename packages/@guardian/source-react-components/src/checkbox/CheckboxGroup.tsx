@@ -32,10 +32,10 @@ export interface CheckboxGroupProps extends Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-src-checkbox-checkboxgroup--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-checkboxgroup--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/466fad-checkbox/b/33fc2f) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/%40guardian/src-checkbox) •
- * [NPM](https://www.npmjs.com/package/@guardian/src-checkbox)
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/checkbox/CheckboxGroup.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * Checkboxes allow users to select multiple options from a list of individual
  * items or to indicate agreement of terms and  services.

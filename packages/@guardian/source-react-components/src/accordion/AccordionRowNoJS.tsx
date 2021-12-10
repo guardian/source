@@ -19,6 +19,12 @@ const visuallyHidden = css`
 	${_visuallyHidden}
 `;
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-accordion--playground) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/38c5aa-accordion/b/92b71e) •
+ * [GitHub](https://github.com/guardian/source/blob/main/packages/@guardian/source-react-components/src/accordion/AccordionRowNoJS.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
+ */
 export const AccordionRowNoJS = ({
 	label,
 	hideToggleLabel = false,
