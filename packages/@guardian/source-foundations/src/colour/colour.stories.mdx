@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Packages/source-foundations/Colour"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Colour
+
+## Example
+
+```tsx
+import { text, background } from '@guardian/source-foundations';
+
+const headline = css`
+	color: ${text.primary};
+	background: ${background.primary};
+`;
+
+/*
+.class-name {
+  color: #121212;
+  background-color: #ffffff;
+}
+*/
+```
+
+## Functional colours
+
+Where possible, prefer using functional colours over global colours. The
+following categories of functional colours are available:
+
+-   text
+-   background
+-   border
+-   line
+
+See the [Tokens page](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb)
+for a list of functional colours, grouped by theme.
+
+## Global colours
+
+See the [Light palette](https://theguardian.design/2a1e5182b/p/492a30-light-palette)
+and [Dark palette](https://theguardian.design/2a1e5182b/p/75f7ca-dark-palette)
+pages for a comprehensive list of global colours.

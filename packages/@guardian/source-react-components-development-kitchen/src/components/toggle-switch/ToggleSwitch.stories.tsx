@@ -8,7 +8,7 @@ import { ToggleSwitch } from './ToggleSwitch';
 import type { ToggleSwitchProps } from './ToggleSwitch';
 
 export default {
-	title: 'Kitchen/source-react-components-development-kitchen/ToggleSwitch',
+	title: 'Packages/source-react-components-development-kitchen/ToggleSwitch',
 	component: ToggleSwitch,
 	args: {},
 };

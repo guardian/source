@@ -1,0 +1,25 @@
+<script>
+	// Hacky way of making sure that we're on the docs page for playground stories.
+	// Setting viewMode: 'docs' in lib/story-intents.ts should do this, but there's a bug.
+	// https://github.com/storybookjs/storybook/issues/13128#issuecomment-798927176
+	// It's very closely bound to storybook implementation details so liable to break after updating.
+	window.onload = () => {
+		const observer = new MutationObserver((mutationsList) => {
+			for (const mutation of mutationsList) {
+				mutation.addedNodes.forEach((addedNode) => {
+					if (addedNode.matches('[href$="--playground"]')) {
+						addedNode.href = addedNode.href.replace(
+							'path=/story/',
+							'path=/docs/',
+						);
+						if (addedNode.dataset.selected) {
+							addedNode.click();
+						}
+					}
+				});
+			}
+		});
+
+		observer.observe(document.body, { childList: true, subtree: true });
+	};
+</script>
