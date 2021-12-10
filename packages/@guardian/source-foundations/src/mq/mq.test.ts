@@ -1,6 +1,6 @@
-import type { Breakpoint } from './breakpoints/breakpoints';
-import { breakpoints } from './breakpoints/breakpoints';
-import { between, from, until } from './mq/mq';
+import type { Breakpoint } from '../breakpoints/breakpoints';
+import { breakpoints } from '../breakpoints/breakpoints';
+import { between, from, until } from './mq';
 
 it('from should return a min-width media query', () => {
 	const min: Breakpoint = 'mobile';

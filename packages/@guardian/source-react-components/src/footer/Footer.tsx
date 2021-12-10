@@ -1,15 +1,15 @@
-import { Props } from '../source-react-components/src/types';
-import { HTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
+import type { Props } from '../types';
+import { BackToTop } from './BackToTop';
 import {
-	footer,
 	copyright,
 	copyrightExtraPadding,
+	footer,
 	links,
 	linksWrapper,
 	linksWrapperSpace,
 	linksWrapperSpaceWithBackToTop,
 } from './styles';
-import { BackToTop } from './BackToTop';
 
 export interface FooterProps extends HTMLAttributes<HTMLElement>, Props {
 	/**
