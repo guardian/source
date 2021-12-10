@@ -1,5 +1,5 @@
 import type { InputHTMLAttributes, ReactNode } from 'react';
-import { Props } from '../@types/Props';
+import type { Props } from '../@types/Props';
 import {
 	label,
 	labelText,

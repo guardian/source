@@ -4,8 +4,8 @@ import {
 	generateSourceId,
 } from '@guardian/source-foundations';
 import type { InputHTMLAttributes } from 'react';
+import type { Props } from '../@types/Props';
 import { Label } from '../label/Label';
-import { Props } from '../@types/Props';
 import { InlineError } from '../user-feedback/InlineError';
 import {
 	errorInput,

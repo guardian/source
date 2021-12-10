@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react';
-import { Props } from '../@types/Props';
+import type { Props } from '../@types/Props';
 import { inline, inlineSpace } from './styles';
 import type { InlineSpace } from './types';
 

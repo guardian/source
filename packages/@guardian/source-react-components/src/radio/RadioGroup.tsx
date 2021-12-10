@@ -1,8 +1,8 @@
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { FieldsetHTMLAttributes } from 'react';
 import { Children, cloneElement } from 'react';
+import type { Props } from '../@types/Props';
 import { Legend } from '../label/Legend';
-import { Props } from '../@types/Props';
 import { InlineError } from '../user-feedback/InlineError';
 import { fieldset, horizontal, vertical } from './styles';
 

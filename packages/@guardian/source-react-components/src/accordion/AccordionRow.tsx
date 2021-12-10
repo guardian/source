@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
 import { useEffect, useState } from 'react';
 import type { HTMLAttributes } from 'react';
+import type { Props } from '../@types/Props';
 import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';
-import { Props } from '../@types/Props';
 import { AccordionRowNoJS } from './AccordionRowNoJS';
 import {
 	accordionRow,
