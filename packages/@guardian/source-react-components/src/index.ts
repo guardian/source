@@ -178,4 +178,4 @@ export {
 	userFeedbackThemeDefault,
 } from './user-feedback/theme';
 
-export type { Props } from './types';
+export type { Props } from './@types/types';

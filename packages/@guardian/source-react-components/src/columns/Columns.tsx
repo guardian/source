@@ -1,7 +1,7 @@
 import type { SerializedStyles } from '@emotion/react';
 import type { Breakpoint } from '@guardian/source-foundations';
 import type { HTMLAttributes } from 'react';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 import {
 	collapseBelowColumnsCSS,
 	collapseBelowDesktop,
