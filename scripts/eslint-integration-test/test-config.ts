@@ -1,8 +1,8 @@
-import type { Test } from './src/types';
 import {
 	componentsEslintConfig,
 	foundationsEslintConfig,
 } from './src/eslint-config';
+import type { Test } from './src/types';
 
 const foundationsTestConfig: Test[] = [
 	{

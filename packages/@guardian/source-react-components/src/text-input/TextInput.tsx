@@ -1,9 +1,5 @@
 import type { SerializedStyles } from '@emotion/react';
-import {
-	visuallyHidden as _visuallyHidden,
-	descriptionId,
-	generateSourceId,
-} from '@guardian/source-foundations';
+import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { Label } from '../label/Label';

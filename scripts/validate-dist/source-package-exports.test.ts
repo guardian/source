@@ -1,6 +1,6 @@
 import * as sourceFoundations from '@guardian/source-foundations';
-import * as sourceReactComponentsDevelopmentKitchen from '@guardian/source-react-components-development-kitchen';
 import * as sourceReactComponents from '@guardian/source-react-components';
+import * as sourceReactComponentsDevelopmentKitchen from '@guardian/source-react-components-development-kitchen';
 
 const packageExports = (pkg: Record<string, unknown>) =>
 	Object.keys(pkg).sort();

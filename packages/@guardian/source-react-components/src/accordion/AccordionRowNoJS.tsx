@@ -23,10 +23,9 @@ export const AccordionRowNoJS = ({
 	label,
 	hideToggleLabel = false,
 	children,
-	onClick,
 	cssOverrides,
 	...props
-}: AccordionRowProps) => {
+}: Omit<AccordionRowProps, 'onClick'>) => {
 	return (
 		<div
 			css={(theme) => [accordionRow(theme.accordion), cssOverrides]}

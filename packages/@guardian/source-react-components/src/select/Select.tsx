@@ -1,8 +1,4 @@
-import {
-	visuallyHidden as _visuallyHidden,
-	descriptionId,
-	generateSourceId,
-} from '@guardian/source-foundations';
+import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { SelectHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';

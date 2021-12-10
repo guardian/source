@@ -1,4 +1,3 @@
-import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
 import type { OptionHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 

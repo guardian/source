@@ -13,7 +13,7 @@ ${replaceStyleAttribute(
 		.split('\n')
 		.map((line) => `\t\t${line}`)
 		.join('\n')
-		.replace(/\>/i, '\twidth={size ? iconSize[size] : undefined}\n\t\t>')
+		.replace(/\\>/i, '\twidth={size ? iconSize[size] : undefined}\n\t\t>')
 		.replace(/fill-rule/gi, 'fillRule')
 		.replace(/clip-rule/gi, 'clipRule'),
 )}
@@ -35,7 +35,7 @@ const replaceStyleAttribute = (source: string): string => {
 const getStyleReplacement = (style: string): string => {
 	return style
 		.replace('style=', '')
-		.replace(/\"/gi, '')
+		.replace(/\\"/gi, '')
 		.split(';')
 		.map((item) => {
 			const [key, value] = item.split(':');

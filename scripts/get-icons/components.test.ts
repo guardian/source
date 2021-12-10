@@ -1,4 +1,4 @@
-import { generateReactComponent, _ } from './components';
+import { _, generateReactComponent } from './components';
 
 describe('The generateReactComponent function', () => {
 	it('generates the correct string for a given svg', () => {

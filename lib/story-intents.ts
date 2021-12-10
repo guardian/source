@@ -1,6 +1,6 @@
 import type { Breakpoint } from '../packages/@guardian/source-foundations/src';
 import { breakpoints } from '../packages/@guardian/source-foundations/src';
-import { Story } from './@types/storybook-emotion-10-fixes';
+import type { Story } from './@types/storybook-emotion-10-fixes';
 
 /**
  * Turns a standard story into a playground/[API documentation story](https://storybook.js.org/addons/@storybook/addon-docs):
@@ -12,6 +12,7 @@ import { Story } from './@types/storybook-emotion-10-fixes';
  * Make sure all props are configurable in storybook's controls table.
  *
  */
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments -- we're not sure tbh
 export const asPlayground = <Args>(story: Story<Args>) => {
 	story.parameters = {
 		...story.parameters,
@@ -51,6 +52,7 @@ export const asPlayground = <Args>(story: Story<Args>) => {
  *
  * Make sure you have one of these for every possible state of your component.
  */
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments -- we're not sure tbh
 export const asChromaticStory = <Args>(story: Story<Args>) => {
 	const defaultViewport = story.parameters?.viewport?.defaultViewport;
 

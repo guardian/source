@@ -43,6 +43,10 @@ export interface ChoiceCardProps
 	 * @ignore passed down by the parent
 	 */
 	error?: boolean;
+	/**
+	 * The type of input you want
+	 */
+	type?: 'radio' | 'checkbox';
 }
 
 /**
@@ -80,6 +84,7 @@ export const ChoiceCard = ({
 
 	return (
 		<>
+			{/* eslint-disable-next-line jsx-a11y/role-supports-aria-props -- the `type` can only be 'radio' or 'checkbox' which both support `aria-checked` but eslint doesn't know about that */}
 			<input
 				css={(theme) => [
 					input(theme.choiceCard),

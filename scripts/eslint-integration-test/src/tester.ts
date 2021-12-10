@@ -1,10 +1,10 @@
-import { ExecError, Test, TestResult } from './types';
-import { readTestFile, writeToTestfile, writeToEslintConfigfile } from './file';
-import { testFileName, eslintConfigFileName } from './config';
 import { execSync } from 'child_process';
 import { cwd } from 'process';
-import ora from 'ora';
 import chalk from 'chalk';
+import ora from 'ora';
+import { eslintConfigFileName, testFileName } from './config';
+import { readTestFile, writeToEslintConfigfile, writeToTestfile } from './file';
+import type { ExecError, Test, TestResult } from './types';
 
 const indexOfFirstMatch = <T>(
 	arr: T[],
