@@ -3,7 +3,7 @@ import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations'
 import { useEffect, useState } from 'react';
 import type { HTMLAttributes } from 'react';
 import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';
-import type { Props } from '../types';
+import type { Props } from '../@types/types';
 import { AccordionRowNoJS } from './AccordionRowNoJS';
 import {
 	accordionRow,
