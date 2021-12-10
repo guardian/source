@@ -96,8 +96,13 @@ export const Checkbox = ({
 		}
 	};
 
-	const box = (
-		<>
+	return (
+		<label
+			css={(theme) => [
+				label(theme.checkbox),
+				supporting ? labelWithSupportingText : '',
+			]}
+		>
 			<input
 				type="checkbox"
 				css={(theme) => [
@@ -121,17 +126,6 @@ export const Checkbox = ({
 					supporting ? tickWithSupportingText : '',
 				]}
 			/>
-		</>
-	);
-
-	const labelledBox = (
-		<label
-			css={(theme) => [
-				label(theme.checkbox),
-				supporting ? labelWithSupportingText : '',
-			]}
-		>
-			{box}
 			{supporting ? (
 				<div>
 					<LabelText hasSupportingText={true}>
@@ -144,6 +138,4 @@ export const Checkbox = ({
 			)}
 		</label>
 	);
-
-	return <>{labelContent || supporting ? labelledBox : box}</>;
 };
