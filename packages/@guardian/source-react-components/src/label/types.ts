@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import type { HTMLAttributes, LabelHTMLAttributes, ReactNode } from 'react';
-import type { Props } from '../@types/types';
+import { Props } from '../@types/Props';
 
 export interface LabelProps
 	extends LabelHTMLAttributes<HTMLLabelElement>,

@@ -6,7 +6,7 @@ import {
 import type { SelectHTMLAttributes } from 'react';
 import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';
 import { Label } from '../label/Label';
-import type { Props } from '../@types/types';
+import { Props } from '../@types/Props';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';
 import {
