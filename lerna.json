@@ -7,7 +7,7 @@
       "message": "chore(release): publish"
     },
     "version": {
-      "allowBranch": "main"
+      "allowBranch": "v4.0.0"
     }
   }
 }
