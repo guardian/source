@@ -3,7 +3,6 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { storybookBackgrounds } from '../../../src-helpers/storybook-bg';
 import { InlineSuccess } from './InlineSuccess';
 import { userFeedbackThemeBrand } from './theme';
 import type { UserFeedbackProps } from './types';
@@ -32,8 +31,7 @@ asChromaticStory(InlineSuccessDefaultTheme);
 export const InlineSuccessBrandTheme = Template.bind({});
 InlineSuccessBrandTheme.parameters = {
 	backgrounds: {
-		default: 'brand',
-		values: [storybookBackgrounds.brand],
+		default: 'brandBackground.primary',
 	},
 	theme: userFeedbackThemeBrand,
 };
