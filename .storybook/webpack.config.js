@@ -6,6 +6,7 @@ const nodeModulesExclude = [
 		exclude: [/@guardian\//],
 	},
 ];
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = ({ config, mode }) => {
 	//Get TypeScript working via babel preset
@@ -38,20 +39,13 @@ module.exports = ({ config, mode }) => {
 	).exclude = nodeModulesExclude;
 
 	config.resolve.extensions.push('.ts', '.tsx');
-	config.resolve.alias = {
-		'@guardian/source-foundations': path.resolve(
-			__dirname,
-			'../packages/@guardian/source-foundations/src',
-		),
-		'@guardian/source-react-components': path.resolve(
-			__dirname,
-			'../packages/@guardian/source-react-components/src',
-		),
-		'@guardian/source-react-components-development-kitchen': path.resolve(
-			__dirname,
-			'../packages/@guardian/source-react-components-development-kitchen/src',
-		),
-	};
+	config.resolve.plugins.push(
+		new TsconfigPathsPlugin({
+			configFile: path.resolve(__dirname, '..', 'tsconfig.json'),
+			extensions: config.resolve.extensions,
+			mainFields: config.resolve.mainFields,
+		}),
+	);
 
 	return config;
 };
