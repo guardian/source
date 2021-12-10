@@ -4,60 +4,60 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import type { IconProps, IconSize } from './types';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-export { SvgAlert } from './SvgAlert';
-export { SvgAlertRound } from './SvgAlertRound';
-export { SvgAlertTriangle } from './SvgAlertTriangle';
-export { SvgAppleBrand } from './SvgAppleBrand';
-export { SvgArrowDownStraight } from './SvgArrowDownStraight';
-export { SvgArrowLeftStraight } from './SvgArrowLeftStraight';
-export { SvgArrowRightStraight } from './SvgArrowRightStraight';
-export { SvgArrowUpStraight } from './SvgArrowUpStraight';
-export { SvgAudio } from './SvgAudio';
-export { SvgCamera } from './SvgCamera';
-export { SvgCheckmark } from './SvgCheckmark';
-export { SvgChevronDownSingle } from './SvgChevronDownSingle';
-export { SvgChevronLeftDouble } from './SvgChevronLeftDouble';
-export { SvgChevronLeftSingle } from './SvgChevronLeftSingle';
-export { SvgChevronRightDouble } from './SvgChevronRightDouble';
-export { SvgChevronRightSingle } from './SvgChevronRightSingle';
-export { SvgChevronUpSingle } from './SvgChevronUpSingle';
-export { SvgClock } from './SvgClock';
-export { SvgCreditCard } from './SvgCreditCard';
-export { SvgCross } from './SvgCross';
-export { SvgDirectDebit } from './SvgDirectDebit';
-export { SvgDirectDebitWide } from './SvgDirectDebitWide';
-export { SvgEnvelope } from './SvgEnvelope';
-export { SvgExternal } from './SvgExternal';
-export { SvgEyeStrike } from './SvgEyeStrike';
-export { SvgEye } from './SvgEye';
-export { SvgFacebook } from './SvgFacebook';
-export { SvgFacebookBrand } from './SvgFacebookBrand';
-export { SvgGift } from './SvgGift';
-export { SvgGlobe } from './SvgGlobe';
-export { SvgGoogleBrand } from './SvgGoogleBrand';
-export { SvgHouse } from './SvgHouse';
-export { SvgIndent } from './SvgIndent';
-export { SvgInfo } from './SvgInfo';
-export { SvgLinkedIn } from './SvgLinkedIn';
-export { SvgMessenger } from './SvgMessenger';
-export { SvgMinus } from './SvgMinus';
-export { SvgOfflineCloud } from './SvgOfflineCloud';
-export { SvgPayPal } from './SvgPayPal';
-export { SvgPerson } from './SvgPerson';
-export { SvgPinterest } from './SvgPinterest';
-export { SvgPlay } from './SvgPlay';
-export { SvgPlus } from './SvgPlus';
-export { SvgQuote } from './SvgQuote';
-export { SvgSettings } from './SvgSettings';
-export { SvgSpeechBubble } from './SvgSpeechBubble';
-export { SvgStar } from './SvgStar';
-export { SvgTickRound } from './SvgTickRound';
-export { SvgTwitter } from './SvgTwitter';
-export { SvgVideo } from './SvgVideo';
-export { SvgWhatsApp } from './SvgWhatsApp';
+import { SvgAlert } from './SvgAlert';
+import { SvgAlertRound } from './SvgAlertRound';
+import { SvgAlertTriangle } from './SvgAlertTriangle';
+import { SvgAppleBrand } from './SvgAppleBrand';
+import { SvgArrowDownStraight } from './SvgArrowDownStraight';
+import { SvgArrowLeftStraight } from './SvgArrowLeftStraight';
+import { SvgArrowRightStraight } from './SvgArrowRightStraight';
+import { SvgArrowUpStraight } from './SvgArrowUpStraight';
+import { SvgAudio } from './SvgAudio';
+import { SvgCamera } from './SvgCamera';
+import { SvgCheckmark } from './SvgCheckmark';
+import { SvgChevronDownSingle } from './SvgChevronDownSingle';
+import { SvgChevronLeftDouble } from './SvgChevronLeftDouble';
+import { SvgChevronLeftSingle } from './SvgChevronLeftSingle';
+import { SvgChevronRightDouble } from './SvgChevronRightDouble';
+import { SvgChevronRightSingle } from './SvgChevronRightSingle';
+import { SvgChevronUpSingle } from './SvgChevronUpSingle';
+import { SvgClock } from './SvgClock';
+import { SvgCreditCard } from './SvgCreditCard';
+import { SvgCross } from './SvgCross';
+import { SvgDirectDebit } from './SvgDirectDebit';
+import { SvgDirectDebitWide } from './SvgDirectDebitWide';
+import { SvgEnvelope } from './SvgEnvelope';
+import { SvgExternal } from './SvgExternal';
+import { SvgEye } from './SvgEye';
+import { SvgEyeStrike } from './SvgEyeStrike';
+import { SvgFacebook } from './SvgFacebook';
+import { SvgFacebookBrand } from './SvgFacebookBrand';
+import { SvgGift } from './SvgGift';
+import { SvgGlobe } from './SvgGlobe';
+import { SvgGoogleBrand } from './SvgGoogleBrand';
+import { SvgHouse } from './SvgHouse';
+import { SvgIndent } from './SvgIndent';
+import { SvgInfo } from './SvgInfo';
+import { SvgLinkedIn } from './SvgLinkedIn';
+import { SvgMessenger } from './SvgMessenger';
+import { SvgMinus } from './SvgMinus';
+import { SvgOfflineCloud } from './SvgOfflineCloud';
+import { SvgPayPal } from './SvgPayPal';
+import { SvgPerson } from './SvgPerson';
+import { SvgPinterest } from './SvgPinterest';
+import { SvgPlay } from './SvgPlay';
+import { SvgPlus } from './SvgPlus';
+import { SvgQuote } from './SvgQuote';
+import { SvgSettings } from './SvgSettings';
+import { SvgSpeechBubble } from './SvgSpeechBubble';
+import { SvgStar } from './SvgStar';
+import { SvgTickRound } from './SvgTickRound';
+import { SvgTwitter } from './SvgTwitter';
+import { SvgVideo } from './SvgVideo';
+import { SvgWhatsApp } from './SvgWhatsApp';
+import type { IconProps, IconSize } from './types';
 
 const uiIcons = {
 	SvgAlert,
@@ -104,6 +104,8 @@ const uiIcons = {
 	SvgStar,
 	SvgTickRound,
 	SvgTwitter,
+	SvgAudio,
+	SvgVideo,
 	SvgWhatsApp,
 };
 
