@@ -10,7 +10,7 @@ export interface LinkButtonProps
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-linkbutton--playground) •
  * [Design System](https://theguardian.design/2a1e5182b/p/435225-button) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/button) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/button/LinkButton.tsx) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
  * Buttons enable users to make choices or perform actions.
