@@ -32,7 +32,9 @@ export const buttonLink = css`
 	padding: 0;
 `;
 
-export const primary = (link: LinkTheme = linkThemeDefault.link) => css`
+export const primary = (
+	link: LinkTheme = linkThemeDefault.link,
+): SerializedStyles => css`
 	color: ${link.textPrimary};
 
 	&:hover {
@@ -40,7 +42,9 @@ export const primary = (link: LinkTheme = linkThemeDefault.link) => css`
 	}
 `;
 
-export const secondary = (link: LinkTheme = linkThemeDefault.link) => css`
+export const secondary = (
+	link: LinkTheme = linkThemeDefault.link,
+): SerializedStyles => css`
 	color: ${link.textSecondary};
 
 	&:hover {
@@ -112,7 +116,9 @@ export const linkStyles = ({
 	iconSide?: IconSide;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }) => {
-	return (theme: Theme) => [
+	return (
+		theme: Theme,
+	): Array<string | SerializedStyles | SerializedStyles[] | undefined> => [
 		link,
 		isButton ? buttonLink : '',
 		priorities[priority](theme.link),

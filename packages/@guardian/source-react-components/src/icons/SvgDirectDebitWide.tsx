@@ -1,7 +1,8 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from './types';
 
-export const SvgDirectDebitWide = ({ size }: IconProps) => (
+export const SvgDirectDebitWide = ({ size }: IconProps): EmotionJSX.Element => (
 	<svg
 		viewBox="0 0 50 20"
 		xmlns="http://www.w3.org/2000/svg"

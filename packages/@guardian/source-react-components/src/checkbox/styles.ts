@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	appearance,
@@ -18,7 +19,9 @@ export const fieldset = css`
 	flex-direction: column;
 `;
 
-export const label = (checkbox = checkboxThemeDefault.checkbox) => css`
+export const label = (
+	checkbox = checkboxThemeDefault.checkbox,
+): SerializedStyles => css`
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -37,7 +40,9 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `;
 
-export const checkbox = (checkbox = checkboxThemeDefault.checkbox) => css`
+export const checkbox = (
+	checkbox = checkboxThemeDefault.checkbox,
+): SerializedStyles => css`
 	flex: 0 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
@@ -84,7 +89,9 @@ export const checkbox = (checkbox = checkboxThemeDefault.checkbox) => css`
 	}
 `;
 
-export const labelText = (checkbox = checkboxThemeDefault.checkbox) => css`
+export const labelText = (
+	checkbox = checkboxThemeDefault.checkbox,
+): SerializedStyles => css`
 	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabel};
 	width: 100%;
@@ -94,12 +101,16 @@ export const labelTextWithSupportingText = css`
 	${textSans.medium({ lineHeight: 'regular' })};
 `;
 
-export const supportingText = (checkbox = checkboxThemeDefault.checkbox) => css`
+export const supportingText = (
+	checkbox = checkboxThemeDefault.checkbox,
+): SerializedStyles => css`
 	${textSans.small({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabelSupporting};
 `;
 
-export const tick = (checkbox = checkboxThemeDefault.checkbox) => css`
+export const tick = (
+	checkbox = checkboxThemeDefault.checkbox,
+): SerializedStyles => css`
 	@supports (
 		(appearance: none) or (-webkit-appearance: none) or
 			(-moz-appearance: none)
@@ -164,6 +175,8 @@ export const tickWithSupportingText = css`
 	}
 `;
 
-export const errorCheckbox = (checkbox = checkboxThemeDefault.checkbox) => css`
+export const errorCheckbox = (
+	checkbox = checkboxThemeDefault.checkbox,
+): SerializedStyles => css`
 	border: 4px solid ${checkbox.borderError};
 `;

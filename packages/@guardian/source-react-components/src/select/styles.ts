@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	appearance,
@@ -9,7 +10,9 @@ import {
 } from '@guardian/source-foundations';
 import { selectThemeDefault } from './theme';
 
-export const errorInput = (select = selectThemeDefault.select) => css`
+export const errorInput = (
+	select = selectThemeDefault.select,
+): SerializedStyles => css`
 	border: 4px solid ${select.borderError};
 	color: ${select.textError};
 	/* When select is active and in an error state, we want the border to remain the same. */
@@ -18,7 +21,9 @@ export const errorInput = (select = selectThemeDefault.select) => css`
 	}
 `;
 
-export const successInput = (select = selectThemeDefault.select) => css`
+export const successInput = (
+	select = selectThemeDefault.select,
+): SerializedStyles => css`
 	border: 4px solid ${select.borderSuccess};
 	color: ${select.textSuccess};
 	/* When select is active and in an success state, we want the border to remain the same. */
@@ -27,19 +32,25 @@ export const successInput = (select = selectThemeDefault.select) => css`
 	}
 `;
 
-export const errorChevron = (select = selectThemeDefault.select) => css`
+export const errorChevron = (
+	select = selectThemeDefault.select,
+): SerializedStyles => css`
 	svg {
 		fill: ${select.textError};
 	}
 `;
 
-export const successChevron = (select = selectThemeDefault.select) => css`
+export const successChevron = (
+	select = selectThemeDefault.select,
+): SerializedStyles => css`
 	svg {
 		fill: ${select.textSuccess};
 	}
 `;
 
-export const selectWrapper = (select = selectThemeDefault.select) => css`
+export const selectWrapper = (
+	select = selectThemeDefault.select,
+): SerializedStyles => css`
 	position: relative;
 
 	svg {
@@ -54,8 +65,8 @@ export const selectWrapper = (select = selectThemeDefault.select) => css`
 	}
 `;
 
-export const select = (select = selectThemeDefault.select) => {
-	return css`
+export const select = (select = selectThemeDefault.select): SerializedStyles =>
+	css`
 		color: ${select.textUserInput};
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
@@ -86,4 +97,3 @@ export const select = (select = selectThemeDefault.select) => {
 			${errorInput(select)};
 		}
 	`;
-};

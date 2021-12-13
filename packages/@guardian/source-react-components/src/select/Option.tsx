@@ -1,4 +1,4 @@
-import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { OptionHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 
@@ -8,7 +8,11 @@ export interface OptionProps
 	children: string;
 }
 
-export const Option = ({ cssOverrides, children, ...props }: OptionProps) => {
+export const Option = ({
+	cssOverrides,
+	children,
+	...props
+}: OptionProps): EmotionJSX.Element => {
 	return (
 		<option css={cssOverrides} {...props}>
 			{children}
