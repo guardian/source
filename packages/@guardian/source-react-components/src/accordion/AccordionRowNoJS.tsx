@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
 import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';
 import type { AccordionRowProps } from './AccordionRow';
@@ -25,7 +26,7 @@ export const AccordionRowNoJS = ({
 	children,
 	cssOverrides,
 	...props
-}: Omit<AccordionRowProps, 'onClick'>) => {
+}: Omit<AccordionRowProps, 'onClick'>): EmotionJSX.Element => {
 	return (
 		<div
 			css={(theme) => [accordionRow(theme.accordion), cssOverrides]}

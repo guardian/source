@@ -13,7 +13,7 @@ import type { Story } from './@types/storybook-emotion-10-fixes';
  *
  */
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments -- we're not sure tbh
-export const asPlayground = <Args>(story: Story<Args>) => {
+export const asPlayground = <Args>(story: Story<Args>): void => {
 	story.parameters = {
 		...story.parameters,
 		viewMode: 'docs',
@@ -53,7 +53,7 @@ export const asPlayground = <Args>(story: Story<Args>) => {
  * Make sure you have one of these for every possible state of your component.
  */
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments -- we're not sure tbh
-export const asChromaticStory = <Args>(story: Story<Args>) => {
+export const asChromaticStory = <Args>(story: Story<Args>): void => {
 	const defaultViewport = story.parameters?.viewport?.defaultViewport;
 
 	const chromatic: Record<string, unknown> = { disable: false };

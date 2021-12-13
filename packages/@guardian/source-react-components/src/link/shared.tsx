@@ -10,7 +10,7 @@ export const linkContents = ({
 	children: ReactNode;
 	iconSvg?: ReactElement;
 	iconSide: IconSide;
-}) => {
+}): ReactNode[] => {
 	// a bit of underlined space; the icon sits on top
 	const spacer = (
 		<Fragment key="spacer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Fragment>

@@ -1,7 +1,10 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const ArrowUpStraightIcon = ({ size }: IconProps) => {
+export const ArrowUpStraightIcon = ({
+	size,
+}: IconProps): EmotionJSX.Element => {
 	return (
 		<svg
 			viewBox="0 0 24 24"

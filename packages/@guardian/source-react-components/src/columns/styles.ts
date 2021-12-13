@@ -18,7 +18,9 @@ export const columns = css`
 	}
 `;
 
-export const collapseBelowColumnsCSS = (breakpoint: Breakpoint) => css`
+export const collapseBelowColumnsCSS = (
+	breakpoint: Breakpoint,
+): SerializedStyles => css`
 	${until[breakpoint]} {
 		display: block;
 		margin-right: 0;
@@ -28,7 +30,7 @@ export const collapseBelowColumnsCSS = (breakpoint: Breakpoint) => css`
 	}
 `;
 
-const collapseBelowSpaceYCSS = (spaceY: ColumnsSpaceY) => css`
+const collapseBelowSpaceYCSS = (spaceY: ColumnsSpaceY): SerializedStyles => css`
 	margin-bottom: ${-space[spaceY]}px;
 	& > * {
 		margin-bottom: ${space[spaceY]}px;
@@ -204,11 +206,11 @@ export const flexGrow = css`
 `;
 
 // width is specified
-export const setWidth = (value: number | number[]) => css`
+export const setWidth = (value: number | number[]): SerializedStyles => css`
 	${generateWidthCSS(value)};
 `;
 
 // span is specified
-export const setSpan = (value: number | number[]) => css`
+export const setSpan = (value: number | number[]): SerializedStyles => css`
 	${generateSpanCSS(value)}
 `;

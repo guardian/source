@@ -1,4 +1,5 @@
 import type { SerializedStyles } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
@@ -91,7 +92,7 @@ export const TextInput = ({
 	success,
 	cssOverrides,
 	...props
-}: TextInputProps) => {
+}: TextInputProps): EmotionJSX.Element => {
 	const textInputId = id ?? generateSourceId();
 	return (
 		<Label

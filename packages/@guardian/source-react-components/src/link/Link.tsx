@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { AnchorHTMLAttributes } from 'react';
 import { linkContents } from './shared';
 import { linkStyles } from './styles';
@@ -25,7 +26,7 @@ export const Link = ({
 	cssOverrides,
 	children,
 	...props
-}: LinkProps) => {
+}: LinkProps): EmotionJSX.Element => {
 	return (
 		<a
 			css={linkStyles({

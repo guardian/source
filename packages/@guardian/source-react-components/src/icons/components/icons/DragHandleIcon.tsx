@@ -1,7 +1,8 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const DragHandleIcon = ({ size }: IconProps) => {
+export const DragHandleIcon = ({ size }: IconProps): EmotionJSX.Element => {
 	return (
 		<svg
 			viewBox="0 0 24 24"

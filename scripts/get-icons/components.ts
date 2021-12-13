@@ -3,10 +3,11 @@ import { kebabToTitle } from './case';
 import { REACT_COMPONENT_OUTPUT_DIR } from './config';
 
 export const generateReactComponent = (name: string, svg: string): string => {
-	return `import { iconSize } from '@guardian/source-foundations';
+	return `import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const ${name}Icon = ({ size }: IconProps) => {
+export const ${name}Icon = ({ size }: IconProps): EmotionJSX.Element => {
 	return (
 ${replaceStyleAttribute(
 	svg

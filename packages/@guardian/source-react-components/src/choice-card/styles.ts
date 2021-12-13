@@ -45,7 +45,7 @@ export const gridContainer = css`
 	}
 `;
 
-const gridColumnsStyle = (columns: ChoiceCardColumns) => css`
+const gridColumnsStyle = (columns: ChoiceCardColumns): SerializedStyles => css`
 	${from.mobileLandscape} {
 		grid-template-columns: repeat(${columns}, 1fr);
 	}
@@ -57,7 +57,9 @@ export const gridColumns: { [key in ChoiceCardColumns]: SerializedStyles } = {
 	5: gridColumnsStyle(5),
 };
 
-export const input = (choiceCard = choiceCardThemeDefault.choiceCard) => css`
+export const input = (
+	choiceCard = choiceCardThemeDefault.choiceCard,
+): SerializedStyles => css`
 	${visuallyHidden};
 
 	&:focus + label {
@@ -127,7 +129,7 @@ export const tickAnimation = css`
 
 export const choiceCard = (
 	choiceCard = choiceCardThemeDefault.choiceCard,
-) => css`
+): SerializedStyles => css`
 	flex: 1;
 	display: flex;
 	justify-content: center;
@@ -197,7 +199,9 @@ export const contentWrapperLabelOnly = css`
 
 // TODO: most of this is duplicated in the checkbox component
 // We should extract it into its own module somewhere
-export const tick = (choiceCard = choiceCardThemeDefault.choiceCard) => css`
+export const tick = (
+	choiceCard = choiceCardThemeDefault.choiceCard,
+): SerializedStyles => css`
 	/* overall positional properties */
 	position: absolute;
 	top: 50%;
@@ -238,7 +242,7 @@ export const tick = (choiceCard = choiceCardThemeDefault.choiceCard) => css`
 
 export const errorChoiceCard = (
 	choiceCard = choiceCardThemeDefault.choiceCard,
-) => css`
+): SerializedStyles => css`
 	box-shadow: inset 0 0 0 4px ${choiceCard.borderError};
 
 	& > * {

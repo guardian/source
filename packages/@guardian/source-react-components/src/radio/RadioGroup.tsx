@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { FieldsetHTMLAttributes } from 'react';
 import { Children, cloneElement } from 'react';
@@ -60,7 +61,7 @@ export const RadioGroup = ({
 	cssOverrides,
 	children,
 	...props
-}: RadioGroupProps) => {
+}: RadioGroupProps): EmotionJSX.Element => {
 	const groupId = id ?? generateSourceId();
 	const legend = label ? (
 		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />

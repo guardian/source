@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { ButtonHTMLAttributes } from 'react';
 import { linkContents } from './shared';
 import { linkStyles } from './styles';
@@ -25,7 +26,7 @@ export const ButtonLink = ({
 	cssOverrides,
 	children,
 	...props
-}: ButtonLinkProps) => {
+}: ButtonLinkProps): EmotionJSX.Element => {
 	return (
 		<button
 			css={linkStyles({

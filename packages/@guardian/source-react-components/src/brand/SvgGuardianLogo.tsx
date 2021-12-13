@@ -1,3 +1,5 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+
 export type SvgGuardianLogoProps = {
 	/**
 	 * The text colour.
@@ -22,7 +24,10 @@ export type SvgGuardianLogoProps = {
  * The Guardian logo.
  */
 
-export const SvgGuardianLogo = ({ textColor, width }: SvgGuardianLogoProps) => {
+export const SvgGuardianLogo = ({
+	textColor,
+	width,
+}: SvgGuardianLogoProps): EmotionJSX.Element => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

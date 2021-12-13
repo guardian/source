@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	focusHalo,
@@ -8,7 +9,9 @@ import {
 } from '@guardian/source-foundations';
 import { textInputThemeDefault } from './theme';
 
-export const errorInput = (textInput = textInputThemeDefault.textInput) => css`
+export const errorInput = (
+	textInput = textInputThemeDefault.textInput,
+): SerializedStyles => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
 	margin-top: 0;
@@ -20,7 +23,7 @@ export const errorInput = (textInput = textInputThemeDefault.textInput) => css`
 
 export const successInput = (
 	textInput = textInputThemeDefault.textInput,
-) => css`
+): SerializedStyles => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
 	margin-top: 0;
@@ -30,8 +33,10 @@ export const successInput = (
 	}
 `;
 
-export const textInput = (textInput = textInputThemeDefault.textInput) => {
-	return css`
+export const textInput = (
+	textInput = textInputThemeDefault.textInput,
+): SerializedStyles =>
+	css`
 		${resets.input};
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
@@ -59,7 +64,6 @@ export const textInput = (textInput = textInputThemeDefault.textInput) => {
 			}
 		}
 	`;
-};
 
 export const labelMargin = css`
 	margin-top: ${space[1]}px;

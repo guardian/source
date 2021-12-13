@@ -8,7 +8,7 @@ export const inline = css`
 	flex-wrap: wrap;
 `;
 
-const inlineSpaceStyle = (number: InlineSpace) => css`
+const inlineSpaceStyle = (number: InlineSpace): SerializedStyles => css`
 	margin-left: -${space[number]}px;
 	& > * {
 		margin-left: ${space[number]}px;

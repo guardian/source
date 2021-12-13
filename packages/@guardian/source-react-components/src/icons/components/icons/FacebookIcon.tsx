@@ -1,7 +1,8 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const FacebookIcon = ({ size }: IconProps) => {
+export const FacebookIcon = ({ size }: IconProps): EmotionJSX.Element => {
 	return (
 		<svg
 			viewBox="0 0 24 24"

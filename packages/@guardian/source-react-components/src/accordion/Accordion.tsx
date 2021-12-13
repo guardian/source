@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { ReactElement } from 'react';
 import { Children, cloneElement } from 'react';
 import type { Props } from '../@types/Props';
@@ -26,7 +27,7 @@ export const Accordion = ({
 	children,
 	cssOverrides,
 	...props
-}: AccordionProps) => {
+}: AccordionProps): EmotionJSX.Element => {
 	// AUDIT https://www.sarasoueidan.com/blog/accordion-markup/
 	return (
 		<div

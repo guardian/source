@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { FieldsetHTMLAttributes } from 'react';
 import { Children, cloneElement } from 'react';
@@ -65,7 +66,7 @@ export const ChoiceCardGroup = ({
 	cssOverrides,
 	children,
 	...props
-}: ChoiceCardGroupProps) => {
+}: ChoiceCardGroupProps): EmotionJSX.Element => {
 	const groupId = id ?? generateSourceId();
 	return (
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
