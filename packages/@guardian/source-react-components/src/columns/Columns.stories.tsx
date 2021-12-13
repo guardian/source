@@ -310,7 +310,7 @@ asChromaticStory(ResponsiveHideAtMobile);
 
 // *****************************************************************************
 
-export const WithSpan: Story<ColumnsProps> = (args) => (
+export const WithSpan: Story<ColumnsProps> = () => (
 	<>
 		<p>
 			Elements with a <Code>{'span'}</Code> prop will scale at our{' '}
