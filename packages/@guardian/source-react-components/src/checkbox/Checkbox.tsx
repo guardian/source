@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { InputHTMLAttributes, ReactNode } from 'react';
 import type { Props } from '../@types/Props';
 import { LabelText } from './LabelText';
@@ -70,7 +71,7 @@ export const Checkbox = ({
 	indeterminate,
 	cssOverrides,
 	...props
-}: CheckboxProps) => {
+}: CheckboxProps): EmotionJSX.Element => {
 	const ariaChecked = (): boolean | 'mixed' => {
 		// Note: the indeterminate prop takes precedence over the checked prop
 		if (indeterminate) {

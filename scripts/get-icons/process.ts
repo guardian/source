@@ -29,4 +29,4 @@ export const stripAttributes = (name: string, svg: string): string => {
 // if they were self closing before. This makes all path tags
 // self closing
 const selfClosePathTags = (svg: string): string =>
-	svg.replace(/\>\<\/(path|rect)\>/gi, '/>');
+	svg.replace(/\\>\\<\/(path|rect)\\>/gi, '/>');

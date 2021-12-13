@@ -1,8 +1,5 @@
-import {
-	visuallyHidden as _visuallyHidden,
-	descriptionId,
-	generateSourceId,
-} from '@guardian/source-foundations';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { Label } from '../label/Label';
@@ -79,7 +76,7 @@ export const TextArea = ({
 	className,
 	value,
 	...props
-}: TextAreaProps) => {
+}: TextAreaProps): EmotionJSX.Element => {
 	const textAreaId = id ?? generateSourceId();
 	const getClassName = () => {
 		const HAS_VALUE_CLASS = 'src-has-value';

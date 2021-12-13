@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { neutral } from '@guardian/source-foundations';
 import { SvgRoundel } from './SvgRoundel';
 
@@ -15,7 +16,9 @@ export type SvgRoundelDefaultProps = {
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/brand/SvgRoundelDefault.tsx) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  */
-export const SvgRoundelDefault = (args: SvgRoundelDefaultProps) => {
+export const SvgRoundelDefault = (
+	args: SvgRoundelDefaultProps,
+): EmotionJSX.Element => {
 	return (
 		<SvgRoundel textColor="white" backgroundColor={neutral[7]} {...args} />
 	);

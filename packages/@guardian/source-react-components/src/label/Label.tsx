@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { SupportingText } from './SupportingText';
 import { Text } from './Text';
 import type { LabelProps } from './types';
@@ -23,7 +24,7 @@ export const Label = ({
 	cssOverrides,
 	children,
 	...props
-}: LabelProps) => {
+}: LabelProps): EmotionJSX.Element => {
 	return (
 		<label css={cssOverrides} {...props}>
 			<Text hideLabel={hideLabel} text={text} optional={optional} />

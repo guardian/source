@@ -1,5 +1,5 @@
-import { TestResult } from './types';
 import chalk from 'chalk';
+import type { TestResult } from './types';
 
 export const printResults = (results: TestResult[]) => {
 	const totalNumber = results.length;

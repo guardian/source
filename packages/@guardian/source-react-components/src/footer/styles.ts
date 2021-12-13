@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	between,
@@ -10,7 +11,9 @@ import {
 } from '@guardian/source-foundations';
 import { footerThemeBrand } from './theme';
 
-export const footer = (footer = footerThemeBrand.footer) => css`
+export const footer = (
+	footer = footerThemeBrand.footer,
+): SerializedStyles => css`
 	color: ${footer.text};
 	background-color: ${footer.background};
 	padding: 0 ${space[3]}px ${space[3]}px ${space[3]}px;
@@ -41,7 +44,9 @@ export const linksWrapperSpaceWithBackToTop = css`
 	}
 `;
 
-export const links = (footer = footerThemeBrand.footer) => css`
+export const links = (
+	footer = footerThemeBrand.footer,
+): SerializedStyles => css`
 	border-style: solid;
 	border-color: ${footer.border};
 	border-width: 0 0 1px 0;
@@ -67,7 +72,9 @@ export const copyrightExtraPadding = css`
 	}
 `;
 
-export const backToTop = (footer = footerThemeBrand.footer) => css`
+export const backToTop = (
+	footer = footerThemeBrand.footer,
+): SerializedStyles => css`
 	display: flex;
 	align-items: center;
 	height: ${height.ctaMedium}px;
@@ -87,7 +94,9 @@ export const backToTop = (footer = footerThemeBrand.footer) => css`
 	}
 `;
 
-export const backToTopIcon = (footer = footerThemeBrand.footer) => css`
+export const backToTopIcon = (
+	footer = footerThemeBrand.footer,
+): SerializedStyles => css`
 	height: ${height.ctaMedium}px;
 	width: ${width.ctaMedium}px;
 	display: flex;

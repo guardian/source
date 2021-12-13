@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { visuallyHidden } from '@guardian/source-foundations';
 import type { ReactElement, ReactNode } from 'react';
 import { cloneElement } from 'react';
@@ -11,7 +12,7 @@ export const buttonContents = ({
 	hideLabel?: boolean;
 	iconSvg?: ReactElement;
 	children: ReactNode;
-}) => {
+}): EmotionJSX.Element | ReactNode[] => {
 	const contents = [children];
 
 	if (iconSvg) {

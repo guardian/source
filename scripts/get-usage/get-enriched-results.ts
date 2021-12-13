@@ -1,5 +1,5 @@
-import { ComponentUsageData } from './types';
 import { groupSrcAndSourceEquivalentComponents } from './group-components';
+import type { ComponentUsageData } from './types';
 
 const getStatsByComponent = (
 	byPackage: Record<string, Record<string, number>>,

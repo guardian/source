@@ -34,7 +34,9 @@ const button = css`
 	}
 `;
 
-const primary = (button: ButtonTheme = buttonThemeDefault.button) => css`
+const primary = (
+	button: ButtonTheme = buttonThemeDefault.button,
+): SerializedStyles => css`
 	background-color: ${button.backgroundPrimary};
 	color: ${button.textPrimary};
 
@@ -43,7 +45,9 @@ const primary = (button: ButtonTheme = buttonThemeDefault.button) => css`
 	}
 `;
 
-const secondary = (button: ButtonTheme = buttonThemeDefault.button) => css`
+const secondary = (
+	button: ButtonTheme = buttonThemeDefault.button,
+): SerializedStyles => css`
 	background-color: ${button.backgroundSecondary};
 	color: ${button.textSecondary};
 
@@ -52,7 +56,9 @@ const secondary = (button: ButtonTheme = buttonThemeDefault.button) => css`
 	}
 `;
 
-const tertiary = (button: ButtonTheme = buttonThemeDefault.button) => css`
+const tertiary = (
+	button: ButtonTheme = buttonThemeDefault.button,
+): SerializedStyles => css`
 	color: ${button.textTertiary};
 	border: 1px solid ${button.borderTertiary};
 
@@ -61,7 +67,9 @@ const tertiary = (button: ButtonTheme = buttonThemeDefault.button) => css`
 	}
 `;
 
-const subdued = (button: ButtonTheme = buttonThemeDefault.button) => css`
+const subdued = (
+	button: ButtonTheme = buttonThemeDefault.button,
+): SerializedStyles => css`
 	padding: 0;
 	background-color: transparent;
 	color: ${button.textSubdued};
@@ -253,7 +261,9 @@ export const buttonStyles =
 		nudgeIcon,
 		cssOverrides,
 	}: SharedButtonProps) =>
-	(theme: Theme) =>
+	(
+		theme: Theme,
+	): Array<string | SerializedStyles | SerializedStyles[] | undefined> =>
 		[
 			button,
 			sizes[size],

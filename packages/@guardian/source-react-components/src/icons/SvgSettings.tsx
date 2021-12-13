@@ -1,7 +1,8 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from './types';
 
-export const SvgSettings = ({ size }: IconProps) => {
+export const SvgSettings = ({ size }: IconProps): EmotionJSX.Element => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

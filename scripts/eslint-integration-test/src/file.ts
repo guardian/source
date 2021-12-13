@@ -1,5 +1,5 @@
-import { writeFileSync, readFileSync } from 'fs';
-import { testFileName, eslintConfigFileName } from './config';
+import { readFileSync, writeFileSync } from 'fs';
+import { eslintConfigFileName, testFileName } from './config';
 
 export const writeToEslintConfigfile = (content: string) => {
 	writeFileSync(eslintConfigFileName, content);

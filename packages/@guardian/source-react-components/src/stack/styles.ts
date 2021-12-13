@@ -9,7 +9,7 @@ export const stack = css`
 	}
 `;
 
-const stackSpaceStyle = (number: StackSpace) => css`
+const stackSpaceStyle = (number: StackSpace): SerializedStyles => css`
 	& > * + * {
 		margin-top: ${space[number]}px;
 	}

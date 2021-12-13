@@ -5,13 +5,9 @@
 // They _should_ come from @storybook/react directly
 // https://github.com/storybookjs/storybook/issues/13486
 
-export type Args = {
-	[key: string]: any;
-};
+export type Args = Record<string, any>;
 
-export type Parameters = {
-	[key: string]: any;
-};
+export type Parameters = Record<string, any>;
 
 export type Story<T = Args> = {
 	(arg0: Args & T): JSX.Element;
@@ -19,5 +15,5 @@ export type Story<T = Args> = {
 	parameters?: Parameters;
 	argTypes?: Args;
 	storyName?: string;
-	decorators?: ((story: Story) => JSX.Element)[];
+	decorators?: Array<(story: Story) => JSX.Element>;
 };

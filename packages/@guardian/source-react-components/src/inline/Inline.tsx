@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { inline, inlineSpace } from './styles';
@@ -23,7 +24,7 @@ export const Inline = ({
 	children,
 	space,
 	...props
-}: InlineProps) => {
+}: InlineProps): EmotionJSX.Element => {
 	return (
 		<div
 			css={[inline, space ? inlineSpace[space] : '', cssOverrides]}

@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	focusHalo,
@@ -12,13 +13,15 @@ import {
 } from '@guardian/source-foundations';
 import { accordionThemeDefault } from './theme';
 
-export const accordion = (accordion = accordionThemeDefault.accordion) => css`
+export const accordion = (
+	accordion = accordionThemeDefault.accordion,
+): SerializedStyles => css`
 	border-bottom: 1px solid ${accordion.borderPrimary};
 `;
 
 export const accordionRow = (
 	accordion = accordionThemeDefault.accordion,
-) => css`
+): SerializedStyles => css`
 	border-top: 1px solid ${accordion.borderPrimary};
 `;
 
@@ -31,7 +34,9 @@ const buttonStyles = css`
 	cursor: pointer;
 `;
 
-export const button = (accordion = accordionThemeDefault.accordion) => css`
+export const button = (
+	accordion = accordionThemeDefault.accordion,
+): SerializedStyles => css`
 	${buttonStyles};
 	color: ${accordion.textPrimary};
 
@@ -46,7 +51,9 @@ export const button = (accordion = accordionThemeDefault.accordion) => css`
 	}
 `;
 
-export const noJsButton = (accordion = accordionThemeDefault.accordion) => css`
+export const noJsButton = (
+	accordion = accordionThemeDefault.accordion,
+): SerializedStyles => css`
 	${buttonStyles};
 	color: ${accordion.textPrimary};
 `;

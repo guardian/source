@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { border, breakpoints, from, space } from '@guardian/source-foundations';
 
@@ -51,10 +52,10 @@ export const containerTopBorder = css`
 	border-top-style: solid;
 `;
 
-export const containerBorderColor = (color: string) => css`
+export const containerBorderColor = (color: string): SerializedStyles => css`
 	border-color: ${color};
 `;
 
-export const containerBackground = (color: string) => css`
+export const containerBackground = (color: string): SerializedStyles => css`
 	background-color: ${color};
 `;

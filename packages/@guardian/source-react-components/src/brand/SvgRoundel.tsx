@@ -1,3 +1,5 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+
 export type SvgRoundelProps = {
 	/**
 	 * The text colour.
@@ -29,7 +31,7 @@ export const SvgRoundel = ({
 	textColor = '#fff',
 	backgroundColor: bgColor = '#000',
 	width,
-}: SvgRoundelProps) => {
+}: SvgRoundelProps): EmotionJSX.Element => {
 	return (
 		<svg
 			viewBox="0 0 42 42"

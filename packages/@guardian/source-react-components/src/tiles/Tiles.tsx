@@ -1,4 +1,5 @@
 import type { SerializedStyles } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { Breakpoint } from '@guardian/source-foundations';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
@@ -78,7 +79,7 @@ export const Tiles = ({
 	cssOverrides,
 	children,
 	...props
-}: TilesProps) => {
+}: TilesProps): EmotionJSX.Element => {
 	return (
 		<div
 			css={[
