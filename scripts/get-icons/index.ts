@@ -1,6 +1,7 @@
-import axios from 'axios';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-import { formatSVG } from './format';
+import axios from 'axios';
+import { kebabToTitle } from './case';
+import { generateReactComponent, writeComponentsIndex } from './components';
 import {
 	FIGMA_OPTIONS,
 	ICON_FILE,
@@ -8,10 +9,9 @@ import {
 	REACT_COMPONENT_OUTPUT_DIR,
 	SVG_OUTPUT_DIR,
 } from './config';
-import { stripAttributes } from './process';
-import { generateReactComponent, writeComponentsIndex } from './components';
-import { kebabToTitle } from './case';
+import { formatSVG } from './format';
 import { Log } from './log';
+import { stripAttributes } from './process';
 
 interface FigmaComponentsResponse {
 	meta: {
@@ -65,7 +65,8 @@ const getContentsAndWriteOutputForNode = (node: NodeWithUrl) => {
 			);
 		})
 		.catch((err) => {
-			console.log(`Failed to write SVG for ${node.name}: ${err}`);
+			console.log(`Failed to write SVG for ${node.name}:`);
+			console.error(err);
 		});
 };
 
@@ -83,7 +84,7 @@ if (!process.env.FIGMA_TOKEN) {
 
 let nodeNames: string[] = [];
 
-axios
+void axios
 	.get<FigmaComponentsResponse>(
 		`https://api.figma.com/v1/files/${ICON_FILE}/components`,
 		FIGMA_OPTIONS,

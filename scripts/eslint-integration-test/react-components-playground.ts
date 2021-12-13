@@ -3,7 +3,6 @@
 // Generally, you probably won't want to commit those changes
 // but if you think your example might be useful for others then feel free to
 
-import { Label } from '@guardian/src-label';
-import { Button } from '@guardian/src-button';
-import { breakpoints } from '@guardian/src-foundations';
-import * as kitchen from '@guardian/source-react-components-development-kitchen';
+// import { breakpoints } from '@guardian/source-foundations';
+// import { Button } from '@guardian/source-react-components';
+// import * as kitchen from '@guardian/source-react-components-development-kitchen';

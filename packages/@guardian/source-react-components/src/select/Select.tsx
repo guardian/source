@@ -1,8 +1,5 @@
-import {
-	visuallyHidden as _visuallyHidden,
-	descriptionId,
-	generateSourceId,
-} from '@guardian/source-foundations';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { SelectHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';
@@ -70,7 +67,7 @@ export const Select = ({
 	cssOverrides,
 	children,
 	...props
-}: SelectProps) => {
+}: SelectProps): EmotionJSX.Element => {
 	const selectId = id ?? generateSourceId();
 	return (
 		<Label

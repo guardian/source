@@ -1,8 +1,9 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from './types';
 
 // The viewBox is changed from "6 6 44 44" to "15 15 26 26" for a ~60% zoom
-export const SvgAppleBrand = ({ size }: IconProps) => {
+export const SvgAppleBrand = ({ size }: IconProps): EmotionJSX.Element => {
 	return (
 		<svg
 			viewBox="15 15 26 26"

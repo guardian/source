@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { remHeight, remWidth, textSans } from '@guardian/source-foundations';
 import { userFeedbackThemeDefault } from './theme';
@@ -24,14 +25,14 @@ const inlineMessage = css`
 
 export const inlineError = (
 	userFeedback = userFeedbackThemeDefault.userFeedback,
-) => css`
+): SerializedStyles => css`
 	${inlineMessage};
 	color: ${userFeedback.textError};
 `;
 
 export const inlineSuccess = (
 	userFeedback = userFeedbackThemeDefault.userFeedback,
-) => css`
+): SerializedStyles => css`
 	${inlineMessage};
 	color: ${userFeedback.textSuccess};
 `;

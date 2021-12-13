@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	appearance,
@@ -11,7 +12,9 @@ import {
 } from '@guardian/source-foundations';
 import { radioThemeDefault } from './theme';
 
-export const fieldset = (radio = radioThemeDefault.radio) => css`
+export const fieldset = (
+	radio = radioThemeDefault.radio,
+): SerializedStyles => css`
 	${resets.fieldset};
 	display: flex;
 	justify-content: flex-start;
@@ -21,7 +24,7 @@ export const fieldset = (radio = radioThemeDefault.radio) => css`
 	}
 `;
 
-export const label = (radio = radioThemeDefault.radio) => css`
+export const label = (radio = radioThemeDefault.radio): SerializedStyles => css`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -39,7 +42,7 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `;
 
-export const radio = (radio = radioThemeDefault.radio) => css`
+export const radio = (radio = radioThemeDefault.radio): SerializedStyles => css`
 	flex: 0 0 auto;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -96,7 +99,9 @@ export const radio = (radio = radioThemeDefault.radio) => css`
 	}
 `;
 
-export const labelText = (radio = radioThemeDefault.radio) => css`
+export const labelText = (
+	radio = radioThemeDefault.radio,
+): SerializedStyles => css`
 	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${radio.textLabel};
 	width: 100%;
@@ -106,7 +111,9 @@ export const labelTextWithSupportingText = css`
 	${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
 `;
 
-export const supportingText = (radio = radioThemeDefault.radio) => css`
+export const supportingText = (
+	radio = radioThemeDefault.radio,
+): SerializedStyles => css`
 	${textSans.small({ lineHeight: 'regular' })};
 	color: ${radio.textLabelSupporting};
 `;

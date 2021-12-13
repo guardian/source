@@ -1,6 +1,6 @@
-import { cwd, chdir } from 'process';
-import { existsSync, writeFileSync, unlinkSync } from 'fs';
-import { testFileName, eslintConfigFileName } from './config';
+import { existsSync, unlinkSync, writeFileSync } from 'fs';
+import { chdir, cwd } from 'process';
+import { eslintConfigFileName, testFileName } from './config';
 
 let _cwd: string;
 

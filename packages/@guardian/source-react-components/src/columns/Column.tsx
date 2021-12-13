@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { column, flexGrow, setSpan, setWidth } from './styles';
@@ -50,7 +51,7 @@ export const Column = ({
 	cssOverrides,
 	children,
 	...props
-}: ColumnProps) => {
+}: ColumnProps): EmotionJSX.Element => {
 	const columnCss = [column];
 	if (width) {
 		columnCss.push(setWidth(width));

@@ -78,7 +78,7 @@ export const tilesGridContainer = css`
 	}
 `;
 
-const gridColumnsStyle = (columns: Columns) => css`
+const gridColumnsStyle = (columns: Columns): SerializedStyles => css`
 	${from.mobileLandscape} {
 		grid-template-columns: repeat(${columns}, 1fr);
 	}

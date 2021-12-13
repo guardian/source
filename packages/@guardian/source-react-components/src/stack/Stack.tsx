@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { stack, stackSpace } from './styles';
@@ -24,7 +25,7 @@ export const Stack = ({
 	children,
 	space,
 	...props
-}: StackProps) => {
+}: StackProps): EmotionJSX.Element => {
 	return (
 		<div
 			css={[stack, space ? stackSpace[space] : '', cssOverrides]}

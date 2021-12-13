@@ -1,3 +1,4 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { InputHTMLAttributes, ReactNode } from 'react';
 import type { Props } from '../@types/Props';
 import {
@@ -81,7 +82,7 @@ export const Radio = ({
 	defaultChecked,
 	cssOverrides,
 	...props
-}: RadioProps) => {
+}: RadioProps): EmotionJSX.Element => {
 	const isChecked = (): boolean => {
 		if (checked != null) {
 			return checked;
