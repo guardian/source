@@ -24,9 +24,9 @@
     "rollup-plugin-ts": "^1.4.7"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.1.2",
-    "react": "^17.0.1"
+    "@emotion/react": "^11.0.0",
     "@guardian/source-foundations": "4.0.0-rc.5",
+    "react": "^17.0.0"
   },
   "publishConfig": {
     "access": "public"
