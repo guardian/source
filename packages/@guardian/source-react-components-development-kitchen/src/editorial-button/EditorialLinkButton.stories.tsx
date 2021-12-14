@@ -6,13 +6,13 @@ import {
 	ArticleSpecial,
 } from '@guardian/libs';
 import { SvgCross } from '@guardian/source-react-components';
-import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asChromaticStory,
 	asPlayground,
-} from '../../../../../../lib/story-intents';
-import { EditorialButton } from './index';
-import type { EditorialButtonProps } from './index';
+} from '../../../../../lib/story-intents';
+import { EditorialLinkButton } from './EditorialLinkButton';
+import type { EditorialLinkButtonProps } from './EditorialLinkButton';
 
 const defaultFormat = {
 	display: ArticleDisplay.Standard,
@@ -20,8 +20,8 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Packages/source-react-components-development-kitchen/EditorialButton',
-	component: EditorialButton,
+	title: 'Packages/source-react-components-development-kitchen/EditorialLinkButton',
+	component: EditorialLinkButton,
 	argTypes: {
 		format: {
 			options: [
@@ -66,17 +66,17 @@ export default {
 	},
 };
 
-const Template: Story = (args: EditorialButtonProps) => {
+const Template: Story = (args: EditorialLinkButtonProps) => {
 	// Providing any value for cssOverrides, even undefined, overrides the custom styles
 	// for the editorial button so only pass through if it's defined
 	const { cssOverrides, ...rest } = args;
-	const props = rest as EditorialButtonProps;
+	const props = rest as EditorialLinkButtonProps;
 
 	if (cssOverrides) {
 		props.cssOverrides = cssOverrides;
 	}
 
-	return <EditorialButton {...props}>Click Me</EditorialButton>;
+	return <EditorialLinkButton {...props}>Click Me</EditorialLinkButton>;
 };
 
 export const Playground = Template.bind({});
@@ -84,6 +84,8 @@ Playground.args = {
 	format: 'news',
 };
 asPlayground(Playground);
+
+// *****************************************************************************
 
 const pillars = [
 	ArticlePillar.News,
@@ -95,8 +97,8 @@ const pillars = [
 	ArticleSpecial.Labs,
 ];
 
-const RowTemplate: Story<EditorialButtonProps> = (
-	args: Partial<EditorialButtonProps>,
+const RowTemplate: Story<EditorialLinkButtonProps> = (
+	args: Partial<EditorialLinkButtonProps>,
 ) => (
 	<div
 		css={css`
