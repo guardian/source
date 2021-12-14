@@ -8,7 +8,7 @@ import {
 	messageWrapperStyles,
 	wrapperStyles,
 } from './styles';
-import type { SummaryProps } from '.';
+import type { SummaryProps } from './types';
 
 export type SuccessSummaryProps = SummaryProps;
 

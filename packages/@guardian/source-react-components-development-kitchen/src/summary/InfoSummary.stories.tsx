@@ -1,8 +1,8 @@
-import type { Story } from '../../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asChromaticStory,
 	asPlayground,
-} from '../../../../../../lib/story-intents';
+} from '../../../../../lib/story-intents';
 import type { InfoSummaryProps } from './InfoSummary';
 import { InfoSummary } from './InfoSummary';
 

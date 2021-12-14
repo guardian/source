@@ -11,10 +11,3 @@ export interface SummaryProps extends Props {
 	 */
 	context?: React.ReactNode;
 }
-
-export type { ErrorSummaryProps } from './ErrorSummary';
-export { ErrorSummary } from './ErrorSummary';
-export type { SuccessSummaryProps } from './SuccessSummary';
-export { SuccessSummary } from './SuccessSummary';
-export type { InfoSummaryProps } from './InfoSummary';
-export { InfoSummary } from './InfoSummary';

@@ -1,5 +1,5 @@
 import { svgBackgroundImage } from '@guardian/source-foundations';
-import type { LineCount } from '.';
+import type { LineCount } from './Lines';
 
 const dotRadius = 1;
 const gridSize = 3;
