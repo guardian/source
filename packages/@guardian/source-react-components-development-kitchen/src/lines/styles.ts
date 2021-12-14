@@ -3,8 +3,8 @@ import { css } from '@emotion/react';
 import { remSpace } from '@guardian/source-foundations';
 import { dashedImage, height as labsImageHeight } from './dashed';
 import { dottedImage, height as dottedImageHeight } from './dotted';
+import type { LineCount } from './Lines';
 import { squigglyImage, height as squigglyImageHeight } from './squiggly';
-import type { LineCount } from '.';
 
 const lineGap = remSpace[1];
 

@@ -1,5 +1,5 @@
 import { space, svgBackgroundImage } from '@guardian/source-foundations';
-import type { LineCount } from '.';
+import type { LineCount } from './Lines';
 
 const thickness = 1;
 const gapHorizontal = 1;
