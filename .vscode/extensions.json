@@ -2,7 +2,7 @@
   "recommendations": [
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "jpoissonnier.vscode-styled-components",
+	"styled-components.vscode-styled-components",
     "stylelint.vscode-stylelint",
     "stkb.rewrap",
     "naumovs.color-highlight"
