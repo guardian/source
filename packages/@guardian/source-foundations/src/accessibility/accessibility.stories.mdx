@@ -1,13 +1,14 @@
 import { Meta } from '@storybook/addon-docs';
+import { FocusStyleManager } from './utils/focus-style-manager';
 
 <Meta
-	title="Packages/source-foundations/Accessibility helpers"
+	title="Packages/source-foundations/Accessibility"
 	parameters={{ previewTabs: { canvas: { hidden: true } } }}
 />
 
-# Accessibility helpers
+# Accessibility
 
-## Focus halo
+## `focusHalo`
 
 Providing a clear focus state (the blue halo effect around active elements) is essential to support keyboard navigation.
 
@@ -21,11 +22,23 @@ const customButton = css`
 `;
 ```
 
-## Focus manager
+## `FocusStyleManager`
 
 While providing a clear focus state is essential to support keyboard navigation, it is less important, and arguably distracting, for mouse users.
 
 Source provides a utility that manages the appearance of focus styles. When enabled, focus styles will be hidden while the user interacts using the mouse. They will appear when the tab key is pressed to begin keyboard navigation.
+
+### Methods
+
+<>
+	{Object.keys(FocusStyleManager).map((method) => (
+		<h6>
+			<code>{`FocusStyleManager.${method}()`}</code>
+		</h6>
+	))}
+</>
+
+### Example
 
 You must explictly enable this feature in your app (and you probably want to):
 
@@ -35,9 +48,9 @@ import { FocusStyleManager } from '@guardian/source-foundations';
 FocusStyleManager.onlyShowFocusOnTabs();
 ```
 
-## Visually hidden elements
+## `visuallyHidden`
 
-Some elements should be presented only to screen reader users. Examples include restyled checkboxes and button labels that provide more contextual information to the user.
+Some elements should be presented only to screen reader users e.g. restyled checkboxes and button labels that provide more contextual information to the user.
 
 Source provides a snippet of CSS that can be imported and applied to elements that need to be hidden from sighted users and displayed to screen reader users.
 
@@ -49,7 +62,7 @@ const label = css`
 `;
 ```
 
-## Description Id
+## `descriptionId`
 
 A function that takes the ID of an element and generates a new ID. This should be set as the ID of an element that describes the first element. The generated ID should also be passed to the `aria-describedby` attribute on the first element.
 
