@@ -1,7 +1,7 @@
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-accessibility-helpers--page#visually-hidden-elements)
  *
- * For elements that need to be hidden from sighted users and displayed to screen reader users.
+ * CSS rules that hide something from sight while still being available to screen readers.
  */
 
 export const visuallyHidden = `
