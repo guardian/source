@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/addon-docs';
 
 <Meta
-	title="Docs/Release notes/Source v4"
+	title="Release notes/Source v4"
 	parameters={{ previewTabs: { canvas: { hidden: true } } }}
 />
 
@@ -38,17 +38,6 @@ However, unlike before, _their version numbers will not stay in sync going forwa
 
 > Components change more frequently than the fundamentals of our design, and it seems odd to bump the foundations package because a component in a different package has changed (especially if you were only using the foundations package in the first place).
 
-## Other changes
-
-We minimised other changes to keep migration as simple as possible, but some house-keeping was required.
-
-There is a codemod to automate handling these (see below), but the full list of changes required for each package are available for the curious:
-
--   [foundations changes](https://github.com/guardian/source/blob/main/packages/%40guardian/source-foundations/migration-breaking-changes.md)
--   [components changes](https://github.com/guardian/source/blob/main/packages/%40guardian/source-react-components/migration-breaking-changes.md)
-
-Note: To conform with the Guardian's [NPM package recommendations](https://github.com/guardian/recommendations/blob/main/npm-packages.md#using-guardian-npm-packages), we [removed an inline polyfill](https://github.com/guardian/source/pull/982/files#diff-1d4bbfb57a73b4844eea8bf903faf617deb06f41c4d06c05e835eb82d2ebaa68L30-L49) for `Object.fromEntries`. If you support [IE11 or another unsupported browser](https://caniuse.com/mdn-javascript_builtins_object_fromentries), you will need to provide a polyfill for this method.
-
 ## Migrating
 
 ### Via codemod
@@ -84,3 +73,14 @@ The recommended manual steps are:
 -   Remove any `@guardian/src-*` packages from your `package.json`
 -   Add the `@guardian/source-foundations` and/or `@guardian/source-react-components` packages, depending on your use requirements
 -   Search for all ocurrences of `@guardian/src-` and fix as required
+
+## Other changes
+
+We minimised other changes to keep migration as simple as possible, but some house-keeping was required.
+
+There is a codemod to automate handling these (see below), but the full list of changes required for each package are available for the curious:
+
+-   [foundations changes](https://github.com/guardian/source/blob/main/packages/%40guardian/source-foundations/migration-breaking-changes.md)
+-   [components changes](https://github.com/guardian/source/blob/main/packages/%40guardian/source-react-components/migration-breaking-changes.md)
+
+Note: To conform with the Guardian's [NPM package recommendations](https://github.com/guardian/recommendations/blob/main/npm-packages.md#using-guardian-npm-packages), we [removed an inline polyfill](https://github.com/guardian/source/pull/982/files#diff-1d4bbfb57a73b4844eea8bf903faf617deb06f41c4d06c05e835eb82d2ebaa68L30-L49) for `Object.fromEntries`. If you support [IE11 or another unsupported browser](https://caniuse.com/mdn-javascript_builtins_object_fromentries), you will need to provide a polyfill for this method.
