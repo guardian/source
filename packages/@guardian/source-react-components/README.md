@@ -4,8 +4,6 @@
 
 A set of robust, accessible React components built using `@guardian/source-foundations`.
 
-See [the `@guardian/source-react-components` storybook](https://guardian.github.io/source/?path=/docs/Packages/source-react-components) for full info.
-
 ## Install
 
 ```sh
@@ -17,6 +15,8 @@ or
 ```sh
 $ npm install @guardian/source-react-components
 ```
+
+> You must install `react`, `@emotion/react` and `@guardian/source-foundations` to use Source components.
 
 ## Example
 
