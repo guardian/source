@@ -1,17 +1,21 @@
 # Foundations
 
-> The atoms from which all our visual design is built.
+[![npm](https://img.shields.io/npm/v/@guardian/source-foundations)](https://www.npmjs.com/package/@guardian/source-foundations)
 
-## Requirements
-
-Our foundations are expressed as JavaScript objects. They may be used with any CSS-in-JS library.
+The atoms from which all our visual design is built. They may be used with any CSS-in-JS library.
 
 ## Install
 
 Foundations are installed as a JavaScript package via Yarn:
 
-```shell
+```sh
 $ yarn add @guardian/source-foundations
+```
+
+or
+
+```sh
+$ yarn install @guardian/source-foundations
 ```
 
 ## Colour
