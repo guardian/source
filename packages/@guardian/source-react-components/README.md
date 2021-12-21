@@ -27,6 +27,6 @@ const Form = () => (
     <form>
         <TextInput label="First name" />
         <Button>Submit</Button>
-    </form >
+    </form>
 );
 ```
