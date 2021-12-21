@@ -1,5 +1,7 @@
 # Development Kitchen 🍳
 
+[![npm](https://img.shields.io/npm/v/@guardian/source-react-components-development-kitchen)](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
+
 The Development Kitchen is where new components and patterns can be cooked up, tested and shared. There are minimal acceptance criteria. It’s okay to duplicate and break things. If a Kitchen component proves valuable, it may be promoted to `@guardian/source-react-components`.
 
 ## Install
