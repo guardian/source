@@ -18,7 +18,7 @@ or
 $ npm install @guardian/source-react-components
 ```
 
-## Use
+## Example
 
 ```tsx
 import { TextInput, Button } from '@guardian/source-react-components';
