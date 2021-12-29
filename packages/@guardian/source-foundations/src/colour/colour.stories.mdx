@@ -1,116 +1,17 @@
 import { Meta } from '@storybook/addon-docs';
-import {
-	brand,
-	brandAlt,
-	neutral,
-	error,
-	success,
-	news,
-	opinion,
-	sport,
-	culture,
-	lifestyle,
-	labs,
-	specialReport,
-	focus,
-	background,
-	brandBackground,
-	brandAltBackground,
-	border,
-	brandBorder,
-	brandAltBorder,
-	line,
-	brandLine,
-	brandAltLine,
-	text,
-	brandText,
-	brandAltText,
-} from './palette';
 
 <Meta
 	title="Packages/source-foundations/Colour"
 	parameters={{ previewTabs: { canvas: { hidden: true } } }}
 />
 
-<>
-	<div style={{ backgroundColor: brand }}>
-		<code>brand</code>
-	</div>
-	<div style={{ backgroundColor: brandAlt }}>
-		<code>brandAlt</code>
-	</div>
-	<div style={{ backgroundColor: neutral }}>
-		<code>neutral</code>
-	</div>
-	<div style={{ backgroundColor: error }}>
-		<code>error</code>
-	</div>
-	<div style={{ backgroundColor: success }}>
-		<code>success</code>
-	</div>
-	<div style={{ backgroundColor: news }}>
-		<code>news</code>
-	</div>
-	<div style={{ backgroundColor: opinion }}>
-		<code>opinion</code>
-	</div>
-	<div style={{ backgroundColor: sport }}>
-		<code>sport</code>
-	</div>
-	<div style={{ backgroundColor: culture }}>
-		<code>culture</code>
-	</div>
-	<div style={{ backgroundColor: lifestyle }}>
-		<code>lifestyle</code>
-	</div>
-	<div style={{ backgroundColor: labs }}>
-		<code>labs</code>
-	</div>
-	<div style={{ backgroundColor: specialReport }}>
-		<code>specialReport</code>
-	</div>
-	<div style={{ backgroundColor: focus }}>
-		<code>focus</code>
-	</div>
-	<div style={{ backgroundColor: background }}>
-		<code>background</code>
-	</div>
-	<div style={{ backgroundColor: brandBackground }}>
-		<code>brandBackground</code>
-	</div>
-	<div style={{ backgroundColor: brandAltBackground }}>
-		<code>brandAltBackground</code>
-	</div>
-	<div style={{ backgroundColor: border }}>
-		<code>border</code>
-	</div>
-	<div style={{ backgroundColor: brandBorder }}>
-		<code>brandBorder</code>
-	</div>
-	<div style={{ backgroundColor: brandAltBorder }}>
-		<code>brandAltBorder</code>
-	</div>
-	<div style={{ backgroundColor: line }}>
-		<code>line</code>
-	</div>
-	<div style={{ backgroundColor: brandLine }}>
-		<code>brandLine</code>
-	</div>
-	<div style={{ backgroundColor: brandAltLine }}>
-		<code>brandAltLine</code>
-	</div>
-	<div style={{ backgroundColor: text }}>
-		<code>text</code>
-	</div>
-	<div style={{ backgroundColor: brandText }}>
-		<code>brandText</code>
-	</div>
-	<div style={{ backgroundColor: brandAltText }}>
-		<code>brandAltText</code>
-	</div>
-</>
-
 # Colour
+
+The colour palette comprises **colour tokens** and **global colours**.
+
+Colour tokens (e.g. `text.primary`) are organised by the context in which they may be used. Where possible, prefer using colour tokens.
+
+Global colours (e.g. `neutral.7`) do not specify a context , and should be used only if an appropriate colour token is not available.
 
 ## Example
 
@@ -130,21 +31,23 @@ const headline = css`
 */
 ```
 
-## Functional colours
+## Colour tokens
 
-Where possible, prefer using functional colours over global colours. The
-following categories of functional colours are available:
+Colour tokens are grouped by theme:
 
--   text
--   background
--   border
--   line
+-   [Default](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb)
+-   [Core Brand](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/4893db)
+-   [Alternative Brand](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/21c6cc)
 
-See the [Tokens page](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb)
-for a list of functional colours, grouped by theme.
+The following categories of colour tokens are available:
+
+-   Text
+-   Background
+-   Border
+-   Line
 
 ## Global colours
 
 See the [Light palette](https://theguardian.design/2a1e5182b/p/492a30-light-palette)
 and [Dark palette](https://theguardian.design/2a1e5182b/p/75f7ca-dark-palette)
-pages for a comprehensive list of global colours.
+pages for a list of global colours.
