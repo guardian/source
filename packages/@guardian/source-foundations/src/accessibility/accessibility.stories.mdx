@@ -12,7 +12,7 @@ import { FocusStyleManager } from '../utils/focus-style-manager';
 
 Providing a clear focus state (the blue halo effect around active elements) is essential to support keyboard navigation.
 
-The focus halo may be imported and applied to custom elements.
+Apply the `focusHalo` style to custom interactive elements:
 
 ```tsx
 import { focusHalo } from '@guardian/source-foundations';
@@ -24,23 +24,11 @@ const customButton = css`
 
 ## `FocusStyleManager`
 
-While providing a clear focus state is essential to support keyboard navigation, it is less important, and arguably distracting, for mouse users.
+While providing a clear focus state is essential to support keyboard navigation, it is less important for mouse users.
 
 Source provides a utility that manages the appearance of focus styles. When enabled, focus styles will be hidden while the user interacts using the mouse. They will appear when the tab key is pressed to begin keyboard navigation.
 
-### Methods
-
-<>
-	{Object.keys(FocusStyleManager).map((method) => (
-		<h6>
-			<code>{`FocusStyleManager.${method}()`}</code>
-		</h6>
-	))}
-</>
-
-### Example
-
-You must explictly enable this feature in your app (and you probably want to):
+You should explictly enable this feature in your app:
 
 ```tsx
 import { FocusStyleManager } from '@guardian/source-foundations';
@@ -48,11 +36,21 @@ import { FocusStyleManager } from '@guardian/source-foundations';
 FocusStyleManager.onlyShowFocusOnTabs();
 ```
 
+### Methods
+
+<ul>
+	{Object.keys(FocusStyleManager).map((method) => (
+		<li>
+			<code>{`FocusStyleManager.${method}()`}</code>
+		</li>
+	))}
+</ul>
+
 ## `visuallyHidden`
 
 Some elements should be presented only to screen reader users e.g. restyled checkboxes and button labels that provide more contextual information to the user.
 
-Source provides a snippet of CSS that can be imported and applied to elements that need to be hidden from sighted users and displayed to screen reader users.
+Apply the `visuallyHidden` style to elements that need to be hidden from sighted users and displayed to screen reader users:
 
 ```tsx
 import { visuallyHidden } from '@guardian/source-foundations';
