@@ -11,29 +11,6 @@ The media queries API provides `max-width` and `min-width` media queries using a
 plain English syntax. The resulting queries map to breakpoints defined in our
 [grid layout](https://theguardian.design/2a1e5182b/p/41be19-grids).
 
-## `from.*`
-
-e.g. `from.tablet` returns `"@media (min-width: 740px)"`
-
-## `until.*`
-
-e.g. `until.desktop` returns `"@media (max-width: 979px)"`
-
-## `between.*.and.*`
-
-e.g. `between.tablet.and.leftCol` returns `"@media (min-width: 740px) and (max-width: 1139px)"`
-
-## Breakpoints
-
--   `wide`: 1300px
--   `leftCol`: 1140px
--   `desktop`: 980px
--   `tablet`: 740px
--   `phablet`: 660px
--   `mobileLandscape`: 480px
--   `mobileMedium`: 375px
--   `mobile`: 320px
-
 ## Example
 
 ```tsx
@@ -74,3 +51,28 @@ const styles = css({
 	},
 });
 ```
+
+## Breakpoints
+
+-   `wide`: 1300px
+-   `leftCol`: 1140px
+-   `desktop`: 980px
+-   `tablet`: 740px
+-   `phablet`: 660px
+-   `mobileLandscape`: 480px
+-   `mobileMedium`: 375px
+-   `mobile`: 320px
+
+## API
+
+### `from`
+
+e.g. `from.tablet` returns `"@media (min-width: 740px)"`
+
+### `until`
+
+e.g. `until.desktop` returns `"@media (max-width: 979px)"`
+
+### `between...and...`
+
+e.g. `between.tablet.and.leftCol` returns `"@media (min-width: 740px) and (max-width: 1139px)"`
