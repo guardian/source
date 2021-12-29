@@ -1,4 +1,3 @@
-# Contribution guidelines
+# Contributing
 
-Please read the [Contributing Guidelines](docs/08-contributing.md) in the docs
-directory.
+Please read the [Contributing](https://guardian.github.io/source/?path=/story/contributing-overview--page) page in Storybook.
