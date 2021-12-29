@@ -12,10 +12,10 @@ Foundations are installed as a JavaScript package via Yarn:
 $ yarn add @guardian/source-foundations
 ```
 
-or
+or NPM:
 
 ```sh
-$ yarn install @guardian/source-foundations
+$ npm install @guardian/source-foundations
 ```
 
 ## Colour
