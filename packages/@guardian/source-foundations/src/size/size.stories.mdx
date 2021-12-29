@@ -14,20 +14,23 @@ Consistent sizing for UI components
 Size units may be used to set the height, max-height, width or max-width of a
 component.
 
-## Global size values
+## Example
 
-We define three global size values. They may be used for call to action buttons
-and user input fields.
+```tsx
+import { width, height } from '@guardian/source-foundations';
 
--   `size.medium` -> 44px
--   `size.small` -> 36px
--   `size.xsmall` -> 24px
+const checkbox = css`
+	width: ${width.inputXsmall}px;
+	height: ${height.inputXsmall}px;
+`;
 
-The same scale is also available as rems:
-
--   `remSize.medium` -> 2.75rem
--   `remSize.small` -> 2.25rem
--   `remSize.xsmall` -> 1.5rem
+/*
+.class-name {
+  width: 24px;
+  height: 24px;
+}
+*/
+```
 
 ## Tokens
 
@@ -62,20 +65,17 @@ Tokens on the `height` and `width` objects return `px` values. The equivalent
 -   `width.iconSmall`
 -   `width.iconXsmall`
 
-## Example
+## Global size values
 
-```tsx
-import { width, height } from '@guardian/source-foundations';
+We define three global size values. They may be used for call to action buttons
+and user input fields.
 
-const checkbox = css`
-	width: ${width.inputXsmall}px;
-	height: ${height.inputXsmall}px;
-`;
+-   `size.medium` -> 44px
+-   `size.small` -> 36px
+-   `size.xsmall` -> 24px
 
-/*
-.class-name {
-  width: 24px;
-  height: 24px;
-}
-*/
-```
+The same scale is also available as rems:
+
+-   `remSize.medium` -> 2.75rem
+-   `remSize.small` -> 2.25rem
+-   `remSize.xsmall` -> 1.5rem
