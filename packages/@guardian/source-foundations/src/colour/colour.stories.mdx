@@ -7,6 +7,12 @@ import { Meta } from '@storybook/addon-docs';
 
 # Colour
 
+The colour palette comprises **colour tokens** and **global colours**.
+
+Colour tokens (e.g. `text.primary`) are organised by the context in which they may be used. Where possible, prefer using colour tokens.
+
+Global colours (e.g. `neutral.7`) do not specify a context , and should be used only if an appropriate colour token is not available.
+
 ## Example
 
 ```tsx
@@ -25,21 +31,23 @@ const headline = css`
 */
 ```
 
-## Functional colours
+## Colour tokens
 
-Where possible, prefer using functional colours over global colours. The
-following categories of functional colours are available:
+Colour tokens are grouped by theme:
 
--   text
--   background
--   border
--   line
+-   [Default](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb)
+-   [Core Brand](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/4893db)
+-   [Alternative Brand](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/21c6cc)
 
-See the [Tokens page](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb)
-for a list of functional colours, grouped by theme.
+The following categories of colour tokens are available:
+
+-   Text
+-   Background
+-   Border
+-   Line
 
 ## Global colours
 
 See the [Light palette](https://theguardian.design/2a1e5182b/p/492a30-light-palette)
 and [Dark palette](https://theguardian.design/2a1e5182b/p/75f7ca-dark-palette)
-pages for a comprehensive list of global colours.
+pages for a list of global colours.

@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/addon-docs';
 
 <Meta
-	title="Docs/07 Contributing"
+	title="Contributing/Overview"
 	parameters={{ previewTabs: { canvas: { hidden: true } } }}
 />
 
@@ -32,7 +32,7 @@ $ yarn storybook
 
 ### Using Emotion
 
--   First familiarise yourself with Emotion's excellent documentation (we use [the React flavour](https://emotion.sh/docs/introduction#react))
+-   First familiarise yourself with Emotion's documentation – we use [the React flavour](https://emotion.sh/docs/introduction#react)
 -   Prefer composing styles using the `css` tag and the `css` prop.
 -   Avoid using `styled` to create or extend components.
     -   Every styled component rendered creates an additional `Context.Consumer` component, which can lead to [performance issues](https://calendar.perfplanet.com/2019/the-unseen-performance-costs-of-css-in-js-in-react-apps/).
@@ -90,7 +90,10 @@ $ yarn release
 The command line tool will highlight packages that have changed, and ask you to
 specify the type of release you are performing (e.g. major / minor / patch).
 
-### Publishing src-\* packages
+### Publishing src-\* (legacy) packages
+
+It is no longer possible to publish legacy packages from the head of the main
+branch. You will first need to check out the most recent v3.x tag.
 
 To publish `src-*` packages that have changed since the last release, you should
 first run:

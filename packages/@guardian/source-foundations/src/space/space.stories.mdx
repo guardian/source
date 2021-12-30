@@ -9,6 +9,22 @@ import { Meta } from '@storybook/addon-docs';
 
 Space units create visual rhythm and balance
 
+## Example
+
+```tsx
+import { space } from '@guardian/source-foundations';
+
+const container = css`
+	margin: ${space[1]}px;
+`;
+
+/*
+.class-name {
+  margin: 4px;
+}
+*/
+```
+
 ## Space scale
 
 The following units can be applied to margin or padding properties, vertically
@@ -35,19 +51,3 @@ The same scale is also available as rems:
 -   `remSpace[9]` -> 2.25rem
 -   `remSpace[12]` -> 3rem
 -   `remSpace[24]` -> 6rem
-
-## Example
-
-```tsx
-import { space } from '@guardian/source-foundations';
-
-const container = css`
-	margin: ${space[1]}px;
-`;
-
-/*
-.class-name {
-  margin: 4px;
-}
-*/
-```

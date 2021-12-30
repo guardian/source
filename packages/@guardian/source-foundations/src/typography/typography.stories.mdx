@@ -12,9 +12,6 @@ hierarchy and legibility.
 
 ## Example
 
-Each font family has an associated import, exposing methods that return snippets
-of CSS depending on the desired font size.
-
 ```tsx
 import { headline, body, textSans } from '@guardian/source-foundations';
 
@@ -47,21 +44,22 @@ The canonical source of fonts is https://github.com/guardian/fonts
 
 They should be loaded from the locations specified in [font-faces.css](https://github.com/guardian/fonts/blob/main/fonts/web/font-faces.css). This optimises for consistency and performance across The Guardian's digital products.
 
-## Sizing scale
+## API
+
+Each font family has an associated import, exposing methods that return snippets
+of CSS depending on the desired font size.
 
 A range of font sizes are available for each font family. The `medium` font size
 should be considered the default.
 
-Pixel values are given below for ease of understanding, but by default the
+Pixel values are given below for ease of understanding. By default the
 typography API assigns font size in rems.
 
 ### Headline
 
 ```css
-font-family: 'GH Guardian Headline';
+font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
-
-For headlines, headings and any short form text, like standfirst, pull quotes, bylines and titles.
 
 -   `headline.xxxsmall()` -> 17px
 -   `headline.xxsmall()` -> 20px
@@ -74,10 +72,8 @@ For headlines, headings and any short form text, like standfirst, pull quotes, b
 ### Body
 
 ```css
-font-family: 'GuardianTextEgyptian';
+font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 ```
-
-For multiple sentences/paragraphs of text, like the body copy in articles, or paragraphs of text on marketing pages.
 
 -   `body.small()` -> 15px
 -   `body.medium()` -> 17px
@@ -85,12 +81,8 @@ For multiple sentences/paragraphs of text, like the body copy in articles, or pa
 ### Text sans
 
 ```css
-font-family: 'GuardianTextSans';
+font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif';
 ```
-
-For interactive page elements like buttons and text input fields and for meta information like datelines, image captions and data visualisations.
-
-Note: Text Sans is used across the board on paid content templates to help differentiate from editorial content.
 
 -   `textSans.xxsmall()` -> 12px
 -   `textSans.xsmall()` -> 14px
@@ -104,20 +96,18 @@ Note: Text Sans is used across the board on paid content templates to help diffe
 ### Titlepiece
 
 ```css
-font-family: 'GT Guardian Titlepiece';
+font-family: 'GT Guardian Titlepiece, Georgia, serif';
 ```
-
-For impact. Ideal for marketing messages, page headers and numerals. Use sparingly and at large sizes only.
 
 -   `titlepiece.small()` -> 42px
 -   `titlepiece.medium()` -> 50px
 -   `titlepiece.large()` -> 70px
 
-## Options
+### Options
 
 Each method may receive an `options` object. Missing options are merged with sensible defaults for each font family.
 
-### Line height
+#### Line height
 
 ```tsx
 headline.medium({ lineHeight: 'loose' });
@@ -131,7 +121,7 @@ The default for body and textSans is `loose`. This meets the [WCAG 2.1 AAA succe
 
 The default for headline and titlepiece is `tight`.
 
-### Font weight
+#### Font weight
 
 ```tsx
 headline.medium({ fontWeight: 'bold' });
@@ -148,7 +138,7 @@ The default for headline is `medium`. The `regular` font-weight is not available
 
 The default and only font-weight for titlepiece is `bold`.
 
-### Font style
+#### Font style
 
 ```tsx
 headline.medium({ fontStyle: 'italic' });
@@ -165,7 +155,7 @@ headline.medium({ fontStyle: 'italic' });
 -   textSans regular
 -   textSans bold
 
-### Unit
+#### Unit
 
 ```tsx
 headline.medium({ unit: 'px' });
