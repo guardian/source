@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Packages/source-foundations/visuallyHidden"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# `visuallyHidden`
+
+Some elements should be presented only to screen reader users e.g. restyled checkboxes and button labels that provide more contextual information to the user.
+
+Apply the `visuallyHidden` CSS rules to elements that need to be hidden from sighted users but displayed to screen reader users:
+
+```tsx
+import { visuallyHidden } from '@guardian/source-foundations';
+
+const label = css`
+	${visuallyHidden};
+`;
+```

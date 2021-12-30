@@ -1,0 +1,24 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Packages/source-foundations/descriptionId"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# `descriptionId`
+
+A function that takes the ID of an element and generates a new ID. This should be set as the ID of an element that describes the first element. The generated ID should also be passed to the `aria-describedby` attribute on the first element.
+
+```tsx
+import { descriptionId } from '@guardian/source-foundations';
+
+const Form = () => {
+	const id = 'first_name';
+	return (
+		<form>
+			<input id={id} type="text" aria-describedby={descriptionId(id)} />
+			<p class="error" id={descriptionId(id)} />
+		</form>
+	);
+};
+```

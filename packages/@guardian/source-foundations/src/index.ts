@@ -102,7 +102,7 @@ export type {
 
 // utils
 export { appearance } from './utils/supports-queries';
-export { FocusStyleManager } from './utils/focus-style-manager';
+export { FocusStyleManager } from './accessibility/focus-style-manager';
 export { pxToRem, rootPixelFontSize } from './utils/px-to-rem';
 export { resets } from './utils/resets';
 export { svgBackgroundImage } from './utils/svg-background-image';

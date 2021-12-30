@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs';
+import { FocusStyleManager } from './focus-style-manager';
+
+<Meta
+	title="Packages/source-foundations/FocusStyleManager"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# `FocusStyleManager`
+
+While providing a clear focus state is essential to support keyboard navigation, it is less important for mouse users.
+
+Source provides a utility that manages the appearance of focus styles. When enabled, focus styles will be hidden while the user interacts using the mouse. They will appear when the tab key is pressed to begin keyboard navigation.
+
+You should explictly enable this feature in your app:
+
+```tsx
+import { FocusStyleManager } from '@guardian/source-foundations';
+
+FocusStyleManager.onlyShowFocusOnTabs();
+```
+
+## API
+
+### FocusStyleManager.isActive()
+
+Returns whether the FocusStyleManager is currently running.
+
+### FocusStyleManager.onlyShowFocusOnTabs()
+
+Enable behavior which hides focus styles during mouse interaction.
+
+### FocusStyleManager.alwaysShowFocus()
+
+Stop this behavior (focus styles are always visible).
