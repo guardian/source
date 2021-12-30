@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/addon-docs';
+
+import { focusHalo } from './focus-halo';
+
+<Meta
+	title="Packages/source-foundations/focusHalo"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# `focusHalo`
+
+Providing a clear focus state (the blue halo effect around active elements) is essential to support keyboard navigation.
+
+Apply the `focusHalo` style to custom interactive elements:
+
+```tsx
+import { focusHalo } from '@guardian/source-foundations';
+
+const customButtonStyles = css`
+	${focusHalo};
+`;
+```
