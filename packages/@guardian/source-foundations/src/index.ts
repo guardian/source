@@ -1,3 +1,19 @@
+import {
+	brand,
+	brandAlt,
+	culture,
+	error,
+	focus,
+	labs,
+	lifestyle,
+	neutral,
+	news,
+	opinion,
+	specialReport,
+	sport,
+	success,
+} from './colour/palette';
+
 // accessibility
 export { descriptionId } from './accessibility/description-id';
 export { focusHalo } from './accessibility/focus-halo';
@@ -42,6 +58,22 @@ export {
 	brandText,
 	brandAltText,
 } from './colour/palette';
+
+export const palette = {
+	brand,
+	brandAlt,
+	neutral,
+	error,
+	success,
+	news,
+	opinion,
+	sport,
+	culture,
+	lifestyle,
+	labs,
+	specialReport,
+	focus,
+};
 
 // size
 export {
