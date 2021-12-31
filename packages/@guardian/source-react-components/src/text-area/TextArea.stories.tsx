@@ -90,7 +90,7 @@ asChromaticStory(ErrorWithMessageDefaultTheme);
 
 export const WithMaxLengthDefaultTheme = Template.bind({});
 WithMaxLengthDefaultTheme.args = {
-	maxLengh: 10,
+	maxLength: 10,
 };
 asChromaticStory(WithMaxLengthDefaultTheme);
 
