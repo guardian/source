@@ -66,7 +66,7 @@
     "@types/jest": "^27.0.2",
     "babel-loader": "^8.2.2",
     "chromatic": "^6.0.4",
-    "eslint": "^7.31.0",
+    "eslint": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
