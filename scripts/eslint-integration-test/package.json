@@ -7,6 +7,10 @@
   "author": "",
   "main": "playground.ts",
   "scripts": {
+    "fix": "npm-run-all fix:foundations fix:react-components",
+    "fix:foundations": "yarn lint:foundations --fix",
+    "fix:react-components": "yarn lint:react-components --fix",
+    "lint": "npm-run-all lint:foundations lint:react-components",
     "lint:foundations": "eslint foundations-playground.ts --ext .ts,.tsx,.js -c .foundations-playground.eslintrc.json --no-eslintrc",
     "lint:react-components": "eslint react-components-playground.ts --ext .ts,.tsx,.js -c .react-components-playground.eslintrc.json --no-eslintrc",
     "test": "ts-node ./src/index.ts"
