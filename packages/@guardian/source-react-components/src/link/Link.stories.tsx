@@ -16,6 +16,7 @@ export default {
 		subdued: false,
 		icon: <SvgExternal />,
 		iconSide: 'left',
+		href: '#',
 	},
 	argTypes: {
 		icon: {

@@ -32,6 +32,7 @@ export default {
 		priority: 'primary',
 		iconSide: 'left',
 		nudgeIcon: false,
+		href: '#',
 	},
 };
 
