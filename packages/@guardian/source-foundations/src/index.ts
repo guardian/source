@@ -1,18 +1,4 @@
-import {
-	brand,
-	brandAlt,
-	culture,
-	error,
-	focus,
-	labs,
-	lifestyle,
-	neutral,
-	news,
-	opinion,
-	specialReport,
-	sport,
-	success,
-} from './colour/palette';
+import { palette } from './colour/palette';
 
 // accessibility
 export { descriptionId } from './accessibility/description-id';
@@ -31,20 +17,10 @@ export { breakpoints } from './breakpoints/breakpoints';
 export { between, from, until } from './mq/mq';
 
 // palette
+export { palette };
+
+// deprecated exports - to be removed in v5
 export {
-	brand,
-	brandAlt,
-	neutral,
-	error,
-	success,
-	news,
-	opinion,
-	sport,
-	culture,
-	lifestyle,
-	labs,
-	specialReport,
-	focus,
 	background,
 	brandBackground,
 	brandAltBackground,
@@ -59,7 +35,8 @@ export {
 	brandAltText,
 } from './colour/palette';
 
-export const palette = {
+// deprecated exports - to be removed in v5
+export const {
 	brand,
 	brandAlt,
 	neutral,
@@ -73,7 +50,7 @@ export const palette = {
 	labs,
 	specialReport,
 	focus,
-};
+} = palette;
 
 // size
 export {

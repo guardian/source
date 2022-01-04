@@ -48,6 +48,7 @@ describe('No exports have changed in the ', () => {
 			'neutral',
 			'news',
 			'opinion',
+			'palette',
 			'pxToRem',
 			'remBodySizes',
 			'remHeadlineSizes',
