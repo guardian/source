@@ -34,6 +34,7 @@ export interface ToggleSwitchProps extends Props {
 	label?: string;
 	/**
 	 * Sets the toggle styling appropriate for each platform.
+	 * The default platform is 'web'.
 	 */
 	platform?: Platform;
 	/**
@@ -60,7 +61,7 @@ const getPlatformStyles = (platform: Platform): SerializedStyles => {
 			return androidStyles;
 		case 'ios':
 			return iosStyles;
-		default:
+		case 'web':
 			return webStyles;
 	}
 };

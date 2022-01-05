@@ -95,9 +95,9 @@ export const webStyles = css`
 	&:before {
 		content: '';
 		position: absolute;
-		top: 6px;
-		height: 8px;
-		width: 4px;
+		top: 0.375rem;
+		height: 0.5rem;
+		width: 0.25rem;
 		opacity: 0;
 		border-bottom: 2px solid ${success[400]};
 		border-right: 2px solid ${success[400]};
@@ -107,8 +107,8 @@ export const webStyles = css`
 	&:after {
 		height: 1.125rem;
 		width: 1.125rem;
-		top: 2.5px;
-		left: 4px;
+		top: 0.15625rem;
+		left: 0.25rem;
 	}
 
 	&[aria-checked='false'] {
@@ -126,7 +126,7 @@ export const webStyles = css`
 	}
 
 	&[aria-checked='true']:after {
-		left: 22px;
+		left: 1.375rem;
 		background: ${neutral[100]};
 	}
 `;
