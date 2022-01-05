@@ -41,11 +41,11 @@ asChromaticStory(AndroidNoLabel);
 
 // *****************************************************************************
 
-export const MediumNoLabel = Template.bind({});
-MediumNoLabel.args = {
+export const IosNoLabel = Template.bind({});
+IosNoLabel.args = {
 	platform: 'ios',
 };
-asChromaticStory(MediumNoLabel);
+asChromaticStory(IosNoLabel);
 
 // *****************************************************************************
 
@@ -66,12 +66,12 @@ asChromaticStory(AndroidWithLabel);
 
 // *****************************************************************************
 
-export const MediumWithLabel = Template.bind({});
-MediumWithLabel.args = {
+export const IosWithLabel = Template.bind({});
+IosWithLabel.args = {
 	label: 'Get alerts on this story',
 	platform: 'ios',
 };
-asChromaticStory(MediumWithLabel);
+asChromaticStory(IosWithLabel);
 
 // *****************************************************************************
 
