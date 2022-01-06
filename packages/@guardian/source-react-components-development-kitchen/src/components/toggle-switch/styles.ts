@@ -87,6 +87,11 @@ export const androidStyles = css`
 	}
 `;
 
+/**
+ * These 'webStyles' are shared with Frontend and will potentially also need updating there if updated here.
+	https://github.com/guardian/frontend/blob/c2b3103e1796b9b2fc3326e792323dd919d4b85a/static/src/stylesheets/module/content-garnett/_live-blog.scss#L257
+ */
+
 export const webStyles = css`
 	width: 2.75rem;
 	height: 1.5rem;
