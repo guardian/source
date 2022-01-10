@@ -1,4 +1,4 @@
-# Foundations
+# `@guardian/source-foundations`
 
 [![npm](https://img.shields.io/npm/v/@guardian/source-foundations)](https://www.npmjs.com/package/@guardian/source-foundations)
 
@@ -12,7 +12,7 @@ Foundations are installed as a JavaScript package via Yarn:
 $ yarn add @guardian/source-foundations
 ```
 
-or NPM:
+or:
 
 ```sh
 $ npm install @guardian/source-foundations

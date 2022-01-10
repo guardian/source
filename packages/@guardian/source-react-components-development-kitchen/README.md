@@ -1,4 +1,4 @@
-# Development Kitchen 🍳
+# `@guardian/source-components-development-kitchen`
 
 [![npm](https://img.shields.io/npm/v/@guardian/source-react-components-development-kitchen)](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
 
