@@ -14,6 +14,14 @@ export default {
 			},
 			control: { type: 'radio' },
 		},
+		success: {
+			options: ['undefined', 'success'],
+			mapping: {
+				undefined: undefined,
+				success: 'Thanks for telling us your views',
+			},
+			control: { type: 'radio' },
+		},
 	},
 	args: {
 		label: 'Comments',
@@ -21,6 +29,7 @@ export default {
 		hideLabel: false,
 		supporting: '',
 		error: undefined,
+		success: undefined,
 	},
 };
 
@@ -81,6 +90,14 @@ ErrorWithMessageDefaultTheme.args = {
 	error: 'Please tell us your views',
 };
 asChromaticStory(ErrorWithMessageDefaultTheme);
+
+// *****************************************************************************
+
+export const SuccessWithMessageDefaultTheme = Template.bind({});
+SuccessWithMessageDefaultTheme.args = {
+	success: 'Thanks for telling us your views',
+};
+asChromaticStory(SuccessWithMessageDefaultTheme);
 
 // *****************************************************************************
 

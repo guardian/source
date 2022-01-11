@@ -1,10 +1,11 @@
 import { InputHTMLAttributes } from 'react';
-import { InlineError } from '@guardian/src-user-feedback';
+import { InlineError, InlineSuccess } from '@guardian/src-user-feedback';
 import { Label } from '@guardian/src-label';
 import {
 	widthFluid,
 	textArea,
 	errorInput,
+	successInput,
 	labelMargin,
 	supportingTextMargin,
 	inlineMessageMargin,
@@ -47,6 +48,11 @@ export interface TextAreaProps
 	 */
 	error?: string;
 	/**
+	 * Appears as an inline success message.
+	 * This prop should not have a value set at the same time as the error prop. In the event that both are set, errors take precedence.
+	 */
+	success?: string;
+	/**
 	 * Specify the number of rows the component should display by default.
 	 */
 	rows?: number;
@@ -67,6 +73,7 @@ export const TextArea = ({
 	hideLabel = false,
 	supporting,
 	error,
+	success,
 	cssOverrides,
 	rows = 3,
 	className,
@@ -102,18 +109,28 @@ export const TextArea = ({
 					</InlineError>
 				</div>
 			)}
+			{!error && success && (
+				<div css={inlineMessageMargin}>
+					<InlineSuccess id={descriptionId(textAreaId)}>
+						{success}
+					</InlineSuccess>
+				</div>
+			)}
 			<textarea
 				css={[
 					widthFluid,
 					textArea,
 					supporting ? supportingTextMargin : labelMargin,
 					error ? errorInput : '',
+					!error && success ? successInput : '',
 					cssOverrides,
 				]}
 				id={textAreaId}
 				aria-required={!optional}
 				aria-invalid={!!error}
-				aria-describedby={error ? descriptionId(textAreaId) : ''}
+				aria-describedby={
+					error || success ? descriptionId(textAreaId) : ''
+				}
 				required={!optional}
 				rows={rows}
 				className={getClassName()}

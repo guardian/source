@@ -14,6 +14,15 @@ export const errorInput = css`
 		border: 4px solid ${border.error};
 	}
 `;
+export const successInput = css`
+	border: 4px solid ${border.success};
+	color: ${text.success};
+	margin-top: 0;
+	/* When input is active and in a success state, we want the border to remain the same. */
+	&:active {
+		border: 4px solid ${border.success};
+	}
+`;
 
 export const textArea = css`
 	${resets.input};
