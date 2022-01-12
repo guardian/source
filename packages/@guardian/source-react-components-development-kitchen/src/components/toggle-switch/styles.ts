@@ -29,7 +29,7 @@ export const buttonStyles = css`
 	}
 `;
 
-export const mediumStyles = css`
+export const iosStyles = css`
 	width: 3.188rem;
 	height: 1.938rem;
 	border-radius: 15.5px;
@@ -56,7 +56,8 @@ export const mediumStyles = css`
 		background: ${neutral[100]};
 	}
 `;
-export const slimStyles = css`
+
+export const androidStyles = css`
 	width: 1.625rem;
 	height: 0.75rem;
 	border-radius: 6px;
@@ -83,6 +84,55 @@ export const slimStyles = css`
 	&[aria-checked='true']:after {
 		left: 8px;
 		background: ${success[500]};
+	}
+`;
+
+/**
+ * These 'webStyles' are shared with Frontend and will potentially also need updating there if updated here.
+	https://github.com/guardian/frontend/blob/c2b3103e1796b9b2fc3326e792323dd919d4b85a/static/src/stylesheets/module/content-garnett/_live-blog.scss#L257
+ */
+
+export const webStyles = css`
+	width: 2.75rem;
+	height: 1.5rem;
+	border-radius: 15.5px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0.375rem;
+		height: 0.5rem;
+		width: 0.25rem;
+		opacity: 0;
+		border-bottom: 2px solid ${success[400]};
+		border-right: 2px solid ${success[400]};
+		transition: opacity 0.1s ease-in;
+	}
+
+	&:after {
+		height: 1.125rem;
+		width: 1.125rem;
+		top: 0.15625rem;
+		left: 0.25rem;
+	}
+
+	&[aria-checked='false'] {
+		background-color: rgba(153, 153, 153, 0.5);
+	}
+
+	&[aria-checked='true'] {
+		background: ${success[500]};
+	}
+
+	&[aria-checked='true']:before {
+		opacity: 1;
+		z-index: 1;
+		transform: translateX(6px) rotate(45deg);
+	}
+
+	&[aria-checked='true']:after {
+		left: 1.375rem;
+		background: ${neutral[100]};
 	}
 `;
 

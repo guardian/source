@@ -1,14 +1,16 @@
+import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { Props } from '@guardian/src-helpers';
 import {
+	androidStyles,
 	buttonStyles,
+	iosStyles,
 	labelStyles,
-	mediumStyles,
-	slimStyles,
 	toggleSwitchStyles,
+	webStyles,
 } from './styles';
 
-export type Size = 'medium' | 'slim';
+export type Platform = 'android' | 'ios' | 'web';
 
 export interface ToggleSwitchProps extends Props {
 	/**
@@ -31,12 +33,10 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	label?: string;
 	/**
-	 * slim or medium toggle would be different in size and colors.
-	 * slim has the size and look of an android toggle switch and
-	 * medium has the ios switch look and feel.
-	 *
+	 * Sets the toggle styling appropriate for each platform.
+	 * The default platform is 'web'.
 	 */
-	size?: Size;
+	platform?: Platform;
 	/**
 	 * A callback function called when the component is checked or unchecked.
 	 * Receives the click event as an argument.
@@ -50,17 +50,28 @@ export interface ToggleSwitchProps extends Props {
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
- * Displays an on/off toggle switch. This toggle has default styling and can be used in andriod or ios.
+ * Displays an on/off toggle switch. This toggle has default styling and can be used on andriod, ios or web.
+ * These styles are driven by the 'platform' prop.
  * To give it more custome styling cssOverride may be used.
  *
  */
+const getPlatformStyles = (platform: Platform): SerializedStyles => {
+	switch (platform) {
+		case 'android':
+			return androidStyles;
+		case 'ios':
+			return iosStyles;
+		case 'web':
+			return webStyles;
+	}
+};
 
 export const ToggleSwitch = ({
 	checked,
 	label,
 	defaultChecked,
 	cssOverrides,
-	size = 'medium',
+	platform = 'web',
 	onClick = () => undefined,
 	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
@@ -72,12 +83,10 @@ export const ToggleSwitch = ({
 		return !!defaultChecked;
 	};
 
-	const isSlim = size === 'slim';
-
 	return (
 		<div css={[toggleSwitchStyles, cssOverrides]} {...props}>
 			<button
-				css={[buttonStyles, isSlim ? slimStyles : mediumStyles]}
+				css={[buttonStyles, getPlatformStyles(platform)]}
 				role="switch"
 				aria-checked={isChecked()}
 				aria-labelledby="notify"
