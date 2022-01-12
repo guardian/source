@@ -33,34 +33,51 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const SlimNoLabel = Template.bind({});
-SlimNoLabel.args = {
-	size: 'slim',
+export const AndroidNoLabel = Template.bind({});
+AndroidNoLabel.args = {
+	platform: 'android',
 };
-asChromaticStory(SlimNoLabel);
+asChromaticStory(AndroidNoLabel);
 
 // *****************************************************************************
 
-export const MediumNoLabel = Template.bind({});
-MediumNoLabel.args = {
-	size: 'medium',
+export const IosNoLabel = Template.bind({});
+IosNoLabel.args = {
+	platform: 'ios',
 };
-asChromaticStory(MediumNoLabel);
+asChromaticStory(IosNoLabel);
 
 // *****************************************************************************
 
-export const SlimWithLabel = Template.bind({});
-SlimWithLabel.args = {
+export const WebNoLabel = Template.bind({});
+WebNoLabel.args = {
+	platform: 'web',
+};
+asChromaticStory(WebNoLabel);
+
+// *****************************************************************************
+
+export const AndroidWithLabel = Template.bind({});
+AndroidWithLabel.args = {
 	label: 'Get alerts on this story',
-	size: 'slim',
+	platform: 'android',
 };
-asChromaticStory(SlimWithLabel);
+asChromaticStory(AndroidWithLabel);
 
 // *****************************************************************************
 
-export const MediumWithLabel = Template.bind({});
-MediumWithLabel.args = {
+export const IosWithLabel = Template.bind({});
+IosWithLabel.args = {
 	label: 'Get alerts on this story',
-	size: 'medium',
+	platform: 'ios',
 };
-asChromaticStory(MediumWithLabel);
+asChromaticStory(IosWithLabel);
+
+// *****************************************************************************
+
+export const WebWithLabel = Template.bind({});
+WebWithLabel.args = {
+	label: 'Get alerts on this story',
+	platform: 'web',
+};
+asChromaticStory(WebWithLabel);
