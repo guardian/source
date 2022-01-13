@@ -171,11 +171,12 @@ const columnBreakpoints: ColumnBreakpoint[] = [
 const calculateSpan = (span: number) => {
 	const columnBreakpointCss = columnBreakpoints.reduce(
 		(acc, cur: ColumnBreakpoint) => {
-			if (span === 0)
+			if (span === 0) {
 				// Reduces number of redundant breakpoint rules
 				return `
 					display: none;
 				`;
+			}
 			const inferredWidth = span / cur.totalColumns;
 			const cappedWidth = inferredWidth < 1 ? inferredWidth : 1;
 			const cssForBreakpoint = calculateWidth(cappedWidth);

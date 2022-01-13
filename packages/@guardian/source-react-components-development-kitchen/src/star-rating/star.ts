@@ -7,11 +7,12 @@ const starSvg = (rating: number): string => {
 		.fill('')
 		.map((_, i) => {
 			const position = i + 1;
-			if (position < rating)
+			if (position < rating) {
 				return `<use xlink:href="#star"
 							x="${position * spacing}"
 							fill="${neutral[7]}"
 						/>`;
+			}
 			return `<use x="${position * spacing}"
 		xlink:href="${`#star`}"
 		clip-path="${`url(#clip-star)`}"
