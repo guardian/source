@@ -22,13 +22,13 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.33.0",
-    "@typescript-eslint/parser": "4.29.2",
-    "eslint-plugin-import": "2.25.3"
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
+    "eslint-plugin-import": "2.25.4"
   },
   "devDependencies": {
-    "@guardian/eslint-config": "^0.7.0",
-    "@guardian/eslint-config-typescript": "^0.7.0",
+    "@guardian/eslint-config": "^1.0.0",
+    "@guardian/eslint-config-typescript": "^1.0.0",
     "@types/estree": "^0.0.50",
     "rollup": "^2.56.3",
     "rollup-plugin-dts": "^4.0.0",
