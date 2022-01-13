@@ -4,11 +4,12 @@ import type { InputHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import { Label } from '../label/Label';
 import { InlineError } from '../user-feedback/InlineError';
+import { InlineSuccess } from '../user-feedback/InlineSuccess';
 import {
 	errorInput,
-	successInput,
 	inlineMessageMargin,
 	labelMargin,
+	successInput,
 	supportingTextMargin,
 	textArea,
 	widthFluid,
