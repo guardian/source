@@ -55,7 +55,7 @@ const getContentsAndWriteOutputForNode = (node: NodeWithUrl) => {
 		.get(node.url)
 		.then((res) => {
 			const formattedSvg = formatSVG(
-				stripAttributes(node.name, res.data),
+				stripAttributes(node.name, res.data as string),
 			);
 			const titleCaseName = kebabToTitle(node.name);
 			writeFileSync(`${SVG_OUTPUT_DIR}/${node.name}.svg`, formattedSvg);
