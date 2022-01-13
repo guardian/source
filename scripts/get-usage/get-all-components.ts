@@ -37,8 +37,9 @@ const getExportsFromFile = (path: string): string[] => {
 		if (
 			node.type !== 'ExportNamedDeclaration' ||
 			node.exportKind !== 'value'
-		)
+		) {
 			continue;
+		}
 
 		if (node.declaration?.type === 'VariableDeclaration') {
 			for (const declaration of node.declaration.declarations) {
