@@ -41,7 +41,7 @@ asPlayground(Playground);
 
 export const PrimaryButtonLinkDefaultTheme = Template.bind({});
 PrimaryButtonLinkDefaultTheme.args = {
-	icon: undefined,
+	icon: 'undefined',
 };
 asChromaticStory(PrimaryButtonLinkDefaultTheme);
 
@@ -50,7 +50,7 @@ asChromaticStory(PrimaryButtonLinkDefaultTheme);
 export const SecondaryButtonLinkDefaultTheme = Template.bind({});
 SecondaryButtonLinkDefaultTheme.args = {
 	priority: 'secondary',
-	icon: undefined,
+	icon: 'undefined',
 };
 asChromaticStory(SecondaryButtonLinkDefaultTheme);
 
@@ -59,7 +59,7 @@ asChromaticStory(SecondaryButtonLinkDefaultTheme);
 export const PrimarySubduedButtonLinkDefaultTheme = Template.bind({});
 PrimarySubduedButtonLinkDefaultTheme.args = {
 	subdued: true,
-	icon: undefined,
+	icon: 'undefined',
 };
 asChromaticStory(PrimarySubduedButtonLinkDefaultTheme);
 
@@ -69,7 +69,7 @@ export const SecondarySubduedButtonLinkDefaultTheme = Template.bind({});
 SecondarySubduedButtonLinkDefaultTheme.args = {
 	priority: 'secondary',
 	subdued: true,
-	icon: undefined,
+	icon: 'undefined',
 };
 asChromaticStory(SecondarySubduedButtonLinkDefaultTheme);
 

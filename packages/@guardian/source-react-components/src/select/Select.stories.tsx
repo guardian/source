@@ -34,8 +34,8 @@ export default {
 		optional: false,
 		hideLabel: false,
 		supporting: '',
-		error: '',
-		success: '',
+		error: 'undefined',
+		success: 'undefined',
 	},
 };
 
@@ -62,14 +62,6 @@ asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
-export const ErrorWithMessageDefaultTheme = Template.bind({});
-ErrorWithMessageDefaultTheme.args = {
-	error: 'Please select your home state. This service is unavailable outside of the US.',
-};
-asChromaticStory(ErrorWithMessageDefaultTheme);
-
-// *****************************************************************************
-
 export const VisuallyHideLabelDefaultTheme = Template.bind({});
 VisuallyHideLabelDefaultTheme.args = {
 	hideLabel: true,
@@ -86,9 +78,17 @@ asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
+export const ErrorWithMessageDefaultTheme = Template.bind({});
+ErrorWithMessageDefaultTheme.args = {
+	error: 'error',
+};
+asChromaticStory(ErrorWithMessageDefaultTheme);
+
+// *****************************************************************************
+
 export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
-	success: 'This service is available in your state',
+	success: 'success',
 };
 asChromaticStory(SuccessWithMessageDefaultTheme);
 

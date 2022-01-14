@@ -41,7 +41,7 @@ asPlayground(Playground);
 
 export const PrimaryLinkDefaultTheme = Template.bind({});
 PrimaryLinkDefaultTheme.args = {
-	icon: undefined,
+	icon: 'undefined',
 };
 asChromaticStory(PrimaryLinkDefaultTheme);
 
@@ -49,7 +49,7 @@ asChromaticStory(PrimaryLinkDefaultTheme);
 
 export const PrimaryLinkBrandTheme = Template.bind({});
 PrimaryLinkBrandTheme.args = {
-	icon: undefined,
+	icon: 'undefined',
 };
 PrimaryLinkBrandTheme.parameters = {
 	backgrounds: {
@@ -63,7 +63,7 @@ asChromaticStory(PrimaryLinkBrandTheme);
 
 export const PrimaryLinkBrandAltTheme = Template.bind({});
 PrimaryLinkBrandAltTheme.args = {
-	icon: undefined,
+	icon: 'undefined',
 };
 PrimaryLinkBrandAltTheme.parameters = {
 	backgrounds: {
@@ -78,7 +78,7 @@ asChromaticStory(PrimaryLinkBrandAltTheme);
 export const SecondaryLinkDefaultTheme = Template.bind({});
 SecondaryLinkDefaultTheme.args = {
 	priority: 'secondary',
-	icon: undefined,
+	icon: 'undefined',
 };
 asChromaticStory(SecondaryLinkDefaultTheme);
 
@@ -87,7 +87,7 @@ asChromaticStory(SecondaryLinkDefaultTheme);
 export const PrimarySubduedLinkDefaultTheme = Template.bind({});
 PrimarySubduedLinkDefaultTheme.args = {
 	subdued: true,
-	icon: undefined,
+	icon: 'undefined',
 };
 asChromaticStory(PrimarySubduedLinkDefaultTheme);
 
