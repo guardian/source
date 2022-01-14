@@ -6,16 +6,10 @@ export const rules = {
 
 export const configs = {
 	recommended: {
-		plugins: [
-			'@guardian/source-react-components',
-			'@guardian/source-foundations',
-			'import',
-		],
+		plugins: ['@guardian/source-react-components'],
 
 		rules: {
 			'@guardian/source-react-components/valid-import-path': 'error',
-			'@guardian/source-foundations/no-star-imports-or-exports': 'error',
-			'import/no-duplicates': 'error',
 		},
 	},
 };
