@@ -32,8 +32,8 @@ export default {
 		optional: false,
 		hideLabel: false,
 		supporting: '',
-		error: undefined,
-		success: undefined,
+		error: 'undefined',
+		success: 'undefined',
 	},
 };
 
@@ -91,7 +91,7 @@ asChromaticStory(SupportingTextDefaultTheme);
 
 export const ErrorWithMessageDefaultTheme = Template.bind({});
 ErrorWithMessageDefaultTheme.args = {
-	error: 'Please tell us your views',
+	error: 'error',
 };
 asChromaticStory(ErrorWithMessageDefaultTheme);
 
@@ -99,7 +99,7 @@ asChromaticStory(ErrorWithMessageDefaultTheme);
 
 export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
-	success: 'Thanks for telling us your views',
+	success: 'success',
 };
 asChromaticStory(SuccessWithMessageDefaultTheme);
 

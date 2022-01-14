@@ -59,7 +59,7 @@ export default {
 	args: {
 		size: 'default',
 		hideLabel: false,
-		icon: undefined,
+		icon: 'undefined',
 		priority: 'primary',
 		iconSide: 'left',
 		nudgeIcon: false,

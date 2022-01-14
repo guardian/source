@@ -83,7 +83,7 @@ export default {
 		children: 'Button',
 		size: 'default',
 		hideLabel: false,
-		icon: undefined,
+		icon: 'undefined',
 		priority: 'primary',
 		iconSide: 'left',
 		nudgeIcon: false,

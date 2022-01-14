@@ -15,8 +15,8 @@ export default {
 		optional: false,
 		hideLabel: false,
 		supporting: '',
-		error: undefined,
-		success: undefined,
+		error: 'undefined',
+		success: 'undefined',
 	},
 	argTypes: {
 		error: {
@@ -115,7 +115,7 @@ asChromaticStory(Width4DefaultTheme);
 
 export const ErrorWithMessageDefaultTheme = Template.bind({});
 ErrorWithMessageDefaultTheme.args = {
-	error: 'The email address entered is not valid',
+	error: 'error',
 };
 asChromaticStory(ErrorWithMessageDefaultTheme);
 
@@ -123,7 +123,7 @@ asChromaticStory(ErrorWithMessageDefaultTheme);
 
 export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
-	success: 'Your email address has been registered successfully',
+	success: 'success',
 };
 asChromaticStory(SuccessWithMessageDefaultTheme);
 
