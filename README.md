@@ -10,13 +10,10 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 
 ## Docs 📖
 
--   [Getting started](https://guardian.github.io/source/?path=/story/docs-01-getting-started--page)
--   [Foundations](https://guardian.github.io/source/?path=/story/docs-02-foundations--page)
--   [Components](https://guardian.github.io/source/?path=/story/docs-03-components--page)
--   [Using Emotion](https://guardian.github.io/source/?path=/story/docs-04-using-emotion--page)
--   [Theming](https://guardian.github.io/source/?path=/story/docs-05-theming--page)
--   [Overriding styles](https://guardian.github.io/source/?path=/story/docs-06-overriding-styles--page)
--   [Develoment Kitchen](https://guardian.github.io/source/?path=/story/docs-07-development-kitchen--page)
+-   [Getting started](https://guardian.github.io/source/?path=/story/getting-started--page)
+-   [Foundations](https://guardian.github.io/source/?path=/story/foundations--page)
+-   [Components](https://guardian.github.io/source/?path=/story/components--page)
+-   [Develoment Kitchen](https://guardian.github.io/source/?path=/story/development-kitchen--page)
 
 ## Using the Source Design System 🎨
 
