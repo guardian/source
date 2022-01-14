@@ -2,7 +2,6 @@
 
 ## `@guardian/source-foundations`
 
--   Removed `palette` object
 -   Removed `@guardian/src-foundations/theme` path
 
 ## `@guardian/source-foundations/accessibility`
