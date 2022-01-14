@@ -1,6 +1,6 @@
 {
   "name": "@guardian/eslint-plugin-source-react-components",
-  "version": "4.0.0-rc.3",
+  "version": "4.0.0-rc.4",
   "description": "ESLint plugin for Guardian projects using the `@guardian/source-react-components` package.",
   "homepage": "https://github.com/guardian/source#readme",
   "bugs": {
@@ -22,7 +22,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@guardian/eslint-plugin-source-foundations": "4.0.0-rc.3",
+    "@guardian/eslint-plugin-source-foundations": "^4.0.0-rc.4",
     "@typescript-eslint/eslint-plugin": "5.9.1",
     "@typescript-eslint/parser": "5.9.1"
   },
