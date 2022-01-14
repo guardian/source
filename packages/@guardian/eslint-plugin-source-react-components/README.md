@@ -5,13 +5,13 @@
 ## Installation
 
 ```bash
-yarn add -D @guardian/eslint-plugin-source-react-components
+yarn add -D @guardian/eslint-plugin-source-foundations @guardian/eslint-plugin-source-react-components
 ```
 
 or
 
 ```bash
-npm install --save-dev @guardian/eslint-plugin-source-react-components
+npm install --save-dev @guardian/eslint-plugin-source-foundations @guardian/eslint-plugin-source-react-components
 ```
 
 ## Usage
@@ -19,11 +19,12 @@ npm install --save-dev @guardian/eslint-plugin-source-react-components
 ```js
 // ESLint configuration file
 {
-    "extends": "plugin:@guardian/source-react-components/recommended"
+    "extends": [
+        "plugin:@guardian/source-foundations/recommended",
+        "plugin:@guardian/source-react-components/recommended"
+    ]
 }
 ```
-
-Note that this plugin extends `@guardian/eslint-plugin-source-foundations` and so only this plygin is required.
 
 ### Valid import path
 
@@ -44,7 +45,3 @@ This rule, from [eslint-plugin-import](https://github.com/import-js/eslint-plugi
 -   New theme names not always updated automatically
 
     The theme variables have changed both name and location in the v4. The plugin should automatically update both but sometimes this does not work.
-
--   Import de-duplication sometimes leaves extra commas
-
-    Now that sub-modules are not longer used in foundations and components have been consolidated into one package, a number of `src-*` import can be consolidated into one or two `source-*` imports. There is a bug with this where, in some edge cases, an extra comma is left in the import, making it invalid.

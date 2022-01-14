@@ -44,7 +44,3 @@ This rule, from [eslint-plugin-import](https://github.com/import-js/eslint-plugi
 -   New theme names not always updated automatically
 
     The theme variables have changed both name and location in the v4. The plugin should automatically update both but sometimes this does not work.
-
--   Import de-duplication sometimes leaves extra commas
-
-    Now that sub-modules are not longer used in foundations and components have been consolidated into one package, a number of `src-*` import can be consolidated into one or two `source-*` imports. There is a bug with this where, in some edge cases, an extra comma is left in the import, making it invalid.
