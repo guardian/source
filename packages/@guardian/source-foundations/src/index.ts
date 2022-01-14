@@ -16,6 +16,7 @@ export { between, from, until } from './mq/mq';
 
 // palette
 export {
+	palette,
 	brand,
 	brandAlt,
 	neutral,
