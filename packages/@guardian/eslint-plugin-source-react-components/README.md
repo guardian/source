@@ -29,7 +29,7 @@ Note that this plugin extends `@guardian/eslint-plugin-source-foundations` and s
 
 This rules errors for imports from a `@guardian/src-*` package. If possible, it will autofix the import to the new location.
 
-Some breaking changes can not be autofixed, for example, in cases where the `palette` object has been imported directly from `@guardian/src-foundations`, developers must manually replace the palette object with imports from global colours or colour tokens.
+Some breaking changes can not be autofixed, for example, in cases where the export has been removed from Source. Developers must manually provide an alternative.
 
 ### No \* imports or exports
 
