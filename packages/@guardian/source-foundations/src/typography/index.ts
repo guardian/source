@@ -44,12 +44,6 @@ type TypographyApi<Sizes> = {
  * ```
  * font-family: 'GT Guardian Titlepiece';
  * ```
- *
- * `titlepiece.small()` -> 42px
- *
- * `titlepiece.medium()` -> 50px
- *
- * `titlepiece.large()` -> 70px
  */
 const titlepiece: TypographyApi<TitlepieceSizes> = {
 	small: (options?: FontScaleArgs) =>
@@ -67,20 +61,6 @@ const titlepiece: TypographyApi<TitlepieceSizes> = {
  * ```
  * font-family: 'GH Guardian Headline';
  * ```
- *
- * `headline.xxxsmall()` -> 17px
- *
- * `headline.xxsmall()` -> 20px
- *
- * `headline.xsmall()` -> 24px
- *
- * `headline.small()` -> 28px
- *
- * `headline.medium()` -> 34px
- *
- * `headline.large()` -> 42px
- *
- * `headline.xlarge()` -> 50px
  */
 const headline: TypographyApi<HeadlineSizes> = {
 	xxxsmall: (options?: FontScaleArgs) =>
@@ -106,10 +86,6 @@ const headline: TypographyApi<HeadlineSizes> = {
  * ```
  * font-family: 'GuardianTextEgyptian';
  * ```
- *
- * `body.small()` -> 15px
- *
- * `body.medium()` -> 17px
  */
 const body: TypographyApi<BodySizes> = {
 	small: (options?: FontScaleArgs) =>
@@ -125,22 +101,6 @@ const body: TypographyApi<BodySizes> = {
  * ```
  * font-family: 'GuardianTextSans';
  * ```
- *
- * `textSans.xxsmall()` -> 12px
- *
- * `textSans.xsmall()` -> 14px
- *
- * `textSans.small()` -> 15px
- *
- * `textSans.medium()` -> 17px
- *
- * `textSans.large()` -> 20px
- *
- * `textSans.xlarge()` -> 24px
- *
- * `textSans.xxlarge()` -> 28px
- *
- * `textSans.xxxlarge()` -> 34px
  */
 const textSans: TypographyApi<TextSansSizes> = {
 	xxsmall: (options?: FontScaleArgs) =>
