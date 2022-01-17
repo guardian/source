@@ -21,9 +21,52 @@ This should make Source easier to consume and contribute to
 
 Previously, the foundations of our visual design language (colours, spacing, typography) were published in `@guardian/src-foundations`. They were accompanied by a set of React components that were published **individually**, following a `@guardian/src-*` naming system.
 
+```ts
+import { from } from '@guardian/src-foundations/mq';
+import { text } from '@guardian/src-foundations/palette';
+import { headline } from '@guardian/src-foundations/typography';
+import { Hide } from '@guardian/src-layout';
+import { Link } from '@guardian/src-link';
+
+const Links = () => (
+	<div
+		css={css`
+			color: ${text.primary};
+			${from.desktop} {
+				${headline.medium()};
+			}
+		`}
+	>
+		<Hide until="tablet">
+			<Link href="#">Click here</Link>
+		</Hide>
+	</div>
+);
+```
+
 ### After
 
 In v4, `@guardian/src-foundations` is replaced by `@guardian/source-foundations`, and all the React components are published together in a **single new package** called `@guardian/source-react-components`.
+
+```ts
+import { from, headline, text } from '@guardian/source-foundations';
+import { Hide, Link } from '@guardian/source-react-components';
+
+const Links = () => (
+	<div
+		css={css`
+			color: ${text.primary};
+			${from.desktop} {
+				${headline.medium()};
+			}
+		`}
+	>
+		<Hide until="tablet">
+			<Link href="#">Click here</Link>
+		</Hide>
+	</div>
+);
+```
 
 ### Summary
 
