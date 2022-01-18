@@ -1,5 +1,5 @@
-import { TestResult } from './types';
 import chalk from 'chalk';
+import type { TestResult } from './types';
 
 export const printResults = (results: TestResult[]) => {
 	const totalNumber = results.length;
@@ -18,16 +18,18 @@ export const printResults = (results: TestResult[]) => {
 	console.log('\n');
 	console.log(chalk.bold('Summary'));
 	console.log(chalk.dim(`${totalNumber} ${getTestOrTests(totalNumber)} run`));
-	if (passedNumber)
+	if (passedNumber) {
 		console.log(
 			chalk.green(
 				`${passedNumber} ${getTestOrTests(passedNumber)} passed`,
 			),
 		);
-	if (failedNumber)
+	}
+	if (failedNumber) {
 		console.log(
 			chalk.red(`${failedNumber} ${getTestOrTests(failedNumber)} failed`),
 		);
+	}
 
 	console.log('\n');
 };

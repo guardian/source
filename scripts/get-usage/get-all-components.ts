@@ -1,10 +1,10 @@
 import { readdirSync, readFileSync } from 'fs';
-import {
-	packageNames,
-	getComponentPackageNamesWithPaths,
-} from './package-names';
-import { paths, getKitchenComponentPaths } from '../paths';
 import { parse } from '@typescript-eslint/typescript-estree';
+import { getKitchenComponentPaths, paths } from '../paths';
+import {
+	getComponentPackageNamesWithPaths,
+	packageNames,
+} from './package-names';
 
 const getPackageComponents = (path: string | string[]): string[] => {
 	if (Array.isArray(path)) {
@@ -37,8 +37,9 @@ const getExportsFromFile = (path: string): string[] => {
 		if (
 			node.type !== 'ExportNamedDeclaration' ||
 			node.exportKind !== 'value'
-		)
+		) {
 			continue;
+		}
 
 		if (node.declaration?.type === 'VariableDeclaration') {
 			for (const declaration of node.declaration.declarations) {

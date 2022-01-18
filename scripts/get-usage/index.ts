@@ -1,5 +1,5 @@
-import { cwd, chdir } from 'process';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { chdir, cwd } from 'process';
 import rimraf from 'rimraf';
 import { getAllComponentsAndPackages } from './get-all-components';
 import { getComponentUsage } from './get-component-usage';

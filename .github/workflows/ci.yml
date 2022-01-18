@@ -33,12 +33,3 @@ jobs:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
       - run: yarn validate-dist
-  check-stories:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.4.0
-      - uses: guardian/actions-setup-node@v2.4.1
-        with:
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn workspace story-sync compare

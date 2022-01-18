@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { FocusStyleManager } from '@guardian/src-foundations/utils';
+import { FocusStyleManager } from '@guardian/source-foundations';
 
 export const FocusManagerDecorator = (storyFn) => {
 	useEffect(() => {

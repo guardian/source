@@ -1,53 +1,192 @@
 import { Meta } from '@storybook/addon-docs';
 
 <Meta
-	title="Docs/Release notes/Source v4"
+	title="Release notes/Source v4"
 	parameters={{ previewTabs: { canvas: { hidden: true } } }}
 />
 
-# Introducing Source v4
+# What's new in v4.0.0
 
-The latest version, v4, of Source brings a big change to how the packages are structured. Previously, the `@guardian/src-foundations` package contained the atoms from which all our visual design is built (colours, spacing, typography). A number of packages following the `@guardian/src-*` naming pattern provided React components designed for this system.
+_tl;dr_
 
-In v4, `@guardian/source-foundations` replaces `@guardian/src-foundations` as the place to get those atoms. `@guardian/source-react-components` makes all components available from a single package.
+-   The NPM packages have been simplified
+-   New ESLint plugins provide an automated migration path - (using the ESLint --fix flag)
+-   Functionality and dependencies have not changed
 
-We hope this will make it easier to consume and contribute to these packages!
+This should make Source easier to consume and contribute to
 
-## What else has changed?
+## Package structure
 
-We have attempted to minimise further breaking changes in an effort to keep migration as simple as possible. Additional breaking changes are documented in the following places:
+Previously, the foundations of our visual design language (colours, spacing, typography) were published in `@guardian/src-foundations`. They were accompanied by a set of React components that were published **individually**, following a `@guardian/src-*` naming system.
 
-[Breaking changes to the foundations package](https://github.com/guardian/source/blob/main/packages/%40guardian/source-foundations/migration-breaking-changes.md)
+In v4, `@guardian/src-foundations` is replaced by `@guardian/source-foundations`, and all the React components are published together in a **single new package** called `@guardian/source-react-components`.
 
-[Breaking changes to the component packages](https://github.com/guardian/source/blob/main/packages/%40guardian/source-react-components/migration-breaking-changes.md)
+### Example
+
+```ts
+// v3
+import { from } from '@guardian/src-foundations/mq';
+import { text } from '@guardian/src-foundations/palette';
+import { headline } from '@guardian/src-foundations/typography';
+import { Hide } from '@guardian/src-layout';
+import { Link } from '@guardian/src-link';
+
+const Links = () => (
+	<div
+		css={css`
+			color: ${text.primary};
+			${from.desktop} {
+				${headline.medium()};
+			}
+		`}
+	>
+		<Hide until="tablet">
+			<Link href="#">Click here</Link>
+		</Hide>
+	</div>
+);
+```
+
+```ts
+// v4
+import { from, headline, text } from '@guardian/source-foundations';
+import { Hide, Link } from '@guardian/source-react-components';
+
+const Links = () => (
+	<div
+		css={css`
+			color: ${text.primary};
+			${from.desktop} {
+				${headline.medium()};
+			}
+		`}
+	>
+		<Hide until="tablet">
+			<Link href="#">Click here</Link>
+		</Hide>
+	</div>
+);
+```
+
+### Summary
+
+| Versions | Design Foundations             | Components                                            |
+| :------- | :----------------------------- | :---------------------------------------------------- |
+| `3.*`    | `@guardian/src-foundations`    | `@guardian/src-accordion`, `@guardian/src-brand` etc… |
+| `4.0.0`  | `@guardian/source-foundations` | `@guardian/source-react-components`                   |
+
+#### A note on package versions
+
+`@guardian/source-foundations` and `@guardian/source-react-components` start at `4.0.0` to maintain the current version numbering.
+
+However, unlike before, _their version numbers will not stay in sync going forward_. Instead, packages like `source-react-components` that depend on `source-foundations` should declare the version they need in their `peerDependencies`.
+
+> Components change more frequently than the fundamentals of our design, and it seems odd to bump the foundations package because a component in a different package has changed (especially if you were only using the foundations package in the first place).
+
+## ESLint plugins
+
+Two new ESLint plugins accompany this release that contain Source-specific linting rules that are highly recommended for your project:
+
+-   `@guardian/eslint-plugin-source-foundations`
+-   `@guardian/eslint-plugin-source-react-components`
+
+They can also be used to migrate your project to v4 automatically, using ESLint’s `--fix` option.
+
+### Migrating to v4
+
+-   Uninstall all `@guardian/src-*` packages
+-   Install the new packages (as required):
+    -   `@guardian/source-foundations`
+    -   `@guardian/source-react-components`
+-   Install the new ESLint plugins (as required) as `devDependencies`:
+
+    -   `@guardian/eslint-plugin-source-foundations`
+    -   `@guardian/eslint-plugin-source-react-components`
+
+-   Add the relevant configs for your project: [@guardian/eslint-plugin-source-foundations](https://guardian.github.io/source/?path=/docs/packages-eslint-plugin-source-foundations-readme--page) or [@guardian/eslint-plugin-source-react-components](https://guardian.github.io/source/?path=/docs/packages-eslint-plugin-source-react-components-readme--page)
+-   Run eslint with the [`--fix` option](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems)
+
+#### Example
+
+```js
+// .eslintrc.js
+"extends": [
+	...,
+	"plugin:@guardian/source-foundations/recommended",
+	"plugin:@guardian/source-react-components/recommended"
+],
+```
+
+### Manual migration
+
+We recommend following the steps above however it is also possible to migrate manually. On the whole, migration involves updating import statements for `@guardian/src-*` to either `@guardian/source-foundations` or `@guardian/source-react-components`. Some further changes may be required in specific cases (see below).
+
+## Other changes
+
+We minimised other changes to keep migration as simple as possible, but some house-keeping was required.
+
+Here is full list of changes for each package:
+
+-   `@guardian/src-foundations/theme`
+    -   Path removed
+    -   component themes moved to `source-react-components` and renamed:
+        -   `accordionDefault` → `accordionThemeDefault`
+        -   `buttonReaderRevenue` → `buttonThemeReaderRevenue`
+        -   `buttonReaderRevenueBrand` → `buttonThemeReaderRevenueBrand`
+        -   `buttonReaderRevenueBrandAlt` → `buttonThemeReaderRevenueBrandAlt`
+        -   `buttonBrand` → `buttonThemeBrand`
+        -   `buttonBrandAlt` → `buttonThemeBrandAlt`
+        -   `buttonDefault` → `buttonThemeDefault`
+        -   `checkboxBrand` → `checkboxThemeBrand`
+        -   `checkboxDefault` → `checkboxThemeDefault`
+        -   `choiceCardDefault` → `choiceCardThemeDefault`
+        -   `footerBrand` → `footerThemeBrand`
+        -   `labelDefault` → `labelThemeDefault`
+        -   `labelBrand` → `labelThemeBrand`
+        -   `linkBrand` → `linkThemeBrand`
+        -   `linkBrandAlt` → `linkThemeBrandAlt`
+        -   `linkDefault` → `linkThemeDefault`
+        -   `radioBrand` → `radioThemeBrand`
+        -   `radioDefault` → `radioThemeDefault`
+        -   `selectDefault` → `selectThemeDefault`
+        -   `textInputDefault` → `textInputThemeDefault`
+        -   `userFeedbackBrand` → `userFeedbackThemeBrand`
+        -   `userFeedbackDefault` → `userFeedbackThemeDefault`
+    -   `defaultTheme`, `brand` and `brandAlt` removed completely
+-   `@guardian/source-foundations/accessibility`
+    -   Path removed
+    -   All exports moved to root
+-   `@guardian/source-foundations/animation`
+    -   Path removed
+    -   All exports moved to root
+-   `@guardian/source-foundations/breakpoints`
+    -   Path removed
+    -   All exports moved to root
+    -   `Breakpoint` is now exported as a type
+-   `@guardian/source-foundations/mq`
+    -   Path removed
+    -   All exports moved to root
+    -   No longer re-exports `breakpoints` and `Breakpoint` from `breakpoints.ts`
+-   `@guardian/source-foundations/palette`
+    -   Path removed
+    -   All exports moved to root
+-   `@guardian/source-foundations/size`
+    -   Path removed
+    -   All exports moved to root
+    -   Removed `remSize` and `remIconSize` exports (previously available from `@guardian/src-foundations/size/global`)
+-   `@guardian/source-foundations/space`
+    -   Path removed
+    -   All exports moved to root
+-   `@guardian/source-foundations/typography`
+    -   Path removed
+    -   All non-index exports removed (e.g. @guardian/src-foundations/typography/fs)
+    -   All other exports moved to root
+-   `@guardian/src-foundations/typography/obj`
+    -   Path removed
+    -   All exports now available from root with `ObjectStyles` suffix (e.g. `headlineObjectStyles`)
+-   `@guardian/source-foundations/utils`
+    -   Path removed
+    -   All exports moved to root
+    -   Removed `InteractionModeEngine` export (previously available from `@guardian/src-foundations/utils/focus-style-manager`)
 
 Note: To conform with the Guardian's [NPM package recommendations](https://github.com/guardian/recommendations/blob/main/npm-packages.md#using-guardian-npm-packages), we [removed an inline polyfill](https://github.com/guardian/source/pull/982/files#diff-1d4bbfb57a73b4844eea8bf903faf617deb06f41c4d06c05e835eb82d2ebaa68L30-L49) for `Object.fromEntries`. If you support [IE11 or another unsupported browser](https://caniuse.com/mdn-javascript_builtins_object_fromentries), you will need to provide a polyfill for this method.
-
-## What will be different going forwards?
-
-Going forwards the versions of `@guardian/source-foundations` and `@guardian/source-react-components` will no longer remain in sync. Instead, you should refer to the version specified in peerDependencies.
-
-## How do I migrate?
-
-### Automagically
-
-A new eslint plugin is available which can be used to complete the migration automatically. This plugin also contains Source specific linting rules that are recommended for your project. The steps for automatic migration are:
-
--   Remove any `@guardian/src-*` packages from your `package.json`
--   Add the `@guardian/source-foundations` and/or `@guardian/source-react-components` packages, depending on your use requirements
--   Add the `@guardian/eslint-plugin-source-foundations` or `@guardian/eslint-plugin-source-react-components` package as a devDependency
-
-    If you are _only_ using foundations then use `@guardian/eslint-plugin-source-foundations`, else use _only_ `@guardian/eslint-plugin-source-react-components`.
-
--   Add the recommended config for either [@guardian/eslint-plugin-source-foundations](https://github.com/guardian/source/tree/main/packages/%40guardian/eslint-plugin-source-foundations#usage) or [@guardian/eslint-plugin-source-react-components](https://github.com/guardian/source/tree/main/packages/%40guardian/eslint-plugin-source-react-components#usage) to your eslint configuration
--   Run eslint with the [fix](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) option
-
-### Manually
-
-It is recommended to follow the steps for [automatic migration](#automagically) however it is also possible to migrate manually. On the whole, migration involves updating import statements for `@guardian/src-*` to either `@guardian/source-foundations` or `@guardian/source-react-components`. Some further changes may be required in specific cases. More information in these can be found in the [What else has changed?](#what-else-has-changed) section.
-
-The recommended manual steps are:
-
--   Remove any `@guardian/src-*` packages from your `package.json`
--   Add the `@guardian/source-foundations` and/or `@guardian/source-react-components` packages, depending on your use requirements
--   Search for all ocurrences of `@guardian/src-` and fix as required

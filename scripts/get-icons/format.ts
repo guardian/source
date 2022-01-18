@@ -1,4 +1,5 @@
-import { html, HTMLBeautifyOptions } from 'js-beautify';
+import type { HTMLBeautifyOptions } from 'js-beautify';
+import { html } from 'js-beautify';
 
 const options: HTMLBeautifyOptions = {
 	wrap_attributes: 'force-expand-multiline',

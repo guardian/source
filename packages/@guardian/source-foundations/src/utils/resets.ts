@@ -1,8 +1,4 @@
-// FYI
-// packages/@guardian/src-foundations/src/utils/resets.ts SYMLINKS TO
-// packages/@guardian/source-foundations/src/utils/resets.ts
-
-import { background, text } from '../palette';
+import { background, text } from '../colour/palette';
 
 ////////////////////////////
 // Element specific resets
@@ -113,7 +109,7 @@ const resetCSS = `
 `;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/source-v4-source-foundations-css-reset--page)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-css-reset--page)
  *
  * `resets.resetCSS`: sensible default CSS rules to provide a base for a consistent environment across projects and browsers.
  */

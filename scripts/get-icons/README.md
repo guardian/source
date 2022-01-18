@@ -1,6 +1,6 @@
 # `get-icons`
 
-This script pulls in the svg source of icons from Figma and updates the `src-icons` package.
+This script pulls in the svg source of icons from Figma and updates the `source-react-components` package.
 
 ## Usage
 

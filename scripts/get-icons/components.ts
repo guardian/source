@@ -3,17 +3,18 @@ import { kebabToTitle } from './case';
 import { REACT_COMPONENT_OUTPUT_DIR } from './config';
 
 export const generateReactComponent = (name: string, svg: string): string => {
-	return `import { iconSize } from '@guardian/src-foundations/size';
+	return `import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { iconSize } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const ${name}Icon = ({ size }: IconProps) => {
+export const ${name}Icon = ({ size }: IconProps): EmotionJSX.Element => {
 	return (
 ${replaceStyleAttribute(
 	svg
 		.split('\n')
 		.map((line) => `\t\t${line}`)
 		.join('\n')
-		.replace(/\>/i, '\twidth={size ? iconSize[size] : undefined}\n\t\t>')
+		.replace(/\\>/i, '\twidth={size ? iconSize[size] : undefined}\n\t\t>')
 		.replace(/fill-rule/gi, 'fillRule')
 		.replace(/clip-rule/gi, 'clipRule'),
 )}
@@ -35,7 +36,7 @@ const replaceStyleAttribute = (source: string): string => {
 const getStyleReplacement = (style: string): string => {
 	return style
 		.replace('style=', '')
-		.replace(/\"/gi, '')
+		.replace(/\\"/gi, '')
 		.split(';')
 		.map((item) => {
 			const [key, value] = item.split(':');

@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/accessibility",
-  "module": "../dist/esm/accessibility",
-  "types": "../dist/types/accessibility",
-  "what is this?": "this is a hack to get @guardian/src-foundations/* submodules working with dist till v4"
-}

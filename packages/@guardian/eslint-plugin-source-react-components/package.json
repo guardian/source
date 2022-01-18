@@ -1,6 +1,6 @@
 {
   "name": "@guardian/eslint-plugin-source-react-components",
-  "version": "4.0.0-rc.2",
+  "version": "4.0.0-rc.6",
   "description": "ESLint plugin for Guardian projects using the `@guardian/source-react-components` package.",
   "homepage": "https://github.com/guardian/source#readme",
   "bugs": {
@@ -22,13 +22,12 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@guardian/eslint-plugin-source-foundations": "^4.0.0-rc.2",
-    "@typescript-eslint/eslint-plugin": "4.29.2",
-    "@typescript-eslint/parser": "4.29.2"
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1"
   },
   "devDependencies": {
-    "@guardian/eslint-config": "^0.7.0",
-    "@guardian/eslint-config-typescript": "^0.7.0",
+    "@guardian/eslint-config": "^1.0.0",
+    "@guardian/eslint-config-typescript": "^1.0.0",
     "@types/estree": "^0.0.50",
     "rollup": "^2.56.3",
     "rollup-plugin-dts": "^4.0.0",
@@ -36,7 +35,9 @@
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "@guardian/source-react-components": "^4.0.0-rc.1"
+    "@guardian/eslint-plugin-source-foundations": "^4.0.0-rc.6",
+    "@guardian/source-react-components": "4.0.0-rc.5",
+    "eslint": "^8.0.0"
   },
   "publishConfig": {
     "access": "public"

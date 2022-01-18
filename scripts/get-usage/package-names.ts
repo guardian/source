@@ -1,5 +1,5 @@
-import { join } from 'path';
 import { readdir, stat } from 'fs';
+import { join } from 'path';
 import { promisify } from 'util';
 
 const readdirP = promisify(readdir);

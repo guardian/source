@@ -2,10 +2,11 @@ export const ICON_FILE = 'Ai7AELHC6KCz38qKZkvuHo';
 
 export const ICON_FRAMES = ['UI icons 24(w)x24(w)', 'Payment icons 24 x 24'];
 
-export const SVG_OUTPUT_DIR = '../../packages/@guardian/src-icons/svgs';
+export const SVG_OUTPUT_DIR =
+	'../../packages/@guardian/source-react-components/icons/svgs';
 
 export const REACT_COMPONENT_OUTPUT_DIR =
-	'../../packages/@guardian/src-icons/components';
+	'../../packages/@guardian/source-react-components/icons/components';
 
 export const FIGMA_OPTIONS = {
 	headers: {

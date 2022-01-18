@@ -1,6 +1,6 @@
 {
   "name": "@guardian/eslint-plugin-source-foundations",
-  "version": "4.0.0-rc.2",
+  "version": "4.0.0-rc.6",
   "description": "ESLint plugin for Guardian projects using the `@guardian/source-foundations` package.",
   "homepage": "https://github.com/guardian/source#readme",
   "bugs": {
@@ -22,13 +22,13 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.33.0",
-    "@typescript-eslint/parser": "4.29.2",
-    "eslint-plugin-import": "2.24.0"
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
+    "eslint-plugin-import": "2.25.4"
   },
   "devDependencies": {
-    "@guardian/eslint-config": "^0.7.0",
-    "@guardian/eslint-config-typescript": "^0.7.0",
+    "@guardian/eslint-config": "^1.0.0",
+    "@guardian/eslint-config-typescript": "^1.0.0",
     "@types/estree": "^0.0.50",
     "rollup": "^2.56.3",
     "rollup-plugin-dts": "^4.0.0",
@@ -36,7 +36,8 @@
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "@guardian/source-foundations": "^4.0.0-rc.1"
+    "@guardian/source-foundations": "4.0.0-rc.7",
+    "eslint": "^8.0.0"
   },
   "publishConfig": {
     "access": "public"

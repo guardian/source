@@ -1,26 +1,9 @@
 {
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "declarationMap": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["es5", "es6", "es7", "es2017", "es2019", "es2020", "dom"],
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "outDir": "dist",
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true,
     "target": "es5",
     "module": "commonjs"
   },
   "exclude": ["src/rules/*.test.ts", "dist"],
-  "include": ["."]
+  "include": ["src"]
 }
