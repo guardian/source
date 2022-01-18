@@ -1,6 +1,7 @@
 {
   "name": "@guardian/source-react-components",
   "version": "4.0.0-rc.2",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
