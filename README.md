@@ -14,6 +14,7 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 -   [Foundations](https://guardian.github.io/source/?path=/story/foundations--page)
 -   [Components](https://guardian.github.io/source/?path=/story/components--page)
 -   [Develoment Kitchen](https://guardian.github.io/source/?path=/story/development-kitchen--page)
+-   [ESLint plugins](https://guardian.github.io/source/?path=/story/eslint-plugins--page)
 
 ## Using the Source Design System 🎨
 
