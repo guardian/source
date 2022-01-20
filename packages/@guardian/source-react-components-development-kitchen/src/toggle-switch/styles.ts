@@ -96,6 +96,12 @@ export const webStyles = css`
 	height: 1.5rem;
 	border-radius: 15.5px;
 
+	// this will go away when resets have been standardised
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -106,6 +112,7 @@ export const webStyles = css`
 		border-bottom: 2px solid ${success[400]};
 		border-right: 2px solid ${success[400]};
 		transition: opacity 0.1s ease-in;
+		box-sizing: content-box;
 	}
 
 	&:after {
