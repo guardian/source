@@ -88,7 +88,7 @@ export const androidStyles = css`
 
 /**
  * These 'webStyles' are shared with Frontend and will potentially also need updating there if updated here.
-	https://github.com/guardian/frontend/blob/c2b3103e1796b9b2fc3326e792323dd919d4b85a/static/src/stylesheets/module/content-garnett/_live-blog.scss#L257
+ * https://github.com/guardian/frontend/blob/c2b3103e1796b9b2fc3326e792323dd919d4b85a/static/src/stylesheets/module/content-garnett/_live-blog.scss#L257
  */
 
 export const webStyles = css`
@@ -96,7 +96,7 @@ export const webStyles = css`
 	height: 1.5rem;
 	border-radius: 15.5px;
 
-	// this will go away when resets have been standardised
+	/* this will go away when resets have been standardised */
 	&:before,
 	&:after {
 		box-sizing: border-box;
