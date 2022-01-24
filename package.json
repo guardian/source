@@ -29,6 +29,7 @@
     "lint:styles": "stylelint packages/**/styles.ts",
     "prepare": "husky install",
     "release": "yarn clean && yarn build:packages && lerna bootstrap && lerna publish --no-private",
+    "release:changesets": "yarn clean && yarn build:packages && changeset publish",
     "release:pre": "yarn clean && yarn build:packages && lerna bootstrap && lerna publish --no-private --dist-tag next",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
