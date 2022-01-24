@@ -1,55 +1,40 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@guardian/src-foundations": ["packages/@guardian/src-foundations/src"],
-      "@guardian/src-foundations/mq": [
-        "packages/@guardian/src-foundations/src/mq"
-      ],
-      "@guardian/src-foundations/accessibility": [
-        "packages/@guardian/src-foundations/src/accessibility"
-      ],
-      "@guardian/src-foundations/palette": [
-        "packages/@guardian/src-foundations/src/palette"
-      ],
-      "@guardian/src-foundations/size": [
-        "packages/@guardian/src-foundations/src/size"
-      ],
-      "@guardian/src-foundations/themes": [
-        "packages/@guardian/src-foundations/src/themes"
-      ],
-      "@guardian/src-foundations/typography": [
-        "packages/@guardian/src-foundations/src/typography"
-      ],
-      "@guardian/src-foundations/utils": [
-        "packages/@guardian/src-foundations/src/utils"
-      ],
-      "@guardian/src-label": ["packages/@guardian/src-label"],
-      "@guardian/src-user-feedback": ["packages/@guardian/src-user-feedback"],
-      "@guardian/src-helpers": ["packages/@guardian/src-helpers"],
-      "@guardian/src-icons": ["packages/@guardian/src-icons"]
-    },
-    "outDir": "dist",
-    "module": "commonjs",
-    "target": "ES2015", // TODO change this to ES2020 in v4.0.0
-    "lib": ["es5", "es6", "es7", "es2017", "es2019", "es2020", "dom"],
-    "strict": true,
-    "sourceMap": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react",
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "lib": ["es5", "es6", "es7", "es2017", "es2019", "es2020", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "paths": {
+      "@guardian/source-foundations": [
+        "packages/@guardian/source-foundations/src/index"
+      ],
+      "@guardian/source-react-components": [
+        "packages/@guardian/source-react-components/src/index"
+      ],
+      "@guardian/source-react-components-development-kitchen": [
+        "packages/@guardian/source-react-components-development-kitchen/src/index"
+      ]
+    },
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "esnext"
   },
-  "include": ["src", "packages", "lib"],
-  "exclude": ["node_modules", "scripts/validate-dist"]
+  "include": ["packages", "lib", "@types", "scripts"],
+  "exclude": ["node_modules", "dist"]
 }

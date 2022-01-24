@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { testConfig } from '../test-config';
-import { cleanup, finalCleanup, preflightChecks } from './setup';
 import { printResults } from './print';
+import { cleanup, finalCleanup, preflightChecks } from './setup';
 import { test } from './tester';
 
 const main = () => {

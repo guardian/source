@@ -22,7 +22,6 @@ const removedImports: Record<string, string[]> = {
 	"'@guardian/source-foundations/utils'": ['InteractionModeEngine'],
 	"'@guardian/src-foundations/size/global'": ['remSize', 'remIconSize'],
 	"'@guardian/src-foundations/themes'": ['defaultTheme', 'brand', 'brandAlt'],
-	"'@guardian/src-foundations'": ['palette'],
 	"'@guardian/src-helpers'": [
 		'storybookBackgrounds',
 		'ThemeName',
@@ -75,8 +74,9 @@ const getRemovedExports = (
 		case 'ImportDeclaration':
 			return node.specifiers.filter((i) => {
 				const source = node.source.raw;
-				if (!source || !Object.keys(removedImports).includes(source))
+				if (!source || !Object.keys(removedImports).includes(source)) {
 					return false;
+				}
 
 				const removedImportsForSource = removedImports[source];
 				return (
@@ -87,8 +87,9 @@ const getRemovedExports = (
 		case 'ExportNamedDeclaration':
 			return node.specifiers.filter((i) => {
 				const source = node.source?.raw;
-				if (!source || !Object.keys(removedImports).includes(source))
+				if (!source || !Object.keys(removedImports).includes(source)) {
 					return false;
+				}
 
 				const removedImportsForSource = removedImports[source];
 				return removedImportsForSource.includes(i.exported.name);
@@ -117,8 +118,9 @@ const getRenameImportFixers = (
 	nodeSource: string,
 ): Rule.Fix[] => {
 	const fixers: Rule.Fix[] = [];
-	if (!node.source?.raw || node.type === 'ExportAllDeclaration')
+	if (!node.source?.raw || node.type === 'ExportAllDeclaration') {
 		return fixers;
+	}
 
 	// If anything has been removed then remove it from the fixed import
 	// Also add a new line which imports the removed exports from the original source
@@ -174,8 +176,9 @@ const getMessage = (
 			if (
 				i.type === 'ImportNamespaceSpecifier' ||
 				i.type === 'ImportDefaultSpecifier'
-			)
+			) {
 				continue;
+			}
 
 			const name = getSpecifierName(i);
 			if (typographyObjChanges.includes(name)) {
@@ -189,8 +192,9 @@ const getMessage = (
 		if (
 			i.type === 'ImportNamespaceSpecifier' ||
 			i.type === 'ImportDefaultSpecifier'
-		)
+		) {
 			continue;
+		}
 
 		const name = getSpecifierName(i);
 		if (name in newThemeNames) {
@@ -239,11 +243,13 @@ const relevantImportSource = (importSource: string, pkg: Package): boolean => {
 	if (
 		pkg === 'foundations' &&
 		importSource.startsWith("'@guardian/src-foundations")
-	)
+	) {
 		return true;
+	}
 
-	if (pkg === 'all' && importSource.startsWith("'@guardian/src-"))
+	if (pkg === 'all' && importSource.startsWith("'@guardian/src-")) {
 		return true;
+	}
 
 	return false;
 };

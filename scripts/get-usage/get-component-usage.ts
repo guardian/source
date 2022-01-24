@@ -1,8 +1,8 @@
-import { repos } from './config.json';
-import { chdir } from 'process';
 import { execSync } from 'child_process';
-import { mkdirSync, writeFileSync, readFileSync } from 'fs';
-import { ComponentUsageData } from './types';
+import { mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { chdir } from 'process';
+import { repos } from './config.json';
+import type { ComponentUsageData } from './types';
 
 const getReactScannerConfig = ({
 	name,

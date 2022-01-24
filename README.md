@@ -10,27 +10,21 @@ See [the Source storybook](https://guardian.github.io/source) for examples of av
 
 ## Docs 📖
 
--   [Getting started](https://guardian.github.io/source/?path=/docs/docs-01-getting-started--page)
--   [Foundations](https://guardian.github.io/source/?path=/docs/docs-02-foundations--page)
--   [Components](https://guardian.github.io/source/?path=/docs/docs-03-components--page)
--   [Using Emotion](https://guardian.github.io/source/?path=/docs/docs-04-using-emotion--page)
--   [Theming](https://guardian.github.io/source/?path=/docs/docs-05-theming--page)
--   [Overriding styles](https://guardian.github.io/source/?path=/docs/docs-06-overriding-styles--page)
--   [Contributing](https://guardian.github.io/source/?path=/docs/docs-07-contributing--page)
--   [FAQs](https://guardian.github.io/source/?path=/docs/docs-08-faqs--page)
--   [Stories](https://guardian.github.io/source/?path=/docs/docs-09-stories--page)
+-   [Getting started](https://guardian.github.io/source/?path=/story/getting-started--page)
+-   [Foundations](https://guardian.github.io/source/?path=/story/foundations--page)
+-   [Components](https://guardian.github.io/source/?path=/story/components--page)
+-   [Develoment Kitchen](https://guardian.github.io/source/?path=/story/development-kitchen--page)
+-   [ESLint plugins](https://guardian.github.io/source/?path=/story/eslint-plugins--page)
 
-## Using the Design System 🎨
+## Using the Source Design System 🎨
 
-These components make using the Design System easier.
+This component library makes it easy to implement user interfaces conforming to the Source Design System.
 
-To understand how the Design System _works_, see the [Design System documentation](https://theguardian.design).
+To understand how the Source Design System _works_, see the [Source Design System documentation](https://theguardian.design).
 
 ## Contributing 💝
 
 We welcome contributions to the Source component library!
 
 Before you begin, please read our
-[Contributing Guidelines](docs/08-contributing.md)
-
-We also have a chat room (internal) at [Digital/Design system 👩‍🎨](https://chat.google.com/room/AAAAGDIhXQs).
+[Contributing Guidelines](https://guardian.github.io/source/?path=/story/contributing-overview--page)
