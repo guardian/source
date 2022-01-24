@@ -26,7 +26,7 @@
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
     "@guardian/source-foundations": "^4.0.1",
-    "react": "^17.0.0"
+    "react": "^17.0.1"
   },
   "publishConfig": {
     "access": "public"
