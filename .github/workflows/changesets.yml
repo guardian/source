@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  release:
-    name: Release
+  changesets-version:
+    name: Manage Changesets Pull Request
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
