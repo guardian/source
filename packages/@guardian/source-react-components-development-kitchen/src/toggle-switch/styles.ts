@@ -106,13 +106,12 @@ export const webStyles = css`
 		content: '';
 		position: absolute;
 		top: 0.375rem;
-		height: 0.5rem;
-		width: 0.25rem;
+		height: 0.7rem;
+		width: 0.4rem;
 		opacity: 0;
 		border-bottom: 2px solid ${success[400]};
 		border-right: 2px solid ${success[400]};
 		transition: opacity 0.1s ease-in;
-		box-sizing: content-box;
 	}
 
 	&:after {
