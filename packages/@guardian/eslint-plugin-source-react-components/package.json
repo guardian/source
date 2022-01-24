@@ -35,7 +35,7 @@
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "@guardian/source-react-components": "4.0.1",
+    "@guardian/source-react-components": "^4.0.1",
     "eslint": "^8.0.0"
   },
   "publishConfig": {
