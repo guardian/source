@@ -354,27 +354,31 @@
 		font-weight: 700;
 		font-style: normal;
 	}
-	.aside {
-		width: 30%;
-		float: right;
+
+	/* palette */
+
+	summary {
+		cursor: pointer;
 	}
 
-	.aside p {
-		margin: 0;
+	.colour_tokens {
+		display: flex;
+		justify-content: space-between;
 	}
 
-	.aside ul {
-		padding-left: 5%;
-		margin: 0;
+	.colour_tokens__colours__list {
+		flex-grow: 2;
+		margin: 0 40px auto -20px; /* -20px to override storybook default padding */
+		margin-right: 40px;
+		max-width: 360px;
 	}
 
-	.colours {
-		max-width: 100%;
-		width: 20rem;
-		margin-left: -20px; /* override storybook default padding */
+	.colour_tokens__colours__list > ul {
+		margin-top: 0 !important;
+		padding-left: 0 !important;
 	}
 
-	.colours__row {
+	.colour_tokens__colours__list__row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -382,15 +386,44 @@
 		padding: 20px;
 	}
 
-	.colours__value {
+	.colour_tokens__colours__list__value {
 		display: flex;
 		align-items: center;
 		gap: 10px;
 	}
 
-	.colours__value__swatch {
+	.colour_tokens__colours__list__value__swatch {
 		height: 50px;
 		width: 50px;
 		border: 1px solid #333333;
+	}
+
+	.colour_tokens__colours__list__colour_dropdown {
+		list-style-type: none;
+		padding-bottom: 5px;
+	}
+
+	.colour_tokens__colours__list__category {
+		cursor: pointer;
+		font-size: 1.3em;
+		font-weight: 700;
+	}
+
+	.colour_tokens__aside {
+		max-width: 300px;
+		padding: 0 10px;
+	}
+
+	.colour_tokens__aside__dropdown {
+		padding: 0 !important;
+	}
+
+	.colour_tokens__aside__dropdown li {
+		list-style-type: none;
+		font-weight: 500;
+	}
+
+	.colour_tokens__aside__list {
+		padding-left: 16px !important;
 	}
 </style>
