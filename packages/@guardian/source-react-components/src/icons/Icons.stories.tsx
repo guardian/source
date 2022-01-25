@@ -44,6 +44,7 @@ import { SvgLinkedIn } from './SvgLinkedIn';
 import { SvgMessenger } from './SvgMessenger';
 import { SvgMinus } from './SvgMinus';
 import { SvgOfflineCloud } from './SvgOfflineCloud';
+import { SvgPaperclip } from './SvgPaperclip';
 import { SvgPayPal } from './SvgPayPal';
 import { SvgPerson } from './SvgPerson';
 import { SvgPinterest } from './SvgPinterest';
@@ -92,6 +93,7 @@ const uiIcons = {
 	SvgMessenger,
 	SvgMinus,
 	SvgOfflineCloud,
+	SvgPaperclip,
 	SvgPlay,
 	SvgPlus,
 	SvgPerson,
