@@ -21,8 +21,6 @@ export default {
 		hideLabel: false,
 	},
 	argTypes: {
-		// sorted by required,alpha
-		name: undefined,
 		columns: {
 			options: [undefined, 2, 3, 4, 5],
 			control: { type: 'select' },
@@ -31,10 +29,6 @@ export default {
 			options: [undefined, 'Please select a choice card to continue'],
 			control: { type: 'select' },
 		},
-		label: undefined,
-		hideLabel: undefined,
-		multi: undefined,
-		supporting: undefined,
 	},
 };
 
