@@ -71,24 +71,13 @@ $ yarn storybook
 
 ### Raising a pull request
 
--   Don’t bump the package version as part of a pull request. Maintainers will take care of this as part of the release process.
+-   Generate a changeset describing your work by running `yarn changeset` and following the prompts.
 -   Test that your component can be used in a real project (e.g. [dotcom-rendering](https://github.com/guardian/dotcom-rendering)). Use [`yarn link`](https://yarnpkg.com/en/docs/cli/link) to avoid having to perform a real publish, and [`yarn pack`](https://yarnpkg.com/en/docs/cli/pack) to see exactly which files would be published.
 -   If your change extends the API of a component or the foundations (e.g. you are adding a new component, a new prop or exporting a new type), please update the [package validation tests](https://github.com/guardian/source/tree/main/scripts/validate-dist).
 
 ## Publishing
 
-To publish Source, you must be on a clean `main` branch, logged into npm on
-your terminal with an account under the [Guardian's npm
-organisation](https://www.npmjs.com/settings/guardian/packages).
-
-To publish `source-*` packages that have changed since the last release, run:
-
-```sh
-$ yarn release
-```
-
-The command line tool will highlight packages that have changed, and ask you to
-specify the type of release you are performing (e.g. major / minor / patch).
+Publishing is triggered by merging the auto-generated _Version Packages_ PR that changesets manages.
 
 ### Publishing src-\* (legacy) packages
 
@@ -112,11 +101,8 @@ $ yarn release
 
 ### Force publishing unchanged packages
 
-There are times when you want Lerna to publish a new version of a package even
+There are times when you want to publish a new version of a package even
 when the package source code hasn't changed. In these cases, you should:
 
--   manually bump the version of the package in its `package.json`
--   commit the version bump change
--   run `yarn release:from-package`
-
-The package will be published at the version you specified in the `package.json`.
+-   create a new changeset
+-   create a PR explaining why the package needs to be bumped
