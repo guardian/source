@@ -1,11 +1,10 @@
 const path = require('path');
 
-const nodeModulesExclude = [
-	{
-		test: /node_modules/,
-		exclude: [/@guardian\//],
-	},
-];
+const nodeModulesExclude = {
+	and: [/node_modules/],
+	not: [/@guardian\//],
+};
+
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = ({ config, mode }) => {
@@ -13,24 +12,28 @@ module.exports = ({ config, mode }) => {
 	config.module.rules.push({
 		test: /\.(ts|tsx)$/,
 		exclude: nodeModulesExclude,
-		loader: require.resolve('babel-loader'),
-		options: {
-			presets: [
-				'@babel/preset-env',
-				'@babel/preset-typescript',
-				[
-					'@babel/preset-react',
-					{
-						runtime: 'automatic',
-						importSource: '@emotion/react',
-					},
-				],
-			],
-			plugins: [
-				'@babel/plugin-proposal-class-properties',
-				'@emotion/babel-plugin',
-			],
-		},
+		use: [
+			{
+				loader: require.resolve('babel-loader'),
+				options: {
+					presets: [
+						'@babel/preset-env',
+						'@babel/preset-typescript',
+						[
+							'@babel/preset-react',
+							{
+								runtime: 'automatic',
+								importSource: '@emotion/react',
+							},
+						],
+					],
+					plugins: [
+						'@babel/plugin-proposal-class-properties',
+						'@emotion/babel-plugin',
+					],
+				},
+			},
+		],
 	});
 
 	// update storybook webpack config to transpile *all* JS
@@ -39,6 +42,8 @@ module.exports = ({ config, mode }) => {
 	).exclude = nodeModulesExclude;
 
 	config.resolve.extensions.push('.ts', '.tsx');
+
+	config.resolve.plugins || (config.resolve.plugins = []);
 	config.resolve.plugins.push(
 		new TsconfigPathsPlugin({
 			configFile: path.resolve(__dirname, '..', 'tsconfig.json'),

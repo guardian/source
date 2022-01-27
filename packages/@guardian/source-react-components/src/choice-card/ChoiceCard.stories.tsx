@@ -16,8 +16,6 @@ export default {
 		label: 'string',
 	},
 	argTypes: {
-		// sorted by required,alpha
-		id: undefined,
 		label: {
 			options: ['string', 'JSX element'],
 			mapping: {
@@ -25,8 +23,6 @@ export default {
 				'JSX element': <em>Option 1</em>,
 			},
 		},
-		value: undefined,
-		checked: undefined,
 		defaultChecked: {
 			control: { disable: true },
 		},

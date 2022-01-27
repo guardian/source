@@ -22,7 +22,7 @@ export const asPlayground = <T>(story: Story<T>): void => {
 			},
 		},
 		// className is part of react API anyway, we don't need to document it
-		controls: { exclude: ['className'] },
+		controls: { exclude: ['className'], sort: 'requiredFirst' },
 		chromatic: { disable: true },
 	};
 	story.args = {

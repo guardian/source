@@ -8,9 +8,14 @@ module.exports = {
 		'@storybook/addon-a11y',
 		{
 			name: '@storybook/addon-docs',
-			options: { transcludeMarkdown: true },
+			options: {
+				transcludeMarkdown: true,
+			},
 		},
 		'@storybook/addon-essentials',
 		'@storybook/addon-links',
 	],
+	core: {
+		builder: 'webpack5',
+	},
 };
