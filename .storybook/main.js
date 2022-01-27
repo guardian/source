@@ -6,11 +6,11 @@ module.exports = {
 	],
 	addons: [
 		'@storybook/addon-a11y',
-		'@storybook/addon-essentials',
-		'@storybook/addon-links',
 		{
 			name: '@storybook/addon-docs',
 			options: { transcludeMarkdown: true },
 		},
+		'@storybook/addon-essentials',
+		'@storybook/addon-links',
 	],
 };
