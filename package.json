@@ -52,7 +52,7 @@
     "@emotion/react": "11.0.0",
     "@guardian/eslint-config": "^1.0.0",
     "@guardian/eslint-config-typescript": "^1.0.0",
-    "@guardian/libs": "3.0.0",
+    "@guardian/libs": "3.3.0",
     "@guardian/prettier": "^0.7.0",
     "@storybook/addon-a11y": "^6.4.14",
     "@storybook/addon-actions": "^6.4.14",
