@@ -14,22 +14,25 @@ export default [
 		plugins: [ts({ tsconfig: '../../../tsconfig.json' })],
 		output: [
 			{
-				file: pkg.main,
+				dir: pkg.main.replace('/index.js', ''),
 				format: 'cjs',
 				sourcemap: true,
+				preserveModules: true,
 			},
 			{
-				file: pkg.module,
+				dir: pkg.module.replace('/index.js', ''),
 				format: 'es',
 				sourcemap: true,
+				preserveModules: true,
 			},
 		],
 	}),
 	bundle({
 		plugins: [dts()],
 		output: {
-			file: pkg.types,
+			dir: pkg.types.replace('/index.d.ts', ''),
 			format: 'es',
+			preserveModules: true,
 		},
 	}),
 ];

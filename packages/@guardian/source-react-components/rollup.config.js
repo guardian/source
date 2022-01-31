@@ -11,14 +11,16 @@ export default [
 		input: 'src/index.ts',
 		output: [
 			{
-				file: pkg.main,
+				dir: pkg.main.replace('/index.js', ''),
 				format: 'cjs',
 				sourcemap: true,
+				preserveModules: true,
 			},
 			{
-				file: pkg.module,
+				dir: pkg.module.replace('/index.js', ''),
 				format: 'es',
 				sourcemap: true,
+				preserveModules: true,
 			},
 		],
 		external,
@@ -30,7 +32,8 @@ export default [
 	{
 		input: 'src/index.ts',
 		output: {
-			file: pkg.types,
+			dir: pkg.types.replace('/index.d.ts', ''),
+			preserveModules: true,
 			format: 'es',
 			sourcemap: true,
 		},
