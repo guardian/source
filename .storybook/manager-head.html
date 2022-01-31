@@ -7,15 +7,18 @@
 		const observer = new MutationObserver((mutationsList) => {
 			for (const mutation of mutationsList) {
 				mutation.addedNodes.forEach((addedNode) => {
-					if (addedNode.matches('[href$="--playground"]')) {
-						addedNode.href = addedNode.href.replace(
+					const links = addedNode.querySelectorAll(
+						'[href$="--playground"]',
+					);
+					links.forEach((link) => {
+						link.href = link.href.replace(
 							'path=/story/',
 							'path=/docs/',
 						);
-						if (addedNode.dataset.selected) {
-							addedNode.click();
+						if (link.dataset.selected) {
+							link.click();
 						}
-					}
+					});
 				});
 			}
 		});
