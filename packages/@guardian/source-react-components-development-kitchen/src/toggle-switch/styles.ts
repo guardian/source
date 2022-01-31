@@ -100,9 +100,9 @@ export const webStyles = css`
 	&:before {
 		content: '';
 		position: absolute;
-		top: 0.375rem;
-		height: 0.7rem;
-		width: 0.4rem;
+		top: 6px;
+		height: 11px;
+		width: 6px;
 		right: 10px;
 		opacity: 0;
 		border-bottom: 2px solid ${success[400]};
