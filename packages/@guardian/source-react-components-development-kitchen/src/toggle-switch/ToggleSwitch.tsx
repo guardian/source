@@ -6,7 +6,6 @@ import {
 	buttonStyles,
 	iosStyles,
 	labelStyles,
-	toggleSwitchStyles,
 	webStyles,
 } from './styles';
 
@@ -84,7 +83,7 @@ export const ToggleSwitch = ({
 	};
 
 	return (
-		<div css={[toggleSwitchStyles, cssOverrides]} {...props}>
+		<label css={[labelStyles, cssOverrides]} {...props} id="notify">
 			<button
 				css={[buttonStyles, getPlatformStyles(platform)]}
 				role="switch"
@@ -92,9 +91,7 @@ export const ToggleSwitch = ({
 				aria-labelledby="notify"
 				onClick={onClick}
 			></button>
-			<label css={labelStyles} id="notify">
-				{label}
-			</label>
-		</div>
+			{label}
+		</label>
 	);
 };

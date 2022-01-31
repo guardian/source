@@ -1,11 +1,6 @@
 import { css } from '@emotion/react';
 import { neutral, success, textSans } from '@guardian/source-foundations';
 
-export const toggleSwitchStyles = css`
-	display: flex;
-	align-items: center;
-`;
-
 export const buttonStyles = css`
 	flex: none;
 	border: none;
@@ -13,10 +8,10 @@ export const buttonStyles = css`
 	margin-left: 0;
 	padding: 0;
 	display: inline-block;
-	vertical-align: middle;
 	text-align: center;
 	position: relative;
 	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	cursor: pointer;
 
 	&:after {
 		content: '';
@@ -105,20 +100,22 @@ export const webStyles = css`
 	&:before {
 		content: '';
 		position: absolute;
-		top: 0.375rem;
-		height: 0.7rem;
-		width: 0.4rem;
+		top: 6px;
+		height: 11px;
+		width: 6px;
+		right: 10px;
 		opacity: 0;
 		border-bottom: 2px solid ${success[400]};
 		border-right: 2px solid ${success[400]};
+		transform: rotate(45deg);
 		transition: opacity 0.1s ease-in;
 	}
 
 	&:after {
-		height: 1.125rem;
-		width: 1.125rem;
-		top: 0.15625rem;
-		left: 0.25rem;
+		height: 18px;
+		width: 18px;
+		top: 3px;
+		left: 4px;
 	}
 
 	&[aria-checked='false'] {
@@ -132,7 +129,6 @@ export const webStyles = css`
 	&[aria-checked='true']:before {
 		opacity: 1;
 		z-index: 1;
-		transform: translateX(6px) rotate(45deg);
 	}
 
 	&[aria-checked='true']:after {
@@ -143,6 +139,9 @@ export const webStyles = css`
 
 export const labelStyles = css`
 	${textSans.small()};
-	display: inline-block;
+	display: inline-flex;
 	color: ${neutral[7]};
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
 `;
