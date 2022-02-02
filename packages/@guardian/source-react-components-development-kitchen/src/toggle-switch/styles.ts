@@ -4,7 +4,7 @@ import { neutral, success, textSans } from '@guardian/source-foundations';
 export const buttonStyles = css`
 	flex: none;
 	border: none;
-	margin: 8px;
+	margin-right: 8px;
 	margin-left: 0;
 	padding: 0;
 	display: inline-block;
@@ -139,7 +139,7 @@ export const webStyles = css`
 
 export const labelStyles = css`
 	${textSans.small()};
-	display: inline-flex;
+	display: flex;
 	color: ${neutral[7]};
 	align-items: center;
 	cursor: pointer;
