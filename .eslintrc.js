@@ -18,6 +18,7 @@ module.exports = {
 		'@guardian/eslint-config',
 		'plugin:react/recommended',
 		'plugin:jsx-a11y/strict',
+		'plugin:storybook/recommended',
 	],
 	rules: {
 		'jsx-a11y/label-has-for': 'off',
