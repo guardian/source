@@ -18,9 +18,9 @@ or:
 $ npm install @guardian/source-foundations
 ```
 
-## Colour palette
+## Colours
 
-Guardian colours can be found in the [palette package](https://guardian.github.io/source/?path=packages-source-foundations-palette--page).
+Guardian colours can be found in the [`palette` documentation](https://guardian.github.io/source/?path=packages-source-foundations-palette--page).
 
 ## Space
 
