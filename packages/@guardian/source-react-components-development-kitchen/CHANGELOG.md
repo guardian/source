@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 0.0.33
+
+### Patch Changes
+
+- 7fbe272a: Remove margin from ToggleSwitch component
+
 ## 0.0.32
 
 ### Patch Changes
