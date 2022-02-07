@@ -30,20 +30,17 @@ const headline = css`
 
 ## Colour tokens
 
-<div className="colour_tokens">
-	<div className="colour_tokens__colours__list">
+<div className="columns">
+	<div className="tokens__list">
 		<ul>
 			{Object.keys(palette).map((colourCategory, idx) => {
 				const colours = Object.keys(palette[colourCategory]).map(
 					(colour, idx) => {
 						return (
-							<div
-								className="colour_tokens__colours__list__row"
-								key={idx}
-							>
-								<div className="colour_tokens__colours__list__value">
+							<div className="tokens__list__row" key={idx}>
+								<div className="tokens__list__value">
 									<div
-										className="colour_tokens__colours__list__value__swatch"
+										className="tokens__list__value__swatch"
 										style={{
 											backgroundColor:
 												palette[colourCategory][colour],
@@ -59,12 +56,9 @@ const headline = css`
 				);
 				const openFirst = idx === 0;
 				return (
-					<li
-						className="colour_tokens__colours__list__colour_dropdown"
-						key={idx}
-					>
+					<li className="tokens__list__dropdown" key={idx}>
 						<details open={openFirst}>
-							<summary className="colour_tokens__colours__list__category">
+							<summary className="tokens__list__category">
 								{colourCategory}
 							</summary>
 							<div>{colours}</div>
@@ -74,14 +68,14 @@ const headline = css`
 			})}
 		</ul>
 	</div>
-	<div className="colour_tokens__aside">
+	<div className="aside">
 		<aside>
 			<h3>Deprecated colour tokens</h3>
 			<p>
 				The following context-specific tokens were available in V3, and
 				are deprecated in V4.
 			</p>
-			<ul className="colour_tokens__aside__dropdown">
+			<ul className="aside__dropdown">
 				<li>
 					<details>
 						<summary>background</summary>
@@ -151,7 +145,7 @@ const headline = css`
 					</details>
 				</li>
 			</ul>
-			<ul className="colour_tokens__aside__list">
+			<ul className="aside__list">
 				<li>brandAltBorder.ctaTertiary</li>
 				<li>line.primary</li>
 				<li> brandLine.primary</li>

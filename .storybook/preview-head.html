@@ -361,24 +361,25 @@
 		cursor: pointer;
 	}
 
-	.colour_tokens {
+	/* allows for an aside */
+	.columns {
 		display: flex;
 		justify-content: space-between;
 	}
 
-	.colour_tokens__colours__list {
+	.tokens__list {
 		flex-grow: 2;
 		margin: 0 40px auto -20px; /* -20px to override storybook default padding */
 		margin-right: 40px;
 		max-width: 360px;
 	}
 
-	.colour_tokens__colours__list > ul {
+	.tokens__list > ul {
 		margin-top: 0 !important;
 		padding-left: 0 !important;
 	}
 
-	.colour_tokens__colours__list__row {
+	.tokens__list__row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -386,44 +387,44 @@
 		padding: 20px;
 	}
 
-	.colour_tokens__colours__list__value {
+	.tokens__list__value {
 		display: flex;
 		align-items: center;
 		gap: 10px;
 	}
 
-	.colour_tokens__colours__list__value__swatch {
+	.tokens__list__value__swatch {
 		height: 50px;
 		width: 50px;
 		border: 1px solid #333333;
 	}
 
-	.colour_tokens__colours__list__colour_dropdown {
+	.tokens__list__dropdown {
 		list-style-type: none;
 		padding-bottom: 5px;
 	}
 
-	.colour_tokens__colours__list__category {
+	.tokens__list__category {
 		cursor: pointer;
 		font-size: 1.3em;
 		font-weight: 700;
 	}
 
-	.colour_tokens__aside {
+	.aside {
 		max-width: 300px;
 		padding: 0 10px;
 	}
 
-	.colour_tokens__aside__dropdown {
+	.aside__dropdown {
 		padding: 0 !important;
 	}
 
-	.colour_tokens__aside__dropdown li {
+	.aside__dropdown li {
 		list-style-type: none;
 		font-weight: 500;
 	}
 
-	.colour_tokens__aside__list {
+	.aside__list {
 		padding-left: 16px !important;
 	}
 </style>
