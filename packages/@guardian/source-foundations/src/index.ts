@@ -19,7 +19,7 @@ export { between, from, until } from './mq/mq';
 // palette
 export { palette };
 
-// deprecated exports - to be removed in v5
+// deprecated exports - to be removed in a future major version
 export {
 	background,
 	brandBackground,
@@ -35,7 +35,7 @@ export {
 	brandAltText,
 } from './colour/palette';
 
-// deprecated exports - to be removed in v5
+// deprecated exports - to be removed in a future major version
 export const {
 	brand,
 	brandAlt,
