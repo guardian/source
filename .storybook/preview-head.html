@@ -354,4 +354,77 @@
 		font-weight: 700;
 		font-style: normal;
 	}
+
+	/* palette */
+
+	summary {
+		cursor: pointer;
+	}
+
+	/* allows for an aside */
+	.columns {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.tokens__list {
+		flex-grow: 2;
+		margin: 0 40px auto -20px; /* -20px to override storybook default padding */
+		margin-right: 40px;
+		max-width: 360px;
+	}
+
+	.tokens__list > ul {
+		margin-top: 0 !important;
+		padding-left: 0 !important;
+	}
+
+	.tokens__list__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid #d0d0d0;
+		padding: 20px;
+	}
+
+	.tokens__list__value {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.tokens__list__value__swatch {
+		height: 50px;
+		width: 50px;
+		border: 1px solid #333333;
+	}
+
+	.tokens__list__dropdown {
+		list-style-type: none;
+		padding-bottom: 5px;
+	}
+
+	.tokens__list__category {
+		cursor: pointer;
+		font-size: 1.3em;
+		font-weight: 700;
+	}
+
+	.aside {
+		max-width: 300px;
+		padding: 0 10px;
+	}
+
+	.aside__dropdown {
+		padding: 0 !important;
+	}
+
+	.aside__dropdown li {
+		list-style-type: none;
+		font-weight: 500;
+	}
+
+	.aside__list {
+		padding-left: 16px !important;
+	}
 </style>
