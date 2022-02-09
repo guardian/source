@@ -1,3 +1,5 @@
+import { palette } from './colour/palette';
+
 // accessibility
 export { descriptionId } from './accessibility/description-id';
 export { focusHalo } from './accessibility/focus-halo';
@@ -15,21 +17,10 @@ export { breakpoints } from './breakpoints/breakpoints';
 export { between, from, until } from './mq/mq';
 
 // palette
+export { palette };
+
+// deprecated exports - to be removed in a future major version
 export {
-	palette,
-	brand,
-	brandAlt,
-	neutral,
-	error,
-	success,
-	news,
-	opinion,
-	sport,
-	culture,
-	lifestyle,
-	labs,
-	specialReport,
-	focus,
 	background,
 	brandBackground,
 	brandAltBackground,
@@ -43,6 +34,23 @@ export {
 	brandText,
 	brandAltText,
 } from './colour/palette';
+
+// deprecated exports - to be removed in a future major version
+export const {
+	brand,
+	brandAlt,
+	neutral,
+	error,
+	success,
+	news,
+	opinion,
+	sport,
+	culture,
+	lifestyle,
+	labs,
+	specialReport,
+	focus,
+} = palette;
 
 // size
 export {

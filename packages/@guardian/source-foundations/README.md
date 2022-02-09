@@ -18,25 +18,9 @@ or:
 $ npm install @guardian/source-foundations
 ```
 
-## Colour
+## Colours
 
-The [colour](https://guardian.github.io/source/?path=/story/packages-source-foundations-colour--page) palette comprises **colour tokens** and **global colours**.
-
-[Colour tokens](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb) (e.g. `text.primary`) are organised by the context in which they may be used. Where possible, prefer using colour tokens.
-
-[Global colours](https://theguardian.design/2a1e5182b/p/492a30-light-palette) (e.g. `neutral.7`) do not specify a context , and should be used only if an appropriate colour token is not available.
-
-```js
-import { text, background } from '@guardian/source-foundations';
-
-const headline = css`
-    color: ${text.primary};
-    background: ${background.primary};
-`;
-
-// color: #121212;
-// background-color: #ffffff;
-```
+Guardian colours can be found in the [`palette` documentation](https://guardian.github.io/source/?path=packages-source-foundations-palette--page).
 
 ## Space
 
