@@ -10,6 +10,7 @@ import {
 } from './styles';
 
 export type Platform = 'android' | 'ios' | 'web';
+export type LabelPosition = 'left' | 'right';
 
 export interface ToggleSwitchProps extends Props {
 	/**
@@ -27,10 +28,13 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	defaultChecked?: boolean;
 	/**
-	 * Appears to the right of the switch.
-	 *
+	 * Appears to the right of the switch by default.
 	 */
 	label?: string;
+	/**
+	 * Which side of the switch the label will appear on.
+	 */
+	labelPosition?: LabelPosition;
 	/**
 	 * Sets the toggle styling appropriate for each platform.
 	 * The default platform is 'web'.
@@ -68,6 +72,7 @@ const getPlatformStyles = (platform: Platform): SerializedStyles => {
 export const ToggleSwitch = ({
 	checked,
 	label,
+	labelPosition = 'right',
 	defaultChecked,
 	cssOverrides,
 	platform = 'web',
@@ -84,14 +89,15 @@ export const ToggleSwitch = ({
 
 	return (
 		<label css={[labelStyles, cssOverrides]} {...props} id="notify">
+			{labelPosition === 'left' && label}
 			<button
-				css={[buttonStyles, getPlatformStyles(platform)]}
+				css={[buttonStyles(labelPosition), getPlatformStyles(platform)]}
 				role="switch"
 				aria-checked={isChecked()}
 				aria-labelledby="notify"
 				onClick={onClick}
 			></button>
-			{label}
+			{labelPosition === 'right' && label}
 		</label>
 	);
 };

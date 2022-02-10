@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 import { neutral, success, textSans } from '@guardian/source-foundations';
+import type { LabelPosition } from './ToggleSwitch';
 
-export const buttonStyles = css`
+export const buttonStyles = (labelPosition: LabelPosition) => css`
 	flex: none;
 	border: none;
-	margin-right: 8px;
-	margin-left: 0;
+	margin: ${labelPosition === 'left' ? '0px 0px 0px 8px' : '0px 8px 0px 0px'};
 	padding: 0;
 	display: inline-block;
 	text-align: center;
