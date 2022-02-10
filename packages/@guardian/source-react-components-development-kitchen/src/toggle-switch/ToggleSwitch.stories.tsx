@@ -81,3 +81,33 @@ WebWithLabel.args = {
 	platform: 'web',
 };
 asChromaticStory(WebWithLabel);
+
+// *****************************************************************************
+
+export const AndroidWithLabelLeft = Template.bind({});
+AndroidWithLabelLeft.args = {
+	label: 'Get alerts on this story',
+	labelPosition: 'left',
+	platform: 'android',
+};
+asChromaticStory(AndroidWithLabelLeft);
+
+// *****************************************************************************
+
+export const IosWithLabelLeft = Template.bind({});
+IosWithLabelLeft.args = {
+	label: 'Get alerts on this story',
+	labelPosition: 'left',
+	platform: 'ios',
+};
+asChromaticStory(IosWithLabelLeft);
+
+// *****************************************************************************
+
+export const WebWithLabelLeft = Template.bind({});
+WebWithLabelLeft.args = {
+	label: 'Get alerts on this story',
+	labelPosition: 'left',
+	platform: 'web',
+};
+asChromaticStory(WebWithLabelLeft);
