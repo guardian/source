@@ -68,7 +68,6 @@ export const asChromaticStory = <T>(story: Story<T>): void => {
 				hidden: true,
 			},
 		},
-		docs: { disable: true },
 		chromatic,
 	};
 };
