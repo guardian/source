@@ -128,6 +128,7 @@ describe('No exports have changed in the ', () => {
 			'SvgAlertRound',
 			'SvgAlertTriangle',
 			'SvgAppleBrand',
+			'SvgArrowCircleClockwise',
 			'SvgArrowDownStraight',
 			'SvgArrowLeftStraight',
 			'SvgArrowRightStraight',
