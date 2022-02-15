@@ -10,6 +10,7 @@ import { SvgAlert } from './SvgAlert';
 import { SvgAlertRound } from './SvgAlertRound';
 import { SvgAlertTriangle } from './SvgAlertTriangle';
 import { SvgAppleBrand } from './SvgAppleBrand';
+import { SvgArrowCircleClockwise } from './SvgArrowCircleClockwise';
 import { SvgArrowDownStraight } from './SvgArrowDownStraight';
 import { SvgArrowLeftStraight } from './SvgArrowLeftStraight';
 import { SvgArrowRightStraight } from './SvgArrowRightStraight';
@@ -64,6 +65,7 @@ const uiIcons = {
 	SvgAlertRound,
 	SvgAlertTriangle,
 	SvgAppleBrand,
+	SvgArrowCircleClockwise,
 	SvgArrowDownStraight,
 	SvgArrowLeftStraight,
 	SvgArrowRightStraight,

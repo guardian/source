@@ -62,6 +62,7 @@ export { SvgAlert } from './icons/SvgAlert';
 export { SvgAlertRound } from './icons/SvgAlertRound';
 export { SvgAlertTriangle } from './icons/SvgAlertTriangle';
 export { SvgAppleBrand } from './icons/SvgAppleBrand';
+export { SvgArrowCircleClockwise } from './icons/SvgArrowCircleClockwise';
 export { SvgArrowDownStraight } from './icons/SvgArrowDownStraight';
 export { SvgArrowLeftStraight } from './icons/SvgArrowLeftStraight';
 export { SvgArrowRightStraight } from './icons/SvgArrowRightStraight';
