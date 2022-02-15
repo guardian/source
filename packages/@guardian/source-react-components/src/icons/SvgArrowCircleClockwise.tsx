@@ -6,7 +6,8 @@ export const SvgArrowCircleClockwise = ({
 	size,
 }: IconProps): EmotionJSX.Element => (
 	<svg
-		viewBox="0 0 24 24"
+		// Really this is 24×24, hence the offset
+		viewBox="-3 -3 30 30"
 		width={size ? iconSize[size] : '24'}
 		height={size ? iconSize[size] : '24'}
 	>
