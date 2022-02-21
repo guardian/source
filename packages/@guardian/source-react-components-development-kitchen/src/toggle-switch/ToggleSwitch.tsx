@@ -1,5 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { Props } from '@guardian/source-react-components';
 import {
 	androidStyles,
@@ -24,9 +25,13 @@ export interface ToggleSwitchProps extends Props {
 	checked?: boolean;
 	/**
 	 * When using the [uncontrolled approach](https://reactjs.org/docs/uncontrolled-components.html),
-	 * use defaultChecked to indicate the whether the ToggleSwitch is checked intially.
+	 * use defaultChecked to indicate the whether the ToggleSwitch is checked initially.
 	 */
 	defaultChecked?: boolean;
+	/**
+	 * Optional Id for the switch. Defaults to a generated indexed Source ID e.g. "src-component-XXX}"
+	 */
+	id?: string;
 	/**
 	 * Appears to the right of the switch by default.
 	 */
@@ -53,9 +58,9 @@ export interface ToggleSwitchProps extends Props {
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
- * Displays an on/off toggle switch. This toggle has default styling and can be used on andriod, ios or web.
+ * Displays an on/off toggle switch. This toggle has default styling and can be used on android, ios or web.
  * These styles are driven by the 'platform' prop.
- * To give it more custome styling cssOverride may be used.
+ * To give it more custom styling cssOverride may be used.
  *
  */
 const getPlatformStyles = (platform: Platform): SerializedStyles => {
@@ -71,6 +76,7 @@ const getPlatformStyles = (platform: Platform): SerializedStyles => {
 
 export const ToggleSwitch = ({
 	checked,
+	id,
 	label,
 	labelPosition = 'right',
 	defaultChecked,
@@ -79,6 +85,8 @@ export const ToggleSwitch = ({
 	onClick = () => undefined,
 	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
+	const buttonId = id ?? generateSourceId();
+	const labelId = descriptionId(buttonId);
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
 			return checked;
@@ -88,13 +96,14 @@ export const ToggleSwitch = ({
 	};
 
 	return (
-		<label css={[labelStyles, cssOverrides]} {...props} id="notify">
+		<label id={labelId} css={[labelStyles, cssOverrides]} {...props}>
 			{labelPosition === 'left' && label}
 			<button
+				id={buttonId}
 				css={[buttonStyles(labelPosition), getPlatformStyles(platform)]}
 				role="switch"
 				aria-checked={isChecked()}
-				aria-labelledby="notify"
+				aria-labelledby={labelId}
 				onClick={onClick}
 			></button>
 			{labelPosition === 'right' && label}
