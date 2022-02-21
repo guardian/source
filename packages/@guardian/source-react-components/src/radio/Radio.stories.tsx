@@ -63,7 +63,7 @@ asChromaticStory(DefaultBrandTheme);
 
 export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
-	supporting: '#ff0000',
+	supporting: 'Hex colour code: #ff0000',
 };
 asChromaticStory(SupportingTextDefaultTheme);
 
@@ -77,7 +77,7 @@ SupportingTextBrandTheme.parameters = {
 	theme: radioThemeBrand,
 };
 SupportingTextBrandTheme.args = {
-	supporting: '#ff0000',
+	supporting: 'Hex colour code: #ff0000',
 };
 asChromaticStory(SupportingTextBrandTheme);
 
@@ -85,7 +85,7 @@ asChromaticStory(SupportingTextBrandTheme);
 
 export const SupportingTextOnlyDefaultTheme = Template.bind({});
 SupportingTextOnlyDefaultTheme.args = {
-	supporting: '#ff0000',
+	supporting: 'Hex colour code: #ff0000',
 	label: null,
 };
 asChromaticStory(SupportingTextOnlyDefaultTheme);
@@ -100,7 +100,7 @@ SupportingTextOnlyBrandTheme.parameters = {
 	theme: radioThemeBrand,
 };
 SupportingTextOnlyBrandTheme.args = {
-	supporting: '#ff0000',
+	supporting: 'Hex colour code: #ff0000',
 	label: null,
 };
 asChromaticStory(SupportingTextOnlyBrandTheme);
