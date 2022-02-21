@@ -278,7 +278,6 @@ asChromaticStory(IconOnlyXSmallSizeDefaultTheme);
 export const IsLoadingPrimary = Template.bind({});
 IsLoadingPrimary.args = {
 	isLoading: true,
-	iconSide: 'right',
 };
 asChromaticStory(IsLoadingPrimary);
 
@@ -296,8 +295,6 @@ asChromaticStory(IsLoadingSecondary);
 export const IsLoadingTertiary = Template.bind({});
 IsLoadingTertiary.args = {
 	isLoading: true,
-	icon: 'cross',
-	iconSide: 'right',
 	priority: 'tertiary',
 };
 asChromaticStory(IsLoadingTertiary);
@@ -307,21 +304,18 @@ asChromaticStory(IsLoadingTertiary);
 export const IsLoadingSubdued = Template.bind({});
 IsLoadingSubdued.args = {
 	isLoading: true,
-	icon: 'cross',
-	iconSide: 'right',
 	priority: 'subdued',
 };
 asChromaticStory(IsLoadingSubdued);
 
 // *****************************************************************************
 
-export const IsLoadingIconSideLeft = Template.bind({});
-IsLoadingIconSideLeft.args = {
+export const IsLoadingIconSideRight = Template.bind({});
+IsLoadingIconSideRight.args = {
 	isLoading: true,
-	iconSide: 'left',
-	priority: 'primary',
+	iconSide: 'right',
 };
-asChromaticStory(IsLoadingIconSideLeft);
+asChromaticStory(IsLoadingIconSideRight);
 
 // *****************************************************************************
 
@@ -329,7 +323,14 @@ export const IsLoadingDisabled = Template.bind({});
 IsLoadingDisabled.args = {
 	isLoading: true,
 	disabled: true,
-	iconSide: 'right',
-	priority: 'primary',
 };
 asChromaticStory(IsLoadingDisabled);
+
+// *****************************************************************************
+
+export const IsLoadingLabelHidden = Template.bind({});
+IsLoadingLabelHidden.args = {
+	isLoading: true,
+	hideLabel: true,
+};
+asChromaticStory(IsLoadingLabelHidden);
