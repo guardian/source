@@ -272,3 +272,40 @@ IconOnlyXSmallSizeDefaultTheme.args = {
 	children: 'Close subscription banner',
 };
 asChromaticStory(IconOnlyXSmallSizeDefaultTheme);
+
+// *****************************************************************************
+
+export const IsLoadingButton = Template.bind({});
+IsLoadingButton.args = {
+	isLoading: true,
+	icon: 'cross',
+	iconSide: 'right',
+};
+asChromaticStory(IsLoadingButton);
+
+export const IsLoadingButton1 = Template.bind({});
+IsLoadingButton1.args = {
+	isLoading: true,
+	icon: 'cross',
+	iconSide: 'right',
+	priority: 'secondary',
+};
+asChromaticStory(IsLoadingButton1);
+
+export const IsLoadingButton2 = Template.bind({});
+IsLoadingButton2.args = {
+	isLoading: true,
+	icon: 'cross',
+	iconSide: 'right',
+	priority: 'tertiary',
+};
+asChromaticStory(IsLoadingButton2);
+
+export const IsLoadingButton3 = Template.bind({});
+IsLoadingButton3.args = {
+	isLoading: true,
+	icon: 'cross',
+	iconSide: 'right',
+	priority: 'subdued',
+};
+asChromaticStory(IsLoadingButton3);

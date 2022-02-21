@@ -25,6 +25,7 @@ export const Button = ({
 	hideLabel,
 	nudgeIcon,
 	type = 'button',
+	isLoading = false,
 	cssOverrides,
 	children,
 	...props
@@ -38,6 +39,7 @@ export const Button = ({
 			iconSide,
 			nudgeIcon,
 			cssOverrides,
+			isLoading,
 		})}
 		type={type}
 		{...props}
@@ -45,6 +47,7 @@ export const Button = ({
 		{buttonContents({
 			hideLabel,
 			iconSvg,
+			isLoading,
 			children,
 		})}
 	</button>

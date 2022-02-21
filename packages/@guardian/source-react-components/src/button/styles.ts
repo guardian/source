@@ -34,36 +34,72 @@ const button = css`
 	}
 `;
 
+const transitionSpinnerBackground = css`
+	path,
+	circle {
+		transition: stroke ${transitions.medium};
+	}
+`;
+
 const primary = (
 	button: ButtonTheme = buttonThemeDefault.button,
+	isLoading = false,
 ): SerializedStyles => css`
 	background-color: ${button.backgroundPrimary};
 	color: ${button.textPrimary};
 
 	&:hover {
 		background-color: ${button.backgroundPrimaryHover};
+		${isLoading &&
+		`path {
+			stroke: ${button.backgroundPrimaryHover};
+		}`}
 	}
 `;
 
 const secondary = (
 	button: ButtonTheme = buttonThemeDefault.button,
+	isLoading = false,
 ): SerializedStyles => css`
 	background-color: ${button.backgroundSecondary};
 	color: ${button.textSecondary};
 
+	${isLoading &&
+	button.backgroundSecondary &&
+	`circle {
+			stroke: ${button.backgroundSecondary};
+		}`}
+
 	&:hover {
 		background-color: ${button.backgroundSecondaryHover};
+		${isLoading &&
+		button.backgroundSecondaryHover &&
+		`circle {
+			stroke: ${button.backgroundSecondaryHover};
+		}`}
 	}
 `;
 
 const tertiary = (
 	button: ButtonTheme = buttonThemeDefault.button,
+	isLoading = false,
 ): SerializedStyles => css`
 	color: ${button.textTertiary};
 	border: 1px solid ${button.borderTertiary};
 
+	${isLoading &&
+	button.backgroundTertiaryHover &&
+	`circle {
+			stroke: white;
+		}`}
+
 	&:hover {
 		background-color: ${button.backgroundTertiaryHover};
+		${isLoading &&
+		button.backgroundTertiaryHover &&
+		`circle {
+			stroke: ${button.backgroundTertiaryHover};
+		}`}
 	}
 `;
 
@@ -214,7 +250,10 @@ const iconNudgeAnimation = css`
 `;
 
 const priorities: {
-	[key in ButtonPriority]: (button?: ButtonTheme) => SerializedStyles;
+	[key in ButtonPriority]: (
+		button?: ButtonTheme,
+		isLoading?: boolean,
+	) => SerializedStyles;
 } = {
 	primary,
 	secondary,
@@ -260,6 +299,7 @@ export const buttonStyles =
 		iconSide = 'left',
 		nudgeIcon,
 		cssOverrides,
+		isLoading,
 	}: SharedButtonProps) =>
 	(
 		theme: Theme,
@@ -267,9 +307,10 @@ export const buttonStyles =
 		[
 			button,
 			sizes[size],
-			priorities[priority](theme.button),
-			iconSvg ? iconSizes[size] : '',
-			iconSvg && !hideLabel ? iconSides[iconSide] : '',
+			priorities[priority](theme.button, isLoading),
+			isLoading ? transitionSpinnerBackground : undefined,
+			iconSvg || isLoading ? iconSizes[size] : '',
+			(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
 			nudgeIcon ? iconNudgeAnimation : '',
 			hideLabel ? iconOnlySizes[size] : '',
 			cssOverrides,

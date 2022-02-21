@@ -52,6 +52,7 @@ import { SvgPlus } from './SvgPlus';
 import { SvgQuote } from './SvgQuote';
 import { SvgSettings } from './SvgSettings';
 import { SvgSpeechBubble } from './SvgSpeechBubble';
+import { SvgSpinner } from './SvgSpinner';
 import { SvgStar } from './SvgStar';
 import { SvgTickRound } from './SvgTickRound';
 import { SvgTwitter } from './SvgTwitter';
@@ -107,6 +108,7 @@ const uiIcons = {
 	SvgAudio,
 	SvgVideo,
 	SvgWhatsApp,
+	SvgSpinner,
 };
 
 const paymentIcons = {

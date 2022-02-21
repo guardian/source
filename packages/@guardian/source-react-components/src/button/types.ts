@@ -32,4 +32,10 @@ export interface SharedButtonProps extends Props {
 	 * When set, the icon (if visible) will move slightly to the right on hover.
 	 */
 	nudgeIcon?: boolean;
+	/**
+	 * When true, a loading spinner will appear to the right of the button content.
+	 * The button will be disabled, and any icon present will be replaced by the
+	 * spinner.
+	 */
+	isLoading?: boolean;
 }
