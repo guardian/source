@@ -19,7 +19,7 @@ const darkblueStyles = css`
 	stroke: ${brand['400']};
 	stroke-dasharray: 820;
 	stroke-dashoffset: 820;
-	stroke-width: ${circleLineThickness + 4};
+	stroke-width: ${circleLineThickness};
 	fill: transparent;
 `;
 

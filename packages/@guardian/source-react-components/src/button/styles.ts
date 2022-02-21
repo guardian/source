@@ -29,6 +29,12 @@ const button = css`
 	text-decoration: none;
 	white-space: nowrap;
 
+	:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+		pointer-events: all !important;
+	}
+
 	&:focus {
 		${focusHalo};
 	}
@@ -47,6 +53,13 @@ const primary = (
 ): SerializedStyles => css`
 	background-color: ${button.backgroundPrimary};
 	color: ${button.textPrimary};
+
+	/* Fix for the light inner loading spinner colour bleeding through on dark backgrounds. */
+	${isLoading &&
+	button.backgroundSecondary &&
+	`path {
+		stroke-width: 65;
+	}`}
 
 	&:hover {
 		background-color: ${button.backgroundPrimaryHover};
@@ -67,8 +80,8 @@ const secondary = (
 	${isLoading &&
 	button.backgroundSecondary &&
 	`circle {
-			stroke: ${button.backgroundSecondary};
-		}`}
+		stroke: ${button.backgroundSecondary};
+	}`}
 
 	&:hover {
 		background-color: ${button.backgroundSecondaryHover};
@@ -90,8 +103,8 @@ const tertiary = (
 	${isLoading &&
 	button.backgroundTertiaryHover &&
 	`circle {
-			stroke: white;
-		}`}
+		stroke: white;
+	}`}
 
 	&:hover {
 		background-color: ${button.backgroundTertiaryHover};
