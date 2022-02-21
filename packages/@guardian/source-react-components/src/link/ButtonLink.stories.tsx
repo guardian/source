@@ -29,7 +29,7 @@ export default {
 };
 
 const Template: Story = (args: ButtonLinkProps) => (
-	<ButtonLink {...args}>Click Me</ButtonLink>
+	<ButtonLink {...args}>Return to home page</ButtonLink>
 );
 
 // *****************************************************************************

@@ -30,7 +30,9 @@ export default {
 	},
 };
 
-const Template: Story = (args: LinkProps) => <Link {...args}>Click Me</Link>;
+const Template: Story = (args: LinkProps) => (
+	<Link {...args}>Return to home page</Link>
+);
 
 // *****************************************************************************
 
