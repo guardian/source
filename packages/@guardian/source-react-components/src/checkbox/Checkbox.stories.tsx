@@ -15,7 +15,7 @@ export default {
 	component: Checkbox,
 	argTypes: {},
 	args: {
-		label: 'Checkbox',
+		label: 'The Guardian Today',
 		checked: true,
 		supporting: '',
 	},
