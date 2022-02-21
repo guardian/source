@@ -42,8 +42,8 @@ export const Button = ({
 			isLoading,
 		})}
 		type={type}
-		aria-live={'polite'}
-		aria-busy={isLoading}
+		aria-live="polite"
+		aria-label={isLoading ? 'Loading' : undefined}
 		{...props}
 	>
 		{buttonContents({
