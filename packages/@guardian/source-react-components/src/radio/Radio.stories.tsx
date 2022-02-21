@@ -32,7 +32,7 @@ export default {
 		label: 'Red',
 		value: 'red',
 		supporting: '',
-		checked: true,
+		defaultChecked: true,
 	},
 };
 
