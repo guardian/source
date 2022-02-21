@@ -80,7 +80,7 @@ export default {
 		},
 	},
 	args: {
-		children: 'Button',
+		children: 'Subscribe now',
 		size: 'default',
 		hideLabel: false,
 		icon: 'undefined',

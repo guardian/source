@@ -25,7 +25,7 @@ export default {
 		},
 	},
 	args: {
-		children: 'Link Button',
+		children: 'Subscribe now',
 		size: 'default',
 		hideLabel: false,
 		icon: 'undefined',
