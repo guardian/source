@@ -30,9 +30,7 @@ const button = css`
 	white-space: nowrap;
 
 	:disabled {
-		opacity: 0.4;
 		cursor: not-allowed;
-		pointer-events: all !important;
 	}
 
 	&:focus {
