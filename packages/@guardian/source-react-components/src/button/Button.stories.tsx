@@ -185,6 +185,7 @@ asChromaticStory(XSmallSizeDefaultTheme);
 export const TextAndIconLeftDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconLeftDefaultSizeDefaultTheme.args = {
 	icon: 'cross',
+	children: 'Close',
 };
 asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
@@ -194,6 +195,7 @@ export const TextAndIconRightDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconRightDefaultSizeDefaultTheme.args = {
 	icon: 'cross',
 	iconSide: 'right',
+	children: 'Close',
 };
 asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
@@ -203,6 +205,7 @@ export const TextAndIconLeftSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftSmallSizeDefaultTheme.args = {
 	icon: 'cross',
 	size: 'small',
+	children: 'Close',
 };
 asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
@@ -213,6 +216,7 @@ TextAndIconRightSmallSizeDefaultTheme.args = {
 	icon: 'cross',
 	iconSide: 'right',
 	size: 'small',
+	children: 'Close',
 };
 asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
@@ -222,6 +226,7 @@ export const TextAndIconLeftXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftXSmallSizeDefaultTheme.args = {
 	icon: 'cross',
 	size: 'xsmall',
+	children: 'Close',
 };
 asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
@@ -232,6 +237,7 @@ TextAndIconRightXSmallSizeDefaultTheme.args = {
 	icon: 'cross',
 	iconSide: 'right',
 	size: 'xsmall',
+	children: 'Close',
 };
 asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
@@ -241,6 +247,7 @@ export const IconOnlyDefaultSizeDefaultTheme = Template.bind({});
 IconOnlyDefaultSizeDefaultTheme.args = {
 	icon: 'cross',
 	hideLabel: true,
+	children: 'Close subscription banner',
 };
 asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
@@ -251,6 +258,7 @@ IconOnlySmallSizeDefaultTheme.args = {
 	icon: 'cross',
 	hideLabel: true,
 	size: 'small',
+	children: 'Close subscription banner',
 };
 asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
@@ -261,5 +269,6 @@ IconOnlyXSmallSizeDefaultTheme.args = {
 	icon: 'cross',
 	hideLabel: true,
 	size: 'xsmall',
+	children: 'Close subscription banner',
 };
 asChromaticStory(IconOnlyXSmallSizeDefaultTheme);
