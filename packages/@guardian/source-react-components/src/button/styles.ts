@@ -54,17 +54,18 @@ const primary = (
 	background-color: ${button.backgroundPrimary};
 	color: ${button.textPrimary};
 
-	/* Fix for the light inner loading spinner colour bleeding through on dark backgrounds. */
 	${isLoading &&
-	button.backgroundSecondary &&
-	`path {
-		stroke-width: 65;
+	`circle {
+		stroke: ${button.backgroundPrimary};
+	}
+	path {
+		stroke: ${button.textPrimary}
 	}`}
 
 	&:hover {
 		background-color: ${button.backgroundPrimaryHover};
 		${isLoading &&
-		`path {
+		`circle {
 			stroke: ${button.backgroundPrimaryHover};
 		}`}
 	}
@@ -82,6 +83,13 @@ const secondary = (
 	`circle {
 		stroke: ${button.backgroundSecondary};
 	}`}
+
+	${isLoading &&
+	button.textSecondary &&
+	`path {
+		stroke: ${button.textSecondary};
+	}`}
+
 
 	&:hover {
 		background-color: ${button.backgroundSecondaryHover};
@@ -101,9 +109,14 @@ const tertiary = (
 	border: 1px solid ${button.borderTertiary};
 
 	${isLoading &&
-	button.backgroundTertiaryHover &&
 	`circle {
-		stroke: white;
+		stroke: transparent;
+	}`}
+
+	${isLoading &&
+	button.textTertiary &&
+	`path {
+		stroke: ${button.textTertiary};
 	}`}
 
 	&:hover {
@@ -118,10 +131,23 @@ const tertiary = (
 
 const subdued = (
 	button: ButtonTheme = buttonThemeDefault.button,
+	isLoading = false,
 ): SerializedStyles => css`
 	padding: 0;
 	background-color: transparent;
 	color: ${button.textSubdued};
+
+	${isLoading &&
+	`circle {
+		stroke: transparent;
+	}`}
+
+	${isLoading &&
+	button.textSubdued &&
+	`path {
+		stroke: ${button.textSubdued};
+	}`}
+
 
 	&:hover {
 		text-decoration: underline;

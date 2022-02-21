@@ -275,37 +275,61 @@ asChromaticStory(IconOnlyXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
-export const IsLoadingButton = Template.bind({});
-IsLoadingButton.args = {
+export const IsLoadingPrimary = Template.bind({});
+IsLoadingPrimary.args = {
 	isLoading: true,
-	icon: 'cross',
 	iconSide: 'right',
 };
-asChromaticStory(IsLoadingButton);
+asChromaticStory(IsLoadingPrimary);
 
-export const IsLoadingButton1 = Template.bind({});
-IsLoadingButton1.args = {
+// *****************************************************************************
+
+export const IsLoadingSecondary = Template.bind({});
+IsLoadingSecondary.args = {
 	isLoading: true,
-	icon: 'cross',
-	iconSide: 'right',
 	priority: 'secondary',
 };
-asChromaticStory(IsLoadingButton1);
+asChromaticStory(IsLoadingSecondary);
 
-export const IsLoadingButton2 = Template.bind({});
-IsLoadingButton2.args = {
+// *****************************************************************************
+
+export const IsLoadingTertiary = Template.bind({});
+IsLoadingTertiary.args = {
 	isLoading: true,
 	icon: 'cross',
 	iconSide: 'right',
 	priority: 'tertiary',
 };
-asChromaticStory(IsLoadingButton2);
+asChromaticStory(IsLoadingTertiary);
 
-export const IsLoadingButton3 = Template.bind({});
-IsLoadingButton3.args = {
+// *****************************************************************************
+
+export const IsLoadingSubdued = Template.bind({});
+IsLoadingSubdued.args = {
 	isLoading: true,
 	icon: 'cross',
 	iconSide: 'right',
 	priority: 'subdued',
 };
-asChromaticStory(IsLoadingButton3);
+asChromaticStory(IsLoadingSubdued);
+
+// *****************************************************************************
+
+export const IsLoadingIconSideLeft = Template.bind({});
+IsLoadingIconSideLeft.args = {
+	isLoading: true,
+	iconSide: 'left',
+	priority: 'primary',
+};
+asChromaticStory(IsLoadingIconSideLeft);
+
+// *****************************************************************************
+
+export const IsLoadingDisabled = Template.bind({});
+IsLoadingDisabled.args = {
+	isLoading: true,
+	disabled: true,
+	iconSide: 'right',
+	priority: 'primary',
+};
+asChromaticStory(IsLoadingDisabled);
