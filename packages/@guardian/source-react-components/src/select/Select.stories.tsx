@@ -51,7 +51,7 @@ const Template: Story<SelectProps> = (args: SelectProps) => (
 
 export const Playground = Template.bind({});
 Playground.args = {
-	supporting: 'Leave blank if you are not within the US',
+	supporting: 'This helps us to provide accurate shipping costs',
 };
 asPlayground(Playground);
 
