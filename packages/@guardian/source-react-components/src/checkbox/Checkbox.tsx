@@ -72,18 +72,6 @@ export const Checkbox = ({
 	cssOverrides,
 	...props
 }: CheckboxProps): EmotionJSX.Element => {
-	const ariaChecked = (): boolean | 'mixed' => {
-		// Note: the indeterminate prop takes precedence over the checked prop
-		if (indeterminate) {
-			return 'mixed';
-		}
-
-		if (checked != null) {
-			return checked;
-		}
-
-		return !!defaultChecked;
-	};
 	const isChecked = (): boolean => {
 		if (checked != null) {
 			return checked;
@@ -112,7 +100,6 @@ export const Checkbox = ({
 					cssOverrides,
 				]}
 				aria-invalid={!!error}
-				aria-checked={ariaChecked()}
 				ref={setIndeterminate}
 				defaultChecked={
 					defaultChecked != null ? defaultChecked : undefined
