@@ -1,5 +1,12 @@
 # @guardian/source-react-components-development-kitchen
 
+## 0.0.34
+
+### Patch Changes
+
+- 0e938355: Add optional id prop on ToggleSwitch
+- 742bd7c2: Add optional LabelPosition prop to Toggle Switch
+
 ## 0.0.33
 
 ### Patch Changes

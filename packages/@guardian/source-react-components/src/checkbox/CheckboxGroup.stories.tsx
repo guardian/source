@@ -16,8 +16,8 @@ export default {
 	subcomponents: { Checkbox },
 	argTypes: {},
 	args: {
-		name: 'checkbox-group',
-		label: 'Checkbox group',
+		name: 'your-newsletters',
+		label: 'Your newsletters',
 		supporting: '',
 		hideLabel: false,
 		error: undefined,
@@ -85,7 +85,7 @@ asChromaticStory(VisuallyHideLegendBrandTheme);
 
 export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
-	supporting: 'Supporting text',
+	supporting: 'Pick the issues and topics that interest you',
 };
 asChromaticStory(SupportingTextDefaultTheme);
 
@@ -99,7 +99,7 @@ SupportingTextBrandTheme.parameters = {
 	theme: checkboxThemeBrand,
 };
 SupportingTextBrandTheme.args = {
-	supporting: 'Supporting text',
+	supporting: 'Pick the issues and topics that interest you',
 };
 asChromaticStory(SupportingTextBrandTheme);
 
@@ -107,7 +107,7 @@ asChromaticStory(SupportingTextBrandTheme);
 
 export const ErrorDefaultTheme = Template.bind({});
 ErrorDefaultTheme.args = {
-	error: 'Error message',
+	error: 'This newsletter is not available in your region',
 };
 asChromaticStory(ErrorDefaultTheme);
 
@@ -121,6 +121,6 @@ ErrorBrandTheme.parameters = {
 	theme: checkboxThemeBrand,
 };
 ErrorBrandTheme.args = {
-	error: 'Error message',
+	error: 'This newsletter is not available in your region',
 };
 asChromaticStory(ErrorBrandTheme);

@@ -37,17 +37,17 @@ export default {
 };
 
 const Image = () => (
-	<div style={{ padding: `8px 0` }}>
-		<img
-			alt="test"
-			src="https://i.guim.co.uk/img/media/9bd896505173dcf4adadd02e5f40a03414c50bdc/172_201_2329_1397/master/2329.jpg?width=620&quality=85&auto=format&fit=max&s=133b7c6ce78a0780e99e605bb3ae7479"
-		/>
-	</div>
+	<img
+		style={{ padding: `8px 0` }}
+		alt="test"
+		src="https://i.guim.co.uk/img/media/9bd896505173dcf4adadd02e5f40a03414c50bdc/172_201_2329_1397/master/2329.jpg?width=620&quality=85&auto=format&fit=max&s=133b7c6ce78a0780e99e605bb3ae7479"
+	/>
 );
 
 const Template: Story = (args: RadioGroupProps) => (
 	<RadioGroup {...args}>
 		<Radio {...RadioStories.args} key="radio-1" />
+		<Radio label="Blue" value="blue" key="radio-2" />
 	</RadioGroup>
 );
 
@@ -122,7 +122,7 @@ asChromaticStory(SupportingMediaDefaultTheme);
 
 export const ErrorDefaultTheme = Template.bind({});
 ErrorDefaultTheme.args = {
-	error: 'Please select a colour',
+	error: 'The selected colour is out of stock',
 };
 asChromaticStory(ErrorDefaultTheme);
 
@@ -130,7 +130,7 @@ asChromaticStory(ErrorDefaultTheme);
 
 export const ErrorBrandTheme = Template.bind({});
 ErrorBrandTheme.args = {
-	error: 'Please select a colour',
+	error: 'The selected colour is out of stock',
 };
 ErrorBrandTheme.parameters = {
 	backgrounds: {
