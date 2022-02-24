@@ -95,7 +95,6 @@ export const Radio = ({
 			type="radio"
 			css={(theme) => [radio(theme.radio), cssOverrides]}
 			value={value}
-			aria-checked={isChecked()}
 			defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 			checked={checked != null ? isChecked() : undefined}
 			{...props}
