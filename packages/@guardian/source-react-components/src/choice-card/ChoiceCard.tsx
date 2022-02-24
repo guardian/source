@@ -85,7 +85,6 @@ export const ChoiceCard = ({
 
 	return (
 		<>
-			{/* eslint-disable-next-line jsx-a11y/role-supports-aria-props -- the `type` can only be 'radio' or 'checkbox' which both support `aria-checked` but eslint doesn't know about that */}
 			<input
 				css={(theme) => [
 					input(theme.choiceCard),
@@ -95,7 +94,6 @@ export const ChoiceCard = ({
 				id={id}
 				value={value}
 				aria-invalid={!!error}
-				aria-checked={isChecked()}
 				defaultChecked={
 					defaultChecked != null ? defaultChecked : undefined
 				}
