@@ -26,6 +26,7 @@ export const Button = ({
 	nudgeIcon,
 	type = 'button',
 	isLoading = false,
+	loadingAnnouncement = 'Loading',
 	cssOverrides,
 	children,
 	...props
@@ -43,7 +44,7 @@ export const Button = ({
 		})}
 		type={type}
 		aria-live="polite"
-		aria-label={isLoading ? 'Loading' : undefined}
+		aria-label={isLoading ? loadingAnnouncement : undefined}
 		{...props}
 	>
 		{buttonContents({
