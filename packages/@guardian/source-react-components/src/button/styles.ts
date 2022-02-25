@@ -29,8 +29,23 @@ const button = css`
 	text-decoration: none;
 	white-space: nowrap;
 
+	:disabled {
+		cursor: not-allowed;
+	}
+
 	&:focus {
 		${focusHalo};
+	}
+`;
+
+const applyButtonStylesToLoadingSpinner = css`
+	path,
+	circle {
+		transition: stroke ${transitions.medium};
+		stroke: transparent;
+	}
+	path {
+		stroke: currentColor;
 	}
 `;
 
@@ -260,6 +275,7 @@ export const buttonStyles =
 		iconSide = 'left',
 		nudgeIcon,
 		cssOverrides,
+		isLoading,
 	}: SharedButtonProps) =>
 	(
 		theme: Theme,
@@ -268,9 +284,10 @@ export const buttonStyles =
 			button,
 			sizes[size],
 			priorities[priority](theme.button),
-			iconSvg ? iconSizes[size] : '',
-			iconSvg && !hideLabel ? iconSides[iconSide] : '',
+			iconSvg || isLoading ? iconSizes[size] : '',
+			(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
 			nudgeIcon ? iconNudgeAnimation : '',
 			hideLabel ? iconOnlySizes[size] : '',
+			isLoading ? applyButtonStylesToLoadingSpinner : undefined,
 			cssOverrides,
 		];

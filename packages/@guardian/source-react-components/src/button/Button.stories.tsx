@@ -272,3 +272,65 @@ IconOnlyXSmallSizeDefaultTheme.args = {
 	children: 'Close subscription banner',
 };
 asChromaticStory(IconOnlyXSmallSizeDefaultTheme);
+
+// *****************************************************************************
+
+export const IsLoadingPrimary = Template.bind({});
+IsLoadingPrimary.args = {
+	isLoading: true,
+};
+asChromaticStory(IsLoadingPrimary);
+
+// *****************************************************************************
+
+export const IsLoadingSecondary = Template.bind({});
+IsLoadingSecondary.args = {
+	isLoading: true,
+	priority: 'secondary',
+};
+asChromaticStory(IsLoadingSecondary);
+
+// *****************************************************************************
+
+export const IsLoadingTertiary = Template.bind({});
+IsLoadingTertiary.args = {
+	isLoading: true,
+	priority: 'tertiary',
+};
+asChromaticStory(IsLoadingTertiary);
+
+// *****************************************************************************
+
+export const IsLoadingSubdued = Template.bind({});
+IsLoadingSubdued.args = {
+	isLoading: true,
+	priority: 'subdued',
+};
+asChromaticStory(IsLoadingSubdued);
+
+// *****************************************************************************
+
+export const IsLoadingIconSideRight = Template.bind({});
+IsLoadingIconSideRight.args = {
+	isLoading: true,
+	iconSide: 'right',
+};
+asChromaticStory(IsLoadingIconSideRight);
+
+// *****************************************************************************
+
+export const IsLoadingDisabled = Template.bind({});
+IsLoadingDisabled.args = {
+	isLoading: true,
+	disabled: true,
+};
+asChromaticStory(IsLoadingDisabled);
+
+// *****************************************************************************
+
+export const IsLoadingLabelHidden = Template.bind({});
+IsLoadingLabelHidden.args = {
+	isLoading: true,
+	hideLabel: true,
+};
+asChromaticStory(IsLoadingLabelHidden);

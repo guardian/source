@@ -25,6 +25,8 @@ export const Button = ({
 	hideLabel,
 	nudgeIcon,
 	type = 'button',
+	isLoading = false,
+	loadingAnnouncement = 'Loading',
 	cssOverrides,
 	children,
 	...props
@@ -38,13 +40,17 @@ export const Button = ({
 			iconSide,
 			nudgeIcon,
 			cssOverrides,
+			isLoading,
 		})}
 		type={type}
+		aria-live="polite"
+		aria-label={isLoading ? loadingAnnouncement : undefined}
 		{...props}
 	>
 		{buttonContents({
 			hideLabel,
 			iconSvg,
+			isLoading,
 			children,
 		})}
 	</button>
