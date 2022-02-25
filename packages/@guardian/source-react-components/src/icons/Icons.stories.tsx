@@ -131,7 +131,12 @@ interface IconPlaygroundArgs extends IconProps {
 
 export const Playground: Story<IconPlaygroundArgs> = (
 	args: IconPlaygroundArgs,
-) => <args.icon size={args.size} />;
+) => (
+	<args.icon
+		size={args.size}
+		isAnnouncedByScreenReader={args.isAnnouncedByScreenReader}
+	/>
+);
 
 Playground.argTypes = {
 	size: {
@@ -157,6 +162,7 @@ Playground.argTypes = {
 Playground.args = {
 	size: 'medium',
 	icon: 'SvgAlertRound',
+	isAnnouncedByScreenReader: false,
 };
 asPlayground(Playground);
 
@@ -165,12 +171,17 @@ asPlayground(Playground);
 type IconChromaticStoryArgs = {
 	size: IconSize;
 	icons: Array<React.FunctionComponent<IconProps>>;
+	isAnnouncedByScreenReader: boolean;
 };
 const Template: Story<IconChromaticStoryArgs> = (
 	args: IconChromaticStoryArgs,
 ) => {
 	const icons = args.icons.map((Icon, index) => (
-		<Icon key={index} size={args.size} />
+		<Icon
+			key={index}
+			size={args.size}
+			isAnnouncedByScreenReader={args.isAnnouncedByScreenReader}
+		/>
 	));
 
 	return <>{icons}</>;
@@ -181,6 +192,7 @@ const Template: Story<IconChromaticStoryArgs> = (
 export const XsmallIconsDefaultTheme = Template.bind({});
 XsmallIconsDefaultTheme.args = {
 	size: 'xsmall',
+	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
 asChromaticStory(XsmallIconsDefaultTheme);
@@ -190,6 +202,7 @@ asChromaticStory(XsmallIconsDefaultTheme);
 export const SmallIconsDefaultTheme = Template.bind({});
 SmallIconsDefaultTheme.args = {
 	size: 'small',
+	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
 asChromaticStory(SmallIconsDefaultTheme);
@@ -199,6 +212,7 @@ asChromaticStory(SmallIconsDefaultTheme);
 export const MediumIconsDefaultTheme = Template.bind({});
 MediumIconsDefaultTheme.args = {
 	size: 'medium',
+	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
 asChromaticStory(MediumIconsDefaultTheme);
@@ -208,6 +222,7 @@ asChromaticStory(MediumIconsDefaultTheme);
 export const MediumIconsBrandTheme = Template.bind({});
 MediumIconsBrandTheme.args = {
 	size: 'medium',
+	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
 MediumIconsBrandTheme.parameters = {
@@ -235,6 +250,7 @@ asChromaticStory(MediumIconsBrandTheme);
 export const PaymentIconsDefaultTheme = Template.bind({});
 PaymentIconsDefaultTheme.args = {
 	size: 'medium',
+	isAnnouncedByScreenReader: true,
 	icons: Object.values(paymentIcons),
 };
 asChromaticStory(PaymentIconsDefaultTheme);
@@ -244,6 +260,7 @@ asChromaticStory(PaymentIconsDefaultTheme);
 export const WidePaymentIconsDefaultTheme = Template.bind({});
 WidePaymentIconsDefaultTheme.args = {
 	size: 'medium',
+	isAnnouncedByScreenReader: true,
 	icons: Object.values(widePaymentIcons),
 };
 asChromaticStory(WidePaymentIconsDefaultTheme);
