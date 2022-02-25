@@ -76,6 +76,7 @@ asChromaticStory(ErrorDefaultTheme);
 
 export const IconDefaultTheme = Template.bind({});
 IconDefaultTheme.args = {
+	label: 'Camera',
 	icon: 'JSX element',
 };
 asChromaticStory(IconDefaultTheme);
