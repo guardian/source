@@ -229,10 +229,7 @@ const iconNudgeAnimation = css`
 `;
 
 const priorities: {
-	[key in ButtonPriority]: (
-		button?: ButtonTheme,
-		isLoading?: boolean,
-	) => SerializedStyles;
+	[key in ButtonPriority]: (button?: ButtonTheme) => SerializedStyles;
 } = {
 	primary,
 	secondary,
@@ -286,7 +283,7 @@ export const buttonStyles =
 		[
 			button,
 			sizes[size],
-			priorities[priority](theme.button, isLoading),
+			priorities[priority](theme.button),
 			iconSvg || isLoading ? iconSizes[size] : '',
 			(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
 			nudgeIcon ? iconNudgeAnimation : '',

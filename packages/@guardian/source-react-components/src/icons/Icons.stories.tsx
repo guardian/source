@@ -102,13 +102,13 @@ const uiIcons = {
 	SvgInfo,
 	SvgSettings,
 	SvgSpeechBubble,
+	SvgSpinner,
 	SvgStar,
 	SvgTickRound,
 	SvgTwitter,
 	SvgAudio,
 	SvgVideo,
 	SvgWhatsApp,
-	SvgSpinner,
 };
 
 const paymentIcons = {
