@@ -20,6 +20,7 @@ export const InlineSuccess = ({
 }: UserFeedbackProps): EmotionJSX.Element => (
 	<span
 		css={(theme) => [inlineSuccess(theme.userFeedback), cssOverrides]}
+		role="alert"
 		{...props}
 	>
 		<SvgTickRound />
