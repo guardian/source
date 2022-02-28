@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 4.1.1
+
+### Patch Changes
+
+- 9001d7b2: Add alert role to inline user feedback components
+
 ## 4.1.0
 
 ### Minor Changes
