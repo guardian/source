@@ -1,5 +1,15 @@
 # @guardian/source-react-components
 
+## 4.1.0
+
+### Minor Changes
+
+- 7305e4ca: Adds an `isLoading` prop to the Button component. This replaces any icon rendered on the button with a spinner (`SvgSpinner`). The spinner will have colours that match the background and text colours of the button. The Button `disabled` state is also extended to show a `not-allowed` cursor so that the disabled state is indicated visually"
+
+### Patch Changes
+
+- 13a0f399: Remove aria-checked attributes from ChoiceCard, Checkbox and Radio components
+
 ## 4.0.3
 
 ### Patch Changes
