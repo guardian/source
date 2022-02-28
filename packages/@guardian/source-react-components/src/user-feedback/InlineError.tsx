@@ -20,6 +20,7 @@ export const InlineError = ({
 }: UserFeedbackProps): EmotionJSX.Element => (
 	<span
 		css={(theme) => [inlineError(theme.userFeedback), cssOverrides]}
+		role="alert"
 		{...props}
 	>
 		<SvgAlertTriangle />
