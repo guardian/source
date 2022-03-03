@@ -98,6 +98,7 @@ export { SvgMinus } from './icons/SvgMinus';
 export { SvgOfflineCloud } from './icons/SvgOfflineCloud';
 export { SvgPayPal } from './icons/SvgPayPal';
 export { SvgPerson } from './icons/SvgPerson';
+export { SvgPinned } from './icons/SvgPinned';
 export { SvgPinterest } from './icons/SvgPinterest';
 export { SvgPlay } from './icons/SvgPlay';
 export { SvgPlus } from './icons/SvgPlus';
