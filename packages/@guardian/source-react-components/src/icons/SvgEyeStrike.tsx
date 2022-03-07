@@ -1,13 +1,19 @@
+import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { iconSize } from '@guardian/source-foundations';
+import { iconSize, visuallyHidden } from '@guardian/source-foundations';
 import type { IconProps } from './types';
 
-export const SvgEyeStrike = ({ size }: IconProps): EmotionJSX.Element => {
-	return (
+export const SvgEyeStrike = ({
+	size,
+	isAnnouncedByScreenReader = false,
+}: IconProps): EmotionJSX.Element => (
+	<>
 		<svg
 			viewBox="0 0 30 30"
 			xmlns="http://www.w3.org/2000/svg"
 			width={size ? iconSize[size] : undefined}
+			aria-hidden={true}
+			focusable={false}
 		>
 			<path
 				fillRule="evenodd"
@@ -22,5 +28,16 @@ export const SvgEyeStrike = ({ size }: IconProps): EmotionJSX.Element => {
 				transform="rotate(45 23.4942 5.10417)"
 			/>
 		</svg>
-	);
-};
+		{isAnnouncedByScreenReader ? (
+			<span
+				css={css`
+					${visuallyHidden}
+				`}
+			>
+				Not visible
+			</span>
+		) : (
+			''
+		)}
+	</>
+);
