@@ -1,13 +1,19 @@
+import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { iconSize } from '@guardian/source-foundations';
+import { iconSize, visuallyHidden } from '@guardian/source-foundations';
 import type { IconProps } from './types';
 
-export const SvgPerson = ({ size }: IconProps): EmotionJSX.Element => {
-	return (
+export const SvgPerson = ({
+	size,
+	isAnnouncedByScreenReader = false,
+}: IconProps): EmotionJSX.Element => (
+	<>
 		<svg
 			viewBox="0 0 30 30"
 			xmlns="http://www.w3.org/2000/svg"
 			width={size ? iconSize[size] : undefined}
+			aria-hidden={true}
+			focusable={false}
 		>
 			<path
 				fillRule="evenodd"
@@ -15,5 +21,16 @@ export const SvgPerson = ({ size }: IconProps): EmotionJSX.Element => {
 				d="M18.975 8.45c0 2.5-2.15 4.55-3.975 4.55-1.625 0-3.95-2.05-3.95-4.55S12.5 4.5 15 4.5s3.975 1.45 3.975 3.95zm-11 8.407L9 15.803c2-.694 3.8-1.003 6-1.003 2.175 0 4 .36 6 1.003l1 1.054 2 7.714-1.025 1.029h-16L6 24.571l1.975-7.714z"
 			/>
 		</svg>
-	);
-};
+		{isAnnouncedByScreenReader ? (
+			<span
+				css={css`
+					${visuallyHidden}
+				`}
+			>
+				Account
+			</span>
+		) : (
+			''
+		)}
+	</>
+);
