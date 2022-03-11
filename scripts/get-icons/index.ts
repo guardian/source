@@ -60,7 +60,7 @@ const getContentsAndWriteOutputForNode = (node: NodeWithUrl) => {
 			const titleCaseName = kebabToTitle(node.name);
 			writeFileSync(`${SVG_OUTPUT_DIR}/${node.name}.svg`, formattedSvg);
 			writeFileSync(
-				`${REACT_COMPONENT_OUTPUT_DIR}/icons/${titleCaseName}Icon.tsx`,
+				`${REACT_COMPONENT_OUTPUT_DIR}/${titleCaseName}Icon.tsx`,
 				generateReactComponent(titleCaseName, formattedSvg.trimEnd()),
 			);
 		})

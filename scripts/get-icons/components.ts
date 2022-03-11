@@ -51,7 +51,7 @@ export const writeComponentsIndex = (nodeNames: string[]): void => {
 	const typeExport = `export type { IconProps, IconSize } from '../types';`;
 	const componentExports = nodeNames.sort().map((name) => {
 		const iconName = `${kebabToTitle(name)}Icon`;
-		return `export { ${iconName} } from './icons/${iconName}';`;
+		return `export { ${iconName} } from './${iconName}';`;
 	});
 
 	writeFileSync(
