@@ -1,5 +1,12 @@
 # @guardian/source-react-components
 
+## 4.2.0
+
+### Minor Changes
+
+- 44f78769: Add pinned SVG icon
+- b1240d34: Add screen reader accessible labels to logo icons
+
 ## 4.1.1
 
 ### Patch Changes
