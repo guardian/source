@@ -1663,7 +1663,7 @@
     eslint-plugin-import "2.25.4"
 
 "@guardian/eslint-plugin-source-react-components@file:packages/@guardian/eslint-plugin-source-react-components":
-  version "4.0.2"
+  version "4.1.0"
   dependencies:
     "@typescript-eslint/eslint-plugin" "5.9.1"
     "@typescript-eslint/parser" "5.9.1"
@@ -11264,12 +11264,7 @@ picomatch@2.2.3:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.3.tgz#465547f359ccc206d3c48e46a1bcb89bf7ee619d"
   integrity sha512-KpELjfwcCDUb9PeigTs2mBJzXUPzAuP2oPcA989He8Rte0+YUAjw1JVedDhuTKPkHjSYzMN3npC9luThGYEKdg==
 
-picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.2.3:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
-  integrity sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==
-
-picomatch@^2.3.0:
+picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.2.3, picomatch@^2.3.0:
   version "2.3.1"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
@@ -11960,9 +11955,9 @@ react-router@6.0.2, react-router@^6.0.0:
     history "^5.1.0"
 
 react-scanner@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-scanner/-/react-scanner-1.0.0.tgz#c7eb59e5fafff9c3b192ca310f499ace16da9ca4"
-  integrity sha512-ku30sEqUJNVvWyBD5PH3IhXCeu8lw76r29sQejaSrZuBhLOfBmyUu9SrOsaZQd9Ptf18YkZs6aVt5z1v/yH2xQ==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-scanner/-/react-scanner-1.0.1.tgz#093c8f818dbc7b2322cb68c549fae64dbbd4346e"
+  integrity sha512-tTOFBhQRshA/1wjQRMRE/JaE6zmuE9cgQ0kNJJL2gjvlK4Fu9D/24JKat3uarsYmR7P7Ozd5YRLweFd4bXuaRg==
   dependencies:
     "@typescript-eslint/typescript-estree" "4.22.0"
     astray "1.1.1"
@@ -13960,12 +13955,7 @@ typescript@4.2.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
   integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
 
-typescript@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
-  integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
-
-typescript@^4.5.4:
+typescript@^4.4.3, typescript@^4.5.4:
   version "4.5.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
   integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
