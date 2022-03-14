@@ -105,6 +105,7 @@ export { SvgPlus } from './icons/components/SvgPlus';
 export { SvgQuote } from './icons/components/SvgQuote';
 export { SvgSettings } from './icons/components/SvgSettings';
 export { SvgSpeechBubble } from './icons/components/SvgSpeechBubble';
+export { SvgSpinner } from './icons/components/SvgSpinner';
 export { SvgStar } from './icons/components/SvgStar';
 export { SvgTickRound } from './icons/components/SvgTickRound';
 export { SvgTwitter } from './icons/components/SvgTwitter';

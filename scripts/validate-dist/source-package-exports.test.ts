@@ -182,6 +182,7 @@ describe('No exports have changed in the ', () => {
 			'SvgRoundelInverse',
 			'SvgSettings',
 			'SvgSpeechBubble',
+			'SvgSpinner',
 			'SvgStar',
 			'SvgTickRound',
 			'SvgTwitter',
