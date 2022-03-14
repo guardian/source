@@ -1,5 +1,5 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { SvgTickRound } from '../icons/SvgTickRound';
+import { SvgTickRound } from '../icons/components/SvgTickRound';
 import { inlineSuccess } from './styles';
 import type { UserFeedbackProps } from './types';
 

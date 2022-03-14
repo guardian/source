@@ -3,7 +3,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { visuallyHidden } from '@guardian/source-foundations';
 import type { ReactElement, ReactNode } from 'react';
 import { cloneElement } from 'react';
-import { SvgSpinner } from '../icons/SvgSpinner';
+import { SvgSpinner } from '../icons/components/SvgSpinner';
 
 export const buttonContents = ({
 	hideLabel,

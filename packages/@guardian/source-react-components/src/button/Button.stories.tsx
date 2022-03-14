@@ -6,7 +6,7 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { SvgCross } from '../icons/SvgCross';
+import { SvgCross } from '../icons/components/SvgCross';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';
 import { buttonThemeBrand, buttonThemeBrandAlt } from './theme';
