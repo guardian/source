@@ -3,7 +3,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize, visuallyHidden } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const SvgMessenger = ({
+export const SvgFacebookMessenger = ({
 	size,
 	isAnnouncedByScreenReader = false,
 }: IconProps): EmotionJSX.Element => {

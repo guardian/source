@@ -58,7 +58,7 @@ export { Footer } from './footer/Footer';
 export type { FooterProps } from './footer/Footer';
 export { footerThemeBrand } from './footer/theme';
 
-export { SvgAlert } from './icons/components/SvgAlert';
+export { SvgExclamation } from './icons/components/SvgExclamation';
 export { SvgAlertRound } from './icons/components/SvgAlertRound';
 export { SvgAlertTriangle } from './icons/components/SvgAlertTriangle';
 export { SvgAppleBrand } from './icons/components/SvgAppleBrand';
@@ -91,16 +91,16 @@ export { SvgGlobe } from './icons/components/SvgGlobe';
 export { SvgGoogleBrand } from './icons/components/SvgGoogleBrand';
 export { SvgHouse } from './icons/components/SvgHouse';
 export { SvgIndent } from './icons/components/SvgIndent';
-export { SvgInfo } from './icons/components/SvgInfo';
+export { SvgInfoRound } from './icons/components/SvgInfoRound';
 export { SvgLinkedIn } from './icons/components/SvgLinkedIn';
-export { SvgMessenger } from './icons/components/SvgMessenger';
+export { SvgFacebookMessenger } from './icons/components/SvgFacebookMessenger';
 export { SvgMinus } from './icons/components/SvgMinus';
-export { SvgOfflineCloud } from './icons/components/SvgOfflineCloud';
+export { SvgCrossedOutCloud } from './icons/components/SvgCrossedOutCloud';
 export { SvgPayPal } from './icons/components/SvgPayPal';
 export { SvgPerson } from './icons/components/SvgPerson';
 export { SvgPinned } from './icons/components/SvgPinned';
 export { SvgPinterest } from './icons/components/SvgPinterest';
-export { SvgPlay } from './icons/components/SvgPlay';
+export { SvgMediaControlsPlay } from './icons/components/SvgMediaControlsPlay';
 export { SvgPlus } from './icons/components/SvgPlus';
 export { SvgQuote } from './icons/components/SvgQuote';
 export { SvgSettings } from './icons/components/SvgSettings';
@@ -110,6 +110,13 @@ export { SvgTickRound } from './icons/components/SvgTickRound';
 export { SvgTwitter } from './icons/components/SvgTwitter';
 export { SvgVideo } from './icons/components/SvgVideo';
 export { SvgWhatsApp } from './icons/components/SvgWhatsApp';
+
+// Legacy icon API. Remove these aliases in a future major version bump
+export { SvgExclamation as SvgAlert } from './icons/components/SvgExclamation';
+export { SvgInfoRound as SvgInfo } from './icons/components/SvgInfoRound';
+export { SvgFacebookMessenger as SvgMessenger } from './icons/components/SvgFacebookMessenger';
+export { SvgCrossedOutCloud as SvgOfflineCloud } from './icons/components/SvgCrossedOutCloud';
+export { SvgMediaControlsPlay as SvgPlay } from './icons/components/SvgMediaControlsPlay';
 
 export type { IconProps, IconSize } from './icons/types';
 
