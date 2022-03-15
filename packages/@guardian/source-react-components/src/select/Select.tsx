@@ -2,7 +2,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { SelectHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
-import { SvgChevronDownSingle } from '../icons/SvgChevronDownSingle';
+import { SvgChevronDownSingle } from '../icons/components/SvgChevronDownSingle';
 import { Label } from '../label/Label';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';

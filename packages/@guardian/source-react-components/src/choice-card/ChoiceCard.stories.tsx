@@ -3,7 +3,7 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { SvgCamera } from '../icons/SvgCamera';
+import { SvgCamera } from '../icons/components/SvgCamera';
 import { ChoiceCard } from './ChoiceCard';
 import type { ChoiceCardProps } from './ChoiceCard';
 
