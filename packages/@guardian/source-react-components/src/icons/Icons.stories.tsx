@@ -6,7 +6,6 @@ import {
 } from '../../../../../lib/story-intents';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-import { SvgAlert } from './components/SvgAlert';
 import { SvgAlertRound } from './components/SvgAlertRound';
 import { SvgAlertTriangle } from './components/SvgAlertTriangle';
 import { SvgAppleBrand } from './components/SvgAppleBrand';
@@ -26,29 +25,30 @@ import { SvgChevronUpSingle } from './components/SvgChevronUpSingle';
 import { SvgClock } from './components/SvgClock';
 import { SvgCreditCard } from './components/SvgCreditCard';
 import { SvgCross } from './components/SvgCross';
+import { SvgCrossedOutCloud } from './components/SvgCrossedOutCloud';
 import { SvgDirectDebit } from './components/SvgDirectDebit';
 import { SvgDirectDebitWide } from './components/SvgDirectDebitWide';
 import { SvgEnvelope } from './components/SvgEnvelope';
+import { SvgExclamation } from './components/SvgExclamation';
 import { SvgExternal } from './components/SvgExternal';
 import { SvgEye } from './components/SvgEye';
 import { SvgEyeStrike } from './components/SvgEyeStrike';
 import { SvgFacebook } from './components/SvgFacebook';
 import { SvgFacebookBrand } from './components/SvgFacebookBrand';
+import { SvgFacebookMessenger } from './components/SvgFacebookMessenger';
 import { SvgGift } from './components/SvgGift';
 import { SvgGlobe } from './components/SvgGlobe';
 import { SvgGoogleBrand } from './components/SvgGoogleBrand';
 import { SvgHouse } from './components/SvgHouse';
 import { SvgIndent } from './components/SvgIndent';
-import { SvgInfo } from './components/SvgInfo';
+import { SvgInfoRound } from './components/SvgInfoRound';
 import { SvgLinkedIn } from './components/SvgLinkedIn';
-import { SvgMessenger } from './components/SvgMessenger';
+import { SvgMediaControlsPlay } from './components/SvgMediaControlsPlay';
 import { SvgMinus } from './components/SvgMinus';
-import { SvgOfflineCloud } from './components/SvgOfflineCloud';
 import { SvgPayPal } from './components/SvgPayPal';
 import { SvgPerson } from './components/SvgPerson';
 import { SvgPinned } from './components/SvgPinned';
 import { SvgPinterest } from './components/SvgPinterest';
-import { SvgPlay } from './components/SvgPlay';
 import { SvgPlus } from './components/SvgPlus';
 import { SvgQuote } from './components/SvgQuote';
 import { SvgSettings } from './components/SvgSettings';
@@ -62,7 +62,7 @@ import { SvgWhatsApp } from './components/SvgWhatsApp';
 import type { IconProps, IconSize } from './types';
 
 const uiIcons = {
-	SvgAlert,
+	SvgExclamation,
 	SvgAlertRound,
 	SvgAlertTriangle,
 	SvgAppleBrand,
@@ -91,17 +91,17 @@ const uiIcons = {
 	SvgCamera,
 	SvgCross,
 	SvgLinkedIn,
-	SvgMessenger,
+	SvgFacebookMessenger,
 	SvgMinus,
-	SvgOfflineCloud,
-	SvgPlay,
+	SvgCrossedOutCloud,
+	SvgMediaControlsPlay,
 	SvgPlus,
 	SvgPerson,
 	SvgPinned,
 	SvgPinterest,
 	SvgQuote,
 	SvgIndent,
-	SvgInfo,
+	SvgInfoRound,
 	SvgSettings,
 	SvgSpeechBubble,
 	SvgSpinner,

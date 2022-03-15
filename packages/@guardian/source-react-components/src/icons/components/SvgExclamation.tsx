@@ -3,7 +3,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { iconSize, visuallyHidden } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const SvgPlay = ({
+export const SvgExclamation = ({
 	size,
 	isAnnouncedByScreenReader = false,
 }: IconProps): EmotionJSX.Element => (
@@ -18,7 +18,7 @@ export const SvgPlay = ({
 			<path
 				fillRule="evenodd"
 				clipRule="evenodd"
-				d="M24.1749 15.15V14.45L8.575 8L8 8.45V21.15L8.575 21.55L24.1749 15.15Z"
+				d="M13.3 7.775L14.025 17.25H16.025L16.775 7.775L16.05 7H14.025L13.3 7.775ZM17 21.25C17 20.15 16.1 19.25 14.975 19.25C13.9 19.25 13 20.15 13 21.25C13 22.3249 13.9 23.2249 14.975 23.2249C16.075 23.2249 17 22.3249 17 21.25Z"
 			/>
 		</svg>
 		{isAnnouncedByScreenReader ? (
@@ -27,7 +27,7 @@ export const SvgPlay = ({
 					${visuallyHidden}
 				`}
 			>
-				Play
+				Exclamation mark
 			</span>
 		) : (
 			''
