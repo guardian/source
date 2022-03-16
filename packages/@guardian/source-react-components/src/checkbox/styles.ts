@@ -19,12 +19,15 @@ export const fieldset = css`
 	flex-direction: column;
 `;
 
+export const checkboxContainer: SerializedStyles = css`
+	position: relative;
+	display: flex;
+`;
+
 export const label = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
 	position: relative;
-	display: flex;
-	align-items: center;
 	cursor: pointer;
 	min-height: ${height.inputMedium}px;
 
@@ -124,7 +127,7 @@ export const tick = (
 			these properties are very sensitive and are overridden
 			if the checkbox has a label or supporting text
 		*/
-		top: 14px;
+		top: 5px;
 		left: 9px;
 		/*
 			this prevents simulated click events to the checkbox, eg from Selenium tests
@@ -164,7 +167,7 @@ export const tick = (
 
 export const tickWithLabelText = css`
 	@supports (${appearance}) {
-		top: 15px;
+		top: 5px;
 		left: 9px;
 	}
 `;
