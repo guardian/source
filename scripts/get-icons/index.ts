@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import axios from 'axios';
 import { kebabToTitle } from './case';
-import { generateReactComponent, writeComponentsIndex } from './components';
+import { generateReactComponent } from './components';
 import {
 	FIGMA_OPTIONS,
 	ICON_FILE,
@@ -21,6 +21,7 @@ interface FigmaComponentsResponse {
 			};
 			name: string;
 			node_id: string;
+			description: string;
 		}>;
 	};
 }
@@ -28,6 +29,7 @@ interface FigmaComponentsResponse {
 interface Node {
 	name: string;
 	node_id: string;
+	description: string;
 }
 
 interface NodeWithUrl extends Node {
@@ -60,8 +62,12 @@ const getContentsAndWriteOutputForNode = (node: NodeWithUrl) => {
 			const titleCaseName = kebabToTitle(node.name);
 			writeFileSync(`${SVG_OUTPUT_DIR}/${node.name}.svg`, formattedSvg);
 			writeFileSync(
-				`${REACT_COMPONENT_OUTPUT_DIR}/${titleCaseName}Icon.tsx`,
-				generateReactComponent(titleCaseName, formattedSvg.trimEnd()),
+				`${REACT_COMPONENT_OUTPUT_DIR}/Svg${titleCaseName}.tsx`,
+				generateReactComponent(
+					titleCaseName,
+					formattedSvg.trimEnd(),
+					node.description,
+				),
 			);
 		})
 		.catch((err) => {
@@ -82,8 +88,6 @@ if (!process.env.FIGMA_TOKEN) {
 	process.exit(1);
 }
 
-let nodeNames: string[] = [];
-
 void axios
 	.get<FigmaComponentsResponse>(
 		`https://api.figma.com/v1/files/${ICON_FILE}/components`,
@@ -98,24 +102,21 @@ void axios
 					ICON_FRAMES.includes(c.containing_frame.name)
 				);
 			})
-			.map(({ node_id, name }) => {
+			.map(({ node_id, name, description }) => {
 				return {
 					node_id,
 					name,
+					description,
 				};
 			});
 		return getUrlsForNodes(svgNodes);
 	})
 	.then((nodes) => {
-		nodeNames = nodes.map((n) => n.name);
 		return Promise.all(
 			nodes.map((node) => {
 				return getContentsAndWriteOutputForNode(node);
 			}),
 		);
-	})
-	.then(() => {
-		return writeComponentsIndex(nodeNames);
 	})
 	.then(() => {
 		console.log('Icons imported successfully');
