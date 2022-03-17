@@ -23,6 +23,7 @@
     "clean:react-components": "yarn workspace @guardian/source-react-components clean",
     "clean:root": "rm -rf dist",
     "fix": "yarn lint:js --fix",
+    "get-icons": "yarn workspace get-icons start && yarn fix",
     "get-usage": "ts-node ./scripts/get-usage",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .ts,.tsx,.js",
