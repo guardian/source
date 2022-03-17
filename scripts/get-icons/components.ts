@@ -1,23 +1,54 @@
-import { writeFileSync } from 'fs';
 import { kebabToTitle } from './case';
-import { REACT_COMPONENT_OUTPUT_DIR } from './config';
+import { WIDE_ICONS } from './config';
 
-export const generateReactComponent = (name: string, svg: string): string => {
-	return `import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { iconSize } from '@guardian/source-foundations';
+export const generateReactComponent = (
+	name: string,
+	svg: string,
+	label: string,
+): string => {
+	const visuallyHiddenToken = 'css`${visuallyHidden}`';
+	const svgWidthProp = 'width={size ? iconSize[size] : undefined}';
+	const svgHeightProp = 'height={size ? iconSize[size] : undefined}';
+	const svgAccessibleProps = ['aria-hidden={true}', 'focusable={false}'];
+	const svgAdditionalProps = [
+		/**
+		 * For wide (48x24) icons we modify the height instead of the width.
+		 * */
+		WIDE_ICONS.includes(name) ? svgHeightProp : svgWidthProp,
+		...svgAccessibleProps,
+	].join(' ');
+
+	return `
+import { css } from '@emotion/react';
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { iconSize, visuallyHidden } from '@guardian/source-foundations';
 import type { IconProps } from '../types';
 
-export const ${name}Icon = ({ size }: IconProps): EmotionJSX.Element => {
+export const Svg${kebabToTitle(name)} = ({
+	size,
+	isAnnouncedByScreenReader = false,
+}: IconProps): EmotionJSX.Element => {
 	return (
-${replaceStyleAttribute(
-	svg
-		.split('\n')
-		.map((line) => `\t\t${line}`)
-		.join('\n')
-		.replace(/\\>/i, '\twidth={size ? iconSize[size] : undefined}\n\t\t>')
-		.replace(/fill-rule/gi, 'fillRule')
-		.replace(/clip-rule/gi, 'clipRule'),
-)}
+		<>
+	${replaceStyleAttribute(
+		svg
+			.split('\n')
+			.map((line) => `\t\t${line}`)
+			.join('\n')
+			.replace(/>/i, `${svgAdditionalProps}>`)
+			.replace(/fill-rule/gi, 'fillRule')
+			.replace(/clip-rule/gi, 'clipRule'),
+	)}
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={${visuallyHiddenToken}}
+				>
+					${label}
+				</span>
+			) : (
+				''
+			)}
+		</>
 	);
 };
 `;
@@ -25,6 +56,7 @@ ${replaceStyleAttribute(
 
 const replaceStyleAttribute = (source: string): string => {
 	const matches = source.matchAll(/style=".*"/gi);
+
 	for (const match of matches) {
 		const value = match.toString();
 		const replacement = getStyleReplacement(value);
@@ -36,7 +68,7 @@ const replaceStyleAttribute = (source: string): string => {
 const getStyleReplacement = (style: string): string => {
 	return style
 		.replace('style=', '')
-		.replace(/\\"/gi, '')
+		.replace(/"/gi, '')
 		.split(';')
 		.map((item) => {
 			const [key, value] = item.split(':');
@@ -46,16 +78,3 @@ const getStyleReplacement = (style: string): string => {
 };
 
 export const _ = { replaceStyleAttribute, getStyleReplacement };
-
-export const writeComponentsIndex = (nodeNames: string[]): void => {
-	const typeExport = `export type { IconProps, IconSize } from '../types';`;
-	const componentExports = nodeNames.sort().map((name) => {
-		const iconName = `${kebabToTitle(name)}Icon`;
-		return `export { ${iconName} } from './${iconName}';`;
-	});
-
-	writeFileSync(
-		`${REACT_COMPONENT_OUTPUT_DIR}/index.ts`,
-		`${typeExport}\n\n${componentExports.join('\n')}\n`,
-	);
-};
