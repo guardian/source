@@ -10,7 +10,7 @@ export const SvgFacebookMessenger = ({
 	return (
 		<>
 			<svg
-				viewBox="0 0 30 30"
+				viewBox="-3 -3 30 30"
 				xmlns="http://www.w3.org/2000/svg"
 				width={size ? iconSize[size] : undefined}
 				aria-hidden={true}
@@ -19,17 +19,15 @@ export const SvgFacebookMessenger = ({
 				<path
 					fillRule="evenodd"
 					clipRule="evenodd"
-					d="M11.5333 23.8667C12.6333 24.2 13.8 24.3667 15 24.3667C21.0667 24.3667 26 19.8 26 14.2C26 8.56667 21.0667 4 15 4C8.93333 4 4 8.56667 4 14.2C4 17.0667 5.3 19.6667 7.36667 21.5V26L11.5333 23.8667ZM13.3333 14.7333L16.1667 17.6667L22.1667 11.3667L16.7 14.3667L13.8667 11.4333L7.86665 17.7333L13.3333 14.7333Z"
-				/>
+					d="M8.84848 20.0606C9.84848 20.3636 10.9091 20.5152 12 20.5152C17.5152 20.5152 22 16.3636 22 11.2727C22 6.15152 17.5152 2 12 2C6.48485 2 2 6.15152 2 11.2727C2 13.8788 3.18182 16.2424 5.06061 17.9091V22L8.84848 20.0606ZM10.4848 11.7576L13.0606 14.4242L18.5151 8.69697L13.5454 11.4242L10.9697 8.75757L5.51513 14.4848L10.4848 11.7576Z"
+				></path>
 			</svg>
 			{isAnnouncedByScreenReader ? (
 				<span
 					css={css`
 						${visuallyHidden}
 					`}
-				>
-					LinkedIn logo
-				</span>
+				></span>
 			) : (
 				''
 			)}

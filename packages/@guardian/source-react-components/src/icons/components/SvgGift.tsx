@@ -6,31 +6,31 @@ import type { IconProps } from '../types';
 export const SvgGift = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M9.13332 7.66667L11.3521 5L15 9.34084L18.6478 5L20.8667 7.66667L17.1215 9.8H21.9333L23 10.8667V16.3067H16.0667V10.3333H15H13.9333V16.3067L7 16.3067V10.8667L8.06667 9.80003L12.8785 9.80001L9.13332 7.66667ZM13.9333 18.9733H7.37712V24.2L8.43999 25.2667H13.9333V18.9733ZM22.6267 18.9733H16.0667V25.2667H21.4L22.6267 24.2V18.9733Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Gift
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path d="M5.91064 3.76316L8.20976 1L11.9896 5.49791L15.7694 1L18.0685 3.76316L14.1879 5.97367L19.5 5.97368L20.5 7.07894V12.7158H13.1V6.52632H10.9V12.7158L3.5 12.7158V7.07895L4.5 5.97371L9.79135 5.97368L5.91064 3.76316Z"></path>
+				<path d="M10.9 15H4V20.8039L5.19217 22H10.9V15Z"></path>
+				<path d="M20 15H13.1V22H18.6211L20 20.7869V15Z"></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Present
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

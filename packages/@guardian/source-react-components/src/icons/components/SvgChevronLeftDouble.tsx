@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgChevronLeftDouble = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M14.275 5L15.225 5.975L7.87498 14.975L15.225 23.9749L14.275 24.9499L4.79999 15.475V14.475L14.275 5ZM24.2749 5L25.2249 5.975L17.8749 14.975L25.2249 23.9749L24.2749 24.9499L14.8 15.475V14.475L24.2749 5Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Double chevron left
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M11.2588 2L12.2111 2.97744L4.84272 12L12.2111 21.0226L11.2588 22L1.76001 12.5013V11.4987L11.2588 2ZM21.2838 2L22.2362 2.97744L14.8678 12L22.2362 21.0226L21.2838 22L11.7851 12.5013V11.4987L21.2838 2Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Chevron, Double Chevron, Left,
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

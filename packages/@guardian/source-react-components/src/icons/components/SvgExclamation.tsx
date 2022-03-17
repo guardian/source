@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgExclamation = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M13.3 7.775L14.025 17.25H16.025L16.775 7.775L16.05 7H14.025L13.3 7.775ZM17 21.25C17 20.15 16.1 19.25 14.975 19.25C13.9 19.25 13 20.15 13 21.25C13 22.3249 13.9 23.2249 14.975 23.2249C16.075 23.2249 17 22.3249 17 21.25Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Exclamation mark
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M9.4068 2.05085L10.3899 14.8983H13.1017L14.1187 2.05085L13.1356 1H10.3899L9.4068 2.05085ZM14.4237 20.322C14.4237 18.8305 13.2034 17.6102 11.678 17.6102C10.2203 17.6102 9 18.8305 9 20.322C9 21.7797 10.2203 23 11.678 23C13.1695 23 14.4237 21.7797 14.4237 20.322Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Exclamation mark, !,
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

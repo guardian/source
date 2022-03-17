@@ -96,7 +96,7 @@ export { SvgLinkedIn } from './icons/components/SvgLinkedIn';
 export { SvgFacebookMessenger } from './icons/components/SvgFacebookMessenger';
 export { SvgMinus } from './icons/components/SvgMinus';
 export { SvgCrossedOutCloud } from './icons/components/SvgCrossedOutCloud';
-export { SvgPayPal } from './icons/components/SvgPayPal';
+export { SvgPaypalBrand } from './icons/components/SvgPaypalBrand';
 export { SvgPerson } from './icons/components/SvgPerson';
 export { SvgPinned } from './icons/components/SvgPinned';
 export { SvgPinterest } from './icons/components/SvgPinterest';
@@ -118,6 +118,7 @@ export { SvgInfoRound as SvgInfo } from './icons/components/SvgInfoRound';
 export { SvgFacebookMessenger as SvgMessenger } from './icons/components/SvgFacebookMessenger';
 export { SvgCrossedOutCloud as SvgOfflineCloud } from './icons/components/SvgCrossedOutCloud';
 export { SvgMediaControlsPlay as SvgPlay } from './icons/components/SvgMediaControlsPlay';
+export { SvgPaypalBrand as SvgPayPal } from './icons/components/SvgPaypalBrand';
 
 export type { IconProps, IconSize } from './icons/types';
 

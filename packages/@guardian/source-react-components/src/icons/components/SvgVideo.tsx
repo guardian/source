@@ -6,31 +6,31 @@ import type { IconProps } from '../types';
 export const SvgVideo = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M5.99999 8L4 9.99999V20L5.99999 22H17.5V8H5.99999ZM24.4999 8.5L19.4999 13.5V16.5L24.4999 21.5H25.9999V8.5H24.4999Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Video
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M2.99999 5L1 6.99999V17L2.99999 19H14.5V5H2.99999ZM21.4999 5.5L16.4999 10.5V13.5L21.4999 18.5H22.9999V5.5H21.4999Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				></span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

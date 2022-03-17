@@ -6,31 +6,31 @@ import type { IconProps } from '../types';
 export const SvgCreditCard = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M26 8.80921L24.1666 7H5.83333L4 8.80921V10.4737H26V8.80921ZM26 12.5H4L4 19.6644L5.80277 21.4737H24.1666L26 19.6644L26 12.5ZM8.63158 18H10.9224V16.8421H8.63158V18ZM14.4044 18H12.1136V16.8421H14.4044V18ZM15.5956 18H17.8864V16.8421H15.5956V18ZM21.3684 18H19.0776V16.8421H21.3684V18Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Credit card
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M23 6.56921L21.1666 4.76H2.83333L1 6.56921V8.23369H23V6.56921ZM23 10.26H1L1 17.4244L2.80277 19.2337H21.1666L23 17.4244L23 10.26ZM5.63158 15.76H7.92236V14.6021H5.63158V15.76ZM11.4044 15.76H9.1136V14.6021H11.4044V15.76ZM12.5956 15.76H14.8864V14.6021H12.5956V15.76ZM18.3684 15.76H16.0776V14.6021H18.3684V15.76Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				></span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

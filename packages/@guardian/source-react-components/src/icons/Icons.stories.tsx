@@ -45,7 +45,7 @@ import { SvgInfoRound } from './components/SvgInfoRound';
 import { SvgLinkedIn } from './components/SvgLinkedIn';
 import { SvgMediaControlsPlay } from './components/SvgMediaControlsPlay';
 import { SvgMinus } from './components/SvgMinus';
-import { SvgPayPal } from './components/SvgPayPal';
+import { SvgPaypalBrand } from './components/SvgPaypalBrand';
 import { SvgPerson } from './components/SvgPerson';
 import { SvgPinned } from './components/SvgPinned';
 import { SvgPinterest } from './components/SvgPinterest';
@@ -116,7 +116,7 @@ const uiIcons = {
 const paymentIcons = {
 	SvgCreditCard,
 	SvgDirectDebit,
-	SvgPayPal,
+	SvgPaypalBrand,
 };
 
 const widePaymentIcons = {

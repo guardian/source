@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgExternal = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M25.9999 13.75H24.7499L24.1499 9.22499L18.4 15L17 13.575L22.7249 7.82499L18.25 7.25V6H25.5249L25.9999 6.475V13.75ZM14 11L12.975 12H5.99999V21.9999H21.9999V17L22.9749 16H23.9999V22.9749L22.9749 23.9999H4.975L4 22.9749V11L4.975 9.99999H14V11Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				External link
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M22.9999 10.75H21.7499L21.1499 6.22499L15.4 12L14 10.575L19.7249 4.82499L15.25 4.25V3H22.5249L22.9999 3.475V10.75ZM11 7.99998L9.97497 8.99998H2.99999V18.9999H18.9999V14L19.9749 13H20.9999V19.9749L19.9749 20.9999H1.975L1 19.9749V7.99998L1.975 6.99999H11V7.99998Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Arrow, Linking out
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};
