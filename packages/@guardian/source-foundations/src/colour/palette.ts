@@ -213,6 +213,8 @@ export const palette = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/9280ee)
  *
  * Default theme background colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const background = {
 	primary: palette.neutral[100],
@@ -232,6 +234,8 @@ export const background = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/63cc10)
  *
  * Brand theme background colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandBackground = {
 	primary: palette.brand[400],
@@ -248,6 +252,8 @@ export const brandBackground = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/743232)
  *
  * Alternative brand theme background colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltBackground = {
 	primary: palette.brandAlt[400],
@@ -263,6 +269,8 @@ export const brandAltBackground = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/69c92f)
  *
  * Default theme border colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const border = {
 	primary: palette.neutral[60],
@@ -282,6 +290,8 @@ export const border = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/04883b)
  *
  * Brand theme border colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandBorder = {
 	primary: palette.brand[600],
@@ -299,6 +309,8 @@ export const brandBorder = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/21c6cc)
  *
  * Alternative brand theme border colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltBorder = {
 	ctaTertiary: palette.neutral[7],
@@ -309,6 +321,8 @@ export const brandAltBorder = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/593cc9)
  *
  * Default theme line colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const line = {
 	primary: palette.neutral[86],
@@ -319,6 +333,8 @@ export const line = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/66455d)
  *
  * Brand theme line colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandLine = {
 	primary: palette.brand[600],
@@ -329,6 +345,8 @@ export const brandLine = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/89955e)
  *
  * Alternative brand theme line colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltLine = {
 	primary: palette.neutral[7],
@@ -339,6 +357,8 @@ export const brandAltLine = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/85d3b0)
  *
  * Default theme text colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const text = {
 	primary: palette.neutral[7],
@@ -366,6 +386,8 @@ export const text = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/244480)
  *
  * Brand theme text colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandText = {
 	primary: palette.neutral[100],
@@ -387,6 +409,8 @@ export const brandText = {
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/11d5fd)
  *
  * Alternative brand theme text colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltText = {
 	primary: palette.neutral[7],

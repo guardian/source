@@ -14,6 +14,8 @@ export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
 	 * **Deprecated**
 	 *
 	 * Use `sideBorders` instead.
+	 *
+	 * @deprecated Use `sideBorders` instead.
 	 */
 	border?: boolean;
 	/**

@@ -18,12 +18,16 @@ export interface HideProps extends HTMLAttributes<HTMLDivElement>, Props {
 	 * **Deprecated**
 	 *
 	 * Use `from` instead.
+	 *
+	 * @deprecated Use `from` instead.
 	 */
 	above?: Breakpoint;
 	/**
 	 * **Deprecated**
 	 *
 	 * Use `until` instead.
+	 *
+	 * @deprecated Use `until` instead.
 	 */
 	below?: Breakpoint;
 }
