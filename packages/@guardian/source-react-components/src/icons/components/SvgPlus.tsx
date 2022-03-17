@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgPlus = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M13.8 16.2l.425 9.8h1.525l.45-9.8 9.8-.45v-1.525l-9.8-.425-.45-9.8h-1.525l-.425 9.8-9.8.425v1.525l9.8.45z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Plus sign
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M10.8 13.2L11.225 22.9999H12.75L13.2 13.2L22.9999 12.75V11.225L13.2 10.8L12.75 1H11.225L10.8 10.8L1 11.225V12.75L10.8 13.2Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Add
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

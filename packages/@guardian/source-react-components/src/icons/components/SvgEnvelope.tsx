@@ -6,28 +6,30 @@ import type { IconProps } from '../types';
 export const SvgEnvelope = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path d="M5.57143 7.2L4 8.89853L13.9524 16.825H16.0476L26 8.89853L24.4286 7.2H5.57143Z" />
-			<path d="M4 20.825V11.325L13.9524 18.325H16.0476L26 11.325V20.825L24.4286 22.325H5.57143L4 20.825Z" />
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Email
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path d="M2.57143 4L1 5.69853L10.9524 13.625H13.0476L23 5.69853L21.4286 4H2.57143Z"></path>
+				<path d="M1 17.625V8.125L10.9524 15.125H13.0476L23 8.125V17.625L21.4286 19.125H2.57143L1 17.625Z"></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Email,
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

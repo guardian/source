@@ -6,31 +6,31 @@ import type { IconProps } from '../types';
 export const SvgEye = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M15 7.89999C19.8749 7.89999 25.9999 14.375 25.9999 14.375V15.55C25.9999 15.55 19.8749 22.0249 15 22.0249C10.125 22.0249 4 15.55 4 15.55V14.375C4 14.375 10.125 7.89999 15 7.89999ZM15 19.675C17.6 19.675 19.7249 17.575 19.7249 14.975C19.7249 12.35 17.6 10.25 15 10.25C12.4 10.25 10.275 12.35 10.275 14.975C10.275 17.575 12.4 19.675 15 19.675ZM15 13.4C15 14.25 15.7 14.975 16.575 14.975H17.35C17.35 16.275 16.3 17.325 15 17.325C13.7 17.325 12.65 16.275 12.65 14.975C12.65 13.65 13.7 12.6 15 12.6V13.4Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				View
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M12 4.89999C16.8749 4.89999 22.9999 11.375 22.9999 11.375V12.55C22.9999 12.55 16.8749 19.0249 12 19.0249C7.12498 19.0249 1 12.55 1 12.55V11.375C1 11.375 7.12498 4.89999 12 4.89999ZM12 16.675C14.6 16.675 16.7249 14.575 16.7249 11.975C16.7249 9.34998 14.6 7.24999 12 7.24999C9.39997 7.24999 7.27498 9.34998 7.27498 11.975C7.27498 14.575 9.39997 16.675 12 16.675ZM12 10.4C12 11.25 12.7 11.975 13.575 11.975H14.35C14.35 13.275 13.3 14.325 12 14.325C10.7 14.325 9.64997 13.275 9.64997 11.975C9.64997 10.65 10.7 9.59998 12 9.59998V10.4Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				></span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

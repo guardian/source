@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgHouse = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			viewBox="0 0 30 30"
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M22 25l1-1V13.375L15.6 6h-1.2L7 13.375V24l1 1h4.5v-6.5h5V25H22z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Home
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M18.9999 20.9999L19.9999 19.9999V9.37497L12.6 2H11.4L4 9.37497V19.9999L5 20.9999H9.49998V14.5H14.5V20.9999H18.9999Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Home
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgPerson = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M18.975 8.45c0 2.5-2.15 4.55-3.975 4.55-1.625 0-3.95-2.05-3.95-4.55S12.5 4.5 15 4.5s3.975 1.45 3.975 3.95zm-11 8.407L9 15.803c2-.694 3.8-1.003 6-1.003 2.175 0 4 .36 6 1.003l1 1.054 2 7.714-1.025 1.029h-16L6 24.571l1.975-7.714z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Account
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M15.975 4.94999C15.975 7.44998 13.825 9.49997 12 9.49997C10.375 9.49997 8.04998 7.44998 8.04998 4.94999C8.04998 2.45 9.49998 1 12 1C14.5 1 15.975 2.45 15.975 4.94999ZM4.975 13.3571L6.00001 12.3029C8.00001 11.6086 9.80001 11.3 12 11.3C14.175 11.3 16 11.66 18 12.3029L19 13.3571L21 21.0714L19.975 22.1H3.975L3 21.0714L4.975 13.3571Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					profile,
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

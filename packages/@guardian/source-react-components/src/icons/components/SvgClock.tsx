@@ -6,30 +6,33 @@ import type { IconProps } from '../types';
 export const SvgClock = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				d="M26 15c0 6.075-4.925 11-11 11S4 21.075 4 15 8.925 4 15 4s11 4.925 11 11zm-9.8-.35L15.475 6H14.5l-.75 9.375 1.275 1.275L22 16v-1l-5.8-.35z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Clock
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M22 12C22 17.5227 17.5227 22 12 22C6.47727 22 2 17.5227 2 12C2 6.47727 6.47727 2 12 2C17.5227 2 22 6.47727 22 12ZM13.091 11.6818L12.432 3.81819H11.5456L10.8638 12.3409L12.0229 13.5L18.3638 12.9091V12L13.091 11.6818Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Time
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

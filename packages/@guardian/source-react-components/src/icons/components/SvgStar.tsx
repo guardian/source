@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgStar = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M22.4499 23.5499L20.1249 16.45L26.1499 12.025L25.8499 11.075H18.4L16.1 4H15.05L12.775 11.075H5.3L5 12.025L11.025 16.45L8.74999 23.5499L9.52498 24.1499L15.575 19.7249L21.6249 24.1499L22.4499 23.5499Z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Star
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M19.1513 21.3357L16.7329 13.9503L23 9.34749L22.6879 8.35931H14.9385L12.5461 0.999969H11.4539L9.08747 8.35931H1.31206L1 9.34749L7.26714 13.9503L4.90071 21.3357L5.70686 21.9598L12 17.3569L18.2931 21.9598L19.1513 21.3357Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Favourite
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};

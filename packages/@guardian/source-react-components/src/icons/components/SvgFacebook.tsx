@@ -10,7 +10,7 @@ export const SvgFacebook = ({
 	return (
 		<>
 			<svg
-				viewBox="0 0 30 30"
+				viewBox="-3 -3 30 30"
 				xmlns="http://www.w3.org/2000/svg"
 				width={size ? iconSize[size] : undefined}
 				aria-hidden={true}
@@ -19,17 +19,15 @@ export const SvgFacebook = ({
 				<path
 					fillRule="evenodd"
 					clipRule="evenodd"
-					d="M11.425 9.12498V12.25H8V15.7H11.425V25.9999H15.55V15.7H18.925L19.675 12.25H15.55V9.49998C15.55 7.97499 16.45 7.44999 17.625 7.44999H19.675L19.55 4.175C18.525 4.075 17.725 4 16.55 4C13.625 4 11.425 5.82499 11.425 9.12498Z"
-				/>
+					d="M9.57501 6.12498V9.24997H6.15002V12.7H9.57501V22.9999H13.7V12.7H17.075L17.825 9.24997H13.7V6.49998C13.7 4.97499 14.6 4.44999 15.775 4.44999H17.825L17.7 1.175C16.675 1.075 15.875 1 14.7 1C11.775 1 9.57501 2.82499 9.57501 6.12498Z"
+				></path>
 			</svg>
 			{isAnnouncedByScreenReader ? (
 				<span
 					css={css`
 						${visuallyHidden}
 					`}
-				>
-					Facebook logo
-				</span>
+				></span>
 			) : (
 				''
 			)}

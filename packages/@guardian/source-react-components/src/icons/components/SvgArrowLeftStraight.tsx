@@ -6,31 +6,33 @@ import type { IconProps } from '../types';
 export const SvgArrowLeftStraight = ({
 	size,
 	isAnnouncedByScreenReader = false,
-}: IconProps): EmotionJSX.Element => (
-	<>
-		<svg
-			viewBox="0 0 30 30"
-			xmlns="http://www.w3.org/2000/svg"
-			width={size ? iconSize[size] : undefined}
-			aria-hidden={true}
-			focusable={false}
-		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M6.9 13.95l7.5-8.975L13.425 4 3 14.45v1L13.425 25.9l.975-.975-7.5-8.975h19.125v-2H6.9z"
-			/>
-		</svg>
-		{isAnnouncedByScreenReader ? (
-			<span
-				css={css`
-					${visuallyHidden}
-				`}
+}: IconProps): EmotionJSX.Element => {
+	return (
+		<>
+			<svg
+				viewBox="-3 -3 30 30"
+				xmlns="http://www.w3.org/2000/svg"
+				width={size ? iconSize[size] : undefined}
+				aria-hidden={true}
+				focusable={false}
 			>
-				Arrow left
-			</span>
-		) : (
-			''
-		)}
-	</>
-);
+				<path
+					fillRule="evenodd"
+					clipRule="evenodd"
+					d="M23 11.0445H4.72639L11.8925 2.46907L10.9609 1.53747L1 11.5223V12.4778L10.9609 22.4626L11.8925 21.531L4.72639 12.9555H23V11.0445Z"
+				></path>
+			</svg>
+			{isAnnouncedByScreenReader ? (
+				<span
+					css={css`
+						${visuallyHidden}
+					`}
+				>
+					Arrow, Left,
+				</span>
+			) : (
+				''
+			)}
+		</>
+	);
+};
