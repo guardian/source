@@ -27,7 +27,9 @@ export const SvgTwitter = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Twitter logo
+				</span>
 			) : (
 				''
 			)}

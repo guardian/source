@@ -35,7 +35,7 @@ export const SvgEyeStrike = ({
 						${visuallyHidden}
 					`}
 				>
-					Eye, Slashed,
+					Not visible
 				</span>
 			) : (
 				''

@@ -27,7 +27,9 @@ export const SvgVideo = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Video
+				</span>
 			) : (
 				''
 			)}

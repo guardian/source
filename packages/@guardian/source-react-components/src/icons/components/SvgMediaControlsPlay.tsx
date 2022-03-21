@@ -27,7 +27,9 @@ export const SvgMediaControlsPlay = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Play
+				</span>
 			) : (
 				''
 			)}

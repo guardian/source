@@ -28,7 +28,7 @@ export const SvgStar = ({
 						${visuallyHidden}
 					`}
 				>
-					Favourite
+					Star
 				</span>
 			) : (
 				''

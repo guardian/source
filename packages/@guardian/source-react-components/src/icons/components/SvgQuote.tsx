@@ -28,7 +28,7 @@ export const SvgQuote = ({
 						${visuallyHidden}
 					`}
 				>
-					Quotation mark
+					Quote
 				</span>
 			) : (
 				''

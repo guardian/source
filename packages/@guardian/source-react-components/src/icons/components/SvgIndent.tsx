@@ -28,7 +28,7 @@ export const SvgIndent = ({
 						${visuallyHidden}
 					`}
 				>
-					Arrow, Indent, Right,
+					Indent
 				</span>
 			) : (
 				''

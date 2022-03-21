@@ -25,7 +25,7 @@ export const SvgEnvelope = ({
 						${visuallyHidden}
 					`}
 				>
-					Email,
+					Email
 				</span>
 			) : (
 				''

@@ -28,7 +28,7 @@ export const SvgGlobe = ({
 						${visuallyHidden}
 					`}
 				>
-					website
+					Globe
 				</span>
 			) : (
 				''

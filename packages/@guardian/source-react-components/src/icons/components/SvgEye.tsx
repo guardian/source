@@ -27,7 +27,9 @@ export const SvgEye = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					View
+				</span>
 			) : (
 				''
 			)}

@@ -26,7 +26,9 @@ export const SvgAppleBrand = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Apple logo
+				</span>
 			) : (
 				''
 			)}

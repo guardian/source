@@ -23,7 +23,9 @@ export const SvgPinterest = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Pinterest logo
+				</span>
 			) : (
 				''
 			)}

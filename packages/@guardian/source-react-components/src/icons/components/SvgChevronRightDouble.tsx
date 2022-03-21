@@ -28,7 +28,7 @@ export const SvgChevronRightDouble = ({
 						${visuallyHidden}
 					`}
 				>
-					Chevron, Double Chevron, Right,
+					Double chevron right
 				</span>
 			) : (
 				''

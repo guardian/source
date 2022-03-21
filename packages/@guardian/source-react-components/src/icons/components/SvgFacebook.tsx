@@ -27,7 +27,9 @@ export const SvgFacebook = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Facebook logo
+				</span>
 			) : (
 				''
 			)}

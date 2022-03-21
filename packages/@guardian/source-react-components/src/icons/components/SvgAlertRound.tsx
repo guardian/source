@@ -28,7 +28,7 @@ export const SvgAlertRound = ({
 						${visuallyHidden}
 					`}
 				>
-					!, Exclamation mark,
+					Warning
 				</span>
 			) : (
 				''

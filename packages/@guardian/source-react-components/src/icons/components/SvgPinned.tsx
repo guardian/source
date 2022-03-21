@@ -23,7 +23,9 @@ export const SvgPinned = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Pinned
+				</span>
 			) : (
 				''
 			)}

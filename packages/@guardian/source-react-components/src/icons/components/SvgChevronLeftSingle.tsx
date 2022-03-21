@@ -28,7 +28,7 @@ export const SvgChevronLeftSingle = ({
 						${visuallyHidden}
 					`}
 				>
-					Chevron, Left,
+					Chevron left
 				</span>
 			) : (
 				''

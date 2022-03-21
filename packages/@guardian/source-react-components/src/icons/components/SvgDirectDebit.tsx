@@ -27,7 +27,9 @@ export const SvgDirectDebit = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Direct Debit logo
+				</span>
 			) : (
 				''
 			)}

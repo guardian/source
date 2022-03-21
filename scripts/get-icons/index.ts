@@ -10,6 +10,7 @@ import {
 	SVG_OUTPUT_DIR,
 } from './config';
 import { formatSVG } from './format';
+import { labels } from './labels';
 import { Log } from './log';
 import { apply30x30ViewBox, stripAttributes } from './process-svg';
 
@@ -52,30 +53,27 @@ const getUrlsForNodes = (nodes: Node[]): Promise<NodeWithUrl[]> => {
 		});
 };
 
-const getContentsAndWriteOutputForNode = (node: NodeWithUrl) => {
+const getContentsAndWriteOutputForNode = ({ url, name }: NodeWithUrl) => {
 	return axios
-		.get(node.url)
+		.get(url)
 		.then((res) => {
 			const formattedSvg = formatSVG(
-				stripAttributes(node.name, res.data as string),
+				stripAttributes(name, res.data as string),
 			);
 			const componentSvg = apply30x30ViewBox(
-				node.name,
+				name,
 				formattedSvg.trimEnd(),
 			);
-			const titleCaseName = kebabToTitle(node.name);
-			writeFileSync(`${SVG_OUTPUT_DIR}/${node.name}.svg`, formattedSvg);
+			const titleCaseName = kebabToTitle(name);
+			const label = labels[name];
+			writeFileSync(`${SVG_OUTPUT_DIR}/${name}.svg`, formattedSvg);
 			writeFileSync(
 				`${REACT_COMPONENT_OUTPUT_DIR}/Svg${titleCaseName}.tsx`,
-				generateReactComponent(
-					node.name,
-					componentSvg,
-					node.description,
-				),
+				generateReactComponent(name, componentSvg, label),
 			);
 		})
 		.catch((err) => {
-			console.log(`Failed to write SVG for ${node.name}:`);
+			console.log(`Failed to write SVG for ${name}:`);
 			console.error(err);
 		});
 };

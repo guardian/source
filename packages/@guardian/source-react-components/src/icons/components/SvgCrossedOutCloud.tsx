@@ -27,7 +27,9 @@ export const SvgCrossedOutCloud = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					No wifi
+				</span>
 			) : (
 				''
 			)}

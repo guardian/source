@@ -82,7 +82,9 @@ export const SvgGoogleBrand = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Google logo
+				</span>
 			) : (
 				''
 			)}

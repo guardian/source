@@ -28,7 +28,7 @@ export const SvgArrowLeftStraight = ({
 						${visuallyHidden}
 					`}
 				>
-					Arrow, Left,
+					Arrow left
 				</span>
 			) : (
 				''

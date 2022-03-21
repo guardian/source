@@ -23,7 +23,9 @@ export const SvgWhatsApp = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					WhatsApp logo
+				</span>
 			) : (
 				''
 			)}

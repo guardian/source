@@ -28,7 +28,7 @@ export const SvgCamera = ({
 						${visuallyHidden}
 					`}
 				>
-					Gallery
+					Camera
 				</span>
 			) : (
 				''

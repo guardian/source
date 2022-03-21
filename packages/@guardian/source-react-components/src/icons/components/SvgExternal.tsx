@@ -28,7 +28,7 @@ export const SvgExternal = ({
 						${visuallyHidden}
 					`}
 				>
-					Arrow, Linking out
+					External link
 				</span>
 			) : (
 				''

@@ -28,7 +28,7 @@ export const SvgTickRound = ({
 						${visuallyHidden}
 					`}
 				>
-					tick
+					Ticked
 				</span>
 			) : (
 				''

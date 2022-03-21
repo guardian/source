@@ -28,7 +28,7 @@ export const SvgPerson = ({
 						${visuallyHidden}
 					`}
 				>
-					profile,
+					Account
 				</span>
 			) : (
 				''

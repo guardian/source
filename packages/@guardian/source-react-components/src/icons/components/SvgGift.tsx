@@ -26,7 +26,7 @@ export const SvgGift = ({
 						${visuallyHidden}
 					`}
 				>
-					Present
+					Gift
 				</span>
 			) : (
 				''

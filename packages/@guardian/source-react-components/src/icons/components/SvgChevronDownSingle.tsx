@@ -28,7 +28,7 @@ export const SvgChevronDownSingle = ({
 						${visuallyHidden}
 					`}
 				>
-					Chevron, Down,
+					Expand to show more
 				</span>
 			) : (
 				''

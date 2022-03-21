@@ -28,7 +28,7 @@ export const SvgAlertTriangle = ({
 						${visuallyHidden}
 					`}
 				>
-					Exclamation mark, !,
+					Warning
 				</span>
 			) : (
 				''

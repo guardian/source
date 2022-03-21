@@ -28,7 +28,7 @@ export const SvgCheckmark = ({
 						${visuallyHidden}
 					`}
 				>
-					Tick
+					Checkmark
 				</span>
 			) : (
 				''

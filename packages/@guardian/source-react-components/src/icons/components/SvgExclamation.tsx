@@ -28,7 +28,7 @@ export const SvgExclamation = ({
 						${visuallyHidden}
 					`}
 				>
-					Exclamation mark, !,
+					Exclamation mark
 				</span>
 			) : (
 				''

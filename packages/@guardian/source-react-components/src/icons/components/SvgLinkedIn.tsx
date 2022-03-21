@@ -24,7 +24,9 @@ export const SvgLinkedIn = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					LinkedIn logo
+				</span>
 			) : (
 				''
 			)}

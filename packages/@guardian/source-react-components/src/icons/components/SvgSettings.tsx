@@ -27,7 +27,9 @@ export const SvgSettings = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Settings
+				</span>
 			) : (
 				''
 			)}

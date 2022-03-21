@@ -27,7 +27,9 @@ export const SvgFacebookMessenger = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Facebook Messenger logo
+				</span>
 			) : (
 				''
 			)}

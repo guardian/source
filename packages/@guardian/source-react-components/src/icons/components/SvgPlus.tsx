@@ -28,7 +28,7 @@ export const SvgPlus = ({
 						${visuallyHidden}
 					`}
 				>
-					Add
+					Plus sign
 				</span>
 			) : (
 				''

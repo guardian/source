@@ -27,7 +27,9 @@ export const SvgCreditCard = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Credit card
+				</span>
 			) : (
 				''
 			)}

@@ -28,7 +28,7 @@ export const SvgSpeechBubble = ({
 						${visuallyHidden}
 					`}
 				>
-					comment,
+					Comments
 				</span>
 			) : (
 				''

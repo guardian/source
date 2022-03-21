@@ -28,7 +28,7 @@ export const SvgAudio = ({
 						${visuallyHidden}
 					`}
 				>
-					Sound
+					Audio
 				</span>
 			) : (
 				''

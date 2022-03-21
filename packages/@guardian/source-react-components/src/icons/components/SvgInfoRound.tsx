@@ -23,7 +23,9 @@ export const SvgInfoRound = ({
 					css={css`
 						${visuallyHidden}
 					`}
-				></span>
+				>
+					Information
+				</span>
 			) : (
 				''
 			)}

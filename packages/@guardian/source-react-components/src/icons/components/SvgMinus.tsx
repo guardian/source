@@ -28,7 +28,7 @@ export const SvgMinus = ({
 						${visuallyHidden}
 					`}
 				>
-					Remove
+					Minus sign
 				</span>
 			) : (
 				''

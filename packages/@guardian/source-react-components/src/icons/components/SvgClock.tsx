@@ -28,7 +28,7 @@ export const SvgClock = ({
 						${visuallyHidden}
 					`}
 				>
-					Time
+					Clock
 				</span>
 			) : (
 				''
