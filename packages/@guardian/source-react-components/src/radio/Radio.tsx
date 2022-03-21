@@ -8,6 +8,7 @@ import {
 	labelTextWithSupportingText,
 	labelWithSupportingText,
 	radio,
+	radioContainer,
 	supportingText,
 } from './styles';
 
@@ -24,7 +25,6 @@ const LabelText = ({
 				hasSupportingText ? labelTextWithSupportingText : '',
 				labelText(theme.radio),
 			]}
-			className="src-radio-label-text"
 		>
 			{children}
 		</div>
@@ -107,24 +107,26 @@ export const Radio = ({
 	);
 
 	const labelledRadioControl = (
-		<label
+		<div
 			css={(theme) => [
-				label(theme.radio),
+				radioContainer(theme.radio),
 				supporting ? labelWithSupportingText : '',
 			]}
 		>
 			{radioControl}
-			{supporting ? (
-				<div>
-					<LabelText hasSupportingText={true}>
-						{labelContent}
-					</LabelText>
-					<SupportingText>{supporting}</SupportingText>
-				</div>
-			) : (
-				<LabelText>{labelContent}</LabelText>
-			)}
-		</label>
+			<label htmlFor={radioId} css={label}>
+				{supporting ? (
+					<div>
+						<LabelText hasSupportingText={true}>
+							{labelContent}
+						</LabelText>
+						<SupportingText>{supporting}</SupportingText>
+					</div>
+				) : (
+					<LabelText>{labelContent}</LabelText>
+				)}
+			</label>
+		</div>
 	);
 
 	return (
