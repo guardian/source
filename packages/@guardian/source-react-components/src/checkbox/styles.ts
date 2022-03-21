@@ -19,18 +19,13 @@ export const fieldset = css`
 	flex-direction: column;
 `;
 
-export const checkboxContainer: SerializedStyles = css`
+export const checkboxContainer = (
+	checkbox = checkboxThemeDefault.checkbox,
+): SerializedStyles => css`
 	position: relative;
 	display: flex;
 	align-items: center;
 	min-height: ${height.inputMedium}px;
-	cursor: pointer;
-`;
-
-export const label = (
-	checkbox = checkboxThemeDefault.checkbox,
-): SerializedStyles => css`
-	position: relative;
 	cursor: pointer;
 
 	&:hover {
@@ -40,7 +35,11 @@ export const label = (
 	}
 `;
 
-export const labelWithSupportingText = css`
+export const label: SerializedStyles = css`
+	cursor: pointer;
+`;
+
+export const checkboxContainerWithSupportingText = css`
 	align-items: flex-start;
 	margin-bottom: ${space[3]}px;
 `;

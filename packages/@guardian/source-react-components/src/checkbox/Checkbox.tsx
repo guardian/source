@@ -6,9 +6,9 @@ import { LabelText } from './LabelText';
 import {
 	checkbox,
 	checkboxContainer,
+	checkboxContainerWithSupportingText,
 	errorCheckbox,
 	label,
-	labelWithSupportingText,
 	tick,
 	tickWithLabelText,
 	tickWithSupportingText,
@@ -92,7 +92,10 @@ export const Checkbox = ({
 
 	return (
 		<div
-			css={[checkboxContainer, supporting ? labelWithSupportingText : '']}
+			css={(theme) => [
+				checkboxContainer(theme.checkbox),
+				supporting ? checkboxContainerWithSupportingText : '',
+			]}
 		>
 			<input
 				id={checkboxId}
@@ -118,10 +121,7 @@ export const Checkbox = ({
 				]}
 			/>
 
-			<label
-				htmlFor={checkboxId}
-				css={(theme) => [label(theme.checkbox)]}
-			>
+			<label htmlFor={checkboxId} css={label}>
 				{supporting ? (
 					<div>
 						<LabelText hasSupportingText={true}>
