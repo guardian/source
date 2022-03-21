@@ -22,6 +22,8 @@ export const fieldset = css`
 export const checkboxContainer: SerializedStyles = css`
 	position: relative;
 	display: flex;
+	align-items: center;
+	min-height: ${height.inputMedium}px;
 `;
 
 export const label = (
@@ -29,7 +31,6 @@ export const label = (
 ): SerializedStyles => css`
 	position: relative;
 	cursor: pointer;
-	min-height: ${height.inputMedium}px;
 
 	&:hover {
 		input {
@@ -127,7 +128,7 @@ export const tick = (
 			these properties are very sensitive and are overridden
 			if the checkbox has a label or supporting text
 		*/
-		top: 5px;
+		top: 14px;
 		left: 9px;
 		/*
 			this prevents simulated click events to the checkbox, eg from Selenium tests
@@ -167,7 +168,7 @@ export const tick = (
 
 export const tickWithLabelText = css`
 	@supports (${appearance}) {
-		top: 5px;
+		top: 15px;
 		left: 9px;
 	}
 `;

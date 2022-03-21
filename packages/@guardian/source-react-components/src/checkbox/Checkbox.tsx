@@ -91,7 +91,9 @@ export const Checkbox = ({
 	};
 
 	return (
-		<div css={checkboxContainer}>
+		<div
+			css={[checkboxContainer, supporting ? labelWithSupportingText : '']}
+		>
 			<input
 				id={checkboxId}
 				type="checkbox"
@@ -118,10 +120,7 @@ export const Checkbox = ({
 
 			<label
 				htmlFor={checkboxId}
-				css={(theme) => [
-					label(theme.checkbox),
-					supporting ? labelWithSupportingText : '',
-				]}
+				css={(theme) => [label(theme.checkbox)]}
 			>
 				{supporting ? (
 					<div>
