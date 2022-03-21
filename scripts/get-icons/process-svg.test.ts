@@ -33,7 +33,7 @@ describe('The stripAttributes function', () => {
 		const svg = `<svg><path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5227" fill="#052962"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M21 12C22 17.5227" fill="#0F2962"></path></svg>`;
 		const stripped = `<svg><path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5227" fill="#052962"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M21 12C22 17.5227" fill="#0F2962"></path></svg>`;
 
-		expect(stripAttributes('pay-pal', svg)).toBe(stripped);
+		expect(stripAttributes('pay-pal-brand', svg)).toBe(stripped);
 	});
 });
 

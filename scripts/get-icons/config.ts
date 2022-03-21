@@ -20,7 +20,7 @@ export const ICONS_WITH_FILL_COLOURS = [
 	'apple-brand',
 	'facebook-brand',
 	'google-brand',
-	'pay-pal',
+	'pay-pal-brand',
 ];
 
 // Some icons don't conform to the 24x24 canvas size
