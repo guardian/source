@@ -24,6 +24,7 @@ export const checkboxContainer: SerializedStyles = css`
 	display: flex;
 	align-items: center;
 	min-height: ${height.inputMedium}px;
+	cursor: pointer;
 `;
 
 export const label = (
@@ -59,7 +60,6 @@ export const checkbox = (
 	position: relative;
 	transition: box-shadow ${transitions.short};
 	transition-delay: 0.08s;
-
 	color: ${checkbox.border};
 
 	&:focus {
