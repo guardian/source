@@ -24,6 +24,11 @@ export type TypographyStyles<Unit extends ScaleUnit = ScaleUnit> = {
 	fontStyle?: 'normal' | 'italic';
 };
 
+/** @deprecated will be removed in the next major version */
+export type TypographySizes = {
+	[key in string]: number;
+};
+
 export type TitlepieceSizes = typeof titlepieceSizes;
 export type HeadlineSizes = typeof headlineSizes;
 export type BodySizes = typeof bodySizes;

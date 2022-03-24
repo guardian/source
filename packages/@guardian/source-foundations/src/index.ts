@@ -98,6 +98,7 @@ export type {
 	FontWeightDefinition,
 	Option,
 	TypographyStyles,
+	TypographySizes,
 	TitlepieceSizes,
 	HeadlineSizes,
 	BodySizes,
