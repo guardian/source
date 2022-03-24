@@ -1,12 +1,12 @@
 import type { SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
-	focusHalo,
 	height,
 	space,
 	textSans,
 	transitions,
 	width,
+	border,
 } from '@guardian/source-foundations';
 import type { ButtonTheme } from './theme';
 import { buttonThemeDefault } from './theme';
@@ -16,6 +16,29 @@ import type {
 	SharedButtonProps,
 	Size,
 } from './types';
+
+const padding = 3;
+const haloWidth = 5;
+
+const focusHaloPadded = `
+position: relative;
+outline: 0;
+&:after {
+	display: block;
+	position: absolute;
+	content: '';
+	transition: box-shadow ${transitions.short};
+	width: calc(100% + ${padding * 2}px);
+	height: calc(100% + ${padding * 2}px);
+	left: -${padding}px;
+	top: -${padding}px;
+}
+html:not(.src-focus-disabled) & {
+	&:focus:after {
+		box-shadow: 0 0 0 ${haloWidth}px ${border.focusHalo};
+	}
+}
+`;
 
 const button = css`
 	display: inline-flex;
@@ -33,9 +56,7 @@ const button = css`
 		cursor: not-allowed;
 	}
 
-	&:focus {
-		${focusHalo};
-	}
+	${focusHaloPadded};
 `;
 
 const applyButtonStylesToLoadingSpinner = css`
@@ -115,6 +136,10 @@ const defaultSize = css`
 	padding: 0 ${space[5]}px;
 	border-radius: ${height.ctaMedium}px;
 	${fontSpacingVerticalOffset};
+
+	:after {
+		border-radius: ${height.ctaMedium}px;
+	}
 `;
 
 const smallSize = css`
@@ -124,6 +149,10 @@ const smallSize = css`
 	padding: 0 ${space[4]}px;
 	border-radius: ${height.ctaSmall}px;
 	${fontSpacingVerticalOffset};
+
+	:after {
+		border-radius: ${height.ctaSmall}px;
+	}
 `;
 
 const xsmallSize = css`
@@ -133,6 +162,10 @@ const xsmallSize = css`
 	padding: 0 ${space[3]}px;
 	border-radius: ${height.ctaXsmall}px;
 	${fontSpacingVerticalOffset};
+
+	:after {
+		border-radius: ${height.ctaXsmall}px;
+	}
 `;
 
 const iconDefault = css`
