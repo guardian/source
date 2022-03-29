@@ -1,54 +1,55 @@
+import type {
+	bodySizes,
+	fontWeightMapping,
+	headlineSizes,
+	lineHeightMapping,
+	textSansSizes,
+	titlepieceSizes,
+} from './data';
+
 export type ScaleUnit = 'rem' | 'px';
-export type Category = 'titlepiece' | 'headline' | 'body' | 'textSans';
-export type LineHeight = 'tight' | 'regular' | 'loose';
+export type LineHeight = keyof typeof lineHeightMapping;
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
 export type Option<A> = A | null;
 
-export type TypographyStyles = {
+export type TypographyStyles<Unit extends ScaleUnit = ScaleUnit> = {
 	fontFamily: string;
-	fontSize: string | number;
+	fontSize: Unit extends 'px' ? number : `${number}rem`;
 	lineHeight: string | number;
-	fontWeight?: number;
-	fontStyle?: string;
+	fontWeight?:
+		| typeof fontWeightMapping[keyof typeof fontWeightMapping]
+		| FontWeight;
+	fontStyle?: 'normal' | 'italic';
 };
+
+/** @deprecated will be removed in the next major version */
 export type TypographySizes = {
 	[key in string]: number;
 };
 
-export interface TitlepieceSizes extends TypographySizes {
-	small: number;
-	medium: number;
-	large: number;
-}
+export type TitlepieceSizes = typeof titlepieceSizes;
+export type HeadlineSizes = typeof headlineSizes;
+export type BodySizes = typeof bodySizes;
+export type TextSansSizes = typeof textSansSizes;
 
-export interface HeadlineSizes extends TypographySizes {
-	xxxsmall: number;
-	xxsmall: number;
-	xsmall: number;
-	small: number;
-	medium: number;
-	large: number;
-	xlarge: number;
-}
-export interface BodySizes extends TypographySizes {
-	small: number;
-	medium: number;
-}
-export interface TextSansSizes extends TypographySizes {
-	xxsmall: number;
-	xsmall: number;
-	small: number;
-	medium: number;
-	large: number;
-	xlarge: number;
-	xxlarge: number;
-	xxxlarge: number;
-}
+type Categories = {
+	titlepiece: TitlepieceSizes;
+	headline: HeadlineSizes;
+	body: BodySizes;
+	textSans: TextSansSizes;
+};
 
-export type Fs = (category: Category) => (
-	level: string,
+export type Category = keyof Categories;
+
+export type Fs = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+) => (
+	level: Level,
 	{
 		lineHeight,
 		fontWeight,
