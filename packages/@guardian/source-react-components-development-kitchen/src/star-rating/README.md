@@ -20,7 +20,7 @@ $ npm i @guardian/source-react-components-development-kitchen
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-star-rating--playground)
+See [storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-development-kitchen-star-rating--playground)
 
 ### How to use
 
