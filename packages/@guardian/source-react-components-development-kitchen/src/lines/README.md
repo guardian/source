@@ -18,7 +18,7 @@ $ npm i @guardian/source-react-components-development-kitchen
 
 ### API
 
-See [storybook](https://guardian.github.io/source/?path=/docs/kitchen-source-react-components-development-kitchen-lines--playground)
+See [storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-development-kitchen-lines--playground)
 
 ### How to use
 
