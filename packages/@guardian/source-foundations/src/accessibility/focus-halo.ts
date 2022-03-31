@@ -1,7 +1,7 @@
 import { border } from '../colour/palette';
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-accessibility-helpers--page#focus-halo)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-focushalo--page)
  *
  * CSS rules that provide a clear visual focus state to support keyboard navigation.
  */

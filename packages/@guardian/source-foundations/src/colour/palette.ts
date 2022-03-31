@@ -95,7 +95,7 @@ const colors = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette)
  *
  * Colour palette organised by type e.g. 'error', or pillar e.g. 'opinion'
@@ -209,10 +209,12 @@ export const palette = {
 // main palette.
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/9280ee)
  *
  * Default theme background colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const background = {
 	primary: palette.neutral[100],
@@ -228,10 +230,12 @@ export const background = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/63cc10)
  *
  * Brand theme background colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandBackground = {
 	primary: palette.brand[400],
@@ -244,10 +248,12 @@ export const brandBackground = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/743232)
  *
  * Alternative brand theme background colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltBackground = {
 	primary: palette.brandAlt[400],
@@ -259,10 +265,12 @@ export const brandAltBackground = {
 } as const;
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/69c92f)
  *
  * Default theme border colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const border = {
 	primary: palette.neutral[60],
@@ -278,10 +286,12 @@ export const border = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/04883b)
  *
  * Brand theme border colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandBorder = {
 	primary: palette.brand[600],
@@ -295,50 +305,60 @@ export const brandBorder = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/b/21c6cc)
  *
  * Alternative brand theme border colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltBorder = {
 	ctaTertiary: palette.neutral[7],
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/593cc9)
  *
  * Default theme line colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const line = {
 	primary: palette.neutral[86],
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/66455d)
  *
  * Brand theme line colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandLine = {
 	primary: palette.brand[600],
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/89955e)
  *
  * Alternative brand theme line colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltLine = {
 	primary: palette.neutral[7],
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/85d3b0)
  *
  * Default theme text colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const text = {
 	primary: palette.neutral[7],
@@ -362,10 +382,12 @@ export const text = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/244480)
  *
  * Brand theme text colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandText = {
 	primary: palette.neutral[100],
@@ -383,10 +405,12 @@ export const brandText = {
 };
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-colour--page) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
  * [Design System](https://theguardian.design/2a1e5182b/p/1377a6-tokens/t/11d5fd)
  *
  * Alternative brand theme text colours
+ *
+ * @deprecated Use the `palette` export instead
  */
 export const brandAltText = {
 	primary: palette.neutral[7],
