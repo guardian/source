@@ -57,6 +57,8 @@ export interface TilesProps extends HTMLAttributes<HTMLDivElement>, Props {
 	 * **Deprecated**
 	 *
 	 * Use `collapseUntil` instead.
+	 *
+	 * @deprecated Use `collapseUntil` instead.
 	 */
 	collapseBelow?: CollapseBreakpoint;
 }

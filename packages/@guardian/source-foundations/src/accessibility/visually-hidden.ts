@@ -1,5 +1,5 @@
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-accessibility-helpers--page#visually-hidden-elements)
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-visuallyhidden--page)
  *
  * CSS rules that hide something from sight while still being available to screen readers.
  */
