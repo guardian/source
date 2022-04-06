@@ -19,6 +19,7 @@ export const DottedLines = ({
 	for (let index = 1; index <= count; index++) {
 		dots.push(
 			<circle
+				key={index}
 				fill={color}
 				cx={gridSize / 2}
 				cy={gridSize * (index - 1 / 2)}
