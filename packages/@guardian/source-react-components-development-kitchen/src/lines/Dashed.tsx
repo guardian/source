@@ -1,0 +1,54 @@
+import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { breakpoints, space } from '@guardian/source-foundations';
+import type { LineCount } from './Lines';
+
+const thickness = 1;
+const gapHorizontal = 1;
+const gapVertical = space[1];
+const width = thickness + gapHorizontal;
+const maxWidth = breakpoints.wide;
+
+const getHeight = (count: LineCount): number =>
+	gapVertical * (count - 1) + thickness;
+
+export const DashedLines = ({
+	count,
+	color,
+}: {
+	count: LineCount;
+	color: string;
+}): EmotionJSX.Element => {
+	const height = getHeight(count);
+	const viewBox = `0 0 ${width} ${height}`;
+
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="100%"
+			height={height}
+			viewBox={viewBox}
+			preserveAspectRatio="xMinYMin meet"
+		>
+			<defs>
+				<pattern
+					id="dotted-pattern"
+					viewBox={`0 0 ${width} ${gapVertical}`}
+					width={width}
+					height={gapVertical}
+					patternUnits="userSpaceOnUse"
+					preserveAspectRatio="none"
+					stroke={color}
+					strokeWidth={thickness}
+				>
+					<path d={`M0,${thickness / 2} h${thickness}`} />
+				</pattern>
+			</defs>
+
+			<rect
+				width={maxWidth}
+				height={height}
+				fill="url(#dotted-pattern)"
+			/>
+		</svg>
+	);
+};
