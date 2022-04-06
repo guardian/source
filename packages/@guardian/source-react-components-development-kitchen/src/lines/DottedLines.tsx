@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { breakpoints } from '@guardian/source-foundations';
 import type { LineCount } from './Lines';
@@ -11,9 +12,11 @@ export const getHeight = (count: LineCount): number => gridSize * count;
 export const DottedLines = ({
 	count,
 	color,
+	cssOverrides,
 }: {
 	count: LineCount;
 	color: string;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }): EmotionJSX.Element => {
 	const dots = [];
 	for (let index = 1; index <= count; index++) {
@@ -38,6 +41,7 @@ export const DottedLines = ({
 			height={height}
 			viewBox={viewBox}
 			preserveAspectRatio="xMinYMin meet"
+			css={cssOverrides}
 		>
 			<defs>
 				<pattern

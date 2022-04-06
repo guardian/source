@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { palette } from '@guardian/source-foundations';
 import { DashedLines } from './DashedLines';
@@ -22,6 +23,7 @@ export interface LinesProps {
 	 * The colour of the lines
 	 */
 	color?: string;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }
 
 /**
@@ -34,16 +36,41 @@ export const Lines = ({
 	effect = 'straight',
 	count = 4,
 	color = palette.neutral[86],
+	cssOverrides,
 }: LinesProps): EmotionJSX.Element => {
 	switch (effect) {
 		case 'squiggly':
-			return <SquigglyLines count={count} color={color} />;
+			return (
+				<SquigglyLines
+					count={count}
+					color={color}
+					cssOverrides={cssOverrides}
+				/>
+			);
 		case 'dotted':
-			return <DottedLines count={count} color={color} />;
+			return (
+				<DottedLines
+					count={count}
+					color={color}
+					cssOverrides={cssOverrides}
+				/>
+			);
 		case 'dashed':
-			return <DashedLines count={count} color={color} />;
+			return (
+				<DashedLines
+					count={count}
+					color={color}
+					cssOverrides={cssOverrides}
+				/>
+			);
 		case 'straight':
 		default:
-			return <StraightLines count={count} color={color} />;
+			return (
+				<StraightLines
+					count={count}
+					color={color}
+					cssOverrides={cssOverrides}
+				/>
+			);
 	}
 };

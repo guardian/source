@@ -1,3 +1,4 @@
+import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { breakpoints, space } from '@guardian/source-foundations';
 import type { LineCount } from './Lines';
@@ -12,9 +13,11 @@ const getHeight = (count: LineCount): number =>
 export const StraightLines = ({
 	count,
 	color,
+	cssOverrides,
 }: {
 	count: LineCount;
 	color: string;
+	cssOverrides?: SerializedStyles | SerializedStyles[];
 }): EmotionJSX.Element => {
 	const height = getHeight(count);
 	const viewBox = `0 0 ${maxWidth} ${height}`;
@@ -41,6 +44,7 @@ export const StraightLines = ({
 			preserveAspectRatio="none"
 			stroke={color}
 			strokeWidth={thickness}
+			css={cssOverrides}
 		>
 			{lines}
 		</svg>
