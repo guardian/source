@@ -1,12 +1,14 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes, ReactNode } from 'react';
 import type { Props } from '../@types/Props';
 import { LabelText } from './LabelText';
 import {
 	checkbox,
+	checkboxContainer,
+	checkboxContainerWithSupportingText,
 	errorCheckbox,
 	label,
-	labelWithSupportingText,
 	tick,
 	tickWithLabelText,
 	tickWithSupportingText,
@@ -16,6 +18,7 @@ import { SupportingText } from './SupportingText';
 export interface CheckboxProps
 	extends InputHTMLAttributes<HTMLInputElement>,
 		Props {
+	id?: string;
 	/**
 	 * Whether checkbox is checked. This is necessary when using the
 	 * [controlled approach](https://reactjs.org/docs/forms.html#controlled-components)
@@ -63,6 +66,7 @@ export interface CheckboxProps
  * The following themes are supported: `default`, `brand`
  */
 export const Checkbox = ({
+	id,
 	label: labelContent,
 	checked,
 	supporting,
@@ -72,6 +76,7 @@ export const Checkbox = ({
 	cssOverrides,
 	...props
 }: CheckboxProps): EmotionJSX.Element => {
+	const checkboxId = id ?? generateSourceId();
 	const isChecked = (): boolean => {
 		if (checked != null) {
 			return checked;
@@ -86,13 +91,14 @@ export const Checkbox = ({
 	};
 
 	return (
-		<label
+		<div
 			css={(theme) => [
-				label(theme.checkbox),
-				supporting ? labelWithSupportingText : '',
+				checkboxContainer(theme.checkbox),
+				supporting ? checkboxContainerWithSupportingText : '',
 			]}
 		>
 			<input
+				id={checkboxId}
 				type="checkbox"
 				css={(theme) => [
 					checkbox(theme.checkbox),
@@ -114,16 +120,19 @@ export const Checkbox = ({
 					supporting ? tickWithSupportingText : '',
 				]}
 			/>
-			{supporting ? (
-				<div>
-					<LabelText hasSupportingText={true}>
-						{labelContent}
-					</LabelText>
-					<SupportingText>{supporting}</SupportingText>
-				</div>
-			) : (
-				<LabelText>{labelContent}</LabelText>
-			)}
-		</label>
+
+			<label htmlFor={checkboxId} css={label}>
+				{supporting ? (
+					<div>
+						<LabelText hasSupportingText={true}>
+							{labelContent}
+						</LabelText>
+						<SupportingText>{supporting}</SupportingText>
+					</div>
+				) : (
+					<LabelText>{labelContent}</LabelText>
+				)}
+			</label>
+		</div>
 	);
 };

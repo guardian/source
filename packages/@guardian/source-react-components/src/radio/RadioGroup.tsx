@@ -3,16 +3,13 @@ import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { FieldsetHTMLAttributes } from 'react';
 import { Children, cloneElement } from 'react';
 import type { Props } from '../@types/Props';
+import { Inline } from '../inline/Inline';
 import { Legend } from '../label/Legend';
+import { Stack } from '../stack/Stack';
 import { InlineError } from '../user-feedback/InlineError';
-import { fieldset, horizontal, vertical } from './styles';
+import { fieldset } from './styles';
 
 type Orientation = 'vertical' | 'horizontal';
-
-const orientationStyles = {
-	vertical: vertical,
-	horizontal: horizontal,
-};
 
 export interface RadioGroupProps
 	extends FieldsetHTMLAttributes<HTMLFieldSetElement>,
@@ -72,19 +69,8 @@ export const RadioGroup = ({
 		<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 	);
 
-	return (
-		<fieldset
-			aria-invalid={!!error}
-			id={groupId}
-			css={(theme) => [
-				fieldset(theme.radio),
-				orientationStyles[orientation],
-				cssOverrides,
-			]}
-			{...props}
-		>
-			{legend}
-			{message}
+	const radioContainers = (
+		<>
 			{Children.map(children, (child) => {
 				return cloneElement(
 					child as React.ReactElement,
@@ -100,6 +86,23 @@ export const RadioGroup = ({
 					),
 				);
 			})}
+		</>
+	);
+
+	return (
+		<fieldset
+			aria-invalid={!!error}
+			id={groupId}
+			css={(theme) => [fieldset(theme.radio), cssOverrides]}
+			{...props}
+		>
+			{legend}
+			{message}
+			{orientation === 'vertical' ? (
+				<Stack>{radioContainers}</Stack>
+			) : (
+				<Inline space={5}>{radioContainers}</Inline>
+			)}
 		</fieldset>
 	);
 };

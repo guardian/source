@@ -1,4 +1,5 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes, ReactNode } from 'react';
 import type { Props } from '../@types/Props';
 import {
@@ -7,6 +8,7 @@ import {
 	labelTextWithSupportingText,
 	labelWithSupportingText,
 	radio,
+	radioContainer,
 	supportingText,
 } from './styles';
 
@@ -23,7 +25,6 @@ const LabelText = ({
 				hasSupportingText ? labelTextWithSupportingText : '',
 				labelText(theme.radio),
 			]}
-			className="src-radio-label-text"
 		>
 			{children}
 		</div>
@@ -37,6 +38,7 @@ const SupportingText = ({ children }: { children: ReactNode }) => {
 export interface RadioProps
 	extends InputHTMLAttributes<HTMLInputElement>,
 		Props {
+	id?: string;
 	/**
 	 * Whether radio button is checked. This is necessary when using the
 	 * [controlled approach](https://reactjs.org/docs/forms.html#controlled-components)
@@ -75,6 +77,7 @@ export interface RadioProps
  * The following themes are supported: `default`, `brand`
  */
 export const Radio = ({
+	id,
 	label: labelContent,
 	value,
 	supporting,
@@ -83,6 +86,7 @@ export const Radio = ({
 	cssOverrides,
 	...props
 }: RadioProps): EmotionJSX.Element => {
+	const radioId = id ?? generateSourceId();
 	const isChecked = (): boolean => {
 		if (checked != null) {
 			return checked;
@@ -92,6 +96,7 @@ export const Radio = ({
 	};
 	const radioControl = (
 		<input
+			id={radioId}
 			type="radio"
 			css={(theme) => [radio(theme.radio), cssOverrides]}
 			value={value}
@@ -102,24 +107,26 @@ export const Radio = ({
 	);
 
 	const labelledRadioControl = (
-		<label
+		<div
 			css={(theme) => [
-				label(theme.radio),
+				radioContainer(theme.radio),
 				supporting ? labelWithSupportingText : '',
 			]}
 		>
 			{radioControl}
-			{supporting ? (
-				<div>
-					<LabelText hasSupportingText={true}>
-						{labelContent}
-					</LabelText>
-					<SupportingText>{supporting}</SupportingText>
-				</div>
-			) : (
-				<LabelText>{labelContent}</LabelText>
-			)}
-		</label>
+			<label htmlFor={radioId} css={label}>
+				{supporting ? (
+					<div>
+						<LabelText hasSupportingText={true}>
+							{labelContent}
+						</LabelText>
+						<SupportingText>{supporting}</SupportingText>
+					</div>
+				) : (
+					<LabelText>{labelContent}</LabelText>
+				)}
+			</label>
+		</div>
 	);
 
 	return (
