@@ -27,7 +27,7 @@ export const StraightLines = ({
 		lines.push(
 			<line
 				key={index}
-				x1={1}
+				x1={0}
 				x2={maxWidth}
 				y1={index * gapVertical + 0.5}
 				y2={index * gapVertical + 0.5}

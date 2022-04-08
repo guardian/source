@@ -4,7 +4,7 @@ import { breakpoints } from '@guardian/source-foundations';
 import type { LineCount } from './Lines';
 
 const wavelength = 12;
-const amplitude = 3;
+const amplitude = 3 / 2;
 const thickness = 1;
 const gap = 3;
 const squiggliness = wavelength / 8;
@@ -14,12 +14,11 @@ export const getHeight = (count: LineCount): number =>
 	thickness + gap * Math.max(count, 1);
 
 const d = [
-	`M 0 ${thickness / 2}`,
-	`q ${squiggliness} 0 ${wavelength / 4} ${amplitude / 2}`,
-	`t ${wavelength / 4} ${amplitude / 2}`,
-	`t ${wavelength / 4} -${amplitude / 2}`,
-	`t ${wavelength / 4} -${amplitude / 2}`,
-	`t 12 0`,
+	`M 0,${thickness / 2}`,
+	`q ${squiggliness},0 ${wavelength / 4},${amplitude}`,
+	`t ${wavelength / 4},${amplitude}`,
+	`${wavelength / 4},${-amplitude}`,
+	`${wavelength / 4},${-amplitude}`,
 ].join(' ');
 
 export const SquigglyLines = ({
@@ -61,7 +60,12 @@ export const SquigglyLines = ({
 					patternUnits="userSpaceOnUse"
 					preserveAspectRatio="none"
 				>
-					<g strokeWidth={thickness} stroke={color} fill="none">
+					<g
+						strokeWidth={thickness}
+						stroke={color}
+						strokeLinecap="square"
+						fill="none"
+					>
 						<path id="squiggle" d={d} />
 						{repeatedLines}
 					</g>
