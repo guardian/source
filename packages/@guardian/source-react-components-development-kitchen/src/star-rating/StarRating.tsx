@@ -8,28 +8,39 @@ import { neutral, remSpace } from '@guardian/source-foundations';
 
 type Size = 'large' | 'medium' | 'small';
 
-const determineSize = (size: Size) => {
+const svgSize = (size: Size) => {
 	switch (size) {
 		case 'small':
 			return css`
-				padding: 0.0625rem;
+				display: block;
 				width: calc(5 * ${remSpace[3]});
 				height: ${remSpace[3]};
 			`;
 		case 'medium':
 			return css`
-				padding: 0.0625rem;
+				display: block;
 				width: calc(5 * ${remSpace[4]});
 				height: ${remSpace[4]};
 			`;
 		case 'large':
 			return css`
-				padding: 0.125rem;
+				display: block;
 				width: calc(5 * ${remSpace[5]});
 				height: ${remSpace[5]};
 			`;
 	}
 };
+
+const figureStyles = (size: Size) => css`
+	display: block;
+	padding: ${size === 'large' ? '0.125rem' : '0.0625rem'};
+	margin: 0;
+	overflow: hidden;
+
+	figcaption {
+		text-indent: -1000px;
+	}
+`;
 
 export interface StarRatingProps {
 	/**
@@ -58,23 +69,17 @@ export const StarRating = ({
 	cssOverrides,
 	...props
 }: StarRatingProps): EmotionJSX.Element => {
-	const styles = css`
-		display: block;
-		margin: 0;
-		overflow: hidden;
-
-		figcaption {
-			text-indent: -1000px;
-		}
-	`;
-
 	return (
 		<figure
 			role="complementary"
-			css={[styles, determineSize(size), cssOverrides]}
+			css={[figureStyles(size), cssOverrides]}
 			{...props}
 		>
-			<svg viewBox={`0 0 ${24 * 5} 24`} fill={neutral[7]}>
+			<svg
+				css={svgSize(size)}
+				viewBox={`0 0 ${24 * 5} 24`}
+				fill={neutral[7]}
+			>
 				{Array(5)
 					.fill('')
 					.map((_, index) => {
