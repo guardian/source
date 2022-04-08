@@ -33,7 +33,7 @@ const determineSize = (size: Size) => {
 
 export interface StarRatingProps {
 	/**
-	 * The rating itself - expected to be `1`, `2`, `3`, `4` or `5`.
+	 * The rating itself - expected to be `0`, `1`, `2`, `3`, `4` or `5`.
 	 */
 	rating: number;
 	/**
@@ -58,7 +58,7 @@ export const StarRating = ({
 	cssOverrides,
 	...props
 }: StarRatingProps): EmotionJSX.Element => {
-	const backgroundImage = css`
+	const styles = css`
 		display: block;
 		margin: 0;
 		overflow: hidden;
@@ -71,7 +71,7 @@ export const StarRating = ({
 	return (
 		<figure
 			role="complementary"
-			css={[determineSize(size), backgroundImage, cssOverrides]}
+			css={[styles, determineSize(size), cssOverrides]}
 			{...props}
 		>
 			<svg viewBox={`0 0 ${24 * 5} 24`} fill={neutral[7]}>

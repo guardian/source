@@ -74,24 +74,24 @@ asChromaticStory(FiveStars);
 
 // *****************************************************************************
 
-export const Small = Template.bind({});
-Small.args = {
+export const SmallStars = Template.bind({});
+SmallStars.args = {
 	size: 'small',
 };
-asChromaticStory(Small);
+asChromaticStory(SmallStars);
 
 // *****************************************************************************
 
-export const Medium = Template.bind({});
-Medium.args = {
+export const MediumStars = Template.bind({});
+MediumStars.args = {
 	size: 'medium',
 };
-asChromaticStory(Medium);
+asChromaticStory(MediumStars);
 
 // *****************************************************************************
 
-export const Large = Template.bind({});
-Large.args = {
+export const LargeStars = Template.bind({});
+LargeStars.args = {
 	size: 'large',
 };
-asChromaticStory(Large);
+asChromaticStory(LargeStars);
