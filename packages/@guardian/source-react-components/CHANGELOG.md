@@ -1,5 +1,18 @@
 # @guardian/source-react-components
 
+## 4.3.0
+
+### Minor Changes
+
+- ecd0969c: expose spinner icon from components index
+
+### Patch Changes
+
+- 65049d62: Accessibility improvements to form components
+- d9bcb118: Add an icons svg folder and svgs for all icons
+- 8a13ceeb: Expose new icon names
+- ddfac4ac: Add `@deprecated` jsdoc hints so that VS Code will let you know if you use deprecated features.
+
 ## 4.2.0
 
 ### Minor Changes
