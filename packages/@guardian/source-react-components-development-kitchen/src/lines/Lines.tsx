@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { palette } from '@guardian/source-foundations';
+import { neutral } from '@guardian/source-foundations';
 import { DashedLines } from './DashedLines';
 import { DottedLines } from './DottedLines';
 import { SquigglyLines } from './SquigglyLines';
@@ -35,7 +35,7 @@ export interface LinesProps {
 export const Lines = ({
 	effect = 'straight',
 	count = 4,
-	color = palette.neutral[86],
+	color = neutral[86],
 	cssOverrides,
 }: LinesProps): EmotionJSX.Element => {
 	switch (effect) {
