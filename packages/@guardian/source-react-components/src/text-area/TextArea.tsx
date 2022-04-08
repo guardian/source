@@ -94,26 +94,29 @@ export const TextArea = ({
 	};
 
 	return (
-		<Label
-			text={labelText}
-			supporting={supporting}
-			optional={!!optional}
-			hideLabel={hideLabel}
-		>
-			{error && (
-				<div css={inlineMessageMargin}>
-					<InlineError id={descriptionId(textAreaId)}>
-						{error}
-					</InlineError>
-				</div>
-			)}
-			{!error && success && (
-				<div css={inlineMessageMargin}>
-					<InlineSuccess id={descriptionId(textAreaId)}>
-						{success}
-					</InlineSuccess>
-				</div>
-			)}
+		<>
+			<Label
+				text={labelText}
+				supporting={supporting}
+				optional={!!optional}
+				hideLabel={hideLabel}
+				htmlFor={textAreaId}
+			>
+				{error && (
+					<div css={inlineMessageMargin}>
+						<InlineError id={descriptionId(textAreaId)}>
+							{error}
+						</InlineError>
+					</div>
+				)}
+				{!error && success && (
+					<div css={inlineMessageMargin}>
+						<InlineSuccess id={descriptionId(textAreaId)}>
+							{success}
+						</InlineSuccess>
+					</div>
+				)}
+			</Label>
 			<textarea
 				css={[
 					widthFluid,
@@ -134,6 +137,6 @@ export const TextArea = ({
 				className={getClassName()}
 				{...props}
 			/>
-		</Label>
+		</>
 	);
 };

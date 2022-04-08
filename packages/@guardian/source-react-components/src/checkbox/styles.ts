@@ -19,14 +19,14 @@ export const fieldset = css`
 	flex-direction: column;
 `;
 
-export const label = (
+export const checkboxContainer = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
 	position: relative;
 	display: flex;
 	align-items: center;
-	cursor: pointer;
 	min-height: ${height.inputMedium}px;
+	cursor: pointer;
 
 	&:hover {
 		input {
@@ -35,7 +35,11 @@ export const label = (
 	}
 `;
 
-export const labelWithSupportingText = css`
+export const label: SerializedStyles = css`
+	cursor: pointer;
+`;
+
+export const checkboxContainerWithSupportingText = css`
 	align-items: flex-start;
 	margin-bottom: ${space[3]}px;
 `;
@@ -55,7 +59,6 @@ export const checkbox = (
 	position: relative;
 	transition: box-shadow ${transitions.short};
 	transition-delay: 0.08s;
-
 	color: ${checkbox.border};
 
 	&:focus {

@@ -95,26 +95,29 @@ export const TextInput = ({
 }: TextInputProps): EmotionJSX.Element => {
 	const textInputId = id ?? generateSourceId();
 	return (
-		<Label
-			text={labelText}
-			optional={!!optional}
-			hideLabel={hideLabel}
-			supporting={supporting}
-		>
-			{error && (
-				<div css={inlineMessageMargin}>
-					<InlineError id={descriptionId(textInputId)}>
-						{error}
-					</InlineError>
-				</div>
-			)}
-			{!error && success && (
-				<div css={inlineMessageMargin}>
-					<InlineSuccess id={descriptionId(textInputId)}>
-						{success}
-					</InlineSuccess>
-				</div>
-			)}
+		<>
+			<Label
+				text={labelText}
+				optional={!!optional}
+				hideLabel={hideLabel}
+				supporting={supporting}
+				htmlFor={textInputId}
+			>
+				{error && (
+					<div css={inlineMessageMargin}>
+						<InlineError id={descriptionId(textInputId)}>
+							{error}
+						</InlineError>
+					</div>
+				)}
+				{!error && success && (
+					<div css={inlineMessageMargin}>
+						<InlineSuccess id={descriptionId(textInputId)}>
+							{success}
+						</InlineSuccess>
+					</div>
+				)}
+			</Label>
 			<input
 				css={(theme) => [
 					width ? widths[width] : widthFluid,
@@ -134,6 +137,6 @@ export const TextInput = ({
 				required={!optional}
 				{...props}
 			/>
-		</Label>
+		</>
 	);
 };

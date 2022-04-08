@@ -16,25 +16,30 @@ export const fieldset = (
 	radio = radioThemeDefault.radio,
 ): SerializedStyles => css`
 	${resets.fieldset};
-	display: flex;
-	justify-content: flex-start;
 
 	&[aria-invalid='true'] input {
 		border: 4px solid ${radio.borderError};
 	}
 `;
 
-export const label = (radio = radioThemeDefault.radio): SerializedStyles => css`
-	cursor: pointer;
+export const radioContainer = (
+	radio = radioThemeDefault.radio,
+): SerializedStyles => css`
+	position: relative;
 	display: flex;
 	align-items: center;
 	min-height: ${height.inputMedium}px;
+	cursor: pointer;
 
 	&:hover {
 		input {
 			border-color: ${radio.borderHover};
 		}
 	}
+`;
+
+export const label: SerializedStyles = css`
+	cursor: pointer;
 `;
 
 export const labelWithSupportingText = css`
@@ -116,26 +121,4 @@ export const supportingText = (
 ): SerializedStyles => css`
 	${textSans.small({ lineHeight: 'regular' })};
 	color: ${radio.textLabelSupporting};
-`;
-
-/*
-TODO: Chrome <86 doesn't allow us to use display:flex on fieldsets.
-The display:block and vertical-align:middle here are a workaround
-which can be replaced by flex-direction:row when the issue is fixed
-https://bugs.chromium.org/p/chromium/issues/detail?id=375693
-*/
-export const horizontal = css`
-	display: block;
-
-	label {
-		display: inline-flex;
-		margin-right: ${space[5]}px;
-	}
-	input,
-	.src-radio-label-text {
-		vertical-align: middle;
-	}
-`;
-export const vertical = css`
-	flex-direction: column;
 `;
