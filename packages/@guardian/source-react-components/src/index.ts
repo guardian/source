@@ -114,13 +114,6 @@ export { SvgTwitter } from './icons/components/SvgTwitter';
 export { SvgVideo } from './icons/components/SvgVideo';
 export { SvgWhatsApp } from './icons/components/SvgWhatsApp';
 
-// Legacy icon API. Remove these aliases in a future major version bump
-export { SvgExclamation as SvgAlert } from './icons/components/SvgExclamation';
-export { SvgInfoRound as SvgInfo } from './icons/components/SvgInfoRound';
-export { SvgFacebookMessenger as SvgMessenger } from './icons/components/SvgFacebookMessenger';
-export { SvgCrossedOutCloud as SvgOfflineCloud } from './icons/components/SvgCrossedOutCloud';
-export { SvgMediaControlsPlay as SvgPlay } from './icons/components/SvgMediaControlsPlay';
-
 export type { IconProps, IconSize } from './icons/types';
 
 export { labelThemeDefault, labelThemeBrand } from './label/theme';
