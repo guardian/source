@@ -1,5 +1,15 @@
 # @guardian/source-foundations
 
+## 4.2.0
+
+### Minor Changes
+
+- 777b8d41: Typography constants with IDE hints
+
+### Patch Changes
+
+- ddfac4ac: Add `@deprecated` jsdoc hints so that VS Code will let you know if you use deprecated features.
+
 ## 4.1.0
 
 ### Minor Changes
