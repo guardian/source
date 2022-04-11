@@ -1,5 +1,14 @@
 # @guardian/source-react-components
 
+## 4.3.1
+
+### Patch Changes
+
+- 825e71e1: move legacy icon exports to `deprecated-exports`
+- 44816e06: Move deprecated exports to their own file, and export them from there.
+
+  This just keeps things cleaner internally.
+
 ## 4.3.0
 
 ### Minor Changes
