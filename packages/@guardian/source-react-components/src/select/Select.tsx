@@ -70,20 +70,25 @@ export const Select = ({
 }: SelectProps): EmotionJSX.Element => {
 	const selectId = id ?? generateSourceId();
 	return (
-		<Label
-			text={labelText}
-			optional={!!optional}
-			supporting={supporting}
-			hideLabel={hideLabel}
-		>
-			{error && (
-				<InlineError id={descriptionId(selectId)}>{error}</InlineError>
-			)}
-			{!error && success && (
-				<InlineSuccess id={descriptionId(selectId)}>
-					{success}
-				</InlineSuccess>
-			)}
+		<>
+			<Label
+				text={labelText}
+				optional={!!optional}
+				supporting={supporting}
+				hideLabel={hideLabel}
+				htmlFor={selectId}
+			>
+				{error && (
+					<InlineError id={descriptionId(selectId)}>
+						{error}
+					</InlineError>
+				)}
+				{!error && success && (
+					<InlineSuccess id={descriptionId(selectId)}>
+						{success}
+					</InlineSuccess>
+				)}
+			</Label>
 			<div
 				css={(theme) => [
 					selectWrapper(theme.select),
@@ -110,6 +115,6 @@ export const Select = ({
 				</select>
 				<SvgChevronDownSingle />
 			</div>
-		</Label>
+		</>
 	);
 };

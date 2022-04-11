@@ -1,3 +1,5 @@
+export * from './deprecated-exports';
+
 export type { AccordionProps } from './accordion/Accordion';
 export { Accordion } from './accordion/Accordion';
 export { AccordionRow } from './accordion/AccordionRow';
@@ -187,9 +189,3 @@ export {
 	userFeedbackThemeBrand,
 	userFeedbackThemeDefault,
 } from './user-feedback/theme';
-
-/**
- * @deprecated This is for internal use only. It was previously exported so the v3 `src-*` modules could use it.
- * It will be removed from the public interface in v5.
- */
-export type Props = import('./@types/Props').Props; // eslint-disable-line @typescript-eslint/consistent-type-imports -- we want to apply the jsdoc @deprecated tag only the the public export, not the actual type itself
