@@ -5,8 +5,15 @@
   "license": "Apache-2.0",
   "main": "index.js",
   "scripts": {
-    "test:components": "jest",
-    "test:types": "tsc",
-    "validate": "yarn test:components && yarn test:types"
+    "test": "jest && tsc"
+  },
+  "dependencies": {
+    "@guardian/source-foundations": "4.2.0",
+    "@guardian/source-react-components": "4.3.1",
+    "@guardian/source-react-components-development-kitchen": "0.0.34"
+  },
+  "devDependencies": {
+    "jest": "^27.2.3",
+    "ts-jest": "^27.0.5"
   }
 }
