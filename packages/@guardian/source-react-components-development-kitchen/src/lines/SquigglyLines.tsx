@@ -50,6 +50,8 @@ export const SquigglyLines = ({
 			viewBox={viewBox}
 			preserveAspectRatio="xMinYMin meet"
 			css={cssOverrides}
+			aria-hidden="true"
+			focusable="false"
 		>
 			<defs>
 				<pattern

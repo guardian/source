@@ -45,6 +45,8 @@ export const StraightLines = ({
 			stroke={color}
 			strokeWidth={thickness}
 			css={cssOverrides}
+			aria-hidden="true"
+			focusable="false"
 		>
 			{lines}
 		</svg>
