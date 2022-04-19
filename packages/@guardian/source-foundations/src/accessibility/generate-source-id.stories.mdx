@@ -7,8 +7,17 @@ import { Meta } from '@storybook/addon-docs';
 
 # `generateSourceId`
 
-?
+A function that generates a unique ID for an element of the form `src-component-X` where `X` is a number.
 
-```
+```tsx
+import { generateSourceId } from '@guardian/source-foundations';
 
+const Form = () => {
+	const id = generateSourceId();
+	return (
+		<form>
+			<input id={id} type="text" />
+		</form>
+	);
+};
 ```
