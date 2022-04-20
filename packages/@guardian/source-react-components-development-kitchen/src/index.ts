@@ -7,6 +7,10 @@ export type { EditorialButtonProps } from './editorial-button/EditorialButton';
 export type { EditorialLinkButtonProps } from './editorial-button/EditorialLinkButton';
 
 export { Lines } from './lines/Lines';
+export { SquigglyLines } from './lines/SquigglyLines';
+export { DashedLines } from './lines/DashedLines';
+export { DottedLines } from './lines/DottedLines';
+export { StraightLines } from './lines/StraightLines';
 export type { LineCount, LinesProps } from './lines/Lines';
 
 export { Logo } from './logo/Logo';

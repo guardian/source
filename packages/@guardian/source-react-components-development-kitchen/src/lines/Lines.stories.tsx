@@ -3,19 +3,33 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
+import { DashedLines as DashedLinesComponent } from './DashedLines';
+import { DottedLines as DottedLinesComponent } from './DottedLines';
 import type { LinesProps } from './Lines';
-import { Lines } from './Lines';
+import { SquigglyLines as SquigglyLinesComponent } from './SquigglyLines';
+import { StraightLines as StraightLinesComponent } from './StraightLines';
 
 export default {
 	title: 'Packages/source-react-components-development-kitchen/Lines',
-	component: Lines,
+	component: StraightLinesComponent,
 	args: {
-		effect: 'straight',
 		count: '4',
 	},
 };
 
-const Template: Story = (args: LinesProps) => <Lines {...args} />;
+const Template: Story = (args: LinesProps) => {
+	switch (args.effect) {
+		case 'dotted':
+			return <DottedLinesComponent {...args} />;
+		case 'dashed':
+			return <DashedLinesComponent {...args} />;
+		case 'squiggly':
+			return <SquigglyLinesComponent {...args} />;
+		case 'straight':
+		default:
+			return <StraightLinesComponent {...args} />;
+	}
+};
 
 // *****************************************************************************
 
