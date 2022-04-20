@@ -31,6 +31,12 @@ export interface LinesProps {
  * [Design System](https://theguardian.design) •
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/lines) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
+ *
+ * @deprecated prefer using the right line type component directly:
+ * - `StraightLines`
+ * - `SquigglyLines`
+ * - `DottedLines`
+ * - `DashedLines`
  */
 export const Lines = ({
 	effect = 'straight',

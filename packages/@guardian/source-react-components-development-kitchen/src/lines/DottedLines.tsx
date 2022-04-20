@@ -1,6 +1,6 @@
 import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { breakpoints } from '@guardian/source-foundations';
+import { breakpoints, neutral } from '@guardian/source-foundations';
 import type { LineCount } from './Lines';
 
 const dotRadius = 1;
@@ -10,12 +10,12 @@ const maxWidth = breakpoints.wide;
 export const getHeight = (count: LineCount): number => gridSize * count;
 
 export const DottedLines = ({
-	count,
-	color,
+	count = 4,
+	color = neutral[86],
 	cssOverrides,
 }: {
-	count: LineCount;
-	color: string;
+	count?: LineCount;
+	color?: string;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 }): EmotionJSX.Element => {
 	const dots = [];
