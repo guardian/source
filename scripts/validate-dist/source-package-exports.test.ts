@@ -82,7 +82,9 @@ describe('No exports have changed in the ', () => {
 	it('@guardian/source-react-components-development-kitchen package', () => {
 		expect(packageExports(sourceReactComponentsDevelopmentKitchen)).toEqual(
 			[
+				'DashedLines',
 				'Divider',
+				'DottedLines',
 				'EditorialButton',
 				'EditorialLinkButton',
 				'ErrorSummary',
@@ -90,7 +92,9 @@ describe('No exports have changed in the ', () => {
 				'Lines',
 				'Logo',
 				'QuoteIcon',
+				'SquigglyLines',
 				'StarRating',
+				'StraightLines',
 				'SuccessSummary',
 				'ToggleSwitch',
 			],
