@@ -79,6 +79,8 @@ export const StarRating = ({
 				css={svgSize(size)}
 				viewBox={`0 0 ${24 * 5} 24`}
 				fill={neutral[7]}
+				aria-hidden="true"
+				focusable="false"
 			>
 				{Array(5)
 					.fill('')
