@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest && tsc"
+    "test": "jest --coverage && tsc"
   },
   "dependencies": {
     "@guardian/source-foundations": "4.2.0",

@@ -6,7 +6,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "yarn ts-node index.ts",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "axios": "^0.24.0",

@@ -20,7 +20,7 @@
     "prepare": "husky install",
     "release": "yarn clean && yarn build:packages && changeset publish",
     "storybook": "start-storybook -p 6006",
-    "test": "nx run-many --target=test --all --coverage",
+    "test": "nx run-many --target=test --all",
     "tsc": "tsc",
     "validate": "npm-run-all tsc lint test",
     "validate-dist": "yarn build && yarn workspace validate-dist validate"

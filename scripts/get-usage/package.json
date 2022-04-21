@@ -7,7 +7,7 @@
   "author": "",
   "main": "index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "react-scanner": "^1.0.0",
