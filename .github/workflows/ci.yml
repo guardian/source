@@ -49,3 +49,17 @@ jobs:
       - name: Verify
         run: yarn workspace validate-dist validate
 
+  integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.4.0
+      - uses: guardian/actions-setup-node@v2.4.1
+        with:
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - name: Test ESLint plugins
+        run: |
+          yarn build:eslint
+          rm -rf ./scripts/eslint-integration-test/node_modules
+          yarn install --frozen-lockfile
+          yarn workspace eslint-integration-test test
