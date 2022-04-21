@@ -8,9 +8,9 @@
     "test": "jest --coverage && tsc"
   },
   "dependencies": {
-    "@guardian/source-foundations": "4.2.0",
-    "@guardian/source-react-components": "4.3.1",
-    "@guardian/source-react-components-development-kitchen": "0.0.34"
+    "@guardian/source-foundations": "file:../../packages/@guardian/source-foundations",
+    "@guardian/source-react-components": "file:../../packages/@guardian/source-react-components",
+    "@guardian/source-react-components-development-kitchen": "file:../../packages/@guardian/source-react-components-development-kitchen"
   },
   "devDependencies": {
     "jest": "^27.2.3",
