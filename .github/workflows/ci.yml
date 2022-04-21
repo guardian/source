@@ -45,7 +45,7 @@ jobs:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
       - name: Build packages
-        run: yarn build:packages
+        run: yarn build
       - name: Verify
         run: yarn workspace validate-dist validate
 

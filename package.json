@@ -17,7 +17,7 @@
     "lint:js": "eslint . --ext .ts,.tsx,.js",
     "lint:styles": "stylelint packages/**/styles.ts",
     "prepare": "husky install",
-    "release": "yarn clean && yarn build:packages && changeset publish",
+    "release": "yarn clean && yarn build && changeset publish",
     "storybook": "start-storybook -p 6006",
     "test": "nx run-many --target=test --all",
     "tsc": "tsc",
