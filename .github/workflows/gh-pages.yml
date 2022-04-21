@@ -11,13 +11,9 @@ jobs:
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'yarn'
-      - name: build
-        run: |
-          yarn install --frozen-lockfile
-          yarn validate
-          yarn build:storybook:ci
-      - name: deploy
+      - run: yarn install --frozen-lockfile
+      - run: yarn build:storybook
+      - uses: maxheld83/ghpages@v0.3.0
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
           BUILD_DIR: 'dist/'
-        uses: maxheld83/ghpages@v0.3.0
