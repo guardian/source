@@ -1,5 +1,13 @@
 # @guardian/source-react-components-development-kitchen
 
+## 0.0.35
+
+### Patch Changes
+
+- 56471081: Use an SVG to render straight lines, too.
+- 96510c75: StarRating uses pure SVG instead of a background-image.
+- 56471081: Drop the background-image repeating css rules in favour of pure SVG patterns that can fill up to our largest breakpoint of 1300px.
+
 ## 0.0.34
 
 ### Patch Changes
