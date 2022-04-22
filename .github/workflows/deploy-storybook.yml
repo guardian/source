@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Storybook to GitHub Pages
 on:
   push:
     branches:
@@ -14,10 +14,8 @@ jobs:
       - name: build
         run: |
           yarn install --frozen-lockfile
-          yarn validate
-          yarn build:storybook:ci
+          yarn build:storybook
       - name: deploy
+        run: yarn storybook-to-ghpages --ci
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-          BUILD_DIR: 'dist/'
-        uses: maxheld83/ghpages@v0.3.0
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

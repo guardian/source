@@ -6,7 +6,7 @@ on:
       - '[0-9]+.[0-9]+'
   workflow_dispatch:
 jobs:
-  validate:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.4.0
@@ -14,8 +14,9 @@ jobs:
         with:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn validate:ci
-  build:
+      - run: yarn lint
+
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.4.0
@@ -23,8 +24,9 @@ jobs:
         with:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn build:storybook:ci
-  validate-dist:
+      - run: yarn test
+
+  type-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.4.0
@@ -32,4 +34,32 @@ jobs:
         with:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn validate-dist
+      - run: yarn tsc
+
+  verify-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.4.0
+      - uses: guardian/actions-setup-node@v2.4.1
+        with:
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - name: Build packages
+        run: yarn build:packages
+      - name: Verify
+        run: yarn workspace validate-dist validate
+
+  integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.4.0
+      - uses: guardian/actions-setup-node@v2.4.1
+        with:
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - name: Test ESLint plugins
+        run: |
+          yarn build:eslint
+          rm -rf ./scripts/eslint-integration-test/node_modules
+          yarn install --frozen-lockfile
+          yarn workspace eslint-integration-test test
