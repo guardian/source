@@ -59,6 +59,7 @@
     "@storybook/core-events": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
     "@storybook/react": "^6.4.19",
+    "@storybook/storybook-deployer": "^2.8.11",
     "@storybook/theming": "^6.4.19",
     "@types/jest": "^27.0.2",
     "babel-loader": "^8.2.2",
