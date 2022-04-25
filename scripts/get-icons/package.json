@@ -8,7 +8,7 @@
     "start": "yarn ts-node index.ts"
   },
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^0.26.1",
     "js-beautify": "^1.14.0",
     "node-html-parser": "^5.1.0"
   },
