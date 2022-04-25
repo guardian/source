@@ -21,7 +21,7 @@
     "@rollup/plugin-node-resolve": "^13.0.5",
     "rollup": "^2.56.3",
     "rollup-plugin-dts": "^4.0.0",
-    "rollup-plugin-ts": "^1.4.7"
+    "rollup-plugin-ts": "^2.0.7"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
