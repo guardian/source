@@ -29,7 +29,7 @@
   "devDependencies": {
     "@guardian/eslint-config": "^1.0.0",
     "@guardian/eslint-config-typescript": "^1.0.0",
-    "@types/estree": "^0.0.50",
+    "@types/estree": "^0.0.51",
     "rollup": "^2.56.3",
     "rollup-plugin-dts": "^4.0.0",
     "rollup-plugin-ts": "^1.4.7",
