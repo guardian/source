@@ -1668,10 +1668,10 @@
     "@typescript-eslint/eslint-plugin" "5.9.1"
     "@typescript-eslint/parser" "5.9.1"
 
-"@guardian/libs@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@guardian/libs/-/libs-3.0.0.tgz#d54813f12f77cede9ee681033f251383ea379acd"
-  integrity sha512-s2NEuE+rX2IyQohFWjKA0OV2GT7HPmh/2QO7cXaZirvMAhrgmEDXu7MSfHfqaLJybpDskUCyik6Yo73qgfnJdg==
+"@guardian/libs@3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-3.2.1.tgz#96368fcd76f63b842708ea1489275bd3200f5e4b"
+  integrity sha512-/o84jYYlodIfKs+aRj1QoluHnQ/OdgJN/v1FONwGCf7eGn6RYn9BCh5QvHRujpoSqzgq435tzx5Ug3EF1wWvfQ==
 
 "@guardian/prettier@^0.7.0":
   version "0.7.0"
