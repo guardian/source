@@ -22,7 +22,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/eslint-plugin": "5.20.0",
     "@typescript-eslint/parser": "5.9.1",
     "eslint-plugin-import": "2.25.4"
   },
