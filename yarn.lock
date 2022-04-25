@@ -1637,13 +1637,15 @@
     strip-json-comments "^3.1.1"
 
 "@guardian/eslint-config-typescript@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@guardian/eslint-config-typescript/-/eslint-config-typescript-1.0.0.tgz#1780c31405a29546ebd1435b2ab718f45af21b56"
-  integrity sha512-8j3HI/Mog4VEswTHk7rzWH4x0R3/0B6PW1XLp20Te2aj/wtOTwIyIH6HfVPeuQ7mi/tHns8wwqmZb0jSyMF4Dw==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@guardian/eslint-config-typescript/-/eslint-config-typescript-1.0.1.tgz#4411d107a514b6eee486ba18402faf238cddbae1"
+  integrity sha512-DuGJsGg5xU7E8VA9/5gX+qF29SfHS8gbTQO2UMnnqwhVjuhF25Pnt04KkNCVnS2o/H+TqA6Y918A4yfNi3Uk1A==
   dependencies:
     "@guardian/eslint-config" "^1.0.0"
     "@typescript-eslint/eslint-plugin" "5.6.0"
     "@typescript-eslint/parser" "5.6.0"
+    eslint-import-resolver-typescript "2.5.0"
+    eslint-plugin-import "2.25.3"
 
 "@guardian/eslint-config@^1.0.0":
   version "1.0.0"
@@ -6710,7 +6712,7 @@ eslint-import-resolver-node@^0.3.6:
     debug "^3.2.7"
     resolve "^1.20.0"
 
-eslint-import-resolver-typescript@^2.5.0:
+eslint-import-resolver-typescript@2.5.0, eslint-import-resolver-typescript@^2.5.0:
   version "2.5.0"
   resolved "https://registry.npmjs.org/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.5.0.tgz#07661966b272d14ba97f597b51e1a588f9722f0a"
   integrity sha512-qZ6e5CFr+I7K4VVhQu3M/9xGv9/YmwsEXrsm3nimw8vWaVHRDrQRp26BgCypTxBp3vUp4o5aVEJRiy0F2DFddQ==
