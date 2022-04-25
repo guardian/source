@@ -8,12 +8,17 @@ updates:
   - package-ecosystem: 'npm' # See documentation for possible values
     directory: '/' # Location of package manifests
     schedule:
-      interval: 'weekly'
+      interval: 'monthly'
       day: 'monday'
       time: '06:00'
+    open-pull-requests-limit: 100
+    # Minimise the number of chromatic runs.
+    # We've enabled 'Require branches to be up to date before merging',
+    # so you won't be able to merge a dependabot PR unless you rebase manually anyway.
+    rebase-strategy: "disabled"
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: 'monthly'
       day: 'monday'
       time: '06:00'
