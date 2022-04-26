@@ -13,7 +13,6 @@
   "license": "Apache-2.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -30,9 +29,8 @@
     "@guardian/eslint-config": "^1.0.0",
     "@guardian/eslint-config-typescript": "^1.0.0",
     "@types/estree": "^0.0.50",
-    "rollup": "^2.56.3",
-    "rollup-plugin-dts": "^4.0.0",
-    "rollup-plugin-ts": "^1.4.7",
+    "rollup": "^2.70.1",
+    "rollup-plugin-ts": "^2.0.5",
     "typescript": "^4.4.3"
   },
   "peerDependencies": {

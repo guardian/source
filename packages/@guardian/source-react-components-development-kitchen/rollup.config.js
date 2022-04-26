@@ -1,4 +1,3 @@
-import dts from 'rollup-plugin-dts';
 import ts from 'rollup-plugin-ts';
 import pkg from './package.json';
 
@@ -26,13 +25,5 @@ export default [
 				preserveModules: true,
 			},
 		],
-	}),
-	bundle({
-		plugins: [dts()],
-		output: {
-			dir: pkg.types.replace('/index.d.ts', ''),
-			format: 'es',
-			preserveModules: true,
-		},
 	}),
 ];

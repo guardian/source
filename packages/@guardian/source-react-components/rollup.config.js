@@ -1,5 +1,4 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
-import dts from 'rollup-plugin-dts';
 import ts from 'rollup-plugin-ts';
 import pkg from './package.json';
 
@@ -28,16 +27,5 @@ export default [
 			nodeResolve({ extensions: ['.ts', '.tsx', '.mjs', '.jsx', '.js'] }),
 			ts({ tsconfig: '../../../tsconfig.json' }),
 		],
-	},
-	{
-		input: 'src/index.ts',
-		output: {
-			dir: pkg.types.replace('/index.d.ts', ''),
-			preserveModules: true,
-			format: 'es',
-			sourcemap: true,
-		},
-		external,
-		plugins: [dts()],
 	},
 ];

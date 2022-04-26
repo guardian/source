@@ -1,4 +1,3 @@
-import dts from 'rollup-plugin-dts';
 import ts from 'rollup-plugin-ts';
 import pkg from './package.json';
 
@@ -23,12 +22,5 @@ export default [
 				sourcemap: true,
 			},
 		],
-	}),
-	bundle({
-		plugins: [dts()],
-		output: {
-			file: pkg.types,
-			format: 'es',
-		},
 	}),
 ];
