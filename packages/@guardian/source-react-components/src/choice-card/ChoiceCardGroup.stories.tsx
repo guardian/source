@@ -317,23 +317,24 @@ asChromaticStory(ControlledSingleSelectDefaultTheme);
 
 // *****************************************************************************
 
-export const UnControlledMultiSelectDefaultTheme: Story<ChoiceCardGroupProps> =
-	(args: ChoiceCardGroupProps) => (
-		<ChoiceCardGroup {...args}>
-			<ChoiceCard
-				id="abc1"
-				value="option-1"
-				label="Option 1"
-				defaultChecked
-			/>
-			<ChoiceCard
-				id="abc2"
-				value="option-2"
-				label="Option 2"
-				defaultChecked
-			/>
-		</ChoiceCardGroup>
-	);
+export const UnControlledMultiSelectDefaultTheme: Story<
+	ChoiceCardGroupProps
+> = (args: ChoiceCardGroupProps) => (
+	<ChoiceCardGroup {...args}>
+		<ChoiceCard
+			id="abc1"
+			value="option-1"
+			label="Option 1"
+			defaultChecked
+		/>
+		<ChoiceCard
+			id="abc2"
+			value="option-2"
+			label="Option 2"
+			defaultChecked
+		/>
+	</ChoiceCardGroup>
+);
 UnControlledMultiSelectDefaultTheme.args = {
 	multi: true,
 };
@@ -342,18 +343,19 @@ asChromaticStory(UnControlledMultiSelectDefaultTheme);
 
 // *****************************************************************************
 
-export const UnControlledSingleSelectDefaultTheme: Story<ChoiceCardGroupProps> =
-	(args: ChoiceCardGroupProps) => (
-		<ChoiceCardGroup {...args}>
-			<ChoiceCard id="abc1" value="option-1" label="Option 1" />
-			<ChoiceCard
-				id="abc2"
-				value="option-2"
-				label="Option 2"
-				defaultChecked
-			/>
-		</ChoiceCardGroup>
-	);
+export const UnControlledSingleSelectDefaultTheme: Story<
+	ChoiceCardGroupProps
+> = (args: ChoiceCardGroupProps) => (
+	<ChoiceCardGroup {...args}>
+		<ChoiceCard id="abc1" value="option-1" label="Option 1" />
+		<ChoiceCard
+			id="abc2"
+			value="option-2"
+			label="Option 2"
+			defaultChecked
+		/>
+	</ChoiceCardGroup>
+);
 UnControlledSingleSelectDefaultTheme.args = {
 	multi: false,
 };
