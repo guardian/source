@@ -15,7 +15,7 @@ updates:
     # Minimise the number of chromatic runs.
     # We've enabled 'Require branches to be up to date before merging',
     # so you won't be able to merge a dependabot PR unless you rebase manually anyway.
-    rebase-strategy: "disabled"
+    # rebase-strategy: "disabled"
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
