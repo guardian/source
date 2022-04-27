@@ -21,14 +21,14 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.9.1",
-    "@typescript-eslint/parser": "5.9.1",
-    "eslint-plugin-import": "2.25.4"
+    "@typescript-eslint/eslint-plugin": "5.21.0",
+    "@typescript-eslint/parser": "5.21.0",
+    "eslint-plugin-import": "2.26.0"
   },
   "devDependencies": {
     "@guardian/eslint-config": "^1.0.0",
     "@guardian/eslint-config-typescript": "^1.0.0",
-    "@types/estree": "^0.0.50",
+    "@types/estree": "^0.0.51",
     "rollup": "^2.70.1",
     "rollup-plugin-ts": "^2.0.5",
     "typescript": "^4.4.3"
