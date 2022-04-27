@@ -9,7 +9,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'yarn'
@@ -19,7 +19,7 @@ jobs:
   unit-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'yarn'
@@ -29,7 +29,7 @@ jobs:
   type-checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'yarn'
@@ -39,7 +39,7 @@ jobs:
   verify-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'yarn'
@@ -52,7 +52,7 @@ jobs:
   integration-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'yarn'
