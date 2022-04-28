@@ -2,7 +2,7 @@
 
 ## `fetch-icons`
 
-Pulls the SVG source of icons from Figma and updates icon components.
+Pulls the SVG source of icons from Figma and generates react components from them using [SVGR](https://github.com/gregberge/svgr).
 
 Run the script using the following command:
 
