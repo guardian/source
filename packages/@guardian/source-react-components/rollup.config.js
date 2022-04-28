@@ -10,13 +10,13 @@ export default [
 		input: 'src/index.ts',
 		output: [
 			{
-				dir: pkg.main.replace('/index.js', ''),
+				dir: pkg.main.replace('/src/index.js', ''),
 				format: 'cjs',
 				sourcemap: true,
 				preserveModules: true,
 			},
 			{
-				dir: pkg.module.replace('/index.js', ''),
+				dir: pkg.module.replace('/src/index.js', ''),
 				format: 'es',
 				sourcemap: true,
 				preserveModules: true,

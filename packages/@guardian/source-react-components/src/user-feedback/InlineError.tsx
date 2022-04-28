@@ -1,5 +1,5 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { SvgAlertTriangle } from '../vendor/icons/SvgAlertTriangle';
+import { SvgAlertTriangle } from '../../vendor/icons/SvgAlertTriangle';
 import { inlineError } from './styles';
 import type { UserFeedbackProps } from './types';
 

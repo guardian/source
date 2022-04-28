@@ -3,7 +3,7 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { SvgArrowRightStraight } from '../vendor/icons/SvgArrowRightStraight';
+import { SvgArrowRightStraight } from '../../vendor/icons/SvgArrowRightStraight';
 import { LinkButton } from './LinkButton';
 import type { LinkButtonProps } from './LinkButton';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
