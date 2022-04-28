@@ -4,7 +4,7 @@ import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations'
 import { useEffect, useState } from 'react';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
-import { SvgChevronDownSingle } from '../icons/components/SvgChevronDownSingle';
+import { SvgChevronDownSingle } from '../vendor/icons/SvgChevronDownSingle';
 import { AccordionRowNoJS } from './AccordionRowNoJS';
 import {
 	accordionRow,

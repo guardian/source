@@ -3,7 +3,7 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { SvgExternal } from '../icons/components/SvgExternal';
+import { SvgExternal } from '../vendor/icons/SvgExternal';
 import type { ButtonLinkProps } from './ButtonLink';
 import { ButtonLink } from './ButtonLink';
 

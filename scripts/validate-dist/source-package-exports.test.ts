@@ -174,6 +174,7 @@ describe('No exports have changed in the ', () => {
 			'SvgMinus',
 			'SvgOfflineCloud',
 			'SvgPayPal',
+			'SvgPayPalBrand',
 			'SvgPerson',
 			'SvgPinned',
 			'SvgPinterest',

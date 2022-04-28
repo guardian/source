@@ -3,7 +3,7 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { SvgExternal } from '../icons/components/SvgExternal';
+import { SvgExternal } from '../vendor/icons/SvgExternal';
 import { Link } from './Link';
 import type { LinkProps } from './Link';
 import { linkThemeBrand, linkThemeBrandAlt } from './theme';

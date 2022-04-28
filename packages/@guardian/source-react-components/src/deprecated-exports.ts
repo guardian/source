@@ -5,11 +5,12 @@
  */
 
 import type { Props as InternalPropsType } from './@types/Props';
-import { SvgCrossedOutCloud } from './icons/components/SvgCrossedOutCloud';
-import { SvgExclamation } from './icons/components/SvgExclamation';
-import { SvgFacebookMessenger } from './icons/components/SvgFacebookMessenger';
-import { SvgInfoRound } from './icons/components/SvgInfoRound';
-import { SvgMediaControlsPlay } from './icons/components/SvgMediaControlsPlay';
+import { SvgCrossedOutCloud } from './vendor/icons/SvgCrossedOutCloud';
+import { SvgExclamation } from './vendor/icons/SvgExclamation';
+import { SvgFacebookMessenger } from './vendor/icons/SvgFacebookMessenger';
+import { SvgInfoRound } from './vendor/icons/SvgInfoRound';
+import { SvgMediaControlsPlay } from './vendor/icons/SvgMediaControlsPlay';
+import { SvgPayPalBrand } from './vendor/icons/SvgPayPalBrand';
 
 /**
  * @deprecated This is for internal use only.
@@ -32,3 +33,6 @@ export const SvgInfo = SvgInfoRound;
 
 /** @deprecated Use `SvgMediaControlsPlay` instead. */
 export const SvgPlay = SvgMediaControlsPlay;
+
+/** @deprecated Use `SvgPayPalBrand` instead. */
+export const SvgPayPal = SvgPayPalBrand;
