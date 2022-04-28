@@ -8,6 +8,7 @@ package-lock.json
 .idea/
 .vscode/settings.json
 coverage/
+.eslintcache
 
 # scripts/get-usage
 scripts/get-usage/config.*.json
