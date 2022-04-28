@@ -16,11 +16,9 @@
     "test": "ts-node ./src/index.ts"
   },
   "dependencies": {
+    "@guardian/eslint-plugin-source-foundations": "file:../../packages/@guardian/eslint-plugin-source-foundations",
+    "@guardian/eslint-plugin-source-react-components": "file:../../packages/@guardian/eslint-plugin-source-react-components",
     "chalk": "^4.1.2",
     "ora": "^5.4.1"
-  },
-  "devDependencies": {
-    "@guardian/eslint-plugin-source-foundations": "file:../../packages/@guardian/eslint-plugin-source-foundations",
-    "@guardian/eslint-plugin-source-react-components": "file:../../packages/@guardian/eslint-plugin-source-react-components"
   }
 }
