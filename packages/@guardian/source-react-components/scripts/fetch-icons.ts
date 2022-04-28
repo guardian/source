@@ -9,19 +9,6 @@ import { labels } from '../src/icons/labels';
 
 const { writeFile, rm } = promises;
 
-/**
- * Fetch Icons from Figma
- * ==========================
- * Run this script manually using:
- *
- * `yarn workspace @guardian/source-react-components fetch-icons`
- *
- * to pull in updates to icons from Figma.
- *
- * We decided not to run it as part of the build process to ensure we don't
- * inadvertently pick up changes to icons as part of an unrelated change.
- */
-
 interface FigmaComponentsResponse {
 	meta: {
 		components: Array<{
