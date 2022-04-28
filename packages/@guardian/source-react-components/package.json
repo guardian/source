@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "fetch-icons": "ts-node scripts/fetch-icons.ts"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.2.0",

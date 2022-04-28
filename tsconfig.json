@@ -35,6 +35,11 @@
     "strictNullChecks": true,
     "target": "esnext"
   },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
   "include": ["packages", "lib", "@types", "scripts"],
   "exclude": ["node_modules", "dist"]
 }
