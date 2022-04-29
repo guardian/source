@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 0.0.36
+
+### Patch Changes
+
+- 0dc5d08e: Empty release to test release process
+
 ## 0.0.35
 
 ### Patch Changes
