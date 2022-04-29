@@ -19,7 +19,7 @@ const SPECIAL_CASES = {
 	isWide: ['direct-debit-wide'],
 };
 
-const VENDOR_ICON_PATH = path.resolve(__dirname, '..', 'vendor', 'icons');
+const VENDOR_ICON_PATH = path.resolve(__dirname, '..', '..', 'vendor', 'icons');
 
 const warning = [
 	'// DO NOT EDIT',
@@ -29,6 +29,8 @@ const warning = [
 
 // now we start fetching SVGs and building our components
 void (async () => {
+	console.log('Removing old icons');
+
 	// remove any existing icons from a previous run
 	try {
 		await rm(VENDOR_ICON_PATH, { recursive: true });
@@ -39,6 +41,8 @@ void (async () => {
 	// create the icons directory
 	await mkdirp(VENDOR_ICON_PATH);
 
+	console.log('Creating readme');
+
 	// create a readme
 	await writeFile(
 		path.resolve(VENDOR_ICON_PATH, 'README.md'),
@@ -46,25 +50,23 @@ void (async () => {
 		'utf8',
 	);
 
+	console.log('Getting SVGs from Figma');
+
 	const icons = await getIconsFromFigma();
+
+	console.log(`Creating components`);
 
 	// fetch the SVGs from Figma, create a react component from them using svgr
 	// and save them both
 	for (const icon of icons) {
-		const component = await createIconComponent({
+		const { component, componentName } = await createIconComponent({
 			icon,
 			retainFill: SPECIAL_CASES.retainFill.includes(icon.name),
 			isWideIcon: SPECIAL_CASES.isWide.includes(icon.name),
 		});
 
 		await writeFile(
-			path.resolve(VENDOR_ICON_PATH, `${icon.name}.svg`),
-			warning + icon.svg,
-			'utf8',
-		);
-
-		await writeFile(
-			path.resolve(VENDOR_ICON_PATH, `${icon.name}.tsx`),
+			path.resolve(VENDOR_ICON_PATH, `${componentName}.tsx`),
 			warning + component,
 			'utf8',
 		);

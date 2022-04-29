@@ -137,7 +137,9 @@ export const createIconComponent = async ({
 					''
 				)}
 			</>
-		);
-		`;
-	return [iconComponent, iconComponentExport].join('\n');
+		);`;
+	return {
+		componentName: iconComponentName,
+		component: [iconComponent, iconComponentExport].join('\n'),
+	};
 };

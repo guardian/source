@@ -18,9 +18,15 @@ interface FigmaImagesResponse {
 
 export const ICON_FILE = 'Ai7AELHC6KCz38qKZkvuHo';
 
+if (!process.env.FIGMA_TOKEN) {
+	console.log('FIGMA_TOKEN not set. Please add it to your .env file.');
+	console.log('See https://www.figma.com/developers/api#access-tokens');
+	process.exit(1);
+}
+
 const FIGMA_API_OPTIONS = {
 	headers: {
-		'X-Figma-Token': process.env.FIGMA_TOKEN ?? 'ADD ME!!!',
+		'X-Figma-Token': process.env.FIGMA_TOKEN,
 	},
 };
 
@@ -30,11 +36,7 @@ export const getIconsFromFigma = async () => {
 	const figmaComponents = (
 		await axios.get<FigmaComponentsResponse>(
 			`https://api.figma.com/v1/files/${ICON_FILE}/components`,
-			{
-				headers: {
-					'X-Figma-Token': process.env.FIGMA_TOKEN ?? 'ADD ME!!!',
-				},
-			},
+			FIGMA_API_OPTIONS,
 		)
 	).data.meta.components;
 
@@ -62,6 +64,8 @@ export const getIconsFromFigma = async () => {
 
 	for (const icon of figmaIconComponents) {
 		const url = figmaIconSvgUrlsByNodeId[icon.node_id];
+
+		console.log(`Fetching ${icon.name}.svg`);
 
 		// Fetch SVG markup from Figma
 		const svg = (await axios.get<string>(url)).data;
