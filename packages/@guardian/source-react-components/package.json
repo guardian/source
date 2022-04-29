@@ -15,8 +15,8 @@
   "scripts": {
     "build": "rollup -c",
     "clean": "rm -rf dist",
+    "create-icons": "ts-node scripts/create-icons",
     "e2e": "jest src/index.test.ts --setupFilesAfterEnv=./jest.e2e.setup.js",
-    "fetch-icons": "ts-node scripts/fetch-icons.ts",
     "test": "jest --coverage"
   },
   "devDependencies": {
