@@ -1,5 +1,5 @@
-import { noStarImportsOrExports } from '../../../../lib/eslint/rules/no-star-imports-or-exports';
-import { validFoundationsImportPath } from '../../../../lib/eslint/rules/valid-import-path';
+import { noStarImportsOrExports } from './rules/no-star-imports-or-exports';
+import { validFoundationsImportPath } from './rules/valid-import-path';
 
 export const rules = {
 	'valid-foundations-import-path': validFoundationsImportPath,
