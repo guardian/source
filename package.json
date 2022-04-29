@@ -29,6 +29,9 @@
     "package.json": "sort-package-json"
   },
   "prettier": "@guardian/prettier",
+  "resolutions": {
+    "trim": ">=0.0.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
