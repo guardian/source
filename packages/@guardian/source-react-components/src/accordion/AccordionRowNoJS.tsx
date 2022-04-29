@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
-import { SvgChevronDownSingle } from '../icons/components/SvgChevronDownSingle';
+import { SvgChevronDownSingle } from '../../vendor/icons/SvgChevronDownSingle';
 import type { AccordionRowProps } from './AccordionRow';
 import {
 	accordionRow,

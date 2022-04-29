@@ -7,19 +7,29 @@
   },
   "license": "Apache-2.0",
   "sideEffects": false,
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/cjs/src/index.js",
+  "module": "dist/esm/src/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rollup -c",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "fetch-icons": "ts-node scripts/fetch-icons.ts"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.2.0",
+    "@svgr/core": "^6.2.1",
+    "@svgr/plugin-jsx": "^6.2.1",
+    "@svgr/plugin-prettier": "^6.1.2",
+    "@svgr/plugin-svgo": "^6.2.0",
+    "@types/mkdirp": "^1.0.2",
+    "@types/svgo": "^2.6.3",
+    "axios": "^0.26.1",
+    "mkdirp": "^1.0.4",
     "rollup": "^2.70.1",
-    "rollup-plugin-ts": "^2.0.5"
+    "rollup-plugin-ts": "^2.0.5",
+    "ts-node": "^10.7.0"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",

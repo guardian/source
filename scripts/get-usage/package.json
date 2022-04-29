@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react-scanner": "^1.0.0",
+    "react-scanner": "^1.0.3",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
