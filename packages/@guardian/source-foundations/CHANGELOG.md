@@ -1,5 +1,11 @@
 # @guardian/source-foundations
 
+## 4.2.1
+
+### Patch Changes
+
+- 393c808d: Update focus colour
+
 ## 4.2.0
 
 ### Minor Changes
