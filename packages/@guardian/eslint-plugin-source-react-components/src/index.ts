@@ -1,4 +1,4 @@
-import { validImportPath } from '../../../../lib/eslint/rules/valid-import-path';
+import { validImportPath } from './rules/valid-import-path';
 
 export const rules = {
 	'valid-import-path': validImportPath,
