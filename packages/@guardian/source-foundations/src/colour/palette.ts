@@ -201,7 +201,7 @@ export const palette = {
 		800: colors.grays[17],
 	},
 	focus: {
-		400: colors.blues[13],
+		400: '#007CC4',
 	},
 };
 
