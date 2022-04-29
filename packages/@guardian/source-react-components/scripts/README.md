@@ -1,13 +1,13 @@
 # `@guardian/source-react-components` scripts
 
-## `fetch-icons`
+## `create-icons`
 
 Pulls the SVG source of icons from Figma and generates react components from them using [SVGR](https://github.com/gregberge/svgr).
 
 Run the script using the following command:
 
 ```sh
-yarn workspace @guardian/source-react-components fetch-icons
+yarn workspace @guardian/source-react-components create-icons
 ```
 
 It requires a Personal Access Token (PAT) to authenticate against the Figma API.
