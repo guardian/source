@@ -22,23 +22,22 @@ const Svg = ({ size }: IconProps): EmotionJSX.Element => (
 	</svg>
 );
 
-
-		export const SvgFacebookMessenger = ({
-			size,
-			isAnnouncedByScreenReader = false,
-		}: IconProps): EmotionJSX.Element => (
-			<>
-				<Svg size={size} />
-				{isAnnouncedByScreenReader ? (
-					<span
-						css={css`
-							${visuallyHidden}
-						`}
-					>
-						Facebook Messenger logo
-					</span>
-				) : (
-					''
-				)}
-			</>
-		);
+export const SvgFacebookMessenger = ({
+	size,
+	isAnnouncedByScreenReader = false,
+}: IconProps): EmotionJSX.Element => (
+	<>
+		<Svg size={size} />
+		{isAnnouncedByScreenReader ? (
+			<span
+				css={css`
+					${visuallyHidden}
+				`}
+			>
+				Facebook Messenger logo
+			</span>
+		) : (
+			''
+		)}
+	</>
+);

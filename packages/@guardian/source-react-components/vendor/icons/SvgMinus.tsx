@@ -22,23 +22,22 @@ const Svg = ({ size }: IconProps): EmotionJSX.Element => (
 	</svg>
 );
 
-
-		export const SvgMinus = ({
-			size,
-			isAnnouncedByScreenReader = false,
-		}: IconProps): EmotionJSX.Element => (
-			<>
-				<Svg size={size} />
-				{isAnnouncedByScreenReader ? (
-					<span
-						css={css`
-							${visuallyHidden}
-						`}
-					>
-						Minus sign
-					</span>
-				) : (
-					''
-				)}
-			</>
-		);
+export const SvgMinus = ({
+	size,
+	isAnnouncedByScreenReader = false,
+}: IconProps): EmotionJSX.Element => (
+	<>
+		<Svg size={size} />
+		{isAnnouncedByScreenReader ? (
+			<span
+				css={css`
+					${visuallyHidden}
+				`}
+			>
+				Minus sign
+			</span>
+		) : (
+			''
+		)}
+	</>
+);
