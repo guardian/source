@@ -1,3 +1,4 @@
+import { inspect } from 'node:util';
 import type { Rule } from 'eslint';
 import type {
 	ExportAllDeclaration,
@@ -312,34 +313,6 @@ const createReport = (context: Rule.RuleContext, node: Node, pkg: Package) => {
 	});
 };
 
-export const validImportPath: Rule.RuleModule = {
-	meta: {
-		type: 'problem',
-		docs: {
-			description: 'Get Source imports from v4 packages',
-			category: 'Deprecated',
-			url: 'https://github.com/guardian/source',
-		},
-		fixable: 'code',
-		schema: [],
-	},
-
-	create(context: Rule.RuleContext): Rule.RuleListener {
-		return {
-			ImportDeclaration(node) {
-				return createReport(context, node, 'all');
-			},
-			ExportNamedDeclaration(node) {
-				// e.g. export {Props} from '@guardian/src-helpers'
-				return createReport(context, node, 'all');
-			},
-			ExportAllDeclaration(node) {
-				// e.g. export * from '@guardian/src-foundations'`
-				return createReport(context, node, 'all');
-			},
-		};
-	},
-};
 export const validFoundationsImportPath: Rule.RuleModule = {
 	meta: {
 		type: 'problem',
@@ -352,7 +325,7 @@ export const validFoundationsImportPath: Rule.RuleModule = {
 		schema: [],
 	},
 
-	create(context: Rule.RuleContext): Rule.RuleListener {
+	create: (context: Rule.RuleContext): Rule.RuleListener => {
 		return {
 			ImportDeclaration(node) {
 				return createReport(context, node, 'foundations');
@@ -368,3 +341,7 @@ export const validFoundationsImportPath: Rule.RuleModule = {
 		};
 	},
 };
+
+console.log(
+	inspect(validFoundationsImportPath, false, null, true /* enable colors */),
+);
