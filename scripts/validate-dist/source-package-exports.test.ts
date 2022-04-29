@@ -188,6 +188,7 @@ describe('No exports have changed in the ', () => {
 			'SvgGlobe',
 			'SvgGoogleBrand',
 			'SvgGps',
+			'SvgGuardianBestWebsiteLogo',
 			'SvgGuardianLiveLogo',
 			'SvgGuardianLogo',
 			'SvgHandPointed',

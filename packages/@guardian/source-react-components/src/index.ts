@@ -26,6 +26,9 @@ export type { ButtonTheme } from './button/theme';
 export { SvgGuardianLogo } from './brand/SvgGuardianLogo';
 export type { SvgGuardianLogoProps } from './brand/SvgGuardianLogo';
 
+export { SvgGuardianBestWebsiteLogo } from './brand/SvgGuardianBestWebsiteLogo';
+export type { SvgGuardianBestWebsiteLogoProps } from './brand/SvgGuardianBestWebsiteLogo';
+
 export { SvgGuardianLiveLogo } from './brand/SvgGuardianLiveLogo';
 export type { SvgGuardianLiveLogoProps } from './brand/SvgGuardianLiveLogo';
 
