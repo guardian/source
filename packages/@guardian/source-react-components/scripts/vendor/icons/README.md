@@ -9,5 +9,5 @@ Figma](https://www.figma.com/file/Ai7AELHC6KCz38qKZkvuHo/%E2%97%90-Icons?node-id
 using the fetch-icons script via the Figma API:
 
 ```sh
-yarn workspace @guardian/source-react-components fetch-icons
+yarn workspace @guardian/source-react-components create-icons
 ```
