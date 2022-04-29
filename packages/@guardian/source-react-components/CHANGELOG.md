@@ -1,5 +1,12 @@
 # @guardian/source-react-components
 
+## 4.4.0
+
+### Minor Changes
+
+- a90b69a2: Add Guardian Best Website Logo
+- 8f401873: Fetch icon SVG markup from Figma, expose new icons
+
 ## 4.3.1
 
 ### Patch Changes
