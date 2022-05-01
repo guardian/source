@@ -2092,9 +2092,9 @@
     tslib "^2.3.0"
 
 "@nrwl/nx-cloud@latest":
-  version "13.2.2"
-  resolved "https://registry.npmjs.org/@nrwl/nx-cloud/-/nx-cloud-13.2.2.tgz#9eee1e9ea0b0c3a3a805208405fb6341a02123b4"
-  integrity sha512-ryGE3JBkSGie0Oy+hFHfiYVNt1BQlNGa3Q7RjeZjILFyNFXkSFzufWYCt1gIRiGlQ7+Q48t1m6gLi2afElNGmg==
+  version "14.0.3"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx-cloud/-/nx-cloud-14.0.3.tgz#fda3d75274ca6e8f4a6f469b294a4b65b54bdc28"
+  integrity sha512-08t9vnRzA5SAkG6gp+NrAGauraepHH0v4IByO4NQ+7JJ7JMWw0nt6fp/70wofRmem7MGQ+Y/AIgIc5T0m89k+w==
   dependencies:
     axios "^0.21.1"
     chalk "4.1.0"
