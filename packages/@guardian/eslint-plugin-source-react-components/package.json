@@ -28,7 +28,7 @@
     "@guardian/eslint-config": "^1.0.0",
     "@guardian/eslint-config-typescript": "^1.0.0",
     "@types/estree": "^0.0.51",
-    "rollup": "^2.70.1",
+    "rollup": "^2.71.1",
     "rollup-plugin-ts": "^2.0.5",
     "typescript": "^4.6.4"
   },
