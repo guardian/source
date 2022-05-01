@@ -2051,6 +2051,13 @@
   dependencies:
     nx "14.0.3"
 
+"@nrwl/cli@14.0.5":
+  version "14.0.5"
+  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-14.0.5.tgz#084b77f127ba13d3c32eed3e739720dde5309848"
+  integrity sha512-WlJ7s5Zvg8q43ydk8OamDNlc78rAN+HR2ocvWDqF/SVUmLebqTA4eWennLNIU7cyaB8tuGU6LW/MEpueQp43bw==
+  dependencies:
+    nx "14.0.5"
+
 "@nrwl/devkit@14.0.3":
   version "14.0.3"
   resolved "https://registry.npmjs.org/@nrwl/devkit/-/devkit-14.0.3.tgz#aa263c717ca08dcd7a619bd5f51d558fa5d440dc"
@@ -2108,6 +2115,13 @@
   integrity sha512-DCk8ktLSUol/8wZN8TlXnHzId8CpOxQwdeSLrJLfsdealHvTrbF8c8b7mSbaSihZ5nDlsEuHWvJZNLWPxQHBJA==
   dependencies:
     nx "14.0.3"
+
+"@nrwl/tao@14.0.5":
+  version "14.0.5"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-14.0.5.tgz#628f27081f91f336096096ce186253169af30b4d"
+  integrity sha512-sxnouiZALWF5ujp9XPf8HGbUS1KLIoUtN9IJ/H3lVV8jCQNJ1FPwriM9HPLYajORZ+nSU9DRi2aqMIuaI9yxhQ==
+  dependencies:
+    nx "14.0.5"
 
 "@nrwl/workspace@14.0.3":
   version "14.0.3"
@@ -3333,65 +3347,130 @@
   resolved "https://registry.npmjs.org/@swc/core-android-arm-eabi/-/core-android-arm-eabi-1.2.165.tgz#8fb8a8f15cd0a1d68b0d4056e03701f4027bed0b"
   integrity sha512-DjX1/5qElHOnlrqhefcZsD1LEspJWDLpW31SKv9cNT2T13U76MkcrHi5ePI50NhG/bWDpHuWFWfuEmgcU+mwHA==
 
+"@swc/core-android-arm-eabi@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-android-arm-eabi/-/core-android-arm-eabi-1.2.174.tgz#25cf7d3e22bfbd19e0fcbeecff36f418400482cd"
+  integrity sha512-sxH6jIq57wnZ8LyLKN8SXM4DhMo4aTq0mClo+zBMPTyHzNO5AEAwh5nqs+d51Dycs3epur/8iv/J6xDv+cKkfw==
+
 "@swc/core-android-arm64@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-android-arm64/-/core-android-arm64-1.2.165.tgz#14a2f0c3445929ac607a89e389c5dd8754a9fce4"
   integrity sha512-lPgG+td9/JlV3ZQiHZtdtqn+lZzGly+s/VQXfnaXgaHQE4JjWU2B4rhTVkVOQxEYbA/Cd9pszNWWxjJSrXytMA==
+
+"@swc/core-android-arm64@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-android-arm64/-/core-android-arm64-1.2.174.tgz#2282d1d1727d8a8083cc7de6b8a882d7a5904050"
+  integrity sha512-gGXBuY8Zs93eNduyrhm+rB+K/smF535uwmamHB1+7BrkuUtt/Lrk3vDTc4D61GMA/vBOqus9IXKHBc+EFmBbog==
 
 "@swc/core-darwin-arm64@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-darwin-arm64/-/core-darwin-arm64-1.2.165.tgz#296365622287d5019d193480ee7deafc0c1ff94f"
   integrity sha512-O6eFbCD4lZ4ZW2E1a4CsIo3zVTI5Tu2MpTbaVan7LvYyv2RK+tot9xjysVbOx/1nfgYDym9JLHU9gY/ayrdOtA==
 
+"@swc/core-darwin-arm64@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-darwin-arm64/-/core-darwin-arm64-1.2.174.tgz#06d6a8206b632d72dbee9da2eb03f532fff3fa37"
+  integrity sha512-dFxu2o8dR55A+d0Qf/Ai0yKnGjon/UT1hWnBY9tcyvgo7XsiFRB/P83tlbVohqq9N+SDVxdBg9bMAR2i8rDTHg==
+
 "@swc/core-darwin-x64@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-darwin-x64/-/core-darwin-x64-1.2.165.tgz#4e80d654287f65ea1cb842ca213692ebcaa0cac0"
   integrity sha512-R1WRiDnkmXWBkyNGR09WDq+mCFIujhdUs3e4QiHJih1HY2rKGXU0SZKoqaBTjeVerk/IYXaEnZM3Bx7sb0oyEQ==
+
+"@swc/core-darwin-x64@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-darwin-x64/-/core-darwin-x64-1.2.174.tgz#32803b267fc26c791575013909237f2639342b29"
+  integrity sha512-LsANlfBkqfJobPvfojTbUY9xw0ZwTxTicdwaK6BC5TLmYXVfvxvMpmhsvIe3bNlx4jV1z0IrFaJ0YxDSc1s6vw==
 
 "@swc/core-freebsd-x64@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-freebsd-x64/-/core-freebsd-x64-1.2.165.tgz#7f37255bad9958ef90e6367b7f3f9a329f913983"
   integrity sha512-bL7Jxy2is/+YLZedQsF5a7swpbq9RGsvtXJmx5Bi0JqaavqWpbICmQtTr9I2S97taw16S/k8vOJ6DPzEvgJWWQ==
 
+"@swc/core-freebsd-x64@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-freebsd-x64/-/core-freebsd-x64-1.2.174.tgz#c75175242cf7b36dfc7cff74c3e23c0f97ec63dc"
+  integrity sha512-IG0qc9/qUHmiqC6fqT3yq4iBwNRHN1zYbGpzQm4DU/d7DTwsV7D2A+1McFUKmnUOvBG7zdgg5ee91QxUVOCZTQ==
+
 "@swc/core-linux-arm-gnueabihf@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-linux-arm-gnueabihf/-/core-linux-arm-gnueabihf-1.2.165.tgz#bd576c091b0d76a8250d540b4d570cd12cfd9d2d"
   integrity sha512-6m+X7a0iw5G97WfkJBKNy7/KfSEivRVRHbWB4VvJgRanNIO4tb//LxlUJFn58frQJg+H7bMFyOXhDJ/taRYAyg==
+
+"@swc/core-linux-arm-gnueabihf@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm-gnueabihf/-/core-linux-arm-gnueabihf-1.2.174.tgz#34421b7a975550a5eac8b343e7796ff98506bf45"
+  integrity sha512-nK4U8s9++e5AVEhWz3W6V0tUsPPjYJlMsb4ZzZR2qhYe53YBURCznFIhUDwe0ib/f6T773Tn7sr52uemcQBu8A==
 
 "@swc/core-linux-arm64-gnu@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.2.165.tgz#9f3c6e4cdffa2084aa8ec24c36f5d1e69b408b78"
   integrity sha512-4roZScf8UZLhKTYBEqqbTNasZPqs3zDA2LF+SJuc4eFUGJyyrl9KgeVC08vTMtkAI47EebT15FgcQ+9LhtMlkg==
 
+"@swc/core-linux-arm64-gnu@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.2.174.tgz#65d4fe50738d75498f5be03bbc210aa75df35355"
+  integrity sha512-Tf6Ths472ul9Z4p8uFP7vMJXLmBS2h4PQL/zDj3g3N+9D8hs6+tnnBNrkEm6jXs09gO4bvaN+706QxmZUEgyPg==
+
 "@swc/core-linux-arm64-musl@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-linux-arm64-musl/-/core-linux-arm64-musl-1.2.165.tgz#a99234b7c543b692d28dc66dbceec45cd3597a48"
   integrity sha512-xM5MDECEnptdsClSitld/f+azudbkeT8nNCkXCP+vFsurex9ISJ2DCWTvw7hgpkFElVv/qFEagDCucgESHcUzw==
+
+"@swc/core-linux-arm64-musl@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-musl/-/core-linux-arm64-musl-1.2.174.tgz#d616cc952ee87fa4adac7429d89deec219c93b5e"
+  integrity sha512-vsQjxyCe3+qRMQSuDlYwmFxbRILIycRC8OB/tBhTJXYuwIh4zvpxc+zvSuERbd4cmMWwM/JtXIlP5grSNjgH6A==
 
 "@swc/core-linux-x64-gnu@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.2.165.tgz#646b0dfaf673ae7d6eeace5a8b62a7d1d6b82b45"
   integrity sha512-MTEhtso3De+HP+qZKZw1DfPTbngn4ms3+7XG6jqUs6CKpmLTJkvnpPJ5swlXGvpKyDq367O2Aicft52Uoaoq+Q==
 
+"@swc/core-linux-x64-gnu@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.2.174.tgz#edb5f2813fbeeaacd4330466c10cc92c089b8698"
+  integrity sha512-CFEL2WMIQ1mZvvDguaVGgwan9X7Ah7ctHG8SOa+mFaWXdAyVXOWp8sdNMJbqvwYAv980CENfYioI8yL0z1heWA==
+
 "@swc/core-linux-x64-musl@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.2.165.tgz#42fc808aa176c6615064e6fd171f0ea6775105bd"
   integrity sha512-T2ZSApYoK4VTMTTqhUKcrNcv68ChoAOZDKUNfOik8zXcN1pMttus/VaqfZjxT2+orviRTD5Bkdsc3UvrhHqHnw==
+
+"@swc/core-linux-x64-musl@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.2.174.tgz#45c52bd5202fe48a053c8412575ac86493a8a057"
+  integrity sha512-qulTJ3GYE8gUR0yfIOJVfo8SSl/AgLKAplskIHJu/cP0JtRpHL8B598mfny6SuD+ZabBjUvAz6d8ACL9JdhYTw==
 
 "@swc/core-win32-arm64-msvc@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-win32-arm64-msvc/-/core-win32-arm64-msvc-1.2.165.tgz#932056556bb5fcc062075a3cbed9281961abd170"
   integrity sha512-Icg6dtQpQZKjAUG6kME4WuYpG6cqZjUzzmiZPQ9wWOw7wY8EYFPwC2ZjTg8KwbOJFkAKN6cjk3O2IAFsOWuUGg==
 
+"@swc/core-win32-arm64-msvc@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-win32-arm64-msvc/-/core-win32-arm64-msvc-1.2.174.tgz#edde9a047bf995ec509c2765054d3c071ec10c4c"
+  integrity sha512-ZogvH4sOVk3pLguYLlc+3lBlGwJ4WOi375VUqDSb92TirBFPjhX98xDn/Xus1fyRKofSGp1zoAs4w80F6hkX6g==
+
 "@swc/core-win32-ia32-msvc@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-win32-ia32-msvc/-/core-win32-ia32-msvc-1.2.165.tgz#66660c20beec35b777e9bade6c4b9ef4b8eb4e6d"
   integrity sha512-ldrTYG1zydyJP54YmYie3VMGcU7gCT2dZ7S1uZ1Tab+10GzZtdvePGGlQ/39jJVpr36/DZ34L6PsjwQkPG7AOw==
 
+"@swc/core-win32-ia32-msvc@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-win32-ia32-msvc/-/core-win32-ia32-msvc-1.2.174.tgz#ee1c89bdf65c56d6720888f6daaece630a0ab8cd"
+  integrity sha512-QcnXBs2L0O5BiV61orDxJqZsmk2wPUscTTY4upfW5++eCI6IpDYVyfQmtQ9OdVCXWfVEPrhQKuUxLZEjoKxdNQ==
+
 "@swc/core-win32-x64-msvc@1.2.165":
   version "1.2.165"
   resolved "https://registry.npmjs.org/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.2.165.tgz#ea864711b177ce20bf9028ba55d13c531897afae"
   integrity sha512-gi2ZELsRLC3RfQFk+qwccL0VZ6ZgprMOP/phCVd8sA2MZsVVrFu6QBEJNGO0Z6hEqQ2BWrva6+cMF/eHSzuAsQ==
+
+"@swc/core-win32-x64-msvc@1.2.174":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.2.174.tgz#8efcb2bce3727a91874b88aa5be003da6445db8b"
+  integrity sha512-9aFcbPTFA5jtiTQbOsq+/QN29F/YNpOrhcwsUa2Haqq0+2h71rMiBn7oluUERFQ+/se9J0C00iSC0QXif4pfuQ==
 
 "@swc/core@^1.2.119", "@swc/core@^1.2.152":
   version "1.2.165"
@@ -3411,6 +3490,25 @@
     "@swc/core-win32-arm64-msvc" "1.2.165"
     "@swc/core-win32-ia32-msvc" "1.2.165"
     "@swc/core-win32-x64-msvc" "1.2.165"
+
+"@swc/core@^1.2.173":
+  version "1.2.174"
+  resolved "https://registry.yarnpkg.com/@swc/core/-/core-1.2.174.tgz#fbc5d65d37be66591c7de94c7db9b2da16c2e471"
+  integrity sha512-PbBwwaqrBCyOae+hZV9QK+QeR1azqb+MGKvuk6SVxsk3Rvh1HSX4CieMnuhcmX+Sm4L58eQv9l37ZLCu2hBZcA==
+  optionalDependencies:
+    "@swc/core-android-arm-eabi" "1.2.174"
+    "@swc/core-android-arm64" "1.2.174"
+    "@swc/core-darwin-arm64" "1.2.174"
+    "@swc/core-darwin-x64" "1.2.174"
+    "@swc/core-freebsd-x64" "1.2.174"
+    "@swc/core-linux-arm-gnueabihf" "1.2.174"
+    "@swc/core-linux-arm64-gnu" "1.2.174"
+    "@swc/core-linux-arm64-musl" "1.2.174"
+    "@swc/core-linux-x64-gnu" "1.2.174"
+    "@swc/core-linux-x64-musl" "1.2.174"
+    "@swc/core-win32-arm64-msvc" "1.2.174"
+    "@swc/core-win32-ia32-msvc" "1.2.174"
+    "@swc/core-win32-x64-msvc" "1.2.174"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -10840,6 +10938,45 @@ nx@14.0.3:
     "@parcel/watcher" "2.0.4"
     "@swc-node/register" "^1.4.2"
     "@swc/core" "^1.2.152"
+    chalk "4.1.0"
+    chokidar "^3.5.1"
+    cli-cursor "3.1.0"
+    cli-spinners "2.6.1"
+    cliui "^7.0.2"
+    dotenv "~10.0.0"
+    enquirer "~2.3.6"
+    fast-glob "3.2.7"
+    figures "3.2.0"
+    flat "^5.0.2"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    ignore "^5.0.4"
+    jsonc-parser "3.0.0"
+    minimatch "3.0.4"
+    npm-run-path "^4.0.1"
+    open "^8.4.0"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    semver "7.3.4"
+    string-width "^4.2.3"
+    tar-stream "~2.2.0"
+    tmp "~0.2.1"
+    tsconfig-paths "^3.9.0"
+    tslib "^2.3.0"
+    v8-compile-cache "2.3.0"
+    yargs "^17.4.0"
+    yargs-parser "21.0.1"
+
+nx@14.0.5:
+  version "14.0.5"
+  resolved "https://registry.yarnpkg.com/nx/-/nx-14.0.5.tgz#31e2360d4054a7e6666ccc8833a4ff89eb585844"
+  integrity sha512-YNBdVkd3YrE1eBQKRbF+3TZCCHNkn/6EBwzsitky5SNKczgvyhcm2/of+Cc4S3Sl29U1OPQ5za9SknCsqdiz/g==
+  dependencies:
+    "@nrwl/cli" "14.0.5"
+    "@nrwl/tao" "14.0.5"
+    "@parcel/watcher" "2.0.4"
+    "@swc-node/register" "^1.4.2"
+    "@swc/core" "^1.2.173"
     chalk "4.1.0"
     chokidar "^3.5.1"
     cli-cursor "3.1.0"
