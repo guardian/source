@@ -1,0 +1,27 @@
+{
+  "name": "@guardian/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint config for Guardian JavaScript projects",
+  "homepage": "https://github.com/guardian/source#readme",
+  "bugs": {
+    "url": "https://github.com/guardian/source/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardian/source.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-prettier": "4.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

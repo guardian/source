@@ -1,0 +1,21 @@
+{
+  "name": "@guardian/prettier",
+  "version": "1.0.0",
+  "description": "Prettier config for Guardian JavaScript projects",
+  "homepage": "https://github.com/guardian/source#readme",
+  "bugs": {
+    "url": "https://github.com/guardian/source/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardian/source.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "prettier": "^2.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
