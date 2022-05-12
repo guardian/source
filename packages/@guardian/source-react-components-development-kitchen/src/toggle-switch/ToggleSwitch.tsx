@@ -46,6 +46,11 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	platform?: Platform;
 	/**
+	 * Disables the toggle and implements disabled specific styling.
+	 * The default is false.
+	 */
+	disabled?: boolean;
+	/**
 	 * A callback function called when the component is checked or unchecked.
 	 * Receives the click event as an argument.
 	 */
@@ -82,12 +87,15 @@ export const ToggleSwitch = ({
 	defaultChecked,
 	cssOverrides,
 	platform = 'web',
+	disabled = false,
 	onClick = () => undefined,
 	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
-	const isChecked = (): boolean => {
+	const isChecked = (disabled: boolean): boolean => {
+		if (disabled) return false;
+
 		if (checked != undefined) {
 			return checked;
 		}
@@ -102,9 +110,10 @@ export const ToggleSwitch = ({
 				id={buttonId}
 				css={[buttonStyles(labelPosition), getPlatformStyles(platform)]}
 				role="switch"
-				aria-checked={isChecked()}
+				aria-checked={isChecked(disabled)}
 				aria-labelledby={labelId}
 				onClick={onClick}
+				aria-disabled={disabled}
 			></button>
 			{labelPosition === 'right' && label}
 		</label>

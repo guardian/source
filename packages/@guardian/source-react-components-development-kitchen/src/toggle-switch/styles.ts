@@ -49,6 +49,10 @@ export const iosStyles = css`
 		left: 20px;
 		background: ${neutral[100]};
 	}
+
+	&[aria-disabled='true'] {
+		background: ${neutral[86]};
+	}
 `;
 
 export const androidStyles = css`
@@ -78,6 +82,10 @@ export const androidStyles = css`
 	&[aria-checked='true']:after {
 		left: 8px;
 		background: ${success[500]};
+	}
+
+	&[aria-disabled='true'] {
+		background: ${neutral[86]};
 	}
 `;
 
@@ -134,6 +142,10 @@ export const webStyles = css`
 	&[aria-checked='true']:after {
 		left: 1.375rem;
 		background: ${neutral[100]};
+	}
+
+	&[aria-disabled='true'] {
+		background: ${neutral[86]};
 	}
 `;
 
