@@ -104,7 +104,7 @@ export const ToggleSwitch = ({
 	};
 
 	return (
-		<label id={labelId} css={[labelStyles, cssOverrides]} {...props}>
+		<label id={labelId} css={[labelStyles(disabled), cssOverrides]} {...props}>
 			{labelPosition === 'left' && label}
 			<button
 				id={buttonId}
