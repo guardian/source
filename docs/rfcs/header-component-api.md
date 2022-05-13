@@ -285,6 +285,46 @@ A visually prominent navigational link that appears in the `Navigation.Secondary
 -   `label` _string_
     -   display label of the `Navigation.SecondaryLinksSupplementalLink`
 
+### `<Subnav />`
+
+A navigation for sub-categories below the current top-level category.
+
+![Subnav](images/header-component-api/subnav.png)
+
+#### Example
+
+```jsx
+<Subnav>
+    <Subnav.Link
+        label="UK"
+        href="https://www.theguardian.com/uk"
+    / >
+    <Subnav.Link
+        label="World"
+        href="https://www.theguardian.com/world"
+    / >
+<Subnav/>
+```
+
+#### `<Subnav.Link />`
+
+A navigational link that appears in the `Subnav` component
+
+![Subnav](images/header-component-api/subnav-link.png)
+
+##### Example
+
+```jsx
+<Subnav.Link label="UK politics" href="https://www.theguardian.com/politics" />
+```
+
+##### Props
+
+-   `href` _string_
+    -   navigation location when `Subnav.Link` is clicked
+-   `label` _string_
+    -   display label of the `Subnav.Link`
+
 ## Specialised headers
 
 ### `<EditorialHeader />`
