@@ -50,6 +50,8 @@ This proposal outlines an API that tries to capture the areas of standardisation
 
 Generic header component. The logo is hard-coded.
 
+![Header](images/header-component-api/header.png)
+
 #### Example
 
 ```jsx
@@ -66,6 +68,8 @@ The area at the top of the header that houses features related to the brand and 
 
 The logo is hardcoded.
 
+![Brand bar](images/header-component-api/brand-bar.png)
+
 #### Example
 
 ```jsx
@@ -81,9 +85,13 @@ The logo is hardcoded.
 
 A list of top-level links and menus that is displayed at the very top of the header.
 
+![Brand bar links](images/header-component-api/brand-bar-links.png)
+
 #### `<BrandBar.Link />`
 
 A link that is displayed in the `BrandBar.Links` section of the header, or within a `BrandBar.LinkList` dropdown.
+
+![Brand bar link](images/header-component-api/brand-bar-link.png)
 
 ##### Props
 
@@ -104,6 +112,8 @@ A link that is displayed in the `BrandBar.Links` section of the header, or withi
 
 A dropdown menu that is displayed in the `BrandBar.Links` section of the header.
 
+![Brand bar link list](images/header-component-api/brand-bar-link-list.png)
+
 ##### Props
 
 -   `label` _string_
@@ -117,7 +127,9 @@ A dropdown menu that is displayed in the `BrandBar.Links` section of the header.
 
 ### `<Navigation />`
 
-The top-level navigation bar.
+The top-level navigation menu.
+
+![Navigation](images/header-component-api/navigation-expanded.png)
 
 #### Example
 
@@ -144,6 +156,8 @@ The top-level navigation bar.
 
 The main visible navigational links
 
+![Navigation primary links](images/header-component-api/navigation-primary-links.png)
+
 ##### Example
 
 ```jsx
@@ -158,6 +172,8 @@ The main visible navigational links
 ##### `<Navigation.PrimaryLink />`
 
 A navigational link that appears in the `Navigation.PrimaryLinks` component
+
+![Navigation primary link](images/header-component-api/navigation-primary-link.png)
 
 ###### Example
 
@@ -185,6 +201,8 @@ A navigational link that appears in the `Navigation.PrimaryLinks` component
 
 An expanding menu that opens on click of the veggie burger icon, or the "more" link at wider breakpoints
 
+![Navigation secondary links](images/header-component-api/navigation-secondary-links.png)
+
 ##### Example
 
 ```jsx
@@ -206,6 +224,8 @@ An expanding menu that opens on click of the veggie burger icon, or the "more" l
 
 A column of links within the `SecondaryLinks` panel
 
+![Navigation secondary links group](images/header-component-api/navigation-secondary-links-group.png)
+
 ###### Example
 
 ```jsx
@@ -224,6 +244,8 @@ A column of links within the `SecondaryLinks` panel
 ###### `<Navigation.SecondaryLink />`
 
 A navigational link that appears in the `Navigation.SecondaryLinks` component
+
+![Navigation secondary link](images/header-component-api/navigation-secondary-link.png)
 
 ###### Props
 
@@ -244,6 +266,8 @@ A navigational link that appears in the `Navigation.SecondaryLinks` component
 ##### `<Navigation.SecondaryLinksSupplementalLink />`
 
 A visually prominent navigational link that appears in the `Navigation.SecondaryLinks` component.
+
+![Navigation secondary links supplemental link](images/header-component-api/navigation-secondary-links-supplemental-link.png)
 
 ###### Example
 
@@ -266,6 +290,8 @@ A visually prominent navigational link that appears in the `Navigation.Secondary
 ### `<EditorialHeader />`
 
 A special header layout for editorial pages. The logo and supporter messages are hard-coded.
+
+![Editorial header](images/header-component-api/editorial-header.png)
 
 #### Differences to generic header
 
@@ -320,6 +346,8 @@ A special header layout for editorial pages. The logo and supporter messages are
 
 The Editions switch dropdown menu appears to the right of the logo in the Editorial Header. It allows the user to switch the default edition of the network front that is displayed when they visit theguardian.com.
 
+![Editorial header edition switch](images/header-component-api/editorial-header-edition-switch.png)
+
 ##### Example
 
 ```jsx
@@ -348,6 +376,8 @@ The Editions switch dropdown menu appears to the right of the logo in the Editor
 #### `<EditorialHeader.EditionSwitchItem />`
 
 Represents a link to an Edition that appears in the Edition Switch dropdown menu.
+
+![Editorial header edition switch item](images/header-component-api/editorial-header-edition-switch-item.png)
 
 ##### Example
 
