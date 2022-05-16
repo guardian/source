@@ -149,10 +149,14 @@ export const webStyles = css`
 	}
 `;
 
-export const labelStyles = (disabled: boolean) => css`
+export const disabledLabelStyles = css`
+	color: ${neutral[86]};
+`;
+
+export const labelStyles = css`
 	${textSans.small()};
 	display: flex;
-	color: ${disabled ? neutral[86] : neutral[7]};
+	color: ${neutral[7]};
 	align-items: center;
 	cursor: pointer;
 	user-select: none;

@@ -5,6 +5,7 @@ import type { Props } from '@guardian/source-react-components';
 import {
 	androidStyles,
 	buttonStyles,
+	disabledLabelStyles,
 	iosStyles,
 	labelStyles,
 	webStyles,
@@ -89,11 +90,10 @@ export const ToggleSwitch = ({
 	platform = 'web',
 	disabled = false,
 	onClick = () => undefined,
-	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
-	const isChecked = (disabled: boolean): boolean => {
+	const isChecked = (): boolean => {
 		if (disabled) return false;
 
 		if (checked != undefined) {
@@ -106,15 +106,18 @@ export const ToggleSwitch = ({
 	return (
 		<label
 			id={labelId}
-			css={[labelStyles(disabled), cssOverrides]}
-			{...props}
+			css={[
+				labelStyles,
+				disabled ? disabledLabelStyles : '',
+				cssOverrides,
+			]}
 		>
 			{labelPosition === 'left' && label}
 			<button
 				id={buttonId}
 				css={[buttonStyles(labelPosition), getPlatformStyles(platform)]}
 				role="switch"
-				aria-checked={isChecked(disabled)}
+				aria-checked={isChecked()}
 				aria-labelledby={labelId}
 				onClick={onClick}
 				aria-disabled={disabled}
