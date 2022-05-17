@@ -7,7 +7,7 @@ export const choiceCardThemeDefault = {
 		textLabelSupporting: palette.neutral[46],
 		textGroupLabel: palette.neutral[7],
 		textGroupLabelSupporting: palette.neutral[46],
-		border: palette.neutral[60],
+		border: palette.neutral[46],
 		textChecked: palette.brand[400],
 		backgroundChecked: '#E3F6FF',
 		backgroundTick: palette.brand[500],
