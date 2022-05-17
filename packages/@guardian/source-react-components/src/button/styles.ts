@@ -1,7 +1,7 @@
 import type { SerializedStyles, Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
-	focusHalo,
+	focusHaloSpaced,
 	height,
 	space,
 	textSans,
@@ -34,7 +34,7 @@ const button = css`
 	}
 
 	&:focus {
-		${focusHalo};
+		${focusHaloSpaced};
 	}
 `;
 
