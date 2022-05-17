@@ -13,8 +13,9 @@ export const focusHalo = `
 `;
 
 export const focusHaloSpaced = `
- outline: 3px solid ${palette.neutral[100]};
+ outline: 0;
  html:not(.src-focus-disabled) & {
-	 box-shadow: 0 0 0 8px ${palette.focus[400]};
+	outline: 5px solid ${palette.focus[400]};
+	outline-offset: 3px;
  }
 `;
