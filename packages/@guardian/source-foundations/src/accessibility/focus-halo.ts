@@ -11,3 +11,10 @@ export const focusHalo = `
 	 box-shadow: 0 0 0 5px ${palette.focus[400]};
  }
 `;
+
+export const focusHaloSpaced = `
+ outline: 3px solid ${palette.neutral[100]};
+ html:not(.src-focus-disabled) & {
+	 box-shadow: 0 0 0 8px ${palette.focus[400]};
+ }
+`;
