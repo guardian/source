@@ -90,6 +90,7 @@ export const ToggleSwitch = ({
 	platform = 'web',
 	disabled = false,
 	onClick = () => undefined,
+	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
@@ -111,6 +112,7 @@ export const ToggleSwitch = ({
 				disabled ? disabledLabelStyles : '',
 				cssOverrides,
 			]}
+			{...props}
 		>
 			{labelPosition === 'left' && label}
 			<button
