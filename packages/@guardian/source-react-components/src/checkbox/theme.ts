@@ -7,7 +7,7 @@ import {
 
 export const checkboxThemeDefault = {
 	checkbox: {
-		border: palette.neutral[60],
+		border: palette.neutral[46],
 		borderHover: palette.brand[500],
 		borderChecked: palette.brand[500],
 		borderError: palette.error[400],
