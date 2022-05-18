@@ -105,7 +105,7 @@ export const palette = {
 		100: colors.blues[7],
 		300: colors.blues[8],
 		400: colors.blues[9],
-		500: colors.blues[10],
+		500: colors.blues[3],
 		600: colors.blues[11],
 		800: colors.blues[12],
 	},
