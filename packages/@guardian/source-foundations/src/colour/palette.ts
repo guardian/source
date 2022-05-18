@@ -26,7 +26,7 @@ const colors = {
 		'#003C60', //sport-100
 		'#004E7C', //sport-200
 		'#005689', //sport-300
-		'#0077B6', //sport-400
+		'#0077B6', //sport-400, focus-400
 		'#00B2FF', //sport-500
 		'#90DCFF', //sport-600
 		'#F1F8FC', //sport-800
@@ -36,7 +36,7 @@ const colors = {
 		'#007ABC', //brand-500
 		'#506991', //brand-600
 		'#C1D8FC', //brand-800
-		'#0093E0', //focus-400
+		'#0093E0',
 	],
 	browns: [
 		'#2B2625', //culture-50
