@@ -26,14 +26,14 @@ const colors = {
 		'#003C60', //sport-100
 		'#004E7C', //sport-200
 		'#005689', //sport-300
-		'#0077B6', //sport-400, focus-400
+		'#0077B6', //sport-400, focus-400, brand-500
 		'#00B2FF', //sport-500
 		'#90DCFF', //sport-600
 		'#F1F8FC', //sport-800
 		'#001536', //brand-100
 		'#041F4A', //brand-300
 		'#052962', //brand-400
-		'#007ABC', //brand-500
+		'#007ABC',
 		'#506991', //brand-600
 		'#C1D8FC', //brand-800
 	],
