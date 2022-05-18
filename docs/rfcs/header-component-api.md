@@ -10,37 +10,44 @@ This proposal outlines an API that tries to capture the areas of standardisation
 
 ```jsx
 <Header>
-    <BrandBar>
-        <BrandBar.Links>
-            <BrandBar.Link href icon={<Icon />} label until from />
-            <BrandBar.LinkList icon label until from>
-                <BrandBar.Link href label />
-                <BrandBar.Link href label />
-            </BrandBar.LinkList>
-            <BrandBar.Link href icon={<Icon />} label until from />
-        </BrandBar.Links>
-    </BrandBar>
+    <Masthead>
+        <Masthead.Links>
+            <Masthead.Link href icon={<Icon />} label until from />
+            <Masthead.Menu icon label until from>
+                <Masthead.Link href label />
+                <Masthead.Link href label />
+            </Masthead.Menu>
+            <Masthead.Link href icon={<Icon />} label until from />
+        </Masthead.Links>
+    </Masthead>
     <Navigation>
-        <Navigation.PrimaryLinks>
-            <Navigation.PrimaryLink
+        <Navigation.Links>
+            <Navigation.Link
                 label="News"
                 href="https://www.theguardian.com/news"
             />
-        </Navigation.PrimaryLinks>
-        <Navigation.SecondaryLinks>
-            <Navigation.SecondaryLinksGroup>
-                <Navigation.SecondaryLink
+        </Navigation.Links>
+        <Navigation.Menu>
+            <Navigation.MenuGroup>
+                <Navigation.MenuLink
                     label="News"
                     href="https://www.theguardian.com/news"
                 />
-            </Navigation.SecondaryLinksGroup>
-            <Navigation.SecondaryLinksSupplementalLink
-                label="Masterclasses"
-                href="https://www.theguardian.com/guardian-masterclasses"
-            />
-        </Navigation.SecondaryLinks>
+            </Navigation.MenuGroup>
+            <Navigation.MenuGroup>
+                <Navigation.MenuSupplementalLink
+                    label="Masterclasses"
+                    href="https://www.theguardian.com/guardian-masterclasses"
+                />
+            </Navigation.MenuGroup>
+        </Navigation.Menu>
     </Navigation>
-    <Subnav />
+    <Subnav>
+        <Subnav.Link
+            label="UK politics"
+            href="https://www.theguardian.com/politics"
+        />
+    </Subnav>
 </Header>
 ```
 
@@ -56,74 +63,74 @@ Generic header component. The logo is hard-coded.
 
 ```jsx
 <Header>
-    <BrandBar />
+    <Masthead />
     <Navigation />
     <Subnav />
 </Header>
 ```
 
-### `<BrandBar />`
+### `<Masthead />`
 
 The area at the top of the header that houses features related to the brand and customisation, rather than content discovery. Examples include the support message, top level links, the Guardian logo and the Edition Switch.
 
 The logo is hardcoded.
 
-![Brand bar](images/header-component-api/brand-bar.png)
+![Masthead](images/header-component-api/masthead.png)
 
 #### Example
 
 ```jsx
-<BrandBar.Links>
-    <BrandBar.Link href icon={<Icon />} label until from />
-    <BrandBar.LinkList icon label until from>
-        <BrandBar.Link href label />
-    </BrandBar.LinkList>
-</BrandBar.Links>
+<Masthead.Links>
+    <Masthead.Link href icon={<Icon />} label until from />
+    <Masthead.Menu icon label until from>
+        <Masthead.Link href label />
+    </Masthead.Menu>
+</Masthead.Links>
 ```
 
-#### `<BrandBar.Links />`
+#### `<Masthead.Links />`
 
 A list of top-level links and menus that is displayed at the very top of the header.
 
-![Brand bar links](images/header-component-api/brand-bar-links.png)
+![Masthead links](images/header-component-api/masthead-links.png)
 
-#### `<BrandBar.Link />`
+#### `<Masthead.Link />`
 
-A link that is displayed in the `BrandBar.Links` section of the header, or within a `BrandBar.LinkList` dropdown.
+A link that is displayed in the `Masthead.Links` section of the header, or within a `Masthead.Menu` dropdown.
 
-![Brand bar link](images/header-component-api/brand-bar-link.png)
+![Masthead link](images/header-component-api/masthead-link.png)
 
 ##### Props
 
 -   `href` _string_
-    -   navigation location when `BrandBar.Link` is clicked
+    -   navigation location when `Masthead.Link` is clicked
 -   `onClick` _function_
-    -   logic that is executed when the `BrandBar.Link` is clicked
+    -   logic that is executed when the `Masthead.Link` is clicked
 -   `label` _string_
-    -   display label of the `BrandBar.Link`
+    -   display label of the `Masthead.Link`
 -   `icon` _ReactNode_
     -   icon that appears alongside the label
 -   `from` _Breakpoint_
-    -   the breakpoint at which the `BrandBar.Link` becomes visible
+    -   the breakpoint at which the `Masthead.Link` becomes visible
 -   `until` _Breakpoint_
-    -   the breakpoint at which the `BrandBar.Link` is no longer displayed
+    -   the breakpoint at which the `Masthead.Link` is no longer displayed
 
-#### `<BrandBar.LinkList />`
+#### `<Masthead.Menu />`
 
-A dropdown menu that is displayed in the `BrandBar.Links` section of the header.
+A dropdown menu that is displayed in the `Masthead.Links` section of the header.
 
-![Brand bar link list](images/header-component-api/brand-bar-link-list.png)
+![Masthead link list](images/header-component-api/masthead-menu.png)
 
 ##### Props
 
 -   `label` _string_
-    -   display label of the `BrandBar.LinkList`
+    -   display label of the `Masthead.Menu`
 -   `icon` _ReactNode_
     -   icon that appears alongside the label
 -   `from` _Breakpoint_
-    -   the breakpoint at which the `BrandBar.LinkList` becomes visible
+    -   the breakpoint at which the `Masthead.Menu` becomes visible
 -   `until` _Breakpoint_
-    -   the breakpoint at which the `BrandBar.LinkList` is no longer displayed
+    -   the breakpoint at which the `Masthead.Menu` is no longer displayed
 
 ### `<Navigation />`
 
@@ -135,24 +142,21 @@ The top-level navigation menu.
 
 ```jsx
 <Navigation>
-    <Navigation.PrimaryLinks>
-        <Navigation.PrimaryLink
-            label="News"
-            href="https://www.theguardian.com/news"
-        />
-    </Navigation.PrimaryLinks>
-    <Navigation.SecondaryLinks>
-        <Navigation.SecondaryLinksGroup>
-            <Navigation.SecondaryLink
+    <Navigation.Links>
+        <Navigation.Link label="News" href="https://www.theguardian.com/news" />
+    </Navigation.Links>
+    <Navigation.Menu>
+        <Navigation.MenuGroup>
+            <Navigation.MenuLink
                 label="News"
                 href="https://www.theguardian.com/news"
             />
-        </Navigation.SecondaryLinksGroup>
-    </Navigation.SecondaryLinks>
+        </Navigation.MenuGroup>
+    </Navigation.Menu>
 </Navigation>
 ```
 
-#### `<Navigation.PrimaryLinks />`
+#### `<Navigation.Links />`
 
 The main visible navigational links
 
@@ -161,24 +165,21 @@ The main visible navigational links
 ##### Example
 
 ```jsx
-<Navigation.PrimaryLinks>
-    <Navigation.PrimaryLink
-        label="News"
-        href="https://www.theguardian.com/news"
-    />
-</Navigation.PrimaryLinks>
+<Navigation.Links>
+    <Navigation.Link label="News" href="https://www.theguardian.com/news" />
+</Navigation.Links>
 ```
 
-##### `<Navigation.PrimaryLink />`
+##### `<Navigation.Link />`
 
-A navigational link that appears in the `Navigation.PrimaryLinks` component
+A navigational link that appears in the `Navigation.Links` component
 
 ![Navigation primary link](images/header-component-api/navigation-primary-link.png)
 
 ###### Example
 
 ```jsx
-<Navigation.PrimaryLink
+<Navigation.Link
     label="News"
     href="https://www.theguardian.com/news"
     color={palette.news[400]}
@@ -189,15 +190,15 @@ A navigational link that appears in the `Navigation.PrimaryLinks` component
 ###### Props
 
 -   `href` _string_
-    -   navigation location when `Navigation.PrimaryLink` is clicked
+    -   navigation location when `Navigation.Link` is clicked
 -   `label` _string_
-    -   display label of the `Navigation.PrimaryLink`
+    -   display label of the `Navigation.Link`
 -   `color` _string_
     -   hex value of the coloured selection indicator
 -   `selected` _boolean_
     -   toggles the top link’s selection indicator
 
-#### `<Navigation.SecondaryLinks />`
+#### `<Navigation.Menu />`
 
 An expanding menu that opens on click of the veggie burger icon, or the "more" link at wider breakpoints
 
@@ -206,21 +207,21 @@ An expanding menu that opens on click of the veggie burger icon, or the "more" l
 ##### Example
 
 ```jsx
-<Navigation.SecondaryLinks>
-    <Navigation.SecondaryLinksGroup>
-        <Navigation.SecondaryLink
+<Navigation.Menu>
+    <Navigation.MenuGroup>
+        <Navigation.MenuLink
             label="News"
             href="https://www.theguardian.com/news"
         />
-    </Navigation.SecondaryLinksGroup>
-    <Navigation.SecondaryLinksSupplementalLink
+    </Navigation.MenuGroup>
+    <Navigation.MenuSupplementalLink
         label="Masterclasses"
         href="https://www.theguardian.com/guardian-masterclasses"
     />
-</Navigation.SecondaryLinks>
+</Navigation.Menu>
 ```
 
-##### `<Navigation.SecondaryLinksGroup />`
+##### `<Navigation.MenuGroup />`
 
 A column of links within the `SecondaryLinks` panel
 
@@ -229,50 +230,50 @@ A column of links within the `SecondaryLinks` panel
 ###### Example
 
 ```jsx
-<Navigation.SecondaryLinksGroup>
-    <Navigation.SecondaryLink
+<Navigation.MenuGroup>
+    <Navigation.MenuLink
         label="UK news"
         href="https://www.theguardian.com/uk"
     />
-    <Navigation.SecondaryLink
+    <Navigation.MenuLink
         label="World news"
         href="https://www.theguardian.com/world"
     />
-</Navigation.SecondaryLinksGroup>
+</Navigation.MenuGroup>
 ```
 
-###### `<Navigation.SecondaryLink />`
+###### `<Navigation.MenuLink />`
 
-A navigational link that appears in the `Navigation.SecondaryLinks` component
+A navigational link that appears in the `Navigation.Menu` component
 
 ![Navigation secondary link](images/header-component-api/navigation-secondary-link.png)
 
 ###### Props
 
 -   `href` _string_
-    -   navigation location when `Navigation.SecondaryLink` is clicked
+    -   navigation location when `Navigation.MenuLink` is clicked
 -   `label` _string_
-    -   display label of the `Navigation.SecondaryLink`
+    -   display label of the `Navigation.MenuLink`
 
 ###### Example
 
 ```jsx
-<Navigation.SecondaryLink
+<Navigation.MenuLink
     label="World news"
     href="https://www.theguardian.com/world"
 />
 ```
 
-##### `<Navigation.SecondaryLinksSupplementalLink />`
+##### `<Navigation.MenuSupplementalLink />`
 
-A visually prominent navigational link that appears in the `Navigation.SecondaryLinks` component.
+A visually prominent navigational link that appears in the `Navigation.Menu` component.
 
 ![Navigation secondary links supplemental link](images/header-component-api/navigation-secondary-links-supplemental-link.png)
 
 ###### Example
 
 ```jsx
-<Navigation.SecondaryLinksSupplementalLink
+<Navigation.MenuSupplementalLink
     label="Masterclasses"
     href="https://www.theguardian.com/guardian-masterclasses"
 />
@@ -281,9 +282,9 @@ A visually prominent navigational link that appears in the `Navigation.Secondary
 ###### Props
 
 -   `href` _string_
-    -   navigation location when `Navigation.SecondaryLinksSupplementalLink` is clicked
+    -   navigation location when `Navigation.MenuSupplementalLink` is clicked
 -   `label` _string_
-    -   display label of the `Navigation.SecondaryLinksSupplementalLink`
+    -   display label of the `Navigation.MenuSupplementalLink`
 
 ### `<Subnav />`
 
@@ -335,7 +336,7 @@ A special header layout for editorial pages. The logo and supporter messages are
 
 #### Differences to generic header
 
-##### Brandbar
+##### Masthead
 
 -   Links to the left, floated right
 -   Editions dropdown to the right
@@ -354,21 +355,21 @@ A special header layout for editorial pages. The logo and supporter messages are
 
 ```jsx
 <EditorialHeader isSignedIn showMessage>
-    <BrandBar>
-        <BrandBar.Links>
-            <BrandBar.Link href icon={<Icon />} label until from />
-            <BrandBar.LinkList icon label until from>
-                <BrandBar.Link href label />
-                <BrandBar.Link href label />
-            </BrandBar.LinkList>
-            <BrandBar.Link href icon={<Icon />} label until from />
-        </BrandBar.Links>
+    <Masthead>
+        <Masthead.Links>
+            <Masthead.Link href icon={<Icon />} label until from />
+            <Masthead.Menu icon label until from>
+                <Masthead.Link href label />
+                <Masthead.Link href label />
+            </Masthead.Menu>
+            <Masthead.Link href icon={<Icon />} label until from />
+        </Masthead.Links>
         <EditorialHeader.EditionSwitch onChange>
             <EditorialHeader.EditionSwitchItem href label />
             <EditorialHeader.EditionSwitchItem href label selected />
             <EditorialHeader.EditionSwitchItem href label />
         </EditorialHeader.EditionSwitch>
-    </BrandBar>
+    </Masthead>
     <Navigation />
     <Subnav />
 </EditorialHeader>
@@ -384,7 +385,7 @@ A special header layout for editorial pages. The logo and supporter messages are
 
 #### `<EditorialHeader.EditionSwitch />`
 
-The Editions switch dropdown menu appears to the right of the logo in the Editorial Header. It allows the user to switch the default edition of the network front that is displayed when they visit theguardian.com.
+The Editions dropdown menu appears to the right of the logo in the Editorial Header. It allows the user to switch the default edition of the network front that is displayed when they visit theguardian.com.
 
 ![Editorial header edition switch](images/header-component-api/editorial-header-edition-switch.png)
 
@@ -448,11 +449,11 @@ Represents a link to an Edition that appears in the Edition Switch dropdown menu
     -   Logos
     -   Editions switch
     -   Support messaging
-    -   BrandBar links
+    -   Masthead links
         -   Do we hardcode the URLs or should platforms control the actual links?
 -   Should Source be aware of / managing Islands?
     -   We need to avoid re-rendering the entire header on the client because Nav is pretty huge, and doesn’t need to be dynamic
     -   Should we be imposing the Island architecture on all platforms?
     -   Could we allow consumers to compose their own header
         -   Via props
-        -   `<EditorialHeader brandBar={<Island><BrandBar /></Island>} />`
+        -   `<EditorialHeader masthead={<Island><Masthead /></Island>} />`
