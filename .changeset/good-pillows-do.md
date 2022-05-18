@@ -1,6 +1,6 @@
 ---
-'@guardian/source-foundations': minor
-'@guardian/source-react-components': minor
+'@guardian/source-foundations': major
+'@guardian/source-react-components': major
 ---
 
 Update focusHalo colour
