@@ -16,6 +16,8 @@ export const link = css`
 	${textSans.medium()};
 	cursor: pointer;
 	text-decoration: underline;
+	text-underline-position: under;
+	text-underline-offset: 10%;
 
 	display: inline;
 	align-items: center;
