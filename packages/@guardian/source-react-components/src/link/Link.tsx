@@ -20,7 +20,6 @@ export interface LinkProps
  */
 export const Link = ({
 	priority = 'primary',
-	subdued: isSubdued,
 	icon: iconSvg,
 	iconSide = 'left',
 	cssOverrides,
@@ -31,7 +30,6 @@ export const Link = ({
 		<a
 			css={linkStyles({
 				priority,
-				isSubdued,
 				iconSvg,
 				iconSide,
 				cssOverrides,

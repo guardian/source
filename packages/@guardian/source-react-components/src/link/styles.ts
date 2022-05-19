@@ -52,14 +52,6 @@ export const secondary = (
 	}
 `;
 
-export const subdued = css`
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
-`;
-
 export const icon = css`
 	svg {
 		fill: currentColor;
@@ -104,7 +96,6 @@ const iconSides: {
 export const linkStyles = ({
 	isButton,
 	priority,
-	isSubdued,
 	iconSvg,
 	iconSide = 'left',
 	cssOverrides,
@@ -122,7 +113,6 @@ export const linkStyles = ({
 		link,
 		isButton ? buttonLink : '',
 		priorities[priority](theme.link),
-		isSubdued ? subdued : '',
 		iconSvg ? icon : '',
 		iconSvg ? iconSides[iconSide] : '',
 		cssOverrides,
