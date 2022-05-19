@@ -49,6 +49,7 @@ it('Should have exactly these exports', () => {
 		'error',
 		'focus',
 		'focusHalo',
+		'focusHaloSpaced',
 		'fontWeights',
 		'fonts',
 		'from',
