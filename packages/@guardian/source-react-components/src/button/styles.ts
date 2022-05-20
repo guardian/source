@@ -88,9 +88,11 @@ const subdued = (
 	padding: 0;
 	background-color: transparent;
 	color: ${button.textSubdued};
+	text-decoration: underline;
+	text-underline-offset: 4px;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration-thickness: 4px;
 	}
 
 	/* Why is this zero? Because the default is to have rounded corners but here, when
