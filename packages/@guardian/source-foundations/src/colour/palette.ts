@@ -26,14 +26,13 @@ const colors = {
 		'#003C60', //sport-100
 		'#004E7C', //sport-200
 		'#005689', //sport-300
-		'#0077B6', //sport-400, focus-400
+		'#0077B6', //sport-400, focus-400, brand-500
 		'#00B2FF', //sport-500
 		'#90DCFF', //sport-600
 		'#F1F8FC', //sport-800
 		'#001536', //brand-100
 		'#041F4A', //brand-300
 		'#052962', //brand-400
-		'#007ABC', //brand-500
 		'#506991', //brand-600
 		'#C1D8FC', //brand-800
 	],
@@ -105,9 +104,9 @@ export const palette = {
 		100: colors.blues[7],
 		300: colors.blues[8],
 		400: colors.blues[9],
-		500: colors.blues[10],
-		600: colors.blues[11],
-		800: colors.blues[12],
+		500: colors.blues[3],
+		600: colors.blues[10],
+		800: colors.blues[11],
 	},
 	brandAlt: {
 		200: colors.yellows[0],
