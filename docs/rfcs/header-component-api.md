@@ -330,7 +330,7 @@ A navigational link that appears in the `Subnav` component
 
 ### `<EditorialHeader />`
 
-A special header layout for editorial pages. The logo and supporter messages are hard-coded.
+A special header layout for editorial pages. The logo is hard-coded.
 
 ![Editorial header](images/header-component-api/editorial-header.png)
 
@@ -345,17 +345,14 @@ A special header layout for editorial pages. The logo and supporter messages are
     -   Primary link – always visible
     -   Secondary links – visible at wider breakpoints
     -   Editions menu
-    -   Is this a concept we want to reflect in the API?
 -   Subscribe / Contribute links
--   `<SubscribeMessage />`?
-    -   Hardcoded in Source?
-    -   Currently inserted by automat
 
 #### Example
 
 ```jsx
-<EditorialHeader isSignedIn showMessage>
+<EditorialHeader>
     <Masthead>
+        <EditorialHeader.Support />
         <Masthead.Links>
             <Masthead.Link href icon={<Icon />} label until from />
             <Masthead.Menu icon label until from>
@@ -377,11 +374,23 @@ A special header layout for editorial pages. The logo and supporter messages are
 
 #### Props
 
--   `isSignedIn` _boolean_
+-   `edition` _string_ `'uk'` | `'au'` | `'us'` | `'international'`
+
+#### `<EditorialHeader.Support />`
+
+Presents either the Support buttons, or the Thank You message depending on whether the user is a supporter
+
+![Support buttons](images/header-component-api/support-buttons.png)
+![Support thank you message](images/header-component-api/support-thank-you.png)
+
+#### Props
+
+-   `showSupportButtons` _boolean_
     -   whether to show the support buttons
 -   `showSubscriberMessage` _boolean_
     -   whether to show the Thank You message
--   `edition` _string_ `'uk'` | `'au'` | `'us'` | `'international'`
+-   `readerRevenueLinks` _{ subscribe: string; support: string; contribute: string }_
+    -   urls to assign to the support buttons
 
 #### `<EditorialHeader.EditionSwitch />`
 
@@ -444,6 +453,7 @@ Represents a link to an Edition that appears in the Edition Switch dropdown menu
 
 -   The support buttons / thank you message is delivered by Automat
     -   What is the state of Automat? Will it continue to be maintained, or should we take the opportunity to simplify?
+    -   Currently in support-dotcom-components. Should the component code live in Source?
 -   Client side rendered consumers will have to ship multiple logos, or they would have to lazy load the correct SVG
 -   How much can we hardcode?
     -   Logos
