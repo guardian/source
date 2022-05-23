@@ -132,6 +132,63 @@ A dropdown menu that is displayed in the `Masthead.Links` section of the header.
 -   `until` _Breakpoint_
     -   the breakpoint at which the `Masthead.Menu` is no longer displayed
 
+#### `<Masthead.Switch />`
+
+A dropdown menu that allows the user to switch a high-level user setting. For example, the Edition Switch controls the default edition of the network front that is displayed when the user visit theguardian.com.
+
+![Masthead switch](images/header-component-api/masthead-switch.png)
+
+##### Example
+
+```jsx
+<Masthead.Switch
+    onChange={() => {
+        localStorage.setItem('edition', 'uk');
+    }}
+>
+    <Masthead.SwitchItem
+        href="https://www.theguardian.com/preference/edition/uk"
+        label="UK edition"
+        selected={true}
+    />
+    <Masthead.SwitchItem
+        href="https://www.theguardian.com/preference/edition/us"
+        label="US edition"
+    />
+</Masthead.Switch>
+```
+
+##### Props
+
+-   `onChange` _function_
+    -   callback for logic that runs when the selected switch item is changed
+
+#### `<Masthead.SwitchItem />`
+
+A link that appears in the Switch dropdown menu.
+
+![Masthead switch item](images/header-component-api/masthead-switch-item.png)
+
+##### Example
+
+```jsx
+<Masthead.SwitchItem
+    href="https://www.theguardian.com/preference/edition/uk"
+    label="UK edition"
+    selected={true}
+/>
+```
+
+##### Props
+
+-   `href` _string_
+    -   Target URL for the `Masthead.SwitchItem`
+    -   Navigation occurs after the `onChange` code has executed
+-   `label` _string_
+    -   display label of the `Masthead.SwitchItem`
+-   `selected` _boolean_
+    -   the currently selected `Masthead.SwitchItem`
+
 ### `<Navigation />`
 
 The top-level navigation menu.
@@ -361,11 +418,11 @@ A special header layout for editorial pages. The logo is hard-coded.
             </Masthead.Menu>
             <Masthead.Link href icon={<Icon />} label until from />
         </Masthead.Links>
-        <EditorialHeader.EditionSwitch onChange>
-            <EditorialHeader.EditionSwitchItem href label />
-            <EditorialHeader.EditionSwitchItem href label selected />
-            <EditorialHeader.EditionSwitchItem href label />
-        </EditorialHeader.EditionSwitch>
+        <Masthead.Switch onChange>
+            <Masthead.SwitchItem href label />
+            <Masthead.SwitchItem href label selected />
+            <Masthead.SwitchItem href label />
+        </Masthead.Switch>
     </Masthead>
     <Navigation />
     <Subnav />
@@ -391,63 +448,6 @@ Presents either the Support buttons, or the Thank You message depending on wheth
     -   whether to show the Thank You message
 -   `readerRevenueLinks` _{ subscribe: string; support: string; contribute: string }_
     -   urls to assign to the support buttons
-
-#### `<EditorialHeader.EditionSwitch />`
-
-The Editions dropdown menu appears to the right of the logo in the Editorial Header. It allows the user to switch the default edition of the network front that is displayed when they visit theguardian.com.
-
-![Editorial header edition switch](images/header-component-api/editorial-header-edition-switch.png)
-
-##### Example
-
-```jsx
-<EditorialHeader.EditionSwitch
-    onChange={() => {
-        localStorage.setItem('edition', 'uk');
-    }}
->
-    <EditorialHeader.EditionSwitchItem
-        href="https://www.theguardian.com/preference/edition/uk"
-        label="UK edition"
-        selected={true}
-    />
-    <EditorialHeader.EditionSwitchItem
-        href="https://www.theguardian.com/preference/edition/us"
-        label="US edition"
-    />
-</EditorialHeader.EditionSwitch>
-```
-
-##### Props
-
--   `onChange` _function_
-    -   callback for logic that runs when the Edition is changed
-
-#### `<EditorialHeader.EditionSwitchItem />`
-
-Represents a link to an Edition that appears in the Edition Switch dropdown menu.
-
-![Editorial header edition switch item](images/header-component-api/editorial-header-edition-switch-item.png)
-
-##### Example
-
-```jsx
-<EditorialHeader.EditionSwitchItem
-    href="https://www.theguardian.com/preference/edition/uk"
-    label="UK edition"
-    selected={true}
-/>
-```
-
-##### Props
-
--   `href` _string_
-    -   Target URL for `<EditorialHeader.EditionSwitchItem />`
-    -   Navigation occurs after the `onChange` code has executed
--   `label` _string_
-    -   display label of the `EditionSwitchItem`
--   `selected` _boolean_
-    -   the currently selected EditionSwitchItem
 
 ## Risks and uncertainty
 
