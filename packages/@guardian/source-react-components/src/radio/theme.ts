@@ -1,11 +1,4 @@
-import {
-	background,
-	border,
-	brandBackground,
-	brandBorder,
-	brandText,
-	text,
-} from '@guardian/source-foundations';
+import { palette } from '@guardian/source-foundations';
 import { labelThemeBrand, labelThemeDefault } from '../label/theme';
 import {
 	userFeedbackThemeBrand,
@@ -14,12 +7,12 @@ import {
 
 export const radioThemeDefault = {
 	radio: {
-		borderHover: border.inputHover,
-		border: border.input,
-		backgroundChecked: background.inputChecked,
-		textLabel: text.inputLabel,
-		textLabelSupporting: text.inputLabelSupporting,
-		borderError: border.error,
+		borderHover: palette.focus[400],
+		border: palette.neutral[60],
+		backgroundChecked: palette.focus[400],
+		textLabel: palette.neutral[7],
+		textLabelSupporting: palette.neutral[46],
+		borderError: palette.error[400],
 	},
 	...labelThemeDefault,
 	...userFeedbackThemeDefault,
@@ -27,12 +20,12 @@ export const radioThemeDefault = {
 
 export const radioThemeBrand = {
 	radio: {
-		borderHover: brandBorder.inputHover,
-		border: brandBorder.input,
-		backgroundChecked: brandBackground.inputChecked,
-		textLabel: brandText.inputLabel,
-		textLabelSupporting: brandText.supporting,
-		borderError: brandBorder.error,
+		borderHover: palette.neutral[100],
+		border: palette.brand[800],
+		backgroundChecked: palette.neutral[100],
+		textLabel: palette.neutral[100],
+		textLabelSupporting: palette.brand[800],
+		borderError: palette.error[500],
 	},
 	...labelThemeBrand,
 	...userFeedbackThemeBrand,
