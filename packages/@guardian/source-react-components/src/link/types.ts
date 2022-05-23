@@ -10,7 +10,12 @@ export interface SharedLinkProps extends Props {
 	 * Informs users of how important a link is
 	 */
 	priority?: LinkPriority;
-
+	/**
+	 * Whether link is subdued (no underline)
+	 *
+	 * @deprecated
+	 */
+	subdued?: boolean;
 	/**
 	 * An icon that appears in the link, alongside text
 	 */
