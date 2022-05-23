@@ -1,6 +1,11 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import { border, breakpoints, from, space } from '@guardian/source-foundations';
+import {
+	breakpoints,
+	from,
+	palette,
+	space,
+} from '@guardian/source-foundations';
 
 export const container = css`
 	margin: 0 auto;
@@ -22,7 +27,7 @@ export const container = css`
 	${from.wide} {
 		width: ${breakpoints.wide}px;
 	}
-	border-color: ${border.secondary};
+	border-color: ${palette.neutral[86]};
 `;
 
 export const containerSideBorders = css`
