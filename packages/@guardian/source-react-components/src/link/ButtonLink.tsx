@@ -20,7 +20,6 @@ export interface ButtonLinkProps
  */
 export const ButtonLink = ({
 	priority = 'primary',
-	subdued: isSubdued,
 	icon: iconSvg,
 	iconSide = 'left',
 	cssOverrides,
@@ -32,7 +31,6 @@ export const ButtonLink = ({
 			css={linkStyles({
 				isButton: true,
 				priority,
-				isSubdued,
 				iconSvg,
 				iconSide,
 				cssOverrides,

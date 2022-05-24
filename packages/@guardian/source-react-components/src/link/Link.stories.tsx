@@ -13,7 +13,6 @@ export default {
 	component: Link,
 	args: {
 		priority: 'primary',
-		subdued: false,
 		icon: <SvgExternal />,
 		iconSide: 'left',
 		href: '#',
@@ -86,25 +85,6 @@ asChromaticStory(SecondaryLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const PrimarySubduedLinkDefaultTheme = Template.bind({});
-PrimarySubduedLinkDefaultTheme.args = {
-	subdued: true,
-	icon: 'undefined',
-};
-asChromaticStory(PrimarySubduedLinkDefaultTheme);
-
-// *****************************************************************************
-
-export const SecondarySubduedLinkDefaultTheme = Template.bind({});
-SecondarySubduedLinkDefaultTheme.args = {
-	priority: 'secondary',
-	subdued: true,
-	icon: undefined,
-};
-asChromaticStory(SecondarySubduedLinkDefaultTheme);
-
-// *****************************************************************************
-
 export const PrimaryIconLinkDefaultTheme = Template.bind({});
 asChromaticStory(PrimaryIconLinkDefaultTheme);
 
@@ -115,14 +95,6 @@ SecondaryIconLinkDefaultTheme.args = {
 	priority: 'secondary',
 };
 asChromaticStory(SecondaryIconLinkDefaultTheme);
-
-// *****************************************************************************
-
-export const SubduedIconLinkDefaultTheme = Template.bind({});
-SubduedIconLinkDefaultTheme.args = {
-	subdued: true,
-};
-asChromaticStory(SubduedIconLinkDefaultTheme);
 
 // *****************************************************************************
 
