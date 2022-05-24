@@ -13,7 +13,7 @@ export interface SharedLinkProps extends Props {
 	/**
 	 * Whether link is subdued (no underline)
 	 *
-	 * @deprecated
+	 * @deprecated Subdued styling has been removed and no longer gets applied
 	 */
 	subdued?: boolean;
 	/**
