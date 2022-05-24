@@ -15,8 +15,8 @@ const colors = {
 	oranges: [
 		'#672005', //opinion-100
 		'#8D2700', //opinion-200
-		'#C74600', //opinion-300
-		'#E05E00', //opinion-400
+		'#C74600', //opinion-400, opinion-300 (deprecated)
+		'#E05E00', //opinion-450
 		'#FF7F0F', //opinion-500
 		'#FF9941', //opinion-550
 		'#F9B376', //opinion-600
@@ -41,8 +41,8 @@ const colors = {
 		'#3E3323', //culture-100
 		'#574835', //culture-200
 		'#6B5840', //culture-300
-		'#866D50', //culture-350
-		'#A1845C', //culture-400
+		'#866D50', //culture-400, culture-350 (deprecated)
+		'#A1845C', //culture-450
 		'#EACCA0', //culture-500
 		'#E7D4B9', //culture-600
 		'#EFE8DD', //culture-700
@@ -146,8 +146,9 @@ export const palette = {
 	opinion: {
 		100: colors.oranges[0],
 		200: colors.oranges[1],
-		300: colors.oranges[2],
-		400: colors.oranges[3],
+		300: colors.oranges[2], // deprecated, use opinion[400]
+		400: colors.oranges[2],
+		450: colors.oranges[3],
 		500: colors.oranges[4],
 		550: colors.oranges[5],
 		600: colors.oranges[6],
@@ -167,8 +168,9 @@ export const palette = {
 		100: colors.browns[1],
 		200: colors.browns[2],
 		300: colors.browns[3],
-		350: colors.browns[4],
-		400: colors.browns[5],
+		350: colors.browns[4], // deprecated, use culture[400]
+		400: colors.browns[4],
+		450: colors.browns[5],
 		500: colors.browns[6],
 		600: colors.browns[7],
 		700: colors.browns[8],
