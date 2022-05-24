@@ -1,14 +1,4 @@
-import {
-	background,
-	border,
-	brandAltBackground,
-	brandAltBorder,
-	brandAltText,
-	brandBackground,
-	brandBorder,
-	brandText,
-	text,
-} from '@guardian/source-foundations';
+import { palette } from '@guardian/source-foundations';
 
 export type ButtonTheme = {
 	textPrimary: string;
@@ -25,45 +15,44 @@ export type ButtonTheme = {
 
 export const buttonThemeDefault: { button: ButtonTheme } = {
 	button: {
-		textPrimary: text.ctaPrimary,
-		backgroundPrimary: background.ctaPrimary,
-		backgroundPrimaryHover: background.ctaPrimaryHover,
-		textSecondary: text.ctaSecondary,
-		backgroundSecondary: background.ctaSecondary,
-		backgroundSecondaryHover: background.ctaSecondaryHover,
-		textTertiary: text.ctaTertiary,
-		backgroundTertiaryHover: background.ctaTertiaryHover,
-		borderTertiary: border.ctaTertiary,
-		textSubdued: text.ctaSecondary,
+		textPrimary: palette.neutral[100],
+		backgroundPrimary: palette.brand[400],
+		backgroundPrimaryHover: '#234B8A', // One-off colour variant generated from palette.brand[400]
+		textSecondary: palette.brand[400],
+		backgroundSecondary: palette.brand[800],
+		backgroundSecondaryHover: '#ACC9F7', // One-off colour variant generated from palette.brand[800]
+		textTertiary: palette.brand[400],
+		backgroundTertiaryHover: '#E5E5E5', // One-off colour variant
+		borderTertiary: palette.brand[400],
+		textSubdued: palette.brand[400],
 	},
 };
 
 export const buttonThemeBrand: { button: ButtonTheme } = {
 	button: {
-		textPrimary: brandText.ctaPrimary,
-		backgroundPrimary: brandBackground.ctaPrimary,
-		backgroundPrimaryHover: brandBackground.ctaPrimaryHover,
-		textSecondary: brandText.ctaSecondary,
-		backgroundSecondary: brandBackground.ctaSecondary,
-		backgroundSecondaryHover: brandBackground.ctaSecondaryHover,
-		textTertiary: brandText.ctaTertiary,
-		backgroundTertiaryHover: brandBackground.ctaTertiaryHover,
-		borderTertiary: brandBorder.ctaTertiary,
-		textSubdued: brandText.ctaSecondary,
+		textPrimary: palette.brand[400],
+		backgroundPrimary: palette.neutral[100],
+		backgroundPrimaryHover: '#E0E0E0', // One-off colour variant generated from palette.neutral[100]
+		textSecondary: palette.neutral[100],
+		backgroundSecondary: palette.brand[600],
+		backgroundSecondaryHover: '#234B8A', // One-off colour variant generated from palette.brand[600]
+		textTertiary: palette.neutral[100],
+		backgroundTertiaryHover: palette.brand[300],
+		borderTertiary: palette.neutral[100],
+		textSubdued: palette.neutral[100],
 	},
 };
 
 export const buttonThemeBrandAlt: { button: ButtonTheme } = {
 	button: {
-		textPrimary: brandAltText.ctaPrimary,
-		backgroundPrimary: brandAltBackground.ctaPrimary,
-		backgroundPrimaryHover: brandAltBackground.ctaPrimaryHover,
-		textSecondary: brandAltText.ctaSecondary,
-		backgroundSecondary: brandAltBackground.ctaSecondary,
-		backgroundSecondaryHover: brandAltBackground.ctaSecondaryHover,
-		textTertiary: brandAltText.ctaTertiary,
-		backgroundTertiaryHover: brandAltBackground.ctaTertiaryHover,
-		borderTertiary: brandAltBorder.ctaTertiary,
-		textSubdued: brandAltText.ctaSecondary,
+		textPrimary: palette.neutral[100],
+		backgroundPrimary: palette.neutral[7],
+		backgroundPrimaryHover: '#454545', // One-off colour variant generated from palette.neutral[7]
+		textSecondary: palette.neutral[7],
+		backgroundSecondary: palette.brandAlt[200],
+		backgroundSecondaryHover: '#F2AE00', // One-off colour variant generated from palette.brandAlt[200]
+		backgroundTertiaryHover: '#FFD213', // One-off colour variant
+		borderTertiary: palette.neutral[7],
+		textSubdued: palette.neutral[7],
 	},
 };

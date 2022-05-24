@@ -1,30 +1,28 @@
 import { css } from '@emotion/react';
 import {
-	background,
-	border,
 	focusHalo,
+	palette,
 	resets,
 	space,
-	text,
 	textSans,
 } from '@guardian/source-foundations';
 
 export const errorInput = css`
-	border: 4px solid ${border.error};
-	color: ${text.inputError};
+	border: 4px solid ${palette.error[400]};
+	color: ${palette.neutral[7]};
 	margin-top: 0;
 	/* When input is active and in an error state, we want the border to remain the same. */
 	&:active {
-		border: 4px solid ${border.error};
+		border: 4px solid ${palette.error[400]};
 	}
 `;
 export const successInput = css`
-	border: 4px solid ${border.success};
-	color: ${text.success};
+	border: 4px solid ${palette.success[400]};
+	color: ${palette.success[400]};
 	margin-top: 0;
 	/* When input is active and in a success state, we want the border to remain the same. */
 	&:active {
-		border: 4px solid ${border.success};
+		border: 4px solid ${palette.success[400]};
 	}
 `;
 
@@ -32,13 +30,13 @@ export const textArea = css`
 	${resets.input};
 	box-sizing: border-box;
 	${textSans.medium({ lineHeight: 'regular' })};
-	color: ${text.userInput};
-	background-color: ${background.input};
-	border: 2px solid ${border.input};
+	color: ${palette.neutral[7]};
+	background-color: ${palette.neutral[100]};
+	border: 2px solid ${palette.neutral[60]};
 	padding: ${space[2]}px ${space[2]}px 0 ${space[2]}px;
 
 	&:active {
-		border: 2px solid ${border.inputActive};
+		border: 2px solid ${palette.brand[500]};
 	}
 
 	&:focus {

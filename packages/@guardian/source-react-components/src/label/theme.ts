@@ -1,21 +1,21 @@
-import { brandText, text } from '@guardian/source-foundations';
+import { palette } from '@guardian/source-foundations';
 
 export const labelThemeDefault = {
 	label: {
-		textLabel: text.inputLabel,
-		textOptional: text.supporting,
-		textSupporting: text.supporting,
-		textError: text.error,
-		textSuccess: text.success,
+		textLabel: palette.neutral[7],
+		textOptional: palette.neutral[46],
+		textSupporting: palette.neutral[46],
+		textError: palette.error[400],
+		textSuccess: palette.success[400],
 	},
 };
 
 export const labelThemeBrand = {
 	label: {
-		textLabel: brandText.inputLabel,
-		textOptional: brandText.supporting,
-		textSupporting: brandText.supporting,
-		textError: brandText.error,
-		textSuccess: brandText.success,
+		textLabel: palette.neutral[100],
+		textOptional: palette.brand[800],
+		textSupporting: palette.brand[800],
+		textError: palette.error[500],
+		textSuccess: palette.success[500],
 	},
 };

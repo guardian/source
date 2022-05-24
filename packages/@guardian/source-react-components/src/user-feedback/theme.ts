@@ -1,15 +1,15 @@
-import { brandText, text } from '@guardian/source-foundations';
+import { palette } from '@guardian/source-foundations';
 
 export const userFeedbackThemeDefault = {
 	userFeedback: {
-		textSuccess: text.success,
-		textError: text.error,
+		textSuccess: palette.success[400],
+		textError: palette.error[400],
 	},
 };
 
 export const userFeedbackThemeBrand = {
 	userFeedback: {
-		textSuccess: brandText.success,
-		textError: brandText.error,
+		textSuccess: palette.success[500],
+		textError: palette.error[500],
 	},
 };
