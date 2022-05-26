@@ -6,8 +6,6 @@ This proposal outlines an API that tries to capture the areas of standardisation
 
 > _See [the visual designs](https://www.figma.com/file/V8u2r27TFdjAWNM3p84ypC/%E2%9C%AD-Header?node-id=1989%3A71918) for more context._
 
-## Example
-
 ```jsx
 <Header>
     <Masthead>
@@ -51,15 +49,13 @@ This proposal outlines an API that tries to capture the areas of standardisation
 </Header>
 ```
 
-## Component breakdown
-
-### `<Header />`
+## `<Header />`
 
 Generic header component. The logo is hard-coded.
 
 ![Header](images/header-component-api/header.png)
 
-#### Example
+### Example
 
 ```jsx
 <Header>
@@ -69,7 +65,7 @@ Generic header component. The logo is hard-coded.
 </Header>
 ```
 
-### `<Masthead />`
+## `<Masthead />`
 
 The area at the top of the header that houses features related to the brand and customisation, rather than content discovery. Examples include the support message, top level links, the Guardian logo and the Edition Switch.
 
@@ -77,7 +73,7 @@ The logo is hardcoded.
 
 ![Masthead](images/header-component-api/masthead.png)
 
-#### Example
+### Example
 
 ```jsx
 <Masthead.Links>
@@ -88,19 +84,19 @@ The logo is hardcoded.
 </Masthead.Links>
 ```
 
-#### `<Masthead.Links />`
+### `<Masthead.Links />`
 
 A list of top-level links and menus that is displayed at the very top of the header.
 
 ![Masthead links](images/header-component-api/masthead-links.png)
 
-#### `<Masthead.Link />`
+### `<Masthead.Link />`
 
 A link that is displayed in the `Masthead.Links` section of the header, or within a `Masthead.Menu` dropdown.
 
 ![Masthead link](images/header-component-api/masthead-link.png)
 
-##### Props
+#### Props
 
 -   `href` _string_
     -   navigation location when `Masthead.Link` is clicked
@@ -115,13 +111,13 @@ A link that is displayed in the `Masthead.Links` section of the header, or withi
 -   `until` _Breakpoint_
     -   the breakpoint at which the `Masthead.Link` is no longer displayed
 
-#### `<Masthead.Menu />`
+### `<Masthead.Menu />`
 
 A dropdown menu that is displayed in the `Masthead.Links` section of the header.
 
 ![Masthead link list](images/header-component-api/masthead-menu.png)
 
-##### Props
+#### Props
 
 -   `label` _string_
     -   display label of the `Masthead.Menu`
@@ -132,13 +128,13 @@ A dropdown menu that is displayed in the `Masthead.Links` section of the header.
 -   `until` _Breakpoint_
     -   the breakpoint at which the `Masthead.Menu` is no longer displayed
 
-#### `<Masthead.Switch />`
+### `<Masthead.Switch />`
 
 A dropdown menu that allows the user to switch a high-level user setting. For example, the Edition Switch controls the default edition of the network front that is displayed when the user visit theguardian.com.
 
 ![Masthead switch](images/header-component-api/masthead-switch.png)
 
-##### Example
+#### Example
 
 ```jsx
 <Masthead.Switch
@@ -158,18 +154,18 @@ A dropdown menu that allows the user to switch a high-level user setting. For ex
 </Masthead.Switch>
 ```
 
-##### Props
+#### Props
 
 -   `onChange` _function_
     -   callback for logic that runs when the selected switch item is changed
 
-#### `<Masthead.SwitchItem />`
+### `<Masthead.SwitchItem />`
 
 A link that appears in the Switch dropdown menu.
 
 ![Masthead switch item](images/header-component-api/masthead-switch-item.png)
 
-##### Example
+#### Example
 
 ```jsx
 <Masthead.SwitchItem
@@ -179,7 +175,7 @@ A link that appears in the Switch dropdown menu.
 />
 ```
 
-##### Props
+#### Props
 
 -   `href` _string_
     -   Target URL for the `Masthead.SwitchItem`
@@ -189,13 +185,13 @@ A link that appears in the Switch dropdown menu.
 -   `selected` _boolean_
     -   the currently selected `Masthead.SwitchItem`
 
-### `<Navigation />`
+## `<Navigation />`
 
 The top-level navigation menu.
 
 ![Navigation](images/header-component-api/navigation-expanded.png)
 
-#### Example
+### Example
 
 ```jsx
 <Navigation>
@@ -213,13 +209,13 @@ The top-level navigation menu.
 </Navigation>
 ```
 
-#### `<Navigation.Links />`
+### `<Navigation.Links />`
 
 The main visible navigational links
 
 ![Navigation primary links](images/header-component-api/navigation-primary-links.png)
 
-##### Example
+#### Example
 
 ```jsx
 <Navigation.Links>
@@ -227,13 +223,13 @@ The main visible navigational links
 </Navigation.Links>
 ```
 
-##### `<Navigation.Link />`
+#### `<Navigation.Link />`
 
 A navigational link that appears in the `Navigation.Links` component
 
 ![Navigation primary link](images/header-component-api/navigation-primary-link.png)
 
-###### Example
+##### Example
 
 ```jsx
 <Navigation.Link
@@ -244,7 +240,7 @@ A navigational link that appears in the `Navigation.Links` component
 />
 ```
 
-###### Props
+##### Props
 
 -   `href` _string_
     -   navigation location when `Navigation.Link` is clicked
@@ -255,13 +251,13 @@ A navigational link that appears in the `Navigation.Links` component
 -   `selected` _boolean_
     -   toggles the top link’s selection indicator
 
-#### `<Navigation.Menu />`
+### `<Navigation.Menu />`
 
 An expanding menu that opens on click of the veggie burger icon, or the "more" link at wider breakpoints
 
 ![Navigation secondary links](images/header-component-api/navigation-secondary-links.png)
 
-##### Example
+#### Example
 
 ```jsx
 <Navigation.Menu>
@@ -278,13 +274,13 @@ An expanding menu that opens on click of the veggie burger icon, or the "more" l
 </Navigation.Menu>
 ```
 
-##### `<Navigation.MenuGroup />`
+#### `<Navigation.MenuGroup />`
 
 A column of links within the `SecondaryLinks` panel
 
 ![Navigation secondary links group](images/header-component-api/navigation-secondary-links-group.png)
 
-###### Example
+##### Example
 
 ```jsx
 <Navigation.MenuGroup>
@@ -299,20 +295,20 @@ A column of links within the `SecondaryLinks` panel
 </Navigation.MenuGroup>
 ```
 
-###### `<Navigation.MenuLink />`
+##### `<Navigation.MenuLink />`
 
 A navigational link that appears in the `Navigation.Menu` component
 
 ![Navigation secondary link](images/header-component-api/navigation-secondary-link.png)
 
-###### Props
+##### Props
 
 -   `href` _string_
     -   navigation location when `Navigation.MenuLink` is clicked
 -   `label` _string_
     -   display label of the `Navigation.MenuLink`
 
-###### Example
+##### Example
 
 ```jsx
 <Navigation.MenuLink
@@ -321,13 +317,13 @@ A navigational link that appears in the `Navigation.Menu` component
 />
 ```
 
-##### `<Navigation.MenuSupplementalLink />`
+#### `<Navigation.MenuSupplementalLink />`
 
 A visually prominent navigational link that appears in the `Navigation.Menu` component.
 
 ![Navigation secondary links supplemental link](images/header-component-api/navigation-secondary-links-supplemental-link.png)
 
-###### Example
+##### Example
 
 ```jsx
 <Navigation.MenuSupplementalLink
@@ -336,20 +332,20 @@ A visually prominent navigational link that appears in the `Navigation.Menu` com
 />
 ```
 
-###### Props
+##### Props
 
 -   `href` _string_
     -   navigation location when `Navigation.MenuSupplementalLink` is clicked
 -   `label` _string_
     -   display label of the `Navigation.MenuSupplementalLink`
 
-### `<Subnav />`
+## `<Subnav />`
 
 A navigation for sub-categories below the current top-level category.
 
 ![Subnav](images/header-component-api/subnav.png)
 
-#### Example
+### Example
 
 ```jsx
 <Subnav>
@@ -364,36 +360,36 @@ A navigation for sub-categories below the current top-level category.
 <Subnav/>
 ```
 
-#### `<Subnav.Link />`
+### `<Subnav.Link />`
 
 A navigational link that appears in the `Subnav` component
 
 ![Subnav](images/header-component-api/subnav-link.png)
 
-##### Example
+#### Example
 
 ```jsx
 <Subnav.Link label="UK politics" href="https://www.theguardian.com/politics" />
 ```
 
-##### Props
+#### Props
 
 -   `href` _string_
     -   navigation location when `Subnav.Link` is clicked
 -   `label` _string_
     -   display label of the `Subnav.Link`
 
-## Specialised headers
+# Specialised headers
 
-### `<EditorialHeader />`
+## `<EditorialHeader />`
 
 A special header layout for editorial pages. The logo is hard-coded.
 
 ![Editorial header](images/header-component-api/editorial-header.png)
 
-#### Differences to generic header
+### Differences to generic header
 
-##### Masthead
+#### Masthead
 
 -   Links to the left, floated right
 -   Editions dropdown to the right
@@ -404,7 +400,7 @@ A special header layout for editorial pages. The logo is hard-coded.
     -   Editions menu
 -   Subscribe / Contribute links
 
-#### Example
+### Example
 
 ```jsx
 <EditorialHeader>
@@ -429,11 +425,11 @@ A special header layout for editorial pages. The logo is hard-coded.
 </EditorialHeader>
 ```
 
-#### Props
+### Props
 
 -   `edition` _string_ `'uk'` | `'au'` | `'us'` | `'international'`
 
-#### `<EditorialHeader.Support />`
+### `<EditorialHeader.Support />`
 
 Presents a message thanking supporters, or encouraging the reader to become a supporter.
 The heading, subheading and buttons can be customised.
@@ -441,7 +437,7 @@ The heading, subheading and buttons can be customised.
 ![Support buttons](images/header-component-api/support-buttons.png)
 ![Support thank you message](images/header-component-api/support-thank-you.png)
 
-#### Props
+### Props
 
 -   `heading` _string_
     -   Text for the heading
@@ -451,22 +447,3 @@ The heading, subheading and buttons can be customised.
     -   URL and button label for the primary call to action
 -   `secondaryCta` _{ ctaUrl: string; ctaText: string }_
     -   URL and button label for the secondary call to action
-
-## Risks and uncertainty
-
--   The support buttons / thank you message is delivered by Automat
-    -   What is the state of Automat? Will it continue to be maintained, or should we take the opportunity to simplify?
-    -   Currently in support-dotcom-components. Should the component code live in Source?
--   Client side rendered consumers will have to ship multiple logos, or they would have to lazy load the correct SVG
--   How much can we hardcode?
-    -   Logos
-    -   Editions switch
-    -   Support messaging
-    -   Masthead links
-        -   Do we hardcode the URLs or should platforms control the actual links?
--   Should Source be aware of / managing Islands?
-    -   We need to avoid re-rendering the entire header on the client because Nav is pretty huge, and doesn’t need to be dynamic
-    -   Should we be imposing the Island architecture on all platforms?
-    -   Could we allow consumers to compose their own header
-        -   Via props
-        -   `<EditorialHeader masthead={<Island><Masthead /></Island>} />`
