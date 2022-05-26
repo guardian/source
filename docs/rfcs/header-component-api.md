@@ -435,19 +435,22 @@ A special header layout for editorial pages. The logo is hard-coded.
 
 #### `<EditorialHeader.Support />`
 
-Presents either the Support buttons, or the Thank You message depending on whether the user is a supporter
+Presents a message thanking supporters, or encouraging the reader to become a supporter.
+The heading, subheading and buttons can be customised.
 
 ![Support buttons](images/header-component-api/support-buttons.png)
 ![Support thank you message](images/header-component-api/support-thank-you.png)
 
 #### Props
 
--   `showSupportButtons` _boolean_
-    -   whether to show the support buttons
--   `showSubscriberMessage` _boolean_
-    -   whether to show the Thank You message
--   `readerRevenueLinks` _{ subscribe: string; support: string; contribute: string }_
-    -   urls to assign to the support buttons
+-   `heading` _string_
+    -   Text for the heading
+-   `subheading` _string_
+    -   Text for the subheading
+-   `primaryCta` _{ ctaUrl: string; ctaText: string }_
+    -   URL and button label for the primary call to action
+-   `secondaryCta` _{ ctaUrl: string; ctaText: string }_
+    -   URL and button label for the secondary call to action
 
 ## Risks and uncertainty
 
