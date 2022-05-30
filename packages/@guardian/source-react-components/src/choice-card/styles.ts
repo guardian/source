@@ -31,6 +31,10 @@ export const flexContainer = css`
 	}
 `;
 
+export const containerTopMargin = css`
+	margin-top: ${space[2]}px;
+`;
+
 export const gridContainer = css`
 	width: 100%;
 	${from.mobileLandscape} {
