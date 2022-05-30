@@ -1,9 +1,6 @@
 name: Chromatic
 on:
   push:
-    branches:
-      - main
-  pull_request:
 jobs:
   upload-storybook:
     runs-on: ubuntu-latest
@@ -21,3 +18,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
+          onlyChanged: "!(main)" # only turbosnap on non-main branches
