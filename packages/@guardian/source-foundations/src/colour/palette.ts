@@ -66,7 +66,7 @@ const colors = {
 		'#185E36', //green-300
 		'#22874D', //green-400, success-400
 		'#58D08B', //green-500, success-500
-		'#4B8878', //labs-200
+		'#0C7A73', //labs-200
 		'#65A897', //labs-300
 		'#69D1CA', //labs-400
 	],
