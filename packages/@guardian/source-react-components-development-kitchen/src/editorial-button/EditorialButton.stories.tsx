@@ -76,7 +76,7 @@ const Template: Story = (args: EditorialButtonProps) => {
 		props.cssOverrides = cssOverrides;
 	}
 
-	return <EditorialButton {...props}>Click Me</EditorialButton>;
+	return <EditorialButton {...props}>Click me</EditorialButton>;
 };
 
 export const Playground = Template.bind({});
