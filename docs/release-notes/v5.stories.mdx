@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+	title="Release notes/Source v5"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# What's new in v5.0.0
+
+_tl;dr_
+
+-	Introduces accessibility improvements discovered in the recent accessibility audit
+-   The TypeScript libraries' API has not changed
+-   Functionality and dependencies have not changed
+
+This brings Source closer to WCAG 2.1 Level AA compliance.
+
+## Changes
+
+### Identifying Links and Buttons
+
+Links and Buttons are distinctively identified as interactive elements by applying
+ an underline to the text.
+
+- Deprecate `subdued` styling in `<Link>` component. Give links marked as `subdued` an underline.
+- Give `<Link>` component underline increased thickness on hover
+- Give text-only `<Button>` components (`priority="subdued"`) an underline which increases in thickness on hover
+- Add 3px of space to focused `<Button>` components a slightly padded focus halo
+
+### Colour
+
+Our text colours are optimised to have a 4.5:1 contrast ratio against its background.
+
+For graphical objects and user interface components (e.g. icons, infographics and buttons),
+we aim for a 3:1 contrast ratio against its background.
+
+#### Changes
+
+- ChoiceCard border colour `#999999` -> `#707070`
+- Checkbox border colour `#999999` -> `#707070`
+- labs.200 `#4B8878` -> `#0C7A73`
+- opinion.400 `#E05E00` -> `#C74600`
+- culture.400 `#A1845C` -> `#866D50`
+- brand.500  `#007ABC` -> `#0077B6`
+- focus.400 `#007CC4` -> `#0077B6`
+
+#### Additions
+
+- opinion.450 `#E05E00`
+- culture.450 `#A1845C`
+
+#### Deprecations
+
+- Deprecate opinion.300 `#C74600`
+- Deprecate culture.350 `#866D50`
+
+### Other changes
+
+- Increase spacing between Choice Cards and label
+
+## Migrating to v5
+
+From a code perspective, v5 of Source is a drop-in replacement for v4. There are no
+breaking API changes and functionality has not changed.
+
+There are a number of updates that change the way Source components appear. There are
+also some colour changes. Consumers are advised to ensure the Source components
+and colours still look beautiful and accessible within their products.
+
+If a changed component or colour appears in automated visual regression tests (e.g. in
+Chromatic), please review the changes before upgrading Source.
