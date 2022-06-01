@@ -29,7 +29,7 @@
     "@types/svgo": "^2.6.3",
     "axios": "^0.27.2",
     "mkdirp": "^1.0.4",
-    "rollup": "^2.71.1",
+    "rollup": "^2.75.4",
     "rollup-plugin-ts": "^2.0.5",
     "ts-node": "^10.7.0"
   },
