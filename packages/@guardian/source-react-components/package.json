@@ -30,7 +30,7 @@
     "axios": "^0.27.2",
     "mkdirp": "^1.0.4",
     "rollup": "^2.71.1",
-    "rollup-plugin-ts": "^2.0.5",
+    "rollup-plugin-ts": "^3.0.1",
     "ts-node": "^10.7.0"
   },
   "peerDependencies": {
