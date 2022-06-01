@@ -31,7 +31,7 @@
     "@types/estree": "^0.0.51",
     "rollup": "^2.71.1",
     "rollup-plugin-ts": "^2.0.5",
-    "typescript": "^4.6.4"
+    "typescript": "^4.7.2"
   },
   "peerDependencies": {
     "@guardian/source-foundations": "^4.0.1",
