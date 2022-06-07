@@ -81,5 +81,6 @@
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "~4.6.4",
     "webpack": "^5.57.1"
-  }
+  },
+  "packageManager": "pnpm@7.1.7"
 }

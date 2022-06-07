@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'pnpm'
@@ -20,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'pnpm'
@@ -30,6 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'pnpm'
@@ -40,6 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
       - uses: guardian/actions-setup-node@v2.4.1
         with:
           cache: 'pnpm'

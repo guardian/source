@@ -8,14 +8,15 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: pnpm/action-setup@v2.2.2
       - uses: guardian/actions-setup-node@v2.4.1
         with:
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
       - uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
           token: ${{ secrets.GITHUB_TOKEN }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
-          onlyChanged: "!(main)" # only turbosnap on non-main branches
+          onlyChanged: '!(main)' # only turbosnap on non-main branches

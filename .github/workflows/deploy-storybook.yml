@@ -8,14 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
       - uses: guardian/actions-setup-node@v2.4.1
         with:
-          cache: 'yarn'
+          cache: 'pnpm'
       - name: build
         run: |
-          yarn install --frozen-lockfile
-          yarn build:storybook
+          pnpm install --frozen-lockfile
+          pnpm build:storybook
       - name: deploy
-        run: yarn storybook-to-ghpages --ci
+        run: pnpm storybook-to-ghpages --ci
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
