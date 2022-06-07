@@ -12,9 +12,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn lint
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
 
   test:
     runs-on: ubuntu-latest
@@ -22,9 +22,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn test
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
 
   tsc:
     runs-on: ubuntu-latest
@@ -32,9 +32,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn tsc
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm tsc
 
   e2e:
     runs-on: ubuntu-latest
@@ -42,6 +42,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: guardian/actions-setup-node@v2.4.1
         with:
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - run: yarn e2e
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm e2e
