@@ -9,11 +9,23 @@ import { Meta } from '@storybook/addon-docs';
 
 _tl;dr_
 
--	Introduces accessibility improvements discovered in the recent accessibility audit
--   The TypeScript libraries' API has not changed
+-	Accessibility improvements (some components look different)
+-   Component APIs have not changed
 -   Functionality and dependencies have not changed
 
 This brings Source closer to WCAG 2.1 Level AA compliance.
+
+## Migrating to v5
+
+From a code perspective, v5 of Source is a drop-in replacement for v4. There are no
+breaking API changes and functionality has not changed.
+
+There are a number of updates that change the way Source components appear. There are
+also some colour changes. Consumers are advised to ensure the Source components
+and colours still look beautiful and accessible within their products.
+
+If a changed component or colour appears in automated visual regression tests (e.g. in
+Chromatic), please review the changes before upgrading Source.
 
 ## Changes
 
@@ -22,14 +34,15 @@ This brings Source closer to WCAG 2.1 Level AA compliance.
 Links and Buttons are distinctively identified as interactive elements by applying
  an underline to the text.
 
-- Deprecate `subdued` styling in `<Link>` component. Give links marked as `subdued` an underline.
-- Give `<Link>` component underline increased thickness on hover
+- Deprecate `subdued` styling in `<Link>` component.
+- Give all links (including now-deprecated `subdued`) an underline.
+- Increase the thickness of the `<Link>` component's underline on hover
 - Give text-only `<Button>` components (`priority="subdued"`) an underline which increases in thickness on hover
 - Add 3px of space to focused `<Button>` components a slightly padded focus halo
 
 ### Colour
 
-Our text colours are optimised to have a 4.5:1 contrast ratio against its background.
+Our text colours are optimised to have a 4.5:1 contrast ratio against their background.
 
 For graphical objects and user interface components (e.g. icons, infographics and buttons),
 we aim for a 3:1 contrast ratio against its background.
@@ -56,16 +69,5 @@ we aim for a 3:1 contrast ratio against its background.
 
 ### Other changes
 
-- Increase spacing between Choice Cards and label
+- Increase spacing between `<ChoiceCard />` and the label
 
-## Migrating to v5
-
-From a code perspective, v5 of Source is a drop-in replacement for v4. There are no
-breaking API changes and functionality has not changed.
-
-There are a number of updates that change the way Source components appear. There are
-also some colour changes. Consumers are advised to ensure the Source components
-and colours still look beautiful and accessible within their products.
-
-If a changed component or colour appears in automated visual regression tests (e.g. in
-Chromatic), please review the changes before upgrading Source.
