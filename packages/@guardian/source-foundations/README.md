@@ -6,7 +6,7 @@ The atoms from which all our visual design is built. They may be used with any C
 
 ## Install
 
-Foundations are installed as a JavaScript package via Yarn:
+Foundations are installed as a JavaScript package from NPM:
 
 ```sh
 $ yarn add @guardian/source-foundations

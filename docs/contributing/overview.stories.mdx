@@ -11,16 +11,16 @@ import { Meta } from '@storybook/addon-docs';
 
 ## Local development
 
-Install dependencies using Yarn:
+Install dependencies using pnpm:
 
 ```shell
-$ yarn
+$ pnpm
 ```
 
 Develop using Storybook:
 
 ```shell
-$ yarn storybook
+$ pnpm storybook
 ```
 
 ## Guidelines
@@ -71,8 +71,8 @@ $ yarn storybook
 
 ### Raising a pull request
 
--   Generate a changeset describing your work by running `yarn changeset` and following the prompts.
--   Test that your component can be used in a real project (e.g. [dotcom-rendering](https://github.com/guardian/dotcom-rendering)). Use [`yarn link`](https://yarnpkg.com/en/docs/cli/link) to avoid having to perform a real publish, and [`yarn pack`](https://yarnpkg.com/en/docs/cli/pack) to see exactly which files would be published.
+-   Generate a changeset describing your work by running `pnpm changeset` and following the prompts.
+-   Test that your component can be used in a real project (e.g. [dotcom-rendering](https://github.com/guardian/dotcom-rendering)). Use [`pnpm link`](https://pnpm.io/cli/link) to avoid having to perform a real publish, and [`pnpm pack`](https://pnpm.io/cli/pack) to see exactly which files would be published.
 
 ## Publishing
 
@@ -87,7 +87,7 @@ To publish `src-*` packages that have changed since the last release, you should
 first run:
 
 ```sh
-$ yarn verbump:prerelease:src
+$ pnpm verbump:prerelease:src
 ```
 
 Changes should be committed to git. This ensures all `src-*` packages have
@@ -95,7 +95,7 @@ changed and will be updated at the same time with the same version number. You
 may then run:
 
 ```sh
-$ yarn release
+$ pnpm release
 ```
 
 ### Force publishing unchanged packages
