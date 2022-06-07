@@ -31,8 +31,8 @@ The steps taken are:
 ## Running the script
 
 1. Clone the Source repository
-1. Install all dependencies: `yarn`
-1. Run `yarn get-usage`
+1. Install all dependencies: `pnpm`
+1. Run `pnpm get-usage`
 
 ### Config
 
