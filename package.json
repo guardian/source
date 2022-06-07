@@ -3,21 +3,17 @@
   "version": "3.12.0",
   "private": true,
   "license": "Apache-2.0",
-  "workspaces": [
-    "packages/@guardian/*",
-    "scripts/*"
-  ],
   "scripts": {
     "build": "nx run-many --all --target=build",
     "build:storybook": "NODE_ENV=production build-storybook -o dist",
     "clean": "rm -rf dist && nx run-many --target=clean --all",
-    "fix": "yarn lint:js --fix",
+    "fix": "pnpm lint:js --fix",
     "get-usage": "ts-node ./scripts/get-usage",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint . --ext .ts,.tsx,.js --cache",
     "lint:styles": "stylelint packages/**/styles.ts",
     "prepare": "husky install",
-    "release": "yarn clean && yarn build && changeset publish",
+    "release": "pnpm clean && pnpm build && changeset publish",
     "storybook": "start-storybook -p 6006",
     "test": "nx run-many --all --target=test",
     "test:coverage": "nx run-many --target=test --all --coverage",
@@ -85,6 +81,5 @@
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "~4.6.4",
     "webpack": "^5.57.1"
-  },
-  "packageManager": "yarn@3.2.0"
+  }
 }
