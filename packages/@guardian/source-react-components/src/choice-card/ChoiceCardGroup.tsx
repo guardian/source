@@ -5,7 +5,13 @@ import { Children, cloneElement } from 'react';
 import type { Props } from '../@types/Props';
 import { Legend } from '../label/Legend';
 import { InlineError } from '../user-feedback/InlineError';
-import { fieldset, flexContainer, gridColumns, gridContainer } from './styles';
+import {
+	containerTopMargin,
+	fieldset,
+	flexContainer,
+	gridColumns,
+	gridContainer,
+} from './styles';
 
 export type ChoiceCardColumns = 2 | 3 | 4 | 5;
 
@@ -68,6 +74,9 @@ export const ChoiceCardGroup = ({
 	...props
 }: ChoiceCardGroupProps): EmotionJSX.Element => {
 	const groupId = id ?? generateSourceId();
+	const topMargin =
+		(label && !hideLabel) || supporting || error ? containerTopMargin : '';
+
 	return (
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
 			{label ? (
@@ -83,11 +92,12 @@ export const ChoiceCardGroup = ({
 				<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 			)}
 			<div
-				css={
+				css={[
 					columns
 						? [gridContainer, gridColumns[columns]]
-						: flexContainer
-				}
+						: flexContainer,
+					topMargin,
+				]}
 			>
 				{Children.map(children, (child) => {
 					return cloneElement(

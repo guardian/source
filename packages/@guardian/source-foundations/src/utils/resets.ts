@@ -1,4 +1,4 @@
-import { background, text } from '../colour/palette';
+import { palette } from '../colour/palette';
 
 ////////////////////////////
 // Element specific resets
@@ -43,8 +43,8 @@ const defaults = `
         font-variant-ligatures: common-ligatures;
     }
     body {
-        background-color: ${background.primary};
-        color: ${text.primary};
+        background-color: ${palette.neutral[100]};
+        color: ${palette.neutral[7]};
     }
     em {
         font-style: italic;

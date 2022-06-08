@@ -1,11 +1,4 @@
-import {
-	background,
-	border,
-	brandBackground,
-	brandBorder,
-	brandText,
-	text,
-} from '@guardian/source-foundations';
+import { palette } from '@guardian/source-foundations';
 import { labelThemeBrand, labelThemeDefault } from '../label/theme';
 import {
 	userFeedbackThemeBrand,
@@ -14,14 +7,14 @@ import {
 
 export const checkboxThemeDefault = {
 	checkbox: {
-		border: border.input,
-		borderHover: border.inputHover,
-		borderChecked: border.inputChecked,
-		borderError: border.error,
-		backgroundChecked: background.inputChecked,
-		textLabel: text.inputLabel,
-		textLabelSupporting: text.inputLabelSupporting,
-		textIndeterminate: text.supporting,
+		border: palette.neutral[46],
+		borderHover: palette.brand[500],
+		borderChecked: palette.brand[500],
+		borderError: palette.error[400],
+		backgroundChecked: palette.brand[500],
+		textLabel: palette.neutral[7],
+		textLabelSupporting: palette.neutral[46],
+		textIndeterminate: palette.neutral[46],
 	},
 	...userFeedbackThemeDefault,
 	...labelThemeDefault,
@@ -29,14 +22,14 @@ export const checkboxThemeDefault = {
 
 export const checkboxThemeBrand = {
 	checkbox: {
-		border: brandBorder.input,
-		borderHover: brandBorder.inputHover,
-		borderChecked: brandBorder.inputChecked,
-		borderError: brandBorder.error,
-		backgroundChecked: brandBackground.inputChecked,
-		textLabel: brandText.inputLabel,
-		textLabelSupporting: brandText.inputLabelSupporting,
-		textIndeterminate: brandText.supporting,
+		border: palette.brand[800],
+		borderHover: palette.neutral[100],
+		borderChecked: palette.neutral[100],
+		borderError: palette.error[500],
+		backgroundChecked: palette.neutral[100],
+		textLabel: palette.neutral[100],
+		textLabelSupporting: palette.brand[800],
+		textIndeterminate: palette.brand[800],
 	},
 	...userFeedbackThemeBrand,
 	...labelThemeBrand,
