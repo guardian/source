@@ -1,5 +1,23 @@
 # @guardian/source-react-components-development-kitchen
 
+## 1.0.0
+
+### Patch Changes
+
+- Updated dependencies [b87baf5c]
+- Updated dependencies [94a6de68]
+- Updated dependencies [1e129d0b]
+- Updated dependencies [d55bc4b6]
+- Updated dependencies [ef458f83]
+- Updated dependencies [8bd1adce]
+- Updated dependencies [a5a14a49]
+- Updated dependencies [51f8737e]
+- Updated dependencies [f6865ac5]
+- Updated dependencies [c37e5be9]
+- Updated dependencies [34ec716d]
+  - @guardian/source-foundations@5.0.0
+  - @guardian/source-react-components@5.0.0
+
 ## 0.0.36
 
 ### Patch Changes

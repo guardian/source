@@ -1,5 +1,27 @@
 # @guardian/source-react-components
 
+## 5.0.0
+
+### Major Changes
+
+- 94a6de68: Improve Link/ButtonLink accessibility
+- 1e129d0b: Add spaced focus halo and apply to buttons
+- d55bc4b6: Change underline on subdued Button
+- ef458f83: Increase spacing between choice cards and label
+- a5a14a49: Improve accessibility of unselected state of ChoiceCard
+- c37e5be9: Improve accessibility of unselected state of checkbox
+
+### Patch Changes
+
+- b87baf5c: Replace deprecated colour tokens with palette
+- Updated dependencies [b87baf5c]
+- Updated dependencies [1e129d0b]
+- Updated dependencies [8bd1adce]
+- Updated dependencies [51f8737e]
+- Updated dependencies [f6865ac5]
+- Updated dependencies [34ec716d]
+  - @guardian/source-foundations@5.0.0
+
 ## 4.4.0
 
 ### Minor Changes
