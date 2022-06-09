@@ -2,6 +2,10 @@
 
 ## 1.0.0
 
+Contributions to this package have stabilised, and the release process seems like it will fit a standard semver pattern. 
+
+So to accompnany the major version releases to its peer deps, the dev kitchen is also moving to v1.
+
 ### Patch Changes
 
 - Updated dependencies [b87baf5c]
