@@ -21,7 +21,7 @@
     "storybook": "start-storybook -p 6006",
     "test": "nx run-many --all --target=test",
     "test:coverage": "nx run-many --target=test --all --coverage",
-    "tsc": "tsc",
+    "tsc": "nx run-many --target=tsc --all",
     "validate": "npm-run-all tsc lint test build e2e",
     "e2e": "nx run-many --target=e2e --all"
   },

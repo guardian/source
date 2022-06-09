@@ -18,7 +18,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "5.21.0",

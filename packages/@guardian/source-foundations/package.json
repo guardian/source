@@ -16,7 +16,8 @@
     "build": "rollup -c",
     "clean": "rm -rf dist",
     "e2e": "jest src/index.test.ts --setupFilesAfterEnv=./jest.e2e.setup.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "tsc": "tsc"
   },
   "dependencies": {
     "mini-svg-data-uri": "^1.3.3"
