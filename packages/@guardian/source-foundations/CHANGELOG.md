@@ -1,5 +1,22 @@
 # @guardian/source-foundations
 
+## 5.0.0
+
+### Major Changes
+
+- 8bd1adce: Update culture and opinion colours for better contrast
+- 51f8737e: Change brand[500] colour token
+- f6865ac5: update palette.labs.200
+- 34ec716d: Update focusHalo colour
+
+### Minor Changes
+
+- 1e129d0b: Add spaced focus halo and apply to buttons
+
+### Patch Changes
+
+- b87baf5c: Replace deprecated colour tokens with palette
+
 ## 4.2.1
 
 ### Patch Changes
