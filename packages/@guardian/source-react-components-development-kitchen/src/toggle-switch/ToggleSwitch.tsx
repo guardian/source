@@ -118,7 +118,7 @@ export const ToggleSwitch = ({
 		setIsBrowser(true);
 	});
 
-	if (isBrowser) {
+	if (!isBrowser) {
 		tooltiptext = 'tooltiptext';
 	}
 
