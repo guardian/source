@@ -46,6 +46,11 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	labelPosition?: LabelPosition;
 	/**
+	 * Whether the toggle has a tooltip.
+	 * The default is false.
+	 */
+	tooltip?: boolean;
+	/**
 	 * Sets the toggle styling appropriate for each platform.
 	 * The default platform is 'web'.
 	 */
