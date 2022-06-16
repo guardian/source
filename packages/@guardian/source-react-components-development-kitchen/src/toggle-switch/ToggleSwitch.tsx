@@ -5,14 +5,11 @@ import type { Props } from '@guardian/source-react-components';
 import { useEffect, useState } from 'react';
 import {
 	androidStyles,
-	androidTooltipPosition,
 	buttonStyles,
 	iosStyles,
-	iosTooltipPosition,
 	labelStyles,
 	tooltipStyles,
 	webStyles,
-	webTooltipPosition,
 } from './styles';
 
 export type Platform = 'android' | 'ios' | 'web';
@@ -84,17 +81,6 @@ const getPlatformStyles = (platform: Platform): SerializedStyles => {
 	}
 };
 
-const getPlatformTooltipPosition = (platform: Platform) => {
-	switch (platform) {
-		case 'android':
-			return androidTooltipPosition;
-		case 'ios':
-			return iosTooltipPosition;
-		case 'web':
-			return webTooltipPosition;
-	}
-};
-
 export const ToggleSwitch = ({
 	checked,
 	id,
@@ -144,16 +130,10 @@ export const ToggleSwitch = ({
 					className="tooltip"
 				></button>
 				{labelPosition === 'right' && label}
-				<div
-					className={tooltiptext}
-					css={[tooltipStyles, getPlatformTooltipPosition(platform)]}
-				>
-					Sorry, your browser does not support JavaScript!
+				<div className={tooltiptext} css={tooltipStyles}>
+					<span>Please turn on JavaScript to use this feature</span>
 				</div>
 			</label>
-			<p>
-				<div>Show key events only</div>
-			</p>
 		</>
 	);
 };

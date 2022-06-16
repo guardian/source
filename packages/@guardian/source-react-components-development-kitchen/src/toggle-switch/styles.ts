@@ -158,7 +158,7 @@ export const tooltipStyles = css`
 	visibility: hidden;
 	/* display: none; */
 	width: 248px;
-	height: 56px;
+	top: 40px;
 	background-color: #ffffff;
 	border: 1px solid rgba(18, 18, 18, 0.25);
 	border-radius: 3px;
@@ -166,14 +166,4 @@ export const tooltipStyles = css`
 	z-index: 1;
 	opacity: 0;
 	transition: 0.7 s opacity;
-`;
-
-export const androidTooltipPosition = css`
-	top: 30px;
-`;
-export const iosTooltipPosition = css`
-	top: 38px;
-`;
-export const webTooltipPosition = css`
-	top: 30px;
 `;
