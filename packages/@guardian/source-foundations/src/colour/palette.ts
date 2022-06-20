@@ -15,8 +15,8 @@ const colors = {
 	oranges: [
 		'#672005', //opinion-100
 		'#8D2700', //opinion-200
-		'#C74600', //opinion-300
-		'#E05E00', //opinion-400
+		'#C74600', //opinion-400, opinion-300 (deprecated)
+		'#E05E00', //opinion-450
 		'#FF7F0F', //opinion-500
 		'#FF9941', //opinion-550
 		'#F9B376', //opinion-600
@@ -26,25 +26,23 @@ const colors = {
 		'#003C60', //sport-100
 		'#004E7C', //sport-200
 		'#005689', //sport-300
-		'#0077B6', //sport-400
+		'#0077B6', //sport-400, focus-400, brand-500
 		'#00B2FF', //sport-500
 		'#90DCFF', //sport-600
 		'#F1F8FC', //sport-800
 		'#001536', //brand-100
 		'#041F4A', //brand-300
 		'#052962', //brand-400
-		'#007ABC', //brand-500
 		'#506991', //brand-600
 		'#C1D8FC', //brand-800
-		'#0093E0', //focus-400
 	],
 	browns: [
 		'#2B2625', //culture-50
 		'#3E3323', //culture-100
 		'#574835', //culture-200
 		'#6B5840', //culture-300
-		'#866D50', //culture-350
-		'#A1845C', //culture-400
+		'#866D50', //culture-400, culture-350 (deprecated)
+		'#A1845C', //culture-450
 		'#EACCA0', //culture-500
 		'#E7D4B9', //culture-600
 		'#EFE8DD', //culture-700
@@ -68,7 +66,7 @@ const colors = {
 		'#185E36', //green-300
 		'#22874D', //green-400, success-400
 		'#58D08B', //green-500, success-500
-		'#4B8878', //labs-200
+		'#0C7A73', //labs-200
 		'#65A897', //labs-300
 		'#69D1CA', //labs-400
 	],
@@ -106,9 +104,9 @@ export const palette = {
 		100: colors.blues[7],
 		300: colors.blues[8],
 		400: colors.blues[9],
-		500: colors.blues[10],
-		600: colors.blues[11],
-		800: colors.blues[12],
+		500: colors.blues[3],
+		600: colors.blues[10],
+		800: colors.blues[11],
 	},
 	brandAlt: {
 		200: colors.yellows[0],
@@ -148,8 +146,9 @@ export const palette = {
 	opinion: {
 		100: colors.oranges[0],
 		200: colors.oranges[1],
-		300: colors.oranges[2],
-		400: colors.oranges[3],
+		300: colors.oranges[2], // deprecated, use opinion[400]
+		400: colors.oranges[2],
+		450: colors.oranges[3],
 		500: colors.oranges[4],
 		550: colors.oranges[5],
 		600: colors.oranges[6],
@@ -169,8 +168,9 @@ export const palette = {
 		100: colors.browns[1],
 		200: colors.browns[2],
 		300: colors.browns[3],
-		350: colors.browns[4],
-		400: colors.browns[5],
+		350: colors.browns[4], // deprecated, use culture[400]
+		400: colors.browns[4],
+		450: colors.browns[5],
 		500: colors.browns[6],
 		600: colors.browns[7],
 		700: colors.browns[8],
@@ -201,7 +201,7 @@ export const palette = {
 		800: colors.grays[17],
 	},
 	focus: {
-		400: '#007CC4',
+		400: colors.blues[3],
 	},
 };
 

@@ -1,8 +1,8 @@
-import { border, text } from '@guardian/source-foundations';
+import { palette } from '@guardian/source-foundations';
 
 export const accordionThemeDefault = {
 	accordion: {
-		textPrimary: text.primary,
-		borderPrimary: border.primary,
+		textPrimary: palette.neutral[7],
+		borderPrimary: palette.neutral[60],
 	},
 };

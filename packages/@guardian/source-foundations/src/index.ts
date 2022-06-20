@@ -2,7 +2,7 @@ import { palette } from './colour/palette';
 
 // accessibility
 export { descriptionId } from './accessibility/description-id';
-export { focusHalo } from './accessibility/focus-halo';
+export { focusHalo, focusHaloSpaced } from './accessibility/focus-halo';
 export { generateSourceId } from './accessibility/generate-source-id';
 export { visuallyHidden } from './accessibility/visually-hidden';
 
