@@ -1,6 +1,6 @@
 {
   "name": "@guardian/source-react-components",
-  "version": "4.4.0",
+  "version": "5.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/guardian/source.git"
@@ -20,7 +20,8 @@
     "test": "jest --coverage"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.2.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@svgr/babel-preset": "^6.2.0",
     "@svgr/core": "^6.2.1",
     "@svgr/plugin-jsx": "^6.2.1",
     "@svgr/plugin-prettier": "^6.1.2",
@@ -29,13 +30,13 @@
     "@types/svgo": "^2.6.3",
     "axios": "^0.27.2",
     "mkdirp": "^1.0.4",
-    "rollup": "^2.71.1",
-    "rollup-plugin-ts": "^2.0.5",
+    "rollup": "^2.75.4",
+    "rollup-plugin-ts": "^2.0.7",
     "ts-node": "^10.7.0"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
-    "@guardian/source-foundations": "^4.0.3",
+    "@guardian/source-foundations": "^5.0.0",
     "react": "^17.0.1"
   },
   "publishConfig": {

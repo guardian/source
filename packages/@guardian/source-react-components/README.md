@@ -78,11 +78,11 @@ To extend or override the styles of Source components, pass `SerializedStyles` g
 import { css } from '@emotion/react';
 
 const dangerStyles = css`
-    background-colour: ${error[500]};
-    color: ${text.ctaPrimary};
+    background-colour: ${palette.error[500]};
+    color: ${palette.neutral[100]};
 
     &:hover {
-        background-colour: ${error[400]};
+        background-colour: ${palette.error[400]};
     }
 `;
 

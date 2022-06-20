@@ -1,4 +1,4 @@
-import { border } from '../colour/palette';
+import { palette } from '../colour/palette';
 
 /**
  * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-focushalo--page)
@@ -8,6 +8,14 @@ import { border } from '../colour/palette';
 export const focusHalo = `
  outline: 0;
  html:not(.src-focus-disabled) & {
-	 box-shadow: 0 0 0 5px ${border.focusHalo};
+	 box-shadow: 0 0 0 5px ${palette.focus[400]};
+ }
+`;
+
+export const focusHaloSpaced = `
+ outline: 0;
+ html:not(.src-focus-disabled) & {
+	outline: 5px solid ${palette.focus[400]};
+	outline-offset: 3px;
  }
 `;

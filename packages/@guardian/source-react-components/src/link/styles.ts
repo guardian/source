@@ -16,9 +16,15 @@ export const link = css`
 	${textSans.medium()};
 	cursor: pointer;
 	text-decoration: underline;
+	text-underline-position: under;
+	text-underline-offset: 10%;
 
 	display: inline;
 	align-items: center;
+
+	&:hover {
+		text-decoration-thickness: 4px;
+	}
 
 	&:focus {
 		${focusHalo};
@@ -49,14 +55,6 @@ export const secondary = (
 
 	&:hover {
 		color: ${link.textSecondaryHover};
-	}
-`;
-
-export const subdued = css`
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
 	}
 `;
 
@@ -104,7 +102,6 @@ const iconSides: {
 export const linkStyles = ({
 	isButton,
 	priority,
-	isSubdued,
 	iconSvg,
 	iconSide = 'left',
 	cssOverrides,
@@ -122,7 +119,6 @@ export const linkStyles = ({
 		link,
 		isButton ? buttonLink : '',
 		priorities[priority](theme.link),
-		isSubdued ? subdued : '',
 		iconSvg ? icon : '',
 		iconSvg ? iconSides[iconSide] : '',
 		cssOverrides,
