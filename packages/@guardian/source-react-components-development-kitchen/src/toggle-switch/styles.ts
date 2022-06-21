@@ -21,6 +21,12 @@ export const buttonStyles = (labelPosition: LabelPosition) => css`
 		will-change: left;
 		transition: left 0.15s ease-in-out;
 	}
+
+	:focus + .tooltiptext {
+		display: inline-block;
+		opacity: 1;
+		visibility: visible;
+	}
 `;
 
 export const iosStyles = css`
@@ -144,4 +150,20 @@ export const labelStyles = css`
 	align-items: center;
 	cursor: pointer;
 	user-select: none;
+	position: relative;
+`;
+
+export const tooltipStyles = css`
+	position: absolute;
+	visibility: hidden;
+	/* display: none; */
+	width: 248px;
+	top: 40px;
+	background-color: #ffffff;
+	border: 1px solid rgba(18, 18, 18, 0.25);
+	border-radius: 3px;
+	padding: 8px;
+	z-index: 1;
+	opacity: 0;
+	transition: 0.7 s opacity;
 `;
