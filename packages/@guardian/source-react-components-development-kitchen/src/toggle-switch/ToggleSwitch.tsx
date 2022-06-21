@@ -2,11 +2,13 @@ import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { Props } from '@guardian/source-react-components';
+import { useEffect, useState } from 'react';
 import {
 	androidStyles,
 	buttonStyles,
 	iosStyles,
 	labelStyles,
+	tooltipStyles,
 	webStyles,
 } from './styles';
 
@@ -40,6 +42,11 @@ export interface ToggleSwitchProps extends Props {
 	 * Which side of the switch the label will appear on.
 	 */
 	labelPosition?: LabelPosition;
+	/**
+	 * Whether the toggle has a tooltip.
+	 * The default is false.
+	 */
+	tooltip?: boolean;
 	/**
 	 * Sets the toggle styling appropriate for each platform.
 	 * The default platform is 'web'.
@@ -87,6 +94,9 @@ export const ToggleSwitch = ({
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
+	const [isBrowser, setIsBrowser] = useState(false);
+	let tooltiptext = '';
+
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
 			return checked;
@@ -95,18 +105,35 @@ export const ToggleSwitch = ({
 		return !!defaultChecked;
 	};
 
+	useEffect(() => {
+		setIsBrowser(true);
+	});
+
+	if (!isBrowser) {
+		tooltiptext = 'tooltiptext';
+	}
+
 	return (
-		<label id={labelId} css={[labelStyles, cssOverrides]} {...props}>
-			{labelPosition === 'left' && label}
-			<button
-				id={buttonId}
-				css={[buttonStyles(labelPosition), getPlatformStyles(platform)]}
-				role="switch"
-				aria-checked={isChecked()}
-				aria-labelledby={labelId}
-				onClick={onClick}
-			></button>
-			{labelPosition === 'right' && label}
-		</label>
+		<>
+			<label id={labelId} css={[labelStyles, cssOverrides]} {...props}>
+				{labelPosition === 'left' && label}
+				<button
+					id={buttonId}
+					css={[
+						buttonStyles(labelPosition),
+						getPlatformStyles(platform),
+					]}
+					role="switch"
+					aria-checked={isChecked()}
+					aria-labelledby={labelId}
+					onClick={onClick}
+					className="tooltip"
+				></button>
+				{labelPosition === 'right' && label}
+				<div className={tooltiptext} css={tooltipStyles}>
+					<span>Please turn on JavaScript to use this feature</span>
+				</div>
+			</label>
+		</>
 	);
 };
