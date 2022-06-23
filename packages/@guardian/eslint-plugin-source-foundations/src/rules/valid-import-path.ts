@@ -1,4 +1,3 @@
-import { inspect } from 'node:util';
 import type { Rule } from 'eslint';
 import type {
 	ExportAllDeclaration,
@@ -341,7 +340,3 @@ export const validFoundationsImportPath: Rule.RuleModule = {
 		};
 	},
 };
-
-console.log(
-	inspect(validFoundationsImportPath, false, null, true /* enable colors */),
-);
