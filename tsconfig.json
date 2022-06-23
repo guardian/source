@@ -27,6 +27,12 @@
       ],
       "@guardian/source-react-components-development-kitchen": [
         "packages/@guardian/source-react-components-development-kitchen/src/index"
+      ],
+      "@guardian/eslint-plugin-source-foundations": [
+        "packages/@guardian/eslint-plugin-source-foundations/src/index"
+      ],
+      "@guardian/eslint-plugin-source-react-components": [
+        "packages/@guardian/eslint-plugin-source-react-components/src/index"
       ]
     },
     "resolveJsonModule": true,
