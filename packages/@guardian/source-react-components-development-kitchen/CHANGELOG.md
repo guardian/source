@@ -1,8 +1,14 @@
 # @guardian/source-react-components-development-kitchen
 
+## 1.0.1
+
+### Patch Changes
+
+- 32ca5c1e: Add tooltip to ToggleSwitch
+
 ## 1.0.0
 
-Contributions to this package have stabilised, and the release process seems like it will fit a standard semver pattern. 
+Contributions to this package have stabilised, and the release process seems like it will fit a standard semver pattern.
 
 So to accompany the major version releases to its peer deps, the dev kitchen is also moving to v1.
 
