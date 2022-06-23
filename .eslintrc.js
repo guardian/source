@@ -1,26 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-const SYMLINK_LOCATION_PLUGIN_SOURCE_FOUNDATIONS = path.join(
-	__dirname,
-	'node_modules',
-	'@guardian/eslint-plugin-source-foundations',
-);
-const SYMLINK_LOCATION_PLUGIN_SOURCE_REACT_COMPONENTS = path.join(
-	__dirname,
-	'node_modules',
-	'@guardian/eslint-plugin-source-react-components',
-);
-
-// Symlink node_modules/eslint-plugin-markdown to this directory so that ESLint
-// resolves this plugin name correctly.
-if (!fs.existsSync(SYMLINK_LOCATION_PLUGIN_SOURCE_FOUNDATIONS)) {
-	fs.symlinkSync(__dirname, SYMLINK_LOCATION_PLUGIN_SOURCE_FOUNDATIONS);
-}
-if (!fs.existsSync(SYMLINK_LOCATION_PLUGIN_SOURCE_REACT_COMPONENTS)) {
-	fs.symlinkSync(__dirname, SYMLINK_LOCATION_PLUGIN_SOURCE_REACT_COMPONENTS);
-}
-
 module.exports = {
 	root: true,
 	env: {
