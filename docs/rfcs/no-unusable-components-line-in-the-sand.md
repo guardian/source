@@ -18,7 +18,7 @@ A new line in the sand for Source:
 
 Given the example above, this could mean either:
 
-- not displaying it to users without javascript
+- not displaying it to users until the JavaScript loads OR
 - identifying and displaying a non-JS fallback
 
 Note that this *does not mandate fallbacks*. A team could decide that the component is an enhancement and not critical, and so they decide to just not show it to people without javascript.
