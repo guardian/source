@@ -4,7 +4,7 @@ This proposes a line in the sand regarding how Source components should behave w
 
 ## Example problem
 
-A toggle switch is similar to a checkbox, but unlike a checkbox, the state it sets should apply immediately (no submit button).
+A Toggle Switch is similar to a Checkbox. Unlike a Checkbox, the state it sets should apply immediately i.e. a user does not need to click a Submit Button.
 
 It needs javascript to achieve this. There is no obvious default widget to fall back to – it's not just a visual treatment of standard widget.
 
