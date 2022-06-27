@@ -8,7 +8,7 @@ A Toggle Switch is similar to a Checkbox. Unlike a Checkbox, the state it sets s
 
 It needs JavaScript to achieve this. The web platform provides no obvious default widget to fall back to – it's not just a visual treatment of standard widget.
 
-If we server render it, users without javascript enabled (or who have not yet downloaded the bundle) will be presented with an unresponsive CTA.
+If we server render it, [users without JavaScript enabled](https://kryogenix.org/code/browser/everyonehasjs.html) (or who have not yet downloaded the bundle) will be presented with an unresponsive Toggle Switch until the JavaScript arrives.
 
 ## Proposal
 
