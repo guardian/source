@@ -6,7 +6,7 @@ This proposes a line in the sand regarding how Source components should behave w
 
 A Toggle Switch is similar to a Checkbox. Unlike a Checkbox, the state it sets should apply immediately i.e. a user does not need to click a Submit Button.
 
-It needs javascript to achieve this. There is no obvious default widget to fall back to – it's not just a visual treatment of standard widget.
+It needs JavaScript to achieve this. The web platform provides no obvious default widget to fall back to – it's not just a visual treatment of standard widget.
 
 If we server render it, users without javascript enabled (or who have not yet downloaded the bundle) will be presented with an unresponsive CTA.
 
