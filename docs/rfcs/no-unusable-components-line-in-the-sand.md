@@ -27,7 +27,7 @@ But rendering it in an inoperative state would cross the line in the sand.
 
 ### Anti-patterns
 
-This proposal would not permit a "*please enable javascript to use this*" type message.
+This proposal would not permit a "*Please enable JavaScript to use this*" type message.
 
 Users should decide (or are unable to change) the environment Source components run in. Our job is to provide the best experience we can given what we encounter. 
 
