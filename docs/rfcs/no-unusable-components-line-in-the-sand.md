@@ -37,7 +37,7 @@ We should treat this approach as an analogue of "this site needs Chrome".
 
 ## Example solution
 
-In the case of a toggle switch, we could create a component that provides optional props that would enable us to render a working fallback. 
+A Toggle Switch component accepts optional props that enable us to render a working fallback in a non-JavaScript environment. 
 
 If they're provided we render the fallback and if we can, enhance/decorate it.
 
