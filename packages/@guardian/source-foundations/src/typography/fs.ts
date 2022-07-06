@@ -6,7 +6,13 @@ import {
 	lineHeightMapping,
 	remFontSizeMapping,
 } from './data';
-import type { FontStyle, FontWeightDefinition, Fs, Option } from './types';
+import type {
+	FontStyle,
+	FontWeightDefinition,
+	Fs,
+	Option,
+	TextDecorationThickness,
+} from './types';
 
 function getFontStyle(
 	font: FontWeightDefinition | undefined,
@@ -20,6 +26,18 @@ function getFontStyle(
 		case null:
 		default:
 			return null;
+	}
+}
+
+function getTextDecorationThickness(fontSize: number): TextDecorationThickness {
+	if (fontSize >= 50) {
+		return '6px';
+	} else if (fontSize >= 42 && fontSize < 50) {
+		return '5px';
+	} else if (fontSize >= 14 && fontSize < 42) {
+		return '4px';
+	} else {
+		return '3px';
 	}
 }
 
@@ -48,12 +66,16 @@ export const fs: Fs =
 			? fontWeightMapping[fontWeight]
 			: '';
 		const fontStyleValue = getFontStyle(requestedFont, fontStyle);
+		const textDecorationThicknessValue = getTextDecorationThickness(
+			Number(fontSizeMapping[category][level]),
+		);
 
 		return Object.assign(
 			{
 				fontFamily: fontFamilyValue,
 				fontSize: fontSizeValue,
 				lineHeight: lineHeightValue,
+				textDecorationThickness: textDecorationThicknessValue,
 			},
 			fontWeightValue ? { fontWeight: fontWeightValue } : {},
 			fontStyleValue ? { fontStyle: fontStyleValue } : {},

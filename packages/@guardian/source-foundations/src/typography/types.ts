@@ -13,6 +13,7 @@ export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
 export type Option<A> = A | null;
+export type TextDecorationThickness = '3px' | '4px' | '5px' | '6px';
 
 export type TypographyStyles<Unit extends ScaleUnit = ScaleUnit> = {
 	fontFamily: string;
@@ -22,6 +23,7 @@ export type TypographyStyles<Unit extends ScaleUnit = ScaleUnit> = {
 		| typeof fontWeightMapping[keyof typeof fontWeightMapping]
 		| FontWeight;
 	fontStyle?: 'normal' | 'italic';
+	textDecorationThickness?: TextDecorationThickness;
 };
 
 /** @deprecated will be removed in the next major version */

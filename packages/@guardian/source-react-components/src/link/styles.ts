@@ -22,10 +22,6 @@ export const link = css`
 	display: inline;
 	align-items: center;
 
-	&:hover {
-		text-decoration-thickness: 4px;
-	}
-
 	&:focus {
 		${focusHalo};
 	}
