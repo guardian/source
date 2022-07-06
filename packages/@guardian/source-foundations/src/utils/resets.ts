@@ -35,6 +35,7 @@ const defaults = `
     html {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
+        overflow-y: scroll;
     }
     html, body {
         text-rendering: optimizeLegibility;
