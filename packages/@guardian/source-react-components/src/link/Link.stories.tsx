@@ -1,3 +1,5 @@
+import { css } from '@emotion/react';
+import { headline, textSans } from '@guardian/source-foundations';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asChromaticStory,
@@ -32,6 +34,77 @@ export default {
 const Template: Story = (args: LinkProps) => (
 	<Link {...args}>Return to home page</Link>
 );
+
+const UnderlineHeadlineTemplate: Story = (args: LinkProps) => {
+	const headlineText = 'This is a Headline';
+
+	return (
+		<div
+			css={css`
+				display: flex;
+				flex-direction: column;
+
+				a {
+					padding: 20px 0;
+				}
+			`}
+		>
+			{Object.values(headline)
+				.reverse()
+				.map((size, i) => (
+					<Link
+						key={i}
+						{...args}
+						cssOverrides={css`
+							${size()}
+						`}
+					>
+						{headlineText}
+					</Link>
+				))}
+		</div>
+	);
+};
+
+const UnderlineTextSansTemplate: Story = (args: LinkProps) => {
+	const headlineText = 'link';
+
+	return (
+		<div
+			css={css`
+				display: flex;
+				flex-direction: column;
+
+				a {
+					padding: 20px 0;
+				}
+			`}
+		>
+			{Object.values(textSans)
+				.reverse()
+				.map((size, i) => (
+					<div
+						css={css`
+							padding: 10px 0;
+							${size()}
+						`}
+						key={i}
+					>
+						Some text sans, with a{' '}
+						<Link
+							{...args}
+							cssOverrides={css`
+								${size()}
+							`}
+						>
+							{headlineText}
+						</Link>{' '}
+						in the middle of it
+					</div>
+				))}
+		</div>
+	);
+};
 
 // *****************************************************************************
 
@@ -103,3 +176,23 @@ RightIconLinkDefaultTheme.args = {
 	iconSide: 'right',
 };
 asChromaticStory(RightIconLinkDefaultTheme);
+
+// *****************************************************************************
+
+export const UnderlineHeadline = UnderlineHeadlineTemplate.bind({});
+
+UnderlineHeadline.args = {
+	icon: 'undefined',
+};
+
+asChromaticStory(UnderlineHeadline);
+
+// *****************************************************************************
+
+export const UnderlineTextSans = UnderlineTextSansTemplate.bind({});
+
+UnderlineTextSans.args = {
+	icon: 'undefined',
+};
+
+asChromaticStory(UnderlineTextSans);
