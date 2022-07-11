@@ -35,7 +35,7 @@ const Template: Story = (args: LinkProps) => (
 	<Link {...args}>Return to home page</Link>
 );
 
-const UnderlineHeadlineTemplate: Story = (args: LinkProps) => {
+const UnderlineHoverHeadlineTemplate: Story = (args: LinkProps) => {
 	const headlineText = 'This is a Headline';
 
 	return (
@@ -66,7 +66,7 @@ const UnderlineHeadlineTemplate: Story = (args: LinkProps) => {
 	);
 };
 
-const UnderlineTextSansTemplate: Story = (args: LinkProps) => {
+const UnderlineHoverTextSansTemplate: Story = (args: LinkProps) => {
 	const headlineText = 'link';
 
 	return (
@@ -179,20 +179,20 @@ asChromaticStory(RightIconLinkDefaultTheme);
 
 // *****************************************************************************
 
-export const UnderlineHeadline = UnderlineHeadlineTemplate.bind({});
+export const UnderlineHoverHeadline = UnderlineHoverHeadlineTemplate.bind({});
 
-UnderlineHeadline.args = {
+UnderlineHoverHeadline.args = {
 	icon: 'undefined',
 };
 
-asChromaticStory(UnderlineHeadline);
+asChromaticStory(UnderlineHoverHeadline);
 
 // *****************************************************************************
 
-export const UnderlineTextSans = UnderlineTextSansTemplate.bind({});
+export const UnderlineHoverTextSans = UnderlineHoverTextSansTemplate.bind({});
 
-UnderlineTextSans.args = {
+UnderlineHoverTextSans.args = {
 	icon: 'undefined',
 };
 
-asChromaticStory(UnderlineTextSans);
+asChromaticStory(UnderlineHoverTextSans);
