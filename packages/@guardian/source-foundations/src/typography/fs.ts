@@ -31,13 +31,17 @@ function getFontStyle(
 
 function getTextDecorationThickness(fontSize: number): TextDecorationThickness {
 	if (fontSize >= 50) {
+		return '7px';
+	} else if (fontSize >= 40 && fontSize < 50) {
 		return '6px';
-	} else if (fontSize >= 42 && fontSize < 50) {
+	} else if (fontSize >= 30 && fontSize < 40) {
 		return '5px';
-	} else if (fontSize >= 14 && fontSize < 42) {
+	} else if (fontSize >= 20 && fontSize < 30) {
 		return '4px';
-	} else {
+	} else if (fontSize >= 14 && fontSize < 20) {
 		return '3px';
+	} else {
+		return '2px';
 	}
 }
 

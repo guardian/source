@@ -36,7 +36,7 @@ const Template: Story = (args: LinkProps) => (
 );
 
 const UnderlineHoverHeadlineTemplate: Story = (args: LinkProps) => {
-	const headlineText = 'This is a Headline';
+	const headlineText = 'This is a guardian help link';
 
 	return (
 		<div
