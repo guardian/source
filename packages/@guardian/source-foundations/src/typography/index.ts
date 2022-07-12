@@ -88,6 +88,8 @@ const headline: TypographyApi<HeadlineSizes> = {
  * ```
  */
 const body: TypographyApi<BodySizes> = {
+	xsmall: (options?: FontScaleArgs) =>
+		objectStylesToString(bodyAsObj.small(options)),
 	small: (options?: FontScaleArgs) =>
 		objectStylesToString(bodyAsObj.small(options)),
 	medium: (options?: FontScaleArgs) =>
