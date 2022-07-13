@@ -65,7 +65,7 @@ $ yarn storybook
 
 ### Commits
 
--   Before raising a pull request, we request that you squash your commits. We prefer to see as few commits as possible as it makes the [CHANGELOG](https://github.com/guardian/source/blob/main/CHANGELOG.md) (slightly) more readable.
+-   Before raising a pull request, squash your commits. Fewer commits makes the [CHANGELOG](https://github.com/guardian/source/blob/main/CHANGELOG.md) (slightly) more readable.
 -   Each commit should contain changes to exactly one package. If you need to edit multiple packages as part of a change, please divide these into separate commits. Again, this is for CHANGELOG readability.
 -   Commit messages should read as if you are instructing someone else what to do. It usually helps to start with a verb. For example, "Increase the line height of the body text".
 
@@ -74,29 +74,17 @@ $ yarn storybook
 -   Generate a changeset describing your work by running `yarn changeset` and following the prompts.
 -   Test that your component can be used in a real project (e.g. [dotcom-rendering](https://github.com/guardian/dotcom-rendering)). Use [`yarn link`](https://yarnpkg.com/en/docs/cli/link) to avoid having to perform a real publish, and [`yarn pack`](https://yarnpkg.com/en/docs/cli/pack) to see exactly which files would be published.
 
+### Versioning
+
+-	`yarn changeset` will prompt you to choose a [semver]https://semver.org/(https://semver.org/) change type for your changes (major/minor/patch).
+-	This should include visual changes, not just changes to the API e.g.
+    -   A slight colour tweak could break contrast ratio guidlines, and comsumers would need to account for this, meaning it's not a drop-in change i.e. major/breaking.
+    -   A new font-size will only affect consumers who want to use it, making it a new feature i.e. a minor change.
+    -   Giving different text-sizes custom underline heights improves accessibility but doesn't require further changes, and all current consumers get the benefit i.e. a patch.
+
 ## Publishing
 
 Publishing is triggered by merging the auto-generated _Version Packages_ PR that changesets manages.
-
-### Publishing src-\* (legacy) packages
-
-It is no longer possible to publish legacy packages from the head of the main
-branch. You will first need to check out the most recent v3.x tag.
-
-To publish `src-*` packages that have changed since the last release, you should
-first run:
-
-```sh
-$ yarn verbump:prerelease:src
-```
-
-Changes should be committed to git. This ensures all `src-*` packages have
-changed and will be updated at the same time with the same version number. You
-may then run:
-
-```sh
-$ yarn release
-```
 
 ### Force publishing unchanged packages
 
