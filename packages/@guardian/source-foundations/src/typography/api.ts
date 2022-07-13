@@ -70,6 +70,8 @@ const bodyDefaults = {
 const bodyFs = fs('body');
 
 export const body: BodyFunctions = {
+	xsmall: (options?: FontScaleArgs) =>
+		bodyFs('xsmall', Object.assign({}, bodyDefaults, options)),
 	small: (options?: FontScaleArgs) =>
 		bodyFs('small', Object.assign({}, bodyDefaults, options)),
 	medium: (options?: FontScaleArgs) =>

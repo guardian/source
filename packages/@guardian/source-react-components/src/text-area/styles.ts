@@ -16,6 +16,7 @@ export const errorInput = css`
 		border: 4px solid ${palette.error[400]};
 	}
 `;
+
 export const successInput = css`
 	border: 4px solid ${palette.success[400]};
 	color: ${palette.success[400]};
@@ -32,7 +33,7 @@ export const textArea = css`
 	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${palette.neutral[7]};
 	background-color: ${palette.neutral[100]};
-	border: 2px solid ${palette.neutral[60]};
+	border: 2px solid ${palette.neutral[46]};
 	padding: ${space[2]}px ${space[2]}px 0 ${space[2]}px;
 
 	&:active {
