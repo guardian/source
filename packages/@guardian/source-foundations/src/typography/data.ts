@@ -17,6 +17,8 @@ const lineHeights = [1.15, 1.35, 1.5] as const;
 
 const fontWeights = [300, 400, 500, 700] as const;
 
+const underlineThickness = [2, 3, 4, 5, 6, 7] as const;
+
 const titlepieceSizes = {
 	small: fontSizes[8], //42px
 	medium: fontSizes[9], //50px
@@ -156,6 +158,45 @@ const availableFonts: {
 	},
 };
 
+const titlepieceUnderlineThickness = {
+	small: underlineThickness[4], //6px
+	medium: underlineThickness[5], //6px
+	large: underlineThickness[5], //7px
+} as const;
+
+const headlineUnderlineThickness = {
+	xxxsmall: underlineThickness[1], //3px
+	xxsmall: underlineThickness[2], //4px
+	xsmall: underlineThickness[2], //4px
+	small: underlineThickness[2], //4px
+	medium: underlineThickness[3], //5px
+	large: underlineThickness[4], //6px
+	xlarge: underlineThickness[5], //7px
+} as const;
+
+const bodyUnderlineThickness = {
+	small: underlineThickness[1], //3px
+	medium: underlineThickness[1], //3px
+} as const;
+
+const textSansUnderlineThickness = {
+	xxsmall: underlineThickness[0], //2px
+	xsmall: underlineThickness[1], //3px
+	small: underlineThickness[1], //3px
+	medium: underlineThickness[1], //3px
+	large: underlineThickness[2], //4px
+	xlarge: underlineThickness[2], //4px
+	xxlarge: underlineThickness[2], //4px
+	xxxlarge: underlineThickness[3], //5px
+} as const;
+
+const underlineThicknessMapping = {
+	titlepiece: titlepieceUnderlineThickness,
+	headline: headlineUnderlineThickness,
+	body: bodyUnderlineThickness,
+	textSans: textSansUnderlineThickness,
+};
+
 Object.freeze(titlepieceSizes);
 Object.freeze(headlineSizes);
 Object.freeze(bodySizes);
@@ -169,6 +210,11 @@ Object.freeze(fontSizeMapping);
 Object.freeze(fontWeightMapping);
 Object.freeze(lineHeightMapping);
 Object.freeze(availableFonts);
+Object.freeze(titlepieceUnderlineThickness);
+Object.freeze(headlineUnderlineThickness);
+Object.freeze(bodyUnderlineThickness);
+Object.freeze(textSansUnderlineThickness);
+Object.freeze(underlineThicknessMapping);
 
 export {
 	titlepieceSizes,
@@ -186,4 +232,9 @@ export {
 	lineHeightMapping,
 	fontWeightMapping,
 	availableFonts,
+	titlepieceUnderlineThickness,
+	headlineUnderlineThickness,
+	bodyUnderlineThickness,
+	textSansUnderlineThickness,
+	underlineThicknessMapping,
 };

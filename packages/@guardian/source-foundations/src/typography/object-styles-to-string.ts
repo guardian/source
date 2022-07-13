@@ -17,7 +17,7 @@ export const objectStylesToString = ({
 	&:hover {
 		${
 			textDecorationThickness
-				? `text-decoration-thickness: ${textDecorationThickness}`
+				? `text-decoration-thickness: ${textDecorationThickness}px`
 				: ``
 		};
 	}

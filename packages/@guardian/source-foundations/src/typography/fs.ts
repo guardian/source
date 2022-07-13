@@ -5,14 +5,9 @@ import {
 	fontWeightMapping,
 	lineHeightMapping,
 	remFontSizeMapping,
+	underlineThicknessMapping,
 } from './data';
-import type {
-	FontStyle,
-	FontWeightDefinition,
-	Fs,
-	Option,
-	TextDecorationThickness,
-} from './types';
+import type { FontStyle, FontWeightDefinition, Fs, Option } from './types';
 
 function getFontStyle(
 	font: FontWeightDefinition | undefined,
@@ -26,22 +21,6 @@ function getFontStyle(
 		case null:
 		default:
 			return null;
-	}
-}
-
-function getTextDecorationThickness(fontSize: number): TextDecorationThickness {
-	if (fontSize >= 50) {
-		return '7px';
-	} else if (fontSize >= 40 && fontSize < 50) {
-		return '6px';
-	} else if (fontSize >= 30 && fontSize < 40) {
-		return '5px';
-	} else if (fontSize >= 20 && fontSize < 30) {
-		return '4px';
-	} else if (fontSize >= 14 && fontSize < 20) {
-		return '3px';
-	} else {
-		return '2px';
 	}
 }
 
@@ -70,8 +49,9 @@ export const fs: Fs =
 			? fontWeightMapping[fontWeight]
 			: '';
 		const fontStyleValue = getFontStyle(requestedFont, fontStyle);
-		const textDecorationThicknessValue = getTextDecorationThickness(
-			Number(fontSizeMapping[category][level]),
+		const textDecorationThicknessValue = Number(
+			// @ts-expect-error -- the types actually overlap, see https://gist.github.com/mxdvl/5e31fd5b13670b6a41ddac6c65efeee4
+			underlineThicknessMapping[category][level],
 		);
 
 		return Object.assign(
