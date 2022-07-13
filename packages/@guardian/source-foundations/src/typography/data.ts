@@ -36,6 +36,7 @@ const headlineSizes = {
 } as const;
 
 const bodySizes = {
+	xsmall: fontSizes[1], //14px
 	small: fontSizes[2], //15px
 	medium: fontSizes[3], //17px
 } as const;
@@ -77,6 +78,7 @@ const remHeadlineSizes = {
 } as const;
 
 const remBodySizes = {
+	xsmall: remFontSizes[1], //14px
 	small: remFontSizes[2], //15px
 	medium: remFontSizes[3], //17px
 } as const;
