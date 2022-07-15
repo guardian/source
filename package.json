@@ -11,6 +11,7 @@
     "build": "nx run-many --all --target=build",
     "build:storybook": "NODE_ENV=production build-storybook -o dist",
     "clean": "rm -rf dist && nx run-many --target=clean --all",
+    "create-icons": "yarn workspace @guardian/source-react-components create-icons",
     "fix": "yarn lint:js --fix",
     "get-usage": "ts-node ./scripts/get-usage",
     "lint": "npm-run-all lint:*",
