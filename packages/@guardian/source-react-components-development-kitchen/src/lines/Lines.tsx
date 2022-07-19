@@ -8,7 +8,7 @@ import { StraightLines } from './StraightLines';
 
 type LineEffectType = 'squiggly' | 'dotted' | 'straight' | 'dashed';
 
-export type LineCount = 1 | 4 | 8;
+export type LineCount = 1 | 4 | 8 | 12;
 
 export interface LinesProps {
 	/**
