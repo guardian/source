@@ -1,6 +1,6 @@
 {
   "name": "@guardian/eslint-plugin-source-foundations",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "ESLint plugin for Guardian projects using the `@guardian/source-foundations` package.",
   "homepage": "https://github.com/guardian/source#readme",
   "bugs": {
