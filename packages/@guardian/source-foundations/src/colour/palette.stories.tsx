@@ -2,24 +2,25 @@ import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import { palette } from './palette';
 
+type Hue = keyof typeof palette;
 interface Props {
-	colourHex: string;
-	colourKey: string;
+	shade: string;
+	value: string;
 	category: string;
 }
 
-const PaletteColour = ({ colourHex, colourKey, category }: Props) => (
+const Colour = ({ shade, value, category }: Props) => (
 	<div className="tokens__list__row">
 		<div className="tokens__list__value">
 			<div
 				className="tokens__list__value__swatch"
 				style={{
-					backgroundColor: colourHex,
+					backgroundColor: value,
 				}}
 			/>
 		</div>
 		<span>
-			<pre>{`palette.${category}[${colourKey}]`}</pre>
+			<pre>{`palette.${category}[${shade}]`}</pre>
 		</span>
 	</div>
 );
@@ -45,16 +46,23 @@ export const Palette = () => (
 		<div className="tokens__list">
 			<ul>
 				{Object.keys(palette).map((category, idx) => {
-					const colours = Object.entries(palette[category]).map(
-						([colourKey, colourHex], idx) => (
-							<PaletteColour
-								key={idx}
-								colourKey={colourKey}
-								colourHex={colourHex}
-								category={category}
-							/>
-						),
-					);
+					const colours = [];
+
+					for (const [_, shades] of Object.entries(palette) as [
+						Hue,
+						Record<number, string>,
+					][]) {
+						for (const [shade, value] of Object.entries(shades)) {
+							colours.push(
+								<Colour
+									key={idx}
+									shade={shade}
+									value={value}
+									category={category}
+								/>,
+							);
+						}
+					}
 
 					return (
 						<li className="tokens__list__item" key={idx}>
