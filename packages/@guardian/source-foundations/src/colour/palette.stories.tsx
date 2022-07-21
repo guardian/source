@@ -28,7 +28,6 @@ const PaletteColour = ({ colourHex, colourKey, category }: Props) => (
  *
  * The colour palette is organised by type e.g. `error`, or pillar e.g. `opinion`.
  *
- *
  * ## Example
  *
  * ```ts
@@ -51,8 +50,8 @@ export const Palette = () => (
 					).map(([colourKey, colourHex], idx) => (
 						<PaletteColour
 							key={idx}
-							colourHex={colourHex}
 							colourKey={colourKey}
+							colourHex={colourHex}
 							category={category}
 						/>
 					));
