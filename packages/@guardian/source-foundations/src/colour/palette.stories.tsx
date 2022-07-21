@@ -1,38 +1,66 @@
-import { palette } from './palette';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory } from '../../../../../lib/story-intents';
+import { palette } from './palette';
 
-const Palette = () => (
+interface Props {
+	colourHex: string;
+	colourKey: string;
+	category: string;
+}
+
+const PaletteColour = ({ colourHex, colourKey, category }: Props) => (
+	<div className="tokens__list__row">
+		<div className="tokens__list__value">
+			<div
+				className="tokens__list__value__swatch"
+				style={{
+					backgroundColor: colourHex,
+				}}
+			/>
+		</div>
+		<span>
+			<pre>{`palette.${category}[${colourKey}]`}</pre>
+		</span>
+	</div>
+);
+
+/**
+ *
+ * The colour palette is organised by type e.g. `error`, or pillar e.g. `opinion`.
+ *
+ *
+ * ## Example
+ *
+ * ```ts
+ * import { palette } from '@guardian/source-foundations';
+ *
+ * const headline = css`
+ * 	color: ${palette.neutral[100]};
+ * 	background: ${palette.brand[400]};
+ * `;
+ * ```
+ *
+ */
+export const Palette = () => (
 	<div className="columns">
 		<div className="tokens__list">
 			<ul>
-				{Object.keys(palette).map((colourCategory, idx) => {
-					const colours = Object.keys(palette[colourCategory]).map(
-						(colour, idx) => {
-							return (
-								<div className="tokens__list__row" key={idx}>
-									<div className="tokens__list__value">
-										<div
-											className="tokens__list__value__swatch"
-											style={{
-												backgroundColor:
-													palette[colourCategory][
-														colour
-													],
-											}}
-										/>
-									</div>
-									<span>
-										<pre>{`palette.${colourCategory}[${colour}]`}</pre>
-									</span>
-								</div>
-							);
-						},
-					);
+				{Object.keys(palette).map((category, idx) => {
+					const colours = Object.entries(
+						palette[category as keyof typeof palette],
+					).map(([colourKey, colourHex], idx) => (
+						<PaletteColour
+							key={idx}
+							colourHex={colourHex}
+							colourKey={colourKey}
+							category={category}
+						/>
+					));
+
 					return (
-						<li className="tokens__list__items" key={idx}>
+						<li className="tokens__list__item" key={idx}>
 							<summary className="tokens__list__category">
-								{colourCategory}
+								{category}
 							</summary>
 							<div>{colours}</div>
 						</li>
@@ -147,9 +175,11 @@ const Palette = () => (
 export default {
 	component: Palette,
 	title: 'Packages/source-foundations/Palette',
-	// parameters = { previewTabs: { canvas: { hidden: true } } },
+	parameters: {
+		previewTabs: { canvas: { hidden: true } },
+	},
 };
 
-const Template: Story = () => <Palette />;
+const Template: Story = (args) => <Palette {...args} />;
 
 asChromaticStory(Template);
