@@ -45,16 +45,16 @@ export const Palette = () => (
 		<div className="tokens__list">
 			<ul>
 				{Object.keys(palette).map((category, idx) => {
-					const colours = Object.entries(
-						palette[category as keyof typeof palette],
-					).map(([colourKey, colourHex], idx) => (
-						<PaletteColour
-							key={idx}
-							colourKey={colourKey}
-							colourHex={colourHex}
-							category={category}
-						/>
-					));
+					const colours = Object.entries(palette[category]).map(
+						([colourKey, colourHex], idx) => (
+							<PaletteColour
+								key={idx}
+								colourKey={colourKey}
+								colourHex={colourHex}
+								category={category}
+							/>
+						),
+					);
 
 					return (
 						<li className="tokens__list__item" key={idx}>

@@ -196,7 +196,7 @@ export const palette = {
 	focus: {
 		400: colors.blues[3],
 	},
-};
+} as const;
 
 // Hover colours are snowflakes as they are manipulations of colours from the
 // main palette.
