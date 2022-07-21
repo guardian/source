@@ -97,6 +97,21 @@ const colors = {
  * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette)
  *
  * Colour palette organised by type e.g. 'error', or pillar e.g. 'opinion'
+ *
+ * # Palette
+ *
+ * The colour palette is organised by type e.g. `error`, or pillar e.g. `opinion`.
+ *
+ * @example
+ *
+ *
+ * import { palette } from '@guardian/source-foundations';
+ *
+ * const headline = css`
+ * 	color: ${palette.neutral[100]};
+ * 	background: ${palette.brand[400]};
+ * `;
+ *
  */
 
 export const palette = {
