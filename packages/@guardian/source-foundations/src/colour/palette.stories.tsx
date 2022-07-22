@@ -2,7 +2,6 @@ import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import { palette } from './palette';
 
-type Hue = keyof typeof palette;
 interface Props {
 	shade: string;
 	value: string;
@@ -45,31 +44,24 @@ export const Palette = () => (
 	<div className="columns">
 		<div className="tokens__list">
 			<ul>
-				{Object.keys(palette).map((category, idx) => {
-					const colours = [];
-
-					for (const [_, shades] of Object.entries(palette) as [
-						Hue,
-						Record<number, string>,
-					][]) {
-						for (const [shade, value] of Object.entries(shades)) {
-							colours.push(
-								<Colour
-									key={idx}
-									shade={shade}
-									value={value}
-									category={category}
-								/>,
-							);
-						}
-					}
-
+				{Object.entries(palette).map(([category, shades]) => {
 					return (
-						<li className="tokens__list__item" key={idx}>
+						<li className="tokens__list__item" key={category}>
 							<summary className="tokens__list__category">
 								{category}
 							</summary>
-							<div>{colours}</div>
+							<div>
+								{Object.entries(shades).map(
+									([shade, value]) => (
+										<Colour
+											key={category}
+											shade={shade}
+											value={value}
+											category={category}
+										/>
+									),
+								)}
+							</div>
 						</li>
 					);
 				})}
