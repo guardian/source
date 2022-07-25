@@ -5,7 +5,6 @@
 	"styled-components.vscode-styled-components",
     "stylelint.vscode-stylelint",
     "stkb.rewrap",
-    "naumovs.color-highlight",
-	// "burkeholland.simple-react-snippets"
+    "naumovs.color-highlight"
   ]
 }
