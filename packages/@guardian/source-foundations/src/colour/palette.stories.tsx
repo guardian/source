@@ -69,7 +69,7 @@ export const Palette = () => (
 		</div>
 		<div className="aside">
 			<aside>
-				<h3>Deprecated colour tokens</h3>
+				<h3 className="aside__title">Deprecated colour tokens</h3>
 				<p>
 					The following context-specific tokens were available in V3,
 					and are deprecated in V4.
