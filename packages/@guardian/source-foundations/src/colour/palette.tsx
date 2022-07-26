@@ -92,6 +92,12 @@ const colors = {
 	],
 } as const;
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--page) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/492a30-light-palette)
+ *
+ * Colour palette organised by type e.g. 'error', or pillar e.g. 'opinion'
+ */
 export const palette = {
 	brand: {
 		100: colors.blues[7],
