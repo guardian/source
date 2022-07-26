@@ -1,50 +1,40 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import { asChromaticStory } from '../../../../../lib/story-intents';
-import { palette } from './palette';
+import { Meta } from '@storybook/addon-docs';
+import { palette as colourPalette } from './palette';
 
-interface Props {
-	shade: string;
-	value: string;
-	category: string;
+<Meta
+	title="Packages/source-foundations/palette"
+	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# `palette`
+
+The colour palette is organised by type e.g. `error`, or pillar e.g. `opinion`.
+
+## Example
+
+```tsx
+import { palette } from '@guardian/source-foundations';
+
+const headline = css`
+	color: ${palette.neutral[100]};
+	background: ${palette.brand[400]};
+`;
+
+/*
+.class-name {
+  color: #FFFFFF;
+  background-color: #052962;
 }
+*/
+```
 
-const Colour = ({ shade, value, category }: Props) => (
-	<div className="tokens__list__row">
-		<div className="tokens__list__value">
-			<div
-				className="tokens__list__value__swatch"
-				style={{
-					backgroundColor: value,
-				}}
-			/>
-		</div>
-		<span>
-			<pre>{`palette.${category}[${shade}]`}</pre>
-		</span>
-	</div>
-);
+## Colour tokens
 
-/**
- *
- * The colour palette is organised by type e.g. `error`, or pillar e.g. `opinion`.
- *
- * ## Example
- *
- * ```ts
- * import { palette } from '@guardian/source-foundations';
- *
- * const headline = css`
- * 	color: ${palette.neutral[100]};
- * 	background: ${palette.brand[400]};
- * `;
- * ```
- *
- */
-export const Palette = () => (
+<Story name="palette">
 	<div className="columns">
 		<div className="tokens__list">
 			<ul>
-				{Object.entries(palette).map(([category, shades]) => {
+				{Object.entries(colourPalette).map(([category, shades]) => {
 					return (
 						<li className="tokens__list__item" key={category}>
 							<summary className="tokens__list__category">
@@ -53,12 +43,19 @@ export const Palette = () => (
 							<div>
 								{Object.entries(shades).map(
 									([shade, value]) => (
-										<Colour
-											key={category}
-											shade={shade}
-											value={value}
-											category={category}
-										/>
+										<div className="tokens__list__row">
+											<div className="tokens__list__value">
+												<div
+													className="tokens__list__value__swatch"
+													style={{
+														backgroundColor: value,
+													}}
+												/>
+											</div>
+											<span>
+												<pre>{`palette.${category}[${shade}]`}</pre>
+											</span>
+										</div>
 									),
 								)}
 							</div>
@@ -69,7 +66,7 @@ export const Palette = () => (
 		</div>
 		<div className="aside">
 			<aside>
-				<h3 className="aside__title">Deprecated colour tokens</h3>
+				<h3>Deprecated colour tokens</h3>
 				<p>
 					The following context-specific tokens were available in V3,
 					and are deprecated in V4.
@@ -169,16 +166,4 @@ export const Palette = () => (
 			</aside>
 		</div>
 	</div>
-);
-
-export default {
-	component: Palette,
-	title: 'Packages/source-foundations/Palette',
-	parameters: {
-		previewTabs: { canvas: { hidden: true } },
-	},
-};
-
-const Template: Story = (args) => <Palette {...args} />;
-
-asChromaticStory(Template);
+</Story>
