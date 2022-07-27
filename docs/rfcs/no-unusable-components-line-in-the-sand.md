@@ -41,7 +41,10 @@ A Toggle Switch component accepts optional props that enable us to render a work
 
 If they're provided we render the fallback and if/when we can, enhance/decorate it further.
 
-If they're not provided, we only show the component once we can make it functional. In reality this probably means either rendered hidden on the server then hydrated and shown, or only rendered in the client.
+If they're not provided, we only show the component once we can make it functional. In reality this means either:
+
+ - render the component hidden on the server, then hydrate and show it on the client OR
+ - only render the component on the client
 
 
 ### With fallback
