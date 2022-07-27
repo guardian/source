@@ -39,7 +39,7 @@ We should treat this approach as an analogue of "this site needs Chrome".
 
 A Toggle Switch component accepts optional props that enable us to render a working fallback in a non-JavaScript environment. 
 
-If they're provided we render the fallback and if we can, enhance/decorate it.
+If they're provided we render the fallback and if/when we can, enhance/decorate it further.
 
 If they're not provided, we only show the component once we can make it functional. In reality this probably means either rendered hidden on the server then hydrated and shown, or only rendered in the client.
 
