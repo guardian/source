@@ -67,6 +67,8 @@ This would render:
 > Note that we would still style the elements to match the design.
 
 ### Without fallback
+
+In this case, the component is not shown if it cannot be used in the environment.
 ```jsx
 <ToggleSwitchGroup onchange={applyA11ySettings}>
 	<ToggleSwitch name="darkmode" value="false">dark mode</ToggleSwitch>
