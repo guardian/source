@@ -35,32 +35,36 @@ const headline = css`
 		<div className="tokens__list">
 			<ul>
 				{Object.entries(colourPalette).map(([category, shades]) => {
-					return (
-						<li className="tokens__list__item" key={category}>
-							<summary className="tokens__list__category">
-								{category}
-							</summary>
-							<div>
-								{Object.entries(shades).map(
-									([shade, value]) => (
-										<div className="tokens__list__row">
-											<div className="tokens__list__value">
-												<div
-													className="tokens__list__value__swatch"
-													style={{
-														backgroundColor: value,
-													}}
-												/>
+					{/* Storybook is adding displayName and __docgenInfo to exported TS enum:
+					https://github.com/storybookjs/storybook/issues/9832 */}
+					if (category !== '__docgenInfo' && category !== 'displayName'){
+						return (
+							<li className="tokens__list__item" key={category}>
+								<summary className="tokens__list__category">
+									{category}
+								</summary>
+								<div>
+									{Object.entries(shades).map(
+										([shade, value]) => (
+											<div className="tokens__list__row" key={shade}>
+												<div className="tokens__list__value">
+													<div
+														className="tokens__list__value__swatch"
+														style={{
+															backgroundColor: value,
+														}}
+													/>
+												</div>
+												<span>
+													<pre>{`palette.${category}[${shade}]`}</pre>
+												</span>
 											</div>
-											<span>
-												<pre>{`palette.${category}[${shade}]`}</pre>
-											</span>
-										</div>
-									),
-								)}
-							</div>
-						</li>
-					);
+										),
+									)}
+								</div>
+							</li>
+						);
+					}
 				})}
 			</ul>
 		</div>
