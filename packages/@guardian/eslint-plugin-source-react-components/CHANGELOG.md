@@ -1,5 +1,14 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 6.0.0
+
+### Patch Changes
+
+- Updated dependencies [07bfaf1b]
+- Updated dependencies [78ff24be]
+- Updated dependencies [fd69cf60]
+  - @guardian/source-react-components@6.0.0
+
 ## 5.0.0
 
 ### Patch Changes
