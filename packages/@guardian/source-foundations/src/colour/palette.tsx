@@ -99,7 +99,6 @@ const colors = {
  *
  * Colour palette organised by type e.g. 'error', or pillar e.g. 'opinion'
  */
-
 export const palette = {
 	brand: {
 		100: colors.blues[7],
@@ -205,7 +204,7 @@ export const palette = {
 	focus: {
 		400: colors.blues[3],
 	},
-};
+} as const;
 
 // Hover colours are snowflakes as they are manipulations of colours from the
 // main palette.
