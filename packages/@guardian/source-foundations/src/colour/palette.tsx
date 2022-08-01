@@ -53,6 +53,7 @@ const colors = {
 		'#650054', //lifestyle-200
 		'#7D0068', //lifestyle-300
 		'#BB3B80', //lifestyle-400
+		'#F37ABC', //lifestyle-450
 		'#FFABDB', //lifestyle-500
 		'#FEC8D3', //lifestyle-600
 		'#FEEEF7', //lifestyle-800
@@ -180,9 +181,10 @@ export const palette = {
 		200: colors.pinks[1],
 		300: colors.pinks[2],
 		400: colors.pinks[3],
-		500: colors.pinks[4],
-		600: colors.pinks[5],
-		800: colors.pinks[6],
+		450: colors.pinks[4],
+		500: colors.pinks[5],
+		600: colors.pinks[6],
+		800: colors.pinks[7],
 	},
 	labs: {
 		200: colors.greens[3],
