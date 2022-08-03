@@ -17,6 +17,8 @@ const lineHeights = [1.15, 1.35, 1.5] as const;
 
 const fontWeights = [300, 400, 500, 700] as const;
 
+const underlineThickness = [2, 3, 4, 5, 6] as const;
+
 const titlepieceSizes = {
 	small: fontSizes[8], //42px
 	medium: fontSizes[9], //50px
@@ -158,6 +160,46 @@ const availableFonts: {
 	},
 };
 
+const titlepieceUnderlineThickness = {
+	small: underlineThickness[3], //5px
+	medium: underlineThickness[4], //6px
+	large: underlineThickness[4], //6px
+} as const;
+
+const headlineUnderlineThickness = {
+	xxxsmall: underlineThickness[0], //2px
+	xxsmall: underlineThickness[1], //3px
+	xsmall: underlineThickness[1], //3px
+	small: underlineThickness[1], //3px
+	medium: underlineThickness[2], //4px
+	large: underlineThickness[3], //5px
+	xlarge: underlineThickness[4], //6px
+} as const;
+
+const bodyUnderlineThickness = {
+	xsmall: underlineThickness[0], //2px
+	small: underlineThickness[0], //2px
+	medium: underlineThickness[0], //2px
+} as const;
+
+const textSansUnderlineThickness = {
+	xxsmall: underlineThickness[0], //2px
+	xsmall: underlineThickness[0], //2px
+	small: underlineThickness[0], //2px
+	medium: underlineThickness[0], //2px
+	large: underlineThickness[1], //3px
+	xlarge: underlineThickness[1], //3px
+	xxlarge: underlineThickness[1], //3px
+	xxxlarge: underlineThickness[2], //4px
+} as const;
+
+const underlineThicknessMapping = {
+	titlepiece: titlepieceUnderlineThickness,
+	headline: headlineUnderlineThickness,
+	body: bodyUnderlineThickness,
+	textSans: textSansUnderlineThickness,
+};
+
 Object.freeze(titlepieceSizes);
 Object.freeze(headlineSizes);
 Object.freeze(bodySizes);
@@ -171,6 +213,11 @@ Object.freeze(fontSizeMapping);
 Object.freeze(fontWeightMapping);
 Object.freeze(lineHeightMapping);
 Object.freeze(availableFonts);
+Object.freeze(titlepieceUnderlineThickness);
+Object.freeze(headlineUnderlineThickness);
+Object.freeze(bodyUnderlineThickness);
+Object.freeze(textSansUnderlineThickness);
+Object.freeze(underlineThicknessMapping);
 
 export {
 	titlepieceSizes,
@@ -188,4 +235,9 @@ export {
 	lineHeightMapping,
 	fontWeightMapping,
 	availableFonts,
+	titlepieceUnderlineThickness,
+	headlineUnderlineThickness,
+	bodyUnderlineThickness,
+	textSansUnderlineThickness,
+	underlineThicknessMapping,
 };
