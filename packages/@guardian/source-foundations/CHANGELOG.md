@@ -1,5 +1,15 @@
 # @guardian/source-foundations
 
+## 5.2.0
+
+### Minor Changes
+
+- 4a613b3e: Add new colour 450 to lifestyle palette
+
+### Patch Changes
+
+- 12a9fce5: Update Link hover underline thickness
+
 ## 5.1.0
 
 ### Minor Changes
