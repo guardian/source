@@ -1,9 +1,9 @@
 import { Meta } from '@storybook/addon-docs';
-import { palette } from './palette';
+import { palette as colourPalette } from './palette';
 
 <Meta
 	title="Packages/source-foundations/palette"
-	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+	parameters={{ previewTabs: { canvas: { hidden: true } }, viewMode: 'docs' }}
 />
 
 # `palette`
@@ -30,127 +30,144 @@ const headline = css`
 
 ## Colour tokens
 
-<div className="columns">
-	<div className="tokens__list">
-		<ul>
-			{Object.keys(palette).map((colourCategory, idx) => {
-				const colours = Object.keys(palette[colourCategory]).map(
-					(colour, idx) => {
+<Story name="palette">
+	<div className="columns">
+		<div className="tokens__list">
+			<ul>
+				{Object.entries(colourPalette).map(([category, shades]) => {
+					{/* Storybook is adding displayName and __docgenInfo to exported TS enum:
+					https://github.com/storybookjs/storybook/issues/9832 */}
+					if (category !== '__docgenInfo' && category !== 'displayName'){
 						return (
-							<div className="tokens__list__row" key={idx}>
-								<div className="tokens__list__value">
-									<div
-										className="tokens__list__value__swatch"
-										style={{
-											backgroundColor:
-												palette[colourCategory][colour],
-										}}
-									/>
+							<li className="tokens__list__item" key={category}>
+								<summary className="tokens__list__category">
+									{category}
+								</summary>
+								<div>
+									{Object.entries(shades).map(
+										([shade, value]) => (
+											<div className="tokens__list__row" key={shade}>
+												<div className="tokens__list__value">
+													<div
+														className="tokens__list__value__swatch"
+														style={{
+															backgroundColor: value,
+														}}
+													/>
+												</div>
+												<span>
+													<pre>{`palette.${category}[${shade}]`}</pre>
+												</span>
+											</div>
+										),
+									)}
 								</div>
-								<span>
-									<pre>{`palette.${colourCategory}[${colour}]`}</pre>
-								</span>
-							</div>
+							</li>
 						);
-					},
-				);
-				const openFirst = idx === 0;
-				return (
-					<li className="tokens__list__dropdown" key={idx}>
-						<details open={openFirst}>
-							<summary className="tokens__list__category">
-								{colourCategory}
-							</summary>
-							<div>{colours}</div>
+					}
+				})}
+			</ul>
+		</div>
+		<div className="aside">
+			<aside>
+				<h3>Deprecated colour tokens</h3>
+				<p>
+					The following context-specific tokens were available in V3,
+					and are deprecated in V4.
+				</p>
+				<ul className="aside__dropdown">
+					<li>
+						<details>
+							<summary>background</summary>
+							background.primary, background.secondary,
+							background.inverse, background.ctaPrimary,
+							background.ctaPrimaryHover, background.ctaSecondary,
+							background.ctaSecondaryHover,
+							background.ctaTertiaryHover, background.input,
+							background.inputChecked
 						</details>
 					</li>
-				);
-			})}
-		</ul>
+					<li>
+						<details>
+							<summary>brandBackground</summary>
+							brandBackground.primary, brandBackground.ctaPrimary,
+							brandBackground.ctaPrimaryHover,
+							brandBackground.ctaSecondary,
+							brandBackground.ctaSecondaryHover,
+							brandBackground.ctaTertiaryHover,
+							brandBackground.inputChecked
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>brandAltBackground</summary>
+							brandAltBackground.primary,
+							brandAltBackground.ctaPrimary,
+							brandAltBackground.ctaPrimaryHover,
+							brandAltBackground.ctaSecondary,
+							brandAltBackground.ctaSecondaryHover,
+							brandAltBackground.ctaTertiaryHover
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>border</summary>
+							border.primary, border.secondary, border.success,
+							border.error, border.ctaTertiary, border.input,
+							border.inputChecked, border.inputHover,
+							border.inputActive, border.focusHalo
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>brandBorder</summary>
+							brandBorder.primary, brandBorder.secondary,
+							brandBorder.success, brandBorder.error,
+							brandBorder.ctaTertiary, brandBorder.input,
+							brandBorder.inputChecked, brandBorder.inputHover
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>text</summary>
+							text.primary, text.supporting, text.success,
+							text.error, text.ctaPrimary, text.ctaSecondary,
+							text.ctaTertiary, text.anchorPrimary,
+							text.anchorSecondary, text.userInput,
+							text.inputLabel, text.inputError,
+							text.inputLabelSupporting, text.inputChecked,
+							text.inputHover, text.groupLabel,
+							text.groupLabelSupporting, text.newsInverse
+							text.inputChecked, text.inputHover
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>brandAltText</summary>
+							brandText.primary, brandText.supporting,
+							brandText.success, brandText.error,
+							brandText.ctaPrimary, brandText.ctaSecondary,
+							brandText.ctaTertiary, brandText.anchorPrimary,
+							brandText.anchorPrimaryHover, brandText.userInput,
+							brandText.inputLabel, brandText.inputLabelSupporting
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>brandAltText</summary>
+							brandAltText.primary, brandAltText.supporting,
+							brandAltText.ctaPrimary, brandAltText.ctaSecondary,
+							brandAltText.ctaTertiary, brandAltText.anchorPrimary
+						</details>
+					</li>
+				</ul>
+				<ul className="aside__list">
+					<li>brandAltBorder.ctaTertiary</li>
+					<li>line.primary</li>
+					<li> brandLine.primary</li>
+					<li>brandAltLine.primary</li>
+				</ul>
+			</aside>
+		</div>
 	</div>
-	<div className="aside">
-		<aside>
-			<h3>Deprecated colour tokens</h3>
-			<p>
-				The following context-specific tokens were available in V3, and
-				are deprecated in V4.
-			</p>
-			<ul className="aside__dropdown">
-				<li>
-					<details>
-						<summary>background</summary>
-						background.primary, background.secondary, background.inverse,
-						background.ctaPrimary, background.ctaPrimaryHover, background.ctaSecondary,
-						background.ctaSecondaryHover, background.ctaTertiaryHover,
-						background.input, background.inputChecked
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary>brandBackground</summary>
-						brandBackground.primary, brandBackground.ctaPrimary, brandBackground.ctaPrimaryHover,
-						brandBackground.ctaSecondary, brandBackground.ctaSecondaryHover,
-						brandBackground.ctaTertiaryHover, brandBackground.inputChecked
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary>brandAltBackground</summary>
-						brandAltBackground.primary, brandAltBackground.ctaPrimary,
-						brandAltBackground.ctaPrimaryHover, brandAltBackground.ctaSecondary,
-						brandAltBackground.ctaSecondaryHover, brandAltBackground.ctaTertiaryHover
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary>border</summary>
-						border.primary, border.secondary, border.success, border.error,
-						border.ctaTertiary, border.input, border.inputChecked, border.inputHover,
-						border.inputActive, border.focusHalo
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary>brandBorder</summary>
-						brandBorder.primary, brandBorder.secondary, brandBorder.success,
-						brandBorder.error, brandBorder.ctaTertiary, brandBorder.input,
-						brandBorder.inputChecked, brandBorder.inputHover
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary>text</summary>
-						text.primary, text.supporting, text.success, text.error,
-						text.ctaPrimary, text.ctaSecondary, text.ctaTertiary, text.anchorPrimary,
-						text.anchorSecondary, text.userInput, text.inputLabel, text.inputError,
-						text.inputLabelSupporting, text.inputChecked, text.inputHover,
-						text.groupLabel, text.groupLabelSupporting, text.newsInverse
-						text.inputChecked, text.inputHover
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary>brandAltText</summary>
-						brandText.primary, brandText.supporting, brandText.success,
-						brandText.error, brandText.ctaPrimary, brandText.ctaSecondary,
-						brandText.ctaTertiary, brandText.anchorPrimary, brandText.anchorPrimaryHover,
-						brandText.userInput, brandText.inputLabel, brandText.inputLabelSupporting
-					</details>
-				</li>
-				<li>
-					<details>
-						<summary>brandAltText</summary>
-						brandAltText.primary, brandAltText.supporting, brandAltText.ctaPrimary,
-						brandAltText.ctaSecondary, brandAltText.ctaTertiary, brandAltText.anchorPrimary
-					</details>
-				</li>
-			</ul>
-			<ul className="aside__list">
-				<li>brandAltBorder.ctaTertiary</li>
-				<li>line.primary</li>
-				<li> brandLine.primary</li>
-				<li>brandAltLine.primary</li>
-			</ul>
-		</aside>
-	</div>
-</div>
+</Story>

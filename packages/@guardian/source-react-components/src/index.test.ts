@@ -159,6 +159,7 @@ it('Should have exactly these exports', () => {
 		'SvgMessenger',
 		'SvgMinus',
 		'SvgMoon',
+		'SvgNewsletter',
 		'SvgNotificationsOff',
 		'SvgNotificationsOn',
 		'SvgOfflineCloud',

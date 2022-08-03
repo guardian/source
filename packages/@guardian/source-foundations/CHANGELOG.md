@@ -1,5 +1,15 @@
 # @guardian/source-foundations
 
+## 5.1.0
+
+### Minor Changes
+
+- b9cfe856: Add 14px "xsmall" font size to body
+
+### Patch Changes
+
+- 33ce0b3a: Prevent layout jumps when navigating between pages where one has content shorter than the viewport
+
 ## 5.0.0
 
 ### Major Changes

@@ -3,7 +3,7 @@
 <!--
 Give a brief summary of why you are proposing this change or new feature.
 Please ensure you have read our Contributing Guidelines:
-https://www.theguardian.design/2a1e5182b/p/77c9d9-contributing
+https://guardian.github.io/source/?path=/story/contributing-overview--page
 -->
 
 ## What does this change?
