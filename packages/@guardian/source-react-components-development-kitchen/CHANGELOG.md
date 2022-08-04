@@ -1,5 +1,13 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.0.0
+
+### Patch Changes
+
+- Updated dependencies [12a9fce5]
+- Updated dependencies [8e8535ba]
+  - @guardian/source-react-components@7.0.0
+
 ## 2.0.0
 
 ### Patch Changes
