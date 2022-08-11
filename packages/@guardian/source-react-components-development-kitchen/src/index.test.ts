@@ -5,6 +5,8 @@ import * as pkgExports from './index';
 export type {
 	EditorialButtonProps,
 	EditorialLinkButtonProps,
+	FooterLinksProps,
+	FooterWithContentsProps,
 	LineCount,
 	LinesProps,
 	LogoProps,
@@ -22,6 +24,8 @@ it('Should have exactly these exports', () => {
 		'EditorialButton',
 		'EditorialLinkButton',
 		'ErrorSummary',
+		'FooterLinks',
+		'FooterWithContents',
 		'InfoSummary',
 		'Lines',
 		'Logo',
@@ -31,5 +35,6 @@ it('Should have exactly these exports', () => {
 		'StraightLines',
 		'SuccessSummary',
 		'ToggleSwitch',
+		'defaultGuardianLinks',
 	]);
 });
