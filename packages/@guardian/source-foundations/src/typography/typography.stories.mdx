@@ -1,8 +1,10 @@
 import { Meta } from '@storybook/addon-docs';
+import { headlineObjectStyles, bodyObjectStyles, textSansObjectStyles, titlepieceObjectStyles } from '@guardian/source-foundations';
+import { TypographyMap } from './TypographyMap';
 
 <Meta
 	title="Packages/source-foundations/Typography"
-	parameters={{ previewTabs: { canvas: { hidden: true } } }}
+	parameters={{ previewTabs: { canvas: { hidden: true } }, viewMode: 'docs' }}
 />
 
 # Typography
@@ -61,13 +63,9 @@ typography API assigns font size in rems.
 font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
 
--   `headline.xxxsmall()` -> 17px
--   `headline.xxsmall()` -> 20px
--   `headline.xsmall()` -> 24px
--   `headline.small()` -> 28px
--   `headline.medium()` -> 34px
--   `headline.large()` -> 42px
--   `headline.xlarge()` -> 50px
+<Story name="headline">
+	<TypographyMap fontName="headline" fontStyles={headlineObjectStyles}></TypographyMap>
+</Story>
 
 ### Body
 
@@ -75,9 +73,9 @@ font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 ```
 
--   `body.xsmall()` -> 14px
--   `body.small()` -> 15px
--   `body.medium()` -> 17px
+<Story name="body">
+	<TypographyMap fontName="body" fontStyles={bodyObjectStyles}></TypographyMap>
+</Story>
 
 ### Text sans
 
@@ -85,14 +83,9 @@ font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif';
 ```
 
--   `textSans.xxsmall()` -> 12px
--   `textSans.xsmall()` -> 14px
--   `textSans.small()` -> 15px
--   `textSans.medium()` -> 17px
--   `textSans.large()` -> 20px
--   `textSans.xlarge()` -> 24px
--   `textSans.xxlarge()` -> 28px
--   `textSans.xxxlarge()` -> 34px
+<Story name="textSans">
+	<TypographyMap fontName="textSans" fontStyles={textSansObjectStyles}></TypographyMap>
+</Story>
 
 ### Titlepiece
 
@@ -100,9 +93,9 @@ font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetic
 font-family: 'GT Guardian Titlepiece, Georgia, serif';
 ```
 
--   `titlepiece.small()` -> 42px
--   `titlepiece.medium()` -> 50px
--   `titlepiece.large()` -> 70px
+<Story name="titlepiece">
+	<TypographyMap fontName="titlepiece" fontStyles={titlepieceObjectStyles}></TypographyMap>
+</Story>
 
 ### Options
 
