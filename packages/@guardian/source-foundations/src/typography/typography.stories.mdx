@@ -74,7 +74,7 @@ typography API assigns font size in rems.
 font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
 
-<Story id="headline">
+<Story name="headline">
 	<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
 </Story>
 
@@ -84,17 +84,17 @@ font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 ```
 
-<Story id="body">
+<Story name="body">
 	<FontStylesRenderer fontName="body" fontStyles={bodyObjectStyles} />
 </Story>
 
 ### Text sans
 
 ```css
-font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif';
+font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucnamea Grande, sans-serif';
 ```
 
-<Story id="textSans">
+<Story name="textSans">
 	<FontStylesRenderer fontName="textSans" fontStyles={textSansObjectStyles} />
 </Story>
 
@@ -104,7 +104,7 @@ font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetic
 font-family: 'GT Guardian Titlepiece, Georgia, serif';
 ```
 
-<Story id="titlepiece">
+<Story name="titlepiece">
 	<FontStylesRenderer fontName="titlepiece" fontStyles={titlepieceObjectStyles} />
 </Story>
 
@@ -118,7 +118,7 @@ Each method may receive an `options` object. Missing options are merged with sen
 headline.medium({ lineHeight: 'loose' });
 ```
 
-<Story id="line height">
+<Story name="line height">
 	<LineHeightRenderer />
 </Story>
 
@@ -132,7 +132,7 @@ The default for headline and titlepiece is `tight`.
 headline.medium({ fontWeight: 'bold' });
 ```
 
-<Story id="font weight">
+<Story name="font weight">
 	<FontWeightRenderer />
 </Story>
 
@@ -152,7 +152,7 @@ headline.medium({ fontStyle: 'italic' });
 
 `italic` is available for the following fonts:
 
-<Story id="italics">
+<Story name="italics">
 	<ItalicsRenderer />
 </Story>
 
