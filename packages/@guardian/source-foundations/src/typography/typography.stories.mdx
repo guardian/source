@@ -12,9 +12,10 @@ import {
 	ItalicsRenderer
 } from './renderers';
 
+
 <Meta
 	title="Packages/source-foundations/Typography"
-	parameters={{ previewTabs: { canvas: { hidden: true } }, viewMode: 'docs' }}
+	parameters={{ previewTabs: { canvas: { hidden: true }}, viewMode: 'docs' }}
 />
 
 # Typography
@@ -73,7 +74,7 @@ typography API assigns font size in rems.
 font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
 
-<Story name="headline">
+<Story id="headline">
 	<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
 </Story>
 
@@ -83,7 +84,7 @@ font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 ```
 
-<Story name="body">
+<Story id="body">
 	<FontStylesRenderer fontName="body" fontStyles={bodyObjectStyles} />
 </Story>
 
@@ -93,7 +94,7 @@ font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif';
 ```
 
-<Story name="textSans">
+<Story id="textSans">
 	<FontStylesRenderer fontName="textSans" fontStyles={textSansObjectStyles} />
 </Story>
 
@@ -103,7 +104,7 @@ font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetic
 font-family: 'GT Guardian Titlepiece, Georgia, serif';
 ```
 
-<Story name="titlepiece">
+<Story id="titlepiece">
 	<FontStylesRenderer fontName="titlepiece" fontStyles={titlepieceObjectStyles} />
 </Story>
 
@@ -117,7 +118,7 @@ Each method may receive an `options` object. Missing options are merged with sen
 headline.medium({ lineHeight: 'loose' });
 ```
 
-<Story name="line height">
+<Story id="line height">
 	<LineHeightRenderer />
 </Story>
 
@@ -131,7 +132,7 @@ The default for headline and titlepiece is `tight`.
 headline.medium({ fontWeight: 'bold' });
 ```
 
-<Story name="font weight">
+<Story id="font weight">
 	<FontWeightRenderer />
 </Story>
 
@@ -151,7 +152,7 @@ headline.medium({ fontStyle: 'italic' });
 
 `italic` is available for the following fonts:
 
-<Story name="italics">
+<Story id="italics">
 	<ItalicsRenderer />
 </Story>
 

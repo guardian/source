@@ -20,19 +20,15 @@ interface Props {
 	fontStyles: FontFunctions;
 }
 
-const listStyles = {
-	margin: 0,
-	listStyle: 'none',
-};
 
 export const FontStylesRenderer = ({ fontName, fontStyles }: Props) => {
 	return (
 		<ul>
 			{Object.entries(fontStyles).map(([name, getFontStyles]) => {
 				const fontStyles = getFontStyles({ unit: 'px' });
-				console.log(fontStyles);
+
 				return (
-					<li key={name} style={{ ...fontStyles, ...listStyles }}>
+					<li key={name} style={{ ...fontStyles }}>
 						{fontName}.{name} {'->'} {fontStyles.fontSize}px
 					</li>
 				);
