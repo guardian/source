@@ -20,7 +20,6 @@ interface Props {
 	fontStyles: FontFunctions;
 }
 
-
 export const FontStylesRenderer = ({ fontName, fontStyles }: Props) => {
 	return (
 		<ul>
