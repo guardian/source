@@ -1,6 +1,16 @@
 import { Meta } from '@storybook/addon-docs';
-import { headlineObjectStyles, bodyObjectStyles, textSansObjectStyles, titlepieceObjectStyles } from '@guardian/source-foundations';
-import { TypographyMap } from './TypographyMap';
+import {
+	headlineObjectStyles,
+	bodyObjectStyles,
+	textSansObjectStyles,
+	titlepieceObjectStyles
+} from '@guardian/source-foundations';
+import {
+	FontStylesRenderer,
+	LineHeightRenderer,
+	FontWeightRenderer,
+	ItalicsRenderer
+} from './renderers';
 
 <Meta
 	title="Packages/source-foundations/Typography"
@@ -64,7 +74,7 @@ font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
 
 <Story name="headline">
-	<TypographyMap fontName="headline" fontStyles={headlineObjectStyles}></TypographyMap>
+	<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
 </Story>
 
 ### Body
@@ -74,7 +84,7 @@ font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 ```
 
 <Story name="body">
-	<TypographyMap fontName="body" fontStyles={bodyObjectStyles}></TypographyMap>
+	<FontStylesRenderer fontName="body" fontStyles={bodyObjectStyles} />
 </Story>
 
 ### Text sans
@@ -84,7 +94,7 @@ font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetic
 ```
 
 <Story name="textSans">
-	<TypographyMap fontName="textSans" fontStyles={textSansObjectStyles}></TypographyMap>
+	<FontStylesRenderer fontName="textSans" fontStyles={textSansObjectStyles} />
 </Story>
 
 ### Titlepiece
@@ -94,7 +104,7 @@ font-family: 'GT Guardian Titlepiece, Georgia, serif';
 ```
 
 <Story name="titlepiece">
-	<TypographyMap fontName="titlepiece" fontStyles={titlepieceObjectStyles}></TypographyMap>
+	<FontStylesRenderer fontName="titlepiece" fontStyles={titlepieceObjectStyles} />
 </Story>
 
 ### Options
@@ -108,17 +118,7 @@ headline.medium({ lineHeight: 'loose' });
 ```
 
 <Story name="line height">
-	<ul>
-		<li style={{...headlineObjectStyles.xxsmall({ lineHeight: 'loose' }), margin: 0}}>
-		loose -> 1.5
-		</li>
-		<li style={{...headlineObjectStyles.xxsmall({ lineHeight: 'regular' }), margin: 0}}>
-		regular -> 1.35
-		</li>
-		<li style={{...headlineObjectStyles.xxsmall({ lineHeight: 'tight' }), margin: 0}}>
-		tight -> 1.15
-		</li>
-	</ul>
+	<LineHeightRenderer />
 </Story>
 
 The default for body and textSans is `loose`. This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
@@ -132,20 +132,7 @@ headline.medium({ fontWeight: 'bold' });
 ```
 
 <Story name="font weight">
-	<ul>
-		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'light' })}}>
-		light -> 300
-		</li>
-		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'regular' })}}>
-		regular -> 400
-		</li>
-		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'medium' })}}>
-		medium -> 500
-		</li>
-		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'bold' })}}>
-		bold -> 700
-		</li>
-	</ul>
+	<FontWeightRenderer />
 </Story>
 
 The default for body and textSans is `regular`. The `light` and `medium` font weights are not available for these fonts.
@@ -165,23 +152,7 @@ headline.medium({ fontStyle: 'italic' });
 `italic` is available for the following fonts:
 
 <Story name="italics">
-	<ul>
-		<li style={{...headlineObjectStyles.xxsmall({ fontStyle: 'italic', fontWeight: 'light' })}}>
-		headline light
-		</li>
-		<li style={{...headlineObjectStyles.xxsmall({ fontStyle: 'italic', fontWeight: 'medium' })}}>
-		headline medium
-		</li>
-		<li style={{...bodyObjectStyles.xsmall({ fontStyle: 'italic', fontWeight: 'regular' })}}>
-		body regular
-		</li>
-		<li style={{...bodyObjectStyles.xsmall({ fontStyle: 'italic', fontWeight: 'bold' })}}>
-		body bold
-		</li>
-		<li style={{...textSansObjectStyles.xsmall({ fontStyle: 'italic', fontWeight: 'regular' })}}>
-		textSans regular
-		</li>
-	</ul>
+	<ItalicsRenderer />
 </Story>
 
 
