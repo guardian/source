@@ -10,16 +10,23 @@ interface Props {
 	options: FontScaleArgs;
 }
 
-export const TypographyMap = ({ fontName, fontStyles, options }: Props) => {
-	return Object.entries(fontStyles).map(([name, getFontStyles]) => {
-		const fontStyles = getFontStyles({ unit: 'px', ...options });
+const listStyles = {
+	margin: 0,
+	listStyle: 'none',
+};
 
-		return (
-			<div key={name}>
-				<h1 style={{ ...fontStyles }}>
-					{fontName}.{name} {'->'} {fontStyles.fontSize}px
-				</h1>
-			</div>
-		);
-	});
+export const TypographyMap = ({ fontName, fontStyles, options }: Props) => {
+	return (
+		<ul>
+			{Object.entries(fontStyles).map(([name, getFontStyles]) => {
+				const fontStyles = getFontStyles({ unit: 'px', ...options });
+
+				return (
+					<li key={name} style={{ ...fontStyles, ...listStyles }}>
+						{fontName}.{name} {'->'} {fontStyles.fontSize}px
+					</li>
+				);
+			})}
+		</ul>
+	);
 };

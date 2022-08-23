@@ -107,9 +107,19 @@ Each method may receive an `options` object. Missing options are merged with sen
 headline.medium({ lineHeight: 'loose' });
 ```
 
--   `loose` -> 1.5
--   `regular` -> 1.35
--   `tight` -> 1.15
+<Story name="line height">
+	<ul>
+		<li style={{...headlineObjectStyles.xxsmall({ lineHeight: 'loose' }), margin: 0}}>
+		loose -> 1.5
+		</li>
+		<li style={{...headlineObjectStyles.xxsmall({ lineHeight: 'regular' }), margin: 0}}>
+		regular -> 1.35
+		</li>
+		<li style={{...headlineObjectStyles.xxsmall({ lineHeight: 'tight' }), margin: 0}}>
+		tight -> 1.15
+		</li>
+	</ul>
+</Story>
 
 The default for body and textSans is `loose`. This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
 
@@ -121,10 +131,22 @@ The default for headline and titlepiece is `tight`.
 headline.medium({ fontWeight: 'bold' });
 ```
 
--   `light` -> 300
--   `regular` -> 400
--   `medium` -> 500
--   `bold` -> 700
+<Story name="font weight">
+	<ul>
+		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'light' })}}>
+		light -> 300
+		</li>
+		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'regular' })}}>
+		regular -> 400
+		</li>
+		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'medium' })}}>
+		medium -> 500
+		</li>
+		<li style={{...headlineObjectStyles.xxsmall({ fontWeight: 'bold' })}}>
+		bold -> 700
+		</li>
+	</ul>
+</Story>
 
 The default for body and textSans is `regular`. The `light` and `medium` font weights are not available for these fonts.
 
@@ -142,12 +164,26 @@ headline.medium({ fontStyle: 'italic' });
 
 `italic` is available for the following fonts:
 
--   headline light
--   headline medium
--   body regular
--   body bold
--   textSans regular
--   textSans bold
+<Story name="italics">
+	<ul>
+		<li style={{...headlineObjectStyles.xxsmall({ fontStyle: 'italic', fontWeight: 'light' })}}>
+		headline light
+		</li>
+		<li style={{...headlineObjectStyles.xxsmall({ fontStyle: 'italic', fontWeight: 'medium' })}}>
+		headline medium
+		</li>
+		<li style={{...bodyObjectStyles.xsmall({ fontStyle: 'italic', fontWeight: 'regular' })}}>
+		body regular
+		</li>
+		<li style={{...bodyObjectStyles.xsmall({ fontStyle: 'italic', fontWeight: 'bold' })}}>
+		body bold
+		</li>
+		<li style={{...textSansObjectStyles.xsmall({ fontStyle: 'italic', fontWeight: 'regular' })}}>
+		textSans regular
+		</li>
+	</ul>
+</Story>
+
 
 #### Unit
 
