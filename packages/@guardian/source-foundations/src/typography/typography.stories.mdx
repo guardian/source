@@ -10,7 +10,7 @@ import {
 	LineHeightRenderer,
 	FontWeightRenderer,
 	ItalicsRenderer
-} from '../../../../../.storybook/typographyRenderers';
+} from '/.storybook/typographyRenderers';
 
 <!--TODO: hide additional sidebar stories when functionality becomes available,
 	we need the <Story /> component to show examples of each font style in Chromatic
@@ -76,6 +76,7 @@ typography API assigns font size in rems.
 ```css
 font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
+
 <Canvas>
 	<Story name="headline">
 		<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
