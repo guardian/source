@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
 import {
 	headlineObjectStyles,
 	bodyObjectStyles,
@@ -12,6 +12,9 @@ import {
 	ItalicsRenderer
 } from '../../../../../.storybook/typographyRenderers';
 
+<!--TODO: hide additional sidebar stories when functionality becomes available,
+	we need the <Story /> component to show examples of each font style in Chromatic
+	https://github.com/storybookjs/storybook/issues/9209 -->
 
 <Meta
 	title="Packages/source-foundations/Typography"
@@ -73,9 +76,11 @@ typography API assigns font size in rems.
 ```css
 font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
-<Story name="headline">
-	<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
-</Story>
+<Canvas>
+	<Story name="headline">
+		<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
+	</Story>
+</Canvas>
 
 ### Body
 
@@ -83,9 +88,11 @@ font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 ```
 
-<Story name="body">
-	<FontStylesRenderer fontName="body" fontStyles={bodyObjectStyles} />
-</Story>
+<Canvas>
+	<Story name="body">
+		<FontStylesRenderer fontName="body" fontStyles={bodyObjectStyles} />
+	</Story>
+</Canvas>
 
 ### Text sans
 
@@ -93,9 +100,11 @@ font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif';
 ```
 
-<Story name="textSans">
-	<FontStylesRenderer fontName="textSans" fontStyles={textSansObjectStyles} />
-</Story>
+<Canvas>
+	<Story name="textSans">
+		<FontStylesRenderer fontName="textSans" fontStyles={textSansObjectStyles} />
+	</Story>
+</Canvas>
 
 ### Titlepiece
 
@@ -103,9 +112,11 @@ font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetic
 font-family: 'GT Guardian Titlepiece, Georgia, serif';
 ```
 
-<Story name="titlepiece">
-	<FontStylesRenderer fontName="titlepiece" fontStyles={titlepieceObjectStyles} />
-</Story>
+<Canvas>
+	<Story name="titlepiece">
+		<FontStylesRenderer fontName="titlepiece" fontStyles={titlepieceObjectStyles} />
+	</Story>
+</Canvas>
 
 ### Options
 
@@ -117,9 +128,11 @@ Each method may receive an `options` object. Missing options are merged with sen
 headline.medium({ lineHeight: 'loose' });
 ```
 
-<Story name="line height">
-	<LineHeightRenderer />
-</Story>
+<Canvas>
+	<Story name="line height">
+		<LineHeightRenderer />
+	</Story>
+</Canvas>
 
 The default for body and textSans is `loose`. This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
 
@@ -131,9 +144,11 @@ The default for headline and titlepiece is `tight`.
 headline.medium({ fontWeight: 'bold' });
 ```
 
-<Story name="font weight">
-	<FontWeightRenderer />
-</Story>
+<Canvas>
+	<Story name="font weight">
+		<FontWeightRenderer />
+	</Story>
+</Canvas>
 
 The default for body and textSans is `regular`. The `light` and `medium` font weights are not available for these fonts.
 
@@ -151,10 +166,11 @@ headline.medium({ fontStyle: 'italic' });
 
 `italic` is available for the following fonts:
 
-<Story name="italics">
-	<ItalicsRenderer />
-</Story>
-
+<Canvas>
+	<Story name="italics">
+		<ItalicsRenderer />
+	</Story>
+</Canvas>
 
 #### Unit
 
