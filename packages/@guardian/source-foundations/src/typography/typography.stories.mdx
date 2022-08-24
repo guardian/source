@@ -15,7 +15,7 @@ import {
 
 <Meta
 	title="Packages/source-foundations/Typography"
-	parameters={{ previewTabs: { canvas: { hidden: true }}, viewMode: 'docs', chromatic: { disable: false } }}
+	parameters={{ previewTabs: { canvas: { hidden: true }}, viewMode: 'docs' }}
 />
 
 # Typography
@@ -73,8 +73,9 @@ typography API assigns font size in rems.
 ```css
 font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 ```
-
-<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
+<Story name="headline">
+	<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
+</Story>
 
 ### Body
 
@@ -89,7 +90,7 @@ font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 ### Text sans
 
 ```css
-font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucnamea Grande, sans-serif';
+font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif';
 ```
 
 <Story name="textSans">
