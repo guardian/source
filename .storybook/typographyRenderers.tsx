@@ -4,24 +4,26 @@ import {
 	headlineObjectStyles,
 	textSansObjectStyles,
 } from '@guardian/source-foundations/src';
-import { fontWeightMapping, lineHeightMapping } from '@guardian/source-foundations/src/typography/data';
+import { fontWeightMapping } from '@guardian/source-foundations/src/typography/data';
 import type {
 	Category,
 	FontScaleFunction,
 	FontWeight,
-	LineHeight,
 } from '@guardian/source-foundations/src/typography/types';
 
 type FontFunctions = {
 	[key in Category]: FontScaleFunction;
 };
 
-interface Props {
+interface FontStylesRendererProps {
 	fontName: string;
 	fontStyles: FontFunctions;
 }
 
-export const FontStylesRenderer = ({ fontName, fontStyles }: Props) => {
+export const FontStylesRenderer: React.FC<FontStylesRendererProps> = ({
+	fontName,
+	fontStyles,
+}) => {
 	return (
 		<ul>
 			{Object.entries(fontStyles).map(([name, getFontStyles]) => {
@@ -37,23 +39,20 @@ export const FontStylesRenderer = ({ fontName, fontStyles }: Props) => {
 	);
 };
 
-export const LineHeightRenderer = () => (
-	<ul>
-		{Object.entries(lineHeightMapping).map(([lineHeight, value]) => (
-			<li
-				key={value}
-				style={{
-					...headlineObjectStyles.xxsmall({
-						lineHeight: lineHeight as LineHeight,
-					}),
-					margin: 0,
-				}}
-			>
-				{lineHeight} {'->'} {value}
-			</li>
-		))}
-	</ul>
-);
+interface LineHeightRendererProps {
+	getFontStyles: FontScaleFunction;
+}
+
+export const LineHeightRenderer: React.FC<LineHeightRendererProps> = ({
+	getFontStyles,
+}) => {
+	const fontStyles = getFontStyles({ unit: 'px' });
+	return (
+		<p style={{ ...fontStyles, width: '15ch' }}>
+			The quick brown fox jumps over the lazy dog
+		</p>
+	);
+};
 
 export const FontWeightRenderer = () => (
 	<ul>
