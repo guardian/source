@@ -13,8 +13,8 @@ import {
 } from '/.storybook/typographyRenderers';
 
 <!--TODO: hide additional sidebar stories when functionality becomes available,
-    we need the <Story /> component to show examples of each font style in Chromatic
-    https://github.com/storybookjs/storybook/issues/9209 -->
+	we need the <Story /> component to show examples of each font style in Chromatic
+	https://github.com/storybookjs/storybook/issues/9209 -->
 
 <Meta
 	title="Packages/source-foundations/Typography"
@@ -173,6 +173,77 @@ The default for titlepiece is `tight`. This maps to `1.15 (115%)`.
 ### Options
 
 Each method may receive an `options` object. Missing options are merged with sensible defaults for each font family.
+
+#### Line height
+
+The available options for line height are documented in the table below.
+
+<table>
+	<tr>
+		<th>Alias in Source</th>
+		<th>Line height</th>
+	</tr>
+	<tr>
+		<td>loose</td>
+		<td>150% (1.5)</td>
+	</tr>
+	<tr>
+		<td>regular</td>
+		<td>135% (1.35)</td>
+	</tr>
+	<tr>
+		<td>tight</td>
+		<td>115% (1.15)</td>
+	</tr>
+</table>
+
+The following is a table of the default line height for each font:
+
+<table>
+	<tr>
+		<th>Font family</th>
+		<th>Line height</th>
+		<th>Alias in Source</th>
+	</tr>
+	<tr>
+		<td>Text Sans</td>
+		<td>135% (1.35)</td>
+		<td>regular</td>
+	</tr>
+	<tr>
+		<td>Text Egyptian</td>
+		<td>150% (1.5)</td>
+		<td>loose</td>
+	</tr>
+	<tr>
+		<td>Guardian Headline</td>
+		<td>115% (1.15)</td>
+		<td>tight</td>
+	</tr>
+	<tr>
+		<td>Guardian Titlepiece</td>
+		<td>115% (1.15)</td>
+		<td>tight</td>
+	</tr>
+</table>
+
+We calculate the final line height based on the font size using the following formula:
+
+```ts
+// line-height is defined as a unitless value, so we multiply
+// by the element's font-size in px to get the px value
+const finalLineHeight = `${lineHeight * fontSizeInPx}px`;
+```
+
+And a worked example:
+
+```ts
+const lineHeight =
+	1.15 * // line-height: tight (unitless)
+	30; // font-size: small (px)
+
+//  lineHeight === 34.5px
+```
 
 #### Font weight
 
