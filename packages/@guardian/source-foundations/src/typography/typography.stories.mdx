@@ -3,22 +3,22 @@ import {
 	headlineObjectStyles,
 	bodyObjectStyles,
 	textSansObjectStyles,
-	titlepieceObjectStyles
+	titlepieceObjectStyles,
 } from '@guardian/source-foundations';
 import {
 	FontStylesRenderer,
 	LineHeightRenderer,
 	FontWeightRenderer,
-	ItalicsRenderer
+	ItalicsRenderer,
 } from '/.storybook/typographyRenderers';
 
 <!--TODO: hide additional sidebar stories when functionality becomes available,
-	we need the <Story /> component to show examples of each font style in Chromatic
-	https://github.com/storybookjs/storybook/issues/9209 -->
+    we need the <Story /> component to show examples of each font style in Chromatic
+    https://github.com/storybookjs/storybook/issues/9209 -->
 
 <Meta
 	title="Packages/source-foundations/Typography"
-	parameters={{ previewTabs: { canvas: { hidden: true }}, viewMode: 'docs' }}
+	parameters={{ previewTabs: { canvas: { hidden: true } }, viewMode: 'docs' }}
 />
 
 # Typography
@@ -79,7 +79,20 @@ font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 
 <Canvas>
 	<Story name="headline">
-		<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
+		<FontStylesRenderer
+			fontName="headline"
+			fontStyles={headlineObjectStyles}
+		/>
+	</Story>
+</Canvas>
+
+#### Line height
+
+The default for headline is `tight`. This maps to `1.15 (115%)`.
+
+<Canvas>
+	<Story name="headline-lineheight">
+		<LineHeightRenderer getFontStyles={headlineObjectStyles.large} />
 	</Story>
 </Canvas>
 
@@ -95,6 +108,18 @@ font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 	</Story>
 </Canvas>
 
+#### Line height
+
+The default for body is `loose`. This maps to `1.50 (150%)`.
+
+This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
+
+<Canvas>
+	<Story name="body-lineheight">
+		<LineHeightRenderer getFontStyles={bodyObjectStyles.small} />
+	</Story>
+</Canvas>
+
 ### Text sans
 
 ```css
@@ -103,7 +128,20 @@ font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetic
 
 <Canvas>
 	<Story name="textSans">
-		<FontStylesRenderer fontName="textSans" fontStyles={textSansObjectStyles} />
+		<FontStylesRenderer
+			fontName="textSans"
+			fontStyles={textSansObjectStyles}
+		/>
+	</Story>
+</Canvas>
+
+#### Line height
+
+The default for body is `regular`. This maps to `1.35 (135%)`.
+
+<Canvas>
+	<Story name="text-sans-lineheight">
+		<LineHeightRenderer getFontStyles={textSansObjectStyles.medium} />
 	</Story>
 </Canvas>
 
@@ -115,29 +153,26 @@ font-family: 'GT Guardian Titlepiece, Georgia, serif';
 
 <Canvas>
 	<Story name="titlepiece">
-		<FontStylesRenderer fontName="titlepiece" fontStyles={titlepieceObjectStyles} />
+		<FontStylesRenderer
+			fontName="titlepiece"
+			fontStyles={titlepieceObjectStyles}
+		/>
+	</Story>
+</Canvas>
+
+#### Line height
+
+The default for titlepiece is `tight`. This maps to `1.15 (115%)`.
+
+<Canvas>
+	<Story name="titlepiece-lineheight">
+		<LineHeightRenderer getFontStyles={titlepieceObjectStyles.medium} />
 	</Story>
 </Canvas>
 
 ### Options
 
 Each method may receive an `options` object. Missing options are merged with sensible defaults for each font family.
-
-#### Line height
-
-```tsx
-headline.medium({ lineHeight: 'loose' });
-```
-
-<Canvas>
-	<Story name="line height">
-		<LineHeightRenderer />
-	</Story>
-</Canvas>
-
-The default for body and textSans is `loose`. This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
-
-The default for headline and titlepiece is `tight`.
 
 #### Font weight
 
