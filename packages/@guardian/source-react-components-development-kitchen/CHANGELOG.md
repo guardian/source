@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.1.0
+
+### Minor Changes
+
+- c7afdedb: add FooterWithContents and FooterLinks components
+
 ## 3.0.0
 
 ### Patch Changes
