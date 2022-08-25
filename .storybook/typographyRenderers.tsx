@@ -20,10 +20,10 @@ interface FontStylesRendererProps {
 	fontStyles: FontFunctions;
 }
 
-export const FontStylesRenderer: React.FC<FontStylesRendererProps> = ({
+export const FontStylesRenderer = ({
 	fontName,
 	fontStyles,
-}) => {
+}: FontStylesRendererProps) => {
 	return (
 		<ul>
 			{Object.entries(fontStyles).map(([name, getFontStyles]) => {
@@ -43,9 +43,9 @@ interface LineHeightRendererProps {
 	getFontStyles: FontScaleFunction;
 }
 
-export const LineHeightRenderer: React.FC<LineHeightRendererProps> = ({
+export const LineHeightRenderer = ({
 	getFontStyles,
-}) => {
+}: LineHeightRendererProps) => {
 	const fontStyles = getFontStyles({ unit: 'px' });
 	return (
 		<p style={{ ...fontStyles, width: '15ch' }}>
