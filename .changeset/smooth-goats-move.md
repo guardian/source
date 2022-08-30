@@ -1,7 +1,5 @@
 ---
-'@guardian/source-foundations': major
+'@guardian/source-foundations': patch
 ---
 
-Change the default line-height for text-sans to regular instead of loose.
-
-Please check that this doesn't break your existing layouts that use text-sans with the default line height.
+Extends the Typography story so that we better capture changes to the lineHeight of our fonts
