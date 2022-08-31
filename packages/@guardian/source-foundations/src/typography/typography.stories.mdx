@@ -3,13 +3,13 @@ import {
 	headlineObjectStyles,
 	bodyObjectStyles,
 	textSansObjectStyles,
-	titlepieceObjectStyles
+	titlepieceObjectStyles,
 } from '@guardian/source-foundations';
 import {
 	FontStylesRenderer,
 	LineHeightRenderer,
 	FontWeightRenderer,
-	ItalicsRenderer
+	ItalicsRenderer,
 } from '/.storybook/typographyRenderers';
 
 <!--TODO: hide additional sidebar stories when functionality becomes available,
@@ -18,7 +18,7 @@ import {
 
 <Meta
 	title="Packages/source-foundations/Typography"
-	parameters={{ previewTabs: { canvas: { hidden: true }}, viewMode: 'docs' }}
+	parameters={{ previewTabs: { canvas: { hidden: true } }, viewMode: 'docs' }}
 />
 
 # Typography
@@ -79,7 +79,20 @@ font-family: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif';
 
 <Canvas>
 	<Story name="headline">
-		<FontStylesRenderer fontName="headline" fontStyles={headlineObjectStyles} />
+		<FontStylesRenderer
+			fontName="headline"
+			fontStyles={headlineObjectStyles}
+		/>
+	</Story>
+</Canvas>
+
+#### Line height
+
+The default for headline is `tight`. This maps to `1.15 (115%)`.
+
+<Canvas>
+	<Story name="headline-lineheight">
+		<LineHeightRenderer getFontStyles={headlineObjectStyles.large} />
 	</Story>
 </Canvas>
 
@@ -95,6 +108,18 @@ font-family: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif';
 	</Story>
 </Canvas>
 
+#### Line height
+
+The default for body is `loose`. This maps to `1.50 (150%)`.
+
+This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
+
+<Canvas>
+	<Story name="body-lineheight">
+		<LineHeightRenderer getFontStyles={bodyObjectStyles.small} />
+	</Story>
+</Canvas>
+
 ### Text sans
 
 ```css
@@ -103,7 +128,20 @@ font-family: 'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetic
 
 <Canvas>
 	<Story name="textSans">
-		<FontStylesRenderer fontName="textSans" fontStyles={textSansObjectStyles} />
+		<FontStylesRenderer
+			fontName="textSans"
+			fontStyles={textSansObjectStyles}
+		/>
+	</Story>
+</Canvas>
+
+#### Line height
+
+The default for body is `loose`. This maps to `1.5 (150%)`.
+
+<Canvas>
+	<Story name="text-sans-lineheight">
+		<LineHeightRenderer getFontStyles={textSansObjectStyles.medium} />
 	</Story>
 </Canvas>
 
@@ -115,7 +153,20 @@ font-family: 'GT Guardian Titlepiece, Georgia, serif';
 
 <Canvas>
 	<Story name="titlepiece">
-		<FontStylesRenderer fontName="titlepiece" fontStyles={titlepieceObjectStyles} />
+		<FontStylesRenderer
+			fontName="titlepiece"
+			fontStyles={titlepieceObjectStyles}
+		/>
+	</Story>
+</Canvas>
+
+#### Line height
+
+The default for titlepiece is `tight`. This maps to `1.15 (115%)`.
+
+<Canvas>
+	<Story name="titlepiece-lineheight">
+		<LineHeightRenderer getFontStyles={titlepieceObjectStyles.medium} />
 	</Story>
 </Canvas>
 
@@ -125,19 +176,74 @@ Each method may receive an `options` object. Missing options are merged with sen
 
 #### Line height
 
-```tsx
-headline.medium({ lineHeight: 'loose' });
+The available options for line height are documented in the table below.
+
+<table>
+	<tr>
+		<th>Alias in Source</th>
+		<th>Line height</th>
+	</tr>
+	<tr>
+		<td>loose</td>
+		<td>150% (1.5)</td>
+	</tr>
+	<tr>
+		<td>regular</td>
+		<td>135% (1.35)</td>
+	</tr>
+	<tr>
+		<td>tight</td>
+		<td>115% (1.15)</td>
+	</tr>
+</table>
+
+The following is a table of the default line height for each font:
+
+<table>
+	<tr>
+		<th>Font family</th>
+		<th>Line height</th>
+		<th>Alias in Source</th>
+	</tr>
+	<tr>
+		<td>Text Sans</td>
+		<td>150% (1.50)</td>
+		<td>loose</td>
+	</tr>
+	<tr>
+		<td>Text Egyptian</td>
+		<td>150% (1.5)</td>
+		<td>loose</td>
+	</tr>
+	<tr>
+		<td>Guardian Headline</td>
+		<td>115% (1.15)</td>
+		<td>tight</td>
+	</tr>
+	<tr>
+		<td>Guardian Titlepiece</td>
+		<td>115% (1.15)</td>
+		<td>tight</td>
+	</tr>
+</table>
+
+We calculate the final line height based on the font size using the following formula:
+
+```ts
+// line-height is defined as a unitless value, so we multiply
+// by the element's font-size in px to get the px value
+const finalLineHeight = `${lineHeight * fontSizeInPx}px`;
 ```
 
-<Canvas>
-	<Story name="line height">
-		<LineHeightRenderer />
-	</Story>
-</Canvas>
+And a worked example:
 
-The default for body and textSans is `loose`. This meets the [WCAG 2.1 AAA success criterion for visual presentation](https://www.w3.org/TR/WCAG21/#visual-presentation).
+```ts
+const lineHeight =
+	1.15 * // line-height: tight (unitless)
+	30; // font-size: small (px)
 
-The default for headline and titlepiece is `tight`.
+//  lineHeight === 34.5px
+```
 
 #### Font weight
 
