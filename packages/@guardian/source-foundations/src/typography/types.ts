@@ -44,6 +44,12 @@ type Categories = {
 
 export type Category = keyof Categories;
 
+export type AvailableFontsMapping = {
+	[cat in Category]: {
+		[fontWeight in FontWeight]?: FontWeightDefinition;
+	};
+};
+
 export type Fs = <
 	Category extends keyof Categories,
 	Level extends keyof Categories[Category],
