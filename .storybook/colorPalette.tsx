@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { transparentize } from 'polished';
 import { styled } from '@storybook/theming';
-import { ResetWrapper } from '@storybook/components';
 
 const ItemTitle = styled.div(({ theme }) => ({
 	fontWeight: theme.typography.weight.bold,
@@ -197,13 +196,11 @@ interface ColorPaletteProps {
  * all specified as `ColorItem` children of this wrapper component.
  */
 export const ColorPalette: FunctionComponent<ColorPaletteProps> = ({ children, ...props }) => (
-	<ResetWrapper>
-		<List {...props} className="docblock-colorpalette">
-			<ListHeading>
-				<ListName>Name</ListName>
-				<ListSwatches>Swatches</ListSwatches>
-			</ListHeading>
-			{children}
-		</List>
-	</ResetWrapper>
+	<List {...props} className="docblock-colorpalette">
+		<ListHeading>
+			<ListName>Name</ListName>
+			<ListSwatches>Swatches</ListSwatches>
+		</ListHeading>
+		{children}
+	</List>
 );
