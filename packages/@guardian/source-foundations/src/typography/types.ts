@@ -1,14 +1,14 @@
 import type {
 	bodySizes,
-	fontWeightMapping,
+	fontWeights,
 	headlineSizes,
-	lineHeightMapping,
+	lineHeights,
 	textSansSizes,
 	titlepieceSizes,
 } from './data';
 
 export type ScaleUnit = 'rem' | 'px';
-export type LineHeight = keyof typeof lineHeightMapping;
+export type LineHeight = keyof typeof lineHeights;
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
@@ -18,9 +18,7 @@ export type TypographyStyles<Unit extends ScaleUnit = ScaleUnit> = {
 	fontFamily: string;
 	fontSize: Unit extends 'px' ? number : `${number}rem`;
 	lineHeight: string | number;
-	fontWeight?:
-		| typeof fontWeightMapping[keyof typeof fontWeightMapping]
-		| FontWeight;
+	fontWeight?: typeof fontWeights[keyof typeof fontWeights] | FontWeight;
 	fontStyle?: 'normal' | 'italic';
 	textDecorationThickness?: number;
 };

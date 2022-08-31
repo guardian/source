@@ -133,20 +133,3 @@ export const remHeadlineSizes = remTextSizes.headlineSizes;
 export const remBodySizes = remTextSizes.remBodySizes;
 
 export const remTextSansSizes = remTextSizes.remTextSansSizes;
-
-/**
- * @deprecated use `fonts` instead
- */
-export const fontMapping = fonts;
-/**
- * @deprecated use `lineHeights` instead
- */
-export const lineHeightMapping = lineHeights;
-/**
- * @deprecated use `fontWeights` instead
- */
-export const fontWeightMapping = fontWeights;
-/**
- * @deprecated use `underlineThickness` instead
- */
-export const underlineThicknessMapping = underlineThickness;

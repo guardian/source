@@ -4,31 +4,12 @@ import {
 	textSans as textSansAsObj,
 	titlepiece as titlepieceAsObj,
 } from './api';
-import {
-	bodySizes,
-	fontMapping,
-	fontWeightMapping,
-	headlineSizes,
-	lineHeightMapping,
-	remBodySizes,
-	remHeadlineSizes,
-	remTextSansSizes,
-	remTitlepieceSizes,
-	textSansSizes,
-	titlepieceSizes,
-} from './data';
 import { objectStylesToString } from './object-styles-to-string';
 import type {
 	BodySizes,
-	Category,
 	FontScaleArgs,
 	FontScaleFunctionStr,
-	FontStyle,
-	FontWeight,
-	FontWeightDefinition,
 	HeadlineSizes,
-	LineHeight,
-	ScaleUnit,
 	TextSansSizes,
 	TitlepieceSizes,
 } from './types';
@@ -45,7 +26,7 @@ type TypographyApi<Sizes> = {
  * font-family: 'GT Guardian Titlepiece';
  * ```
  */
-const titlepiece: TypographyApi<TitlepieceSizes> = {
+export const titlepiece: TypographyApi<TitlepieceSizes> = {
 	small: (options?: FontScaleArgs) =>
 		objectStylesToString(titlepieceAsObj.small(options)),
 	medium: (options?: FontScaleArgs) =>
@@ -62,7 +43,7 @@ const titlepiece: TypographyApi<TitlepieceSizes> = {
  * font-family: 'GH Guardian Headline';
  * ```
  */
-const headline: TypographyApi<HeadlineSizes> = {
+export const headline: TypographyApi<HeadlineSizes> = {
 	xxxsmall: (options?: FontScaleArgs) =>
 		objectStylesToString(headlineAsObj.xxxsmall(options)),
 	xxsmall: (options?: FontScaleArgs) =>
@@ -87,7 +68,7 @@ const headline: TypographyApi<HeadlineSizes> = {
  * font-family: 'GuardianTextEgyptian';
  * ```
  */
-const body: TypographyApi<BodySizes> = {
+export const body: TypographyApi<BodySizes> = {
 	xsmall: (options?: FontScaleArgs) =>
 		objectStylesToString(bodyAsObj.small(options)),
 	small: (options?: FontScaleArgs) =>
@@ -104,7 +85,7 @@ const body: TypographyApi<BodySizes> = {
  * font-family: 'GuardianTextSans';
  * ```
  */
-const textSans: TypographyApi<TextSansSizes> = {
+export const textSans: TypographyApi<TextSansSizes> = {
 	xxsmall: (options?: FontScaleArgs) =>
 		objectStylesToString(textSansAsObj.xxsmall(options)),
 	xsmall: (options?: FontScaleArgs) =>
@@ -124,22 +105,18 @@ const textSans: TypographyApi<TextSansSizes> = {
 };
 
 export {
-	titlepiece,
-	headline,
-	body,
-	textSans,
-	titlepieceSizes,
-	headlineSizes,
 	bodySizes,
-	textSansSizes,
-	remTitlepieceSizes,
-	remHeadlineSizes,
+	headlineSizes,
 	remBodySizes,
+	remHeadlineSizes,
 	remTextSansSizes,
-	fontMapping,
-	fontWeightMapping,
-	lineHeightMapping,
-};
+	remTitlepieceSizes,
+	textSansSizes,
+	titlepieceSizes,
+	fonts,
+	lineHeights,
+	fontWeights,
+} from './data';
 
 export type {
 	ScaleUnit,
@@ -148,4 +125,4 @@ export type {
 	FontWeight,
 	FontStyle,
 	FontWeightDefinition,
-};
+} from './types';
