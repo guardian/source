@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 8.0.0
+
+### Major Changes
+
+- 175e8dcf: Bump dev dependencies
+
 ## 7.0.0
 
 ### Major Changes

@@ -1,6 +1,6 @@
 {
   "name": "@guardian/eslint-plugin-source-react-components",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "ESLint plugin for Guardian projects using the `@guardian/source-react-components` package.",
   "homepage": "https://github.com/guardian/source#readme",
   "bugs": {
@@ -33,7 +33,7 @@
     "typescript": "~4.6.4"
   },
   "peerDependencies": {
-    "@guardian/source-react-components": "^7.0.0",
+    "@guardian/source-react-components": "^8.0.0",
     "eslint": "^8.0.0"
   },
   "publishConfig": {
