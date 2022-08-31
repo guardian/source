@@ -1,5 +1,31 @@
 # @guardian/source-foundations
 
+## 5.2.1
+
+### Patch Changes
+
+- 19f2fb8a: Extends the Typography story so that we better capture changes to the lineHeight of our fonts
+
+## 5.2.0
+
+### Minor Changes
+
+- 4a613b3e: Add new colour 450 to lifestyle palette
+
+### Patch Changes
+
+- 12a9fce5: Update Link hover underline thickness
+
+## 5.1.0
+
+### Minor Changes
+
+- b9cfe856: Add 14px "xsmall" font size to body
+
+### Patch Changes
+
+- 33ce0b3a: Prevent layout jumps when navigating between pages where one has content shorter than the viewport
+
 ## 5.0.0
 
 ### Major Changes

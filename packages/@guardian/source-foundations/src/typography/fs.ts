@@ -5,6 +5,7 @@ import {
 	fontWeightMapping,
 	lineHeightMapping,
 	remFontSizeMapping,
+	underlineThicknessMapping,
 } from './data';
 import type { FontStyle, FontWeightDefinition, Fs, Option } from './types';
 
@@ -48,12 +49,17 @@ export const fs: Fs =
 			? fontWeightMapping[fontWeight]
 			: '';
 		const fontStyleValue = getFontStyle(requestedFont, fontStyle);
+		const textDecorationThicknessValue = Number(
+			// @ts-expect-error -- the types actually overlap, see https://gist.github.com/mxdvl/5e31fd5b13670b6a41ddac6c65efeee4
+			underlineThicknessMapping[category][level],
+		);
 
 		return Object.assign(
 			{
 				fontFamily: fontFamilyValue,
 				fontSize: fontSizeValue,
 				lineHeight: lineHeightValue,
+				textDecorationThickness: textDecorationThicknessValue,
 			},
 			fontWeightValue ? { fontWeight: fontWeightValue } : {},
 			fontStyleValue ? { fontStyle: fontStyleValue } : {},
