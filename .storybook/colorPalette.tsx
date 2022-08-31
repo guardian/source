@@ -1,5 +1,4 @@
-import React, { FunctionComponent } from 'react';
-import { ResetWrapper } from '@storybook/components';
+import React from 'react';
 import { css } from '@emotion/react';
 
 const ItemTitleStyles = css`
@@ -125,12 +124,11 @@ function renderSwatch(color: string, index: number) {
 	return <div css={SwatchStyles(color)} key={`${color} -${index} `} title={color} />;
 }
 
-function renderSwatchLabel(color: string, index: number, colorDescription?: string) {
+function renderSwatchLabel(color: string, index: number) {
 	return (
 		<div css={SwatchLabelStyles} key={`${color} -${index} `} title={color}>
 			<div>
 				{color}
-				{colorDescription && <span>{colorDescription}</span>}
 			</div>
 		</div>
 	);
@@ -151,7 +149,7 @@ function renderSwatchSpecimen(colors: Colors) {
 				{Object.values(colors).map((color, index) => renderSwatch(color, index))}
 			</div>
 			<div css={SwatchLabelsStyles}>
-				{Object.keys(colors).map((color, index) => renderSwatchLabel(color, index, colors[color]))}
+				{Object.keys(colors).map((color, index) => renderSwatchLabel(color, index))}
 			</div>
 		</div>
 	);
@@ -161,7 +159,7 @@ function renderSwatchSpecimen(colors: Colors) {
  * A single color row your styleguide showing title, subtitle and one or more colors, used
  * as a child of `ColorPalette`.
  */
-export const ColorItem: FunctionComponent<ColorItemProps> = ({ title, subtitle, colors }) => {
+export const ColorItem = ({ title, subtitle, colors }: ColorItemProps) => {
 	return (
 		<div css={ItemStyles}>
 			<div css={ItemDescriptionStyles}>
@@ -184,14 +182,12 @@ interface ColorPaletteProps {
  * Styleguide documentation for colors, including names, captions, and color swatches,
  * all specified as `ColorItem` children of this wrapper component.
  */
-export const ColorPalette: FunctionComponent<ColorPaletteProps> = ({ children, ...props }) => (
-	<ResetWrapper>
-		<div css={ListStyles} {...props} className="docblock-colorpalette">
-			<div css={ListHeadingStyles}>
-				<div css={ListNameStyles}>Name</div>
-				<div css={ListSwatchesStyles}>Swatches</div>
-			</div>
-			{children}
+export const ColorPalette = ({ children, ...props }: ColorPaletteProps) => (
+	<div css={ListStyles} {...props}>
+		<div css={ListHeadingStyles}>
+			<div css={ListNameStyles}>Name</div>
+			<div css={ListSwatchesStyles}>Swatches</div>
 		</div>
-	</ResetWrapper>
+		{children}
+	</div>
 );
