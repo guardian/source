@@ -1,124 +1,132 @@
-import React from 'react';
-import { css } from '@emotion/react';
+import React, { FunctionComponent } from 'react';
+import { transparentize } from 'polished';
+import { styled } from '@storybook/theming';
+import { ResetWrapper } from '@storybook/components';
 
-/**
- * Copied from Storybook:
- * https://github.com/storybookjs/storybook/blob/7035ea7389393da041985ebc491ee58dedb50d06/code/lib/blocks/src/components/ColorPalette.tsx
- *
- */
+const ItemTitle = styled.div(({ theme }) => ({
+	fontWeight: theme.typography.weight.bold,
+	color: theme.color.defaultText,
+}));
 
-const ItemTitleStyles = css`
-	font-weight: 700;
-	color: #333333;
-	font-size: 14px;
-`
+const ItemSubtitle = styled.div(({ theme }) => ({
+	color:
+		theme.base === 'light'
+			? transparentize(0.2, theme.color.defaultText)
+			: transparentize(0.6, theme.color.defaultText),
+}));
 
-const ItemSubtitleStyles = css`
-	color: grey;
-`
+const ItemDescription = styled.div({
+	flex: '0 0 30%',
+	lineHeight: '20px',
+	marginTop: 5,
+});
 
-const ItemDescriptionStyles = css`
-	flex: 0 0 30%;
-	line-height: 1;
-	margin-top: 5px;
-`
+const SwatchLabel = styled.div(({ theme }) => ({
+	flex: 1,
+	textAlign: 'center',
+	fontFamily: theme.typography.fonts.mono,
+	fontSize: theme.typography.size.s1,
+	lineHeight: 1,
+	overflow: 'hidden',
+	color:
+		theme.base === 'light'
+			? transparentize(0.4, theme.color.defaultText)
+			: transparentize(0.6, theme.color.defaultText),
 
-const SwatchLabelStyles = css`
-	flex: 1;
-	text-align: center;
-	font-size: 12px;
-	line-height: 1;
-	overflow: hidden;
-	color: #33333399;
-
-	div {
-		display: inline-block;
-		overflow: hidden;
-		max-width: 100%;
-		text-overflow: ellipsis;
-	};
+	'> div': {
+		display: 'inline-block',
+		overflow: 'hidden',
+		maxWidth: '100%',
+		textOverflow: 'ellipsis',
+	},
 
 	span: {
-		display: block;
-		margin-top: 2px;
-	};
-`
+		display: 'block',
+		marginTop: 2,
+	},
+}));
 
-const SwatchLabelsStyles = css`
-	display: flex;
-	flex-direction: row;
-`
+const SwatchLabels = styled.div({
+	display: 'flex',
+	flexDirection: 'row',
+});
 
-const SwatchStyles = (background: string) => css`
-	position: relative;
-	flex: 1;
+interface SwatchProps {
+	background: string;
+}
 
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: ${background};
-		content: '';
-	};
-`
+const Swatch = styled.div<SwatchProps>(({ background }) => ({
+	position: 'relative',
+	flex: 1,
 
-const SwatchColorsStyles = css`
-	display: flex;
-	flex-direction: row;
-	height: 50px;
-	margin-bottom: 5px;
-	overflow: hidden;
-	background-color: white;
-	background-image: repeating-linear-gradient(-45deg, #ccc, #ccc 1px, #fff 1px, #fff 16px);
-	background-clip: padding-box;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
-`
+	'&::before': {
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		width: '100%',
+		height: '100%',
+		background,
+		content: '""',
+	},
+}));
 
-const SwatchSpecimenStyles = css`
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	position: relative;
-	margin-bottom: 30px;
-`
+const SwatchColors = styled.div(({ theme }) => ({
+	display: 'flex',
+	flexDirection: 'row',
+	height: 50,
+	marginBottom: 5,
+	overflow: 'hidden',
+	backgroundColor: 'white',
+	backgroundImage: `repeating-linear-gradient(-45deg, #ccc, #ccc 1px, #fff 1px, #fff 16px)`,
+	backgroundClip: 'padding-box',
+}));
 
-const SwatchesStyles = css`
-	flex: 1;
-	display: flex;
-	flex-direction: row;
-`
+const SwatchSpecimen = styled.div({
+	display: 'flex',
+	flexDirection: 'column',
+	flex: 1,
+	position: 'relative',
+	marginBottom: 30,
+});
 
-const ItemStyles = css`
-	display: flex;
-	align-items: flex-start;
-`
+const Swatches = styled.div({
+	flex: 1,
+	display: 'flex',
+	flexDirection: 'row',
+});
 
-const ListNameStyles = css`
-	flex: 0 0 30%;
-`
+const Item = styled.div({
+	display: 'flex',
+	alignItems: 'flex-start',
+});
 
-const ListSwatchesStyles = css`
-	flex: 1;
-`
+const ListName = styled.div({
+	flex: '0 0 30%',
+});
 
-const ListHeadingStyles = css`
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding-bottom: 20px;
-	font-weight: 700;
-	color: #33333399;
-    font-size: 14px;
-`
+const ListSwatches = styled.div({
+	flex: 1,
+});
 
-const ListStyles = css`
-	font-size: 12px;
-	line-height: 1;
-	display: flex;
-	flex-direction: column;
-`
+const ListHeading = styled.div(({ theme }) => ({
+	display: 'flex',
+	flexDirection: 'row',
+	alignItems: 'center',
+	paddingBottom: 20,
+	fontWeight: theme.typography.weight.bold,
+	color:
+		theme.base === 'light'
+			? transparentize(0.4, theme.color.defaultText)
+			: transparentize(0.6, theme.color.defaultText),
+}));
+
+const List = styled.div(({ theme }) => ({
+	fontSize: theme.typography.size.s2,
+	lineHeight: `20px`,
+
+	display: 'flex',
+	flexDirection: 'column',
+}));
 
 type Colors = string[] | { [key: string]: string };
 
@@ -129,37 +137,38 @@ interface ColorItemProps {
 }
 
 function renderSwatch(color: string, index: number) {
-	return <div css={SwatchStyles(color)} key={`${color} -${index} `} title={color} />;
+	return <Swatch key={`${color}-${index}`} title={color} background={color} />;
 }
 
-function renderSwatchLabel(color: string, index: number) {
+function renderSwatchLabel(color: string, index: number, colorDescription?: string) {
 	return (
-		<div css={SwatchLabelStyles} key={`${color} -${index} `} title={color}>
+		<SwatchLabel key={`${color}-${index}`} title={color}>
 			<div>
 				{color}
+				{colorDescription && <span>{colorDescription}</span>}
 			</div>
-		</div>
+		</SwatchLabel>
 	);
 }
 
 function renderSwatchSpecimen(colors: Colors) {
 	if (Array.isArray(colors)) {
 		return (
-			<div css={SwatchSpecimenStyles}>
-				<div css={SwatchColorsStyles}>{colors.map((color, index) => renderSwatch(color, index))}</div>
-				<div css={SwatchLabelsStyles}>{colors.map((color, index) => renderSwatchLabel(color, index))}</div>
-			</div>
+			<SwatchSpecimen>
+				<SwatchColors>{colors.map((color, index) => renderSwatch(color, index))}</SwatchColors>
+				<SwatchLabels>{colors.map((color, index) => renderSwatchLabel(color, index))}</SwatchLabels>
+			</SwatchSpecimen>
 		);
 	}
 	return (
-		<div css={SwatchSpecimenStyles}>
-			<div css={SwatchColorsStyles}>
+		<SwatchSpecimen>
+			<SwatchColors>
 				{Object.values(colors).map((color, index) => renderSwatch(color, index))}
-			</div>
-			<div css={SwatchLabelsStyles}>
-				{Object.keys(colors).map((color, index) => renderSwatchLabel(color, index))}
-			</div>
-		</div>
+			</SwatchColors>
+			<SwatchLabels>
+				{Object.keys(colors).map((color, index) => renderSwatchLabel(color, index, colors[color]))}
+			</SwatchLabels>
+		</SwatchSpecimen>
 	);
 }
 
@@ -167,15 +176,15 @@ function renderSwatchSpecimen(colors: Colors) {
  * A single color row your styleguide showing title, subtitle and one or more colors, used
  * as a child of `ColorPalette`.
  */
-export const ColorItem = ({ title, subtitle, colors }: ColorItemProps) => {
+export const ColorItem: FunctionComponent<ColorItemProps> = ({ title, subtitle, colors }) => {
 	return (
-		<div css={ItemStyles}>
-			<div css={ItemDescriptionStyles}>
-				<div css={ItemTitleStyles}>{title}</div>
-				<div css={ItemSubtitleStyles}>{subtitle}</div>
-			</div>
-			<div css={SwatchesStyles}>{renderSwatchSpecimen(colors)}</div>
-		</div>
+		<Item>
+			<ItemDescription>
+				<ItemTitle>{title}</ItemTitle>
+				<ItemSubtitle>{subtitle}</ItemSubtitle>
+			</ItemDescription>
+			<Swatches>{renderSwatchSpecimen(colors)}</Swatches>
+		</Item>
 	);
 };
 
@@ -187,12 +196,14 @@ interface ColorPaletteProps {
  * Styleguide documentation for colors, including names, captions, and color swatches,
  * all specified as `ColorItem` children of this wrapper component.
  */
-export const ColorPalette = ({ children, ...props }: ColorPaletteProps) => (
-	<div css={ListStyles} {...props}>
-		<div css={ListHeadingStyles}>
-			<div css={ListNameStyles}>Name</div>
-			<div css={ListSwatchesStyles}>Swatches</div>
-		</div>
-		{children}
-	</div>
+export const ColorPalette: FunctionComponent<ColorPaletteProps> = ({ children, ...props }) => (
+	<ResetWrapper>
+		<List {...props} className="docblock-colorpalette">
+			<ListHeading>
+				<ListName>Name</ListName>
+				<ListSwatches>Swatches</ListSwatches>
+			</ListHeading>
+			{children}
+		</List>
+	</ResetWrapper>
 );
