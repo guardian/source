@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 /**
- * Copied from Storybook:
+ * Copied from Storybook but using emotion rather than styled-components:
  * https://github.com/storybookjs/storybook/blob/7035ea7389393da041985ebc491ee58dedb50d06/code/lib/blocks/src/components/ColorPalette.tsx
  *
  */
