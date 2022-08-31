@@ -3,7 +3,8 @@ import { css } from '@emotion/react';
 
 const ItemTitleStyles = css`
 	font-weight: 700;
-	color: black;
+	color: #333333;
+	font-size: 14px;
 `
 
 const ItemSubtitleStyles = css`
@@ -22,7 +23,7 @@ const SwatchLabelStyles = css`
 	font-size: 12px;
 	line-height: 1;
 	overflow: hidden;
-	color: grey;
+	color: #33333399;
 
 	div {
 		display: inline-block;
@@ -101,8 +102,8 @@ const ListHeadingStyles = css`
 	align-items: center;
 	padding-bottom: 20px;
 	font-weight: 700;
-	color: black;
-	font-size: 17px;
+	color: #33333399;
+    font-size: 14px;
 `
 
 const ListStyles = css`
