@@ -22,6 +22,7 @@ export type TypographyStyles<Unit extends ScaleUnit = ScaleUnit> = {
 		| typeof fontWeightMapping[keyof typeof fontWeightMapping]
 		| FontWeight;
 	fontStyle?: 'normal' | 'italic';
+	textDecorationThickness?: number;
 };
 
 /** @deprecated will be removed in the next major version */

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import 'dotenv/config';
 
 interface FigmaComponentsResponse {
 	meta: {

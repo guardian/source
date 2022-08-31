@@ -86,6 +86,7 @@ import { SvgMediaControlsStop } from '../../vendor/icons/SvgMediaControlsStop';
 import { SvgMenu } from '../../vendor/icons/SvgMenu';
 import { SvgMinus } from '../../vendor/icons/SvgMinus';
 import { SvgMoon } from '../../vendor/icons/SvgMoon';
+import { SvgNewsletter } from '../../vendor/icons/SvgNewsletter';
 import { SvgNotificationsOff } from '../../vendor/icons/SvgNotificationsOff';
 import { SvgNotificationsOn } from '../../vendor/icons/SvgNotificationsOn';
 import { SvgPadlock } from '../../vendor/icons/SvgPadlock';
@@ -210,6 +211,7 @@ const uiIcons = {
 	SvgMediaControlsStop,
 	SvgMenu,
 	SvgMoon,
+	SvgNewsletter,
 	SvgNotificationsOff,
 	SvgNotificationsOn,
 	SvgPadlock,

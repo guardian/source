@@ -1,5 +1,29 @@
 # @guardian/source-react-components
 
+## 7.0.0
+
+### Major Changes
+
+- 8e8535ba: Update Select border colour
+
+### Patch Changes
+
+- 12a9fce5: Update Link hover underline thickness
+
+## 6.0.0
+
+### Major Changes
+
+- 07bfaf1b: Update default border colour for TextInput and TextArea
+
+### Minor Changes
+
+- fd69cf60: add newsletter icon
+
+### Patch Changes
+
+- 78ff24be: Add documentation note about `AccordionRow`'s `max-height`
+
 ## 5.0.0
 
 ### Major Changes

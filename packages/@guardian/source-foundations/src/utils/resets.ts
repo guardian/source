@@ -35,6 +35,10 @@ const defaults = `
     html {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
+        // always show the vertical scroll bar to stop the page
+        // jumping about when navigating between pages where 
+        // one has content shorter than the viewport
+        overflow-y: scroll;
     }
     html, body {
         text-rendering: optimizeLegibility;
