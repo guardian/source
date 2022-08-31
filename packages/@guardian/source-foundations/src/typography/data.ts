@@ -142,7 +142,6 @@ export const headlineSizes = pxTextSizes.headline;
 export const titlepieceSizes = pxTextSizes.titlepiece;
 
 // Computed rem font size exports
-
 export const remTitlepieceSizes = remTextSizes.titlepiece;
 
 export const remHeadlineSizes = remTextSizes.headline;
