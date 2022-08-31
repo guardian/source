@@ -110,7 +110,7 @@ const ListHeadingStyles = css`
 	padding-bottom: 20px;
 	font-weight: 700;
 	color: #33333399;
-    font-size: 14px;
+	font-size: 14px;
 `
 
 const ListStyles = css`
