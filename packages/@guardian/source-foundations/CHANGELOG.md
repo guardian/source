@@ -1,5 +1,11 @@
 # @guardian/source-foundations
 
+## 5.2.1
+
+### Patch Changes
+
+- 19f2fb8a: Extends the Typography story so that we better capture changes to the lineHeight of our fonts
+
 ## 5.2.0
 
 ### Minor Changes
