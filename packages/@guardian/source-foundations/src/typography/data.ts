@@ -1,53 +1,33 @@
-import { pxToRem } from '../utils/px-to-rem';
 import type { Category, FontWeight, FontWeightDefinition } from './types';
 
-const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70] as const;
-
-const fonts = {
-	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
-	headlineSerif: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
-	bodySerif: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
-	bodySans:
-		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
-} as const;
-
-const lineHeights = [1.15, 1.35, 1.5] as const;
-
-const fontWeights = [300, 400, 500, 700] as const;
-
-const underlineThickness = [2, 3, 4, 5, 6] as const;
-
-const titlepieceSizes = {
-	small: fontSizes[8], //42px
-	medium: fontSizes[9], //50px
-	large: fontSizes[10], //70px
-} as const;
-
-const headlineSizes = {
-	xxxsmall: fontSizes[3], //17px
-	xxsmall: fontSizes[4], //20px
-	xsmall: fontSizes[5], //24px
-	small: fontSizes[6], //28px
-	medium: fontSizes[7], //34px
-	large: fontSizes[8], //42px
-	xlarge: fontSizes[9], //50px
-} as const;
-
-const bodySizes = {
-	xsmall: fontSizes[1], //14px
-	small: fontSizes[2], //15px
-	medium: fontSizes[3], //17px
-} as const;
-
 const textSansSizes = {
-	xxsmall: fontSizes[0], //12px
-	xsmall: fontSizes[1], //14px
-	small: fontSizes[2], //15px
-	medium: fontSizes[3], //17px
-	large: fontSizes[4], //20px
-	xlarge: fontSizes[5], //24px
-	xxlarge: fontSizes[6], //28px
-	xxxlarge: fontSizes[7], //34px
+	xxsmall: 12,
+	xsmall: 14,
+	small: 15,
+	medium: 17,
+	large: 20,
+	xlarge: 24,
+	xxlarge: 28,
+	xxxlarge: 34,
+} as const;
+const bodySizes = {
+	xsmall: 14,
+	small: 15,
+	medium: 17,
+} as const;
+const headlineSizes = {
+	xxxsmall: 17,
+	xxsmall: 20,
+	xsmall: 24,
+	small: 28,
+	medium: 34,
+	large: 42,
+	xlarge: 50,
+} as const;
+const titlepieceSizes = {
+	small: 42,
+	medium: 50,
+	large: 70,
 } as const;
 
 const fontSizeMapping = {
@@ -55,41 +35,36 @@ const fontSizeMapping = {
 	headline: headlineSizes,
 	body: bodySizes,
 	textSans: textSansSizes,
-} as const;
-
-const remFontSizes = fontSizes.map((fontSize) => pxToRem(fontSize));
+};
 
 const remTitlepieceSizes = {
-	small: remFontSizes[8], //42px
-	medium: remFontSizes[9], //50px
-	large: remFontSizes[10], //70px
+	small: 2.625, //42px
+	medium: 3.125, //50px
+	large: 4.375, //70px
 } as const;
-
 const remHeadlineSizes = {
-	xxxsmall: remFontSizes[3], //17px
-	xxsmall: remFontSizes[4], //20px
-	xsmall: remFontSizes[5], //24px
-	small: remFontSizes[6], //28px
-	medium: remFontSizes[7], //34px
-	large: remFontSizes[8], //42px
-	xlarge: remFontSizes[9], //50px
+	xxxsmall: 1.0625, //17px
+	xxsmall: 1.25, //20px
+	xsmall: 1.5, //24px
+	small: 1.75, //28px
+	medium: 2.125, //34px
+	large: 2.625, //42px
+	xlarge: 3.125, //50px
 } as const;
-
 const remBodySizes = {
-	xsmall: remFontSizes[1], //14px
-	small: remFontSizes[2], //15px
-	medium: remFontSizes[3], //17px
+	xsmall: 0.875, //14px
+	small: 0.9375, //15px
+	medium: 1.0625, //17px
 } as const;
-
 const remTextSansSizes = {
-	xxsmall: remFontSizes[0], //12px
-	xsmall: remFontSizes[1], //14px
-	small: remFontSizes[2], //15px
-	medium: remFontSizes[3], //17px
-	large: remFontSizes[4], //20px
-	xlarge: remFontSizes[5], //24px
-	xxlarge: remFontSizes[6], //28px
-	xxxlarge: remFontSizes[7], //34px
+	xxsmall: 0.75, //12px
+	xsmall: 0.875, //14px
+	small: 0.9375, //15px
+	medium: 1.0625, //17px
+	large: 1.25, //20px
+	xlarge: 1.5, //24px
+	xxlarge: 1.75, //28px
+	xxxlarge: 2.125, //34px
 } as const;
 
 const remFontSizeMapping = {
@@ -97,33 +72,28 @@ const remFontSizeMapping = {
 	headline: remHeadlineSizes,
 	body: remBodySizes,
 	textSans: remTextSansSizes,
-} as const;
+};
 
 const fontMapping = {
-	titlepiece: fonts.titlepiece,
-	headline: fonts.headlineSerif,
-	body: fonts.bodySerif,
-	textSans: fonts.bodySans,
-} as const;
+	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
+	headlineSerif: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
+	bodySerif: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
+	bodySans:
+		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
+};
 
 const lineHeightMapping = {
-	tight: lineHeights[0],
-	regular: lineHeights[1],
-	loose: lineHeights[2],
-} as const;
-
+	tight: 1.15,
+	regular: 1.35,
+	loose: 1.5,
+};
 const fontWeightMapping = {
-	light: fontWeights[0],
-	regular: fontWeights[1],
-	medium: fontWeights[2],
-	bold: fontWeights[3],
-} as const;
-
-const availableFonts: {
-	[cat in Category]: {
-		[fontWeight in FontWeight]?: FontWeightDefinition;
-	};
-} = {
+	light: 300,
+	regular: 400,
+	medium: 500,
+	bold: 700,
+};
+const availableFonts = {
 	titlepiece: {
 		bold: {
 			hasItalic: false,
@@ -156,86 +126,57 @@ const availableFonts: {
 			hasItalic: false,
 		},
 	},
+} as {
+	[cat in Category]: {
+		[fontWeight in FontWeight]?: FontWeightDefinition;
+	};
 };
-
-const titlepieceUnderlineThickness = {
-	small: underlineThickness[3], //5px
-	medium: underlineThickness[4], //6px
-	large: underlineThickness[4], //6px
-} as const;
-
-const headlineUnderlineThickness = {
-	xxxsmall: underlineThickness[0], //2px
-	xxsmall: underlineThickness[1], //3px
-	xsmall: underlineThickness[1], //3px
-	small: underlineThickness[1], //3px
-	medium: underlineThickness[2], //4px
-	large: underlineThickness[3], //5px
-	xlarge: underlineThickness[4], //6px
-} as const;
-
-const bodyUnderlineThickness = {
-	xsmall: underlineThickness[0], //2px
-	small: underlineThickness[0], //2px
-	medium: underlineThickness[0], //2px
-} as const;
-
-const textSansUnderlineThickness = {
-	xxsmall: underlineThickness[0], //2px
-	xsmall: underlineThickness[0], //2px
-	small: underlineThickness[0], //2px
-	medium: underlineThickness[0], //2px
-	large: underlineThickness[1], //3px
-	xlarge: underlineThickness[1], //3px
-	xxlarge: underlineThickness[1], //3px
-	xxxlarge: underlineThickness[2], //4px
-} as const;
-
 const underlineThicknessMapping = {
-	titlepiece: titlepieceUnderlineThickness,
-	headline: headlineUnderlineThickness,
-	body: bodyUnderlineThickness,
-	textSans: textSansUnderlineThickness,
+	textSans: {
+		xxsmall: 2,
+		xsmall: 2,
+		small: 2,
+		medium: 2,
+		large: 3,
+		xlarge: 3,
+		xxlarge: 3,
+		xxxlarge: 4,
+	},
+	body: {
+		xsmall: 2,
+		small: 2,
+		medium: 2,
+	},
+	headline: {
+		xxxsmall: 2,
+		xxsmall: 3,
+		xsmall: 3,
+		small: 3,
+		medium: 4,
+		large: 5,
+		xlarge: 6,
+	},
+	titlepiece: {
+		small: 5,
+		medium: 6,
+		large: 6,
+	},
 };
-
-Object.freeze(titlepieceSizes);
-Object.freeze(headlineSizes);
-Object.freeze(bodySizes);
-Object.freeze(textSansSizes);
-Object.freeze(remTitlepieceSizes);
-Object.freeze(remHeadlineSizes);
-Object.freeze(remBodySizes);
-Object.freeze(remTextSansSizes);
-Object.freeze(fontMapping);
-Object.freeze(fontSizeMapping);
-Object.freeze(fontWeightMapping);
-Object.freeze(lineHeightMapping);
-Object.freeze(availableFonts);
-Object.freeze(titlepieceUnderlineThickness);
-Object.freeze(headlineUnderlineThickness);
-Object.freeze(bodyUnderlineThickness);
-Object.freeze(textSansUnderlineThickness);
-Object.freeze(underlineThicknessMapping);
 
 export {
-	titlepieceSizes,
-	headlineSizes,
-	bodySizes,
-	textSansSizes,
-	remFontSizes,
-	remTitlepieceSizes,
-	remHeadlineSizes,
-	remBodySizes,
-	remTextSansSizes,
-	remFontSizeMapping,
-	fontMapping,
-	fontSizeMapping,
-	lineHeightMapping,
-	fontWeightMapping,
 	availableFonts,
-	titlepieceUnderlineThickness,
-	headlineUnderlineThickness,
-	bodyUnderlineThickness,
-	textSansUnderlineThickness,
+	fontSizeMapping,
+	remFontSizeMapping,
 	underlineThicknessMapping,
+	bodySizes,
+	fontMapping,
+	fontWeightMapping,
+	headlineSizes,
+	lineHeightMapping,
+	remBodySizes,
+	remHeadlineSizes,
+	remTextSansSizes,
+	remTitlepieceSizes,
+	textSansSizes,
+	titlepieceSizes,
 };
