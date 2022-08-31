@@ -1,6 +1,12 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
+/**
+ * Copied from Storybook:
+ * https://github.com/storybookjs/storybook/blob/7035ea7389393da041985ebc491ee58dedb50d06/code/lib/blocks/src/components/ColorPalette.tsx
+ *
+ */
+
 const ItemTitleStyles = css`
 	font-weight: 700;
 	color: #333333;
@@ -178,9 +184,6 @@ interface ColorPaletteProps {
 }
 
 /**
- * Copied from Storybook:
- * https://github.com/storybookjs/storybook/blob/7035ea7389393da041985ebc491ee58dedb50d06/code/lib/blocks/src/components/ColorPalette.tsx
- *
  * Styleguide documentation for colors, including names, captions, and color swatches,
  * all specified as `ColorItem` children of this wrapper component.
  */
