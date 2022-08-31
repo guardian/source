@@ -35,7 +35,7 @@ const fontSizeMapping = {
 	headline: headlineSizes,
 	body: bodySizes,
 	textSans: textSansSizes,
-};
+} as const;
 
 const remTitlepieceSizes = {
 	small: 2.625, //42px
@@ -72,7 +72,7 @@ const remFontSizeMapping = {
 	headline: remHeadlineSizes,
 	body: remBodySizes,
 	textSans: remTextSansSizes,
-};
+} as const;
 
 const fontMapping = {
 	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
@@ -80,19 +80,19 @@ const fontMapping = {
 	bodySerif: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
 	bodySans:
 		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
-};
+} as const;
 
 const lineHeightMapping = {
 	tight: 1.15,
 	regular: 1.35,
 	loose: 1.5,
-};
+} as const;
 const fontWeightMapping = {
 	light: 300,
 	regular: 400,
 	medium: 500,
 	bold: 700,
-};
+} as const;
 const availableFonts = {
 	titlepiece: {
 		bold: {
@@ -161,7 +161,7 @@ const underlineThicknessMapping = {
 		medium: 6,
 		large: 6,
 	},
-};
+} as const;
 
 export {
 	availableFonts,
