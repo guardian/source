@@ -1,86 +1,68 @@
-import type { Category, FontWeight, FontWeightDefinition } from './types';
-
-export const textSansSizes = {
-	xxsmall: 12,
-	xsmall: 14,
-	small: 15,
-	medium: 17,
-	large: 20,
-	xlarge: 24,
-	xxlarge: 28,
-	xxxlarge: 34,
+const pxTextSizes = {
+	textSansSizes: {
+		xxsmall: 12,
+		xsmall: 14,
+		small: 15,
+		medium: 17,
+		large: 20,
+		xlarge: 24,
+		xxlarge: 28,
+		xxxlarge: 34,
+	},
+	bodySizes: {
+		xsmall: 14,
+		small: 15,
+		medium: 17,
+	},
+	headlineSizes: {
+		xxxsmall: 17,
+		xxsmall: 20,
+		xsmall: 24,
+		small: 28,
+		medium: 34,
+		large: 42,
+		xlarge: 50,
+	},
+	titlepieceSizes: {
+		small: 42,
+		medium: 50,
+		large: 70,
+	},
 } as const;
 
-export const bodySizes = {
-	xsmall: 14,
-	small: 15,
-	medium: 17,
-} as const;
+const remTextSizes = {
+	titlepieceSizes: {
+		small: 2.625,
+		medium: 3.125,
+		large: 4.375,
+	},
+	headlineSizes: {
+		xxxsmall: 1.0625,
+		xxsmall: 1.25,
+		xsmall: 1.5,
+		small: 1.75,
+		medium: 2.125,
+		large: 2.625,
+		xlarge: 3.125,
+	},
+	remBodySizes: {
+		xsmall: 0.875,
+		small: 0.9375,
+		medium: 1.0625,
+	},
+	remTextSansSizes: {
+		xxsmall: 0.75,
+		xsmall: 0.875,
+		small: 0.9375,
+		medium: 1.0625,
+		large: 1.25,
+		xlarge: 1.5,
+		xxlarge: 1.75,
+		xxxlarge: 2.125,
+	},
+};
 
-export const headlineSizes = {
-	xxxsmall: 17,
-	xxsmall: 20,
-	xsmall: 24,
-	small: 28,
-	medium: 34,
-	large: 42,
-	xlarge: 50,
-} as const;
-
-export const titlepieceSizes = {
-	small: 42,
-	medium: 50,
-	large: 70,
-} as const;
-
-export const fontSizeMapping = {
-	titlepiece: titlepieceSizes,
-	headline: headlineSizes,
-	body: bodySizes,
-	textSans: textSansSizes,
-} as const;
-
-export const remTitlepieceSizes = {
-	small: 2.625, //42px
-	medium: 3.125, //50px
-	large: 4.375, //70px
-} as const;
-
-export const remHeadlineSizes = {
-	xxxsmall: 1.0625, //17px
-	xxsmall: 1.25, //20px
-	xsmall: 1.5, //24px
-	small: 1.75, //28px
-	medium: 2.125, //34px
-	large: 2.625, //42px
-	xlarge: 3.125, //50px
-} as const;
-
-export const remBodySizes = {
-	xsmall: 0.875, //14px
-	small: 0.9375, //15px
-	medium: 1.0625, //17px
-} as const;
-
-export const remTextSansSizes = {
-	xxsmall: 0.75, //12px
-	xsmall: 0.875, //14px
-	small: 0.9375, //15px
-	medium: 1.0625, //17px
-	large: 1.25, //20px
-	xlarge: 1.5, //24px
-	xxlarge: 1.75, //28px
-	xxxlarge: 2.125, //34px
-} as const;
-
-export const remFontSizeMapping = {
-	titlepiece: remTitlepieceSizes,
-	headline: remHeadlineSizes,
-	body: remBodySizes,
-	textSans: remTextSansSizes,
-} as const;
-
-export const fontMapping = {
+export const fonts = {
 	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
 	headlineSerif: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
 	bodySerif: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
@@ -88,58 +70,20 @@ export const fontMapping = {
 		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
 } as const;
 
-export const lineHeightMapping = {
+export const lineHeights = {
 	tight: 1.15,
 	regular: 1.35,
 	loose: 1.5,
 } as const;
 
-export const fontWeightMapping = {
+export const fontWeights = {
 	light: 300,
 	regular: 400,
 	medium: 500,
 	bold: 700,
 } as const;
 
-export const availableFonts = {
-	titlepiece: {
-		bold: {
-			hasItalic: false,
-		},
-	},
-	headline: {
-		light: {
-			hasItalic: true,
-		},
-		medium: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: false,
-		},
-	},
-	body: {
-		regular: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: true,
-		},
-	},
-	textSans: {
-		regular: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: false,
-		},
-	},
-} as {
-	[cat in Category]: {
-		[fontWeight in FontWeight]?: FontWeightDefinition;
-	};
-};
-export const underlineThicknessMapping = {
+export const underlineThickness = {
 	textSans: {
 		xxsmall: 2,
 		xsmall: 2,
@@ -170,3 +114,39 @@ export const underlineThicknessMapping = {
 		large: 6,
 	},
 } as const;
+
+// Pixel font size exports
+export const textSansSizes = pxTextSizes.textSansSizes;
+
+export const bodySizes = pxTextSizes.bodySizes;
+
+export const headlineSizes = pxTextSizes.headlineSizes;
+
+export const titlepieceSizes = pxTextSizes.titlepieceSizes;
+
+// Rem font size exports
+
+export const remTitlepieceSizes = remTextSizes.titlepieceSizes;
+
+export const remHeadlineSizes = remTextSizes.headlineSizes;
+
+export const remBodySizes = remTextSizes.remBodySizes;
+
+export const remTextSansSizes = remTextSizes.remTextSansSizes;
+
+/**
+ * @deprecated use `fonts` instead
+ */
+export const fontMapping = fonts;
+/**
+ * @deprecated use `lineHeights` instead
+ */
+export const lineHeightMapping = lineHeights;
+/**
+ * @deprecated use `fontWeights` instead
+ */
+export const fontWeightMapping = fontWeights;
+/**
+ * @deprecated use `underlineThickness` instead
+ */
+export const underlineThicknessMapping = underlineThickness;
