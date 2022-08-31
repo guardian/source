@@ -9,6 +9,7 @@ package-lock.json
 .vscode/settings.json
 coverage/
 .eslintcache
+.vscode/
 
 # scripts/get-usage
 scripts/get-usage/config.*.json

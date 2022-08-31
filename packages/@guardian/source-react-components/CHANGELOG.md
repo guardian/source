@@ -1,5 +1,15 @@
 # @guardian/source-react-components
 
+## 7.0.0
+
+### Major Changes
+
+- 8e8535ba: Update Select border colour
+
+### Patch Changes
+
+- 12a9fce5: Update Link hover underline thickness
+
 ## 6.0.0
 
 ### Major Changes

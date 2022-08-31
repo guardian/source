@@ -17,14 +17,10 @@ export const link = css`
 	cursor: pointer;
 	text-decoration: underline;
 	text-underline-position: under;
-	text-underline-offset: 10%;
+	text-underline-offset: 5%;
 
 	display: inline;
 	align-items: center;
-
-	&:hover {
-		text-decoration-thickness: 4px;
-	}
 
 	&:focus {
 		${focusHalo};

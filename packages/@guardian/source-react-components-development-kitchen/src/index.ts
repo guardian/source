@@ -32,3 +32,11 @@ export type { InfoSummaryProps } from './summary/InfoSummary';
 
 export { ToggleSwitch } from './toggle-switch/ToggleSwitch';
 export type { ToggleSwitchProps } from './toggle-switch/ToggleSwitch';
+
+export { FooterWithContents } from './footer-with-contents/FooterWithContents';
+export {
+	FooterLinks,
+	defaultGuardianLinks,
+} from './footer-with-contents/FooterLinks';
+export type { FooterWithContentsProps } from './footer-with-contents/FooterWithContents';
+export type { FooterLinksProps } from './footer-with-contents/FooterLinks';
