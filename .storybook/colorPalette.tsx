@@ -67,6 +67,7 @@ const SwatchColorsStyles = css`
 	background-color: white;
 	background-image: repeating-linear-gradient(-45deg, #ccc, #ccc 1px, #fff 1px, #fff 16px);
 	background-clip: padding-box;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
 `
 
 const SwatchSpecimenStyles = css`
