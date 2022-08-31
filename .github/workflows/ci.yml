@@ -14,7 +14,6 @@ jobs:
         with:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn build
       - run: yarn lint
 
   test:
