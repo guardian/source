@@ -1,9 +1,9 @@
 import {
-	fontMapping as fonts,
-	fontWeightMapping as fontWeights,
+	fonts,
+	fontWeights,
 	headline,
 	headlineSizes,
-	lineHeightMapping as lineHeights,
+	lineHeights,
 	remHeadlineSizes,
 } from '.';
 
