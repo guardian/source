@@ -1,10 +1,10 @@
 import React from 'react';
 import {
 	bodyObjectStyles,
+	fontWeights,
 	headlineObjectStyles,
 	textSansObjectStyles,
 } from '@guardian/source-foundations/src';
-import { fontWeightMapping } from '@guardian/source-foundations/src/typography/data';
 import type {
 	Category,
 	FontScaleFunction,
@@ -56,7 +56,7 @@ export const LineHeightRenderer = ({
 
 export const FontWeightRenderer = () => (
 	<ul>
-		{Object.entries(fontWeightMapping).map(([fontWeight, value]) => (
+		{Object.entries(fontWeights).map(([fontWeight, value]) => (
 			<li
 				key={value}
 				style={{
