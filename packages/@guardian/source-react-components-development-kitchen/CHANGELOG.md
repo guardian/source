@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.1.8
+
+### Patch Changes
+
+- e1524b0b: noop - ignore this safely
+
 ## 3.1.7
 
 ### Patch Changes
