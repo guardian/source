@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.1.1
+
+### Patch Changes
+
+- 430276ce: Noop to test release pipeline
+
 ## 3.1.0
 
 ### Minor Changes
