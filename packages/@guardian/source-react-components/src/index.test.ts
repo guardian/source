@@ -50,6 +50,7 @@ it('Should have exactly these exports', () => {
 	expect(Object.keys(pkgExports).sort()).toEqual([
 		'Accordion',
 		'AccordionRow',
+		'BackToTop',
 		'Button',
 		'ButtonLink',
 		'Checkbox',

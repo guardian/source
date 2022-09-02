@@ -60,6 +60,7 @@ export type { ChoiceCardProps } from './choice-card/ChoiceCard';
 export { choiceCardThemeDefault } from './choice-card/theme';
 
 export { Footer } from './footer/Footer';
+export { BackToTop } from './footer/BackToTop';
 export type { FooterProps } from './footer/Footer';
 export { footerThemeBrand } from './footer/theme';
 
