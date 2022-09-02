@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.1.9
+
+### Patch Changes
+
+- 4ef91d3c: noop - ignore this
+
 ## 3.1.8
 
 ### Patch Changes
