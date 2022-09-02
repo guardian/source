@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.1.6
+
+### Patch Changes
+
+- e45b80b1: noop to test release - you can ignore this
+
 ## 3.1.5
 
 ### Patch Changes
