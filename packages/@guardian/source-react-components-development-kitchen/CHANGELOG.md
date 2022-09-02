@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.1.2
+
+### Patch Changes
+
+- 6ff6fede: noop to test pipeline - ignore this release
+
 ## 3.1.1
 
 ### Patch Changes
