@@ -1,3 +1,12 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- imported so it can be used for our doc comment
+import { pxToRem } from '../utils/px-to-rem';
+
+/**
+ * Pixel size values for each font that we use in the design system.
+ *
+ * These fit the following px size scale:
+ * [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70]
+ */
 const pxTextSizes = {
 	textSansSizes: {
 		xxsmall: 12,
@@ -30,6 +39,15 @@ const pxTextSizes = {
 	},
 } as const;
 
+/**
+ * Relative font sizes, calculated from the pixel sizes above;
+ * using the pxToRem method.
+ *
+ * The resulting scale that we draw from is:
+ * [0.75, 0.875, 0.9375, 1.0625, 1.25, 1.5, 1.75, 2.125, 2.625, 3.125, 4.375]
+ *
+ * See {@link pxToRem} for more details.
+ */
 const remTextSizes = {
 	titlepieceSizes: {
 		small: 2.625,
@@ -45,12 +63,12 @@ const remTextSizes = {
 		large: 2.625,
 		xlarge: 3.125,
 	},
-	remBodySizes: {
+	bodySizes: {
 		xsmall: 0.875,
 		small: 0.9375,
 		medium: 1.0625,
 	},
-	remTextSansSizes: {
+	textSansSizes: {
 		xxsmall: 0.75,
 		xsmall: 0.875,
 		small: 0.9375,
@@ -60,7 +78,7 @@ const remTextSizes = {
 		xxlarge: 1.75,
 		xxxlarge: 2.125,
 	},
-};
+} as const;
 
 export const fonts = {
 	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
@@ -124,12 +142,12 @@ export const headlineSizes = pxTextSizes.headlineSizes;
 
 export const titlepieceSizes = pxTextSizes.titlepieceSizes;
 
-// Rem font size exports
+// Computed rem font size exports
 
 export const remTitlepieceSizes = remTextSizes.titlepieceSizes;
 
 export const remHeadlineSizes = remTextSizes.headlineSizes;
 
-export const remBodySizes = remTextSizes.remBodySizes;
+export const remBodySizes = remTextSizes.bodySizes;
 
-export const remTextSansSizes = remTextSizes.remTextSansSizes;
+export const remTextSansSizes = remTextSizes.textSansSizes;
