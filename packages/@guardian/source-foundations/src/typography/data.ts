@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- imported so it can be used for our doc comment
-import { pxToRem } from '../utils/px-to-rem';
-
 /**
  * Pixel size values for each font that we use in the design system.
  *
@@ -46,7 +43,7 @@ const pxTextSizes = {
  * The resulting scale that we draw from is:
  * [0.75, 0.875, 0.9375, 1.0625, 1.25, 1.5, 1.75, 2.125, 2.625, 3.125, 4.375]
  *
- * See {@link pxToRem} for more details.
+ * See {@link [pxToRem](../utils/px-to-rem.ts)} for more details.
  */
 const remTextSizes = {
 	titlepieceSizes: {
