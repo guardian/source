@@ -10,8 +10,8 @@ import {
 } from './data';
 import type {
 	Category,
-	GetFontStyle,
 	GetFontSizeValue,
+	GetFontStyle,
 	GetFontStyleValue,
 	GetFontWeightValue,
 	GetLineHeightValue,

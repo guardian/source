@@ -51,6 +51,11 @@ export type Categories = {
 
 export type Category = keyof Categories;
 
+export type TitlepieceLevels = keyof TitlepieceSizes;
+export type HeadlineLevels = keyof HeadlineSizes;
+export type BodyLevels = keyof BodySizes;
+export type TextSansLevels = keyof TextSansSizes;
+
 export type AvailableFontsMapping = {
 	[cat in Category]: {
 		[fontWeight in FontWeight]?: FontWeightDefinition;
