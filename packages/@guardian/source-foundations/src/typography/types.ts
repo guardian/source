@@ -3,6 +3,10 @@ import type {
 	fontWeights,
 	headlineSizes,
 	lineHeights,
+	remBodySizes,
+	remHeadlineSizes,
+	remTextSansSizes,
+	remTitlepieceSizes,
 	textSansSizes,
 	titlepieceSizes,
 } from './data';
@@ -28,10 +32,12 @@ export type TypographySizes = {
 	[key in string]: number;
 };
 
-export type TitlepieceSizes = typeof titlepieceSizes;
-export type HeadlineSizes = typeof headlineSizes;
-export type BodySizes = typeof bodySizes;
-export type TextSansSizes = typeof textSansSizes;
+export type TitlepieceSizes =
+	| typeof titlepieceSizes
+	| typeof remTitlepieceSizes;
+export type HeadlineSizes = typeof headlineSizes | typeof remHeadlineSizes;
+export type BodySizes = typeof bodySizes | typeof remBodySizes;
+export type TextSansSizes = typeof textSansSizes | typeof remTextSansSizes;
 
 type Categories = {
 	titlepiece: TitlepieceSizes;
