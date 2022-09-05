@@ -1,5 +1,59 @@
 # @guardian/source-react-components-development-kitchen
 
+## 3.1.9
+
+### Patch Changes
+
+- 4ef91d3c: noop - ignore this
+
+## 3.1.8
+
+### Patch Changes
+
+- e1524b0b: noop - ignore this safely
+
+## 3.1.7
+
+### Patch Changes
+
+- 6e1958c7: Noop - this can be ignored
+
+## 3.1.6
+
+### Patch Changes
+
+- e45b80b1: noop to test release - you can ignore this
+
+## 3.1.5
+
+### Patch Changes
+
+- e6d86ab6: noop to test release again - you can ignore this release
+
+## 3.1.4
+
+### Patch Changes
+
+- f4522bd4: noop to test release again - you can ignore this release
+
+## 3.1.3
+
+### Patch Changes
+
+- e3a3c742: noop to test releases – you can ignore this version
+
+## 3.1.2
+
+### Patch Changes
+
+- 6ff6fede: noop to test pipeline - ignore this release
+
+## 3.1.1
+
+### Patch Changes
+
+- 430276ce: Noop to test release pipeline
+
 ## 3.1.0
 
 ### Minor Changes
