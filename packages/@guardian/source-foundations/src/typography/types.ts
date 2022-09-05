@@ -65,7 +65,7 @@ export type ItalicsAvailableForFontWeight = {
 	[cat in Category]?: { [weight in FontWeight]?: boolean };
 };
 
-export type GetFontSettingsWithDefaults = <
+export type GetFontStyle = <
 	Category extends keyof Categories,
 	Level extends keyof Categories[Category],
 >(
@@ -112,16 +112,36 @@ export type GetLineHeightValue = <
 	lineHeight: LineHeight,
 ) => LineHeightValue;
 
-type TypographyOptions = {
+export type TypographyOptions = {
 	lineHeight: LineHeight;
 	fontWeight: FontWeight;
-	fontStyle: FontStyle;
+	fontStyle: Option<FontStyle>;
 	unit: ScaleUnit;
 };
 
-export type FontScaleArgs = Partial<TypographyOptions>;
+export type FontScaleArgs = Partial<
+	Pick<TypographyOptions, 'fontWeight' | 'lineHeight' | 'unit'>
+> & {
+	fontStyle?: FontStyle;
+};
 
 export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles;
 
 // returns styles as a template literal
 export type FontScaleFunctionStr = (options?: FontScaleArgs) => string;
+
+export type TitlepieceFunctions = {
+	[key in keyof TitlepieceSizes]: FontScaleFunction;
+};
+
+export type HeadlineFunctions = {
+	[key in keyof HeadlineSizes]: FontScaleFunction;
+};
+
+export type BodyFunctions = {
+	[key in keyof BodySizes]: FontScaleFunction;
+};
+
+export type TextSansFunctions = {
+	[key in keyof TextSansSizes]: FontScaleFunction;
+};

@@ -10,7 +10,7 @@ import {
 } from './data';
 import type {
 	Category,
-	GetFontSettingsWithDefaults,
+	GetFontStyle,
 	GetFontSizeValue,
 	GetFontStyleValue,
 	GetFontWeightValue,
@@ -71,11 +71,7 @@ const getTextDecorationThicknessValue: GetTextDecorationThicknessValue = (
 	level,
 ) => Number(underlineThickness[category][level]);
 
-export const getFontSettingsWithDefaults: GetFontSettingsWithDefaults = (
-	category,
-	level,
-	options,
-) => {
+export const getFontStyle: GetFontStyle = (category, level, options) => {
 	const { lineHeight, fontWeight, fontStyle, unit } = options;
 	return {
 		fontFamily: getFontFamilyValue(category),
