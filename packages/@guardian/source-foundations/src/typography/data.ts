@@ -6,8 +6,8 @@ import { pxToRem } from '../utils/px-to-rem';
  * These fit the following px size scale:
  * [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70]
  */
-const pxTextSizes = {
-	textSansSizes: {
+export const pxTextSizes = {
+	textSans: {
 		xxsmall: 12,
 		xsmall: 14,
 		small: 15,
@@ -17,12 +17,12 @@ const pxTextSizes = {
 		xxlarge: 28,
 		xxxlarge: 34,
 	},
-	bodySizes: {
+	body: {
 		xsmall: 14,
 		small: 15,
 		medium: 17,
 	},
-	headlineSizes: {
+	headline: {
 		xxxsmall: 17,
 		xxsmall: 20,
 		xsmall: 24,
@@ -31,7 +31,7 @@ const pxTextSizes = {
 		large: 42,
 		xlarge: 50,
 	},
-	titlepieceSizes: {
+	titlepiece: {
 		small: 42,
 		medium: 50,
 		large: 70,
@@ -48,8 +48,8 @@ const pxTextSizes = {
  *
  * See {@link [pxToRem](../utils/px-to-rem.ts)} for more details.
  */
-const remTextSizes = {
-	textSansSizes: {
+export const remTextSizes = {
+	textSans: {
 		xxsmall: pxToRem(12),
 		xsmall: pxToRem(14),
 		small: pxToRem(15),
@@ -59,12 +59,12 @@ const remTextSizes = {
 		xxlarge: pxToRem(28),
 		xxxlarge: pxToRem(34),
 	},
-	bodySizes: {
+	body: {
 		xsmall: pxToRem(14),
 		small: pxToRem(15),
 		medium: pxToRem(17),
 	},
-	headlineSizes: {
+	headline: {
 		xxxsmall: pxToRem(17),
 		xxsmall: pxToRem(20),
 		xsmall: pxToRem(24),
@@ -73,7 +73,7 @@ const remTextSizes = {
 		large: pxToRem(42),
 		xlarge: pxToRem(50),
 	},
-	titlepieceSizes: {
+	titlepiece: {
 		small: pxToRem(42),
 		medium: pxToRem(50),
 		large: pxToRem(70),
@@ -134,20 +134,20 @@ export const underlineThickness = {
 } as const;
 
 // Pixel font size exports
-export const textSansSizes = pxTextSizes.textSansSizes;
+export const textSansSizes = pxTextSizes.textSans;
 
-export const bodySizes = pxTextSizes.bodySizes;
+export const bodySizes = pxTextSizes.body;
 
-export const headlineSizes = pxTextSizes.headlineSizes;
+export const headlineSizes = pxTextSizes.headline;
 
-export const titlepieceSizes = pxTextSizes.titlepieceSizes;
+export const titlepieceSizes = pxTextSizes.titlepiece;
 
 // Computed rem font size exports
 
-export const remTitlepieceSizes = remTextSizes.titlepieceSizes;
+export const remTitlepieceSizes = remTextSizes.titlepiece;
 
-export const remHeadlineSizes = remTextSizes.headlineSizes;
+export const remHeadlineSizes = remTextSizes.headline;
 
-export const remBodySizes = remTextSizes.bodySizes;
+export const remBodySizes = remTextSizes.body;
 
-export const remTextSansSizes = remTextSizes.textSansSizes;
+export const remTextSansSizes = remTextSizes.textSans;
