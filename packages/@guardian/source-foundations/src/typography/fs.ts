@@ -1,71 +1,85 @@
 import {
 	fonts,
 	fontWeights,
+	fontWeightsAvailable,
+	italicsAvailableForFontWeight,
 	lineHeights,
 	pxTextSizes,
 	remTextSizes,
 	underlineThickness,
 } from './data';
 import type {
-	AvailableFontsMapping,
+	Categories,
 	Category,
 	FontStyle,
-	FontWeightDefinition,
+	FontWeight,
 	Fs,
+	LineHeight,
 	Option,
+	ScaleUnit,
 } from './types';
 
-export const availableFonts: AvailableFontsMapping = {
-	titlepiece: {
-		bold: {
-			hasItalic: false,
-		},
-	},
-	headline: {
-		light: {
-			hasItalic: true,
-		},
-		medium: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: false,
-		},
-	},
-	body: {
-		regular: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: true,
-		},
-	},
-	textSans: {
-		regular: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: false,
-		},
-	},
+const getFontFamilyValue = (category: Category) => fonts[category];
+const getFontSizeValue = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+	level: Level,
+	unit: ScaleUnit,
+): `${number}rem` | number =>
+	unit === 'px'
+		? Number(pxTextSizes[category][level])
+		: `${Number(remTextSizes[category][level])}rem`;
+
+const getLineHeightValue = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+	level: Level,
+	unit: ScaleUnit,
+	lineHeight: LineHeight,
+): `${number}px` | number => {
+	return unit === 'px'
+		? // line-height is defined as a unitless value, so we multiply
+		  // by the element's font-size in px to get the px value
+		  `${lineHeights[lineHeight] * Number(pxTextSizes[category][level])}px`
+		: lineHeights[lineHeight];
 };
 
-function getFontStyle(
-	font: FontWeightDefinition | undefined,
+type FontWeights = typeof fontWeights[FontWeight];
+
+const getFontWeightValue = (
+	category: Category,
+	fontWeight: FontWeight,
+): FontWeights | '' => {
+	const isFontWeightAvailable =
+		fontWeightsAvailable[category]?.[fontWeight] ?? false;
+
+	if (isFontWeightAvailable) {
+		return fontWeights[fontWeight];
+	}
+	return '';
+};
+
+const getFontStyleValue = (
+	category: Category,
+	fontWeight: FontWeight,
 	fontStyle: Option<FontStyle>,
-): Option<FontStyle> {
+): Option<FontStyle> => {
+	const hasItalic =
+		italicsAvailableForFontWeight[category]?.[fontWeight] ?? false;
 	switch (fontStyle) {
 		case 'italic':
-			return font?.hasItalic ? 'italic' : null;
+			return hasItalic ? 'italic' : null;
 		case 'normal':
 			return 'normal';
 		case null:
 		default:
 			return null;
 	}
-}
-
-const getFontFamilyValue = (category: Category) => fonts[category];
+};
 
 export const fs: Fs = (
 	category,
@@ -73,22 +87,10 @@ export const fs: Fs = (
 	{ lineHeight, fontWeight, fontStyle, unit },
 ) => {
 	const fontFamilyValue = getFontFamilyValue(category);
-	const fontSizeValue: `${number}rem` | number =
-		unit === 'px'
-			? Number(pxTextSizes[category][level])
-			: `${Number(remTextSizes[category][level])}rem`;
-
-	const lineHeightValue: `${number}px` | number =
-		unit === 'px'
-			? // line-height is defined as a unitless value, so we multiply
-			  // by the element's font-size in px to get the px value
-			  `${lineHeights[lineHeight] * Number(pxTextSizes[category][level])}px`
-			: lineHeights[lineHeight];
-	// TODO: consider logging an error in development if a requested
-	// font is unavailable
-	const requestedFont = availableFonts[category][fontWeight];
-	const fontWeightValue = requestedFont ? fontWeights[fontWeight] : '';
-	const fontStyleValue = getFontStyle(requestedFont, fontStyle);
+	const fontSizeValue = getFontSizeValue(category, level, unit);
+	const lineHeightValue = getLineHeightValue(category, level, unit, lineHeight);
+	const fontWeightValue = getFontWeightValue(category, fontWeight);
+	const fontStyleValue = getFontStyleValue(category, fontWeight, fontStyle);
 	const textDecorationThicknessValue = Number(
 		underlineThickness[category][level],
 	);
