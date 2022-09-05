@@ -1,15 +1,9 @@
 import {
-	bodySizes,
 	fonts,
 	fontWeights,
-	headlineSizes,
 	lineHeights,
-	remBodySizes,
-	remHeadlineSizes,
-	remTextSansSizes,
-	remTitlepieceSizes,
-	textSansSizes,
-	titlepieceSizes,
+	pxTextSizes,
+	remTextSizes,
 	underlineThickness,
 } from './data';
 import type {
@@ -19,20 +13,6 @@ import type {
 	Fs,
 	Option,
 } from './types';
-
-const fontSizes = {
-	titlepiece: titlepieceSizes,
-	headline: headlineSizes,
-	body: bodySizes,
-	textSans: textSansSizes,
-} as const;
-
-const remFontSizes = {
-	titlepiece: remTitlepieceSizes,
-	headline: remHeadlineSizes,
-	body: remBodySizes,
-	textSans: remTextSansSizes,
-} as const;
 
 export const availableFonts = {
 	titlepiece: {
@@ -90,14 +70,13 @@ export const fs: Fs =
 		const fontFamilyValue = fonts[category];
 		const fontSizeValue: `${number}rem` | number =
 			unit === 'px'
-				? Number(fontSizes[category][level])
-				: // @ts-expect-error -- the types actually overlap, see https://gist.github.com/mxdvl/5e31fd5b13670b6a41ddac6c65efeee4
-				  `${Number(remFontSizes[category][level])}rem`;
+				? Number(pxTextSizes[category][level])
+				: `${Number(remTextSizes[category][level])}rem`;
 		const lineHeightValue: `${number}px` | number =
 			unit === 'px'
 				? // line-height is defined as a unitless value, so we multiply
 				  // by the element's font-size in px to get the px value
-				  `${lineHeights[lineHeight] * Number(fontSizes[category][level])}px`
+				  `${lineHeights[lineHeight] * Number(pxTextSizes[category][level])}px`
 				: lineHeights[lineHeight];
 		// TODO: consider logging an error in development if a requested
 		// font is unavailable
@@ -105,7 +84,6 @@ export const fs: Fs =
 		const fontWeightValue = requestedFont ? fontWeights[fontWeight] : '';
 		const fontStyleValue = getFontStyle(requestedFont, fontStyle);
 		const textDecorationThicknessValue = Number(
-			// @ts-expect-error -- the types actually overlap, see https://gist.github.com/mxdvl/5e31fd5b13670b6a41ddac6c65efeee4
 			underlineThickness[category][level],
 		);
 
