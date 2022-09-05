@@ -14,6 +14,7 @@ import type {
 export type ScaleUnit = 'rem' | 'px';
 export type LineHeight = keyof typeof lineHeights;
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
+export type FontWeightValue = typeof fontWeights[FontWeight];
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
 export type Option<A> = A | null;
@@ -68,27 +69,19 @@ export type Fs = <
 >(
 	category: Category,
 	level: Level,
-	{
-		lineHeight,
-		fontWeight,
-		fontStyle,
-		unit,
-	}: {
-		lineHeight: LineHeight;
-		fontWeight: FontWeight;
-		fontStyle: Option<FontStyle>;
-		unit: ScaleUnit;
-	},
+	{ lineHeight, fontWeight, fontStyle, unit }: TypographyOptions,
 ) => TypographyStyles;
+
+type TypographyOptions = {
+	lineHeight: LineHeight;
+	fontWeight: FontWeight;
+	fontStyle: FontStyle;
+	unit: ScaleUnit;
+};
+
+export type FontScaleArgs = Partial<TypographyOptions>;
 
 export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles;
 
 // returns styles as a template literal
 export type FontScaleFunctionStr = (options?: FontScaleArgs) => string;
-
-export interface FontScaleArgs {
-	lineHeight?: LineHeight;
-	fontWeight?: FontWeight;
-	fontStyle?: FontStyle;
-	unit?: ScaleUnit;
-}

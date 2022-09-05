@@ -13,6 +13,7 @@ import type {
 	Category,
 	FontStyle,
 	FontWeight,
+	FontWeightValue,
 	Fs,
 	LineHeight,
 	Option,
@@ -20,6 +21,7 @@ import type {
 } from './types';
 
 const getFontFamilyValue = (category: Category) => fonts[category];
+
 const getFontSizeValue = <
 	Category extends keyof Categories,
 	Level extends keyof Categories[Category],
@@ -48,12 +50,10 @@ const getLineHeightValue = <
 		: lineHeights[lineHeight];
 };
 
-type FontWeights = typeof fontWeights[FontWeight];
-
 const getFontWeightValue = (
 	category: Category,
 	fontWeight: FontWeight,
-): FontWeights | undefined => {
+): FontWeightValue | undefined => {
 	const isFontWeightAvailable =
 		fontWeightsAvailable[category]?.[fontWeight] ?? false;
 
