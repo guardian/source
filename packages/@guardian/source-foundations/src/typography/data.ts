@@ -106,16 +106,16 @@ export const fontWeights = {
 
 export const fontWeightsAvailable = {
 	titlepiece: { bold: true },
-	headline: { light: true, medium: true, bold: false },
+	headline: { light: true, medium: true, bold: true },
 	body: { regular: true, bold: true },
-	textSans: { regular: true, bold: false },
+	textSans: { regular: true, bold: true },
 } as AvailableFontWeights;
 
 export const italicsAvailableForFontWeight = {
 	titlepiece: { bold: false },
-	headline: { light: true, medium: true, bold: true },
+	headline: { light: true, medium: true, bold: false },
 	body: { regular: true, bold: true },
-	textSans: { regular: true, bold: true },
+	textSans: { regular: true, bold: false },
 } as ItalicsAvailableForFontWeight;
 
 export const underlineThickness = {
