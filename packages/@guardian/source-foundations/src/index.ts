@@ -104,7 +104,9 @@ export type {
 	HeadlineSizes,
 	BodySizes,
 	TextSansSizes,
-	Fs,
+	GetFontSettingsWithDefaults,
+	/* @deprecated use GetFontSettingsWithDefaults instead */
+	GetFontSettingsWithDefaults as Fs,
 	FontScaleFunction,
 	FontScaleFunctionStr,
 	FontScaleArgs,
