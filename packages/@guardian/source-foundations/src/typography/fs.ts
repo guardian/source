@@ -53,14 +53,15 @@ type FontWeights = typeof fontWeights[FontWeight];
 const getFontWeightValue = (
 	category: Category,
 	fontWeight: FontWeight,
-): FontWeights | '' => {
+): FontWeights | undefined => {
 	const isFontWeightAvailable =
 		fontWeightsAvailable[category]?.[fontWeight] ?? false;
 
 	if (isFontWeightAvailable) {
 		return fontWeights[fontWeight];
 	}
-	return '';
+
+	return undefined;
 };
 
 const getFontStyleValue = (
@@ -94,24 +95,12 @@ export const fs: Fs = (
 	level,
 	{ lineHeight, fontWeight, fontStyle, unit },
 ) => {
-	const fontFamilyValue = getFontFamilyValue(category);
-	const fontSizeValue = getFontSizeValue(category, level, unit);
-	const lineHeightValue = getLineHeightValue(category, level, unit, lineHeight);
-	const fontWeightValue = getFontWeightValue(category, fontWeight);
-	const fontStyleValue = getFontStyleValue(category, fontWeight, fontStyle);
-	const textDecorationThicknessValue = getTextDecorationThicknessValue(
-		category,
-		level,
-	);
-
-	return Object.assign(
-		{
-			fontFamily: fontFamilyValue,
-			fontSize: fontSizeValue,
-			lineHeight: lineHeightValue,
-			textDecorationThickness: textDecorationThicknessValue,
-		},
-		fontWeightValue ? { fontWeight: fontWeightValue } : {},
-		fontStyleValue ? { fontStyle: fontStyleValue } : {},
-	);
+	return {
+		fontFamily: getFontFamilyValue(category),
+		fontSize: getFontSizeValue(category, level, unit),
+		lineHeight: getLineHeightValue(category, level, unit, lineHeight),
+		textDecorationThickness: getTextDecorationThicknessValue(category, level),
+		fontWeight: getFontWeightValue(category, fontWeight),
+		fontStyle: getFontStyleValue(category, fontWeight, fontStyle) ?? undefined,
+	};
 };
