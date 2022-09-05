@@ -1,3 +1,5 @@
+import { pxToRem } from '../utils/px-to-rem';
+
 /**
  * Pixel size values for each font that we use in the design system.
  *
@@ -43,37 +45,38 @@ const pxTextSizes = {
  * The resulting scale that we draw from is:
  * [0.75, 0.875, 0.9375, 1.0625, 1.25, 1.5, 1.75, 2.125, 2.625, 3.125, 4.375]
  *
+ *
  * See {@link [pxToRem](../utils/px-to-rem.ts)} for more details.
  */
 const remTextSizes = {
-	titlepieceSizes: {
-		small: 2.625,
-		medium: 3.125,
-		large: 4.375,
-	},
-	headlineSizes: {
-		xxxsmall: 1.0625,
-		xxsmall: 1.25,
-		xsmall: 1.5,
-		small: 1.75,
-		medium: 2.125,
-		large: 2.625,
-		xlarge: 3.125,
+	textSansSizes: {
+		xxsmall: pxToRem(12),
+		xsmall: pxToRem(14),
+		small: pxToRem(15),
+		medium: pxToRem(17),
+		large: pxToRem(20),
+		xlarge: pxToRem(24),
+		xxlarge: pxToRem(28),
+		xxxlarge: pxToRem(34),
 	},
 	bodySizes: {
-		xsmall: 0.875,
-		small: 0.9375,
-		medium: 1.0625,
+		xsmall: pxToRem(14),
+		small: pxToRem(15),
+		medium: pxToRem(17),
 	},
-	textSansSizes: {
-		xxsmall: 0.75,
-		xsmall: 0.875,
-		small: 0.9375,
-		medium: 1.0625,
-		large: 1.25,
-		xlarge: 1.5,
-		xxlarge: 1.75,
-		xxxlarge: 2.125,
+	headlineSizes: {
+		xxxsmall: pxToRem(17),
+		xxsmall: pxToRem(20),
+		xsmall: pxToRem(24),
+		small: pxToRem(28),
+		medium: pxToRem(34),
+		large: pxToRem(42),
+		xlarge: pxToRem(50),
+	},
+	titlepieceSizes: {
+		small: pxToRem(42),
+		medium: pxToRem(50),
+		large: pxToRem(70),
 	},
 } as const;
 
