@@ -59,7 +59,6 @@ export type Fs = <
 	Level extends keyof Categories[Category],
 >(
 	category: Category,
-) => (
 	level: Level,
 	{
 		lineHeight,
