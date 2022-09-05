@@ -48,11 +48,6 @@ export type Categories = {
 
 export type Category = keyof Categories;
 
-export type TitlepieceLevels = keyof TitlepieceSizes;
-export type HeadlineLevels = keyof HeadlineSizes;
-export type BodyLevels = keyof BodySizes;
-export type TextSansLevels = keyof TextSansSizes;
-
 export type AvailableFontWeights = {
 	[cat in Category]?: { [weight in FontWeight]?: boolean };
 };
@@ -94,3 +89,26 @@ export type BodyFunctions = {
 export type TextSansFunctions = {
 	[key in keyof TextSansSizes]: FontScaleFunction;
 };
+
+/**
+ * @deprecated will be removed in the next major version
+ */
+export type Fs = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+) => (
+	level: Level,
+	{
+		lineHeight,
+		fontWeight,
+		fontStyle,
+		unit,
+	}: {
+		lineHeight: LineHeight;
+		fontWeight: FontWeight;
+		fontStyle: Option<FontStyle>;
+		unit: ScaleUnit;
+	},
+) => TypographyStyles;
