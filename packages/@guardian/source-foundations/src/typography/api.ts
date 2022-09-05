@@ -1,153 +1,84 @@
 import { getFontStyle } from './font-styles';
 import type {
 	BodyFunctions,
+	BodyLevels,
 	FontScaleArgs,
 	HeadlineFunctions,
+	HeadlineLevels,
 	TextSansFunctions,
+	TextSansLevels,
 	TitlepieceFunctions,
+	TitlepieceLevels,
 } from './types';
 
-const titlepieceDefaults = {
-	lineHeight: 'tight',
-	fontWeight: 'bold',
-	fontStyle: null,
-	unit: 'rem',
-} as const;
+export const getTitlepieceFontStyleFunction =
+	(level: TitlepieceLevels) => (options?: FontScaleArgs) =>
+		getFontStyle('titlepiece', level, {
+			lineHeight: 'tight',
+			fontWeight: 'bold',
+			fontStyle: null,
+			unit: 'rem',
+			...options,
+		});
 
 export const titlepiece: TitlepieceFunctions = {
-	small: (options?: FontScaleArgs) =>
-		getFontStyle('titlepiece', 'small', {
-			...titlepieceDefaults,
-			...options,
-		}),
-	medium: (options?: FontScaleArgs) =>
-		getFontStyle('titlepiece', 'medium', {
-			...titlepieceDefaults,
-			...options,
-		}),
-	large: (options?: FontScaleArgs) =>
-		getFontStyle('titlepiece', 'large', {
-			...titlepieceDefaults,
-			...options,
-		}),
+	small: getTitlepieceFontStyleFunction('small'),
+	medium: getTitlepieceFontStyleFunction('medium'),
+	large: getTitlepieceFontStyleFunction('large'),
 };
 
-const headlineDefaults = {
-	lineHeight: 'tight',
-	fontWeight: 'medium',
-	fontStyle: null,
-	unit: 'rem',
-} as const;
+export const getHeadlineFontStyleFunction =
+	(level: HeadlineLevels) => (options?: FontScaleArgs) =>
+		getFontStyle('headline', level, {
+			lineHeight: 'tight',
+			fontWeight: 'medium',
+			fontStyle: null,
+			unit: 'rem',
+			...options,
+		});
 
 export const headline: HeadlineFunctions = {
-	xxxsmall: (options?: FontScaleArgs) =>
-		getFontStyle('headline', 'xxxsmall', {
-			...headlineDefaults,
-			...options,
-		}),
-	xxsmall: (options?: FontScaleArgs) =>
-		getFontStyle('headline', 'xxsmall', {
-			...headlineDefaults,
-			...options,
-		}),
-	xsmall: (options?: FontScaleArgs) =>
-		getFontStyle('headline', 'xsmall', {
-			...headlineDefaults,
-			...options,
-		}),
-	small: (options?: FontScaleArgs) =>
-		getFontStyle('headline', 'small', {
-			...headlineDefaults,
-			...options,
-		}),
-	medium: (options?: FontScaleArgs) =>
-		getFontStyle('headline', 'medium', {
-			...headlineDefaults,
-			...options,
-		}),
-	large: (options?: FontScaleArgs) =>
-		getFontStyle('headline', 'large', {
-			...headlineDefaults,
-			...options,
-		}),
-	xlarge: (options?: FontScaleArgs) =>
-		getFontStyle('headline', 'xlarge', {
-			...headlineDefaults,
-			...options,
-		}),
+	xxxsmall: getHeadlineFontStyleFunction('xxxsmall'),
+	xxsmall: getHeadlineFontStyleFunction('xxsmall'),
+	xsmall: getHeadlineFontStyleFunction('xsmall'),
+	small: getHeadlineFontStyleFunction('small'),
+	medium: getHeadlineFontStyleFunction('medium'),
+	large: getHeadlineFontStyleFunction('large'),
+	xlarge: getHeadlineFontStyleFunction('xlarge'),
 };
 
-const bodyDefaults = {
-	lineHeight: 'loose',
-	fontWeight: 'regular',
-	fontStyle: null,
-	unit: 'rem',
-} as const;
-
+export const getBodyFontStyleFunction =
+	(level: BodyLevels) => (options?: FontScaleArgs) =>
+		getFontStyle('body', level, {
+			lineHeight: 'loose',
+			fontWeight: 'regular',
+			fontStyle: null,
+			unit: 'rem',
+			...options,
+		});
 export const body: BodyFunctions = {
-	xsmall: (options?: FontScaleArgs) =>
-		getFontStyle('body', 'xsmall', {
-			...bodyDefaults,
-			...options,
-		}),
-	small: (options?: FontScaleArgs) =>
-		getFontStyle('body', 'small', {
-			...bodyDefaults,
-			...options,
-		}),
-	medium: (options?: FontScaleArgs) =>
-		getFontStyle('body', 'medium', {
-			...bodyDefaults,
-			...options,
-		}),
+	xsmall: getBodyFontStyleFunction('xsmall'),
+	small: getBodyFontStyleFunction('small'),
+	medium: getBodyFontStyleFunction('medium'),
 };
 
-const textSansDefaults = {
-	lineHeight: 'loose',
-	fontWeight: 'regular',
-	fontStyle: null,
-	unit: 'rem',
-} as const;
+export const getTextSansFontStyleFunction =
+	(level: TextSansLevels) => (options?: FontScaleArgs) =>
+		getFontStyle('textSans', level, {
+			lineHeight: 'loose',
+			fontWeight: 'regular',
+			fontStyle: null,
+			unit: 'rem',
+			...options,
+		});
 
 export const textSans: TextSansFunctions = {
-	xxsmall: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'xxsmall', {
-			...textSansDefaults,
-			...options,
-		}),
-	xsmall: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'xsmall', {
-			...textSansDefaults,
-			...options,
-		}),
-	small: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'small', {
-			...textSansDefaults,
-			...options,
-		}),
-	medium: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'medium', {
-			...textSansDefaults,
-			...options,
-		}),
-	large: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'large', {
-			...textSansDefaults,
-			...options,
-		}),
-	xlarge: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'xlarge', {
-			...textSansDefaults,
-			...options,
-		}),
-	xxlarge: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'xxlarge', {
-			...textSansDefaults,
-			...options,
-		}),
-	xxxlarge: (options?: FontScaleArgs) =>
-		getFontStyle('textSans', 'xxxlarge', {
-			...textSansDefaults,
-			...options,
-		}),
+	xxsmall: getTextSansFontStyleFunction('xxsmall'),
+	xsmall: getTextSansFontStyleFunction('xsmall'),
+	small: getTextSansFontStyleFunction('small'),
+	medium: getTextSansFontStyleFunction('medium'),
+	large: getTextSansFontStyleFunction('large'),
+	xlarge: getTextSansFontStyleFunction('xlarge'),
+	xxlarge: getTextSansFontStyleFunction('xxlarge'),
+	xxxlarge: getTextSansFontStyleFunction('xxxlarge'),
 };
