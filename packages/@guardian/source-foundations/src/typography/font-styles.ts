@@ -9,76 +9,65 @@ import {
 	underlineThickness,
 } from './data';
 import type {
-	Category,
-	GetFontSizeValue,
-	GetFontStyle,
-	GetFontStyleValue,
-	GetFontWeightValue,
-	GetLineHeightValue,
-	GetTextDecorationThicknessValue,
+	Categories,
+	FontStyle,
+	Option,
+	TypographyOptions,
+	TypographyStyles,
 } from './types';
 
-const getFontFamilyValue = (category: Category) => fonts[category];
-
-const getFontSizeValue: GetFontSizeValue = (category, level, unit) =>
-	unit === 'px'
-		? Number(pxTextSizes[category][level])
-		: `${Number(remTextSizes[category][level])}rem`;
-
-const getLineHeightValue: GetLineHeightValue = (
-	category,
-	level,
-	unit,
-	lineHeight,
-) =>
-	unit === 'px'
-		? // line-height is defined as a unitless value, so we multiply
-		  // by the element's font-size in px to get the px value
-		  `${lineHeights[lineHeight] * Number(pxTextSizes[category][level])}px`
-		: lineHeights[lineHeight];
-
-const getFontWeightValue: GetFontWeightValue = (category, fontWeight) => {
-	const isFontWeightAvailable =
-		fontWeightsAvailable[category]?.[fontWeight] ?? false;
-
-	if (isFontWeightAvailable) {
-		return fontWeights[fontWeight];
-	}
-
-	return undefined;
-};
-
-const getFontStyleValue: GetFontStyleValue = (
-	category,
-	fontWeight,
-	fontStyle,
+const determineFontStyleProperty = (
+	fontStyle: Option<FontStyle>,
+	hasItalic: boolean,
 ) => {
-	const hasItalic =
-		italicsAvailableForFontWeight[category]?.[fontWeight] ?? false;
 	switch (fontStyle) {
 		case 'italic':
-			return hasItalic ? 'italic' : null;
+			return hasItalic ? 'italic' : undefined;
 		case 'normal':
 			return 'normal';
 		case null:
 		default:
-			return null;
+			return undefined;
 	}
 };
 
-const getTextDecorationThicknessValue: GetTextDecorationThicknessValue = (
-	category,
-	level,
-) => Number(underlineThickness[category][level]);
+export const getFontStyle = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+	level: Level,
+	options: TypographyOptions,
+): TypographyStyles => {
+	// Fetch the font size in pixels and rems for the given category and level
+	const pxTextSize = Number(pxTextSizes[category][level]);
+	const remTextSize = Number(remTextSizes[category][level]);
 
-export const getFontStyle: GetFontStyle = (category, level, options) => {
-	const { lineHeight, fontWeight, fontStyle, unit } = options;
+	// Determine if italic font-style is available for this font weight
+	const hasItalic =
+		italicsAvailableForFontWeight[category]?.[options.fontWeight] ?? false;
+
+	// Determine if setting the font weight is allowed for the given category
+	const isFontWeightAvailable =
+		fontWeightsAvailable[category]?.[options.fontWeight] ?? false;
+
+	const fontWeight = isFontWeightAvailable
+		? fontWeights[options.fontWeight]
+		: undefined;
+
+	// line-height is defined as a unitless value, so we multiply
+	// by the element's font-size in px to get the px value
+	const lineHeight =
+		options.unit === 'px'
+			? `${lineHeights[options.lineHeight] * pxTextSize}px`
+			: lineHeights[options.lineHeight];
+
 	return {
-		fontFamily: getFontFamilyValue(category),
-		fontSize: getFontSizeValue(category, level, unit),
-		lineHeight: getLineHeightValue(category, level, unit, lineHeight),
-		textDecorationThickness: getTextDecorationThicknessValue(category, level),
-		fontWeight: getFontWeightValue(category, fontWeight),
-		fontStyle: getFontStyleValue(category, fontWeight, fontStyle) ?? undefined,
+		lineHeight,
+		fontWeight,
+		fontSize: options.unit === 'px' ? pxTextSize : `${remTextSize}rem`,
+		fontFamily: fonts[category],
+		textDecorationThickness: Number(underlineThickness[category][level]),
+		fontStyle: determineFontStyleProperty(options.fontStyle, hasItalic),
 	};
 };
