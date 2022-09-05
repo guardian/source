@@ -10,6 +10,7 @@ import {
 } from './data';
 import type {
 	Categories,
+	FontScaleArgs,
 	FontStyle,
 	Option,
 	TypographyOptions,
@@ -31,43 +32,58 @@ const determineFontStyleProperty = (
 	}
 };
 
-export const getFontStyle = <
-	Category extends keyof Categories,
-	Level extends keyof Categories[Category],
->(
-	category: Category,
-	level: Level,
-	options: TypographyOptions,
-): TypographyStyles => {
-	// Fetch the font size in pixels and rems for the given category and level
-	const pxTextSize = Number(pxTextSizes[category][level]);
-	const remTextSize = Number(remTextSizes[category][level]);
+export const fontStyleFunction =
+	<
+		Category extends keyof Categories,
+		Level extends keyof Categories[Category],
+	>(
+		category: Category,
+		level: Level,
+		defaults: TypographyOptions,
+	) =>
+	(options?: FontScaleArgs): TypographyStyles => {
+		const finalOptions = {
+			...defaults,
+			...options,
+		};
 
-	// Determine if italic font-style is available for this font weight
-	const hasItalic =
-		italicsAvailableForFontWeight[category]?.[options.fontWeight] ?? false;
+		// Fetch the font size in pixels and rems for the given category and level
+		const pxTextSize = Number(pxTextSizes[category][level]);
+		const remTextSize = Number(remTextSizes[category][level]);
 
-	// Determine if setting the font weight is allowed for the given category
-	const isFontWeightAvailable =
-		fontWeightsAvailable[category]?.[options.fontWeight] ?? false;
+		// Determine if italic font-style is available for this font weight
+		const hasItalic =
+			italicsAvailableForFontWeight[category]?.[
+				finalOptions.fontWeight
+			] ?? false;
 
-	const fontWeight = isFontWeightAvailable
-		? fontWeights[options.fontWeight]
-		: undefined;
+		// Determine if setting the font weight is allowed for the given category
+		const isFontWeightAvailable =
+			fontWeightsAvailable[category]?.[finalOptions.fontWeight] ?? false;
 
-	// line-height is defined as a unitless value, so we multiply
-	// by the element's font-size in px to get the px value
-	const lineHeight =
-		options.unit === 'px'
-			? `${lineHeights[options.lineHeight] * pxTextSize}px`
-			: lineHeights[options.lineHeight];
+		const fontWeight = isFontWeightAvailable
+			? fontWeights[finalOptions.fontWeight]
+			: undefined;
 
-	return {
-		lineHeight,
-		fontWeight,
-		fontSize: options.unit === 'px' ? pxTextSize : `${remTextSize}rem`,
-		fontFamily: fonts[category],
-		textDecorationThickness: Number(underlineThickness[category][level]),
-		fontStyle: determineFontStyleProperty(options.fontStyle, hasItalic),
+		// line-height is defined as a unitless value, so we multiply
+		// by the element's font-size in px to get the px value
+		const lineHeight =
+			finalOptions.unit === 'px'
+				? `${lineHeights[finalOptions.lineHeight] * pxTextSize}px`
+				: lineHeights[finalOptions.lineHeight];
+
+		return {
+			lineHeight,
+			fontWeight,
+			fontSize:
+				finalOptions.unit === 'px' ? pxTextSize : `${remTextSize}rem`,
+			fontFamily: fonts[category],
+			textDecorationThickness: Number(
+				underlineThickness[category][level],
+			),
+			fontStyle: determineFontStyleProperty(
+				finalOptions.fontStyle,
+				hasItalic,
+			),
+		};
 	};
-};
