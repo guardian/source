@@ -18,15 +18,26 @@ const titlepieceDefaults = {
 	fontStyle: null,
 	unit: 'rem',
 };
-const titlepieceFs = fs('titlepiece');
 
 export const titlepiece: TitlepieceFunctions = {
 	small: (options?: FontScaleArgs) =>
-		titlepieceFs('small', Object.assign({}, titlepieceDefaults, options)),
+		fs(
+			'titlepiece',
+			'small',
+			Object.assign({}, titlepieceDefaults, options),
+		),
 	medium: (options?: FontScaleArgs) =>
-		titlepieceFs('medium', Object.assign({}, titlepieceDefaults, options)),
+		fs(
+			'titlepiece',
+			'medium',
+			Object.assign({}, titlepieceDefaults, options),
+		),
 	large: (options?: FontScaleArgs) =>
-		titlepieceFs('large', Object.assign({}, titlepieceDefaults, options)),
+		fs(
+			'titlepiece',
+			'large',
+			Object.assign({}, titlepieceDefaults, options),
+		),
 };
 
 type HeadlineFunctions = {
@@ -38,23 +49,26 @@ const headlineDefaults = {
 	fontStyle: null,
 	unit: 'rem',
 };
-const headlineFs = fs('headline');
 
 export const headline: HeadlineFunctions = {
 	xxxsmall: (options?: FontScaleArgs) =>
-		headlineFs('xxxsmall', Object.assign({}, headlineDefaults, options)),
+		fs(
+			'headline',
+			'xxxsmall',
+			Object.assign({}, headlineDefaults, options),
+		),
 	xxsmall: (options?: FontScaleArgs) =>
-		headlineFs('xxsmall', Object.assign({}, headlineDefaults, options)),
+		fs('headline', 'xxsmall', Object.assign({}, headlineDefaults, options)),
 	xsmall: (options?: FontScaleArgs) =>
-		headlineFs('xsmall', Object.assign({}, headlineDefaults, options)),
+		fs('headline', 'xsmall', Object.assign({}, headlineDefaults, options)),
 	small: (options?: FontScaleArgs) =>
-		headlineFs('small', Object.assign({}, headlineDefaults, options)),
+		fs('headline', 'small', Object.assign({}, headlineDefaults, options)),
 	medium: (options?: FontScaleArgs) =>
-		headlineFs('medium', Object.assign({}, headlineDefaults, options)),
+		fs('headline', 'medium', Object.assign({}, headlineDefaults, options)),
 	large: (options?: FontScaleArgs) =>
-		headlineFs('large', Object.assign({}, headlineDefaults, options)),
+		fs('headline', 'large', Object.assign({}, headlineDefaults, options)),
 	xlarge: (options?: FontScaleArgs) =>
-		headlineFs('xlarge', Object.assign({}, headlineDefaults, options)),
+		fs('headline', 'xlarge', Object.assign({}, headlineDefaults, options)),
 };
 
 type BodyFunctions = {
@@ -67,15 +81,14 @@ const bodyDefaults = {
 	fontStyle: null,
 	unit: 'rem',
 };
-const bodyFs = fs('body');
 
 export const body: BodyFunctions = {
 	xsmall: (options?: FontScaleArgs) =>
-		bodyFs('xsmall', Object.assign({}, bodyDefaults, options)),
+		fs('body', 'xsmall', Object.assign({}, bodyDefaults, options)),
 	small: (options?: FontScaleArgs) =>
-		bodyFs('small', Object.assign({}, bodyDefaults, options)),
+		fs('body', 'small', Object.assign({}, bodyDefaults, options)),
 	medium: (options?: FontScaleArgs) =>
-		bodyFs('medium', Object.assign({}, bodyDefaults, options)),
+		fs('body', 'medium', Object.assign({}, bodyDefaults, options)),
 };
 
 type TextSansFunctions = {
@@ -88,23 +101,26 @@ const textSansDefaults = {
 	fontStyle: null,
 	unit: 'rem',
 };
-const textSansFs = fs('textSans');
 
 export const textSans: TextSansFunctions = {
 	xxsmall: (options?: FontScaleArgs) =>
-		textSansFs('xxsmall', Object.assign({}, textSansDefaults, options)),
+		fs('textSans', 'xxsmall', Object.assign({}, textSansDefaults, options)),
 	xsmall: (options?: FontScaleArgs) =>
-		textSansFs('xsmall', Object.assign({}, textSansDefaults, options)),
+		fs('textSans', 'xsmall', Object.assign({}, textSansDefaults, options)),
 	small: (options?: FontScaleArgs) =>
-		textSansFs('small', Object.assign({}, textSansDefaults, options)),
+		fs('textSans', 'small', Object.assign({}, textSansDefaults, options)),
 	medium: (options?: FontScaleArgs) =>
-		textSansFs('medium', Object.assign({}, textSansDefaults, options)),
+		fs('textSans', 'medium', Object.assign({}, textSansDefaults, options)),
 	large: (options?: FontScaleArgs) =>
-		textSansFs('large', Object.assign({}, textSansDefaults, options)),
+		fs('textSans', 'large', Object.assign({}, textSansDefaults, options)),
 	xlarge: (options?: FontScaleArgs) =>
-		textSansFs('xlarge', Object.assign({}, textSansDefaults, options)),
+		fs('textSans', 'xlarge', Object.assign({}, textSansDefaults, options)),
 	xxlarge: (options?: FontScaleArgs) =>
-		textSansFs('xxlarge', Object.assign({}, textSansDefaults, options)),
+		fs('textSans', 'xxlarge', Object.assign({}, textSansDefaults, options)),
 	xxxlarge: (options?: FontScaleArgs) =>
-		textSansFs('xxxlarge', Object.assign({}, textSansDefaults, options)),
+		fs(
+			'textSans',
+			'xxxlarge',
+			Object.assign({}, textSansDefaults, options),
+		),
 };

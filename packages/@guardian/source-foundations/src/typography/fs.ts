@@ -8,6 +8,7 @@ import {
 } from './data';
 import type {
 	AvailableFontsMapping,
+	Category,
 	FontStyle,
 	FontWeightDefinition,
 	Fs,
@@ -64,37 +65,42 @@ function getFontStyle(
 	}
 }
 
-export const fs: Fs =
-	(category) =>
-	(level, { lineHeight, fontWeight, fontStyle, unit }) => {
-		const fontFamilyValue = fonts[category];
-		const fontSizeValue: `${number}rem` | number =
-			unit === 'px'
-				? Number(pxTextSizes[category][level])
-				: `${Number(remTextSizes[category][level])}rem`;
-		const lineHeightValue: `${number}px` | number =
-			unit === 'px'
-				? // line-height is defined as a unitless value, so we multiply
-				  // by the element's font-size in px to get the px value
-				  `${lineHeights[lineHeight] * Number(pxTextSizes[category][level])}px`
-				: lineHeights[lineHeight];
-		// TODO: consider logging an error in development if a requested
-		// font is unavailable
-		const requestedFont = availableFonts[category][fontWeight];
-		const fontWeightValue = requestedFont ? fontWeights[fontWeight] : '';
-		const fontStyleValue = getFontStyle(requestedFont, fontStyle);
-		const textDecorationThicknessValue = Number(
-			underlineThickness[category][level],
-		);
+const getFontFamilyValue = (category: Category) => fonts[category];
 
-		return Object.assign(
-			{
-				fontFamily: fontFamilyValue,
-				fontSize: fontSizeValue,
-				lineHeight: lineHeightValue,
-				textDecorationThickness: textDecorationThicknessValue,
-			},
-			fontWeightValue ? { fontWeight: fontWeightValue } : {},
-			fontStyleValue ? { fontStyle: fontStyleValue } : {},
-		);
-	};
+export const fs: Fs = (
+	category,
+	level,
+	{ lineHeight, fontWeight, fontStyle, unit },
+) => {
+	const fontFamilyValue = getFontFamilyValue(category);
+	const fontSizeValue: `${number}rem` | number =
+		unit === 'px'
+			? Number(pxTextSizes[category][level])
+			: `${Number(remTextSizes[category][level])}rem`;
+
+	const lineHeightValue: `${number}px` | number =
+		unit === 'px'
+			? // line-height is defined as a unitless value, so we multiply
+			  // by the element's font-size in px to get the px value
+			  `${lineHeights[lineHeight] * Number(pxTextSizes[category][level])}px`
+			: lineHeights[lineHeight];
+	// TODO: consider logging an error in development if a requested
+	// font is unavailable
+	const requestedFont = availableFonts[category][fontWeight];
+	const fontWeightValue = requestedFont ? fontWeights[fontWeight] : '';
+	const fontStyleValue = getFontStyle(requestedFont, fontStyle);
+	const textDecorationThicknessValue = Number(
+		underlineThickness[category][level],
+	);
+
+	return Object.assign(
+		{
+			fontFamily: fontFamilyValue,
+			fontSize: fontSizeValue,
+			lineHeight: lineHeightValue,
+			textDecorationThickness: textDecorationThicknessValue,
+		},
+		fontWeightValue ? { fontWeight: fontWeightValue } : {},
+		fontStyleValue ? { fontStyle: fontStyleValue } : {},
+	);
+};
