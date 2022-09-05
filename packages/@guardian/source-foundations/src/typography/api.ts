@@ -1,102 +1,80 @@
-import { getFontSettingsWithDefaults } from './fontSettings';
+import { getFontStyle } from './font-styles';
 import type {
-	BodySizes,
+	BodyFunctions,
 	FontScaleArgs,
-	FontScaleFunction,
-	HeadlineSizes,
-	TextSansSizes,
-	TitlepieceSizes,
+	HeadlineFunctions,
+	TextSansFunctions,
+	TitlepieceFunctions,
 } from './types';
-
-type TitlepieceFunctions = {
-	[key in keyof TitlepieceSizes]: FontScaleFunction;
-};
 
 const titlepieceDefaults = {
 	lineHeight: 'tight',
 	fontWeight: 'bold',
 	fontStyle: null,
 	unit: 'rem',
-};
+} as const;
 
 export const titlepiece: TitlepieceFunctions = {
 	small: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'titlepiece',
-			'small',
-			Object.assign({}, titlepieceDefaults, options),
-		),
+		getFontStyle('titlepiece', 'small', {
+			...titlepieceDefaults,
+			...options,
+		}),
 	medium: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'titlepiece',
-			'medium',
-			Object.assign({}, titlepieceDefaults, options),
-		),
+		getFontStyle('titlepiece', 'medium', {
+			...titlepieceDefaults,
+			...options,
+		}),
 	large: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'titlepiece',
-			'large',
-			Object.assign({}, titlepieceDefaults, options),
-		),
+		getFontStyle('titlepiece', 'large', {
+			...titlepieceDefaults,
+			...options,
+		}),
 };
 
-type HeadlineFunctions = {
-	[key in keyof HeadlineSizes]: FontScaleFunction;
-};
 const headlineDefaults = {
 	lineHeight: 'tight',
 	fontWeight: 'medium',
 	fontStyle: null,
 	unit: 'rem',
-};
+} as const;
 
 export const headline: HeadlineFunctions = {
 	xxxsmall: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'headline',
-			'xxxsmall',
-			Object.assign({}, headlineDefaults, options),
-		),
+		getFontStyle('headline', 'xxxsmall', {
+			...headlineDefaults,
+			...options,
+		}),
 	xxsmall: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'headline',
-			'xxsmall',
-			Object.assign({}, headlineDefaults, options),
-		),
+		getFontStyle('headline', 'xxsmall', {
+			...headlineDefaults,
+			...options,
+		}),
 	xsmall: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'headline',
-			'xsmall',
-			Object.assign({}, headlineDefaults, options),
-		),
+		getFontStyle('headline', 'xsmall', {
+			...headlineDefaults,
+			...options,
+		}),
 	small: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'headline',
-			'small',
-			Object.assign({}, headlineDefaults, options),
-		),
+		getFontStyle('headline', 'small', {
+			...headlineDefaults,
+			...options,
+		}),
 	medium: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'headline',
-			'medium',
-			Object.assign({}, headlineDefaults, options),
-		),
+		getFontStyle('headline', 'medium', {
+			...headlineDefaults,
+			...options,
+		}),
 	large: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'headline',
-			'large',
-			Object.assign({}, headlineDefaults, options),
-		),
+		getFontStyle('headline', 'large', {
+			...headlineDefaults,
+			...options,
+		}),
 	xlarge: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'headline',
-			'xlarge',
-			Object.assign({}, headlineDefaults, options),
-		),
-};
-
-type BodyFunctions = {
-	[key in keyof BodySizes]: FontScaleFunction;
+		getFontStyle('headline', 'xlarge', {
+			...headlineDefaults,
+			...options,
+		}),
 };
 
 const bodyDefaults = {
@@ -104,31 +82,24 @@ const bodyDefaults = {
 	fontWeight: 'regular',
 	fontStyle: null,
 	unit: 'rem',
-};
+} as const;
 
 export const body: BodyFunctions = {
 	xsmall: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'body',
-			'xsmall',
-			Object.assign({}, bodyDefaults, options),
-		),
+		getFontStyle('body', 'xsmall', {
+			...bodyDefaults,
+			...options,
+		}),
 	small: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'body',
-			'small',
-			Object.assign({}, bodyDefaults, options),
-		),
+		getFontStyle('body', 'small', {
+			...bodyDefaults,
+			...options,
+		}),
 	medium: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'body',
-			'medium',
-			Object.assign({}, bodyDefaults, options),
-		),
-};
-
-type TextSansFunctions = {
-	[key in keyof TextSansSizes]: FontScaleFunction;
+		getFontStyle('body', 'medium', {
+			...bodyDefaults,
+			...options,
+		}),
 };
 
 const textSansDefaults = {
@@ -136,55 +107,47 @@ const textSansDefaults = {
 	fontWeight: 'regular',
 	fontStyle: null,
 	unit: 'rem',
-};
+} as const;
 
 export const textSans: TextSansFunctions = {
 	xxsmall: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'xxsmall',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'xxsmall', {
+			...textSansDefaults,
+			...options,
+		}),
 	xsmall: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'xsmall',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'xsmall', {
+			...textSansDefaults,
+			...options,
+		}),
 	small: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'small',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'small', {
+			...textSansDefaults,
+			...options,
+		}),
 	medium: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'medium',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'medium', {
+			...textSansDefaults,
+			...options,
+		}),
 	large: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'large',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'large', {
+			...textSansDefaults,
+			...options,
+		}),
 	xlarge: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'xlarge',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'xlarge', {
+			...textSansDefaults,
+			...options,
+		}),
 	xxlarge: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'xxlarge',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'xxlarge', {
+			...textSansDefaults,
+			...options,
+		}),
 	xxxlarge: (options?: FontScaleArgs) =>
-		getFontSettingsWithDefaults(
-			'textSans',
-			'xxxlarge',
-			Object.assign({}, textSansDefaults, options),
-		),
+		getFontStyle('textSans', 'xxxlarge', {
+			...textSansDefaults,
+			...options,
+		}),
 };
