@@ -1,4 +1,8 @@
 import { pxToRem } from '../utils/px-to-rem';
+import type {
+	AvailableFontWeights,
+	ItalicsAvailableForFontWeight,
+} from './types';
 
 /**
  * Pixel size values for each font that we use in the design system.
@@ -99,6 +103,20 @@ export const fontWeights = {
 	medium: 500,
 	bold: 700,
 } as const;
+
+export const fontWeightsAvailable = {
+	titlepiece: { bold: true },
+	headline: { light: true, medium: true, bold: false },
+	body: { regular: true, bold: true },
+	textSans: { regular: true, bold: false },
+} as AvailableFontWeights;
+
+export const italicsAvailableForFontWeight = {
+	titlepiece: { bold: false },
+	headline: { light: true, medium: true, bold: true },
+	body: { regular: true, bold: true },
+	textSans: { regular: true, bold: true },
+} as ItalicsAvailableForFontWeight;
 
 export const underlineThickness = {
 	textSans: {

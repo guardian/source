@@ -39,7 +39,7 @@ export type HeadlineSizes = typeof headlineSizes | typeof remHeadlineSizes;
 export type BodySizes = typeof bodySizes | typeof remBodySizes;
 export type TextSansSizes = typeof textSansSizes | typeof remTextSansSizes;
 
-type Categories = {
+export type Categories = {
 	titlepiece: TitlepieceSizes;
 	headline: HeadlineSizes;
 	body: BodySizes;
@@ -52,6 +52,14 @@ export type AvailableFontsMapping = {
 	[cat in Category]: {
 		[fontWeight in FontWeight]?: FontWeightDefinition;
 	};
+};
+
+export type AvailableFontWeights = {
+	[cat in Category]?: { [weight in FontWeight]?: boolean };
+};
+
+export type ItalicsAvailableForFontWeight = {
+	[cat in Category]?: { [weight in FontWeight]?: boolean };
 };
 
 export type Fs = <
