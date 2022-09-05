@@ -81,6 +81,14 @@ const getFontStyleValue = (
 	}
 };
 
+const getTextDecorationThicknessValue = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+	level: Level,
+): number => Number(underlineThickness[category][level]);
+
 export const fs: Fs = (
 	category,
 	level,
@@ -91,8 +99,9 @@ export const fs: Fs = (
 	const lineHeightValue = getLineHeightValue(category, level, unit, lineHeight);
 	const fontWeightValue = getFontWeightValue(category, fontWeight);
 	const fontStyleValue = getFontStyleValue(category, fontWeight, fontStyle);
-	const textDecorationThicknessValue = Number(
-		underlineThickness[category][level],
+	const textDecorationThicknessValue = getTextDecorationThicknessValue(
+		category,
+		level,
 	);
 
 	return Object.assign(
