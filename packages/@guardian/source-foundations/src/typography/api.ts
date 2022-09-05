@@ -1,4 +1,4 @@
-import { getFontSettingsWithDefaults } from './fs';
+import { getFontSettingsWithDefaults } from './fontSettings';
 import type {
 	BodySizes,
 	FontScaleArgs,

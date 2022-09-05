@@ -74,9 +74,9 @@ const getTextDecorationThicknessValue: GetTextDecorationThicknessValue = (
 export const getFontSettingsWithDefaults: GetFontSettingsWithDefaults = (
 	category,
 	level,
-	overrides,
+	options,
 ) => {
-	const { lineHeight, fontWeight, fontStyle, unit } = overrides;
+	const { lineHeight, fontWeight, fontStyle, unit } = options;
 	return {
 		fontFamily: getFontFamilyValue(category),
 		fontSize: getFontSizeValue(category, level, unit),
