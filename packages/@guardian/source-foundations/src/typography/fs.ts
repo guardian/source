@@ -9,51 +9,35 @@ import {
 	underlineThickness,
 } from './data';
 import type {
-	Categories,
 	Category,
-	FontStyle,
-	FontWeight,
-	FontWeightValue,
-	Fs,
-	LineHeight,
-	Option,
-	ScaleUnit,
+	GetFontSettingsWithDefaults,
+	GetFontSizeValue,
+	GetFontStyleValue,
+	GetFontWeightValue,
+	GetLineHeightValue,
+	GetTextDecorationThicknessValue,
 } from './types';
 
 const getFontFamilyValue = (category: Category) => fonts[category];
 
-const getFontSizeValue = <
-	Category extends keyof Categories,
-	Level extends keyof Categories[Category],
->(
-	category: Category,
-	level: Level,
-	unit: ScaleUnit,
-): `${number}rem` | number =>
+const getFontSizeValue: GetFontSizeValue = (category, level, unit) =>
 	unit === 'px'
 		? Number(pxTextSizes[category][level])
 		: `${Number(remTextSizes[category][level])}rem`;
 
-const getLineHeightValue = <
-	Category extends keyof Categories,
-	Level extends keyof Categories[Category],
->(
-	category: Category,
-	level: Level,
-	unit: ScaleUnit,
-	lineHeight: LineHeight,
-): `${number}px` | number => {
-	return unit === 'px'
+const getLineHeightValue: GetLineHeightValue = (
+	category,
+	level,
+	unit,
+	lineHeight,
+) =>
+	unit === 'px'
 		? // line-height is defined as a unitless value, so we multiply
 		  // by the element's font-size in px to get the px value
 		  `${lineHeights[lineHeight] * Number(pxTextSizes[category][level])}px`
 		: lineHeights[lineHeight];
-};
 
-const getFontWeightValue = (
-	category: Category,
-	fontWeight: FontWeight,
-): FontWeightValue | undefined => {
+const getFontWeightValue: GetFontWeightValue = (category, fontWeight) => {
 	const isFontWeightAvailable =
 		fontWeightsAvailable[category]?.[fontWeight] ?? false;
 
@@ -64,11 +48,11 @@ const getFontWeightValue = (
 	return undefined;
 };
 
-const getFontStyleValue = (
-	category: Category,
-	fontWeight: FontWeight,
-	fontStyle: Option<FontStyle>,
-): Option<FontStyle> => {
+const getFontStyleValue: GetFontStyleValue = (
+	category,
+	fontWeight,
+	fontStyle,
+) => {
 	const hasItalic =
 		italicsAvailableForFontWeight[category]?.[fontWeight] ?? false;
 	switch (fontStyle) {
@@ -82,19 +66,17 @@ const getFontStyleValue = (
 	}
 };
 
-const getTextDecorationThicknessValue = <
-	Category extends keyof Categories,
-	Level extends keyof Categories[Category],
->(
-	category: Category,
-	level: Level,
-): number => Number(underlineThickness[category][level]);
-
-export const fs: Fs = (
+const getTextDecorationThicknessValue: GetTextDecorationThicknessValue = (
 	category,
 	level,
-	{ lineHeight, fontWeight, fontStyle, unit },
+) => Number(underlineThickness[category][level]);
+
+export const getFontSettingsWithDefaults: GetFontSettingsWithDefaults = (
+	category,
+	level,
+	overrides,
 ) => {
+	const { lineHeight, fontWeight, fontStyle, unit } = overrides;
 	return {
 		fontFamily: getFontFamilyValue(category),
 		fontSize: getFontSizeValue(category, level, unit),

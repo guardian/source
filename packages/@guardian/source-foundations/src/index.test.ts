@@ -17,7 +17,7 @@ export type {
 	HeadlineSizes,
 	BodySizes,
 	TextSansSizes,
-	Fs,
+	GetFontSettingsWithDefaults,
 	FontScaleFunction,
 	FontScaleFunctionStr,
 	FontScaleArgs,

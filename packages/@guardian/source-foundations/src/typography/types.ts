@@ -15,6 +15,8 @@ export type ScaleUnit = 'rem' | 'px';
 export type LineHeight = keyof typeof lineHeights;
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontWeightValue = typeof fontWeights[FontWeight];
+type FontSizeValue = `${number}rem` | number;
+type LineHeightValue = `${number}px` | number;
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
 export type Option<A> = A | null;
@@ -63,7 +65,7 @@ export type ItalicsAvailableForFontWeight = {
 	[cat in Category]?: { [weight in FontWeight]?: boolean };
 };
 
-export type Fs = <
+export type GetFontSettingsWithDefaults = <
 	Category extends keyof Categories,
 	Level extends keyof Categories[Category],
 >(
@@ -71,6 +73,44 @@ export type Fs = <
 	level: Level,
 	{ lineHeight, fontWeight, fontStyle, unit }: TypographyOptions,
 ) => TypographyStyles;
+
+export type GetTextDecorationThicknessValue = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+	level: Level,
+) => number;
+
+export type GetFontSizeValue = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+	level: Level,
+	unit: ScaleUnit,
+) => FontSizeValue;
+
+export type GetFontStyleValue = (
+	category: Category,
+	fontWeight: FontWeight,
+	fontStyle: Option<FontStyle>,
+) => Option<FontStyle>;
+
+export type GetFontWeightValue = (
+	category: Category,
+	fontWeight: FontWeight,
+) => FontWeightValue | undefined;
+
+export type GetLineHeightValue = <
+	Category extends keyof Categories,
+	Level extends keyof Categories[Category],
+>(
+	category: Category,
+	level: Level,
+	unit: ScaleUnit,
+	lineHeight: LineHeight,
+) => LineHeightValue;
 
 type TypographyOptions = {
 	lineHeight: LineHeight;
