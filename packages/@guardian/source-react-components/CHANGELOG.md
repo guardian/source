@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 7.1.0
+
+### Minor Changes
+
+- bbbe1e3e: make BackToTop an explicit export of source-react-components so it can be used in the FooterWithContents dev kitchen component
+
 ## 7.0.1
 
 ### Patch Changes
