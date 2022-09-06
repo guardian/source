@@ -1,7 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { brand } from '@guardian/source-foundations';
-import { Container } from '@guardian/source-react-components';
-import { BackToTop } from '@guardian/source-react-components/src/footer/BackToTop';
+import { BackToTop, Container } from '@guardian/source-react-components';
 import type { ReactNode } from 'react';
 import {
 	backToTopStyles,
