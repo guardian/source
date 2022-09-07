@@ -65,15 +65,19 @@ export const getIconsFromFigma = async () => {
 	for (const icon of figmaIconComponents) {
 		const url = figmaIconSvgUrlsByNodeId[icon.node_id];
 
-		console.log(`Fetching ${icon.name}.svg`);
+		if (url) {
+			console.log(`Fetching ${icon.name}.svg`);
 
-		// Fetch SVG markup from Figma
-		const svg = (await axios.get<string>(url)).data;
+			// Fetch SVG markup from Figma
+			const svg = (await axios.get<string>(url)).data;
 
-		icons.push({
-			name: icon.name,
-			svg,
-		});
+			icons.push({
+				name: icon.name,
+				svg,
+			});
+		} else {
+			throw new Error('No URL found for icon');
+		}
 	}
 
 	return icons;

@@ -87,7 +87,10 @@ export const createIconComponent = async ({
 			.split('-')
 			.map((s) => {
 				const [firstLetter, ...rest] = s;
-				return firstLetter.toLocaleUpperCase() + rest.join('');
+				if (firstLetter) {
+					return firstLetter.toLocaleUpperCase() + rest.join('');
+				}
+				return s;
 			})
 			.join('');
 
@@ -114,6 +117,12 @@ export const createIconComponent = async ({
 		},
 	);
 
+	const label = labels[icon.name];
+
+	if (!label) {
+		throw new Error(`No label found for ${icon.name}`);
+	}
+
 	const iconComponentExport = `
 		export const ${iconComponentName} = ({
 			size,
@@ -127,7 +136,7 @@ export const createIconComponent = async ({
 							\${visuallyHidden}
 						\`}
 					>
-						${labels[icon.name]}
+						${label}
 					</span>
 				) : (
 					''
