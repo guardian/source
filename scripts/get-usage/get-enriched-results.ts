@@ -144,11 +144,10 @@ export const getEnrichedResults = (
 			onlyUsedInOneCodebaseNewOrOld: onlyOneCodebaseComponentsCombined,
 		},
 		metrics: {
-			percentageOfComponentsNotUsedAnywhere:
-				getUnusedComponentsPercentage(
-					combinedComponents,
-					unusedComponentsCombined,
-				),
+			percentageOfComponentsNotUsedAnywhere: getUnusedComponentsPercentage(
+				combinedComponents,
+				unusedComponentsCombined,
+			),
 			percentageOfComponentsUsedInAtLeastTwoCodebases:
 				getComponentsUsedInTwoCodebasesPercentage(
 					componentsWithPackage,
@@ -165,8 +164,7 @@ export const getEnrichedResults = (
 					],
 				),
 			percentageOfComponentsFromSourcePackages: Math.round(
-				(usedComponents.filter((c) => c.startsWith('@guardian/source'))
-					.length /
+				(usedComponents.filter((c) => c.startsWith('@guardian/source')).length /
 					usedComponents.length) *
 					100,
 			),

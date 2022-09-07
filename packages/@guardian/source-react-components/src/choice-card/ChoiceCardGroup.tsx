@@ -80,11 +80,7 @@ export const ChoiceCardGroup = ({
 	return (
 		<fieldset css={[fieldset, cssOverrides]} id={groupId} {...props}>
 			{label ? (
-				<Legend
-					text={label}
-					supporting={supporting}
-					hideLabel={hideLabel}
-				/>
+				<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
 			) : (
 				''
 			)}
@@ -93,9 +89,7 @@ export const ChoiceCardGroup = ({
 			)}
 			<div
 				css={[
-					columns
-						? [gridContainer, gridColumns[columns]]
-						: flexContainer,
+					columns ? [gridContainer, gridColumns[columns]] : flexContainer,
 					topMargin,
 				]}
 			>
@@ -109,8 +103,7 @@ export const ChoiceCardGroup = ({
 							error
 								? {
 										error: true,
-										'aria-describedby':
-											descriptionId(groupId),
+										'aria-describedby': descriptionId(groupId),
 								  }
 								: {},
 							{

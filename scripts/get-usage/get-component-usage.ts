@@ -36,17 +36,13 @@ export const getComponentUsage = (): ComponentUsageData => {
 	// For each repository, and each project within that repository
 	// Get all of the components that are used
 	for (const repo of repos) {
-		execSync(
-			`git clone --depth 1 git@github.com:guardian/${repo.repo}.git`,
-		);
+		execSync(`git clone --depth 1 git@github.com:guardian/${repo.repo}.git`);
 		chdir(repo.repo);
 		for (const project of repo.projects) {
 			console.log(`Analysing ${project.name}`);
 			const configFileName = `${project.name}.scan.config`;
 			writeFileSync(configFileName, getReactScannerConfig(project));
-			execSync(
-				`../../node_modules/.bin/react-scanner -c ${configFileName}`,
-			);
+			execSync(`../../node_modules/.bin/react-scanner -c ${configFileName}`);
 			componentUsage[project.name] = JSON.parse(
 				readFileSync(`${project.name}.component-usage.json`, 'utf-8'),
 			);

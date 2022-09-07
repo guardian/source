@@ -74,11 +74,7 @@ export const SquigglyLines = ({
 				</pattern>
 			</defs>
 
-			<rect
-				width={maxWidth}
-				height={height}
-				fill="url(#squiggly-pattern)"
-			/>
+			<rect width={maxWidth} height={height} fill="url(#squiggly-pattern)" />
 		</svg>
 	);
 };

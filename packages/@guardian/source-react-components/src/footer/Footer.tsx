@@ -33,26 +33,19 @@ export const Footer = ({
 	...props
 }: FooterProps): EmotionJSX.Element => {
 	return (
-		<footer
-			css={(theme) => [footer(theme.footer), cssOverrides]}
-			{...props}
-		>
+		<footer css={(theme) => [footer(theme.footer), cssOverrides]} {...props}>
 			<div
 				css={[
 					linksWrapper,
-					showBackToTop
-						? linksWrapperSpaceWithBackToTop
-						: linksWrapperSpace,
+					showBackToTop ? linksWrapperSpaceWithBackToTop : linksWrapperSpace,
 				]}
 			>
 				<div css={(theme) => links(theme.footer)}>{children}</div>
 				{showBackToTop ? BackToTop : ''}
 			</div>
-			<small
-				css={[copyright, showBackToTop ? copyrightExtraPadding : '']}
-			>
-				&copy; 2021 Guardian News and Media Limited or its affiliated
-				companies. All rights reserved.
+			<small css={[copyright, showBackToTop ? copyrightExtraPadding : '']}>
+				&copy; 2021 Guardian News and Media Limited or its affiliated companies.
+				All rights reserved.
 			</small>
 		</footer>
 	);

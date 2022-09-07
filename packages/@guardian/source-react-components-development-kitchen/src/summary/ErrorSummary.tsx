@@ -31,10 +31,7 @@ export const ErrorSummary = ({
 		<div css={messageWrapperStyles}>
 			<div css={messageStyles(errorColors[400])}>{message}</div>
 			{errorReportUrl && (
-				<a
-					css={messageStyles(errorColors[400], false)}
-					href={errorReportUrl}
-				>
+				<a css={messageStyles(errorColors[400], false)} href={errorReportUrl}>
 					Report this error
 				</a>
 			)}

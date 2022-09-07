@@ -145,71 +145,71 @@ asChromaticStory(HideLabelBrandTheme);
 
 1. Define a template for each set of stories
 
-    ```ts
-    const Template: Story = (args: ComponentProps) => <Component {...args} />;
-    ```
+   ```ts
+   const Template: Story = (args: ComponentProps) => <Component {...args} />;
+   ```
 
 1. Set the default [story args][story-args] and [argTypes][argtypes] on the [default export][default-export]
 
-    ```ts
-        export default {
-            title: 'Source/src-package/MyComponent',
-            component: MyComponent,
-            argTypes: { ... },
-            args: { ... },
-        };
-    ```
+   ```ts
+       export default {
+           title: 'Source/src-package/MyComponent',
+           component: MyComponent,
+           argTypes: { ... },
+           args: { ... },
+       };
+   ```
 
 1. Define a Playground story for each component to document its behaviour
 1. Wrap Playground stories with the [`asPlayground`][asplayground] function
 
-    ```ts
-        export const Playground = Template.bind({})
-        Playground.args = { ... };
-        asPlayground(Playground)
-    ```
+   ```ts
+       export const Playground = Template.bind({})
+       Playground.args = { ... };
+       asPlayground(Playground)
+   ```
 
 1. Define a series of stories detailing all possible states of each component for visual regression testing
 1. Wrap these stories with the [`asChromaticStory`][aschromaticstory] function
 
-    ```ts
-        export const Story = Template.bind({})
-        Story.args = { ... };
-        asChromaticStory(Story)
-    ```
+   ```ts
+       export const Story = Template.bind({})
+       Story.args = { ... };
+       asChromaticStory(Story)
+   ```
 
 1. Seperate stories with the following delimiter
 
-    ```ts
-    // *****************************************************************************
-    ```
+   ```ts
+   // *****************************************************************************
+   ```
 
 1. Provide as many args as is useful for the Playground story. Consider how props react to different types of value (e.g. `undefined` vs strings)
 
-    ```ts
-    export const Playground = ...
+   ```ts
+   export const Playground = ...
 
-    Playground.args = {
-        arg1: "value"
-    }
-    ```
+   Playground.args = {
+       arg1: "value"
+   }
+   ```
 
 1. Disable controls for deprecated props and for args that won't have any effect in storybook
 
-    ```ts
-     export default {
-        title: 'Source/src-package/MyComponent',
-        component: MyComponent,
-        argTypes: {
-            arg2: {
-                control: {
-                    disable: true
-                }
-            }
-        },
-        args: { ... },
-    };
-    ```
+   ```ts
+    export default {
+       title: 'Source/src-package/MyComponent',
+       component: MyComponent,
+       argTypes: {
+           arg2: {
+               control: {
+                   disable: true
+               }
+           }
+       },
+       args: { ... },
+   };
+   ```
 
 1. Avoid styling and theming Playground stories
 
@@ -223,88 +223,88 @@ asChromaticStory(HideLabelBrandTheme);
 
 1. Document component props using [doc blocks](https://storybook.js.org/docs/react/writing-docs/doc-blocks)
 
-    ```ts
-    export interface MyComponentProps {
-    	/**
-    	 * A label to display alongside the component
-    	 */
-    	label: string;
-    }
-    ```
+   ```ts
+   export interface MyComponentProps {
+   	/**
+   	 * A label to display alongside the component
+   	 */
+   	label: string;
+   }
+   ```
 
 1. Document Components with JSDoc comments including links to online documentation
 
-    ```ts
-    /**
-     * [Storybook](https://guardian.github.io/source/?path=/docs/source-${MY_COMPONENT_PACKAGE}-${MY_COMPONENT}--demo) •
-     * [Design System](https://theguardian.design/${MY_COMPONENT_PATH}) •
-     * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/${MY_COMPONENT}) •
-     * [NPM](https://www.npmjs.com/package/@guardian/${MY_COMPONENT_PACKAGE})
-     *
-     * My Component is a nifty way of showing key -> value data
-     *
-     * The following themes are supported: `default`, `brand`
-     */
-    export MyComponent = ({}: MyComponentProps) => {...}
-    ```
+   ```ts
+   /**
+    * [Storybook](https://guardian.github.io/source/?path=/docs/source-${MY_COMPONENT_PACKAGE}-${MY_COMPONENT}--demo) •
+    * [Design System](https://theguardian.design/${MY_COMPONENT_PATH}) •
+    * [GitHub](https://github.com/guardian/source/tree/main/src/core/components/${MY_COMPONENT}) •
+    * [NPM](https://www.npmjs.com/package/@guardian/${MY_COMPONENT_PACKAGE})
+    *
+    * My Component is a nifty way of showing key -> value data
+    *
+    * The following themes are supported: `default`, `brand`
+    */
+   export MyComponent = ({}: MyComponentProps) => {...}
+   ```
 
 1. Mark any props that should not be documented with the `@ignore` annotation and a comment explaining why
 
-    ```tsx
-    interface MyChildComponentProps {
-    	/**
-    	 * @ignore passed down by the parent <MyComponent />
-    	 */
-    	myProp?: boolean;
-    }
-    ```
+   ```tsx
+   interface MyChildComponentProps {
+   	/**
+   	 * @ignore passed down by the parent <MyComponent />
+   	 */
+   	myProp?: boolean;
+   }
+   ```
 
 ### Sub-components
 
 1. Set the `subcomponents` value in the default export for components that have [sub-components](https://storybook.js.org/docs/react/workflows/stories-for-multiple-components)
 
-    ```ts
-    export default {
-        title: 'Source/src-package/Component',
-        component: Component,
-        subcomponents: { SubComponent },
-        args: { ... },
-        argTypes: { ... },
-    };
-    ```
+   ```ts
+   export default {
+       title: 'Source/src-package/Component',
+       component: Component,
+       subcomponents: { SubComponent },
+       args: { ... },
+       argTypes: { ... },
+   };
+   ```
 
 1. Pass any sub-component's default story args through to the sub-component in the template of the component story
 
-    ```tsx
-    // SubComponent.stories.tsx
+   ```tsx
+   // SubComponent.stories.tsx
 
-    export default {
-        title: 'Source/src-package/SubComponent',
-        component: SubComponent,
-        argTypes: { ... },
-        args: {
-            arg0: 'test',
-            arg1: 1,
-        },
-    };
-    ```
+   export default {
+       title: 'Source/src-package/SubComponent',
+       component: SubComponent,
+       argTypes: { ... },
+       args: {
+           arg0: 'test',
+           arg1: 1,
+       },
+   };
+   ```
 
-    ```tsx
-    // Component.stories.tsx
+   ```tsx
+   // Component.stories.tsx
 
-    ...
+   ...
 
-    import SubComponentStories from './SubComponent.stories';
+   import SubComponentStories from './SubComponent.stories';
 
-    ...
+   ...
 
-    const Template: Story = (args: ComponentProps) => (
-        <Component {...args}>
-            <SubComponent {...SubComponentStories.args} />
-        </Component>
-    );
+   const Template: Story = (args: ComponentProps) => (
+       <Component {...args}>
+           <SubComponent {...SubComponentStories.args} />
+       </Component>
+   );
 
-    ```
+   ```
 
 ## Other Tips
 

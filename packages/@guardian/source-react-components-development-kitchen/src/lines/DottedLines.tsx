@@ -58,11 +58,7 @@ export const DottedLines = ({
 				</pattern>
 			</defs>
 
-			<rect
-				width={maxWidth}
-				height={height}
-				fill="url(#dotted-pattern)"
-			/>
+			<rect width={maxWidth} height={height} fill="url(#dotted-pattern)" />
 		</svg>
 	);
 };

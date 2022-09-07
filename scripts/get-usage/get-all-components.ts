@@ -19,10 +19,7 @@ const getPackageComponents = (path: string | string[]): string[] => {
 		return getExportsFromFile(`${path}/index.ts`);
 	} else {
 		return contents
-			.filter(
-				(item) =>
-					!item.endsWith('stories.tsx') && item.endsWith('.tsx'),
-			)
+			.filter((item) => !item.endsWith('stories.tsx') && item.endsWith('.tsx'))
 			.flatMap((file) => getExportsFromFile(`${path}/${file}`));
 	}
 };
@@ -34,10 +31,7 @@ const getExportsFromFile = (path: string): string[] => {
 	const exports: string[] = [];
 
 	for (const node of ast.body) {
-		if (
-			node.type !== 'ExportNamedDeclaration' ||
-			node.exportKind !== 'value'
-		) {
+		if (node.type !== 'ExportNamedDeclaration' || node.exportKind !== 'value') {
 			continue;
 		}
 

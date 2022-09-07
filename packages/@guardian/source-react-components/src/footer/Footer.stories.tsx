@@ -17,14 +17,12 @@ export default {
 				with: (
 					<p>
 						<strong>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						</strong>
 						<br />
-						Ut proverbia non nulla veriora sint quam vestra dogmata.
-						Ampulla enim sit necne sit, quis non iure optimo
-						irrideatur, si laboret? Quae quo sunt excelsiores, eo
-						dant clariora indicia naturae.
+						Ut proverbia non nulla veriora sint quam vestra dogmata. Ampulla
+						enim sit necne sit, quis non iure optimo irrideatur, si laboret?
+						Quae quo sunt excelsiores, eo dant clariora indicia naturae.
 					</p>
 				),
 			},

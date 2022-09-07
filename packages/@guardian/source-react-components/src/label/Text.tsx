@@ -14,10 +14,7 @@ export const Text = ({
 	hideLabel,
 }: LabelProps): EmotionJSX.Element => (
 	<div
-		css={(theme) => [
-			labelText(theme.label),
-			hideLabel ? visuallyHidden : '',
-		]}
+		css={(theme) => [labelText(theme.label), hideLabel ? visuallyHidden : '']}
 	>
 		{text}{' '}
 		{optional ? (

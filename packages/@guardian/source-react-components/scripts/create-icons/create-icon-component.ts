@@ -75,12 +75,8 @@ export const createIconComponent = async ({
 	const svgProps = {
 		focusable: '{false}',
 		'aria-hidden': '{true}',
-		width: isWideIcon
-			? '{undefined}'
-			: '{size ? iconSize[size] : undefined}',
-		height: isWideIcon
-			? '{size ? iconSize[size] : undefined}'
-			: '{undefined}',
+		width: isWideIcon ? '{undefined}' : '{size ? iconSize[size] : undefined}',
+		height: isWideIcon ? '{size ? iconSize[size] : undefined}' : '{undefined}',
 	};
 
 	const svgComponentName = 'Svg';

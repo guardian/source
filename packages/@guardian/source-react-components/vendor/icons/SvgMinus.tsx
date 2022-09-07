@@ -14,11 +14,7 @@ const Svg = ({ size }: IconProps): EmotionJSX.Element => (
 		focusable={false}
 		aria-hidden={true}
 	>
-		<path
-			fillRule="evenodd"
-			clipRule="evenodd"
-			d="M1 10.75v2.5h22v-2.5H1Z"
-		/>
+		<path fillRule="evenodd" clipRule="evenodd" d="M1 10.75v2.5h22v-2.5H1Z" />
 	</svg>
 );
 

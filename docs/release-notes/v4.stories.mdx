@@ -9,9 +9,9 @@ import { Meta } from '@storybook/addon-docs';
 
 _tl;dr_
 
--   The NPM packages have been simplified
--   New ESLint plugins provide an automated migration path - (using the ESLint --fix flag)
--   Functionality and dependencies have not changed
+- The NPM packages have been simplified
+- New ESLint plugins provide an automated migration path - (using the ESLint --fix flag)
+- Functionality and dependencies have not changed
 
 This should make Source easier to consume and contribute to
 
@@ -87,24 +87,24 @@ However, unlike before, _their version numbers will not stay in sync going forwa
 
 Two new ESLint plugins accompany this release that contain Source-specific linting rules that are highly recommended for your project:
 
--   `@guardian/eslint-plugin-source-foundations`
--   `@guardian/eslint-plugin-source-react-components`
+- `@guardian/eslint-plugin-source-foundations`
+- `@guardian/eslint-plugin-source-react-components`
 
 They can also be used to migrate your project to v4 automatically, using ESLint’s `--fix` option.
 
 ### Migrating to v4
 
--   Uninstall all `@guardian/src-*` packages
--   Install the new packages (as required):
-    -   `@guardian/source-foundations`
-    -   `@guardian/source-react-components`
--   Install the new ESLint plugins (as required) as `devDependencies`:
+- Uninstall all `@guardian/src-*` packages
+- Install the new packages (as required):
+  - `@guardian/source-foundations`
+  - `@guardian/source-react-components`
+- Install the new ESLint plugins (as required) as `devDependencies`:
 
-    -   `@guardian/eslint-plugin-source-foundations`
-    -   `@guardian/eslint-plugin-source-react-components`
+  - `@guardian/eslint-plugin-source-foundations`
+  - `@guardian/eslint-plugin-source-react-components`
 
--   Add the relevant configs for your project: [@guardian/eslint-plugin-source-foundations](https://guardian.github.io/source/?path=/docs/packages-eslint-plugin-source-foundations-readme--page) or [@guardian/eslint-plugin-source-react-components](https://guardian.github.io/source/?path=/docs/packages-eslint-plugin-source-react-components-readme--page)
--   Run eslint with the [`--fix` option](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems)
+- Add the relevant configs for your project: [@guardian/eslint-plugin-source-foundations](https://guardian.github.io/source/?path=/docs/packages-eslint-plugin-source-foundations-readme--page) or [@guardian/eslint-plugin-source-react-components](https://guardian.github.io/source/?path=/docs/packages-eslint-plugin-source-react-components-readme--page)
+- Run eslint with the [`--fix` option](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems)
 
 #### Example
 
@@ -127,66 +127,66 @@ We minimised other changes to keep migration as simple as possible, but some hou
 
 Here is full list of changes for each package:
 
--   `@guardian/src-foundations/theme`
-    -   Path removed
-    -   component themes moved to `source-react-components` and renamed:
-        -   `accordionDefault` → `accordionThemeDefault`
-        -   `buttonReaderRevenue` → `buttonThemeReaderRevenue`
-        -   `buttonReaderRevenueBrand` → `buttonThemeReaderRevenueBrand`
-        -   `buttonReaderRevenueBrandAlt` → `buttonThemeReaderRevenueBrandAlt`
-        -   `buttonBrand` → `buttonThemeBrand`
-        -   `buttonBrandAlt` → `buttonThemeBrandAlt`
-        -   `buttonDefault` → `buttonThemeDefault`
-        -   `checkboxBrand` → `checkboxThemeBrand`
-        -   `checkboxDefault` → `checkboxThemeDefault`
-        -   `choiceCardDefault` → `choiceCardThemeDefault`
-        -   `footerBrand` → `footerThemeBrand`
-        -   `labelDefault` → `labelThemeDefault`
-        -   `labelBrand` → `labelThemeBrand`
-        -   `linkBrand` → `linkThemeBrand`
-        -   `linkBrandAlt` → `linkThemeBrandAlt`
-        -   `linkDefault` → `linkThemeDefault`
-        -   `radioBrand` → `radioThemeBrand`
-        -   `radioDefault` → `radioThemeDefault`
-        -   `selectDefault` → `selectThemeDefault`
-        -   `textInputDefault` → `textInputThemeDefault`
-        -   `userFeedbackBrand` → `userFeedbackThemeBrand`
-        -   `userFeedbackDefault` → `userFeedbackThemeDefault`
-    -   `defaultTheme`, `brand` and `brandAlt` removed completely
--   `@guardian/source-foundations/accessibility`
-    -   Path removed
-    -   All exports moved to root
--   `@guardian/source-foundations/animation`
-    -   Path removed
-    -   All exports moved to root
--   `@guardian/source-foundations/breakpoints`
-    -   Path removed
-    -   All exports moved to root
-    -   `Breakpoint` is now exported as a type
--   `@guardian/source-foundations/mq`
-    -   Path removed
-    -   All exports moved to root
-    -   No longer re-exports `breakpoints` and `Breakpoint` from `breakpoints.ts`
--   `@guardian/source-foundations/palette`
-    -   Path removed
-    -   All exports moved to root
--   `@guardian/source-foundations/size`
-    -   Path removed
-    -   All exports moved to root
-    -   Removed `remSize` and `remIconSize` exports (previously available from `@guardian/src-foundations/size/global`)
--   `@guardian/source-foundations/space`
-    -   Path removed
-    -   All exports moved to root
--   `@guardian/source-foundations/typography`
-    -   Path removed
-    -   All non-index exports removed (e.g. @guardian/src-foundations/typography/fs)
-    -   All other exports moved to root
--   `@guardian/src-foundations/typography/obj`
-    -   Path removed
-    -   All exports now available from root with `ObjectStyles` suffix (e.g. `headlineObjectStyles`)
--   `@guardian/source-foundations/utils`
-    -   Path removed
-    -   All exports moved to root
-    -   Removed `InteractionModeEngine` export (previously available from `@guardian/src-foundations/utils/focus-style-manager`)
+- `@guardian/src-foundations/theme`
+  - Path removed
+  - component themes moved to `source-react-components` and renamed:
+    - `accordionDefault` → `accordionThemeDefault`
+    - `buttonReaderRevenue` → `buttonThemeReaderRevenue`
+    - `buttonReaderRevenueBrand` → `buttonThemeReaderRevenueBrand`
+    - `buttonReaderRevenueBrandAlt` → `buttonThemeReaderRevenueBrandAlt`
+    - `buttonBrand` → `buttonThemeBrand`
+    - `buttonBrandAlt` → `buttonThemeBrandAlt`
+    - `buttonDefault` → `buttonThemeDefault`
+    - `checkboxBrand` → `checkboxThemeBrand`
+    - `checkboxDefault` → `checkboxThemeDefault`
+    - `choiceCardDefault` → `choiceCardThemeDefault`
+    - `footerBrand` → `footerThemeBrand`
+    - `labelDefault` → `labelThemeDefault`
+    - `labelBrand` → `labelThemeBrand`
+    - `linkBrand` → `linkThemeBrand`
+    - `linkBrandAlt` → `linkThemeBrandAlt`
+    - `linkDefault` → `linkThemeDefault`
+    - `radioBrand` → `radioThemeBrand`
+    - `radioDefault` → `radioThemeDefault`
+    - `selectDefault` → `selectThemeDefault`
+    - `textInputDefault` → `textInputThemeDefault`
+    - `userFeedbackBrand` → `userFeedbackThemeBrand`
+    - `userFeedbackDefault` → `userFeedbackThemeDefault`
+  - `defaultTheme`, `brand` and `brandAlt` removed completely
+- `@guardian/source-foundations/accessibility`
+  - Path removed
+  - All exports moved to root
+- `@guardian/source-foundations/animation`
+  - Path removed
+  - All exports moved to root
+- `@guardian/source-foundations/breakpoints`
+  - Path removed
+  - All exports moved to root
+  - `Breakpoint` is now exported as a type
+- `@guardian/source-foundations/mq`
+  - Path removed
+  - All exports moved to root
+  - No longer re-exports `breakpoints` and `Breakpoint` from `breakpoints.ts`
+- `@guardian/source-foundations/palette`
+  - Path removed
+  - All exports moved to root
+- `@guardian/source-foundations/size`
+  - Path removed
+  - All exports moved to root
+  - Removed `remSize` and `remIconSize` exports (previously available from `@guardian/src-foundations/size/global`)
+- `@guardian/source-foundations/space`
+  - Path removed
+  - All exports moved to root
+- `@guardian/source-foundations/typography`
+  - Path removed
+  - All non-index exports removed (e.g. @guardian/src-foundations/typography/fs)
+  - All other exports moved to root
+- `@guardian/src-foundations/typography/obj`
+  - Path removed
+  - All exports now available from root with `ObjectStyles` suffix (e.g. `headlineObjectStyles`)
+- `@guardian/source-foundations/utils`
+  - Path removed
+  - All exports moved to root
+  - Removed `InteractionModeEngine` export (previously available from `@guardian/src-foundations/utils/focus-style-manager`)
 
 Note: To conform with the Guardian's [NPM package recommendations](https://github.com/guardian/recommendations/blob/main/npm-packages.md#using-guardian-npm-packages), we [removed an inline polyfill](https://github.com/guardian/source/pull/982/files#diff-1d4bbfb57a73b4844eea8bf903faf617deb06f41c4d06c05e835eb82d2ebaa68L30-L49) for `Object.fromEntries`. If you support [IE11 or another unsupported browser](https://caniuse.com/mdn-javascript_builtins_object_fromentries), you will need to provide a polyfill for this method.

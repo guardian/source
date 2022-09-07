@@ -45,9 +45,7 @@ export const fs: Fs =
 		// TODO: consider logging an error in development if a requested
 		// font is unavailable
 		const requestedFont = availableFonts[category][fontWeight];
-		const fontWeightValue = requestedFont
-			? fontWeightMapping[fontWeight]
-			: '';
+		const fontWeightValue = requestedFont ? fontWeightMapping[fontWeight] : '';
 		const fontStyleValue = getFontStyle(requestedFont, fontStyle);
 		const textDecorationThicknessValue = Number(
 			// @ts-expect-error -- the types actually overlap, see https://gist.github.com/mxdvl/5e31fd5b13670b6a41ddac6c65efeee4

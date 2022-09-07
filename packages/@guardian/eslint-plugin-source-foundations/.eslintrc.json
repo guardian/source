@@ -1,31 +1,31 @@
 {
-  "root": true,
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true
-      }
-    }
-  },
-  "env": {
-    "jest": true,
-    "browser": true,
-    "node": true
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2020,
-    "ecmaFeatures": {
-      "modules": true
-    },
-    "project": "./tsconfig.json"
-  },
-  "extends": ["@guardian/eslint-config"],
-  "ignorePatterns": ["dist", "coverage"],
-  "overrides": [
-    {
-      "files": ["**/*.ts", "**/*.tsx"],
-      "extends": ["@guardian/eslint-config-typescript"]
-    }
-  ]
+	"root": true,
+	"settings": {
+		"import/resolver": {
+			"typescript": {
+				"alwaysTryTypes": true
+			}
+		}
+	},
+	"env": {
+		"jest": true,
+		"browser": true,
+		"node": true
+	},
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2020,
+		"ecmaFeatures": {
+			"modules": true
+		},
+		"project": "./tsconfig.json"
+	},
+	"extends": ["@guardian/eslint-config"],
+	"ignorePatterns": ["dist", "coverage"],
+	"overrides": [
+		{
+			"files": ["**/*.ts", "**/*.tsx"],
+			"extends": ["@guardian/eslint-config-typescript"]
+		}
+	]
 }

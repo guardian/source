@@ -23,34 +23,31 @@ export default {
 const Template: Story<ColumnsProps> = (args) => (
 	<Columns {...args} style={style}>
 		<Column style={style}>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus
-			nibh erat, eget rutrum ligula vehicula sit amet. Etiam scelerisque
-			dapibus pulvinar. Integer non accumsan justo. Duis et vehicula
-			risus. Nulla ligula eros, consequat sodales lectus eget, eleifend
-			venenatis neque.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus nibh
+			erat, eget rutrum ligula vehicula sit amet. Etiam scelerisque dapibus
+			pulvinar. Integer non accumsan justo. Duis et vehicula risus. Nulla ligula
+			eros, consequat sodales lectus eget, eleifend venenatis neque.
 		</Column>
 		<Column style={style}>
 			Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla
-			facilisi. Phasellus id aliquam odio. Aliquam tempus eu enim in
-			fermentum. Donec ut velit vel purus rutrum vulputate ut scelerisque
-			lacus.
+			facilisi. Phasellus id aliquam odio. Aliquam tempus eu enim in fermentum.
+			Donec ut velit vel purus rutrum vulputate ut scelerisque lacus.
 		</Column>
 		<Column style={style}>
-			Pellentesque id ornare turpis. Aliquam laoreet aliquet pharetra.
-			Donec nec erat ac libero interdum sollicitudin. Nullam imperdiet ut
-			dolor non cursus. Integer et ante fringilla, luctus magna nec,
-			consequat est.
+			Pellentesque id ornare turpis. Aliquam laoreet aliquet pharetra. Donec nec
+			erat ac libero interdum sollicitudin. Nullam imperdiet ut dolor non
+			cursus. Integer et ante fringilla, luctus magna nec, consequat est.
 		</Column>
 		<Column style={style}>
 			Nunc nec dapibus quam. Praesent nec neque vel velit mollis tempor.
-			Suspendisse justo eros, pharetra et elit sit amet, hendrerit laoreet
-			dui. Curabitur ut libero nibh. Duis finibus sollicitudin tortor, ac
-			viverra urna commodo et.
+			Suspendisse justo eros, pharetra et elit sit amet, hendrerit laoreet dui.
+			Curabitur ut libero nibh. Duis finibus sollicitudin tortor, ac viverra
+			urna commodo et.
 		</Column>
 		<Column style={style}>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non igitur
-			potestis voluptate omnia dirigentes aut tueri aut retinere virtutem.
-			Hoc Hieronymus summum bonum esse dixit.
+			potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. Hoc
+			Hieronymus summum bonum esse dixit.
 		</Column>
 	</Columns>
 );
@@ -345,8 +342,8 @@ export const WithSpan: Story<ColumnsProps> = () => (
 			</Columns>
 		</Container>
 		<p>
-			An array of <Code>{'span'}</Code> values can be specified for
-			relevant breakpoints:
+			An array of <Code>{'span'}</Code> values can be specified for relevant
+			breakpoints:
 		</p>
 		<Container style={style}>
 			<Columns>
@@ -362,8 +359,8 @@ export const WithSpan: Story<ColumnsProps> = () => (
 			</Columns>
 		</Container>
 		<p>
-			An element with a <Code>{'span'}</Code> will not extend beyond 100%
-			of the browser width:
+			An element with a <Code>{'span'}</Code> will not extend beyond 100% of the
+			browser width:
 		</p>
 		<Container style={style}>
 			<Columns>
@@ -373,8 +370,7 @@ export const WithSpan: Story<ColumnsProps> = () => (
 			</Columns>
 		</Container>
 		<p>
-			A <Code>{'span'}</Code> of 0 will cause the element not to be
-			displayed.
+			A <Code>{'span'}</Code> of 0 will cause the element not to be displayed.
 		</p>
 		<Container style={style}>
 			<Columns>

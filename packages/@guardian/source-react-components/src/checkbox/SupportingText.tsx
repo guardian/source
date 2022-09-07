@@ -7,7 +7,5 @@ export const SupportingText = ({
 }: {
 	children: ReactNode;
 }): EmotionJSX.Element => {
-	return (
-		<div css={(theme) => supportingText(theme.checkbox)}>{children}</div>
-	);
+	return <div css={(theme) => supportingText(theme.checkbox)}>{children}</div>;
 };

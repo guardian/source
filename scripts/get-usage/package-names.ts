@@ -28,15 +28,15 @@ export const getComponentPackageNamesWithPaths = () =>
 							!nonComponentDirectories.includes(name),
 					)
 					.map((componentDirName) =>
-						isDirectory(
-							`${coreComponents}/${componentDirName}`,
-						).then((isDir) => {
-							if (!isDir) return;
+						isDirectory(`${coreComponents}/${componentDirName}`).then(
+							(isDir) => {
+								if (!isDir) return;
 
-							return {
-								[`@guardian/${componentDirName}`]: `${coreComponents}/${componentDirName}`,
-							};
-						}),
+								return {
+									[`@guardian/${componentDirName}`]: `${coreComponents}/${componentDirName}`,
+								};
+							},
+						),
 					),
 			),
 		)

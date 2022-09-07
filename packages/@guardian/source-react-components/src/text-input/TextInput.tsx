@@ -105,9 +105,7 @@ export const TextInput = ({
 			>
 				{error && (
 					<div css={inlineMessageMargin}>
-						<InlineError id={descriptionId(textInputId)}>
-							{error}
-						</InlineError>
+						<InlineError id={descriptionId(textInputId)}>{error}</InlineError>
 					</div>
 				)}
 				{!error && success && (
@@ -131,9 +129,7 @@ export const TextInput = ({
 				id={textInputId}
 				aria-required={!optional}
 				aria-invalid={!!error}
-				aria-describedby={
-					error || success ? descriptionId(textInputId) : ''
-				}
+				aria-describedby={error || success ? descriptionId(textInputId) : ''}
 				required={!optional}
 				{...props}
 			/>
