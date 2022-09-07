@@ -33,10 +33,7 @@ export const Accordion = ({
 }: AccordionProps): EmotionJSX.Element => {
 	// AUDIT https://www.sarasoueidan.com/blog/accordion-markup/
 	return (
-		<div
-			css={(theme) => [accordion(theme.accordion), cssOverrides]}
-			{...props}
-		>
+		<div css={(theme) => [accordion(theme.accordion), cssOverrides]} {...props}>
 			{Children.map(children, (child) => {
 				return cloneElement(child, { hideToggleLabel });
 			})}

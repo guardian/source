@@ -45,8 +45,7 @@ export const getIconsFromFigma = async () => {
 	const figmaIconComponents = figmaComponents.filter((c) => {
 		return (
 			// Only get icons that are in a certain frame
-			c.containing_frame &&
-			c.containing_frame.name === 'UI icons 24(w)x24(w)'
+			c.containing_frame && c.containing_frame.name === 'UI icons 24(w)x24(w)'
 		);
 	});
 

@@ -115,8 +115,7 @@ export const tick = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
 	@supports (
-		(appearance: none) or (-webkit-appearance: none) or
-			(-moz-appearance: none)
+		(appearance: none) or (-webkit-appearance: none) or (-moz-appearance: none)
 	) {
 		/* overall positional properties */
 		position: absolute;

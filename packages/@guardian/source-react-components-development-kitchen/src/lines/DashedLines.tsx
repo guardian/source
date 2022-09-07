@@ -50,11 +50,7 @@ export const DashedLines = ({
 				</pattern>
 			</defs>
 
-			<rect
-				width={maxWidth}
-				height={height}
-				fill="url(#dashed-pattern)"
-			/>
+			<rect width={maxWidth} height={height} fill="url(#dashed-pattern)" />
 		</svg>
 	);
 };

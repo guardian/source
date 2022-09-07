@@ -22,10 +22,10 @@ $ npm install @guardian/source-react-components-development-kitchen
 import { Lines } from '@guardian/source-react-components-development-kitchen';
 
 const Section = () => (
-    <>
-        <Lines count={8} />
-        <Lines effect="squiggly" />
-    </>
+	<>
+		<Lines count={8} />
+		<Lines effect="squiggly" />
+	</>
 );
 ```
 
@@ -49,8 +49,8 @@ Source is a library where teams can expect to find high quality shared component
 
 Potential contributors are put off contributing directly to Source, as they they find it hard to balance the time investment against their team's priorities. The cost of this is two-fold:
 
--   The number of high quality components available in Source is lower than it could be
--   Potentially sharable components are built directly into applications, leading to fragmentation, inconsistency and duplication
+- The number of high quality components available in Source is lower than it could be
+- Potentially sharable components are built directly into applications, leading to fragmentation, inconsistency and duplication
 
 We believe there is value in moving quickly, experimenting with new ideas and sharing those ideas for wider input. The Development Kitchen helps teams achieve this by lowering the barrier to entry. It allows teams to get fast feedback on new components, both from users and from other developers.
 
@@ -60,5 +60,5 @@ By providing an agile mechanism for iterating and improving, components can be b
 
 The Development Kitchen is published as its own package, independent of the stable components in the `@guardian/source-react-components`. This:
 
--   Allows the Kitchen to move fast.
--   Allows us to make frequent breaking changes to the Kitchen whilst preserving semver. The stable library changes at a slower pace, in order to set expectations and preserve developer confidence.
+- Allows the Kitchen to move fast.
+- Allows us to make frequent breaking changes to the Kitchen whilst preserving semver. The stable library changes at a slower pace, in order to set expectations and preserve developer confidence.

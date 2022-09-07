@@ -40,10 +40,7 @@ export const AccordionRowNoJS = ({
 		>
 			<label>
 				<input type="checkbox" css={noJsInput} role="button" />
-				<div
-					css={(theme) => noJsButton(theme.accordion)}
-					data-target="label"
-				>
+				<div css={(theme) => noJsButton(theme.accordion)} data-target="label">
 					<strong css={labelText}>{label}</strong>
 					<div data-target="toggle">
 						<div
@@ -54,12 +51,7 @@ export const AccordionRowNoJS = ({
 							]}
 							data-target="toggle-label-show"
 						>
-							<span
-								css={[
-									toggleLabel,
-									hideToggleLabel ? visuallyHidden : '',
-								]}
-							>
+							<span css={[toggleLabel, hideToggleLabel ? visuallyHidden : '']}>
 								Show<span css={visuallyHidden}> more</span>
 							</span>
 							<SvgChevronDownSingle />
@@ -72,12 +64,7 @@ export const AccordionRowNoJS = ({
 							]}
 							data-target="toggle-label-hide"
 						>
-							<span
-								css={[
-									toggleLabel,
-									hideToggleLabel ? visuallyHidden : '',
-								]}
-							>
+							<span css={[toggleLabel, hideToggleLabel ? visuallyHidden : '']}>
 								Hide
 							</span>
 							<SvgChevronDownSingle />

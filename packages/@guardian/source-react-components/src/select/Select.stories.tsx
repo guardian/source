@@ -16,7 +16,8 @@ export default {
 			options: ['undefined', 'error'],
 			mapping: {
 				undefined: undefined,
-				error: 'Please select your home state. This service is unavailable outside of the US.',
+				error:
+					'Please select your home state. This service is unavailable outside of the US.',
 			},
 			control: { type: 'radio' },
 		},

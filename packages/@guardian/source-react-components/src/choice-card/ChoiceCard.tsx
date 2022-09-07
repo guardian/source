@@ -94,9 +94,7 @@ export const ChoiceCard = ({
 				id={id}
 				value={value}
 				aria-invalid={!!error}
-				defaultChecked={
-					defaultChecked != null ? defaultChecked : undefined
-				}
+				defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 				checked={checked != null ? isChecked() : undefined}
 				onChange={(event) => {
 					if (onChange) {
@@ -114,12 +112,7 @@ export const ChoiceCard = ({
 				]}
 				htmlFor={id}
 			>
-				<div
-					css={[
-						contentWrapper,
-						!iconSvg ? contentWrapperLabelOnly : '',
-					]}
-				>
+				<div css={[contentWrapper, !iconSvg ? contentWrapperLabelOnly : '']}>
 					{iconSvg ? iconSvg : ''}
 					<div>{labelContent}</div>
 				</div>

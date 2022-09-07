@@ -107,9 +107,7 @@ export const Checkbox = ({
 				]}
 				aria-invalid={!!error}
 				ref={setIndeterminate}
-				defaultChecked={
-					defaultChecked != null ? defaultChecked : undefined
-				}
+				defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 				checked={checked != null ? isChecked() : undefined}
 				{...props}
 			/>
@@ -124,9 +122,7 @@ export const Checkbox = ({
 			<label htmlFor={checkboxId} css={label}>
 				{supporting ? (
 					<div>
-						<LabelText hasSupportingText={true}>
-							{labelContent}
-						</LabelText>
+						<LabelText hasSupportingText={true}>{labelContent}</LabelText>
 						<SupportingText>{supporting}</SupportingText>
 					</div>
 				) : (

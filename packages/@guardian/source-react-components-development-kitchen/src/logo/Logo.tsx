@@ -90,9 +90,7 @@ const AnniversaryLogo = () => {
 			css={svgSize}
 			aria-labelledby="AnniversaryLogoTitle"
 		>
-			<title id="AnniversaryLogoTitle">
-				The Guardian. For 200 years.
-			</title>
+			<title id="AnniversaryLogoTitle">The Guardian. For 200 years.</title>
 			<g fill={brandText.primary}>
 				<path
 					data-content="The Guardian"

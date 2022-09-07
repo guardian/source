@@ -11,8 +11,7 @@ export const configs = {
 		plugins: ['@guardian/source-foundations', 'import'],
 
 		rules: {
-			'@guardian/source-foundations/valid-foundations-import-path':
-				'error',
+			'@guardian/source-foundations/valid-foundations-import-path': 'error',
 			'@guardian/source-foundations/no-star-imports-or-exports': 'error',
 			'import/no-duplicates': 'error',
 		},

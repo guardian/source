@@ -143,9 +143,7 @@ const getRenameImportFixers = (
 		fixers.push(
 			fixer.insertTextBeforeRange(
 				node.range ?? [0, 0],
-				`import { ${importsArray.join(', ')} } from ${
-					node.source.raw
-				};\n`,
+				`import { ${importsArray.join(', ')} } from ${node.source.raw};\n`,
 			),
 		);
 	}
@@ -297,16 +295,8 @@ const createReport = (context: Rule.RuleContext, node: Node, pkg: Package) => {
 			return node.specifiers.length === removedExports.length
 				? null
 				: [
-						...getRenameImportFixers(
-							node,
-							removedExports,
-							fixer,
-							nodeSource,
-						),
-						fixer.replaceTextRange(
-							node.source?.range ?? [0, 0],
-							newPackage,
-						),
+						...getRenameImportFixers(node, removedExports, fixer, nodeSource),
+						fixer.replaceTextRange(node.source?.range ?? [0, 0], newPackage),
 				  ];
 		},
 	});

@@ -24,10 +24,10 @@ $ npm install @guardian/source-react-components
 import { TextInput, Button } from '@guardian/source-react-components';
 
 const Form = () => (
-    <form>
-        <TextInput label="First name" />
-        <Button>Submit</Button>
-    </form>
+	<form>
+		<TextInput label="First name" />
+		<Button>Submit</Button>
+	</form>
 );
 ```
 
@@ -42,19 +42,19 @@ To compose a theme for specific components:
 ```jsx
 import { ThemeProvider } from '@emotion/react';
 import {
-    Button,
-    buttonThemeBrand,
-    TextInput,
-    textInputThemeBrand,
+	Button,
+	buttonThemeBrand,
+	TextInput,
+	textInputThemeBrand,
 } from '@guardian/source-react-components';
 
 const Form = () => (
-    <ThemeProvider theme={{ ...buttonThemeBrand, ...textInputThemeBrand }}>
-        <form>
-            <TextInput label="First Name" />
-            <Button>Click me</Button>
-        </form>
-    </ThemeProvider>
+	<ThemeProvider theme={{ ...buttonThemeBrand, ...textInputThemeBrand }}>
+		<form>
+			<TextInput label="First Name" />
+			<Button>Click me</Button>
+		</form>
+	</ThemeProvider>
 );
 ```
 
@@ -62,9 +62,9 @@ const Form = () => (
 
 Standard themes available from `@guardian/source-react-components`:
 
--   **default – exported as `[componentName]ThemeDefault`**
--   **brand – exported as `[componentName]ThemeBrand`**
--   **brandAlt – exported as `[componentName]ThemeBrandAlt`**
+- **default – exported as `[componentName]ThemeDefault`**
+- **brand – exported as `[componentName]ThemeBrand`**
+- **brandAlt – exported as `[componentName]ThemeBrandAlt`**
 
 To find out which themes a component supports, check its stories under `Packages/source-react-components/<ComponentName>`
 
@@ -78,16 +78,16 @@ To extend or override the styles of Source components, pass `SerializedStyles` g
 import { css } from '@emotion/react';
 
 const dangerStyles = css`
-    background-colour: ${palette.error[500]};
-    color: ${palette.neutral[100]};
+	background-colour: ${palette.error[500]};
+	color: ${palette.neutral[100]};
 
-    &:hover {
-        background-colour: ${palette.error[400]};
-    }
+	&:hover {
+		background-colour: ${palette.error[400]};
+	}
 `;
 
 const Danger = () => (
-    <Button cssOverrides={dangerStyles}>Delete my account</Button>
+	<Button cssOverrides={dangerStyles}>Delete my account</Button>
 );
 ```
 

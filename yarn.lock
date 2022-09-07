@@ -2644,10 +2644,10 @@
   resolved "https://registry.npmjs.org/@guardian/libs/-/libs-3.0.0.tgz#d54813f12f77cede9ee681033f251383ea379acd"
   integrity sha512-s2NEuE+rX2IyQohFWjKA0OV2GT7HPmh/2QO7cXaZirvMAhrgmEDXu7MSfHfqaLJybpDskUCyik6Yo73qgfnJdg==
 
-"@guardian/prettier@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@guardian/prettier/-/prettier-1.0.0.tgz#a5dd832e2ce31c6f723f0af77fe116b32b4695ff"
-  integrity sha512-srnhPn3hcSv14mDotFQN0CfN3k8MaGsXdK8BXAG95QQxM69Ybi16o4/Xqe361fwDEp7m+9jf03sETcMi8WsDlA==
+"@guardian/prettier@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/@guardian/prettier/-/prettier-2.1.1.tgz#e6de7d5fa484f0a384bfc6588eafda8052bba231"
+  integrity sha512-QFTwJilWDA0t3IMizJwKi9ykqbBlB3Vzd2dC+1Fjx5A7ffHfc5DPcBQxsnsCuznK3Cj/BhCASzJsEDAnBbB5sg==
 
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"

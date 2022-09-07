@@ -35,9 +35,6 @@ export const decorators = [FocusManagerDecorator, ThemeProviderDecorator];
 // Something else is also going on to affect scroll, hence the need for the timeout (sorry!)
 window.addEventListener('load', () => {
 	if (window.location.hash !== window.parent.location.hash) {
-		setTimeout(
-			() => (window.location.hash = window.parent.location.hash),
-			10,
-		);
+		setTimeout(() => (window.location.hash = window.parent.location.hash), 10);
 	}
 });

@@ -41,8 +41,8 @@ export const FooterWithContents = ({
 				sideBorders={false}
 			>
 				<small css={copyrightStyles}>
-					© {new Date().getFullYear()} Guardian News & Media Limited
-					or its affiliated companies. All rights reserved.
+					© {new Date().getFullYear()} Guardian News & Media Limited or its
+					affiliated companies. All rights reserved.
 				</small>
 			</ContainerComponent>
 		</footer>

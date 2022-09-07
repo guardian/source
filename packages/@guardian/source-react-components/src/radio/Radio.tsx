@@ -117,9 +117,7 @@ export const Radio = ({
 			<label htmlFor={radioId} css={label}>
 				{supporting ? (
 					<div>
-						<LabelText hasSupportingText={true}>
-							{labelContent}
-						</LabelText>
+						<LabelText hasSupportingText={true}>{labelContent}</LabelText>
 						<SupportingText>{supporting}</SupportingText>
 					</div>
 				) : (

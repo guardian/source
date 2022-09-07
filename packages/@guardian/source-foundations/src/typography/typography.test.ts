@@ -38,9 +38,7 @@ it('should return styles containing the specified font weight', () => {
 it('should return styles containing the specified line height', () => {
 	const mediumHeadlineStyles = headline.medium({ lineHeight: 'tight' });
 
-	expect(mediumHeadlineStyles).toContain(
-		`line-height: ${lineHeights.tight};`,
-	);
+	expect(mediumHeadlineStyles).toContain(`line-height: ${lineHeights.tight};`);
 });
 
 it('should return styles containing the specified line height in px if requested', () => {

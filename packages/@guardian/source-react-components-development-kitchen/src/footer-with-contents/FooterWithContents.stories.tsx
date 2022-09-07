@@ -11,7 +11,8 @@ import type { FooterWithContentsProps } from './FooterWithContents';
 import { FooterWithContents } from './FooterWithContents';
 
 export default {
-	title: 'Packages/source-react-components-development-kitchen/FooterWithContents',
+	title:
+		'Packages/source-react-components-development-kitchen/FooterWithContents',
 	component: FooterWithContents,
 	parameters: {
 		layout: 'fullscreen',

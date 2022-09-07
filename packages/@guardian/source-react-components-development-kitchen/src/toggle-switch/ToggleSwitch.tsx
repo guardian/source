@@ -119,10 +119,7 @@ export const ToggleSwitch = ({
 				{labelPosition === 'left' && label}
 				<button
 					id={buttonId}
-					css={[
-						buttonStyles(labelPosition),
-						getPlatformStyles(platform),
-					]}
+					css={[buttonStyles(labelPosition), getPlatformStyles(platform)]}
 					role="switch"
 					aria-checked={isChecked()}
 					aria-labelledby={labelId}

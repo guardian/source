@@ -42,6 +42,6 @@ This rule, from [eslint-plugin-import](https://github.com/import-js/eslint-plugi
 
 ## Known Issues
 
--   New theme names not always updated automatically
+- New theme names not always updated automatically
 
-    The theme variables have changed both name and location in the v4. The plugin should automatically update both but sometimes this does not work.
+  The theme variables have changed both name and location in the v4. The plugin should automatically update both but sometimes this does not work.

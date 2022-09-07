@@ -45,13 +45,13 @@ export const getComponentPaths = () =>
 							!nonComponentDirectories.includes(name),
 					)
 					.map((componentDirName) =>
-						isDirectory(
-							`${coreComponents}/${componentDirName}`,
-						).then((isDir) => {
-							if (!isDir) return;
+						isDirectory(`${coreComponents}/${componentDirName}`).then(
+							(isDir) => {
+								if (!isDir) return;
 
-							return `${coreComponents}/${componentDirName}`;
-						}),
+								return `${coreComponents}/${componentDirName}`;
+							},
+						),
 					),
 			),
 		)
@@ -62,13 +62,13 @@ export const getKitchenComponentPaths = () =>
 		.then((componentDirs) =>
 			Promise.all(
 				componentDirs.map((componentDirName) =>
-					isDirectory(
-						`${kitchenComponents}/${componentDirName}`,
-					).then((isDir) => {
-						if (!isDir) return '';
+					isDirectory(`${kitchenComponents}/${componentDirName}`).then(
+						(isDir) => {
+							if (!isDir) return '';
 
-						return `${kitchenComponents}/${componentDirName}`;
-					}),
+							return `${kitchenComponents}/${componentDirName}`;
+						},
+					),
 				),
 			),
 		)

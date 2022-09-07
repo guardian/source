@@ -79,14 +79,10 @@ export const Select = ({
 				htmlFor={selectId}
 			>
 				{error && (
-					<InlineError id={descriptionId(selectId)}>
-						{error}
-					</InlineError>
+					<InlineError id={descriptionId(selectId)}>{error}</InlineError>
 				)}
 				{!error && success && (
-					<InlineSuccess id={descriptionId(selectId)}>
-						{success}
-					</InlineSuccess>
+					<InlineSuccess id={descriptionId(selectId)}>{success}</InlineSuccess>
 				)}
 			</Label>
 			<div
@@ -105,9 +101,7 @@ export const Select = ({
 					]}
 					aria-required={!optional}
 					aria-invalid={!!error}
-					aria-describedby={
-						error || success ? descriptionId(selectId) : ''
-					}
+					aria-describedby={error || success ? descriptionId(selectId) : ''}
 					id={selectId}
 					{...props}
 				>

@@ -69,11 +69,9 @@ export const buttonThemeReaderRevenueBrandAlt: { button: ButtonTheme } = {
 	button: {
 		textPrimary: text.readerRevenueBrandAlt.ctaPrimary,
 		backgroundPrimary: background.readerRevenueBrandAlt.ctaPrimary,
-		backgroundPrimaryHover:
-			background.readerRevenueBrandAlt.ctaPrimaryHover,
+		backgroundPrimaryHover: background.readerRevenueBrandAlt.ctaPrimaryHover,
 		textTertiary: text.readerRevenueBrandAlt.ctaTertiary,
-		backgroundTertiaryHover:
-			background.readerRevenueBrandAlt.ctaTertiaryHover,
+		backgroundTertiaryHover: background.readerRevenueBrandAlt.ctaTertiaryHover,
 		borderTertiary: border.readerRevenueBrandAlt.ctaTertiary,
 	},
 };
