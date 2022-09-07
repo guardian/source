@@ -13,7 +13,6 @@
 		"clean": "rm -rf dist && nx run-many --target=clean --all",
 		"create-icons": "yarn workspace @guardian/source-react-components create-icons",
 		"fix": "yarn lint:js --fix",
-		"get-usage": "ts-node ./scripts/get-usage",
 		"lint": "npm-run-all lint:*",
 		"lint:js": "eslint . --ext .ts,.tsx,.js --cache",
 		"lint:styles": "stylelint packages/**/styles.ts",
