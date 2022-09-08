@@ -1,3 +1,4 @@
+import { isUndefined } from '@guardian/libs';
 import type { Rule } from 'eslint';
 import type {
 	ExportAllDeclaration,
@@ -79,10 +80,15 @@ const getRemovedExports = (
 				}
 
 				const removedImportsForSource = removedImports[source];
-				return (
-					i.type === 'ImportSpecifier' &&
-					removedImportsForSource.includes(i.imported.name)
-				);
+
+				if (removedImportsForSource) {
+					return (
+						i.type === 'ImportSpecifier' &&
+						removedImportsForSource.includes(i.imported.name)
+					);
+				}
+
+				return false;
 			}) as ImportSpecifier[];
 		case 'ExportNamedDeclaration':
 			return node.specifiers.filter((i) => {
@@ -92,7 +98,11 @@ const getRemovedExports = (
 				}
 
 				const removedImportsForSource = removedImports[source];
-				return removedImportsForSource.includes(i.exported.name);
+				if (removedImportsForSource) {
+					return removedImportsForSource.includes(i.exported.name);
+				}
+
+				return false;
 			});
 		case 'ExportAllDeclaration':
 			return [];
@@ -195,8 +205,10 @@ const getMessage = (
 		}
 
 		const name = getSpecifierName(i);
-		if (name in newThemeNames) {
-			renamedExports.push([name, `${newThemeNames[name]}`]);
+		const newThemeName = newThemeNames[name];
+
+		if (!isUndefined(newThemeName)) {
+			renamedExports.push([name, `${newThemeName}`]);
 		}
 	}
 

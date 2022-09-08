@@ -1,23 +1,13 @@
 {
+	"extends": "@guardian/tsconfig/tsconfig.json",
 	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
 		"baseUrl": ".",
 		"declaration": true,
 		"declarationMap": true,
-		"emitDecoratorMetadata": true,
-		"esModuleInterop": true,
-		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "@emotion/react",
-		"lib": ["es5", "es6", "es7", "es2017", "es2019", "es2020", "dom"],
-		"module": "esnext",
-		"moduleResolution": "node",
 		"noEmit": true,
-		"noImplicitAny": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noUnusedLocals": true,
 		"paths": {
 			"@guardian/source-foundations": [
 				"packages/@guardian/source-foundations/src/index"
@@ -29,11 +19,7 @@
 				"packages/@guardian/source-react-components-development-kitchen/src/index"
 			]
 		},
-		"resolveJsonModule": true,
-		"sourceMap": true,
-		"strict": true,
-		"strictNullChecks": true,
-		"target": "esnext"
+		"sourceMap": true
 	},
 	"ts-node": {
 		"compilerOptions": {
