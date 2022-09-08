@@ -84,7 +84,7 @@ export const checkbox = (
 				color: ${checkbox.textIndeterminate};
 				content: '-';
 				position: absolute;
-				top: -8px;
+				top: -${space[2]}px;
 				left: 5px;
 				z-index: 5;
 			}
