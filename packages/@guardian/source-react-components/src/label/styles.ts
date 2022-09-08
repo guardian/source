@@ -10,14 +10,14 @@ export const legend = css`
 export const labelText = (
 	label = labelThemeDefault.label,
 ): SerializedStyles => css`
-	${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
+	${textSans.medium({ fontWeight: 'bold' })};
 	color: ${label.textLabel};
 `;
 
 export const optionalText = (
 	label = labelThemeDefault.label,
 ): SerializedStyles => css`
-	${textSans.small({ lineHeight: 'regular' })};
+	${textSans.small()};
 	color: ${label.textOptional};
 	font-style: italic;
 `;
@@ -25,7 +25,7 @@ export const optionalText = (
 export const supportingText = (
 	label = labelThemeDefault.label,
 ): SerializedStyles => css`
-	${textSans.small({ lineHeight: 'regular' })};
+	${textSans.small()};
 	color: ${label.textSupporting};
 	margin: 2px 0 0;
 `;

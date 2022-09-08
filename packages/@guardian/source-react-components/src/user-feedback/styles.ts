@@ -6,7 +6,7 @@ import { userFeedbackThemeDefault } from './theme';
 const inlineMessage = css`
 	display: flex;
 	align-items: flex-start;
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 
 	svg {
 		fill: currentColor;

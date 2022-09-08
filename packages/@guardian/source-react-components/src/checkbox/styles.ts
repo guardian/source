@@ -95,19 +95,19 @@ export const checkbox = (
 export const labelText = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 	color: ${checkbox.textLabel};
 	width: 100%;
 `;
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 `;
 
 export const supportingText = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
-	${textSans.small({ lineHeight: 'regular' })};
+	${textSans.small()};
 	color: ${checkbox.textLabelSupporting};
 `;
 
