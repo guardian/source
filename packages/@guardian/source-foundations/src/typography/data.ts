@@ -82,9 +82,9 @@ export const remTextSizes = {
 
 export const fonts = {
 	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
-	headlineSerif: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
-	bodySerif: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
-	bodySans:
+	headline: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
+	body: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
+	textSans:
 		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
 } as const;
 
