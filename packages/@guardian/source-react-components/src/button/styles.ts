@@ -107,7 +107,7 @@ const subdued = (
 	TODO: find a more scalable solution to this (see https://css-tricks.com/how-to-tame-line-height-in-css/)
 */
 const fontSpacingVerticalOffset = css`
-	padding-bottom: 2px;
+	/* padding-bottom: 2px; */
 `;
 
 const defaultSize = css`
@@ -279,17 +279,17 @@ export const buttonStyles =
 		cssOverrides,
 		isLoading,
 	}: SharedButtonProps) =>
-	(
-		theme: Theme,
-	): Array<string | SerializedStyles | SerializedStyles[] | undefined> =>
-		[
-			button,
-			sizes[size],
-			priorities[priority](theme.button),
-			iconSvg || isLoading ? iconSizes[size] : '',
-			(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
-			nudgeIcon ? iconNudgeAnimation : '',
-			hideLabel ? iconOnlySizes[size] : '',
-			isLoading ? applyButtonStylesToLoadingSpinner : undefined,
-			cssOverrides,
-		];
+		(
+			theme: Theme,
+		): Array<string | SerializedStyles | SerializedStyles[] | undefined> =>
+			[
+				button,
+				sizes[size],
+				priorities[priority](theme.button),
+				iconSvg || isLoading ? iconSizes[size] : '',
+				(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
+				nudgeIcon ? iconNudgeAnimation : '',
+				hideLabel ? iconOnlySizes[size] : '',
+				isLoading ? applyButtonStylesToLoadingSpinner : undefined,
+				cssOverrides,
+			];
