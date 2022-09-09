@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 7.1.1
+
+### Patch Changes
+
+- 57c14867: Update to eslint configs
+
 ## 7.1.0
 
 ### Minor Changes
