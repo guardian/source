@@ -26,7 +26,8 @@
 		"e2e": "nx run-many --target=e2e --all"
 	},
 	"lint-staged": {
-		"package.json": "sort-package-json"
+		"package.json": "sort-package-json",
+		"*.{js,jsx,ts,tsx,css,md,json}": "prettier --write"
 	},
 	"prettier": "@guardian/prettier",
 	"resolutions": {
@@ -40,8 +41,8 @@
 		"@changesets/cli": "^2.24.4",
 		"@emotion/babel-plugin": "^11.10.2",
 		"@emotion/react": "11.0.0",
-		"@guardian/eslint-config": "^1.0.0",
-		"@guardian/eslint-config-typescript": "^1.0.7",
+		"@guardian/eslint-config": "^2.0.1",
+		"@guardian/eslint-config-typescript": "^1.0.9",
 		"@guardian/libs": "3.0.0",
 		"@guardian/prettier": "^2.1.1",
 		"@guardian/tsconfig": "^0.1.4",
