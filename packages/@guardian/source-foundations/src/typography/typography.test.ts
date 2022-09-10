@@ -87,7 +87,7 @@ it('should not include italic font style if it is not available for requested fo
 	expect(largeHeadlineStyles).not.toContain('font-style: italic;');
 });
 
-describe('Validate data', () => {
+describe('Validate that the font size px and rem values match those expected for each entry in the scale', () => {
 	const sizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70] as const;
 	const names = [
 		'xxxsmall',
