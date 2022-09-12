@@ -99,6 +99,7 @@ const subdued = (
 	   there is only text, it is more natural to show a rectangle for the focus halo */
 	border-radius: 0;
 `;
+
 /*
 	Guardian Text Sans appears to be encoded with slightly more space above the lettering
 	than below. We add a small amount of padding to the bottom of the button to ensure
@@ -278,17 +279,17 @@ export const buttonStyles =
 		cssOverrides,
 		isLoading,
 	}: SharedButtonProps) =>
-		(
-			theme: Theme,
-		): Array<string | SerializedStyles | SerializedStyles[] | undefined> =>
-			[
-				button,
-				sizes[size],
-				priorities[priority](theme.button),
-				iconSvg || isLoading ? iconSizes[size] : '',
-				(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
-				nudgeIcon ? iconNudgeAnimation : '',
-				hideLabel ? iconOnlySizes[size] : '',
-				isLoading ? applyButtonStylesToLoadingSpinner : undefined,
-				cssOverrides,
-			];
+	(
+		theme: Theme,
+	): Array<string | SerializedStyles | SerializedStyles[] | undefined> =>
+		[
+			button,
+			sizes[size],
+			priorities[priority](theme.button),
+			iconSvg || isLoading ? iconSizes[size] : '',
+			(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
+			nudgeIcon ? iconNudgeAnimation : '',
+			hideLabel ? iconOnlySizes[size] : '',
+			isLoading ? applyButtonStylesToLoadingSpinner : undefined,
+			cssOverrides,
+		];
