@@ -116,49 +116,58 @@ const calculateWidth = (width: number) => {
 };
 
 const generateWidthCSS = (width: number | number[]) => {
-	if (Array.isArray(width)) {
-		const breakpoints: Breakpoint[] = [
-			'mobile',
-			'tablet',
-			'desktop',
-			'leftCol',
-			'wide',
-		];
+	const widths = Array.isArray(width) ? width : [width];
 
-		return width.reduce((styles, w, i) => {
-			return `
-				${styles}
-				${from[breakpoints[i]]} {
-					${calculateWidth(w)};
+	const breakpoints: Breakpoint[] = [
+		'mobile',
+		'tablet',
+		'desktop',
+		'leftCol',
+		'wide',
+	];
+
+	let widthCSS = '';
+
+	for (const [i, width] of widths.entries()) {
+		const breakpoint = breakpoints[i];
+		if (breakpoint) {
+			widthCSS += `
+				${from[breakpoint]} {
+					${calculateWidth(width)};
 				}
 			`;
-		}, ``);
+		}
 	}
 
-	return calculateWidth(width);
+	return widthCSS;
 };
 
 const generateSpanCSS = (span: number | number[]) => {
-	if (Array.isArray(span)) {
-		const breakpoints: Breakpoint[] = [
-			'mobile',
-			'tablet',
-			'desktop',
-			'leftCol',
-			'wide',
-		];
+	const spans = Array.isArray(span) ? span : [span];
 
-		return span.reduce((styles, w, i) => {
-			return `
-				${styles}
-				${from[breakpoints[i]]} {
-					${calculateSpan(w)}
+	const breakpoints: Breakpoint[] = [
+		'mobile',
+		'tablet',
+		'desktop',
+		'leftCol',
+		'wide',
+	];
+
+	let spanCSS = '';
+
+	for (const [i, span] of spans.entries()) {
+		const breakpoint = breakpoints[i];
+
+		if (breakpoint) {
+			spanCSS += `
+				${from[breakpoint]} {
+					${calculateSpan(span)};
 				}
 			`;
-		}, ``);
+		}
 	}
 
-	return calculateSpan(span);
+	return spanCSS;
 };
 
 const columnBreakpoints: ColumnBreakpoint[] = [
