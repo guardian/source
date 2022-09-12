@@ -99,29 +99,41 @@ const subdued = (
 	   there is only text, it is more natural to show a rectangle for the focus halo */
 	border-radius: 0;
 `;
+/*
+	Guardian Text Sans appears to be encoded with slightly more space above the lettering
+	than below. We add a small amount of padding to the bottom of the button to ensure
+	the button label is vertically centred visually.
+	TODO: find a more scalable solution to this (see https://css-tricks.com/how-to-tame-line-height-in-css/)
+*/
+const fontSpacingVerticalOffset = css`
+	padding-bottom: 2px;
+`;
 
 const defaultSize = css`
-	${textSans.medium({ fontWeight: 'bold' })};
+	${textSans.medium({ fontWeight: 'bold', lineHeight: 'loose' })};
 	height: ${height.ctaMedium}px;
 	min-height: ${height.ctaMedium}px;
 	padding: 0 ${space[5]}px;
 	border-radius: ${height.ctaMedium}px;
+	${fontSpacingVerticalOffset};
 `;
 
 const smallSize = css`
-	${textSans.medium({ fontWeight: 'bold' })};
+	${textSans.medium({ fontWeight: 'bold', lineHeight: 'loose' })};
 	height: ${height.ctaSmall}px;
 	min-height: ${height.ctaSmall}px;
 	padding: 0 ${space[4]}px;
 	border-radius: ${height.ctaSmall}px;
+	${fontSpacingVerticalOffset};
 `;
 
 const xsmallSize = css`
-	${textSans.small({ fontWeight: 'bold' })};
+	${textSans.small({ fontWeight: 'bold', lineHeight: 'loose' })};
 	height: ${height.ctaXsmall}px;
 	min-height: ${height.ctaXsmall}px;
 	padding: 0 ${space[3]}px;
 	border-radius: ${height.ctaXsmall}px;
+	${fontSpacingVerticalOffset};
 `;
 
 const iconDefault = css`
@@ -266,17 +278,17 @@ export const buttonStyles =
 		cssOverrides,
 		isLoading,
 	}: SharedButtonProps) =>
-	(
-		theme: Theme,
-	): Array<string | SerializedStyles | SerializedStyles[] | undefined> =>
-		[
-			button,
-			sizes[size],
-			priorities[priority](theme.button),
-			iconSvg || isLoading ? iconSizes[size] : '',
-			(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
-			nudgeIcon ? iconNudgeAnimation : '',
-			hideLabel ? iconOnlySizes[size] : '',
-			isLoading ? applyButtonStylesToLoadingSpinner : undefined,
-			cssOverrides,
-		];
+		(
+			theme: Theme,
+		): Array<string | SerializedStyles | SerializedStyles[] | undefined> =>
+			[
+				button,
+				sizes[size],
+				priorities[priority](theme.button),
+				iconSvg || isLoading ? iconSizes[size] : '',
+				(iconSvg || isLoading) && !hideLabel ? iconSides[iconSide] : '',
+				nudgeIcon ? iconNudgeAnimation : '',
+				hideLabel ? iconOnlySizes[size] : '',
+				isLoading ? applyButtonStylesToLoadingSpinner : undefined,
+				cssOverrides,
+			];
