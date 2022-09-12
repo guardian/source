@@ -12,6 +12,7 @@ export const wrapperStyles = (color: string): SerializedStyles => css`
 export const iconStyles = (color: string): SerializedStyles => css`
 	display: flex;
 	flex: 0 1 auto;
+	margin-top: 1px;
 	svg {
 		fill: ${color};
 		height: ${size.xsmall}px;
@@ -23,7 +24,10 @@ export const messageStyles = (
 	color: string,
 	isBold = true,
 ): SerializedStyles => css`
-	${textSans.medium({ fontWeight: isBold ? 'bold' : 'regular' })}
+	${textSans.medium({
+		fontWeight: isBold ? 'bold' : 'regular',
+		lineHeight: 'loose',
+	})};
 	color: ${color};
 `;
 
