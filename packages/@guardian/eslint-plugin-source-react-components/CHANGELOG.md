@@ -1,5 +1,16 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 8.0.0
+
+### Major Changes
+
+- a883dda7: Set default textSans line height to 'regular', there should be no change to Source components but any consumers using textSans should expect a default line height of 1.35 rather than 1.5
+
+### Patch Changes
+
+- Updated dependencies [a883dda7]
+  - @guardian/source-react-components@8.0.0
+
 ## 7.0.0
 
 ### Patch Changes
