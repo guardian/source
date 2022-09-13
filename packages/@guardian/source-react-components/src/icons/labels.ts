@@ -79,6 +79,7 @@ export const labels: Record<string, string> = {
 	menu: 'Menu',
 	minus: 'Minus sign',
 	moon: 'Dark mode',
+	newsletter: 'Newsletter',
 	'notifications-off': 'Notification off',
 	'notifications-on': 'Notification on',
 	padlock: 'Lock',
