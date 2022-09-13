@@ -11,6 +11,7 @@ import {
 import type {
 	Categories,
 	FontScaleArgs,
+	FontScaleFunction,
 	FontStyle,
 	Option,
 	TypographyConfiguration,
@@ -101,4 +102,33 @@ export const fontStyleFunction =
 				hasItalic,
 			),
 		};
+	};
+
+export const fontStyleToStringFunction =
+	(typographyFunction: FontScaleFunction) =>
+	(options?: FontScaleArgs): string => {
+		const {
+			fontFamily,
+			fontSize,
+			fontStyle,
+			fontWeight,
+			lineHeight,
+			textDecorationThickness,
+		} = typographyFunction(options);
+
+		return `
+			font-family: ${fontFamily};
+			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
+			line-height: ${lineHeight};
+			${fontWeight ? `font-weight: ${fontWeight}` : ''};
+			${fontStyle ? `font-style: ${fontStyle}` : ''};
+
+			&:hover {
+				${
+					textDecorationThickness
+						? `text-decoration-thickness: ${textDecorationThickness}px`
+						: ``
+				};
+			}
+		`;
 	};

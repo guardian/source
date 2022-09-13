@@ -1,10 +1,11 @@
 import { fontStyleFunction } from './font-styles';
 import type {
-	BodyFunctions,
-	HeadlineFunctions,
-	TextSansFunctions,
-	TitlepieceFunctions,
+	BodySizes,
+	HeadlineSizes,
+	TextSansSizes,
+	TitlepieceSizes,
 	TypographyConfiguration,
+	TypographyFunctions,
 } from './types';
 
 const titlepieceDefaults: TypographyConfiguration = {
@@ -14,7 +15,7 @@ const titlepieceDefaults: TypographyConfiguration = {
 	unit: 'rem',
 };
 
-export const titlepiece: TitlepieceFunctions = {
+export const titlepiece: TypographyFunctions<TitlepieceSizes> = {
 	small: fontStyleFunction('titlepiece', 'small', titlepieceDefaults),
 	medium: fontStyleFunction('titlepiece', 'medium', titlepieceDefaults),
 	large: fontStyleFunction('titlepiece', 'large', titlepieceDefaults),
@@ -27,7 +28,7 @@ const headlineDefaults: TypographyConfiguration = {
 	unit: 'rem',
 };
 
-export const headline: HeadlineFunctions = {
+export const headline: TypographyFunctions<HeadlineSizes> = {
 	xxxsmall: fontStyleFunction('headline', 'xxxsmall', headlineDefaults),
 	xxsmall: fontStyleFunction('headline', 'xxsmall', headlineDefaults),
 	xsmall: fontStyleFunction('headline', 'xsmall', headlineDefaults),
@@ -44,7 +45,7 @@ const bodyDefaults: TypographyConfiguration = {
 	unit: 'rem',
 };
 
-export const body: BodyFunctions = {
+export const body: TypographyFunctions<BodySizes> = {
 	xsmall: fontStyleFunction('body', 'xsmall', bodyDefaults),
 	small: fontStyleFunction('body', 'small', bodyDefaults),
 	medium: fontStyleFunction('body', 'medium', bodyDefaults),
@@ -56,7 +57,7 @@ const textSansDefaults: TypographyConfiguration = {
 	fontStyle: null,
 	unit: 'rem',
 };
-export const textSans: TextSansFunctions = {
+export const textSans: TypographyFunctions<TextSansSizes> = {
 	xxsmall: fontStyleFunction('textSans', 'xxsmall', textSansDefaults),
 	xsmall: fontStyleFunction('textSans', 'xsmall', textSansDefaults),
 	small: fontStyleFunction('textSans', 'small', textSansDefaults),
