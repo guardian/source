@@ -57,7 +57,7 @@ export type AvailableFontWeights = {
 	[cat in Category]?: { [weight in FontWeight]?: boolean };
 };
 
-export type ItalicsAvailableForFontWeight = {
+export type ItalicsFontWeights = {
 	[cat in Category]?: { [weight in FontWeight]?: boolean };
 };
 

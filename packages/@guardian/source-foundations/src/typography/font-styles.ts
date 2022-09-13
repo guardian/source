@@ -1,8 +1,8 @@
 import {
+	availableFontWeights,
 	fonts,
 	fontWeights,
-	fontWeightsAvailable,
-	italicsAvailableForFontWeight,
+	italicsFontWeights,
 	lineHeights,
 	pxTextSizes,
 	remTextSizes,
@@ -44,7 +44,7 @@ const determineFontStyleProperty = (
  * fontStyleFunction('headline', 'small', { fontWeight: 'medium' });
  * ```
  *
- * **Example usage**, we call the method to get our typography stylesand override
+ * **Example usage**, we call the method to get our typography styles and override
  * the default font weight set above with `bold`:
  *
  * ```
@@ -70,13 +70,12 @@ export const fontStyleFunction =
 
 		// Determine if italic font-style is available for this font weight
 		const hasItalic =
-			italicsAvailableForFontWeight[category]?.[
-				finalFontConfiguration.fontWeight
-			] ?? false;
+			italicsFontWeights[category]?.[finalFontConfiguration.fontWeight] ??
+			false;
 
 		// Determine if setting the font weight is allowed for the given category
 		const isFontWeightAvailable =
-			fontWeightsAvailable[category]?.[finalFontConfiguration.fontWeight] ??
+			availableFontWeights[category]?.[finalFontConfiguration.fontWeight] ??
 			false;
 
 		const fontWeight = isFontWeightAvailable
