@@ -88,6 +88,12 @@ export type TypographyFunctions<Sizes extends AvailableSizes> = {
 };
 
 /**
+ * This is left over from the refactor of the font style method.
+ * It is exported from source-foundations but has now been replaced
+ * by the fontStyleFunction method type definition.
+ *
+ * Before we remove it, we need to determine if it is being used.
+ *
  * @deprecated will be removed in the next major version
  */
 export type Fs = <
