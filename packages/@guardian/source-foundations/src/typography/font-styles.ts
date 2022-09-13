@@ -13,7 +13,7 @@ import type {
 	FontScaleArgs,
 	FontStyle,
 	Option,
-	TypographyOptions,
+	TypographyConfiguration,
 	TypographyStyles,
 } from './types';
 
@@ -55,10 +55,10 @@ export const fontStyleFunction =
 	<Category extends keyof Categories, Level extends keyof Categories[Category]>(
 		category: Category,
 		level: Level,
-		defaults: TypographyOptions,
+		defaults: TypographyConfiguration,
 	) =>
 	(options?: FontScaleArgs): TypographyStyles => {
-		const finalOptions = {
+		const finalFontConfiguration: TypographyConfiguration = {
 			...defaults,
 			...options,
 		};
@@ -69,30 +69,36 @@ export const fontStyleFunction =
 
 		// Determine if italic font-style is available for this font weight
 		const hasItalic =
-			italicsAvailableForFontWeight[category]?.[finalOptions.fontWeight] ??
-			false;
+			italicsAvailableForFontWeight[category]?.[
+				finalFontConfiguration.fontWeight
+			] ?? false;
 
 		// Determine if setting the font weight is allowed for the given category
 		const isFontWeightAvailable =
-			fontWeightsAvailable[category]?.[finalOptions.fontWeight] ?? false;
+			fontWeightsAvailable[category]?.[finalFontConfiguration.fontWeight] ??
+			false;
 
 		const fontWeight = isFontWeightAvailable
-			? fontWeights[finalOptions.fontWeight]
+			? fontWeights[finalFontConfiguration.fontWeight]
 			: undefined;
 
 		// line-height is defined as a unitless value, so we multiply
 		// by the element's font-size in px to get the px value
 		const lineHeight =
-			finalOptions.unit === 'px'
-				? `${lineHeights[finalOptions.lineHeight] * pxTextSize}px`
-				: lineHeights[finalOptions.lineHeight];
+			finalFontConfiguration.unit === 'px'
+				? `${lineHeights[finalFontConfiguration.lineHeight] * pxTextSize}px`
+				: lineHeights[finalFontConfiguration.lineHeight];
 
 		return {
 			lineHeight,
 			fontWeight,
-			fontSize: finalOptions.unit === 'px' ? pxTextSize : `${remTextSize}rem`,
+			fontSize:
+				finalFontConfiguration.unit === 'px' ? pxTextSize : `${remTextSize}rem`,
 			fontFamily: fonts[category],
 			textDecorationThickness: Number(underlineThickness[category][level]),
-			fontStyle: determineFontStyleProperty(finalOptions.fontStyle, hasItalic),
+			fontStyle: determineFontStyleProperty(
+				finalFontConfiguration.fontStyle,
+				hasItalic,
+			),
 		};
 	};

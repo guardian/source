@@ -4,10 +4,10 @@ import type {
 	HeadlineFunctions,
 	TextSansFunctions,
 	TitlepieceFunctions,
-	TypographyOptions,
+	TypographyConfiguration,
 } from './types';
 
-const titlepieceDefaults: TypographyOptions = {
+const titlepieceDefaults: TypographyConfiguration = {
 	lineHeight: 'tight',
 	fontWeight: 'bold',
 	fontStyle: null,
@@ -20,7 +20,7 @@ export const titlepiece: TitlepieceFunctions = {
 	large: fontStyleFunction('titlepiece', 'large', titlepieceDefaults),
 };
 
-const headlineDefaults: TypographyOptions = {
+const headlineDefaults: TypographyConfiguration = {
 	lineHeight: 'tight',
 	fontWeight: 'medium',
 	fontStyle: null,
@@ -37,7 +37,7 @@ export const headline: HeadlineFunctions = {
 	xlarge: fontStyleFunction('headline', 'xlarge', headlineDefaults),
 };
 
-const bodyDefaults: TypographyOptions = {
+const bodyDefaults: TypographyConfiguration = {
 	lineHeight: 'loose',
 	fontWeight: 'regular',
 	fontStyle: null,
@@ -50,7 +50,7 @@ export const body: BodyFunctions = {
 	medium: fontStyleFunction('body', 'medium', bodyDefaults),
 };
 
-const textSansDefaults: TypographyOptions = {
+const textSansDefaults: TypographyConfiguration = {
 	lineHeight: 'loose',
 	fontWeight: 'regular',
 	fontStyle: null,

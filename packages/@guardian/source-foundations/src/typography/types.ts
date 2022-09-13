@@ -56,7 +56,7 @@ export type ItalicsAvailableForFontWeight = {
 	[cat in Category]?: { [weight in FontWeight]?: boolean };
 };
 
-export type TypographyOptions = {
+export type TypographyConfiguration = {
 	lineHeight: LineHeight;
 	fontWeight: FontWeight;
 	fontStyle: Option<FontStyle>;
@@ -64,7 +64,7 @@ export type TypographyOptions = {
 };
 
 export type FontScaleArgs = Partial<
-	Pick<TypographyOptions, 'fontWeight' | 'lineHeight' | 'unit'>
+	Pick<TypographyConfiguration, 'fontWeight' | 'lineHeight' | 'unit'>
 > & {
 	fontStyle?: FontStyle;
 };
