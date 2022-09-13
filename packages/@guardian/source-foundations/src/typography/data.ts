@@ -3,8 +3,8 @@ import { pxToRem } from '../utils/px-to-rem';
 /**
  * Pixel size values for each font that we use in the design system.
  *
- * These fit the following px size scale:
- * [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70]
+ * We assert that the values match those we expect in our
+ * {@link [unit test suite](./typography.test.ts)}.
  */
 export const pxTextSizes = {
 	textSans: {
@@ -41,6 +41,9 @@ export const pxTextSizes = {
 /**
  * Relative font sizes, calculated from the pixel sizes above;
  * using the pxToRem method.
+ *
+ * We assert that the computed rem values match the expected values
+ * in our {@link [unit test suite](./typography.test.ts)}.
  *
  * See {@link [pxToRem](../utils/px-to-rem.ts)} for more details.
  */
