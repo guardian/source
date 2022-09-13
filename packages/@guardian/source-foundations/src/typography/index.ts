@@ -5,7 +5,6 @@ import {
 	titlepiece as titlepieceAsObj,
 } from './api';
 import { fontStyleToStringFunction } from './font-styles';
-
 import type {
 	BodySizes,
 	HeadlineSizes,
