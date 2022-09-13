@@ -42,41 +42,37 @@ export const pxTextSizes = {
  * Relative font sizes, calculated from the pixel sizes above;
  * using the pxToRem method.
  *
- * The resulting scale that we draw from is:
- * [0.75, 0.875, 0.9375, 1.0625, 1.25, 1.5, 1.75, 2.125, 2.625, 3.125, 4.375]
- *
- *
  * See {@link [pxToRem](../utils/px-to-rem.ts)} for more details.
  */
 export const remTextSizes = {
 	textSans: {
-		xxsmall: pxToRem(12),
-		xsmall: pxToRem(14),
-		small: pxToRem(15),
-		medium: pxToRem(17),
-		large: pxToRem(20),
-		xlarge: pxToRem(24),
-		xxlarge: pxToRem(28),
-		xxxlarge: pxToRem(34),
+		xxsmall: pxToRem(pxTextSizes.textSans.xxsmall),
+		xsmall: pxToRem(pxTextSizes.textSans.xsmall),
+		small: pxToRem(pxTextSizes.textSans.small),
+		medium: pxToRem(pxTextSizes.textSans.medium),
+		large: pxToRem(pxTextSizes.textSans.large),
+		xlarge: pxToRem(pxTextSizes.textSans.xlarge),
+		xxlarge: pxToRem(pxTextSizes.textSans.xxlarge),
+		xxxlarge: pxToRem(pxTextSizes.textSans.xxxlarge),
 	},
 	body: {
-		xsmall: pxToRem(14),
-		small: pxToRem(15),
-		medium: pxToRem(17),
+		xsmall: pxToRem(pxTextSizes.body.xsmall),
+		small: pxToRem(pxTextSizes.body.small),
+		medium: pxToRem(pxTextSizes.body.medium),
 	},
 	headline: {
-		xxxsmall: pxToRem(17),
-		xxsmall: pxToRem(20),
-		xsmall: pxToRem(24),
-		small: pxToRem(28),
-		medium: pxToRem(34),
-		large: pxToRem(42),
-		xlarge: pxToRem(50),
+		xxxsmall: pxToRem(pxTextSizes.headline.xxxsmall),
+		xxsmall: pxToRem(pxTextSizes.headline.xxsmall),
+		xsmall: pxToRem(pxTextSizes.headline.xsmall),
+		small: pxToRem(pxTextSizes.headline.small),
+		medium: pxToRem(pxTextSizes.headline.medium),
+		large: pxToRem(pxTextSizes.headline.large),
+		xlarge: pxToRem(pxTextSizes.headline.xlarge),
 	},
 	titlepiece: {
-		small: pxToRem(42),
-		medium: pxToRem(50),
-		large: pxToRem(70),
+		small: pxToRem(pxTextSizes.titlepiece.small),
+		medium: pxToRem(pxTextSizes.titlepiece.medium),
+		large: pxToRem(pxTextSizes.titlepiece.large),
 	},
 } as const;
 
