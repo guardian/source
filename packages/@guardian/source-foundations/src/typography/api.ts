@@ -83,7 +83,7 @@ type TextSansFunctions = {
 };
 
 const textSansDefaults = {
-	lineHeight: 'regular',
+	lineHeight: 'loose',
 	fontWeight: 'regular',
 	fontStyle: null,
 	unit: 'rem',

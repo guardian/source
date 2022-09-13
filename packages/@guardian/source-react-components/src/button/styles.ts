@@ -111,7 +111,7 @@ const fontSpacingVerticalOffset = css`
 `;
 
 const defaultSize = css`
-	${textSans.medium({ fontWeight: 'bold', lineHeight: 'loose' })};
+	${textSans.medium({ fontWeight: 'bold' })};
 	height: ${height.ctaMedium}px;
 	min-height: ${height.ctaMedium}px;
 	padding: 0 ${space[5]}px;
@@ -120,7 +120,7 @@ const defaultSize = css`
 `;
 
 const smallSize = css`
-	${textSans.medium({ fontWeight: 'bold', lineHeight: 'loose' })};
+	${textSans.medium({ fontWeight: 'bold' })};
 	height: ${height.ctaSmall}px;
 	min-height: ${height.ctaSmall}px;
 	padding: 0 ${space[4]}px;
@@ -129,7 +129,7 @@ const smallSize = css`
 `;
 
 const xsmallSize = css`
-	${textSans.small({ fontWeight: 'bold', lineHeight: 'loose' })};
+	${textSans.small({ fontWeight: 'bold' })};
 	height: ${height.ctaXsmall}px;
 	min-height: ${height.ctaXsmall}px;
 	padding: 0 ${space[3]}px;

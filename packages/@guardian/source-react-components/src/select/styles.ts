@@ -71,7 +71,7 @@ export const select = (select = selectThemeDefault.select): SerializedStyles =>
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
 		width: 100%;
-		${textSans.medium()};
+		${textSans.medium({ lineHeight: 'regular' })};
 		background-color: ${select.backgroundInput};
 		border: 2px solid ${select.border};
 		padding-left: ${space[2]}px;

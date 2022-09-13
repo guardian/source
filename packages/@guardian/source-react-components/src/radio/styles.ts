@@ -107,18 +107,18 @@ export const radio = (radio = radioThemeDefault.radio): SerializedStyles => css`
 export const labelText = (
 	radio = radioThemeDefault.radio,
 ): SerializedStyles => css`
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${radio.textLabel};
 	width: 100%;
 `;
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ fontWeight: 'bold' })};
+	${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
 `;
 
 export const supportingText = (
 	radio = radioThemeDefault.radio,
 ): SerializedStyles => css`
-	${textSans.small()};
+	${textSans.small({ lineHeight: 'regular' })};
 	color: ${radio.textLabelSupporting};
 `;
