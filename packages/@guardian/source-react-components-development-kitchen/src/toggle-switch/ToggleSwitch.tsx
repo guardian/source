@@ -1,8 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
+import type { Props } from '@guardian/source-react-components';
 import { useEffect, useState } from 'react';
-import type { Props } from '../@types/Props';
 import {
 	androidStyles,
 	buttonStyles,
@@ -59,6 +59,17 @@ export interface ToggleSwitchProps extends Props {
 	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-development-kitchen-toggle-switch--playground) •
+ * [Design System](https://theguardian.design) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
+ *
+ * Displays an on/off toggle switch. This toggle has default styling and can be used on android, ios or web.
+ * These styles are driven by the 'platform' prop.
+ * To give it more custom styling cssOverride may be used.
+ *
+ */
 const getPlatformStyles = (platform: Platform): SerializedStyles => {
 	switch (platform) {
 		case 'android':
