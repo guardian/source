@@ -103,6 +103,12 @@ export const fontStyleFunction =
 		};
 	};
 
+/**
+ * Generates a method that evaluates a given font scale function with the
+ * provided options and returns the typography styles as a CSS string.
+ *
+ * For an example usage see our {@link [typography string function exports](./index.ts)}.
+ */
 export const fontStyleToStringFunction =
 	(typographyFunction: FontScaleFunction) =>
 	(options?: FontScaleArgs): string => {
