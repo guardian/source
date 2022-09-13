@@ -1,5 +1,11 @@
 # @guardian/source-foundations
 
+## 5.2.2
+
+### Patch Changes
+
+- 6ea1ce6a: refactoring of internal typography definitions to directly map to a concrete value instead of pulling from an array of values; a general simplification of the typography data file, and of its exports
+
 ## 5.2.1
 
 ### Patch Changes
