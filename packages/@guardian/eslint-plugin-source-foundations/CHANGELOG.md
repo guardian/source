@@ -1,5 +1,16 @@
 # @guardian/eslint-plugin-source-foundations
 
+## 6.0.0
+
+### Major Changes
+
+- 3e30b6e7: Set default textSans line height to 'regular', there should be no change to Source components but any consumers using textSans should expect a default line height of 1.35 rather than 1.5
+
+### Patch Changes
+
+- Updated dependencies [3e30b6e7]
+  - @guardian/source-foundations@6.0.0
+
 ## 5.0.1
 
 ### Patch Changes
