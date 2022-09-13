@@ -14,7 +14,7 @@ import type {
 	Option,
 } from './types';
 
-export const availableFonts = {
+export const availableFonts: AvailableFontsMapping = {
 	titlepiece: {
 		bold: {
 			hasItalic: false,
@@ -47,7 +47,7 @@ export const availableFonts = {
 			hasItalic: false,
 		},
 	},
-} as AvailableFontsMapping;
+};
 
 function getFontStyle(
 	font: FontWeightDefinition | undefined,
