@@ -8,7 +8,7 @@ import { ToggleSwitch } from './ToggleSwitch';
 import type { ToggleSwitchProps } from './ToggleSwitch';
 
 export default {
-	title: 'Packages/source-react-components-development-kitchen/ToggleSwitch',
+	title: 'Packages/source-react-components/ToggleSwitch',
 	component: ToggleSwitch,
 	args: {},
 };
@@ -16,15 +16,13 @@ export default {
 const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 	const [checked, setChecked] = useState(args.checked);
 	return (
-		<div style={{ height: '100px' }}>
-			<ToggleSwitch
-				{...args}
-				checked={checked}
-				onClick={() => {
-					setChecked(!checked);
-				}}
-			/>
-		</div>
+		<ToggleSwitch
+			{...args}
+			checked={checked}
+			onClick={() => {
+				setChecked(!checked);
+			}}
+		/>
 	);
 };
 
