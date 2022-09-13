@@ -173,7 +173,7 @@ export const contentWrapper = css`
 	}
 
 	& > * {
-		${textSans.medium({ fontWeight: 'bold' })};
+		${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
 		text-align: center;
 	}
 

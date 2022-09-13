@@ -24,10 +24,7 @@ export const messageStyles = (
 	color: string,
 	isBold = true,
 ): SerializedStyles => css`
-	${textSans.medium({
-		fontWeight: isBold ? 'bold' : 'regular',
-		lineHeight: 'loose',
-	})};
+	${textSans.medium({ fontWeight: isBold ? 'bold' : 'regular' })}
 	color: ${color};
 `;
 

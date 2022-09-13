@@ -84,7 +84,7 @@ export const checkbox = (
 				color: ${checkbox.textIndeterminate};
 				content: '-';
 				position: absolute;
-				top: -${space[2]}px;
+				top: -10px;
 				left: 5px;
 				z-index: 5;
 			}
@@ -95,19 +95,19 @@ export const checkbox = (
 export const labelText = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabel};
 	width: 100%;
 `;
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium()};
+	${textSans.medium({ lineHeight: 'regular' })};
 `;
 
 export const supportingText = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
-	${textSans.small()};
+	${textSans.small({ lineHeight: 'regular' })};
 	color: ${checkbox.textLabelSupporting};
 `;
 
