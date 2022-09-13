@@ -32,11 +32,27 @@ const determineFontStyleProperty = (
 	}
 };
 
+/**
+ * Generates a method that returns a TypographyStyles object for a given font scale.
+ *
+ * **Example**, generate a method that returns styles for the `headline` category
+ * at the `small` level and a default font weight of `medium`:
+ *
+ * ```
+ * const headlineSmall =
+ * fontStyleFunction('headline', 'small', { fontWeight: 'medium' });
+ * ```
+ *
+ * **Example usage**, we call the method to get our typography stylesand override
+ * the default font weight set above with `bold`:
+ *
+ * ```
+ * const headlineSmallStyles =
+ * headlineSmall({ fontWeight: 'bold' });
+ * ```
+ */
 export const fontStyleFunction =
-	<
-		Category extends keyof Categories,
-		Level extends keyof Categories[Category],
-	>(
+	<Category extends keyof Categories, Level extends keyof Categories[Category]>(
 		category: Category,
 		level: Level,
 		defaults: TypographyOptions,
@@ -53,9 +69,8 @@ export const fontStyleFunction =
 
 		// Determine if italic font-style is available for this font weight
 		const hasItalic =
-			italicsAvailableForFontWeight[category]?.[
-				finalOptions.fontWeight
-			] ?? false;
+			italicsAvailableForFontWeight[category]?.[finalOptions.fontWeight] ??
+			false;
 
 		// Determine if setting the font weight is allowed for the given category
 		const isFontWeightAvailable =
@@ -75,15 +90,9 @@ export const fontStyleFunction =
 		return {
 			lineHeight,
 			fontWeight,
-			fontSize:
-				finalOptions.unit === 'px' ? pxTextSize : `${remTextSize}rem`,
+			fontSize: finalOptions.unit === 'px' ? pxTextSize : `${remTextSize}rem`,
 			fontFamily: fonts[category],
-			textDecorationThickness: Number(
-				underlineThickness[category][level],
-			),
-			fontStyle: determineFontStyleProperty(
-				finalOptions.fontStyle,
-				hasItalic,
-			),
+			textDecorationThickness: Number(underlineThickness[category][level]),
+			fontStyle: determineFontStyleProperty(finalOptions.fontStyle, hasItalic),
 		};
 	};
