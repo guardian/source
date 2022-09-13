@@ -38,6 +38,11 @@ export type TitlepieceSizes =
 export type HeadlineSizes = typeof headlineSizes | typeof remHeadlineSizes;
 export type BodySizes = typeof bodySizes | typeof remBodySizes;
 export type TextSansSizes = typeof textSansSizes | typeof remTextSansSizes;
+export type AvailableSizes =
+	| TitlepieceSizes
+	| HeadlineSizes
+	| BodySizes
+	| TextSansSizes;
 
 export type Categories = {
 	titlepiece: TitlepieceSizes;
@@ -74,20 +79,12 @@ export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles;
 // returns styles as a template literal
 export type FontScaleFunctionStr = (options?: FontScaleArgs) => string;
 
-export type TitlepieceFunctions = {
-	[key in keyof TitlepieceSizes]: FontScaleFunction;
+export type TypographyStrFunctions<Sizes extends AvailableSizes> = {
+	[key in keyof Sizes]: FontScaleFunctionStr;
 };
 
-export type HeadlineFunctions = {
-	[key in keyof HeadlineSizes]: FontScaleFunction;
-};
-
-export type BodyFunctions = {
-	[key in keyof BodySizes]: FontScaleFunction;
-};
-
-export type TextSansFunctions = {
-	[key in keyof TextSansSizes]: FontScaleFunction;
+export type TypographyFunctions<Sizes extends AvailableSizes> = {
+	[key in keyof Sizes]: FontScaleFunction;
 };
 
 /**
