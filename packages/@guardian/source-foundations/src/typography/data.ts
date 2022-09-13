@@ -3,7 +3,7 @@ import { pxToRem } from '../utils/px-to-rem';
 /**
  * Pixel size values for each font that we use in the design system.
  *
- * We assert that the values match those we expect in our
+ * We assert that the values match the guardian type scale in our
  * {@link [unit test suite](./typography.test.ts)}.
  */
 export const pxTextSizes = {
