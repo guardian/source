@@ -82,6 +82,8 @@ const colors = {
 		'#EDEDED', //neutral-93
 		'#F6F6F6', //neutral-97
 		'#FFFFFF', //neutral-100
+	],
+	special: [
 		'#222527', //specialReport-100
 		'#303538', //specialReport-200
 		'#3F464A', //specialReport-300
@@ -90,6 +92,11 @@ const colors = {
 		'#ABC2C9', //specialReport-500
 		'#E4E5E8', //specialReport-700
 		'#EFF1F2', //specialReport-800
+		'#2B2B2A', //specialReportAlt-100
+		'#B9300A', //specialReportAlt-200
+		'#FF663D', //specialReportAlt-300
+		'#EBE6E1', //specialReportAlt-700
+		'#F5F0EB', //specialReportAlt-800
 	],
 } as const;
 
@@ -192,14 +199,21 @@ export const palette = {
 		400: colors.greens[5],
 	},
 	specialReport: {
-		100: colors.grays[10],
-		200: colors.grays[11],
-		300: colors.grays[12],
-		400: colors.grays[13],
-		450: colors.grays[14],
-		500: colors.grays[15],
-		700: colors.grays[16],
-		800: colors.grays[17],
+		100: colors.special[0],
+		200: colors.special[1],
+		300: colors.special[2],
+		400: colors.special[3],
+		450: colors.special[4],
+		500: colors.special[5],
+		700: colors.special[6],
+		800: colors.special[7],
+	},
+	specialReportAlt: {
+		100: colors.special[8],
+		200: colors.special[9],
+		300: colors.special[10],
+		700: colors.special[11],
+		800: colors.special[12],
 	},
 	focus: {
 		400: colors.blues[3],
@@ -435,5 +449,6 @@ export const {
 	lifestyle,
 	labs,
 	specialReport,
+	specialReportAlt,
 	focus,
 } = palette;
