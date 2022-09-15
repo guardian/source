@@ -47,6 +47,14 @@ const applyButtonStylesToLoadingSpinner = css`
 	path {
 		stroke: currentColor;
 	}
+	svg {
+		/*
+		 * The loading spinner width has been specified as 24px in the design
+		 * which falls outside of the icon sizes in source-foundations, so we
+		 * override the width here.
+		 */
+		width: 24px;
+	}
 `;
 
 const primary = (
