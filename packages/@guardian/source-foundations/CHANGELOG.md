@@ -1,5 +1,11 @@
 # @guardian/source-foundations
 
+## 5.3.0
+
+### Minor Changes
+
+- 0239822b: Add new colours for specialReportAlt palette
+
 ## 5.2.2
 
 ### Patch Changes
