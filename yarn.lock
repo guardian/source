@@ -2649,10 +2649,10 @@
   resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-3.9.0.tgz#330ef270b87f0262e09a5f9964b916c21d1f987a"
   integrity sha512-2i/AvgeIVCdowSJuc/RnXVBZUROjNT48EbdQY5OtUSzgcR0o1EFoibVX7OAd6Y4nIFHULbx5XDhnH1ymYSSYlA==
 
-"@guardian/prettier@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/@guardian/prettier/-/prettier-2.1.1.tgz#e6de7d5fa484f0a384bfc6588eafda8052bba231"
-  integrity sha512-QFTwJilWDA0t3IMizJwKi9ykqbBlB3Vzd2dC+1Fjx5A7ffHfc5DPcBQxsnsCuznK3Cj/BhCASzJsEDAnBbB5sg==
+"@guardian/prettier@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.npmjs.org/@guardian/prettier/-/prettier-2.1.4.tgz#3a92c31bfe9edd82a9fdb2736d463c8fe36735a4"
+  integrity sha512-xO8AyLmuTolrYKIaIDoYft6W8qNQ7xHTnqWryEzEGuDgZVJGZUBbsNtdNJMKOD+cAC1KHfclNnhB7XlAdFjRuw==
 
 "@guardian/tsconfig@^0.1.4":
   version "0.1.4"
