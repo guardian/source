@@ -1,14 +1,18 @@
 import type {
 	bodySizes,
-	fontWeightMapping,
+	fontWeights,
 	headlineSizes,
-	lineHeightMapping,
+	lineHeights,
+	remBodySizes,
+	remHeadlineSizes,
+	remTextSansSizes,
+	remTitlepieceSizes,
 	textSansSizes,
 	titlepieceSizes,
 } from './data';
 
 export type ScaleUnit = 'rem' | 'px';
-export type LineHeight = keyof typeof lineHeightMapping;
+export type LineHeight = keyof typeof lineHeights;
 export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
 export type FontStyle = 'normal' | 'italic';
 export type FontWeightDefinition = { hasItalic: boolean };
@@ -18,9 +22,7 @@ export type TypographyStyles<Unit extends ScaleUnit = ScaleUnit> = {
 	fontFamily: string;
 	fontSize: Unit extends 'px' ? number : `${number}rem`;
 	lineHeight: string | number;
-	fontWeight?:
-		| typeof fontWeightMapping[keyof typeof fontWeightMapping]
-		| FontWeight;
+	fontWeight?: typeof fontWeights[keyof typeof fontWeights] | FontWeight;
 	fontStyle?: 'normal' | 'italic';
 	textDecorationThickness?: number;
 };
@@ -30,10 +32,12 @@ export type TypographySizes = {
 	[key in string]: number;
 };
 
-export type TitlepieceSizes = typeof titlepieceSizes;
-export type HeadlineSizes = typeof headlineSizes;
-export type BodySizes = typeof bodySizes;
-export type TextSansSizes = typeof textSansSizes;
+export type TitlepieceSizes =
+	| typeof titlepieceSizes
+	| typeof remTitlepieceSizes;
+export type HeadlineSizes = typeof headlineSizes | typeof remHeadlineSizes;
+export type BodySizes = typeof bodySizes | typeof remBodySizes;
+export type TextSansSizes = typeof textSansSizes | typeof remTextSansSizes;
 
 type Categories = {
 	titlepiece: TitlepieceSizes;
@@ -43,6 +47,12 @@ type Categories = {
 };
 
 export type Category = keyof Categories;
+
+export type AvailableFontsMapping = {
+	[cat in Category]: {
+		[fontWeight in FontWeight]?: FontWeightDefinition;
+	};
+};
 
 export type Fs = <
 	Category extends keyof Categories,
