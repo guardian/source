@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 7.1.2
+
+### Patch Changes
+
+- 9d7fa178: - #1548 Fix missing label for `newsletter` icon
+
 ## 7.1.1
 
 ### Patch Changes
