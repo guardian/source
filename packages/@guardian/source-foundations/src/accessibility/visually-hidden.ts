@@ -5,10 +5,15 @@
  */
 
 export const visuallyHidden = `
-	position: absolute;
-	opacity: 0;
-	height: 0;
-	width: 0;
-	top: 0;
-	left: 0;
+	position: absolute !important;
+	overflow: hidden !important;
+	white-space: nowrap !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
 `;
