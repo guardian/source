@@ -153,7 +153,6 @@ export const palette = {
 	opinion: {
 		100: colors.oranges[0],
 		200: colors.oranges[1],
-		300: colors.oranges[2], // deprecated, use opinion[400]
 		400: colors.oranges[2],
 		450: colors.oranges[3],
 		500: colors.oranges[4],
@@ -175,7 +174,6 @@ export const palette = {
 		100: colors.browns[1],
 		200: colors.browns[2],
 		300: colors.browns[3],
-		350: colors.browns[4], // deprecated, use culture[400]
 		400: colors.browns[4],
 		450: colors.browns[5],
 		500: colors.browns[6],

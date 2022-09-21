@@ -69,7 +69,7 @@ export const decideBackground = (
 					`;
 				case ArticlePillar.Opinion:
 					return css`
-						background-color: ${opinion[300]};
+						background-color: ${opinion[400]};
 						:hover {
 							background-color: ${opinion[400]};
 							border: 1px solid ${opinion[400]};
