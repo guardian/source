@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 7.1.3
+
+### Patch Changes
+
+- fee8fd5b: the width of the button loading spinner icon is set to 24px as it was previously too large
+
 ## 7.1.2
 
 ### Patch Changes
