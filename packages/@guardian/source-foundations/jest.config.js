@@ -2,4 +2,5 @@
 module.exports = {
 	preset: 'ts-jest',
 	testEnvironment: 'node',
+	setupFilesAfterEnv: ['./src/utils/jest-matchers/setup-custom-matchers.ts'],
 };
