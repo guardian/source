@@ -28,7 +28,7 @@ const input = `
 ////////////////////////////
 // TODO: currently including this is optional but one day will be required
 // see https://github.com/orgs/guardian/teams/client-side-infra/discussions/17
-const defaults = /* css */ `
+const defaults = `
 	*, *:before, *:after {
         box-sizing: border-box;
     }
@@ -60,7 +60,7 @@ const defaults = /* css */ `
 ////////////////////////////
 // Originally sourced from https://github.com/shannonmoeller/reset-css
 // and https://meyerweb.com/eric/tools/css/reset/
-const resetCSS = /* css */ `
+const resetCSS = `
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 	a, abbr, acronym, address, big, cite, code,
