@@ -121,7 +121,7 @@ export const fontStyleToStringFunction =
 			textDecorationThickness,
 		} = typographyFunction(options);
 
-		return /* css */ `
+		return `
 			font-family: ${fontFamily};
 			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
 			line-height: ${lineHeight};
