@@ -1,14 +1,14 @@
 import { focusHalo, focusHaloSpaced } from './focus-halo';
 import { visuallyHidden } from './visually-hidden';
 
-it('should provide valid CSS for focusHalo', () => {
+test('focusHalo should be a valid CSS fragment', () => {
 	expect(focusHalo).toBeValidCSS({ isFragment: true });
 });
 
-it('should provide valid CSS for focusHaloSpaced', () => {
+test('focusHaloSpaced should be a valid CSS fragment', () => {
 	expect(focusHaloSpaced).toBeValidCSS({ isFragment: true });
 });
 
-it('should provide valid CSS for visuallyHidden', () => {
+test('visuallyHidden should be a valid CSS fragment', () => {
 	expect(visuallyHidden).toBeValidCSS({ isFragment: true });
 });
