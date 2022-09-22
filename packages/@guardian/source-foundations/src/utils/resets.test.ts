@@ -1,56 +1,23 @@
-import { transform } from 'lightningcss';
 import { resets } from './resets';
 
 it('should provide valid CSS for resets.defaults', () => {
-	expect(() =>
-		transform({ code: Buffer.from(resets.defaults, 'utf8'), filename: '' }),
-	).not.toThrowError();
+	expect(resets.defaults).toBeValidCSS();
 });
 
 it('should provide valid CSS for resets.fieldset', () => {
-	expect(() =>
-		transform({
-			code: Buffer.from(
-				`* {
-					${resets.fieldset}
-				}`,
-				'utf8',
-			),
-			filename: '',
-		}),
-	).not.toThrowError();
+	expect(resets.fieldset).toBeValidCSS({ isFragment: true });
 });
 
 it('should provide SCSS for resets.input', () => {
-	expect(() =>
-		transform({
-			code: Buffer.from(
-				`* {
-					${resets.input}
-				}`,
-				'utf8',
-			),
-			filename: '',
-		}),
-	).toThrowError();
+	// We add a test here so we don't forget to add/update a test
+	// when this is converted to CSS in the future.
+	expect(resets.input).not.toBeValidCSS({ isFragment: true });
 });
 
 it('should provide valid CSS for resets.legend', () => {
-	expect(() =>
-		transform({
-			code: Buffer.from(
-				`* {
-					${resets.legend}
-				}`,
-				'utf8',
-			),
-			filename: '',
-		}),
-	).not.toThrowError();
+	expect(resets.legend).toBeValidCSS({ isFragment: true });
 });
 
 it('should provide valid CSS for resets.resetCSS', () => {
-	expect(() =>
-		transform({ code: Buffer.from(resets.resetCSS, 'utf8'), filename: '' }),
-	).not.toThrowError();
+	expect(resets.resetCSS).toBeValidCSS();
 });
