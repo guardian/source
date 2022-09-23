@@ -118,7 +118,6 @@ describe('Validate that the font size px and rem values match those expected for
 			expect(typeof key).toBe('string');
 			for (const [name, remSize] of Object.entries(value)) {
 				// @ts-expect-error -- we’re testing
-				// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- we’re testing
 				const pxSize: number = pxTextSizes[key][name] ?? -1;
 				expect(remSize).toBeCloseTo(pxSize / rootPixelFontSize, 6);
 			}
