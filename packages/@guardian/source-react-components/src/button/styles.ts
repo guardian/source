@@ -1,4 +1,4 @@
-import type { SerializedStyles, Theme } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	focusHaloSpaced,
@@ -8,6 +8,7 @@ import {
 	transitions,
 	width,
 } from '@guardian/source-foundations';
+import type { Theme } from '../@types/Theme';
 import type { ButtonTheme } from './theme';
 import { buttonThemeDefault } from './theme';
 import type {
