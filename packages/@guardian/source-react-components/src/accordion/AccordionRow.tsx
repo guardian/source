@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import type { HTMLAttributes } from 'react';
 import { SvgChevronDownSingle } from '../../vendor/icons/SvgChevronDownSingle';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { AccordionRowNoJS } from './AccordionRowNoJS';
 import {
 	accordionRow,
@@ -71,12 +72,14 @@ export const AccordionRow = ({
 
 	if (isBrowser) {
 		return (
-			<div css={(theme) => [accordionRow(theme.accordion), cssOverrides]}>
+			<div
+				css={(theme: Theme) => [accordionRow(theme.accordion), cssOverrides]}
+			>
 				<button
 					type="button"
 					aria-expanded={expanded}
 					onClick={handleClick}
-					css={(theme) => [
+					css={(theme: Theme) => [
 						button(theme.accordion),
 						expanded ? chevronIconUp : chevronIconDown,
 						!hideToggleLabel ? toggleIconWithLabel : '',

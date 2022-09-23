@@ -26,6 +26,6 @@
 			"module": "CommonJS"
 		}
 	},
-	"include": ["packages", "lib", "@types", "scripts"],
+	"include": ["packages", "lib", "scripts"],
 	"exclude": ["node_modules", "dist"]
 }
