@@ -16,8 +16,11 @@ const fieldset = `
 	margin: 0;
 `;
 
+/**
+ * @deprecated this uses the SCSS parent selector. In the future we
+ * should look to make this just CSS or move into into our main reset.
+ */
 // remove styling of invalid input elements that gets applied in Firefox
-// this uses the SCSS parent selector and in the future we should look to make this just CSS
 const input = `
 	&:invalid {
 		box-shadow: none;
