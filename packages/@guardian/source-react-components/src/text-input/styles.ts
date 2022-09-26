@@ -37,7 +37,7 @@ export const textInput = (
 	textInput = textInputThemeDefault.textInput,
 ): SerializedStyles =>
 	css`
-		${resets.input};
+		${resets.inputSCSS};
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
 		${textSans.medium({ lineHeight: 'regular' })};

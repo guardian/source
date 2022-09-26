@@ -12,6 +12,7 @@ test('resets.input should be an invalid CSS fragment', () => {
 	// We add a test here so we don't forget to add/update a test
 	// when this is converted to CSS in the future.
 	expect(resets.input).not.toBeValidCSS({ isFragment: true });
+	expect(resets.inputSCSS).not.toBeValidCSS({ isFragment: true });
 });
 
 test('resets.legend should be a valid CSS fragment', () => {

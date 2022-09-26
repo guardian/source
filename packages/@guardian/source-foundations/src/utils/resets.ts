@@ -16,16 +16,17 @@ const fieldset = `
 	margin: 0;
 `;
 
-/**
- * @deprecated this uses the SCSS parent selector. In the future we
- * should look to make this just CSS or move into into our main reset.
- */
 // remove styling of invalid input elements that gets applied in Firefox
-const input = `
+const inputSCSS = `
 	&:invalid {
 		box-shadow: none;
 	}
 `;
+
+/**
+ * @deprecated use `resets.inputSCSS`
+ */
+const input = inputSCSS;
 
 ////////////////////////////
 // Default resets
@@ -125,6 +126,7 @@ export const resets = {
 	legend,
 	fieldset,
 	input,
+	inputSCSS,
 	defaults,
 	resetCSS,
 };

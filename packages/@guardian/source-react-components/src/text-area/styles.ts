@@ -28,7 +28,7 @@ export const successInput = css`
 `;
 
 export const textArea = css`
-	${resets.input};
+	${resets.inputSCSS};
 	box-sizing: border-box;
 	${textSans.medium({ lineHeight: 'regular' })};
 	color: ${palette.neutral[7]};
