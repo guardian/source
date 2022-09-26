@@ -13,7 +13,6 @@ export type {
 	HeadlineSize,
 	QuoteIconProps,
 	StarRatingProps,
-	ToggleSwitchProps,
 } from './index';
 
 it('Should have exactly these exports', () => {
@@ -34,7 +33,6 @@ it('Should have exactly these exports', () => {
 		'StarRating',
 		'StraightLines',
 		'SuccessSummary',
-		'ToggleSwitch',
 		'defaultGuardianLinks',
 	]);
 });

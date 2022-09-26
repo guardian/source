@@ -30,9 +30,6 @@ export type { ErrorSummaryProps } from './summary/ErrorSummary';
 export type { SuccessSummaryProps } from './summary/SuccessSummary';
 export type { InfoSummaryProps } from './summary/InfoSummary';
 
-export { ToggleSwitch } from './toggle-switch/ToggleSwitch';
-export type { ToggleSwitchProps } from './toggle-switch/ToggleSwitch';
-
 export { FooterWithContents } from './footer-with-contents/FooterWithContents';
 export {
 	FooterLinks,
