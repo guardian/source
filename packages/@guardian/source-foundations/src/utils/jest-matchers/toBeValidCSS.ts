@@ -43,10 +43,12 @@ expect.extend({
 				pass: true,
 				message: () => '',
 			};
-		} catch (e) {
+		} catch (error) {
+			const message = (error as Warning).message;
+			if (!message) throw error;
 			return {
 				pass: false,
-				message: () => (e as Warning).message,
+				message: () => message,
 			};
 		}
 	},
