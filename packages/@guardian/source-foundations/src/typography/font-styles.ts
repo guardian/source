@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import {
 	availableFontWeights,
 	fonts,
@@ -12,6 +13,8 @@ import type {
 	Categories,
 	FontScaleArgs,
 	FontScaleFunction,
+	FontScaleFunctionEmotion,
+	FontScaleFunctionStr,
 	FontStyle,
 	Option,
 	TypographyConfiguration,
@@ -107,11 +110,35 @@ export const fontStyleFunction =
  * Generates a method that evaluates a given font scale function with the
  * provided options and returns the typography styles as a CSS string.
  *
+ * This method will not work with the `textDecorationThickness` property.
+ * If you require this, please use `fontStyleToEmotionFunction` instead.
+ *
  * For an example usage see our {@link [typography string function exports](./index.ts)}.
  */
 export const fontStyleToStringFunction =
-	(typographyFunction: FontScaleFunction) =>
-	(options?: FontScaleArgs): string => {
+	(typographyFunction: FontScaleFunction): FontScaleFunctionStr =>
+	(options?: FontScaleArgs) => {
+		const { fontFamily, fontSize, fontStyle, fontWeight, lineHeight } =
+			typographyFunction(options);
+
+		return `
+			font-family: ${fontFamily};
+			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
+			line-height: ${lineHeight};
+			${fontWeight ? `font-weight: ${fontWeight};` : ''}
+			${fontStyle ? `font-style: ${fontStyle};` : ''}
+		`;
+	};
+
+/**
+ * Generates a method that evaluates a given font scale function with the
+ * provided options and returns the typography styles as a serialised emotion object.
+ *
+ * For an example usage see our {@link [typography string function exports](./index.ts)}.
+ */
+export const fontStyleToEmotionFunction =
+	(typographyFunction: FontScaleFunction): FontScaleFunctionEmotion =>
+	(options?: FontScaleArgs) => {
 		const {
 			fontFamily,
 			fontSize,
@@ -121,19 +148,17 @@ export const fontStyleToStringFunction =
 			textDecorationThickness,
 		} = typographyFunction(options);
 
-		return `
+		return css`
 			font-family: ${fontFamily};
 			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
 			line-height: ${lineHeight};
-			${fontWeight ? `font-weight: ${fontWeight}` : ''};
-			${fontStyle ? `font-style: ${fontStyle}` : ''};
+			${fontWeight ? `font-weight: ${fontWeight};` : ''}
+			${fontStyle ? `font-style: ${fontStyle};` : ''}
 
 			&:hover {
-				${
-					textDecorationThickness
-						? `text-decoration-thickness: ${textDecorationThickness}px`
-						: ``
-				};
+				${textDecorationThickness
+					? `text-decoration-thickness: ${textDecorationThickness}px;`
+					: ``}
 			}
 		`;
 	};

@@ -1,3 +1,4 @@
+import { SerializedStyles } from '@emotion/react';
 import type {
 	bodySizes,
 	fontWeights,
@@ -78,9 +79,17 @@ export type FontScaleFunction = (options?: FontScaleArgs) => TypographyStyles;
 
 // returns styles as a template literal
 export type FontScaleFunctionStr = (options?: FontScaleArgs) => string;
+// returns styles as an Emotion SerializedStyles object
+export type FontScaleFunctionEmotion = (
+	options?: FontScaleArgs,
+) => SerializedStyles;
 
 export type TypographyStrFunctions<Sizes extends AvailableSizes> = {
 	[key in keyof Sizes]: FontScaleFunctionStr;
+};
+
+export type TypographyEmotionFunctions<Sizes extends AvailableSizes> = {
+	[key in keyof Sizes]: FontScaleFunctionEmotion;
 };
 
 export type TypographyFunctions<Sizes extends AvailableSizes> = {

@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import { palette } from '../colour/palette';
 
 ////////////////////////////
@@ -17,16 +18,11 @@ const fieldset = `
 `;
 
 // remove styling of invalid input elements that gets applied in Firefox
-const inputSCSS = `
+const input = css`
 	&:invalid {
 		box-shadow: none;
 	}
 `;
-
-/**
- * @deprecated use `resets.inputSCSS`
- */
-const input = inputSCSS;
 
 ////////////////////////////
 // Default resets
@@ -126,7 +122,6 @@ export const resets = {
 	legend,
 	fieldset,
 	input,
-	inputSCSS,
 	defaults,
 	resetCSS,
 };
