@@ -2,6 +2,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes, ReactNode } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { LabelText } from './LabelText';
 import {
 	checkbox,
@@ -92,7 +93,7 @@ export const Checkbox = ({
 
 	return (
 		<div
-			css={(theme) => [
+			css={(theme: Theme) => [
 				checkboxContainer(theme.checkbox),
 				supporting ? checkboxContainerWithSupportingText : '',
 			]}
@@ -100,7 +101,7 @@ export const Checkbox = ({
 			<input
 				id={checkboxId}
 				type="checkbox"
-				css={(theme) => [
+				css={(theme: Theme) => [
 					checkbox(theme.checkbox),
 					error ? errorCheckbox(theme.checkbox) : '',
 					cssOverrides,
@@ -112,7 +113,7 @@ export const Checkbox = ({
 				{...props}
 			/>
 			<span
-				css={(theme) => [
+				css={(theme: Theme) => [
 					tick(theme.checkbox),
 					labelContent || supporting ? tickWithLabelText : '',
 					supporting ? tickWithSupportingText : '',
