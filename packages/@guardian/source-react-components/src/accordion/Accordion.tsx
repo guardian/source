@@ -2,6 +2,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { ReactElement } from 'react';
 import { Children, cloneElement } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { accordion } from './styles';
 
 export interface AccordionProps extends Props {
@@ -33,7 +34,10 @@ export const Accordion = ({
 }: AccordionProps): EmotionJSX.Element => {
 	// AUDIT https://www.sarasoueidan.com/blog/accordion-markup/
 	return (
-		<div css={(theme) => [accordion(theme.accordion), cssOverrides]} {...props}>
+		<div
+			css={(theme: Theme) => [accordion(theme.accordion), cssOverrides]}
+			{...props}
+		>
 			{Children.map(children, (child) => {
 				return cloneElement(child, { hideToggleLabel });
 			})}

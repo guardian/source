@@ -1,5 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { SvgAlertTriangle } from '../../vendor/icons/SvgAlertTriangle';
+import type { Theme } from '../@types/Theme';
 import { inlineError } from './styles';
 import type { UserFeedbackProps } from './types';
 
@@ -19,7 +20,7 @@ export const InlineError = ({
 	...props
 }: UserFeedbackProps): EmotionJSX.Element => (
 	<span
-		css={(theme) => [inlineError(theme.userFeedback), cssOverrides]}
+		css={(theme: Theme) => [inlineError(theme.userFeedback), cssOverrides]}
 		role="alert"
 		{...props}
 	>

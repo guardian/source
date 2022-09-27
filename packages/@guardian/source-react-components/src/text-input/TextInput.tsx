@@ -3,6 +3,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { Label } from '../label/Label';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';
@@ -117,7 +118,7 @@ export const TextInput = ({
 				)}
 			</Label>
 			<input
-				css={(theme) => [
+				css={(theme: Theme) => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput),
 					supporting ? supportingTextMargin : labelMargin,

@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 7.1.4
+
+### Patch Changes
+
+- 81a17eaa: Turn ambient `Theme` type into an explicitly imported type
+
 ## 7.1.3
 
 ### Patch Changes

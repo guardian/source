@@ -1,6 +1,7 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { BackToTop } from './BackToTop';
 import {
 	copyright,
@@ -33,14 +34,17 @@ export const Footer = ({
 	...props
 }: FooterProps): EmotionJSX.Element => {
 	return (
-		<footer css={(theme) => [footer(theme.footer), cssOverrides]} {...props}>
+		<footer
+			css={(theme: Theme) => [footer(theme.footer), cssOverrides]}
+			{...props}
+		>
 			<div
 				css={[
 					linksWrapper,
 					showBackToTop ? linksWrapperSpaceWithBackToTop : linksWrapperSpace,
 				]}
 			>
-				<div css={(theme) => links(theme.footer)}>{children}</div>
+				<div css={(theme: Theme) => links(theme.footer)}>{children}</div>
 				{showBackToTop ? BackToTop : ''}
 			</div>
 			<small css={[copyright, showBackToTop ? copyrightExtraPadding : '']}>
