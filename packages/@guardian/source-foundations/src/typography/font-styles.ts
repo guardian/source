@@ -107,6 +107,21 @@ export const fontStyleFunction =
 	};
 
 /**
+ * Helper method that returns a valid CSS string for a given set of typography styles.
+ */
+const fontStyleToCssString = (styles: TypographyStyles) => {
+	const { fontFamily, fontSize, fontStyle, fontWeight, lineHeight } = styles;
+
+	return `
+			font-family: ${fontFamily};
+			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
+			line-height: ${lineHeight};
+			${fontWeight ? `font-weight: ${fontWeight};` : ''}
+			${fontStyle ? `font-style: ${fontStyle};` : ''}
+		`;
+};
+
+/**
  * Generates a method that evaluates a given font scale function with the
  * provided options and returns the typography styles as a CSS string.
  *
@@ -117,18 +132,8 @@ export const fontStyleFunction =
  */
 export const fontStyleToStringFunction =
 	(typographyFunction: FontScaleFunction): FontScaleFunctionStr =>
-	(options?: FontScaleArgs) => {
-		const { fontFamily, fontSize, fontStyle, fontWeight, lineHeight } =
-			typographyFunction(options);
-
-		return `
-			font-family: ${fontFamily};
-			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
-			line-height: ${lineHeight};
-			${fontWeight ? `font-weight: ${fontWeight};` : ''}
-			${fontStyle ? `font-style: ${fontStyle};` : ''}
-		`;
-	};
+	(options?: FontScaleArgs) =>
+		fontStyleToCssString(typographyFunction(options));
 
 /**
  * Generates a method that evaluates a given font scale function with the
@@ -139,21 +144,11 @@ export const fontStyleToStringFunction =
 export const fontStyleToEmotionFunction =
 	(typographyFunction: FontScaleFunction): FontScaleFunctionEmotion =>
 	(options?: FontScaleArgs) => {
-		const {
-			fontFamily,
-			fontSize,
-			fontStyle,
-			fontWeight,
-			lineHeight,
-			textDecorationThickness,
-		} = typographyFunction(options);
+		const { textDecorationThickness, ...fontStyles } =
+			typographyFunction(options);
 
 		return css`
-			font-family: ${fontFamily};
-			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
-			line-height: ${lineHeight};
-			${fontWeight ? `font-weight: ${fontWeight};` : ''}
-			${fontStyle ? `font-style: ${fontStyle};` : ''}
+			${fontStyleToCssString(fontStyles)}
 
 			&:hover {
 				${textDecorationThickness
