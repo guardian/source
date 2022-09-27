@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import { palette } from '../colour/palette';
 
 ////////////////////////////
@@ -17,7 +18,7 @@ const fieldset = `
 `;
 
 // remove styling of invalid input elements that gets applied in Firefox
-const input = `
+const input = css`
 	&:invalid {
 		box-shadow: none;
 	}
