@@ -15,7 +15,7 @@ import {
 export type Platform = 'android' | 'ios' | 'web';
 export type LabelPosition = 'left' | 'right';
 
-export interface ToggleSwitchProps extends Props {
+export interface ToggleSwitchAppsProps extends Props {
 	/**
 	 * Whether the ToggleSwitch is checked. This is necessary when using the
 	 * [controlled approach](https://reactjs.org/docs/forms.html#controlled-components)
@@ -81,7 +81,7 @@ const getPlatformStyles = (platform: Platform): SerializedStyles => {
 	}
 };
 
-export const ToggleSwitch = ({
+export const ToggleSwitchApps = ({
 	checked,
 	id,
 	label,
@@ -91,7 +91,7 @@ export const ToggleSwitch = ({
 	platform = 'web',
 	onClick = () => undefined,
 	...props
-}: ToggleSwitchProps): EmotionJSX.Element => {
+}: ToggleSwitchAppsProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
 	const [isBrowser, setIsBrowser] = useState(false);

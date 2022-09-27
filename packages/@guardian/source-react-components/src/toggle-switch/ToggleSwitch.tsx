@@ -1,4 +1,5 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import type { ArticleFormat } from '@guardian/libs';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { Props } from '../@types/Props';
 import {
@@ -30,6 +31,10 @@ export interface ToggleSwitchProps extends Props {
 	 * use defaultChecked to indicate the whether the ToggleSwitch is checked initially.
 	 */
 	defaultChecked?: boolean;
+	/**
+	 * Optional Format prop, when provided this renders the toggle with a theme colored tick and light background track
+	 */
+	format?: ArticleFormat;
 	/**
 	 * Optional Id for the switch. Defaults to a generated indexed Source ID e.g. "src-component-XXX}"
 	 */
@@ -91,6 +96,7 @@ export const ToggleSwitch = ({
 	id,
 	fontWeight = 'regular',
 	fontSize = 'small',
+	format,
 	label,
 	labelBorder = false,
 	labelPosition = 'right',

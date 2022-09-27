@@ -38,9 +38,9 @@ const decideBackgroundColor = (format?: ArticleFormat) => {
 			case ArticlePillar.Opinion:
 				return opinion[200];
 			case ArticleSpecial.Labs:
-				return labs[300];
+				return labs[200];
 			case ArticleSpecial.SpecialReport:
-				return specialReport[300];
+				return specialReport[200];
 			default:
 				return news[200];
 		}

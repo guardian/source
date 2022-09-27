@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { neutral, success, textSans } from '@guardian/source-foundations';
-import type { LabelPosition } from './ToggleSwitch';
+import type { LabelPosition } from './ToggleSwitchApps';
 
 export const buttonStyles = (labelPosition: LabelPosition) => css`
 	flex: none;

@@ -1,6 +1,6 @@
-# ToggleSwitch
+# ToggleSwitchApps
 
-Displays an on/off switch. See the accompanying stories for visual examples.
+Displays an on/off switch for use in apps web views. See the accompanying stories for visual examples.
 
 ## Install
 

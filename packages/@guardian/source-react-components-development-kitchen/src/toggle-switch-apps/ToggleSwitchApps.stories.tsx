@@ -4,20 +4,23 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import { ToggleSwitch } from './ToggleSwitch';
-import type { ToggleSwitchProps } from './ToggleSwitch';
+import { ToggleSwitchApps } from './ToggleSwitchApps';
+import type { ToggleSwitchAppsProps } from './ToggleSwitchApps';
 
 export default {
-	title: 'Packages/source-react-components-development-kitchen/ToggleSwitch',
-	component: ToggleSwitch,
+	title:
+		'Packages/source-react-components-development-kitchen/ToggleSwitchApps',
+	component: ToggleSwitchApps,
 	args: {},
 };
 
-const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
+const Template: Story<ToggleSwitchAppsProps> = (
+	args: ToggleSwitchAppsProps,
+) => {
 	const [checked, setChecked] = useState(args.checked);
 	return (
 		<div style={{ height: '100px' }}>
-			<ToggleSwitch
+			<ToggleSwitchApps
 				{...args}
 				checked={checked}
 				onClick={() => {
