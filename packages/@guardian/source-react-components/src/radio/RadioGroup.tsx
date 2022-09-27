@@ -3,6 +3,7 @@ import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { FieldsetHTMLAttributes } from 'react';
 import { Children, cloneElement } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { Inline } from '../inline/Inline';
 import { Legend } from '../label/Legend';
 import { Stack } from '../stack/Stack';
@@ -93,7 +94,7 @@ export const RadioGroup = ({
 		<fieldset
 			aria-invalid={!!error}
 			id={groupId}
-			css={(theme) => [fieldset(theme.radio), cssOverrides]}
+			css={(theme: Theme) => [fieldset(theme.radio), cssOverrides]}
 			{...props}
 		>
 			{legend}

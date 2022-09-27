@@ -1,9 +1,11 @@
+import { rootPixelFontSize } from '../utils/px-to-rem';
+import { pxTextSizes, remTextSizes } from './data';
 import {
-	fontMapping as fonts,
-	fontWeightMapping as fontWeights,
+	fonts,
+	fontWeights,
 	headline,
 	headlineSizes,
-	lineHeightMapping as lineHeights,
+	lineHeights,
 	remHeadlineSizes,
 } from '.';
 
@@ -83,4 +85,42 @@ it('should not include italic font style if it is not available for requested fo
 
 	expect(mediumHeadlineStyles).not.toContain('font-style: italic;');
 	expect(largeHeadlineStyles).not.toContain('font-style: italic;');
+});
+
+describe('Validate that the font size px and rem values match those expected for each entry in the scale', () => {
+	const sizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70] as const;
+	const names = [
+		'xxxsmall',
+		'xxsmall',
+		'xsmall',
+		'small',
+		'medium',
+		'large',
+		'xlarge',
+		'xxlarge',
+		'xxxlarge',
+	] as const;
+
+	it.each(Object.entries(pxTextSizes))(
+		'pxTextSizes has valid values for %s',
+		(key, value) => {
+			expect(typeof key).toBe('string');
+			for (const [name, size] of Object.entries(value)) {
+				expect(names).toContain(name);
+				expect(sizes).toContain(size);
+			}
+		},
+	);
+
+	it.each(Object.entries(remTextSizes))(
+		'remTextSizes has valid values for %s',
+		(key, value) => {
+			expect(typeof key).toBe('string');
+			for (const [name, remSize] of Object.entries(value)) {
+				// @ts-expect-error -- we’re testing
+				const pxSize: number = pxTextSizes[key][name] ?? -1;
+				expect(remSize).toBeCloseTo(pxSize / rootPixelFontSize, 6);
+			}
+		},
+	);
 });

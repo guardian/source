@@ -1,4 +1,4 @@
-import type { SerializedStyles, Theme } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	focusHaloSpaced,
@@ -8,6 +8,7 @@ import {
 	transitions,
 	width,
 } from '@guardian/source-foundations';
+import type { Theme } from '../@types/Theme';
 import type { ButtonTheme } from './theme';
 import { buttonThemeDefault } from './theme';
 import type {
@@ -46,6 +47,14 @@ const applyButtonStylesToLoadingSpinner = css`
 	}
 	path {
 		stroke: currentColor;
+	}
+	svg {
+		/*
+		 * The loading spinner width has been specified as 24px in the design
+		 * which falls outside of the icon sizes in source-foundations, so we
+		 * override the width here.
+		 */
+		width: 24px;
 	}
 `;
 

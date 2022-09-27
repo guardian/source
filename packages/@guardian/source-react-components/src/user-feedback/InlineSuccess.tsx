@@ -1,5 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { SvgTickRound } from '../../vendor/icons/SvgTickRound';
+import type { Theme } from '../@types/Theme';
 import { inlineSuccess } from './styles';
 import type { UserFeedbackProps } from './types';
 
@@ -19,7 +20,7 @@ export const InlineSuccess = ({
 	...props
 }: UserFeedbackProps): EmotionJSX.Element => (
 	<span
-		css={(theme) => [inlineSuccess(theme.userFeedback), cssOverrides]}
+		css={(theme: Theme) => [inlineSuccess(theme.userFeedback), cssOverrides]}
 		role="alert"
 		{...props}
 	>

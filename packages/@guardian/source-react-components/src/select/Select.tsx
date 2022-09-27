@@ -3,6 +3,7 @@ import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { SelectHTMLAttributes } from 'react';
 import { SvgChevronDownSingle } from '../../vendor/icons/SvgChevronDownSingle';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { Label } from '../label/Label';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';
@@ -86,14 +87,14 @@ export const Select = ({
 				)}
 			</Label>
 			<div
-				css={(theme) => [
+				css={(theme: Theme) => [
 					selectWrapper(theme.select),
 					error ? errorChevron(theme.select) : '',
 					!error && success ? successChevron(theme.select) : '',
 				]}
 			>
 				<select
-					css={(theme) => [
+					css={(theme: Theme) => [
 						select(theme.select),
 						error ? errorInput(theme.select) : '',
 						!error && success ? successInput(theme.select) : '',

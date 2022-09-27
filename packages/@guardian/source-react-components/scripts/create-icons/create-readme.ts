@@ -1,7 +1,6 @@
 import { ICON_FILE } from './get-svgs-from-figma';
 
-export const createReadme = () => `
-# Icons
+export const createReadme = () => `# Icons
 
 **The contents of this directory are created automatically. Any edits will be
 overwritten sooner or later.**

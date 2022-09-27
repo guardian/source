@@ -1,6 +1,8 @@
 import { promises } from 'fs';
 import path from 'path';
+import prettierConfig from '@guardian/prettier';
 import mkdirp from 'mkdirp';
+import { format } from 'prettier';
 import { createIconComponent } from './create-icon-component';
 import { createReadme } from './create-readme';
 import { getIconsFromFigma } from './get-svgs-from-figma';
@@ -65,9 +67,11 @@ void (async () => {
 			isWideIcon: SPECIAL_CASES.isWide.includes(icon.name),
 		});
 
+		const filepath = path.resolve(VENDOR_ICON_PATH, `${componentName}.tsx`);
+
 		await writeFile(
-			path.resolve(VENDOR_ICON_PATH, `${componentName}.tsx`),
-			warning + component,
+			filepath,
+			format(warning + component, { filepath, ...prettierConfig }),
 			'utf8',
 		);
 	}
