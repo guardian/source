@@ -113,12 +113,12 @@ const fontStyleToCssString = (styles: TypographyStyles) => {
 	const { fontFamily, fontSize, fontStyle, fontWeight, lineHeight } = styles;
 
 	return `
-			font-family: ${fontFamily};
-			font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
-			line-height: ${lineHeight};
-			${fontWeight ? `font-weight: ${fontWeight};` : ''}
-			${fontStyle ? `font-style: ${fontStyle};` : ''}
-		`;
+		font-family: ${fontFamily};
+		font-size: ${typeof fontSize === 'number' ? `${fontSize}px` : fontSize};
+		line-height: ${lineHeight};
+		${fontWeight ? `font-weight: ${fontWeight};` : ''}
+		${fontStyle ? `font-style: ${fontStyle};` : ''}
+	`;
 };
 
 /**
