@@ -130,6 +130,7 @@ export const TextArea = ({
 				aria-describedby={error || success ? descriptionId(textAreaId) : ''}
 				required={!optional}
 				rows={rows}
+				value={value}
 				className={getClassName()}
 				{...props}
 			/>
