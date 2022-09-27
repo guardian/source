@@ -1,4 +1,3 @@
-import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { Props } from '@guardian/source-react-components';
@@ -9,10 +8,9 @@ import {
 	iosStyles,
 	labelStyles,
 	tooltipStyles,
-	webStyles,
 } from './styles';
 
-export type Platform = 'android' | 'ios' | 'web';
+export type Platform = 'android' | 'ios';
 export type LabelPosition = 'left' | 'right';
 
 export interface ToggleSwitchAppsProps extends Props {
@@ -49,7 +47,7 @@ export interface ToggleSwitchAppsProps extends Props {
 	tooltip?: boolean;
 	/**
 	 * Sets the toggle styling appropriate for each platform.
-	 * The default platform is 'web'.
+	 * The default platform is 'ios'.
 	 */
 	platform?: Platform;
 	/**
@@ -60,9 +58,9 @@ export interface ToggleSwitchAppsProps extends Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-development-kitchen-toggle-switch--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-development-kitchen-toggle-switch-apps--playground) •
  * [Design System](https://theguardian.design) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch-apps) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
  * Displays an on/off toggle switch. This toggle has default styling and can be used on android, ios or web.
@@ -70,17 +68,6 @@ export interface ToggleSwitchAppsProps extends Props {
  * To give it more custom styling cssOverride may be used.
  *
  */
-const getPlatformStyles = (platform: Platform): SerializedStyles => {
-	switch (platform) {
-		case 'android':
-			return androidStyles;
-		case 'ios':
-			return iosStyles;
-		case 'web':
-			return webStyles;
-	}
-};
-
 export const ToggleSwitchApps = ({
 	checked,
 	id,
@@ -88,7 +75,7 @@ export const ToggleSwitchApps = ({
 	labelPosition = 'right',
 	defaultChecked,
 	cssOverrides,
-	platform = 'web',
+	platform = 'ios',
 	onClick = () => undefined,
 	...props
 }: ToggleSwitchAppsProps): EmotionJSX.Element => {
@@ -119,7 +106,10 @@ export const ToggleSwitchApps = ({
 				{labelPosition === 'left' && label}
 				<button
 					id={buttonId}
-					css={[buttonStyles(labelPosition), getPlatformStyles(platform)]}
+					css={[
+						buttonStyles(labelPosition),
+						platform === 'ios' ? iosStyles : androidStyles,
+					]}
 					role="switch"
 					aria-checked={isChecked()}
 					aria-labelledby={labelId}

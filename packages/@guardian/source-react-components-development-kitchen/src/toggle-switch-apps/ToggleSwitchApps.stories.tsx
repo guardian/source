@@ -54,14 +54,6 @@ asChromaticStory(IosNoLabel);
 
 // *****************************************************************************
 
-export const WebNoLabel = Template.bind({});
-WebNoLabel.args = {
-	platform: 'web',
-};
-asChromaticStory(WebNoLabel);
-
-// *****************************************************************************
-
 export const AndroidWithLabel = Template.bind({});
 AndroidWithLabel.args = {
 	label: 'Get alerts on this story',
@@ -77,15 +69,6 @@ IosWithLabel.args = {
 	platform: 'ios',
 };
 asChromaticStory(IosWithLabel);
-
-// *****************************************************************************
-
-export const WebWithLabel = Template.bind({});
-WebWithLabel.args = {
-	label: 'Get alerts on this story',
-	platform: 'web',
-};
-asChromaticStory(WebWithLabel);
 
 // *****************************************************************************
 
@@ -106,13 +89,3 @@ IosWithLabelLeft.args = {
 	platform: 'ios',
 };
 asChromaticStory(IosWithLabelLeft);
-
-// *****************************************************************************
-
-export const WebWithLabelLeft = Template.bind({});
-WebWithLabelLeft.args = {
-	label: 'Get alerts on this story',
-	labelPosition: 'left',
-	platform: 'web',
-};
-asChromaticStory(WebWithLabelLeft);

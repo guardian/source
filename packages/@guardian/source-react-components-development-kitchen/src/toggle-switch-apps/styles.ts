@@ -87,62 +87,6 @@ export const androidStyles = css`
 	}
 `;
 
-/**
- * These 'webStyles' are shared with Frontend and will potentially also need updating there if updated here.
- * https://github.com/guardian/frontend/blob/c2b3103e1796b9b2fc3326e792323dd919d4b85a/static/src/stylesheets/module/content-garnett/_live-blog.scss#L257
- */
-
-export const webStyles = css`
-	width: 2.75rem;
-	height: 1.5rem;
-	border-radius: 15.5px;
-
-	/* this will go away when resets have been standardised */
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 6px;
-		height: 11px;
-		width: 6px;
-		right: 10px;
-		opacity: 0;
-		border-bottom: 2px solid ${success[400]};
-		border-right: 2px solid ${success[400]};
-		transform: rotate(45deg);
-		transition: opacity 0.1s ease-in;
-	}
-
-	&:after {
-		height: 18px;
-		width: 18px;
-		top: 3px;
-		left: 4px;
-	}
-
-	&[aria-checked='false'] {
-		background-color: rgba(153, 153, 153, 0.5);
-	}
-
-	&[aria-checked='true'] {
-		background: ${success[500]};
-	}
-
-	&[aria-checked='true']:before {
-		opacity: 1;
-		z-index: 1;
-	}
-
-	&[aria-checked='true']:after {
-		left: 1.375rem;
-		background: ${neutral[100]};
-	}
-`;
-
 export const labelStyles = css`
 	${textSans.small()};
 	display: flex;
