@@ -112,3 +112,11 @@ WithMaxLengthDefaultTheme.args = {
 asChromaticStory(WithMaxLengthDefaultTheme);
 
 // *****************************************************************************
+
+export const WithValue = Template.bind({});
+WithValue.args = {
+	value: 'This is a value passed in as a prop',
+};
+asChromaticStory(WithValue);
+
+// *****************************************************************************
