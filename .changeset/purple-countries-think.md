@@ -2,4 +2,4 @@
 '@guardian/source-react-components': patch
 ---
 
-Add value field to textArea
+Add defaultValue field to textArea
