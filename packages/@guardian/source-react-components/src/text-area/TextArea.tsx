@@ -131,7 +131,7 @@ export const TextArea = ({
 				required={!optional}
 				rows={rows}
 				className={getClassName()}
-				defaultValue={value}
+				value={value}
 				{...props}
 			/>
 		</>
