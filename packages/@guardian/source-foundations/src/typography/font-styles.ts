@@ -149,7 +149,6 @@ export const fontStyleToEmotionFunction =
 
 		return css`
 			${fontStyleToCssString(fontStyles)}
-
 			&:hover {
 				${textDecorationThickness
 					? `text-decoration-thickness: ${textDecorationThickness}px;`

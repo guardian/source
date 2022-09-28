@@ -137,10 +137,6 @@ test('headlineString.medium should return a valid CSS fragment', () => {
 	expect(headlineString.medium()).toBeValidCSS({ isFragment: true });
 });
 
-test('headline.medium should not return a valid CSS fragment', () => {
-	expect(headline.medium().styles).not.toBeValidCSS({ isFragment: true });
-});
-
 it('should not include italic font style if it is not available for requested font', () => {
 	const mediumHeadlineStyles = headlineString.medium({
 		fontWeight: 'bold',
