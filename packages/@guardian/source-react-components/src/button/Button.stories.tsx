@@ -283,6 +283,24 @@ asChromaticStory(IsLoadingPrimary);
 
 // *****************************************************************************
 
+export const IsLoadingPrimarySmall = Template.bind({});
+IsLoadingPrimarySmall.args = {
+	isLoading: true,
+	size: 'small',
+};
+asChromaticStory(IsLoadingPrimarySmall);
+
+// *****************************************************************************
+
+export const IsLoadingPrimaryXSmall = Template.bind({});
+IsLoadingPrimaryXSmall.args = {
+	isLoading: true,
+	size: 'xsmall',
+};
+asChromaticStory(IsLoadingPrimaryXSmall);
+
+// *****************************************************************************
+
 export const IsLoadingSecondary = Template.bind({});
 IsLoadingSecondary.args = {
 	isLoading: true,
