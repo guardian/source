@@ -1,5 +1,18 @@
 # @guardian/source-react-components
 
+## 7.1.5
+
+### Patch Changes
+
+- 8079ce0e: Add value field to textArea so the component works as a controlled component
+- 6b989f6a: - fix the size of the loading spinner on buttons of size: small and xsmall
+
+## 7.1.4
+
+### Patch Changes
+
+- 81a17eaa: Turn ambient `Theme` type into an explicitly imported type
+
 ## 7.1.3
 
 ### Patch Changes
