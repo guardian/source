@@ -2641,7 +2641,7 @@
 
 "@guardian/libs@3.0.0":
   version "3.0.0"
-  resolved "https://registry.npmjs.org/@guardian/libs/-/libs-3.0.0.tgz#d54813f12f77cede9ee681033f251383ea379acd"
+  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-3.0.0.tgz#d54813f12f77cede9ee681033f251383ea379acd"
   integrity sha512-s2NEuE+rX2IyQohFWjKA0OV2GT7HPmh/2QO7cXaZirvMAhrgmEDXu7MSfHfqaLJybpDskUCyik6Yo73qgfnJdg==
 
 "@guardian/libs@^3.0.0":

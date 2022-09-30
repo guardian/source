@@ -116,148 +116,48 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const AndroidNoLabel = Template.bind({});
-AndroidNoLabel.args = {
-	platform: 'android',
-};
-asChromaticStory(AndroidNoLabel);
+export const NoLabel = Template.bind({});
+asChromaticStory(NoLabel);
 
 // *****************************************************************************
 
-export const IosNoLabel = Template.bind({});
-IosNoLabel.args = {
-	platform: 'ios',
-};
-asChromaticStory(IosNoLabel);
-
-// *****************************************************************************
-
-export const WebNoLabel = Template.bind({});
-WebNoLabel.args = {
-	platform: 'web',
-};
-asChromaticStory(WebNoLabel);
-
-// *****************************************************************************
-
-export const AndroidWithLabel = Template.bind({});
-AndroidWithLabel.args = {
+export const WithLabel = Template.bind({});
+WithLabel.args = {
 	label: 'Get alerts on this story',
-	platform: 'android',
 };
-asChromaticStory(AndroidWithLabel);
+asChromaticStory(WithLabel);
 
 // *****************************************************************************
 
-export const IosWithLabel = Template.bind({});
-IosWithLabel.args = {
-	label: 'Get alerts on this story',
-	platform: 'ios',
-};
-asChromaticStory(IosWithLabel);
-
-// *****************************************************************************
-
-export const WebWithLabel = Template.bind({});
-WebWithLabel.args = {
-	label: 'Get alerts on this story',
-	platform: 'web',
-};
-asChromaticStory(WebWithLabel);
-
-// *****************************************************************************
-
-export const AndroidWithLabelLeft = Template.bind({});
-AndroidWithLabelLeft.args = {
+export const WithLabelLeft = Template.bind({});
+WithLabelLeft.args = {
 	label: 'Get alerts on this story',
 	labelPosition: 'left',
-	platform: 'android',
 };
-asChromaticStory(AndroidWithLabelLeft);
+asChromaticStory(WithLabelLeft);
 
 // *****************************************************************************
 
-export const IosWithLabelLeft = Template.bind({});
-IosWithLabelLeft.args = {
+export const WithBorder = Template.bind({});
+WithBorder.args = {
 	label: 'Get alerts on this story',
-	labelPosition: 'left',
-	platform: 'ios',
-};
-asChromaticStory(IosWithLabelLeft);
-
-// *****************************************************************************
-
-export const WebWithLabelLeft = Template.bind({});
-WebWithLabelLeft.args = {
-	label: 'Get alerts on this story',
-	labelPosition: 'left',
-	platform: 'web',
-};
-asChromaticStory(WebWithLabelLeft);
-
-// *****************************************************************************
-
-export const AndroidWithBorder = Template.bind({});
-AndroidWithBorder.args = {
-	label: 'Get alerts on this story',
-	platform: 'android',
 	labelBorder: true,
 };
-asChromaticStory(AndroidWithBorder);
+asChromaticStory(WithBorder);
 
 // *****************************************************************************
 
-export const IosWithBorder = Template.bind({});
-IosWithBorder.args = {
+export const WithFormat = PillarsTemplate.bind({});
+WithFormat.args = {
 	label: 'Get alerts on this story',
-	platform: 'ios',
-	labelBorder: true,
 };
-asChromaticStory(IosWithBorder);
+asChromaticStory(WithFormat);
 
 // *****************************************************************************
 
-export const WebWithBorder = Template.bind({});
-WebWithBorder.args = {
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
 	label: 'Get alerts on this story',
-	platform: 'web',
-	labelBorder: true,
-};
-asChromaticStory(WebWithBorder);
-
-// *****************************************************************************
-
-export const AndroidWithFormat = PillarsTemplate.bind({});
-AndroidWithFormat.args = {
-	label: 'Get alerts on this story',
-	platform: 'android',
-};
-asChromaticStory(AndroidWithFormat);
-
-// *****************************************************************************
-
-export const IosWithFormat = PillarsTemplate.bind({});
-IosWithFormat.args = {
-	label: 'Get alerts on this story',
-	platform: 'ios',
-};
-asChromaticStory(IosWithFormat);
-
-// *****************************************************************************
-
-export const WebWithFormat = PillarsTemplate.bind({});
-WebWithFormat.args = {
-	label: 'Get alerts on this story',
-	platform: 'web',
-};
-asChromaticStory(WebWithFormat);
-
-// *****************************************************************************
-
-export const WebWithTooltip = Template.bind({});
-WebWithTooltip.args = {
-	label: 'Get alerts on this story',
-	platform: 'web',
 	noJs: true,
 };
-asChromaticStory(WebWithTooltip);
+asChromaticStory(WithTooltip);

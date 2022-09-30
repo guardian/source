@@ -4,14 +4,12 @@ import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { Props } from '../@types/Props';
 import {
 	buttonStyles,
-	iosToggleStyles,
 	labelBorderStyles,
 	labelStyles,
 	toggleStyles,
 	tooltipStyles,
 } from './styles';
 
-export type Platform = 'android' | 'ios' | 'web';
 export type LabelPosition = 'left' | 'right';
 export type ToggleSwitchFontWeight = 'regular' | 'bold';
 export type ToggleSwitchFontSize = 'small' | 'medium';
@@ -57,11 +55,6 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	noJs?: boolean;
 	/**
-	 * Sets the toggle styling appropriate for each platform.
-	 * The default platform is 'web'.
-	 */
-	platform?: Platform;
-	/**
 	 * Sets the font weight to either 'regular' or 'bold'.
 	 * Note this does not take all font weights, only 'regular' and 'bold'.
 	 */
@@ -102,7 +95,6 @@ export const ToggleSwitch = ({
 	labelPosition = 'right',
 	noJs = false,
 	onClick,
-	platform = 'web',
 	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
@@ -131,10 +123,7 @@ export const ToggleSwitch = ({
 			{labelPosition === 'left' && label}
 			<button
 				id={buttonId}
-				css={[
-					buttonStyles(labelPosition),
-					platform === 'ios' ? iosToggleStyles(format) : toggleStyles(format),
-				]}
+				css={[buttonStyles(labelPosition), toggleStyles(format)]}
 				role="switch"
 				aria-checked={isChecked()}
 				aria-labelledby={labelId}

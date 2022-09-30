@@ -1,17 +1,9 @@
 import { css } from '@emotion/react';
 import type { SerializedStyles } from '@emotion/react';
 import type { ArticleFormat } from '@guardian/libs';
-import { ArticlePillar, ArticleSpecial } from '@guardian/libs';
 import {
-	culture,
-	labs,
-	lifestyle,
 	neutral,
-	news,
-	opinion,
 	space,
-	specialReport,
-	sport,
 	success,
 	textSans,
 } from '@guardian/source-foundations';
@@ -20,30 +12,6 @@ import type {
 	ToggleSwitchFontSize,
 	ToggleSwitchFontWeight,
 } from './ToggleSwitch';
-
-export const decideTickColor = (format?: ArticleFormat): string => {
-	if (format) {
-		switch (format.theme) {
-			case ArticlePillar.News:
-				return news[200];
-			case ArticlePillar.Culture:
-				return culture[200];
-			case ArticlePillar.Lifestyle:
-				return lifestyle[200];
-			case ArticlePillar.Sport:
-				return sport[100];
-			case ArticlePillar.Opinion:
-				return opinion[200];
-			case ArticleSpecial.Labs:
-				return labs[200];
-			case ArticleSpecial.SpecialReport:
-				return specialReport[200];
-			default:
-				return news[200];
-		}
-	}
-	return success[400];
-};
 
 export const buttonStyles = (
 	labelPosition: LabelPosition,
@@ -73,14 +41,10 @@ export const buttonStyles = (
 	}
 `;
 
-/**
- * These 'webStyles' are shared with Frontend and will potentially also need updating there if updated here.
- */
 export const toggleStyles = (format?: ArticleFormat): SerializedStyles => css`
 	width: 44px;
-	height: 24px;
+	height: 22px;
 	border-radius: 16px;
-	border: 1px solid ${format ? 'rgba(255, 255, 255, 0.4)' : neutral[46]};
 	box-sizing: unset;
 
 	/* this will go away when resets have been standardised */
@@ -92,13 +56,13 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => css`
 	&:before {
 		content: '';
 		position: absolute;
-		top: 6px;
+		top: 5px;
 		height: 11px;
 		width: 6px;
 		right: 10px;
 		opacity: 0;
-		border-bottom: 2px solid ${decideTickColor(format)};
-		border-right: 2px solid ${decideTickColor(format)};
+		border-bottom: 2px solid ${success[400]};
+		border-right: 2px solid ${success[400]};
 		transform: rotate(45deg);
 		transition-property: opacity;
 		transition-duration: 0.2s;
@@ -107,12 +71,13 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => css`
 	&:after {
 		height: 18px;
 		width: 18px;
-		top: 3px;
+		top: 2px;
 		left: 4px;
 	}
 
 	&[aria-checked='false'] {
 		background-color: ${format ? 'rgba(255, 255, 255, 0.4)' : neutral[46]};
+		border: 1px solid ${format ? 'rgba(255, 255, 255, 0.4)' : neutral[46]};
 	}
 
 	&[aria-checked='false']:before {
@@ -120,7 +85,8 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => css`
 	}
 
 	&[aria-checked='true'] {
-		background-color: ${format ? 'rgba(255, 255, 255, 0.4)' : success[400]};
+		background-color: ${success[400]};
+		border: 1px solid ${format ? '#A7CFB8' : success[400]};
 	}
 
 	&[aria-checked='true']:before {
@@ -130,38 +96,8 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => css`
 	}
 
 	&[aria-checked='true']:after {
-		left: 1.375rem;
+		left: 22px;
 		background: ${neutral[100]};
-	}
-`;
-
-export const iosToggleStyles = (
-	format?: ArticleFormat,
-): SerializedStyles => css`
-	width: 3.188rem;
-	height: 1.938rem;
-	border-radius: 15.5px;
-
-	&:after {
-		height: 1.688rem;
-		width: 1.688rem;
-		margin: 2px;
-		top: 0;
-		left: 0;
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.306272);
-	}
-
-	&[aria-checked='false'] {
-		background-color: ${format ? 'rgba(255, 255, 255, 0.5)' : neutral[46]};
-	}
-
-	&[aria-checked='true'] {
-		background-color: ${format ? success[500] : success[400]};
-	}
-
-	&[aria-checked='true']:after {
-		background-color: ${neutral[100]};
-		left: 20px;
 	}
 `;
 
