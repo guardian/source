@@ -1,5 +1,11 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 8.0.0
+
+### Patch Changes
+
+- @guardian/source-react-components@8.0.0
+
 ## 7.0.0
 
 ### Patch Changes

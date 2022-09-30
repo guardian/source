@@ -1,5 +1,12 @@
 # @guardian/eslint-plugin-source-foundations
 
+## 6.0.0
+
+### Patch Changes
+
+- Updated dependencies [3823490a]
+  - @guardian/source-foundations@6.0.0
+
 ## 5.0.1
 
 ### Patch Changes

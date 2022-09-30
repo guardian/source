@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/source-foundations",
-	"version": "5.3.0",
+	"version": "6.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/guardian/source.git"

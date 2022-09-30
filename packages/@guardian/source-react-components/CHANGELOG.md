@@ -1,5 +1,12 @@
 # @guardian/source-react-components
 
+## 8.0.0
+
+### Patch Changes
+
+- Updated dependencies [3823490a]
+  - @guardian/source-foundations@6.0.0
+
 ## 7.1.5
 
 ### Patch Changes
