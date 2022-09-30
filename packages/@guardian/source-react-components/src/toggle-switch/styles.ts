@@ -13,6 +13,10 @@ import type {
 	ToggleSwitchFontWeight,
 } from './ToggleSwitch';
 
+const toggleBackground = 'rgba(255, 255, 255, 0.4)';
+const toggleBorder = 'rgba(255, 255, 255, 0.6)';
+const toggleBorderGreen = '#A7CFB8';
+
 export const buttonStyles = (
 	labelPosition: LabelPosition,
 ): SerializedStyles => css`
@@ -41,65 +45,67 @@ export const buttonStyles = (
 	}
 `;
 
-export const toggleStyles = (format?: ArticleFormat): SerializedStyles => css`
-	width: 44px;
-	height: 22px;
-	border-radius: 16px;
-	box-sizing: unset;
+export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
+	return css`
+		width: 44px;
+		height: 22px;
+		border-radius: 16px;
+		box-sizing: unset;
 
-	/* this will go away when resets have been standardised */
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
+		/* this will go away when resets have been standardised */
+		&:before,
+		&:after {
+			box-sizing: border-box;
+		}
 
-	&:before {
-		content: '';
-		position: absolute;
-		top: 5px;
-		height: 11px;
-		width: 6px;
-		right: 10px;
-		opacity: 0;
-		border-bottom: 2px solid ${success[400]};
-		border-right: 2px solid ${success[400]};
-		transform: rotate(45deg);
-		transition-property: opacity;
-		transition-duration: 0.2s;
-	}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 5px;
+			height: 11px;
+			width: 6px;
+			right: 10px;
+			opacity: 0;
+			border-bottom: 2px solid ${success[400]};
+			border-right: 2px solid ${success[400]};
+			transform: rotate(45deg);
+			transition-property: opacity;
+			transition-duration: 0.2s;
+		}
 
-	&:after {
-		height: 18px;
-		width: 18px;
-		top: 2px;
-		left: 4px;
-	}
+		&:after {
+			height: 18px;
+			width: 18px;
+			top: 2px;
+			left: 4px;
+		}
 
-	&[aria-checked='false'] {
-		background-color: ${format ? 'rgba(255, 255, 255, 0.4)' : neutral[46]};
-		border: 1px solid ${format ? 'rgba(255, 255, 255, 0.4)' : neutral[46]};
-	}
+		&[aria-checked='false'] {
+			background-color: ${format ? toggleBackground : neutral[46]};
+			border: 1px solid ${format ? toggleBorder : neutral[46]};
+		}
 
-	&[aria-checked='false']:before {
-		transition-delay: 0;
-	}
+		&[aria-checked='false']:before {
+			transition-delay: 0;
+		}
 
-	&[aria-checked='true'] {
-		background-color: ${success[400]};
-		border: 1px solid ${format ? '#A7CFB8' : success[400]};
-	}
+		&[aria-checked='true'] {
+			background-color: ${success[400]};
+			border: 1px solid ${format ? toggleBorderGreen : success[400]};
+		}
 
-	&[aria-checked='true']:before {
-		opacity: 1;
-		z-index: 1;
-		transition-delay: 0.2s;
-	}
+		&[aria-checked='true']:before {
+			opacity: 1;
+			z-index: 1;
+			transition-delay: 0.2s;
+		}
 
-	&[aria-checked='true']:after {
-		left: 22px;
-		background: ${neutral[100]};
-	}
-`;
+		&[aria-checked='true']:after {
+			left: 22px;
+			background: ${neutral[100]};
+		}
+	`;
+};
 
 export const labelStyles = (
 	fontSize: ToggleSwitchFontSize,
