@@ -1,5 +1,11 @@
 # @guardian/source-foundations
 
+## 6.0.0
+
+### Major Changes
+
+- 3823490a: - change the visually hidden CSS to conform to the DAC standard. **Note:** this may cause changes to your layout, please ensure that it is not affected after updating to this version
+
 ## 5.3.0
 
 ### Minor Changes
