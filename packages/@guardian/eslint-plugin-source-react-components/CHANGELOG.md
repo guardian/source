@@ -1,5 +1,11 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 8.0.1
+
+### Patch Changes
+
+- 40e41a43: **No changes**: Patch bump to fix deploy to npm due to the major version already having been published and deleted
+
 ## 8.0.0
 
 ### Patch Changes
