@@ -129,17 +129,3 @@ export const labelBorderStyles = (
 	padding-top: ${space[1]}px;
 	width: 100%;
 `;
-
-export const tooltipStyles: SerializedStyles = css`
-	position: absolute;
-	display: none;
-	width: 248px;
-	top: 40px;
-	background-color: ${neutral[100]};
-	border: 1px solid rgba(18, 18, 18, 0.25);
-	border-radius: 3px;
-	padding: 8px;
-	z-index: 1;
-	opacity: 0;
-	transition: 0.7s opacity;
-`;

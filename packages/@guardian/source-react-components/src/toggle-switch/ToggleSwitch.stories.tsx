@@ -152,12 +152,3 @@ WithFormat.args = {
 	label: 'Get alerts on this story',
 };
 asChromaticStory(WithFormat);
-
-// *****************************************************************************
-
-export const WithTooltip = Template.bind({});
-WithTooltip.args = {
-	label: 'Get alerts on this story',
-	noJs: true,
-};
-asChromaticStory(WithTooltip);

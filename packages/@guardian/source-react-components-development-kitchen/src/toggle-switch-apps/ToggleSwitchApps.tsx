@@ -1,14 +1,7 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { Props } from '@guardian/source-react-components';
-import { useEffect, useState } from 'react';
-import {
-	androidStyles,
-	buttonStyles,
-	iosStyles,
-	labelStyles,
-	tooltipStyles,
-} from './styles';
+import { androidStyles, buttonStyles, iosStyles, labelStyles } from './styles';
 
 export type Platform = 'android' | 'ios';
 export type LabelPosition = 'left' | 'right';
@@ -40,11 +33,6 @@ export interface ToggleSwitchAppsProps extends Props {
 	 * Which side of the switch the label will appear on.
 	 */
 	labelPosition?: LabelPosition;
-	/**
-	 * Whether the toggle has a tooltip.
-	 * The default is false.
-	 */
-	tooltip?: boolean;
 	/**
 	 * Sets the toggle styling appropriate for each platform.
 	 * The default platform is 'ios'.
@@ -81,8 +69,6 @@ export const ToggleSwitchApps = ({
 }: ToggleSwitchAppsProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
-	const [isBrowser, setIsBrowser] = useState(false);
-	let tooltiptext = '';
 
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
@@ -91,14 +77,6 @@ export const ToggleSwitchApps = ({
 
 		return !!defaultChecked;
 	};
-
-	useEffect(() => {
-		setIsBrowser(true);
-	});
-
-	if (!isBrowser) {
-		tooltiptext = 'tooltiptext';
-	}
 
 	return (
 		<>
@@ -117,9 +95,6 @@ export const ToggleSwitchApps = ({
 					className="tooltip"
 				></button>
 				{labelPosition === 'right' && label}
-				<div className={tooltiptext} css={tooltipStyles}>
-					<span>Please turn on JavaScript to use this feature</span>
-				</div>
 			</label>
 		</>
 	);
