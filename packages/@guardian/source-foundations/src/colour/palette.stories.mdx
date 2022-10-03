@@ -39,8 +39,29 @@ const headline = css`
 			https://github.com/storybookjs/storybook/issues/9832 */
 			}
 			if (category !== '__docgenInfo' && category !== 'displayName') {
+				// These colours have been deprecated and should not be used.
+				const deprecatedColours = {
+					opinion: ['300'],
+					culture: ['350'],
+				};
+				const shadesWithoutDeprecated = {};
+				for (const shade in shades) {
+					const isShadeDeprecated =
+						deprecatedColours[category] &&
+						deprecatedColours[category].includes(shade);
+					// Skip deprecated colours
+					if (isShadeDeprecated) {
+						continue;
+					} else {
+						shadesWithoutDeprecated[shade] = shades[shade];
+					}
+				}
 				return (
-					<ColorItem key={category} title={category} colors={{ ...shades }} />
+					<ColorItem
+						key={category}
+						title={category}
+						colors={{ ...shadesWithoutDeprecated }}
+					/>
 				);
 			}
 		})}
