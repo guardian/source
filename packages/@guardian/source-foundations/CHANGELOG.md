@@ -1,5 +1,11 @@
 # @guardian/source-foundations
 
+## 6.0.1
+
+### Patch Changes
+
+- 54dd09e2: Add a full deprecation notice to opinion.300 and culture.350
+
 ## 6.0.0
 
 ### Major Changes
