@@ -152,3 +152,12 @@ WithFormat.args = {
 	label: 'Get alerts on this story',
 };
 asChromaticStory(WithFormat);
+
+// *****************************************************************************
+
+export const NoJS = Template.bind({});
+NoJS.args = {
+	label: 'Get alerts on this story',
+	noJs: true,
+};
+asChromaticStory(NoJS);
