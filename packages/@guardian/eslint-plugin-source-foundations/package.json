@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/eslint-plugin-source-foundations",
-	"version": "5.0.1",
+	"version": "6.0.1",
 	"description": "ESLint plugin for Guardian projects using the `@guardian/source-foundations` package.",
 	"homepage": "https://github.com/guardian/source#readme",
 	"bugs": {
@@ -36,7 +36,7 @@
 	},
 	"peerDependencies": {
 		"@guardian/libs": "^3.0.0",
-		"@guardian/source-foundations": "^5.0.0",
+		"@guardian/source-foundations": "^6.0.0",
 		"eslint": "^8.0.0"
 	},
 	"publishConfig": {

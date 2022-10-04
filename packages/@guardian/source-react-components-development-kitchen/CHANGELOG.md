@@ -1,5 +1,19 @@
 # @guardian/source-react-components-development-kitchen
 
+## 4.0.1
+
+### Patch Changes
+
+- 40e41a43: **No changes**: Patch bump to fix deploy to npm due to the major version already having been published and deleted
+
+## 4.0.0
+
+### Patch Changes
+
+- Updated dependencies [3823490a]
+  - @guardian/source-foundations@6.0.0
+  - @guardian/source-react-components@8.0.0
+
 ## 3.1.10
 
 ### Patch Changes

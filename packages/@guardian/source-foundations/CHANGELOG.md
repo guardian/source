@@ -1,5 +1,24 @@
 # @guardian/source-foundations
 
+## 6.0.2
+
+### Patch Changes
+
+- eeecc020: - remove invalid syntax from the css reset
+  - add assertions and new unit tests for areas where we export CSS and want to ensure that SCSS does not slip into the code.
+
+## 6.0.1
+
+### Patch Changes
+
+- 54dd09e2: Add a full deprecation notice to opinion.300 and culture.350
+
+## 6.0.0
+
+### Major Changes
+
+- 3823490a: - change the visually hidden CSS to conform to the DAC standard. **Note:** this may cause changes to your layout, please ensure that it is not affected after updating to this version
+
 ## 5.3.0
 
 ### Minor Changes

@@ -1,5 +1,18 @@
 # @guardian/source-react-components
 
+## 8.0.1
+
+### Patch Changes
+
+- 40e41a43: **No changes**: Patch bump to fix deploy to npm due to the major version already having been published and deleted
+
+## 8.0.0
+
+### Patch Changes
+
+- Updated dependencies [3823490a]
+  - @guardian/source-foundations@6.0.0
+
 ## 7.1.5
 
 ### Patch Changes
