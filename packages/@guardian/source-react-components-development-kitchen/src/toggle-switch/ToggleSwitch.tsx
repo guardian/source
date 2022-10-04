@@ -7,6 +7,7 @@ import {
 	labelBorderStyles,
 	labelStyles,
 	toggleStyles,
+	tooltipStyles,
 } from './styles';
 
 export type LabelPosition = 'left' | 'right';
@@ -129,6 +130,9 @@ export const ToggleSwitch = ({
 				onClick={onClick}
 			></button>
 			{labelPosition === 'right' && label}
+			<div className={noJs ? 'show-tooltip' : ''} css={tooltipStyles}>
+				<span>Please turn on JavaScript to use this feature</span>
+			</div>
 		</label>
 	);
 };

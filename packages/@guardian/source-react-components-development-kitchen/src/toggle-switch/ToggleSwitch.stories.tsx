@@ -116,8 +116,8 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const NoLabel = Template.bind({});
-asChromaticStory(NoLabel);
+export const WithNoLabel = Template.bind({});
+asChromaticStory(WithNoLabel);
 
 // *****************************************************************************
 
@@ -155,9 +155,9 @@ asChromaticStory(WithFormat);
 
 // *****************************************************************************
 
-export const NoJS = Template.bind({});
-NoJS.args = {
+export const WithNoJS = Template.bind({});
+WithNoJS.args = {
 	label: 'Get alerts on this story',
 	noJs: true,
 };
-asChromaticStory(NoJS);
+asChromaticStory(WithNoJS);
