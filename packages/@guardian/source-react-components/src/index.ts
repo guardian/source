@@ -245,6 +245,3 @@ export {
 	userFeedbackThemeBrand,
 	userFeedbackThemeDefault,
 } from './user-feedback/theme';
-
-export { ToggleSwitch } from './toggle-switch/ToggleSwitch';
-export type { ToggleSwitchProps } from './toggle-switch/ToggleSwitch';

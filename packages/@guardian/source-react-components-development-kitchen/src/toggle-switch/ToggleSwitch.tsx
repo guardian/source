@@ -1,7 +1,7 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { ArticleFormat } from '@guardian/libs';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
-import type { Props } from '../@types/Props';
+import type { Props } from '../../../source-react-components/src/@types/Props';
 import {
 	buttonStyles,
 	labelBorderStyles,

@@ -44,7 +44,6 @@ export type {
 	SvgRoundelDefaultProps,
 	SvgRoundelInverseProps,
 	Props,
-	ToggleSwitchProps,
 } from './index';
 
 it('Should have exactly these exports', () => {
@@ -204,7 +203,6 @@ it('Should have exactly these exports', () => {
 		'TextArea',
 		'TextInput',
 		'Tiles',
-		'ToggleSwitch',
 		'accordionThemeDefault',
 		'buttonThemeBrand',
 		'buttonThemeBrandAlt',
