@@ -138,7 +138,7 @@ export const tooltipStyles = css`
 	background-color: ${neutral[100]};
 	border: 1px solid rgba(18, 18, 18, 0.25);
 	border-radius: 3px;
-	padding: 8px;
+	padding: ${space[2]};
 	z-index: 1;
 	opacity: 0;
 	transition: 0.7s opacity;
