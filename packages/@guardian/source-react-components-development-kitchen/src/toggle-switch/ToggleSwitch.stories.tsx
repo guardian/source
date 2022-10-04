@@ -10,7 +10,6 @@ import type { ToggleSwitchProps } from './ToggleSwitch';
 export default {
 	title: 'Packages/source-react-components-development-kitchen/ToggleSwitch',
 	component: ToggleSwitch,
-	args: {},
 };
 
 const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
@@ -35,81 +34,24 @@ asPlayground(Playground);
 
 // *****************************************************************************
 
-export const AndroidNoLabel = Template.bind({});
-AndroidNoLabel.args = {
-	platform: 'android',
-};
-asChromaticStory(AndroidNoLabel);
+export const WithNoLabel = Template.bind({});
+asChromaticStory(WithNoLabel);
 
 // *****************************************************************************
 
-export const IosNoLabel = Template.bind({});
-IosNoLabel.args = {
-	platform: 'ios',
-};
-asChromaticStory(IosNoLabel);
-
-// *****************************************************************************
-
-export const WebNoLabel = Template.bind({});
-WebNoLabel.args = {
-	platform: 'web',
-};
-asChromaticStory(WebNoLabel);
-
-// *****************************************************************************
-
-export const AndroidWithLabel = Template.bind({});
-AndroidWithLabel.args = {
+export const WithLabel = Template.bind({});
+WithLabel.args = {
 	label: 'Get alerts on this story',
-	platform: 'android',
 };
-asChromaticStory(AndroidWithLabel);
+asChromaticStory(WithLabel);
 
 // *****************************************************************************
 
-export const IosWithLabel = Template.bind({});
-IosWithLabel.args = {
-	label: 'Get alerts on this story',
-	platform: 'ios',
-};
-asChromaticStory(IosWithLabel);
-
-// *****************************************************************************
-
-export const WebWithLabel = Template.bind({});
-WebWithLabel.args = {
-	label: 'Get alerts on this story',
-	platform: 'web',
-};
-asChromaticStory(WebWithLabel);
-
-// *****************************************************************************
-
-export const AndroidWithLabelLeft = Template.bind({});
-AndroidWithLabelLeft.args = {
+export const WithLabelLeft = Template.bind({});
+WithLabelLeft.args = {
 	label: 'Get alerts on this story',
 	labelPosition: 'left',
-	platform: 'android',
 };
-asChromaticStory(AndroidWithLabelLeft);
+asChromaticStory(WithLabelLeft);
 
 // *****************************************************************************
-
-export const IosWithLabelLeft = Template.bind({});
-IosWithLabelLeft.args = {
-	label: 'Get alerts on this story',
-	labelPosition: 'left',
-	platform: 'ios',
-};
-asChromaticStory(IosWithLabelLeft);
-
-// *****************************************************************************
-
-export const WebWithLabelLeft = Template.bind({});
-WebWithLabelLeft.args = {
-	label: 'Get alerts on this story',
-	labelPosition: 'left',
-	platform: 'web',
-};
-asChromaticStory(WebWithLabelLeft);

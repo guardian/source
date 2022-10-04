@@ -14,6 +14,7 @@ export type {
 	QuoteIconProps,
 	StarRatingProps,
 	ToggleSwitchProps,
+	ToggleSwitchAppsProps,
 } from './index';
 
 it('Should have exactly these exports', () => {
@@ -35,6 +36,7 @@ it('Should have exactly these exports', () => {
 		'StraightLines',
 		'SuccessSummary',
 		'ToggleSwitch',
+		'ToggleSwitchApps',
 		'defaultGuardianLinks',
 	]);
 });
