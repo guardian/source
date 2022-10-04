@@ -1,5 +1,12 @@
 # @guardian/source-foundations
 
+## 6.0.2
+
+### Patch Changes
+
+- eeecc020: - remove invalid syntax from the css reset
+  - add assertions and new unit tests for areas where we export CSS and want to ensure that SCSS does not slip into the code.
+
 ## 6.0.1
 
 ### Patch Changes
