@@ -15,15 +15,13 @@ export default {
 const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 	const [checked, setChecked] = useState(args.checked);
 	return (
-		<div style={{ height: '100px' }}>
-			<ToggleSwitch
-				{...args}
-				checked={checked}
-				onClick={() => {
-					setChecked(!checked);
-				}}
-			/>
-		</div>
+		<ToggleSwitch
+			{...args}
+			checked={checked}
+			onClick={() => {
+				setChecked(!checked);
+			}}
+		/>
 	);
 };
 
