@@ -30,7 +30,7 @@ export const successInput = css`
 export const textArea = css`
 	${resets.input};
 	box-sizing: border-box;
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 	color: ${palette.neutral[7]};
 	background-color: ${palette.neutral[100]};
 	border: 2px solid ${palette.neutral[46]};

@@ -52,7 +52,7 @@ export const body: TypographyFunctions<BodySizes> = {
 };
 
 const textSansDefaults: TypographyConfiguration = {
-	lineHeight: 'loose',
+	lineHeight: 'regular',
 	fontWeight: 'regular',
 	fontStyle: null,
 	unit: 'rem',
