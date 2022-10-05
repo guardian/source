@@ -29,70 +29,12 @@ export const buttonStyles = (labelPosition: LabelPosition) => css`
 	}
 `;
 
-export const iosStyles = css`
-	width: 3.188rem;
-	height: 1.938rem;
-	border-radius: 15.5px;
-
-	&:after {
-		height: 1.688rem;
-		width: 1.688rem;
-		margin: 2px;
-		top: 0;
-		left: 0;
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.306272);
-	}
-
-	&[aria-checked='false'] {
-		background-color: rgba(153, 153, 153, 0.5);
-	}
-
-	&[aria-checked='true'] {
-		background: ${success[500]};
-	}
-
-	&[aria-checked='true']:after {
-		left: 20px;
-		background: ${neutral[100]};
-	}
-`;
-
-export const androidStyles = css`
-	width: 1.625rem;
-	height: 0.75rem;
-	border-radius: 6px;
-
-	&:after {
-		height: 1.125rem;
-		width: 1.125rem;
-		top: -3px;
-		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
-	}
-
-	&[aria-checked='false'] {
-		background: rgb(112, 112, 112, 0.5);
-	}
-
-	&[aria-checked='false']:after {
-		left: -2px;
-	}
-
-	&[aria-checked='true'] {
-		background: rgba(88, 208, 139, 0.65);
-	}
-
-	&[aria-checked='true']:after {
-		left: 8px;
-		background: ${success[500]};
-	}
-`;
-
 /**
  * These 'webStyles' are shared with Frontend and will potentially also need updating there if updated here.
  * https://github.com/guardian/frontend/blob/c2b3103e1796b9b2fc3326e792323dd919d4b85a/static/src/stylesheets/module/content-garnett/_live-blog.scss#L257
  */
 
-export const webStyles = css`
+export const toggleStyles = css`
 	width: 2.75rem;
 	height: 1.5rem;
 	border-radius: 15.5px;

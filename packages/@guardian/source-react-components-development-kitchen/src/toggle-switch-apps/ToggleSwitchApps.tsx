@@ -1,17 +1,12 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { Props } from '@guardian/source-react-components';
-import { useEffect, useState } from 'react';
-import {
-	buttonStyles,
-	labelStyles,
-	toggleStyles,
-	tooltipStyles,
-} from './styles';
+import { androidStyles, buttonStyles, iosStyles, labelStyles } from './styles';
 
+export type Platform = 'android' | 'ios';
 export type LabelPosition = 'left' | 'right';
 
-export interface ToggleSwitchProps extends Props {
+export interface ToggleSwitchAppsProps extends Props {
 	/**
 	 * Whether the ToggleSwitch is checked. This is necessary when using the
 	 * [controlled approach](https://reactjs.org/docs/forms.html#controlled-components)
@@ -39,12 +34,10 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	labelPosition?: LabelPosition;
 	/**
-	 * Whether the toggle has a tooltip.
-	 * The default is false.
+	 * Sets the toggle styling appropriate for each platform.
+	 * The default platform is 'ios'.
 	 */
-	tooltip?: boolean;
-	/**
-	 */
+	platform?: Platform;
 	/**
 	 * A callback function called when the component is checked or unchecked.
 	 * Receives the click event as an argument.
@@ -53,9 +46,9 @@ export interface ToggleSwitchProps extends Props {
 }
 
 /**
- * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-development-kitchen-toggle-switch--playground) •
+ * [Storybook](https://guardian.github.io/source/?path=/docs/packages-source-react-components-development-kitchen-toggle-switch-apps--playground) •
  * [Design System](https://theguardian.design) •
- * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/toggle-switch-apps) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components-development-kitchen)
  *
  * Displays an on/off toggle switch. This toggle has default styling and can be used on android, ios or web.
@@ -63,20 +56,19 @@ export interface ToggleSwitchProps extends Props {
  * To give it more custom styling cssOverride may be used.
  *
  */
-export const ToggleSwitch = ({
+export const ToggleSwitchApps = ({
 	checked,
 	id,
 	label,
 	labelPosition = 'right',
 	defaultChecked,
 	cssOverrides,
+	platform = 'ios',
 	onClick = () => undefined,
 	...props
-}: ToggleSwitchProps): EmotionJSX.Element => {
+}: ToggleSwitchAppsProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
-	const [isBrowser, setIsBrowser] = useState(false);
-	let tooltiptext = '';
 
 	const isChecked = (): boolean => {
 		if (checked != undefined) {
@@ -86,21 +78,16 @@ export const ToggleSwitch = ({
 		return !!defaultChecked;
 	};
 
-	useEffect(() => {
-		setIsBrowser(true);
-	});
-
-	if (!isBrowser) {
-		tooltiptext = 'tooltiptext';
-	}
-
 	return (
 		<>
 			<label id={labelId} css={[labelStyles, cssOverrides]} {...props}>
 				{labelPosition === 'left' && label}
 				<button
 					id={buttonId}
-					css={[buttonStyles(labelPosition), toggleStyles]}
+					css={[
+						buttonStyles(labelPosition),
+						platform === 'ios' ? iosStyles : androidStyles,
+					]}
 					role="switch"
 					aria-checked={isChecked()}
 					aria-labelledby={labelId}
@@ -108,9 +95,6 @@ export const ToggleSwitch = ({
 					className="tooltip"
 				></button>
 				{labelPosition === 'right' && label}
-				<div className={tooltiptext} css={tooltipStyles}>
-					<span>Please turn on JavaScript to use this feature</span>
-				</div>
 			</label>
 		</>
 	);

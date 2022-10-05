@@ -33,6 +33,9 @@ export type { InfoSummaryProps } from './summary/InfoSummary';
 export { ToggleSwitch } from './toggle-switch/ToggleSwitch';
 export type { ToggleSwitchProps } from './toggle-switch/ToggleSwitch';
 
+export { ToggleSwitchApps } from './toggle-switch-apps/ToggleSwitchApps';
+export type { ToggleSwitchAppsProps } from './toggle-switch-apps/ToggleSwitchApps';
+
 export { FooterWithContents } from './footer-with-contents/FooterWithContents';
 export {
 	FooterLinks,
