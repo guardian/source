@@ -1,6 +1,6 @@
 # ToggleSwitch
 
-Displays an on/off switch. See the accompanying stories for visual examples.
+Displays an on/off switch for web. See the accompanying stories for visual examples.
 
 ## Install
 
