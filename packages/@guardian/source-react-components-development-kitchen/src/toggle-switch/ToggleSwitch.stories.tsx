@@ -152,3 +152,52 @@ WithFormat.args = {
 	label: 'Get alerts on this story',
 };
 asChromaticStory(WithFormat);
+
+// *****************************************************************************
+
+export const WithMediumFont = Template.bind({});
+WithMediumFont.args = {
+	label: 'Get alerts on this story',
+	fontSize: 'medium',
+};
+asChromaticStory(WithMediumFont);
+
+// *****************************************************************************
+
+export const WithBoldFont = Template.bind({});
+WithBoldFont.args = {
+	label: 'Get alerts on this story',
+	fontWeight: 'bold',
+};
+asChromaticStory(WithBoldFont);
+
+// *****************************************************************************
+
+export const WithBoldMediumFont = Template.bind({});
+WithBoldMediumFont.args = {
+	label: 'Get alerts on this story',
+	fontWeight: 'bold',
+	fontSize: 'medium',
+};
+asChromaticStory(WithBoldMediumFont);
+
+// *****************************************************************************
+
+export const WithMediumFontAndBorder = Template.bind({});
+WithMediumFontAndBorder.args = {
+	label: 'Get alerts on this story',
+	fontSize: 'medium',
+	labelBorder: 'true',
+};
+asChromaticStory(WithMediumFontAndBorder);
+
+// *****************************************************************************
+
+export const WithBoldMediumFontAndBorder = Template.bind({});
+WithBoldMediumFontAndBorder.args = {
+	label: 'Get alerts on this story',
+	fontWeight: 'bold',
+	fontSize: 'medium',
+	labelBorder: 'true',
+};
+asChromaticStory(WithBoldMediumFontAndBorder);
