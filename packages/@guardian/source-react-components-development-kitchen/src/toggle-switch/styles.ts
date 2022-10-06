@@ -40,8 +40,8 @@ export const buttonStyles = (
 	}
 
 	:focus + .show-tooltip {
-		display: inline-block;
 		opacity: 1;
+		visibility: visible;
 	}
 `;
 
@@ -132,7 +132,7 @@ export const labelBorderStyles = (
 
 export const tooltipStyles = css`
 	position: absolute;
-	display: none;
+	visibility: hidden;
 	width: 248px;
 	top: 40px;
 	background-color: ${neutral[100]};
