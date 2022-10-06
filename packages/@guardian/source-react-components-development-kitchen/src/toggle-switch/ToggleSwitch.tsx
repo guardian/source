@@ -1,6 +1,7 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { ArticleFormat } from '@guardian/libs';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
+import { useEffect, useState } from 'react';
 import type { Props } from '../../../source-react-components/src/@types/Props';
 import {
 	buttonStyles,
@@ -50,11 +51,6 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	labelBorder?: boolean;
 	/**
-	 * If JS is not available the toggle is not clickable and shows a tooltip.
-	 * The default is false.
-	 */
-	noJs?: boolean;
-	/**
 	 * Sets the font weight to either 'regular' or 'bold'.
 	 * Note this does not take all font weights, only 'regular' and 'bold'.
 	 */
@@ -91,7 +87,6 @@ export const ToggleSwitch = ({
 	label,
 	labelBorder = false,
 	labelPosition = 'right',
-	noJs = false,
 	defaultChecked,
 	cssOverrides,
 	onClick,
@@ -99,16 +94,24 @@ export const ToggleSwitch = ({
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
 	const labelId = descriptionId(buttonId);
+	const [isBrowser, setIsBrowser] = useState(false);
+	let tooltiptext = '';
 
 	const isChecked = (): boolean => {
-		if (noJs) return false;
-
 		if (checked != undefined) {
 			return checked;
 		}
 
 		return !!defaultChecked;
 	};
+
+	useEffect(() => {
+		setIsBrowser(true);
+	});
+
+	if (!isBrowser) {
+		tooltiptext = 'tooltiptext';
+	}
 
 	return (
 		<label
@@ -130,7 +133,7 @@ export const ToggleSwitch = ({
 				onClick={onClick}
 			></button>
 			{labelPosition === 'right' && label}
-			<div className={noJs ? 'show-tooltip' : ''} css={tooltipStyles}>
+			<div className={tooltiptext} css={tooltipStyles}>
 				<span>Please turn on JavaScript to use this feature</span>
 			</div>
 		</label>

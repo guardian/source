@@ -39,7 +39,7 @@ export const buttonStyles = (
 		transition: left 0.15s ease-in-out;
 	}
 
-	:focus + .show-tooltip {
+	:focus + .tooltiptext {
 		opacity: 1;
 		visibility: visible;
 	}
