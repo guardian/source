@@ -15,6 +15,12 @@ import type {
 
 const toggleBackground = 'rgba(255, 255, 255, 0.4)';
 const toggleBorder = 'rgba(255, 255, 255, 0.6)';
+
+/**
+ * This colour represents Palette.success[400] with a 40% opacity white overlay.
+ * As we're using it for a border we're unable to add an overlay so use a pre-calculated
+ * hex value instead.
+ */
 const toggleBorderGreen = '#A7CFB8';
 
 export const buttonStyles = (
