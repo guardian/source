@@ -40,7 +40,7 @@ export const textInput = (
 		${resets.input};
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
-		${textSans.medium({ lineHeight: 'regular' })};
+		${textSans.medium()};
 		color: ${textInput.textUserInput};
 		background-color: ${textInput.backgroundInput};
 		border: 2px solid ${textInput.border};
