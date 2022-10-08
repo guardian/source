@@ -94,7 +94,7 @@ export const Checkbox = ({
 	return (
 		<div
 			css={(theme: Theme) => [
-				checkboxContainer(theme.checkbox),
+				checkboxContainer(theme.checkbox, error),
 				supporting ? checkboxContainerWithSupportingText : '',
 			]}
 		>
