@@ -31,15 +31,12 @@ export const checkboxContainer = (
 
 	&:hover {
 		input {
-			border: 2px solid ${checkbox.borderHover};
+			border-color: ${error ? checkbox.borderError : checkbox.borderHover};
 		}
-
-		input:checked {
-			${error ? `border: 4px solid ${checkbox.borderError}` : ''}
-		}
-
-		input:active {
-			border: 2px solid ${checkbox.borderHover};
+	}
+	&:active {
+		input {
+			border-color: ${checkbox.borderHover};
 		}
 	}
 `;
@@ -55,6 +52,7 @@ export const checkboxContainerWithSupportingText = css`
 
 export const checkbox = (
 	checkbox = checkboxThemeDefault.checkbox,
+	error = false,
 ): SerializedStyles => css`
 	flex: 0 0 auto;
 	box-sizing: border-box;
@@ -77,8 +75,9 @@ export const checkbox = (
 	@supports (${appearance}) {
 		appearance: none;
 		&:checked {
-			border: 2px solid ${checkbox.borderChecked};
-
+			border: ${error
+				? `4px solid ${checkbox.borderError}`
+				: `2px solid ${checkbox.borderChecked}`};
 			& ~ span:before {
 				right: 0;
 			}
@@ -190,16 +189,9 @@ export const errorCheckbox = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
 	border: 4px solid ${checkbox.borderError};
-	:hover {
+
+	&:not(:checked):hover,
+	&:active {
 		border: 2px solid ${checkbox.borderHover};
-	}
-	&:checked {
-		border: 4px solid ${checkbox.borderError};
-		:hover {
-			border: 4px solid ${checkbox.borderError};
-		}
-		:active {
-			border: 2px solid ${checkbox.borderHover};
-		}
 	}
 `;

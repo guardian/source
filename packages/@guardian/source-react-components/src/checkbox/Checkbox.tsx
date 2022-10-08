@@ -102,7 +102,7 @@ export const Checkbox = ({
 				id={checkboxId}
 				type="checkbox"
 				css={(theme: Theme) => [
-					checkbox(theme.checkbox),
+					checkbox(theme.checkbox, error),
 					error ? errorCheckbox(theme.checkbox) : '',
 					cssOverrides,
 				]}
