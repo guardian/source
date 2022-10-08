@@ -21,6 +21,7 @@ export const fieldset = css`
 
 export const checkboxContainer = (
 	checkbox = checkboxThemeDefault.checkbox,
+	error = false,
 ): SerializedStyles => css`
 	position: relative;
 	display: flex;
@@ -30,7 +31,15 @@ export const checkboxContainer = (
 
 	&:hover {
 		input {
-			border-color: ${checkbox.borderHover};
+			border: 2px solid ${checkbox.borderHover};
+		}
+
+		input:checked {
+			${error ? `border: 4px solid ${checkbox.borderError}` : ''}
+		}
+
+		input:active {
+			border: 2px solid ${checkbox.borderHover};
 		}
 	}
 `;
@@ -181,4 +190,16 @@ export const errorCheckbox = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
 	border: 4px solid ${checkbox.borderError};
+	:hover {
+		border: 2px solid ${checkbox.borderHover};
+	}
+	&:checked {
+		border: 4px solid ${checkbox.borderError};
+		:hover {
+			border: 4px solid ${checkbox.borderError};
+		}
+		:active {
+			border: 2px solid ${checkbox.borderHover};
+		}
+	}
 `;
