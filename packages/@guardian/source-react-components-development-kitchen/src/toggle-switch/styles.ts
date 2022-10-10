@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import type { SerializedStyles } from '@emotion/react';
 import type { ArticleFormat } from '@guardian/libs';
 import {
+	brand,
 	neutral,
 	space,
 	success,
@@ -54,7 +55,7 @@ export const buttonStyles = (
 export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 	return css`
 		width: 44px;
-		height: 22px;
+		height: 24px;
 		border-radius: 16px;
 		box-sizing: unset;
 
@@ -67,7 +68,7 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 		&:before {
 			content: '';
 			position: absolute;
-			top: 5px;
+			top: 6px;
 			height: 11px;
 			width: 6px;
 			right: 10px;
@@ -82,13 +83,13 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 		&:after {
 			height: 18px;
 			width: 18px;
-			top: 2px;
+			top: 3px;
 			left: 4px;
 		}
 
 		&[aria-checked='false'] {
 			background-color: ${format ? toggleBackground : neutral[46]};
-			border: 1px solid ${format ? toggleBorder : neutral[46]};
+			outline: 1px solid ${format ? toggleBorder : neutral[46]};
 		}
 
 		&[aria-checked='false']:before {
@@ -97,7 +98,7 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 
 		&[aria-checked='true'] {
 			background-color: ${success[400]};
-			border: 1px solid ${format ? toggleBorderGreen : success[400]};
+			outline: 1px solid ${format ? toggleBorderGreen : success[400]};
 		}
 
 		&[aria-checked='true']:before {
@@ -109,6 +110,10 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 		&[aria-checked='true']:after {
 			left: 22px;
 			background: ${neutral[100]};
+		}
+
+		&:focus-visible {
+			outline: 1px solid ${brand[500]};
 		}
 	`;
 };
