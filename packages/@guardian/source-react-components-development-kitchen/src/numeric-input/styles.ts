@@ -12,6 +12,7 @@ import { textInputThemeDefault } from '@guardian/source-react-components';
 export const inputWrapper = css`
 	display: flex;
 	width: 100%;
+	/* Encloses the prefix and suffix when the input element is focused */
 	&:focus-within {
 		${focusHalo};
 	}
@@ -77,22 +78,6 @@ export const textInput = (
 export const hasExtensions = (prefix?: string, suffix?: string) => css`
 	${prefix && 'border-left: none;'}
 	${suffix && 'border-right: none;'}
-`;
-
-export const inputPrefix = (input = textInputThemeDefault.textInput) => css`
-	${textInput(input)}
-	display: inline-flex;
-	align-items: center;
-	padding-right: ${space[1]}px;
-	border-right: none;
-`;
-
-export const inputSuffix = (input = textInputThemeDefault.textInput) => css`
-	${textInput(input)}
-	display: inline-flex;
-	align-items: center;
-	padding-left: 0;
-	border-left: none;
 `;
 
 export const labelMargin = css`

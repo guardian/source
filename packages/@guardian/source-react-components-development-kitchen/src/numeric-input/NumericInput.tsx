@@ -10,12 +10,11 @@ import {
 	InlineSuccess,
 	Label,
 } from '@guardian/source-react-components';
+import { InputExtension } from './InputExtension';
 import {
 	errorInput,
 	hasExtensions,
 	inlineMessageMargin,
-	inputPrefix,
-	inputSuffix,
 	inputWrapper,
 	labelMargin,
 	successInput,
@@ -27,7 +26,7 @@ import {
 	widthFluid,
 } from './styles';
 
-interface InputTheme extends Theme {
+export interface InputTheme extends Theme {
 	textInput?: typeof textInputThemeDefault.textInput;
 }
 
@@ -43,17 +42,23 @@ const widths: {
 
 export type NumericInputProps = Omit<TextInputProps, 'inputmode'> & {
 	/**
-	 * Appears before the input. May be used with or without a suffix.
-	 * Will not be read by screen readers, so do not rely on this alone
-	 */
-	prefix?: string;
-	/**
 	 * Appears after the input. May be used with or without a prefix.
-	 * Will not be read by screen readers, so do not rely on this alone
+	 * Will not be read by screen readers, so do not rely on this alone to convey meaning.
 	 */
-	suffix?: string;
+	suffixText?: string;
+	/**
+	 * Appears before the input. May be used with or without a suffix.
+	 * Will not be read by screen readers, so do not rely on this alone to convey meaning.
+	 */
+	prefixText?: string;
 };
 
+/**
+ * This is an iteration on the core TextInput component for taking numeric input, such as currency amounts.
+ * It can optionally display a prefix and/or suffix to add additonal visual context.
+ *
+ * **Note**: This component enforces inputmode="numeric" so a number keypad will appear on mobile devices
+ */
 export const NumericInput = ({
 	id,
 	label: labelText,
@@ -63,8 +68,8 @@ export const NumericInput = ({
 	width,
 	error,
 	success,
-	prefix,
-	suffix,
+	prefixText,
+	suffixText,
 	cssOverrides,
 	...props
 }: NumericInputProps): EmotionJSX.Element => {
@@ -94,13 +99,8 @@ export const NumericInput = ({
 			<div
 				css={[inputWrapper, supporting ? supportingTextMargin : labelMargin]}
 			>
-				{prefix && (
-					<span
-						aria-hidden="true"
-						css={(theme: InputTheme) => inputPrefix(theme.textInput)}
-					>
-						{prefix}
-					</span>
+				{prefixText && (
+					<InputExtension type="prefix">{prefixText}</InputExtension>
 				)}
 				<input
 					css={(theme: InputTheme) => [
@@ -108,7 +108,7 @@ export const NumericInput = ({
 						textInput(theme.textInput),
 						error ? errorInput(theme.textInput) : '',
 						!error && success ? successInput(theme.textInput) : '',
-						hasExtensions(prefix, suffix),
+						hasExtensions(prefixText, suffixText),
 						cssOverrides,
 					]}
 					type="text"
@@ -120,13 +120,8 @@ export const NumericInput = ({
 					required={!optional}
 					{...props}
 				/>
-				{suffix && (
-					<span
-						aria-hidden="true"
-						css={(theme: InputTheme) => inputSuffix(theme.textInput)}
-					>
-						{suffix}
-					</span>
+				{suffixText && (
+					<InputExtension type="suffix">{suffixText}</InputExtension>
 				)}
 			</div>
 		</>

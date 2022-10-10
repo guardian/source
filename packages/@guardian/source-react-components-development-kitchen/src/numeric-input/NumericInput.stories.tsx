@@ -130,7 +130,7 @@ asChromaticStory(SuccessWithMessageDefaultTheme);
 // *****************************************************************************
 export const WithPrefix = Template.bind({});
 WithPrefix.args = {
-	prefix: '£',
+	prefixText: '£',
 	label: 'Contribution amount',
 };
 asChromaticStory(WithPrefix);
@@ -138,7 +138,7 @@ asChromaticStory(WithPrefix);
 // *****************************************************************************
 export const WithSuffix = Template.bind({});
 WithSuffix.args = {
-	suffix: 'kr.',
+	suffixText: 'kr.',
 	label: 'Contribution amount',
 };
 asChromaticStory(WithSuffix);
@@ -146,8 +146,9 @@ asChromaticStory(WithSuffix);
 // *****************************************************************************
 export const WithPrefixAndSuffix = Template.bind({});
 WithPrefixAndSuffix.args = {
-	prefix: '£',
-	suffix: 'per month',
+	prefixText: '£',
+	suffixText: 'per month',
 	label: 'Contribution amount',
+	supporting: 'Will be charged monthly starting from today',
 };
 asChromaticStory(WithPrefixAndSuffix);
