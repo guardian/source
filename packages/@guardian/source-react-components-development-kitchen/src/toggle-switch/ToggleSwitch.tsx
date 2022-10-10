@@ -61,10 +61,6 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	fontSize?: ToggleSwitchFontSize;
 	/**
-	 * Whether the toggle has a tooltip.
-	 * The default is false. */
-	tooltip?: boolean;
-	/**
 	 * A callback function called when the component is checked or unchecked.
 	 * Receives the click event as an argument.
 	 */
