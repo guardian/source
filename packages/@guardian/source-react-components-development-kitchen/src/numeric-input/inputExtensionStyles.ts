@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
 import { space } from '@guardian/source-foundations';
 import { textInputThemeDefault } from '@guardian/source-react-components';
-import { textInput } from './styles';
+import { inputBase } from './sharedStyles';
 
 export const inputExtension = (input = textInputThemeDefault.textInput) => css`
-	${textInput(input)}
+	${inputBase(input)}
 	display: inline-flex;
 	align-items: center;
 `;

@@ -1,13 +1,8 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
-import {
-	focusHalo,
-	height,
-	resets,
-	space,
-	textSans,
-} from '@guardian/source-foundations';
+import { focusHalo, space } from '@guardian/source-foundations';
 import { textInputThemeDefault } from '@guardian/source-react-components';
+import { inputBase } from './sharedStyles';
 
 export const inputWrapper = css`
 	display: flex;
@@ -16,6 +11,23 @@ export const inputWrapper = css`
 	&:focus-within {
 		${focusHalo};
 	}
+`;
+
+export const widthFluid = css`
+	width: 100%;
+`;
+
+export const width30 = css`
+	width: 40ex;
+	max-width: 100%; /* prevent overflow on narrow viewports */
+`;
+
+export const width10 = css`
+	width: 18ex;
+`;
+
+export const width4 = css`
+	width: 9ex;
 `;
 
 export const errorInput = (
@@ -46,14 +58,9 @@ export const textInput = (
 	textInput = textInputThemeDefault.textInput,
 ): SerializedStyles =>
 	css`
-		${resets.input};
-		box-sizing: border-box;
-		height: ${height.inputMedium}px;
-		${textSans.medium()};
-		color: ${textInput.textUserInput};
-		background-color: ${textInput.backgroundInput};
-		border: 2px solid ${textInput.border};
-		padding: 0 ${space[2]}px;
+		${inputBase(textInput)}
+		max-width: 100%;
+		flex-grow: 1;
 
 		&:active {
 			border: 2px solid ${textInput.borderActive};
@@ -76,8 +83,8 @@ export const textInput = (
 	`;
 
 export const hasExtensions = (prefix?: string, suffix?: string) => css`
-	${prefix && 'border-left: none;'}
-	${suffix && 'border-right: none;'}
+	${prefix && 'border-left: none; margin-left: 0;'}
+	${suffix && 'border-right: none; margin-right: 0;'}
 `;
 
 export const labelMargin = css`
@@ -90,21 +97,4 @@ export const supportingTextMargin = css`
 
 export const inlineMessageMargin = css`
 	margin-top: 2px;
-`;
-
-export const widthFluid = css`
-	flex-grow: 1;
-`;
-
-export const width30 = css`
-	width: 40ex;
-	max-width: 100%; /* prevent overflow on narrow viewports */
-`;
-
-export const width10 = css`
-	width: 18ex;
-`;
-
-export const width4 = css`
-	width: 9ex;
 `;

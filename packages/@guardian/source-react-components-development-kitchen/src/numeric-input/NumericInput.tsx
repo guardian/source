@@ -24,7 +24,7 @@ import {
 	width30,
 	width4,
 	widthFluid,
-} from './styles';
+} from './numericInputStyles';
 
 export interface InputTheme extends Theme {
 	textInput?: typeof textInputThemeDefault.textInput;
@@ -42,18 +42,23 @@ const widths: {
 
 export type NumericInputProps = Omit<TextInputProps, 'inputmode'> & {
 	/**
-	 * Appears after the input. May be used with or without a prefix.
+	 * Appears after the input. May be used with or without a prefix. Should be kept short to avoid issues on small screens.
 	 * Will not be read by screen readers, so do not rely on this alone to convey meaning.
 	 */
 	suffixText?: string;
 	/**
-	 * Appears before the input. May be used with or without a suffix.
+	 * Appears before the input. May be used with or without a suffix. Should be kept short to avoid issues on small screens.
 	 * Will not be read by screen readers, so do not rely on this alone to convey meaning.
 	 */
 	prefixText?: string;
 };
 
 /**
+ * [Storybook](https://guardian.github.io/source/?path=/docs/source-react-components-development-kitchen-NumericInput--demo) •
+ * [Design System](https://theguardian.design/2a1e5182b/p/097455-text-input-field/b/050445) •
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/components/numeric-input) •
+ * [NPM](https://www.npmjs.com/package/@guardian/@guardian/source-react-components-development-kitchen)
+ *
  * This is an iteration on the core TextInput component for taking numeric input, such as currency amounts.
  * It can optionally display a prefix and/or suffix to add additonal visual context.
  *
@@ -97,14 +102,17 @@ export const NumericInput = ({
 				)}
 			</Label>
 			<div
-				css={[inputWrapper, supporting ? supportingTextMargin : labelMargin]}
+				css={[
+					inputWrapper,
+					width ? widths[width] : widthFluid,
+					supporting ? supportingTextMargin : labelMargin,
+				]}
 			>
 				{prefixText && (
 					<InputExtension type="prefix">{prefixText}</InputExtension>
 				)}
 				<input
 					css={(theme: InputTheme) => [
-						width ? widths[width] : widthFluid,
 						textInput(theme.textInput),
 						error ? errorInput(theme.textInput) : '',
 						!error && success ? successInput(theme.textInput) : '',

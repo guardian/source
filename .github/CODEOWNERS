@@ -4,6 +4,7 @@
 /packages/@guardian/source-react-components-development-kitchen/src/components/footer-with-contents @guardian/conversions-developers
 /packages/@guardian/source-react-components-development-kitchen/src/components/lines @guardian/dotcom-platform
 /packages/@guardian/source-react-components-development-kitchen/src/components/logo @guardian/dotcom-platform
+/packages/@guardian/source-react-components-development-kitchen/src/components/numeric-input @guardian/conversions-developers
 /packages/@guardian/source-react-components-development-kitchen/src/components/quote-icon @guardian/dotcom-platform
 /packages/@guardian/source-react-components-development-kitchen/src/components/star-rating @guardian/dotcom-platform
 /packages/@guardian/source-react-components-development-kitchen/src/components/summary @guardian/identity
