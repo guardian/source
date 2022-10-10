@@ -1,8 +1,31 @@
 import { css } from '@emotion/react';
-import { neutral, success, textSans } from '@guardian/source-foundations';
-import type { LabelPosition } from './ToggleSwitch';
+import type { SerializedStyles } from '@emotion/react';
+import type { ArticleFormat } from '@guardian/libs';
+import {
+	neutral,
+	space,
+	success,
+	textSans,
+} from '@guardian/source-foundations';
+import type {
+	LabelPosition,
+	ToggleSwitchFontSize,
+	ToggleSwitchFontWeight,
+} from './ToggleSwitch';
 
-export const buttonStyles = (labelPosition: LabelPosition) => css`
+const toggleBackground = 'rgba(255, 255, 255, 0.4)';
+const toggleBorder = 'rgba(255, 255, 255, 0.6)';
+
+/**
+ * This colour represents Palette.success[400] with a 40% opacity white overlay.
+ * As we're using it for a border we're unable to add an overlay so use a pre-calculated
+ * hex value instead.
+ */
+const toggleBorderGreen = '#A7CFB8';
+
+export const buttonStyles = (
+	labelPosition: LabelPosition,
+): SerializedStyles => css`
 	flex: none;
 	border: none;
 	margin: ${labelPosition === 'left' ? '0px 0px 0px 8px' : '0px 8px 0px 0px'};
@@ -17,95 +40,112 @@ export const buttonStyles = (labelPosition: LabelPosition) => css`
 		content: '';
 		position: absolute;
 		border-radius: 50%;
-		background: #fff;
+		background: ${neutral[100]};
 		will-change: left;
 		transition: left 0.15s ease-in-out;
 	}
 
 	:focus + .tooltiptext {
-		display: inline-block;
 		opacity: 1;
 		visibility: visible;
 	}
 `;
 
-/**
- * These 'webStyles' are shared with Frontend and will potentially also need updating there if updated here.
- * https://github.com/guardian/frontend/blob/c2b3103e1796b9b2fc3326e792323dd919d4b85a/static/src/stylesheets/module/content-garnett/_live-blog.scss#L257
- */
+export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
+	return css`
+		width: 44px;
+		height: 22px;
+		border-radius: 16px;
+		box-sizing: unset;
 
-export const toggleStyles = css`
-	width: 2.75rem;
-	height: 1.5rem;
-	border-radius: 15.5px;
+		/* this will go away when resets have been standardised */
+		&:before,
+		&:after {
+			box-sizing: border-box;
+		}
 
-	/* this will go away when resets have been standardised */
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 5px;
+			height: 11px;
+			width: 6px;
+			right: 10px;
+			opacity: 0;
+			border-bottom: 2px solid ${success[400]};
+			border-right: 2px solid ${success[400]};
+			transform: rotate(45deg);
+			transition-property: opacity;
+			transition-duration: 0.2s;
+		}
 
-	&:before {
-		content: '';
-		position: absolute;
-		top: 6px;
-		height: 11px;
-		width: 6px;
-		right: 10px;
-		opacity: 0;
-		border-bottom: 2px solid ${success[400]};
-		border-right: 2px solid ${success[400]};
-		transform: rotate(45deg);
-		transition: opacity 0.1s ease-in;
-	}
+		&:after {
+			height: 18px;
+			width: 18px;
+			top: 2px;
+			left: 4px;
+		}
 
-	&:after {
-		height: 18px;
-		width: 18px;
-		top: 3px;
-		left: 4px;
-	}
+		&[aria-checked='false'] {
+			background-color: ${format ? toggleBackground : neutral[46]};
+			border: 1px solid ${format ? toggleBorder : neutral[46]};
+		}
 
-	&[aria-checked='false'] {
-		background-color: rgba(153, 153, 153, 0.5);
-	}
+		&[aria-checked='false']:before {
+			transition-delay: 0;
+		}
 
-	&[aria-checked='true'] {
-		background: ${success[500]};
-	}
+		&[aria-checked='true'] {
+			background-color: ${success[400]};
+			border: 1px solid ${format ? toggleBorderGreen : success[400]};
+		}
 
-	&[aria-checked='true']:before {
-		opacity: 1;
-		z-index: 1;
-	}
+		&[aria-checked='true']:before {
+			opacity: 1;
+			z-index: 1;
+			transition-delay: 0.2s;
+		}
 
-	&[aria-checked='true']:after {
-		left: 1.375rem;
-		background: ${neutral[100]};
-	}
-`;
+		&[aria-checked='true']:after {
+			left: 22px;
+			background: ${neutral[100]};
+		}
+	`;
+};
 
-export const labelStyles = css`
-	${textSans.small()};
-	display: flex;
-	color: ${neutral[7]};
+export const labelStyles = (
+	fontSize: ToggleSwitchFontSize,
+	fontWeight: ToggleSwitchFontWeight,
+	format?: ArticleFormat,
+): SerializedStyles => css`
+	${textSans[fontSize]({ fontWeight })};
+	color: ${format ? neutral[100] : neutral[7]};
+	display: inline-flex;
+	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
 	user-select: none;
 	position: relative;
 `;
 
+export const labelBorderStyles = (
+	format?: ArticleFormat,
+): SerializedStyles => css`
+	border-top: 1px solid ${format ? neutral[100] : neutral[46]};
+	padding-top: ${space[1]}px;
+	width: 100%;
+`;
+
 export const tooltipStyles = css`
 	position: absolute;
 	visibility: hidden;
-	/* display: none; */
 	width: 248px;
 	top: 40px;
-	background-color: #ffffff;
+	background-color: ${neutral[100]};
 	border: 1px solid rgba(18, 18, 18, 0.25);
 	border-radius: 3px;
-	padding: 8px;
+	padding: ${space[2]};
 	z-index: 1;
 	opacity: 0;
-	transition: 0.7 s opacity;
+	transition: 0.7s opacity;
 `;
