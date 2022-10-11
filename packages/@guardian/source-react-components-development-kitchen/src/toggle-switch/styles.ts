@@ -58,7 +58,6 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 		height: 22px;
 		border-radius: 16px;
 		box-sizing: unset;
-		outline: 0;
 
 		/* this will go away when resets have been standardised */
 		&:before,
