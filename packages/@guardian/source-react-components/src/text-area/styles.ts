@@ -11,20 +11,12 @@ export const errorInput = css`
 	border: 4px solid ${palette.error[400]};
 	color: ${palette.neutral[7]};
 	margin-top: 0;
-	/* When input is active and in an error state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${palette.error[400]};
-	}
 `;
 
 export const successInput = css`
 	border: 4px solid ${palette.success[400]};
 	color: ${palette.success[400]};
 	margin-top: 0;
-	/* When input is active and in a success state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${palette.success[400]};
-	}
 `;
 
 export const textArea = css`
@@ -36,11 +28,8 @@ export const textArea = css`
 	border: 2px solid ${palette.neutral[46]};
 	padding: ${space[2]}px ${space[2]}px 0 ${space[2]}px;
 
-	&:active {
-		border: 2px solid ${palette.brand[500]};
-	}
-
 	&:focus {
+		border: 2px solid ${palette.brand[500]};
 		${focusHalo};
 	}
 
