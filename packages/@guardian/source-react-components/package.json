@@ -20,6 +20,8 @@
 		"test": "jest --coverage"
 	},
 	"devDependencies": {
+		"@emotion/react": "11.0.0",
+		"@guardian/source-foundations": "6.0.2",
 		"@rollup/plugin-node-resolve": "^13.3.0",
 		"@svgr/babel-preset": "^6.3.1",
 		"@svgr/core": "^6.3.1",
@@ -30,13 +32,14 @@
 		"@types/svgo": "^2.6.3",
 		"axios": "^0.27.2",
 		"mkdirp": "^1.0.4",
+		"react": "17.0.1",
 		"rollup": "^2.77.2",
 		"rollup-plugin-ts": "^2.0.7",
 		"ts-node": "^10.7.0"
 	},
 	"peerDependencies": {
 		"@emotion/react": "^11.0.0",
-		"@guardian/source-foundations": "^6.0.0",
+		"@guardian/source-foundations": "^6.0.2",
 		"react": "^17.0.1"
 	},
 	"publishConfig": {
