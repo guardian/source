@@ -22,9 +22,9 @@
 	},
 	"peerDependencies": {
 		"@emotion/react": "^11.0.0",
-		"@guardian/libs": "^3.0.0",
 		"@guardian/source-foundations": "^7.0.0",
 		"@guardian/source-react-components": "^9.0.0",
+		"@guardian/libs": "^8.0.5",
 		"react": "^17.0.1"
 	},
 	"publishConfig": {

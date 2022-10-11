@@ -43,7 +43,7 @@
 		"@emotion/react": "11.0.0",
 		"@guardian/eslint-config": "^2.0.1",
 		"@guardian/eslint-config-typescript": "^1.0.9",
-		"@guardian/libs": "3.0.0",
+		"@guardian/libs": "8.0.0",
 		"@guardian/prettier": "^2.1.4",
 		"@guardian/tsconfig": "^0.1.4",
 		"@nrwl/cli": "14.0.5",
