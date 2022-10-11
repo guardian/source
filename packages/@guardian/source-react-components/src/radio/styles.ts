@@ -19,6 +19,11 @@ export const fieldset = (
 
 	&[aria-invalid='true'] input {
 		border: 4px solid ${radio.borderError};
+
+		&:not(:checked):hover,
+		&:active {
+			border: 2px solid ${radio.borderHover};
+		}
 	}
 `;
 
