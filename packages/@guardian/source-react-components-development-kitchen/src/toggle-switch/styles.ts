@@ -114,7 +114,8 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 		}
 
 		&:focus-visible {
-			border: 1px solid ${brand[500]};
+			outline: 5px solid ${format ? neutral[100] : brand[500]};
+			outline-offset: 3px;
 		}
 	`;
 };
