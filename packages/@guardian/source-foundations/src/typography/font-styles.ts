@@ -141,7 +141,7 @@ export const fontStyleToStringFunction =
 			 * in the underlineThickness object.
 			 */
 			--source-hover-text-decoration-thickness: ${
-				textDecorationThickness ? textDecorationThickness : 'initial'
+				textDecorationThickness ? `${textDecorationThickness}px` : 'auto'
 			};
 		`;
 	};
