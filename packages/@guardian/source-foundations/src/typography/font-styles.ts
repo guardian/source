@@ -108,6 +108,11 @@ export const fontStyleFunction =
  * provided options and returns the typography styles as a CSS string.
  *
  * For an example usage see our {@link [typography string function exports](./index.ts)}.
+ *
+ * The CSS string exposes a scoped variable: `--source-text-decoration-thickness`,
+ * so consumers can use the recommended value for the font/weight combination.
+ *
+ * For the text underline thickness mappings see {@link underlineThickness}.
  */
 export const fontStyleToStringFunction =
 	(typographyFunction: FontScaleFunction) =>
@@ -128,12 +133,17 @@ export const fontStyleToStringFunction =
 			${fontWeight ? `font-weight: ${fontWeight}` : ''};
 			${fontStyle ? `font-style: ${fontStyle}` : ''};
 
-			&:hover {
-				${
-					textDecorationThickness
-						? `text-decoration-thickness: ${textDecorationThickness}px`
-						: ``
-				};
-			}
+			/*
+			 * Child elements (e.g. <Link/>) can use this variable
+			 * to set the thickness of their underline.
+			 *
+			 * The thickness for each font type and weight is defined
+			 * in the underlineThickness object.
+			 */
+			--source-text-decoration-thickness: ${
+				textDecorationThickness === undefined
+					? 'auto'
+					: `${textDecorationThickness}px`
+			};
 		`;
 	};

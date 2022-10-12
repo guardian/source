@@ -16,7 +16,9 @@ const fieldset = `
 	margin: 0;
 `;
 
-// remove styling of invalid input elements that gets applied in Firefox
+/*
+ * Remove styling of invalid input elements that gets applied in Firefox
+ */
 const input = `
 	&:invalid {
 		box-shadow: none;
@@ -120,6 +122,7 @@ const resetCSS = `
 export const resets = {
 	legend,
 	fieldset,
+	/** @deprecated This will be removed in a future release, as it relies on the Emotion framework */
 	input,
 	defaults,
 	resetCSS,

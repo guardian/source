@@ -26,6 +26,11 @@ export const link = css`
 	&:focus {
 		${focusHalo};
 	}
+
+	&:hover {
+		/* If the hover text decoration thickness is not set, we default to the initial value. */
+		text-decoration-thickness: var(--source-text-decoration-thickness, auto);
+	}
 `;
 
 export const buttonLink = css`
