@@ -28,11 +28,8 @@ export const link = css`
 	}
 
 	&:hover {
-		text-decoration-thickness: var(
-			--source-text-decoration-thickness,
-			/* If the hover text decoration thickness is not set, we default to the initial value. */
-				auto
-		);
+		/* If the hover text decoration thickness is not set, we default to the initial value. */
+		text-decoration-thickness: var(--source-text-decoration-thickness, auto);
 	}
 `;
 
