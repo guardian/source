@@ -2639,10 +2639,10 @@
     eslint-plugin-import "2.26.0"
     eslint-plugin-prettier "4.0.0"
 
-"@guardian/libs@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-8.0.0.tgz#e1b67528ab35c66a513a181b059789ffd9b3e4c0"
-  integrity sha512-PRl+zB3/MI3FtnMXa5SEzHDMbMatODbCxynqjRfkrwItWsBgOtC2m8liVRqZGg9IqpliCCGEgJqcy1pnittOBg==
+"@guardian/libs@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-9.0.0.tgz#bb16cbfa4b367d2488e45dfab5d86add893eb028"
+  integrity sha512-VTNP04HisGts8ebnigRwsT255Wcf4ask9puc0AeP29Fj93Hs0rVkh8TAZ5VHEZ5ncNARiJTGAKc7ahatd7QYGQ==
 
 "@guardian/prettier@^2.1.4":
   version "2.1.4"
