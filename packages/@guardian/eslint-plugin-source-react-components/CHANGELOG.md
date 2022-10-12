@@ -2,10 +2,8 @@
 
 ## 9.0.0
 
-### Patch Changes
+### Major Changes
 
-- Updated dependencies [905c5148]
-- Updated dependencies [905c5148]
 - Updated dependencies [905c5148]
   - @guardian/source-react-components@9.0.0
 
