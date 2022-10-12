@@ -109,7 +109,7 @@ export const fontStyleFunction =
  *
  * For an example usage see our {@link [typography string function exports](./index.ts)}.
  *
- * The CSS string exposes a scoped variable: `--source-hover-text-decoration-thickness`,
+ * The CSS string exposes a scoped variable: `--source-text-decoration-thickness`,
  * so consumers can use the recommended value on hover for the font/weight combination.
  *
  * For the text underline thickness mappings see {@link underlineThickness}.
@@ -140,7 +140,7 @@ export const fontStyleToStringFunction =
 			 * The thickness for each font type and weight is defined
 			 * in the underlineThickness object.
 			 */
-			--source-hover-text-decoration-thickness: ${
+			--source-text-decoration-thickness: ${
 				textDecorationThickness ? `${textDecorationThickness}px` : 'auto'
 			};
 		`;

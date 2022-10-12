@@ -29,9 +29,9 @@ export const link = css`
 
 	&:hover {
 		text-decoration-thickness: var(
-			--source-hover-text-decoration-thickness,
+			--source-text-decoration-thickness,
 			/* If the hover text decoration thickness is not set, we default to the initial value. */
-			auto
+				auto
 		);
 	}
 `;
