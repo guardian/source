@@ -4,7 +4,7 @@
 
 ### Major Changes
 
-- Updated dependencies [905c5148]
+- Updated `peerDependencies` [905c5148]
   - @guardian/source-foundations@7.0.0
   - @guardian/source-react-components@9.0.0
 - d9e94ef1: `ToggleSwitch` no longer contains iOS and Android versions
