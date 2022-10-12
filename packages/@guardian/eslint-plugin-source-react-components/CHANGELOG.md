@@ -1,5 +1,12 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 9.0.0
+
+### Major Changes
+
+- Updated `peerDependencies` [905c5148]
+  - @guardian/source-react-components@9.0.0
+
 ## 8.0.1
 
 ### Patch Changes

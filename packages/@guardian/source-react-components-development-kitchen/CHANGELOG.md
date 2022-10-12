@@ -1,5 +1,29 @@
 # @guardian/source-react-components-development-kitchen
 
+## 5.0.0
+
+### Major Changes
+
+- Updated `peerDependencies` [905c5148]
+  - @guardian/source-foundations@7.0.0
+  - @guardian/source-react-components@9.0.0
+- d9e94ef1: `ToggleSwitch` no longer contains iOS and Android versions
+  - adds a new `ToggleSwitchApps` component to use instead
+- 7b99c758: 
+  - passing a `format` prop to `ToggleSwitch` renders an alternative colour scheme suitable for use on coloured backgrounds
+  - `FontWeight` in `ToggleSwitch` is now limited to `regular` and `bold` and controlled via a `fontWeight` prop
+  - `FontSize` in `ToggleSwitch` is now limited to `small` and regular and controlled via a `fontSize` prop
+  - adds a new `labelBorder` prop to `ToggleSwitch`
+- 676f6f07: Removes unused 'tooltip' prop from `ToggleSwitch` component.
+
+### Minor Changes
+
+- 4cdc3016: Add `NumericInput` component.
+
+### Patch Changes
+
+- 2010337c: Show a focus ring when tabbing to a `ToggleSwitch`
+
 ## 4.0.1
 
 ### Patch Changes

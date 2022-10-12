@@ -1,5 +1,12 @@
 # @guardian/eslint-plugin-source-foundations
 
+## 7.0.0
+
+### Major Changes
+
+- Updated `peerDependencies` [905c5148]
+  - @guardian/source-foundations@7.0.0
+
 ## 6.0.1
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @guardian/source-react-components
 
+## 9.0.0
+
+### Major Changes
+
+- Updated `peerDependencies` [905c5148]
+  - @guardian/source-foundations@7.0.0
+
+### Patch Changes
+
+- 905c5148: Uses input `reset` in `TextArea` and `TextInput`.
+- 905c5148: `Link` text has variable underline heights, based on the size of the link text.
+
 ## 8.0.1
 
 ### Patch Changes

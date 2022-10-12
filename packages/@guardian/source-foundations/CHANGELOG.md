@@ -1,5 +1,23 @@
 # @guardian/source-foundations
 
+## 7.0.0
+
+### Major Changes
+
+- 905c5148: Set default `textSans` line height to `regular`
+  - this how it should have been all along
+  - line height will be shorter than before
+    - you should confirm your designs are not adversely affected
+		
+### Minor changes
+- 905c5148: Typography functions now also include a `--source-text-decoration-thickness` CSS variable.
+
+### Patch Changes
+
+- 905c5148: `TextArea`, `TextInput`, and `Select` active border colour persists when focused. 
+	- `Radio` and `Checkbox` border changes on hover when unchecked and remains in the error state on hover when checked.
+- 905c5148: Adds a deprecation notice to the existing input reset, and move uses of it into the styles for `TextArea` and `TextInput`.
+
 ## 6.0.2
 
 ### Patch Changes
