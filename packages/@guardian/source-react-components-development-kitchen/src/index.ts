@@ -43,3 +43,6 @@ export {
 } from './footer-with-contents/FooterLinks';
 export type { FooterWithContentsProps } from './footer-with-contents/FooterWithContents';
 export type { FooterLinksProps } from './footer-with-contents/FooterLinks';
+
+export { NumericInput } from './numeric-input/NumericInput';
+export type { NumericInputProps } from './numeric-input/NumericInput';
