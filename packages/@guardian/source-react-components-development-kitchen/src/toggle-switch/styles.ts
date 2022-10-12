@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import type { SerializedStyles } from '@emotion/react';
 import type { ArticleFormat } from '@guardian/libs';
 import {
+	brand,
 	neutral,
 	space,
 	success,
@@ -109,6 +110,11 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 		&[aria-checked='true']:after {
 			left: 22px;
 			background: ${neutral[100]};
+		}
+
+		&:focus-visible {
+			outline: 5px solid ${format ? neutral[100] : brand[500]};
+			outline-offset: 3px;
 		}
 	`;
 };
