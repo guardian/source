@@ -1,5 +1,40 @@
 # @guardian/source-react-components-development-kitchen
 
+## 5.0.0
+
+### Major Changes
+
+- 7b99c758: ## Changes to `ToggleSwitch`
+
+  - passing a `format` prop now renders an alternative colour scheme suitable for use on coloured backgrounds
+  - `FontWeight` is now limited to `regular` and `bold` and controlled via a `fontWeight` prop
+  - `FontSize` is now limited to `small` and regular and controlled via a `fontSize` prop
+  - added a new `labelBorder` prop
+
+- 676f6f07: Removes unused 'tooltip' prop from `ToggleSwitch` component.
+- d9e94ef1: - `ToggleSwitch` no longer contains iOS and Android versions
+  - adds a new `ToggleSwitchApps` component to use instead
+- 905c5148: Set default `textSans` line height to `regular`
+
+  - this how it should have been all along
+  - line height will be shorter than before
+    - you should confirm your designs are not adversely affected
+
+### Minor Changes
+
+- 4cdc3016: Add `NumericInput` component.
+
+### Patch Changes
+
+- 2010337c: Show a focus ring when tabbing to a `ToggleSwitch`
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+  - @guardian/source-foundations@7.0.0
+  - @guardian/source-react-components@9.0.0
+
 ## 4.0.1
 
 ### Patch Changes

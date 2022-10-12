@@ -1,5 +1,25 @@
 # @guardian/source-react-components
 
+## 9.0.0
+
+### Major Changes
+
+- 905c5148: Set default `textSans` line height to `regular`
+
+  - this how it should have been all along
+  - line height will be shorter than before
+    - you should confirm your designs are not adversely affected
+
+### Patch Changes
+
+- 905c5148: Adds a deprecation notice to the existing input reset, and move uses of it into the styles for `TextArea` and `TextInput`.
+- 905c5148: `Link` text has variable underline heights, based on the size of the link text.
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+  - @guardian/source-foundations@7.0.0
+
 ## 8.0.1
 
 ### Patch Changes

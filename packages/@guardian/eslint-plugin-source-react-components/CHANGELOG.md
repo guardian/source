@@ -1,5 +1,14 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 9.0.0
+
+### Patch Changes
+
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+- Updated dependencies [905c5148]
+  - @guardian/source-react-components@9.0.0
+
 ## 8.0.1
 
 ### Patch Changes
