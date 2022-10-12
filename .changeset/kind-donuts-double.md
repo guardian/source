@@ -2,4 +2,4 @@
 '@guardian/source-react-components-development-kitchen': major
 ---
 
-Remove unused 'tooltip' prop from `ToggleSwitch` component
+Removes unused 'tooltip' prop from `ToggleSwitch` component.

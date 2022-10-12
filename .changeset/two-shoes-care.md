@@ -2,4 +2,4 @@
 '@guardian/source-react-components-development-kitchen': patch
 ---
 
-Fix focus-visible behaviour for `ToggleSwitch`
+Show a focus ring when tabbing to a `ToggleSwitch`

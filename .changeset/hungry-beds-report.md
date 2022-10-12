@@ -3,4 +3,4 @@
 '@guardian/source-react-components': patch
 ---
 
-Add deprecation notice to the existing input reset, move uses of it into the styles for `TextArea` and `TextInput`
+Adds a deprecation notice to the existing input reset, and move uses of it into the styles for `TextArea` and `TextInput`.

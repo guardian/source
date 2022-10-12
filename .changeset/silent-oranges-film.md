@@ -2,4 +2,4 @@
 '@guardian/source-react-components-development-kitchen': minor
 ---
 
-add NumericInput component
+Add `NumericInput` component.
