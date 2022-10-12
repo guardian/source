@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import {
 	focusHalo,
 	height,
-	resets,
 	space,
 	textSans,
 } from '@guardian/source-foundations';
@@ -29,7 +28,6 @@ export const textInput = (
 	textInput = textInputThemeDefault.textInput,
 ): SerializedStyles =>
 	css`
-		${resets.input};
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
 		${textSans.medium()};
@@ -44,6 +42,9 @@ export const textInput = (
 		}
 
 		&:invalid {
+			/* Remove styling of invalid input elements that gets applied in Firefox */
+			box-shadow: none;
+
 			/*
 			We automatically apply error styling to fields in an invalid state,
 			but stop short of applying it to empty required fields.
