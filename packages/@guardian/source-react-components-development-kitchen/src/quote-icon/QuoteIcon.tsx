@@ -8,6 +8,7 @@ import {
 	lifestyle,
 	news,
 	opinion,
+	palette,
 	specialReport,
 	sport,
 } from '@guardian/source-foundations';
@@ -54,6 +55,13 @@ const quoteColor = (format: ArticleFormat) => {
 			return css`
 				svg {
 					fill: ${specialReport[400]};
+				}
+			`;
+		}
+		case ArticleSpecial.SpecialReportAlt: {
+			return css`
+				svg {
+					fill: ${palette.specialReportAlt[200]};
 				}
 			`;
 		}
