@@ -3,6 +3,7 @@ import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { SelectHTMLAttributes } from 'react';
 import { SvgChevronDownSingle } from '../../vendor/icons/SvgChevronDownSingle';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { Label } from '../label/Label';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';
@@ -79,25 +80,21 @@ export const Select = ({
 				htmlFor={selectId}
 			>
 				{error && (
-					<InlineError id={descriptionId(selectId)}>
-						{error}
-					</InlineError>
+					<InlineError id={descriptionId(selectId)}>{error}</InlineError>
 				)}
 				{!error && success && (
-					<InlineSuccess id={descriptionId(selectId)}>
-						{success}
-					</InlineSuccess>
+					<InlineSuccess id={descriptionId(selectId)}>{success}</InlineSuccess>
 				)}
 			</Label>
 			<div
-				css={(theme) => [
+				css={(theme: Theme) => [
 					selectWrapper(theme.select),
 					error ? errorChevron(theme.select) : '',
 					!error && success ? successChevron(theme.select) : '',
 				]}
 			>
 				<select
-					css={(theme) => [
+					css={(theme: Theme) => [
 						select(theme.select),
 						error ? errorInput(theme.select) : '',
 						!error && success ? successInput(theme.select) : '',
@@ -105,9 +102,7 @@ export const Select = ({
 					]}
 					aria-required={!optional}
 					aria-invalid={!!error}
-					aria-describedby={
-						error || success ? descriptionId(selectId) : ''
-					}
+					aria-describedby={error || success ? descriptionId(selectId) : ''}
 					id={selectId}
 					{...props}
 				>

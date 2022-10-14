@@ -63,15 +63,11 @@ export const Divider = ({
 							margin: auto;
 						}
 						:before {
-							margin-left: ${size === 'partial'
-								? '30%'
-								: '-10px'};
+							margin-left: ${size === 'partial' ? '30%' : '-10px'};
 							margin-right: 10px;
 						}
 						:after {
-							margin-right: ${size === 'partial'
-								? '30%'
-								: '-10px'};
+							margin-right: ${size === 'partial' ? '30%' : '-10px'};
 							margin-left: 10px;
 						}
 					`,

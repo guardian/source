@@ -1,45 +1,31 @@
 {
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "declaration": true,
-    "declarationMap": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react",
-    "lib": ["es5", "es6", "es7", "es2017", "es2019", "es2020", "dom"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "paths": {
-      "@guardian/source-foundations": [
-        "packages/@guardian/source-foundations/src/index"
-      ],
-      "@guardian/source-react-components": [
-        "packages/@guardian/source-react-components/src/index"
-      ],
-      "@guardian/source-react-components-development-kitchen": [
-        "packages/@guardian/source-react-components-development-kitchen/src/index"
-      ]
-    },
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "target": "esnext"
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
-  "include": ["packages", "lib", "@types", "scripts"],
-  "exclude": ["node_modules", "dist"]
+	"extends": "@guardian/tsconfig/tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"declaration": true,
+		"declarationMap": true,
+		"forceConsistentCasingInFileNames": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "@emotion/react",
+		"noEmit": true,
+		"paths": {
+			"@guardian/source-foundations": [
+				"packages/@guardian/source-foundations/src/index"
+			],
+			"@guardian/source-react-components": [
+				"packages/@guardian/source-react-components/src/index"
+			],
+			"@guardian/source-react-components-development-kitchen": [
+				"packages/@guardian/source-react-components-development-kitchen/src/index"
+			]
+		},
+		"sourceMap": true
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	},
+	"include": ["packages", "lib", "scripts"],
+	"exclude": ["node_modules", "dist"]
 }

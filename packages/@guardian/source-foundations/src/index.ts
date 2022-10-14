@@ -79,10 +79,11 @@ export {
 	remHeadlineSizes,
 	remBodySizes,
 	remTextSansSizes,
-	fontMapping as fonts,
-	fontWeightMapping as fontWeights,
-	lineHeightMapping as lineHeights,
+	fonts,
+	fontWeights,
+	lineHeights,
 } from './typography';
+
 export {
 	body as bodyObjectStyles,
 	headline as headlineObjectStyles,

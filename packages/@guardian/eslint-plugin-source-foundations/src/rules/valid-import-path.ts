@@ -1,4 +1,4 @@
-import { inspect } from 'node:util';
+import { isUndefined } from '@guardian/libs';
 import type { Rule } from 'eslint';
 import type {
 	ExportAllDeclaration,
@@ -80,10 +80,15 @@ const getRemovedExports = (
 				}
 
 				const removedImportsForSource = removedImports[source];
-				return (
-					i.type === 'ImportSpecifier' &&
-					removedImportsForSource.includes(i.imported.name)
-				);
+
+				if (removedImportsForSource) {
+					return (
+						i.type === 'ImportSpecifier' &&
+						removedImportsForSource.includes(i.imported.name)
+					);
+				}
+
+				return false;
 			}) as ImportSpecifier[];
 		case 'ExportNamedDeclaration':
 			return node.specifiers.filter((i) => {
@@ -93,7 +98,11 @@ const getRemovedExports = (
 				}
 
 				const removedImportsForSource = removedImports[source];
-				return removedImportsForSource.includes(i.exported.name);
+				if (removedImportsForSource) {
+					return removedImportsForSource.includes(i.exported.name);
+				}
+
+				return false;
 			});
 		case 'ExportAllDeclaration':
 			return [];
@@ -144,9 +153,7 @@ const getRenameImportFixers = (
 		fixers.push(
 			fixer.insertTextBeforeRange(
 				node.range ?? [0, 0],
-				`import { ${importsArray.join(', ')} } from ${
-					node.source.raw
-				};\n`,
+				`import { ${importsArray.join(', ')} } from ${node.source.raw};\n`,
 			),
 		);
 	}
@@ -198,8 +205,10 @@ const getMessage = (
 		}
 
 		const name = getSpecifierName(i);
-		if (name in newThemeNames) {
-			renamedExports.push([name, `${newThemeNames[name]}`]);
+		const newThemeName = newThemeNames[name];
+
+		if (!isUndefined(newThemeName)) {
+			renamedExports.push([name, `${newThemeName}`]);
 		}
 	}
 
@@ -298,16 +307,8 @@ const createReport = (context: Rule.RuleContext, node: Node, pkg: Package) => {
 			return node.specifiers.length === removedExports.length
 				? null
 				: [
-						...getRenameImportFixers(
-							node,
-							removedExports,
-							fixer,
-							nodeSource,
-						),
-						fixer.replaceTextRange(
-							node.source?.range ?? [0, 0],
-							newPackage,
-						),
+						...getRenameImportFixers(node, removedExports, fixer, nodeSource),
+						fixer.replaceTextRange(node.source?.range ?? [0, 0], newPackage),
 				  ];
 		},
 	});
@@ -341,7 +342,3 @@ export const validFoundationsImportPath: Rule.RuleModule = {
 		};
 	},
 };
-
-console.log(
-	inspect(validFoundationsImportPath, false, null, true /* enable colors */),
-);

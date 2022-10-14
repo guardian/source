@@ -9,11 +9,7 @@ package-lock.json
 .vscode/settings.json
 coverage/
 .eslintcache
-
-# scripts/get-usage
-scripts/get-usage/config.*.json
-scripts/get-usage/results/
-scripts/get-usage/tmp/
+.vscode/
 
 # scripts/eslint-integration-test
 scripts/eslint-integration-test/integration-test-content.ts

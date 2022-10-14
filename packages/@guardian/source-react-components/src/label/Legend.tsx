@@ -31,9 +31,7 @@ export const Legend = ({
 				<Text text={text} optional={optional} hideLabel={hideLabel} />
 			</legend>
 			{supporting ? (
-				<SupportingText hideLabel={hideLabel}>
-					{supporting}
-				</SupportingText>
+				<SupportingText hideLabel={hideLabel}>{supporting}</SupportingText>
 			) : (
 				''
 			)}

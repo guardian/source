@@ -1,4 +1,4 @@
-import type { SerializedStyles, Theme } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import {
 	focusHalo,
@@ -7,6 +7,7 @@ import {
 	width,
 } from '@guardian/source-foundations';
 import type { ReactElement } from 'react';
+import type { Theme } from '../@types/Theme';
 import type { LinkTheme } from './theme';
 import { linkThemeDefault } from './theme';
 import type { IconSide, LinkPriority } from './types';
@@ -17,17 +18,18 @@ export const link = css`
 	cursor: pointer;
 	text-decoration: underline;
 	text-underline-position: under;
-	text-underline-offset: 10%;
+	text-underline-offset: 5%;
 
 	display: inline;
 	align-items: center;
 
-	&:hover {
-		text-decoration-thickness: 4px;
-	}
-
 	&:focus {
 		${focusHalo};
+	}
+
+	&:hover {
+		/* If the hover text decoration thickness is not set, we default to the initial value. */
+		text-decoration-thickness: var(--source-text-decoration-thickness, auto);
 	}
 `;
 

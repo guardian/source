@@ -10,7 +10,7 @@ export const textInputThemeDefault = {
 		textError: palette.neutral[7],
 		textSuccess: palette.success[400],
 		backgroundInput: palette.neutral[100],
-		border: palette.neutral[60],
+		border: palette.neutral[46],
 		borderActive: palette.focus[400],
 		borderError: palette.error[400],
 		borderSuccess: palette.success[400],

@@ -71,7 +71,7 @@ export const select = (select = selectThemeDefault.select): SerializedStyles =>
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
 		width: 100%;
-		${textSans.medium({ lineHeight: 'regular' })};
+		${textSans.medium()};
 		background-color: ${select.backgroundInput};
 		border: 2px solid ${select.border};
 		padding-left: ${space[2]}px;
@@ -85,11 +85,8 @@ export const select = (select = selectThemeDefault.select): SerializedStyles =>
 			}
 		}
 
-		&:active {
-			border: 2px solid ${select.borderActive};
-		}
-
 		&:focus {
+			border: 2px solid ${select.borderActive};
 			${focusHalo};
 		}
 

@@ -1,5 +1,41 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 9.0.0
+
+### Major Changes
+
+- Updated `peerDependencies` [905c5148]
+  - @guardian/source-react-components@9.0.0
+
+## 8.0.1
+
+### Patch Changes
+
+- 40e41a43: **No changes**: Patch bump to fix deploy to npm due to the major version already having been published and deleted
+
+## 8.0.0
+
+### Patch Changes
+
+- @guardian/source-react-components@8.0.0
+
+## 7.0.0
+
+### Patch Changes
+
+- Updated dependencies [12a9fce5]
+- Updated dependencies [8e8535ba]
+  - @guardian/source-react-components@7.0.0
+
+## 6.0.0
+
+### Patch Changes
+
+- Updated dependencies [07bfaf1b]
+- Updated dependencies [78ff24be]
+- Updated dependencies [fd69cf60]
+  - @guardian/source-react-components@6.0.0
+
 ## 5.0.0
 
 ### Patch Changes

@@ -37,7 +37,8 @@ ruleTester.run('valid-import-path', validImportPath, {
 						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
 				},
 			],
-			output: "import type { LabelProps } from '@guardian/source-react-components';",
+			output:
+				"import type { LabelProps } from '@guardian/source-react-components';",
 		},
 		{
 			// Multiple imports from a single package
@@ -48,7 +49,8 @@ ruleTester.run('valid-import-path', validImportPath, {
 						"@guardian/src-* packages are deprecated. Import from '@guardian/source-react-components' instead.",
 				},
 			],
-			output: "import { Label, Legend } from '@guardian/source-react-components';",
+			output:
+				"import { Label, Legend } from '@guardian/source-react-components';",
 		},
 		{
 			// Helpers removed exports

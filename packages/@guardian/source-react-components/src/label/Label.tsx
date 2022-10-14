@@ -29,9 +29,7 @@ export const Label = ({
 		<label css={cssOverrides} {...props}>
 			<Text hideLabel={hideLabel} text={text} optional={optional} />
 			{supporting ? (
-				<SupportingText hideLabel={hideLabel}>
-					{supporting}
-				</SupportingText>
+				<SupportingText hideLabel={hideLabel}>{supporting}</SupportingText>
 			) : (
 				''
 			)}

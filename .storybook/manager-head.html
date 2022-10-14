@@ -12,14 +12,9 @@
 					// https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
 					if (addedNode.nodeType === ELEMENT_NODE) {
 						const links =
-							addedNode.querySelectorAll(
-								'[href$="--playground"]',
-							) || [];
+							addedNode.querySelectorAll('[href$="--playground"]') || [];
 						links.forEach((link) => {
-							link.href = link.href.replace(
-								'path=/story/',
-								'path=/docs/',
-							);
+							link.href = link.href.replace('path=/story/', 'path=/docs/');
 							if (link.dataset.selected) {
 								link.click();
 							}

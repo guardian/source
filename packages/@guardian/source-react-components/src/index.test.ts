@@ -50,6 +50,7 @@ it('Should have exactly these exports', () => {
 	expect(Object.keys(pkgExports).sort()).toEqual([
 		'Accordion',
 		'AccordionRow',
+		'BackToTop',
 		'Button',
 		'ButtonLink',
 		'Checkbox',
@@ -159,6 +160,7 @@ it('Should have exactly these exports', () => {
 		'SvgMessenger',
 		'SvgMinus',
 		'SvgMoon',
+		'SvgNewsletter',
 		'SvgNotificationsOff',
 		'SvgNotificationsOn',
 		'SvgOfflineCloud',

@@ -2,6 +2,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { ReactElement } from 'react';
 import { Children, cloneElement } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { accordion } from './styles';
 
 export interface AccordionProps extends Props {
@@ -21,6 +22,9 @@ export interface AccordionProps extends Props {
  * [Design System](https://theguardian.design/2a1e5182b/p/38c5aa-accordion/b/92b71e) •
  * [GitHub](https://github.com/guardian/source/blob/main/packages/@guardian/source-react-components/src/accordion/Accordion.tsx) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
+ *
+ * **Note**: the `max-height` of an `AccordionRow` is `500px`
+ *
  */
 export const Accordion = ({
 	hideToggleLabel = false,
@@ -31,7 +35,7 @@ export const Accordion = ({
 	// AUDIT https://www.sarasoueidan.com/blog/accordion-markup/
 	return (
 		<div
-			css={(theme) => [accordion(theme.accordion), cssOverrides]}
+			css={(theme: Theme) => [accordion(theme.accordion), cssOverrides]}
 			{...props}
 		>
 			{Children.map(children, (child) => {

@@ -19,6 +19,11 @@ export const fieldset = (
 
 	&[aria-invalid='true'] input {
 		border: 4px solid ${radio.borderError};
+
+		&:not(:checked):hover,
+		&:active {
+			border: 2px solid ${radio.borderHover};
+		}
 	}
 `;
 
@@ -107,18 +112,18 @@ export const radio = (radio = radioThemeDefault.radio): SerializedStyles => css`
 export const labelText = (
 	radio = radioThemeDefault.radio,
 ): SerializedStyles => css`
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 	color: ${radio.textLabel};
 	width: 100%;
 `;
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ fontWeight: 'bold', lineHeight: 'regular' })};
+	${textSans.medium({ fontWeight: 'bold' })};
 `;
 
 export const supportingText = (
 	radio = radioThemeDefault.radio,
 ): SerializedStyles => css`
-	${textSans.small({ lineHeight: 'regular' })};
+	${textSans.small()};
 	color: ${radio.textLabelSupporting};
 `;

@@ -1,10 +1,10 @@
 {
-  "recommendations": [
-    "editorconfig.editorconfig",
-    "esbenp.prettier-vscode",
-	"styled-components.vscode-styled-components",
-    "stylelint.vscode-stylelint",
-    "stkb.rewrap",
-    "naumovs.color-highlight"
-  ]
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"esbenp.prettier-vscode",
+		"styled-components.vscode-styled-components",
+		"stylelint.vscode-stylelint",
+		"stkb.rewrap",
+		"naumovs.color-highlight"
+	]
 }

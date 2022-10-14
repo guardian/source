@@ -60,6 +60,7 @@ export type { ChoiceCardProps } from './choice-card/ChoiceCard';
 export { choiceCardThemeDefault } from './choice-card/theme';
 
 export { Footer } from './footer/Footer';
+export { BackToTop } from './footer/BackToTop';
 export type { FooterProps } from './footer/Footer';
 export { footerThemeBrand } from './footer/theme';
 
@@ -157,6 +158,7 @@ export { SvgMediaControlsPause } from '../vendor/icons/SvgMediaControlsPause';
 export { SvgMediaControlsStop } from '../vendor/icons/SvgMediaControlsStop';
 export { SvgMenu } from '../vendor/icons/SvgMenu';
 export { SvgMoon } from '../vendor/icons/SvgMoon';
+export { SvgNewsletter } from '../vendor/icons/SvgNewsletter';
 export { SvgNotificationsOff } from '../vendor/icons/SvgNotificationsOff';
 export { SvgNotificationsOn } from '../vendor/icons/SvgNotificationsOn';
 export { SvgPadlock } from '../vendor/icons/SvgPadlock';

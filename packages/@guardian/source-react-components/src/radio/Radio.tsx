@@ -2,6 +2,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes, ReactNode } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import {
 	label,
 	labelText,
@@ -21,7 +22,7 @@ const LabelText = ({
 }) => {
 	return (
 		<div
-			css={(theme) => [
+			css={(theme: Theme) => [
 				hasSupportingText ? labelTextWithSupportingText : '',
 				labelText(theme.radio),
 			]}
@@ -32,7 +33,9 @@ const LabelText = ({
 };
 
 const SupportingText = ({ children }: { children: ReactNode }) => {
-	return <div css={(theme) => supportingText(theme.radio)}>{children}</div>;
+	return (
+		<div css={(theme: Theme) => supportingText(theme.radio)}>{children}</div>
+	);
 };
 
 export interface RadioProps
@@ -98,7 +101,7 @@ export const Radio = ({
 		<input
 			id={radioId}
 			type="radio"
-			css={(theme) => [radio(theme.radio), cssOverrides]}
+			css={(theme: Theme) => [radio(theme.radio), cssOverrides]}
 			value={value}
 			defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 			checked={checked != null ? isChecked() : undefined}
@@ -108,7 +111,7 @@ export const Radio = ({
 
 	const labelledRadioControl = (
 		<div
-			css={(theme) => [
+			css={(theme: Theme) => [
 				radioContainer(theme.radio),
 				supporting ? labelWithSupportingText : '',
 			]}
@@ -117,9 +120,7 @@ export const Radio = ({
 			<label htmlFor={radioId} css={label}>
 				{supporting ? (
 					<div>
-						<LabelText hasSupportingText={true}>
-							{labelContent}
-						</LabelText>
+						<LabelText hasSupportingText={true}>{labelContent}</LabelText>
 						<SupportingText>{supporting}</SupportingText>
 					</div>
 				) : (

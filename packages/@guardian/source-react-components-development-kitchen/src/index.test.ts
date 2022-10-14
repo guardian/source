@@ -5,13 +5,18 @@ import * as pkgExports from './index';
 export type {
 	EditorialButtonProps,
 	EditorialLinkButtonProps,
+	FooterLinksProps,
+	FooterWithContentsProps,
 	LineCount,
 	LinesProps,
 	LogoProps,
+	NumericInput,
+	NumericInputProps,
 	HeadlineSize,
 	QuoteIconProps,
 	StarRatingProps,
 	ToggleSwitchProps,
+	ToggleSwitchAppsProps,
 } from './index';
 
 it('Should have exactly these exports', () => {
@@ -22,14 +27,19 @@ it('Should have exactly these exports', () => {
 		'EditorialButton',
 		'EditorialLinkButton',
 		'ErrorSummary',
+		'FooterLinks',
+		'FooterWithContents',
 		'InfoSummary',
 		'Lines',
 		'Logo',
+		'NumericInput',
 		'QuoteIcon',
 		'SquigglyLines',
 		'StarRating',
 		'StraightLines',
 		'SuccessSummary',
 		'ToggleSwitch',
+		'ToggleSwitchApps',
+		'defaultGuardianLinks',
 	]);
 });

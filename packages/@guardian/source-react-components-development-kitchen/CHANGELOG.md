@@ -1,5 +1,126 @@
 # @guardian/source-react-components-development-kitchen
 
+## 5.0.0
+
+### Major Changes
+
+- Updated `peerDependencies` [905c5148]
+  - @guardian/source-foundations@7.0.0
+  - @guardian/source-react-components@9.0.0
+- d9e94ef1: `ToggleSwitch` no longer contains iOS and Android versions
+  - adds a new `ToggleSwitchApps` component to use instead
+- 7b99c758: 
+  - passing a `format` prop to `ToggleSwitch` renders an alternative colour scheme suitable for use on coloured backgrounds
+  - `FontWeight` in `ToggleSwitch` is now limited to `regular` and `bold` and controlled via a `fontWeight` prop
+  - `FontSize` in `ToggleSwitch` is now limited to `small` and regular and controlled via a `fontSize` prop
+  - adds a new `labelBorder` prop to `ToggleSwitch`
+- 676f6f07: Removes unused 'tooltip' prop from `ToggleSwitch` component.
+
+### Minor Changes
+
+- 4cdc3016: Add `NumericInput` component.
+
+### Patch Changes
+
+- 2010337c: Show a focus ring when tabbing to a `ToggleSwitch`
+
+## 4.0.1
+
+### Patch Changes
+
+- 40e41a43: **No changes**: Patch bump to fix deploy to npm due to the major version already having been published and deleted
+
+## 4.0.0
+
+### Patch Changes
+
+- Updated dependencies [3823490a]
+  - @guardian/source-foundations@6.0.0
+  - @guardian/source-react-components@8.0.0
+
+## 3.1.10
+
+### Patch Changes
+
+- bbbe1e3e: make BackToTop an explicit export of source-react-components so it can be used in the FooterWithContents dev kitchen component
+
+## 3.1.9
+
+### Patch Changes
+
+- 4ef91d3c: noop - ignore this
+
+## 3.1.8
+
+### Patch Changes
+
+- e1524b0b: noop - ignore this safely
+
+## 3.1.7
+
+### Patch Changes
+
+- 6e1958c7: Noop - this can be ignored
+
+## 3.1.6
+
+### Patch Changes
+
+- e45b80b1: noop to test release - you can ignore this
+
+## 3.1.5
+
+### Patch Changes
+
+- e6d86ab6: noop to test release again - you can ignore this release
+
+## 3.1.4
+
+### Patch Changes
+
+- f4522bd4: noop to test release again - you can ignore this release
+
+## 3.1.3
+
+### Patch Changes
+
+- e3a3c742: noop to test releases – you can ignore this version
+
+## 3.1.2
+
+### Patch Changes
+
+- 6ff6fede: noop to test pipeline - ignore this release
+
+## 3.1.1
+
+### Patch Changes
+
+- 430276ce: Noop to test release pipeline
+
+## 3.1.0
+
+### Minor Changes
+
+- c7afdedb: add FooterWithContents and FooterLinks components
+
+## 3.0.0
+
+### Patch Changes
+
+- Updated dependencies [12a9fce5]
+- Updated dependencies [8e8535ba]
+  - @guardian/source-react-components@7.0.0
+
+## 2.0.0
+
+### Patch Changes
+
+- Updated dependencies [07bfaf1b]
+- Updated dependencies [78ff24be]
+- Updated dependencies [fd69cf60]
+  - @guardian/source-react-components@6.0.0
+
 ## 1.0.1
 
 ### Patch Changes

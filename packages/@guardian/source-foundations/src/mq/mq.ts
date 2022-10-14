@@ -89,22 +89,10 @@ export const between = {
 				breakpoints.mobileMedium,
 				breakpoints.mobileLandscape,
 			),
-			phablet: minWidthMaxWidth(
-				breakpoints.mobileMedium,
-				breakpoints.phablet,
-			),
-			tablet: minWidthMaxWidth(
-				breakpoints.mobileMedium,
-				breakpoints.tablet,
-			),
-			desktop: minWidthMaxWidth(
-				breakpoints.mobileMedium,
-				breakpoints.desktop,
-			),
-			leftCol: minWidthMaxWidth(
-				breakpoints.mobileMedium,
-				breakpoints.leftCol,
-			),
+			phablet: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.phablet),
+			tablet: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.tablet),
+			desktop: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.desktop),
+			leftCol: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.leftCol),
 			wide: minWidthMaxWidth(breakpoints.mobileMedium, breakpoints.wide),
 		},
 	},
@@ -114,10 +102,7 @@ export const between = {
 				breakpoints.mobileLandscape,
 				breakpoints.phablet,
 			),
-			tablet: minWidthMaxWidth(
-				breakpoints.mobileLandscape,
-				breakpoints.tablet,
-			),
+			tablet: minWidthMaxWidth(breakpoints.mobileLandscape, breakpoints.tablet),
 			desktop: minWidthMaxWidth(
 				breakpoints.mobileLandscape,
 				breakpoints.desktop,
@@ -126,10 +111,7 @@ export const between = {
 				breakpoints.mobileLandscape,
 				breakpoints.leftCol,
 			),
-			wide: minWidthMaxWidth(
-				breakpoints.mobileLandscape,
-				breakpoints.wide,
-			),
+			wide: minWidthMaxWidth(breakpoints.mobileLandscape, breakpoints.wide),
 		},
 	},
 	phablet: {

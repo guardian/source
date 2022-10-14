@@ -11,9 +11,7 @@ it('from should return a min-width media query', () => {
 it('until should return a max-width media query', () => {
 	const max: Breakpoint = 'wide';
 
-	expect(until[max]).toBe(
-		`@media (max-width: ${`${breakpoints[max] - 1}px`})`,
-	);
+	expect(until[max]).toBe(`@media (max-width: ${`${breakpoints[max] - 1}px`})`);
 });
 
 it('between should return a media query with min- and max-width', () => {

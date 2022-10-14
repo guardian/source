@@ -55,19 +55,11 @@ export const Lines = ({
 			);
 		case 'dotted':
 			return (
-				<DottedLines
-					count={count}
-					color={color}
-					cssOverrides={cssOverrides}
-				/>
+				<DottedLines count={count} color={color} cssOverrides={cssOverrides} />
 			);
 		case 'dashed':
 			return (
-				<DashedLines
-					count={count}
-					color={color}
-					cssOverrides={cssOverrides}
-				/>
+				<DashedLines count={count} color={color} cssOverrides={cssOverrides} />
 			);
 		case 'straight':
 		default:

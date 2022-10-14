@@ -1,189 +1,166 @@
 import { pxToRem } from '../utils/px-to-rem';
-import type { Category, FontWeight, FontWeightDefinition } from './types';
+import type { AvailableFontWeights, ItalicsFontWeights } from './types';
 
-const fontSizes = [12, 14, 15, 17, 20, 24, 28, 34, 42, 50, 70] as const;
+/**
+ * Pixel size values for each font that we use in the design system.
+ *
+ * We assert that the values match the guardian type scale in our
+ * {@link [unit test suite](./typography.test.ts)}.
+ */
+export const pxTextSizes = {
+	textSans: {
+		xxsmall: 12,
+		xsmall: 14,
+		small: 15,
+		medium: 17,
+		large: 20,
+		xlarge: 24,
+		xxlarge: 28,
+		xxxlarge: 34,
+	},
+	body: {
+		xsmall: 14,
+		small: 15,
+		medium: 17,
+	},
+	headline: {
+		xxxsmall: 17,
+		xxsmall: 20,
+		xsmall: 24,
+		small: 28,
+		medium: 34,
+		large: 42,
+		xlarge: 50,
+	},
+	titlepiece: {
+		small: 42,
+		medium: 50,
+		large: 70,
+	},
+} as const;
 
-const fonts = {
+/**
+ * Relative font sizes, calculated from the pixel sizes above;
+ * using the pxToRem method.
+ *
+ * We assert that the computed rem values match the expected values
+ * in our {@link [unit test suite](./typography.test.ts)}.
+ *
+ * See {@link [pxToRem](../utils/px-to-rem.ts)} for more details.
+ */
+export const remTextSizes = {
+	textSans: {
+		xxsmall: pxToRem(pxTextSizes.textSans.xxsmall),
+		xsmall: pxToRem(pxTextSizes.textSans.xsmall),
+		small: pxToRem(pxTextSizes.textSans.small),
+		medium: pxToRem(pxTextSizes.textSans.medium),
+		large: pxToRem(pxTextSizes.textSans.large),
+		xlarge: pxToRem(pxTextSizes.textSans.xlarge),
+		xxlarge: pxToRem(pxTextSizes.textSans.xxlarge),
+		xxxlarge: pxToRem(pxTextSizes.textSans.xxxlarge),
+	},
+	body: {
+		xsmall: pxToRem(pxTextSizes.body.xsmall),
+		small: pxToRem(pxTextSizes.body.small),
+		medium: pxToRem(pxTextSizes.body.medium),
+	},
+	headline: {
+		xxxsmall: pxToRem(pxTextSizes.headline.xxxsmall),
+		xxsmall: pxToRem(pxTextSizes.headline.xxsmall),
+		xsmall: pxToRem(pxTextSizes.headline.xsmall),
+		small: pxToRem(pxTextSizes.headline.small),
+		medium: pxToRem(pxTextSizes.headline.medium),
+		large: pxToRem(pxTextSizes.headline.large),
+		xlarge: pxToRem(pxTextSizes.headline.xlarge),
+	},
+	titlepiece: {
+		small: pxToRem(pxTextSizes.titlepiece.small),
+		medium: pxToRem(pxTextSizes.titlepiece.medium),
+		large: pxToRem(pxTextSizes.titlepiece.large),
+	},
+} as const;
+
+export const fonts = {
 	titlepiece: 'GT Guardian Titlepiece, Georgia, serif',
-	headlineSerif:
-		'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
-	bodySerif:
-		'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
-	bodySans:
+	headline: 'GH Guardian Headline, Guardian Egyptian Web, Georgia, serif',
+	body: 'GuardianTextEgyptian, Guardian Text Egyptian Web, Georgia, serif',
+	textSans:
 		'GuardianTextSans, Guardian Text Sans Web, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif',
 } as const;
 
-const lineHeights = [1.15, 1.35, 1.5] as const;
-
-const fontWeights = [300, 400, 500, 700] as const;
-
-const titlepieceSizes = {
-	small: fontSizes[8], //42px
-	medium: fontSizes[9], //50px
-	large: fontSizes[10], //70px
+export const lineHeights = {
+	tight: 1.15,
+	regular: 1.35,
+	loose: 1.5,
 } as const;
 
-const headlineSizes = {
-	xxxsmall: fontSizes[3], //17px
-	xxsmall: fontSizes[4], //20px
-	xsmall: fontSizes[5], //24px
-	small: fontSizes[6], //28px
-	medium: fontSizes[7], //34px
-	large: fontSizes[8], //42px
-	xlarge: fontSizes[9], //50px
+export const fontWeights = {
+	light: 300,
+	regular: 400,
+	medium: 500,
+	bold: 700,
 } as const;
 
-const bodySizes = {
-	small: fontSizes[2], //15px
-	medium: fontSizes[3], //17px
-} as const;
+export const availableFontWeights = {
+	titlepiece: { bold: true },
+	headline: { light: true, medium: true, bold: true },
+	body: { regular: true, bold: true },
+	textSans: { regular: true, bold: true },
+} as AvailableFontWeights;
 
-const textSansSizes = {
-	xxsmall: fontSizes[0], //12px
-	xsmall: fontSizes[1], //14px
-	small: fontSizes[2], //15px
-	medium: fontSizes[3], //17px
-	large: fontSizes[4], //20px
-	xlarge: fontSizes[5], //24px
-	xxlarge: fontSizes[6], //28px
-	xxxlarge: fontSizes[7], //34px
-} as const;
+export const italicsFontWeights = {
+	titlepiece: { bold: false },
+	headline: { light: true, medium: true, bold: false },
+	body: { regular: true, bold: true },
+	textSans: { regular: true, bold: false },
+} as ItalicsFontWeights;
 
-const fontSizeMapping = {
-	titlepiece: titlepieceSizes,
-	headline: headlineSizes,
-	body: bodySizes,
-	textSans: textSansSizes,
-} as const;
-
-const remFontSizes = fontSizes.map((fontSize) => pxToRem(fontSize));
-
-const remTitlepieceSizes = {
-	small: remFontSizes[8], //42px
-	medium: remFontSizes[9], //50px
-	large: remFontSizes[10], //70px
-} as const;
-
-const remHeadlineSizes = {
-	xxxsmall: remFontSizes[3], //17px
-	xxsmall: remFontSizes[4], //20px
-	xsmall: remFontSizes[5], //24px
-	small: remFontSizes[6], //28px
-	medium: remFontSizes[7], //34px
-	large: remFontSizes[8], //42px
-	xlarge: remFontSizes[9], //50px
-} as const;
-
-const remBodySizes = {
-	small: remFontSizes[2], //15px
-	medium: remFontSizes[3], //17px
-} as const;
-
-const remTextSansSizes = {
-	xxsmall: remFontSizes[0], //12px
-	xsmall: remFontSizes[1], //14px
-	small: remFontSizes[2], //15px
-	medium: remFontSizes[3], //17px
-	large: remFontSizes[4], //20px
-	xlarge: remFontSizes[5], //24px
-	xxlarge: remFontSizes[6], //28px
-	xxxlarge: remFontSizes[7], //34px
-} as const;
-
-const remFontSizeMapping = {
-	titlepiece: remTitlepieceSizes,
-	headline: remHeadlineSizes,
-	body: remBodySizes,
-	textSans: remTextSansSizes,
-} as const;
-
-const fontMapping = {
-	titlepiece: fonts.titlepiece,
-	headline: fonts.headlineSerif,
-	body: fonts.bodySerif,
-	textSans: fonts.bodySans,
-} as const;
-
-const lineHeightMapping = {
-	tight: lineHeights[0],
-	regular: lineHeights[1],
-	loose: lineHeights[2],
-} as const;
-
-const fontWeightMapping = {
-	light: fontWeights[0],
-	regular: fontWeights[1],
-	medium: fontWeights[2],
-	bold: fontWeights[3],
-} as const;
-
-const availableFonts: {
-	[cat in Category]: {
-		[fontWeight in FontWeight]?: FontWeightDefinition;
-	};
-} = {
-	titlepiece: {
-		bold: {
-			hasItalic: false,
-		},
-	},
-	headline: {
-		light: {
-			hasItalic: true,
-		},
-		medium: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: false,
-		},
+export const underlineThickness = {
+	textSans: {
+		xxsmall: 2,
+		xsmall: 2,
+		small: 2,
+		medium: 2,
+		large: 3,
+		xlarge: 3,
+		xxlarge: 3,
+		xxxlarge: 4,
 	},
 	body: {
-		regular: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: true,
-		},
+		xsmall: 2,
+		small: 2,
+		medium: 2,
 	},
-	textSans: {
-		regular: {
-			hasItalic: true,
-		},
-		bold: {
-			hasItalic: false,
-		},
+	headline: {
+		xxxsmall: 2,
+		xxsmall: 3,
+		xsmall: 3,
+		small: 3,
+		medium: 4,
+		large: 5,
+		xlarge: 6,
 	},
-};
+	titlepiece: {
+		small: 5,
+		medium: 6,
+		large: 6,
+	},
+} as const;
 
-Object.freeze(titlepieceSizes);
-Object.freeze(headlineSizes);
-Object.freeze(bodySizes);
-Object.freeze(textSansSizes);
-Object.freeze(remTitlepieceSizes);
-Object.freeze(remHeadlineSizes);
-Object.freeze(remBodySizes);
-Object.freeze(remTextSansSizes);
-Object.freeze(fontMapping);
-Object.freeze(fontSizeMapping);
-Object.freeze(fontWeightMapping);
-Object.freeze(lineHeightMapping);
-Object.freeze(availableFonts);
+// Pixel font size exports
+export const textSansSizes = pxTextSizes.textSans;
 
-export {
-	titlepieceSizes,
-	headlineSizes,
-	bodySizes,
-	textSansSizes,
-	remFontSizes,
-	remTitlepieceSizes,
-	remHeadlineSizes,
-	remBodySizes,
-	remTextSansSizes,
-	remFontSizeMapping,
-	fontMapping,
-	fontSizeMapping,
-	lineHeightMapping,
-	fontWeightMapping,
-	availableFonts,
-};
+export const bodySizes = pxTextSizes.body;
+
+export const headlineSizes = pxTextSizes.headline;
+
+export const titlepieceSizes = pxTextSizes.titlepiece;
+
+// Computed rem font size exports
+export const remBodySizes = remTextSizes.body;
+
+export const remTitlepieceSizes = remTextSizes.titlepiece;
+
+export const remHeadlineSizes = remTextSizes.headline;
+
+export const remTextSansSizes = remTextSizes.textSans;

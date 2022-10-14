@@ -20,7 +20,8 @@ const defaultFormat = {
 };
 
 export default {
-	title: 'Packages/source-react-components-development-kitchen/EditorialLinkButton',
+	title:
+		'Packages/source-react-components-development-kitchen/EditorialLinkButton',
 	component: EditorialLinkButton,
 	argTypes: {
 		format: {
