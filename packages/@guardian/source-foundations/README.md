@@ -20,7 +20,7 @@ $ npm install @guardian/source-foundations
 
 ## Colours
 
-Guardian colours can be found in the [`palette` documentation](https://guardian.github.io/source/?path=/story/packages-source-foundations-palette--page).
+Guardian colours can be found in the [`palette` documentation]https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--palette).
 
 ## Space
 
@@ -54,7 +54,7 @@ const checkbox = css`
 
 ## Typography
 
-[Typography](https://guardian.github.io/source/?path=/story/packages-source-foundations-typography--page) is expressed as methods that return snippets of CSS depending on the desired font family and size.
+[Typography](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--body) is expressed as methods that return snippets of CSS depending on the desired font family and size.
 
 ```js
 import { headline } from '@guardian/source-foundations';
