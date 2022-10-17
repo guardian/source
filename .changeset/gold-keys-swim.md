@@ -4,4 +4,4 @@
 '@guardian/source-react-components-development-kitchen': major
 ---
 
-Bump @guardian/libs to latest major version
+Bump @guardian/libs to `^9.0.0`
