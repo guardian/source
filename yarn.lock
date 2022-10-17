@@ -2639,15 +2639,10 @@
     eslint-plugin-import "2.26.0"
     eslint-plugin-prettier "4.0.0"
 
-"@guardian/libs@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@guardian/libs/-/libs-3.0.0.tgz#d54813f12f77cede9ee681033f251383ea379acd"
-  integrity sha512-s2NEuE+rX2IyQohFWjKA0OV2GT7HPmh/2QO7cXaZirvMAhrgmEDXu7MSfHfqaLJybpDskUCyik6Yo73qgfnJdg==
-
-"@guardian/libs@^3.0.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-3.9.0.tgz#330ef270b87f0262e09a5f9964b916c21d1f987a"
-  integrity sha512-2i/AvgeIVCdowSJuc/RnXVBZUROjNT48EbdQY5OtUSzgcR0o1EFoibVX7OAd6Y4nIFHULbx5XDhnH1ymYSSYlA==
+"@guardian/libs@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@guardian/libs/-/libs-9.0.0.tgz#bb16cbfa4b367d2488e45dfab5d86add893eb028"
+  integrity sha512-VTNP04HisGts8ebnigRwsT255Wcf4ask9puc0AeP29Fj93Hs0rVkh8TAZ5VHEZ5ncNARiJTGAKc7ahatd7QYGQ==
 
 "@guardian/prettier@^2.1.4":
   version "2.1.4"
@@ -15788,6 +15783,11 @@ web-namespaces@^1.0.0:
   version "1.1.4"
   resolved "https://registry.npmjs.org/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
+
+web-vitals@^2.0.0:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-2.1.4.tgz#76563175a475a5e835264d373704f9dde718290c"
+  integrity sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
