@@ -73,7 +73,7 @@ export const radio = (radio = radioThemeDefault.radio): SerializedStyles => css`
 		color: ${radio.backgroundChecked};
 	}
 
-	&:focus {
+	&:focus-visible {
 		${focusHalo};
 	}
 

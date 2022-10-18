@@ -36,7 +36,7 @@ export const textInput = (
 		border: 2px solid ${textInput.border};
 		padding: 0 ${space[2]}px;
 
-		&:focus {
+		&:focus-visible {
 			border: 2px solid ${textInput.borderActive};
 			${focusHalo};
 		}

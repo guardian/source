@@ -1,6 +1,5 @@
 import { viewport } from './preview/viewport';
 import { backgrounds } from './preview/backgrounds';
-import { FocusManagerDecorator } from './preview/FocusManagerDecorator';
 import { ThemeProviderDecorator } from './preview/ThemeProviderDecorator';
 
 export const parameters = {
@@ -27,7 +26,7 @@ export const parameters = {
 	},
 };
 
-export const decorators = [FocusManagerDecorator, ThemeProviderDecorator];
+export const decorators = [ThemeProviderDecorator];
 
 // The docs pages don't seem to respect the anchor links on load so this
 // ensures they do. This may be related to the fact that window.location.hash

@@ -66,7 +66,7 @@ export const input = (
 ): SerializedStyles => css`
 	${visuallyHidden};
 
-	&:focus + label {
+	&:focus-visible + label {
 		${focusHalo};
 	}
 

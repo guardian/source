@@ -23,7 +23,7 @@ export const link = css`
 	display: inline;
 	align-items: center;
 
-	&:focus {
+	&:focus-visible {
 		${focusHalo};
 	}
 

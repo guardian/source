@@ -46,7 +46,7 @@ export const button = (
 	border: none;
 	text-align: left;
 
-	&:focus div {
+	&:focus-visible div {
 		${focusHalo};
 	}
 `;
@@ -100,7 +100,7 @@ export const collapsedBody = css`
 export const noJsInput = css`
 	${visuallyHidden};
 
-	&:focus + [data-target='label'] > [data-target='toggle'] {
+	&:focus-visible + [data-target='label'] > [data-target='toggle'] {
 		${focusHalo};
 	}
 

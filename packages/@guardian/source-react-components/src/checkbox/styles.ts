@@ -68,7 +68,7 @@ export const checkbox = (
 	transition-delay: 0.08s;
 	color: ${checkbox.border};
 
-	&:focus {
+	&:focus-visible {
 		${focusHalo};
 	}
 

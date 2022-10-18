@@ -85,7 +85,7 @@ export const select = (select = selectThemeDefault.select): SerializedStyles =>
 			}
 		}
 
-		&:focus {
+		&:focus-visible {
 			border: 2px solid ${select.borderActive};
 			${focusHalo};
 		}

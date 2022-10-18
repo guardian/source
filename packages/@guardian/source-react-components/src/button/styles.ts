@@ -34,7 +34,7 @@ const button = css`
 		cursor: not-allowed;
 	}
 
-	&:focus {
+	&:focus-visible {
 		${focusHaloSpaced};
 	}
 `;
