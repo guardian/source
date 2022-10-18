@@ -112,9 +112,12 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 			background: ${neutral[100]};
 		}
 
-		&:focus-visible {
-			outline: 5px solid ${format ? neutral[100] : brand[500]};
-			outline-offset: 3px;
+		&:focus {
+			outline: 0;
+			html:not(.src-focus-disabled) & {
+				outline: 5px solid ${format ? neutral[100] : brand[500]};
+				outline-offset: 3px;
+			}
 		}
 	`;
 };
