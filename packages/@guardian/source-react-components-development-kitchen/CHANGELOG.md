@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 6.0.1
+
+### Patch Changes
+
+- 1f218bf6: Update focus styles for `ToggleSwitch`
+
 ## 6.0.0
 
 ### Major Changes
