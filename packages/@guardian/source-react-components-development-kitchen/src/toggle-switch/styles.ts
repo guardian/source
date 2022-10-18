@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import type { SerializedStyles } from '@emotion/react';
 import type { ArticleFormat } from '@guardian/libs';
 import {
-	focusHaloSpaced,
+	brand,
 	neutral,
 	space,
 	success,
@@ -113,7 +113,8 @@ export const toggleStyles = (format?: ArticleFormat): SerializedStyles => {
 		}
 
 		&:focus {
-			${focusHaloSpaced}
+			outline: 5px solid ${format ? neutral[100] : brand[500]};
+			outline-offset: 3px;
 		}
 	`;
 };
