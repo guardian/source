@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 6.0.2
+
+### Patch Changes
+
+- 1143ed83: Fix bug with `ToggleSwitch` useEffect browser check
+
 ## 6.0.1
 
 ### Patch Changes
