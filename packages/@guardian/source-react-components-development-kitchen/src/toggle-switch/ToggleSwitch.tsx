@@ -107,7 +107,7 @@ export const ToggleSwitch = ({
 
 	useEffect(() => {
 		setIsBrowser(true);
-	});
+	}, []);
 
 	if (!isBrowser) {
 		tooltiptext = 'tooltiptext';
