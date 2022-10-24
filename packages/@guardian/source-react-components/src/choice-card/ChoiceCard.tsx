@@ -6,6 +6,7 @@ import type {
 } from 'react';
 import { useState } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import {
 	choiceCard,
 	contentWrapper,
@@ -86,7 +87,7 @@ export const ChoiceCard = ({
 	return (
 		<>
 			<input
-				css={(theme) => [
+				css={(theme: Theme) => [
 					input(theme.choiceCard),
 					userChanged ? tickAnimation : '',
 					cssOverrides,
@@ -94,9 +95,7 @@ export const ChoiceCard = ({
 				id={id}
 				value={value}
 				aria-invalid={!!error}
-				defaultChecked={
-					defaultChecked != null ? defaultChecked : undefined
-				}
+				defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 				checked={checked != null ? isChecked() : undefined}
 				onChange={(event) => {
 					if (onChange) {
@@ -108,22 +107,17 @@ export const ChoiceCard = ({
 				{...props}
 			/>
 			<label
-				css={(theme) => [
+				css={(theme: Theme) => [
 					choiceCard(theme.choiceCard),
 					error ? errorChoiceCard(theme.choiceCard) : '',
 				]}
 				htmlFor={id}
 			>
-				<div
-					css={[
-						contentWrapper,
-						!iconSvg ? contentWrapperLabelOnly : '',
-					]}
-				>
+				<div css={[contentWrapper, !iconSvg ? contentWrapperLabelOnly : '']}>
 					{iconSvg ? iconSvg : ''}
 					<div>{labelContent}</div>
 				</div>
-				<span css={(theme) => [tick(theme.choiceCard)]} />
+				<span css={(theme: Theme) => [tick(theme.choiceCard)]} />
 			</label>
 		</>
 	);

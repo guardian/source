@@ -14,6 +14,7 @@ import {
 	neutral,
 	news,
 	opinion,
+	palette,
 	specialReport,
 	sport,
 } from '@guardian/source-foundations';
@@ -159,6 +160,10 @@ export const decideFont = (
 				case ArticleSpecial.SpecialReport:
 					return css`
 						color: ${specialReport[400]};
+					`;
+				case ArticleSpecial.SpecialReportAlt:
+					return css`
+						color: ${palette.specialReportAlt[200]};
 					`;
 			}
 	}

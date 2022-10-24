@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { visuallyHidden as _visuallyHidden } from '@guardian/source-foundations';
 import { SvgChevronDownSingle } from '../../vendor/icons/SvgChevronDownSingle';
+import type { Theme } from '../@types/Theme';
 import type { AccordionRowProps } from './AccordionRow';
 import {
 	accordionRow,
@@ -35,13 +36,13 @@ export const AccordionRowNoJS = ({
 }: Omit<AccordionRowProps, 'onClick'>): EmotionJSX.Element => {
 	return (
 		<div
-			css={(theme) => [accordionRow(theme.accordion), cssOverrides]}
+			css={(theme: Theme) => [accordionRow(theme.accordion), cssOverrides]}
 			{...props}
 		>
 			<label>
 				<input type="checkbox" css={noJsInput} role="button" />
 				<div
-					css={(theme) => noJsButton(theme.accordion)}
+					css={(theme: Theme) => noJsButton(theme.accordion)}
 					data-target="label"
 				>
 					<strong css={labelText}>{label}</strong>
@@ -54,12 +55,7 @@ export const AccordionRowNoJS = ({
 							]}
 							data-target="toggle-label-show"
 						>
-							<span
-								css={[
-									toggleLabel,
-									hideToggleLabel ? visuallyHidden : '',
-								]}
-							>
+							<span css={[toggleLabel, hideToggleLabel ? visuallyHidden : '']}>
 								Show<span css={visuallyHidden}> more</span>
 							</span>
 							<SvgChevronDownSingle />
@@ -72,12 +68,7 @@ export const AccordionRowNoJS = ({
 							]}
 							data-target="toggle-label-hide"
 						>
-							<span
-								css={[
-									toggleLabel,
-									hideToggleLabel ? visuallyHidden : '',
-								]}
-							>
+							<span css={[toggleLabel, hideToggleLabel ? visuallyHidden : '']}>
 								Hide
 							</span>
 							<SvgChevronDownSingle />

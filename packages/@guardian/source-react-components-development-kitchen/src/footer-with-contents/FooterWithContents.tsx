@@ -1,7 +1,6 @@
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { brand } from '@guardian/source-foundations';
-import { Container } from '@guardian/source-react-components';
-import { BackToTop } from '@guardian/source-react-components/src/footer/BackToTop';
+import { BackToTop, Container } from '@guardian/source-react-components';
 import type { ReactNode } from 'react';
 import {
 	backToTopStyles,
@@ -42,8 +41,8 @@ export const FooterWithContents = ({
 				sideBorders={false}
 			>
 				<small css={copyrightStyles}>
-					© {new Date().getFullYear()} Guardian News & Media Limited
-					or its affiliated companies. All rights reserved.
+					© {new Date().getFullYear()} Guardian News & Media Limited or its
+					affiliated companies. All rights reserved.
 				</small>
 			</ContainerComponent>
 		</footer>

@@ -20,7 +20,7 @@ $ npm install @guardian/source-foundations
 
 ## Colours
 
-Guardian colours can be found in the [`palette` documentation](https://guardian.github.io/source/?path=/story/packages-source-foundations-palette--page).
+Guardian colours can be found in the [`palette` documentation]https://guardian.github.io/source/?path=/docs/packages-source-foundations-palette--palette).
 
 ## Space
 
@@ -30,7 +30,7 @@ Our [space](https://guardian.github.io/source/?path=/story/packages-source-found
 import { space } from '@guardian/source-foundations';
 
 const spaceAfter = css`
-    margin-bottom: ${space[3]}px;
+	margin-bottom: ${space[3]}px;
 `;
 
 // margin-bottom: 12px;
@@ -44,8 +44,8 @@ const spaceAfter = css`
 import { width, height } from '@guardian/source-foundations';
 
 const checkbox = css`
-    width: ${width.inputXsmall}px;
-    height: ${height.inputXsmall}px;
+	width: ${width.inputXsmall}px;
+	height: ${height.inputXsmall}px;
 `;
 
 // width: 24px;
@@ -54,13 +54,13 @@ const checkbox = css`
 
 ## Typography
 
-[Typography](https://guardian.github.io/source/?path=/story/packages-source-foundations-typography--page) is expressed as methods that return snippets of CSS depending on the desired font family and size.
+[Typography](https://guardian.github.io/source/?path=/docs/packages-source-foundations-typography--body) is expressed as methods that return snippets of CSS depending on the desired font family and size.
 
 ```js
 import { headline } from '@guardian/source-foundations';
 
 const h1 = css`
-    ${headline.medium()};
+	${headline.medium()};
 `;
 
 // font-family: GH Guardian Headline, Georgia, serif;
@@ -75,19 +75,19 @@ We provide [media queries](https://guardian.github.io/source/?path=/story/packag
 import { from, until, between } from '@guardian/source-foundations';
 
 const styles = css`
-    padding: 0 10px;
+	padding: 0 10px;
 
-    ${from.mobileLandscape} {
-        padding: 0 20px;
-    }
+	${from.mobileLandscape} {
+		padding: 0 20px;
+	}
 
-    ${between.phablet.and.desktop} {
-        padding: 0 32px;
-    }
+	${between.phablet.and.desktop} {
+		padding: 0 32px;
+	}
 
-    ${until.wide} {
-        padding: 0 40px;
-    }
+	${until.wide} {
+		padding: 0 40px;
+	}
 `;
 
 // padding: 0 10px;

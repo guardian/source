@@ -1,110 +1,69 @@
-import { fs } from './fs';
+import { fontStyleFunction } from './font-styles';
 import type {
 	BodySizes,
-	FontScaleArgs,
-	FontScaleFunction,
 	HeadlineSizes,
 	TextSansSizes,
 	TitlepieceSizes,
+	TypographyConfiguration,
+	TypographyFunctions,
 } from './types';
 
-type TitlepieceFunctions = {
-	[key in keyof TitlepieceSizes]: FontScaleFunction;
-};
-
-const titlepieceDefaults = {
+const titlepieceDefaults: TypographyConfiguration = {
 	lineHeight: 'tight',
 	fontWeight: 'bold',
 	fontStyle: null,
 	unit: 'rem',
 };
-const titlepieceFs = fs('titlepiece');
 
-export const titlepiece: TitlepieceFunctions = {
-	small: (options?: FontScaleArgs) =>
-		titlepieceFs('small', Object.assign({}, titlepieceDefaults, options)),
-	medium: (options?: FontScaleArgs) =>
-		titlepieceFs('medium', Object.assign({}, titlepieceDefaults, options)),
-	large: (options?: FontScaleArgs) =>
-		titlepieceFs('large', Object.assign({}, titlepieceDefaults, options)),
+export const titlepiece: TypographyFunctions<TitlepieceSizes> = {
+	small: fontStyleFunction('titlepiece', 'small', titlepieceDefaults),
+	medium: fontStyleFunction('titlepiece', 'medium', titlepieceDefaults),
+	large: fontStyleFunction('titlepiece', 'large', titlepieceDefaults),
 };
 
-type HeadlineFunctions = {
-	[key in keyof HeadlineSizes]: FontScaleFunction;
-};
-const headlineDefaults = {
+const headlineDefaults: TypographyConfiguration = {
 	lineHeight: 'tight',
 	fontWeight: 'medium',
 	fontStyle: null,
 	unit: 'rem',
 };
-const headlineFs = fs('headline');
 
-export const headline: HeadlineFunctions = {
-	xxxsmall: (options?: FontScaleArgs) =>
-		headlineFs('xxxsmall', Object.assign({}, headlineDefaults, options)),
-	xxsmall: (options?: FontScaleArgs) =>
-		headlineFs('xxsmall', Object.assign({}, headlineDefaults, options)),
-	xsmall: (options?: FontScaleArgs) =>
-		headlineFs('xsmall', Object.assign({}, headlineDefaults, options)),
-	small: (options?: FontScaleArgs) =>
-		headlineFs('small', Object.assign({}, headlineDefaults, options)),
-	medium: (options?: FontScaleArgs) =>
-		headlineFs('medium', Object.assign({}, headlineDefaults, options)),
-	large: (options?: FontScaleArgs) =>
-		headlineFs('large', Object.assign({}, headlineDefaults, options)),
-	xlarge: (options?: FontScaleArgs) =>
-		headlineFs('xlarge', Object.assign({}, headlineDefaults, options)),
+export const headline: TypographyFunctions<HeadlineSizes> = {
+	xxxsmall: fontStyleFunction('headline', 'xxxsmall', headlineDefaults),
+	xxsmall: fontStyleFunction('headline', 'xxsmall', headlineDefaults),
+	xsmall: fontStyleFunction('headline', 'xsmall', headlineDefaults),
+	small: fontStyleFunction('headline', 'small', headlineDefaults),
+	medium: fontStyleFunction('headline', 'medium', headlineDefaults),
+	large: fontStyleFunction('headline', 'large', headlineDefaults),
+	xlarge: fontStyleFunction('headline', 'xlarge', headlineDefaults),
 };
 
-type BodyFunctions = {
-	[key in keyof BodySizes]: FontScaleFunction;
-};
-
-const bodyDefaults = {
+const bodyDefaults: TypographyConfiguration = {
 	lineHeight: 'loose',
 	fontWeight: 'regular',
 	fontStyle: null,
 	unit: 'rem',
 };
-const bodyFs = fs('body');
 
-export const body: BodyFunctions = {
-	xsmall: (options?: FontScaleArgs) =>
-		bodyFs('xsmall', Object.assign({}, bodyDefaults, options)),
-	small: (options?: FontScaleArgs) =>
-		bodyFs('small', Object.assign({}, bodyDefaults, options)),
-	medium: (options?: FontScaleArgs) =>
-		bodyFs('medium', Object.assign({}, bodyDefaults, options)),
+export const body: TypographyFunctions<BodySizes> = {
+	xsmall: fontStyleFunction('body', 'xsmall', bodyDefaults),
+	small: fontStyleFunction('body', 'small', bodyDefaults),
+	medium: fontStyleFunction('body', 'medium', bodyDefaults),
 };
 
-type TextSansFunctions = {
-	[key in keyof TextSansSizes]: FontScaleFunction;
-};
-
-const textSansDefaults = {
-	lineHeight: 'loose',
+const textSansDefaults: TypographyConfiguration = {
+	lineHeight: 'regular',
 	fontWeight: 'regular',
 	fontStyle: null,
 	unit: 'rem',
 };
-const textSansFs = fs('textSans');
-
-export const textSans: TextSansFunctions = {
-	xxsmall: (options?: FontScaleArgs) =>
-		textSansFs('xxsmall', Object.assign({}, textSansDefaults, options)),
-	xsmall: (options?: FontScaleArgs) =>
-		textSansFs('xsmall', Object.assign({}, textSansDefaults, options)),
-	small: (options?: FontScaleArgs) =>
-		textSansFs('small', Object.assign({}, textSansDefaults, options)),
-	medium: (options?: FontScaleArgs) =>
-		textSansFs('medium', Object.assign({}, textSansDefaults, options)),
-	large: (options?: FontScaleArgs) =>
-		textSansFs('large', Object.assign({}, textSansDefaults, options)),
-	xlarge: (options?: FontScaleArgs) =>
-		textSansFs('xlarge', Object.assign({}, textSansDefaults, options)),
-	xxlarge: (options?: FontScaleArgs) =>
-		textSansFs('xxlarge', Object.assign({}, textSansDefaults, options)),
-	xxxlarge: (options?: FontScaleArgs) =>
-		textSansFs('xxxlarge', Object.assign({}, textSansDefaults, options)),
+export const textSans: TypographyFunctions<TextSansSizes> = {
+	xxsmall: fontStyleFunction('textSans', 'xxsmall', textSansDefaults),
+	xsmall: fontStyleFunction('textSans', 'xsmall', textSansDefaults),
+	small: fontStyleFunction('textSans', 'small', textSansDefaults),
+	medium: fontStyleFunction('textSans', 'medium', textSansDefaults),
+	large: fontStyleFunction('textSans', 'large', textSansDefaults),
+	xlarge: fontStyleFunction('textSans', 'xlarge', textSansDefaults),
+	xxlarge: fontStyleFunction('textSans', 'xxlarge', textSansDefaults),
+	xxxlarge: fontStyleFunction('textSans', 'xxxlarge', textSansDefaults),
 };

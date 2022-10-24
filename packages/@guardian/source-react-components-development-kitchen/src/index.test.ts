@@ -10,10 +10,13 @@ export type {
 	LineCount,
 	LinesProps,
 	LogoProps,
+	NumericInput,
+	NumericInputProps,
 	HeadlineSize,
 	QuoteIconProps,
 	StarRatingProps,
 	ToggleSwitchProps,
+	ToggleSwitchAppsProps,
 } from './index';
 
 it('Should have exactly these exports', () => {
@@ -29,12 +32,14 @@ it('Should have exactly these exports', () => {
 		'InfoSummary',
 		'Lines',
 		'Logo',
+		'NumericInput',
 		'QuoteIcon',
 		'SquigglyLines',
 		'StarRating',
 		'StraightLines',
 		'SuccessSummary',
 		'ToggleSwitch',
+		'ToggleSwitchApps',
 		'defaultGuardianLinks',
 	]);
 });

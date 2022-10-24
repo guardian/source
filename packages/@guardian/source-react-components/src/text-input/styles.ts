@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import {
 	focusHalo,
 	height,
-	resets,
 	space,
 	textSans,
 } from '@guardian/source-foundations';
@@ -15,10 +14,6 @@ export const errorInput = (
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
 	margin-top: 0;
-	/* When input is active and in an error state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${textInput.borderError};
-	}
 `;
 
 export const successInput = (
@@ -27,34 +22,29 @@ export const successInput = (
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
 	margin-top: 0;
-	/* When input is active and in a success state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${textInput.borderSuccess};
-	}
 `;
 
 export const textInput = (
 	textInput = textInputThemeDefault.textInput,
 ): SerializedStyles =>
 	css`
-		${resets.input};
 		box-sizing: border-box;
 		height: ${height.inputMedium}px;
-		${textSans.medium({ lineHeight: 'regular' })};
+		${textSans.medium()};
 		color: ${textInput.textUserInput};
 		background-color: ${textInput.backgroundInput};
 		border: 2px solid ${textInput.border};
 		padding: 0 ${space[2]}px;
 
-		&:active {
-			border: 2px solid ${textInput.borderActive};
-		}
-
 		&:focus {
+			border: 2px solid ${textInput.borderActive};
 			${focusHalo};
 		}
 
 		&:invalid {
+			/* Remove styling of invalid input elements that gets applied in Firefox */
+			box-shadow: none;
+
 			/*
 			We automatically apply error styling to fields in an invalid state,
 			but stop short of applying it to empty required fields.

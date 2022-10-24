@@ -104,9 +104,7 @@ export const TextArea = ({
 			>
 				{error && (
 					<div css={inlineMessageMargin}>
-						<InlineError id={descriptionId(textAreaId)}>
-							{error}
-						</InlineError>
+						<InlineError id={descriptionId(textAreaId)}>{error}</InlineError>
 					</div>
 				)}
 				{!error && success && (
@@ -129,12 +127,11 @@ export const TextArea = ({
 				id={textAreaId}
 				aria-required={!optional}
 				aria-invalid={!!error}
-				aria-describedby={
-					error || success ? descriptionId(textAreaId) : ''
-				}
+				aria-describedby={error || success ? descriptionId(textAreaId) : ''}
 				required={!optional}
 				rows={rows}
 				className={getClassName()}
+				value={value}
 				{...props}
 			/>
 		</>

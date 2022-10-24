@@ -1,5 +1,61 @@
 # @guardian/source-foundations
 
+## 7.0.1
+
+### Patch Changes
+
+- 32ed7c38: Remove `!important` from `visuallyHidden`
+
+## 7.0.0
+
+### Major Changes
+
+- 905c5148: Set default `textSans` line height to `regular`
+  - this how it should have been all along
+  - line height will be shorter than before
+    - you should confirm your designs are not adversely affected
+
+### Minor changes
+
+- 905c5148: Typography functions now also include a `--source-text-decoration-thickness` CSS variable.
+
+### Patch Changes
+
+- 905c5148: `TextArea`, `TextInput`, and `Select` active border colour persists when focused.
+  - `Radio` and `Checkbox` border changes on hover when unchecked and remains in the error state on hover when checked.
+- 905c5148: Adds a deprecation notice to the existing input reset, and move uses of it into the styles for `TextArea` and `TextInput`.
+
+## 6.0.2
+
+### Patch Changes
+
+- eeecc020: - remove invalid syntax from the css reset
+  - add assertions and new unit tests for areas where we export CSS and want to ensure that SCSS does not slip into the code.
+
+## 6.0.1
+
+### Patch Changes
+
+- 54dd09e2: Add a full deprecation notice to opinion.300 and culture.350
+
+## 6.0.0
+
+### Major Changes
+
+- 3823490a: - change the visually hidden CSS to conform to the DAC standard. **Note:** this may cause changes to your layout, please ensure that it is not affected after updating to this version
+
+## 5.3.0
+
+### Minor Changes
+
+- 0239822b: Add new colours for specialReportAlt palette
+
+## 5.2.2
+
+### Patch Changes
+
+- 6ea1ce6a: refactoring of internal typography definitions to directly map to a concrete value instead of pulling from an array of values; a general simplification of the typography data file, and of its exports
+
 ## 5.2.1
 
 ### Patch Changes

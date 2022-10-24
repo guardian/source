@@ -18,4 +18,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           buildScriptName: 'build:storybook'
           exitOnceUploaded: true
-          onlyChanged: "!(main)" # only turbosnap on non-main branches
+          onlyChanged: '!(main)' # only turbosnap on non-main branches

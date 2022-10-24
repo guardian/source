@@ -1,10 +1,10 @@
 import { body, headline, textSans, titlepiece } from '../api';
 import {
 	bodySizes,
-	fontMapping,
-	fontWeightMapping,
+	fonts,
+	fontWeights,
 	headlineSizes,
-	lineHeightMapping,
+	lineHeights,
 	remBodySizes,
 	remHeadlineSizes,
 	remTextSansSizes,
@@ -26,7 +26,7 @@ export {
 	remHeadlineSizes,
 	remBodySizes,
 	remTextSansSizes,
-	fontMapping as fonts,
-	fontWeightMapping as fontWeights,
-	lineHeightMapping as lineHeights,
+	fonts,
+	fontWeights,
+	lineHeights,
 };

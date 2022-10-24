@@ -21,6 +21,7 @@ export const fieldset = css`
 
 export const checkboxContainer = (
 	checkbox = checkboxThemeDefault.checkbox,
+	error = false,
 ): SerializedStyles => css`
 	position: relative;
 	display: flex;
@@ -29,6 +30,11 @@ export const checkboxContainer = (
 	cursor: pointer;
 
 	&:hover {
+		input {
+			border-color: ${error ? checkbox.borderError : checkbox.borderHover};
+		}
+	}
+	&:active {
 		input {
 			border-color: ${checkbox.borderHover};
 		}
@@ -46,6 +52,7 @@ export const checkboxContainerWithSupportingText = css`
 
 export const checkbox = (
 	checkbox = checkboxThemeDefault.checkbox,
+	error = false,
 ): SerializedStyles => css`
 	flex: 0 0 auto;
 	box-sizing: border-box;
@@ -68,8 +75,9 @@ export const checkbox = (
 	@supports (${appearance}) {
 		appearance: none;
 		&:checked {
-			border: 2px solid ${checkbox.borderChecked};
-
+			border: ${error
+				? `4px solid ${checkbox.borderError}`
+				: `2px solid ${checkbox.borderChecked}`};
 			& ~ span:before {
 				right: 0;
 			}
@@ -84,7 +92,7 @@ export const checkbox = (
 				color: ${checkbox.textIndeterminate};
 				content: '-';
 				position: absolute;
-				top: -10px;
+				top: -${space[2]}px;
 				left: 5px;
 				z-index: 5;
 			}
@@ -95,19 +103,19 @@ export const checkbox = (
 export const labelText = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 	color: ${checkbox.textLabel};
 	width: 100%;
 `;
 
 export const labelTextWithSupportingText = css`
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 `;
 
 export const supportingText = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
-	${textSans.small({ lineHeight: 'regular' })};
+	${textSans.small()};
 	color: ${checkbox.textLabelSupporting};
 `;
 
@@ -115,8 +123,7 @@ export const tick = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
 	@supports (
-		(appearance: none) or (-webkit-appearance: none) or
-			(-moz-appearance: none)
+		(appearance: none) or (-webkit-appearance: none) or (-moz-appearance: none)
 	) {
 		/* overall positional properties */
 		position: absolute;
@@ -182,4 +189,9 @@ export const errorCheckbox = (
 	checkbox = checkboxThemeDefault.checkbox,
 ): SerializedStyles => css`
 	border: 4px solid ${checkbox.borderError};
+
+	&:not(:checked):hover,
+	&:active {
+		border: 2px solid ${checkbox.borderHover};
+	}
 `;

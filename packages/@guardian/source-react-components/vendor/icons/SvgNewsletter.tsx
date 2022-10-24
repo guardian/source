@@ -34,7 +34,7 @@ export const SvgNewsletter = ({
 					${visuallyHidden}
 				`}
 			>
-				undefined
+				Newsletter
 			</span>
 		) : (
 			''

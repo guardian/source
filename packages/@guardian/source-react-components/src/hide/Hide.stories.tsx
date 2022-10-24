@@ -21,10 +21,10 @@ export default {
 
 const Template: Story = (args: HideProps) => (
 	<Hide {...args}>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliud igitur
-		esse censet gaudere, aliud non dolere. Quid turpius quam sapientis vitam
-		ex insipientium sermone pendere? Nam illud quidem adduci vix possum, ut
-		ea, quae senserit ille, tibi non vera videantur. At iam decimum annum in
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliud igitur esse
+		censet gaudere, aliud non dolere. Quid turpius quam sapientis vitam ex
+		insipientium sermone pendere? Nam illud quidem adduci vix possum, ut ea,
+		quae senserit ille, tibi non vera videantur. At iam decimum annum in
 		spelunca iacet.
 	</Hide>
 );

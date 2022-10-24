@@ -74,9 +74,7 @@ export const FooterLinks = ({
 								<Link
 									cssOverrides={linkElementStyles}
 									href={href}
-									rel={
-										isExternal ? 'noopener noreferrer' : ''
-									}
+									rel={isExternal ? 'noopener noreferrer' : ''}
 									{...linkAttrs}
 								>
 									{text}
@@ -98,9 +96,7 @@ export const FooterLinks = ({
 								<Link
 									cssOverrides={linkElementStyles}
 									href={href}
-									rel={
-										isExternal ? 'noopener noreferrer' : ''
-									}
+									rel={isExternal ? 'noopener noreferrer' : ''}
 									{...linkAttrs}
 								>
 									{text}

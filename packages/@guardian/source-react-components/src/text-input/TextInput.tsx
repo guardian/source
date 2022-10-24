@@ -3,6 +3,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { Label } from '../label/Label';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';
@@ -105,9 +106,7 @@ export const TextInput = ({
 			>
 				{error && (
 					<div css={inlineMessageMargin}>
-						<InlineError id={descriptionId(textInputId)}>
-							{error}
-						</InlineError>
+						<InlineError id={descriptionId(textInputId)}>{error}</InlineError>
 					</div>
 				)}
 				{!error && success && (
@@ -119,7 +118,7 @@ export const TextInput = ({
 				)}
 			</Label>
 			<input
-				css={(theme) => [
+				css={(theme: Theme) => [
 					width ? widths[width] : widthFluid,
 					textInput(theme.textInput),
 					supporting ? supportingTextMargin : labelMargin,
@@ -131,9 +130,7 @@ export const TextInput = ({
 				id={textInputId}
 				aria-required={!optional}
 				aria-invalid={!!error}
-				aria-describedby={
-					error || success ? descriptionId(textInputId) : ''
-				}
+				aria-describedby={error || success ? descriptionId(textInputId) : ''}
 				required={!optional}
 				{...props}
 			/>

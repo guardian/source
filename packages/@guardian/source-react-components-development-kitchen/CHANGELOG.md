@@ -1,5 +1,67 @@
 # @guardian/source-react-components-development-kitchen
 
+## 6.0.2
+
+### Patch Changes
+
+- 1143ed83: Fix bug with `ToggleSwitch` useEffect browser check
+
+## 6.0.1
+
+### Patch Changes
+
+- 1f218bf6: Update focus styles for `ToggleSwitch`
+
+## 6.0.0
+
+### Major Changes
+
+- aa4c2caa: Bump @guardian/libs to `^9.0.0`
+
+## 5.0.0
+
+### Major Changes
+
+- Updated `peerDependencies` [905c5148]
+  - @guardian/source-foundations@7.0.0
+  - @guardian/source-react-components@9.0.0
+- d9e94ef1: `ToggleSwitch` no longer contains iOS and Android versions
+  - adds a new `ToggleSwitchApps` component to use instead
+- 7b99c758:
+  - passing a `format` prop to `ToggleSwitch` renders an alternative colour scheme suitable for use on coloured backgrounds
+  - `FontWeight` in `ToggleSwitch` is now limited to `regular` and `bold` and controlled via a `fontWeight` prop
+  - `FontSize` in `ToggleSwitch` is now limited to `small` and regular and controlled via a `fontSize` prop
+  - adds a new `labelBorder` prop to `ToggleSwitch`
+- 676f6f07: Removes unused 'tooltip' prop from `ToggleSwitch` component.
+
+### Minor Changes
+
+- 4cdc3016: Add `NumericInput` component.
+
+### Patch Changes
+
+- 2010337c: Show a focus ring when tabbing to a `ToggleSwitch`
+
+## 4.0.1
+
+### Patch Changes
+
+- 40e41a43: **No changes**: Patch bump to fix deploy to npm due to the major version already having been published and deleted
+
+## 4.0.0
+
+### Patch Changes
+
+- Updated dependencies [3823490a]
+  - @guardian/source-foundations@6.0.0
+  - @guardian/source-react-components@8.0.0
+
+## 3.1.10
+
+### Patch Changes
+
+- bbbe1e3e: make BackToTop an explicit export of source-react-components so it can be used in the FooterWithContents dev kitchen component
+
 ## 3.1.9
 
 ### Patch Changes

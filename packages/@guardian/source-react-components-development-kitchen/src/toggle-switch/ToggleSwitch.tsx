@@ -1,19 +1,19 @@
-import type { SerializedStyles } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import type { ArticleFormat } from '@guardian/libs';
 import { descriptionId, generateSourceId } from '@guardian/source-foundations';
-import type { Props } from '@guardian/source-react-components';
 import { useEffect, useState } from 'react';
+import type { Props } from '../../../source-react-components/src/@types/Props';
 import {
-	androidStyles,
 	buttonStyles,
-	iosStyles,
+	labelBorderStyles,
 	labelStyles,
+	toggleStyles,
 	tooltipStyles,
-	webStyles,
 } from './styles';
 
-export type Platform = 'android' | 'ios' | 'web';
 export type LabelPosition = 'left' | 'right';
+export type ToggleSwitchFontWeight = 'regular' | 'bold';
+export type ToggleSwitchFontSize = 'small' | 'medium';
 
 export interface ToggleSwitchProps extends Props {
 	/**
@@ -31,6 +31,10 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	defaultChecked?: boolean;
 	/**
+	 * Optional Format prop, when provided this renders the toggle with a theme colored tick and light background track
+	 */
+	format?: ArticleFormat;
+	/**
 	 * Optional Id for the switch. Defaults to a generated indexed Source ID e.g. "src-component-XXX}"
 	 */
 	id?: string;
@@ -43,15 +47,19 @@ export interface ToggleSwitchProps extends Props {
 	 */
 	labelPosition?: LabelPosition;
 	/**
-	 * Whether the toggle has a tooltip.
-	 * The default is false.
+	 * Displays a border above the toggle switch label and toggle.
 	 */
-	tooltip?: boolean;
+	labelBorder?: boolean;
 	/**
-	 * Sets the toggle styling appropriate for each platform.
-	 * The default platform is 'web'.
+	 * Sets the font weight to either 'regular' or 'bold'.
+	 * Note this does not take all font weights, only 'regular' and 'bold'.
 	 */
-	platform?: Platform;
+	fontWeight?: ToggleSwitchFontWeight;
+	/**
+	 * Sets the font weight to either 'regular' or 'bold'.
+	 * Note this does not take all font sizes, only 'small' and 'medium'.
+	 */
+	fontSize?: ToggleSwitchFontSize;
 	/**
 	 * A callback function called when the component is checked or unchecked.
 	 * Receives the click event as an argument.
@@ -70,26 +78,18 @@ export interface ToggleSwitchProps extends Props {
  * To give it more custom styling cssOverride may be used.
  *
  */
-const getPlatformStyles = (platform: Platform): SerializedStyles => {
-	switch (platform) {
-		case 'android':
-			return androidStyles;
-		case 'ios':
-			return iosStyles;
-		case 'web':
-			return webStyles;
-	}
-};
-
 export const ToggleSwitch = ({
 	checked,
 	id,
+	fontWeight = 'regular',
+	fontSize = 'small',
+	format,
 	label,
+	labelBorder = false,
 	labelPosition = 'right',
 	defaultChecked,
 	cssOverrides,
-	platform = 'web',
-	onClick = () => undefined,
+	onClick,
 	...props
 }: ToggleSwitchProps): EmotionJSX.Element => {
 	const buttonId = id ?? generateSourceId();
@@ -107,33 +107,35 @@ export const ToggleSwitch = ({
 
 	useEffect(() => {
 		setIsBrowser(true);
-	});
+	}, []);
 
 	if (!isBrowser) {
 		tooltiptext = 'tooltiptext';
 	}
 
 	return (
-		<>
-			<label id={labelId} css={[labelStyles, cssOverrides]} {...props}>
-				{labelPosition === 'left' && label}
-				<button
-					id={buttonId}
-					css={[
-						buttonStyles(labelPosition),
-						getPlatformStyles(platform),
-					]}
-					role="switch"
-					aria-checked={isChecked()}
-					aria-labelledby={labelId}
-					onClick={onClick}
-					className="tooltip"
-				></button>
-				{labelPosition === 'right' && label}
-				<div className={tooltiptext} css={tooltipStyles}>
-					<span>Please turn on JavaScript to use this feature</span>
-				</div>
-			</label>
-		</>
+		<label
+			id={labelId}
+			css={[
+				labelStyles(fontSize, fontWeight, format),
+				labelBorder && labelBorderStyles(format),
+				cssOverrides,
+			]}
+			{...props}
+		>
+			{labelPosition === 'left' && label}
+			<button
+				id={buttonId}
+				css={[buttonStyles(labelPosition), toggleStyles(format)]}
+				role="switch"
+				aria-checked={isChecked()}
+				aria-labelledby={labelId}
+				onClick={onClick}
+			></button>
+			{labelPosition === 'right' && label}
+			<div className={tooltiptext} css={tooltipStyles}>
+				<span>Please turn on JavaScript to use this feature</span>
+			</div>
+		</label>
 	);
 };

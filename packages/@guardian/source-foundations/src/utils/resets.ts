@@ -16,7 +16,9 @@ const fieldset = `
 	margin: 0;
 `;
 
-// remove styling of invalid input elements that gets applied in Firefox
+/*
+ * Remove styling of invalid input elements that gets applied in Firefox
+ */
 const input = `
 	&:invalid {
 		box-shadow: none;
@@ -35,9 +37,9 @@ const defaults = `
     html {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
-        // always show the vertical scroll bar to stop the page
-        // jumping about when navigating between pages where 
-        // one has content shorter than the viewport
+        /* always show the vertical scroll bar to stop the page
+         * jumping about when navigating between pages where
+         * one has content shorter than the viewport */
         overflow-y: scroll;
     }
     html, body {
@@ -120,6 +122,7 @@ const resetCSS = `
 export const resets = {
 	legend,
 	fieldset,
+	/** @deprecated This will be removed in a future release, as it relies on the Emotion framework */
 	input,
 	defaults,
 	resetCSS,

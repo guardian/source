@@ -1,45 +1,45 @@
 {
-  "extends": "@nrwl/workspace/presets/npm.json",
-  "npmScope": "guardian",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "test", "e2e"],
-        "accessToken": "YjlhZjRmOWQtNWQwNy00YzUyLTk0YzItZWY1NTk3OGExMDQ4fHJlYWQtd3JpdGU="
-      }
-    }
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ],
-    "test": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ],
-    "e2e": [
-      {
-        "target": "build",
-        "projects": "self"
-      },
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
-  "affected": {
-    "defaultBase": "main"
-  },
-  "pluginsConfig": {
-    "@nrwl/js": {
-      "analyzeSourceFiles": false
-    }
-  }
+	"extends": "@nrwl/workspace/presets/npm.json",
+	"npmScope": "guardian",
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "@nrwl/nx-cloud",
+			"options": {
+				"cacheableOperations": ["build", "test", "e2e"],
+				"accessToken": "YjlhZjRmOWQtNWQwNy00YzUyLTk0YzItZWY1NTk3OGExMDQ4fHJlYWQtd3JpdGU="
+			}
+		}
+	},
+	"targetDependencies": {
+		"build": [
+			{
+				"target": "build",
+				"projects": "dependencies"
+			}
+		],
+		"test": [
+			{
+				"target": "build",
+				"projects": "dependencies"
+			}
+		],
+		"e2e": [
+			{
+				"target": "build",
+				"projects": "self"
+			},
+			{
+				"target": "build",
+				"projects": "dependencies"
+			}
+		]
+	},
+	"affected": {
+		"defaultBase": "main"
+	},
+	"pluginsConfig": {
+		"@nrwl/js": {
+			"analyzeSourceFiles": false
+		}
+	}
 }

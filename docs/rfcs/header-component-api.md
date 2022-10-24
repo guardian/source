@@ -8,44 +8,41 @@ This proposal outlines an API that tries to capture the areas of standardisation
 
 ```jsx
 <Header>
-    <Masthead>
-        <Masthead.Links>
-            <Masthead.Link href icon={<Icon />} label until from />
-            <Masthead.Menu icon label until from>
-                <Masthead.Link href label />
-                <Masthead.Link href label />
-            </Masthead.Menu>
-            <Masthead.Link href icon={<Icon />} label until from />
-        </Masthead.Links>
-    </Masthead>
-    <Navigation>
-        <Navigation.Links>
-            <Navigation.Link
-                label="News"
-                href="https://www.theguardian.com/news"
-            />
-        </Navigation.Links>
-        <Navigation.Menu>
-            <Navigation.MenuGroup>
-                <Navigation.MenuLink
-                    label="News"
-                    href="https://www.theguardian.com/news"
-                />
-            </Navigation.MenuGroup>
-            <Navigation.MenuGroup>
-                <Navigation.MenuSupplementalLink
-                    label="Masterclasses"
-                    href="https://www.theguardian.com/guardian-masterclasses"
-                />
-            </Navigation.MenuGroup>
-        </Navigation.Menu>
-    </Navigation>
-    <Subnav>
-        <Subnav.Link
-            label="UK politics"
-            href="https://www.theguardian.com/politics"
-        />
-    </Subnav>
+	<Masthead>
+		<Masthead.Links>
+			<Masthead.Link href icon={<Icon />} label until from />
+			<Masthead.Menu icon label until from>
+				<Masthead.Link href label />
+				<Masthead.Link href label />
+			</Masthead.Menu>
+			<Masthead.Link href icon={<Icon />} label until from />
+		</Masthead.Links>
+	</Masthead>
+	<Navigation>
+		<Navigation.Links>
+			<Navigation.Link label="News" href="https://www.theguardian.com/news" />
+		</Navigation.Links>
+		<Navigation.Menu>
+			<Navigation.MenuGroup>
+				<Navigation.MenuLink
+					label="News"
+					href="https://www.theguardian.com/news"
+				/>
+			</Navigation.MenuGroup>
+			<Navigation.MenuGroup>
+				<Navigation.MenuSupplementalLink
+					label="Masterclasses"
+					href="https://www.theguardian.com/guardian-masterclasses"
+				/>
+			</Navigation.MenuGroup>
+		</Navigation.Menu>
+	</Navigation>
+	<Subnav>
+		<Subnav.Link
+			label="UK politics"
+			href="https://www.theguardian.com/politics"
+		/>
+	</Subnav>
 </Header>
 ```
 
@@ -59,9 +56,9 @@ Generic header component. The logo is hard-coded.
 
 ```jsx
 <Header>
-    <Masthead />
-    <Navigation />
-    <Subnav />
+	<Masthead />
+	<Navigation />
+	<Subnav />
 </Header>
 ```
 
@@ -77,10 +74,10 @@ The logo is hardcoded.
 
 ```jsx
 <Masthead.Links>
-    <Masthead.Link href icon={<Icon />} label until from />
-    <Masthead.Menu icon label until from>
-        <Masthead.Link href label />
-    </Masthead.Menu>
+	<Masthead.Link href icon={<Icon />} label until from />
+	<Masthead.Menu icon label until from>
+		<Masthead.Link href label />
+	</Masthead.Menu>
 </Masthead.Links>
 ```
 
@@ -98,18 +95,18 @@ A link that is displayed in the `Masthead.Links` section of the header, or withi
 
 #### Props
 
--   `href` _string_
-    -   navigation location when `Masthead.Link` is clicked
--   `onClick` _function_
-    -   logic that is executed when the `Masthead.Link` is clicked
--   `label` _string_
-    -   display label of the `Masthead.Link`
--   `icon` _ReactNode_
-    -   icon that appears alongside the label
--   `from` _Breakpoint_
-    -   the breakpoint at which the `Masthead.Link` becomes visible
--   `until` _Breakpoint_
-    -   the breakpoint at which the `Masthead.Link` is no longer displayed
+- `href` _string_
+  - navigation location when `Masthead.Link` is clicked
+- `onClick` _function_
+  - logic that is executed when the `Masthead.Link` is clicked
+- `label` _string_
+  - display label of the `Masthead.Link`
+- `icon` _ReactNode_
+  - icon that appears alongside the label
+- `from` _Breakpoint_
+  - the breakpoint at which the `Masthead.Link` becomes visible
+- `until` _Breakpoint_
+  - the breakpoint at which the `Masthead.Link` is no longer displayed
 
 ### `<Masthead.Menu />`
 
@@ -119,14 +116,14 @@ A dropdown menu that is displayed in the `Masthead.Links` section of the header.
 
 #### Props
 
--   `label` _string_
-    -   display label of the `Masthead.Menu`
--   `icon` _ReactNode_
-    -   icon that appears alongside the label
--   `from` _Breakpoint_
-    -   the breakpoint at which the `Masthead.Menu` becomes visible
--   `until` _Breakpoint_
-    -   the breakpoint at which the `Masthead.Menu` is no longer displayed
+- `label` _string_
+  - display label of the `Masthead.Menu`
+- `icon` _ReactNode_
+  - icon that appears alongside the label
+- `from` _Breakpoint_
+  - the breakpoint at which the `Masthead.Menu` becomes visible
+- `until` _Breakpoint_
+  - the breakpoint at which the `Masthead.Menu` is no longer displayed
 
 ### `<Masthead.Switch />`
 
@@ -138,26 +135,26 @@ A dropdown menu that allows the user to switch a high-level user setting. For ex
 
 ```jsx
 <Masthead.Switch
-    onChange={() => {
-        localStorage.setItem('edition', 'uk');
-    }}
+	onChange={() => {
+		localStorage.setItem('edition', 'uk');
+	}}
 >
-    <Masthead.SwitchItem
-        href="https://www.theguardian.com/preference/edition/uk"
-        label="UK edition"
-        selected={true}
-    />
-    <Masthead.SwitchItem
-        href="https://www.theguardian.com/preference/edition/us"
-        label="US edition"
-    />
+	<Masthead.SwitchItem
+		href="https://www.theguardian.com/preference/edition/uk"
+		label="UK edition"
+		selected={true}
+	/>
+	<Masthead.SwitchItem
+		href="https://www.theguardian.com/preference/edition/us"
+		label="US edition"
+	/>
 </Masthead.Switch>
 ```
 
 #### Props
 
--   `onChange` _function_
-    -   callback for logic that runs when the selected switch item is changed
+- `onChange` _function_
+  - callback for logic that runs when the selected switch item is changed
 
 ### `<Masthead.SwitchItem />`
 
@@ -169,21 +166,21 @@ A link that appears in the Switch dropdown menu.
 
 ```jsx
 <Masthead.SwitchItem
-    href="https://www.theguardian.com/preference/edition/uk"
-    label="UK edition"
-    selected={true}
+	href="https://www.theguardian.com/preference/edition/uk"
+	label="UK edition"
+	selected={true}
 />
 ```
 
 #### Props
 
--   `href` _string_
-    -   Target URL for the `Masthead.SwitchItem`
-    -   Navigation occurs after the `onChange` code has executed
--   `label` _string_
-    -   display label of the `Masthead.SwitchItem`
--   `selected` _boolean_
-    -   the currently selected `Masthead.SwitchItem`
+- `href` _string_
+  - Target URL for the `Masthead.SwitchItem`
+  - Navigation occurs after the `onChange` code has executed
+- `label` _string_
+  - display label of the `Masthead.SwitchItem`
+- `selected` _boolean_
+  - the currently selected `Masthead.SwitchItem`
 
 ## `<Navigation />`
 
@@ -195,17 +192,17 @@ The top-level navigation menu.
 
 ```jsx
 <Navigation>
-    <Navigation.Links>
-        <Navigation.Link label="News" href="https://www.theguardian.com/news" />
-    </Navigation.Links>
-    <Navigation.Menu>
-        <Navigation.MenuGroup>
-            <Navigation.MenuLink
-                label="News"
-                href="https://www.theguardian.com/news"
-            />
-        </Navigation.MenuGroup>
-    </Navigation.Menu>
+	<Navigation.Links>
+		<Navigation.Link label="News" href="https://www.theguardian.com/news" />
+	</Navigation.Links>
+	<Navigation.Menu>
+		<Navigation.MenuGroup>
+			<Navigation.MenuLink
+				label="News"
+				href="https://www.theguardian.com/news"
+			/>
+		</Navigation.MenuGroup>
+	</Navigation.Menu>
 </Navigation>
 ```
 
@@ -219,7 +216,7 @@ The main visible navigational links
 
 ```jsx
 <Navigation.Links>
-    <Navigation.Link label="News" href="https://www.theguardian.com/news" />
+	<Navigation.Link label="News" href="https://www.theguardian.com/news" />
 </Navigation.Links>
 ```
 
@@ -233,23 +230,23 @@ A navigational link that appears in the `Navigation.Links` component
 
 ```jsx
 <Navigation.Link
-    label="News"
-    href="https://www.theguardian.com/news"
-    color={palette.news[400]}
-    selected={true}
+	label="News"
+	href="https://www.theguardian.com/news"
+	color={palette.news[400]}
+	selected={true}
 />
 ```
 
 ##### Props
 
--   `href` _string_
-    -   navigation location when `Navigation.Link` is clicked
--   `label` _string_
-    -   display label of the `Navigation.Link`
--   `color` _string_
-    -   hex value of the coloured selection indicator
--   `selected` _boolean_
-    -   toggles the top link’s selection indicator
+- `href` _string_
+  - navigation location when `Navigation.Link` is clicked
+- `label` _string_
+  - display label of the `Navigation.Link`
+- `color` _string_
+  - hex value of the coloured selection indicator
+- `selected` _boolean_
+  - toggles the top link’s selection indicator
 
 ### `<Navigation.Menu />`
 
@@ -261,16 +258,13 @@ An expanding menu that opens on click of the veggie burger icon, or the "more" l
 
 ```jsx
 <Navigation.Menu>
-    <Navigation.MenuGroup>
-        <Navigation.MenuLink
-            label="News"
-            href="https://www.theguardian.com/news"
-        />
-    </Navigation.MenuGroup>
-    <Navigation.MenuSupplementalLink
-        label="Masterclasses"
-        href="https://www.theguardian.com/guardian-masterclasses"
-    />
+	<Navigation.MenuGroup>
+		<Navigation.MenuLink label="News" href="https://www.theguardian.com/news" />
+	</Navigation.MenuGroup>
+	<Navigation.MenuSupplementalLink
+		label="Masterclasses"
+		href="https://www.theguardian.com/guardian-masterclasses"
+	/>
 </Navigation.Menu>
 ```
 
@@ -284,14 +278,11 @@ A column of links within the `SecondaryLinks` panel
 
 ```jsx
 <Navigation.MenuGroup>
-    <Navigation.MenuLink
-        label="UK news"
-        href="https://www.theguardian.com/uk"
-    />
-    <Navigation.MenuLink
-        label="World news"
-        href="https://www.theguardian.com/world"
-    />
+	<Navigation.MenuLink label="UK news" href="https://www.theguardian.com/uk" />
+	<Navigation.MenuLink
+		label="World news"
+		href="https://www.theguardian.com/world"
+	/>
 </Navigation.MenuGroup>
 ```
 
@@ -303,17 +294,17 @@ A navigational link that appears in the `Navigation.Menu` component
 
 ##### Props
 
--   `href` _string_
-    -   navigation location when `Navigation.MenuLink` is clicked
--   `label` _string_
-    -   display label of the `Navigation.MenuLink`
+- `href` _string_
+  - navigation location when `Navigation.MenuLink` is clicked
+- `label` _string_
+  - display label of the `Navigation.MenuLink`
 
 ##### Example
 
 ```jsx
 <Navigation.MenuLink
-    label="World news"
-    href="https://www.theguardian.com/world"
+	label="World news"
+	href="https://www.theguardian.com/world"
 />
 ```
 
@@ -327,17 +318,17 @@ A visually prominent navigational link that appears in the `Navigation.Menu` com
 
 ```jsx
 <Navigation.MenuSupplementalLink
-    label="Masterclasses"
-    href="https://www.theguardian.com/guardian-masterclasses"
+	label="Masterclasses"
+	href="https://www.theguardian.com/guardian-masterclasses"
 />
 ```
 
 ##### Props
 
--   `href` _string_
-    -   navigation location when `Navigation.MenuSupplementalLink` is clicked
--   `label` _string_
-    -   display label of the `Navigation.MenuSupplementalLink`
+- `href` _string_
+  - navigation location when `Navigation.MenuSupplementalLink` is clicked
+- `label` _string_
+  - display label of the `Navigation.MenuSupplementalLink`
 
 ## `<Subnav />`
 
@@ -374,10 +365,10 @@ A navigational link that appears in the `Subnav` component
 
 #### Props
 
--   `href` _string_
-    -   navigation location when `Subnav.Link` is clicked
--   `label` _string_
-    -   display label of the `Subnav.Link`
+- `href` _string_
+  - navigation location when `Subnav.Link` is clicked
+- `label` _string_
+  - display label of the `Subnav.Link`
 
 # Specialised headers
 
@@ -391,43 +382,43 @@ A special header layout for editorial pages. The logo is hard-coded.
 
 #### Masthead
 
--   Links to the left, floated right
--   Editions dropdown to the right
--   My account / sign in
-    -   Links hierarchy
-    -   Primary link – always visible
-    -   Secondary links – visible at wider breakpoints
-    -   Editions menu
--   Subscribe / Contribute links
+- Links to the left, floated right
+- Editions dropdown to the right
+- My account / sign in
+  - Links hierarchy
+  - Primary link – always visible
+  - Secondary links – visible at wider breakpoints
+  - Editions menu
+- Subscribe / Contribute links
 
 ### Example
 
 ```jsx
 <EditorialHeader>
-    <Masthead>
-        <EditorialHeader.Support />
-        <Masthead.Links>
-            <Masthead.Link href icon={<Icon />} label until from />
-            <Masthead.Menu icon label until from>
-                <Masthead.Link href label />
-                <Masthead.Link href label />
-            </Masthead.Menu>
-            <Masthead.Link href icon={<Icon />} label until from />
-        </Masthead.Links>
-        <Masthead.Switch onChange>
-            <Masthead.SwitchItem href label />
-            <Masthead.SwitchItem href label selected />
-            <Masthead.SwitchItem href label />
-        </Masthead.Switch>
-    </Masthead>
-    <Navigation />
-    <Subnav />
+	<Masthead>
+		<EditorialHeader.Support />
+		<Masthead.Links>
+			<Masthead.Link href icon={<Icon />} label until from />
+			<Masthead.Menu icon label until from>
+				<Masthead.Link href label />
+				<Masthead.Link href label />
+			</Masthead.Menu>
+			<Masthead.Link href icon={<Icon />} label until from />
+		</Masthead.Links>
+		<Masthead.Switch onChange>
+			<Masthead.SwitchItem href label />
+			<Masthead.SwitchItem href label selected />
+			<Masthead.SwitchItem href label />
+		</Masthead.Switch>
+	</Masthead>
+	<Navigation />
+	<Subnav />
 </EditorialHeader>
 ```
 
 ### Props
 
--   `edition` _string_ `'uk'` | `'au'` | `'us'` | `'international'`
+- `edition` _string_ `'uk'` | `'au'` | `'us'` | `'international'`
 
 ### `<EditorialHeader.Support />`
 
@@ -439,11 +430,11 @@ The heading, subheading and buttons can be customised.
 
 ### Props
 
--   `heading` _string_
-    -   Text for the heading
--   `subheading` _string_
-    -   Text for the subheading
--   `primaryCta` _{ ctaUrl: string; ctaText: string }_
-    -   URL and button label for the primary call to action
--   `secondaryCta` _{ ctaUrl: string; ctaText: string }_
-    -   URL and button label for the secondary call to action
+- `heading` _string_
+  - Text for the heading
+- `subheading` _string_
+  - Text for the subheading
+- `primaryCta` _{ ctaUrl: string; ctaText: string }_
+  - URL and button label for the primary call to action
+- `secondaryCta` _{ ctaUrl: string; ctaText: string }_
+  - URL and button label for the secondary call to action

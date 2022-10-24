@@ -94,10 +94,7 @@ export const StarRating = ({
 							);
 
 						return (
-							<g
-								key={index}
-								transform={`translate(${index * 24}, 0)`}
-							>
+							<g key={index} transform={`translate(${index * 24}, 0)`}>
 								{star}
 							</g>
 						);

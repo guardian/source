@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import {
 	asChromaticStory,
@@ -37,9 +38,14 @@ export default {
 	},
 };
 
-const Template: Story<TextAreaProps> = (args: TextAreaProps) => (
-	<TextArea {...args} />
-);
+const Template: Story<TextAreaProps> = (args: TextAreaProps) => {
+	const [value, setValue] = useState(args.value);
+
+	const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
+		setValue(e.target.value);
+
+	return <TextArea {...args} onChange={onChange} value={value} />;
+};
 
 // *****************************************************************************
 
@@ -110,5 +116,13 @@ WithMaxLengthDefaultTheme.args = {
 	maxLength: 10,
 };
 asChromaticStory(WithMaxLengthDefaultTheme);
+
+// *****************************************************************************
+
+export const WithDefaultValue = Template.bind({});
+WithDefaultValue.args = {
+	value: 'This is a value passed in as a prop',
+};
+asChromaticStory(WithDefaultValue);
 
 // *****************************************************************************

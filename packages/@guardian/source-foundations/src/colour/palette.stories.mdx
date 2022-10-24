@@ -34,14 +34,33 @@ const headline = css`
 <Story name="palette">
 	<ColorPalette>
 		{Object.entries(colours).map(([category, shades]) => {
-			{/* Storybook is adding displayName and __docgenInfo to exported TS enum:
-			https://github.com/storybookjs/storybook/issues/9832 */}
-			if (category !== '__docgenInfo' && category !== 'displayName'){
+			{
+				/* Storybook is adding displayName and __docgenInfo to exported TS enum:
+			https://github.com/storybookjs/storybook/issues/9832 */
+			}
+			if (category !== '__docgenInfo' && category !== 'displayName') {
+				// These colours have been deprecated and should not be used.
+				const deprecatedColours = {
+					opinion: ['300'],
+					culture: ['350'],
+				};
+				const shadesWithoutDeprecated = {};
+				for (const shade in shades) {
+					const isShadeDeprecated =
+						deprecatedColours[category] &&
+						deprecatedColours[category].includes(shade);
+					// Skip deprecated colours
+					if (isShadeDeprecated) {
+						continue;
+					} else {
+						shadesWithoutDeprecated[shade] = shades[shade];
+					}
+				}
 				return (
 					<ColorItem
 						key={category}
 						title={category}
-						colors={{...shades}}
+						colors={{ ...shadesWithoutDeprecated }}
 					/>
 				);
 			}
@@ -57,84 +76,62 @@ The following context-specific tokens were available in V3, and are deprecated i
 	<li>
 		<details>
 			<summary>background</summary>
-			background.primary, background.secondary,
-			background.inverse, background.ctaPrimary,
-			background.ctaPrimaryHover, background.ctaSecondary,
-			background.ctaSecondaryHover,
-			background.ctaTertiaryHover, background.input,
-			background.inputChecked
+			background.primary, background.secondary, background.inverse, background.ctaPrimary,
+			background.ctaPrimaryHover, background.ctaSecondary, background.ctaSecondaryHover,
+			background.ctaTertiaryHover, background.input, background.inputChecked
 		</details>
 	</li>
 	<li>
 		<details>
 			<summary>brandBackground</summary>
-			brandBackground.primary, brandBackground.ctaPrimary,
-			brandBackground.ctaPrimaryHover,
-			brandBackground.ctaSecondary,
-			brandBackground.ctaSecondaryHover,
-			brandBackground.ctaTertiaryHover,
+			brandBackground.primary, brandBackground.ctaPrimary, brandBackground.ctaPrimaryHover,
+			brandBackground.ctaSecondary, brandBackground.ctaSecondaryHover, brandBackground.ctaTertiaryHover,
 			brandBackground.inputChecked
 		</details>
 	</li>
 	<li>
 		<details>
 			<summary>brandAltBackground</summary>
-			brandAltBackground.primary,
-			brandAltBackground.ctaPrimary,
-			brandAltBackground.ctaPrimaryHover,
-			brandAltBackground.ctaSecondary,
-			brandAltBackground.ctaSecondaryHover,
-			brandAltBackground.ctaTertiaryHover
+			brandAltBackground.primary, brandAltBackground.ctaPrimary, brandAltBackground.ctaPrimaryHover,
+			brandAltBackground.ctaSecondary, brandAltBackground.ctaSecondaryHover, brandAltBackground.ctaTertiaryHover
 		</details>
 	</li>
 	<li>
 		<details>
 			<summary>border</summary>
-			border.primary, border.secondary, border.success,
-			border.error, border.ctaTertiary, border.input,
-			border.inputChecked, border.inputHover,
-			border.inputActive, border.focusHalo
+			border.primary, border.secondary, border.success, border.error, border.ctaTertiary,
+			border.input, border.inputChecked, border.inputHover, border.inputActive, border.focusHalo
 		</details>
 	</li>
 	<li>
 		<details>
 			<summary>brandBorder</summary>
-			brandBorder.primary, brandBorder.secondary,
-			brandBorder.success, brandBorder.error,
-			brandBorder.ctaTertiary, brandBorder.input,
-			brandBorder.inputChecked, brandBorder.inputHover
+			brandBorder.primary, brandBorder.secondary, brandBorder.success, brandBorder.error,
+			brandBorder.ctaTertiary, brandBorder.input, brandBorder.inputChecked, brandBorder.inputHover
 		</details>
 	</li>
 	<li>
 		<details>
 			<summary>text</summary>
-			text.primary, text.supporting, text.success,
-			text.error, text.ctaPrimary, text.ctaSecondary,
-			text.ctaTertiary, text.anchorPrimary,
-			text.anchorSecondary, text.userInput,
-			text.inputLabel, text.inputError,
-			text.inputLabelSupporting, text.inputChecked,
-			text.inputHover, text.groupLabel,
-			text.groupLabelSupporting, text.newsInverse
+			text.primary, text.supporting, text.success, text.error, text.ctaPrimary, text.ctaSecondary,
+			text.ctaTertiary, text.anchorPrimary, text.anchorSecondary, text.userInput,
+			text.inputLabel, text.inputError, text.inputLabelSupporting, text.inputChecked,
+			text.inputHover, text.groupLabel, text.groupLabelSupporting, text.newsInverse
 			text.inputChecked, text.inputHover
 		</details>
 	</li>
 	<li>
 		<details>
 			<summary>brandAltText</summary>
-			brandText.primary, brandText.supporting,
-			brandText.success, brandText.error,
-			brandText.ctaPrimary, brandText.ctaSecondary,
-			brandText.ctaTertiary, brandText.anchorPrimary,
-			brandText.anchorPrimaryHover, brandText.userInput,
-			brandText.inputLabel, brandText.inputLabelSupporting
+			brandText.primary, brandText.supporting, brandText.success, brandText.error,
+			brandText.ctaPrimary, brandText.ctaSecondary, brandText.ctaTertiary, brandText.anchorPrimary,
+			brandText.anchorPrimaryHover, brandText.userInput, brandText.inputLabel, brandText.inputLabelSupporting
 		</details>
 	</li>
 	<li>
 		<details>
 			<summary>brandAltText</summary>
-			brandAltText.primary, brandAltText.supporting,
-			brandAltText.ctaPrimary, brandAltText.ctaSecondary,
+			brandAltText.primary, brandAltText.supporting, brandAltText.ctaPrimary, brandAltText.ctaSecondary,
 			brandAltText.ctaTertiary, brandAltText.anchorPrimary
 		</details>
 	</li>

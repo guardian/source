@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import {
 	focusHalo,
 	palette,
-	resets,
 	space,
 	textSans,
 } from '@guardian/source-foundations';
@@ -11,40 +10,31 @@ export const errorInput = css`
 	border: 4px solid ${palette.error[400]};
 	color: ${palette.neutral[7]};
 	margin-top: 0;
-	/* When input is active and in an error state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${palette.error[400]};
-	}
 `;
 
 export const successInput = css`
 	border: 4px solid ${palette.success[400]};
 	color: ${palette.success[400]};
 	margin-top: 0;
-	/* When input is active and in a success state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${palette.success[400]};
-	}
 `;
 
 export const textArea = css`
-	${resets.input};
 	box-sizing: border-box;
-	${textSans.medium({ lineHeight: 'regular' })};
+	${textSans.medium()};
 	color: ${palette.neutral[7]};
 	background-color: ${palette.neutral[100]};
 	border: 2px solid ${palette.neutral[46]};
 	padding: ${space[2]}px ${space[2]}px 0 ${space[2]}px;
 
-	&:active {
-		border: 2px solid ${palette.brand[500]};
-	}
-
 	&:focus {
+		border: 2px solid ${palette.brand[500]};
 		${focusHalo};
 	}
 
 	&:invalid {
+		/* Remove styling of invalid input elements that gets applied in Firefox */
+		box-shadow: none;
+
 		/*
 		We automatically apply error styling to fields in an invalid state,
 		but stop short of applying it to empty required fields.

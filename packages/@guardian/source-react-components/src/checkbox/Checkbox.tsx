@@ -2,6 +2,7 @@ import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { generateSourceId } from '@guardian/source-foundations';
 import type { InputHTMLAttributes, ReactNode } from 'react';
 import type { Props } from '../@types/Props';
+import type { Theme } from '../@types/Theme';
 import { LabelText } from './LabelText';
 import {
 	checkbox,
@@ -92,29 +93,27 @@ export const Checkbox = ({
 
 	return (
 		<div
-			css={(theme) => [
-				checkboxContainer(theme.checkbox),
+			css={(theme: Theme) => [
+				checkboxContainer(theme.checkbox, error),
 				supporting ? checkboxContainerWithSupportingText : '',
 			]}
 		>
 			<input
 				id={checkboxId}
 				type="checkbox"
-				css={(theme) => [
-					checkbox(theme.checkbox),
+				css={(theme: Theme) => [
+					checkbox(theme.checkbox, error),
 					error ? errorCheckbox(theme.checkbox) : '',
 					cssOverrides,
 				]}
 				aria-invalid={!!error}
 				ref={setIndeterminate}
-				defaultChecked={
-					defaultChecked != null ? defaultChecked : undefined
-				}
+				defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 				checked={checked != null ? isChecked() : undefined}
 				{...props}
 			/>
 			<span
-				css={(theme) => [
+				css={(theme: Theme) => [
 					tick(theme.checkbox),
 					labelContent || supporting ? tickWithLabelText : '',
 					supporting ? tickWithSupportingText : '',
@@ -124,9 +123,7 @@ export const Checkbox = ({
 			<label htmlFor={checkboxId} css={label}>
 				{supporting ? (
 					<div>
-						<LabelText hasSupportingText={true}>
-							{labelContent}
-						</LabelText>
+						<LabelText hasSupportingText={true}>{labelContent}</LabelText>
 						<SupportingText>{supporting}</SupportingText>
 					</div>
 				) : (

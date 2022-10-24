@@ -27,10 +27,7 @@ export const Stack = ({
 	...props
 }: StackProps): EmotionJSX.Element => {
 	return (
-		<div
-			css={[stack, space ? stackSpace[space] : '', cssOverrides]}
-			{...props}
-		>
+		<div css={[stack, space ? stackSpace[space] : '', cssOverrides]} {...props}>
 			{children}
 		</div>
 	);
