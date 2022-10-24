@@ -16,6 +16,7 @@
 		"build": "rollup -c",
 		"clean": "rm -rf dist",
 		"e2e": "jest src/index.test.ts --setupFilesAfterEnv=./jest.e2e.setup.js",
+		"lint": "eslint . --ext .ts,.tsx,.js --cache",
 		"test": "jest --coverage"
 	},
 	"dependencies": {

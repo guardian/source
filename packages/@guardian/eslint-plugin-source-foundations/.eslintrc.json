@@ -21,7 +21,7 @@
 		"project": "./tsconfig.json"
 	},
 	"extends": ["@guardian/eslint-config"],
-	"ignorePatterns": ["dist", "coverage"],
+	"ignorePatterns": ["dist", "coverage", "src/rules/*.test.ts"],
 	"overrides": [
 		{
 			"files": ["**/*.ts", "**/*.tsx"],

@@ -12,7 +12,10 @@
 		"build": "rollup -c",
 		"clean": "rm -rf dist",
 		"test": "jest --coverage",
-		"e2e": "jest src/index.test.ts --setupFilesAfterEnv=./jest.e2e.setup.js"
+		"e2e": "jest src/index.test.ts --setupFilesAfterEnv=./jest.e2e.setup.js",
+		"lint": "npm-run-all lint:*",
+		"lint:js": "eslint . --ext .ts,.tsx,.js --cache",
+		"lint:styles": "stylelint ./**/styles.ts"
 	},
 	"devDependencies": {
 		"mini-svg-data-uri": "^1.3.3",
@@ -31,5 +34,10 @@
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"nx": {
+		"implicitDependencies": [
+			"eslint-plugin-source-react-components"
+		]
 	}
 }

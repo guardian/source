@@ -12,6 +12,7 @@ module.exports = {
 			modules: true,
 		},
 		project: './tsconfig.json',
+		tsconfigRootDir: __dirname,
 	},
 	plugins: ['react', 'jsx-a11y'],
 	extends: [

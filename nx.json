@@ -28,6 +28,9 @@
 		},
 		"e2e": {
 			"dependsOn": ["build", "^build"]
+		},
+		"lint": {
+			"dependsOn": ["build", "^build"]
 		}
 	}
 }
