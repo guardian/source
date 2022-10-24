@@ -9,6 +9,12 @@
 		"jsxImportSource": "@emotion/react",
 		"noEmit": true,
 		"paths": {
+			"@guardian/eslint-plugin-source-foundations": [
+				"packages/@guardian/eslint-plugin-source-foundations/src/index"
+			],
+			"@guardian/eslint-plugin-source-react-components": [
+				"packages/@guardian/eslint-plugin-source-react-components/src/index"
+			],
 			"@guardian/source-foundations": [
 				"packages/@guardian/source-foundations/src/index"
 			],
@@ -17,12 +23,6 @@
 			],
 			"@guardian/source-react-components-development-kitchen": [
 				"packages/@guardian/source-react-components-development-kitchen/src/index"
-			],
-			"@guardian/eslint-plugin-source-foundations": [
-				"packages/@guardian/eslint-plugin-source-foundations/src/index"
-			],
-			"@guardian/eslint-plugin-source-react-components": [
-				"packages/@guardian/eslint-plugin-source-react-components/src/index"
 			]
 		},
 		"sourceMap": true

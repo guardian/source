@@ -10,36 +10,24 @@
 			}
 		}
 	},
-	"targetDependencies": {
-		"build": [
-			{
-				"target": "build",
-				"projects": "dependencies"
-			}
-		],
-		"test": [
-			{
-				"target": "build",
-				"projects": "dependencies"
-			}
-		],
-		"e2e": [
-			{
-				"target": "build",
-				"projects": "self"
-			},
-			{
-				"target": "build",
-				"projects": "dependencies"
-			}
-		]
-	},
 	"affected": {
 		"defaultBase": "main"
 	},
 	"pluginsConfig": {
 		"@nrwl/js": {
 			"analyzeSourceFiles": false
+		}
+	},
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"targetDefaults": {
+		"build": {
+			"dependsOn": ["^build"]
+		},
+		"test": {
+			"dependsOn": ["^build"]
+		},
+		"e2e": {
+			"dependsOn": ["build", "^build"]
 		}
 	}
 }

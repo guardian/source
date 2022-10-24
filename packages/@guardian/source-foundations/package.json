@@ -30,5 +30,10 @@
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"nx": {
+		"implicitDependencies": [
+			"eslint-plugin-source-foundations"
+		]
 	}
 }
