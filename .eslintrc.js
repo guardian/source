@@ -18,6 +18,8 @@ module.exports = {
 		'@guardian/eslint-config',
 		'plugin:react/recommended',
 		'plugin:jsx-a11y/strict',
+		'plugin:@guardian/source-foundations/recommended',
+		'plugin:@guardian/source-react-components/recommended',
 	],
 	rules: {
 		'jsx-a11y/label-has-for': 'off',
