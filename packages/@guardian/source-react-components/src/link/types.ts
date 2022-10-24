@@ -11,12 +11,6 @@ export interface SharedLinkProps extends Props {
 	 */
 	priority?: LinkPriority;
 	/**
-	 * Whether link is subdued (no underline)
-	 *
-	 * @deprecated Subdued styling has been removed and no longer gets applied
-	 */
-	subdued?: boolean;
-	/**
 	 * An icon that appears in the link, alongside text
 	 */
 	icon?: ReactElement;

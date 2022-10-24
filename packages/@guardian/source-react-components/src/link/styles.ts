@@ -110,7 +110,6 @@ export const linkStyles = ({
 }: {
 	isButton?: boolean;
 	priority: LinkPriority;
-	isSubdued?: boolean;
 	iconSvg?: ReactElement;
 	iconSide?: IconSide;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
