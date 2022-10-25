@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { BackToTop } from './BackToTop';
 
 export default {
@@ -11,9 +8,6 @@ export default {
 };
 
 const Template: Story = () => BackToTop;
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
 
 export const Default = Template.bind({});
 asChromaticStory(Default);

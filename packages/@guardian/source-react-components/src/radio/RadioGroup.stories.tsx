@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Radio } from './Radio';
 import RadioStories from './Radio.stories';
 import type { RadioGroupProps } from './RadioGroup';

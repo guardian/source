@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgCamera } from '../../vendor/icons/SvgCamera';
 import { ChoiceCard } from './ChoiceCard';
 import type { ChoiceCardProps } from './ChoiceCard';
@@ -41,15 +38,6 @@ export default {
 const Template: Story<ChoiceCardProps> = (args: ChoiceCardProps) => (
 	<ChoiceCard {...args} />
 );
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	icon: 'undefined',
-	checked: false,
-};
-asPlayground(Playground);
 
 // *****************************************************************************
 

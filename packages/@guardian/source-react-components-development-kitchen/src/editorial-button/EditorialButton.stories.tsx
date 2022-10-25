@@ -7,10 +7,7 @@ import {
 } from '@guardian/libs';
 import { SvgCross } from '@guardian/source-react-components';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { EditorialButton } from './EditorialButton';
 import type { EditorialButtonProps } from './EditorialButton';
 
@@ -78,12 +75,6 @@ const Template: Story = (args: EditorialButtonProps) => {
 
 	return <EditorialButton {...props}>Click me</EditorialButton>;
 };
-
-export const Playground = Template.bind({});
-Playground.args = {
-	format: 'news',
-};
-asPlayground(Playground);
 
 const pillars = [
 	ArticlePillar.News,

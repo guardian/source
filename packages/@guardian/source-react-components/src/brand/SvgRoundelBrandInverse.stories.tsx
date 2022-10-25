@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { SvgRoundelBrandInverseProps } from './SvgRoundelBrandInverse';
 import { SvgRoundelBrandInverse } from './SvgRoundelBrandInverse';
 
@@ -19,16 +16,6 @@ export default {
 const Template: Story = (args: SvgRoundelBrandInverseProps) => (
 	<SvgRoundelBrandInverse {...args} />
 );
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	width: 300,
-};
-asPlayground(Playground);
-
-// *****************************************************************************
 
 export const Default = Template.bind({});
 asChromaticStory(Default);

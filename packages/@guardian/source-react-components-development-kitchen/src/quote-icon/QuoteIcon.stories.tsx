@@ -5,10 +5,7 @@ import {
 	ArticleSpecial,
 } from '@guardian/libs';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { QuoteIconProps } from './QuoteIcon';
 import { QuoteIcon } from './QuoteIcon';
 
@@ -54,15 +51,6 @@ const Template: Story<QuoteIconProps> = (args: QuoteIconProps) => (
 		<span>I look like a buffoon. I feel incredible. And then I vomit</span>
 	</div>
 );
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	size: 'xsmall',
-	format: 'news',
-};
-asPlayground(Playground);
 
 // *****************************************************************************
 

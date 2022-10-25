@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { HideProps } from './Hide';
 import { Hide } from './Hide';
 
@@ -28,11 +25,6 @@ const Template: Story = (args: HideProps) => (
 		spelunca iacet.
 	</Hide>
 );
-
-// *****************************************************************************
-
-export const Demo = Template.bind({});
-asPlayground(Demo);
 
 // *****************************************************************************
 

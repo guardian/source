@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { FooterProps } from './Footer';
 import { Footer } from './Footer';
 
@@ -32,13 +29,6 @@ export default {
 };
 
 const Template: Story = (args: FooterProps) => <Footer {...args} />;
-
-export const Playground = Template.bind({});
-Playground.args = {
-	showBackToTop: false,
-	children: 'with',
-};
-asPlayground(Playground);
 
 export const DefaultDefaultTheme = Template.bind({});
 DefaultDefaultTheme.args = { children: 'with' };

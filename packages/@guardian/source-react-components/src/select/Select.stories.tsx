@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Option } from './Option';
 import type { SelectProps } from './Select';
 import { Select } from './Select';
@@ -47,14 +44,6 @@ const Template: Story<SelectProps> = (args: SelectProps) => (
 		<Option value="ca">California</Option>
 	</Select>
 );
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	supporting: 'This helps us to provide accurate shipping costs',
-};
-asPlayground(Playground);
 
 // *****************************************************************************
 

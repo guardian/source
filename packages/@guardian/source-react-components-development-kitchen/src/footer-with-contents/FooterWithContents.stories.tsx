@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import {
 	DefaultFooterLinks,
 	FooterLinksInColumns,
@@ -22,14 +19,6 @@ export default {
 const Template: Story<FooterWithContentsProps> = (
 	args: FooterWithContentsProps,
 ) => <FooterWithContents {...args} />;
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	children: 'Content goes here',
-};
-asPlayground(Playground);
 
 // *****************************************************************************
 

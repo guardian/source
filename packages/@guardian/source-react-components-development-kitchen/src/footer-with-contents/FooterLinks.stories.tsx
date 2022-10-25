@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { FooterLinksProps } from './FooterLinks';
 import { defaultGuardianLinks, FooterLinks } from './FooterLinks';
 
@@ -17,19 +14,6 @@ export default {
 const Template: Story<FooterLinksProps> = (args: FooterLinksProps) => (
 	<FooterLinks {...args} />
 );
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	links: [
-		{
-			href: '/',
-			text: 'Privacy policy',
-		},
-	],
-};
-asPlayground(Playground);
 
 // *****************************************************************************
 

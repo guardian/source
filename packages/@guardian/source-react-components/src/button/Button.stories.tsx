@@ -2,10 +2,7 @@ import type {
 	Parameters,
 	Story,
 } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgCross } from '../../vendor/icons/SvgCross';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';

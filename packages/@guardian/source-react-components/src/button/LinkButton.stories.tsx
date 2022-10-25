@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgArrowRightStraight } from '../../vendor/icons/SvgArrowRightStraight';
 import { LinkButton } from './LinkButton';
 import type { LinkButtonProps } from './LinkButton';

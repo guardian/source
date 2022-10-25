@@ -1,8 +1,5 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { DashedLines as DashedLinesComponent } from './DashedLines';
 import { DottedLines as DottedLinesComponent } from './DottedLines';
 import type { LinesProps } from './Lines';

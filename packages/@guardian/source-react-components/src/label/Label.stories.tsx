@@ -1,10 +1,7 @@
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Label } from './Label';
 import { labelThemeBrand } from './theme';
 import type { LabelProps } from './types';
@@ -24,13 +21,6 @@ const Template: Story<LabelProps> = (args: LabelProps) => (
 		<input type="email" />
 	</Label>
 );
-
-export const Playground = Template.bind({});
-Playground.args = {
-	text: 'Email',
-	supporting: 'alex@example.com',
-};
-asPlayground(Playground);
 
 // *****************************************************************************
 

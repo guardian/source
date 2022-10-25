@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { ToggleSwitchApps } from './ToggleSwitchApps';
 import type { ToggleSwitchAppsProps } from './ToggleSwitchApps';
 

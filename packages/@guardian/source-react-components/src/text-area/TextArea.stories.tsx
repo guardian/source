@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { TextAreaProps } from './TextArea';
 import { TextArea } from './TextArea';
 
@@ -46,14 +43,6 @@ const Template: Story<TextAreaProps> = (args: TextAreaProps) => {
 
 	return <TextArea {...args} onChange={onChange} value={value} />;
 };
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	rows: 3,
-};
-asPlayground(Playground);
 
 // *****************************************************************************
 

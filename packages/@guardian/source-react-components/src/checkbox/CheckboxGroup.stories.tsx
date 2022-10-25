@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Checkbox } from './Checkbox';
 import CheckboxStories from './Checkbox.stories';
 import type { CheckboxGroupProps } from './CheckboxGroup';
