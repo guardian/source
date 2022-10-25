@@ -32,13 +32,6 @@ const Template: Story = (args: DividerProps) => (
 	</span>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDivider = Template.bind({});
 asChromaticStory(DefaultDivider);
 

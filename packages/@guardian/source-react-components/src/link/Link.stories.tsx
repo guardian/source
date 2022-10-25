@@ -106,13 +106,6 @@ const UnderlineHoverTextSansTemplate: Story = (args: LinkProps) => {
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const PrimaryLinkDefaultTheme = Template.bind({});
 PrimaryLinkDefaultTheme.args = {
 	icon: 'undefined',

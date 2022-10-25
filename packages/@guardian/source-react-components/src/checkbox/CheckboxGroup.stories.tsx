@@ -38,13 +38,6 @@ const Template: Story<CheckboxGroupProps> = (args: CheckboxGroupProps) => {
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
 asChromaticStory(DefaultDefaultTheme);
 

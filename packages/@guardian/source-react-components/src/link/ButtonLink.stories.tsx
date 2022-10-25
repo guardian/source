@@ -31,13 +31,6 @@ const Template: Story = (args: ButtonLinkProps) => (
 	<ButtonLink {...args}>Return to home page</ButtonLink>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const PrimaryButtonLinkDefaultTheme = Template.bind({});
 PrimaryButtonLinkDefaultTheme.args = {
 	icon: 'undefined',

@@ -62,12 +62,7 @@ export const asChromaticStory = <T>(story: Story<T>): void => {
 
 	story.parameters = {
 		...story.parameters,
-		viewMode: 'canvas',
-		previewTabs: {
-			'storybook/docs/panel': {
-				hidden: true,
-			},
-		},
+		viewMode: 'story',
 		chromatic,
 	};
 };

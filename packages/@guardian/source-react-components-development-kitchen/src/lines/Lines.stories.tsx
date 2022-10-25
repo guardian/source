@@ -31,13 +31,6 @@ const Template: Story = (args: LinesProps) => {
 	}
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultLines = Template.bind({});
 asChromaticStory(DefaultLines);
 

@@ -52,13 +52,6 @@ const Template: Story<ColumnsProps> = (args) => (
 	</Columns>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Default = Template.bind({});
 Default.parameters = {
 	viewport: { defaultViewport: 'tablet' },

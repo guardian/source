@@ -3,7 +3,6 @@ import {
 	asChromaticStory,
 	asPlayground,
 } from '../../../../../lib/story-intents';
-import type { LogoProps } from './Logo';
 import { Logo } from './Logo';
 
 export default {
@@ -18,15 +17,6 @@ export default {
 		},
 	},
 };
-
-const Template: Story = (args: LogoProps) => <Logo {...args} />;
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
 
 const TripleTemplate: Story = () => (
 	<div>

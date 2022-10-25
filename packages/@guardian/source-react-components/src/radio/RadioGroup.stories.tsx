@@ -51,13 +51,6 @@ const Template: Story = (args: RadioGroupProps) => (
 	</RadioGroup>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
 asChromaticStory(DefaultDefaultTheme);
 

@@ -38,13 +38,6 @@ export default {
 
 const Template: Story = (args: RadioProps) => <Radio {...args} />;
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
 asChromaticStory(DefaultDefaultTheme);
 

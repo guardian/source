@@ -29,13 +29,6 @@ const Template: Story<ToggleSwitchAppsProps> = (
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const AndroidNoLabel = Template.bind({});
 AndroidNoLabel.args = {
 	platform: 'android',

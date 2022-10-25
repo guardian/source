@@ -19,13 +19,6 @@ const Template: Story = (args: StackProps) => (
 	</Stack>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Default = Template.bind({});
 asChromaticStory(Default);
 

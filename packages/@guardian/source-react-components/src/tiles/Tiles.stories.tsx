@@ -46,13 +46,6 @@ const Template: Story<TilesProps> = (args: TilesProps) => (
 	</Tiles>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Columns2 = Template.bind({});
 Columns2.args = {
 	columns: '2',

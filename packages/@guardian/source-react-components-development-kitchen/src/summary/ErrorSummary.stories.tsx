@@ -20,13 +20,6 @@ const Template: Story<ErrorSummaryProps> = (args: ErrorSummaryProps) => (
 	<ErrorSummary {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const ErrorOnly = Template.bind({});
 ErrorOnly.args = {
 	message: 'This is an example with an error message only',

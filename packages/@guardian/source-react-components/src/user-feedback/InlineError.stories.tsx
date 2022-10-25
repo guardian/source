@@ -19,13 +19,6 @@ const Template: Story<UserFeedbackProps> = ({
 	<InlineError {...args}>{children ?? 'Please enter your name'}</InlineError>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const InlineErrorDefaultTheme = Template.bind({});
 asChromaticStory(InlineErrorDefaultTheme);
 

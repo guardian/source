@@ -109,13 +109,6 @@ const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const WithNoLabel = Template.bind({});
 asChromaticStory(WithNoLabel);
 

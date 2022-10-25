@@ -94,13 +94,6 @@ const Template: Story<ButtonProps> = (args: ButtonProps) => (
 	<Button {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const [
 	PrimaryPriorityDefaultTheme,
 	SecondaryPriorityDefaultTheme,

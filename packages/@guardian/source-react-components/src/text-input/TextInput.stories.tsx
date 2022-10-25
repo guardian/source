@@ -50,13 +50,6 @@ const Template: Story<TextInputProps> = (args: TextInputProps) => {
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
 asChromaticStory(DefaultDefaultTheme);
 

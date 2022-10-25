@@ -19,13 +19,6 @@ const Template: Story<SuccessSummaryProps> = (args: SuccessSummaryProps) => (
 	<SuccessSummary {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const SuccessOnly = Template.bind({});
 SuccessOnly.args = {
 	message: 'This is an example with a success message only',

@@ -23,13 +23,6 @@ const Template: Story = (args: InlineProps) => (
 	</Inline>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const NoSpace = Template.bind({});
 asChromaticStory(NoSpace);
 

@@ -40,13 +40,6 @@ const Template: Story<LinkButtonProps> = (args: LinkButtonProps) => (
 	<LinkButton {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const [
 	PrimaryPriorityDefaultTheme,
 	SecondaryPriorityDefaultTheme,

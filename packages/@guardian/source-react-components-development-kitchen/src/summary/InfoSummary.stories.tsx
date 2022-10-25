@@ -19,13 +19,6 @@ const Template: Story<InfoSummaryProps> = (args: InfoSummaryProps) => (
 	<InfoSummary {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const InfoOnly = Template.bind({});
 InfoOnly.args = {
 	message: 'This is an example with a info message only',

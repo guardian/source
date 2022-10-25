@@ -30,13 +30,6 @@ const Template: Story<AccordionProps> = (args: AccordionProps) => (
 	</Accordion>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const WithCTALabelsDefaultTheme = Template.bind({});
 asChromaticStory(WithCTALabelsDefaultTheme);
 

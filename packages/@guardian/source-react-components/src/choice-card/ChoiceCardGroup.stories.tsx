@@ -79,13 +79,6 @@ const Template: Story<ChoiceCardGroupProps> = (args: ChoiceCardGroupProps) => (
 	</ChoiceCardGroup>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
 DefaultDefaultTheme.args = {
 	label: undefined,

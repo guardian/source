@@ -19,13 +19,6 @@ const Template: Story<StarRatingProps> = (args: StarRatingProps) => (
 	<StarRating {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const NoStar = Template.bind({});
 NoStar.args = {
 	rating: 0,

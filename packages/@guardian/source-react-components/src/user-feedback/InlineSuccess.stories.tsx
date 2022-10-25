@@ -16,13 +16,6 @@ const Template: Story<UserFeedbackProps> = (args: UserFeedbackProps) => (
 	<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const InlineSuccessDefaultTheme = Template.bind({});
 asChromaticStory(InlineSuccessDefaultTheme);
 

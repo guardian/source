@@ -32,13 +32,6 @@ const Template: Story = (args: ContainerProps) => (
 	</Container>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Default = Template.bind({});
 asChromaticStory(Default);
 
