@@ -1,28 +1,36 @@
-import type { Story } from '@storybook/react';
+import type { Meta, Story } from '@storybook/react';
 import type { ButtonProps } from '../src/button/Button';
 import { Button } from '../src/button/Button';
 
 export default {
-	title: 'Button',
+	title: 'Components / Button',
 	component: Button,
-	viewMode: 'docs',
-};
+	args: {
+		children: 'test',
+	},
+} as Meta<ButtonProps>;
 
 const Template: Story<ButtonProps> = (args: ButtonProps) => (
 	<Button {...args} />
 );
 
-export const Default = Template.bind({});
+/**
+ * Primary and Secondary button example components.
+ */
+export const Primary = Template.bind({});
 
-Default.args = {
-	children: 'Test',
+Primary.parameters = {
+	viewMode: 'story',
+	chromatic: { disable: false },
 };
 
-Default.parameters = {
-	viewMode: 'docs',
-	docs: {
-		description: {
-			story: 'Some story **markdown**',
-		},
-	},
+export const Secondary = Template.bind({});
+
+Secondary.parameters = {
+	viewMode: 'story',
+	chromatic: { disable: false },
+};
+
+Secondary.args = {
+	priority: 'secondary',
 };

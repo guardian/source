@@ -1,7 +1,8 @@
 module.exports = {
 	stories: [
-		'../packages/@guardian/source-react-components/stories/**/*.stories.mdx',
-		'../packages/@guardian/source-react-components/stories/**/*.stories.@(js|jsx|ts|tsx)',
+		'../packages/**/*.stories.mdx',
+		'../packages/**/*stories.@(js|jsx|ts|tsx)',
+		'../docs/**/*.stories.mdx',
 	],
 	addons: [
 		'@storybook/addon-a11y',
