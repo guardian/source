@@ -63,7 +63,7 @@
 		"@storybook/testing-library": "^0.0.13",
 		"@types/jest": "^27.0.2",
 		"@types/node": "^16.11.33",
-		"@types/react": "17.0.1",
+		"@types/react": "^18.0.22",
 		"babel-loader": "^8.2.2",
 		"chromatic": "^6.8.0",
 		"eslint": "^8.23.0",
