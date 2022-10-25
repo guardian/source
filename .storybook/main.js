@@ -5,16 +5,18 @@ module.exports = {
 	],
 	addons: [
 		'@storybook/addon-a11y',
-		'@storybook/addon-links',
-		'@storybook/addon-essentials',
-		'@storybook/addon-interactions',
 		{
 			name: '@storybook/addon-docs',
 			options: {
 				transcludeMarkdown: true,
 			},
 		},
+		'@storybook/addon-essentials',
+		'@storybook/addon-links',
 	],
+	features: {
+		emotionAlias: false,
+	},
 	framework: '@storybook/react',
 	core: {
 		builder: '@storybook/builder-webpack5',
