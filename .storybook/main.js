@@ -1,21 +1,22 @@
 module.exports = {
 	stories: [
-		'../packages/**/*.stories.mdx',
-		'../packages/**/*stories.@(js|jsx|ts|tsx)',
-		'../docs/**/*.stories.mdx',
+		'../packages/@guardian/source-react-components/stories/**/*.stories.mdx',
+		'../packages/@guardian/source-react-components/stories/**/*.stories.@(js|jsx|ts|tsx)',
 	],
 	addons: [
 		'@storybook/addon-a11y',
+		'@storybook/addon-links',
+		'@storybook/addon-essentials',
+		'@storybook/addon-interactions',
 		{
 			name: '@storybook/addon-docs',
 			options: {
 				transcludeMarkdown: true,
 			},
 		},
-		'@storybook/addon-essentials',
-		'@storybook/addon-links',
 	],
+	framework: '@storybook/react',
 	core: {
-		builder: 'webpack5',
+		builder: '@storybook/builder-webpack5',
 	},
 };
