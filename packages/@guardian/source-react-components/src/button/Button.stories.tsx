@@ -171,6 +171,7 @@ asChromaticStory(XSmallSizeDefaultTheme);
 
 export const TextAndIconLeftDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconLeftDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	children: 'Close',
 };
@@ -180,6 +181,7 @@ asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 export const TextAndIconRightDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconRightDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	iconSide: 'right',
 	children: 'Close',
@@ -190,6 +192,7 @@ asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 export const TextAndIconLeftSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	size: 'small',
 	children: 'Close',
@@ -200,6 +203,7 @@ asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 export const TextAndIconRightSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	iconSide: 'right',
 	size: 'small',
@@ -211,6 +215,7 @@ asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 export const TextAndIconLeftXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	size: 'xsmall',
 	children: 'Close',
@@ -221,6 +226,7 @@ asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 export const TextAndIconRightXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	iconSide: 'right',
 	size: 'xsmall',
@@ -232,6 +238,7 @@ asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 export const IconOnlyDefaultSizeDefaultTheme = Template.bind({});
 IconOnlyDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	hideLabel: true,
 	children: 'Close subscription banner',
@@ -242,6 +249,7 @@ asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 export const IconOnlySmallSizeDefaultTheme = Template.bind({});
 IconOnlySmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	hideLabel: true,
 	size: 'small',
@@ -253,6 +261,7 @@ asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 export const IconOnlyXSmallSizeDefaultTheme = Template.bind({});
 IconOnlyXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	hideLabel: true,
 	size: 'xsmall',

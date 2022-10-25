@@ -75,7 +75,7 @@ asChromaticStory(CollapseUntilTabletWithNoSpacing);
 export const CollapseUntilTabletWithSpace1 = Template.bind({});
 CollapseUntilTabletWithSpace1.args = {
 	collapseUntil: 'tablet',
-	spaceY: '1',
+	spaceY: 1,
 };
 CollapseUntilTabletWithSpace1.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -89,7 +89,7 @@ asChromaticStory(CollapseUntilTabletWithSpace1);
 export const CollapseUntilTabletWithSpace2 = Template.bind({});
 CollapseUntilTabletWithSpace2.args = {
 	collapseUntil: 'tablet',
-	spaceY: '2',
+	spaceY: 2,
 };
 CollapseUntilTabletWithSpace2.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -103,7 +103,7 @@ asChromaticStory(CollapseUntilTabletWithSpace2);
 export const CollapseUntilTabletWithSpace3 = Template.bind({});
 CollapseUntilTabletWithSpace3.args = {
 	collapseUntil: 'tablet',
-	spaceY: '3',
+	spaceY: 3,
 };
 CollapseUntilTabletWithSpace3.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -117,7 +117,7 @@ asChromaticStory(CollapseUntilTabletWithSpace3);
 export const CollapseUntilTabletWithSpace4 = Template.bind({});
 CollapseUntilTabletWithSpace4.args = {
 	collapseUntil: 'tablet',
-	spaceY: '4',
+	spaceY: 4,
 };
 CollapseUntilTabletWithSpace4.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -131,7 +131,7 @@ asChromaticStory(CollapseUntilTabletWithSpace4);
 export const CollapseUntilTabletWithSpace5 = Template.bind({});
 CollapseUntilTabletWithSpace5.args = {
 	collapseUntil: 'tablet',
-	spaceY: '5',
+	spaceY: 5,
 };
 CollapseUntilTabletWithSpace5.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -145,7 +145,7 @@ asChromaticStory(CollapseUntilTabletWithSpace5);
 export const CollapseUntilTabletWithSpace6 = Template.bind({});
 CollapseUntilTabletWithSpace6.args = {
 	collapseUntil: 'tablet',
-	spaceY: '6',
+	spaceY: 6,
 };
 CollapseUntilTabletWithSpace6.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -159,7 +159,7 @@ asChromaticStory(CollapseUntilTabletWithSpace6);
 export const CollapseUntilTabletWithSpace9 = Template.bind({});
 CollapseUntilTabletWithSpace9.args = {
 	collapseUntil: 'tablet',
-	spaceY: '9',
+	spaceY: 9,
 };
 CollapseUntilTabletWithSpace9.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -173,7 +173,7 @@ asChromaticStory(CollapseUntilTabletWithSpace9);
 export const CollapseUntilTabletWithSpace12 = Template.bind({});
 CollapseUntilTabletWithSpace12.args = {
 	collapseUntil: 'tablet',
-	spaceY: '12',
+	spaceY: 12,
 };
 CollapseUntilTabletWithSpace12.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -187,7 +187,7 @@ asChromaticStory(CollapseUntilTabletWithSpace12);
 export const CollapseUntilTabletWithSpace24 = Template.bind({});
 CollapseUntilTabletWithSpace24.args = {
 	collapseUntil: 'tablet',
-	spaceY: '24',
+	spaceY: 24,
 };
 CollapseUntilTabletWithSpace24.parameters = {
 	viewport: { defaultViewport: 'phablet' },
@@ -198,8 +198,8 @@ asChromaticStory(CollapseUntilTabletWithSpace24);
 
 // *****************************************************************************
 
-export const WithContainer: Story<ColumnsProps> = (args) => (
-	<Container style={style}>{Template(args)}</Container>
+export const WithContainer: Story<ColumnsProps> = (args, ctx) => (
+	<Container style={style}>{Template(args, ctx)}</Container>
 );
 WithContainer.parameters = {
 	layout: 'fullscreen',

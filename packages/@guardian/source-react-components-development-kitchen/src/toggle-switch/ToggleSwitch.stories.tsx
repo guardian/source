@@ -177,7 +177,7 @@ export const WithMediumFontAndBorder = Template.bind({});
 WithMediumFontAndBorder.args = {
 	label: 'Get alerts on this story',
 	fontSize: 'medium',
-	labelBorder: 'true',
+	labelBorder: true,
 };
 asChromaticStory(WithMediumFontAndBorder);
 
@@ -188,6 +188,6 @@ WithBoldMediumFontAndBorder.args = {
 	label: 'Get alerts on this story',
 	fontWeight: 'bold',
 	fontSize: 'medium',
-	labelBorder: 'true',
+	labelBorder: true,
 };
 asChromaticStory(WithBoldMediumFontAndBorder);

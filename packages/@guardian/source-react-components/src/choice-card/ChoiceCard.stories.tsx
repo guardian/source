@@ -65,6 +65,7 @@ asChromaticStory(ErrorDefaultTheme);
 export const IconDefaultTheme = Template.bind({});
 IconDefaultTheme.args = {
 	label: 'Camera',
+	// @ts-expect-error - Storybook maps 'JSX element' to <em>Option 1</em>
 	icon: 'JSX element',
 };
 asChromaticStory(IconDefaultTheme);

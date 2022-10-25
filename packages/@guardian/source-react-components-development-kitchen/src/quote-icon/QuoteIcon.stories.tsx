@@ -57,6 +57,7 @@ const Template: Story<QuoteIconProps> = (args: QuoteIconProps) => (
 export const News = Template.bind({});
 News.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
 asChromaticStory(News);
@@ -66,6 +67,7 @@ asChromaticStory(News);
 export const Sport = Template.bind({});
 Sport.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Sport
 	format: 'sport',
 };
 asChromaticStory(Sport);
@@ -75,6 +77,7 @@ asChromaticStory(Sport);
 export const Culture = Template.bind({});
 Culture.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Culture
 	format: 'culture',
 };
 asChromaticStory(Culture);
@@ -84,6 +87,7 @@ asChromaticStory(Culture);
 export const Lifestyle = Template.bind({});
 Lifestyle.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Lifestyle
 	format: 'lifestyle',
 };
 asChromaticStory(Lifestyle);
@@ -93,6 +97,7 @@ asChromaticStory(Lifestyle);
 export const Opinion = Template.bind({});
 Opinion.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Opinion
 	format: 'opinion',
 };
 asChromaticStory(Opinion);
@@ -102,6 +107,7 @@ asChromaticStory(Opinion);
 export const SpecialReport = Template.bind({});
 SpecialReport.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.SpecialReport
 	format: 'special_report',
 };
 asChromaticStory(SpecialReport);
@@ -111,6 +117,7 @@ asChromaticStory(SpecialReport);
 export const Labs = Template.bind({});
 Labs.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Labs
 	format: 'labs',
 };
 asChromaticStory(Labs);
@@ -120,6 +127,7 @@ asChromaticStory(Labs);
 export const XSmall = Template.bind({});
 XSmall.args = {
 	size: 'xsmall',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
 asChromaticStory(XSmall);
@@ -129,6 +137,7 @@ asChromaticStory(XSmall);
 export const Small = Template.bind({});
 Small.args = {
 	size: 'small',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
 asChromaticStory(Small);
@@ -138,6 +147,7 @@ asChromaticStory(Small);
 export const Medium = Template.bind({});
 Medium.args = {
 	size: 'medium',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
 asChromaticStory(Medium);
@@ -147,6 +157,7 @@ asChromaticStory(Medium);
 export const Large = Template.bind({});
 Large.args = {
 	size: 'large',
+	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
 asChromaticStory(Large);
