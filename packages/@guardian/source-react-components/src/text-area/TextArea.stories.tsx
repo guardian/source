@@ -1,5 +1,5 @@
+import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { TextAreaProps } from './TextArea';
 import { TextArea } from './TextArea';

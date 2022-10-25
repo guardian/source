@@ -1,11 +1,9 @@
+import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { CheckboxProps } from './Checkbox';
 import { Checkbox } from './Checkbox';
 import { checkboxThemeBrand } from './theme';
-// These types are the right types, but don't work with Storybook v6 which uses Emotion v10
-// import type { Args, Story } from '@storybook/react';
 
 export default {
 	title: 'Packages/source-react-components/Checkbox',

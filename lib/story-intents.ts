@@ -1,6 +1,6 @@
+import type { Story } from '@storybook/react';
 import type { Breakpoint } from '../packages/@guardian/source-foundations/src';
 import { breakpoints } from '../packages/@guardian/source-foundations/src';
-import type { Story } from './@types/storybook-emotion-10-fixes';
 
 /**
  * Turns a standard story into a visual regression testing story:

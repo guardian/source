@@ -1,4 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '@storybook/react';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 import { asChromaticStory } from '../../../../../lib/story-intents';

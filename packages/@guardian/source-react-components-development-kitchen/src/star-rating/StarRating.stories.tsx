@@ -1,4 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '@storybook/react';
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { StarRatingProps } from './StarRating';
 import { StarRating } from './StarRating';

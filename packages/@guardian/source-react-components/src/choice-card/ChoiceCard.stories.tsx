@@ -1,4 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '@storybook/react';
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgCamera } from '../../vendor/icons/SvgCamera';
 import { ChoiceCard } from './ChoiceCard';

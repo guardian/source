@@ -6,7 +6,7 @@ import {
 	ArticleSpecial,
 } from '@guardian/libs';
 import { SvgCross } from '@guardian/source-react-components';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '@storybook/react';
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import { EditorialLinkButton } from './EditorialLinkButton';
 import type { EditorialLinkButtonProps } from './EditorialLinkButton';

@@ -1,5 +1,5 @@
+import type { Story } from '@storybook/react';
 import type { HTMLAttributes } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Container } from '../container/Container';
 import { Column } from './Column';
