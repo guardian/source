@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { DividerProps } from './Divider';
 import { Divider } from './Divider';
 

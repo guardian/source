@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { SvgRoundelDefaultProps } from './SvgRoundelDefault';
 import { SvgRoundelDefault } from './SvgRoundelDefault';
 

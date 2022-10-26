@@ -5,7 +5,6 @@ import {
 	ArticleSpecial,
 } from '@guardian/libs';
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { QuoteIconProps } from './QuoteIcon';
 import { QuoteIcon } from './QuoteIcon';
 

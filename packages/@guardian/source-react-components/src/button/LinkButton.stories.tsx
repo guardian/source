@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgArrowRightStraight } from '../../vendor/icons/SvgArrowRightStraight';
 import { LinkButton } from './LinkButton';
 import type { LinkButtonProps } from './LinkButton';

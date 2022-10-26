@@ -1,6 +1,5 @@
 import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { TextInput } from './TextInput';
 import type { TextInputProps } from './TextInput';
 

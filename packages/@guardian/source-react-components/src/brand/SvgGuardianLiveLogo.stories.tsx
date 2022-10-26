@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { SvgGuardianLiveLogoProps } from './SvgGuardianLiveLogo';
 import { SvgGuardianLiveLogo } from './SvgGuardianLiveLogo';
 

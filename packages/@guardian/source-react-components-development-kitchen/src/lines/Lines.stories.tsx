@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { DashedLines as DashedLinesComponent } from './DashedLines';
 import { DottedLines as DottedLinesComponent } from './DottedLines';
 import type { LinesProps } from './Lines';

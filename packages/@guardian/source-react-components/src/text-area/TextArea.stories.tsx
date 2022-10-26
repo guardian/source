@@ -1,6 +1,5 @@
 import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { TextAreaProps } from './TextArea';
 import { TextArea } from './TextArea';
 

@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { SvgGuardianLogoProps } from './SvgGuardianLogo';
 import { SvgGuardianLogo } from './SvgGuardianLogo';
 

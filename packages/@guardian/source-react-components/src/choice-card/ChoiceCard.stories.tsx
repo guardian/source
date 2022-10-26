@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgCamera } from '../../vendor/icons/SvgCamera';
 import { ChoiceCard } from './ChoiceCard';
 import type { ChoiceCardProps } from './ChoiceCard';

@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Option } from './Option';
 import type { SelectProps } from './Select';
 import { Select } from './Select';

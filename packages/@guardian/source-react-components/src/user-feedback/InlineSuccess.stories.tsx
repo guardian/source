@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { InlineSuccess } from './InlineSuccess';
 import { userFeedbackThemeBrand } from './theme';
 import type { UserFeedbackProps } from './types';

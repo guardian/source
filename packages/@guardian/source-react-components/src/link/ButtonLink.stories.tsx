@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgExternal } from '../../vendor/icons/SvgExternal';
 import type { ButtonLinkProps } from './ButtonLink';
 import { ButtonLink } from './ButtonLink';

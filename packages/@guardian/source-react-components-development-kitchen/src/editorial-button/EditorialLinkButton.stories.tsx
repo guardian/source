@@ -7,7 +7,6 @@ import {
 } from '@guardian/libs';
 import { SvgCross } from '@guardian/source-react-components';
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { EditorialLinkButton } from './EditorialLinkButton';
 import type { EditorialLinkButtonProps } from './EditorialLinkButton';
 

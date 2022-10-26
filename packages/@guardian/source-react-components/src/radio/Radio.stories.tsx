@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Radio } from './Radio';
 import type { RadioProps } from './Radio';
 import { radioThemeBrand } from './theme';

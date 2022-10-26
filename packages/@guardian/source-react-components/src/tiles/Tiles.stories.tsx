@@ -1,6 +1,5 @@
 import { breakpoints } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { TilesProps } from './Tiles';
 import { Tiles } from './Tiles';
 

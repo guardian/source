@@ -1,6 +1,5 @@
 import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { ToggleSwitchApps } from './ToggleSwitchApps';
 import type { ToggleSwitchAppsProps } from './ToggleSwitchApps';
 

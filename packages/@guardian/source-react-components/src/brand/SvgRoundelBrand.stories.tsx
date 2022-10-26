@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { SvgRoundelBrandProps } from './SvgRoundelBrand';
 import { SvgRoundelBrand } from './SvgRoundelBrand';
 

@@ -17,7 +17,6 @@ import {
 } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { ToggleSwitch } from './ToggleSwitch';
 import type { ToggleSwitchProps } from './ToggleSwitch';
 

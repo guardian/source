@@ -1,6 +1,5 @@
 import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Checkbox } from './Checkbox';
 import CheckboxStories from './Checkbox.stories';
 import type { CheckboxGroupProps } from './CheckboxGroup';

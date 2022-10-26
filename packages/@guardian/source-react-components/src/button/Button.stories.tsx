@@ -1,5 +1,4 @@
 import type { Parameters, Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { SvgCross } from '../../vendor/icons/SvgCross';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';

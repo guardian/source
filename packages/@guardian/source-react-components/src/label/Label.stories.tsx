@@ -1,7 +1,6 @@
 import type { Story } from '@storybook/react';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Label } from './Label';
 import { labelThemeBrand } from './theme';
 import type { LabelProps } from './types';

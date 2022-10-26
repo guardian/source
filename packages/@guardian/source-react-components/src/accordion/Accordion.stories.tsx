@@ -1,5 +1,4 @@
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { AccordionProps } from './Accordion';
 import { Accordion } from './Accordion';
 import { AccordionRow } from './AccordionRow';
