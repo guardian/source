@@ -47,7 +47,6 @@ const Template: Story<TextAreaProps> = (args: TextAreaProps) => {
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -55,7 +54,6 @@ export const WithRowsDefaultTheme = Template.bind({});
 WithRowsDefaultTheme.args = {
 	rows: 10,
 };
-asChromaticStory(WithRowsDefaultTheme);
 
 // *****************************************************************************
 
@@ -63,7 +61,6 @@ export const OptionalDefaultTheme = Template.bind({});
 OptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -71,7 +68,6 @@ export const VisuallyHideLabelDefaultTheme = Template.bind({});
 VisuallyHideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -80,7 +76,6 @@ SupportingTextDefaultTheme.args = {
 	supporting:
 		'Please keep comments respectful and abide by the community guidelines.',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -88,7 +83,6 @@ export const ErrorWithMessageDefaultTheme = Template.bind({});
 ErrorWithMessageDefaultTheme.args = {
 	error: 'error',
 };
-asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -96,7 +90,6 @@ export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
 	success: 'success',
 };
-asChromaticStory(SuccessWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -104,7 +97,6 @@ export const WithMaxLengthDefaultTheme = Template.bind({});
 WithMaxLengthDefaultTheme.args = {
 	maxLength: 10,
 };
-asChromaticStory(WithMaxLengthDefaultTheme);
 
 // *****************************************************************************
 
@@ -112,6 +104,5 @@ export const WithDefaultValue = Template.bind({});
 WithDefaultValue.args = {
 	value: 'This is a value passed in as a prop',
 };
-asChromaticStory(WithDefaultValue);
 
 // *****************************************************************************

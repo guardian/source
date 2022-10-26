@@ -25,7 +25,6 @@ const Template: Story<LabelProps> = (args: LabelProps) => (
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -33,7 +32,6 @@ export const WithSupportingTextDefaultTheme = Template.bind({});
 WithSupportingTextDefaultTheme.args = {
 	supporting: 'alex@example.com',
 };
-asChromaticStory(WithSupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -41,7 +39,6 @@ export const WithOptionalDefaultTheme = Template.bind({});
 WithOptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(WithOptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -49,7 +46,6 @@ export const WithHiddenLabelDefaultTheme = Template.bind({});
 WithHiddenLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(WithHiddenLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -60,7 +56,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -74,7 +69,6 @@ WithSupportingTextBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithSupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -88,7 +82,6 @@ WithOptionalBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithOptionalBrandTheme);
 
 // *****************************************************************************
 
@@ -102,4 +95,3 @@ WithHiddenLabelThemeBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithHiddenLabelThemeBrandTheme);

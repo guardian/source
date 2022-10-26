@@ -107,7 +107,6 @@ export const PrimaryLinkDefaultTheme = Template.bind({});
 PrimaryLinkDefaultTheme.args = {
 	icon: 'undefined',
 };
-asChromaticStory(PrimaryLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -121,7 +120,6 @@ PrimaryLinkBrandTheme.parameters = {
 	},
 	theme: linkThemeBrand,
 };
-asChromaticStory(PrimaryLinkBrandTheme);
 
 // *****************************************************************************
 
@@ -135,7 +133,6 @@ PrimaryLinkBrandAltTheme.parameters = {
 	},
 	theme: linkThemeBrandAlt,
 };
-asChromaticStory(PrimaryLinkBrandAltTheme);
 
 // *****************************************************************************
 
@@ -144,12 +141,10 @@ SecondaryLinkDefaultTheme.args = {
 	priority: 'secondary',
 	icon: 'undefined',
 };
-asChromaticStory(SecondaryLinkDefaultTheme);
 
 // *****************************************************************************
 
 export const PrimaryIconLinkDefaultTheme = Template.bind({});
-asChromaticStory(PrimaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -157,7 +152,6 @@ export const SecondaryIconLinkDefaultTheme = Template.bind({});
 SecondaryIconLinkDefaultTheme.args = {
 	priority: 'secondary',
 };
-asChromaticStory(SecondaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -165,7 +159,6 @@ export const RightIconLinkDefaultTheme = Template.bind({});
 RightIconLinkDefaultTheme.args = {
 	iconSide: 'right',
 };
-asChromaticStory(RightIconLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -175,8 +168,6 @@ UnderlineHoverHeadline.args = {
 	icon: 'undefined',
 };
 
-asChromaticStory(UnderlineHoverHeadline);
-
 // *****************************************************************************
 
 export const UnderlineHoverTextSans = UnderlineHoverTextSansTemplate.bind({});
@@ -184,5 +175,3 @@ export const UnderlineHoverTextSans = UnderlineHoverTextSansTemplate.bind({});
 UnderlineHoverTextSans.args = {
 	icon: 'undefined',
 };
-
-asChromaticStory(UnderlineHoverTextSans);

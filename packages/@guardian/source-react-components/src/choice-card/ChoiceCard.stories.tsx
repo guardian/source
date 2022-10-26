@@ -42,7 +42,6 @@ const Template: Story<ChoiceCardProps> = (args: ChoiceCardProps) => (
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -50,7 +49,6 @@ export const CheckedDefaultTheme = Template.bind({});
 CheckedDefaultTheme.args = {
 	checked: true,
 };
-asChromaticStory(CheckedDefaultTheme);
 
 // *****************************************************************************
 
@@ -58,7 +56,6 @@ export const ErrorDefaultTheme = Template.bind({});
 ErrorDefaultTheme.args = {
 	error: true,
 };
-asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -68,4 +65,3 @@ IconDefaultTheme.args = {
 	// @ts-expect-error - Storybook maps 'JSX element' to <em>Option 1</em>
 	icon: 'JSX element',
 };
-asChromaticStory(IconDefaultTheme);

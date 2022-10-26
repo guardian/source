@@ -21,7 +21,6 @@ export const ErrorOnly = Template.bind({});
 ErrorOnly.args = {
 	message: 'This is an example with an error message only',
 };
-asChromaticStory(ErrorOnly);
 
 // *****************************************************************************
 
@@ -33,7 +32,6 @@ ErrorOnlyAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(ErrorOnlyAsReactNode);
 
 // *****************************************************************************
 
@@ -42,7 +40,6 @@ WithContext.args = {
 	message: 'Here is an error',
 	context: 'This is some more information about this error message',
 };
-asChromaticStory(WithContext);
 
 // *****************************************************************************
 
@@ -55,7 +52,6 @@ WithContextAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(WithContextAsReactNode);
 
 // *****************************************************************************
 
@@ -65,4 +61,3 @@ WithReportLink.args = {
 	context: 'This is some more information about this error message',
 	errorReportUrl: 'https://www.theguardian.com/info/tech-feedback',
 };
-asChromaticStory(WithReportLink);

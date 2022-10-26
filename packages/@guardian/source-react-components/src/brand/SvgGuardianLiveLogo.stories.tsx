@@ -18,4 +18,3 @@ const Template: Story = (args: SvgGuardianLiveLogoProps) => (
 );
 
 export const Default = Template.bind({});
-asChromaticStory(Default);

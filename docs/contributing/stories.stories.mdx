@@ -85,7 +85,7 @@ export default {
 const Template: Story = (args: MyComponentProps) => <MyComponent {...args} />;
 
 export const Default = Template.bind({});
-asChromaticStory(Default);
+
 
 // *****************************************************************************
 
@@ -99,7 +99,7 @@ DefaultBrandTheme.parameters = {
 		default: 'brandBackground.primary',
 	},
 };
-asChromaticStory(DefaultBrandTheme);
+
 
 // *****************************************************************************
 
@@ -107,7 +107,7 @@ export const HideLabel = Template.bind({});
 HideLabel.args = {
 	hideLabel: true,
 };
-asChromaticStory(HideLabel);
+
 
 // *****************************************************************************
 
@@ -124,7 +124,7 @@ HideLabelBrandTheme.parameters = {
 		default: 'brandBackground.primary',
 	},
 };
-asChromaticStory(HideLabelBrandTheme);
+
 ```
 
 ### Files and Naming

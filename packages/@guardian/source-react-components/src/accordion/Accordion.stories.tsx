@@ -28,7 +28,6 @@ const Template: Story<AccordionProps> = (args: AccordionProps) => (
 );
 
 export const WithCTALabelsDefaultTheme = Template.bind({});
-asChromaticStory(WithCTALabelsDefaultTheme);
 
 // *****************************************************************************
 
@@ -36,4 +35,3 @@ export const WithoutCTALabelsDefaultTheme = Template.bind({});
 WithoutCTALabelsDefaultTheme.args = {
 	hideToggleLabel: true,
 };
-asChromaticStory(WithoutCTALabelsDefaultTheme);

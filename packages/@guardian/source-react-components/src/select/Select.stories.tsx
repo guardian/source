@@ -48,7 +48,6 @@ const Template: Story<SelectProps> = (args: SelectProps) => (
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -56,7 +55,6 @@ export const VisuallyHideLabelDefaultTheme = Template.bind({});
 VisuallyHideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -64,7 +62,6 @@ export const OptionalDefaultTheme = Template.bind({});
 OptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -72,7 +69,6 @@ export const ErrorWithMessageDefaultTheme = Template.bind({});
 ErrorWithMessageDefaultTheme.args = {
 	error: 'error',
 };
-asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -80,7 +76,6 @@ export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
 	success: 'success',
 };
-asChromaticStory(SuccessWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -88,6 +83,5 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Leave blank if you are not within the US',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************

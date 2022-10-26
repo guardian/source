@@ -60,7 +60,6 @@ News.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
-asChromaticStory(News);
 
 // *****************************************************************************
 
@@ -70,7 +69,6 @@ Sport.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Sport
 	format: 'sport',
 };
-asChromaticStory(Sport);
 
 // *****************************************************************************
 
@@ -80,7 +78,6 @@ Culture.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Culture
 	format: 'culture',
 };
-asChromaticStory(Culture);
 
 // *****************************************************************************
 
@@ -90,7 +87,6 @@ Lifestyle.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Lifestyle
 	format: 'lifestyle',
 };
-asChromaticStory(Lifestyle);
 
 // *****************************************************************************
 
@@ -100,7 +96,6 @@ Opinion.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Opinion
 	format: 'opinion',
 };
-asChromaticStory(Opinion);
 
 // *****************************************************************************
 
@@ -110,7 +105,6 @@ SpecialReport.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.SpecialReport
 	format: 'special_report',
 };
-asChromaticStory(SpecialReport);
 
 // *****************************************************************************
 
@@ -120,7 +114,6 @@ Labs.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.Labs
 	format: 'labs',
 };
-asChromaticStory(Labs);
 
 // *****************************************************************************
 
@@ -130,7 +123,6 @@ XSmall.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
-asChromaticStory(XSmall);
 
 // *****************************************************************************
 
@@ -140,7 +132,6 @@ Small.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
-asChromaticStory(Small);
 
 // *****************************************************************************
 
@@ -150,7 +141,6 @@ Medium.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
-asChromaticStory(Medium);
 
 // *****************************************************************************
 
@@ -160,4 +150,3 @@ Large.args = {
 	// @ts-expect-error - Storybook maps 'news' to ArticlePillar.News
 	format: 'news',
 };
-asChromaticStory(Large);

@@ -41,7 +41,6 @@ const Template: Story<LegendProps> = (args: LegendProps) => (
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -49,7 +48,6 @@ export const WithSupportingTextDefaultTheme = Template.bind({});
 WithSupportingTextDefaultTheme.args = {
 	supporting: 'text',
 };
-asChromaticStory(WithSupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -57,7 +55,6 @@ export const WithSupportingComponentDefaultTheme = Template.bind({});
 WithSupportingComponentDefaultTheme.args = {
 	supporting: 'component',
 };
-asChromaticStory(WithSupportingComponentDefaultTheme);
 
 // *****************************************************************************
 
@@ -65,7 +62,6 @@ export const WithOptionalDefaultTheme = Template.bind({});
 WithOptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(WithOptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -73,7 +69,6 @@ export const WithHiddenLabelDefaultTheme = Template.bind({});
 WithHiddenLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(WithHiddenLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -84,7 +79,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -98,7 +92,6 @@ WithSupportingTextBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithSupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -112,7 +105,6 @@ WithSupportingComponentBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithSupportingComponentBrandTheme);
 
 // *****************************************************************************
 
@@ -126,7 +118,6 @@ WithOptionalBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithOptionalBrandTheme);
 
 // *****************************************************************************
 
@@ -140,6 +131,5 @@ WithHiddenLabelBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithHiddenLabelBrandTheme);
 
 // *****************************************************************************

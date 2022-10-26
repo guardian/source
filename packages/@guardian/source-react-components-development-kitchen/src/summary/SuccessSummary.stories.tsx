@@ -20,7 +20,6 @@ export const SuccessOnly = Template.bind({});
 SuccessOnly.args = {
 	message: 'This is an example with a success message only',
 };
-asChromaticStory(SuccessOnly);
 
 export const SuccessOnlyAsReactNode = Template.bind({});
 SuccessOnlyAsReactNode.args = {
@@ -30,7 +29,6 @@ SuccessOnlyAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(SuccessOnlyAsReactNode);
 
 // *****************************************************************************
 
@@ -39,7 +37,6 @@ WithContext.args = {
 	message: 'It was successful',
 	context: 'This is some more information about this success message',
 };
-asChromaticStory(WithContext);
 
 // *****************************************************************************
 
@@ -52,4 +49,3 @@ WithContextAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(WithContextAsReactNode);

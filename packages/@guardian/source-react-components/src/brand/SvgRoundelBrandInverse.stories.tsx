@@ -18,4 +18,3 @@ const Template: Story = (args: SvgRoundelBrandInverseProps) => (
 );
 
 export const Default = Template.bind({});
-asChromaticStory(Default);

@@ -49,7 +49,6 @@ const Template: Story = (args: RadioGroupProps) => (
 );
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -60,7 +59,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: radioThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -68,7 +66,6 @@ export const HorizontalDefaultTheme = Template.bind({});
 HorizontalDefaultTheme.args = {
 	orientation: 'horizontal',
 };
-asChromaticStory(HorizontalDefaultTheme);
 
 // *****************************************************************************
 
@@ -76,7 +73,6 @@ export const VisuallyHideLegendDefaultTheme = Template.bind({});
 VisuallyHideLegendDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLegendDefaultTheme);
 
 // *****************************************************************************
 
@@ -84,7 +80,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'You can always change it later',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -98,7 +93,6 @@ SupportingTextBrandTheme.parameters = {
 SupportingTextBrandTheme.args = {
 	supporting: 'You can always change it later',
 };
-asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -106,7 +100,6 @@ export const SupportingMediaDefaultTheme = Template.bind({});
 SupportingMediaDefaultTheme.args = {
 	supporting: <Image />,
 };
-asChromaticStory(SupportingMediaDefaultTheme);
 
 // *****************************************************************************
 
@@ -114,7 +107,6 @@ export const ErrorDefaultTheme = Template.bind({});
 ErrorDefaultTheme.args = {
 	error: 'The selected colour is out of stock',
 };
-asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -128,7 +120,6 @@ ErrorBrandTheme.parameters = {
 	},
 	theme: radioThemeBrand,
 };
-asChromaticStory(ErrorBrandTheme);
 
 // *****************************************************************************
 
@@ -137,4 +128,3 @@ SupportingMediaWithErrorDefaultTheme.args = {
 	error: 'Please select a colour',
 	supporting: <Image />,
 };
-asChromaticStory(SupportingMediaWithErrorDefaultTheme);

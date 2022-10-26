@@ -30,7 +30,6 @@ const Template: Story = (args: DividerProps) => (
 );
 
 export const DefaultDivider = Template.bind({});
-asChromaticStory(DefaultDivider);
 
 // *****************************************************************************
 
@@ -38,7 +37,6 @@ export const TightDivider = Template.bind({});
 TightDivider.args = {
 	spaceAbove: 'tight',
 };
-asChromaticStory(TightDivider);
 
 // *****************************************************************************
 
@@ -46,7 +44,6 @@ export const FullDivider = Template.bind({});
 FullDivider.args = {
 	size: 'full',
 };
-asChromaticStory(FullDivider);
 
 // *****************************************************************************
 
@@ -54,4 +51,3 @@ export const TextDivider = Template.bind({});
 TextDivider.args = {
 	displayText: 'I am centred',
 };
-asChromaticStory(TextDivider);

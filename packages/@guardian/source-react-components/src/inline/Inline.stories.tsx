@@ -21,7 +21,6 @@ const Template: Story = (args: InlineProps) => (
 );
 
 export const NoSpace = Template.bind({});
-asChromaticStory(NoSpace);
 
 // *****************************************************************************
 
@@ -29,7 +28,6 @@ export const Space1 = Template.bind({});
 Space1.args = {
 	space: 1,
 };
-asChromaticStory(Space1);
 
 // *****************************************************************************
 
@@ -37,7 +35,6 @@ export const Space2 = Template.bind({});
 Space2.args = {
 	space: 2,
 };
-asChromaticStory(Space2);
 
 // *****************************************************************************
 
@@ -45,7 +42,6 @@ export const Space3 = Template.bind({});
 Space3.args = {
 	space: 3,
 };
-asChromaticStory(Space3);
 
 // *****************************************************************************
 
@@ -53,7 +49,6 @@ export const Space4 = Template.bind({});
 Space4.args = {
 	space: 4,
 };
-asChromaticStory(Space4);
 
 // *****************************************************************************
 
@@ -61,7 +56,6 @@ export const Space5 = Template.bind({});
 Space5.args = {
 	space: 5,
 };
-asChromaticStory(Space5);
 
 // *****************************************************************************
 
@@ -69,7 +63,6 @@ export const Space6 = Template.bind({});
 Space6.args = {
 	space: 6,
 };
-asChromaticStory(Space6);
 
 // *****************************************************************************
 
@@ -77,7 +70,6 @@ export const Space9 = Template.bind({});
 Space9.args = {
 	space: 9,
 };
-asChromaticStory(Space9);
 
 // *****************************************************************************
 
@@ -85,7 +77,6 @@ export const Space12 = Template.bind({});
 Space12.args = {
 	space: 12,
 };
-asChromaticStory(Space12);
 
 // *****************************************************************************
 
@@ -93,7 +84,6 @@ export const Space24 = Template.bind({});
 Space24.args = {
 	space: 24,
 };
-asChromaticStory(Space24);
 
 // *****************************************************************************
 
@@ -122,4 +112,3 @@ LotsOfItems.args = {
 		<div key={20}>[Item 20]</div>,
 	],
 };
-asChromaticStory(LotsOfItems);

@@ -32,7 +32,6 @@ export const PrimaryButtonLinkDefaultTheme = Template.bind({});
 PrimaryButtonLinkDefaultTheme.args = {
 	icon: 'undefined',
 };
-asChromaticStory(PrimaryButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -41,12 +40,10 @@ SecondaryButtonLinkDefaultTheme.args = {
 	priority: 'secondary',
 	icon: 'undefined',
 };
-asChromaticStory(SecondaryButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
 export const PrimaryIconButtonLinkDefaultTheme = Template.bind({});
-asChromaticStory(PrimaryIconButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -54,7 +51,6 @@ export const SecondaryIconButtonLinkDefaultTheme = Template.bind({});
 SecondaryIconButtonLinkDefaultTheme.args = {
 	priority: 'secondary',
 };
-asChromaticStory(SecondaryIconButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -62,6 +58,5 @@ export const RightIconButtonLinkDefaultTheme = Template.bind({});
 RightIconButtonLinkDefaultTheme.args = {
 	iconSide: 'right',
 };
-asChromaticStory(RightIconButtonLinkDefaultTheme);
 
 // *****************************************************************************

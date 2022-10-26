@@ -48,7 +48,6 @@ const Template: Story<NumericInputProps> = (args: NumericInputProps) => {
 };
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -56,7 +55,6 @@ export const OptionalDefaultTheme = Template.bind({});
 OptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -64,7 +62,6 @@ export const HideLabelDefaultTheme = Template.bind({});
 HideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(HideLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -72,7 +69,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Must be between 6 and 8 digits long',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -81,7 +77,6 @@ Width30DefaultTheme.args = {
 	width: 30,
 	label: 'Card number',
 };
-asChromaticStory(Width30DefaultTheme);
 
 // *****************************************************************************
 
@@ -90,7 +85,6 @@ Width10DefaultTheme.args = {
 	width: 10,
 	label: 'Sort code',
 };
-asChromaticStory(Width10DefaultTheme);
 
 // *****************************************************************************
 
@@ -99,7 +93,6 @@ Width4DefaultTheme.args = {
 	width: 4,
 	label: 'Year of birth',
 };
-asChromaticStory(Width4DefaultTheme);
 
 // *****************************************************************************
 
@@ -107,7 +100,6 @@ export const ErrorWithMessageDefaultTheme = Template.bind({});
 ErrorWithMessageDefaultTheme.args = {
 	error: 'error',
 };
-asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -115,7 +107,6 @@ export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
 	success: 'success',
 };
-asChromaticStory(SuccessWithMessageDefaultTheme);
 
 // *****************************************************************************
 export const WithPrefix = Template.bind({});
@@ -123,7 +114,6 @@ WithPrefix.args = {
 	prefixText: '£',
 	label: 'Contribution amount',
 };
-asChromaticStory(WithPrefix);
 
 // *****************************************************************************
 export const WithSuffix = Template.bind({});
@@ -131,7 +121,6 @@ WithSuffix.args = {
 	suffixText: 'kr.',
 	label: 'Contribution amount',
 };
-asChromaticStory(WithSuffix);
 
 // *****************************************************************************
 export const WithPrefixAndSuffix = Template.bind({});
@@ -141,4 +130,3 @@ WithPrefixAndSuffix.args = {
 	label: 'Contribution amount',
 	supporting: 'Will be charged monthly starting from today',
 };
-asChromaticStory(WithPrefixAndSuffix);

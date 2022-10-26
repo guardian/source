@@ -29,7 +29,6 @@ const Template: Story<CheckboxProps> = (args: CheckboxProps) => {
 };
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -40,7 +39,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: checkboxThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -48,7 +46,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Supporting text',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -62,7 +59,6 @@ SupportingTextBrandTheme.parameters = {
 SupportingTextBrandTheme.args = {
 	supporting: 'Supporting text',
 };
-asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -71,7 +67,6 @@ SupportingTextOnlyDefaultTheme.args = {
 	label: null,
 	supporting: 'Supporting text',
 };
-asChromaticStory(SupportingTextOnlyDefaultTheme);
 
 // *****************************************************************************
 
@@ -86,7 +81,6 @@ SupportingTextOnlyBrandTheme.args = {
 	label: null,
 	supporting: 'Supporting text',
 };
-asChromaticStory(SupportingTextOnlyBrandTheme);
 
 // *****************************************************************************
 
@@ -95,7 +89,6 @@ IndeterminateDefaultTheme.args = {
 	checked: undefined,
 	indeterminate: true,
 };
-asChromaticStory(IndeterminateDefaultTheme);
 
 // *****************************************************************************
 
@@ -109,7 +102,6 @@ IndeterminateBrandTheme.parameters = {
 IndeterminateBrandTheme.args = {
 	indeterminate: true,
 };
-asChromaticStory(IndeterminateBrandTheme);
 
 // *****************************************************************************
 
@@ -118,4 +110,3 @@ UnlabelledDefaultTheme.args = {
 	label: null,
 	'aria-label': 'Checkbox',
 };
-asChromaticStory(UnlabelledDefaultTheme);

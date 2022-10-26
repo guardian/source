@@ -30,7 +30,6 @@ const Template: Story = (args: ContainerProps) => (
 );
 
 export const Default = Template.bind({});
-asChromaticStory(Default);
 
 // *****************************************************************************
 
@@ -38,7 +37,6 @@ export const WithSideBorders = Template.bind({});
 WithSideBorders.args = {
 	sideBorders: true,
 };
-asChromaticStory(WithSideBorders);
 
 // *****************************************************************************
 
@@ -46,7 +44,6 @@ export const WithTopBorder = Template.bind({});
 WithTopBorder.args = {
 	topBorder: true,
 };
-asChromaticStory(WithTopBorder);
 
 // *****************************************************************************
 
@@ -56,7 +53,6 @@ WithBorderColour.args = {
 	topBorder: true,
 	borderColor: 'red',
 };
-asChromaticStory(WithBorderColour);
 
 // *****************************************************************************
 
@@ -64,7 +60,6 @@ export const WithBackgroundColour = Template.bind({});
 WithBackgroundColour.args = {
 	backgroundColor: 'red',
 };
-asChromaticStory(WithBackgroundColour);
 
 // *****************************************************************************
 
@@ -72,6 +67,5 @@ export const WithAsideElement = Template.bind({});
 WithAsideElement.args = {
 	element: 'aside',
 };
-asChromaticStory(WithAsideElement);
 
 // *****************************************************************************

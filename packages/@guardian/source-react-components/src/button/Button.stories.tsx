@@ -55,7 +55,6 @@ const createStory = (args: Partial<ButtonProps>, parameters: Parameters) => {
 
 	story.parameters = parameters;
 	story.args = args;
-	asChromaticStory(story);
 
 	return story;
 };
@@ -149,7 +148,6 @@ export const [
 // *****************************************************************************
 
 export const DefaultSizeDefaultTheme = Template.bind({});
-asChromaticStory(DefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -157,7 +155,6 @@ export const SmallSizeDefaultTheme = Template.bind({});
 SmallSizeDefaultTheme.args = {
 	size: 'small',
 };
-asChromaticStory(SmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -165,7 +162,6 @@ export const XSmallSizeDefaultTheme = Template.bind({});
 XSmallSizeDefaultTheme.args = {
 	size: 'xsmall',
 };
-asChromaticStory(XSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -175,7 +171,6 @@ TextAndIconLeftDefaultSizeDefaultTheme.args = {
 	icon: 'cross',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -186,7 +181,6 @@ TextAndIconRightDefaultSizeDefaultTheme.args = {
 	iconSide: 'right',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -197,7 +191,6 @@ TextAndIconLeftSmallSizeDefaultTheme.args = {
 	size: 'small',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -209,7 +202,6 @@ TextAndIconRightSmallSizeDefaultTheme.args = {
 	size: 'small',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -220,7 +212,6 @@ TextAndIconLeftXSmallSizeDefaultTheme.args = {
 	size: 'xsmall',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -232,7 +223,6 @@ TextAndIconRightXSmallSizeDefaultTheme.args = {
 	size: 'xsmall',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -243,7 +233,6 @@ IconOnlyDefaultSizeDefaultTheme.args = {
 	hideLabel: true,
 	children: 'Close subscription banner',
 };
-asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -255,7 +244,6 @@ IconOnlySmallSizeDefaultTheme.args = {
 	size: 'small',
 	children: 'Close subscription banner',
 };
-asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -267,7 +255,6 @@ IconOnlyXSmallSizeDefaultTheme.args = {
 	size: 'xsmall',
 	children: 'Close subscription banner',
 };
-asChromaticStory(IconOnlyXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -275,7 +262,6 @@ export const IsLoadingPrimary = Template.bind({});
 IsLoadingPrimary.args = {
 	isLoading: true,
 };
-asChromaticStory(IsLoadingPrimary);
 
 // *****************************************************************************
 
@@ -284,7 +270,6 @@ IsLoadingPrimarySmall.args = {
 	isLoading: true,
 	size: 'small',
 };
-asChromaticStory(IsLoadingPrimarySmall);
 
 // *****************************************************************************
 
@@ -293,7 +278,6 @@ IsLoadingPrimaryXSmall.args = {
 	isLoading: true,
 	size: 'xsmall',
 };
-asChromaticStory(IsLoadingPrimaryXSmall);
 
 // *****************************************************************************
 
@@ -302,7 +286,6 @@ IsLoadingSecondary.args = {
 	isLoading: true,
 	priority: 'secondary',
 };
-asChromaticStory(IsLoadingSecondary);
 
 // *****************************************************************************
 
@@ -311,7 +294,6 @@ IsLoadingTertiary.args = {
 	isLoading: true,
 	priority: 'tertiary',
 };
-asChromaticStory(IsLoadingTertiary);
 
 // *****************************************************************************
 
@@ -320,7 +302,6 @@ IsLoadingSubdued.args = {
 	isLoading: true,
 	priority: 'subdued',
 };
-asChromaticStory(IsLoadingSubdued);
 
 // *****************************************************************************
 
@@ -329,7 +310,6 @@ IsLoadingIconSideRight.args = {
 	isLoading: true,
 	iconSide: 'right',
 };
-asChromaticStory(IsLoadingIconSideRight);
 
 // *****************************************************************************
 
@@ -338,7 +318,6 @@ IsLoadingDisabled.args = {
 	isLoading: true,
 	disabled: true,
 };
-asChromaticStory(IsLoadingDisabled);
 
 // *****************************************************************************
 
@@ -347,4 +326,3 @@ IsLoadingLabelHidden.args = {
 	isLoading: true,
 	hideLabel: true,
 };
-asChromaticStory(IsLoadingLabelHidden);

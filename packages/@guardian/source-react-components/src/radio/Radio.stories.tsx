@@ -36,7 +36,6 @@ export default {
 const Template: Story = (args: RadioProps) => <Radio {...args} />;
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -47,7 +46,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: radioThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -55,7 +53,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -69,7 +66,6 @@ SupportingTextBrandTheme.parameters = {
 SupportingTextBrandTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 };
-asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -78,7 +74,6 @@ SupportingTextOnlyDefaultTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 	label: null,
 };
-asChromaticStory(SupportingTextOnlyDefaultTheme);
 
 // *****************************************************************************
 
@@ -93,7 +88,6 @@ SupportingTextOnlyBrandTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 	label: null,
 };
-asChromaticStory(SupportingTextOnlyBrandTheme);
 
 // *****************************************************************************
 
@@ -101,4 +95,3 @@ export const UnlabelledDefaultTheme = Template.bind({});
 UnlabelledDefaultTheme.args = {
 	label: undefined,
 };
-asChromaticStory(UnlabelledDefaultTheme);

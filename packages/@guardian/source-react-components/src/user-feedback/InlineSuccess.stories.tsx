@@ -14,7 +14,6 @@ const Template: Story<UserFeedbackProps> = (args: UserFeedbackProps) => (
 );
 
 export const InlineSuccessDefaultTheme = Template.bind({});
-asChromaticStory(InlineSuccessDefaultTheme);
 
 // *****************************************************************************
 
@@ -25,4 +24,3 @@ InlineSuccessBrandTheme.parameters = {
 	},
 	theme: userFeedbackThemeBrand,
 };
-asChromaticStory(InlineSuccessBrandTheme);

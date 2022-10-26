@@ -273,7 +273,6 @@ XsmallIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(XsmallIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -283,7 +282,6 @@ SmallIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(SmallIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -293,7 +291,6 @@ MediumIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(MediumIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -321,7 +318,6 @@ MediumIconsBrandTheme.decorators = [
 		</div>
 	),
 ];
-asChromaticStory(MediumIconsBrandTheme);
 
 // *****************************************************************************
 
@@ -331,7 +327,6 @@ PaymentIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(paymentIcons),
 };
-asChromaticStory(PaymentIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -341,4 +336,3 @@ WidePaymentIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(widePaymentIcons),
 };
-asChromaticStory(WidePaymentIconsDefaultTheme);

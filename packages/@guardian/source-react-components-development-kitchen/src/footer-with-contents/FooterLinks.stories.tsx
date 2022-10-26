@@ -18,7 +18,6 @@ const Template: Story<FooterLinksProps> = (args: FooterLinksProps) => (
 // *****************************************************************************
 
 export const DefaultFooterLinks = Template.bind({});
-asChromaticStory(DefaultFooterLinks);
 
 // *****************************************************************************
 
@@ -32,4 +31,3 @@ FooterLinksInColumns.args = {
 		},
 	],
 };
-asChromaticStory(FooterLinksInColumns);

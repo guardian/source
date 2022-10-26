@@ -20,7 +20,6 @@ export const InfoOnly = Template.bind({});
 InfoOnly.args = {
 	message: 'This is an example with a info message only',
 };
-asChromaticStory(InfoOnly);
 
 // *****************************************************************************
 
@@ -32,7 +31,6 @@ InfoOnlyAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(InfoOnlyAsReactNode);
 
 // *****************************************************************************
 
@@ -41,7 +39,6 @@ WithContext.args = {
 	message: 'It was insightful',
 	context: 'This is some more information about this info message',
 };
-asChromaticStory(WithContext);
 
 // *****************************************************************************
 
@@ -54,4 +51,3 @@ WithContextAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(WithContextAsReactNode);

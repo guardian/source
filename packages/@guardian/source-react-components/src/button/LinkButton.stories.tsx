@@ -54,7 +54,6 @@ export const [
 	story.args = {
 		priority,
 	};
-	asChromaticStory(story);
 
 	return story;
 });
@@ -66,7 +65,6 @@ TextAndIconLeftDefaultSizeDefaultTheme.args = {
 	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 };
-asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -76,7 +74,6 @@ TextAndIconRightDefaultSizeDefaultTheme.args = {
 	icon: 'arrow',
 	iconSide: 'right',
 };
-asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -86,7 +83,6 @@ TextAndIconLeftSmallSizeDefaultTheme.args = {
 	icon: 'arrow',
 	size: 'small',
 };
-asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -97,7 +93,6 @@ TextAndIconRightSmallSizeDefaultTheme.args = {
 	iconSide: 'right',
 	size: 'small',
 };
-asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -107,7 +102,6 @@ TextAndIconLeftXSmallSizeDefaultTheme.args = {
 	icon: 'arrow',
 	size: 'xsmall',
 };
-asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -118,7 +112,6 @@ TextAndIconRightXSmallSizeDefaultTheme.args = {
 	iconSide: 'right',
 	size: 'xsmall',
 };
-asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -128,7 +121,6 @@ TextAndIconLeftWithNudgeDefaultTheme.args = {
 	icon: 'arrow',
 	nudgeIcon: true,
 };
-asChromaticStory(TextAndIconLeftWithNudgeDefaultTheme);
 
 // *****************************************************************************
 
@@ -139,7 +131,6 @@ TextAndIconRightWithNudgeDefaultTheme.args = {
 	iconSide: 'right',
 	nudgeIcon: true,
 };
-asChromaticStory(TextAndIconRightWithNudgeDefaultTheme);
 
 // *****************************************************************************
 
@@ -149,7 +140,6 @@ IconOnlyDefaultSizeDefaultTheme.args = {
 	icon: 'arrow',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -160,7 +150,6 @@ IconOnlySmallSizeDefaultTheme.args = {
 	size: 'small',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -171,4 +160,3 @@ IconOnlyXSmallSizeDefaultTheme.args = {
 	size: 'xsmall',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlyXSmallSizeDefaultTheme);

@@ -107,7 +107,6 @@ const Template: Story<ToggleSwitchProps> = (args: ToggleSwitchProps) => {
 };
 
 export const WithNoLabel = Template.bind({});
-asChromaticStory(WithNoLabel);
 
 // *****************************************************************************
 
@@ -115,7 +114,6 @@ export const WithLabel = Template.bind({});
 WithLabel.args = {
 	label: 'Get alerts on this story',
 };
-asChromaticStory(WithLabel);
 
 // *****************************************************************************
 
@@ -124,7 +122,6 @@ WithLabelLeft.args = {
 	label: 'Get alerts on this story',
 	labelPosition: 'left',
 };
-asChromaticStory(WithLabelLeft);
 
 // *****************************************************************************
 
@@ -133,7 +130,6 @@ WithBorder.args = {
 	label: 'Get alerts on this story',
 	labelBorder: true,
 };
-asChromaticStory(WithBorder);
 
 // *****************************************************************************
 
@@ -141,7 +137,6 @@ export const WithFormat = PillarsTemplate.bind({});
 WithFormat.args = {
 	label: 'Get alerts on this story',
 };
-asChromaticStory(WithFormat);
 
 // *****************************************************************************
 
@@ -150,7 +145,6 @@ WithMediumFont.args = {
 	label: 'Get alerts on this story',
 	fontSize: 'medium',
 };
-asChromaticStory(WithMediumFont);
 
 // *****************************************************************************
 
@@ -159,7 +153,6 @@ WithBoldFont.args = {
 	label: 'Get alerts on this story',
 	fontWeight: 'bold',
 };
-asChromaticStory(WithBoldFont);
 
 // *****************************************************************************
 
@@ -169,7 +162,6 @@ WithBoldMediumFont.args = {
 	fontWeight: 'bold',
 	fontSize: 'medium',
 };
-asChromaticStory(WithBoldMediumFont);
 
 // *****************************************************************************
 
@@ -179,7 +171,6 @@ WithMediumFontAndBorder.args = {
 	fontSize: 'medium',
 	labelBorder: true,
 };
-asChromaticStory(WithMediumFontAndBorder);
 
 // *****************************************************************************
 
@@ -190,4 +181,3 @@ WithBoldMediumFontAndBorder.args = {
 	fontSize: 'medium',
 	labelBorder: true,
 };
-asChromaticStory(WithBoldMediumFontAndBorder);

@@ -36,7 +36,6 @@ const Template: Story<CheckboxGroupProps> = (args: CheckboxGroupProps) => {
 };
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -47,7 +46,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: checkboxThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -55,7 +53,6 @@ export const VisuallyHideLegendDefaultTheme = Template.bind({});
 VisuallyHideLegendDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLegendDefaultTheme);
 
 // *****************************************************************************
 
@@ -69,7 +66,6 @@ VisuallyHideLegendBrandTheme.parameters = {
 VisuallyHideLegendBrandTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLegendBrandTheme);
 
 // *****************************************************************************
 
@@ -77,7 +73,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Pick the issues and topics that interest you',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -91,7 +86,6 @@ SupportingTextBrandTheme.parameters = {
 SupportingTextBrandTheme.args = {
 	supporting: 'Pick the issues and topics that interest you',
 };
-asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -99,7 +93,6 @@ export const ErrorDefaultTheme = Template.bind({});
 ErrorDefaultTheme.args = {
 	error: 'This newsletter is not available in your region',
 };
-asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -113,4 +106,3 @@ ErrorBrandTheme.parameters = {
 ErrorBrandTheme.args = {
 	error: 'This newsletter is not available in your region',
 };
-asChromaticStory(ErrorBrandTheme);

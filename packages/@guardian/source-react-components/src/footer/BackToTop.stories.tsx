@@ -10,4 +10,3 @@ export default {
 const Template: Story = () => BackToTop;
 
 export const Default = Template.bind({});
-asChromaticStory(Default);

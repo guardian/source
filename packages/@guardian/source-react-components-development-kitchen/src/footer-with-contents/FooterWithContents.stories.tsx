@@ -26,7 +26,6 @@ export const DefaultFooterWithContents = Template.bind({});
 DefaultFooterWithContents.args = {
 	children: <DefaultFooterLinks />,
 };
-asChromaticStory(DefaultFooterWithContents);
 
 // *****************************************************************************
 
@@ -34,4 +33,3 @@ export const FooterWithColumnLinks = Template.bind({});
 FooterWithColumnLinks.args = {
 	children: <FooterLinksInColumns {...FooterLinksInColumns.args} />,
 };
-asChromaticStory(DefaultFooterWithContents);

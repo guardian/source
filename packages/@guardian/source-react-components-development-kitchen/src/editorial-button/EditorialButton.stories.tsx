@@ -112,7 +112,6 @@ WhenPrimary.args = {
 	priority: 'primary',
 	size: 'small',
 };
-asChromaticStory(WhenPrimary);
 
 // *****************************************************************************
 
@@ -121,7 +120,6 @@ WhenSecondary.args = {
 	priority: 'secondary',
 	size: 'small',
 };
-asChromaticStory(WhenSecondary);
 
 // *****************************************************************************
 
@@ -130,7 +128,6 @@ WhenTertiary.args = {
 	priority: 'tertiary',
 	size: 'small',
 };
-asChromaticStory(WhenTertiary);
 
 // *****************************************************************************
 
@@ -139,7 +136,6 @@ WhenSubdued.args = {
 	priority: 'subdued',
 	size: 'small',
 };
-asChromaticStory(WhenSubdued);
 
 // *****************************************************************************
 
@@ -149,10 +145,8 @@ WithOverrides.args = {
 		background-color: pink;
 	`,
 };
-asChromaticStory(WithOverrides);
 
 // *****************************************************************************
 
 export const WithDefaults = Template.bind({});
 WithDefaults.args = {};
-asChromaticStory(WithDefaults);
