@@ -1,5 +1,5 @@
+import { breakpoints } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { InlineError } from './InlineError';
 import { userFeedbackThemeBrand } from './theme';
 import type { UserFeedbackProps } from './types';
@@ -17,7 +17,6 @@ const Template: Story<UserFeedbackProps> = ({
 );
 
 export const InlineErrorDefaultTheme = Template.bind({});
-asChromaticStory(InlineErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -28,18 +27,18 @@ InlineErrorBrandTheme.parameters = {
 	},
 	theme: userFeedbackThemeBrand,
 };
-asChromaticStory(InlineErrorBrandTheme);
 
 // *****************************************************************************
 
 export const LongInlineErrorDefaultThemeMobile = Template.bind({});
 LongInlineErrorDefaultThemeMobile.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
 LongInlineErrorDefaultThemeMobile.args = {
 	children: 'Please pick a date in the future, but not a leap year',
 };
-
-asChromaticStory(LongInlineErrorDefaultThemeMobile);
 
 // *****************************************************************************

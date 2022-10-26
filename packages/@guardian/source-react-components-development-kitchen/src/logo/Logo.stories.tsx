@@ -1,5 +1,5 @@
+import { breakpoints } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Logo } from './Logo';
 
 export default {
@@ -32,8 +32,10 @@ Desktop.parameters = {
 	viewport: {
 		defaultViewport: 'desktop',
 	},
+	chromatic: {
+		viewports: [breakpoints.desktop],
+	},
 };
-asChromaticStory(Desktop);
 
 // *****************************************************************************
 
@@ -42,8 +44,10 @@ Tablet.parameters = {
 	viewport: {
 		defaultViewport: 'tablet',
 	},
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(Tablet);
 
 // *****************************************************************************
 
@@ -52,8 +56,10 @@ MobileMedium.parameters = {
 	viewport: {
 		defaultViewport: 'mobileMedium',
 	},
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
-asChromaticStory(MobileMedium);
 
 // *****************************************************************************
 
@@ -62,7 +68,9 @@ Mobile.parameters = {
 	viewport: {
 		defaultViewport: 'mobile',
 	},
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(Mobile);
 
 // *****************************************************************************

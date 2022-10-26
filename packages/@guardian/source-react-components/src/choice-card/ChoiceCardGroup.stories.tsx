@@ -1,6 +1,6 @@
+import { breakpoints } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { ChoiceCard } from './ChoiceCard';
 import ChoiceCardStories from './ChoiceCard.stories';
 import { ChoiceCardGroup } from './ChoiceCardGroup';
@@ -81,7 +81,6 @@ DefaultDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 };
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -92,8 +91,10 @@ DefaultMobileDefaultTheme.args = {
 };
 DefaultMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
-asChromaticStory(DefaultMobileDefaultTheme);
 
 // *****************************************************************************
 
@@ -104,8 +105,10 @@ DefaultTabletDefaultTheme.args = {
 };
 DefaultTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(DefaultTabletDefaultTheme);
 
 // *****************************************************************************
 
@@ -115,7 +118,6 @@ DefaultIn2ColumnsDefaultTheme.args = {
 	supporting: undefined,
 	columns: 2,
 };
-asChromaticStory(DefaultIn2ColumnsDefaultTheme);
 
 // *****************************************************************************
 
@@ -125,7 +127,6 @@ DefaultIn3ColumnsDefaultTheme.args = {
 	supporting: undefined,
 	columns: 3,
 };
-asChromaticStory(DefaultIn3ColumnsDefaultTheme);
 
 // *****************************************************************************
 
@@ -135,7 +136,6 @@ DefaultIn4ColumnsDefaultTheme.args = {
 	supporting: undefined,
 	columns: 4,
 };
-asChromaticStory(DefaultIn4ColumnsDefaultTheme);
 
 // *****************************************************************************
 
@@ -145,18 +145,15 @@ DefaultIn5ColumnsDefaultTheme.args = {
 	supporting: undefined,
 	columns: 5,
 };
-asChromaticStory(DefaultIn5ColumnsDefaultTheme);
 
 // *****************************************************************************
 
 export const WithLabelDefaultTheme = Template.bind({});
 WithLabelDefaultTheme.args = { supporting: undefined };
-asChromaticStory(WithLabelDefaultTheme);
 
 // *****************************************************************************
 
 export const WithSupportingDefaultTheme = Template.bind({});
-asChromaticStory(WithSupportingDefaultTheme);
 
 // *****************************************************************************
 
@@ -166,7 +163,6 @@ WithErrorDefaultTheme.args = {
 	label: undefined,
 	supporting: undefined,
 };
-asChromaticStory(WithErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -175,7 +171,6 @@ WithLabelAndErrorDefaultTheme.args = {
 	error: 'Please select a choice card to continue',
 	supporting: undefined,
 };
-asChromaticStory(WithLabelAndErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -183,7 +178,6 @@ export const WithLabelAndSupportingAndErrorDefaultTheme = Template.bind({});
 WithLabelAndSupportingAndErrorDefaultTheme.args = {
 	error: 'Please select a choice card to continue',
 };
-asChromaticStory(WithLabelAndSupportingAndErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -205,7 +199,6 @@ WithWildlyVaryingLengthsDefaultTheme.args = {
 		<ChoiceCard id="abc3" value="option-3" label="Short" key={3} />,
 	],
 };
-asChromaticStory(WithWildlyVaryingLengthsDefaultTheme);
 
 // *****************************************************************************
 
@@ -214,8 +207,10 @@ WithWildlyVaryingLengthsMobileDefaultTheme.args =
 	WithWildlyVaryingLengthsDefaultTheme.args;
 WithWildlyVaryingLengthsMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(WithWildlyVaryingLengthsMobileDefaultTheme);
 
 // *****************************************************************************
 
@@ -224,8 +219,10 @@ WithWildlyVaryingLengthsTabletDefaultTheme.args =
 	WithWildlyVaryingLengthsDefaultTheme.args;
 WithWildlyVaryingLengthsTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(WithWildlyVaryingLengthsTabletDefaultTheme);
 
 // *****************************************************************************
 
@@ -265,7 +262,6 @@ export const ControlledMultiSelectDefaultTheme: Story<ChoiceCardGroupProps> = (
 ControlledMultiSelectDefaultTheme.args = {
 	multi: true,
 };
-asChromaticStory(ControlledMultiSelectDefaultTheme);
 
 // *****************************************************************************
 
@@ -303,7 +299,6 @@ export const ControlledSingleSelectDefaultTheme: Story<ChoiceCardGroupProps> = (
 ControlledSingleSelectDefaultTheme.args = {
 	multi: false,
 };
-asChromaticStory(ControlledSingleSelectDefaultTheme);
 
 // *****************************************************************************
 
@@ -319,7 +314,6 @@ UnControlledMultiSelectDefaultTheme.args = {
 	multi: true,
 };
 UnControlledMultiSelectDefaultTheme.storyName = 'Un-controlled Multi Select';
-asChromaticStory(UnControlledMultiSelectDefaultTheme);
 
 // *****************************************************************************
 
@@ -335,4 +329,3 @@ UnControlledSingleSelectDefaultTheme.args = {
 	multi: false,
 };
 UnControlledSingleSelectDefaultTheme.storyName = 'Un-controlled Single Select';
-asChromaticStory(UnControlledSingleSelectDefaultTheme);

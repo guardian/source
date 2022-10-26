@@ -1,6 +1,6 @@
+import { breakpoints } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
 import type { HTMLAttributes } from 'react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import { Container } from '../container/Container';
 import { Column } from './Column';
 import type { ColumnsProps } from './Columns';
@@ -52,10 +52,12 @@ const Template: Story<ColumnsProps> = (args) => (
 export const Default = Template.bind({});
 Default.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(Default);
 
 // *****************************************************************************
 
@@ -65,10 +67,12 @@ CollapseUntilTabletWithNoSpacing.args = {
 };
 CollapseUntilTabletWithNoSpacing.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithNoSpacing);
 
 // *****************************************************************************
 
@@ -79,10 +83,12 @@ CollapseUntilTabletWithSpace1.args = {
 };
 CollapseUntilTabletWithSpace1.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace1);
 
 // *****************************************************************************
 
@@ -93,10 +99,12 @@ CollapseUntilTabletWithSpace2.args = {
 };
 CollapseUntilTabletWithSpace2.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace2);
 
 // *****************************************************************************
 
@@ -107,10 +115,12 @@ CollapseUntilTabletWithSpace3.args = {
 };
 CollapseUntilTabletWithSpace3.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace3);
 
 // *****************************************************************************
 
@@ -121,10 +131,12 @@ CollapseUntilTabletWithSpace4.args = {
 };
 CollapseUntilTabletWithSpace4.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace4);
 
 // *****************************************************************************
 
@@ -135,10 +147,12 @@ CollapseUntilTabletWithSpace5.args = {
 };
 CollapseUntilTabletWithSpace5.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace5);
 
 // *****************************************************************************
 
@@ -149,10 +163,12 @@ CollapseUntilTabletWithSpace6.args = {
 };
 CollapseUntilTabletWithSpace6.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace6);
 
 // *****************************************************************************
 
@@ -163,10 +179,12 @@ CollapseUntilTabletWithSpace9.args = {
 };
 CollapseUntilTabletWithSpace9.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace9);
 
 // *****************************************************************************
 
@@ -177,10 +195,12 @@ CollapseUntilTabletWithSpace12.args = {
 };
 CollapseUntilTabletWithSpace12.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace12);
 
 // *****************************************************************************
 
@@ -191,10 +211,12 @@ CollapseUntilTabletWithSpace24.args = {
 };
 CollapseUntilTabletWithSpace24.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace24);
 
 // *****************************************************************************
 
@@ -204,7 +226,6 @@ export const WithContainer: Story<ColumnsProps> = (args, ctx) => (
 WithContainer.parameters = {
 	layout: 'fullscreen',
 };
-asChromaticStory(WithContainer);
 
 // *****************************************************************************
 
@@ -224,10 +245,12 @@ export const ResponsiveAtPhablet: Story<ColumnsProps> = (args) => (
 );
 ResponsiveAtPhablet.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(ResponsiveAtPhablet);
 
 // *****************************************************************************
 
@@ -247,9 +270,11 @@ export const ResponsiveAtTablet: Story<ColumnsProps> = (args) => (
 );
 ResponsiveAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 };
-asChromaticStory(ResponsiveAtTablet);
 
 // *****************************************************************************
 
@@ -269,9 +294,11 @@ export const ResponsiveHideAtTablet: Story<ColumnsProps> = (args) => (
 );
 ResponsiveHideAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 };
-asChromaticStory(ResponsiveHideAtTablet);
 
 // *****************************************************************************
 
@@ -291,9 +318,11 @@ export const ResponsiveHideAtMobile: Story<ColumnsProps> = (args) => (
 );
 ResponsiveHideAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 };
-asChromaticStory(ResponsiveHideAtMobile);
 
 // *****************************************************************************
 
@@ -391,7 +420,6 @@ export const WithSpan: Story<ColumnsProps> = () => (
 WithSpan.parameters = {
 	layout: 'fullscreen',
 };
-asChromaticStory(WithSpan);
 
 // *****************************************************************************
 
@@ -441,4 +469,3 @@ export const WithWidth: Story<ColumnsProps> = () => (
 WithWidth.parameters = {
 	layout: 'fullscreen',
 };
-asChromaticStory(WithWidth);

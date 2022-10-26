@@ -1,3 +1,4 @@
+import { breakpoints } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
 import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { TilesProps } from './Tiles';
@@ -47,7 +48,6 @@ export const Columns2 = Template.bind({});
 Columns2.args = {
 	columns: 2,
 };
-asChromaticStory(Columns2);
 
 // *****************************************************************************
 
@@ -55,7 +55,6 @@ export const Columns3 = Template.bind({});
 Columns3.args = {
 	columns: 3,
 };
-asChromaticStory(Columns3);
 
 // *****************************************************************************
 
@@ -63,7 +62,6 @@ export const Columns4 = Template.bind({});
 Columns4.args = {
 	columns: 4,
 };
-asChromaticStory(Columns4);
 
 // *****************************************************************************
 
@@ -71,7 +69,6 @@ export const Columns5 = Template.bind({});
 Columns5.args = {
 	columns: 5,
 };
-asChromaticStory(Columns5);
 
 // *****************************************************************************
 
@@ -82,8 +79,10 @@ Columns5CollapseUntilTabletAtMobile.args = {
 };
 Columns5CollapseUntilTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(Columns5CollapseUntilTabletAtMobile);
 
 // *****************************************************************************
 
@@ -94,5 +93,7 @@ Columns5CollapseUntilTabletAtTablet.args = {
 };
 Columns5CollapseUntilTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(Columns5CollapseUntilTabletAtTablet);

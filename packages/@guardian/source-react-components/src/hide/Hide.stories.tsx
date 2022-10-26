@@ -1,5 +1,5 @@
+import { breakpoints } from '@guardian/source-foundations';
 import type { Story } from '@storybook/react';
-import { asChromaticStory } from '../../../../../lib/story-intents';
 import type { HideProps } from './Hide';
 import { Hide } from './Hide';
 
@@ -34,8 +34,10 @@ HiddenFromTabletAtMobile.args = {
 };
 HiddenFromTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(HiddenFromTabletAtMobile);
 
 // *****************************************************************************
 
@@ -45,8 +47,10 @@ HiddenFromTabletAtTablet.args = {
 };
 HiddenFromTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(HiddenFromTabletAtTablet);
 
 // *****************************************************************************
 
@@ -56,8 +60,10 @@ HiddenUntilTabletAtMobile.args = {
 };
 HiddenUntilTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(HiddenUntilTabletAtMobile);
 
 // *****************************************************************************
 
@@ -67,5 +73,7 @@ HiddenUntilTabletAtTablet.args = {
 };
 HiddenUntilTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(HiddenUntilTabletAtTablet);
