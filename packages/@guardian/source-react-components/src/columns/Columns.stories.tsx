@@ -271,7 +271,7 @@ export const ResponsiveAtTablet: Story<ColumnsProps> = (args) => (
 ResponsiveAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 	chromatic: {
-		viewports: [breakpoints.phablet],
+		viewports: [breakpoints.tablet],
 	},
 	layout: 'fullscreen',
 };
@@ -295,7 +295,7 @@ export const ResponsiveHideAtTablet: Story<ColumnsProps> = (args) => (
 ResponsiveHideAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
 	chromatic: {
-		viewports: [breakpoints.phablet],
+		viewports: [breakpoints.tablet],
 	},
 	layout: 'fullscreen',
 };
@@ -319,7 +319,7 @@ export const ResponsiveHideAtMobile: Story<ColumnsProps> = (args) => (
 ResponsiveHideAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
 	chromatic: {
-		viewports: [breakpoints.phablet],
+		viewports: [breakpoints.mobile],
 	},
 	layout: 'fullscreen',
 };
