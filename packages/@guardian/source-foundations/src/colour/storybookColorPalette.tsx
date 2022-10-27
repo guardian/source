@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 
 /**
@@ -126,7 +125,7 @@ const ListStyles = css`
 	flex-direction: column;
 `;
 
-type Colors = string[] | { [key: string]: string };
+type Colors = string[] | Record<string, string>;
 
 interface ColorItemProps {
 	title: string;
