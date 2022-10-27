@@ -59,6 +59,7 @@
 		"@storybook/builder-webpack5": "^6.5.13",
 		"@storybook/manager-webpack5": "^6.5.13",
 		"@storybook/react": "^6.5.13",
+		"@storybook/storybook-deployer": "^2.8.16",
 		"@storybook/testing-library": "^0.0.13",
 		"@types/jest": "^27.0.2",
 		"@types/node": "^16.11.33",
