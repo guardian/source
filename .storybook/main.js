@@ -23,9 +23,6 @@ module.exports = {
 		'@storybook/addon-essentials',
 		'@storybook/addon-links',
 	],
-	features: {
-		emotionAlias: false,
-	},
 	framework: '@storybook/react',
 	core: {
 		builder: '@storybook/builder-webpack5',
