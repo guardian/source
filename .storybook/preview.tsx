@@ -13,6 +13,18 @@ export const parameters = {
 			date: /Date$/,
 		},
 	},
+	options: {
+		storySort: {
+			order: [
+				'Source',
+				'Foundations',
+				'Components',
+				'Development Kitchen',
+				'Packages',
+			],
+			method: 'alphabetical',
+		},
+	},
 };
 
 export const decorators = [FocusManagerDecorator, ThemeProviderDecorator];
