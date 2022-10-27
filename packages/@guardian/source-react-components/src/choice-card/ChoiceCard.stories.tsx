@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { SvgCamera } from '../../vendor/icons/SvgCamera';
 import { ChoiceCard } from './ChoiceCard';
 import type { ChoiceCardProps } from './ChoiceCard';
@@ -44,17 +40,7 @@ const Template: Story<ChoiceCardProps> = (args: ChoiceCardProps) => (
 
 // *****************************************************************************
 
-export const Playground = Template.bind({});
-Playground.args = {
-	icon: 'undefined',
-	checked: false,
-};
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -62,7 +48,6 @@ export const CheckedDefaultTheme = Template.bind({});
 CheckedDefaultTheme.args = {
 	checked: true,
 };
-asChromaticStory(CheckedDefaultTheme);
 
 // *****************************************************************************
 
@@ -70,13 +55,12 @@ export const ErrorDefaultTheme = Template.bind({});
 ErrorDefaultTheme.args = {
 	error: true,
 };
-asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 
 export const IconDefaultTheme = Template.bind({});
 IconDefaultTheme.args = {
 	label: 'Camera',
+	// @ts-expect-error - Storybook maps 'JSX element' to <em>Option 1</em>
 	icon: 'JSX element',
 };
-asChromaticStory(IconDefaultTheme);

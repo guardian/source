@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import type { AccordionProps } from './Accordion';
 import { Accordion } from './Accordion';
 import { AccordionRow } from './AccordionRow';
@@ -30,15 +26,7 @@ const Template: Story<AccordionProps> = (args: AccordionProps) => (
 	</Accordion>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const WithCTALabelsDefaultTheme = Template.bind({});
-asChromaticStory(WithCTALabelsDefaultTheme);
 
 // *****************************************************************************
 
@@ -46,4 +34,3 @@ export const WithoutCTALabelsDefaultTheme = Template.bind({});
 WithoutCTALabelsDefaultTheme.args = {
 	hideToggleLabel: true,
 };
-asChromaticStory(WithoutCTALabelsDefaultTheme);

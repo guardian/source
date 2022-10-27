@@ -66,8 +66,7 @@ import { MyComponent } from './MyComponent';
 import type { MyComponentProps } from './MyComponent';
 import { myComponentBrand } from './index';
 import { ThemeProvider } from '@emotion/react';
-import type { Story } from '../../../@types/storybook-emotion-10-fixes';
-import { asPlayground, asChromaticStory } from '../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 
 export default {
 	title: 'Source/src-my-component/MyComponent',
@@ -84,15 +83,8 @@ export default {
 
 const Template: Story = (args: MyComponentProps) => <MyComponent {...args} />;
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Default = Template.bind({});
-asChromaticStory(Default);
+
 
 // *****************************************************************************
 
@@ -106,7 +98,7 @@ DefaultBrandTheme.parameters = {
 		default: 'brandBackground.primary',
 	},
 };
-asChromaticStory(DefaultBrandTheme);
+
 
 // *****************************************************************************
 
@@ -114,7 +106,7 @@ export const HideLabel = Template.bind({});
 HideLabel.args = {
 	hideLabel: true,
 };
-asChromaticStory(HideLabel);
+
 
 // *****************************************************************************
 
@@ -131,7 +123,7 @@ HideLabelBrandTheme.parameters = {
 		default: 'brandBackground.primary',
 	},
 };
-asChromaticStory(HideLabelBrandTheme);
+
 ```
 
 ### Files and Naming
@@ -149,7 +141,7 @@ asChromaticStory(HideLabelBrandTheme);
    const Template: Story = (args: ComponentProps) => <Component {...args} />;
    ```
 
-1. Set the default [story args][story-args] and [argTypes][argtypes] on the [default export][default-export]
+2. Set the default [story args][story-args] and [argTypes][argtypes] on the [default export][default-export]
 
    ```ts
        export default {
@@ -160,41 +152,15 @@ asChromaticStory(HideLabelBrandTheme);
        };
    ```
 
-1. Define a Playground story for each component to document its behaviour
-1. Wrap Playground stories with the [`asPlayground`][asplayground] function
+3. Define a series of stories detailing all possible states of each component for visual regression testing
 
-   ```ts
-       export const Playground = Template.bind({})
-       Playground.args = { ... };
-       asPlayground(Playground)
-   ```
-
-1. Define a series of stories detailing all possible states of each component for visual regression testing
-1. Wrap these stories with the [`asChromaticStory`][aschromaticstory] function
-
-   ```ts
-       export const Story = Template.bind({})
-       Story.args = { ... };
-       asChromaticStory(Story)
-   ```
-
-1. Seperate stories with the following delimiter
+4. Separate stories with the following delimiter
 
    ```ts
    // *****************************************************************************
    ```
 
-1. Provide as many args as is useful for the Playground story. Consider how props react to different types of value (e.g. `undefined` vs strings)
-
-   ```ts
-   export const Playground = ...
-
-   Playground.args = {
-       arg1: "value"
-   }
-   ```
-
-1. Disable controls for deprecated props and for args that won't have any effect in storybook
+5. Disable controls for deprecated props and for args that won't have any effect in storybook
 
    ```ts
     export default {
@@ -210,14 +176,22 @@ asChromaticStory(HideLabelBrandTheme);
        args: { ... },
    };
    ```
+6. (Optional) If you want a viewport to be reflected in Chromatic, you need to explicitly add it as a `chromatic` parameter
 
-1. Avoid styling and theming Playground stories
+```ts
+   MyStory.parameters = {
+	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
+	layout: 'fullscreen',
+};
+   ```
+
 
 [story-args]: https://storybook.js.org/docs/react/writing-stories/args
 [argtypes]: https://storybook.js.org/docs/react/api/argtypes
 [default-export]: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-[asplayground]: https://github.com/guardian/source/blob/245fc1362d553d842d7ae3d99b241e6c49268b26/src/lib/story-intents.ts#L13-L24
-[aschromaticstory]: https://github.com/guardian/source/blob/245fc1362d553d842d7ae3d99b241e6c49268b26/src/lib/story-intents.ts#L34-L46
 
 ### Documentation / Comments
 

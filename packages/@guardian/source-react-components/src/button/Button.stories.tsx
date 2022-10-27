@@ -1,11 +1,4 @@
-import type {
-	Parameters,
-	Story,
-} from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Parameters, Story } from '@storybook/react';
 import { SvgCross } from '../../vendor/icons/SvgCross';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';
@@ -61,7 +54,6 @@ const createStory = (args: Partial<ButtonProps>, parameters: Parameters) => {
 
 	story.parameters = parameters;
 	story.args = args;
-	asChromaticStory(story);
 
 	return story;
 };
@@ -93,13 +85,6 @@ export default {
 const Template: Story<ButtonProps> = (args: ButtonProps) => (
 	<Button {...args} />
 );
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
 
 export const [
 	PrimaryPriorityDefaultTheme,
@@ -162,7 +147,6 @@ export const [
 // *****************************************************************************
 
 export const DefaultSizeDefaultTheme = Template.bind({});
-asChromaticStory(DefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -170,7 +154,6 @@ export const SmallSizeDefaultTheme = Template.bind({});
 SmallSizeDefaultTheme.args = {
 	size: 'small',
 };
-asChromaticStory(SmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -178,100 +161,99 @@ export const XSmallSizeDefaultTheme = Template.bind({});
 XSmallSizeDefaultTheme.args = {
 	size: 'xsmall',
 };
-asChromaticStory(XSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconLeftDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconLeftDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconRightDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconRightDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	iconSide: 'right',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconLeftSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	size: 'small',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconRightSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	iconSide: 'right',
 	size: 'small',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconLeftXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	size: 'xsmall',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconRightXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	iconSide: 'right',
 	size: 'xsmall',
 	children: 'Close',
 };
-asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const IconOnlyDefaultSizeDefaultTheme = Template.bind({});
 IconOnlyDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	hideLabel: true,
 	children: 'Close subscription banner',
 };
-asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const IconOnlySmallSizeDefaultTheme = Template.bind({});
 IconOnlySmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	hideLabel: true,
 	size: 'small',
 	children: 'Close subscription banner',
 };
-asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const IconOnlyXSmallSizeDefaultTheme = Template.bind({});
 IconOnlyXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'JSX element' to <SvgCross />
 	icon: 'cross',
 	hideLabel: true,
 	size: 'xsmall',
 	children: 'Close subscription banner',
 };
-asChromaticStory(IconOnlyXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
@@ -279,7 +261,6 @@ export const IsLoadingPrimary = Template.bind({});
 IsLoadingPrimary.args = {
 	isLoading: true,
 };
-asChromaticStory(IsLoadingPrimary);
 
 // *****************************************************************************
 
@@ -288,7 +269,6 @@ IsLoadingPrimarySmall.args = {
 	isLoading: true,
 	size: 'small',
 };
-asChromaticStory(IsLoadingPrimarySmall);
 
 // *****************************************************************************
 
@@ -297,7 +277,6 @@ IsLoadingPrimaryXSmall.args = {
 	isLoading: true,
 	size: 'xsmall',
 };
-asChromaticStory(IsLoadingPrimaryXSmall);
 
 // *****************************************************************************
 
@@ -306,7 +285,6 @@ IsLoadingSecondary.args = {
 	isLoading: true,
 	priority: 'secondary',
 };
-asChromaticStory(IsLoadingSecondary);
 
 // *****************************************************************************
 
@@ -315,7 +293,6 @@ IsLoadingTertiary.args = {
 	isLoading: true,
 	priority: 'tertiary',
 };
-asChromaticStory(IsLoadingTertiary);
 
 // *****************************************************************************
 
@@ -324,7 +301,6 @@ IsLoadingSubdued.args = {
 	isLoading: true,
 	priority: 'subdued',
 };
-asChromaticStory(IsLoadingSubdued);
 
 // *****************************************************************************
 
@@ -333,7 +309,6 @@ IsLoadingIconSideRight.args = {
 	isLoading: true,
 	iconSide: 'right',
 };
-asChromaticStory(IsLoadingIconSideRight);
 
 // *****************************************************************************
 
@@ -342,7 +317,6 @@ IsLoadingDisabled.args = {
 	isLoading: true,
 	disabled: true,
 };
-asChromaticStory(IsLoadingDisabled);
 
 // *****************************************************************************
 
@@ -351,4 +325,3 @@ IsLoadingLabelHidden.args = {
 	isLoading: true,
 	hideLabel: true,
 };
-asChromaticStory(IsLoadingLabelHidden);

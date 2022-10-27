@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import type { InfoSummaryProps } from './InfoSummary';
 import { InfoSummary } from './InfoSummary';
 
@@ -19,18 +15,10 @@ const Template: Story<InfoSummaryProps> = (args: InfoSummaryProps) => (
 	<InfoSummary {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const InfoOnly = Template.bind({});
 InfoOnly.args = {
 	message: 'This is an example with a info message only',
 };
-asChromaticStory(InfoOnly);
 
 // *****************************************************************************
 
@@ -42,7 +30,6 @@ InfoOnlyAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(InfoOnlyAsReactNode);
 
 // *****************************************************************************
 
@@ -51,7 +38,6 @@ WithContext.args = {
 	message: 'It was insightful',
 	context: 'This is some more information about this info message',
 };
-asChromaticStory(WithContext);
 
 // *****************************************************************************
 
@@ -64,4 +50,3 @@ WithContextAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(WithContextAsReactNode);

@@ -1,9 +1,5 @@
 import { css } from '@emotion/react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 import { SvgAlertPhone } from '../../vendor/icons/SvgAlertPhone';
@@ -247,47 +243,6 @@ export default {
 	title: 'Packages/source-react-components/Icons',
 };
 
-interface IconPlaygroundArgs extends IconProps {
-	icon: React.FunctionComponent<IconProps>;
-}
-
-export const Playground: Story<IconPlaygroundArgs> = (
-	args: IconPlaygroundArgs,
-) => (
-	<args.icon
-		size={args.size}
-		isAnnouncedByScreenReader={args.isAnnouncedByScreenReader}
-	/>
-);
-
-Playground.argTypes = {
-	size: {
-		options: ['medium', 'small', 'xsmall'],
-		control: { type: 'radio' },
-	},
-	icon: {
-		options: Object.keys({
-			...uiIcons,
-			...paymentIcons,
-			...widePaymentIcons,
-		}),
-		mapping: {
-			...uiIcons,
-			...paymentIcons,
-			...widePaymentIcons,
-		},
-		control: {
-			type: 'select',
-		},
-	},
-};
-Playground.args = {
-	size: 'medium',
-	icon: 'SvgAlertRound',
-	isAnnouncedByScreenReader: false,
-};
-asPlayground(Playground);
-
 // *****************************************************************************
 
 type IconChromaticStoryArgs = {
@@ -317,7 +272,6 @@ XsmallIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(XsmallIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -327,7 +281,6 @@ SmallIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(SmallIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -337,7 +290,6 @@ MediumIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(uiIcons),
 };
-asChromaticStory(MediumIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -365,7 +317,6 @@ MediumIconsBrandTheme.decorators = [
 		</div>
 	),
 ];
-asChromaticStory(MediumIconsBrandTheme);
 
 // *****************************************************************************
 
@@ -375,7 +326,6 @@ PaymentIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(paymentIcons),
 };
-asChromaticStory(PaymentIconsDefaultTheme);
 
 // *****************************************************************************
 
@@ -385,4 +335,3 @@ WidePaymentIconsDefaultTheme.args = {
 	isAnnouncedByScreenReader: true,
 	icons: Object.values(widePaymentIcons),
 };
-asChromaticStory(WidePaymentIconsDefaultTheme);

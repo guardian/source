@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import type { FooterLinksProps } from './FooterLinks';
 import { defaultGuardianLinks, FooterLinks } from './FooterLinks';
 
@@ -20,21 +16,7 @@ const Template: Story<FooterLinksProps> = (args: FooterLinksProps) => (
 
 // *****************************************************************************
 
-export const Playground = Template.bind({});
-Playground.args = {
-	links: [
-		{
-			href: '/',
-			text: 'Privacy policy',
-		},
-	],
-};
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultFooterLinks = Template.bind({});
-asChromaticStory(DefaultFooterLinks);
 
 // *****************************************************************************
 
@@ -48,4 +30,3 @@ FooterLinksInColumns.args = {
 		},
 	],
 };
-asChromaticStory(FooterLinksInColumns);

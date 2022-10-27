@@ -1,9 +1,5 @@
+import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
 import { TextInput } from './TextInput';
 import type { TextInputProps } from './TextInput';
 
@@ -50,15 +46,7 @@ const Template: Story<TextInputProps> = (args: TextInputProps) => {
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -66,7 +54,6 @@ export const OptionalDefaultTheme = Template.bind({});
 OptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -74,7 +61,6 @@ export const HideLabelDefaultTheme = Template.bind({});
 HideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(HideLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -82,7 +68,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'alex@example.com',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -91,7 +76,6 @@ Width30DefaultTheme.args = {
 	width: 30,
 	label: 'First name',
 };
-asChromaticStory(Width30DefaultTheme);
 
 // *****************************************************************************
 
@@ -100,7 +84,6 @@ Width10DefaultTheme.args = {
 	width: 10,
 	label: 'Postcode',
 };
-asChromaticStory(Width10DefaultTheme);
 
 // *****************************************************************************
 
@@ -109,7 +92,6 @@ Width4DefaultTheme.args = {
 	width: 4,
 	label: 'Year of birth',
 };
-asChromaticStory(Width4DefaultTheme);
 
 // *****************************************************************************
 
@@ -117,7 +99,6 @@ export const ErrorWithMessageDefaultTheme = Template.bind({});
 ErrorWithMessageDefaultTheme.args = {
 	error: 'error',
 };
-asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -125,7 +106,6 @@ export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
 	success: 'success',
 };
-asChromaticStory(SuccessWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -136,6 +116,5 @@ ConstraintDefaultTheme.args = {
 	title: '11 digit phone number',
 	type: 'tel',
 };
-asChromaticStory(ConstraintDefaultTheme);
 
 // *****************************************************************************

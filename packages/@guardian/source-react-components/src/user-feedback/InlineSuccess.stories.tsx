@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { InlineSuccess } from './InlineSuccess';
 import { userFeedbackThemeBrand } from './theme';
 import type { UserFeedbackProps } from './types';
@@ -16,15 +12,7 @@ const Template: Story<UserFeedbackProps> = (args: UserFeedbackProps) => (
 	<InlineSuccess {...args}>Your voucher code is valid</InlineSuccess>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const InlineSuccessDefaultTheme = Template.bind({});
-asChromaticStory(InlineSuccessDefaultTheme);
 
 // *****************************************************************************
 
@@ -35,4 +23,3 @@ InlineSuccessBrandTheme.parameters = {
 	},
 	theme: userFeedbackThemeBrand,
 };
-asChromaticStory(InlineSuccessBrandTheme);

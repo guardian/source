@@ -1,9 +1,5 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
-import type { LogoProps } from './Logo';
+import { breakpoints } from '@guardian/source-foundations';
+import type { Story } from '@storybook/react';
 import { Logo } from './Logo';
 
 export default {
@@ -18,15 +14,6 @@ export default {
 		},
 	},
 };
-
-const Template: Story = (args: LogoProps) => <Logo {...args} />;
-
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
 
 const TripleTemplate: Story = () => (
 	<div>
@@ -45,8 +32,10 @@ Desktop.parameters = {
 	viewport: {
 		defaultViewport: 'desktop',
 	},
+	chromatic: {
+		viewports: [breakpoints.desktop],
+	},
 };
-asChromaticStory(Desktop);
 
 // *****************************************************************************
 
@@ -55,8 +44,10 @@ Tablet.parameters = {
 	viewport: {
 		defaultViewport: 'tablet',
 	},
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(Tablet);
 
 // *****************************************************************************
 
@@ -65,8 +56,10 @@ MobileMedium.parameters = {
 	viewport: {
 		defaultViewport: 'mobileMedium',
 	},
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
-asChromaticStory(MobileMedium);
 
 // *****************************************************************************
 
@@ -75,7 +68,9 @@ Mobile.parameters = {
 	viewport: {
 		defaultViewport: 'mobile',
 	},
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(Mobile);
 
 // *****************************************************************************

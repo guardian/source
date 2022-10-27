@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { SvgExternal } from '../../vendor/icons/SvgExternal';
 import type { ButtonLinkProps } from './ButtonLink';
 import { ButtonLink } from './ButtonLink';
@@ -31,18 +27,10 @@ const Template: Story = (args: ButtonLinkProps) => (
 	<ButtonLink {...args}>Return to home page</ButtonLink>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const PrimaryButtonLinkDefaultTheme = Template.bind({});
 PrimaryButtonLinkDefaultTheme.args = {
 	icon: 'undefined',
 };
-asChromaticStory(PrimaryButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -51,12 +39,10 @@ SecondaryButtonLinkDefaultTheme.args = {
 	priority: 'secondary',
 	icon: 'undefined',
 };
-asChromaticStory(SecondaryButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
 export const PrimaryIconButtonLinkDefaultTheme = Template.bind({});
-asChromaticStory(PrimaryIconButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -64,7 +50,6 @@ export const SecondaryIconButtonLinkDefaultTheme = Template.bind({});
 SecondaryIconButtonLinkDefaultTheme.args = {
 	priority: 'secondary',
 };
-asChromaticStory(SecondaryIconButtonLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -72,6 +57,5 @@ export const RightIconButtonLinkDefaultTheme = Template.bind({});
 RightIconButtonLinkDefaultTheme.args = {
 	iconSide: 'right',
 };
-asChromaticStory(RightIconButtonLinkDefaultTheme);
 
 // *****************************************************************************

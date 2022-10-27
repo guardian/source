@@ -20,6 +20,7 @@ module.exports = {
 		'plugin:jsx-a11y/strict',
 		'plugin:@guardian/source-foundations/recommended',
 		'plugin:@guardian/source-react-components/recommended',
+		'plugin:storybook/recommended',
 	],
 	rules: {
 		'jsx-a11y/label-has-for': 'off',

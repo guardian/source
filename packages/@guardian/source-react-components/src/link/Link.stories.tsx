@@ -1,10 +1,6 @@
 import { css } from '@emotion/react';
 import { headline, textSans } from '@guardian/source-foundations';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { SvgExternal } from '../../vendor/icons/SvgExternal';
 import { Link } from './Link';
 import type { LinkProps } from './Link';
@@ -106,18 +102,10 @@ const UnderlineHoverTextSansTemplate: Story = (args: LinkProps) => {
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const PrimaryLinkDefaultTheme = Template.bind({});
 PrimaryLinkDefaultTheme.args = {
 	icon: 'undefined',
 };
-asChromaticStory(PrimaryLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -131,7 +119,6 @@ PrimaryLinkBrandTheme.parameters = {
 	},
 	theme: linkThemeBrand,
 };
-asChromaticStory(PrimaryLinkBrandTheme);
 
 // *****************************************************************************
 
@@ -145,7 +132,6 @@ PrimaryLinkBrandAltTheme.parameters = {
 	},
 	theme: linkThemeBrandAlt,
 };
-asChromaticStory(PrimaryLinkBrandAltTheme);
 
 // *****************************************************************************
 
@@ -154,12 +140,10 @@ SecondaryLinkDefaultTheme.args = {
 	priority: 'secondary',
 	icon: 'undefined',
 };
-asChromaticStory(SecondaryLinkDefaultTheme);
 
 // *****************************************************************************
 
 export const PrimaryIconLinkDefaultTheme = Template.bind({});
-asChromaticStory(PrimaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -167,7 +151,6 @@ export const SecondaryIconLinkDefaultTheme = Template.bind({});
 SecondaryIconLinkDefaultTheme.args = {
 	priority: 'secondary',
 };
-asChromaticStory(SecondaryIconLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -175,7 +158,6 @@ export const RightIconLinkDefaultTheme = Template.bind({});
 RightIconLinkDefaultTheme.args = {
 	iconSide: 'right',
 };
-asChromaticStory(RightIconLinkDefaultTheme);
 
 // *****************************************************************************
 
@@ -185,8 +167,6 @@ UnderlineHoverHeadline.args = {
 	icon: 'undefined',
 };
 
-asChromaticStory(UnderlineHoverHeadline);
-
 // *****************************************************************************
 
 export const UnderlineHoverTextSans = UnderlineHoverTextSansTemplate.bind({});
@@ -194,5 +174,3 @@ export const UnderlineHoverTextSans = UnderlineHoverTextSansTemplate.bind({});
 UnderlineHoverTextSans.args = {
 	icon: 'undefined',
 };
-
-asChromaticStory(UnderlineHoverTextSans);

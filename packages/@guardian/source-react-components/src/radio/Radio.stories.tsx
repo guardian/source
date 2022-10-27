@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { Radio } from './Radio';
 import type { RadioProps } from './Radio';
 import { radioThemeBrand } from './theme';
@@ -38,15 +34,7 @@ export default {
 
 const Template: Story = (args: RadioProps) => <Radio {...args} />;
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -57,7 +45,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: radioThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -65,7 +52,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -79,7 +65,6 @@ SupportingTextBrandTheme.parameters = {
 SupportingTextBrandTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 };
-asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -88,7 +73,6 @@ SupportingTextOnlyDefaultTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 	label: null,
 };
-asChromaticStory(SupportingTextOnlyDefaultTheme);
 
 // *****************************************************************************
 
@@ -103,7 +87,6 @@ SupportingTextOnlyBrandTheme.args = {
 	supporting: 'Hex colour code: #ff0000',
 	label: null,
 };
-asChromaticStory(SupportingTextOnlyBrandTheme);
 
 // *****************************************************************************
 
@@ -111,4 +94,3 @@ export const UnlabelledDefaultTheme = Template.bind({});
 UnlabelledDefaultTheme.args = {
 	label: undefined,
 };
-asChromaticStory(UnlabelledDefaultTheme);
