@@ -23,8 +23,7 @@
 		"tsc": "tsc",
 		"validate": "npm-run-all tsc lint test build e2e",
 		"e2e": "nx run-many --target=e2e --all",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"storybook": "start-storybook -p 6006"
 	},
 	"lint-staged": {
 		"package.json": "sort-package-json",
