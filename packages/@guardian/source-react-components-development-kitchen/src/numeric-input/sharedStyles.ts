@@ -18,3 +18,27 @@ export const inputBase = (
 		border: 2px solid ${textInput.border};
 		padding: 0 ${space[2]}px;
 	`;
+
+export const errorInput = (
+	textInput = textInputThemeDefault.textInput,
+): SerializedStyles => css`
+	border: 4px solid ${textInput.borderError};
+	color: ${textInput.textError};
+	margin-top: 0;
+	/* When input is active and in an error state, we want the border to remain the same. */
+	&:active {
+		border: 4px solid ${textInput.borderError};
+	}
+`;
+
+export const successInput = (
+	textInput = textInputThemeDefault.textInput,
+): SerializedStyles => css`
+	border: 4px solid ${textInput.borderSuccess};
+	color: ${textInput.textSuccess};
+	margin-top: 0;
+	/* When input is active and in a success state, we want the border to remain the same. */
+	&:active {
+		border: 4px solid ${textInput.borderSuccess};
+	}
+`;

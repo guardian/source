@@ -2,7 +2,7 @@ import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import { focusHalo, space } from '@guardian/source-foundations';
 import { textInputThemeDefault } from '@guardian/source-react-components';
-import { inputBase } from './sharedStyles';
+import { errorInput, inputBase } from './sharedStyles';
 
 export const inputWrapper = css`
 	display: flex;
@@ -28,30 +28,6 @@ export const width10 = css`
 
 export const width4 = css`
 	width: 9ex;
-`;
-
-export const errorInput = (
-	textInput = textInputThemeDefault.textInput,
-): SerializedStyles => css`
-	border: 4px solid ${textInput.borderError};
-	color: ${textInput.textError};
-	margin-top: 0;
-	/* When input is active and in an error state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${textInput.borderError};
-	}
-`;
-
-export const successInput = (
-	textInput = textInputThemeDefault.textInput,
-): SerializedStyles => css`
-	border: 4px solid ${textInput.borderSuccess};
-	color: ${textInput.textSuccess};
-	margin-top: 0;
-	/* When input is active and in a success state, we want the border to remain the same. */
-	&:active {
-		border: 4px solid ${textInput.borderSuccess};
-	}
 `;
 
 export const textInput = (
