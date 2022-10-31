@@ -129,3 +129,19 @@ WithPrefixAndSuffix.args = {
 	label: 'Contribution amount',
 	supporting: 'Will be charged monthly starting from today',
 };
+
+// *****************************************************************************
+export const WithPrefixAndError = Template.bind({});
+WithPrefixAndError.args = {
+	prefixText: '£',
+	label: 'Contribution amount',
+	error: 'The amount entered is not valid',
+};
+
+// *****************************************************************************
+export const WithSuffixAndSuccess = Template.bind({});
+WithSuffixAndSuccess.args = {
+	suffixText: 'kr.',
+	label: 'Contribution amount',
+	success: 'success',
+};
