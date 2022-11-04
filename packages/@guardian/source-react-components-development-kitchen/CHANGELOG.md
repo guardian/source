@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 6.0.3
+
+### Patch Changes
+
+- 11333bf1: fix issue with error and success state display on NumericInput component
+
 ## 6.0.2
 
 ### Patch Changes
