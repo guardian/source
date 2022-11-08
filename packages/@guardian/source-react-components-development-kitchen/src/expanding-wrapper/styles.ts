@@ -91,7 +91,7 @@ export const showHideLabelStyles = css`
 
 export const collapsibleBodyStyles = css`
 	margin: 0;
-	max-height: 25vh;
+	max-height: 30vh;
 	overflow: hidden;
 `;
 
