@@ -1,9 +1,5 @@
+import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
 import { ToggleSwitchApps } from './ToggleSwitchApps';
 import type { ToggleSwitchAppsProps } from './ToggleSwitchApps';
 
@@ -29,18 +25,10 @@ const Template: Story<ToggleSwitchAppsProps> = (
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const AndroidNoLabel = Template.bind({});
 AndroidNoLabel.args = {
 	platform: 'android',
 };
-asChromaticStory(AndroidNoLabel);
 
 // *****************************************************************************
 
@@ -48,7 +36,6 @@ export const IosNoLabel = Template.bind({});
 IosNoLabel.args = {
 	platform: 'ios',
 };
-asChromaticStory(IosNoLabel);
 
 // *****************************************************************************
 
@@ -57,7 +44,6 @@ AndroidWithLabel.args = {
 	label: 'Get alerts on this story',
 	platform: 'android',
 };
-asChromaticStory(AndroidWithLabel);
 
 // *****************************************************************************
 
@@ -66,7 +52,6 @@ IosWithLabel.args = {
 	label: 'Get alerts on this story',
 	platform: 'ios',
 };
-asChromaticStory(IosWithLabel);
 
 // *****************************************************************************
 
@@ -76,7 +61,6 @@ AndroidWithLabelLeft.args = {
 	labelPosition: 'left',
 	platform: 'android',
 };
-asChromaticStory(AndroidWithLabelLeft);
 
 // *****************************************************************************
 
@@ -86,4 +70,3 @@ IosWithLabelLeft.args = {
 	labelPosition: 'left',
 	platform: 'ios',
 };
-asChromaticStory(IosWithLabelLeft);

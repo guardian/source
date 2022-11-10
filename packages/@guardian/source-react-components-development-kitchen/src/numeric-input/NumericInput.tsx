@@ -12,12 +12,10 @@ import {
 } from '@guardian/source-react-components';
 import { InputExtension } from './InputExtension';
 import {
-	errorInput,
 	hasExtensions,
 	inlineMessageMargin,
 	inputWrapper,
 	labelMargin,
-	successInput,
 	supportingTextMargin,
 	textInput,
 	width10,
@@ -25,6 +23,7 @@ import {
 	width4,
 	widthFluid,
 } from './numericInputStyles';
+import { errorInput, successInput } from './sharedStyles';
 
 export interface InputTheme extends Theme {
 	textInput?: typeof textInputThemeDefault.textInput;
@@ -109,7 +108,9 @@ export const NumericInput = ({
 				]}
 			>
 				{prefixText && (
-					<InputExtension type="prefix">{prefixText}</InputExtension>
+					<InputExtension type="prefix" error={error} success={success}>
+						{prefixText}
+					</InputExtension>
 				)}
 				<input
 					css={(theme: InputTheme) => [
@@ -129,7 +130,9 @@ export const NumericInput = ({
 					{...props}
 				/>
 				{suffixText && (
-					<InputExtension type="suffix">{suffixText}</InputExtension>
+					<InputExtension type="suffix" error={error} success={success}>
+						{suffixText}
+					</InputExtension>
 				)}
 			</div>
 		</>

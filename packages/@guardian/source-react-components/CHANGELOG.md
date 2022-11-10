@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 9.0.1
+
+### Patch Changes
+
+- c04aae35: Improve partial loading of Guardian logo SVG
+
 ## 9.0.0
 
 ### Major Changes

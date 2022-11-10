@@ -1,8 +1,5 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { breakpoints } from '@guardian/source-foundations';
+import type { Story } from '@storybook/react';
 import { InlineError } from './InlineError';
 import { userFeedbackThemeBrand } from './theme';
 import type { UserFeedbackProps } from './types';
@@ -19,15 +16,7 @@ const Template: Story<UserFeedbackProps> = ({
 	<InlineError {...args}>{children ?? 'Please enter your name'}</InlineError>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const InlineErrorDefaultTheme = Template.bind({});
-asChromaticStory(InlineErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -38,18 +27,18 @@ InlineErrorBrandTheme.parameters = {
 	},
 	theme: userFeedbackThemeBrand,
 };
-asChromaticStory(InlineErrorBrandTheme);
 
 // *****************************************************************************
 
 export const LongInlineErrorDefaultThemeMobile = Template.bind({});
 LongInlineErrorDefaultThemeMobile.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
 LongInlineErrorDefaultThemeMobile.args = {
 	children: 'Please pick a date in the future, but not a leap year',
 };
-
-asChromaticStory(LongInlineErrorDefaultThemeMobile);
 
 // *****************************************************************************

@@ -1,15 +1,17 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { SvgArrowRightStraight } from '../../vendor/icons/SvgArrowRightStraight';
 import { LinkButton } from './LinkButton';
 import type { LinkButtonProps } from './LinkButton';
+import type { ButtonPriority } from './types';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 
-const priorityArgs = ['primary', 'secondary', 'tertiary', 'subdued'];
+const priorityArgs: ButtonPriority[] = [
+	'primary',
+	'secondary',
+	'tertiary',
+	'subdued',
+];
 
 export default {
 	title: 'Packages/source-react-components/LinkButton',
@@ -40,13 +42,6 @@ const Template: Story<LinkButtonProps> = (args: LinkButtonProps) => (
 	<LinkButton {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const [
 	PrimaryPriorityDefaultTheme,
 	SecondaryPriorityDefaultTheme,
@@ -58,7 +53,6 @@ export const [
 	story.args = {
 		priority,
 	};
-	asChromaticStory(story);
 
 	return story;
 });
@@ -67,101 +61,101 @@ export const [
 
 export const TextAndIconLeftDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconLeftDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 };
-asChromaticStory(TextAndIconLeftDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconRightDefaultSizeDefaultTheme = Template.bind({});
 TextAndIconRightDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	iconSide: 'right',
 };
-asChromaticStory(TextAndIconRightDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconLeftSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	size: 'small',
 };
-asChromaticStory(TextAndIconLeftSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconRightSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	iconSide: 'right',
 	size: 'small',
 };
-asChromaticStory(TextAndIconRightSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconLeftXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconLeftXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	size: 'xsmall',
 };
-asChromaticStory(TextAndIconLeftXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconRightXSmallSizeDefaultTheme = Template.bind({});
 TextAndIconRightXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	iconSide: 'right',
 	size: 'xsmall',
 };
-asChromaticStory(TextAndIconRightXSmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconLeftWithNudgeDefaultTheme = Template.bind({});
 TextAndIconLeftWithNudgeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	nudgeIcon: true,
 };
-asChromaticStory(TextAndIconLeftWithNudgeDefaultTheme);
 
 // *****************************************************************************
 
 export const TextAndIconRightWithNudgeDefaultTheme = Template.bind({});
 TextAndIconRightWithNudgeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	iconSide: 'right',
 	nudgeIcon: true,
 };
-asChromaticStory(TextAndIconRightWithNudgeDefaultTheme);
 
 // *****************************************************************************
 
 export const IconOnlyDefaultSizeDefaultTheme = Template.bind({});
 IconOnlyDefaultSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlyDefaultSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const IconOnlySmallSizeDefaultTheme = Template.bind({});
 IconOnlySmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	size: 'small',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlySmallSizeDefaultTheme);
 
 // *****************************************************************************
 
 export const IconOnlyXSmallSizeDefaultTheme = Template.bind({});
 IconOnlyXSmallSizeDefaultTheme.args = {
+	// @ts-expect-error - Storybook maps 'arrow' to <SvgArrowRightStraight />
 	icon: 'arrow',
 	size: 'xsmall',
 	hideLabel: true,
 };
-asChromaticStory(IconOnlyXSmallSizeDefaultTheme);

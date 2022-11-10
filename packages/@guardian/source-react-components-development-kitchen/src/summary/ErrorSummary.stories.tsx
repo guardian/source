@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import type { ErrorSummaryProps } from './ErrorSummary';
 import { ErrorSummary } from './ErrorSummary';
 
@@ -20,18 +16,10 @@ const Template: Story<ErrorSummaryProps> = (args: ErrorSummaryProps) => (
 	<ErrorSummary {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const ErrorOnly = Template.bind({});
 ErrorOnly.args = {
 	message: 'This is an example with an error message only',
 };
-asChromaticStory(ErrorOnly);
 
 // *****************************************************************************
 
@@ -43,7 +31,6 @@ ErrorOnlyAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(ErrorOnlyAsReactNode);
 
 // *****************************************************************************
 
@@ -52,7 +39,6 @@ WithContext.args = {
 	message: 'Here is an error',
 	context: 'This is some more information about this error message',
 };
-asChromaticStory(WithContext);
 
 // *****************************************************************************
 
@@ -65,7 +51,6 @@ WithContextAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(WithContextAsReactNode);
 
 // *****************************************************************************
 
@@ -75,4 +60,3 @@ WithReportLink.args = {
 	context: 'This is some more information about this error message',
 	errorReportUrl: 'https://www.theguardian.com/info/tech-feedback',
 };
-asChromaticStory(WithReportLink);

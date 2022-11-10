@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import type { DividerProps } from './Divider';
 import { Divider } from './Divider';
 
@@ -32,15 +28,7 @@ const Template: Story = (args: DividerProps) => (
 	</span>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDivider = Template.bind({});
-asChromaticStory(DefaultDivider);
 
 // *****************************************************************************
 
@@ -48,7 +36,6 @@ export const TightDivider = Template.bind({});
 TightDivider.args = {
 	spaceAbove: 'tight',
 };
-asChromaticStory(TightDivider);
 
 // *****************************************************************************
 
@@ -56,7 +43,6 @@ export const FullDivider = Template.bind({});
 FullDivider.args = {
 	size: 'full',
 };
-asChromaticStory(FullDivider);
 
 // *****************************************************************************
 
@@ -64,4 +50,3 @@ export const TextDivider = Template.bind({});
 TextDivider.args = {
 	displayText: 'I am centred',
 };
-asChromaticStory(TextDivider);

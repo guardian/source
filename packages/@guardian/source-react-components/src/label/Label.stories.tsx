@@ -1,10 +1,6 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '@storybook/react';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
 import { Label } from './Label';
 import { labelThemeBrand } from './theme';
 import type { LabelProps } from './types';
@@ -25,17 +21,9 @@ const Template: Story<LabelProps> = (args: LabelProps) => (
 	</Label>
 );
 
-export const Playground = Template.bind({});
-Playground.args = {
-	text: 'Email',
-	supporting: 'alex@example.com',
-};
-asPlayground(Playground);
-
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -43,7 +31,6 @@ export const WithSupportingTextDefaultTheme = Template.bind({});
 WithSupportingTextDefaultTheme.args = {
 	supporting: 'alex@example.com',
 };
-asChromaticStory(WithSupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -51,7 +38,6 @@ export const WithOptionalDefaultTheme = Template.bind({});
 WithOptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(WithOptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -59,7 +45,6 @@ export const WithHiddenLabelDefaultTheme = Template.bind({});
 WithHiddenLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(WithHiddenLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -70,7 +55,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -84,7 +68,6 @@ WithSupportingTextBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithSupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -98,7 +81,6 @@ WithOptionalBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithOptionalBrandTheme);
 
 // *****************************************************************************
 
@@ -112,4 +94,3 @@ WithHiddenLabelThemeBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithHiddenLabelThemeBrandTheme);

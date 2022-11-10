@@ -1,8 +1,5 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { breakpoints } from '@guardian/source-foundations';
+import type { Story } from '@storybook/react';
 import type { HideProps } from './Hide';
 import { Hide } from './Hide';
 
@@ -31,19 +28,16 @@ const Template: Story = (args: HideProps) => (
 
 // *****************************************************************************
 
-export const Demo = Template.bind({});
-asPlayground(Demo);
-
-// *****************************************************************************
-
 export const HiddenFromTabletAtMobile = Template.bind({});
 HiddenFromTabletAtMobile.args = {
 	from: 'tablet',
 };
 HiddenFromTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(HiddenFromTabletAtMobile);
 
 // *****************************************************************************
 
@@ -53,8 +47,10 @@ HiddenFromTabletAtTablet.args = {
 };
 HiddenFromTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(HiddenFromTabletAtTablet);
 
 // *****************************************************************************
 
@@ -64,8 +60,10 @@ HiddenUntilTabletAtMobile.args = {
 };
 HiddenUntilTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(HiddenUntilTabletAtMobile);
 
 // *****************************************************************************
 
@@ -75,5 +73,7 @@ HiddenUntilTabletAtTablet.args = {
 };
 HiddenUntilTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(HiddenUntilTabletAtTablet);

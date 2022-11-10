@@ -1,5 +1,11 @@
 # @guardian/eslint-plugin-source-foundations
 
+## 8.0.0
+
+### Major Changes
+
+- aa4c2caa: Bump @guardian/libs to `^9.0.0`
+
 ## 7.0.0
 
 ### Major Changes

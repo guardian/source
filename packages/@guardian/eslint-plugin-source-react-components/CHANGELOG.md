@@ -1,5 +1,11 @@
 # @guardian/eslint-plugin-source-react-components
 
+## 10.0.0
+
+### Major Changes
+
+- aa4c2caa: Bump @guardian/libs to `^9.0.0`
+
 ## 9.0.0
 
 ### Major Changes

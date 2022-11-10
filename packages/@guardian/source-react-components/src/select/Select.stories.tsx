@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { Option } from './Option';
 import type { SelectProps } from './Select';
 import { Select } from './Select';
@@ -50,16 +46,7 @@ const Template: Story<SelectProps> = (args: SelectProps) => (
 
 // *****************************************************************************
 
-export const Playground = Template.bind({});
-Playground.args = {
-	supporting: 'This helps us to provide accurate shipping costs',
-};
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -67,7 +54,6 @@ export const VisuallyHideLabelDefaultTheme = Template.bind({});
 VisuallyHideLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -75,7 +61,6 @@ export const OptionalDefaultTheme = Template.bind({});
 OptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(OptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -83,7 +68,6 @@ export const ErrorWithMessageDefaultTheme = Template.bind({});
 ErrorWithMessageDefaultTheme.args = {
 	error: 'error',
 };
-asChromaticStory(ErrorWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -91,7 +75,6 @@ export const SuccessWithMessageDefaultTheme = Template.bind({});
 SuccessWithMessageDefaultTheme.args = {
 	success: 'success',
 };
-asChromaticStory(SuccessWithMessageDefaultTheme);
 
 // *****************************************************************************
 
@@ -99,6 +82,5 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Leave blank if you are not within the US',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************

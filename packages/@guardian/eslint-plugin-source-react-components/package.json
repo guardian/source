@@ -1,6 +1,6 @@
 {
 	"name": "@guardian/eslint-plugin-source-react-components",
-	"version": "9.0.0",
+	"version": "10.0.0",
 	"description": "ESLint plugin for Guardian projects using the `@guardian/source-react-components` package.",
 	"homepage": "https://github.com/guardian/source#readme",
 	"bugs": {
@@ -18,7 +18,8 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
-		"clean": "rm -rf dist"
+		"clean": "rm -rf dist",
+		"e2e": "jest src/index.test.ts --setupFilesAfterEnv=./jest.e2e.setup.js"
 	},
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "5.21.0",
@@ -27,14 +28,16 @@
 	"devDependencies": {
 		"@guardian/eslint-config": "^1.0.0",
 		"@guardian/eslint-config-typescript": "^1.0.0",
-		"@guardian/libs": "^3.0.0",
+		"@guardian/libs": "9.0.0",
 		"@types/estree": "^0.0.51",
 		"rollup": "^2.75.4",
 		"rollup-plugin-ts": "^2.0.7",
-		"typescript": "~4.6.4"
+		"tslib": "^2.4.0",
+		"typescript": "~4.6.4",
+		"web-vitals": "^2.0.0"
 	},
 	"peerDependencies": {
-		"@guardian/libs": "^3.0.0",
+		"@guardian/libs": "^9.0.0",
 		"@guardian/source-react-components": "^9.0.0",
 		"eslint": "^8.0.0"
 	},

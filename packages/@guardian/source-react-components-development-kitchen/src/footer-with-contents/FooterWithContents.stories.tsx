@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import {
 	DefaultFooterLinks,
 	FooterLinksInColumns,
@@ -25,19 +21,10 @@ const Template: Story<FooterWithContentsProps> = (
 
 // *****************************************************************************
 
-export const Playground = Template.bind({});
-Playground.args = {
-	children: 'Content goes here',
-};
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultFooterWithContents = Template.bind({});
 DefaultFooterWithContents.args = {
 	children: <DefaultFooterLinks />,
 };
-asChromaticStory(DefaultFooterWithContents);
 
 // *****************************************************************************
 
@@ -45,4 +32,3 @@ export const FooterWithColumnLinks = Template.bind({});
 FooterWithColumnLinks.args = {
 	children: <FooterLinksInColumns {...FooterLinksInColumns.args} />,
 };
-asChromaticStory(DefaultFooterWithContents);

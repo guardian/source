@@ -1,10 +1,6 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
+import type { Story } from '@storybook/react';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
 import { Legend } from './Legend';
 import { labelThemeBrand } from './theme';
 import type { LegendProps } from './types';
@@ -41,17 +37,9 @@ const Template: Story<LegendProps> = (args: LegendProps) => (
 	</fieldset>
 );
 
-export const Playground = Template.bind({});
-Playground.args = {
-	text: 'Email',
-	supporting: 'text',
-};
-asPlayground(Playground);
-
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -59,7 +47,6 @@ export const WithSupportingTextDefaultTheme = Template.bind({});
 WithSupportingTextDefaultTheme.args = {
 	supporting: 'text',
 };
-asChromaticStory(WithSupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -67,7 +54,6 @@ export const WithSupportingComponentDefaultTheme = Template.bind({});
 WithSupportingComponentDefaultTheme.args = {
 	supporting: 'component',
 };
-asChromaticStory(WithSupportingComponentDefaultTheme);
 
 // *****************************************************************************
 
@@ -75,7 +61,6 @@ export const WithOptionalDefaultTheme = Template.bind({});
 WithOptionalDefaultTheme.args = {
 	optional: true,
 };
-asChromaticStory(WithOptionalDefaultTheme);
 
 // *****************************************************************************
 
@@ -83,7 +68,6 @@ export const WithHiddenLabelDefaultTheme = Template.bind({});
 WithHiddenLabelDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(WithHiddenLabelDefaultTheme);
 
 // *****************************************************************************
 
@@ -94,7 +78,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -108,7 +91,6 @@ WithSupportingTextBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithSupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -122,7 +104,6 @@ WithSupportingComponentBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithSupportingComponentBrandTheme);
 
 // *****************************************************************************
 
@@ -136,7 +117,6 @@ WithOptionalBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithOptionalBrandTheme);
 
 // *****************************************************************************
 
@@ -150,6 +130,5 @@ WithHiddenLabelBrandTheme.parameters = {
 	},
 	theme: labelThemeBrand,
 };
-asChromaticStory(WithHiddenLabelBrandTheme);
 
 // *****************************************************************************

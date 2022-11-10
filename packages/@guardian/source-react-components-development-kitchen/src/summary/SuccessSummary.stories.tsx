@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import type { SuccessSummaryProps } from './SuccessSummary';
 import { SuccessSummary } from './SuccessSummary';
 
@@ -19,18 +15,10 @@ const Template: Story<SuccessSummaryProps> = (args: SuccessSummaryProps) => (
 	<SuccessSummary {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const SuccessOnly = Template.bind({});
 SuccessOnly.args = {
 	message: 'This is an example with a success message only',
 };
-asChromaticStory(SuccessOnly);
 
 export const SuccessOnlyAsReactNode = Template.bind({});
 SuccessOnlyAsReactNode.args = {
@@ -40,7 +28,6 @@ SuccessOnlyAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(SuccessOnlyAsReactNode);
 
 // *****************************************************************************
 
@@ -49,7 +36,6 @@ WithContext.args = {
 	message: 'It was successful',
 	context: 'This is some more information about this success message',
 };
-asChromaticStory(WithContext);
 
 // *****************************************************************************
 
@@ -62,4 +48,3 @@ WithContextAsReactNode.args = {
 		</>
 	),
 };
-asChromaticStory(WithContextAsReactNode);

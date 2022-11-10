@@ -1,9 +1,5 @@
+import type { Story } from '@storybook/react';
 import { useState } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
 import { Checkbox } from './Checkbox';
 import CheckboxStories from './Checkbox.stories';
 import type { CheckboxGroupProps } from './CheckboxGroup';
@@ -38,15 +34,7 @@ const Template: Story<CheckboxGroupProps> = (args: CheckboxGroupProps) => {
 	);
 };
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const DefaultDefaultTheme = Template.bind({});
-asChromaticStory(DefaultDefaultTheme);
 
 // *****************************************************************************
 
@@ -57,7 +45,6 @@ DefaultBrandTheme.parameters = {
 	},
 	theme: checkboxThemeBrand,
 };
-asChromaticStory(DefaultBrandTheme);
 
 // *****************************************************************************
 
@@ -65,7 +52,6 @@ export const VisuallyHideLegendDefaultTheme = Template.bind({});
 VisuallyHideLegendDefaultTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLegendDefaultTheme);
 
 // *****************************************************************************
 
@@ -79,7 +65,6 @@ VisuallyHideLegendBrandTheme.parameters = {
 VisuallyHideLegendBrandTheme.args = {
 	hideLabel: true,
 };
-asChromaticStory(VisuallyHideLegendBrandTheme);
 
 // *****************************************************************************
 
@@ -87,7 +72,6 @@ export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Pick the issues and topics that interest you',
 };
-asChromaticStory(SupportingTextDefaultTheme);
 
 // *****************************************************************************
 
@@ -101,7 +85,6 @@ SupportingTextBrandTheme.parameters = {
 SupportingTextBrandTheme.args = {
 	supporting: 'Pick the issues and topics that interest you',
 };
-asChromaticStory(SupportingTextBrandTheme);
 
 // *****************************************************************************
 
@@ -109,7 +92,6 @@ export const ErrorDefaultTheme = Template.bind({});
 ErrorDefaultTheme.args = {
 	error: 'This newsletter is not available in your region',
 };
-asChromaticStory(ErrorDefaultTheme);
 
 // *****************************************************************************
 
@@ -123,4 +105,3 @@ ErrorBrandTheme.parameters = {
 ErrorBrandTheme.args = {
 	error: 'This newsletter is not available in your region',
 };
-asChromaticStory(ErrorBrandTheme);

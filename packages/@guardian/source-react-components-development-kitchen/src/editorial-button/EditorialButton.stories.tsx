@@ -6,11 +6,7 @@ import {
 	ArticleSpecial,
 } from '@guardian/libs';
 import { SvgCross } from '@guardian/source-react-components';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import { EditorialButton } from './EditorialButton';
 import type { EditorialButtonProps } from './EditorialButton';
 
@@ -79,12 +75,6 @@ const Template: Story = (args: EditorialButtonProps) => {
 	return <EditorialButton {...props}>Click me</EditorialButton>;
 };
 
-export const Playground = Template.bind({});
-Playground.args = {
-	format: 'news',
-};
-asPlayground(Playground);
-
 const pillars = [
 	ArticlePillar.News,
 	ArticlePillar.Sport,
@@ -121,7 +111,6 @@ WhenPrimary.args = {
 	priority: 'primary',
 	size: 'small',
 };
-asChromaticStory(WhenPrimary);
 
 // *****************************************************************************
 
@@ -130,7 +119,6 @@ WhenSecondary.args = {
 	priority: 'secondary',
 	size: 'small',
 };
-asChromaticStory(WhenSecondary);
 
 // *****************************************************************************
 
@@ -139,7 +127,6 @@ WhenTertiary.args = {
 	priority: 'tertiary',
 	size: 'small',
 };
-asChromaticStory(WhenTertiary);
 
 // *****************************************************************************
 
@@ -148,7 +135,6 @@ WhenSubdued.args = {
 	priority: 'subdued',
 	size: 'small',
 };
-asChromaticStory(WhenSubdued);
 
 // *****************************************************************************
 
@@ -158,10 +144,8 @@ WithOverrides.args = {
 		background-color: pink;
 	`,
 };
-asChromaticStory(WithOverrides);
 
 // *****************************************************************************
 
 export const WithDefaults = Template.bind({});
 WithDefaults.args = {};
-asChromaticStory(WithDefaults);

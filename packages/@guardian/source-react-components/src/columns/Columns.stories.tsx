@@ -1,9 +1,6 @@
+import { breakpoints } from '@guardian/source-foundations';
+import type { Story } from '@storybook/react';
 import type { HTMLAttributes } from 'react';
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
 import { Container } from '../container/Container';
 import { Column } from './Column';
 import type { ColumnsProps } from './Columns';
@@ -52,20 +49,15 @@ const Template: Story<ColumnsProps> = (args) => (
 	</Columns>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Default = Template.bind({});
 Default.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(Default);
 
 // *****************************************************************************
 
@@ -75,146 +67,165 @@ CollapseUntilTabletWithNoSpacing.args = {
 };
 CollapseUntilTabletWithNoSpacing.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithNoSpacing);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace1 = Template.bind({});
 CollapseUntilTabletWithSpace1.args = {
 	collapseUntil: 'tablet',
-	spaceY: '1',
+	spaceY: 1,
 };
 CollapseUntilTabletWithSpace1.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace1);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace2 = Template.bind({});
 CollapseUntilTabletWithSpace2.args = {
 	collapseUntil: 'tablet',
-	spaceY: '2',
+	spaceY: 2,
 };
 CollapseUntilTabletWithSpace2.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace2);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace3 = Template.bind({});
 CollapseUntilTabletWithSpace3.args = {
 	collapseUntil: 'tablet',
-	spaceY: '3',
+	spaceY: 3,
 };
 CollapseUntilTabletWithSpace3.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace3);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace4 = Template.bind({});
 CollapseUntilTabletWithSpace4.args = {
 	collapseUntil: 'tablet',
-	spaceY: '4',
+	spaceY: 4,
 };
 CollapseUntilTabletWithSpace4.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace4);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace5 = Template.bind({});
 CollapseUntilTabletWithSpace5.args = {
 	collapseUntil: 'tablet',
-	spaceY: '5',
+	spaceY: 5,
 };
 CollapseUntilTabletWithSpace5.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace5);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace6 = Template.bind({});
 CollapseUntilTabletWithSpace6.args = {
 	collapseUntil: 'tablet',
-	spaceY: '6',
+	spaceY: 6,
 };
 CollapseUntilTabletWithSpace6.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace6);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace9 = Template.bind({});
 CollapseUntilTabletWithSpace9.args = {
 	collapseUntil: 'tablet',
-	spaceY: '9',
+	spaceY: 9,
 };
 CollapseUntilTabletWithSpace9.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace9);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace12 = Template.bind({});
 CollapseUntilTabletWithSpace12.args = {
 	collapseUntil: 'tablet',
-	spaceY: '12',
+	spaceY: 12,
 };
 CollapseUntilTabletWithSpace12.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace12);
 
 // *****************************************************************************
 
 export const CollapseUntilTabletWithSpace24 = Template.bind({});
 CollapseUntilTabletWithSpace24.args = {
 	collapseUntil: 'tablet',
-	spaceY: '24',
+	spaceY: 24,
 };
 CollapseUntilTabletWithSpace24.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(CollapseUntilTabletWithSpace24);
 
 // *****************************************************************************
 
-export const WithContainer: Story<ColumnsProps> = (args) => (
-	<Container style={style}>{Template(args)}</Container>
+export const WithContainer: Story<ColumnsProps> = (args, ctx) => (
+	<Container style={style}>{Template(args, ctx)}</Container>
 );
 WithContainer.parameters = {
 	layout: 'fullscreen',
 };
-asChromaticStory(WithContainer);
 
 // *****************************************************************************
 
@@ -234,10 +245,12 @@ export const ResponsiveAtPhablet: Story<ColumnsProps> = (args) => (
 );
 ResponsiveAtPhablet.parameters = {
 	viewport: { defaultViewport: 'phablet' },
+	chromatic: {
+		viewports: [breakpoints.phablet],
+	},
 	layout: 'fullscreen',
 	outline: true,
 };
-asChromaticStory(ResponsiveAtPhablet);
 
 // *****************************************************************************
 
@@ -257,9 +270,11 @@ export const ResponsiveAtTablet: Story<ColumnsProps> = (args) => (
 );
 ResponsiveAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 	layout: 'fullscreen',
 };
-asChromaticStory(ResponsiveAtTablet);
 
 // *****************************************************************************
 
@@ -279,9 +294,11 @@ export const ResponsiveHideAtTablet: Story<ColumnsProps> = (args) => (
 );
 ResponsiveHideAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 	layout: 'fullscreen',
 };
-asChromaticStory(ResponsiveHideAtTablet);
 
 // *****************************************************************************
 
@@ -301,9 +318,11 @@ export const ResponsiveHideAtMobile: Story<ColumnsProps> = (args) => (
 );
 ResponsiveHideAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 	layout: 'fullscreen',
 };
-asChromaticStory(ResponsiveHideAtMobile);
 
 // *****************************************************************************
 
@@ -401,7 +420,6 @@ export const WithSpan: Story<ColumnsProps> = () => (
 WithSpan.parameters = {
 	layout: 'fullscreen',
 };
-asChromaticStory(WithSpan);
 
 // *****************************************************************************
 
@@ -451,4 +469,3 @@ export const WithWidth: Story<ColumnsProps> = () => (
 WithWidth.parameters = {
 	layout: 'fullscreen',
 };
-asChromaticStory(WithWidth);

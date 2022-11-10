@@ -1,15 +1,10 @@
-import React from 'react';
 import {
 	bodyObjectStyles,
 	fontWeights,
 	headlineObjectStyles,
 	textSansObjectStyles,
-} from '@guardian/source-foundations/src';
-import type {
-	Category,
-	FontScaleFunction,
-	FontWeight,
-} from '@guardian/source-foundations/src/typography/types';
+} from '../index';
+import type { Category, FontScaleFunction, FontWeight } from './types';
 
 type FontFunctions = {
 	[key in Category]: FontScaleFunction;

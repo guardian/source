@@ -1,8 +1,5 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { breakpoints } from '@guardian/source-foundations';
+import type { Story } from '@storybook/react';
 import type { FooterProps } from './Footer';
 import { Footer } from './Footer';
 
@@ -33,34 +30,29 @@ export default {
 
 const Template: Story = (args: FooterProps) => <Footer {...args} />;
 
-export const Playground = Template.bind({});
-Playground.args = {
-	showBackToTop: false,
-	children: 'with',
-};
-asPlayground(Playground);
-
 export const DefaultDefaultTheme = Template.bind({});
 DefaultDefaultTheme.args = { children: 'with' };
-asChromaticStory(DefaultDefaultTheme);
 
 export const DefaultTabletDefaultTheme = Template.bind({});
 DefaultTabletDefaultTheme.args = { children: 'with' };
 DefaultTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(DefaultTabletDefaultTheme);
 
 export const DefaultMobileDefaultTheme = Template.bind({});
 DefaultMobileDefaultTheme.args = { children: 'with' };
 DefaultMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
-asChromaticStory(DefaultMobileDefaultTheme);
 
 export const WithBackToTopDefaultTheme = Template.bind({});
 WithBackToTopDefaultTheme.args = { showBackToTop: true, children: 'with' };
-asChromaticStory(WithBackToTopDefaultTheme);
 
 export const WithBackToTopTabletDefaultTheme = Template.bind({});
 WithBackToTopTabletDefaultTheme.args = {
@@ -69,8 +61,10 @@ WithBackToTopTabletDefaultTheme.args = {
 };
 WithBackToTopTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(WithBackToTopTabletDefaultTheme);
 
 export const WithBackToTopMobileDefaultTheme = Template.bind({});
 WithBackToTopMobileDefaultTheme.args = {
@@ -79,33 +73,37 @@ WithBackToTopMobileDefaultTheme.args = {
 };
 WithBackToTopMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
-asChromaticStory(WithBackToTopMobileDefaultTheme);
 
 export const WithoutChildrenDefaultTheme = Template.bind({});
 WithoutChildrenDefaultTheme.args = { children: 'without' };
-asChromaticStory(WithoutChildrenDefaultTheme);
 
 export const WithoutChildrenTabletDefaultTheme = Template.bind({});
 WithoutChildrenTabletDefaultTheme.args = { children: 'without' };
 WithoutChildrenTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(WithoutChildrenTabletDefaultTheme);
 
 export const WithoutChildrenMobileDefaultTheme = Template.bind({});
 WithoutChildrenMobileDefaultTheme.args = { children: 'without' };
 WithoutChildrenMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
-asChromaticStory(WithoutChildrenMobileDefaultTheme);
 
 export const WithoutChildrenWithBackToTopDefaultTheme = Template.bind({});
 WithoutChildrenWithBackToTopDefaultTheme.args = {
 	showBackToTop: true,
 	children: 'without',
 };
-asChromaticStory(WithoutChildrenWithBackToTopDefaultTheme);
 
 export const WithoutChildrenWithBackToTopTabletDefaultTheme = Template.bind({});
 WithoutChildrenWithBackToTopTabletDefaultTheme.args = {
@@ -114,8 +112,10 @@ WithoutChildrenWithBackToTopTabletDefaultTheme.args = {
 };
 WithoutChildrenWithBackToTopTabletDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(WithoutChildrenWithBackToTopTabletDefaultTheme);
 
 export const WithoutChildrenWithBackToTopMobileDefaultTheme = Template.bind({});
 WithoutChildrenWithBackToTopMobileDefaultTheme.args = {
@@ -124,5 +124,7 @@ WithoutChildrenWithBackToTopMobileDefaultTheme.args = {
 };
 WithoutChildrenWithBackToTopMobileDefaultTheme.parameters = {
 	viewport: { defaultViewport: 'mobileMedium' },
+	chromatic: {
+		viewports: [breakpoints.mobileMedium],
+	},
 };
-asChromaticStory(WithoutChildrenWithBackToTopMobileDefaultTheme);

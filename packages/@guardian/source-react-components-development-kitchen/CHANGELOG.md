@@ -1,5 +1,29 @@
 # @guardian/source-react-components-development-kitchen
 
+## 6.0.3
+
+### Patch Changes
+
+- 11333bf1: fix issue with error and success state display on NumericInput component
+
+## 6.0.2
+
+### Patch Changes
+
+- 1143ed83: Fix bug with `ToggleSwitch` useEffect browser check
+
+## 6.0.1
+
+### Patch Changes
+
+- 1f218bf6: Update focus styles for `ToggleSwitch`
+
+## 6.0.0
+
+### Major Changes
+
+- aa4c2caa: Bump @guardian/libs to `^9.0.0`
+
 ## 5.0.0
 
 ### Major Changes
@@ -9,7 +33,7 @@
   - @guardian/source-react-components@9.0.0
 - d9e94ef1: `ToggleSwitch` no longer contains iOS and Android versions
   - adds a new `ToggleSwitchApps` component to use instead
-- 7b99c758: 
+- 7b99c758:
   - passing a `format` prop to `ToggleSwitch` renders an alternative colour scheme suitable for use on coloured backgrounds
   - `FontWeight` in `ToggleSwitch` is now limited to `regular` and `bold` and controlled via a `fontWeight` prop
   - `FontSize` in `ToggleSwitch` is now limited to `small` and regular and controlled via a `fontSize` prop

@@ -49,18 +49,17 @@ $ yarn storybook
 
 ### Documentation
 
-- To enable better integration with our documentation site, each component variant should be represented as a separate story at its own URL.
+- Source uses [storybook](https://guardian.github.io/source/?path=/story/contributing-stories--page) for its API documentation as well as for visual regression testing.
 
 ### Testing
 
 - Ensure you test your changes against our [accessibility testing guide](https://github.com/guardian/source/blob/main/.github/PULL_REQUEST_TEMPLATE.md#accessibility).
-- Ensure your component works against the following browsers (you can [ask for access to Browserstack](mailto:divx@theguardian.com?subject=Browserstack login)):
+- Ensure your component works against the following browsers (you can [ask for access to Browserstack](mailto:divx@theguardian.com?subject=Browserstack)):
   - **Chrome 77+**
   - **Firefox 68+**
   - **Edge 17+**
   - **Safari 12+**
-  - **IE11**
-- Ensure your component can be imported and server-rendered on a project running **Node.js v10**.
+- Ensure your component can be imported and server-rendered on a project running **Node.js v14**.
 - Ensure your component works on touchscreen devices.
 
 ### Commits
@@ -76,7 +75,7 @@ $ yarn storybook
 
 ### Versioning
 
-- `yarn changeset` will prompt you to choose a [semver]https://semver.org/(https://semver.org/) change type for your changes (major/minor/patch).
+- `yarn changeset` will prompt you to choose a [semver](https://semver.org/) change type for your changes (major/minor/patch).
 - This should include visual changes, not just changes to the API e.g.
   - A slight colour tweak could break contrast ratio guidlines, and comsumers would need to account for this, meaning it's not a drop-in change i.e. major/breaking.
   - A new font-size will only affect consumers who want to use it, making it a new feature i.e. a minor change.

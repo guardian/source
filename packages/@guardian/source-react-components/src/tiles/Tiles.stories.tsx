@@ -1,8 +1,5 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import { breakpoints } from '@guardian/source-foundations';
+import type { Story } from '@storybook/react';
 import type { TilesProps } from './Tiles';
 import { Tiles } from './Tiles';
 
@@ -46,63 +43,56 @@ const Template: Story<TilesProps> = (args: TilesProps) => (
 	</Tiles>
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Columns2 = Template.bind({});
 Columns2.args = {
-	columns: '2',
+	columns: 2,
 };
-asChromaticStory(Columns2);
 
 // *****************************************************************************
 
 export const Columns3 = Template.bind({});
 Columns3.args = {
-	columns: '3',
+	columns: 3,
 };
-asChromaticStory(Columns3);
 
 // *****************************************************************************
 
 export const Columns4 = Template.bind({});
 Columns4.args = {
-	columns: '4',
+	columns: 4,
 };
-asChromaticStory(Columns4);
 
 // *****************************************************************************
 
 export const Columns5 = Template.bind({});
 Columns5.args = {
-	columns: '5',
+	columns: 5,
 };
-asChromaticStory(Columns5);
 
 // *****************************************************************************
 
 export const Columns5CollapseUntilTabletAtMobile = Template.bind({});
 Columns5CollapseUntilTabletAtMobile.args = {
-	columns: '5',
+	columns: 5,
 	collapseUntil: 'tablet',
 };
 Columns5CollapseUntilTabletAtMobile.parameters = {
 	viewport: { defaultViewport: 'mobile' },
+	chromatic: {
+		viewports: [breakpoints.mobile],
+	},
 };
-asChromaticStory(Columns5CollapseUntilTabletAtMobile);
 
 // *****************************************************************************
 
 export const Columns5CollapseUntilTabletAtTablet = Template.bind({});
 Columns5CollapseUntilTabletAtTablet.args = {
-	columns: '5',
+	columns: 5,
 	collapseUntil: 'tablet',
 };
 Columns5CollapseUntilTabletAtTablet.parameters = {
 	viewport: { defaultViewport: 'tablet' },
+	chromatic: {
+		viewports: [breakpoints.tablet],
+	},
 };
-asChromaticStory(Columns5CollapseUntilTabletAtTablet);

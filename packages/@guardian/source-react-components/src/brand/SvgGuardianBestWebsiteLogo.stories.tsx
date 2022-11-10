@@ -1,8 +1,4 @@
-import type { Story } from '../../../../../lib/@types/storybook-emotion-10-fixes';
-import {
-	asChromaticStory,
-	asPlayground,
-} from '../../../../../lib/story-intents';
+import type { Story } from '@storybook/react';
 import type { SvgGuardianBestWebsiteLogoProps } from './SvgGuardianBestWebsiteLogo';
 import { SvgGuardianBestWebsiteLogo } from './SvgGuardianBestWebsiteLogo';
 
@@ -20,15 +16,4 @@ const Template: Story = (args: SvgGuardianBestWebsiteLogoProps) => (
 	<SvgGuardianBestWebsiteLogo {...args} />
 );
 
-// *****************************************************************************
-
-export const Playground = Template.bind({});
-Playground.args = {
-	width: 300,
-};
-asPlayground(Playground);
-
-// *****************************************************************************
-
 export const Default = Template.bind({});
-asChromaticStory(Default);
