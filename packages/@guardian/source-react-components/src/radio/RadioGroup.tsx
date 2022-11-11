@@ -36,6 +36,11 @@ export interface RadioGroupProps
 	 * If passed, error styling should applies to this radio group. The string appears as an inline error message.
 	 */
 	error?: string;
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 /**
@@ -46,7 +51,7 @@ export interface RadioGroupProps
  *
  * Radio buttons allow users to make a single selection from a set of options.
  *
- * The following themes are supported: `default`, `brand`
+ * The following themes are supported: `default light`, `default dark`, `brand`
  */
 export const RadioGroup = ({
 	id,
@@ -58,16 +63,23 @@ export const RadioGroup = ({
 	error,
 	cssOverrides,
 	children,
+	supportDarkMode = false,
 	...props
 }: RadioGroupProps): EmotionJSX.Element => {
 	const groupId = id ?? generateSourceId();
 	const legend = label ? (
-		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
+		<Legend
+			supportDarkMode={supportDarkMode}
+			text={label}
+			supporting={supporting}
+			hideLabel={hideLabel}
+		/>
 	) : (
 		''
 	);
 	const message = error && (
 		<InlineError id={descriptionId(groupId)}>{error}</InlineError>
+		// TODO
 	);
 
 	const radioContainers = (
@@ -83,6 +95,7 @@ export const RadioGroup = ({
 							: {},
 						{
 							name,
+							supportDarkMode,
 						},
 					),
 				);
@@ -94,7 +107,10 @@ export const RadioGroup = ({
 		<fieldset
 			aria-invalid={!!error}
 			id={groupId}
-			css={(theme: Theme) => [fieldset(theme.radio), cssOverrides]}
+			css={(theme: Theme) => [
+				fieldset(supportDarkMode, theme.radio),
+				cssOverrides,
+			]}
 			{...props}
 		>
 			{legend}

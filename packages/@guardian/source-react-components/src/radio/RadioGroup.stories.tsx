@@ -75,6 +75,14 @@ VisuallyHideLegendDefaultTheme.args = {
 
 // *****************************************************************************
 
+export const SupportsDarkMode = Template.bind({});
+SupportsDarkMode.args = {
+	supporting:
+		'Put your device in dark mode to see this - TODO: is there a way to switch programatically?',
+	supportDarkMode: true,
+};
+// *****************************************************************************
+
 export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'You can always change it later',
