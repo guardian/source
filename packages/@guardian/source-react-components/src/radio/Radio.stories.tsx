@@ -48,6 +48,15 @@ DefaultBrandTheme.parameters = {
 
 // *****************************************************************************
 
+export const SupportsDarkMode = Template.bind({});
+SupportsDarkMode.args = {
+	supportDarkMode: true,
+	supporting:
+		'Put your device in dark mode to see this - TODO: is there a way to switch programatically?',
+};
+
+// *****************************************************************************
+
 export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Hex colour code: #ff0000',

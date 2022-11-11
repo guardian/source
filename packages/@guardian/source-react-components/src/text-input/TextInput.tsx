@@ -85,7 +85,7 @@ export interface TextInputProps
  *
  * Single line fields that allow users to enter freeform data.
  *
- * The following themes are supported: `default light, default dark (with prop)`
+ * The following themes are supported: `default light`, `default dark` (with prop)
  */
 export const TextInput = ({
 	id,

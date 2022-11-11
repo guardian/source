@@ -69,7 +69,7 @@ export interface CheckboxProps
  * Checkboxes allow users to select multiple options from a list of individual
  * items or to indicate agreement of terms and  services.
  *
- * The following themes are supported: `default`, `brand`
+ * The following themes are supported: `default light`, `default dark` (with prop), `brand`
  */
 export const Checkbox = ({
 	id,

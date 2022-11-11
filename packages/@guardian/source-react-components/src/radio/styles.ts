@@ -12,8 +12,15 @@ import {
 } from '@guardian/source-foundations';
 import { radioThemeDefault } from './theme';
 
+const getRadioTheme = (supportDarkmode?: boolean) => {
+	if (!supportDarkmode) return radioThemeDefault.radio;
+	const useDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	return useDark ? radioThemeDefault.radioDark : radioThemeDefault.radio;
+};
+
 export const fieldset = (
-	radio = radioThemeDefault.radio,
+	supportDarkMode: boolean,
+	radio = getRadioTheme(supportDarkMode),
 ): SerializedStyles => css`
 	${resets.fieldset};
 
@@ -28,7 +35,8 @@ export const fieldset = (
 `;
 
 export const radioContainer = (
-	radio = radioThemeDefault.radio,
+	supportDarkMode: boolean,
+	radio = getRadioTheme(supportDarkMode),
 ): SerializedStyles => css`
 	position: relative;
 	display: flex;
@@ -52,7 +60,10 @@ export const labelWithSupportingText = css`
 	margin-bottom: ${space[3]}px;
 `;
 
-export const radio = (radio = radioThemeDefault.radio): SerializedStyles => css`
+export const radio = (
+	supportDarkMode: boolean,
+	radio = getRadioTheme(supportDarkMode),
+): SerializedStyles => css`
 	flex: 0 0 auto;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -110,7 +121,8 @@ export const radio = (radio = radioThemeDefault.radio): SerializedStyles => css`
 `;
 
 export const labelText = (
-	radio = radioThemeDefault.radio,
+	supportDarkMode: boolean,
+	radio = getRadioTheme(supportDarkMode),
 ): SerializedStyles => css`
 	${textSans.medium()};
 	color: ${radio.textLabel};
@@ -122,7 +134,8 @@ export const labelTextWithSupportingText = css`
 `;
 
 export const supportingText = (
-	radio = radioThemeDefault.radio,
+	supportDarkMode: boolean,
+	radio = getRadioTheme(supportDarkMode),
 ): SerializedStyles => css`
 	${textSans.small()};
 	color: ${radio.textLabelSupporting};

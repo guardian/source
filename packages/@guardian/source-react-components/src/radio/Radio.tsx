@@ -16,15 +16,17 @@ import {
 const LabelText = ({
 	hasSupportingText,
 	children,
+	supportDarkMode = false,
 }: {
 	hasSupportingText?: boolean;
+	supportDarkMode?: boolean;
 	children: ReactNode;
 }) => {
 	return (
 		<div
 			css={(theme: Theme) => [
 				hasSupportingText ? labelTextWithSupportingText : '',
-				labelText(theme.radio),
+				labelText(supportDarkMode, theme.radio),
 			]}
 		>
 			{children}
@@ -32,9 +34,17 @@ const LabelText = ({
 	);
 };
 
-const SupportingText = ({ children }: { children: ReactNode }) => {
+const SupportingText = ({
+	children,
+	supportDarkMode = false,
+}: {
+	children: ReactNode;
+	supportDarkMode?: boolean;
+}) => {
 	return (
-		<div css={(theme: Theme) => supportingText(theme.radio)}>{children}</div>
+		<div css={(theme: Theme) => supportingText(supportDarkMode, theme.radio)}>
+			{children}
+		</div>
 	);
 };
 
@@ -67,6 +77,11 @@ export interface RadioProps
 	 * Additional text or a component that appears below the label
 	 */
 	supporting?: string | ReactNode;
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 /**
@@ -77,7 +92,7 @@ export interface RadioProps
  *
  * Radio buttons allow users to make a single selection from a set of options.
  *
- * The following themes are supported: `default`, `brand`
+ * The following themes are supported: `default light`, `default dark`, `brand`
  */
 export const Radio = ({
 	id,
@@ -87,6 +102,7 @@ export const Radio = ({
 	checked,
 	defaultChecked,
 	cssOverrides,
+	supportDarkMode = false,
 	...props
 }: RadioProps): EmotionJSX.Element => {
 	const radioId = id ?? generateSourceId();
@@ -101,7 +117,10 @@ export const Radio = ({
 		<input
 			id={radioId}
 			type="radio"
-			css={(theme: Theme) => [radio(theme.radio), cssOverrides]}
+			css={(theme: Theme) => [
+				radio(supportDarkMode, theme.radio),
+				cssOverrides,
+			]}
 			value={value}
 			defaultChecked={defaultChecked != null ? defaultChecked : undefined}
 			checked={checked != null ? isChecked() : undefined}
@@ -112,7 +131,7 @@ export const Radio = ({
 	const labelledRadioControl = (
 		<div
 			css={(theme: Theme) => [
-				radioContainer(theme.radio),
+				radioContainer(supportDarkMode, theme.radio),
 				supporting ? labelWithSupportingText : '',
 			]}
 		>
@@ -120,11 +139,20 @@ export const Radio = ({
 			<label htmlFor={radioId} css={label}>
 				{supporting ? (
 					<div>
-						<LabelText hasSupportingText={true}>{labelContent}</LabelText>
-						<SupportingText>{supporting}</SupportingText>
+						<LabelText
+							supportDarkMode={supportDarkMode}
+							hasSupportingText={true}
+						>
+							{labelContent}
+						</LabelText>
+						<SupportingText supportDarkMode={supportDarkMode}>
+							{supporting}
+						</SupportingText>
 					</div>
 				) : (
-					<LabelText>{labelContent}</LabelText>
+					<LabelText supportDarkMode={supportDarkMode}>
+						{labelContent}
+					</LabelText>
 				)}
 			</label>
 		</div>

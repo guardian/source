@@ -14,6 +14,14 @@ export const radioThemeDefault = {
 		textLabelSupporting: palette.neutral[46],
 		borderError: palette.error[400],
 	},
+	radioDark: {
+		borderHover: palette.focus[400],
+		border: palette.neutral[46],
+		backgroundChecked: palette.focus[400],
+		textLabel: palette.neutral[97],
+		textLabelSupporting: palette.neutral[60],
+		borderError: palette.error[500],
+	},
 	...labelThemeDefault,
 	...userFeedbackThemeDefault,
 };
