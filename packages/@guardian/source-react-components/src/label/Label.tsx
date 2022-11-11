@@ -14,7 +14,7 @@ import type { LabelProps } from './types';
  * Label is used by other Source components, such as TextInput. Only use Label
  * if you are building your own form components.
  *
- * The following themes are supported: `light`, `brand`.
+ * The following themes are supported: `default light, default dark (with prop)`, `brand`.
  * */
 export const Label = ({
 	text,
@@ -23,13 +23,21 @@ export const Label = ({
 	hideLabel = false,
 	cssOverrides,
 	children,
+	supportDarkMode = false,
 	...props
 }: LabelProps): EmotionJSX.Element => {
 	return (
 		<label css={cssOverrides} {...props}>
-			<Text hideLabel={hideLabel} text={text} optional={optional} />
+			<Text
+				hideLabel={hideLabel}
+				text={text}
+				optional={optional}
+				supportDarkMode={supportDarkMode}
+			/>
 			{supporting ? (
-				<SupportingText hideLabel={hideLabel}>{supporting}</SupportingText>
+				<SupportingText hideLabel={hideLabel} supportDarkMode={supportDarkMode}>
+					{supporting}
+				</SupportingText>
 			) : (
 				''
 			)}

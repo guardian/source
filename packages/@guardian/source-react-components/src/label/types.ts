@@ -23,6 +23,11 @@ export interface LabelProps
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
 	children?: ReactNode;
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 export interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {

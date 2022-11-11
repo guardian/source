@@ -13,16 +13,19 @@ export const Text = ({
 	text,
 	optional,
 	hideLabel,
+	supportDarkMode = false,
 }: LabelProps): EmotionJSX.Element => (
 	<div
 		css={(theme: Theme) => [
-			labelText(theme.label),
+			labelText(supportDarkMode, theme.label),
 			hideLabel ? visuallyHidden : '',
 		]}
 	>
 		{text}{' '}
 		{optional ? (
-			<span css={(theme: Theme) => optionalText(theme.label)}>Optional</span>
+			<span css={(theme: Theme) => optionalText(supportDarkMode, theme.label)}>
+				Optional
+			</span>
 		) : (
 			''
 		)}

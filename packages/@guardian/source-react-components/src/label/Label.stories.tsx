@@ -2,7 +2,7 @@ import type { Story } from '@storybook/react';
 // These types are the right types, but don't work with Storybook v6 which uses Emotion v10
 // import type { Args, Story } from '@storybook/react';
 import { Label } from './Label';
-import { labelThemeBrand } from './theme';
+import { labelThemeBrand, labelThemeDefault } from './theme';
 import type { LabelProps } from './types';
 
 export default {
@@ -24,6 +24,15 @@ const Template: Story<LabelProps> = (args: LabelProps) => (
 // *****************************************************************************
 
 export const DefaultDefaultTheme = Template.bind({});
+
+// *****************************************************************************
+
+export const SupportsDarkMode = Template.bind({});
+SupportsDarkMode.args = {
+	supporting:
+		'Put your device in dark mode to see this - TODO: is there a way to switch programatically?',
+	supportDarkMode: true,
+};
 
 // *****************************************************************************
 

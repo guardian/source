@@ -3,19 +3,27 @@ import { css } from '@emotion/react';
 import { resets, textSans } from '@guardian/source-foundations';
 import { labelThemeDefault } from './theme';
 
+const getLabelTheme = (supportDarkmode?: boolean) => {
+	if (!supportDarkmode) return labelThemeDefault.label;
+	const useDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	return useDark ? labelThemeDefault.labelDark : labelThemeDefault.label;
+};
+
 export const legend = css`
 	${resets.legend};
 `;
 
 export const labelText = (
-	label = labelThemeDefault.label,
+	supportDarkmode: boolean,
+	label = getLabelTheme(supportDarkmode),
 ): SerializedStyles => css`
 	${textSans.medium({ fontWeight: 'bold' })};
 	color: ${label.textLabel};
 `;
 
 export const optionalText = (
-	label = labelThemeDefault.label,
+	supportDarkmode: boolean,
+	label = getLabelTheme(supportDarkmode),
 ): SerializedStyles => css`
 	${textSans.small()};
 	color: ${label.textOptional};
@@ -23,7 +31,8 @@ export const optionalText = (
 `;
 
 export const supportingText = (
-	label = labelThemeDefault.label,
+	supportDarkmode: boolean,
+	label = getLabelTheme(supportDarkmode),
 ): SerializedStyles => css`
 	${textSans.small()};
 	color: ${label.textSupporting};

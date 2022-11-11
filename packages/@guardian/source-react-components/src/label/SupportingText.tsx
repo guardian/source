@@ -12,14 +12,16 @@ const visuallyHidden = css`
 export const SupportingText = ({
 	hideLabel,
 	children,
+	supportDarkMode = false,
 }: {
 	hideLabel?: boolean;
 	children: ReactNode;
+	supportDarkMode?: boolean;
 }): EmotionJSX.Element => {
 	return (
 		<p
 			css={(theme: Theme) => [
-				supportingText(theme.label),
+				supportingText(supportDarkMode, theme.label),
 				hideLabel ? visuallyHidden : '',
 			]}
 		>
