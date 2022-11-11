@@ -38,6 +38,15 @@ export const DefaultDefaultTheme = Template.bind({});
 
 // *****************************************************************************
 
+export const SupportsDarkMode = Template.bind({});
+SupportsDarkMode.args = {
+	supportDarkMode: true,
+	supporting:
+		'Put your device in dark mode to see this - TODO: is there a way to switch programatically?',
+};
+
+// *****************************************************************************
+
 export const DefaultBrandTheme = Template.bind({});
 DefaultBrandTheme.parameters = {
 	backgrounds: {

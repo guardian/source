@@ -30,6 +30,11 @@ export interface CheckboxGroupProps extends Props {
 	 */
 	error?: string;
 	children: JSX.Element | JSX.Element[];
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 /**
@@ -52,11 +57,17 @@ export const CheckboxGroup = ({
 	error,
 	cssOverrides,
 	children,
+	supportDarkMode = false,
 	...props
 }: CheckboxGroupProps): EmotionJSX.Element => {
 	const groupId = id ?? generateSourceId();
 	const legend = label ? (
-		<Legend text={label} supporting={supporting} hideLabel={hideLabel} />
+		<Legend
+			supportDarkMode={supportDarkMode}
+			text={label}
+			supporting={supporting}
+			hideLabel={hideLabel}
+		/>
 	) : (
 		''
 	);
@@ -65,6 +76,7 @@ export const CheckboxGroup = ({
 		typeof error === 'string' ? (
 			<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 		) : (
+			// TODO: support dark
 			''
 		);
 
@@ -84,6 +96,7 @@ export const CheckboxGroup = ({
 							: {},
 						{
 							name,
+							supportDarkMode,
 						},
 					),
 				);

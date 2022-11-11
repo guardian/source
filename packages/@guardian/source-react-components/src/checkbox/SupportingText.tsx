@@ -5,7 +5,7 @@ import { supportingText } from './styles';
 
 export const SupportingText = ({
 	children,
-	supportDarkMode,
+	supportDarkMode = false,
 }: {
 	children: ReactNode;
 	supportDarkMode?: boolean;

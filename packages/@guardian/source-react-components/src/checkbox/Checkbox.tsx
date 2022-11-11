@@ -140,7 +140,9 @@ export const Checkbox = ({
 						</SupportingText>
 					</div>
 				) : (
-					<LabelText>{labelContent}</LabelText>
+					<LabelText supportDarkMode={supportDarkMode}>
+						{labelContent}
+					</LabelText>
 				)}
 			</label>
 		</div>
