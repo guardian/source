@@ -1,33 +1,46 @@
 import { css } from '@emotion/react';
-import {
-	focusHalo,
-	palette,
-	space,
-	textSans,
-} from '@guardian/source-foundations';
+import type { SerializedStyles } from '@emotion/react';
+import { focusHalo, space, textSans } from '@guardian/source-foundations';
+import { textAreaThemeDefault } from './theme';
 
-export const errorInput = css`
-	border: 4px solid ${palette.error[400]};
-	color: ${palette.neutral[7]};
+const getTextAreaTheme = (supportDarkmode?: boolean) => {
+	if (!supportDarkmode) return textAreaThemeDefault.textArea;
+	const useDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	return useDark
+		? textAreaThemeDefault.textAreaDark
+		: textAreaThemeDefault.textArea;
+};
+
+export const errorInput = (
+	supportDarkMode: boolean,
+	textArea = getTextAreaTheme(supportDarkMode),
+): SerializedStyles => css`
+	border: 4px solid ${textArea.borderError};
+	color: ${textArea.textError};
 	margin-top: 0;
 `;
 
-export const successInput = css`
-	border: 4px solid ${palette.success[400]};
-	color: ${palette.success[400]};
+export const successInput = (
+	supportDarkMode: boolean,
+	textArea = getTextAreaTheme(supportDarkMode),
+): SerializedStyles => css`
+	border: 4px solid ${textArea.borderSuccess};
+	color: ${textArea.textSuccess};
 	margin-top: 0;
 `;
-
-export const textArea = css`
-	box-sizing: border-box;
+export const textArea = (
+	supportDarkMode: boolean,
+	textArea = getTextAreaTheme(supportDarkMode),
+): SerializedStyles => css`
 	${textSans.medium()};
-	color: ${palette.neutral[7]};
-	background-color: ${palette.neutral[100]};
-	border: 2px solid ${palette.neutral[46]};
+	box-sizing: border-box;
+	color: ${textArea.textUserInput};
+	background-color: ${textArea.backgroundInput};
+	border: 2px solid ${textArea.border};
 	padding: ${space[2]}px ${space[2]}px 0 ${space[2]}px;
 
 	&:focus {
-		border: 2px solid ${palette.brand[500]};
+		border: 2px solid ${textArea.borderActive};
 		${focusHalo};
 	}
 
@@ -43,7 +56,7 @@ export const textArea = css`
 		component: https://reactjs.org/docs/forms.html#controlled-components
 		*/
 		.src-has-value {
-			${errorInput}
+			${errorInput(supportDarkMode, textArea)}
 		}
 	}
 `;

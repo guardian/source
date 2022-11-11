@@ -9,6 +9,7 @@ import type { linkThemeDefault } from '../link/theme';
 import type { radioThemeDefault } from '../radio/theme';
 import type { selectThemeDefault } from '../select/theme';
 import type { textInputThemeDefault } from '../text-input/theme';
+import type { textAreaThemeDefault } from '../text-area/theme';
 import type { userFeedbackThemeDefault } from '../user-feedback/theme';
 
 export interface Theme extends EmotionTheme {
@@ -22,7 +23,7 @@ export interface Theme extends EmotionTheme {
 	link?: typeof linkThemeDefault.link;
 	radio?: typeof radioThemeDefault.radio;
 	select?: typeof selectThemeDefault.select;
-	textArea?: Record<string, unknown>;
+	textArea?: typeof textAreaThemeDefault.textArea;
 	textInput?: typeof textInputThemeDefault.textInput;
 	userFeedback?: typeof userFeedbackThemeDefault.userFeedback;
 }

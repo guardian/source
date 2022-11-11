@@ -5,6 +5,7 @@ import type { Props } from '../@types/Props';
 import { Label } from '../label/Label';
 import { InlineError } from '../user-feedback/InlineError';
 import { InlineSuccess } from '../user-feedback/InlineSuccess';
+import type { Theme } from '../@types/Theme';
 import {
 	errorInput,
 	inlineMessageMargin,
@@ -54,6 +55,11 @@ export interface TextAreaProps
 	 * Specify the number of rows the component should display by default.
 	 */
 	rows?: number;
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 /**
@@ -62,7 +68,7 @@ export interface TextAreaProps
  * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components/src/text-area/TextArea.tsx) •
  * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
  *
- * The following themes are supported: `light`
+ * The following themes are supported: `default light, default dark (with prop)`
  */
 export const TextArea = ({
 	id,
@@ -76,6 +82,7 @@ export const TextArea = ({
 	rows = 3,
 	className,
 	value,
+	supportDarkMode = false,
 	...props
 }: TextAreaProps): EmotionJSX.Element => {
 	const textAreaId = id ?? generateSourceId();
@@ -101,27 +108,32 @@ export const TextArea = ({
 				optional={!!optional}
 				hideLabel={hideLabel}
 				htmlFor={textAreaId}
+				supportDarkMode={supportDarkMode}
 			>
 				{error && (
 					<div css={inlineMessageMargin}>
 						<InlineError id={descriptionId(textAreaId)}>{error}</InlineError>
+						{/* TODO: supportDarkMode */}
 					</div>
 				)}
 				{!error && success && (
 					<div css={inlineMessageMargin}>
 						<InlineSuccess id={descriptionId(textAreaId)}>
+							{/* TODO: supportDarkMode */}
 							{success}
 						</InlineSuccess>
 					</div>
 				)}
 			</Label>
 			<textarea
-				css={[
+				css={(theme: Theme) => [
 					widthFluid,
-					textArea,
+					textArea(supportDarkMode, theme.textArea),
 					supporting ? supportingTextMargin : labelMargin,
-					error ? errorInput : '',
-					!error && success ? successInput : '',
+					error ? errorInput(supportDarkMode, theme.textInput) : '',
+					!error && success
+						? successInput(supportDarkMode, theme.textInput)
+						: '',
 					cssOverrides,
 				]}
 				id={textAreaId}
