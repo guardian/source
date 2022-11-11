@@ -48,4 +48,9 @@ export interface LegendProps extends HTMLAttributes<HTMLLegendElement>, Props {
 	 */
 	hideLabel?: boolean;
 	cssOverrides?: SerializedStyles | SerializedStyles[];
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }

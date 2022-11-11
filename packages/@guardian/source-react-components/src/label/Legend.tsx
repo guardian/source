@@ -15,7 +15,7 @@ import type { LegendProps } from './types';
  * Legend is used by other Source components, such as RadioGroup. Only use Legend
  * if you are building your own form components.
  *
- * The following themes are supported: `light`, `brand`.
+ * The following themes are supported: `default light, default dark (with prop)`, `brand`.
  * */
 export const Legend = ({
 	text,
@@ -23,15 +23,23 @@ export const Legend = ({
 	optional = false,
 	hideLabel = false,
 	cssOverrides,
+	supportDarkMode,
 	...props
 }: LegendProps): EmotionJSX.Element => {
 	return (
 		<>
 			<legend css={[legend, cssOverrides]} {...props}>
-				<Text text={text} optional={optional} hideLabel={hideLabel} />
+				<Text
+					supportDarkMode={supportDarkMode}
+					text={text}
+					optional={optional}
+					hideLabel={hideLabel}
+				/>
 			</legend>
 			{supporting ? (
-				<SupportingText hideLabel={hideLabel}>{supporting}</SupportingText>
+				<SupportingText supportDarkMode={supportDarkMode} hideLabel={hideLabel}>
+					{supporting}
+				</SupportingText>
 			) : (
 				''
 			)}
