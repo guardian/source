@@ -5,10 +5,16 @@ import { supportingText } from './styles';
 
 export const SupportingText = ({
 	children,
+	supportDarkMode,
 }: {
 	children: ReactNode;
+	supportDarkMode?: boolean;
 }): EmotionJSX.Element => {
 	return (
-		<div css={(theme: Theme) => supportingText(theme.checkbox)}>{children}</div>
+		<div
+			css={(theme: Theme) => supportingText(supportDarkMode, theme.checkbox)}
+		>
+			{children}
+		</div>
 	);
 };

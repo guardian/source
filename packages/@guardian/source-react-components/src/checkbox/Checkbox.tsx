@@ -53,6 +53,11 @@ export interface CheckboxProps
 	 * @ignore passed down by the parent
 	 */
 	error?: boolean;
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 /**
@@ -75,6 +80,7 @@ export const Checkbox = ({
 	error,
 	indeterminate,
 	cssOverrides,
+	supportDarkMode = false,
 	...props
 }: CheckboxProps): EmotionJSX.Element => {
 	const checkboxId = id ?? generateSourceId();
@@ -94,7 +100,7 @@ export const Checkbox = ({
 	return (
 		<div
 			css={(theme: Theme) => [
-				checkboxContainer(theme.checkbox, error),
+				checkboxContainer(supportDarkMode, theme.checkbox, error),
 				supporting ? checkboxContainerWithSupportingText : '',
 			]}
 		>
@@ -102,8 +108,8 @@ export const Checkbox = ({
 				id={checkboxId}
 				type="checkbox"
 				css={(theme: Theme) => [
-					checkbox(theme.checkbox, error),
-					error ? errorCheckbox(theme.checkbox) : '',
+					checkbox(supportDarkMode, theme.checkbox, error),
+					error ? errorCheckbox(supportDarkMode, theme.checkbox) : '',
 					cssOverrides,
 				]}
 				aria-invalid={!!error}
@@ -114,7 +120,7 @@ export const Checkbox = ({
 			/>
 			<span
 				css={(theme: Theme) => [
-					tick(theme.checkbox),
+					tick(supportDarkMode, theme.checkbox),
 					labelContent || supporting ? tickWithLabelText : '',
 					supporting ? tickWithSupportingText : '',
 				]}
@@ -123,8 +129,15 @@ export const Checkbox = ({
 			<label htmlFor={checkboxId} css={label}>
 				{supporting ? (
 					<div>
-						<LabelText hasSupportingText={true}>{labelContent}</LabelText>
-						<SupportingText>{supporting}</SupportingText>
+						<LabelText
+							hasSupportingText={true}
+							supportDarkMode={supportDarkMode}
+						>
+							{labelContent}
+						</LabelText>
+						<SupportingText supportDarkMode={supportDarkMode}>
+							{supporting}
+						</SupportingText>
 					</div>
 				) : (
 					<LabelText>{labelContent}</LabelText>

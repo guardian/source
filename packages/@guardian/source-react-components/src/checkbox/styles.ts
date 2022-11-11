@@ -12,6 +12,14 @@ import {
 } from '@guardian/source-foundations';
 import { checkboxThemeDefault } from './theme';
 
+const getCheckboxTheme = (supportDarkmode?: boolean) => {
+	if (!supportDarkmode) return checkboxThemeDefault.checkbox;
+	const useDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	return useDark
+		? checkboxThemeDefault.checkboxDark
+		: checkboxThemeDefault.checkbox;
+};
+
 export const fieldset = css`
 	${resets.fieldset};
 	display: flex;
@@ -20,7 +28,8 @@ export const fieldset = css`
 `;
 
 export const checkboxContainer = (
-	checkbox = checkboxThemeDefault.checkbox,
+	supportDarkMode: boolean,
+	checkbox = getCheckboxTheme(supportDarkMode),
 	error = false,
 ): SerializedStyles => css`
 	position: relative;
@@ -51,7 +60,8 @@ export const checkboxContainerWithSupportingText = css`
 `;
 
 export const checkbox = (
-	checkbox = checkboxThemeDefault.checkbox,
+	supportDarkMode: boolean,
+	checkbox = getCheckboxTheme(supportDarkMode),
 	error = false,
 ): SerializedStyles => css`
 	flex: 0 0 auto;
@@ -101,7 +111,8 @@ export const checkbox = (
 `;
 
 export const labelText = (
-	checkbox = checkboxThemeDefault.checkbox,
+	supportDarkMode: boolean,
+	checkbox = getCheckboxTheme(supportDarkMode),
 ): SerializedStyles => css`
 	${textSans.medium()};
 	color: ${checkbox.textLabel};
@@ -113,14 +124,16 @@ export const labelTextWithSupportingText = css`
 `;
 
 export const supportingText = (
-	checkbox = checkboxThemeDefault.checkbox,
+	supportDarkMode: boolean,
+	checkbox = getCheckboxTheme(supportDarkMode),
 ): SerializedStyles => css`
 	${textSans.small()};
 	color: ${checkbox.textLabelSupporting};
 `;
 
 export const tick = (
-	checkbox = checkboxThemeDefault.checkbox,
+	supportDarkMode: boolean,
+	checkbox = getCheckboxTheme(supportDarkMode),
 ): SerializedStyles => css`
 	@supports (
 		(appearance: none) or (-webkit-appearance: none) or (-moz-appearance: none)
@@ -186,7 +199,8 @@ export const tickWithSupportingText = css`
 `;
 
 export const errorCheckbox = (
-	checkbox = checkboxThemeDefault.checkbox,
+	supportDarkMode: boolean,
+	checkbox = getCheckboxTheme(supportDarkMode),
 ): SerializedStyles => css`
 	border: 4px solid ${checkbox.borderError};
 

@@ -41,6 +41,20 @@ DefaultBrandTheme.parameters = {
 
 // *****************************************************************************
 
+export const SupportsDarkMode = Template.bind({});
+DefaultBrandTheme.parameters = {
+	backgrounds: {
+		default: 'brandBackground.matchSystemSettings',
+	},
+};
+SupportsDarkMode.args = {
+	supportDarkMode: true,
+	supporting:
+		'Put your device in dark mode to see this - TODO: is there a way to switch programatically?',
+};
+
+// *****************************************************************************
+
 export const SupportingTextDefaultTheme = Template.bind({});
 SupportingTextDefaultTheme.args = {
 	supporting: 'Supporting text',

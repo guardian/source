@@ -16,6 +16,16 @@ export const checkboxThemeDefault = {
 		textLabelSupporting: palette.neutral[46],
 		textIndeterminate: palette.neutral[46],
 	},
+	checkboxDark: {
+		border: palette.neutral[60],
+		borderHover: palette.brand[500],
+		borderChecked: palette.brand[500],
+		borderError: palette.error[500],
+		backgroundChecked: palette.brand[500],
+		textLabel: palette.neutral[97],
+		textLabelSupporting: palette.neutral[60],
+		textIndeterminate: palette.neutral[60],
+	},
 	...userFeedbackThemeDefault,
 	...labelThemeDefault,
 };
