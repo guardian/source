@@ -50,6 +50,16 @@ export const DefaultDefaultTheme = Template.bind({});
 
 // *****************************************************************************
 
+export const SupportsDarkMode = Template.bind({});
+SupportsDarkMode.args = {
+	optional: true,
+	supporting:
+		'Put your device in dark mode to see this - TODO: is there a way to switch programatically?',
+	supportDarkMode: true,
+};
+
+// *****************************************************************************
+
 export const OptionalDefaultTheme = Template.bind({});
 OptionalDefaultTheme.args = {
 	optional: true,

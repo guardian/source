@@ -70,6 +70,11 @@ export interface TextInputProps
 	 * _Note: if you pass the `value` prop, you MUST also pass an `onChange` handler, or the field will be rendered as read-only_
 	 */
 	value?: string;
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 /**
@@ -80,7 +85,7 @@ export interface TextInputProps
  *
  * Single line fields that allow users to enter freeform data.
  *
- * The following themes are supported: `light`
+ * The following themes are supported: `default light, default dark (with prop)`
  */
 export const TextInput = ({
 	id,
@@ -92,6 +97,7 @@ export const TextInput = ({
 	error,
 	success,
 	cssOverrides,
+	supportDarkMode = false,
 	...props
 }: TextInputProps): EmotionJSX.Element => {
 	const textInputId = id ?? generateSourceId();
@@ -103,15 +109,18 @@ export const TextInput = ({
 				hideLabel={hideLabel}
 				supporting={supporting}
 				htmlFor={textInputId}
+				supportDarkMode={supportDarkMode}
 			>
 				{error && (
 					<div css={inlineMessageMargin}>
 						<InlineError id={descriptionId(textInputId)}>{error}</InlineError>
+						{/* TODO: Theme error */}
 					</div>
 				)}
 				{!error && success && (
 					<div css={inlineMessageMargin}>
 						<InlineSuccess id={descriptionId(textInputId)}>
+							{/* TODO: Theme success */}
 							{success}
 						</InlineSuccess>
 					</div>
@@ -120,10 +129,12 @@ export const TextInput = ({
 			<input
 				css={(theme: Theme) => [
 					width ? widths[width] : widthFluid,
-					textInput(theme.textInput),
+					textInput(supportDarkMode, theme.textInput),
 					supporting ? supportingTextMargin : labelMargin,
-					error ? errorInput(theme.textInput) : '',
-					!error && success ? successInput(theme.textInput) : '',
+					error ? errorInput(supportDarkMode, theme.textInput) : '',
+					!error && success
+						? successInput(supportDarkMode, theme.textInput)
+						: '',
 					cssOverrides,
 				]}
 				type="text"

@@ -8,8 +8,17 @@ import {
 } from '@guardian/source-foundations';
 import { textInputThemeDefault } from './theme';
 
+const getTextInputTheme = (supportDarkmode?: boolean) => {
+	if (!supportDarkmode) return textInputThemeDefault.textInput;
+	const useDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	return useDark
+		? textInputThemeDefault.textInputDark
+		: textInputThemeDefault.textInput;
+};
+
 export const errorInput = (
-	textInput = textInputThemeDefault.textInput,
+	supportDarkMode: boolean,
+	textInput = getTextInputTheme(supportDarkMode),
 ): SerializedStyles => css`
 	border: 4px solid ${textInput.borderError};
 	color: ${textInput.textError};
@@ -17,7 +26,8 @@ export const errorInput = (
 `;
 
 export const successInput = (
-	textInput = textInputThemeDefault.textInput,
+	supportDarkMode: boolean,
+	textInput = getTextInputTheme(supportDarkMode),
 ): SerializedStyles => css`
 	border: 4px solid ${textInput.borderSuccess};
 	color: ${textInput.textSuccess};
@@ -25,7 +35,8 @@ export const successInput = (
 `;
 
 export const textInput = (
-	textInput = textInputThemeDefault.textInput,
+	supportDarkMode: boolean,
+	textInput = getTextInputTheme(supportDarkMode),
 ): SerializedStyles =>
 	css`
 		box-sizing: border-box;
@@ -50,7 +61,7 @@ export const textInput = (
 			but stop short of applying it to empty required fields.
 			*/
 			&[value]:not([value='']) {
-				${errorInput(textInput)};
+				${errorInput(supportDarkMode, textInput)};
 			}
 		}
 	`;
