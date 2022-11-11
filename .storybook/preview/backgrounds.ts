@@ -1,8 +1,14 @@
 import { palette } from '@guardian/source-foundations';
 
+const isDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 export const backgrounds = {
-	default: 'background.primary',
+	default: 'background.matchSystemSettings',
 	values: [
+		{
+			name: 'background.matchSystemSettings',
+			value: isDark() ? palette.neutral[10] : palette.neutral[100],
+		},
 		{
 			name: 'background.primary',
 			value: palette.neutral[100],
