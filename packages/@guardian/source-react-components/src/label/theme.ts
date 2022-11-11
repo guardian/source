@@ -12,8 +12,8 @@ export const labelThemeDefault = {
 		textLabel: palette.neutral[97],
 		textOptional: palette.neutral[60],
 		textSupporting: palette.neutral[60],
-		textError: palette.error[500],
-		textSuccess: palette.success[500],
+		textError: palette.error[400],
+		textSuccess: palette.success[400],
 	},
 };
 

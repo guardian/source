@@ -76,7 +76,6 @@ export const CheckboxGroup = ({
 		typeof error === 'string' ? (
 			<InlineError id={descriptionId(groupId)}>{error}</InlineError>
 		) : (
-			// TODO: support dark
 			''
 		);
 

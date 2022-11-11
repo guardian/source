@@ -113,13 +113,11 @@ export const TextArea = ({
 				{error && (
 					<div css={inlineMessageMargin}>
 						<InlineError id={descriptionId(textAreaId)}>{error}</InlineError>
-						{/* TODO: supportDarkMode */}
 					</div>
 				)}
 				{!error && success && (
 					<div css={inlineMessageMargin}>
 						<InlineSuccess id={descriptionId(textAreaId)}>
-							{/* TODO: supportDarkMode */}
 							{success}
 						</InlineSuccess>
 					</div>

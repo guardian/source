@@ -20,7 +20,7 @@ export const radioThemeDefault = {
 		backgroundChecked: palette.focus[400],
 		textLabel: palette.neutral[97],
 		textLabelSupporting: palette.neutral[60],
-		borderError: palette.error[500],
+		borderError: palette.error[400],
 	},
 	...labelThemeDefault,
 	...userFeedbackThemeDefault,

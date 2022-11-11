@@ -9,7 +9,7 @@ export const userFeedbackThemeDefault = {
 
 export const userFeedbackThemeBrand = {
 	userFeedback: {
-		textSuccess: palette.success[500],
-		textError: palette.error[500],
+		textSuccess: palette.success[400],
+		textError: palette.error[400],
 	},
 };

@@ -20,7 +20,7 @@ export const checkboxThemeDefault = {
 		border: palette.neutral[60],
 		borderHover: palette.brand[500],
 		borderChecked: palette.brand[500],
-		borderError: palette.error[500],
+		borderError: palette.error[400],
 		backgroundChecked: palette.brand[500],
 		textLabel: palette.neutral[97],
 		textLabelSupporting: palette.neutral[60],

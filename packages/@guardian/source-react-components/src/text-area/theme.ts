@@ -19,8 +19,8 @@ export const textAreaThemeDefault = {
 		backgroundInput: palette.neutral[0],
 		border: palette.neutral[60],
 		borderActive: palette.focus[400],
-		borderError: palette.error[500],
-		borderSuccess: palette.success[500],
+		borderError: palette.error[400],
+		borderSuccess: palette.success[400],
 	},
 	...userFeedbackThemeDefault,
 };

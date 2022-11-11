@@ -114,13 +114,11 @@ export const TextInput = ({
 				{error && (
 					<div css={inlineMessageMargin}>
 						<InlineError id={descriptionId(textInputId)}>{error}</InlineError>
-						{/* TODO: Theme error */}
 					</div>
 				)}
 				{!error && success && (
 					<div css={inlineMessageMargin}>
 						<InlineSuccess id={descriptionId(textInputId)}>
-							{/* TODO: Theme success */}
 							{success}
 						</InlineSuccess>
 					</div>

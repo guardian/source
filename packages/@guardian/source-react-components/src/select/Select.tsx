@@ -88,11 +88,9 @@ export const Select = ({
 			>
 				{error && (
 					<InlineError id={descriptionId(selectId)}>{error}</InlineError>
-					// todo
 				)}
 				{!error && success && (
 					<InlineSuccess id={descriptionId(selectId)}>{success}</InlineSuccess>
-					// todo
 				)}
 			</Label>
 			<div

@@ -79,7 +79,6 @@ export const RadioGroup = ({
 	);
 	const message = error && (
 		<InlineError id={descriptionId(groupId)}>{error}</InlineError>
-		// TODO
 	);
 
 	const radioContainers = (
