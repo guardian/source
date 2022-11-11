@@ -10,8 +10,15 @@ import {
 } from '@guardian/source-foundations';
 import { selectThemeDefault } from './theme';
 
+const getSelectTheme = (supportDarkmode?: boolean) => {
+	if (!supportDarkmode) return selectThemeDefault.select;
+	const useDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	return useDark ? selectThemeDefault.selectDark : selectThemeDefault.select;
+};
+
 export const errorInput = (
-	select = selectThemeDefault.select,
+	supportDarkMode: boolean,
+	select = getSelectTheme(supportDarkMode),
 ): SerializedStyles => css`
 	border: 4px solid ${select.borderError};
 	color: ${select.textError};
@@ -22,7 +29,8 @@ export const errorInput = (
 `;
 
 export const successInput = (
-	select = selectThemeDefault.select,
+	supportDarkMode: boolean,
+	select = getSelectTheme(supportDarkMode),
 ): SerializedStyles => css`
 	border: 4px solid ${select.borderSuccess};
 	color: ${select.textSuccess};
@@ -33,7 +41,8 @@ export const successInput = (
 `;
 
 export const errorChevron = (
-	select = selectThemeDefault.select,
+	supportDarkMode: boolean,
+	select = getSelectTheme(supportDarkMode),
 ): SerializedStyles => css`
 	svg {
 		fill: ${select.textError};
@@ -41,7 +50,8 @@ export const errorChevron = (
 `;
 
 export const successChevron = (
-	select = selectThemeDefault.select,
+	supportDarkMode: boolean,
+	select = getSelectTheme(supportDarkMode),
 ): SerializedStyles => css`
 	svg {
 		fill: ${select.textSuccess};
@@ -49,7 +59,8 @@ export const successChevron = (
 `;
 
 export const selectWrapper = (
-	select = selectThemeDefault.select,
+	supportDarkMode: boolean,
+	select = getSelectTheme(supportDarkMode),
 ): SerializedStyles => css`
 	position: relative;
 
@@ -65,7 +76,10 @@ export const selectWrapper = (
 	}
 `;
 
-export const select = (select = selectThemeDefault.select): SerializedStyles =>
+export const select = (
+	supportDarkMode: boolean,
+	select = getSelectTheme(supportDarkMode),
+): SerializedStyles =>
 	css`
 		color: ${select.textUserInput};
 		box-sizing: border-box;
@@ -91,6 +105,6 @@ export const select = (select = selectThemeDefault.select): SerializedStyles =>
 		}
 
 		&:invalid {
-			${errorInput(select)};
+			${errorInput(supportDarkMode, select)};
 		}
 	`;

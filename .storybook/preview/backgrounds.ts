@@ -7,7 +7,7 @@ export const backgrounds = {
 	values: [
 		{
 			name: 'background.matchSystemSettings',
-			value: isDark() ? palette.neutral[10] : palette.neutral[100],
+			value: isDark() ? palette.neutral[0] : palette.neutral[100],
 		},
 		{
 			name: 'background.primary',

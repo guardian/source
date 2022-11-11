@@ -45,6 +45,11 @@ export interface SelectProps
 	 */
 	success?: string;
 	children: JSX.Element | JSX.Element[];
+	/**
+	 * Should the theme change to dark when the user has prefers-color-scheme: dark set?
+	 * Defaults to false for backwards compatibility
+	 */
+	supportDarkMode?: boolean;
 }
 
 /**
@@ -55,7 +60,7 @@ export interface SelectProps
  *
  * Select boxes allow the user to make a choice from a long list of similar options.
  *
- * The following themes are supported: `light`
+ * The following themes are supported: `default light`, `default dark`
  */
 export const Select = ({
 	id,
@@ -67,6 +72,7 @@ export const Select = ({
 	success,
 	cssOverrides,
 	children,
+	supportDarkMode = false,
 	...props
 }: SelectProps): EmotionJSX.Element => {
 	const selectId = id ?? generateSourceId();
@@ -78,26 +84,33 @@ export const Select = ({
 				supporting={supporting}
 				hideLabel={hideLabel}
 				htmlFor={selectId}
+				supportDarkMode={supportDarkMode}
 			>
 				{error && (
 					<InlineError id={descriptionId(selectId)}>{error}</InlineError>
+					// todo
 				)}
 				{!error && success && (
 					<InlineSuccess id={descriptionId(selectId)}>{success}</InlineSuccess>
+					// todo
 				)}
 			</Label>
 			<div
 				css={(theme: Theme) => [
-					selectWrapper(theme.select),
-					error ? errorChevron(theme.select) : '',
-					!error && success ? successChevron(theme.select) : '',
+					selectWrapper(supportDarkMode, theme.select),
+					error ? errorChevron(supportDarkMode, theme.select) : '',
+					!error && success
+						? successChevron(supportDarkMode, theme.select)
+						: '',
 				]}
 			>
 				<select
 					css={(theme: Theme) => [
-						select(theme.select),
-						error ? errorInput(theme.select) : '',
-						!error && success ? successInput(theme.select) : '',
+						select(supportDarkMode, theme.select),
+						error ? errorInput(supportDarkMode, theme.select) : '',
+						!error && success
+							? successInput(supportDarkMode, theme.select)
+							: '',
 						cssOverrides,
 					]}
 					aria-required={!optional}
