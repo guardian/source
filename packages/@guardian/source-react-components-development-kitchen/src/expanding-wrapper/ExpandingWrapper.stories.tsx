@@ -71,7 +71,6 @@ const lorem = (
 			eu, ultricies venenatis elit.
 		</p>
 		<br />
-		<input placeholder="Input that should be hidden when collapsed (but not for screenreaders)" />
 		<p>
 			Pellentesque tincidunt blandit turpis, convallis facilisis massa fringilla
 			cursus. Praesent neque odio, porta sodales imperdiet a, aliquam eu ante.
@@ -90,7 +89,11 @@ const lorem = (
 	</div>
 );
 
-const renderUpdatedText = () => <span>Last updated yesterday</span>;
+const renderUpdatedText = () => (
+	<span style={{ background: 'yellow', padding: '2px' }}>
+		Last updated yesterday
+	</span>
+);
 
 const expandingWrapper = (): ReactElement => (
 	<>

@@ -1,8 +1,8 @@
+import { useState, cloneElement, Children } from 'react';
 import { css } from '@emotion/react';
 import { visuallyHidden } from '@guardian/source-foundations';
 import { SvgMinus, SvgPlus } from '@guardian/source-react-components';
 import type { FC } from 'react';
-import { SkipTo } from './skipTo';
 import {
 	buttonIconStyles,
 	collapsibleBodyStyles,
@@ -16,47 +16,52 @@ import type { ExpandingWrapperProps } from './types';
 export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 	renderExtra,
 	children,
-	contentsLabel,
 }) => {
+	const [isExpanded, setIsExpanded] = useState(false);
 	return (
-		<>
-			<div css={containerStyles}>
-				{contentsLabel && (
-					<SkipTo id={'after-collapsed'} label={`Skip ${contentsLabel}`} />
-				)}
-				<input
-					type="checkbox"
-					css={css`
-						visibility: hidden;
-						${visuallyHidden};
-					`}
-					id="expander-checkbox"
-					name="expander-checkbox"
-					tabIndex={-1}
-					key="PinnedPostCheckbox"
-				/>
-				<div id="collapsible-body" css={collapsibleBodyStyles}>
-					{children}
-				</div>
-				<div id="expander-overlay" css={overlayStyles} />
-				<label
-					aria-hidden={true}
-					css={showHideLabelStyles}
-					htmlFor="expander-checkbox"
-					id="expander-button"
-				>
+		<div id="expander" css={containerStyles}>
+			<input
+				type="checkbox"
+				css={css`
+					${visuallyHidden};
+				`}
+				id="expander-checkbox"
+				name="expander-checkbox"
+				onChange={(e): void => setIsExpanded(e.target.checked)}
+				aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${name}`}
+			/>
+			<div
+				id="collapsible-body"
+				css={collapsibleBodyStyles}
+				aria-hidden={!isExpanded}
+			>
+				{children}
+			</div>
+
+			{!isExpanded && <div id="expander-overlay" css={overlayStyles} />}
+			{renderExtra && <span css={extraStyles}>{renderExtra()}</span>}
+			<label
+				aria-hidden={true}
+				css={showHideLabelStyles}
+				htmlFor="expander-checkbox"
+				id="expander-button"
+			>
+				{isExpanded ? (
 					<>
 						<span id="svgminus" css={buttonIconStyles}>
 							<SvgMinus />
 						</span>
+						Show Less
+					</>
+				) : (
+					<>
 						<span id="svgplus" css={buttonIconStyles}>
 							<SvgPlus />
 						</span>
+						Show More
 					</>
-				</label>
-				{renderExtra && <span css={extraStyles}>{renderExtra()}</span>}
-			</div>
-			<span id="after-collapsed" />
-		</>
+				)}
+			</label>
+		</div>
 	);
 };

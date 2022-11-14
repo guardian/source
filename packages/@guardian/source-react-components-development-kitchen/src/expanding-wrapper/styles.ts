@@ -1,32 +1,27 @@
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import {
 	from,
 	neutral,
 	remHeight,
 	remSpace,
-	space,
+	focusHalo,
 	textSans,
 } from '@guardian/source-foundations';
 
 export const containerStyles = css`
-	border-top: 1px solid ${neutral[86]};
+	border-image: repeating-linear-gradient(
+			to bottom,
+			${neutral[86]},
+			${neutral[86]} 1px,
+			transparent 1px,
+			transparent 4px
+		)
+		13;
+	border-top: 13px solid ${neutral[86]};
 	background: ${neutral[97]};
 	box-shadow: none;
 	position: relative;
-	margin-bottom: ${space[9]}px;
-
-	#expander-checkbox ~ label::after {
-		content: 'Show more';
-	}
-	#expander-checkbox:checked ~ label::after {
-		content: 'Show less';
-	}
-
-	#expander-checkbox:checked ~ #expander-overlay,
-	#expander-checkbox ~ label #svgminus,
-	#expander-checkbox:checked ~ label #svgplus {
-		display: none;
-	}
+	margin-bottom: ${remSpace[12]};
 
 	#expander-checkbox:checked ~ label {
 		background: ${neutral[100]};
@@ -40,14 +35,13 @@ export const containerStyles = css`
 		fill: ${neutral[100]};
 	}
 
-	#expander-checkbox ~ label #svgplus,
-	#expander-checkbox:checked ~ label #svgminus {
-		display: block;
-	}
-
 	#expander-checkbox:checked ~ #collapsible-body {
 		max-height: fit-content;
 		margin-bottom: ${remSpace[6]};
+	}
+
+	#expander-checkbox:focus ~ #collapsible-body {
+		${focusHalo};
 	}
 `;
 
@@ -72,7 +66,6 @@ export const showHideLabelStyles = css`
 	box-sizing: border-box;
 	cursor: pointer;
 	position: absolute;
-	margin-left: ${remSpace[1]};
 	bottom: -${remSpace[6]};
 	border-radius: ${remHeight.ctaMedium}rem;
 	padding: 0 ${remSpace[5]};
@@ -83,10 +76,6 @@ export const showHideLabelStyles = css`
 	height: ${remHeight.ctaMedium}rem;
 	min-height: ${remHeight.ctaMedium}rem;
 	${textSans.medium({ fontWeight: 'bold' })};
-
-	${from.tablet} {
-		margin-left: 3.75rem;
-	}
 `;
 
 export const collapsibleBodyStyles = css`
