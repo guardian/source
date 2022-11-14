@@ -1,7 +1,7 @@
-import { useState, cloneElement, Children } from 'react';
 import { css } from '@emotion/react';
 import { visuallyHidden } from '@guardian/source-foundations';
 import { SvgMinus, SvgPlus } from '@guardian/source-react-components';
+import { useState } from 'react';
 import type { FC } from 'react';
 import {
 	buttonIconStyles,
@@ -14,6 +14,8 @@ import {
 import type { ExpandingWrapperProps } from './types';
 
 export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
+	name,
+	expandCallback,
 	renderExtra,
 	children,
 }) => {
@@ -27,8 +29,11 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 				`}
 				id="expander-checkbox"
 				name="expander-checkbox"
-				onChange={(e): void => setIsExpanded(e.target.checked)}
-				aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${name}`}
+				onChange={(e) => {
+					expandCallback?.(e.target.checked);
+					setIsExpanded(e.target.checked);
+				}}
+				aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${name && name}`}
 			/>
 			<div
 				id="collapsible-body"

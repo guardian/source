@@ -1,10 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import {
-	from,
+	focusHalo,
 	neutral,
 	remHeight,
 	remSpace,
-	focusHalo,
 	textSans,
 } from '@guardian/source-foundations';
 

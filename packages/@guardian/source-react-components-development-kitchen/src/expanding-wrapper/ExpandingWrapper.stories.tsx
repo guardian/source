@@ -1,14 +1,26 @@
 import { css } from '@emotion/react';
 import { neutral } from '@guardian/source-foundations';
+import { useState } from 'react';
 import type { ReactElement } from 'react';
 import { ExpandingWrapper } from './ExpandingWrapper';
+
+/**
+ * [Storybook](https://guardian.github.io/source/?path=/story/packages-source-react-components-development-kitchen-expandingwrapper--expanding-wrapper
+ * [GitHub](https://github.com/guardian/source/tree/main/packages/@guardian/source-react-components-development-kitchen/src/expanding-wrapper/ExpandingWrapper.tsx) •
+ * [NPM](https://www.npmjs.com/package/@guardian/source-react-components)
+ *
+ * An Expanding Wrapper surrounds a bit of content that can be collapsed and expanded
+ * Note: When collapsed, there should be no focusable elements within the wrapper.
+ *
+ * The following themes are supported: `light`.
+ * */
 
 const loremStyles = css`
 	padding: 10px;
 	background: ${neutral[97]};
 `;
 
-const lorem = (
+const getLorem = (expanded: boolean) => (
 	<div css={loremStyles}>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis
@@ -24,7 +36,7 @@ const lorem = (
 			sagittis turpis blandit eget. Sed tempor mi ut urna vehicula, vel posuere
 			ipsum egestas.
 		</p>
-		<input placeholder="Basic Input" />
+		<input disabled={!expanded} placeholder="Basic Input" />
 
 		<br />
 		<p>
@@ -39,7 +51,9 @@ const lorem = (
 			Integer dapibus pulvinar condimentum. Pellentesque ultricies ligula et
 			facilisis pulvinar.
 		</p>
-		<button onClick={() => window.alert('HELLO')}>Sound the alarm</button>
+		<button disabled={!expanded} onClick={() => window.alert('HELLO')}>
+			Sound the alarm
+		</button>
 		<br />
 		<p>
 			Phasellus vel dapibus ex. Orci varius natoque penatibus et magnis dis
@@ -95,17 +109,22 @@ const renderUpdatedText = () => (
 	</span>
 );
 
-const expandingWrapper = (): ReactElement => (
-	<>
-		<ExpandingWrapper
-			renderExtra={renderUpdatedText}
-			contentsLabel="Lorem Ipsum"
-		>
-			{lorem}
-		</ExpandingWrapper>
-		<button>Click me!</button>
-	</>
-);
+const expandingWrapper = (): ReactElement => {
+	const [isExpanded, setIsExpanded] = useState(false);
+	const expandCallback = (isExpanded: boolean) => setIsExpanded(isExpanded);
+	return (
+		<>
+			<ExpandingWrapper
+				renderExtra={renderUpdatedText}
+				expandCallback={expandCallback}
+				name="Lorem Ipsum Text"
+			>
+				{getLorem(isExpanded)}
+			</ExpandingWrapper>
+			<button>Click me!</button>
+		</>
+	);
+};
 
 export default {
 	component: expandingWrapper,

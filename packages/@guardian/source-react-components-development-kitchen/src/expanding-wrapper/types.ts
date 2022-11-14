@@ -1,7 +1,8 @@
-import type { ReactNode } from 'react';
+import type { ReactElement } from 'react';
 
 export interface ExpandingWrapperProps {
-	children: ReactNode;
-	contentsLabel?: string;
-	renderExtra?: () => ReactNode;
+	children: ReactElement;
+	name: string;
+	renderExtra?: () => ReactElement;
+	expandCallback?: (expanded: boolean) => void;
 }
