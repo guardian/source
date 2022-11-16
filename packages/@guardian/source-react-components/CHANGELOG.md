@@ -1,5 +1,11 @@
 # @guardian/source-react-components
 
+## 9.1.0
+
+### Minor Changes
+
+- 305c58e6: Add the SvgShareCallout icon
+
 ## 9.0.1
 
 ### Patch Changes
