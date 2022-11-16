@@ -170,6 +170,7 @@ export { SvgPersonTick } from '../vendor/icons/SvgPersonTick';
 export { SvgPhone } from '../vendor/icons/SvgPhone';
 export { SvgReload } from '../vendor/icons/SvgReload';
 export { SvgShare } from '../vendor/icons/SvgShare';
+export { SvgShareCallout } from '../vendor/icons/SvgShareCallout';
 export { SvgSpeechBubbleCross } from '../vendor/icons/SvgSpeechBubbleCross';
 export { SvgSpeechBubblePlus } from '../vendor/icons/SvgSpeechBubblePlus';
 export { SvgStarOutline } from '../vendor/icons/SvgStarOutline';

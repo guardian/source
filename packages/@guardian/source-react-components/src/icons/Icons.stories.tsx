@@ -101,6 +101,7 @@ import { SvgQuote } from '../../vendor/icons/SvgQuote';
 import { SvgReload } from '../../vendor/icons/SvgReload';
 import { SvgSettings } from '../../vendor/icons/SvgSettings';
 import { SvgShare } from '../../vendor/icons/SvgShare';
+import { SvgShareCallout } from '../../vendor/icons/SvgShareCallout';
 import { SvgSpeechBubble } from '../../vendor/icons/SvgSpeechBubble';
 import { SvgSpeechBubbleCross } from '../../vendor/icons/SvgSpeechBubbleCross';
 import { SvgSpeechBubblePlus } from '../../vendor/icons/SvgSpeechBubblePlus';
@@ -219,6 +220,7 @@ const uiIcons = {
 	SvgPhone,
 	SvgReload,
 	SvgShare,
+	SvgShareCallout,
 	SvgSpeechBubbleCross,
 	SvgSpeechBubblePlus,
 	SvgStarOutline,

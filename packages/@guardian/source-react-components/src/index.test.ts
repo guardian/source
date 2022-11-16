@@ -186,6 +186,7 @@ it('Should have exactly these exports', () => {
 		'SvgRoundelInverse',
 		'SvgSettings',
 		'SvgShare',
+		'SvgShareCallout',
 		'SvgSpeechBubble',
 		'SvgSpeechBubbleCross',
 		'SvgSpeechBubblePlus',
