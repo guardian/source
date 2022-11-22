@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 6.1.1
+
+### Patch Changes
+
+- c6e1a9b9: Export the Expanding Wrapper
+
 ## 6.1.0
 
 ### Minor Changes
