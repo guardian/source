@@ -13,6 +13,8 @@ import {
 } from './styles';
 import type { ExpandingWrapperProps } from './types';
 
+export type { ExpandingWrapperProps } from './types';
+
 export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 	name,
 	expandCallback,
