@@ -106,7 +106,7 @@ export const StarRating = ({
 					${visuallyHidden}
 				`}
 			>
-				{rating} star{rating > 1 && 's'} out of 5
+				{rating} star{rating !== 1 && 's'} out of 5
 			</figcaption>
 		</figure>
 	);
