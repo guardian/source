@@ -70,11 +70,7 @@ export const StarRating = ({
 	...props
 }: StarRatingProps): EmotionJSX.Element => {
 	return (
-		<figure
-			role="complementary"
-			css={[figureStyles(size), cssOverrides]}
-			{...props}
-		>
+		<figure css={[figureStyles(size), cssOverrides]} {...props}>
 			<svg
 				css={svgSize(size)}
 				viewBox={`0 0 ${24 * 5} 24`}
