@@ -11,10 +11,10 @@ import {
 	overlayStyles,
 	showHideLabelStyles,
 } from './styles';
+import type { Theme } from './theme';
 import type { ExpandingWrapperProps } from './types';
 
 export type { ExpandingWrapperProps } from './types';
-import type { Theme } from './theme';
 
 export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 	name,
