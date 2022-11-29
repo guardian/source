@@ -14,6 +14,7 @@ import {
 import type { ExpandingWrapperProps } from './types';
 
 export type { ExpandingWrapperProps } from './types';
+import type { Theme } from './theme';
 
 export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 	name,
@@ -23,7 +24,7 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 }) => {
 	const [isExpanded, setIsExpanded] = useState(false);
 	return (
-		<div id="expander" css={containerStyles}>
+		<div id="expander" css={(theme: Theme) => containerStyles(theme.expander)}>
 			<input
 				type="checkbox"
 				css={css`
@@ -45,11 +46,16 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 				{children}
 			</div>
 
-			{!isExpanded && <div id="expander-overlay" css={overlayStyles} />}
+			{!isExpanded && (
+				<div
+					id="expander-overlay"
+					css={(theme: Theme) => overlayStyles(theme.expander)}
+				/>
+			)}
 			{renderExtra && <span css={extraStyles}>{renderExtra()}</span>}
 			<label
 				aria-hidden={true}
-				css={showHideLabelStyles}
+				css={(theme: Theme) => showHideLabelStyles(theme.expander)}
 				htmlFor="expander-checkbox"
 				id="expander-button"
 			>
