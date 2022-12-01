@@ -60,7 +60,7 @@ module.exports = {
 			(rule) => String(rule.test) === String(/\.(mjs|tsx?|jsx?)$/),
 		).exclude = nodeModulesExclude;
 
-		config.resolve.plugins ||= [];
+		config.resolve.plugins = [];
 		config.resolve.plugins.push(
 			new TsconfigPathsPlugin({
 				configFile: path.resolve(__dirname, '..', 'tsconfig.json'),

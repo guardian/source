@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { visuallyHidden } from '@guardian/source-foundations';
 import { SvgMinus, SvgPlus } from '@guardian/source-react-components';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import type { FC } from 'react';
 import {
 	buttonIconStyles,
@@ -17,7 +17,7 @@ import type { ExpandingWrapperProps, TabbableElementType } from './types';
 export type { ExpandingWrapperProps } from './types';
 
 const setTabIndex = (name: string, isExpanded: boolean) => {
-	var collapsibleBody = document.getElementById(
+	const collapsibleBody = document.getElementById(
 		`expander-${name}__collapsible-body`,
 	);
 	if (!collapsibleBody) return;
