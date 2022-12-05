@@ -54,7 +54,7 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 					${visuallyHidden};
 				`}
 				className="expander__checkbox"
-				id="expander-checkbox"
+				id={`expander-checkbox-${name}`}
 				onChange={(e) => {
 					expandCallback?.(e.target.checked);
 					setIsExpanded(e.target.checked);
@@ -77,7 +77,7 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 			<label
 				aria-hidden={true}
 				css={(theme: Theme) => showHideLabelStyles(theme.expander)}
-				htmlFor="expander-checkbox"
+				htmlFor={`expander-checkbox-${name}`}
 			>
 				{isExpanded ? (
 					<>
