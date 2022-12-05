@@ -17,6 +17,7 @@ import { ExpandingWrapper } from './ExpandingWrapper';
 const loremStyles = css`
 	padding: 10px;
 	background: ${neutral[97]};
+	font-family: GuardianTextSans;
 `;
 
 const Lorem = (
@@ -101,7 +102,13 @@ const Lorem = (
 );
 
 const renderUpdatedText = () => (
-	<span style={{ background: 'yellow', padding: '2px' }}>
+	<span
+		style={{
+			background: 'yellow',
+			padding: '2px',
+			fontFamily: 'GuardianTextSans',
+		}}
+	>
 		Last updated yesterday
 	</span>
 );

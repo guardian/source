@@ -54,7 +54,7 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 					${visuallyHidden};
 				`}
 				className="expander__checkbox"
-				name="expander-checkbox"
+				id="expander-checkbox"
 				onChange={(e) => {
 					expandCallback?.(e.target.checked);
 					setIsExpanded(e.target.checked);

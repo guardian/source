@@ -23,7 +23,7 @@ export const containerStyles = (
 	background: ${expander.collapseBackground};
 	box-shadow: none;
 	position: relative;
-	margin-bottom: ${remSpace[12]};
+	margin-bottom: ${remSpace[9]};
 
 	.expander__checkbox:checked ~ label {
 		background: ${expander.collapseBackground};
@@ -83,6 +83,7 @@ export const showHideLabelStyles = (
 	height: ${remHeight.ctaMedium}rem;
 	min-height: ${remHeight.ctaMedium}rem;
 	${textSans.medium({ fontWeight: 'bold' })};
+	margin-left: ${remSpace[2]};
 `;
 
 export const collapsibleBodyStyles = css`
