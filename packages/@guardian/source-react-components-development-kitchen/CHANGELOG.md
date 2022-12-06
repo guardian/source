@@ -1,5 +1,11 @@
 # @guardian/source-react-components-development-kitchen
 
+## 6.1.2
+
+### Patch Changes
+
+- fada52db: Add theming and a dark theme to the Expanding Wrapper
+
 ## 6.1.1
 
 ### Patch Changes

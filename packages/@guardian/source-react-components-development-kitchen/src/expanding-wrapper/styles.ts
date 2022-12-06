@@ -1,37 +1,40 @@
 import { css } from '@emotion/react';
+import type { SerializedStyles } from '@emotion/react';
 import {
 	focusHalo,
-	neutral,
 	remHeight,
 	remSpace,
 	textSans,
 } from '@guardian/source-foundations';
+import { expandingWrapperThemeDefault } from './theme';
 
-export const containerStyles = css`
+export const containerStyles = (
+	expander = expandingWrapperThemeDefault.expander,
+): SerializedStyles => css`
 	border-image: repeating-linear-gradient(
 			to bottom,
-			${neutral[86]},
-			${neutral[86]} 1px,
+			${expander.border},
+			${expander.border} 1px,
 			transparent 1px,
 			transparent 4px
 		)
 		13;
-	border-top: 13px solid ${neutral[86]};
-	background: ${neutral[97]};
+	border-top: 13px solid ${expander.border};
+	background: ${expander.collapseBackground};
 	box-shadow: none;
 	position: relative;
 	margin-bottom: ${remSpace[12]};
 
 	#expander-checkbox:checked ~ label {
-		background: ${neutral[100]};
-		color: ${neutral[7]};
-
+		background: ${expander.collapseBackground};
+		color: ${expander.collapseText};
+		border: 1px solid ${expander.collapseText};
 		#svgminus {
-			fill: ${neutral[7]};
+			fill: ${expander.collapseText};
 		}
 	}
 	#expander-checkbox ~ label #svgplus {
-		fill: ${neutral[100]};
+		fill: ${expander.expandText};
 	}
 
 	#expander-checkbox:checked ~ #collapsible-body {
@@ -44,11 +47,13 @@ export const containerStyles = css`
 	}
 `;
 
-export const overlayStyles = css`
+export const overlayStyles = (
+	expander = expandingWrapperThemeDefault.expander,
+): SerializedStyles => css`
 	background-image: linear-gradient(
 		0deg,
-		${neutral[97]},
-		${neutral[97]} 40%,
+		${expander.collapseBackground},
+		${expander.collapseBackground} 40%,
 		rgba(255, 255, 255, 0)
 	);
 	height: 5rem;
@@ -57,7 +62,10 @@ export const overlayStyles = css`
 	width: 100%;
 	display: block;
 `;
-export const showHideLabelStyles = css`
+
+export const showHideLabelStyles = (
+	expander = expandingWrapperThemeDefault.expander,
+): SerializedStyles => css`
 	display: inline-flex;
 	justify-content: space-between;
 	box-shadow: none;
@@ -68,10 +76,10 @@ export const showHideLabelStyles = css`
 	bottom: -${remSpace[6]};
 	border-radius: ${remHeight.ctaMedium}rem;
 	padding: 0 ${remSpace[5]};
-	border: 1px solid ${neutral[7]};
+	border: 1px solid ${expander.expandBackground};
 	text-decoration: none;
-	background: ${neutral[7]};
-	color: ${neutral[100]};
+	background: ${expander.expandBackground};
+	color: ${expander.expandText};
 	height: ${remHeight.ctaMedium}rem;
 	min-height: ${remHeight.ctaMedium}rem;
 	${textSans.medium({ fontWeight: 'bold' })};
