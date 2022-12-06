@@ -1,30 +1,15 @@
-<img src="assets/logo.png" height="320" width="620" >
+# Source
 
 > A component library for the Guardian's [Source Design System](https://theguardian.design).
 
-[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://guardian.github.io/source)
+**Source packages have moved to https://github.com/guardian/csnx in [#252](https://github.com/guardian/csnx/pull/252)**.
 
-## Components ⚛️
+The last versions to be published from here were:
 
-See [the Source storybook](https://guardian.github.io/source) for examples of available components.
+- @guardian/source-foundations@7.0.1
+- @guardian/source-react-components@9.1.0
+- @guardian/source-react-components-development-kitchen@7.0.0
+- @guardian/eslint-plugin-source-foundations@7.0.0
+- @guardian/eslint-plugin-source-react-components@9.0.0
 
-## Docs 📖
-
-- [Getting started](https://guardian.github.io/source/?path=/story/getting-started--page)
-- [Foundations](https://guardian.github.io/source/?path=/story/foundations--page)
-- [Components](https://guardian.github.io/source/?path=/story/components--page)
-- [Development Kitchen](https://guardian.github.io/source/?path=/story/development-kitchen--page)
-- [ESLint plugins](https://guardian.github.io/source/?path=/story/eslint-plugins--page)
-
-## Using the Source Design System 🎨
-
-This component library makes it easy to implement user interfaces conforming to the Source Design System.
-
-To understand how the Source Design System _works_, see the [Source Design System documentation](https://theguardian.design).
-
-## Contributing 💝
-
-We welcome contributions to the Source component library!
-
-Before you begin, please read our
-[Contributing Guidelines](https://guardian.github.io/source/?path=/story/contributing-overview--page)
+https://github.com/guardian/source/releases
