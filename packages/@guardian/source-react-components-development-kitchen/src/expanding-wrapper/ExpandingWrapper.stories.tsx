@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
 import { neutral } from '@guardian/source-foundations';
-import { useState } from 'react';
 import type { ReactElement } from 'react';
 import { ExpandingWrapper } from './ExpandingWrapper';
 
@@ -18,9 +17,10 @@ import { ExpandingWrapper } from './ExpandingWrapper';
 const loremStyles = css`
 	padding: 10px;
 	background: ${neutral[97]};
+	font-family: GuardianTextSans;
 `;
 
-const getLorem = (expanded: boolean) => (
+const Lorem = (
 	<div css={loremStyles}>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis
@@ -36,7 +36,7 @@ const getLorem = (expanded: boolean) => (
 			sagittis turpis blandit eget. Sed tempor mi ut urna vehicula, vel posuere
 			ipsum egestas.
 		</p>
-		<input disabled={!expanded} placeholder="Basic Input" />
+		<input placeholder="Basic Input" />
 
 		<br />
 		<p>
@@ -51,9 +51,7 @@ const getLorem = (expanded: boolean) => (
 			Integer dapibus pulvinar condimentum. Pellentesque ultricies ligula et
 			facilisis pulvinar.
 		</p>
-		<button disabled={!expanded} onClick={() => window.alert('HELLO')}>
-			Sound the alarm
-		</button>
+		<button onClick={() => window.alert('HELLO')}>Sound the alarm</button>
 		<br />
 		<p>
 			Phasellus vel dapibus ex. Orci varius natoque penatibus et magnis dis
@@ -104,22 +102,22 @@ const getLorem = (expanded: boolean) => (
 );
 
 const renderUpdatedText = () => (
-	<span style={{ background: 'yellow', padding: '2px' }}>
+	<span
+		style={{
+			background: 'yellow',
+			padding: '2px',
+			fontFamily: 'GuardianTextSans',
+		}}
+	>
 		Last updated yesterday
 	</span>
 );
 
 const expandingWrapper = (): ReactElement => {
-	const [isExpanded, setIsExpanded] = useState(false);
-	const expandCallback = (isExpanded: boolean) => setIsExpanded(isExpanded);
 	return (
 		<>
-			<ExpandingWrapper
-				renderExtra={renderUpdatedText}
-				expandCallback={expandCallback}
-				name="Lorem Ipsum Text"
-			>
-				{getLorem(isExpanded)}
+			<ExpandingWrapper renderExtra={renderUpdatedText} name="Lorem Ipsum Text">
+				{Lorem}
 			</ExpandingWrapper>
 			<button>Click me!</button>
 		</>

@@ -23,9 +23,9 @@ export const containerStyles = (
 	background: ${expander.collapseBackground};
 	box-shadow: none;
 	position: relative;
-	margin-bottom: ${remSpace[12]};
+	margin-bottom: ${remSpace[9]};
 
-	#expander-checkbox:checked ~ label {
+	.expander__checkbox:checked ~ label {
 		background: ${expander.collapseBackground};
 		color: ${expander.collapseText};
 		border: 1px solid ${expander.collapseText};
@@ -33,16 +33,16 @@ export const containerStyles = (
 			fill: ${expander.collapseText};
 		}
 	}
-	#expander-checkbox ~ label #svgplus {
+	.expander__checkbox ~ label #svgplus {
 		fill: ${expander.expandText};
 	}
 
-	#expander-checkbox:checked ~ #collapsible-body {
+	.expander__checkbox:checked ~ .expander__collapsible-body {
 		max-height: fit-content;
 		margin-bottom: ${remSpace[6]};
 	}
 
-	#expander-checkbox:focus ~ #collapsible-body {
+	.expander__checkbox:focus ~ .expander__collapsible-body {
 		${focusHalo};
 	}
 `;
@@ -83,6 +83,7 @@ export const showHideLabelStyles = (
 	height: ${remHeight.ctaMedium}rem;
 	min-height: ${remHeight.ctaMedium}rem;
 	${textSans.medium({ fontWeight: 'bold' })};
+	margin-left: ${remSpace[2]};
 `;
 
 export const collapsibleBodyStyles = css`
