@@ -1,5 +1,20 @@
 # @guardian/source-react-components-development-kitchen
 
+## 7.0.0
+
+### Major Changes
+
+- f83640ca: Visually hide StarRating's <figcaption> element
+
+### Minor Changes
+
+- f83640ca: Remove aria-role=complementary from StarRating
+
+### Patch Changes
+
+- 28af724b: The expanding wrapper should manage the tabIndex of child nodes when the wrapper is collapsed
+- f83640ca: Change StarRating caption for 0 stars from 'zero star' to 'zero stars'
+
 ## 6.1.2
 
 ### Patch Changes
