@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { visuallyHidden } from '@guardian/source-foundations';
 import { SvgMinus, SvgPlus } from '@guardian/source-react-components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { FC } from 'react';
 import {
 	buttonIconStyles,
@@ -12,26 +12,49 @@ import {
 	showHideLabelStyles,
 } from './styles';
 import type { Theme } from './theme';
-import type { ExpandingWrapperProps } from './types';
+import type { ExpandingWrapperProps, TabbableElementType } from './types';
 
 export type { ExpandingWrapperProps } from './types';
+
+const setTabIndex = (name: string, isExpanded: boolean) => {
+	const collapsibleBody = document.getElementById(
+		`expander-${name}__collapsible-body`,
+	);
+	if (!collapsibleBody) return;
+
+	const tabbableElements: TabbableElementType[] = Array.from(
+		collapsibleBody.querySelectorAll('input,textarea,select,button,a'),
+	);
+	tabbableElements.forEach((element: TabbableElementType) => {
+		element.tabIndex = isExpanded ? 0 : -1;
+	});
+};
 
 export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 	name,
 	expandCallback,
 	renderExtra,
+	disableTabbingWhenCollapsed = true,
 	children,
 }) => {
 	const [isExpanded, setIsExpanded] = useState(false);
+
+	useEffect(() => {
+		disableTabbingWhenCollapsed && setTabIndex(name, isExpanded);
+	}, [disableTabbingWhenCollapsed, isExpanded]);
+
 	return (
-		<div id="expander" css={(theme: Theme) => containerStyles(theme.expander)}>
+		<div
+			id={`expander-${name}`}
+			css={(theme: Theme) => containerStyles(theme.expander)}
+		>
 			<input
 				type="checkbox"
 				css={css`
 					${visuallyHidden};
 				`}
-				id="expander-checkbox"
-				name="expander-checkbox"
+				className="expander__checkbox"
+				id={`expander-checkbox-${name}`}
 				onChange={(e) => {
 					expandCallback?.(e.target.checked);
 					setIsExpanded(e.target.checked);
@@ -39,7 +62,8 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 				aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${name && name}`}
 			/>
 			<div
-				id="collapsible-body"
+				className="expander__collapsible-body"
+				id={`expander-${name}__collapsible-body`}
 				css={collapsibleBodyStyles}
 				aria-hidden={!isExpanded}
 			>
@@ -47,17 +71,13 @@ export const ExpandingWrapper: FC<ExpandingWrapperProps> = ({
 			</div>
 
 			{!isExpanded && (
-				<div
-					id="expander-overlay"
-					css={(theme: Theme) => overlayStyles(theme.expander)}
-				/>
+				<div css={(theme: Theme) => overlayStyles(theme.expander)} />
 			)}
 			{renderExtra && <span css={extraStyles}>{renderExtra()}</span>}
 			<label
 				aria-hidden={true}
 				css={(theme: Theme) => showHideLabelStyles(theme.expander)}
-				htmlFor="expander-checkbox"
-				id="expander-button"
+				htmlFor={`expander-checkbox-${name}`}
 			>
 				{isExpanded ? (
 					<>
