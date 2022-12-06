@@ -1,7 +1,11 @@
 import type { SerializedStyles } from '@emotion/react';
 import { css } from '@emotion/react';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { neutral, remSpace } from '@guardian/source-foundations';
+import {
+	neutral,
+	remSpace,
+	visuallyHidden,
+} from '@guardian/source-foundations';
 
 // https://docs.google.com/spreadsheets/d/1QUa5Kh734J4saFc8ERjCYHZu10_-Hj7llNa2rr8urNg/edit?usp=sharing
 // A list style variations for each breakpoint
@@ -36,10 +40,6 @@ const figureStyles = (size: Size) => css`
 	padding: ${size === 'large' ? '0.125rem' : '0.0625rem'};
 	margin: 0;
 	overflow: hidden;
-
-	figcaption {
-		text-indent: -1000px;
-	}
 `;
 
 export interface StarRatingProps {
@@ -70,11 +70,7 @@ export const StarRating = ({
 	...props
 }: StarRatingProps): EmotionJSX.Element => {
 	return (
-		<figure
-			role="complementary"
-			css={[figureStyles(size), cssOverrides]}
-			{...props}
-		>
+		<figure css={[figureStyles(size), cssOverrides]} {...props}>
 			<svg
 				css={svgSize(size)}
 				viewBox={`0 0 ${24 * 5} 24`}
@@ -101,8 +97,12 @@ export const StarRating = ({
 					})}
 			</svg>
 
-			<figcaption>
-				{rating} star{rating > 1 && 's'} out of 5
+			<figcaption
+				css={css`
+					${visuallyHidden}
+				`}
+			>
+				{rating} star{rating !== 1 && 's'} out of 5
 			</figcaption>
 		</figure>
 	);
